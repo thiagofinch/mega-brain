@@ -1,0 +1,120 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "decisions-registry.schema.json",
+  "title": "Decisions Registry",
+  "description": "Schema for decisions-registry.json - tracking all agent decisions and precedents",
+  "type": "object",
+  "required": ["version", "created_at", "updated_at", "decisions", "stats"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "decisions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/decision"
+      }
+    },
+    "stats": {
+      "$ref": "#/definitions/stats"
+    }
+  },
+  "definitions": {
+    "decision": {
+      "type": "object",
+      "required": ["id", "timestamp", "origin", "destination", "type", "subject", "decision", "confidence", "resolution"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^\\d{8}\\d{6}-[A-Z\\-]+-[A-Z\\-]+$",
+          "description": "Format: YYYYMMDDHHMMSS-ORIGIN-DESTINATION"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "origin": {
+          "type": "string",
+          "description": "Agent that initiated the decision"
+        },
+        "destination": {
+          "type": "string",
+          "description": "Agent that received/validated the decision"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["decisao", "consulta", "escalation", "precedent", "war-room"]
+        },
+        "subject": {
+          "type": "string"
+        },
+        "context": {
+          "type": "string"
+        },
+        "decision": {
+          "type": "string"
+        },
+        "justification": {
+          "type": "string"
+        },
+        "sources": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Knowledge files used as reference"
+        },
+        "chunk_ids": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Link to supporting chunks"
+        },
+        "confidence": {
+          "type": "string",
+          "enum": ["alta", "media", "baixa"]
+        },
+        "resolution": {
+          "type": "string",
+          "enum": ["resolvido", "pendente", "escalado", "arquivado"]
+        },
+        "iterations": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "tags": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "precedent_id": {
+          "type": "string",
+          "description": "If this decision creates a precedent, the precedent ID"
+        }
+      }
+    },
+    "stats": {
+      "type": "object",
+      "properties": {
+        "total_interactions": {"type": "integer"},
+        "by_type": {
+          "type": "object",
+          "additionalProperties": {"type": "integer"}
+        },
+        "by_agent": {
+          "type": "object",
+          "additionalProperties": {"type": "integer"}
+        },
+        "by_resolution": {
+          "type": "object",
+          "additionalProperties": {"type": "integer"}
+        }
+      }
+    }
+  }
+}

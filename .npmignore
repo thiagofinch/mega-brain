@@ -1,0 +1,205 @@
+# ===========================================
+# .npmignore - Mega Brain npm package
+# Defense-in-depth: package.json "files" is the
+# primary whitelist. This file is the SECOND layer.
+# ===========================================
+
+# === PYTHON BUILD ARTIFACTS (NEVER ship) ===
+# Explicit paths because **/ glob fails on Windows npm
+.claude/hooks/__pycache__/
+.claude/scripts/__pycache__/
+.claude/skills/chronicler/__pycache__/
+.claude/skills/**/__pycache__/
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+*.egg-info/
+
+# === PERSONAL DATA (NEVER ship) ===
+_IMPORT/
+_import/
+company/
+.company/
+archive/
+
+# === COMPANY-SPECIFIC SKILLS ===
+.claude/skills/ask-company/
+.claude/skills/process-company-inbox/
+.claude/skills/convert-to-billion-docs/
+.claude/skills/*company*
+.claude/skills/*-company-*
+
+# === PERSONAL EXPERT DATA ===
+agents/persons/**
+!agents/persons/.gitkeep
+!agents/persons/_example/
+!agents/persons/_example/**
+
+# === COMPANY DATA (sua-empresa is per-user) ===
+agents/sua-empresa/**
+!agents/sua-empresa/.gitkeep
+!agents/sua-empresa/README.md
+!agents/sua-empresa/_example/
+!agents/sua-empresa/_example/**
+
+# === PERSONAL SCRIPTS (ALL of them) ===
+SCRIPTS/
+scripts/company/
+scripts/tmp-scripts/
+
+# === DEVELOPMENT DOCS (not for customers) ===
+docs/plans/
+docs/validation/
+docs/checklists/
+docs/prd-*
+docs/stories/
+docs/referencias/
+docs/prompts/
+
+# === VOICE MODULE (Layer 3 only, not for package) ===
+system/jarvis-voice/
+
+# === IMPORT SCRIPTS WITH CREDENTIALS ===
+system/database/import-buyers.mjs
+system/database/import-buyers.sh
+
+# === COMPANY-SPECIFIC PRDS ===
+reference/prds/prd-company-*.md
+
+# === LARGE NON-TEMPLATE DIRECTORIES ===
+.venv-rag/
+.venv/
+venv/
+vendor/
+node_modules/
+chroma_db/
+.chroma/
+
+# === GIT ===
+.git/
+.gitignore
+
+# === RUNTIME STATE (per-user, not template) ===
+.claude/agent-memory/
+.claude/monitoring/
+.claude/sessions/
+.claude/learning-system/
+.claude/mission-control/
+.claude/aios/
+.claude/jarvis/STATE.json
+.claude/jarvis/DECISIONS-LOG.md
+.claude/jarvis/CONTEXT-STACK.json
+.claude/jarvis/PENDING.md
+.claude/jarvis/CURRENT-TASK.md
+.claude/settings.json
+.claude/settings.local.json
+system/JARVIS-STATE.json
+system/registry/
+system/backups/
+system/insights-*.jsonl
+system/temp/
+system/DIAGNOSTICO-*.md
+system/SESSION-STATE.md
+
+# === MCP & SECRETS ===
+.mcp.json
+mcp_servers.json
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+*.secret
+*.credentials
+credentials.json
+token.json
+token_write.json
+settings.local.json
+
+# === USER CONTENT (empty dirs created by installer) ===
+inbox/**
+!inbox/.gitkeep
+processing/chunks/**
+!processing/chunks/.gitkeep
+processing/canonical/**
+!processing/canonical/.gitkeep
+processing/insights/**
+!processing/insights/.gitkeep
+processing/narratives/**
+!processing/narratives/.gitkeep
+knowledge/dossiers/persons/**
+!knowledge/dossiers/persons/.gitkeep
+!knowledge/dossiers/persons/DOSSIER-EXAMPLE.md
+knowledge/dossiers/themes/**
+!knowledge/dossiers/themes/.gitkeep
+knowledge/dossiers/system/**
+!knowledge/dossiers/system/.gitkeep
+knowledge/sources/**
+!knowledge/sources/.gitkeep
+knowledge/playbooks/**
+!knowledge/playbooks/.gitkeep
+!knowledge/playbooks/PLAYBOOK-EXAMPLE.md
+knowledge/dna/**
+!knowledge/dna/.gitkeep
+knowledge/TAG-RESOLVER.json
+
+# === LOGS (per-user) ===
+logs/sessions/
+logs/batches/
+logs/decisions/
+logs/reports/
+logs/exports/
+logs/execution/
+logs/evolution/
+logs/council/
+logs/n8n/
+logs/audit/
+logs/chronicle/
+logs/benchmark/
+logs/*.log
+logs/*.json
+logs/*.jsonl
+logs/*.md
+
+# === CLAUDE RUNTIME ARTIFACTS ===
+.claude/audit-*.json
+
+# === MEDIA FILES ===
+*.mp4
+*.mp3
+*.wav
+*.m4a
+*.mov
+*.avi
+*.mkv
+
+# === BASE64 ENCODED FILES ===
+*.b64
+
+# === DATABASE FILES ===
+*.db
+*.sqlite
+
+# === OS & IDE ===
+.DS_Store
+Thumbs.db
+nul
+.vscode/
+.idea/
+.obsidian/
+
+# === BUILD ARTIFACTS ===
+dist/
+build/
+
+# === BACKUPS ===
+*_BACKUP_*.py
+*.bak
+*.tmp
+
+# === LARGE FILES ===
+**/SellTheAgency.com_Presentation.pdf

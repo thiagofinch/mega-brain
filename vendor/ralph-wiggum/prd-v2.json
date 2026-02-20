@@ -1,0 +1,475 @@
+{
+  "project": "[SUA EMPRESA]-MegaBrain-v2",
+  "branchName": "ralph/[sua-empresa]-mega-brain-v2",
+  "description": "[SUA EMPRESA] MEGA BRAIN v2.0 - Sistema de Inteligencia Autonoma que opera 24/7, evolui sozinho, questiona decisoes, trabalha enquanto a equipe dorme, e conduz a [SUA EMPRESA] ao objetivo de R$ 1 [META FINANCEIRA]",
+  "northStar": "Fazer a [SUA EMPRESA] chegar ao [META FINANCEIRA] atraves de um sistema que trabalha mais inteligente que qualquer humano, 24 horas por dia, eliminando 90% da margem de erro em decisoes estrategicas",
+  "sprints": [
+    {
+      "id": 1,
+      "name": "Contexto [SUA EMPRESA] Completo",
+      "weeks": "1-2",
+      "milestone": "Contexto [SUA EMPRESA] completo e consultavel",
+      "userStories": ["US-013", "US-014", "US-015", "US-016", "US-017"]
+    },
+    {
+      "id": 2,
+      "name": "Oraculo Inteligente",
+      "weeks": "3-4",
+      "milestone": "Oraculo faz 10+ perguntas antes de decisoes importantes",
+      "userStories": ["US-018", "US-019", "US-020"]
+    },
+    {
+      "id": 3,
+      "name": "Agentes Assincronos",
+      "weeks": "5-6",
+      "milestone": "3-5 agentes trabalhando enquanto dorme",
+      "userStories": ["US-024", "US-025", "US-026"]
+    },
+    {
+      "id": 4,
+      "name": "Automacoes Operacionais",
+      "weeks": "7-8",
+      "milestone": "Onboarding automatizado, planilhas sincronizadas",
+      "userStories": ["US-027", "US-028", "US-029", "US-030"]
+    },
+    {
+      "id": 5,
+      "name": "Sistema Meritocratico",
+      "weeks": "9-10",
+      "milestone": "Sistema meritocratico baseado em dados",
+      "userStories": ["US-031", "US-032", "US-033", "US-034"]
+    },
+    {
+      "id": 6,
+      "name": "ClickUp Process Auditor + Critica Autonoma",
+      "weeks": "11-12",
+      "milestone": "Sistema completo, auto-evolutivo, metodologia Process Auditor",
+      "userStories": ["US-035", "US-036", "US-037", "US-021", "US-022", "US-023"]
+    }
+  ],
+  "userStories": [
+    {
+      "id": "US-013",
+      "title": "Criar Pipeline de Ingestao [SUA EMPRESA]",
+      "description": "Como sistema, preciso de uma pipeline dedicada para processar todo conteudo marcado como [SUA EMPRESA], separado do conhecimento geral de especialistas.",
+      "phase": 2,
+      "sprint": 1,
+      "acceptanceCriteria": [
+        "Criar pasta /[sua-empresa]/inbox/ para entrada de conteudo [SUA EMPRESA]",
+        "Criar marcacao [[SUA EMPRESA]] para identificar conteudo interno",
+        "Pipeline bifurca automaticamente: conteudo [SUA EMPRESA] -> /[sua-empresa]/, conteudo externo -> /knowledge/",
+        "Processar calls internas, planilhas, decisoes, organograma",
+        "Gerar CHUNKS e INSIGHTS especificos do contexto [SUA EMPRESA]",
+        "Indexar em /[sua-empresa]/_INDEX.md com links para cada arquivo"
+      ],
+      "priority": 1,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-014",
+      "title": "Integrar Planilhas Financeiras ao Oraculo",
+      "description": "Como sistema, preciso ter acesso as planilhas financeiras da [SUA EMPRESA] para contexto em decisoes.",
+      "phase": 2,
+      "sprint": 1,
+      "acceptanceCriteria": [
+        "Conectar via Google Drive MCP as planilhas: KPIs Master ([YOUR_SHEET_ID_HERE]), DRE 2025 ([YOUR_SHEET_ID_HERE])",
+        "Criar snapshot diario dos numeros-chave em /[sua-empresa]/03-FINANCE/DAILY-SNAPSHOT.yaml",
+        "Incluir: MRR, CAC, LTV, custos fixos (~R$XXXk/mes), runway",
+        "Oraculo consulta automaticamente antes de recomendacoes financeiras",
+        "Alertas automaticos se metricas sairem de thresholds"
+      ],
+      "priority": 2,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-015",
+      "title": "Estruturar Modelo de Negocios e Flywheel",
+      "description": "Como sistema, preciso ter o modelo de negocios e flywheel documentados e consultaveis.",
+      "phase": 2,
+      "sprint": 1,
+      "acceptanceCriteria": [
+        "Criar /[sua-empresa]/07-STRATEGY/BUSINESS-MODEL.md com produtos, publico-alvo, pricing, margens, canais de aquisicao",
+        "Criar /[sua-empresa]/07-STRATEGY/FLYWHEEL.md com ciclo de crescimento, pontos de alavancagem, gargalos",
+        "Criar /[sua-empresa]/07-STRATEGY/COMPETITIVE-MOAT.md com vantagens competitivas",
+        "Agentes consultam estes arquivos antes de recomendacoes estrategicas"
+      ],
+      "priority": 3,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-016",
+      "title": "Documentar Organograma com Job Descriptions",
+      "description": "Como sistema, preciso saber quem faz o que na empresa para rotear tarefas corretamente.",
+      "phase": 2,
+      "sprint": 1,
+      "acceptanceCriteria": [
+        "Criar /[sua-empresa]/team/ORGANOGRAM.yaml com estrutura hierarquica completa",
+        "Para cada pessoa incluir: Nome, cargo, area, Reports to, Job description, KPIs, OKRs",
+        "Criar /[sua-empresa]/team/SOW/ com Statement of Work de cada cargo",
+        "Sistema sabe para quem rotear cada tipo de tarefa",
+        "Sistema sabe quais metricas cobrar de cada pessoa"
+      ],
+      "priority": 4,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-017",
+      "title": "Criar Banco de Conhecimento [SUA EMPRESA] Consultavel",
+      "description": "Como Oraculo, preciso responder perguntas sobre a [SUA EMPRESA] com contexto completo.",
+      "phase": 2,
+      "sprint": 1,
+      "acceptanceCriteria": [
+        "Implementar RAG (Retrieval Augmented Generation) para contexto [SUA EMPRESA]",
+        "Ao perguntar sobre [SUA EMPRESA], sistema consulta produtos, precos, margens, historico de vendas, perfil de cliente, scripts",
+        "Criar comando /ask-[sua-empresa] [pergunta] que injeta contexto automaticamente",
+        "Respostas incluem fonte dos dados (^[[SUA EMPRESA]:arquivo:linha])"
+      ],
+      "priority": 5,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-018",
+      "title": "Implementar Sistema de Perguntas Criticas",
+      "description": "Como Oraculo, antes de tomar decisoes importantes, devo fazer perguntas que humanos nao pensariam em fazer.",
+      "phase": 3,
+      "sprint": 2,
+      "acceptanceCriteria": [
+        "Criar /agents/protocols/CRITICAL-QUESTIONS.md com framework de perguntas",
+        "Para decisoes financeiras: minimo 10 perguntas sobre impacto, risco, alternativas",
+        "Para decisoes de contratacao: minimo 15 perguntas sobre fit, custo, ROI",
+        "Para decisoes de produto: minimo 20 perguntas sobre mercado, timing, recursos",
+        "Sistema classifica decisao por severidade (1-5) e ajusta numero de perguntas",
+        "Perguntas ancoradas em parametros fora do campo de visao humano"
+      ],
+      "priority": 6,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-019",
+      "title": "Criar Conselho de Agentes Especialistas",
+      "description": "Como sistema, preciso de um conselho de agentes que debate decisoes importantes antes de recomendar.",
+      "phase": 3,
+      "sprint": 2,
+      "acceptanceCriteria": [
+        "Criar agentes especialistas em /agents/council/: AGENT-CFO, AGENT-COO, AGENT-CMO, AGENT-CTO, AGENT-CHRO, AGENT-CRITIC",
+        "Para decisoes de severidade >= 3, convocar Conselho automaticamente",
+        "Cada agente opina com base em sua especialidade + contexto [SUA EMPRESA]",
+        "CRITIC sempre questiona consenso",
+        "Output: recomendacao final com votos e justificativas"
+      ],
+      "priority": 7,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-020",
+      "title": "Implementar War Room para Decisoes Criticas",
+      "description": "Como sistema, decisoes que afetam >R$50K ou >3 meses de trabalho passam por War Room.",
+      "phase": 3,
+      "sprint": 2,
+      "acceptanceCriteria": [
+        "Criar protocolo /agents/protocols/WAR-ROOM.md",
+        "Gatilhos automaticos: Contratacao de pessoa, Lancamento de produto, Investimento >R$50K, Mudanca de estrategia",
+        "Formato: Apresentacao do problema, Perguntas criticas, Debate entre agentes, CRITIC apresenta riscos, Votacao e recomendacao final",
+        "Log de todas as War Rooms em /logs/WAR-ROOMS/"
+      ],
+      "priority": 8,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-021",
+      "title": "Criar Agente de Evolucao do Projeto",
+      "description": "Como sistema, preciso de um agente que constantemente questiona e melhora o proprio Mega Brain.",
+      "phase": 4,
+      "sprint": 6,
+      "acceptanceCriteria": [
+        "Criar /agents/META/AGENT-EVOLUTION.md",
+        "Responsabilidades: Comparar projeto com melhores praticas, Identificar caminhos desnecessarios, Propor simplificacoes, Virar projeto de cabeca pra baixo se necessario",
+        "Rodar analise semanal do estado do projeto",
+        "Gerar /logs/EVOLUTION/WEEKLY-REVIEW-YYYY-WW.md",
+        "Propor PRs de melhoria automaticamente"
+      ],
+      "priority": 21,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-022",
+      "title": "Implementar Benchmark contra Melhores Praticas",
+      "description": "Como sistema, preciso comparar nossas praticas com o que ha de mais avancado no mercado.",
+      "phase": 4,
+      "sprint": 6,
+      "acceptanceCriteria": [
+        "Criar /reference/BENCHMARKS/ com melhores praticas de vendas, gestao, automacao, marketing",
+        "Agente compara processos [SUA EMPRESA] vs benchmarks mensalmente",
+        "Gap analysis: onde estamos vs onde deveriamos estar",
+        "Priorizacao de gaps por impacto no objetivo [META FINANCEIRA]"
+      ],
+      "priority": 22,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-023",
+      "title": "Criar Sistema de Sugestoes Proativas",
+      "description": "Como sistema, devo sugerir melhorias sem ser perguntado.",
+      "phase": 4,
+      "sprint": 6,
+      "acceptanceCriteria": [
+        "Monitorar metricas [SUA EMPRESA] continuamente",
+        "Se metrica sair de threshold, gerar alerta + sugestao",
+        "Se processo estiver ineficiente, sugerir automacao",
+        "Se codigo repetido detectado, sugerir refatoracao",
+        "Sugestoes salvas em /logs/SUGGESTIONS/",
+        "Usuario aprova/rejeita sugestoes, sistema aprende com feedback"
+      ],
+      "priority": 23,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-024",
+      "title": "Implementar Sistema de Agentes Web",
+      "description": "Como usuario, quero spawnar agentes em claude.ai que trabalham enquanto durmo.",
+      "phase": 5,
+      "sprint": 3,
+      "acceptanceCriteria": [
+        "Criar skill /spawn-agents que gera lista de tarefas para execucao noturna, formata como prompts standalone, exporta para execucao",
+        "Tipos de tarefas: Processar batches, Extrair DNAs, Gerar playbooks, Analisar metricas, Pesquisar mercado",
+        "Output padronizado para facil review matinal",
+        "Documentar em /system/ASYNC-AGENTS.md"
+      ],
+      "priority": 9,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-025",
+      "title": "Criar Protocolo de Handoff Noturno",
+      "description": "Como sistema, preciso preparar trabalho para agentes noturnos e receber resultados de manha.",
+      "phase": 5,
+      "sprint": 3,
+      "acceptanceCriteria": [
+        "Skill /goodnight que lista tarefas pendentes, prioriza por impacto, gera prompts para 3-5 agentes",
+        "Skill /goodmorning que le resultados dos agentes noturnos, consolida em relatorio, lista o que precisa de review humano",
+        "Salvar em /logs/ASYNC/NIGHT-YYYY-MM-DD.md",
+        "Agentes noturnos usam contexto [SUA EMPRESA] completo"
+      ],
+      "priority": 10,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-026",
+      "title": "Implementar Queue de Tarefas Assincronas",
+      "description": "Como sistema, preciso de uma fila de tarefas que agentes podem pegar e executar.",
+      "phase": 5,
+      "sprint": 3,
+      "acceptanceCriteria": [
+        "Criar /system/TASK-QUEUE.yaml com estrutura: id, type, priority, status, estimated_tokens, context_required",
+        "Agentes pegam tarefas da fila por prioridade",
+        "Status: pending -> in_progress -> completed/failed",
+        "Resultados salvos em /logs/ASYNC/RESULTS/"
+      ],
+      "priority": 11,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-027",
+      "title": "Automatizar Fluxo de Onboarding",
+      "description": "Como sistema, preciso automatizar o onboarding de novos colaboradores.",
+      "phase": 6,
+      "sprint": 4,
+      "acceptanceCriteria": [
+        "Criar workflow N8N [SUA EMPRESA]-Onboarding-Flow",
+        "Gatilho: nova pessoa adicionada no ClickUp (status: Contratado)",
+        "Acoes automaticas: Criar pasta Drive, Enviar email boas-vindas, Criar tarefas onboarding ClickUp, Agendar calls, Adicionar em canais",
+        "Checklist de onboarding rastreado automaticamente",
+        "Notificar gestor quando onboarding completo"
+      ],
+      "priority": 12,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-028",
+      "title": "Criar Sistema de Avaliacao de Candidatos",
+      "description": "Como sistema, preciso avaliar candidatos com base em criterios objetivos.",
+      "phase": 6,
+      "sprint": 4,
+      "acceptanceCriteria": [
+        "Criar /agents/sub-agents/AGENT-RECRUITER.md",
+        "Para cada vaga, definir criterios objetivos (skills, experiencia, fit cultural)",
+        "Agente analisa curriculo e gera score 0-100",
+        "Perguntas de entrevista geradas com base em gaps identificados",
+        "Ranking automatico de candidatos",
+        "Integracao com ClickUp para tracking"
+      ],
+      "priority": 13,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-029",
+      "title": "Automatizar Preenchimento de Planilhas",
+      "description": "Como sistema, preciso preencher planilhas automaticamente com dados do sistema.",
+      "phase": 6,
+      "sprint": 4,
+      "acceptanceCriteria": [
+        "Criar workflow N8N [SUA EMPRESA]-Spreadsheet-Sync",
+        "Conectar via Google Sheets MCP",
+        "Dados que sincronizam: Metricas de vendas -> KPIs Master, Horas trabalhadas -> Timesheet, Status projetos -> Dashboard, Pipeline -> CRM",
+        "Sync a cada 1 hora ou por gatilho",
+        "Log de alteracoes em /logs/SYNC/"
+      ],
+      "priority": 14,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-030",
+      "title": "Desencadear Sub-agentes por Mudanca de Status",
+      "description": "Como sistema, mudancas de status no ClickUp devem disparar agentes automaticamente.",
+      "phase": 6,
+      "sprint": 4,
+      "acceptanceCriteria": [
+        "Mapear status -> agente em /system/STATUS-TRIGGERS.yaml",
+        "Workflow N8N escuta webhooks do ClickUp",
+        "Dispara agente correspondente",
+        "Agente processa e atualiza tarefa",
+        "Notifica responsavel se acao humana necessaria"
+      ],
+      "priority": 15,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-031",
+      "title": "Definir KPIs por Cargo",
+      "description": "Como sistema, preciso saber quais metricas cada cargo deve entregar.",
+      "phase": 7,
+      "sprint": 5,
+      "acceptanceCriteria": [
+        "Para cada cargo em /[sua-empresa]/team/SOW/, definir 3-5 KPIs primarios, 2-3 KPIs secundarios, frequencia de medicao, thresholds verde/amarelo/vermelho",
+        "Criar dashboard de KPIs por pessoa",
+        "Alertas automaticos se KPI ficar vermelho por >X dias",
+        "Historico de performance salvo"
+      ],
+      "priority": 16,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-032",
+      "title": "Implementar Sistema de OKRs",
+      "description": "Como sistema, preciso rastrear OKRs da empresa e de cada pessoa.",
+      "phase": 7,
+      "sprint": 5,
+      "acceptanceCriteria": [
+        "Criar /[sua-empresa]/07-STRATEGY/OKRS/ com COMPANY-OKRS-Q1-2026.md, TEAM-OKRS-Q1-2026.md, INDIVIDUAL-OKRS/[pessoa].md",
+        "Key Results mensuraveis e verificaveis",
+        "Check-in semanal automatico (lembrete)",
+        "Score de 0-1 calculado automaticamente onde possivel",
+        "Retrospectiva trimestral guiada pelo sistema"
+      ],
+      "priority": 17,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-033",
+      "title": "Criar Trilha de Evolucao por Cargo",
+      "description": "Como sistema, preciso mostrar o que cada pessoa precisa fazer para subir de nivel.",
+      "phase": 7,
+      "sprint": 5,
+      "acceptanceCriteria": [
+        "Para cada cargo, definir niveis (Jr, Pleno, Senior, Lead)",
+        "Para cada nivel, definir skills necessarias, KPIs que deve atingir, tempo minimo, entregas que demonstram capacidade",
+        "Sistema avalia automaticamente elegibilidade para promocao",
+        "Sugestao de promocao quando criterios atingidos",
+        "Feedback continuo sobre gaps para proximo nivel"
+      ],
+      "priority": 18,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-034",
+      "title": "Implementar Sistema de Feedback Continuo",
+      "description": "Como sistema, preciso coletar e processar feedback sobre performance.",
+      "phase": 7,
+      "sprint": 5,
+      "acceptanceCriteria": [
+        "Criar workflow de feedback 360 trimestral",
+        "Feedback entre pares, gestores e subordinados",
+        "Perguntas estruturadas por competencia",
+        "Consolidacao anonima de feedback",
+        "Insights gerados por IA sobre padroes",
+        "Plano de desenvolvimento individual gerado"
+      ],
+      "priority": 19,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-035",
+      "title": "Implementar Task-First no ClickUp",
+      "description": "Como sistema, preciso que o ClickUp siga a metodologia Task-First do Process Auditor.",
+      "phase": 8,
+      "sprint": 6,
+      "acceptanceCriteria": [
+        "Cada tarefa deve ter: Unico responsavel, Tempo mensuravel, Input especifico, Output especifico, Definicao de done clara, Template se aplicavel",
+        "Validacao automatica: tarefa sem esses campos nao pode ser criada",
+        "Se tarefa tem 2+ responsaveis, sistema alerta: Isso nao e uma tarefa, e uma etapa"
+      ],
+      "priority": 20,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-036",
+      "title": "Criar Quality Gates Automaticos",
+      "description": "Como sistema, informacoes nao podem passar de fase sem validacao.",
+      "phase": 8,
+      "sprint": 6,
+      "acceptanceCriteria": [
+        "Definir Quality Gates por tipo de projeto em /system/QUALITY-GATES.yaml",
+        "Se validacao falha, tarefa nao avanca",
+        "Sistema notifica o que esta faltando",
+        "Log de tentativas de avanco bloqueadas"
+      ],
+      "priority": 24,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-037",
+      "title": "Decidir Executor Automaticamente",
+      "description": "Como sistema, preciso decidir se tarefa vai para Humano, Agente IA, Worker (script) ou Cron.",
+      "phase": 8,
+      "sprint": 6,
+      "acceptanceCriteria": [
+        "Criar classificador de tarefas: HUMANO (julgamento criativo), AGENTE IA (interpretacao de contexto), WORKER (deterministico), CRON (repetitivo agendado)",
+        "Ao criar tarefa, sistema sugere executor",
+        "Se tarefa sendo feita por humano poderia ser automacao, alertar",
+        "Metricas: % de tarefas por tipo de executor"
+      ],
+      "priority": 25,
+      "passes": false,
+      "notes": ""
+    }
+  ],
+  "phase1Complete": {
+    "status": true,
+    "userStories": ["US-001", "US-002", "US-003", "US-004", "US-005", "US-006", "US-007", "US-008", "US-009", "US-010", "US-011", "US-012"],
+    "notes": "Infraestrutura tecnica completa: N8N MCP configurado, workflows funcionando, ClickUp sync ativo"
+  }
+}

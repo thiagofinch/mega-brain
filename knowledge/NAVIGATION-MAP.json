@@ -1,0 +1,292 @@
+{
+  "version": "2.0.0",
+  "created": "2025-12-24T12:00:00Z",
+  "last_updated": "2026-02-18T00:00:00Z",
+  "description": "Mapa de navegacao reversa: arquivo -> secoes -> chunk_ids",
+
+  "note": "Este arquivo e atualizado automaticamente durante Phase 6.5 (Dossier Compilation) e Phase 4.1 (Sources Compilation). Permite navegacao reversa de qualquer secao ate o chunk original. Updated 2026-02-18 by Quality Uplift STATE-003.",
+
+  "usage": {
+    "forward": "DOSSIER -> section -> chunk_ids -> CHUNKS-STATE.json -> inbox/*.txt",
+    "reverse": "chunk_id -> NAVIGATION-MAP.json -> DOSSIER/SOURCE + section"
+  },
+
+  "dossiers": {
+    "persons": {
+      "DOSSIER-COLE-GORDON.md": {
+        "path": "/knowledge/dossiers/persons/DOSSIER-COLE-GORDON.md",
+        "source_ids": ["CG-SM001"],
+        "sections": {
+          "Filosofia Central": ["CG001_001", "CG001_002"],
+          "7 Beliefs Framework": ["CG001_010", "CG001_011"],
+          "6-Phase Call Flow": ["CG002_012"],
+          "Double Tie Down": ["CG002_015"],
+          "Show Rate Optimization": ["CG003_001", "CG003_002", "CG003_003"],
+          "Team Scaling": ["CG004_001", "CG004_002", "CG004_003", "CG004_004"]
+        },
+        "total_chunks": 315,
+        "last_updated": "2026-02-18"
+      },
+      "DOSSIER-ALEX-HORMOZI.md": {
+        "path": "/knowledge/dossiers/persons/DOSSIER-ALEX-HORMOZI.md",
+        "source_ids": ["AH-BP001", "AH-HR001", "AH-ML001", "AH-YT001", "AH-YT002", "AH-YT003", "AH-YT004", "AH-YT005", "AH-YT006", "AH-YT007", "AH-YT008", "AH-YT009", "AH-YT010", "AH-YT011", "AH-YT012", "AH-YT013", "AH-YT014", "AH-YT015", "AH-YT016", "AH-YT017", "AH-YT018", "AH-YT019"],
+        "sections": {
+          "_pending_mapping": true
+        },
+        "total_chunks": 793,
+        "last_updated": "2026-02-18"
+      },
+      "DOSSIER-JEREMY-HAYNES.md": {
+        "path": "/knowledge/dossiers/persons/DOSSIER-JEREMY-HAYNES.md",
+        "source_ids": [],
+        "sections": {
+          "_pending_mapping": true
+        },
+        "last_updated": "2026-02-18"
+      },
+      "DOSSIER-JEREMY-MINER.md": {
+        "path": "/knowledge/dossiers/persons/DOSSIER-JEREMY-MINER.md",
+        "source_ids": [],
+        "sections": {
+          "_pending_mapping": true
+        },
+        "last_updated": "2026-02-18"
+      },
+      "DOSSIER-JORDAN-LEE.md": {
+        "path": "/knowledge/dossiers/persons/DOSSIER-JORDAN-LEE.md",
+        "source_ids": [],
+        "sections": {
+          "_pending_mapping": true
+        },
+        "last_updated": "2026-02-18"
+      },
+      "DOSSIER-RICHARD-LINDER.md": {
+        "path": "/knowledge/dossiers/persons/DOSSIER-RICHARD-LINDER.md",
+        "source_ids": ["RL001"],
+        "sections": {
+          "_pending_mapping": true
+        },
+        "total_chunks": 22,
+        "last_updated": "2026-02-18"
+      },
+      "DOSSIER-SAM-OVEN.md": {
+        "path": "/knowledge/dossiers/persons/DOSSIER-SAM-OVEN.md",
+        "source_ids": [],
+        "sections": {
+          "_pending_mapping": true
+        },
+        "last_updated": "2026-02-18"
+      },
+      "DOSSIER-THE-SCALABLE-COMPANY.md": {
+        "path": "/knowledge/dossiers/persons/DOSSIER-THE-SCALABLE-COMPANY.md",
+        "source_ids": [],
+        "sections": {
+          "_pending_mapping": true
+        },
+        "last_updated": "2026-02-18"
+      }
+    },
+    "themes": {
+      "DOSSIER-01-ESTRUTURA-TIME.md": {
+        "path": "/knowledge/dossiers/themes/DOSSIER-01-ESTRUTURA-TIME.md",
+        "contributing_persons": ["Alex Hormozi"],
+        "sections": { "_pending_mapping": true },
+        "last_updated": "2026-02-18"
+      },
+      "DOSSIER-02-PROCESSO-VENDAS.md": {
+        "path": "/knowledge/dossiers/themes/DOSSIER-02-PROCESSO-VENDAS.md",
+        "contributing_persons": [],
+        "sections": { "_pending_mapping": true },
+        "last_updated": "2026-02-18"
+      },
+      "DOSSIER-03-CONTRATACAO.md": {
+        "path": "/knowledge/dossiers/themes/DOSSIER-03-CONTRATACAO.md",
+        "contributing_persons": [],
+        "sections": { "_pending_mapping": true },
+        "last_updated": "2026-02-18"
+      },
+      "DOSSIER-04-COMISSIONAMENTO.md": {
+        "path": "/knowledge/dossiers/themes/DOSSIER-04-COMISSIONAMENTO.md",
+        "contributing_persons": [],
+        "sections": { "_pending_mapping": true },
+        "last_updated": "2026-02-18"
+      },
+      "DOSSIER-05-METRICAS.md": {
+        "path": "/knowledge/dossiers/themes/DOSSIER-05-METRICAS.md",
+        "contributing_persons": [],
+        "sections": { "_pending_mapping": true },
+        "last_updated": "2026-02-18"
+      },
+      "DOSSIER-07-PRICING.md": {
+        "path": "/knowledge/dossiers/themes/DOSSIER-07-PRICING.md",
+        "contributing_persons": [],
+        "sections": { "_pending_mapping": true },
+        "last_updated": "2026-02-18"
+      },
+      "DOSSIER-09-GESTAO.md": {
+        "path": "/knowledge/dossiers/themes/DOSSIER-09-GESTAO.md",
+        "contributing_persons": [],
+        "sections": { "_pending_mapping": true },
+        "last_updated": "2026-02-18"
+      },
+      "DOSSIER-10-CULTURA-GAMIFICACAO.md": {
+        "path": "/knowledge/dossiers/themes/DOSSIER-10-CULTURA-GAMIFICACAO.md",
+        "contributing_persons": [],
+        "sections": { "_pending_mapping": true },
+        "last_updated": "2026-02-18"
+      },
+      "DOSSIER-5-PILARES-PRE-VENDAS.md": {
+        "path": "/knowledge/dossiers/themes/DOSSIER-5-PILARES-PRE-VENDAS.md",
+        "contributing_persons": [],
+        "sections": { "_pending_mapping": true },
+        "last_updated": "2026-02-18"
+      },
+      "DOSSIER-BUSINESS-OPERATING-SYSTEMS.md": {
+        "path": "/knowledge/dossiers/themes/DOSSIER-BUSINESS-OPERATING-SYSTEMS.md",
+        "contributing_persons": [],
+        "sections": { "_pending_mapping": true },
+        "last_updated": "2026-02-18"
+      },
+      "DOSSIER-CALL-FUNNELS.md": {
+        "path": "/knowledge/dossiers/themes/DOSSIER-CALL-FUNNELS.md",
+        "contributing_persons": [],
+        "sections": { "_pending_mapping": true },
+        "last_updated": "2026-02-18"
+      },
+      "DOSSIER-CLOSER-FRAMEWORK.md": {
+        "path": "/knowledge/dossiers/themes/DOSSIER-CLOSER-FRAMEWORK.md",
+        "contributing_persons": [],
+        "sections": { "_pending_mapping": true },
+        "last_updated": "2026-02-18"
+      },
+      "DOSSIER-CRM-AUTOMACAO.md": {
+        "path": "/knowledge/dossiers/themes/DOSSIER-CRM-AUTOMACAO.md",
+        "contributing_persons": [],
+        "sections": { "_pending_mapping": true },
+        "last_updated": "2026-02-18"
+      },
+      "DOSSIER-FUNIL-RH.md": {
+        "path": "/knowledge/dossiers/themes/DOSSIER-FUNIL-RH.md",
+        "contributing_persons": [],
+        "sections": { "_pending_mapping": true },
+        "last_updated": "2026-02-18"
+      },
+      "DOSSIER-HIERARQUIA-SDR.md": {
+        "path": "/knowledge/dossiers/themes/DOSSIER-HIERARQUIA-SDR.md",
+        "contributing_persons": [],
+        "sections": { "_pending_mapping": true },
+        "last_updated": "2026-02-18"
+      },
+      "DOSSIER-HIGH-TICKET-BR.md": {
+        "path": "/knowledge/dossiers/themes/DOSSIER-HIGH-TICKET-BR.md",
+        "contributing_persons": [],
+        "sections": { "_pending_mapping": true },
+        "last_updated": "2026-02-18"
+      },
+      "DOSSIER-KLT-FRAMEWORK.md": {
+        "path": "/knowledge/dossiers/themes/DOSSIER-KLT-FRAMEWORK.md",
+        "contributing_persons": [],
+        "sections": { "_pending_mapping": true },
+        "last_updated": "2026-02-18"
+      },
+      "DOSSIER-NEPQ-METHODOLOGY.md": {
+        "path": "/knowledge/dossiers/themes/DOSSIER-NEPQ-METHODOLOGY.md",
+        "contributing_persons": [],
+        "sections": { "_pending_mapping": true },
+        "last_updated": "2026-02-18"
+      },
+      "DOSSIER-OBJECTION-HANDLING.md": {
+        "path": "/knowledge/dossiers/themes/DOSSIER-OBJECTION-HANDLING.md",
+        "contributing_persons": [],
+        "sections": { "_pending_mapping": true },
+        "last_updated": "2026-02-18"
+      },
+      "DOSSIER-PAID-MEDIA-SCALING.md": {
+        "path": "/knowledge/dossiers/themes/DOSSIER-PAID-MEDIA-SCALING.md",
+        "contributing_persons": [],
+        "sections": { "_pending_mapping": true },
+        "last_updated": "2026-02-18"
+      },
+      "DOSSIER-SDR-OUTBOUND.md": {
+        "path": "/knowledge/dossiers/themes/DOSSIER-SDR-OUTBOUND.md",
+        "contributing_persons": [],
+        "sections": { "_pending_mapping": true },
+        "last_updated": "2026-02-18"
+      },
+      "DOSSIER-SHOW-RATES.md": {
+        "path": "/knowledge/dossiers/themes/DOSSIER-SHOW-RATES.md",
+        "contributing_persons": [],
+        "sections": { "_pending_mapping": true },
+        "last_updated": "2026-02-18"
+      }
+    },
+    "system": {
+      "DOSSIER-SISTEMA-DIGESTIVO-JARVIS.md": {
+        "path": "/knowledge/dossiers/system/DOSSIER-SISTEMA-DIGESTIVO-JARVIS.md",
+        "sections": { "_pending_mapping": true },
+        "last_updated": "2026-02-18"
+      }
+    }
+  },
+
+  "sources": {
+    "alex-hormozi": {
+      "chunk_prefix": "AH",
+      "total_source_files": 22,
+      "total_chunks": 793,
+      "_pending_full_mapping": true
+    },
+    "cole-gordon": {
+      "chunk_prefix": "CG",
+      "total_source_files": 1,
+      "total_chunks": 315,
+      "_pending_full_mapping": true
+    },
+    "richard-linder": {
+      "chunk_prefix": "RL",
+      "total_source_files": 1,
+      "total_chunks": 22,
+      "_pending_full_mapping": true
+    },
+    "unidentified": {
+      "chunk_prefix": "UNK",
+      "total_source_files": 43,
+      "note": "43 chunk files without proper source_id attribution. Require source_id assignment during next pipeline run."
+    }
+  },
+
+  "chunk_reverse_index": {
+    "_description": "Indice reverso: dado um chunk_id, encontrar onde ele aparece. Populated by Phase 6.5.",
+    "CG001_001": {
+      "appears_in": [
+        {
+          "file": "DOSSIER-COLE-GORDON.md",
+          "section": "Filosofia Central",
+          "type": "dossier_person"
+        }
+      ]
+    },
+    "CG001_010": {
+      "appears_in": [
+        {
+          "file": "DOSSIER-COLE-GORDON.md",
+          "section": "7 Beliefs Framework",
+          "type": "dossier_person"
+        }
+      ]
+    }
+  },
+
+  "statistics": {
+    "total_dossiers_persons": 10,
+    "total_dossiers_themes": 22,
+    "total_dossiers_system": 1,
+    "total_dossiers_all": 33,
+    "fully_mapped": 1,
+    "pending_section_mapping": 32,
+    "total_known_chunks": 4088,
+    "total_known_sources": 24,
+    "unidentified_sources": 43,
+    "last_index_generated": "2026-02-18T20:26:16Z"
+  }
+}

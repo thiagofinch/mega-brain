@@ -1,0 +1,68 @@
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#4a90a4', 'primaryTextColor': '#fff', 'primaryBorderColor': '#2d5a6b', 'lineColor': '#5a5a5a', 'secondaryColor': '#f4f4f4', 'tertiaryColor': '#e8e8e8'}}}%%
+
+graph TD
+    subgraph External["External Sources"]
+        YT[YouTube Video]
+        LV[Local Video/Audio]
+        DOC[Documents]
+    end
+
+    subgraph Input["00-INBOX"]
+        INBOX[(Drop Zone)]
+    end
+
+    subgraph Processing["Processing Layer"]
+        YTAPI[YouTube Transcript API]
+        AAI[AssemblyAI API]
+        AGENT[b2b-sales-expert Agent]
+    end
+
+    subgraph Commands["Claude Commands"]
+        CMD1["/process-video"]
+        CMD2["/extract-knowledge"]
+        CMD3["/scan-inbox"]
+    end
+
+    subgraph Output["KNOWLEDGE Base"]
+        K01[01-estrutura-time]
+        K02[02-processo-vendas]
+        K03[03-contratacao]
+        K04[04-comissionamento]
+        K05[05-metricas]
+        K99[99-secundario]
+    end
+
+    %% Flow
+    YT -->|URL| CMD1
+    LV -->|File path| CMD1
+    DOC --> INBOX
+
+    CMD1 -->|YouTube| YTAPI
+    CMD1 -->|Local| AAI
+
+    YTAPI --> INBOX
+    AAI --> INBOX
+
+    CMD3 -->|Scans| INBOX
+    INBOX -->|Transcript| CMD2
+
+    CMD2 --> AGENT
+    AGENT -->|Classify| K01
+    AGENT -->|Classify| K02
+    AGENT -->|Classify| K03
+    AGENT -->|Classify| K04
+    AGENT -->|Classify| K05
+    AGENT -->|Classify| K99
+
+    %% Styling
+    classDef external fill:#e3f2fd,stroke:#1976d2
+    classDef input fill:#fff3e0,stroke:#f57c00
+    classDef processing fill:#e8f5e9,stroke:#388e3c
+    classDef command fill:#fce4ec,stroke:#c2185b
+    classDef output fill:#f3e5f5,stroke:#7b1fa2
+
+    class YT,LV,DOC external
+    class INBOX input
+    class YTAPI,AAI,AGENT processing
+    class CMD1,CMD2,CMD3 command
+    class K01,K02,K03,K04,K05,K99 output

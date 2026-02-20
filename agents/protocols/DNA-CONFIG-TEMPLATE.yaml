@@ -1,0 +1,181 @@
+# DNA-CONFIG-TEMPLATE.yaml - Template para Configuração de DNA de Agentes
+#
+# Versao: 2.0.0
+# Data: 2025-12-25
+# Proposito: Template padrao para criacao de DNA-CONFIG.yaml
+# Integrado com: AGENT-COGNITION-PROTOCOL (FASE 1.5), AGENT-INTEGRITY-PROTOCOL
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+# REGRA INQUEBRÁVEL: RASTREABILIDADE 100%
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# Todo DNA deve ter paths verificáveis até inbox
+# Cada pessoa/domínio deve ter insight_ids e chunk_ids rastreáveis
+#
+# Navegação: DNA-CONFIG → PESSOA/DNA.yaml → INSIGHTS-STATE.json → CHUNKS → inbox
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# METADADOS DO CARGO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+cargo: "{NOME_DO_CARGO}"          # Ex: "CFO", "closer", "BDR"
+versao: "1.0.0"
+nivel: "{NIVEL}"                  # Ex: "C-LEVEL", "SALES", "OPERATIONS"
+natureza: "{HIBRIDO|SOLO}"        # HIBRIDO = múltiplas fontes, SOLO = uma pessoa
+data_criacao: "{DATA}"
+ultima_atualizacao: "{DATA}"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# CONSTITUIÇÃO (Layer 1 - Princípios compartilhados)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+constituicao:
+  path: "/agents/CONSTITUTION/BASE-CONSTITUTION.md"
+  descricao: "Princípios éticos e operacionais base para todos os agentes"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# MEMÓRIA DO CARGO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+memoria:
+  path: "./MEMORY.md"
+  versao: "X.Y.Z"
+  descricao: "Experiência acumulada deste cargo"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# SOUL DO CARGO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+soul:
+  path: "./SOUL.md"
+  versao: "X.Y"
+  descricao: "Identidade e consciência viva do agente"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# FONTES DE DNA - COM RASTREABILIDADE COMPLETA
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# IMPORTANTE: Cada fonte deve ter:
+# - path: Caminho até o DNA extraído
+# - raiz: Caminho até inbox com materiais originais
+# - dominios_usados: Quais temas são usados desta fonte
+# - insight_ids: Lista de insights relevantes em INSIGHTS-STATE.json
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+
+dna_sources:
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # FONTES AGREGADAS (multi-pessoa, por tema)
+  # ───────────────────────────────────────────────────────────────────────────
+
+  agregado:
+    - dominio: "{DOMINIO}"                                    # Ex: "compensation"
+      path: "/knowledge/dna/AGGREGATED/AGG-{DOMINIO}.yaml"
+      peso: 0.90                                              # 0.0 a 1.0
+      quando_usar: "{Contexto de aplicação}"
+      insight_ids:                                            # RASTREABILIDADE
+        - "insight_XXX"
+        - "insight_YYY"
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # FONTES PRIMÁRIAS (por pessoa)
+  # ───────────────────────────────────────────────────────────────────────────
+
+  primario:
+    - pessoa: "{NOME_CANONICO}"                               # Ex: "alex-hormozi"
+      path: "/knowledge/dna/persons/{NOME_CANONICO}"       # Diretório do DNA
+      raiz: "/inbox/{PASTA_PESSOA}/"                       # RASTREABILIDADE: inbox
+      dominios_usados:
+        - "{dominio_1}"                                       # Ex: "scaling"
+        - "{dominio_2}"                                       # Ex: "offers"
+      peso: 0.85                                              # 0.0 a 1.0
+      quando_usar: "{Contexto de aplicação}"
+      insight_ids:                                            # RASTREABILIDADE
+        - "insight_XXX"
+        - "insight_YYY"
+      chunk_ids:                                              # RASTREABILIDADE GRANULAR
+        - "chunk_XXX"
+        - "chunk_YYY"
+      materiais_fonte:                                        # RASTREABILIDADE COMPLETA
+        - titulo: "{TITULO_DO_MATERIAL}"
+          path_raiz: "/inbox/{PESSOA}/{TIPO}/{ARQUIVO}.txt"
+          tipo: "{podcast|masterclass|curso|livro}"
+          data_processamento: "{DATA}"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# MAPA DE CONFLITOS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+conflitos:
+  path: "/knowledge/dna/MAPS/MAP-CONFLITOS.yaml"
+  descricao: "Mapa de tensões entre fontes com resoluções documentadas"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# REGRAS DE RESOLUÇÃO DE CONFLITOS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+resolucao_de_conflitos:
+  regra_geral: |
+    1. Consenso forte → usar sem ressalva
+    2. Consenso parcial → usar com nota
+    3. Conflito mapeado → aplicar regra de MAP-CONFLITOS
+    4. Conflito não mapeado → apresentar opções ao usuário
+
+  preferencias_contextuais:
+    - contexto: "{CONTEXTO_1}"                                # Ex: "conservador/risco"
+      priorizar: "{PESSOA}"                                   # Ex: "SAM-OVEN"
+      razao: "{Justificativa}"
+      fonte: "^[insight_id ou chunk_id]"                      # RASTREABILIDADE
+
+    - contexto: "{CONTEXTO_2}"
+      priorizar: "{PESSOA}"
+      razao: "{Justificativa}"
+      fonte: "^[insight_id ou chunk_id]"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# PROTOCOLO DE RACIOCÍNIO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+raciocinio:
+  path: "/system/protocols/dna/REASONING-MODEL-PROTOCOL.md"
+  descricao: "Como o agente deve raciocinar com o DNA"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# REGRAS ESPECÍFICAS DO CARGO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+regras_especificas:
+  foco: "{Foco principal do cargo}"
+
+  heuristicas_prioritarias:
+    - heuristica: "{Heurística 1}"
+      fonte: "^[chunk_id]"                                    # RASTREABILIDADE
+      path_raiz: "/inbox/.../arquivo.txt:linha"
+
+    - heuristica: "{Heurística 2}"
+      fonte: "^[chunk_id]"
+      path_raiz: "/inbox/.../arquivo.txt:linha"
+
+  restricoes:
+    - restricao: "{Restrição 1}"
+      fonte: "^[chunk_id]"                                    # RASTREABILIDADE
+      path_raiz: "/inbox/.../arquivo.txt:linha"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# VALIDAÇÃO DE RASTREABILIDADE
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# CHECKLIST antes de publicar:
+# [ ] Toda fonte primária tem raiz com path para inbox
+# [ ] Insight_ids existem em INSIGHTS-STATE.json
+# [ ] Chunk_ids existem em CHUNKS-STATE.json
+# [ ] Heurísticas têm fonte e path_raiz
+# [ ] Preferências contextuais têm fonte
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Fim do DNA-CONFIG-TEMPLATE.yaml v2.0.0
+# Integrado com AGENT-COGNITION-PROTOCOL (FASE 1.5) e AGENT-INTEGRITY-PROTOCOL

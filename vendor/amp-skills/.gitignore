@@ -1,0 +1,27 @@
+# Browser profile data (contains sensitive cookies, cache, etc.)
+dev-browser/profiles/
+dev-browser/tmp/
+
+# Node modules
+node_modules/
+**/node_modules/
+
+# OS files
+.DS_Store
+
+# Lock files
+package-lock.json
+
+# Private skills (not for public repo)
+brand-voice/
+content-atomizer/
+direct-response-copy/
+email-sequences/
+keyword-research/
+lead-magnet/
+newsletter/
+orchestrator/
+positioning-angles/
+seo-content/
+web-artifacts-builder/
+xlsx/

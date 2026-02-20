@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "insights-state.schema.json",
+  "title": "Insights State",
+  "description": "Schema for INSIGHTS-STATE.json - extracted actionable insights",
+  "type": "object",
+  "required": ["insights_state"],
+  "properties": {
+    "insights_state": {
+      "type": "object",
+      "required": ["persons", "themes", "version", "change_log"],
+      "properties": {
+        "persons": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/insight"
+            }
+          }
+        },
+        "themes": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/insight"
+            }
+          }
+        },
+        "version": {
+          "type": "string"
+        },
+        "change_log": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/change_entry"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "insight": {
+      "type": "object",
+      "required": ["chunk_id", "insight", "priority", "scope", "corpus", "source", "confidence", "status"],
+      "properties": {
+        "chunk_id": {
+          "type": "string",
+          "pattern": "^[A-Z]{2,4}\\d{3}-\\d{3}$"
+        },
+        "insight": {
+          "type": "string",
+          "minLength": 10,
+          "description": "Actionable insight text"
+        },
+        "priority": {
+          "type": "string",
+          "enum": ["high", "medium", "low"]
+        },
+        "scope": {
+          "type": "string",
+          "enum": ["company", "personal", "course"]
+        },
+        "corpus": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/definitions/source_ref"
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "status": {
+          "type": "string",
+          "enum": ["new", "updated", "contradiction", "reinforced"]
+        }
+      }
+    },
+    "source_ref": {
+      "type": "object",
+      "required": ["source_type", "source_id", "source_title"],
+      "properties": {
+        "source_type": {"type": "string"},
+        "source_id": {"type": "string"},
+        "source_title": {"type": "string"},
+        "source_path": {"type": "string"},
+        "source_datetime": {"type": "string"}
+      }
+    },
+    "change_entry": {
+      "type": "object",
+      "required": ["entity", "key", "chunk_id", "change"],
+      "properties": {
+        "entity": {
+          "type": "string",
+          "enum": ["person", "theme"]
+        },
+        "key": {"type": "string"},
+        "chunk_id": {"type": "string"},
+        "change": {
+          "type": "string",
+          "enum": ["new", "update", "contradiction", "reinforced"]
+        },
+        "note": {"type": "string"}
+      }
+    }
+  }
+}

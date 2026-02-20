@@ -1,0 +1,322 @@
+# DEBATE-DYNAMICS-CONFIG.yaml
+# Configuracao central para dinamica de debate entre agentes
+# Referenciado por: DEBATE-DYNAMICS-PROTOCOL.md
+
+versao: "1.0.0"
+ultima_atualizacao: "2025-12-25"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# RODADAS DE DEBATE
+# ═══════════════════════════════════════════════════════════════════════════════
+
+debate:
+  rounds:
+    min: 1                    # Minimo de rodadas (sempre executa pelo menos 1)
+    typical: 2                # Numero tipico de rodadas
+    max: 3                    # Maximo antes de circuit breaker
+
+  tipos_rodada:
+    - id: "posicoes_iniciais"
+      descricao: "Cada agente apresenta posicao isoladamente"
+      execucao: "paralela"
+      rodada: 1
+
+    - id: "rebatidas_cruzadas"
+      descricao: "Agentes veem e respondem posicoes dos outros"
+      execucao: "sequencial"
+      rodada: 2
+
+    - id: "refinamento_final"
+      descricao: "Foco apenas em divergencias restantes"
+      execucao: "foco_divergencias"
+      rodada: 3
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# CONVERGENCIA
+# ═══════════════════════════════════════════════════════════════════════════════
+
+convergence:
+  threshold: 70               # Percentual minimo para considerar convergido
+
+  criterios:
+    - id: "recomendacao_final"
+      peso: 30
+      descricao: "Agentes chegaram a mesma recomendacao?"
+
+    - id: "premissas_base"
+      peso: 25
+      descricao: "Premissas fundamentais sao as mesmas?"
+
+    - id: "riscos_identificados"
+      peso: 25
+      descricao: "Mesmos riscos foram identificados?"
+
+    - id: "timing_proposto"
+      peso: 20
+      descricao: "Concordam no timing de execucao?"
+
+  calculo: |
+    convergencia = soma(criterio.peso * criterio.concordancia) / soma(criterio.peso)
+
+    Onde concordancia = 1.0 (total), 0.5 (parcial), 0.0 (divergencia)
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# TIMEOUTS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+timeout:
+  per_agent:
+    seconds: 30
+    acao_exceder: "usar_resposta_parcial"
+
+  per_round:
+    seconds: 120
+    acao_exceder: "encerrar_rodada"
+
+  total:
+    seconds: 300
+    acao_exceder: "circuit_breaker"
+
+  rag_query:
+    seconds: 15
+    acao_exceder: "abortar_consulta"
+
+  council:
+    seconds: 180
+    acao_exceder: "forcar_sintese"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# CIRCUIT BREAKER
+# ═══════════════════════════════════════════════════════════════════════════════
+
+circuit_breaker:
+  enabled: true
+
+  max_iterations: 5           # Maximo de iteracoes totais (rodadas + refinamentos)
+  max_refinements: 2          # Maximo de loops de refinamento
+
+  triggers:
+    - id: "max_rounds"
+      condition: "rodadas >= 3"
+      acao: "forcar_sintese"
+      escalar_para: "council"
+
+    - id: "max_iterations"
+      condition: "iteracoes >= 5"
+      acao: "parar_imediatamente"
+      escalar_para: "humano"
+
+    - id: "max_refinements"
+      condition: "refinamentos >= 2"
+      acao: "declarar_impasse"
+      escalar_para: "council"
+
+    - id: "timeout_total"
+      condition: "tempo >= 300s"
+      acao: "abortar"
+      escalar_para: "humano"
+
+    - id: "loop_detectado"
+      condition: "hash_posicoes == hash_anterior por 2 rodadas"
+      acao: "declarar_loop"
+      escalar_para: "council"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# RAG (RETRIEVAL AUGMENTED GENERATION)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+rag:
+  internal:
+    enabled: true
+    max_queries: 5            # Maximo de consultas por debate
+    timeout: 15               # Segundos por consulta
+
+    scope:
+      - "knowledge/"
+      - "processing/insights/"
+      - "processing/narratives/"
+
+    formato_citacao: "[RAG:{chunk_id}]"
+
+  external:
+    enabled: false            # PROIBIDO busca externa
+    motivo: "Controle de qualidade e rastreabilidade"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# ESCALACAO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+escalation:
+  para_council:
+    triggers:
+      - condicao: "convergencia_final < 70%"
+        obrigatorio: true
+
+      - condicao: "confianca_sintese < 70%"
+        obrigatorio: true
+
+      - condicao: "divergencia_critica == true"
+        obrigatorio: true
+
+      - condicao: "valor_em_risco > 100000"  # R$100k
+        obrigatorio: true
+
+      - condicao: "decisao_irreversivel == true"
+        obrigatorio: true
+
+  para_humano:
+    triggers:
+      - condicao: "confianca < 50%"
+        obrigatorio: true
+        motivo: "Confianca muito baixa para decisao autonoma"
+
+      - condicao: "circuit_breaker == max_iterations"
+        obrigatorio: true
+        motivo: "Limite de iteracoes atingido"
+
+      - condicao: "tipo_incerteza == fora_do_escopo"
+        obrigatorio: true
+        motivo: "Conhecimento insuficiente no sistema"
+
+      - condicao: "risco == CATASTROFICO"
+        obrigatorio: true
+        motivo: "Risco catastrofico identificado"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# CONFIANCA
+# ═══════════════════════════════════════════════════════════════════════════════
+
+confidence:
+  thresholds:
+    alta:
+      min: 80
+      max: 100
+      acao: "emitir_decisao"
+      council: false
+
+    media:
+      min: 50
+      max: 79
+      acao: "avaliar_risco"
+      council: "condicional"
+
+    baixa:
+      min: 0
+      max: 49
+      acao: "escalar_humano"
+      council: false  # Vai direto para humano
+
+  ajustes:
+    - condicao: "timeout_ocorreu"
+      ajuste: -10
+
+    - condicao: "circuit_breaker_ativado"
+      ajuste: -15
+
+    - condicao: "loop_detectado"
+      ajuste: -20
+
+    - condicao: "rag_falhou"
+      ajuste: -5
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# LOGGING
+# ═══════════════════════════════════════════════════════════════════════════════
+
+logging:
+  enabled: true
+
+  output:
+    console: true
+    file: "logs/SYSTEM/debate-execution.log"
+
+  nivel: "INFO"  # DEBUG, INFO, WARN, ERROR
+
+  campos:
+    - session_id
+    - timestamp
+    - query
+    - participantes
+    - rodadas
+    - convergencia
+    - confianca
+    - escalacao
+    - duracao_ms
+    - rag_queries
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# VALIDACAO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+validation:
+  pre_debate:
+    - check: "pergunta_clara"
+      required: true
+
+    - check: "agentes_selecionados"
+      required: true
+      min_agentes: 2
+
+    - check: "rag_disponivel"
+      required: false
+
+  pos_debate:
+    - check: "sintese_gerada"
+      required: true
+
+    - check: "confianca_calculada"
+      required: true
+
+    - check: "log_finalizado"
+      required: true
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# METRICAS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+metrics:
+  track:
+    - nome: "tempo_medio_rodada"
+      tipo: "duracao"
+
+    - nome: "taxa_convergencia"
+      tipo: "percentual"
+
+    - nome: "taxa_escalacao_council"
+      tipo: "percentual"
+
+    - nome: "taxa_escalacao_humano"
+      tipo: "percentual"
+
+    - nome: "consultas_rag_por_debate"
+      tipo: "contador"
+
+    - nome: "circuit_breakers_ativados"
+      tipo: "contador"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# RISCO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+risk:
+  categorias:
+    - id: "CATASTROFICO"
+      impacto: "Perda > R$1M ou dano irreparavel"
+      acao: "escalar_humano_imediato"
+
+    - id: "SEVERO"
+      impacto: "Perda R$100k-R$1M ou dano significativo"
+      acao: "council_obrigatorio"
+
+    - id: "MODERADO"
+      impacto: "Perda R$10k-R$100k ou dano recuperavel"
+      acao: "council_recomendado"
+
+    - id: "BAIXO"
+      impacto: "Perda < R$10k ou dano minimo"
+      acao: "debate_suficiente"
+
+  valor_referencia:
+    moeda: "BRL"
+    threshold_alto: 100000   # R$100k
+    threshold_medio: 10000   # R$10k

@@ -1,0 +1,4 @@
+# Force LF line endings for bin files (shebang compatibility)
+bin/**/*.js text eol=lf
+bin/templates/* text eol=lf
+scripts/*.sh text eol=lf

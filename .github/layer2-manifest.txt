@@ -1,0 +1,41 @@
+# Layer 2 Manifest - PREMIUM content (MoneyClub members)
+***REMOVED***=========
+# Layer 2 = Layer 1 (all public content)
+#         + PREMIUM folders listed below
+#
+# These folders contain the "brain" - the valuable content
+# that differentiates premium from community shell.
+#
+# RULE: Layer 2 excludes Layer 3 personal data.
+***REMOVED***=========
+
+# === PREMIUM ADDITIONS (on top of Layer 1) ===
+
+# Knowledge base (pre-digested expert content)
+knowledge/dossiers/
+knowledge/playbooks/
+knowledge/dna/
+knowledge/sources/
+
+# Expert agents (cloned minds)
+agents/persons/
+
+# Cargo agents (C-level, sales, marketing roles)
+agents/cargo/
+
+# Processed content
+processing/
+
+# === LAYER 3 EXCLUSIONS (never in Layer 2) ===
+# These are stripped from Layer 2 pushes:
+#   - inbox/          (raw user uploads)
+#   - logs/           (session logs)
+#   - .env*           (API keys)
+#   - .mcp.json       (MCP secrets)
+#   - .claude/agent-memory/  (runtime state)
+#   - .claude/aios/          (runtime state)
+#   - .claude/sessions/      (runtime state)
+#   - .claude/monitoring/    (runtime state)
+#   - system/backups/        (personal backups)
+#   - system/jarvis-voice/audiobooks/  (personal audio)
+#   - .company/        (company data - Layer 3)

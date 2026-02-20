@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARVIS Voice Test</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #00d4ff, #0099ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            color: #888;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        #call-button {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: none;
+            background: linear-gradient(135deg, #00d4ff, #0066ff);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 40px rgba(0, 150, 255, 0.3);
+        }
+
+        #call-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 50px rgba(0, 150, 255, 0.4);
+        }
+
+        #call-button.active {
+            background: linear-gradient(135deg, #ff4444, #ff0066);
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 0, 102, 0.4); }
+            70% { box-shadow: 0 0 0 20px rgba(255, 0, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 0, 102, 0); }
+        }
+
+        #call-button svg {
+            width: 50px;
+            height: 50px;
+            fill: white;
+        }
+
+        #status {
+            font-size: 1.2rem;
+            color: #00d4ff;
+            margin-bottom: 20px;
+            min-height: 30px;
+        }
+
+        #transcript {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+            min-height: 100px;
+            text-align: left;
+        }
+
+        #transcript p {
+            margin: 10px 0;
+            padding: 10px 15px;
+            border-radius: 10px;
+        }
+
+        #transcript .user {
+            background: rgba(0, 150, 255, 0.2);
+            margin-left: 20%;
+        }
+
+        #transcript .assistant {
+            background: rgba(100, 100, 100, 0.2);
+            margin-right: 20%;
+        }
+
+        .instructions {
+            margin-top: 40px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JARVIS</h1>
+        <p class="subtitle">Mega Brain Voice Interface</p>
+
+        <button id="call-button" onclick="toggleCall()">
+            <svg id="mic-icon" viewBox="0 0 24 24">
+                <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm-1-9c0-.55.45-1 1-1s1 .45 1 1v6c0 .55-.45 1-1 1s-1-.45-1-1V5z"/>
+                <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+            </svg>
+            <svg id="stop-icon" viewBox="0 0 24 24" style="display:none">
+                <path d="M6 6h12v12H6z"/>
+            </svg>
+        </button>
+
+        <div id="status">Clique para iniciar</div>
+
+        <div id="transcript"></div>
+
+        <p class="instructions">
+            Fale naturalmente em português.<br>
+            JARVIS responderá por voz.
+        </p>
+    </div>
+
+    <script>
+        // IMPORTANT: Set these via environment or replace before deploying
+        const VAPI_PUBLIC_KEY = '[REDACTED - set VAPI_API_KEY in .env]';
+        const ASSISTANT_ID = '[REDACTED - set VAPI_ASSISTANT_ID in .env]';
+
+        let vapi = null;
+        let isCallActive = false;
+
+        // Carregar SDK do Vapi
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/@vapi-ai/web@latest/dist/vapi-web.js';
+        script.onload = initVapi;
+        document.head.appendChild(script);
+
+        function initVapi() {
+            vapi = new window.Vapi(VAPI_PUBLIC_KEY);
+
+            vapi.on('call-start', () => {
+                document.getElementById('status').textContent = 'Conectado - Fale com JARVIS';
+                document.getElementById('call-button').classList.add('active');
+                document.getElementById('mic-icon').style.display = 'none';
+                document.getElementById('stop-icon').style.display = 'block';
+                isCallActive = true;
+            });
+
+            vapi.on('call-end', () => {
+                document.getElementById('status').textContent = 'Chamada encerrada';
+                document.getElementById('call-button').classList.remove('active');
+                document.getElementById('mic-icon').style.display = 'block';
+                document.getElementById('stop-icon').style.display = 'none';
+                isCallActive = false;
+            });
+
+            vapi.on('speech-start', () => {
+                document.getElementById('status').textContent = 'JARVIS está falando...';
+            });
+
+            vapi.on('speech-end', () => {
+                document.getElementById('status').textContent = 'Sua vez de falar';
+            });
+
+            vapi.on('message', (msg) => {
+                if (msg.type === 'transcript') {
+                    addTranscript(msg.role, msg.transcript);
+                }
+            });
+
+            vapi.on('error', (e) => {
+                console.error('Vapi error:', e);
+                document.getElementById('status').textContent = 'Erro: ' + (e.message || 'Desconhecido');
+            });
+
+            document.getElementById('status').textContent = 'Pronto - Clique para iniciar';
+        }
+
+        function toggleCall() {
+            if (!vapi) {
+                alert('SDK ainda carregando...');
+                return;
+            }
+
+            if (isCallActive) {
+                vapi.stop();
+            } else {
+                document.getElementById('status').textContent = 'Conectando...';
+                document.getElementById('transcript').innerHTML = '';
+                vapi.start(ASSISTANT_ID);
+            }
+        }
+
+        function addTranscript(role, text) {
+            if (!text) return;
+            const div = document.getElementById('transcript');
+            const p = document.createElement('p');
+            p.className = role === 'user' ? 'user' : 'assistant';
+            p.textContent = (role === 'user' ? 'Você: ' : 'JARVIS: ') + text;
+            div.appendChild(p);
+            div.scrollTop = div.scrollHeight;
+        }
+    </script>
+</body>
+</html>

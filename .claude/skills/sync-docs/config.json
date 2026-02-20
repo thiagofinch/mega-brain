@@ -1,0 +1,37 @@
+{
+  "google": {
+    "oauth_keys_path": "~/.config/mcp-gdrive/gcp-oauth.keys.json",
+    "token_path": "~/.config/mcp-gdrive/.gdrive-server-credentials.json",
+    "target_folder_id": "YOUR_GOOGLE_DRIVE_FOLDER_ID",
+    "default_folder": "DOCUMENTACAO",
+    "folder_mapping": {
+      "templates": "Templates",
+      "playbooks": "Playbooks",
+      "standards": "Standards",
+      "knowledge": "Knowledge-Base",
+      "strategy": "Strategy",
+      "reports": "Reports"
+    }
+  },
+  "github": {
+    "repo": "Mega Brain",
+    "branch": "main",
+    "commit_prefix": "docs: sync",
+    "auto_push": true
+  },
+  "validation": {
+    "max_file_size_kb": 5000,
+    "sensitive_patterns": [
+      "API_KEY",
+      "SECRET",
+      "PASSWORD",
+      "CREDENTIALS",
+      "PRIVATE_KEY"
+    ]
+  },
+  "paths": {
+    "company_core": "/path/to/your/COMPANY-CORE",
+    "mega_brain": "/path/to/your/Mega-Brain",
+    "aios_core": "/path/to/your/.aios-core"
+  }
+}

@@ -1,0 +1,55 @@
+name: Publish to npm
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      version_bump:
+        description: 'Version bump type'
+        required: true
+        default: 'patch'
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Verify package
+        run: |
+          echo "Verifying package..."
+          node --check bin/cli.js
+          node --check bin/mega-brain.js
+          node --check bin/lib/installer.js
+          node --check bin/lib/validate-email.js
+          node --check bin/lib/ascii-art.js
+          node --check bin/lib/setup-wizard.js
+          node --check bin/push.js
+          echo "All syntax checks passed"
+
+      - name: Dry run pack
+        run: |
+          npm pack --dry-run 2>&1 | tail -10
+          echo "Package ready for publish"
+
+      - name: Publish to npm
+        run: npm publish --access public --provenance
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

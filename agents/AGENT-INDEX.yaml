@@ -1,0 +1,175 @@
+# AGENT INDEX - Mega Brain
+# Version: 4.0.0
+# Updated: 2026-02-18
+# Source: Filesystem inventory of agents/
+
+***REMOVED***=================================
+# PERSON AGENTS (5) - Mind clones de experts
+***REMOVED***=================================
+persons:
+  - slug: alex-hormozi
+    name: Alex Hormozi
+    source_ids: [AH]
+    path: agents/persons/alex-hormozi/
+    memory: .claude/agent-memory/alex-hormozi/MEMORY.md
+    status: active
+
+  - slug: cole-gordon
+    name: Cole Gordon
+    source_ids: [CG]
+    path: agents/persons/cole-gordon/
+    memory: .claude/agent-memory/cole-gordon/MEMORY.md
+    status: active
+
+  - slug: jeremy-haynes
+    name: Jeremy Haynes
+    source_ids: [JH, JH-CA]
+    path: agents/persons/jeremy-haynes/
+    memory: .claude/agent-memory/jeremy-haynes/MEMORY.md
+    status: active
+
+  - slug: jeremy-miner
+    name: Jeremy Miner
+    source_ids: [JM]
+    path: agents/persons/jeremy-miner/
+    memory: .claude/agent-memory/jeremy-miner/MEMORY.md
+    status: active
+
+  - slug: the-scalable-company
+    name: The Scalable Company
+    source_ids: [TSC]
+    path: agents/persons/the-scalable-company/
+    memory: .claude/agent-memory/the-scalable-company/MEMORY.md
+    status: active
+
+***REMOVED***=================================
+# CARGO AGENTS (5 groups) - Posicoes funcionais
+***REMOVED***=================================
+cargo:
+  - group: c-level
+    path: agents/cargo/c-level/
+    agents: [cro, cfo, cmo, coo]
+    status: active
+
+  - group: cfo
+    path: agents/cargo/cfo/
+    memory: .claude/agent-memory/cfo/MEMORY.md
+    status: active
+
+  - group: closer
+    path: agents/cargo/closer/
+    memory: .claude/agent-memory/closer/MEMORY.md
+    status: active
+
+  - group: marketing
+    path: agents/cargo/marketing/
+    status: active
+
+  - group: sales
+    path: agents/cargo/sales/
+    memory: .claude/agent-memory/bdr/MEMORY.md
+    status: active
+
+  shared_rules: agents/cargo/SHARED-RULES.md
+
+***REMOVED***=================================
+# COUNCIL AGENTS (3) - Decisao coletiva
+***REMOVED***=================================
+council:
+  - slug: advogado-do-diabo
+    name: Advogado do Diabo
+    path: agents/council/advogado-do-diabo/
+    status: active
+
+  - slug: critico-metodologico
+    name: Critico Metodologico
+    path: agents/council/critico-metodologico/
+    status: active
+
+  - slug: sintetizador
+    name: Sintetizador
+    path: agents/council/sintetizador/
+    memory: .claude/agent-memory/synthesizer/MEMORY.md
+    status: active
+
+***REMOVED***=================================
+# SYSTEM AGENTS (4 autonomous + 4 sub-agents)
+***REMOVED***=================================
+autonomous:
+  - slug: benchmark
+    path: agents/autonomous/AGENT-BENCHMARK.md
+    status: active
+
+  - slug: critic
+    path: agents/autonomous/AGENT-CRITIC.md
+    memory: .claude/agent-memory/critic/MEMORY.md
+    status: active
+
+  - slug: evolver
+    path: agents/autonomous/AGENT-EVOLVER.md
+    status: active
+
+  - slug: playbook-generator
+    path: agents/autonomous/PLAYBOOK-GENERATOR.md
+    status: active
+
+sub_agents:
+  - slug: devops
+    path: agents/sub-agents/AGENT-DEVOPS.md
+    memory: .claude/agent-memory/devops/MEMORY.md
+    status: active
+
+  - slug: pipeline-master
+    path: agents/sub-agents/AGENT-PIPELINE-MASTER.md
+    memory: .claude/agent-memory/pipeline-master/MEMORY.md
+    status: active
+
+  - slug: sentinel-org
+    path: agents/sub-agents/AGENT-SENTINEL-ORG.md
+    memory: .claude/agent-memory/sentinel-org/MEMORY.md
+    status: active
+
+  - slug: status-trigger
+    path: agents/sub-agents/AGENT-STATUS-TRIGGER.md
+    status: active
+
+***REMOVED***=================================
+# INFRASTRUCTURE
+***REMOVED***=================================
+infrastructure:
+  boardroom:
+    path: agents/boardroom/
+    status: dead-infrastructure
+    purpose: Strategic decision system (designed but never wired to hooks/skills)
+    audit_date: 2026-02-18
+    audit_result: No references in hooks/ or skills/. Candidate for archive/.
+
+  shared_memory:
+    path: agents/shared-memory/
+    files: [ALERTS.yaml, CONTEXTS.yaml, DECISIONS.yaml, QUEUE.yaml, STATES.yaml]
+    status: dead-infrastructure
+    audit_date: 2026-02-18
+    audit_result: Well-structured YAML but all counters at 0. No hooks reference these files. Last updated 2026-01-11.
+
+  org_live:
+    path: agents/org-live/
+    purpose: Live organizational chart
+    status: active
+
+  discovery:
+    path: agents/discovery/
+    purpose: New expert tracking
+    status: active
+
+***REMOVED***=================================
+# TOTALS
+***REMOVED***=================================
+totals:
+  persons: 5
+  cargo_groups: 5
+  council: 3
+  autonomous: 4
+  sub_agents: 4
+  total_active: 21
+  with_memory: 14
+  archived: 4
