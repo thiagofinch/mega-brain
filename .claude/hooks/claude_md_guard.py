@@ -17,6 +17,10 @@ Architecture Rule Enforced:
 VETO CONDITIONS:
   - Any Write/Edit targeting a CLAUDE.md outside sanctioned paths -> BLOCK
   - Any content containing <claude-mem-context> outside .claude/ -> BLOCK
+
+ERROR HANDLING: fail-CLOSED (2026-02-22 hardening)
+  - JSONDecodeError -> BLOCK (can't parse = can't validate)
+  - Any Exception -> BLOCK (unknown error = can't validate)
 """
 
 import json
@@ -133,12 +137,16 @@ def main():
         }))
 
     except json.JSONDecodeError:
-        print(json.dumps({"decision": "allow"}))
-    except Exception as e:
-        # Fail-open: don't block on errors
+        # Fail-CLOSED: can't parse input = can't validate = BLOCK
         print(json.dumps({
-            "decision": "allow",
-            "message": f"CLAUDE.md Guard error (fail-open): {str(e)}"
+            "decision": "block",
+            "reason": "CLAUDE.md Guard: Cannot parse hook input (malformed JSON). Blocking by default."
+        }))
+    except Exception as e:
+        # Fail-CLOSED: unknown error = can't validate = BLOCK
+        print(json.dumps({
+            "decision": "block",
+            "reason": f"CLAUDE.md Guard error (fail-closed): {str(e)}. Blocking by default."
         }))
 
 

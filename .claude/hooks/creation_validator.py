@@ -15,6 +15,10 @@ EXIT CODES:
 - 1: Aviso (continua mas notifica)
 - 2: Erro (bloqueia execução)
 
+ERROR HANDLING: fail-CLOSED (2026-02-22 hardening)
+  - Internal exceptions -> exit(2) BLOCK (can't validate = block)
+  - Log failures -> pass (logging never blocks)
+
 Executado via settings.local.json PreToolUse hook.
 """
 
@@ -343,14 +347,13 @@ def main():
         sys.exit(exit_code)
 
     except Exception as e:
-        # Em caso de erro interno, não bloquear
-        # Logar erro mas permitir operação
+        # Fail-CLOSED: internal error = can't validate = BLOCK
         print(json.dumps({
-            "status": "error",
+            "status": "blocked",
             "internal_error": str(e),
-            "message": "Validador falhou internamente. Operação permitida."
+            "message": "Validador falhou internamente. Operação BLOQUEADA por segurança (fail-closed)."
         }))
-        sys.exit(0)
+        sys.exit(2)
 
 
 if __name__ == "__main__":

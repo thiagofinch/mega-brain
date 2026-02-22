@@ -1,0 +1,110 @@
+#!/bin/bash
+***REMOVED***=================================
+# MEGA BRAIN — Pre-Push Validation Gate (PHYSICAL BLOCK)
+***REMOVED***=================================
+# PURPOSE: Block direct 'git push' — force all pushes through push.js validation.
+# DESIGN: fail-CLOSED — if validation fails or is bypassed, push is BLOCKED.
+# INSTALLED: 2026-02-20 (post-incident hardening)
+***REMOVED***=================================
+
+set -euo pipefail
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+CYAN='\033[0;36m'
+NC='\033[0m'
+
+# Check if push.js set the bypass flag (meaning push.js already validated)
+PUSHJS_VALIDATED="${MEGA_BRAIN_PUSH_VALIDATED:-}"
+
+if [ "$PUSHJS_VALIDATED" = "true" ]; then
+    echo -e "${GREEN}[pre-push] push.js validation passed. Push allowed.${NC}"
+    exit 0
+fi
+
+echo -e "${YELLOW}[pre-push] Direct git push detected. Running security scan...${NC}"
+
+# Get the root of the repository
+REPO_ROOT=$(git rev-parse --show-toplevel 2>/dev/null || pwd)
+
+# === SCAN 1: Check ALL tracked files for secrets ===
+FOUND_SECRETS=0
+
+SECRET_PATTERNS=(
+    'ghp_[A-Za-z0-9]{36}'
+    'github_pat_[A-Za-z0-9_]{82}'
+    'gho_[A-Za-z0-9]{36}'
+    'ghs_[A-Za-z0-9]{36}'
+    'sk-ant-[A-Za-z0-9-]{90,}'
+    'sk-[A-Za-z0-9]{48}'
+    'AKIA[0-9A-Z]{16}'
+    'sk_[a-f0-9]{48}'
+    'https?://[^/]*\.app\.n8n\.cloud/webhook'
+    'ntn_[A-Za-z0-9]{40,}'
+)
+
+# Scan tracked files that will be pushed
+TRACKED_FILES=$(git ls-files 2>/dev/null || true)
+
+# Exclude security infrastructure files (contain detection patterns, not actual secrets)
+SECURITY_INFRA_EXCLUDE="--exclude=bin/pre-publish-gate.js --exclude=bin/push.js"
+
+for pattern in "${SECRET_PATTERNS[@]}"; do
+    MATCHES=$(echo "$TRACKED_FILES" | xargs grep -rlE $SECURITY_INFRA_EXCLUDE "$pattern" 2>/dev/null | head -10 || true)
+    if [ -n "$MATCHES" ]; then
+        echo -e "${RED}[BLOCKED] Secret pattern '$pattern' found in:${NC}"
+        echo "$MATCHES" | while read -r file; do
+            echo -e "  ${RED}-> $file${NC}"
+        done
+        FOUND_SECRETS=1
+    fi
+done
+
+# === SCAN 2: Check for phantom files (.gitignore bypass) ===
+PHANTOM=$(git ls-files -ci --exclude-standard 2>/dev/null || true)
+if [ -n "$PHANTOM" ]; then
+    echo -e "${RED}[BLOCKED] Phantom files detected (tracked but should be ignored):${NC}"
+    echo "$PHANTOM" | while read -r file; do
+        echo -e "  ${RED}-> $file${NC}"
+    done
+    FOUND_SECRETS=1
+fi
+
+# === SCAN 3: Check for .env files in tracked content ===
+ENV_FILES=$(git ls-files | grep -E '\.env($|\.)' 2>/dev/null || true)
+if [ -n "$ENV_FILES" ]; then
+    echo -e "${RED}[BLOCKED] .env files are tracked:${NC}"
+    echo "$ENV_FILES" | while read -r file; do
+        echo -e "  ${RED}-> $file${NC}"
+    done
+    FOUND_SECRETS=1
+fi
+
+# === OPTIONAL: Use trufflehog if available ===
+if command -v trufflehog &> /dev/null; then
+    echo -e "${YELLOW}[pre-push] Running trufflehog (deep scan)...${NC}"
+    VERIFIED=$(trufflehog filesystem "$REPO_ROOT" --only-verified --no-update --json 2>/dev/null | head -1 || true)
+    if [ -n "$VERIFIED" ]; then
+        echo -e "${RED}[BLOCKED] trufflehog found VERIFIED secrets.${NC}"
+        FOUND_SECRETS=1
+    fi
+fi
+
+# === VERDICT ===
+if [ "$FOUND_SECRETS" -ne 0 ]; then
+    echo ""
+    echo -e "${RED}================================================${NC}"
+    echo -e "${RED}  PUSH BLOCKED: Security validation failed       ${NC}"
+    echo -e "${RED}================================================${NC}"
+    echo ""
+    echo -e "${CYAN}  Safe alternative: mega-brain push${NC}"
+    echo -e "${CYAN}  This runs full validation before pushing.${NC}"
+    echo ""
+    echo -e "${YELLOW}  Override (DANGEROUS): git push --no-verify${NC}"
+    echo ""
+    exit 1
+fi
+
+echo -e "${GREEN}[pre-push] Security scan passed. Push allowed.${NC}"
+exit 0
