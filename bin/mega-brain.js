@@ -17,10 +17,16 @@
 import { createRequire } from 'module';
 import { fileURLToPath } from 'url';
 import { dirname, resolve } from 'path';
-import { readFileSync } from 'fs';
+import { readFileSync, existsSync } from 'fs';
 
+// Load .env from project root (Node.js 21+ native, no dependencies)
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+const envPath = resolve(__dirname, '..', '.env');
+if (existsSync(envPath)) {
+  try { process.loadEnvFile(envPath); } catch {}
+}
+
 const require = createRequire(import.meta.url);
 
 const pkg = JSON.parse(readFileSync(resolve(__dirname, '..', 'package.json'), 'utf-8'));
