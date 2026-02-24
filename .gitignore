@@ -1,3 +1,6 @@
+# === EXTERNAL FRAMEWORKS (NEVER track) ===
+.aios-core/
+
 # === ENVIRONMENT & SECRETS ===
 .env
 .env.local
@@ -62,6 +65,7 @@ agents/shared-memory/*.md
 agents/archive/
 agents/discovery/
 agents/boardroom/outputs/
+agents/boardroom/config/voice_mapping.json
 
 # === USER CONTENT (Empty in template) ===
 inbox/**
@@ -92,6 +96,9 @@ knowledge/dna/**
 knowledge/TAG-RESOLVER.json
 
 # === PERSONAL DATA (Remove entirely) ===
+# Company-specific data directories (per-user, never public)
+company-data/
+.company-data/
 company/
 .company/
 archive/
@@ -103,11 +110,13 @@ vendor/
 
 # === COMPANY-SPECIFIC SKILLS (Per-user) ===
 .claude/skills/*company*
+.claude/skills/*billion*
 .claude/skills/*-company-*
 
 # === BUILD SCRIPTS (not for distribution) ===
 /SCRIPTS/
 scripts/tmp-scripts/
+scripts/company/
 scripts/company/
 
 # === OPERATIONAL LOGS & SYSTEM STATE (Per-user) ===
@@ -136,6 +145,13 @@ system/database/import-buyers.sh
 
 # === COMPANY-SPECIFIC PRDS ===
 reference/prds/prd-company-*.md
+reference/prds/prd-company-*.md
+
+# === COMPANY-SPECIFIC DOCS (Layer 3 only) ===
+system/docs/MEGA-BRAIN-MANIFESTO-COMPLETO.md
+system/docs/MOGA-BRAIN-EXPLICACAO-COMPLETA.md
+.github/layer-rules.yaml
+reference/README-RALPH-*.md
 
 # === DEVELOPMENT ARTIFACTS (not for distribution) ===
 docs/plans/
@@ -169,6 +185,7 @@ processing/dna/
 
 # === KNOWLEDGE PERSONAL (Per-user) ===
 knowledge/_legacy/
+knowledge/company/
 knowledge/company/
 
 # === MEDIA FILES ===

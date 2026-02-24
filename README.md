@@ -786,7 +786,7 @@ Ideal para quem quer construir tudo do zero, inserindo seus próprios materiais 
 >
 > O Gratuito é poderoso. O PREMIUM é **imparável**.
 >
-> 💎 [Acesse o PREMIUM completo](https://moneyclub.thiagofinch.com)
+> 💎 [Acesse o PREMIUM completo](https://megabrain.ai/premium)
 
 ---
 
@@ -1122,7 +1122,7 @@ O poder do Mega Brain é diretamente proporcional ao que você insere. Existem *
 
 **P: O sistema vem com conteúdo pronto?**
 
-A versão **Gratuita** é uma estrutura vazia — você insere seus próprios materiais. A versão **PREMIUM** vem com +$500 mil dólares em conteúdo já processado, mentes clonadas e métodos prontos. [Saiba mais sobre o PREMIUM](https://moneyclub.thiagofinch.com).
+A versão **Gratuita** é uma estrutura vazia — você insere seus próprios materiais. A versão **PREMIUM** vem com +$500 mil dólares em conteúdo já processado, mentes clonadas e métodos prontos. [Saiba mais sobre o PREMIUM](https://megabrain.ai/premium).
 
 <br>
 
@@ -1196,7 +1196,7 @@ Funcionalidades extras que expandem o sistema:
 ## 💬 Suporte
 
 - 💎 **Comunidade MoneyClub** — Canal exclusivo para membros PREMIUM
-- 🐛 **Problemas** — [Reportar aqui](https://github.com/thiagofinch/mega-brain/issues)
+- 🐛 **Problemas** — [Reportar aqui](https://github.com/mega-brain-ai/mega-brain/issues)
 
 ---
 
@@ -1217,7 +1217,7 @@ Software proprietário. Uso exclusivo para membros MoneyClub.
   <em>Agora multiplique isso para qualquer tema."</em>
   <br>
   <br>
-  💎 <a href="https://moneyclub.thiagofinch.com">moneyclub.thiagofinch.com</a> — Acesse o PREMIUM
+  💎 <a href="https://megabrain.ai/premium">megabrain.ai/premium</a> — Acesse o PREMIUM
   <br>
   <br>
   <sub>Desenvolvido com 🧠 JARVIS AI Orchestration</sub>

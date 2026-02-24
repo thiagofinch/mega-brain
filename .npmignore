@@ -21,13 +21,17 @@ _IMPORT/
 _import/
 company/
 .company/
+company-data/
+.company-data/
 archive/
+.aios-core/
 
 # === COMPANY-SPECIFIC SKILLS ===
 .claude/skills/ask-company/
 .claude/skills/process-company-inbox/
 .claude/skills/convert-to-billion-docs/
 .claude/skills/*company*
+.claude/skills/*billion*
 .claude/skills/*-company-*
 
 # === PERSONAL EXPERT DATA ===
@@ -45,6 +49,7 @@ agents/sua-empresa/**
 
 # === PERSONAL SCRIPTS (ALL of them) ===
 SCRIPTS/
+scripts/company/
 scripts/company/
 scripts/tmp-scripts/
 
@@ -65,6 +70,7 @@ system/database/import-buyers.mjs
 system/database/import-buyers.sh
 
 # === COMPANY-SPECIFIC PRDS ===
+reference/prds/prd-company-*.md
 reference/prds/prd-company-*.md
 
 # === LARGE NON-TEMPLATE DIRECTORIES ===

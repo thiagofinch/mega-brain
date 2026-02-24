@@ -127,7 +127,6 @@ Se duas skills têm mesma prioridade → Aplicar em ordem numérica (00, 01, 02.
 |-------|------|----------|------------|--------|
 | ask-[sua-empresa] | `ask-[sua-empresa]/` | [sua-empresa], empresa | MEDIA | NO |
 | chronicler | `chronicler/` | briefing, handoff, log | ALTA | OK |
-| convert-to-billion-docs | `convert-to-billion-docs/` | converter, [sua-empresa], docs | MEDIA | NO |
 | council | `council/` | council, debate | MEDIA | NO |
 | executor | `executor/` | executar, tarefa | MEDIA | NO |
 | fase-2-5-tagging | `fase-2-5-tagging/` | fase, tagging | MEDIA | NO |

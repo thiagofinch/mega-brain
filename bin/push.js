@@ -16,10 +16,10 @@
  *   mega-brain push --dry-run     Show what would happen without executing
  *   mega-brain push --message "x" Commit message (skips prompt)
  *
- * Remotes:
- *   public  → https://github.com/thiagofinch/mega-brain.git
- *   premium → https://github.com/thiagofinch/mega-brain-premium.git
- *   backup  → https://github.com/thiagofinch/mega-brain-full.git
+ * Remotes (configure via git remote):
+ *   public  → <your-github>/mega-brain.git
+ *   premium → <your-github>/mega-brain-premium.git
+ *   backup  → <your-github>/mega-brain-full.git
  */
 
 import { readFileSync, existsSync } from 'fs';
@@ -44,21 +44,21 @@ const LAYER_CONFIG = {
     name: 'Community',
     label: 'Layer 1 — Community (publico, npm)',
     remote: 'public',
-    remoteUrl: 'https://github.com/thiagofinch/mega-brain.git',
+    remoteUrl: 'https://github.com/<your-username>/mega-brain.git',
     color: '#6366f1',
   },
   2: {
     name: 'Premium',
     label: 'Layer 2 — Premium (MoneyClub, privado)',
     remote: 'premium',
-    remoteUrl: 'https://github.com/thiagofinch/mega-brain-premium.git',
+    remoteUrl: 'https://github.com/<your-username>/mega-brain-premium.git',
     color: '#f59e0b',
   },
   3: {
     name: 'Full Backup',
     label: 'Layer 3 — Full Backup (tudo, privado)',
     remote: 'backup',
-    remoteUrl: 'https://github.com/thiagofinch/mega-brain-full.git',
+    remoteUrl: 'https://github.com/<your-username>/mega-brain-full.git',
     color: '#ef4444',
   },
 };
@@ -73,7 +73,8 @@ const SENSITIVE_PATTERNS = [
 // sk-ant- check: match the prefix but NOT the known placeholder
 const SK_ANT_REAL = /sk-ant-(?!api03-sua-chave-aqui)[A-Za-z0-9_-]+/;
 
-const LAYER2_EXCLUDED_PERSONAS = ['g4-educacao', 'full-sales-system', 'grupo-silva'];
+// Excluded personas — add names of persona directories that should NOT go to Layer 2
+const LAYER2_EXCLUDED_PERSONAS = ['example-persona-1', 'example-persona-2'];
 
 // ---------------------------------------------------------------------------
 // Git helpers

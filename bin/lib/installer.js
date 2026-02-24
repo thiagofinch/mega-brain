@@ -370,7 +370,7 @@ async function fetchPremiumContent(targetDir, token, spinner) {
 
   mkdirSync(join(targetDir, '.layer-sync'), { recursive: true });
 
-  const authUrl = `https://x-access-token:${token}@github.com/thiagofinch/mega-brain-premium.git`;
+  const authUrl = `https://x-access-token:${token}@github.com/${process.env.MEGA_BRAIN_GH_ORG || 'mega-brain-ai'}/mega-brain-premium.git`;
 
   // --- CLONE ---
   if (!existsSync(join(tempDir, '.git'))) {
@@ -505,7 +505,7 @@ function showPostInstallCommunity() {
     + chalk.dim('  Ou comece do zero alimentando o sistema:') + '\n'
     + chalk.cyan('    /ingest [URL do YouTube]') + chalk.dim('  — Importar conteúdo') + '\n'
     + chalk.cyan('    /process-jarvis') + chalk.dim('          — Processar pipeline') + '\n\n'
-    + chalk.dim('  moneyclub.thiagofinch.com — Acesse o PREMIUM completo');
+    + chalk.dim('  megabrain.ai/premium — Acesse o PREMIUM completo');
 
   console.log(boxen(content, {
     padding: 1,

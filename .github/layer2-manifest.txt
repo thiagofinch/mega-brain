@@ -38,4 +38,4 @@ processing/
 #   - .claude/monitoring/    (runtime state)
 #   - system/backups/        (personal backups)
 #   - system/jarvis-voice/audiobooks/  (personal audio)
-#   - .company/        (company data - Layer 3)
+#   - .company-data/  (company data - Layer 3)
