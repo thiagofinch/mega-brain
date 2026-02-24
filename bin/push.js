@@ -4,7 +4,7 @@
  * Mega Brain - Smart Multi-Layer Push System v2.0
  *
  * Pushes content to the appropriate git remote based on layer selection:
- *   Layer 1 (public)  → Community content, respects .gitignore → remote "public"
+ *   Layer 1 (public)  → Community content, respects .gitignore → remote "origin"
  *   Layer 2 (premium) → Layer 1 + premium manifest paths → remote "premium"
  *   Layer 3 (backup)  → Everything, no filtering → remote "backup"
  *
@@ -17,7 +17,7 @@
  *   mega-brain push --message "x" Commit message (skips prompt)
  *
  * Remotes (configure via git remote):
- *   public  → <your-github>/mega-brain.git
+ *   origin  → <your-github>/mega-brain.git
  *   premium → <your-github>/mega-brain-premium.git
  *   backup  → <your-github>/mega-brain-full.git
  */
@@ -43,7 +43,7 @@ const LAYER_CONFIG = {
   1: {
     name: 'Community',
     label: 'Layer 1 — Community (publico, npm)',
-    remote: 'public',
+    remote: 'origin',
     remoteUrl: 'https://github.com/<your-username>/mega-brain.git',
     color: '#6366f1',
   },
@@ -183,6 +183,30 @@ function loadLayer2ManifestPaths() {
 
   return paths;
 }
+
+function loadLayer3ManifestPaths() {
+  const manifestPath = resolve(PROJECT_ROOT, '.github', 'layer3-manifest.txt');
+  if (!existsSync(manifestPath)) return [];
+
+  const content = readFileSync(manifestPath, 'utf-8');
+  const paths = [];
+
+  for (const raw of content.split('\n')) {
+    const line = raw.trim();
+    if (line.includes('ALWAYS EXCLUDED')) break;
+    if (!line || line.startsWith('#')) continue;
+    paths.push(line.replace(/\/+$/, ''));
+  }
+
+  return paths;
+}
+
+// Files that must NEVER be pushed to any remote
+const SECRET_FILES = [
+  '.env', '.env.local', '.env.production', '.env.development',
+  '.mcp.json', 'credentials.json', 'token.json', 'token_write.json',
+  'settings.local.json', '.claude/settings.json',
+];
 
 // ---------------------------------------------------------------------------
 // Pre-push validation
@@ -587,11 +611,11 @@ async function pushLayer2({ dryRun, message }) {
 
   addSpinner.succeed(chalk.green(`${addedCount} caminhos premium staged`));
 
-  // Step 4: Commit
+  // Step 4: Commit (bypass pre-commit hook via env var — this is a temporary commit)
   const commitMsg = message || 'feat(premium): update Layer 2 content';
   const commitSpinner = ora({ text: 'Criando commit premium...', color: 'yellow' }).start();
   try {
-    git(`commit -m "${commitMsg.replace(/"/g, '\\"')}"`, { silent: true, stdio: 'pipe' });
+    git(`commit -m "${commitMsg.replace(/"/g, '\\"')}"`, { silent: true, stdio: 'pipe', env: { MEGA_BRAIN_LAYER_PUSH: 'true' } });
     commitSpinner.succeed(chalk.green('Commit premium criado'));
   } catch (err) {
     const output = (err.stdout || '') + (err.stderr || '');
@@ -632,19 +656,60 @@ async function pushLayer3({ dryRun, message }) {
 
   // No validation for Layer 3
 
+  // Read Layer 3 manifest
+  const layer3Paths = loadLayer3ManifestPaths();
+  if (layer3Paths.length === 0) {
+    console.log(chalk.red('\n  Erro: layer3-manifest.txt vazio ou nao encontrado.'));
+    console.log(chalk.dim('  Verifique: .github/layer3-manifest.txt\n'));
+    process.exit(1);
+  }
+
   if (dryRun) {
     showDryRun(3, config, branch);
+    console.log(chalk.dim('  Caminhos do manifest que seriam adicionados com git add -f:'));
+    for (const p of layer3Paths) {
+      const exists = existsSync(resolve(PROJECT_ROOT, p));
+      console.log(`    ${exists ? chalk.green('+') : chalk.red('x')} ${p} ${!exists ? chalk.dim('(nao existe)') : ''}`);
+    }
+    console.log();
     return;
   }
 
-  // Step 1: git add -A
-  const addSpinner = ora({ text: 'Staging TODOS os arquivos...', color: 'red' }).start();
+  // Step 1: Stage tracked files normally
+  const addSpinner = ora({ text: 'Staging arquivos tracked...', color: 'red' }).start();
   try {
     git('add -A', { silent: true, stdio: 'pipe' });
-    addSpinner.succeed(chalk.green('Todos os arquivos staged'));
+    addSpinner.succeed(chalk.green('Arquivos tracked staged'));
   } catch (err) {
     addSpinner.fail(chalk.red(`Falha ao fazer staging: ${err.message}`));
     process.exit(1);
+  }
+
+  // Step 2: Force-add Layer 3 content (gitignored but needed for backup)
+  const forceSpinner = ora({ text: 'Staging conteudo de backup (force add)...', color: 'red' }).start();
+  let addedCount = 0;
+
+  for (const manifestPath of layer3Paths) {
+    const fullPath = resolve(PROJECT_ROOT, manifestPath);
+    if (!existsSync(fullPath)) continue;
+
+    try {
+      git(`add -f "${manifestPath}"`, { silent: true, stdio: 'pipe' });
+      addedCount++;
+    } catch {
+      // Some paths may fail — that's ok
+    }
+  }
+
+  forceSpinner.succeed(chalk.green(`${addedCount} caminhos de backup staged`));
+
+  // Step 3: Safety — unstage secrets that may have been caught
+  for (const secretFile of SECRET_FILES) {
+    try {
+      git(`reset HEAD -- "${secretFile}"`, { silent: true, stdio: 'pipe' });
+    } catch {
+      // File may not exist or not be staged
+    }
   }
 
   // Check if there's anything to commit
@@ -663,10 +728,10 @@ async function pushLayer3({ dryRun, message }) {
     return;
   }
 
-  // Step 2: Commit message
+  // Step 4: Commit message
   const commitMsg = message || (await promptCommitMessage('backup: full state sync'));
 
-  // Step 3: git commit
+  // Step 5: git commit
   const commitSpinner = ora({ text: 'Criando commit de backup...', color: 'red' }).start();
   try {
     git(`commit -m "${commitMsg.replace(/"/g, '\\"')}"`, { silent: true, stdio: 'pipe' });
@@ -681,7 +746,7 @@ async function pushLayer3({ dryRun, message }) {
     }
   }
 
-  // Step 4: git push backup main --force
+  // Step 6: git push backup main --force
   const pushSpinner = ora({ text: `Pushing para ${config.remote}/${branch} (force)...`, color: 'red' }).start();
   try {
     git(`push ${config.remote} ${branch} --force`);
@@ -693,7 +758,7 @@ async function pushLayer3({ dryRun, message }) {
     process.exit(1);
   }
 
-  // Step 5: git reset HEAD~1 (Layer 3 commit doesn't stay on local main)
+  // Step 7: git reset HEAD~1 (Layer 3 commit doesn't stay on local main)
   resetLastCommit();
 }
 
@@ -763,7 +828,7 @@ function showDryRun(layer, config, branch) {
     console.log(chalk.dim('    2. git add -A (respeita .gitignore)'));
     console.log(chalk.dim('    3. Prompt para commit message'));
     console.log(chalk.dim('    4. git commit'));
-    console.log(chalk.dim('    5. git push public main'));
+    console.log(chalk.dim('    5. git push origin main'));
     console.log(chalk.dim('    6. Perguntar sobre npm publish'));
     console.log(chalk.dim('    7. Auto-sync para backup (Layer 3)'));
   } else if (layer === 2) {
@@ -778,11 +843,13 @@ function showDryRun(layer, config, branch) {
   } else {
     console.log(chalk.dim('\n  Fluxo Layer 3:'));
     console.log(chalk.dim('    1. Sem validacao (tudo vai)'));
-    console.log(chalk.dim('    2. git add -A'));
-    console.log(chalk.dim('    3. Prompt para commit message'));
-    console.log(chalk.dim('    4. git commit'));
-    console.log(chalk.dim('    5. git push backup main --force'));
-    console.log(chalk.dim('    6. git reset HEAD~1 (limpar commit local)'));
+    console.log(chalk.dim('    2. git add -A (tracked files)'));
+    console.log(chalk.dim('    3. git add -f para caminhos do layer3-manifest.txt'));
+    console.log(chalk.dim('    4. git reset HEAD -- secrets (safety net)'));
+    console.log(chalk.dim('    5. Prompt para commit message'));
+    console.log(chalk.dim('    6. git commit'));
+    console.log(chalk.dim('    7. git push backup main --force'));
+    console.log(chalk.dim('    8. git reset HEAD~1 (limpar commit local)'));
   }
 
   console.log();
@@ -915,7 +982,7 @@ async function main() {
 // Entry point — works as standalone binary AND as module import
 // ---------------------------------------------------------------------------
 
-export { pushLayer1, pushLayer2, pushLayer3, validateForLayer, loadLayer2ManifestPaths };
+export { pushLayer1, pushLayer2, pushLayer3, validateForLayer, loadLayer2ManifestPaths, loadLayer3ManifestPaths };
 
 main().catch((err) => {
   console.error();
