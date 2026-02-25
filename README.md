@@ -809,7 +809,7 @@ $ npx mega-brain-ai install
  | |  | |  __/ (_| | (_| | |_) | | | (_| | | | | |
  |_|  |_|\___|\__, |\__,_|____/|_|  \__,_|_|_| |_|
               |___/
-                    AI Knowledge Management System v1.1.0
+                    AI Knowledge Management System v1.2.11
 
   Bem-vindo ao instalador do Mega Brain!
 
