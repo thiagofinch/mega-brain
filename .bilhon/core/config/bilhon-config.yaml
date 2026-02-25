@@ -1,0 +1,257 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                              BILHON OS v1.0                                  ║
+# ║                 "IA com tentaculos que orquestra orquestracoes"              ║
+# ╠══════════════════════════════════════════════════════════════════════════════╣
+# ║  Arquivo: bilhon-config.yaml                                                 ║
+# ║  Proposito: Configuracao central do BILHON OS                                ║
+# ║  Retrocompatibilidade: .claude/ continua funcionando                         ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+version: "1.0.0"
+name: "BILHON OS"
+description: "Sistema unificado que combina AIOS, Ralph Inferno, Ralph Local e Mega Brain"
+created: "2026-01-17"
+
+# ─────────────────────────────────────────────────────────────────────────────────
+# CEREBRO CENTRAL
+# ─────────────────────────────────────────────────────────────────────────────────
+brain:
+  name: "JARVIS"
+  type: "orchestrator"
+  identity:
+    soul: "/.claude/jarvis/JARVIS-DNA-PERSONALITY.md"
+    state: "/.claude/jarvis/STATE.json"
+    memory: "/.claude/jarvis/MEMORY-THIAGO.md"
+  rules:
+    file: "/CLAUDE.md"
+    groups: "/reference/RULES/RULE-GROUP-*.md"
+    total: 30
+
+# ─────────────────────────────────────────────────────────────────────────────────
+# RETROCOMPATIBILIDADE COM .claude/
+# ─────────────────────────────────────────────────────────────────────────────────
+retrocompatibility:
+  enabled: true
+  mappings:
+    hooks:
+      source: "/.claude/hooks/"
+      target: "/.bilhon/core/hooks/"
+      type: "import"
+    skills:
+      source: "/.claude/skills/"
+      target: "/.bilhon/core/skills/"
+      type: "import"
+    jarvis:
+      source: "/.claude/jarvis/"
+      target: "/.bilhon/jarvis/"
+      type: "import"
+    mission_control:
+      source: "/.claude/mission-control/"
+      target: "/.bilhon/mission-control/"
+      type: "import"
+
+# ─────────────────────────────────────────────────────────────────────────────────
+# SISTEMA DE AGENTES (4 TIERS)
+# ─────────────────────────────────────────────────────────────────────────────────
+agents:
+  tier1_orchestrator:
+    name: "JARVIS"
+    location: "/.claude/jarvis/"
+    role: "Cerebro central, routing, state management"
+
+  tier2_council:
+    description: "Agentes para deliberacao formal via /council"
+    persons:
+      location: "/agents/persons/"
+      count: 7
+      examples: ["Alex Hormozi", "Cole Gordon", "Jeremy Miner"]
+    cargos:
+      location: "/agents/CARGOS/"
+      count: 11
+      examples: ["CRO", "CFO", "Closer", "Sales Manager"]
+    tech:
+      location: "/agents/tech/"
+      count: 12  # A serem importados do AIOS
+      examples: ["dev (Dex)", "architect (Aria)", "devops (Gage)"]
+      source: "AIOS Framework"
+
+  tier3_subagents:
+    description: "Subditos do JARVIS para tarefas do dia-a-dia"
+    location: "/.claude/jarvis/sub-agents/"
+    auto_activation: true
+
+  tier4_discovery:
+    description: "Roles para discovery de novos projetos"
+    source: "Ralph Inferno"
+    roles: ["Analyst", "UX Designer", "PM", "Architect", "Business Analyst"]
+
+# ─────────────────────────────────────────────────────────────────────────────────
+# WORKFLOWS
+# ─────────────────────────────────────────────────────────────────────────────────
+workflows:
+  content_pipeline:
+    description: "Pipeline JARVIS para processamento de conhecimento"
+    phases: 5
+    location: "/reference/RULES/"
+
+  project_workflow:
+    description: "Workflow unificado para projetos de desenvolvimento"
+    phases: 6
+    source: "AIOS + Ralph"
+    phases_detail:
+      - phase0: "Bootstrap"
+      - phase1: "Discovery (5 roles)"
+      - phase2: "Planning (stories + specs)"
+      - phase3: "Development (3-loop)"
+      - phase4: "Release"
+      - phase5: "Learning (compound)"
+    location: "/reference/WORKFLOWS/PROJECT-WORKFLOW.md"
+
+# ─────────────────────────────────────────────────────────────────────────────────
+# QUALITY SYSTEM
+# ─────────────────────────────────────────────────────────────────────────────────
+quality:
+  hooks:
+    location: "/.claude/hooks/"
+    count: 33
+
+  health_check:
+    source: "AIOS"
+    location: "/.bilhon/core/health/"
+    modes: ["quick", "full"]
+
+  quality_gates:
+    source: "Ralph Local"
+    location: "/.bilhon/core/quality/"
+    gates:
+      - gate1: "Code Quality (lint, no console.log)"
+      - gate2: "Type Check (TypeScript 0 errors)"
+      - gate3: "Unit Tests (npm test)"
+      - gate4: "Integration (works with existing)"
+      - gate5: "Build (npm run build)"
+
+  security:
+    source: "Ralph Inferno"
+    location: "/.bilhon/core/security/"
+    checks: ["dangerous_commands", "secrets", "ssh", "firewall"]
+
+# ─────────────────────────────────────────────────────────────────────────────────
+# INTEGRACOES (MCP HUB)
+# ─────────────────────────────────────────────────────────────────────────────────
+integrations:
+  mcp_hub:
+    location: "/integrations/mcps/"
+    registry: "MCP-REGISTRY.md"
+    mcps:
+      gdrive:
+        status: "active"
+        description: "Google Drive + Sheets"
+      excalidraw:
+        status: "active"
+        description: "Diagramas"
+      playwright:
+        status: "pending"
+        source: "AIOS"
+        description: "Automacao web"
+      desktop_commander:
+        status: "pending"
+        source: "AIOS"
+        description: "Controle de desktop"
+      exa:
+        status: "pending"
+        source: "AIOS"
+        description: "Search avancado"
+
+  notifications:
+    location: "/integrations/notifications/"
+    ntfy:
+      status: "pending"
+      source: "Ralph Inferno"
+    discord:
+      status: "pending"
+      source: "Ralph Inferno"
+
+# ─────────────────────────────────────────────────────────────────────────────────
+# LEARNING SYSTEM
+# ─────────────────────────────────────────────────────────────────────────────────
+learning:
+  compound:
+    source: "Ralph Local"
+    location: "/.bilhon/core/learning/"
+    components:
+      - patterns: "Padroes de codigo descobertos"
+      - decisions: "Decisoes arquiteturais tomadas"
+      - lessons: "Licoes aprendidas"
+      - improvements: "Melhorias identificadas"
+
+  cost_tracking:
+    source: "Ralph Inferno"
+    location: "/.bilhon/core/tracking/"
+    log: "/logs/cost-tracking.jsonl"
+
+# ─────────────────────────────────────────────────────────────────────────────────
+# KNOWLEDGE SYSTEM (DNA 5 CAMADAS - MEGA BRAIN)
+# ─────────────────────────────────────────────────────────────────────────────────
+knowledge:
+  dna_layers:
+    layer1: "Filosofias (principios fundamentais)"
+    layer2: "Modelos Mentais (como pensar)"
+    layer3: "Heuristicas (regras praticas)"
+    layer4: "Frameworks (metodologias formais)"
+    layer5: "Metricas (KPIs, benchmarks)"
+
+  locations:
+    dossiers: "/knowledge/"
+    playbooks: "/knowledge/playbooks/"
+    themes: "/knowledge/THEMES/"
+
+# ─────────────────────────────────────────────────────────────────────────────────
+# PATHS IMPORTANTES
+# ─────────────────────────────────────────────────────────────────────────────────
+paths:
+  root: "C:/Users/thiag/OneDrive/Documentos/Mega Brain"
+  import: "/_IMPORT/"
+  agents: "/agents/"
+  logs: "/logs/"
+  projects: "/projects/"
+  scripts: "/scripts/"
+  integrations: "/integrations/"
+
+# ─────────────────────────────────────────────────────────────────────────────────
+# FONTE DOS COMPONENTES
+# ─────────────────────────────────────────────────────────────────────────────────
+sources:
+  aios:
+    imported: true
+    location: "/_IMPORT/AIOS/"
+    components:
+      - "12 tech agents"
+      - "6 workflows"
+      - "health check"
+      - "schemas"
+
+  ralph_inferno:
+    imported: true
+    location: "/_IMPORT/RALPH-INFERNO/"
+    components:
+      - "3-loop architecture"
+      - "ntfy notifications"
+      - "cost tracking"
+      - "security checks"
+
+  ralph_local:
+    imported: true
+    location: "/_IMPORT/RALPH-LOCAL/"
+    components:
+      - "12-step autonomous loop"
+      - "5 quality gates"
+      - "compound learning"
+
+  mega_brain:
+    native: true
+    components:
+      - "30 rules"
+      - "33 hooks"
+      - "DNA 5 layers"
+      - "PERSONS + CARGOS agents"
+      - "Pipeline 5 phases"
