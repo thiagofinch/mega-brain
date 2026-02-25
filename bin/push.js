@@ -64,10 +64,10 @@ const LAYER_CONFIG = {
 };
 
 const SENSITIVE_PATTERNS = [
-  /github_pat_[A-Za-z0-9_]+/,
-  /ghp_[A-Za-z0-9]+/,
-  /gho_[A-Za-z0-9]+/,
-  /ghs_[A-Za-z0-9]+/,
+  /github_pat_[A-Za-z0-9_]{20,}/,
+  /ghp_[A-Za-z0-9]{20,}/,
+  /gho_[A-Za-z0-9]{20,}/,
+  /ghs_[A-Za-z0-9]{20,}/,
 ];
 
 // sk-ant- check: match the prefix but NOT the known placeholder
@@ -269,8 +269,10 @@ function validateForLayer(layer) {
       );
     }
 
-    // --- Check no .env is tracked ---
-    const trackedEnv = trackedFiles.filter((f) => f === '.env' || f.match(/^\.env\.\w/));
+    // --- Check no .env is tracked (exclude .env.example which is OK) ---
+    const trackedEnv = trackedFiles.filter((f) =>
+      (f === '.env' || f.match(/^\.env\.\w/)) && !f.endsWith('.example')
+    );
     if (trackedEnv.length > 0) {
       errors.push(
         `Arquivo .env está tracked:\n` +

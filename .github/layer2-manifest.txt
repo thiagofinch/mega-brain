@@ -1,5 +1,5 @@
 # Layer 2 Manifest - PREMIUM content (MoneyClub members)
-***REMOVED***=========
+# ================================================================
 # Layer 2 = Layer 1 (all public content)
 #         + PREMIUM folders listed below
 #
@@ -7,7 +7,7 @@
 # that differentiates premium from community shell.
 #
 # RULE: Layer 2 excludes Layer 3 personal data.
-***REMOVED***=========
+# ================================================================
 
 # === PREMIUM ADDITIONS (on top of Layer 1) ===
 

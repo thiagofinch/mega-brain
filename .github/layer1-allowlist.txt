@@ -1,5 +1,5 @@
 # Layer 1 Allowlist - PUBLIC content (free/community)
-***REMOVED***=======
+# ==============================================================
 # ONLY paths listed here are included in Layer 1 (public repo).
 # Everything else is PREMIUM by default (Layer 2+).
 #
@@ -11,7 +11,7 @@
 #       To make something public, add it here explicitly.
 #
 # AUDITED: 2026-02-20 (Phases 4-5, Layer System v2.0)
-***REMOVED***=======
+# ==============================================================
 
 # === CLI & INSTALLER (always public) ===
 bin/
