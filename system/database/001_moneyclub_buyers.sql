@@ -1,7 +1,7 @@
--- Migration: 001_moneyclub_buyers
--- Description: MoneyClub buyers table for email validation during Mega Brain installation
+-- Migration: 001_product_buyers
+-- Description: Product buyers table for email validation during Mega Brain installation
 -- Date: 2026-02-18
--- Product: Mega Brain - MoneyClub Edition
+-- Product: Mega Brain - [YOUR_PRODUCT_NAME] Edition
 --
 -- DATA FLOW:
 --   Google Sheets (source) → Sync (n8n/Apps Script) → Supabase (source of truth) → CLI validator
@@ -16,10 +16,10 @@
 --   The CLI installer calls validate_buyer_email() via Supabase anon RPC.
 
 -- ═══════════════════════════════════════════════════════════════
--- TABLE: moneyclub_buyers
+-- TABLE: product_buyers
 -- ═══════════════════════════════════════════════════════════════
 
-CREATE TABLE IF NOT EXISTS moneyclub_buyers (
+CREATE TABLE IF NOT EXISTS product_buyers (
   id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
 
   -- From Google Sheets
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS moneyclub_buyers (
   phone_full TEXT,                    -- "Telefone Completo do Cliente"
 
   -- Installer tracking (managed by RPC function)
-  product TEXT NOT NULL DEFAULT 'moneyclub',
+  product TEXT NOT NULL DEFAULT '[YOUR_PRODUCT_CODE]',
   status TEXT NOT NULL DEFAULT 'active' CHECK (status IN ('active', 'inactive', 'refunded')),
   activated_at TIMESTAMPTZ,           -- First install timestamp
   install_count INTEGER DEFAULT 0,    -- How many times installed
@@ -43,20 +43,20 @@ CREATE TABLE IF NOT EXISTS moneyclub_buyers (
 );
 
 -- Index for fast email lookup (used by RPC function)
-CREATE INDEX IF NOT EXISTS idx_moneyclub_buyers_email ON moneyclub_buyers(email);
+CREATE INDEX IF NOT EXISTS idx_product_buyers_email ON product_buyers(email);
 
 -- Index for status filtering
-CREATE INDEX IF NOT EXISTS idx_moneyclub_buyers_status ON moneyclub_buyers(status);
+CREATE INDEX IF NOT EXISTS idx_product_buyers_status ON product_buyers(status);
 
 -- ═══════════════════════════════════════════════════════════════
 -- ROW LEVEL SECURITY
 -- ═══════════════════════════════════════════════════════════════
 -- No direct access for anon role. All access goes through the RPC function.
 
-ALTER TABLE moneyclub_buyers ENABLE ROW LEVEL SECURITY;
+ALTER TABLE product_buyers ENABLE ROW LEVEL SECURITY;
 
 -- Service role can do everything (for sync scripts)
-CREATE POLICY "service_role_full_access" ON moneyclub_buyers
+CREATE POLICY "service_role_full_access" ON product_buyers
   FOR ALL
   TO service_role
   USING (true)
@@ -80,7 +80,7 @@ DECLARE
 BEGIN
   SELECT id, email, name, status, install_count
   INTO buyer
-  FROM moneyclub_buyers
+  FROM product_buyers
   WHERE LOWER(email) = LOWER(buyer_email)
   AND status = 'active';
 
@@ -92,7 +92,7 @@ BEGIN
   END IF;
 
   -- Update install tracking
-  UPDATE moneyclub_buyers
+  UPDATE product_buyers
   SET install_count = install_count + 1,
       last_install_at = NOW(),
       activated_at = COALESCE(activated_at, NOW()),
@@ -132,14 +132,14 @@ AS $$
 DECLARE
   result RECORD;
 BEGIN
-  INSERT INTO moneyclub_buyers (name, email, phone_ddi, phone_ddd, phone_number, phone_full)
+  INSERT INTO product_buyers (name, email, phone_ddi, phone_ddd, phone_number, phone_full)
   VALUES (p_name, LOWER(TRIM(p_email)), p_phone_ddi, p_phone_ddd, p_phone_number, p_phone_full)
   ON CONFLICT (email) DO UPDATE SET
     name = EXCLUDED.name,
-    phone_ddi = COALESCE(EXCLUDED.phone_ddi, moneyclub_buyers.phone_ddi),
-    phone_ddd = COALESCE(EXCLUDED.phone_ddd, moneyclub_buyers.phone_ddd),
-    phone_number = COALESCE(EXCLUDED.phone_number, moneyclub_buyers.phone_number),
-    phone_full = COALESCE(EXCLUDED.phone_full, moneyclub_buyers.phone_full),
+    phone_ddi = COALESCE(EXCLUDED.phone_ddi, product_buyers.phone_ddi),
+    phone_ddd = COALESCE(EXCLUDED.phone_ddd, product_buyers.phone_ddd),
+    phone_number = COALESCE(EXCLUDED.phone_number, product_buyers.phone_number),
+    phone_full = COALESCE(EXCLUDED.phone_full, product_buyers.phone_full),
     updated_at = NOW()
   RETURNING id, email, name INTO result;
 

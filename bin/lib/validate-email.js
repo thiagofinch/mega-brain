@@ -97,7 +97,7 @@ export async function validateEmail(email) {
  */
 export function getErrorMessage(reason) {
   const messages = {
-    email_not_found: 'Este email não está cadastrado no MoneyClub.\nAcesse megabrain.ai/premium para adquirir o produto.',
+    email_not_found: 'Email não autorizado.\nAcesse a página do produto para adquirir acesso.',
     invalid_email_format: 'Formato de email inválido. Verifique e tente novamente.',
     max_attempts_exceeded: 'Número máximo de tentativas excedido. Reinicie o instalador.',
     timeout: 'Tempo de conexão esgotado. Verifique sua internet e tente novamente.',

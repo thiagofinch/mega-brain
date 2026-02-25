@@ -110,17 +110,17 @@ Runway = Saldo / Burn Rate
 Runway = R$ X.XM / R$ XXXk = NN meses
 
 ### STATUS
-**Runway: 40 meses (ate Nov/2028)**
+**Runway: [RUNWAY_MESES] meses (ate [DATA_FIM_RUNWAY])**
 
 [ ] SAUDAVEL - Runway > 24 meses
 
 ### SENSIBILIDADE
-- +10% custos: 36 meses
-- +20% custos: 33 meses
-- Contratacao de time (estimado): -7 meses
+- +10% custos: [CALC] meses
+- +20% custos: [CALC] meses
+- Contratacao de time (estimado): -[CALC] meses
 
 ### RECOMENDACAO
-Runway confortavel para expansao agressiva.
+[Analise baseada nos dados atuais do [SUA EMPRESA]-CONTEXT]
 Monitorar burn rate mensalmente.
 ```
 

@@ -1,7 +1,7 @@
 -- Migration: 002_premium_token
 -- Description: Add premium_token delivery to email validation
 -- Date: 2026-02-20
--- Product: Mega Brain - MoneyClub Edition
+-- Product: Mega Brain - [YOUR_PRODUCT_NAME] Edition
 --
 -- PURPOSE:
 --   Closes the "premium_token gap": validate_buyer_email() previously returned
@@ -60,7 +60,7 @@ BEGIN
   -- Validate buyer
   SELECT id, email, name, status, install_count
   INTO buyer
-  FROM moneyclub_buyers
+  FROM product_buyers
   WHERE LOWER(email) = LOWER(buyer_email)
   AND status = 'active';
 
@@ -72,7 +72,7 @@ BEGIN
   END IF;
 
   -- Update install tracking
-  UPDATE moneyclub_buyers
+  UPDATE product_buyers
   SET install_count = install_count + 1,
       last_install_at = NOW(),
       activated_at = COALESCE(activated_at, NOW()),
