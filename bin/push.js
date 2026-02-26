@@ -201,6 +201,28 @@ function loadLayer3ManifestPaths() {
   return paths;
 }
 
+/**
+ * Load Layer 1 allowlist paths.
+ * Layer 2 needs these to be complete (Layer 2 = Layer 1 + Premium).
+ */
+function loadLayer1AllowlistPaths() {
+  const allowlistPath = resolve(PROJECT_ROOT, '.github', 'layer1-allowlist.txt');
+  if (!existsSync(allowlistPath)) return [];
+
+  const content = readFileSync(allowlistPath, 'utf-8');
+  const paths = [];
+
+  for (const raw of content.split('\n')) {
+    const line = raw.trim();
+    if (!line || line.startsWith('#')) continue;
+    // Skip .gitkeep entries - they're just placeholders
+    if (line.endsWith('.gitkeep')) continue;
+    paths.push(line.replace(/\/+$/, ''));
+  }
+
+  return paths;
+}
+
 // Files that must NEVER be pushed to any remote
 const SECRET_FILES = [
   '.env', '.env.local', '.env.production', '.env.development',
@@ -564,57 +586,94 @@ async function pushLayer2({ dryRun, message }) {
     spinner.succeed(chalk.green('Validacao OK'));
   }
 
-  // Step 2: Read layer2-manifest.txt to get premium paths
-  const manifestPaths = loadLayer2ManifestPaths();
-  if (manifestPaths.length === 0) {
+  // Step 2: Read layer1-allowlist.txt AND layer2-manifest.txt
+  // Layer 2 = Layer 1 (base) + Premium (manifest)
+  const layer1Paths = loadLayer1AllowlistPaths();
+  const layer2Paths = loadLayer2ManifestPaths();
+
+  if (layer1Paths.length === 0) {
+    console.log(chalk.red('\n  Erro: layer1-allowlist.txt vazio ou nao encontrado.'));
+    console.log(chalk.dim('  Verifique: .github/layer1-allowlist.txt\n'));
+    process.exit(1);
+  }
+
+  if (layer2Paths.length === 0) {
     console.log(chalk.red('\n  Erro: layer2-manifest.txt vazio ou nao encontrado.'));
     console.log(chalk.dim('  Verifique: .github/layer2-manifest.txt\n'));
     process.exit(1);
   }
 
-  console.log(chalk.dim(`\n  Manifest: ${manifestPaths.length} caminhos premium definidos`));
-  for (const p of manifestPaths) {
+  // Combine Layer 1 + Layer 2 (deduplicated)
+  const allPaths = [...new Set([...layer1Paths, ...layer2Paths])];
+
+  console.log(chalk.dim(`\n  Layer 1 (base): ${layer1Paths.length} caminhos`));
+  console.log(chalk.dim(`  Layer 2 (premium): ${layer2Paths.length} caminhos`));
+  console.log(chalk.dim(`  Total combinado: ${allPaths.length} caminhos\n`));
+
+  // Show Layer 1 paths
+  console.log(chalk.hex('#6366f1')('  Layer 1 (Community):'));
+  for (const p of layer1Paths.slice(0, 5)) {
+    console.log(chalk.dim(`    + ${p}`));
+  }
+  if (layer1Paths.length > 5) {
+    console.log(chalk.dim(`    ... e mais ${layer1Paths.length - 5} caminhos`));
+  }
+
+  // Show Layer 2 paths
+  console.log(chalk.hex('#f59e0b')('\n  Layer 2 (Premium):'));
+  for (const p of layer2Paths) {
     console.log(chalk.dim(`    + ${p}`));
   }
   console.log();
 
+  // Use combined paths for the rest of the function
+  const manifestPaths = allPaths;
+
   if (dryRun) {
     showDryRun(2, config, branch);
-    console.log(chalk.dim('  Caminhos do manifest que seriam adicionados com git add -f:'));
-    for (const p of manifestPaths) {
+    console.log(chalk.dim('  Caminhos (Layer 1 + Layer 2) que seriam adicionados com git add -f:'));
+    for (const p of manifestPaths.slice(0, 15)) {
       const exists = existsSync(resolve(PROJECT_ROOT, p));
       console.log(`    ${exists ? chalk.green('+') : chalk.red('x')} ${p} ${!exists ? chalk.dim('(nao existe)') : ''}`);
+    }
+    if (manifestPaths.length > 15) {
+      console.log(chalk.dim(`    ... e mais ${manifestPaths.length - 15} caminhos`));
     }
     console.log();
     return;
   }
 
-  // Step 3: git add -f each manifest path that exists on disk
-  const addSpinner = ora({ text: 'Staging caminhos premium (force add)...', color: 'yellow' }).start();
+  // Step 3: git add -f each path (Layer 1 + Layer 2) that exists on disk
+  const addSpinner = ora({ text: 'Staging caminhos Layer 1 + Layer 2 (force add)...', color: 'yellow' }).start();
   let addedCount = 0;
+  let layer1Added = 0;
+  let layer2Added = 0;
 
-  for (const manifestPath of manifestPaths) {
-    const fullPath = resolve(PROJECT_ROOT, manifestPath);
+  for (const path of manifestPaths) {
+    const fullPath = resolve(PROJECT_ROOT, path);
     if (!existsSync(fullPath)) continue;
 
     try {
-      git(`add -f "${manifestPath}"`, { silent: true, stdio: 'pipe' });
+      git(`add -f "${path}"`, { silent: true, stdio: 'pipe' });
       addedCount++;
+      // Track which layer this path belongs to
+      if (layer1Paths.includes(path)) layer1Added++;
+      if (layer2Paths.includes(path)) layer2Added++;
     } catch {
       // Some paths may fail — that's ok
     }
   }
 
   if (addedCount === 0) {
-    addSpinner.warn(chalk.yellow('Nenhum caminho premium encontrado no disco.'));
-    console.log(chalk.dim('  Verifique se o conteudo premium existe localmente.\n'));
+    addSpinner.warn(chalk.yellow('Nenhum caminho encontrado no disco.'));
+    console.log(chalk.dim('  Verifique se o conteudo existe localmente.\n'));
     process.exit(1);
   }
 
-  addSpinner.succeed(chalk.green(`${addedCount} caminhos premium staged`));
+  addSpinner.succeed(chalk.green(`${addedCount} caminhos staged (L1: ${layer1Added}, L2: ${layer2Added})`));
 
   // Step 4: Commit (bypass pre-commit hook via env var — this is a temporary commit)
-  const commitMsg = message || 'feat(premium): update Layer 2 content';
+  const commitMsg = message || 'feat(premium): update Layer 2 (Layer 1 + Premium content)';
   const commitSpinner = ora({ text: 'Criando commit premium...', color: 'yellow' }).start();
   try {
     git(`commit -m "${commitMsg.replace(/"/g, '\\"')}"`, { silent: true, stdio: 'pipe', env: { MEGA_BRAIN_LAYER_PUSH: 'true' } });
@@ -834,10 +893,10 @@ function showDryRun(layer, config, branch) {
     console.log(chalk.dim('    6. Perguntar sobre npm publish'));
     console.log(chalk.dim('    7. Auto-sync para backup (Layer 3)'));
   } else if (layer === 2) {
-    console.log(chalk.dim('\n  Fluxo Layer 2:'));
+    console.log(chalk.dim('\n  Fluxo Layer 2 (Layer 1 + Premium):'));
     console.log(chalk.dim('    1. Validar (personas excluidas, .env)'));
-    console.log(chalk.dim('    2. Ler layer2-manifest.txt'));
-    console.log(chalk.dim('    3. git add -f para cada caminho do manifest'));
+    console.log(chalk.dim('    2. Ler layer1-allowlist.txt + layer2-manifest.txt'));
+    console.log(chalk.dim('    3. git add -f para cada caminho (L1 + L2 combinados)'));
     console.log(chalk.dim('    4. git commit'));
     console.log(chalk.dim('    5. git push premium main --force'));
     console.log(chalk.dim('    6. git reset HEAD~1 (limpar commit local)'));
@@ -984,7 +1043,7 @@ async function main() {
 // Entry point — works as standalone binary AND as module import
 // ---------------------------------------------------------------------------
 
-export { pushLayer1, pushLayer2, pushLayer3, validateForLayer, loadLayer2ManifestPaths, loadLayer3ManifestPaths };
+export { pushLayer1, pushLayer2, pushLayer3, validateForLayer, loadLayer1AllowlistPaths, loadLayer2ManifestPaths, loadLayer3ManifestPaths };
 
 main().catch((err) => {
   console.error();

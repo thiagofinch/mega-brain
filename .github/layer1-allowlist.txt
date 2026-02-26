@@ -17,6 +17,9 @@
 # === CLI & INSTALLER (always public) ===
 bin/
 package.json
+
+# === INTELLIGENCE LAYER (processing engine) ===
+scripts/
 .gitignore
 .gitattributes
 .claudeignore
