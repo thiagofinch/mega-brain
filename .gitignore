@@ -231,6 +231,7 @@ build/
 # === ROOT ARTIFACTS ===
 _audit.ps1
 npm-publish-error.log
+*.tgz
 
 # === SECURITY (filter-repo patterns, never commit) ===
 scripts/filter-patterns.txt

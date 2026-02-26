@@ -41,9 +41,7 @@ archive/
 .claude/skills/source-sync/
 .claude/skills/sync-docs/
 .claude/skills/talent-agent/
-.claude/skills/04-SKILL-KNOWLEDGE-EXTRACTION/
-.claude/skills/05-SKILL-PIPELINE-JARVIS/
-.claude/skills/07-SKILL-DISPATCHING-PARALLEL-AGENTS/
+# (old numbered names removed — renamed to kebab-case in v1.3.0)
 .claude/skills/chronicler/
 .claude/skills/gemini-fallback/
 .claude/skills/jarvis/
@@ -121,7 +119,6 @@ chroma_db/
 .claude/jarvis/CONTEXT-STACK.json
 .claude/jarvis/PENDING.md
 .claude/jarvis/CURRENT-TASK.md
-.claude/settings.json
 .claude/settings.local.json
 system/JARVIS-STATE.json
 system/registry/

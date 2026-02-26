@@ -205,7 +205,7 @@ function loadLayer3ManifestPaths() {
 const SECRET_FILES = [
   '.env', '.env.local', '.env.production', '.env.development',
   '.mcp.json', 'credentials.json', 'token.json', 'token_write.json',
-  'settings.local.json', '.claude/settings.json',
+  'settings.local.json', '.claude/settings.local.json',
 ];
 
 // ---------------------------------------------------------------------------

@@ -1,155 +1,148 @@
-# Mega Brain - JARVIS Knowledge System
+# Mega Brain - AI Knowledge Management System
 
-## Sistema
+## What is Mega Brain?
 
-- **Produto:** Mega Brain - AI Knowledge Management System (MoneyClub Edition)
-- **Identidade:** JARVIS (Just A Rather Very Intelligent System) - Digital British Butler
-- **Orquestrador:** JARVIS via hooks em `.claude/hooks/`
-- **Idioma:** Português Brasileiro (PT-BR) - JARVIS fala como executivo britânico em português
+AI-powered system that transforms expert materials (videos, PDFs, transcriptions) into structured playbooks, DNA schemas, and mind-clone agents. Powered by JARVIS orchestrator.
 
-## Arquitetura de Pastas
+## Quick Start
+
+1. Run `npx mega-brain-ai setup` (auto-triggers on first use if `.env` missing)
+2. Fill in API keys when prompted (only `OPENAI_API_KEY` is required)
+3. Use `/jarvis-briefing` to see system status
+
+## Architecture
 
 ```
 mega-brain/
-├── inbox/          -> Entrada de materiais brutos (vídeos, PDFs, transcrições)
-├── processing/     -> Materiais em processamento pelo pipeline
-│   ├── chunks/        -> Fragmentos de texto para processamento
-│   ├── canonical/     -> Versões canônicas consolidadas
-│   ├── insights/      -> Insights extraídos
-│   └── narratives/    -> Narrativas geradas
-├── knowledge/      -> Base de conhecimento estruturada (DNA schemas)
-│   ├── dossiers/      -> Dossiês de pessoas/empresas
-│   ├── playbooks/     -> Playbooks operacionais
-│   ├── sources/       -> Fontes originais indexadas
-│   └── dna/           -> DNA schemas extraídos
-├── reference/      -> PRDs, templates, documentação de referência
-├── system/         -> Configurações do sistema, JARVIS Voice, protocolos
-├── agents/         -> Agentes ativos e suas configurações
-├── logs/           -> Logs de sessões e batches
-├── bin/            -> Executáveis e CLI tools
-├── sessions/       -> Sessões salvas
-├── scripts/        -> Scripts utilitários (Python)
-├── vendor/         -> Ferramentas e plugins de terceiros
-├── .claude/           -> Configurações Claude Code
-│   ├── hooks/         -> Hooks de lifecycle (session_start, memory, etc.)
-│   ├── jarvis/        -> Identidade e estado JARVIS
-│   ├── commands/      -> Slash commands
-│   └── skills/        -> Skills especializadas
+├── inbox/          -> Raw materials (videos, PDFs, transcriptions)
+├── processing/     -> Pipeline stages (chunks, canonical, insights, narratives)
+├── knowledge/      -> Structured knowledge base (dossiers, playbooks, DNA)
+├── agents/         -> AI agents (persons, cargo, council)
+├── system/         -> Protocols, schemas, documentation
+├── reference/      -> PRDs, templates, reference docs
+├── .claude/        -> Claude Code integration (hooks, skills, commands, rules)
+├── bin/            -> CLI tools and installer
+├── logs/           -> Session and batch logs
+└── scripts/        -> Python utilities
 ```
 
-## DNA Schema (5 Camadas de Conhecimento)
+## Community vs Pro
 
-O Mega Brain organiza conhecimento extraído em 5 camadas:
+| Feature | Community | Pro |
+|---------|-----------|-----|
+| CLI & Templates | yes | yes |
+| Skills & Hooks | yes | yes |
+| Agent Templates | yes | yes |
+| Knowledge Base (populated) | - | yes |
+| Mind Clone Agents | - | yes |
+| Pipeline Processing | - | yes |
+| Council / Conclave | - | yes |
 
-| Camada | Nome | Descrição |
-|--------|------|-----------|
-| L1 | FILOSOFIAS | Crenças fundamentais e visão de mundo |
-| L2 | MODELOS-MENTAIS | Frameworks de pensamento e decisão |
-| L3 | HEURÍSTICAS | Regras práticas e atalhos de decisão |
-| L4 | FRAMEWORKS | Metodologias estruturadas e processos |
-| L5 | METODOLOGIAS | Implementações passo-a-passo |
+## DNA Schema (5 Knowledge Layers)
 
-## Comandos Principais
+| Layer | Name | Description |
+|-------|------|-------------|
+| L1 | PHILOSOPHIES | Core beliefs and worldview |
+| L2 | MENTAL-MODELS | Thinking and decision frameworks |
+| L3 | HEURISTICS | Practical rules and decision shortcuts |
+| L4 | FRAMEWORKS | Structured methodologies and processes |
+| L5 | METHODOLOGIES | Step-by-step implementations |
 
-| Comando | Descrição |
-|---------|-----------|
-| `/jarvis-briefing` | Status operacional + health score |
-| `/jarvis-full` | Pipeline completo (ingest + process + enrich) |
-| `/jarvis-painel` | Dashboard voice (localhost:8765) |
-| `/process-jarvis` | Processador pipeline 5 fases |
-| `/conclave` | Sessão do Conselho (debate multi-agente) |
-| `/ingest` | Ingestão de material novo |
-| `/save` | Salvar sessão atual |
-| `/resume` | Retomar sessão anterior |
-| `/map` | MMOS Mind Cloning Command |
-| `/setup` | Setup inicial do ambiente |
+## Commands
 
-## Agentes
+| Command | Description |
+|---------|-------------|
+| `/jarvis-briefing` | Operational status + health score |
+| `/jarvis-full` | Full pipeline (ingest + process + enrich) |
+| `/process-jarvis` | Pipeline processor (5 phases) |
+| `/conclave` | Council session (multi-agent debate) |
+| `/ingest` | Ingest new material |
+| `/save` | Save current session |
+| `/resume` | Resume previous session |
+| `/setup` | Environment setup wizard |
 
-Agentes são definidos em `AGENT-INDEX.yaml` e ativados via slash commands.
+## Agents
 
-### Tipos de Agente
+Defined in `AGENT-INDEX.yaml`, activated via slash commands.
 
-| Tipo | Exemplos | Propósito |
-|------|----------|-----------|
+| Type | Examples | Purpose |
+|------|----------|---------|
 | CARGO | CRO, CFO, CMO, COO | C-Level advisors |
-| PERSONS | Cole Gordon, Alex Hormozi, Jeremy Haynes | Mind clones de especialistas |
-| CONCLAVE | Critico, Advogado do Diabo, Sintetizador | Deliberacao multi-perspectiva |
-| SALES | Closer, BDR, SDS, LNS | Operacoes de vendas |
-| SYSTEM | JARVIS, Pipeline | Operações do sistema |
+| PERSONS | Cole Gordon, Alex Hormozi | Expert mind clones |
+| CONCLAVE | Critic, Devil's Advocate, Synthesizer | Multi-perspective deliberation |
+| SYSTEM | JARVIS, Pipeline | System operations |
 
-## Convenções
+## Configuration
 
-### Naming
-- Pastas: lowercase sem prefixo (`inbox`, `system`)
-- Arquivos de config: SCREAMING-CASE.ext (`STATE.json`, `MEMORY.md`)
-- Scripts Python: snake_case (`jarvis_terminal.py`)
-- Agentes: SCREAMING-CASE ID (`CRO`, `CLOSER`)
+- **`.env`** is the ONLY source of truth for credentials
+- Run `/setup` to configure interactively
+- Never hardcode API keys anywhere
+- `.mcp.json` uses `${ENV_VAR}` syntax for MCP servers
 
-### Imports Python
-- Sempre usar `from dotenv import load_dotenv` + `load_dotenv()` no topo
-- Nunca hardcodar credentials - sempre via `os.getenv()`
-- Paths absolutos via `Path(__file__).parent` ou env vars
+### Required Keys
 
-## Segurança
+| Key | Purpose | Required? |
+|-----|---------|-----------|
+| `OPENAI_API_KEY` | Whisper transcription | Yes (pipeline needs it) |
+| `VOYAGE_API_KEY` | Semantic embeddings (RAG) | Recommended |
+| `GOOGLE_CLIENT_ID` | Drive import | Optional |
+| `ANTHROPIC_API_KEY` | N/A with Claude Code | Not needed |
 
-### Regras Invioláveis
-1. **NUNCA** hardcodar API keys ou tokens em código
-2. **SEMPRE** usar `.env` para credenciais
-3. `.mcp.json` usa `${ENV_VAR}` syntax para referência
-4. `.env` está no `.gitignore` - nunca commitar
-5. Google OAuth credentials via config file, não código
-6. Rotacionar chaves se expostas em git history
+## Hooks System
 
-### Arquivos Sensíveis
-- `.env` - Todas as API keys
-- `.mcp.json` - Referências a env vars para MCP servers
-- `credentials.json` - Google OAuth (gitignored)
+20+ active hooks in `.claude/hooks/` (Python 3, stdlib + PyYAML only).
+Configured in `settings.json` (distributed) and `settings.local.json` (local overrides).
 
-## Hooks Ativos
+| Event | Key Hooks |
+|-------|-----------|
+| SessionStart | `session_start.py`, `inbox_age_alert.py`, `skill_indexer.py` |
+| UserPromptSubmit | `skill_router.py`, `quality_watchdog.py`, `memory_updater.py` |
+| PreToolUse | `creation_validator.py`, `claude_md_guard.py` |
+| PostToolUse | `post_tool_use.py`, `enforce_dual_location.py` |
+| Stop | `stop_hook_completeness.py`, `ralph_wiggum.py` |
 
-| Hook | Evento | Função |
-|------|--------|--------|
-| `session_start.py` | SessionStart | Carrega JARVIS identity + estado + briefing |
-| `memory_updater.py` | PostToolUse | Detecta decisões e atualiza MEMORY |
-| `inbox_age_alert.py` | SessionStart | Alerta sobre arquivos antigos no INBOX |
+## Rules (Lazy Loading)
 
-## JARVIS Identity Files
+Detailed rules are loaded on-demand via keyword matching from `.claude/rules/`:
 
-| Arquivo | Propósito |
-|---------|-----------|
-| `.claude/jarvis/JARVIS-BOOT-SEQUENCE.md` | Startup prompt consolidado |
-| `.claude/jarvis/JARVIS-DNA-PERSONALITY.md` | DNA completo de personalidade |
-| `.claude/jarvis/STATE.json` | Estado da missão atual |
-| `.claude/jarvis/PENDING.md` | Pendências ativas |
-| `.claude/jarvis/CURRENT-TASK.md` | Tarefa em andamento |
+| Group | Topics | File |
+|-------|--------|------|
+| PHASE-MANAGEMENT | phases, pipeline, batch | RULE-GROUP-1.md |
+| PERSISTENCE | sessions, save, resume | RULE-GROUP-2.md |
+| OPERATIONS | parallel, templates, KPIs | RULE-GROUP-3.md |
+| PHASE-5 | agents, dossiers, cascading | RULE-GROUP-4.md |
+| VALIDATION | source-sync, integrity | RULE-GROUP-5.md |
+| AUTO-ROUTING | skills, sub-agents, GitHub | RULE-GROUP-6.md |
 
-## Pipeline de Processamento
+## Security
 
-```
-INBOX -> Classificação -> Transcrição -> Extração DNA -> Enriquecimento -> Knowledge Base
-```
+1. **NEVER** hardcode API keys or tokens in code
+2. **ALWAYS** use `.env` for credentials (gitignored)
+3. Google OAuth credentials via config file, not code
+4. `git push` is blocked by `settings.json` deny rules — delegate to @devops
 
-Cada fase é executada pelo JARVIS Pipeline Processor (`/process-jarvis`).
+## Conventions
+
+- Folders: lowercase (`inbox`, `system`)
+- Config files: SCREAMING-CASE (`STATE.json`, `MEMORY.md`)
+- Python scripts: snake_case, use `pathlib.Path` for cross-platform paths
+- Skills: kebab-case directories (`knowledge-extraction/`)
+
+## Troubleshooting
+
+| Problem | Solution |
+|---------|----------|
+| "Hook failed" | Check Python 3 is in PATH |
+| ".env not found" | Run `npx mega-brain-ai setup` |
+| "Permission denied on git push" | By design — use branch + PR workflow |
+| Skills not auto-activating | Check `SKILL-INDEX.json` is generated on SessionStart |
+
+## Recent Changes
+
+See `system/docs/CHANGELOG-ARCHITECTURE.md` for architectural evolution history.
 
 ## CLAUDE.md Policy
 
-- Apenas 2 CLAUDE.md são válidos: `CLAUDE.md` (root) e `.claude/CLAUDE.md` (este arquivo)
-- NUNCA criar CLAUDE.md em subpastas de dados ou código
-- Memória de agentes vive em `.claude/jarvis/` e `.claude/skills/`, não em CLAUDE.md
-
-## Otimização Claude Code
-
-### Uso de Ferramentas
-
-| Tarefa | Use | Não Use |
-|--------|-----|---------|
-| Buscar conteúdo | `Grep` tool | `grep`/`rg` no bash |
-| Ler arquivos | `Read` tool | `cat`/`head`/`tail` |
-| Editar arquivos | `Edit` tool | `sed`/`awk` |
-| Buscar arquivos | `Glob` tool | `find` |
-
-### Performance
-- Prefira chamadas de ferramentas em batch
-- Use execução paralela para operações independentes
-- Cache dados frequentemente acessados durante a sessão
+- Only 2 CLAUDE.md files are valid: root `CLAUDE.md` and `.claude/CLAUDE.md` (this file)
+- NEVER create CLAUDE.md in data or code subdirectories
+- Agent memory lives in `.claude/jarvis/` and `.claude/skills/`

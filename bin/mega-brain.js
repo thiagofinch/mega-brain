@@ -44,6 +44,24 @@ async function main() {
     process.exit(0);
   }
 
+  // Auto-trigger setup if .env is missing (skip for install/setup/help)
+  const skipEnvCheck = ['install', 'setup', 'push'].includes(command);
+  if (!skipEnvCheck) {
+    const projectEnv = resolve(process.cwd(), '.env');
+    if (!existsSync(projectEnv)) {
+      const boxen = (await import('boxen')).default;
+      console.log(boxen(
+        '  First time? Let\'s set up your environment.\n' +
+        '  Running setup wizard...\n\n' +
+        '  (You can run this anytime with: npx mega-brain-ai setup)',
+        { padding: 1, borderColor: 'cyan', borderStyle: 'round' }
+      ));
+      const { runSetup } = await import('./lib/setup-wizard.js');
+      await runSetup();
+      process.exit(0);
+    }
+  }
+
   if (command === 'install') {
     const { runInstaller } = await import('./lib/installer.js');
     await runInstaller(pkg.version, args[1]);
@@ -74,6 +92,9 @@ async function main() {
   } else if (command === 'features') {
     const { showFeatures } = await import('./lib/pro-commands.js');
     showFeatures();
+  } else if (command === 'setup') {
+    const { runSetup } = await import('./lib/setup-wizard.js');
+    await runSetup();
   } else {
     console.error(`\n  Comando desconhecido: ${command}`);
     showHelp();
@@ -88,6 +109,7 @@ function showHelp() {
 
   Comandos:
     install [nome]  Instalar Mega Brain (PREMIUM ou Community)
+    setup       Configurar API keys e dependencias (wizard interativo)
     validate    Validar email MoneyClub (mega-brain validate <email>)
     push        Push para Layer 1/2/3 (mega-brain push [--layer N])
     upgrade     Atualizar Community para Premium

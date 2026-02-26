@@ -10,68 +10,103 @@
 # RULE: New files/folders are PREMIUM by default.
 #       To make something public, add it here explicitly.
 #
-# AUDITED: 2026-02-20 (Phases 4-5, Layer System v2.0)
+# SYNCED WITH: package.json "files" field
+# AUDITED: 2026-02-25 (Hardening v1)
 # ==============================================================
 
 # === CLI & INSTALLER (always public) ===
 bin/
 package.json
-.npmignore
 .gitignore
 .gitattributes
 .claudeignore
-README.md
-LICENSE
+.gitleaks.toml
+CONTRIBUTING.md
 
 # === GITHUB CONFIG ===
 .github/layer1-allowlist.txt
 .github/layer2-manifest.txt
+.github/CODEOWNERS
+.github/PULL_REQUEST_TEMPLATE.md
 
-# === CLAUDE CODE INTEGRATION (structure only) ===
+# === IDE PRESETS ===
+.cursor/
+.windsurf/
+.antigravity/
+
+# === CLAUDE CODE INTEGRATION ===
 .claude/CLAUDE.md
 .claude/commands/
 .claude/hooks/
 .claude/rules/
-.claude/skills/
+.claude/settings.json
 .claude/templates/
+.claude/scripts/
 
-# === SYSTEM (protocols + structural, no data) ===
+# === CLAUDE SKILLS (explicit list — no wildcard) ===
+.claude/skills/_TEMPLATES/
+.claude/skills/skill-creator-internal/
+.claude/skills/docs-megabrain/
+.claude/skills/python-megabrain/
+.claude/skills/agent-creation/
+.claude/skills/knowledge-extraction/
+.claude/skills/pipeline-jarvis/
+.claude/skills/brainstorming/
+.claude/skills/dispatching-parallel-agents/
+.claude/skills/executing-plans/
+.claude/skills/writing-plans/
+.claude/skills/verification-before-completion/
+.claude/skills/using-superpowers/
+.claude/skills/code-review/
+.claude/skills/feature-dev/
+.claude/skills/frontend-design/
+.claude/skills/gha/
+.claude/skills/github-workflow/
+.claude/skills/hookify/
+.claude/skills/plugin-dev/
+.claude/skills/pr-review-toolkit/
+.claude/skills/skill-writer/
+.claude/skills/verify-6-levels/
+.claude/skills/DETECTION-PROTOCOL.md
+.claude/skills/README.md
+.claude/skills/SKILL-REGISTRY.md
+.claude/skills/SKILL-SUGGESTIONS.md
+
+# === AGENTS STRUCTURE (templates + examples only) ===
+agents/council/
+agents/boardroom/CHECKLIST-MASTER.md
+agents/boardroom/INTEGRATION-GUIDE.md
+agents/boardroom/README.md
+agents/boardroom/config/BOARDROOM-CONFIG.md
+agents/boardroom/config/TTS-INTEGRATION.md
+agents/boardroom/config/VOICE-PROFILES.md
+agents/boardroom/scripts/
+agents/boardroom/templates/
+agents/boardroom/workflows/
+agents/constitution/
+agents/protocols/
+agents/_templates/
+agents/persons/_example/
+agents/sua-empresa/README.md
+agents/sua-empresa/_example/
+
+# === SYSTEM (protocols + docs, no data) ===
 system/protocols/
-system/docs/
-system/glossary/
-system/schemas/
+system/database/
+system/docs/HOOK-INSTALLATION.md
+system/docs/MEGA-BRAIN-DEMO-COMPLETA.md
+system/docs/STRATEGIC-INTEGRATION-GUIDE.md
+system/docs/architecture/
+system/docs/hooks/
 
-# === REFERENCE (public docs only) ===
+# === REFERENCE (public docs) ===
 reference/
 
 # === INTEGRATIONS (setup instructions) ===
 integrations/
 
-# === AGENTS STRUCTURE (empty + examples only) ===
-agents/council/
-agents/boardroom/
-agents/constitution/
-agents/protocols/
-agents/autonomous/
-agents/sub-agents/
-agents/_templates/
-agents/persons/.gitkeep
-agents/persons/_example/
-agents/cargo/.gitkeep
-agents/sua-empresa/.gitkeep
-agents/sua-empresa/README.md
-agents/sua-empresa/_example/
-agents/sua-empresa/org/.gitkeep
-agents/sua-empresa/roles/.gitkeep
-agents/sua-empresa/jds/.gitkeep
-agents/sua-empresa/operations/.gitkeep
-agents/sua-empresa/metrics/.gitkeep
-agents/sua-empresa/memory/.gitkeep
-agents/sua-empresa/sow/.gitkeep
-
 # === EMPTY DIRECTORIES (structure only) ===
 inbox/.gitkeep
-inbox/README.md
 processing/chunks/.gitkeep
 processing/canonical/.gitkeep
 processing/insights/.gitkeep
@@ -85,4 +120,3 @@ knowledge/playbooks/.gitkeep
 knowledge/playbooks/PLAYBOOK-EXAMPLE.md
 knowledge/dna/.gitkeep
 logs/.gitkeep
-logs/README.md
