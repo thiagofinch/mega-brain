@@ -1,0 +1,61 @@
+# DNA Cognitivo - Exemplo
+# Gerado automaticamente pela extração de DNA do pipeline JARVIS
+# Este arquivo é um modelo. Será substituído por DNAs reais.
+
+expert:
+  name: "Alex Exemplo"
+  id: "example-expert"
+  sources_count: 12
+  extraction_date: "2026-01-15"
+
+layers:
+  L1_filosofias:
+    - belief: "O preço é consequência do valor"
+      confidence: 0.95
+      sources: ["AE001", "AE002"]
+    - belief: "Escala antes de otimizar"
+      confidence: 0.87
+      sources: ["AE003"]
+
+  L2_modelos_mentais:
+    - model: "Value Equation"
+      description: "Resultado Sonhado x Probabilidade / Tempo x Esforço"
+      application: "Avaliar e melhorar ofertas"
+      sources: ["AE001"]
+    - model: "Esteira de Produtos"
+      description: "Front End -> Back End -> High End"
+      application: "Estruturar progressão de valor"
+      sources: ["AE002"]
+
+  L3_heuristicas:
+    - rule: "Responder lead em menos de 5 minutos"
+      context: "Velocidade de resposta impacta 80% da conversão"
+      sources: ["AE001"]
+    - rule: "Sempre ancorar antes de revelar preço"
+      context: "Ancoragem define percepção de valor"
+      sources: ["AE002"]
+
+  L4_frameworks:
+    - name: "SPIN Selling"
+      steps:
+        - "Situação: entender contexto atual"
+        - "Problema: identificar dor principal"
+        - "Implicação: amplificar consequências"
+        - "Necessidade: criar urgência de solução"
+      sources: ["AE001", "AE003"]
+
+  L5_metodologias:
+    - name: "Pipeline de Onboarding"
+      duration: "30 dias"
+      steps:
+        - "Dia 1-3: Welcome + Setup"
+        - "Dia 4-7: Primeiro Quick Win"
+        - "Dia 8-14: Implementação Core"
+        - "Dia 15-30: Otimização + Resultados"
+      sources: ["AE003"]
+
+metadata:
+  version: "1.0.0"
+  pipeline_version: "JARVIS v2.1"
+  total_chunks_analyzed: 847
+  total_insights_extracted: 156

@@ -1,0 +1,98 @@
+# METODOLOGIAS - JORDAN LEE
+# Processos passo-a-passo com ORDEM RIGIDA e criterios de sucesso por etapa
+# Versao: 1.0.0 | Criado: 2025-12-27
+
+versao: "1.0.0"
+pessoa: "Jordan Lee"
+camada: "METODOLOGIAS"
+total_itens: 3
+
+itens:
+  - id: "JL-MET-001"
+    titulo: "Talent Acquisition VSL Method"
+    descricao: "Tratamento de job ads como Video Sales Letters para atrair top talent."
+    peso: 0.85
+    chunks:
+      - "CJ001_004"
+      - "CJ001_005"
+    fontes:
+      - "CJ001"
+    etapas:
+      - passo: 1
+        nome: "Criar VSL Job Ad"
+        descricao: "Job ad deve vender o sonho, mostrar a visão"
+        criterio_sucesso: "Candidato quer a visão, não só o salário"
+      - passo: 2
+        nome: "Título Aspiracional"
+        descricao: "Postar 'Sales Director' para atrair Sales Managers que querem subir"
+        criterio_sucesso: "Atrai candidatos ambiciosos, não apenas matching"
+      - passo: 3
+        nome: "Negociação por Valor"
+        descricao: "Negociar salário baseado em valor entregue"
+        criterio_sucesso: "Alinhamento de expectativas com resultados"
+      - passo: 4
+        nome: "Onboarding com Visão"
+        descricao: "Talento compra visão, não só salário"
+        criterio_sucesso: "Retenção de A-players"
+    recursos: "Dois recruiters internos + plataformas AI"
+    aplicacao: "Recrutamento, atração de talentos"
+
+  - id: "JL-MET-002"
+    titulo: "AI Sales Call Analyzer Implementation"
+    descricao: "Sistema de análise de calls usando AI para coaching em escala."
+    peso: 0.90
+    chunks:
+      - "CJ001_016"
+    fontes:
+      - "CJ001"
+    etapas:
+      - passo: 1
+        nome: "Integrar com Slack"
+        descricao: "Conectar analyzer ao canal de comunicação do time"
+      - passo: 2
+        nome: "Rastrear Compliance"
+        descricao: "Verificar aderência ao script"
+      - passo: 3
+        nome: "Analisar Tonalidade"
+        descricao: "Avaliar tom de voz e energia"
+      - passo: 4
+        nome: "Cross-reference Training"
+        descricao: "Comparar com centenas de vídeos de treinamento"
+      - passo: 5
+        nome: "Feedback Personalizado"
+        descricao: "Gerar feedback automático e específico"
+    resultado: "Passou de 2 calls/week para EVERY single call reviewed"
+    citacao: "É como ter um mentor pessoal para cada closer."
+    aplicacao: "QC de vendas, coaching em escala"
+
+  - id: "JL-MET-003"
+    titulo: "Sales Team Structure"
+    descricao: "Estrutura organizacional para time de vendas high-ticket em escala."
+    peso: 0.85
+    chunks:
+      - "CJ001_010"
+    fontes:
+      - "CJ001"
+    etapas:
+      - passo: 1
+        nome: "Closers (70)"
+        descricao: "Base do time, executam as vendas"
+      - passo: 2
+        nome: "Team Leads"
+        descricao: "Com overrides sobre performance"
+      - passo: 3
+        nome: "RevOps"
+        descricao: "Booking, calendars, CRM, follow-up, payment links"
+      - passo: 4
+        nome: "Sales Coach"
+        descricao: "Assiste calls e dá feedback"
+    capacidade: "300 calls/dia com 70 closers"
+    aplicacao: "Estruturação de time de vendas"
+
+metadados:
+  total_chunks_processados: 6
+  fontes_utilizadas:
+    - "CJ001"
+  peso_medio: 0.87
+  criado_em: "2025-12-27T00:00:00Z"
+  protocolo: "DNA-EXTRACTION-PROTOCOL v1.0"

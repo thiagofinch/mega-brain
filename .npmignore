@@ -1,0 +1,139 @@
+# ===========================================
+# .npmignore - Mega Brain npm package
+# ===========================================
+# AUTO-GENERATED from audit layer classifications.
+# Source of truth: core/intelligence/audit_layers.py
+# Regenerate: python3 core/intelligence/sync_package_files.py --npmignore --apply
+#
+# Defense-in-depth: package.json "files" is the
+# primary whitelist. This file is the SECOND layer.
+# ===========================================
+
+# === PYTHON BUILD ARTIFACTS (NEVER ship) ===
+__pycache__/
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+*.egg-info/
+
+# === L2 CONTENT (Premium -- not in public package) ===
+# Source: L2_PATTERNS in audit_layers.py
+agents/cargo/
+agents/minds/
+artifacts/chunks/
+artifacts/extractions/
+artifacts/insights/
+knowledge/dna/
+knowledge/dossiers/
+knowledge/playbooks/
+knowledge/sources/
+
+# === L3 CONTENT (Personal -- never distributed) ===
+# Source: L3_PATTERNS in audit_layers.py
+.claude/mission-control/
+.claude/sessions/
+agents/sua-empresa/
+inbox/
+logs/
+
+# === NEVER CONTENT (Secrets/sensitive) ===
+# Source: NEVER_PATTERNS in audit_layers.py
+.DS_Store
+.env
+.key
+.mcp.json
+.pem
+.secret
+credentials.json
+node_modules/
+settings.local.json
+token.json
+.env.*
+
+# === DEVELOPMENT-ONLY (not for consumers) ===
+.planning/
+docs/audit/
+docs/plans/
+docs/validation/
+
+# === RUNTIME STATE (per-user, not template) ===
+.claude/agent-memory/
+.claude/monitoring/
+.claude/learning-system/
+.claude/aios/
+.claude/jarvis/STATE.json
+.claude/jarvis/DECISIONS-LOG.md
+.claude/jarvis/CONTEXT-STACK.json
+.claude/jarvis/PENDING.md
+.claude/jarvis/CURRENT-TASK.md
+.claude/settings.local.json
+.claude/audit-*.json
+
+# === COMPANY-SPECIFIC CONTENT ===
+.claude/skills/ask-company/
+.claude/skills/process-company-inbox/
+.claude/skills/*-company-*
+
+# === L2-ONLY SKILLS (premium layer) ===
+.claude/skills/chronicler/
+.claude/skills/council/
+.claude/skills/executor/
+.claude/skills/fase-2-5-tagging/
+.claude/skills/finance-agent/
+.claude/skills/gdrive-transcription-downloader/
+.claude/skills/gemini-fallback/
+.claude/skills/hybrid-source-reading/
+.claude/skills/jarvis/
+.claude/skills/jarvis-briefing/
+.claude/skills/ler-planilha/
+.claude/skills/resume/
+.claude/skills/save/
+.claude/skills/smart-download-tagger/
+.claude/skills/source-sync/
+.claude/skills/sync-docs/
+.claude/skills/talent-agent/
+.claude/skills/verify/
+
+# === MEDIA FILES ===
+*.mp4
+*.mp3
+*.wav
+*.m4a
+*.mov
+*.avi
+*.mkv
+
+# === LARGE/BINARY FILES ===
+*.b64
+*.db
+*.sqlite
+*.pdf
+*.zip
+*.tar
+*.gz
+*.bz2
+
+# === OS & IDE ===
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.obsidian/
+
+# === BUILD ARTIFACTS ===
+dist/
+build/
+.venv*/
+venv/
+vendor/
+chroma_db/
+.chroma/
+
+# === BACKUPS & TEMP ===
+*_BACKUP_*.py
+*.bak
+*.tmp
+
+# === GIT (npm handles this, but explicit) ===
+.git/

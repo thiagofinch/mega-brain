@@ -1,0 +1,112 @@
+# HEURISTICAS - JORDAN LEE
+# Regras com THRESHOLD NUMERICO - Formato "Se X entao Y"
+# AS CAMADA MAIS VALIOSA - prioridade maxima
+# Versao: 1.0.0 | Criado: 2025-12-27
+
+versao: "1.0.0"
+pessoa: "Jordan Lee"
+camada: "HEURISTICAS"
+total_itens: 8
+
+itens:
+  - id: "JL-HEU-001"
+    titulo: "Regra dos 40 Anos"
+    descricao: "Se você tem 40 anos e não é rico, ou estava trabalhando na coisa errada ou você é ruim. Use isso como filtro de contratação."
+    threshold: "40 anos sem riqueza = red flag"
+    peso: 0.90
+    chunks:
+      - "CJ001_005"
+      - "CJ001_006"
+    fontes:
+      - "CJ001"
+    aplicacao: "Contratação, avaliação de candidatos sênior"
+    citacao: "If you're 40 and you're not rich yet, you either have been working on the wrong thing or you're just shit"
+
+  - id: "JL-HEU-002"
+    titulo: "AI Replacement Timeline"
+    descricao: "Sales reps serão substituídos por AI em 6-12 meses. Higher level sales (relationship-based enterprise, >$100k) não será substituído."
+    threshold: "6-12 meses para substituição de vendedores por AI"
+    peso: 0.85
+    chunks:
+      - "CJ001_014"
+    fontes:
+      - "CJ001"
+    aplicacao: "Planejamento de headcount, investimento em AI"
+    nuance: "Vendas abaixo de $100K são 'low ticket' na perspectiva enterprise"
+
+  - id: "JL-HEU-003"
+    titulo: "Variable Cost Target"
+    descricao: "Manter 70% dos custos como variáveis. Contrate apenas salespeople, consultants e criativos. SDRs e PMs substituídos por AI."
+    threshold: "70% custos variáveis"
+    peso: 0.85
+    chunks:
+      - "CJ001_014"
+    fontes:
+      - "CJ001"
+    aplicacao: "Estrutura de custos, decisões de contratação"
+
+  - id: "JL-HEU-004"
+    titulo: "Top Performer Earning"
+    descricao: "Top sales reps podem fazer $45-50k/mês, chegando até $70k com gamificação (Million-dollar club, double commissions)."
+    threshold: "$45-50k/mês para top performers, até $70k com bônus"
+    peso: 0.90
+    chunks:
+      - "CJ001_012"
+    fontes:
+      - "CJ001"
+    aplicacao: "Desenho de compensation, atração de talentos"
+
+  - id: "JL-HEU-005"
+    titulo: "Enterprise Value Factors"
+    descricao: "6 fatores que determinam enterprise value: High growth (revenue), Profitability model (reinvestir, não lifestyle), Scalability (productized), Recurring revenue, Proprietary AI/tech, Low dependency on founder."
+    threshold: "6 fatores para maximizar valuation"
+    peso: 0.90
+    chunks:
+      - "CJ001_013"
+    fontes:
+      - "CJ001"
+    aplicacao: "Preparação para exit, decisões estratégicas"
+
+  - id: "JL-HEU-006"
+    titulo: "Scale Capacity"
+    descricao: "Com 70 closers, capacidade de 300 calls/dia. Approximately 4.3 calls por closer por dia."
+    threshold: "4-5 calls/closer/dia"
+    peso: 0.85
+    chunks:
+      - "CJ001_003"
+      - "CJ001_004"
+    fontes:
+      - "CJ001"
+    aplicacao: "Dimensionamento de time, capacity planning"
+
+  - id: "JL-HEU-007"
+    titulo: "Irreplaceable Core"
+    descricao: "Com 240 funcionários, apenas 3 pessoas são irreplaceáveis além do co-fundador. Manter core team pequeno e de alta confiança."
+    threshold: "3 pessoas irreplaceáveis em 240 funcionários (~1.25%)"
+    peso: 0.80
+    chunks:
+      - "CJ001_010"
+    fontes:
+      - "CJ001"
+    aplicacao: "Gestão de pessoas-chave, planejamento de sucessão"
+
+  - id: "JL-HEU-008"
+    titulo: "Closer Close Rate"
+    descricao: "Matt (Head of Sales) fechou 38/39 calls sem experiência prévia. Competency e training > experiência."
+    threshold: "97% close rate possível com pessoa certa + training"
+    peso: 0.85
+    chunks:
+      - "CJ001_006"
+      - "CJ001_010"
+    fontes:
+      - "CJ001"
+    aplicacao: "Seleção de closers, validação de potencial"
+
+metadados:
+  total_chunks_processados: 14
+  fontes_utilizadas:
+    - "CJ001"
+  peso_medio: 0.86
+  itens_com_threshold_numerico: 8
+  criado_em: "2025-12-27T00:00:00Z"
+  protocolo: "DNA-EXTRACTION-PROTOCOL v1.0"

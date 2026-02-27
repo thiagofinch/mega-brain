@@ -1,0 +1,215 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/session_start.py",
+            "timeout": 10000
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/inbox_age_alert.py",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/skill_indexer.py",
+            "timeout": 5000
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .claude/hooks/gsd-check-update.js"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/continuous_save.py",
+            "timeout": 2000
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/user_prompt_submit.py",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/skill_router.py",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/quality_watchdog.py",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/memory_hints_injector.py",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/enforce_plan_mode.py",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/memory_updater.py",
+            "timeout": 5000
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/claude_md_guard.py",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/creation_validator.py",
+            "timeout": 5000
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/continuous_save.py",
+            "timeout": 2000
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/post_tool_use.py",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/post_batch_cascading.py",
+            "timeout": 30000
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/enforce_dual_location.py",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/pending_tracker.py",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/agent_creation_trigger.py",
+            "timeout": 10000
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/agent_index_updater.py",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/claude_md_agent_sync.py",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/pipeline_checkpoint.py",
+            "timeout": 5000
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .claude/hooks/gsd-context-monitor.js"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/continuous_save.py",
+            "timeout": 2000
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/stop_hook_completeness.py",
+            "timeout": 10000
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/ralph_wiggum.py",
+            "timeout": 5000
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/session_end.py",
+            "timeout": 10000
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/session_autosave_v2.py save session_end",
+            "timeout": 10000
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/agent_memory_persister.py",
+            "timeout": 5000
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "deny": [
+      "Bash(rm -rf *)",
+      "Bash(sudo *)",
+      "Bash(chmod 777 *)",
+      "Bash(git push --force *)",
+      "Bash(git push --force)",
+      "Bash(git push *)",
+      "Bash(git push)",
+      "Bash(git reset --hard *)",
+      "Bash(npm publish *)",
+      "Bash(npm publish)"
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "node .claude/hooks/gsd-statusline.js"
+  }
+}

@@ -1,0 +1,44 @@
+# Claude Code Agent Registry
+# Source: agents/persona-registry.yaml
+# Version: 1.0.0
+
+source: "agents/persona-registry.yaml"
+sync_targets:
+  - ".cursor/agents.yaml"
+  - ".windsurf/agents.yaml"
+
+# Layer paths
+paths:
+  L0: "core/jarvis/"
+  L1: "agents/conclave/"
+  L2: "agents/boardroom/"
+  L3: "agents/minds/"
+  L4: "agents/cargo/"
+  SUB: ".claude/jarvis/sub-agents/"
+
+# Activation
+activation:
+  # L0 - System
+  jarvis: "@jarvis"
+  agent-creator: "/create-agent"
+
+  # L1 - Conclave
+  conclave: "/conclave"
+
+  # L2-L4 - via /ask
+  ask: "/ask [agent-id]"
+
+# Creation triggers
+triggers:
+  role_detector:
+    script: "core/intelligence/role_detector.py"
+    thresholds:
+      L4: 5
+      L2: 10
+
+  pipeline:
+    phase: "5.2"
+    creates: "L3"
+
+  manual:
+    command: "/create-agent"

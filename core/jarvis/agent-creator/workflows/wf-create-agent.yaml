@@ -1,0 +1,110 @@
+# Workflow: Create Agent
+# Version: 1.0.0
+# Trigger: role_detector threshold OR manual /create-agent
+
+workflow:
+  id: wf-create-agent
+  name: "Agent Creation Workflow"
+  version: "1.0.0"
+  responsible: "@agent-creator"
+
+phases:
+  - id: phase_1
+    name: "VALIDATION"
+    steps:
+      - execute:
+          task: "core/jarvis/agent-creator/tasks/create-agent.md"
+          phase: "Phase 1: Validation"
+      - validate:
+          - layer in [L0, L1, L2, L3, L4, SUB]
+          - id is unique
+          - id is kebab-case
+    checkpoint:
+      id: CP_VALIDATE
+      blocking: true
+      criteria:
+        - "No duplicate agent ID"
+        - "Valid layer specified"
+
+  - id: phase_2
+    name: "GENERATION"
+    steps:
+      - execute:
+          task: "core/jarvis/agent-creator/tasks/create-agent.md"
+          phase: "Phase 2: Generate Files"
+      - create:
+          - path: "{layer_folder}/{id}/AGENT.md"
+            template: "agents/_templates/TEMPLATE-AGENT-V3.md"
+          - path: "{layer_folder}/{id}/SOUL.md"
+            template: "agents/protocols/SOUL-TEMPLATE.md"
+    checkpoint:
+      id: CP_FILES
+      blocking: true
+      criteria:
+        - "AGENT.md created"
+        - "SOUL.md created"
+
+  - id: phase_3
+    name: "REGISTRATION"
+    steps:
+      - execute:
+          task: "core/jarvis/agent-creator/tasks/create-agent.md"
+          phase: "Phase 3 & 4"
+      - create:
+          - path: ".claude/commands/{id}.md"
+            template: "inline"
+      - update:
+          - file: "agents/persona-registry.yaml"
+            action: "append"
+    checkpoint:
+      id: CP_REGISTRY
+      blocking: true
+      criteria:
+        - "Command file created"
+        - "Registry updated"
+
+  - id: phase_4
+    name: "SYNC"
+    steps:
+      - execute:
+          task: "core/jarvis/agent-creator/tasks/sync-agents.md"
+    checkpoint:
+      id: CP_SYNC
+      blocking: false
+      criteria:
+        - "IDE configs updated"
+
+transitions:
+  - from: phase_1
+    to: phase_2
+    condition: "validation_passed"
+
+  - from: phase_2
+    to: phase_3
+    condition: "files_created"
+
+  - from: phase_3
+    to: phase_4
+    condition: "registration_complete"
+
+output:
+  success:
+    message: "🏭 Agent {id} created successfully in {layer}"
+    data:
+      - agent_path
+      - command_path
+      - registry_entry
+
+  failure:
+    message: "❌ Agent creation failed: {reason}"
+    actions:
+      - cleanup_partial_files
+      - log_error
+
+hooks:
+  on_complete:
+    - trigger: "agent_created"
+      payload:
+        agent_id: "{id}"
+        layer: "{layer}"
+        path: "{agent_path}"

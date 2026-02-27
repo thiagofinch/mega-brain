@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "canonical-map.schema.json",
+  "title": "Canonical Map",
+  "description": "Schema for CANONICAL-MAP.json - entity resolution and alias mapping",
+  "type": "object",
+  "required": ["canonical_state"],
+  "properties": {
+    "canonical_state": {
+      "type": "object",
+      "required": ["canonical_map", "rules", "version"],
+      "properties": {
+        "canonical_map": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/alias"
+            }
+          }
+        },
+        "rules": {
+          "type": "object",
+          "properties": {
+            "threshold_merge": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          }
+        },
+        "version": {
+          "type": "string"
+        }
+      }
+    },
+    "review_queue": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/review_item"
+      }
+    },
+    "collisions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/collision"
+      }
+    }
+  },
+  "definitions": {
+    "alias": {
+      "type": "object",
+      "required": ["alias", "confidence"],
+      "properties": {
+        "alias": {
+          "type": "string"
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "source_id": {
+          "type": "string",
+          "description": "Where this alias was first found"
+        }
+      }
+    },
+    "review_item": {
+      "type": "object",
+      "required": ["candidate_a", "candidate_b", "confidence"],
+      "properties": {
+        "candidate_a": {"type": "string"},
+        "candidate_b": {"type": "string"},
+        "confidence": {"type": "number"},
+        "reason": {"type": "string"},
+        "scope": {"type": "string"},
+        "corpus": {"type": "string"}
+      }
+    },
+    "collision": {
+      "type": "object",
+      "required": ["label", "term", "seen_in"],
+      "properties": {
+        "label": {"type": "string"},
+        "term": {"type": "string"},
+        "seen_in": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "recommendation": {
+          "type": "string",
+          "enum": ["keep_separate", "merge_manual"]
+        }
+      }
+    }
+  }
+}

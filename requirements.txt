@@ -1,0 +1,4 @@
+# Mega Brain - Python Dependencies
+# Hooks in .claude/hooks/ use only stdlib + PyYAML
+# Scripts in scripts/ may require additional packages (dev-only, not distributed)
+PyYAML>=6.0

@@ -1,0 +1,275 @@
+# knowledge/dna/persons/alex-hormozi/FILOSOFIAS.yaml
+# Gerado em: 2025-12-23
+# Fonte: INSIGHTS-STATE.json + NARRATIVES-STATE.json + DOSSIER
+
+pessoa: "Alex Hormozi"
+versao: "1.0.0"
+data_extracao: "2025-12-23T12:00:00Z"
+total_itens: 8
+
+filosofias:
+  - id: "FIL-AH-001"
+    nome: "Outbound é Indestrutível"
+    declaracao: "Outbound sales é impossível de quebrar. Se Facebook shuts you down, phone still works."
+
+    evidencias:
+      - citacao: "The outbound process takes significantly longer than most people expect. That being said, it's part of the reason that private equity and potential acquirers will value it - because it is this sturdy machine. If tomorrow Facebook ads shut me down it doesn't matter because if I literally have a phone we can make money."
+        chunk_id: "chunk_198"
+        source_id: "AH-SS001"
+        source_title: "How I Scaled My Sales Team [Taki Moore Mastermind]"
+      - citacao: "The beautiful part about this model is that it takes a long time to build and it also is impossible to break. I can tell you I sleep so much better as a business owner knowing that no matter what happens tomorrow we're going to close deals."
+        chunk_id: "chunk_212"
+        source_id: "AH-SS001"
+        source_title: "How I Scaled My Sales Team [Taki Moore Mastermind]"
+
+    insight_origem: "OB003"
+
+    implicacoes:
+      fazer:
+        - "Investir em outbound mesmo que leve 12-14 meses para maturar"
+        - "Construir independência de canal antes de tentar exit"
+        - "Valorizar a estabilidade sobre a velocidade de escala"
+      evitar:
+        - "Desistir de outbound antes dos 12 meses"
+        - "Depender exclusivamente de paid ads"
+        - "Subestimar o valor de PE/acquirers em ter outbound"
+
+    conflitos_potenciais:
+      - "Pressão por resultados rápidos pode conflitar com timeline de 12-14 meses"
+
+    dominios:
+      - "sales-structure"
+      - "scaling"
+      - "exit-strategy"
+
+    peso: 0.95  # Citação direta + múltiplas fontes + linguagem forte
+
+  - id: "FIL-AH-002"
+    nome: "HR Serve a Empresa"
+    declaracao: "O cliente do HR é A EMPRESA, não os funcionários. Funcionários são responsáveis pela própria felicidade."
+
+    evidencias:
+      - citacao: "Your job is NOT to make employees happy. Employees responsible for own happiness. HR's customer = THE COMPANY, not employees."
+        chunk_id: "AH002_002"
+        source_id: "AH-HR001"
+        source_title: "The Role of HR"
+
+    insight_origem: "HR001"
+
+    implicacoes:
+      fazer:
+        - "Proteger a empresa em decisões de HR"
+        - "Focar em performance, não em felicidade"
+        - "Deixar claro os três stakeholders (shareholders, customers, employees)"
+      evitar:
+        - "Transformar HR em departamento de felicidade"
+        - "Priorizar conforto do funcionário sobre resultados"
+        - "Confundir role de HR com assistência social"
+
+    conflitos_potenciais:
+      - "Pode parecer insensível em culturas mais empáticas"
+      - "Risco de burnout se aplicado sem equilíbrio"
+
+    dominios:
+      - "hr-philosophy"
+      - "organizational-culture"
+      - "compensation"
+
+    peso: 0.85  # Citação direta + linguagem forte + controversa
+
+  - id: "FIL-AH-003"
+    nome: "Pague o Mínimo pelo Máximo Valor"
+    declaracao: "Goal = pay as little as possible for as much value as possible. Só pague mais se tiver problema em atrair OU reter."
+
+    evidencias:
+      - citacao: "Only pay more if: 1) trouble attracting talent, OR 2) trouble retaining talent. Otherwise, pay is fine."
+        chunk_id: "AH002_004"
+        source_id: "AH-HR001"
+        source_title: "The Role of HR"
+
+    insight_origem: "HR003"
+
+    implicacoes:
+      fazer:
+        - "Monitorar métricas de atração e retenção"
+        - "Aumentar salário apenas quando dados indicarem necessidade"
+        - "Focar em criar valor desproporcional com star employees"
+      evitar:
+        - "Aumentos automáticos sem análise de mercado"
+        - "Benchmark salarial apenas por benchmark"
+        - "Gastar recursos de compensação de forma uniforme"
+
+    conflitos_potenciais:
+      - "Pode perder talentos para concorrentes que pagam mais"
+
+    dominios:
+      - "compensation"
+      - "hr-philosophy"
+      - "unit-economics"
+
+    peso: 0.80  # Citação direta + prescritiva
+
+  - id: "FIL-AH-004"
+    nome: "Meritocracia Pura"
+    declaracao: "Pure meritocracy - the numbers don't lie. Promoção por HABILIDADE, não por tempo."
+
+    evidencias:
+      - citacao: "What job in the world can you go from zero to $200,000 a year in nine to twelve months with no degree? Here you can because we're pure meritocracy and the numbers don't lie."
+        chunk_id: "chunk_217"
+        source_id: "AH-SS001"
+        source_title: "How I Scaled My Sales Team [Taki Moore Mastermind]"
+      - citacao: "Get promoted ABILITY, not automatic. 10 deals trial at BC level. No killer starts cold and gets good."
+        chunk_id: "AH001_006"
+        source_id: "AH-SS001"
+        source_title: "How I Scaled My Sales Team [Taki Moore Mastermind]"
+
+    insight_origem: "FS003"
+
+    implicacoes:
+      fazer:
+        - "Criar métricas objetivas para promoção"
+        - "Publicar critérios claros de progressão"
+        - "Celebrar resultados, não tempo de casa"
+      evitar:
+        - "Promoções automáticas por tempo"
+        - "Aumentos baseados em política"
+        - "Favoritismo ou nepotismo"
+
+    conflitos_potenciais:
+      - "Pode criar ambiente competitivo demais"
+
+    dominios:
+      - "compensation"
+      - "hiring"
+      - "organizational-culture"
+
+    peso: 0.90  # Múltiplas citações + linguagem forte
+
+  - id: "FIL-AH-005"
+    nome: "Ambiente de Vencedores"
+    declaracao: "High performance culture é lugar perigoso pra trabalhar. Se você é winner, vai amar. Se não é, não vai durar."
+
+    evidencias:
+      - citacao: "Gym Launch é um lugar perigoso pra trabalhar. Se você entra e sobe no trem, vai aprender mais do que nunca. Mas você precisa performar. Isso é um ambiente de vencedores."
+        chunk_id: "AH002_005"
+        source_id: "AH-HR001"
+        source_title: "The Role of HR"
+
+    insight_origem: "CC001"
+
+    implicacoes:
+      fazer:
+        - "Criar cultura que se auto-reforça via core team"
+        - "Deixar claro expectations na contratação"
+        - "Remover low performers rapidamente"
+      evitar:
+        - "Tolerar mediocridade por medo de turnover"
+        - "Suavizar a cultura para agradar todos"
+        - "Confundir cultura exigente com cultura tóxica sem propósito"
+
+    conflitos_potenciais:
+      - "Risco de burnout"
+      - "Pode parecer tóxico sem contexto"
+
+    dominios:
+      - "organizational-culture"
+      - "hiring"
+      - "hr-philosophy"
+
+    peso: 0.85  # Citação direta + controversa
+
+  - id: "FIL-AH-006"
+    nome: "Ninguém Começa Matador"
+    declaracao: "No killer starts cold and gets good. Closers são forjados pelo Farm System, não contratados prontos."
+
+    evidencias:
+      - citacao: "The key point here is that the human resource training system itself becomes an asset to the business because we know that when someone works their way up from being a BDR all the way to a BC, they know how to close. Because these people were never spoiled with inbound leads, they got hung up on and cussed at."
+        chunk_id: "chunk_213"
+        source_id: "AH-SS001"
+        source_title: "How I Scaled My Sales Team [Taki Moore Mastermind]"
+
+    insight_origem: "FS001"
+
+    implicacoes:
+      fazer:
+        - "Construir pipeline interno de talentos"
+        - "Valorizar o training system como asset"
+        - "Deixar novos passarem pelas dificuldades"
+      evitar:
+        - "Contratar closers prontos e caros de fora"
+        - "Poupar novatos das dificuldades"
+        - "Dar inbound leads para quem não cortou os dentes"
+
+    conflitos_potenciais:
+      - "Demora mais para ter closers prontos"
+
+    dominios:
+      - "hiring"
+      - "sales-structure"
+      - "training"
+
+    peso: 0.90  # Citação direta + múltiplas aparições
+
+  - id: "FIL-AH-007"
+    nome: "Largar para Crescer"
+    declaracao: "O que estou segurando que preciso largar? Cada nível de crescimento exige abrir mão de algo."
+
+    evidencias:
+      - citacao: "'What am I holding onto that I need to give up?' Key question at each growth level."
+        chunk_id: "AH001_012"
+        source_id: "AH-SS001"
+        source_title: "How I Scaled My Sales Team [Taki Moore Mastermind]"
+
+    insight_origem: "GL002"
+
+    implicacoes:
+      fazer:
+        - "Identificar o que você está segurando"
+        - "Delegar antes de estar 100% confortável"
+        - "Aceitar que sua função muda a cada estágio"
+      evitar:
+        - "Acumular funções indefinidamente"
+        - "Ser indispensável em operações"
+        - "Achar que você é a exceção"
+
+    conflitos_potenciais:
+      - "Ego pode dificultar o desapego"
+
+    dominios:
+      - "scaling"
+      - "leadership"
+      - "delegation"
+
+    peso: 0.85  # Citação direta + prescritiva
+
+  - id: "FIL-AH-008"
+    nome: "Consistência Vence Intensidade"
+    declaracao: "The wealthiest people in the world: 'I've been doing the same thing for 40 years.' That's the secret."
+
+    evidencias:
+      - citacao: "Buy, build, refinance - don't need to sell. Wealthiest people: 'I've been doing the same thing for 40 years.'"
+        chunk_id: "AH001_010"
+        source_id: "AH-SS001"
+        source_title: "How I Scaled My Sales Team [Taki Moore Mastermind]"
+
+    insight_origem: "EX002"
+
+    implicacoes:
+      fazer:
+        - "Escolher um jogo e jogá-lo por décadas"
+        - "Construir para compor, não para vender rápido"
+        - "Resistir à tentação de pivotar constantemente"
+      evitar:
+        - "Pular de oportunidade em oportunidade"
+        - "Vender na primeira oferta boa"
+        - "Confundir movimento com progresso"
+
+    conflitos_potenciais:
+      - "Pode parecer contrário à narrativa de exits rápidos"
+
+    dominios:
+      - "wealth-building"
+      - "exit-strategy"
+      - "long-term-thinking"
+
+    peso: 0.85  # Citação direta + insight profundo

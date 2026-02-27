@@ -1,0 +1,547 @@
+# _ROLE_PATTERNS.yaml
+# Patterns de deteccao para roles (cargos/funcoes)
+# Fonte unica para regex patterns - carregado em runtime pelo role_detector.py
+#
+# Estrutura por role:
+#   patterns: regex case-insensitive para deteccao normal (peso 1x)
+#   strong_patterns: regex para deteccao forte (peso 2x)
+#   exclude_patterns: regex que ANULAM deteccao (falsos positivos)
+#
+# Para adicionar novo role: inserir aqui + DOMAINS-TAXONOMY.yaml (cargos section)
+#
+# Versao: 2.0.0
+# Data: 2026-02-25
+
+# ===========================================================================
+# SALES (existentes - extraidos do role_detector.py v1.0)
+# ===========================================================================
+
+CLOSER:
+  patterns:
+    - "\\bcloser\\b"
+    - "\\bclosers\\b"
+    - "\\bfechador\\b"
+    - "\\bfechadores\\b"
+    - "\\bbc\\b(?=\\s*/|\\s+closer|\\s+business)"
+  strong_patterns:
+    - "contratar\\s+closer"
+    - "hire\\s+(?:a\\s+)?closer"
+    - "closer\\s+(?:deve|precisa|faz|responsavel|manages|handles)"
+    - "(?:o|a|um|cada|the|your)\\s+closer"
+    - "role\\s+(?:of|do)\\s+(?:the\\s+)?closer"
+    - "closer\\s+(?:position|cargo|funcao|vaga)"
+  exclude_patterns:
+    - "closer?\\s+(?:look|to\\s+the|to\\s+(?:our|your|their)\\s+goal)"
+    - "close\\s+(?:the|a|that)\\s+(?:deal|sale|gap|loop|door)"
+    - "(?:get|come|move)\\s+closer"
+
+BDR:
+  patterns:
+    - "\\bbdr\\b"
+    - "\\bbdrs\\b"
+    - "business\\s+dev(?:elopment)?\\s+rep(?:resentative)?"
+  strong_patterns:
+    - "contratar\\s+bdr"
+    - "hire\\s+(?:a\\s+)?bdr"
+    - "(?:o|a|um|the)\\s+bdr"
+  exclude_patterns: []
+
+SDS:
+  patterns:
+    - "\\bsds\\b"
+    - "sales\\s+dev(?:elopment)?\\s+specialist"
+  strong_patterns:
+    - "contratar\\s+sds"
+    - "(?:o|a|um|the)\\s+sds"
+  exclude_patterns: []
+
+SDR:
+  patterns:
+    - "\\bsdr\\b"
+    - "\\bsdrs\\b"
+    - "sales\\s+dev(?:elopment)?\\s+rep(?:resentative)?"
+  strong_patterns:
+    - "contratar\\s+sdr"
+    - "(?:o|a|um|the)\\s+sdr"
+  exclude_patterns: []
+
+SALES-MANAGER:
+  patterns:
+    - "sales\\s+manager"
+    - "gerente\\s+(?:de\\s+)?vendas"
+    - "gestor\\s+(?:de\\s+)?vendas"
+    - "diretor\\s+(?:de\\s+)?vendas"
+  strong_patterns:
+    - "contratar\\s+(?:um\\s+)?(?:sales\\s+manager|gerente)"
+    - "(?:o|a|um|the)\\s+sales\\s+manager"
+    - "sales\\s+manager\\s+(?:deve|precisa|faz|responsavel|role|manages)"
+  exclude_patterns: []
+
+SALES-LEAD:
+  patterns:
+    - "sales\\s+lead\\b"
+    - "lider\\s+(?:de\\s+)?vendas"
+  strong_patterns:
+    - "(?:o|a|um|the)\\s+sales\\s+lead"
+  exclude_patterns:
+    - "sales\\s+leads?\\s+(?:from|through|via|generated)"
+
+SALES-COORDINATOR:
+  patterns:
+    - "sales\\s+coordinator"
+    - "coordenador\\s+(?:de\\s+)?vendas"
+    - "coordenador\\s+(?:de\\s+)?pre[\\s-]?vendas"
+  strong_patterns: []
+  exclude_patterns: []
+
+LNS:
+  patterns:
+    - "\\blns\\b"
+    - "lead\\s+nurture\\s+specialist"
+    - "especialista\\s+(?:de\\s+)?nurtur"
+  strong_patterns: []
+  exclude_patterns: []
+
+SETTER:
+  patterns:
+    - "\\bsetter\\b"
+    - "\\bsetters\\b"
+  strong_patterns:
+    - "contratar\\s+setter"
+    - "(?:o|a|um|the)\\s+setter"
+    - "setter\\s+(?:deve|precisa|faz|responsavel|role|books|qualifies)"
+  exclude_patterns:
+    - "goal[\\s-]?setter"
+    - "trend[\\s-]?setter"
+    - "pace[\\s-]?setter"
+
+SALES-FARMING:
+  patterns:
+    - "sales\\s+farming"
+    - "farming\\s+(?:de\\s+)?(?:leads|vendas|sales)"
+    - "reativac[a\\xe3]o\\s+(?:de\\s+)?leads"
+  strong_patterns: []
+  exclude_patterns: []
+
+CUSTOMER-SUCCESS:
+  patterns:
+    - "customer\\s+success"
+    - "sucesso\\s+(?:do\\s+)?cliente"
+    - "\\bcs\\b(?=\\s+(?:team|manager|rep))"
+  strong_patterns:
+    - "(?:o|a|um|the)\\s+customer\\s+success"
+    - "customer\\s+success\\s+(?:manager|rep|specialist|team)"
+  exclude_patterns: []
+
+# ===========================================================================
+# C-LEVEL (existentes)
+# ===========================================================================
+
+CRO:
+  patterns:
+    - "\\bcro\\b"
+    - "chief\\s+revenue\\s+officer"
+  strong_patterns: []
+  exclude_patterns:
+    - "cro\\s+(?:tool|platform|software|conversion)"
+
+CFO:
+  patterns:
+    - "\\bcfo\\b"
+    - "chief\\s+financial\\s+officer"
+    - "diretor\\s+financeiro"
+  strong_patterns: []
+  exclude_patterns: []
+
+CMO:
+  patterns:
+    - "\\bcmo\\b"
+    - "chief\\s+marketing\\s+officer"
+    - "diretor\\s+(?:de\\s+)?marketing"
+  strong_patterns: []
+  exclude_patterns: []
+
+COO:
+  patterns:
+    - "\\bcoo\\b"
+    - "chief\\s+operat(?:ing|ions)\\s+officer"
+    - "diretor\\s+(?:de\\s+)?operac[o\\xf5]es"
+  strong_patterns: []
+  exclude_patterns: []
+
+# ===========================================================================
+# HR (existente)
+# ===========================================================================
+
+HR-DIRECTOR:
+  patterns:
+    - "hr\\s+director"
+    - "diretor\\s+(?:de\\s+)?(?:rh|hr)"
+    - "head\\s+of\\s+(?:hr|people|rh)"
+  strong_patterns: []
+  exclude_patterns: []
+
+# ===========================================================================
+# SPECIALIST (existentes)
+# ===========================================================================
+
+NEPQ-SPECIALIST:
+  patterns:
+    - "\\bnepq\\b"
+  strong_patterns:
+    - "nepq\\s+(?:specialist|method|framework|approach|selling)"
+  exclude_patterns: []
+
+PAID-MEDIA-SPECIALIST:
+  patterns:
+    - "paid\\s+media"
+    - "media\\s+buyer"
+    - "gestor\\s+(?:de\\s+)?(?:trafego|midia)"
+  strong_patterns: []
+  exclude_patterns: []
+
+# ===========================================================================
+# MARKETING (NOVOS - Sprint 4)
+# ===========================================================================
+
+COPYWRITER:
+  patterns:
+    - "\\bcopywriter\\b"
+    - "\\bcopywriters\\b"
+    - "copy\\s+writer"
+    - "\\bredator\\b"
+    - "redator\\s+(?:de\\s+)?vendas"
+    - "redator\\s+publicit[a\\xe1]rio"
+  strong_patterns:
+    - "contratar\\s+(?:um\\s+)?(?:copywriter|redator)"
+    - "(?:o|a|um|the|your|our)\\s+copywriter"
+    - "copywriter\\s+(?:deve|precisa|faz|responsavel|writes|creates)"
+  exclude_patterns:
+    - "copy\\s+(?:of|and\\s+paste|the|this|that|it)"
+    - "\\bcopy\\b(?=\\s+(?:of|from|into|to\\s+(?:the|your|a)))"
+
+FUNNEL-STRATEGIST:
+  patterns:
+    - "funnel\\s+strategist"
+    - "estrategista\\s+(?:de\\s+)?fun[ei]l"
+    - "funnel\\s+architect"
+    - "funnel\\s+builder"
+    - "funnel\\s+specialist"
+    - "funnel\\s+expert"
+  strong_patterns:
+    - "(?:o|a|um|the|your|our)\\s+funnel\\s+(?:strategist|architect|builder)"
+    - "contratar\\s+(?:um\\s+)?funnel"
+    - "funnel\\s+(?:person|team|department|role)"
+  exclude_patterns:
+    - "funnel\\s+(?:metrics|data|analytics|conversion\\s+rate)"
+
+MARKETER:
+  patterns:
+    - "\\bmarketer\\b"
+    - "\\bmarketers\\b"
+    - "marketing\\s+specialist"
+    - "especialista\\s+(?:de\\s+)?marketing"
+    - "marketing\\s+manager"
+    - "gerente\\s+(?:de\\s+)?marketing"
+  strong_patterns:
+    - "(?:o|a|um|the|your|our)\\s+marketer"
+    - "contratar\\s+(?:um\\s+)?(?:marketer|marketing)"
+    - "marketer\\s+(?:deve|precisa|faz|responsavel|handles)"
+  exclude_patterns:
+    - "marketing\\s+(?:strategy|plan|budget|campaign|channel|funnel|materials)"
+
+LAUNCH-STRATEGIST:
+  patterns:
+    - "launch\\s+strategist"
+    - "estrategista\\s+(?:de\\s+)?lan[c\\xe7]amento"
+    - "launch\\s+manager"
+    - "gerente\\s+(?:de\\s+)?lan[c\\xe7]amento"
+  strong_patterns:
+    - "(?:o|a|um|the)\\s+launch\\s+(?:strategist|manager)"
+  exclude_patterns: []
+
+# ===========================================================================
+# CONTENT / DESIGN (NOVOS - Sprint 4)
+# ===========================================================================
+
+CONTENT-CREATOR:
+  patterns:
+    - "content\\s+creator"
+    - "criador\\s+(?:de\\s+)?conte[u\\xfa]do"
+    - "content\\s+producer"
+    - "produtor\\s+(?:de\\s+)?conte[u\\xfa]do"
+    - "content\\s+specialist"
+  strong_patterns:
+    - "(?:o|a|um|the|your|our)\\s+content\\s+(?:creator|producer)"
+    - "contratar\\s+(?:um\\s+)?(?:content|criador)"
+  exclude_patterns:
+    - "content\\s+(?:of|from|is|was|for\\s+the)"
+
+DESIGNER:
+  patterns:
+    - "\\bdesigner\\b"
+    - "\\bdesigners\\b"
+    - "graphic\\s+designer"
+    - "designer\\s+gr[a\\xe1]fico"
+    - "web\\s+designer"
+    - "ui\\s+designer"
+    - "ux\\s+designer"
+  strong_patterns:
+    - "(?:o|a|um|the|your|our)\\s+designer"
+    - "contratar\\s+(?:um\\s+)?designer"
+    - "designer\\s+(?:deve|precisa|faz|responsavel|creates)"
+  exclude_patterns:
+    - "design\\s+(?:of|the|this|that|a\\s+(?:system|process|plan))"
+    - "(?:by|intelligent|instructional)\\s+design"
+
+SOCIAL-MEDIA-MANAGER:
+  patterns:
+    - "social\\s+media\\s+manager"
+    - "gerente\\s+(?:de\\s+)?(?:redes\\s+sociais|midias\\s+sociais)"
+    - "social\\s+media\\s+specialist"
+    - "community\\s+manager"
+    - "gerente\\s+(?:de\\s+)?comunidade"
+  strong_patterns:
+    - "(?:o|a|um|the|your|our)\\s+social\\s+media\\s+(?:manager|specialist)"
+    - "contratar\\s+(?:um\\s+)?social\\s+media"
+  exclude_patterns: []
+
+DISTRIBUTION-HEAD:
+  patterns:
+    - "distribution\\s+head"
+    - "chefe\\s+(?:de\\s+)?distribui[c\\xe7][a\\xe3]o"
+    - "head\\s+of\\s+distribution"
+    - "distribution\\s+manager"
+  strong_patterns:
+    - "(?:o|a|um|the)\\s+(?:distribution\\s+(?:head|manager)|chefe\\s+de\\s+distribui)"
+  exclude_patterns: []
+
+# ===========================================================================
+# GROWTH (NOVOS - Sprint 4)
+# ===========================================================================
+
+GROWTH-HACKER:
+  patterns:
+    - "growth\\s+hacker"
+    - "growth\\s+marketer"
+    - "growth\\s+specialist"
+    - "growth\\s+manager"
+    - "especialista\\s+(?:de\\s+)?growth"
+  strong_patterns:
+    - "(?:o|a|um|the|your|our)\\s+growth\\s+(?:hacker|marketer|specialist)"
+  exclude_patterns:
+    - "growth\\s+(?:rate|metric|phase|stage|strategy)"
+
+PPC-MANAGER:
+  patterns:
+    - "ppc\\s+manager"
+    - "google\\s+ads\\s+manager"
+    - "gestor\\s+(?:de\\s+)?tr[a\\xe1]fego"
+    - "traffic\\s+manager"
+    - "ads\\s+manager"
+    - "gestor\\s+(?:de\\s+)?(?:google|facebook)\\s+ads"
+  strong_patterns:
+    - "(?:o|a|um|the|your|our)\\s+(?:ppc|traffic|ads)\\s+manager"
+    - "contratar\\s+(?:um\\s+)?gestor\\s+(?:de\\s+)?tr[a\\xe1]fego"
+  exclude_patterns: []
+
+MEDIA-BUYER:
+  patterns:
+    - "media\\s+buyer"
+    - "comprador\\s+(?:de\\s+)?m[i\\xed]dia"
+    - "media\\s+buying"
+    - "compra\\s+(?:de\\s+)?m[i\\xed]dia"
+  strong_patterns:
+    - "(?:o|a|um|the|your|our)\\s+media\\s+buyer"
+    - "contratar\\s+(?:um\\s+)?media\\s+buyer"
+  exclude_patterns: []
+
+# ===========================================================================
+# OPERATIONS (NOVOS - Sprint 4)
+# ===========================================================================
+
+PROJECT-MANAGER:
+  patterns:
+    - "project\\s+manager"
+    - "gerente\\s+(?:de\\s+)?projetos?"
+    - "project\\s+coordinator"
+    - "coordenador\\s+(?:de\\s+)?projetos?"
+    - "\\bpm\\b(?=\\s+(?:role|team|position|manages))"
+  strong_patterns:
+    - "(?:o|a|um|the|your|our)\\s+project\\s+manager"
+    - "contratar\\s+(?:um\\s+)?(?:project\\s+manager|gerente\\s+de\\s+projetos)"
+  exclude_patterns:
+    - "pm\\s+(?:hours|time|schedule)"
+
+OPS-MANAGER:
+  patterns:
+    - "operations\\s+manager"
+    - "gerente\\s+(?:de\\s+)?opera[c\\xe7][o\\xf5]es"
+    - "ops\\s+manager"
+    - "director\\s+(?:of\\s+)?operations"
+    - "head\\s+of\\s+ops"
+  strong_patterns:
+    - "(?:o|a|um|the|your|our)\\s+(?:operations|ops)\\s+manager"
+  exclude_patterns: []
+
+DATA-ANALYST:
+  patterns:
+    - "data\\s+analyst"
+    - "analista\\s+(?:de\\s+)?dados"
+    - "data\\s+scientist"
+    - "business\\s+analyst"
+    - "analytics\\s+specialist"
+  strong_patterns:
+    - "(?:o|a|um|the|your|our)\\s+data\\s+(?:analyst|scientist)"
+    - "contratar\\s+(?:um\\s+)?(?:data|analista)"
+  exclude_patterns:
+    - "data\\s+(?:shows|indicates|suggests|from|in\\s+the)"
+
+TECH-LEAD:
+  patterns:
+    - "tech\\s+lead"
+    - "l[i\\xed]der\\s+t[e\\xe9]cnico"
+    - "technical\\s+lead"
+    - "lead\\s+developer"
+    - "lead\\s+engineer"
+    - "engineering\\s+manager"
+    - "\\bcto\\b"
+    - "chief\\s+technology\\s+officer"
+  strong_patterns:
+    - "(?:o|a|um|the|your|our)\\s+(?:tech\\s+lead|cto)"
+    - "contratar\\s+(?:um\\s+)?(?:tech\\s+lead|cto)"
+  exclude_patterns:
+    - "tech\\s+(?:stack|company|industry|sector)"
+
+# ===========================================================================
+# ACTIVITY-TO-ROLE INFERENCE MAP (peso 0.7x)
+# ===========================================================================
+# Estas NAO sao deteccoes de nome de cargo.
+# Sao atividades que IMPLICAM a existencia de um cargo.
+# Usadas pelo modulo _infer_roles_from_context()
+
+_inference_map:
+  COPYWRITER:
+    - "writ(?:e|es|ing)\\s+(?:the\\s+)?(?:sales\\s+page|copy|headline|email\\s+sequence|ad\\s+copy|script|VSL)"
+    - "(?:escreve|redige|cria)\\s+(?:a\\s+)?(?:copy|carta\\s+de\\s+vendas|headline|sequencia)"
+  FUNNEL-STRATEGIST:
+    - "build(?:s|ing)?\\s+(?:the\\s+)?(?:funnel|landing\\s+page|opt[\\s-]?in|squeeze\\s+page|sales\\s+page)"
+    - "(?:constr[o\\xf3]i|monta|cria)\\s+(?:o\\s+)?(?:funil|landing|pagina\\s+de)"
+    - "funnel\\s+(?:architecture|design|structure|flow)"
+  MEDIA-BUYER:
+    - "manag(?:e|es|ing)\\s+(?:the\\s+)?(?:ad\\s+spend|campaigns?|facebook\\s+ads|google\\s+ads|paid\\s+(?:media|traffic))"
+    - "(?:gerencia|administra|otimiza)\\s+(?:os?\\s+)?(?:anuncios|campanhas|trafego\\s+pago)"
+    - "running\\s+(?:the\\s+)?(?:ads|campaigns|paid)"
+  CONTENT-CREATOR:
+    - "creat(?:e|es|ing)\\s+(?:the\\s+)?(?:content|posts?|videos?|reels?|social\\s+(?:media\\s+)?content)"
+    - "(?:cria|produz|grava)\\s+(?:o\\s+)?(?:conte[u\\xfa]do|posts?|v[i\\xed]deos?|reels?)"
+  DESIGNER:
+    - "design(?:s|ing)?\\s+(?:the\\s+)?(?:assets?|graphics?|creatives?|brand(?:ing)?|visuals?|layouts?)"
+    - "(?:cria|desenha|projeta)\\s+(?:os?\\s+)?(?:assets?|criativos?|layouts?|visuais?)"
+  LAUNCH-STRATEGIST:
+    - "(?:launch|launches|launching)\\s+(?:the\\s+)?(?:product|curso|offer|programa|webinar|event)"
+    - "(?:lan[c\\xe7]a|lan[c\\xe7]amento)\\s+(?:d[eo]\\s+)?(?:produto|curso|oferta|programa)"
+  DISTRIBUTION-HEAD:
+    - "(?:distribut(?:e|es|ing))\\s+(?:the\\s+)?(?:content|traffic|leads?)"
+  SOCIAL-MEDIA-MANAGER:
+    - "manag(?:e|es|ing)\\s+(?:the\\s+)?(?:social\\s+media|instagram|facebook|tiktok|linkedin)"
+    - "(?:gerencia|administra|cuida)\\s+(?:d[ao]s?\\s+)?(?:redes\\s+sociais|instagram|facebook)"
+  DATA-ANALYST:
+    - "(?:analyz|track|analis)(?:e|es|ing)?\\s+(?:the\\s+)?(?:data|metrics?|kpis?|conversions?|dashboards?)"
+    - "(?:analisa|rastreia|monitora)\\s+(?:os?\\s+)?(?:dados|metricas|kpis|convers[o\\xf5]es)"
+  HR-DIRECTOR:
+    - "(?:hir(?:e|es|ing)|contrat(?:a|ar|ando)|recruit(?:s|ing)?)\\s+(?:the\\s+)?(?:team|people|talent|staff|reps?)"
+  CLOSER:
+    - "(?:clos(?:e|es|ing))\\s+(?:the\\s+)?(?:deals?|sales?|contracts?|clients?)"
+    - "(?:fecha|fechando)\\s+(?:os?\\s+)?(?:neg[o\\xf3]cios?|vendas?|contratos?)"
+  BDR:
+    - "(?:prospect(?:s|ing)?|outbound(?:ing)?)\\s+(?:via\\s+)?(?:cold\\s+)?(?:calls?|emails?|outreach)"
+  SETTER:
+    - "(?:set(?:s|ting)?)\\s+(?:the\\s+)?(?:appointments?|meetings?|calls?|demos?)"
+    - "(?:agenda|marca|qualifica)\\s+(?:as?\\s+)?(?:reuni[o\\xf5]es|calls?|demos?)"
+  PROJECT-MANAGER:
+    - "(?:lead(?:s|ing)?|manag(?:e|es|ing))\\s+(?:the\\s+)?(?:project|projeto|sprint|roadmap)"
+  TECH-LEAD:
+    - "(?:develop(?:s|ing)?|cod(?:e|es|ing)|program(?:s|ming)?)\\s+(?:the\\s+)?(?:software|app|system|api|platform)"
+  OPS-MANAGER:
+    - "(?:operat(?:e|es|ing)|run(?:s|ning)?)\\s+(?:the\\s+)?(?:day[\\s-]?to[\\s-]?day|operations?|logistics?)"
+
+# ===========================================================================
+# GENERIC ROLE EMERGENCE PATTERNS
+# ===========================================================================
+# Patterns universais para detectar roles NAO conhecidos.
+# Usados pelo modulo _detect_emergent_roles()
+# Capturam o "nome do cargo" via grupo regex.
+
+_emergence_patterns:
+  - "(?:our|the|a|o|nosso|nossa)\\s+(\\w+(?:\\s+\\w+)?)\\s+(?:handles?|manages?|runs?|leads?|cuida|gerencia|oversees?)"
+  - "(?:hired?|contrat[ao]r?|contratamos)\\s+(?:a|an|um|uma)\\s+(\\w+(?:\\s+\\w+)?)"
+  - "(?:the|o|a)\\s+(\\w+(?:\\s+\\w+)?)\\s+(?:team|department|equipe|departamento|squad)"
+  - "(?:role|cargo|funcao|position|vaga)\\s+(?:of|de|as|para)\\s+(\\w+(?:\\s+\\w+)?)"
+  - "(\\w+(?:\\s+\\w+)?)\\s+(?:position|vaga|role|cargo)\\b"
+  - "(?:chief|head|director|gerente|coordenador|especialista|supervisor)\\s+(?:of|de)\\s+(\\w+(?:\\s+\\w+)?)"
+
+# Palavras que NAO devem ser consideradas roles emergentes
+_emergence_stopwords:
+  - "the"
+  - "a"
+  - "an"
+  - "um"
+  - "uma"
+  - "it"
+  - "this"
+  - "that"
+  - "them"
+  - "their"
+  - "our"
+  - "your"
+  - "his"
+  - "her"
+  - "who"
+  - "what"
+  - "which"
+  - "one"
+  - "all"
+  - "most"
+  - "some"
+  - "any"
+  - "very"
+  - "right"
+  - "best"
+  - "new"
+  - "whole"
+  - "entire"
+  - "same"
+  - "next"
+  - "first"
+  - "other"
+  - "business"
+  - "company"
+  - "organization"
+  - "person"
+  - "people"
+  - "guy"
+  - "girl"
+  - "thing"
+  - "stuff"
+  # Generic nouns captured by greedy patterns (not role names alone)
+  - "team"
+  - "department"
+  - "division"
+  - "group"
+  - "area"
+  - "side"
+  - "part"
+  - "role"
+  - "position"
+  - "job"
+  - "work"
+  - "design"
+  - "science"
+  - "scientist"
+  - "engineering"
+  - "technology"
+  - "market"
+  - "marketing"
+  - "sales"
+  - "operations"

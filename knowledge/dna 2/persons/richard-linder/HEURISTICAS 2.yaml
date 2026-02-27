@@ -1,0 +1,97 @@
+# HEURISTICAS - RICHARD LINDER
+# Regras com THRESHOLD NUMERICO no formato "Se X entao Y"
+# Versao: 1.0.0 | Criado: 2025-12-28
+
+versao: "1.0.0"
+pessoa: "Richard Linder"
+camada: "HEURISTICAS"
+total_itens: 6
+
+itens:
+  - id: "RL-HEU-001"
+    titulo: "Hell Yes or No (Sem 7s)"
+    descricao: "Pontuacao de candidato deve ser 8+ (Hell Yes) ou e um 6 (rejeitar). Remover 7 do scorecard."
+    peso: 0.95
+    chunks:
+      - "RL001_010"
+    fontes:
+      - "RL001"
+    regra: "SE pontuacao = 7 ENTAO reclassificar como 6 (pessimista) ou 8 (otimista baseado em dor)"
+    threshold: "8+ = contratar, 7 = nao existe, <7 = rejeitar"
+    aplicacao: "Scorecard de contratacao, tomada de decisao"
+    citacao: "Setes sao BS total. Setes sao seis otimistas ou oitos pessimistas. Sete e o numero que usamos quando nao estamos dispostos a nos comprometer."
+
+  - id: "RL-HEU-002"
+    titulo: "1-3-1 Escalation Format"
+    descricao: "Nao pode trazer problemas sem estrutura: 1 problema + 3 solucoes + 1 recomendacao."
+    peso: 0.90
+    chunks:
+      - "RL001_011"
+    fontes:
+      - "RL001"
+    regra: "SE escalacao ENTAO obrigatorio 1 problema + 3 solucoes + 1 recomendacao"
+    threshold: "1 problema, 3 solucoes, 1 recomendacao"
+    aplicacao: "Cultura de escalacao, reunioes, comunicacao"
+    citacao: "Como fundadores, tudo o que voce recebe sao os problemas de todos os outros para resolver o dia todo."
+
+  - id: "RL-HEU-003"
+    titulo: "Paid Skills Assessment"
+    descricao: "Pagar $1-2k por 4-8 horas de trabalho real em problema real."
+    peso: 0.90
+    chunks:
+      - "RL001_012"
+    fontes:
+      - "RL001"
+    regra: "SE avaliacao de skills ENTAO pagar $1-2k por 4-8 horas"
+    threshold: "$1,000-$2,000 por 4-8 horas"
+    aplicacao: "Processo de entrevista, avaliacao de competencia"
+
+  - id: "RL-HEU-004"
+    titulo: "Phone Screen 10 Minutos"
+    descricao: "Primeira ligacao deve filtrar basicos em 10 minutos antes de investir tempo."
+    peso: 0.85
+    chunks:
+      - "RL001_013"
+    fontes:
+      - "RL001"
+    regra: "SE primeiro contato ENTAO phone screen de 10 min para filtrar"
+    threshold: "10 minutos maximo"
+    aplicacao: "Triagem inicial, economia de tempo"
+    filtros:
+      - "Experiencia basica"
+      - "Faixa salarial (OBRIGATORIO confirmar)"
+      - "Disponibilidade remoto/viagem"
+      - "Alinhamento de cargo"
+
+  - id: "RL-HEU-005"
+    titulo: "Pontuacao Minima 8 em Nao-Negociaveis"
+    descricao: "Para tracos definidos como nao-negociaveis, pontuacao minima deve ser 8+."
+    peso: 0.85
+    chunks:
+      - "RL001_014"
+    fontes:
+      - "RL001"
+    regra: "SE traco e nao-negociavel ENTAO pontuacao minima = 8"
+    threshold: "8+ em todos os nao-negociaveis"
+    aplicacao: "Scorecard, filtro de candidatos"
+
+  - id: "RL-HEU-006"
+    titulo: "Contratar Ninguem e Resultado Aceitavel"
+    descricao: "Se Hell Yes nao aparecer, nao contratar e fazer de novo. Melhor que contratar 'melhor dos ruins'."
+    peso: 0.90
+    chunks:
+      - "RL001_015"
+    fontes:
+      - "RL001"
+    regra: "SE Hell Yes nao apareceu ENTAO nao contratar (reiniciar busca)"
+    threshold: "0 contratacoes e preferivel a contratacao ruim"
+    aplicacao: "Decisao final de contratacao, resistir a pressao"
+    citacao: "Um resultado aceitavel de uma contratacao aberta e contratar NINGUEM."
+
+metadados:
+  total_chunks_processados: 6
+  fontes_utilizadas:
+    - "RL001"
+  peso_medio: 0.89
+  criado_em: "2025-12-28T00:00:00Z"
+  protocolo: "DNA-EXTRACTION-PROTOCOL v1.0"

@@ -1,0 +1,8 @@
+# Default: @thiagofinch owns everything
+* @thiagofinch
+
+# Critical paths require explicit review
+.github/ @thiagofinch
+bin/ @thiagofinch
+.claude/ @thiagofinch
+package.json @thiagofinch

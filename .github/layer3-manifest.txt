@@ -1,0 +1,94 @@
+# Layer 3 Manifest - FULL BACKUP content (private, everything)
+# ================================================================
+# Layer 3 = Layer 1 (all public content)
+#         + Layer 2 (all premium content)
+#         + BACKUP-ONLY folders listed below
+#
+# This is a COMPLETE backup of the entire working state.
+# The ONLY things excluded are secrets (.env, credentials)
+# and dev artifacts (node_modules, __pycache__, etc.)
+#
+# RULE: Layer 3 excludes ONLY secrets and dev artifacts.
+# ================================================================
+
+# === LAYER 2 CONTENT (premium) ===
+
+# Knowledge base (pre-digested expert content)
+knowledge/dossiers/
+knowledge/playbooks/
+knowledge/dna/
+knowledge/sources/
+
+# Expert agents (cloned minds)
+agents/minds/
+
+# Cargo agents (C-level, sales, marketing roles)
+agents/cargo/
+
+# Processed content
+artifacts/
+
+# === LAYER 3 ADDITIONS (backup-only) ===
+
+# Company agents (org structure, roles, JDs)
+agents/sua-empresa/
+
+# Shared agent memory
+agents/shared-memory/
+
+# Agent archive and discovery
+agents/archive/
+agents/discovery/
+
+# Boardroom outputs
+agents/boardroom/outputs/
+
+# Raw user uploads
+inbox/
+
+# Session and batch logs
+logs/
+
+# Knowledge extras
+knowledge/_legacy/
+knowledge/company/
+knowledge/TAG-RESOLVER.json
+
+# JARVIS state and memory
+.claude/jarvis/
+.claude/sessions/
+.claude/mission-control/
+.claude/agent-memory/
+.claude/aios/
+.claude/monitoring/
+.claude/learning-system/
+.claude/agents/
+.claude/guides/
+.claude/handoffs/
+.claude/plans/
+.claude/temp/
+
+# System state
+system/backups/
+system/registry/
+system/memory/
+system/traces/
+system/archive/
+system/checkpoints/
+system/moc/
+system/temp/
+system/jarvis-voice/
+system/user-preferences.json
+system/SESSION-STATE.md
+system/JARVIS-STATE.json
+system/database/
+
+# === ALWAYS EXCLUDED (secrets + dev artifacts) ===
+# These are NEVER included regardless of layer:
+#   - .env, .env.*, *.key, *.pem, credentials.json, token.json
+#   - .mcp.json, settings.local.json
+#   - node_modules/, __pycache__/, .venv/, dist/, build/
+#   - chroma_db/, .chroma/, *.db, *.sqlite
+#   - .DS_Store, Thumbs.db, .vscode/, .idea/
+#   - *.mp4, *.mp3, *.wav, *.m4a (large media)
+#   - .aios-core/ (external framework)

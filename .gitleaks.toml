@@ -1,0 +1,118 @@
+#=================================
+# Mega Brain — Gitleaks Configuration
+#=================================
+# Custom secret detection patterns for the Mega Brain ecosystem.
+# Used by: pre-commit hook (if gitleaks installed), CI/CD pipeline.
+# Installed: 2026-02-21 (post-incident hardening)
+#=================================
+
+title = "Mega Brain Secret Detection"
+
+# === CUSTOM RULES ===
+
+[[rules]]
+id = "github-pat"
+description = "GitHub Personal Access Token"
+regex = '''ghp_[A-Za-z0-9]{36}'''
+tags = ["key", "github"]
+
+[[rules]]
+id = "github-fine-grained-pat"
+description = "GitHub Fine-Grained Personal Access Token"
+regex = '''github_pat_[A-Za-z0-9_]{82}'''
+tags = ["key", "github"]
+
+[[rules]]
+id = "github-oauth"
+description = "GitHub OAuth Access Token"
+regex = '''gho_[A-Za-z0-9]{36}'''
+tags = ["key", "github"]
+
+[[rules]]
+id = "github-app-token"
+description = "GitHub App Token"
+regex = '''ghs_[A-Za-z0-9]{36}'''
+tags = ["key", "github"]
+
+[[rules]]
+id = "anthropic-api-key"
+description = "Anthropic API Key"
+regex = '''sk-ant-[A-Za-z0-9\-]{90,}'''
+tags = ["key", "anthropic"]
+
+[[rules]]
+id = "openai-api-key"
+description = "OpenAI API Key"
+regex = '''sk-[A-Za-z0-9]{48}'''
+tags = ["key", "openai"]
+
+[[rules]]
+id = "aws-access-key"
+description = "AWS Access Key ID"
+regex = '''AKIA[0-9A-Z]{16}'''
+tags = ["key", "aws"]
+
+[[rules]]
+id = "elevenlabs-api-key"
+description = "ElevenLabs API Key"
+regex = '''sk_[a-f0-9]{48}'''
+tags = ["key", "elevenlabs"]
+
+[[rules]]
+id = "notion-integration-token"
+description = "Notion Integration Token"
+regex = '''ntn_[A-Za-z0-9]{40,}'''
+tags = ["key", "notion"]
+
+[[rules]]
+id = "notion-secret"
+description = "Notion Secret"
+regex = '''secret_[A-Za-z0-9]{40,}'''
+tags = ["key", "notion"]
+
+[[rules]]
+id = "n8n-webhook"
+description = "N8N Webhook URL"
+regex = '''https?://[^/]*\.app\.n8n\.cloud/webhook[^\s"']*'''
+tags = ["url", "n8n"]
+
+[[rules]]
+id = "supabase-jwt"
+description = "Supabase/JWT Token"
+regex = '''eyJ[A-Za-z0-9_-]{20,}\.eyJ[A-Za-z0-9_-]{20,}\.[A-Za-z0-9_-]{20,}'''
+tags = ["key", "supabase", "jwt"]
+
+[[rules]]
+id = "generic-password-assignment"
+description = "Hardcoded Password Assignment"
+regex = '''(?i)password\s*[:=]\s*["'][^"']{8,}["']'''
+tags = ["secret", "password"]
+
+[[rules]]
+id = "generic-api-key-assignment"
+description = "Hardcoded API Key Assignment"
+regex = '''(?i)api[_-]?key\s*[:=]\s*["'][^"']{12,}["']'''
+tags = ["secret", "api-key"]
+
+[[rules]]
+id = "brazilian-cpf"
+description = "Brazilian CPF (PII)"
+regex = '''\d{3}\.\d{3}\.\d{3}-\d{2}'''
+tags = ["pii", "cpf"]
+
+[[rules]]
+id = "brazilian-cnpj"
+description = "Brazilian CNPJ (PII)"
+regex = '''\d{2}\.\d{3}\.\d{3}/\d{4}-\d{2}'''
+tags = ["pii", "cnpj"]
+
+# === ALLOWLIST ===
+# Files that contain detection patterns (not actual secrets)
+
+[allowlist]
+description = "Security infrastructure files containing detection regex patterns"
+paths = [
+    '''bin/pre-publish-gate\.js''',
+    '''\.gitleaks\.toml''',
+    '''\.github/workflows/.*\.yml''',
+]

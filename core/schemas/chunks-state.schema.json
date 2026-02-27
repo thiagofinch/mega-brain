@@ -1,0 +1,131 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "chunks-state.schema.json",
+  "title": "Chunks State",
+  "description": "Schema for CHUNKS-STATE.json - consolidated chunks from all sources",
+  "type": "object",
+  "required": ["version", "last_updated", "total_chunks", "sources", "chunks"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "total_chunks": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/source"
+      }
+    },
+    "chunks": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/chunk"
+      }
+    }
+  },
+  "definitions": {
+    "source": {
+      "type": "object",
+      "required": ["source_id", "source_type", "source_title", "source_path", "channel", "scope", "corpus", "role", "file"],
+      "properties": {
+        "source_id": {
+          "type": "string",
+          "pattern": "^[A-Z]{2,4}\\d{3}$",
+          "description": "Unique source ID: PREFIX + 3 digits (e.g., JL001, CG003)"
+        },
+        "source_type": {
+          "type": "string",
+          "enum": ["podcast", "mastermind", "vlog", "course", "blueprint", "vsl", "script", "marketing"]
+        },
+        "source_title": {
+          "type": "string"
+        },
+        "source_path": {
+          "type": "string"
+        },
+        "channel": {
+          "type": "string"
+        },
+        "scope": {
+          "type": "string",
+          "enum": ["company", "personal", "course"]
+        },
+        "corpus": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string",
+          "enum": ["host", "guest", "author", "instructor"]
+        },
+        "file": {
+          "type": "string"
+        },
+        "host": {
+          "type": "string"
+        },
+        "guest": {
+          "type": "string"
+        }
+      }
+    },
+    "chunk": {
+      "type": "object",
+      "required": ["chunk_id", "source_id", "index", "text", "tokens", "entities"],
+      "properties": {
+        "chunk_id": {
+          "type": "string",
+          "pattern": "^[A-Z]{2,4}\\d{3}-\\d{3}$",
+          "description": "Unique chunk ID: SOURCE_ID + chunk index (e.g., JL001-001)"
+        },
+        "source_id": {
+          "type": "string",
+          "pattern": "^[A-Z]{2,4}\\d{3}$"
+        },
+        "index": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "text": {
+          "type": "string",
+          "minLength": 100
+        },
+        "tokens": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "start_time": {
+          "type": "string",
+          "description": "Timestamp in format HH:MM:SS or null"
+        },
+        "end_time": {
+          "type": "string"
+        },
+        "entities": {
+          "type": "object",
+          "properties": {
+            "persons": {
+              "type": "array",
+              "items": {"type": "string"}
+            },
+            "themes": {
+              "type": "array",
+              "items": {"type": "string"}
+            },
+            "concepts": {
+              "type": "array",
+              "items": {"type": "string"}
+            }
+          }
+        }
+      }
+    }
+  }
+}

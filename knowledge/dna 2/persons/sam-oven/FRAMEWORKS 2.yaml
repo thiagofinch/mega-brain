@@ -1,0 +1,108 @@
+# FRAMEWORKS - SAM OVEN
+# Estruturas nomeadas com componentes definidos (NAO tem ordem rigida)
+# Versao: 1.0.0 | Criado: 2025-12-27
+
+versao: "1.0.0"
+pessoa: "Sam Oven"
+camada: "FRAMEWORKS"
+total_itens: 4
+
+itens:
+  - id: "SO-FW-001"
+    titulo: "Bridge Analogy Framework"
+    descricao: "Framework para estruturar qualquer oferta como uma ponte entre estados."
+    peso: 0.95
+    chunks:
+      - "SETTERLUN-OC_002"
+      - "SETTERLUN-OC_003"
+    fontes:
+      - "SETTERLUN-OC"
+    componentes:
+      - nome: "Current State"
+        descricao: "Onde o cliente está hoje (dor, problema)"
+      - nome: "Desired State"
+        descricao: "Onde o cliente quer chegar (resultado)"
+      - nome: "Bridge (Your Offer)"
+        descricao: "Como você leva do atual ao desejado"
+      - nome: "Troll"
+        descricao: "Objeções que o prospect levanta"
+      - nome: "Toll Booth"
+        descricao: "Seu preço (pedágio para cruzar)"
+      - nome: "Competitors"
+        descricao: "Outras pontes (mesma travessia)"
+      - nome: "Unique Mechanism"
+        descricao: "Por que SUA ponte é melhor"
+    aplicacao: "Criação de ofertas, pitch, messaging"
+
+  - id: "SO-FW-002"
+    titulo: "Purple Ocean Framework"
+    descricao: "Posicionamento que combina mercado provado com diferenciação única."
+    peso: 0.90
+    chunks:
+      - "SETTERLUN-PO_001"
+      - "SETTERLUN-PO_002"
+    fontes:
+      - "SETTERLUN-PO"
+    componentes:
+      - nome: "Red Ocean"
+        descricao: "Competição alta, demanda provada, difícil se destacar"
+      - nome: "Blue Ocean"
+        descricao: "Único no mercado, precisa criar demanda, arriscado"
+      - nome: "Purple Ocean"
+        descricao: "Red + Blue = diferenciado em mercado provado"
+    exemplos:
+      - "Tesla = Car + Electric"
+      - "iPhone = Phone + Smart"
+      - "Amazon = Store + Online"
+    aplicacao: "Posicionamento, nicho, diferenciação"
+
+  - id: "SO-FW-003"
+    titulo: "3 Business Archetypes"
+    descricao: "Três modelos de entrega com trade-offs distintos."
+    peso: 0.90
+    chunks:
+      - "SETTERLUN-BD_001"
+    fontes:
+      - "SETTERLUN-BD"
+    componentes:
+      - nome: "DFY (Done For You)"
+        descricao: "Você faz tudo"
+        caracteristicas: "Maior preço, menor escala, requer expertise"
+      - nome: "DWY (Done With You)"
+        descricao: "Você guia o processo"
+        caracteristicas: "Equilíbrio preço/escala, RECOMENDADO para agências"
+      - nome: "DIY (Do It Yourself)"
+        descricao: "Cliente faz sozinho"
+        caracteristicas: "Menor preço, maior escala, cursos/SaaS"
+    recomendacao: "DWY é o gold standard para agências e consultorias"
+    aplicacao: "Modelo de negócio, estrutura de entrega"
+
+  - id: "SO-FW-004"
+    titulo: "Pizza Strategy"
+    descricao: "Método para encontrar o Purple Ocean através de tweak progressivo."
+    peso: 0.80
+    chunks:
+      - "SETTERLUN-PO_003"
+    fontes:
+      - "SETTERLUN-PO"
+    componentes:
+      - nome: "Nivel 1 (Red)"
+        descricao: "Genérico (ex: 'Pizza')"
+        resultado: "Milhares de concorrentes"
+      - nome: "Nivel 2 (Purple)"
+        descricao: "Tweak (ex: 'Wood-fired truffle pizza')"
+        resultado: "Diferenciado mas reconhecível - SWEET SPOT"
+      - nome: "Nivel 3 (Blue)"
+        descricao: "Tweak demais (ex: 'Gourmet pizza for high-performing athletes')"
+        resultado: "Específico demais, difícil vender"
+    aplicacao: "Refinamento de nicho, messaging"
+
+metadados:
+  total_chunks_processados: 8
+  fontes_utilizadas:
+    - "SETTERLUN-OC"
+    - "SETTERLUN-PO"
+    - "SETTERLUN-BD"
+  peso_medio: 0.89
+  criado_em: "2025-12-27T00:00:00Z"
+  protocolo: "DNA-EXTRACTION-PROTOCOL v1.0"

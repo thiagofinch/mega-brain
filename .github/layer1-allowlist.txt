@@ -1,0 +1,196 @@
+# Layer 1 Allowlist - PUBLIC content (free/community)
+# ==============================================================
+# AUTO-GENERATED from package.json files field.
+# Regenerate: python3 core/intelligence/sync_package_files.py --allowlist --apply
+#
+# ONLY paths listed here are included in Layer 1 (public repo).
+# Everything else is PREMIUM by default (Layer 2+).
+#
+# SYNCED WITH: package.json "files" field
+# AUDITED: 2026-02-27
+# ==============================================================
+
+# --- IDE integration (Antigravity) ---
+.antigravity/
+
+# --- Claude Code integration ---
+.claude/CLAUDE.md
+.claude/agent-memory/alex-hormozi/
+.claude/agent-memory/bdr/
+.claude/agent-memory/cfo/
+.claude/agent-memory/closer/
+.claude/agent-memory/cmo/
+.claude/agent-memory/cole-gordon/
+.claude/agent-memory/coo/
+.claude/agent-memory/critic/
+.claude/agent-memory/cro/
+.claude/agent-memory/devops/
+.claude/agent-memory/full-sales-system/
+.claude/agent-memory/g4-educacao/
+.claude/agent-memory/jarvis/
+.claude/agent-memory/jeremy-haynes/
+.claude/agent-memory/jeremy-miner/
+.claude/agent-memory/pipeline-master/
+.claude/agent-memory/sales-manager/
+.claude/agent-memory/sentinel-org/
+.claude/agent-memory/synthesizer/
+.claude/agent-memory/the-scalable-company/
+.claude/agents.yaml
+.claude/agents/
+.claude/aios/
+.claude/commands/
+.claude/get-shit-done/
+.claude/gsd-file-manifest.json
+.claude/hooks/
+.claude/jarvis/
+.claude/mission-control/README.md
+.claude/package.json
+.claude/rules/
+.claude/scripts/
+.claude/settings.json
+.claude/skills/
+.claude/templates/
+
+# --- .claudeignore ---
+.claudeignore
+
+# --- IDE integration (Cursor) ---
+.cursor/
+
+# --- .env.example ---
+.env.example
+
+# --- .gitattributes ---
+.gitattributes
+
+# --- GitHub integration ---
+.github/CODEOWNERS
+.github/ISSUE_TEMPLATE/
+.github/PULL_REQUEST_TEMPLATE.md
+.github/assets/
+.github/layer-rules.yaml
+.github/layer1-allowlist.txt
+.github/layer2-manifest.txt
+.github/layer3-manifest.txt
+.github/workflows/
+
+# --- .gitignore ---
+.gitignore
+
+# --- .gitleaks.toml ---
+.gitleaks.toml
+
+# --- IDE integration (Windsurf) ---
+.windsurf/
+
+# --- CONTRIBUTING.md ---
+CONTRIBUTING.md
+
+# --- QUICK-START.md ---
+QUICK-START.md
+
+# --- Agent system ---
+agents/AGENT-INDEX.yaml
+agents/MASTER-AGENT.md
+agents/README.md
+agents/_templates/
+agents/boardroom/CHECKLIST-MASTER.md
+agents/boardroom/INTEGRATION-GUIDE.md
+agents/boardroom/README.md
+agents/boardroom/config/
+agents/boardroom/scripts/
+agents/boardroom/templates/
+agents/boardroom/workflows/
+agents/conclave/
+agents/constitution/
+agents/persona-registry.yaml
+agents/sua-empresa/.gitkeep
+agents/sua-empresa/README.md
+agents/sua-empresa/_example/jds/
+agents/sua-empresa/_example/org/
+agents/sua-empresa/_example/roles/
+agents/sua-empresa/jds/.gitkeep
+agents/sua-empresa/memory/
+agents/sua-empresa/metrics/.gitkeep
+agents/sua-empresa/operations/.gitkeep
+agents/sua-empresa/org/.gitkeep
+agents/sua-empresa/roles/.gitkeep
+agents/sua-empresa/sow/.gitkeep
+
+# --- Artifact scaffolding ---
+artifacts/README.md
+artifacts/canonical/
+artifacts/chunks/.gitkeep
+artifacts/dna/jeremy-haynes/
+artifacts/insights/.gitkeep
+artifacts/narratives/
+
+# --- CLI tools ---
+bin/
+
+# --- Core engine ---
+core/.claude/sessions/
+core/__init__.py
+core/glossary/
+core/intelligence/
+core/jarvis/
+core/patterns/
+core/schemas/
+core/tasks/
+core/templates/README.md
+core/templates/agents/
+core/templates/debates/
+core/templates/logs/
+core/templates/phases/
+core/workflows/
+
+# --- Documentation ---
+docs/LAYERS.md
+docs/api-keys-guide.md
+docs/checklists/
+docs/conselho.md
+docs/context7-readme.md
+docs/dossie-seguranca-2026-02-20.md
+docs/dossie-seguranca-completo-2026-02-20.md
+docs/integration-points.md
+docs/jarvis-logging-protocol.md
+docs/pipeline-completa-v4.md
+docs/plan-mode-protocol.md
+docs/plans/
+docs/prd-mega-brain-quality-uplift-v1.md
+docs/prd/
+docs/prompts/
+docs/quick-start.md
+docs/readme-ralph-cascateamento.md
+docs/restore-and-index.md
+docs/tag-resolver-implementation.md
+docs/template-master.md
+docs/templates/phase5/
+docs/validation/
+docs/verification-levels.md
+docs/workflow-continuous-claude.md
+
+# --- Inbox scaffolding ---
+inbox/.gitkeep
+inbox/README.md
+
+# --- Knowledge scaffolding ---
+knowledge/NAVIGATION-MAP.json
+knowledge/README.md
+knowledge/TAG-RESOLVER.json
+knowledge/dna/.gitkeep
+knowledge/dossiers/persons/.gitkeep
+knowledge/dossiers/system/.gitkeep
+knowledge/dossiers/themes/.gitkeep
+knowledge/playbooks/.gitkeep
+knowledge/sources/.gitkeep
+
+# --- Logs scaffolding ---
+logs/.gitkeep
+logs/README.md
+logs/batches/.gitkeep
+logs/decisions/
+logs/sessions/.gitkeep
+
+# --- requirements.txt ---
+requirements.txt

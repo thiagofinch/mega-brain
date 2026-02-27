@@ -1,0 +1,584 @@
+Transcrição Completa: 4 Systems Operations with COO Amber Morningstar
+[00:00]
+So uh when it comes to doing systems and operations for businesses a lot of people will ask me what exactly do you do and the best way to describe that is I'll ask my clients what is the dream outcome that you have for any problem any issue in the business and then what we'll do is we'll reverse engineer the solution to that problem.
+[00:25]
+So we'll create a system that can then replicably solve that problem over and over again. So we're not solving the problem good. Yeah. Yeah. So we're not resolving problems time and time again. We're creating the solution once and then we're creating an SOP for that and we're giving that to a team member that can then execute that over and over again. Okay.
+[00:52]
+Now with that obviously means we need a strong team. So that is the other half of what I'll do with businesses is I will build dedicated teams that are also very replaceable. Okay? And that may sound a little bit different to what you're used to hearing.
+[01:12] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Avengers Problem"
+NÚMEROS: Não especificados neste momento
+VISUAL: Conceito de equipe de A-players comparado aos Vingadores, representação visual de super-heróis vs equipe sustentável.
+[01:15]
+You'll go to some of these other masterminds and people might tell you what you need to be building is a team of A players, right? They'll tell you essentially what you need to do is assemble the Avengers. Okay. But as we all know, have you guys seen you know the Avengers? Yes. What happens to Iron Man?
+[01:38]
+He dies. He dies. Yeah. And obviously I don't wish that on anyone's team member, but we do lose team members along the way. And so if we're so focused on building this team of A players, we're putting ourselves at risk. We're putting our businesses at risk because to find another A player, how difficult is that?
+[02:02]
+Very. Right. How many of you guys have teams right now other than business partners? Okay, perfect. Awesome. How many of you enjoy the process of hiring? Okay. Right. We don't like to do it.
+[02:22]
+Now, how hard is it, like I said, to find these A players over and over again? We don't want to have to put ourselves in a position where we've depended on that key team member and only they know how to do their role because then when they're gone, we now have to go back and find that a player again. Okay
+[02:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "April's Story - The A-Player Risk"
+NÚMEROS: Não especificados
+VISUAL: Case study de membro de equipe A-player que desapareceu, representando risco de dependência.
+[02:48]
+I'll give you a great example of this. I had a team member, her name was April. I loved April when I found her. Okay, she had tons of experience in accounting, a lot of experience that I didn't have at the time. She also had a lot of experience in customer service. I wanted to hire her to do accounting for our clients. I thought this is going to be great.
+[03:15]
+Brought her on. She needed very little training. She was able to go in and interact with customers, answer billing questions without any templates. I thought this is a dream, right? I don't have to really manage her that much. She's a self-starter. She'll work on weekends. She'll come in early. She'll stay late. Perfect, right?
+[03:38]
+It was perfect until one day April never showed up again. just ghosted. Didn't like submit a termination letter, resignation letter, nothing. She just never showed up again. And now I was stuck, right? Because I did have a system for how we did accounting for our clients, but I trusted her to go out and actually correspond with the customers.
+[04:05]
+So, we didn't necessarily have the templates that we should have had to make it easy to replace her now that she was gone. So it became this scramble to try to find someone who could do that and innovate those responses on their own. And that is very difficult to find. And that was the last time that I ever focused my attention on hiring only a players too.
+[04:32]
+Does anyone here watch football? Yes. We got some football fans in the room. Has anyone ever heard of Tom Brady? Yeah. Okay. Cool.
+[04:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Tom Brady Effect"
+NÚMEROS: 77% taxa de vitória Patriots com Tom Brady, 50% sem ele, 27% redução de performance
+VISUAL: Comparação visual de desempenho Patriots antes e depois de Tom Brady, gráfico mostrando queda dramática de 27%.
+[04:50]
+So, does anyone any stats nerds out there know the win rate of the Patriots when Tom Brady was on the team? Very high. Very high. 77%. Okay. Now, we all know he's no longer with the Patriots, right? What is the win rate of the Patriots now that Tom Brady is no longer on the team?
+[05:15]
+50%. Okay, that's a 27% reduction in performance. Now, I don't know about you guys, but I would not be happy if one player leaving my team caused my business to drop by 27%. Can anyone else say that they would be okay with that? Exactly. Okay.
+[05:38]
+So, again, focusing on hiring these A team players makes you vulnerable, right? Not only are they hard to find, they're also hard to keep. And just people in general are hard to keep on your team. Has anyone ever experienced that issue where people don't stay very long in the business? Right.
+[06:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Current Workforce Statistics"
+NÚMEROS: 85% se consideram job hoppers, 75% deixam sem outro emprego alinhado
+VISUAL: Estatísticas sobre comportamento da força de trabalho atual, gráficos de pizza ou barras mostrando percentuais de job hopping.
+[06:05]
+Statistically, 85% of the current workforce right now considers themselves to be job hoppers. So, they don't want to stay with a company for very long. They want to use your business as the stepping stone to their next thing. 75% of those job hoppers will leave a job even if they don't have another one lined up.
+[06:28]
+So you could just look at them the wrong way or, you know, not like their outfit or change a policy and they don't even care if they have another job lined up or not. They'll just leave because it no longer serves them. That's just the attitude of the current workforce.
+[06:48]
+So we're not only fighting against finding good talent now, we're also fighting against the fact that people just don't want to stay longterm in any business, right? So, if we're fighting against those things as business owners, if we want to be successful, we need to stack the odds in our favor as much as possible. We need to keep control of as much as possible in our business so that we're set up to win.
+[07:18] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Solution: B-Players + A-Level Systems"
+NÚMEROS: Não especificados
+VISUAL: Fórmula visual mostrando B-player + A-level system = A-level success, equação ou diagrama representando o conceito.
+[07:25]
+And the way that I help businesses do that is actually by hiring B players and implementing Alevel systems. because a B player implementing an A-level system is going to get that same A-level success every single time. But they're also very easy to replace. Okay, that doesn't mean I don't care about the teams that I build. I love the people that I work with, but I don't ever want to feel like I'm in a position where I can't find that person again.
+[07:58]
+I don't ever want to be in a position where I need to go and look for that Tom Brady or that Iron Man because it's going to be very hard to find. Going back to the example with the Patriots, how likely is it that they're going to get another Tom Brady on their team in the near future, right?
+[08:18]
+And they have access to the NFL combine in the draft where literally football players from around the country compete to be, "Hey, pick me, pick me." That talent pool is right there for them. Do we have an online business combine where people get on Zoom and battle it out on spreadsheets to show that they know more formulas than the other person?
+[08:42]
+LinkedIn, but we don't, right? There is no formal candidate pool that we can go to. There's no formal display of people's abilities where we can say, "Hey, that's a good person for me to pick." So again to circle back, we want to leverage as much as we can by allowing ourselves to have these systems in place so that hiring becomes a lot easier for us.
+[09:08]
+Okay, we can find those B-level players, give them the A-level systems, and get that same result every single time.
+[09:18] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "B-Player Advantages"
+NÚMEROS: Não especificados
+VISUAL: Lista de benefícios de B-players: hungrier, provam valor, coachable, não começam negócios concorrentes.
+[09:22]
+You know what else I love about B-level players? They have something to prove. They're usually new to the industry. They don't necessarily have a ton of experience. They're coming in and they they're hungry. They want to do well. They want to show you what they're made of. And they want to learn. They want to soak up that knowledge and gain the experience that they can while they're in your business.
+[09:48]
+So, they're usually going to work a little bit harder than an A player who kind of knows, hey, I know my stuff, right? I'm just good because I'm good. I have that talent to fall back on. Okay. They also are more coachable. They don't have egos as much as the A players will in comparison, right?
+[10:12]
+and they're not going to go off and say, "You know what? I'm going to go start my own business." Right? Have you guys ever had that? You have a team member that's like, "You know what? I can do this better than you. I'm going to leave and start my own thing and just copy everything I learned from you and start a business."
+[10:32]
+Right? A B player isn't going to do that because A players start businesses. B players don't. And that's okay. You need to have that level in your business again so you don't run into this problem where you have your whole team just leaving, taking all the IP with them. and going and trying to do what you're doing, right?
+[10:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Hard Work Beats Talent (With Winning Systems)"
+NÚMEROS: Não especificados
+VISUAL: Quote visual com ênfase na necessidade de sistemas vencedores para que trabalho duro supere talento.
+[11:00]
+So again, to have these B players built into the business, you need to have the focus on systems. Has anyone ever heard that saying, um, hard work beats talent when talent doesn't work hard, right? Well, that hard work only works if they have a winning system, right? If I give them a failing system, if I don't or no system at all, they're not going to beat talent ever.
+[11:28]
+So, the focus has to be on making sure you get these systems as dialed in as possible and make sure that you're monitoring the performance of those systems and optimizing them over time. And that's the boring stuff. That's the stuff no one likes to do. But that's the stuff that's going to build a strong foundation for your business
+[11:52]
+so that you aren't someone who has one team member leave and loses 27% of your recurring revenue for the month. You aren't going to wake up one day and have someone put in their letter of resignation and go, "Oh, What do I do now?" Right?
+[12:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "A-Players: Hedge Your Bets"
+NÚMEROS: Não especificados
+VISUAL: Estratégia de mitigação de risco ao contratar A-players, ícones de proteção ou seguro.
+[12:12]
+And I don't say all of this to say I'm anti- a player because I'm an A player and I work with Brandon. Right? If I was anti-Arer, I would be out of a job. I wouldn't have a business. But if you're going to hire an A player, you need to understand the risks associated with that and you need to hed your bets against that.
+[12:35]
+You need to make sure that anything that they're doing in your business is systemized, that you have an SOP for it, that you know exactly what they're bringing to the table and how they're doing it. You do not want to be blind in your business. If you just trust someone because they know what they're doing, they're an expert, they're the best at this or the best at that, they're better than you at marketing or better than you at sales, you are so vulnerable
+[13:05]
+because if they leave and you don't have that systemized, you have no clue what to do at that point because they could do it better than you. So if you are going to bring that A player onto your team, you need to make sure that everything they do has a system, has an SOP, so that if they do turn around and they leave, whether it's another A player that you find and implement into the business or it's a B player that you find and implement into the business, you have that A-level IP that person was using to give to the next person down the line.
+[13:42]
+Not only is that going to get you the same result, it's also going to get you those people trained a lot faster. So that downtime, that transitional time from when someone leaves and a new person is starting, you're going to shorten that and you're not going to have as much of a dip and recorrection when bringing on new team members. Does that make sense for everyone?
+[14:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Summary: The System-First Approach"
+NÚMEROS: Não especificados
+VISUAL: Resumo visual da estratégia: B-players + A-systems, com SOPs obrigatórios mesmo para A-players.
+[14:12]
+So again to summarize what I have said here today uh we want to be looking and focusing on hiring B-level players and having Alevel systems put in place in the event that we decide hey you know what we're just going to go for it we're going to hire that A player they've come across you know they've submitted their resume we're going to take that person on make sure that everything that they do is systemized
+[14:38]
+don't let don't trust any you know oh I got it don't worry about it I'm I'm just going to get this done. Make sure that everything that they do, they create an SOP for. That is so important. That's one of the biggest mistakes that I'll see businesses make is they just trust those people to handle their department, to handle their role, and they never bother to say, "Hey, why don't you write down how you handled that? Why don't you make an SOP for that process?" Right?
+[15:12]
+And that's true even for something as like something like sales, right? You could say, "How do you SOP a sales process?" Well, it's very easy. You take their calls, you clip how they handle objections, and you make a library of this is how in this company we handle a spousal objection. We handle I don't have time, right? This is how we dig deeper for pain. You use those examples. You can SOP anything in your business.
+[15:42]
+And you need to make sure all of that is documented so that you're never at a point where you are vulnerable. You never have that A player come to you and say, "I want double." And you're like, "I can't afford double, but I also can't afford to lose you, so I guess I'm sleeping on my couch for the next six months while I figure it out." Right?
+[16:05]
+You never want them to have that upper hand. You always want to make sure you're hedging your bets in your business. And you always want to make sure that you're in control. The only person who should negatively impact your business if they leave is you. Okay, if you can think of any team member on your team right now and you feel like it would be a loss if they left, that is a problem.
+[16:32]
+Unless they're more of a partner in your business, it's a little bit different obviously because if they're a partner in your business, they have skin in the game as well too and you guys are working on growing things together. Okay, so I hope that was helpful for you guys. If you guys have any questions about team building or systems, I'd be open to answering any of those for you guys. Now, go ahead. Thank you.
+[17:00]
+Let's say no systems. Yeah. Marketing, sales, finance. That's a great question. I would say typically it's going to be the stuff that's easiest to pass off, right? Because if you have a smaller team right now and you're looking to scale and leverage, you want to SOP those things that you could pass off and get someone else taking over.
+[17:25]
+So, if it's customer service, uh, administration tasks, data entry, things like that. Those are the easiest things to SOP. Those are the things you'll be able to finish SOPing the fastest, and then you'll be able to leverage and delegate that off to a different B-level team member the quickest.
+[17:48]
+You want to take the most time with the more complex things because obviously they're going to be more detailed. And you also want to make sure that you test everything you SOP because if you give someone a broken system, you're going to get a broken result, right? So for the more complex stuff, it takes more time. I would do that stuff afterwards.
+[18:12]
+Yeah. Low hanging fruit always. Question. Go ahead. What do you find is your most uh common process as well as place to find these process and place. Okay, we have a very extensive hiring process. I always say hire slow, fire fast. I'll fire someone within 24 hours of them joining my team if I see it's not working out.
+[18:42] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Extensive Hiring Process"
+NÚMEROS: 24 horas para demitir se não funcionar
+VISUAL: Fluxograma do processo de contratação: job ad (4Rs) → resume review → group culture fit → skills assessment → final interview.
+[18:48]
+I always say it's like a relationship. It doesn't get better if it's not going well. Uh but the process is going to be to go out in canvas using what we call a 4R essentially a job ad that describes everything about the role, the requirements, the results which I think are really important. What are the KPIs they're responsible for?
+[19:15]
+Everyone on your team should own a KPI in your business because that is a measure for them of whether or not they're successful in their role and they need to know if they are seeing success in their role or not. And you need to know that as well too. So having a very clear job ad, you put that out onto different job boards, whether that's LinkedIn, um Indeed is another good one, Glass Door, your network, etc.
+[19:45]
+I'll bring them in. We'll do an initial review of the resume. Realistically, everyone lies on their resume. Just a heads up. Uh so we, you know, I'll look at that for face value, but I don't dig too much into it. We'll then get them into what we call a group culture fit interview. So do they fit the culture of the team?
+[20:08]
+That's the most important thing because you can't teach that to people, right? Do they fit the vision, the mission for the company? If we feel that they have done that well in that interview, we'll bring them to a skills assessment. It's not just enough to ask someone if they know how to use Microsoft Excel or Google Sheets or build a Looker Studio dashboard. I want to see you do that in practice and how we use it in our business.
+[20:38]
+So, we'll make them do a project to show their skills for their specific role. and that's going to look different for every role. And they'll submit that back to us and we'll assess, okay, do they know what they're talking about? Is everything they put on their resume legitimate from what we can see in the skills assessment?
+[21:00]
+And then if that goes well, then they'll do another interview and that one will usually be with me. And that's a more detailed interview. That's where I'm going to go into past work history, any references that they might have, what they're looking to achieve in their own career, and get a better sense of who they are and what they're really about.
+[21:22]
+But I won't ever even meet with someone at that final interview if they haven't passed through those other hoops already. Okay. I want to gather as much information as possible before making that hiring decision. Yes.
+[21:38]
+Um, so I'm sure everybody in this room would agree like, you know, a whole bunch of ideas for what you want to hire for. Yeah, you just don't have the resources to hire everybody you want to hire for. So, how do you prioritize who you should hire first?
+[21:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Activity Inventory Method"
+NÚMEROS: Exemplo: 50 tarefas, 25 administrativas = necessidade de admin
+VISUAL: Metodologia de inventário de atividades com código de cores, highlighting de tarefas similares para identificar papéis necessários.
+[22:00]
+So, what I normally will tell business owners to do is an activity inventory. So, write down everything that you're doing in your business in a given day. And then what you'll do is take a highlighter if you're writing it out on paper and just highlight all the like tasks in one color. If you're doing this online, obviously you can highlight with, you know, Google Docs.
+[22:25]
+And then you'll be able to see the groups of different types of tasks that you have on your plate, which will start to help you understand what kind of roles that you need to hire for. If you see that out of the 50 things you've written down, 25 are administrated related, probably need an admin, especially if those 25 things are things you don't want to do, right?
+[22:50]
+So doing that activity inventory and then um segregating based off of the like tasks help you to define and create that job role that you're going to go post, right? Because now you have a specific list of responsibilities they need to take on. And then you want to look at the things that again you don't want to do in your business. Doesn't mean you can't do them. It just you don't want to do them.
+[23:18]
+Those are things you want to get off your plate the fastest because the faster that you can do more of what you enjoy doing, what's your zone of genius, the faster your company is going to grow. And that's usually how I'll advise people decide on who they need to hire. Okay. Yes.
+[23:38]
+Is there ever a scenario when you do want to hire a player? Like let's say that you know a different company has betterach. Yeah, that's a great question. I might be a little biased in saying this, but I do feel like the one role you would want to have an A player for is your operations manager
+[24:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The One Exception: Operations Manager"
+NÚMEROS: Não especificados
+VISUAL: Destaque especial para o papel de Operations Manager como único papel onde A-player é ideal, com ênfase em criação de sistemas.
+[24:08]
+because they are the person who's likely going to be making a lot of the systems that are going to run your business. And so, obviously, if you want A-level systems, you're going to need a strong team member to create those systems. Um, that would be the one person that I would say is probably, you know, better off for you to have that A player.
+[24:32]
+However, again, if an A player comes into your universe, you're able to grab them. I'm never gonna tell you, you know, don't draft Tom Brady. That's a mistake, right? But what I am gonna say is make sure you SOP everything that that star player is doing so that if and when they do exit the company, you're not left high and dry, right?
+[24:58]
+Especially in your example through poaching. I mean, I always go back to the interaction with relationships. If you can poach a girl from another guy, how likely is she to stay with you and not go to the next guy, right? So, if they're job hopping like that, especially, yes, you want to grab those SOPs from that other business, but actually grab them. Make sure they're documented. Make sure they're replicable.
+[25:28]
+Make sure you understand how to actually do those SOPs to some degree as well, too, because if it's written down, but you have no clue what to do, you can't teach the next person if they leave, right? So, just make sure that you have that in place again so that you're not screwed over if they leave. Yes.
+[25:48]
+So, you know, we had a business on paper. Um, one of the things that you said was that I would like for you to elaborate on you said optimizing accountability essentially to the systems. Um, how in practice have you implemented this across organizations you consult with? So once we document this way we want to do things a we are aware that things need to get fixed.
+[26:18] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "COO Role: Monitoring & Optimization"
+NÚMEROS: Não especificados
+VISUAL: Papel do COO: delegar (não fazer), monitorar execução, otimizar SOPs, garantir uso correto dos sistemas.
+[26:22]
+That's a great question. Uh specifically for the uh companies that I work with that is part of my role is monitoring the use of those SOPs making sure that they're being implemented correctly optimizing if they're not getting us the result that they want. So, if that's not going to be an expert like myself, for example, who's in the business and doing a fractional COO service, that role would fall on the COO of your business.
+[26:52]
+A COO's role isn't to actually do things. It's to delegate. A true COO isn't doing, they're delegating. They're delegating and then they're watching to make sure it's done correctly. Because you can't keep your eyes on every single thing that's going on. So they are there to make sure that everything is being executed, SOPs are being updated and optimized as needed.
+[27:18]
+Would you mind example if you're doing that and you're taking a look at that? How are you like feedback that I mean obviously you're not going to go through step by step by step by step every single time to validate that it was executed that way. Correct. Yes.
+[27:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Spot Check System"
+NÚMEROS: Não especificados
+VISUAL: Sistema de verificação por amostragem: customer service manager revisa emails diariamente, foca em emails complexos (59+ replies), fornece feedback.
+[27:40]
+So spot checks are important. If someone is not doing something correct, you're going to catch it eventually. And it's not a perfect system because it doesn't make sense to say, "Hey, I'm going to hire this VA to um, you know, answer customer service emails and then I'm going to hire an A player to read all of the responses and make sure that they were executed correctly because then you're just paying for the work to be done twice essentially.
+[28:08]
+But if you have a strong process for those spot checks, so for example, for our customer service emails, our customer service team, they respond to all of the emails. our customer service manager, her job is to go through every single day and to spot check through emails to make sure any difficult emails were responded to correctly.
+[28:32]
+And so she will judge that based off of the subject line or if you know you see an email and it says, you know, 59 replies, that one's probably an issue going back and forth with a customer. So she'll use her best judgment to determine which email she should QA for that day. She'll review them and she'll give feedback.
+[28:55]
+Whether that feedback is this was perfect, keep doing more of this or hey, you didn't follow the template, please refer back to this SOP. And what we'll do is we'll reassign the whole SOP as a training, as a task to that team member. So now they have a task to reread the whole SOP
+[29:18] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Green Square Method"
+NÚMEROS: Não especificados
+VISUAL: Processo de validação de compreensão: membro da equipe deve explicar SOP com próprias palavras, repetir até dominar completamente.
+[29:22]
+and then do what we call is green square that SOP. So repeat back to us in their own words exactly what that process is meant for, how they implement it, and how they're supposed to use that SOP. And if they can't tell us exactly how it needs to be done in their own words, they have to read it again. Okay. Yes.
+[29:48]
+In terms of the documentation and deployment of SOPs, what sort of vehicles do you recommend for that like systems, etc.? Um, we use ClickUp. ClickUp is very great for organization. We're able to assign those uh docs out as tasks very easily in ClickUp as well too and then reassign and reassign and reassign. Um and they just live there forever. Google Docs is another great place.
+[30:18] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "SOP Tools & Best Practices"
+NÚMEROS: 16 páginas mencionadas como exemplo de excesso, 30 minutos de Loom mencionado
+VISUAL: Ferramentas recomendadas: ClickUp (principal), Google Docs (alternativa), Loom videos (preferencial vs texto longo).
+[30:22]
+Um I do recommend when you're making the SOPs to focus a lot more on Looms where possible as opposed to writing out 16 pages of step-by-step instructions like click here to log into ClickFunnels. you know, don't be so redundant that you're giving them every little step.
+[30:42]
+Looms are a great tool to make it visual as well, too, so they can watch that loom and then go and implement, see in real time what they're supposed to click and how they're supposed to do it. But again, having that written piece is great so that you don't have to watch the whole 30 minute loom. You can scroll through and search for keywords to find the step that you're stuck on. Thanks. No problem. Yes.
+[31:12]
+Besides obviously if you can afford it, how do you like the job? Um, team culture is important. I feel like if people feel connected to a vision or a mission, they're far less likely to leave. Uh, so making sure that they believe in what you're building.
+[31:32] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Retention Strategy: Vision + Stability + Future"
+NÚMEROS: 5 anos mencionado como horizonte de planejamento
+VISUAL: Três pilares de retenção: cultura/missão, KPIs claros de sucesso, future pacing (visão de 5 anos para o membro da equipe).
+[31:35]
+Um, we spoke a lot about the KPI stuff as well too, like understanding what success is in their role. How is success defined within their role? Are they doing a good job? Are they doing a bad job? Right? And future pacing. I think a lot of the times we get into online businesses, we build our own business businesses because we want that freedom. We want that flexibility to do whatever and you know build a great life for ourselves.
+[32:05]
+Uh the B players or even some A players that come into our businesses, they want stability, right? They want to know that they're going to be able to put food on the table for their family, that if their son or daughter wants to go to college, they're going to be able to put money away in order to afford that.
+[32:25]
+So you need to build that stability, that vision for them, not only of where the company is going, but how they fit into that picture because if they can see you want to be here in 5 years, but that means they'll be there in 5 years, then they'll be down for that cause at least more so than if they have no clue what the hell is going on at any given time. And it just feels like, well, you know, hopefully this thing's around in two years. No one's going to want to stay for that. No problem. Yes.
+[33:00]
+question. What would you say across market? Okay. Uh that's going to differ obviously based off of different businesses.
+[33:12] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "KPIs by Department"
+NÚMEROS: $10,000/mês mencionado, 90 dias mencionado, 1-3 KPIs recomendados
+VISUAL: Breakdown de KPIs por departamento: Fulfillment (retenção, $10k/mês em 90 dias), Marketing (reach, ROAS), Operations (profit), Sales (conversion, cost per call).
+[33:15]
+I would say for uh delivery, for fulfillment, for you know managing clients, it's usually going to be client retention or client success. So, if you have a way to measure success within your clients, if your coaching business goal is to get clients to $10,000 per month, how many clients hit $10,000 per month in their first 90 days, right?
+[33:42]
+Or if after 90 days you're reselling clients on a retention offer, what is that percentage conversion percentage? That is the responsibility of your fulfillment team. Their goal is to make sure clients are happy and they stay, right? So, finding a way to measure that within your business.
+[34:05]
+marketing KPIs. Um, again, it depends on what section of department. If you're looking at organic, it could be reach, it could be impressions, it could be, you know, saves to a post, it could be growth on your account. If you're looking at paid marketing, rorowaz, right? Are you getting a return on the investment for the ads that you're running?
+[34:32]
+For operations, it's profit. It's great to make a million dollars, but if your expenses were 999,000, you didn't do so hot, right? Operations oversees everything. Their goal is to make things as efficient as possible and to get costs as low as possible so you take home as much profit as possible.
+[34:58]
+Sales conversion, right? Are they selling people or not? Are people coming into your business? Um, and again, there's more detailed KPIs that you can get into, more granular stuff like cost per call or average sale, um, you know, no-show rates, things like that. But you want to give them keep it simple. Give them one core KPI. No more than three.
+[35:25]
+I always say anything more than three and it becomes overwhelming. But one to three core KPIs that you're like you own that. That is your responsibility. That's the, you know, the row that you're, you know, rowing with in this boat here. And if you don't do that, the business doesn't succeed. We need you to do your part. That's your part. Thank you. An appointment setter. Yeah. Do you know you got any associated with that role?
+[35:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Appointment Setter KPI"
+NÚMEROS: 0.5 calls por hora (padrão), 1,000 seguidores vs conta engajada (variação)
+VISUAL: KPI específico para appointment setter: 0.5 calls/hora como baseline, ajustado por tamanho/engajamento da conta, comissão para qualidade+quantidade.
+[36:00]
+Um appointment setter. So basically going in social media and booking calls, DMs. Uh calls per hour is a good one that I've always used. 0.5 calls per hour is usually a pretty good standard KPI depending on the account. Every account is different. Um, for someone who has as engaged a following as Brandon, let's say, that KPI is going to be far higher.
+[36:28]
+For a company that has, you know, a thousand followers, that's probably going to be far lower. But I usually say 0.5, half a call an hour essentially is like a good starting point because you want to make sure that they're booking calls throughout the hours that they're working. Um, they should also have some sort of responsibility. So, incentivizing them with commission will help them to book quality and quantity. Yes,
+[36:58]
+I had a question over more creative roles. So, um some that aren't always cookie cutter exactly. Mhm. Do you have a process on how to create those processes that specifically specifically design you have a process that could be implemented that when you do this? It breaks down what looks like creative magic into actual science.
+[37:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Creative Roles: Templates + Best Practices"
+NÚMEROS: Não especificados
+VISUAL: Abordagem para papéis criativos: brand guide, templates (intros/outros), biblioteca de melhores conteúdos, estrutura de podcast/vídeo.
+[37:30]
+I would say creative roles and sometimes sales are two of the hardest roles to SOP just because like you said it is very variable. It's very subjective. Um with creative roles you can get your video designer, your video editor to create a lot of templates, right, that can be put into Final Cut, things like that, intros, outros, um if you have a podcast, right? Like what's the intro? When do you cut to ads?
+[38:00]
+You know, what's the overall flow of the story of the podcast? What are your brand colors? Having a brand guide is really important for creative roles so that you don't, you know, have different fonts all over the place, wrong colors, wrong logos, old logos. I've seen that before. Um, so just having those assets available to them is very helpful.
+[38:25]
+And again, similar to sales, having your best performing content in a folder, that's training resources. This was stuff that did fantastic for us. We loved the message. We loved how it looked. We felt really proud of this content. And not only that, it went viral, right? So that way if a new editor comes in, they know, okay, this is the type of content that works for their audience. And if they're a good editor, they're going to be able to pick up on that a lot more quickly. Does that make sense? Thank you. No problem. Any other questions? Yes.
+[39:00]
+You like to hire VA? Yes. So, we actually have a VA agency and all we hire are overseas team members. And even though they are what I would consider, you know, be players in that sense. That's no disrespect to them. They're some of my favorite people that I've worked with. They're
+[39:25]
+Yeah, they're A-listers in their own way. They're not going to go, like I said, and start their own operations agency or anything, but they are hardworking. They're great to work with. They're dedicated to the mission. Um, and they've done phenomenal work for me. I have no nothing bad to say about hiring overseas VAS. Yes.
+[39:48]
+Other than the Philippines, do you go out anywhere else for employees? Um, no. I focus mainly on the Philippines. Yes.
+[40:00]
+What's the best operational decision you feel you ever made business the most leverage and what's the worst operational decision that you made impact?
+[40:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Best & Worst Decisions"
+NÚMEROS: Não especificados
+VISUAL: Lições aprendidas: Melhor = tirar tudo do caminho do dono para ser face da marca; Pior = ficar cega no negócio (caso April).
+[40:18]
+Um, it's a good question. I would say the best operational decision um would just be getting everything out of the own business owner's way so that they can really be the face of the brand. So knowing to build these team members and take as much off of their plate is only going to help the brand grow because the more that the business owner, the brandins of the world can go out and do content and be in front of their audience and do that marketing piece, the more that they're going to have those that reach, that impression and bring that business in.
+[40:58]
+Um, I would say that's probably one of the better decisions is just taking as much off of their plate as possible so they can operate in their zone of genius. And I would say going back to that example with April, one of the worst decisions is allowing even myself to be blind in my business. I didn't know I didn't have a system of the templates that she was using. There were no templates, right?
+[41:25]
+So anytime I've had a hire where I haven't really diligently soped everything out, I have eventually regretted that decision because again, it just puts you in a vulnerable place. I don't like ever putting myself or my clients in that position. No problem. Yes.
+[41:48]
+At what point should somebody bring somebody like you?
+[41:52] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "When to Hire Fractional COO"
+NÚMEROS: 6-7 figuras em receita, 1,000 seguidores, 1-2 vendas/mês (muito cedo)
+VISUAL: Critérios para contratar COO fracionário: estratégia provada, 6-7 figuras, cash flow para payroll, negócio saudável.
+[41:55]
+Um, for me specifically, I prefer to work with businesses that have a proven strategy. So, I'm not going to come in and, you know, if someone has a thousand followers and they're only doing one or two a month, like I can't solve that kind of problem. Uh but if you're a healthy business doing you know six to seven figures uh that's something that I can work with that I can scale
+[42:22]
+just because of the fact that I am go my style is to come in and bring in a strong team and you need to be able to you know afford that payroll. I also want to make sure that the business stays as profitable as possible. So I want to make sure that you have the cash flow necessary to implement the systems in the team in order to continue to scale. I hope that answers your question. Hi.
+[42:48]
+So when you're placing teams, great question.
+[42:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Employment Classifications in US"
+NÚMEROS: W2 (salaried), W9 (US contractor), W8 (international contractor), 7.5% de impostos mencionado
+VISUAL: Três tipos de classificação de emprego: W2 (você paga impostos), W9 (contractor US), W8 (internacional, sem impostos), implicações legais de cada.
+[43:00]
+Um, so to get a little bit more technical on this, there are three types of uh like employment relationships in the US. There is a W2, which is a salaried employee where you're paying part of their taxes. There's a W9, which is a contractor relationship based in the US. And then there's a W8, which is an international contractor. Okay?
+[43:28]
+So any of the team members that we hire from the Philippines, they would classify as W8 contractors or W8 bends. They do not require any taxes to be taken off of their pay. You pay them the full amount. If they're paid $5 an hour, you're giving them $5 an hour. You're not responsible for their taxes. You make them sign a W8 Ben, which basically says, "I am not responsible for your taxes."
+[43:58]
+And I let you know that so that they can't come back and say, "Oh, I thought you were paying my taxes." Right? Um W2s are only for the US. I do not like hiring W2s. I don't recommend it. Um there's a lot of labor laws around that. Um, when it comes to W9's versus W2s, the things you can and cannot do, uh, a lot of you are probably crossing that line when it comes to your W9's where they should technically be W TWS,
+[44:32]
+but I try to implement as many processes as possible to walk that legal line where I'm not going to get in trouble and I can still classify them as a W9 because with W2s, you have to adhere to the labor laws in their state, not yours. So, that starts to get really tricky. So, if you have people in Texas or LA and you're in Florida, you don't have to start to educate yourself on all of those labor laws,
+[45:00]
+whether they are owed vacation pay for certain holidays, how um how you can fire them, when you can fire them. Uh and that just becomes very tricky as you start to grow a far larger team. So, I just I don't want to deal with that. Plus, you have to pay half of their taxes. You can write it off, but you still have to invest that.
+[45:25]
+In some states, you have to give them the option for benefits. In some states, you don't. In some states, you have to give them vacation pay. In some, you don't. So, it can be it's a very expensive decision to bring someone on as a W2. So, you have to be ready to take on that responsibility. Um, because you can't just part ways if they're not working out. There's a whole formal system for getting rid of them. Um, and again, as I mentioned, the whole tax thing. Yeah.
+[45:58]
+Is there someone said that if you are going to have W9 better to pay them through their LLC rather than clarify that?
+[46:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "W9 Protection: Pay Their LLC"
+NÚMEROS: 40 horas/semana mencionado como limite legal
+VISUAL: Estratégia legal: pagar LLC do contractor (não pessoa física) = vendor relationship, permite 40 horas/semana legalmente, você não sabe quantos funcionários eles têm.
+[46:12]
+Yeah. So, by paying them through their LLC, you're essentially making them a vendor in your business. Uh they're not an a contractor. So, what that you're saying is they provide a service and I'm hiring that business. I'm not hiring the person. And the reason why that's important is because as a W9 contractor, you cannot monopolize all of their time.
+[46:38]
+So if you hire them and you pay them through them as an individual and they're working 40 hours a week in your business, that's illegal. You're not allowed to do that. They should be a W2 at that point legally. But if you hired their business and they're putting 40 hours of work as a business into your business, that's, you know, that's their that's their business.
+[47:05]
+Yep. As long as they have an LLC and you pay their LLC, you don't know if they have one team member or a 100, right? So, them working giving you 40 hours of service is their responsibility. How they want to manage that and handle that is on them. It's not on you. If you're paying them for 40 hours as an individual, they legally should be a W2 and you can get in a lot of trouble for that if you know labor board ever got involved. Yes.
+[47:38]
+So, are you saying that sales rep isn't oper if they're commission only. That is the one time you're you've got some saving grace. Commission only roles cannot be W2s unless you pay them the salary. But if it's base commission, that would be W2. Yeah. So don't don't give them a base. Yes.
+[48:05]
+Are there any laws or regulations about telling contractor how they should do their job?
+[48:12] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "W9 Management Restrictions"
+NÚMEROS: 9-5 Monday-Friday mencionado, 7.5% impostos, toda vida do negócio pode ser auditada
+VISUAL: Limites legais com W9s: não pode ditar horário, não pode micromanage excessivo, deve focar em resultado final, linguagem sugerida: "preferimos" não "você deve".
+[48:15]
+Yeah. So when it comes to W9s, you're not allowed to tell them when they can work, right? And you can give them guidelines and SOPs of like this is how the job needs to be done, but you can't like I don't know how to describe it, but there's a level of micromanaging that cannot be done with W9. You have to say this is what I want. this is the end result and this is the SOP that we use to get to that end result. Go do your thing.
+[48:48]
+Um, you can't penalize them too much for not following the SOP. You can fire them, but if you're holding them to strict practices, that can start to get into a legal gray area. It's a little bit harder to defend because you can't say, "Well, I'll, you know, just let them do things wrong." Um, but if you're telling them, I need you to clock on every Monday at 9 to 5 Monday through Friday. Yeah, that's a big no no. You got to let them work when they want.
+[49:22]
+So I always word it as, you know, we prefer prompt contact between the hours of 9 to5 Mondays through Friday, but we are a deadline focused company. So feel free to do your work whatever time you want as long as it's done on time. Right. Yeah. Can you tell me like, "Hey, we're having team training every Monday at 9 a.m."
+[49:48]
+I mean, you can say that, but they don't have to show up. You You would say like, "Hey, I want to do a training at 9:00. Does that work for you?" As opposed to training is at 9:00 every day, right? Does that work for you? You know, just the little things, right? And that can save you in the long run.
+[50:12]
+Um, if anyone ever did get dinged by the labor board for improper classification of W9 and W2 employees, they can go back through the lifeline of your business and find every single W9 you've ever hired. And if they determine any of those should have been W2s, you have to pay taxes on all of them. Every dollar you've ever paid them, you would have to pay that 7.5% or whatever it is taxes that you're supposed to be paying on every single person.
+[50:45]
+that can bankrupt a business. Um, so just little things like that. I always say, hey, better safe than sorry. Little types of language changes and how you operate the team can save you a lot of headache in the long run. Any other questions? Yes.
+[51:05]
+Um, that's a good question. I would say um again like and this is no disrespect but any of the roles that require a little bit more critical thinking or like thinking outside of the box uh in addition to the SOP that you're providing them are something that I would usually want to hire more onshore for
+[51:32] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Offshore vs Onshore Roles"
+NÚMEROS: Não especificados
+VISUAL: Divisão de papéis: Filipinas (customer service, accounting, data entry, distribuição de conteúdo) vs US (copywriting, pensamento crítico, fora da caixa).
+[51:35]
+um customer service accounting data entry VAS are great for that. uh content distribution, great. Copywriting, probably not, right? So, just kind of use your discretion. At worst case scenario, you could try it with a Filipino VA, but again, I feel that um I don't know if it's just like a English as a second language thing or just them not understanding our industry,
+[52:05]
+but it is a little bit more difficult to get them like they'll still try, but it's not going to get the result that you want um if you're hiring overseas. Yes. Main reason you only to the Philippines.
+[52:22]
+Um, I've just had really great results there. Uh, and I know how to work with those people. I also now have all my team members from there, so they're all in the same time zone, so that helps a little bit as well, too. Um, they do predominantly work in our time zone, but it's nice that they're all on the same. It's just a little bit easier to manage. Their holidays are the same, so I'm not worried about all these different cultural holidays and all that. So, it just kind of keeps things simple for me. Yes.
+[52:58]
+Healthy coaching online business. On a good healthy online coaching business, it should be uh over 45%. Yeah. What? Correct.
+[53:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Healthy Profit Margin"
+NÚMEROS: 45%+ margem de lucro para coaching business saudável
+VISUAL: Benchmark financeiro: 45%+ lucro se equipe enxuta e sistemas bons, problemas comuns: overpaying underperformers, falta de QA.
+[53:18]
+If your team is lean like and your systems are good, you should be able to hit that. I find a lot of times like when I go in and assess businesses, if their profit margins aren't there, it's usually because they're overpaying, underperforming team members. That's usually the number one reason, especially if they have team members that started with them. They're like, "But he's been with me since the beginning." I'm like, "But he's not doing his job."
+[53:48]
+You know, you got to kind of let some of those people go. You know, who gets you here won't get you there kind of thing. A lot of people fall victim to that. um or just not looking at the work that's being completed because you guys have so much going on in a day. You don't have someone properly QAing these processes. So, you don't even know that they're broken and then someone like me comes in and looks at and goes, "What the heck is this?"
+[54:18]
+Um and then we lean out the team or replace the poor performers and that helps a lot with the profit margins. Yes. PH um online jobs PH has been really helpful for us. That's definitely a main one that we'll use. Um and then also referrals from our existing team members. They still go through the same hiring process. Like I don't even care if it's my mother, she's still going through my hiring process
+[54:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Hiring Sources"
+NÚMEROS: Não especificados
+VISUAL: Fontes de contratação: OnlineJobs.ph (principal), referrals de equipe existente (todos passam pelo mesmo processo), vários casais trabalham na empresa.
+[54:52]
+um because I want to make sure they're actually qualified for the job. But typically people who do good work know other people who do good work. Um, so we do actually have quite a few couples in our business that work together. They don't work in the same department, but they both work in my company and they do very well. So, we leverage a lot of referrals as well, too, because we've worked with so many people in that space at this point.
+[55:22]
+Yeah, I have a hiring team. So their only role is to just go canvas for people and then bring me the good ones and then I go through that last final phase. Uh no, that person's actually US based. Yeah, no problem. Yes.
+[55:42]
+As a fractional, how many hours would you say that's a fraction of going from fulltime CO to a fraction?
+[55:52] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Fractional COO Hours"
+NÚMEROS: 10-30 horas/semana (Amber), 20 membros de equipe (time de Amber), 5+ anos com Brandon
+VISUAL: Estrutura de COO fracionário: 10-30h/semana pessoal dependendo do cliente, equipe de 20 implementando sistemas diariamente, relacionamento de 5+ anos = parceria.
+[55:55]
+I mean it really depends on the relationship. like someone like Brandon for example, him and I work extremely closely together. So I spend a lot of my time in his business as opposed to other clients that are a bit smaller. Um it can be anywhere as small as 10 hours a week up to 30 hours a week.
+[56:22]
+And again, you know, the amount of time that I will put into the business is vastly different from my team. So, you know, in Brandon's business, I will put a lot of my own time in, obviously, but I also have my team of 20 who are working every single day in his business implementing the systems that I've created.
+[56:48]
+I know you said you have a lot of questions. Do you have any more? Okay. Yes. Um, when you say you're hiring people in the business, are you in your case, are you hiring people onto your that are putting things into that business or are you and your team hiring people into that business?
+[57:12]
+It's a bit of both. Yeah, I get what you're saying. It's a bit of both. Um, so you know, for Brandon's business, some of the team members I've hired are on his payroll. Most of the operational team members are on mine. Um, in other businesses, it functions the same or it's a mixture of both.
+[57:38]
+For me, it depends on the longevity of the partnership, I guess, with the client. Um, Brandon and I have worked together for over five years now at this point. So, I consider the business relationship with him more of a partnership than a client relationship. Um, whereas with other clients, you know, I am really concerned about, hey, what is the longevity of this partnership? What is your end goal here?
+[58:08]
+Do you want me to just come in and create a system for you and build a team and then kind of leave or are we kind of working together on this for the long haul? And we'll kind of adjust a strategy based off of that. Um, so with all the different types of people that you've hired for different businesses, specifically in this sector of like creative roles and helping people pump out content, would you say that those types of roles have been more fruitful for the business than maybe hiring more like client success or hiring more people like copyrighting or like
+[58:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Creative Roles: Challenges & Value"
+NÚMEROS: Não especificados
+VISUAL: Realidade de papéis criativos: mais difíceis de gerenciar, subjetivos, tipo de personalidade emocional, críticos para crescimento mas desafiadores.
+[58:52]
+It's a good question. Um, I think creative roles and the creative role personality type is one of the most difficult to manage and find just again because it is such a subjective task work like doing content. They may think it's great, you may think it's bad, who's to say one way or the other.
+[59:18]
+Um, I think good content is key to growing any business, but it, you know, who makes great content for you might make really shitty content for Brandon, right? So it dep you have to find the content creator that matches your style, your message, what you're trying to put out, and also understands obviously, you know, what's trending in the industry. But there has to be a good match there. It's not always, you know, who's going to be good for you, who's going to be good for the next person.
+[59:52]
+Um, it will drive the business, but it'll also drive you crazy. Um, because they are, like I said, they're difficult to manage. They're definitely typically more of an emotional person to work with from a personality type. So you just kind of have to know how to manage that type of person when bringing them into the team.
+[1:00:15]
+I guess between like say for instance like roles that have to do with pumping out ads, right? Versus roles that have to do with maybe not even like their creative, maybe they're just helping you posting social media, prioritizing social media, whatever. Would you say it's I guess my overall question is how important has content been to the businesses that you've worked with versus just like ads right organic content hired for
+[1:00:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Content vs Ads Strategy by CEO"
+NÚMEROS: 1 milhão de seguidores mencionado (Brandon em cada plataforma)
+VISUAL: Estratégia varia por CEO: Brandon (1M followers) = organic crítico, igual peso ads+organic; John Whiting (menor presença) = ads muito mais importante.
+[1:00:52]
+right again I think that does make a difference on the personality this the CEO of the business for someone like Brandon who has a very engaged following has a million followers on every single platform content is a critical part of our strategy organic is very important to everything that we do It drives a lot of business for us.
+[1:01:22]
+But for a client like let's say John Whiting who doesn't have as prominent of a presence on social media, we rely far more heavily on ads. And so in that business, hiring someone who's really good at ads and having really good systems in that area is super important. Whereas with Brandon, again, you know, organic for us is equally as important as ads. Do another round. Anyone else? Okay.
+[1:01:52]
+From a content creation standpoint about I turned to a couple now just because obviously there's the barrier of them trying to culture in our world kind of difficult to do actually that's the lasting piece I can't figure out a virtual system for that do you have the good like the right systems in place for a VA from the Philippines to come in and be successful in that role.
+[1:02:22]
+I started creating about three months ago. So I would say 5050. Okay. Then I would continue down that path. I mean if you've been able to find a VA that was great at copywriting. You may have other resource pools. Ask that VA. Hey, do you know any good video editors who can create content and see if they have a good referral for you?
+[1:02:48]
+But make sure that those systems are in place because if you can't even answer the question, what content's going to go viral? you can't expect them to figure it out for you when they're not from America. Does that make sense?
+[1:03:05]
+So, but if you can't answer that question, then I would go more for somebody based in the US. Um, and then if you can find someone who knows more than you, SOP everything they know. So, now you have that IP in your business. All right, I think that's it then. Thank you guys.
+📊 RESUMO EXECUTIVO
+NÚMEROS PRINCIPAIS:
+77% taxa de vitória Patriots com Tom Brady
+50% taxa de vitória Patriots sem Tom Brady
+27% redução de performance (perda de um A-player)
+85% da força de trabalho atual se considera job hoppers
+75% dos job hoppers deixam emprego mesmo sem outro alinhado
+24 horas prazo para demitir se não funcionar
+0.5 calls/hora KPI padrão para appointment setter
+45%+ margem de lucro saudável para coaching business online
+$10,000/mês exemplo de meta de sucesso do cliente em 90 dias
+90 dias período típico para medir sucesso do cliente
+1-3 KPIs máximo recomendado por membro da equipe
+$5/hora exemplo de pagamento para VA (sem impostos)
+7.5% impostos que empregador paga em W2
+40 horas/semana limite legal para W9 individual
+1 milhão de seguidores mencionado (Brandon em cada plataforma)
+5+ anos parceria entre Amber e Brandon
+20 membros na equipe de Amber
+10-30 horas/semana tempo de COO fracionário
+16 páginas exemplo de SOP muito longo (evitar)
+30 minutos exemplo de Loom longo
+59+ replies indicador de email problemático para QA
+50/50 avaliação de sistemas (3 meses criando)
+6-7 figuras receita mínima para COO fracionário
+1,000 seguidores + 1-2 vendas/mês = muito cedo para COO
+ESTRATÉGIAS E SISTEMAS:
+1. Filosofia Core: B-Players + A-Level Systems
+B-player implementando A-level system = A-level success
+Foco em replicabilidade, não em talento individual
+Sistemas protegem contra perda de 27% de performance
+Evitar dependência de "Iron Man" ou "Tom Brady"
+2. Processo de Reverse Engineering
+Identificar dream outcome do problema
+Criar sistema que resolve problema repetidamente
+Criar SOP do sistema
+Delegar para team member executar
+3. Sistema de Contratação Extensivo (4 Fases)
+Fase 1: Job ad 4Rs (Role, Requirements, Results, Responsibilities) + KPIs claros
+Fase 2: Resume review (todos mentem, não confiar muito)
+Fase 3: Group culture fit interview (não pode ensinar cultura)
+Fase 4: Skills assessment (projeto prático, não apenas perguntar)
+Fase 5: Final interview com líder (história, referências, objetivos de carreira)
+Hire slow, fire fast (24h se não funcionar)
+4. Activity Inventory Method
+Listar todas tarefas do dia
+Highlighter por tipo de tarefa (código de cores)
+Agrupar tarefas similares = identificar papel necessário
+Priorizar tarefas que não quer fazer (sair da placa primeiro)
+Exemplo: 50 tarefas, 25 admin = precisa admin
+5. Sistema de SOPs
+Ferramentas: ClickUp (principal), Google Docs (alternativa)
+Formato: Loom videos > texto longo (não 16 páginas)
+Estrutura: Visual (Loom) + texto (busca por keywords)
+Obrigatoriedade: Até A-players devem criar SOPs
+Teste: Testar todo SOP antes de implementar
+Atualização: Monitorar e otimizar continuamente
+6. Green Square Method
+Reassign SOP como tarefa de treinamento
+Team member relê todo SOP
+Explica com próprias palavras: propósito, implementação, uso
+Se não consegue explicar = relê novamente
+Validação de compreensão completa
+7. Sistema de Spot Checks
+Não revisar 100% (ineficiente, paga trabalho 2x)
+Customer service manager revisa diariamente
+Foca em emails difíceis (59+ replies, assuntos complexos)
+Feedback: "perfeito" ou "refira-se ao SOP"
+Reassign SOP se erro detectado
+8. Papéis Criativos (2 dos mais difíceis: creative + sales)
+Templates: Intros, outros, estrutura de podcast
+Brand Guide: Cores, fontes, logos (evitar inconsistência)
+Biblioteca: Best performing content como training
+Sales: Clips de calls, library de objeções (spousal, no time, pain digging)
+Pode SOP qualquer coisa, mesmo criativo
+9. KPIs por Departamento
+Fulfillment/Delivery: Client retention, client success ($10k/90 dias)
+Marketing Organic: Reach, impressions, saves, growth
+Marketing Paid: ROAS (return on ad spend)
+Operations: Profit (receita - despesas)
+Sales: Conversion rate, cost per call, average sale, no-show rates
+Appointment Setter: 0.5 calls/hora (ajustar por tamanho conta)
+Máximo 1-3 KPIs por pessoa (mais = overwhelming)
+10. Estratégia de Retenção
+Cultura: Conexão com visão/missão (menos likely to leave)
+KPIs Claros: Sabem se estão tendo sucesso no papel
+Future Pacing: Mostrar onde empresa estará em 5 anos E onde eles estarão
+Estabilidade: B-players querem segurança (comida, college fund)
+Não apenas "espero que isso dure 2 anos"
+11. Priorização de SOPs
+Primeiro: Low-hanging fruit (customer service, admin, data entry)
+Depois: Coisas complexas (mais detalhadas, mais tempo)
+Foco: Coisas que pode passar rapidamente
+Teste: Sempre testar antes de delegar
+ESTRUTURA:
+Hierarquia de Contratação:
+B-Players (maioria da equipe):
+Novos na indústria, menos experiência
+Hungry, querem provar valor
+Mais coachable, menos ego
+Não vão começar negócio concorrente
+Fáceis de substituir
+Trabalham mais duro que A-players
+A-Players (exceção: Operations Manager):
+Único papel onde vale a pena
+Criam os A-level systems
+CRÍTICO: Deve SOP tudo que faz
+Risco de poaching, job hopping
+Difíceis de encontrar e manter
+Podem pedir double e ter leverage
+Classificações de Emprego (US):
+W8 (International - Filipinas):
+Sem impostos (você paga valor cheio)
+W8 Ben form (proteção legal)
+$5/hora exemplo
+Recomendado para: customer service, accounting, data entry, content distribution
+Não recomendado para: copywriting, pensamento crítico
+W9 (US Contractor):
+Sem impostos retidos
+MELHOR: Pagar LLC deles (vendor) não pessoa
+LLC = pode trabalhar 40h/semana legalmente
+Pessoa física 40h/semana = ilegal, deveria ser W2
+Restrições: Não pode ditar horário, não pode micromanage excessivo
+Linguagem: "Preferimos 9-5" não "Você deve 9-5"
+Treinamentos: "9am funciona para você?" não "Treinamento é 9am"
+Foco: Deadline-focused, não time-focused
+Comissão only: OK como W9, base+comissão = W2
+W2 (Salaried Employee):
+Você paga 7.5% impostos
+Leis trabalhistas do estado deles (não seu)
+Benefícios obrigatórios (varia por estado)
+Vacation pay (varia por estado)
+Processo formal de demissão
+EVITAR se possível
+Labor board pode auditar toda vida do negócio
+Pode falir empresa com impostos retroativos
+Papel do COO:
+Não faz, delega
+Monitora execução de SOPs
+Otimiza sistemas continuamente
+Garante uso correto dos processos
+Spot checks regulares
+Feedback e re-treinamento
+Fractional: 10-30h/semana + equipe de 20
+Fontes de Contratação:
+OnlineJobs.ph (principal para Filipinas)
+Referrals de equipe existente (passam pelo mesmo processo)
+LinkedIn, Indeed, Glassdoor
+Network pessoal
+Hiring team dedicado (canvas e traz candidatos)
+Quando Contratar COO Fracionário:
+Estratégia provada (não 1k followers, 1-2 vendas/mês)
+6-7 figuras em receita
+Cash flow para payroll
+Negócio saudável
+Pronto para escalar com equipe forte
+Red Flags de Profit Margin:
+Menos de 45% = problema
+Causas comuns:
+Overpaying underperforming team members
+Lealdade a "been here since beginning" (quem te trouxe aqui não te leva lá)
+Falta de QA nos processos
+Não sabe que sistemas estão quebrados
+Solução: Lean out team, substituir poor performers
+Vantagens B-Players:
+Algo a provar
+Hungrier que A-players
+Mais coachable
+Menos ego
+Não começam negócios concorrentes
+A-players começam businesses, B-players não
+Trabalham mais duro (não dependem só de talento)
+Riscos A-Players:
+Hard to find
+Hard to keep
+85% workforce = job hoppers
+75% deixam sem outro job alinhado
+Podem pedir double quando têm leverage
+Podem roubar IP e começar concorrência
+Exemplo April: ghosted sem aviso
+Exemplo Patriots: -27% performance
+Estratégia de Hedge (se contratar A-player):
+SOP absolutamente tudo
+Nunca confiar "I got it, don't worry"
+Documentar todo IP
+Entender processos você mesmo (para ensinar próximo)
+Reduzir downtime de transição
+Evitar estar "blind" no negócio
+Nunca dar upper hand para negociar
+Princípio Core:
+"The only person who should negatively impact your business if they leave is you."
+Dados Financeiros:
+Margem Saudável: 45%+ para coaching business
+Pagamento VAs: $5/hora exemplo (sem impostos W8)
+Impostos W2: 7.5% pagos por empregador
+Risco Auditoria: Impostos retroativos em todos W9s históricos
+Commission: Incentiva quality + quantity (appointment setters)
+DURAÇÃO: ~1h03m FORMATO: Apresentação + Q&A interativo em evento presencial

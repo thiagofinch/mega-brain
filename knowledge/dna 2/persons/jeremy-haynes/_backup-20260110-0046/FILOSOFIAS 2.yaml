@@ -1,0 +1,61 @@
+# FILOSOFIAS - JEREMY HAYNES
+# Crencas fundamentais que aparecem 3+ vezes em contextos diferentes
+# Versao: 1.0.0 | Criado: 2025-12-28
+
+versao: "1.0.0"
+pessoa: "Jeremy Haynes"
+camada: "FILOSOFIAS"
+total_itens: 4
+
+itens:
+  - id: "JH-FIL-001"
+    titulo: "Recurring Superior a Transactional"
+    descricao: "Recurring high-ticket e superior ao transactional. Mas so funciona se entregar valor que exceda preco a cada 30 dias."
+    peso: 0.95
+    chunks:
+      - "JH001_001"
+    fontes:
+      - "JH001"
+    aplicacao: "Estruturacao de oferta, modelo de receita"
+    citacao: "You want to charge somebody every 30 days, you have to exceed the value of what they paid."
+
+  - id: "JH-FIL-002"
+    titulo: "Fair Pricing"
+    descricao: "Fair Pricing nao e cobrar o maximo. E criar troca onde ambas partes reconhecem valor > custo."
+    peso: 0.95
+    chunks:
+      - "JH001_002"
+    fontes:
+      - "JH001"
+    aplicacao: "Precificacao, proposta de valor"
+    citacao: "Whatever you are going to charge, you have to be able to EXCEED the value of what that counterparty is getting from it BEFORE the next charge comes."
+
+  - id: "JH-FIL-003"
+    titulo: "Consumption Rate Theory"
+    descricao: "Preco alto = Skin in the game = Implementacao rapida = Resultado. Cobrar barato e desservico."
+    peso: 0.90
+    chunks:
+      - "JH001_003"
+    fontes:
+      - "JH001"
+    aplicacao: "Justificativa etica para preco alto"
+    citacao: "I deeply believe that I think you're actually doing a big disservice to people by only charging them a one-time transactional amount."
+
+  - id: "JH-FIL-004"
+    titulo: "Pricing = Certeza do Sistema"
+    descricao: "Preco e reflexo da certeza do seu sistema para produzir resultados. Subir conforme certeza aumenta."
+    peso: 0.90
+    chunks:
+      - "JH001_004"
+    fontes:
+      - "JH001"
+    aplicacao: "Jornada de pricing, quando subir preco"
+    citacao: "Pricing is reflected with the certainty of your system for producing those ongoing results."
+
+metadados:
+  total_chunks_processados: 4
+  fontes_utilizadas:
+    - "JH001"
+  peso_medio: 0.92
+  criado_em: "2025-12-28T00:00:00Z"
+  protocolo: "DNA-EXTRACTION-PROTOCOL v1.0"

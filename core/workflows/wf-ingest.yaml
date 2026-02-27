@@ -1,0 +1,88 @@
+# MEGA BRAIN - INGEST WORKFLOW
+# Padrão: Pedro (aios-core/squad-creator)
+# Versão: 1.0.0
+
+workflow:
+  id: wf-ingest
+  name: "Material Ingestion"
+  description: "Ingere novo material no INBOX com metadados"
+  version: "1.0.0"
+
+  orchestrator: "@jarvis"
+
+  inputs:
+    - name: source_url
+      type: string
+      required: false
+      description: "URL do material (YouTube, Drive, etc)"
+    - name: source_file
+      type: file
+      required: false
+      description: "Arquivo local a ingerir"
+    - name: source_code
+      type: string
+      required: true
+      description: "Código da fonte (e.g., CG, JM)"
+
+  phases:
+    - id: phase_1
+      name: "DOWNLOAD"
+      description: "Download ou cópia do material"
+      steps:
+        - condition: "source_url is not null"
+          execute:
+            command: "download_from_url"
+            inputs:
+              url: "${source_url}"
+        - condition: "source_file is not null"
+          execute:
+            command: "copy_to_inbox"
+            inputs:
+              file: "${source_file}"
+      checkpoint:
+        id: CP_DOWNLOAD
+        blocking: true
+
+    - id: phase_2
+      name: "METADATA"
+      description: "Extração de metadados"
+      steps:
+        - execute:
+            task: "tasks/detect-role.md"
+        - execute:
+            command: "generate_tag"
+            inputs:
+              source_code: "${source_code}"
+      checkpoint:
+        id: CP_METADATA
+        blocking: true
+
+    - id: phase_3
+      name: "PLACEMENT"
+      description: "Organização no INBOX"
+      steps:
+        - execute:
+            command: "move_to_source_folder"
+            inputs:
+              destination: "inbox/${source_folder}/"
+        - execute:
+            command: "update_planilha"
+      checkpoint:
+        id: CP_PLACEMENT
+        blocking: true
+
+  transitions:
+    - from: phase_1
+      to: phase_2
+      condition: "file_downloaded"
+    - from: phase_2
+      to: phase_3
+      condition: "metadata_extracted"
+
+  outputs:
+    - name: inbox_path
+      type: string
+    - name: tag
+      type: string
+    - name: metadata
+      type: json

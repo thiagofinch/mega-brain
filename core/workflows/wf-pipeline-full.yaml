@@ -1,0 +1,138 @@
+# MEGA BRAIN - FULL PIPELINE WORKFLOW
+# Padrão: Pedro (aios-core/squad-creator)
+# Versão: 1.0.0
+
+workflow:
+  id: wf-pipeline-full
+  name: "Full Pipeline Processing"
+  description: "Executa pipeline completo: ingest → process → enrich"
+  version: "1.0.0"
+
+  # Orchestrator
+  orchestrator: "@jarvis"
+
+  # Input requirements
+  inputs:
+    - name: source_code
+      type: string
+      required: true
+      description: "Código da fonte (e.g., CG, JM, JH)"
+    - name: files
+      type: array
+      required: true
+      description: "Lista de arquivos a processar"
+
+  # Phases
+  phases:
+    - id: phase_1
+      name: "FOUNDATION"
+      description: "Preparação e normalização"
+      steps:
+        - execute:
+            task: "tasks/normalize-entities.md"
+            inputs:
+              content: "${files}"
+        - execute:
+            task: "tasks/detect-role.md"
+            inputs:
+              content: "${files}"
+      checkpoint:
+        id: CP_FOUNDATION
+        blocking: true
+        validation:
+          - "entities_normalized"
+          - "roles_detected"
+
+    - id: phase_2
+      name: "INTELLIGENCE"
+      description: "Análise temática e classificação"
+      steps:
+        - execute:
+            task: "tasks/analyze-themes.md"
+            inputs:
+              entities: "${phase_1.entities}"
+              role: "${phase_1.primary_role}"
+      checkpoint:
+        id: CP_INTELLIGENCE
+        blocking: true
+        validation:
+          - "themes_identified"
+
+    - id: phase_3
+      name: "EXTRACTION"
+      description: "Extração de DNA e conhecimento"
+      steps:
+        - execute:
+            task: "tasks/extract-dna.md"
+            inputs:
+              themes: "${phase_2.themes}"
+              source_id: "${source_code}"
+      checkpoint:
+        id: CP_EXTRACTION
+        blocking: true
+        validation:
+          - "dna_complete"
+          - "all_5_layers_populated"
+
+    - id: phase_4
+      name: "PIPELINE"
+      description: "Processamento de batches"
+      steps:
+        - execute:
+            task: "tasks/process-batch.md"
+            inputs:
+              source_code: "${source_code}"
+              files: "${files}"
+      checkpoint:
+        id: CP_PIPELINE
+        blocking: true
+        validation:
+          - "batch_log_complete"
+          - "dual_location_logs"
+          - "cascading_executed"
+
+    - id: phase_5
+      name: "VALIDATION"
+      description: "Validação final e integridade"
+      steps:
+        - execute:
+            task: "tasks/validate-cascade.md"
+            inputs:
+              batch_id: "${phase_4.batch_id}"
+      checkpoint:
+        id: CP_VALIDATION
+        blocking: true
+        validation:
+          - "status_passed"
+
+  # Transitions
+  transitions:
+    - from: phase_1
+      to: phase_2
+      condition: "checkpoint_passed"
+    - from: phase_2
+      to: phase_3
+      condition: "checkpoint_passed"
+    - from: phase_3
+      to: phase_4
+      condition: "checkpoint_passed"
+    - from: phase_4
+      to: phase_5
+      condition: "checkpoint_passed"
+
+  # Error handling
+  on_error:
+    - action: "log_error"
+    - action: "notify_user"
+    - action: "rollback_to_checkpoint"
+
+  # Output
+  outputs:
+    - name: batch_log
+      type: file
+      location: "logs/batches/"
+    - name: dna_config
+      type: file
+      location: "agents/persons/{source}/DNA-CONFIG.yaml"
+    - name: validation_report
+      type: json

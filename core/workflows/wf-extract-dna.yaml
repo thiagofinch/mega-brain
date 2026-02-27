@@ -1,0 +1,158 @@
+# MEGA BRAIN - DNA EXTRACTION WORKFLOW
+# Padrão: Pedro (aios-core/squad-creator)
+# Versão: 1.0.0
+
+workflow:
+  id: wf-extract-dna
+  name: "Cognitive DNA Extraction"
+  description: "Extrai DNA Cognitivo (5 camadas) de uma fonte"
+  version: "1.0.0"
+
+  orchestrator: "@jarvis"
+
+  inputs:
+    - name: source_code
+      type: string
+      required: true
+      description: "Código da fonte (e.g., CG, JM)"
+    - name: source_name
+      type: string
+      required: true
+      description: "Nome da pessoa/fonte"
+    - name: batches
+      type: array
+      required: true
+      description: "Batches a consolidar para extração"
+
+  phases:
+    - id: phase_1
+      name: "CONSOLIDATION"
+      description: "Consolidar insights de todos os batches"
+      steps:
+        - execute:
+            command: "load_all_batches"
+            inputs:
+              source_code: "${source_code}"
+              batches: "${batches}"
+        - execute:
+            task: "tasks/analyze-themes.md"
+      checkpoint:
+        id: CP_CONSOLIDATION
+        blocking: true
+        validation:
+          - "all_batches_loaded"
+          - "themes_consolidated"
+
+    - id: phase_2
+      name: "L1_PHILOSOPHIES"
+      description: "Extrair camada L1 - Filosofias"
+      steps:
+        - execute:
+            task: "tasks/extract-dna.md"
+            inputs:
+              layer: "L1"
+              focus: "beliefs, worldview, values"
+      checkpoint:
+        id: CP_L1
+        blocking: true
+        validation:
+          - "min_3_items"
+
+    - id: phase_3
+      name: "L2_MENTAL_MODELS"
+      description: "Extrair camada L2 - Modelos Mentais"
+      steps:
+        - execute:
+            task: "tasks/extract-dna.md"
+            inputs:
+              layer: "L2"
+              focus: "thinking frameworks, decision patterns"
+      checkpoint:
+        id: CP_L2
+        blocking: true
+
+    - id: phase_4
+      name: "L3_HEURISTICS"
+      description: "Extrair camada L3 - Heurísticas"
+      steps:
+        - execute:
+            task: "tasks/extract-dna.md"
+            inputs:
+              layer: "L3"
+              focus: "rules of thumb, shortcuts"
+      checkpoint:
+        id: CP_L3
+        blocking: true
+
+    - id: phase_5
+      name: "L4_FRAMEWORKS"
+      description: "Extrair camada L4 - Frameworks"
+      steps:
+        - execute:
+            task: "tasks/extract-dna.md"
+            inputs:
+              layer: "L4"
+              focus: "structured methodologies"
+      checkpoint:
+        id: CP_L4
+        blocking: true
+
+    - id: phase_6
+      name: "L5_METHODOLOGIES"
+      description: "Extrair camada L5 - Metodologias"
+      steps:
+        - execute:
+            task: "tasks/extract-dna.md"
+            inputs:
+              layer: "L5"
+              focus: "step-by-step implementations"
+      checkpoint:
+        id: CP_L5
+        blocking: true
+
+    - id: phase_7
+      name: "ASSEMBLY"
+      description: "Montar DNA-CONFIG.yaml final"
+      steps:
+        - execute:
+            command: "assemble_dna_config"
+            inputs:
+              layers: ["L1", "L2", "L3", "L4", "L5"]
+              source_name: "${source_name}"
+        - execute:
+            command: "validate_yaml"
+      checkpoint:
+        id: CP_ASSEMBLY
+        blocking: true
+        validation:
+          - "valid_yaml"
+          - "all_5_layers_present"
+
+  transitions:
+    - from: phase_1
+      to: phase_2
+      condition: "consolidation_complete"
+    - from: phase_2
+      to: phase_3
+      condition: "l1_extracted"
+    - from: phase_3
+      to: phase_4
+      condition: "l2_extracted"
+    - from: phase_4
+      to: phase_5
+      condition: "l3_extracted"
+    - from: phase_5
+      to: phase_6
+      condition: "l4_extracted"
+    - from: phase_6
+      to: phase_7
+      condition: "l5_extracted"
+
+  outputs:
+    - name: dna_config
+      type: file
+      location: "agents/persons/${source_name}/DNA-CONFIG.yaml"
+    - name: layer_counts
+      type: json
+    - name: source_citations
+      type: array

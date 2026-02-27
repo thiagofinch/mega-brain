@@ -1,0 +1,776 @@
+# THE SCALABLE COMPANY - DNA COGNITIVO
+# Camada: MODELOS MENTAIS (Formas de Ver a Realidade)
+# Versao: 1.0.0 | Criado: 2026-01-11 | Fase 5 Consolidacao
+
+pessoa: "Ryan Deiss / The Scalable Company"
+versao: "1.0.0"
+data_extracao: "2026-01-11T01:35:00Z"
+total_itens: 55
+camada: "MODELOS_MENTAIS"
+
+modelos_mentais:
+
+  # ============================================================================
+  # BLOCO 1: ANALOGIAS CORE (Referências Culturais)
+  # ============================================================================
+
+  - id: "MM-TSC-001"
+    modelo: "Matrix Numbers Model"
+    descricao: "Time ve padroes onde outros veem apenas numeros (como Neo vendo o Matrix)"
+    aplicacao:
+      - "Desenvolver 'Matrix vision' atraves de trabalho manual com metricas"
+      - "Scorecards manuais treinam o olho para padroes"
+      - "Automacao impede desenvolvimento dessa habilidade"
+    dominios:
+      - "scorecards"
+      - "metricas"
+      - "pattern-recognition"
+    peso: 0.95
+
+  - id: "MM-TSC-002"
+    modelo: "Elephant Eating Model"
+    descricao: "Metas de 3 anos sao o elefante, sprints trimestrais sao as mordidas"
+    aplicacao:
+      - "Como voce come um elefante? Uma mordida de cada vez"
+      - "12Q divide 3 anos em 12 partes gerenciaveis"
+      - "Foco no quarter atual, visao no elefante inteiro"
+    dominios:
+      - "12Q"
+      - "planejamento"
+      - "execucao"
+    peso: 0.96
+
+  - id: "MM-TSC-003"
+    modelo: "Coca-Cola Vault Model"
+    descricao: "Sua biblioteca de playbooks e como o cofre da receita da Coca-Cola"
+    aplicacao:
+      - "Playbooks sao seu ativo mais valioso"
+      - "Receita secreta do negocio"
+      - "Proteger, atualizar, tratar como propriedade intelectual"
+    dominios:
+      - "playbooks"
+      - "ativos"
+      - "valor"
+    peso: 0.93
+
+  - id: "MM-TSC-004"
+    modelo: "Sticky Note Mapping"
+    descricao: "Mapeamento de processos com post-its e 'e depois o que acontece?'"
+    aplicacao:
+      - "Perguntar 'Then what happens?' repetidamente"
+      - "Escrever em post-it, colar na parede"
+      - "Messy sticky notes > beautiful unused docs"
+    dominios:
+      - "mapeamento"
+      - "processos"
+      - "simplicidade"
+    peso: 0.91
+
+  - id: "MM-TSC-005"
+    modelo: "Orchestrated Ballet Model"
+    descricao: "Negocio como fluxo continuo, nao tarefas desconectadas"
+    aplicacao:
+      - "Uma atividade flui naturalmente para a proxima"
+      - "Value engines sao os atos do bale"
+      - "Pensar em sistemas, nao silos"
+    dominios:
+      - "value-engines"
+      - "sistemas"
+      - "flow"
+    peso: 0.90
+
+  - id: "MM-TSC-006"
+    modelo: "Gollum's Precious Model"
+    descricao: "Knowledge hoarders tratam informacao como 'meu precioso'"
+    aplicacao:
+      - "Referencia a Gollum de LOTR"
+      - "Comportamento toxico e visivel"
+      - "Black boxing = fireable offense"
+    dominios:
+      - "cultura"
+      - "transparencia"
+      - "conhecimento"
+    peso: 0.88
+
+  - id: "MM-TSC-007"
+    modelo: "Circular Filing Cabinet Model"
+    descricao: "= Lixo. Onde SOPs nao usadas acabam"
+    aplicacao:
+      - "Documentos bonitos mas nao usados vao pro lixo"
+      - "Uso > existencia"
+      - "Se ninguem consulta, nao serve"
+    dominios:
+      - "playbooks"
+      - "pragmatismo"
+      - "desperdicio"
+    peso: 0.86
+
+  - id: "MM-TSC-008"
+    modelo: "Then What Discovery Model"
+    descricao: "Continuar perguntando 'e depois?' ate a pessoa dizer 'so isso'"
+    aplicacao:
+      - "Revela processo completo naturalmente"
+      - "Sem formularios ou templates rigidos"
+      - "A pessoa guia a descoberta"
+    dominios:
+      - "mapeamento"
+      - "discovery"
+      - "facilitacao"
+    peso: 0.92
+
+  # ============================================================================
+  # BLOCO 2: MODELOS DE PLANEJAMENTO E TEMPO
+  # ============================================================================
+
+  - id: "MM-TSC-009"
+    modelo: "12Q Grid Mental Model"
+    descricao: "Ver 3 anos como 12 blocos de 90 dias, nao 1 bloco de 36 meses"
+    aplicacao:
+      - "Cada quarter e uma unidade gerenciavel"
+      - "Planejar o quarter, revisar o ano"
+      - "Evitar paralisia de longo prazo"
+    dominios:
+      - "12Q"
+      - "planejamento"
+      - "perspectiva"
+    peso: 0.94
+
+  - id: "MM-TSC-010"
+    modelo: "Annual Plans as Joke Model"
+    descricao: "Planos anuais sao uma piada - muito longos para prever, muito curtos para significar"
+    aplicacao:
+      - "Nao usar planos anuais como ferramenta principal"
+      - "12Q (3 anos) para visao"
+      - "90 dias para execucao"
+    dominios:
+      - "planejamento"
+      - "estrategia"
+      - "tempo"
+    peso: 0.93
+
+  - id: "MM-TSC-011"
+    modelo: "QSP Heartbeat Model"
+    descricao: "QSP e o batimento cardiaco do sistema operacional"
+    aplicacao:
+      - "Sem QSP trimestral, sistema morre"
+      - "Ritmo cria vida no OS"
+      - "Cada QSP renova energia"
+    dominios:
+      - "QSP"
+      - "meeting-rhythm"
+      - "saude"
+    peso: 0.91
+
+  - id: "MM-TSC-012"
+    modelo: "Quarterly Sprint Model"
+    descricao: "Cada quarter e um sprint com comeco, meio e fim definidos"
+    aplicacao:
+      - "Tema do quarter cria foco"
+      - "Iniciativas sao os entregaveis"
+      - "QSP e o kick-off, MBR e o check-in"
+    dominios:
+      - "execucao"
+      - "sprints"
+      - "foco"
+    peso: 0.92
+
+  - id: "MM-TSC-013"
+    modelo: "Learning Now Accuracy Later Model"
+    descricao: "Aprender agora, precisao depois - targets iniciais estarao errados"
+    aplicacao:
+      - "Aceitar imprecisao inicial"
+      - "12 semanas minimo para calibrar"
+      - "Acao > perfeicao"
+    dominios:
+      - "targets"
+      - "aprendizado"
+      - "iteracao"
+    peso: 0.90
+
+  # ============================================================================
+  # BLOCO 3: MODELOS DE VALOR E NEGOCIO
+  # ============================================================================
+
+  - id: "MM-TSC-014"
+    modelo: "Value Engine Architecture Model"
+    descricao: "Negocio como 3 motores: Growth, Fulfillment, Innovation"
+    aplicacao:
+      - "Cada engine tem power stages proprios"
+      - "Mapear engines antes de otimizar"
+      - "Equilibrio entre os tres"
+    dominios:
+      - "value-engines"
+      - "arquitetura"
+      - "estrategia"
+    peso: 0.95
+
+  - id: "MM-TSC-015"
+    modelo: "Power Stages Leverage Model"
+    descricao: "2-3 momentos criticos por engine que fazem ou quebram tudo"
+    aplicacao:
+      - "Nem todas as etapas sao iguais"
+      - "Identificar os poucos criticos"
+      - "Documentar power stages primeiro"
+    dominios:
+      - "power-stages"
+      - "prioridades"
+      - "leverage"
+    peso: 0.94
+
+  - id: "MM-TSC-016"
+    modelo: "Needle Moving Model"
+    descricao: "Focar apenas no que move a agulha - nao tudo"
+    aplicacao:
+      - "Document what moves the needle"
+      - "Ignorar o que nao impacta resultados"
+      - "80/20 aplicado a processos"
+    dominios:
+      - "priorizacao"
+      - "foco"
+      - "impacto"
+    peso: 0.93
+
+  - id: "MM-TSC-017"
+    modelo: "Clone Your Best Model"
+    descricao: "Playbooks permitem clonar suas melhores pessoas"
+    aplicacao:
+      - "Capturar expertise em documento"
+      - "Escalar sem depender de individuos"
+      - "Best practices replicaveis"
+    dominios:
+      - "playbooks"
+      - "escala"
+      - "conhecimento"
+    peso: 0.92
+
+  - id: "MM-TSC-018"
+    modelo: "Infrastructure Not Overhead Model"
+    descricao: "Sistema operacional e infraestrutura, nao custo"
+    aplicacao:
+      - "Investimento com ROI real"
+      - "Retorno em escala e liberdade"
+      - "Mentalidade de construcao"
+    dominios:
+      - "investimento"
+      - "ScalableOS"
+      - "valor"
+    peso: 0.89
+
+  # ============================================================================
+  # BLOCO 4: MODELOS DE LIDERANCA E TIMES
+  # ============================================================================
+
+  - id: "MM-TSC-019"
+    modelo: "Traffic Light Leadership Model"
+    descricao: "RED (faca por eles) → YELLOW (faca com eles) → GREEN (eles fazem)"
+    aplicacao:
+      - "Progressao natural de autonomia"
+      - "Cada pessoa em cada tarefa tem uma cor"
+      - "Objetivo e mover todos para verde"
+    dominios:
+      - "lideranca"
+      - "delegacao"
+      - "desenvolvimento"
+    peso: 0.94
+
+  - id: "MM-TSC-020"
+    modelo: "Right Questions Not Answers Model"
+    descricao: "Respostas certas te trouxeram ate aqui; perguntas certas te levam adiante"
+    aplicacao:
+      - "Lideres perguntam, nao respondem"
+      - "Desenvolver autonomia no time"
+      - "Coaching via questionamento"
+    dominios:
+      - "lideranca"
+      - "coaching"
+      - "desenvolvimento"
+    peso: 0.91
+
+  - id: "MM-TSC-021"
+    modelo: "Shoulder Tap Diagnostic Model"
+    descricao: "Interrupcoes constantes = playbooks nao funcionando"
+    aplicacao:
+      - "Medir interrupcoes como KPI de sistema"
+      - "Cada shoulder tap e sintoma"
+      - "Playbooks devem reduzir taps"
+    dominios:
+      - "playbooks"
+      - "produtividade"
+      - "diagnostico"
+    peso: 0.88
+
+  - id: "MM-TSC-022"
+    modelo: "30-45 Minute Recovery Model"
+    descricao: "Cada interrupcao custa 30-45 minutos de recuperacao de foco"
+    aplicacao:
+      - "Interrupcoes sao caras"
+      - "Proteger deep work"
+      - "Justificar investimento em playbooks"
+    dominios:
+      - "produtividade"
+      - "custos"
+      - "foco"
+    peso: 0.87
+
+  - id: "MM-TSC-023"
+    modelo: "CABs Focus Model"
+    descricao: "3-5 metricas por time maximo (Critical Accountability Bullets)"
+    aplicacao:
+      - "Muitas metricas = nenhuma metrica"
+      - "Foco nos poucos que importam"
+      - "Simplicidade > completude"
+    dominios:
+      - "metricas"
+      - "foco"
+      - "simplicidade"
+    peso: 0.90
+
+  - id: "MM-TSC-024"
+    modelo: "High Output Team Canvas Model"
+    descricao: "Visualizacao clara de estrutura de time e gaps"
+    aplicacao:
+      - "Quem faz o que fica claro"
+      - "Gaps ficam evidentes"
+      - "Base para decisoes de hiring"
+    dominios:
+      - "times"
+      - "estrutura"
+      - "clareza"
+    peso: 0.86
+
+  # ============================================================================
+  # BLOCO 5: MODELOS DE PROCESSO E DOCUMENTACAO
+  # ============================================================================
+
+  - id: "MM-TSC-025"
+    modelo: "3D Playbook Process Model"
+    descricao: "DEFINE (o que) → DESIGN (como) → DEPLOY (rollout)"
+    aplicacao:
+      - "Sequencia importa"
+      - "Nao pular etapas"
+      - "Cada D tem entregavel"
+    dominios:
+      - "playbooks"
+      - "processo"
+      - "estrutura"
+    peso: 0.91
+
+  - id: "MM-TSC-026"
+    modelo: "Do-Document-Do Again Model"
+    descricao: "Fazer primeiro, documentar, fazer de novo para validar"
+    aplicacao:
+      - "Documentar durante a execucao"
+      - "Validar com segunda rodada"
+      - "Field test com outra pessoa"
+    dominios:
+      - "playbooks"
+      - "validacao"
+      - "processo"
+    peso: 0.89
+
+  - id: "MM-TSC-027"
+    modelo: "9 of 10 Skip Steps Model"
+    descricao: "Criador do checklist pula passos 9 em 10 vezes"
+    aplicacao:
+      - "Nao confiar no criador para validar"
+      - "Fresh eyes sao necessarios"
+      - "Field test obrigatorio com outros"
+    dominios:
+      - "validacao"
+      - "human-nature"
+      - "qualidade"
+    peso: 0.87
+
+  - id: "MM-TSC-028"
+    modelo: "Field Test Reveals Gaps Model"
+    descricao: "Executar com pessoa diferente revela lacunas invisiveis"
+    aplicacao:
+      - "O que e obvio pro criador nao e pro executor"
+      - "Gaps aparecem na execucao real"
+      - "Validar antes de scale"
+    dominios:
+      - "playbooks"
+      - "qualidade"
+      - "validacao"
+    peso: 0.88
+
+  - id: "MM-TSC-029"
+    modelo: "Mistakes to Playbooks Model"
+    descricao: "Erros sao o principal catalisador para criacao de playbooks"
+    aplicacao:
+      - "Cada erro e oportunidade de documentar"
+      - "Nao punir, capturar"
+      - "Transformar falhas em processos"
+    dominios:
+      - "playbooks"
+      - "aprendizado"
+      - "cultura"
+    peso: 0.90
+
+  # ============================================================================
+  # BLOCO 6: MODELOS DE AUTOMACAO E MANUAL
+  # ============================================================================
+
+  - id: "MM-TSC-030"
+    modelo: "Manual Over Automated Model"
+    descricao: "Scorecards manuais > automatizados por causa de ownership e insights"
+    aplicacao:
+      - "Automacao divorcia time dos numeros"
+      - "Manual cria Matrix vision"
+      - "Insights vem da busca, nao da captura"
+    dominios:
+      - "scorecards"
+      - "metricas"
+      - "ownership"
+    peso: 0.94
+
+  - id: "MM-TSC-031"
+    modelo: "Hunt Not Capture Model"
+    descricao: "Insights vem da busca pelos numeros, nao da captura automatica"
+    aplicacao:
+      - "Processo de buscar gera aprendizado"
+      - "Automatizar remove beneficio oculto"
+      - "Manual tem ROI intangivel"
+    dominios:
+      - "metricas"
+      - "aprendizado"
+      - "insight"
+    peso: 0.89
+
+  - id: "MM-TSC-032"
+    modelo: "Tens of Thousands Wasted Model"
+    descricao: "Empresas gastam dezenas de milhares em automacao que ninguem usa"
+    aplicacao:
+      - "Tech investment nao garante uso"
+      - "Simples manual frequentemente supera"
+      - "Validar necessidade antes de investir"
+    dominios:
+      - "investimento"
+      - "automacao"
+      - "desperdicio"
+    peso: 0.85
+
+  - id: "MM-TSC-033"
+    modelo: "Automation Divorce Model"
+    descricao: "Automacao 'divorcia' o time do significado dos numeros"
+    aplicacao:
+      - "Distancia = falta de conexao"
+      - "Manual = intimidade com dados"
+      - "Trade-off consciente"
+    dominios:
+      - "automacao"
+      - "metricas"
+      - "alienacao"
+    peso: 0.88
+
+  # ============================================================================
+  # BLOCO 7: MODELOS DE FOUNDER E ESCALA
+  # ============================================================================
+
+  - id: "MM-TSC-034"
+    modelo: "Founder Freedom Model"
+    descricao: "Objetivo final e ter escolha de participar ou nao"
+    aplicacao:
+      - "Nao e sair da empresa"
+      - "E ter OPCAO de estar ou nao"
+      - "Liberdade = autonomia de escolha"
+    dominios:
+      - "founder-freedom"
+      - "escala"
+      - "proposito"
+    peso: 0.95
+
+  - id: "MM-TSC-035"
+    modelo: "Choice vs Forced Model"
+    descricao: "Escolher participar e diferente de ser forcado a participar"
+    aplicacao:
+      - "Muitos founders querem estar envolvidos"
+      - "Problema e nao ter escolha"
+      - "Sistemas criam a opcao"
+    dominios:
+      - "founder-freedom"
+      - "autonomia"
+      - "liberdade"
+    peso: 0.91
+
+  - id: "MM-TSC-036"
+    modelo: "Systems Scale People Don't Model"
+    descricao: "Sistemas escalam, pessoas nao - por isso playbooks"
+    aplicacao:
+      - "Depender de individuos = limite"
+      - "Playbooks multiplicam capacidade"
+      - "Escala exige sistemas"
+    dominios:
+      - "escala"
+      - "sistemas"
+      - "limite"
+    peso: 0.93
+
+  - id: "MM-TSC-037"
+    modelo: "Hiring Into Chaos Model"
+    descricao: "Contratar em ambiente caotico cria mais caos"
+    aplicacao:
+      - "Sistemas primeiro, pessoas depois"
+      - "Onboarding precisa de playbooks"
+      - "Escalar sem sistema = desastre"
+    dominios:
+      - "hiring"
+      - "sistemas"
+      - "ordem"
+    peso: 0.89
+
+  - id: "MM-TSC-038"
+    modelo: "Predictable Not Explosive Model"
+    descricao: "Objetivo e crescimento previsivel, nao explosivo"
+    aplicacao:
+      - "Sustentavel > rapido"
+      - "Previsibilidade = fundamento"
+      - "ScalableOS cria previsibilidade"
+    dominios:
+      - "crescimento"
+      - "sustentabilidade"
+      - "estrategia"
+    peso: 0.90
+
+  # ============================================================================
+  # BLOCO 8: MODELOS DE MEETING E RITMO
+  # ============================================================================
+
+  - id: "MM-TSC-039"
+    modelo: "Meeting Rhythm Architecture Model"
+    descricao: "QSP → MBR → Weekly → One-on-ones como sistema integrado"
+    aplicacao:
+      - "Cada tipo tem proposito especifico"
+      - "Cadencia cria previsibilidade"
+      - "Sistema > reunioes avulsas"
+    dominios:
+      - "meeting-rhythm"
+      - "estrutura"
+      - "previsibilidade"
+    peso: 0.92
+
+  - id: "MM-TSC-040"
+    modelo: "Ad Hoc Failure Signal Model"
+    descricao: "Muitas reunioes ad hoc = falha de planejamento"
+    aplicacao:
+      - "Se rhythm esta certo, ad hocs sao raros"
+      - "Menos de 10% deve ser ad hoc"
+      - "Ad hocs indicam gaps no sistema"
+    dominios:
+      - "reunioes"
+      - "diagnostico"
+      - "planejamento"
+    peso: 0.87
+
+  - id: "MM-TSC-041"
+    modelo: "Rhythm Beats Random Model"
+    descricao: "Ritmo vence aleatoriedade sempre"
+    aplicacao:
+      - "Previsibilidade > improvisacao"
+      - "Cadencia cria confianca"
+      - "Sistema > heroismo"
+    dominios:
+      - "meeting-rhythm"
+      - "disciplina"
+      - "consistencia"
+    peso: 0.89
+
+  - id: "MM-TSC-042"
+    modelo: "One-on-One Sacred Model"
+    descricao: "One-on-ones sao sagrados, nao opcionais"
+    aplicacao:
+      - "Desenvolvimento individual"
+      - "Captura de insights"
+      - "Nunca cancelar"
+    dominios:
+      - "lideranca"
+      - "one-on-ones"
+      - "disciplina"
+    peso: 0.86
+
+  # ============================================================================
+  # BLOCO 9: MODELOS DE CLAREZA E ESTRATEGIA
+  # ============================================================================
+
+  - id: "MM-TSC-043"
+    modelo: "Clarity Compass Model"
+    descricao: "3-Year Target + Purpose + Anchors + Values como bussola"
+    aplicacao:
+      - "Quatro componentes essenciais"
+      - "Guia todas as decisoes"
+      - "Primeiro passo do ScalableOS"
+    dominios:
+      - "clarity-compass"
+      - "estrategia"
+      - "fundamentos"
+    peso: 0.93
+
+  - id: "MM-TSC-044"
+    modelo: "Strategic Anchors Say No Model"
+    descricao: "Anchors sao framework para dizer NAO"
+    aplicacao:
+      - "Clareza sobre o que NAO fazer"
+      - "Evita shiny object syndrome"
+      - "Protege foco"
+    dominios:
+      - "estrategia"
+      - "foco"
+      - "priorizacao"
+    peso: 0.90
+
+  - id: "MM-TSC-045"
+    modelo: "North Star Focus Model"
+    descricao: "Uma metrica principal por quarter alinha toda empresa"
+    aplicacao:
+      - "Todos sabem o numero"
+      - "Decisoes se alinham ao north star"
+      - "Simplicidade de foco"
+    dominios:
+      - "metricas"
+      - "alinhamento"
+      - "foco"
+    peso: 0.91
+
+  - id: "MM-TSC-046"
+    modelo: "Theme Emotional Connection Model"
+    descricao: "Tema do quarter cria conexao emocional"
+    aplicacao:
+      - "Nome memoravel e motivador"
+      - "Alinha energia do time"
+      - "Celebracao de conclusao"
+    dominios:
+      - "engajamento"
+      - "cultura"
+      - "motivacao"
+    peso: 0.85
+
+  - id: "MM-TSC-047"
+    modelo: "Purpose Unifies Model"
+    descricao: "Purpose statement unifica todas as decisoes"
+    aplicacao:
+      - "Por que a empresa existe"
+      - "Guia para dilemas"
+      - "Criterio de decisao final"
+    dominios:
+      - "proposito"
+      - "cultura"
+      - "decisoes"
+    peso: 0.88
+
+  - id: "MM-TSC-048"
+    modelo: "Values as Criteria Model"
+    descricao: "Valores devem ser criterios de decisao, nao decoracao"
+    aplicacao:
+      - "Se nao usa para decidir, nao serve"
+      - "Testar com casos reais"
+      - "Actionable > decorative"
+    dominios:
+      - "valores"
+      - "cultura"
+      - "decisoes"
+    peso: 0.86
+
+  # ============================================================================
+  # BLOCO 10: MODELOS FINAIS (49-55)
+  # ============================================================================
+
+  - id: "MM-TSC-049"
+    modelo: "Build Install Optimize Sequence Model"
+    descricao: "BUILD (6-8 sem) → INSTALL (2-3 sem) → OPTIMIZE (ongoing)"
+    aplicacao:
+      - "Sequencia importa"
+      - "Nao otimizar o que nao existe"
+      - "Cada fase tem entregaveis"
+    dominios:
+      - "ScalableOS"
+      - "implementacao"
+      - "sequencia"
+    peso: 0.94
+
+  - id: "MM-TSC-050"
+    modelo: "MBR Drift Catcher Model"
+    descricao: "Monthly Business Review pega desvios antes de virar crise"
+    aplicacao:
+      - "Revisao mensal e suficiente"
+      - "Ajustes pequenos frequentes"
+      - "Conecta weekly com QSP"
+    dominios:
+      - "meeting-rhythm"
+      - "monitoramento"
+      - "prevencao"
+    peso: 0.87
+
+  - id: "MM-TSC-051"
+    modelo: "Best People Leave Model"
+    descricao: "Melhores pessoas saem sem oportunidades de crescimento"
+    aplicacao:
+      - "Playbooks permitem crescimento"
+      - "Cross-training abre caminhos"
+      - "Retencao via desenvolvimento"
+    dominios:
+      - "retencao"
+      - "desenvolvimento"
+      - "talento"
+    peso: 0.86
+
+  - id: "MM-TSC-052"
+    modelo: "Cross-Training Unlimited Upside Model"
+    descricao: "Cross-training tem zero downside e upside ilimitado"
+    aplicacao:
+      - "Treinar todos no playbook inteiro"
+      - "Cria redundancia e entendimento"
+      - "Nenhum risco, so beneficio"
+    dominios:
+      - "treinamento"
+      - "times"
+      - "resiliencia"
+    peso: 0.90
+
+  - id: "MM-TSC-053"
+    modelo: "Complexity Enemy Model"
+    descricao: "Complexidade e inimiga da execucao"
+    aplicacao:
+      - "Simplificar sempre"
+      - "Menos e mais"
+      - "CABS, nao dashboards infinitos"
+    dominios:
+      - "simplicidade"
+      - "execucao"
+      - "foco"
+    peso: 0.89
+
+  - id: "MM-TSC-054"
+    modelo: "What Gets Measured Model"
+    descricao: "O que e medido e gerenciado - mas medir apenas o certo"
+    aplicacao:
+      - "Scorecards sao essenciais"
+      - "Medir CABs, nao tudo"
+      - "Foco > completude"
+    dominios:
+      - "metricas"
+      - "gestao"
+      - "foco"
+    peso: 0.88
+
+  - id: "MM-TSC-055"
+    modelo: "Visibility Not Judgment Model"
+    descricao: "Scorecards criam visibilidade, nao julgamento"
+    aplicacao:
+      - "Dados para aprender, nao punir"
+      - "Transparencia cria accountability"
+      - "Cultura de melhoria, nao culpa"
+    dominios:
+      - "scorecards"
+      - "cultura"
+      - "feedback"
+    peso: 0.87
+
+# Metadados de extracao
+metadados:
+  criado_em: "2026-01-11T01:35:00Z"
+  atualizado_em: "2026-01-11T01:35:00Z"
+  protocolo: "DNA-EXTRACTION-PROTOCOL v2.0"
+  pipeline: "Jarvis v3.33.0"
+  extraido_por: "Claude Code"
+  missao: "MISSION-2026-001"
+  fase: "PHASE-5-CONSOLIDATION"

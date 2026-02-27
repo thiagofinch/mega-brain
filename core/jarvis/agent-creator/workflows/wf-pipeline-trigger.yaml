@@ -1,0 +1,111 @@
+# Workflow: Pipeline Trigger Integration
+# Version: 1.0.0
+# Connects agent-creator to existing pipeline triggers
+
+workflow:
+  id: wf-pipeline-trigger
+  name: "Pipeline Agent Trigger"
+  version: "1.0.0"
+  responsible: "@agent-creator"
+
+triggers:
+  # Trigger 1: Role Detector (Cargo agents - L4)
+  - source: "SCRIPTS/role_detector.py"
+    event: "role_threshold_reached"
+    condition:
+      weighted_score: ">= 5"
+    action:
+      workflow: "wf-create-agent"
+      params:
+        layer: "L4"
+        id: "{detected_role_id}"
+        name: "{detected_role_name}"
+        role: "{detected_role_description}"
+        source: "pipeline:role_detector"
+        traits: "{detected_traits}"
+
+  # Trigger 2: Pipeline Phase 5.2 (Mind clones - L3)
+  - source: ".claude/skills/process-jarvis/"
+    event: "phase_5.2_complete"
+    condition:
+      dna_extracted: true
+    action:
+      workflow: "wf-create-agent"
+      params:
+        layer: "L3"
+        id: "{source_person_id}"
+        name: "{source_person_name}"
+        role: "Expert Mind Clone"
+        source: "pipeline:phase_5.2:{source_id}"
+        element: "{detected_element}"
+
+  # Trigger 3: Boardroom threshold (C-Level - L2)
+  - source: "SCRIPTS/role_detector.py"
+    event: "executive_threshold_reached"
+    condition:
+      weighted_score: ">= 10"
+      min_sources: ">= 2"
+    action:
+      workflow: "wf-create-agent"
+      params:
+        layer: "L2"
+        id: "{detected_executive_id}"
+        name: "{detected_executive_name}"
+        role: "C-Level Executive"
+        source: "pipeline:executive_detection"
+
+phases:
+  - id: phase_1
+    name: "DETECT"
+    description: "Receive trigger from pipeline component"
+    steps:
+      - listen:
+          sources:
+            - "role_detector.py"
+            - "process-jarvis skill"
+      - validate:
+          - "trigger is authentic"
+          - "data is complete"
+
+  - id: phase_2
+    name: "DELEGATE"
+    description: "Delegate to creation workflow"
+    steps:
+      - invoke:
+          workflow: "wf-create-agent"
+          params: "{trigger_params}"
+      - await:
+          completion: true
+      - report:
+          status: "{result}"
+
+integration_points:
+  # Hook into role_detector.py
+  role_detector:
+    hook_location: "SCRIPTS/role_detector.py"
+    hook_type: "post_detection"
+    code_snippet: |
+      # Add to role_detector.py after threshold check
+      if weighted_score >= CARGO_THRESHOLD:
+          trigger_agent_creation("L4", role_data)
+      elif weighted_score >= EXECUTIVE_THRESHOLD:
+          trigger_agent_creation("L2", role_data)
+
+  # Hook into process-jarvis skill
+  process_jarvis:
+    hook_location: ".claude/skills/process-jarvis/SKILL.md"
+    hook_type: "phase_5.2_complete"
+    instruction: |
+      After DNA extraction completes:
+      1. Check if mind agent exists
+      2. If not, trigger agent-creator with L3 params
+      3. If exists, update DNA-CONFIG.yaml
+
+output:
+  log_file: "logs/agent-creation.jsonl"
+  format:
+    timestamp: "ISO"
+    trigger_source: "string"
+    agent_created: "string"
+    layer: "string"
+    status: "SUCCESS|FAILED"

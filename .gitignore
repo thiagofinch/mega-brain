@@ -1,0 +1,244 @@
+# === LAYER 3 - PERSONAL DATA (100% gitignored) ===
+.data/
+
+# === EXTERNAL FRAMEWORKS (NEVER track) ===
+.aios-core/
+bilhon/
+.bilhon/
+
+# === ENVIRONMENT & SECRETS ===
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+*.secret
+*.credentials
+credentials.json
+token.json
+token_write.json
+settings.local.json
+
+# === MCP & CLAUDE RUNTIME ===
+.mcp.json
+mcp_servers.json
+.claude/settings.json
+.claude/settings.local.json
+.claude/aios/
+.claude/jarvis/
+.claude/monitoring/
+.claude/sessions/
+.claude/learning-system/
+.claude/mission-control/
+
+# === AGENT MEMORY (Runtime, per-user) ===
+.claude/agent-memory/
+
+# === MIND CLONES (Per-user expert minds) ===
+agents/minds/**
+!agents/minds/.gitkeep
+!agents/minds/_example/
+!agents/minds/_example/**
+
+# === CARGO AGENTS (Pipeline output, per-user) ===
+agents/cargo/**
+!agents/cargo/.gitkeep
+
+# === COMPANY DATA (Pipeline output, per-user) ===
+agents/sua-empresa/**
+!agents/sua-empresa/.gitkeep
+!agents/sua-empresa/README.md
+!agents/sua-empresa/_example/
+!agents/sua-empresa/_example/**
+!agents/sua-empresa/org/.gitkeep
+!agents/sua-empresa/roles/.gitkeep
+!agents/sua-empresa/jds/.gitkeep
+!agents/sua-empresa/operations/.gitkeep
+!agents/sua-empresa/metrics/.gitkeep
+!agents/sua-empresa/memory/.gitkeep
+!agents/sua-empresa/sow/.gitkeep
+
+# === SHARED AGENTS DATA (Per-user) ===
+agents/shared-memory/*.yaml
+agents/shared-memory/*.md
+agents/archive/
+agents/discovery/
+agents/boardroom/outputs/
+agents/boardroom/config/voice_mapping.json
+
+# === USER CONTENT (Empty in template) ===
+inbox/**
+!inbox/.gitkeep
+!inbox/README.md
+artifacts/chunks/**
+!artifacts/chunks/.gitkeep
+artifacts/canonical/**
+!artifacts/canonical/.gitkeep
+artifacts/insights/**
+!artifacts/insights/.gitkeep
+artifacts/narratives/**
+!artifacts/narratives/.gitkeep
+knowledge/dossiers/persons/**
+!knowledge/dossiers/persons/.gitkeep
+!knowledge/dossiers/persons/DOSSIER-EXAMPLE.md
+knowledge/dossiers/themes/**
+!knowledge/dossiers/themes/.gitkeep
+knowledge/dossiers/system/**
+!knowledge/dossiers/system/.gitkeep
+knowledge/sources/**
+!knowledge/sources/.gitkeep
+knowledge/playbooks/**
+!knowledge/playbooks/.gitkeep
+!knowledge/playbooks/PLAYBOOK-EXAMPLE.md
+knowledge/dna/**
+!knowledge/dna/.gitkeep
+knowledge/TAG-RESOLVER.json
+
+# === PERSONAL DATA (Remove entirely) ===
+# Company-specific data directories (per-user, never public)
+company-data/
+.company-data/
+archive/
+_IMPORT/
+_import/
+
+# === EXTERNAL PACKAGES (not for distribution) ===
+vendor/
+
+# === COMPANY-SPECIFIC SKILLS (excluded from npm via .npmignore) ===
+# Skills are tracked in git (Layer 2) but excluded from npm package (Layer 1)
+
+# === BUILD SCRIPTS (not for distribution) ===
+/SCRIPTS/
+scripts/tmp-scripts/
+scripts/company/
+
+# === OPERATIONAL LOGS & SYSTEM STATE (Per-user) ===
+*.jsonl
+system/backups/
+system/insights-*.jsonl
+system/registry/
+system/temp/
+system/archive/
+system/checkpoints/
+system/memory/
+system/moc/
+system/traces/
+system/DIAGNOSTICO-*.md
+system/SESSION-STATE.md
+system/JARVIS-STATE.json
+system/jarvis-voice/audiobooks/
+system/jarvis-voice/voice_id*.txt
+system/jarvis-voice/vapi_config.json
+system/user-preferences.json
+system/rules-for-claude.md
+
+# === IMPORT SCRIPTS WITH CREDENTIALS ===
+system/database/import-buyers.mjs
+system/database/import-buyers.sh
+
+# === COMPANY-SPECIFIC PRDS ===
+reference/prds/prd-company-*.md
+
+# === COMPANY-SPECIFIC DOCS (Layer 3 only) ===
+system/docs/MEGA-BRAIN-MANIFESTO-COMPLETO.md
+system/docs/MOGA-BRAIN-EXPLICACAO-COMPLETA.md
+.github/layer-rules.yaml
+reference/README-RALPH-*.md
+
+# === DEVELOPMENT ARTIFACTS (not for distribution) ===
+docs/plans/
+docs/validation/
+docs/checklists/
+docs/prd/
+docs/prd-*
+docs/stories/
+# === SECURITY DOSSIER (Never commit) ===
+docs/DOSSIE-SEGURANCA-*.md
+docs/CREDENTIAL-ROTATION-*.md
+docs/referencias/
+
+# === SESSION & LOGS (Per-user, only .gitkeep and README stay) ===
+logs/**
+!logs/.gitkeep
+!logs/README.md
+
+# === CLAUDE RUNTIME ARTIFACTS ===
+.claude/audit-*.json
+.claude/agents/
+.claude/guides/
+.claude/handoffs/
+.claude/plans/
+.claude/temp/
+.claude/HORMOZI-*.md
+.claude/LEDGER.md
+
+# === PROCESSING DNA (Per-user) ===
+artifacts/dna/
+
+# === KNOWLEDGE PERSONAL (Per-user) ===
+knowledge/_legacy/
+knowledge/company/
+
+# === MEDIA FILES ===
+*.mp4
+*.mp3
+*.wav
+*.m4a
+*.mov
+*.avi
+*.mkv
+
+# === BASE64 ENCODED FILES ===
+*.b64
+
+# === DATABASE ===
+chroma_db/
+.chroma/
+*.db
+*.sqlite
+
+# === OS & IDE ===
+.DS_Store
+Thumbs.db
+nul
+.vscode/
+.idea/
+.obsidian/
+
+# === BUILD & DEPS ===
+node_modules/
+__pycache__/
+*.py[cod]
+.venv/
+.venv-rag/
+venv/
+*.egg-info/
+dist/
+build/
+
+# === PYTHON BACKUPS ===
+*_BACKUP_*.py
+*.bak
+*.tmp
+
+# === LAYER SYNC (Push system staging) ===
+.layer-sync/
+
+# === ROOT ARTIFACTS ===
+_audit.ps1
+npm-publish-error.log
+*.tgz
+
+# === SECURITY (filter-repo patterns, never commit) ===
+scripts/filter-patterns.txt
+
+# === LARGE FILES ===
+**/SellTheAgency.com_Presentation.pdf
+*.docx

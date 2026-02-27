@@ -1,0 +1,86 @@
+name: Publish to npm
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      version_bump:
+        description: 'Version bump type'
+        required: true
+        default: 'patch'
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Verify package
+        run: |
+          echo "Verifying package..."
+          node --check bin/cli.js
+          node --check bin/mega-brain.js
+          node --check bin/lib/installer.js
+          node --check bin/lib/validate-email.js
+          node --check bin/lib/ascii-art.js
+          node --check bin/lib/setup-wizard.js
+          node --check bin/push.js
+          echo "All syntax checks passed"
+
+      - name: Dry run pack
+        run: |
+          npm pack --dry-run 2>&1 | tail -10
+          echo "Package ready for publish"
+
+      - name: Security scan — secret detection
+        run: |
+          echo "Installing trufflehog..."
+          curl -sSfL https://raw.githubusercontent.com/trufflesecurity/trufflehog/main/scripts/install.sh | sh -s -- -b /usr/local/bin
+
+          echo "Scanning repository for verified secrets..."
+          trufflehog filesystem . --only-verified --fail --no-update 2>&1 || {
+            echo "::error::VERIFIED secrets found — publish BLOCKED"
+            exit 1
+          }
+
+          echo "Scanning npm pack output for secrets..."
+          mkdir -p /tmp/pack-scan
+          npm pack --pack-destination /tmp/pack-scan
+          cd /tmp/pack-scan
+          tar xzf *.tgz
+          trufflehog filesystem package/ --only-verified --fail --no-update 2>&1 || {
+            echo "::error::VERIFIED secrets found in package tarball — publish BLOCKED"
+            exit 1
+          }
+
+          echo "Pattern scan for common API keys..."
+          PATTERNS="ghp_|github_pat_|sk-ant-|sk-[a-zA-Z0-9]{48}|AKIA[0-9A-Z]{16}|eyJ[A-Za-z0-9_-]{20,}\\.eyJ"
+          # Exclude files that contain detection patterns (not actual secrets)
+          if grep -rE "$PATTERNS" package/ --include='*.js' --include='*.json' --include='*.md' --include='*.yaml' --include='*.yml' --include='*.txt' --exclude='pre-publish-gate.js' --exclude='push.js' 2>/dev/null; then
+            echo "::error::API key patterns found in package — publish BLOCKED"
+            exit 1
+          fi
+
+          echo "Security scan PASSED"
+
+      - name: Publish to npm
+        run: npm publish --access public --provenance
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

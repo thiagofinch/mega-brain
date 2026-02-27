@@ -1,0 +1,139 @@
+# MEGA BRAIN - CONCLAVE WORKFLOW
+# Padrão: Pedro (aios-core/squad-creator)
+# Versão: 1.0.0
+
+workflow:
+  id: wf-conclave
+  name: "Conclave Deliberation"
+  description: "Sessão completa do Conselho com debate estruturado"
+  version: "1.0.0"
+
+  orchestrator: "@jarvis"
+
+  inputs:
+    - name: query
+      type: string
+      required: true
+      description: "Pergunta ou decisão a ser deliberada"
+    - name: level
+      type: enum
+      values: ["STANDARD", "COMPLEX", "CRITICAL"]
+      default: "STANDARD"
+    - name: participants
+      type: array
+      required: false
+      description: "Agentes participantes (default: todos)"
+
+  phases:
+    - id: phase_0
+      name: "CONSTITUTIONAL_FOUNDATION"
+      description: "Invocar Constituição antes de qualquer opinião"
+      steps:
+        - execute:
+            command: "load_constitution"
+            file: "agents/constitution/CONSTITUTION.md"
+        - execute:
+            command: "display_principles"
+      checkpoint:
+        id: CP_CONSTITUTION
+        blocking: true
+
+    - id: phase_1
+      name: "CARGO_DEBATE"
+      description: "Debate entre agentes de cargo"
+      steps:
+        - execute:
+            command: "load_cargo_agents"
+            inputs:
+              participants: "${participants}"
+        - execute:
+            command: "round_1_positions"
+        - execute:
+            command: "round_2_confrontation"
+        - execute:
+            command: "synthesize_debate"
+      checkpoint:
+        id: CP_DEBATE
+        blocking: true
+        validation:
+          - "all_positions_stated"
+          - "confrontation_complete"
+
+    - id: phase_2
+      name: "METHODOLOGICAL_CRITIC"
+      description: "Avaliação do Crítico Metodológico"
+      steps:
+        - execute:
+            command: "invoke_critic"
+            agent: "agents/conclave/CRITIC/AGENT.md"
+        - execute:
+            command: "evaluate_process"
+        - execute:
+            command: "score_quality"
+      checkpoint:
+        id: CP_CRITIC
+        blocking: true
+        validation:
+          - "quality_score_calculated"
+          - "gaps_identified"
+
+    - id: phase_3
+      name: "DEVILS_ADVOCATE"
+      description: "Desafio do Advogado do Diabo"
+      steps:
+        - execute:
+            command: "invoke_advocate"
+            agent: "agents/conclave/ADVOCATE/AGENT.md"
+        - execute:
+            command: "challenge_premises"
+        - execute:
+            command: "identify_risks"
+      checkpoint:
+        id: CP_ADVOCATE
+        blocking: true
+        validation:
+          - "weakest_premise_identified"
+          - "risks_documented"
+
+    - id: phase_4
+      name: "SYNTHESIS"
+      description: "Síntese Final"
+      steps:
+        - execute:
+            command: "invoke_synthesizer"
+            agent: "agents/conclave/SYNTHESIZER/AGENT.md"
+        - execute:
+            command: "integrate_perspectives"
+        - execute:
+            command: "generate_recommendation"
+      checkpoint:
+        id: CP_SYNTHESIS
+        blocking: true
+        validation:
+          - "recommendation_clear"
+          - "next_steps_defined"
+
+  transitions:
+    - from: phase_0
+      to: phase_1
+      condition: "constitution_loaded"
+    - from: phase_1
+      to: phase_2
+      condition: "debate_complete"
+    - from: phase_2
+      to: phase_3
+      condition: "critic_approved"
+    - from: phase_3
+      to: phase_4
+      condition: "advocate_complete"
+
+  outputs:
+    - name: decision_log
+      type: file
+      location: "logs/council/DECISION-LOG-{date}.md"
+    - name: recommendation
+      type: json
+    - name: confidence_score
+      type: number
+    - name: next_steps
+      type: array

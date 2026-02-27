@@ -1,0 +1,106 @@
+# CONFIG - SAM OVEN DNA COGNITIVO
+# Arquivo central de configuração e metadados do DNA
+# Versao: 1.0.0 | Criado: 2025-12-27
+
+versao: "1.0.0"
+pessoa: "Sam Oven"
+nome_canonico: "Sam Oven"
+empresa: "Setterlun University / Consulting.com"
+localizacao: "Los Angeles, USA"
+
+# Padroes comportamentais identificados
+padroes_comportamentais:
+  - padrao: "Framework-driven teaching"
+    frequencia: "ALTA"
+    evidencia: "Bridge Analogy, Purple Ocean, 3 Archetypes"
+  - padrao: "Simplificação radical"
+    frequencia: "ALTA"
+    evidencia: "Frameworks visuais simples, analogias claras"
+  - padrao: "Foco em agências/consultorias"
+    frequencia: "ALTA"
+    evidencia: "DWY recomendado, productização de serviços"
+  - padrao: "Value-based pricing"
+    frequencia: "ALTA"
+    evidencia: "Preço baseado em resultado, não custo"
+
+# Sintese narrativa
+sintese_narrativa: |
+  Sam Oven é fundador da Consulting.com e Setterlun University, focado em
+  ajudar consultores e agências a escalar seus negócios. Sua filosofia central
+  é a Bridge Analogy - toda oferta é uma ponte entre o estado atual e desejado
+  do cliente.
+
+  Seu framework de posicionamento Purple Ocean combina o melhor de Red Ocean
+  (demanda provada) com Blue Ocean (diferenciação), evitando os riscos de ambos.
+
+  Defende fortemente o modelo DWY (Done With You) como ideal para agências,
+  equilibrando liberdade do founder com resultados do cliente. Aplica 80/20
+  agressivamente em todas as operações.
+
+  Pricing deve ser baseado no valor do resultado para o cliente, não no custo
+  de entrega. Margem líquida target de 30-40%.
+
+# Estatisticas do DNA
+estatisticas:
+  filosofias: 5
+  modelos_mentais: 4
+  heuristicas: 6
+  frameworks: 4
+  metodologias: 2
+  total_itens: 21
+
+  peso_medio_geral: 0.88
+  itens_peso_acima_070: 21
+  percentual_alta_confianca: 100.0
+
+# Fontes utilizadas
+fontes:
+  processadas:
+    - source_id: "SETTERLUN-OC"
+      tipo: "course"
+      titulo: "Offer Creation Module"
+    - source_id: "SETTERLUN-PO"
+      tipo: "course"
+      titulo: "Purple Ocean Positioning"
+    - source_id: "SETTERLUN-BD"
+      tipo: "course"
+      titulo: "Business Model Design"
+
+  dossier: "/knowledge/dossiers/persons/DOSSIER-SAM-OVEN.md"
+  chunks_totais: 25
+
+# Relacionamentos
+relacionamentos:
+  foco_principal: "Consultores e agências"
+  modelo_recomendado: "DWY (Done With You)"
+  pricing_approach: "Value-based (resultado para cliente)"
+
+# Tensoes com outras fontes
+tensoes:
+  - fonte: "Alex Hormozi"
+    topico: "Modelo preferido"
+    sam_oven: "DWY"
+    outra_fonte: "DFY"
+    tipo: "COMPLEMENTAR"
+    nota: "Sam foca em agências, Hormozi é mais amplo"
+  - fonte: "Alex Hormozi"
+    topico: "Framework de oferta"
+    sam_oven: "Bridge Analogy"
+    outra_fonte: "Grand Slam Offer"
+    tipo: "COMPLEMENTAR"
+    nota: "Abordagens diferentes para mesmo objetivo"
+
+# Metadados de extração
+metadados:
+  criado_em: "2025-12-27T00:00:00Z"
+  atualizado_em: "2025-12-27T00:00:00Z"
+  protocolo: "DNA-EXTRACTION-PROTOCOL v1.0"
+  pipeline: "Jarvis v2.1"
+  extraido_por: "Claude Code"
+
+changelog:
+  - data: "2025-12-27T00:00:00Z"
+    acao: "Criação inicial do DNA"
+    fonte: "DOSSIER-SAM-OVEN.md"
+    itens_adicionados: 21
+    versao: "1.0.0"

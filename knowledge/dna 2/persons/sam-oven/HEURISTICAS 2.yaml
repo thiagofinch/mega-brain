@@ -1,0 +1,86 @@
+# HEURISTICAS - SAM OVEN
+# Regras com THRESHOLD NUMERICO - Formato "Se X entao Y"
+# AS CAMADA MAIS VALIOSA - prioridade maxima
+# Versao: 1.0.0 | Criado: 2025-12-27
+
+versao: "1.0.0"
+pessoa: "Sam Oven"
+camada: "HEURISTICAS"
+total_itens: 6
+
+itens:
+  - id: "SO-HEU-001"
+    titulo: "80/20 Rule"
+    descricao: "20% das atividades geram 80% dos resultados. Os outros 80% de esforço geram apenas 20% incremental - não vale o tempo."
+    threshold: "20% esforço = 80% resultados; 80% esforço = 20% incremental"
+    peso: 0.90
+    chunks:
+      - "SETTERLUN-BD_002"
+    fontes:
+      - "SETTERLUN-BD"
+    aplicacao: "Priorização de tarefas, alocação de recursos"
+
+  - id: "SO-HEU-002"
+    titulo: "Net Profit Margin Target"
+    descricao: "Meta de lucro líquido para negócios de serviço. Se margem está abaixo de 30%, há problema de pricing ou custo de entrega."
+    threshold: "30-40% net profit target"
+    peso: 0.90
+    chunks:
+      - "SETTERLUN-BD_003"
+    fontes:
+      - "SETTERLUN-BD"
+    aplicacao: "Pricing, estrutura de custos"
+
+  - id: "SO-HEU-003"
+    titulo: "Fulfillment Cost Allocation"
+    descricao: "Percentual do revenue que deve ir para custos de fulfillment/entrega."
+    threshold: "60-70% do revenue em fulfillment"
+    peso: 0.85
+    chunks:
+      - "SETTERLUN-BD_003"
+    fontes:
+      - "SETTERLUN-BD"
+    aplicacao: "Estrutura de custos, precificação"
+
+  - id: "SO-HEU-004"
+    titulo: "Marketing/Sales Budget"
+    descricao: "Percentual do revenue alocado para marketing e vendas."
+    threshold: "20-30% do revenue em marketing/sales"
+    peso: 0.85
+    chunks:
+      - "SETTERLUN-BD_003"
+    fontes:
+      - "SETTERLUN-BD"
+    aplicacao: "Orçamento, alocação de recursos"
+
+  - id: "SO-HEU-005"
+    titulo: "Client Break-even Timeline"
+    descricao: "Tempo esperado para cliente atingir break-even do investimento."
+    threshold: "1-3 meses para break-even do cliente"
+    peso: 0.80
+    chunks:
+      - "SETTERLUN-BD_003"
+    fontes:
+      - "SETTERLUN-BD"
+    aplicacao: "Expectativa de resultados, pitch"
+
+  - id: "SO-HEU-006"
+    titulo: "University Pricing Model"
+    descricao: "Modelo de pricing upfront alto justificado por ROI lifetime."
+    threshold: "$40-80k upfront; break-even 1-2 anos; retorno vitalício"
+    peso: 0.85
+    chunks:
+      - "SETTERLUN-OC_004"
+    fontes:
+      - "SETTERLUN-OC"
+    aplicacao: "High-ticket pricing, justificativa de valor"
+
+metadados:
+  total_chunks_processados: 7
+  fontes_utilizadas:
+    - "SETTERLUN-OC"
+    - "SETTERLUN-BD"
+  peso_medio: 0.86
+  itens_com_threshold_numerico: 6
+  criado_em: "2025-12-27T00:00:00Z"
+  protocolo: "DNA-EXTRACTION-PROTOCOL v1.0"
