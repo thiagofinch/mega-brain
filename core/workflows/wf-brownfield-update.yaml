@@ -1,0 +1,325 @@
+# MEGA BRAIN - BROWNFIELD UPDATE WORKFLOW
+# Padrão: Pedro (aios-core/squad-creator)
+# Versão: 1.0.0
+#
+# Incremental pipeline for updating existing mind clones when new source
+# materials become available. Saves 60-75% time/tokens by only re-processing
+# affected DNA layers instead of rebuilding from scratch.
+
+workflow:
+  id: wf-brownfield-update
+  name: "Brownfield Incremental Update"
+  description: "Updates existing mind clones with new sources via diff analysis and selective re-execution"
+  version: "1.0.0"
+
+  # Orchestrator
+  orchestrator: "@jarvis"
+
+  # Activation condition - distinguishes brownfield from greenfield
+  activation:
+    condition: "metadata.yaml exists AND pipeline_status == 'completed'"
+    fallback_workflow: "wf-pipeline-full"
+    description: >
+      When a clone already has a completed DNA extraction, new sources
+      trigger brownfield mode instead of full reprocessing.
+
+  # Input requirements
+  inputs:
+    - name: source_code
+      type: string
+      required: true
+      description: "Código da fonte existente (e.g., CG, JM, JH)"
+    - name: new_files
+      type: array
+      required: true
+      description: "Lista de NOVOS arquivos a integrar no clone existente"
+    - name: existing_dna_path
+      type: string
+      required: true
+      description: "Caminho para DNA-CONFIG.yaml existente do clone"
+    - name: rollback_enabled
+      type: boolean
+      required: false
+      default: true
+      description: "Se true, cria snapshot para rollback antes de modificar"
+
+  # Phases
+  phases:
+    - id: phase_1
+      name: "DETECTION"
+      description: "Detect brownfield scenario and snapshot existing state"
+      steps:
+        - execute:
+            task: "tasks/pipeline/detect-brownfield.md"
+            inputs:
+              source_code: "${source_code}"
+              existing_dna_path: "${existing_dna_path}"
+        - execute:
+            command: "snapshot_current_state"
+            inputs:
+              dna_path: "${existing_dna_path}"
+              snapshot_dir: "artifacts/brownfield/snapshots/${source_code}"
+            description: "Create rollback snapshot of current DNA + agent state"
+            condition: "${rollback_enabled}"
+      checkpoint:
+        id: CP_DETECTION
+        blocking: true
+        validation:
+          - "brownfield_confirmed"
+          - "existing_dna_loaded"
+          - "snapshot_created_if_enabled"
+
+    - id: phase_2
+      name: "DIFF_ANALYSIS"
+      description: "Analyze delta between new sources and existing DNA"
+      steps:
+        - execute:
+            task: "tasks/normalize-entities.md"
+            inputs:
+              content: "${new_files}"
+        - execute:
+            task: "tasks/detect-role.md"
+            inputs:
+              content: "${new_files}"
+        - execute:
+            task: "tasks/analyze-themes.md"
+            inputs:
+              entities: "${phase_2.entities}"
+              role: "${phase_2.primary_role}"
+        - execute:
+            task: "tasks/pipeline/diff-analysis.md"
+            inputs:
+              new_themes: "${phase_2.themes}"
+              existing_dna: "${phase_1.existing_dna}"
+              new_files: "${new_files}"
+              source_code: "${source_code}"
+      checkpoint:
+        id: CP_DIFF
+        blocking: true
+        validation:
+          - "diff_report_generated"
+          - "affected_layers_identified"
+          - "contradiction_check_complete"
+
+    - id: phase_3
+      name: "SELECTIVE_EXTRACTION"
+      description: "Re-extract only affected DNA layers based on diff analysis"
+      steps:
+        # Decision tree: only execute layers flagged by diff analysis
+        - execute:
+            task: "tasks/extract-dna.md"
+            inputs:
+              layer: "L1"
+              focus: "beliefs, worldview, values"
+              mode: "incremental"
+              existing_items: "${phase_1.existing_dna.L1}"
+              new_content: "${new_files}"
+            condition: "${phase_2.affected_layers contains 'L1'}"
+        - execute:
+            task: "tasks/extract-dna.md"
+            inputs:
+              layer: "L2"
+              focus: "thinking frameworks, decision patterns"
+              mode: "incremental"
+              existing_items: "${phase_1.existing_dna.L2}"
+              new_content: "${new_files}"
+            condition: "${phase_2.affected_layers contains 'L2'}"
+        - execute:
+            task: "tasks/extract-dna.md"
+            inputs:
+              layer: "L3"
+              focus: "rules of thumb, shortcuts"
+              mode: "incremental"
+              existing_items: "${phase_1.existing_dna.L3}"
+              new_content: "${new_files}"
+            condition: "${phase_2.affected_layers contains 'L3'}"
+        - execute:
+            task: "tasks/extract-dna.md"
+            inputs:
+              layer: "L4"
+              focus: "structured methodologies"
+              mode: "incremental"
+              existing_items: "${phase_1.existing_dna.L4}"
+              new_content: "${new_files}"
+            condition: "${phase_2.affected_layers contains 'L4'}"
+        - execute:
+            task: "tasks/extract-dna.md"
+            inputs:
+              layer: "L5"
+              focus: "step-by-step implementations"
+              mode: "incremental"
+              existing_items: "${phase_1.existing_dna.L5}"
+              new_content: "${new_files}"
+            condition: "${phase_2.affected_layers contains 'L5'}"
+      checkpoint:
+        id: CP_SELECTIVE
+        blocking: true
+        validation:
+          - "affected_layers_re_extracted"
+          - "no_duplicate_items_introduced"
+          - "source_citations_present"
+
+    - id: phase_4
+      name: "MERGE"
+      description: "Merge new DNA items into existing DNA-CONFIG.yaml"
+      steps:
+        - execute:
+            command: "merge_dna_incremental"
+            inputs:
+              existing_dna: "${phase_1.existing_dna}"
+              new_extractions: "${phase_3.extractions}"
+              diff_report: "${phase_2.diff_report}"
+            description: >
+              Merge strategy:
+              - ADDITIONS: Append new items to appropriate layers
+              - REINFORCEMENTS: Increment confidence/weight on existing items
+              - CONTRADICTIONS: Flag for human review, do NOT auto-resolve
+              - DUPLICATES: Deduplicate by semantic similarity threshold (0.85)
+        - execute:
+            command: "update_metadata"
+            inputs:
+              source_code: "${source_code}"
+              new_files: "${new_files}"
+              layers_updated: "${phase_3.layers_updated}"
+            description: "Update metadata.yaml with new source info and timestamp"
+      checkpoint:
+        id: CP_MERGE
+        blocking: true
+        validation:
+          - "merged_dna_valid_yaml"
+          - "all_5_layers_present"
+          - "item_count_gte_previous"
+          - "contradictions_flagged_not_suppressed"
+
+    - id: phase_5
+      name: "REGRESSION"
+      description: "Regression testing to ensure fidelity is maintained"
+      steps:
+        - execute:
+            command: "fidelity_regression_test"
+            inputs:
+              previous_dna: "${phase_1.snapshot_path}"
+              updated_dna: "${phase_4.merged_dna}"
+              source_code: "${source_code}"
+            description: >
+              Regression checks:
+              1. No existing items were removed (only added/reinforced)
+              2. Layer structure is intact (all 5 layers)
+              3. Source citations preserved for all pre-existing items
+              4. No semantic drift in core philosophies (L1 stability check)
+              5. Agent SOUL.md still consistent with updated DNA
+        - execute:
+            task: "tasks/validate-cascade.md"
+            inputs:
+              batch_id: "${phase_4.batch_id}"
+      checkpoint:
+        id: CP_REGRESSION
+        blocking: true
+        validation:
+          - "fidelity_score_gte_previous"
+          - "no_items_removed"
+          - "l1_stability_passed"
+          - "cascade_validation_passed"
+
+    - id: phase_6
+      name: "PROPAGATION"
+      description: "Propagate changes to dependent artifacts (agents, dossiers)"
+      steps:
+        - execute:
+            command: "propagate_to_agents"
+            inputs:
+              source_code: "${source_code}"
+              updated_layers: "${phase_3.layers_updated}"
+              diff_report: "${phase_2.diff_report}"
+            description: >
+              Update dependent artifacts:
+              - PERSON agent SOUL.md if L1 (philosophies) changed
+              - PERSON agent MEMORY.md with new insights
+              - CARGO agents if relevant domain DNA changed
+              - Theme DOSSIERS with new frameworks/heuristics
+              - SOURCE files with new material references
+        - execute:
+            command: "generate_update_log"
+            inputs:
+              source_code: "${source_code}"
+              diff_report: "${phase_2.diff_report}"
+              layers_updated: "${phase_3.layers_updated}"
+              propagation_targets: "${phase_6.propagated_targets}"
+      checkpoint:
+        id: CP_PROPAGATION
+        blocking: true
+        validation:
+          - "all_dependents_updated"
+          - "update_log_generated"
+          - "dual_location_logs"
+
+  # Transitions
+  transitions:
+    - from: phase_1
+      to: phase_2
+      condition: "brownfield_confirmed"
+    - from: phase_2
+      to: phase_3
+      condition: "diff_analysis_complete"
+    - from: phase_3
+      to: phase_4
+      condition: "selective_extraction_complete"
+    - from: phase_4
+      to: phase_5
+      condition: "merge_complete"
+    - from: phase_5
+      to: phase_6
+      condition: "regression_passed"
+    # Rollback path
+    - from: phase_5
+      to: rollback
+      condition: "regression_failed AND rollback_enabled"
+
+  # Rollback procedure
+  rollback:
+    trigger: "regression_failed"
+    steps:
+      - action: "restore_snapshot"
+        inputs:
+          snapshot_dir: "artifacts/brownfield/snapshots/${source_code}"
+          target: "${existing_dna_path}"
+        description: "Restore DNA-CONFIG.yaml from pre-update snapshot"
+      - action: "restore_agent_state"
+        inputs:
+          snapshot_dir: "artifacts/brownfield/snapshots/${source_code}"
+        description: "Restore SOUL.md, MEMORY.md to pre-update state"
+      - action: "log_rollback"
+        inputs:
+          reason: "${phase_5.failure_reason}"
+          source_code: "${source_code}"
+      - action: "notify_user"
+        inputs:
+          message: "Brownfield update rolled back due to fidelity regression"
+
+  # Error handling
+  on_error:
+    - action: "log_error"
+    - action: "notify_user"
+    - action: "rollback_to_checkpoint"
+    - action: "preserve_diff_report"
+      description: "Keep diff analysis even on error for debugging"
+
+  # Outputs
+  outputs:
+    - name: updated_dna
+      type: file
+      location: "agents/persons/{source}/DNA-CONFIG.yaml"
+    - name: diff_report
+      type: json
+      location: "artifacts/brownfield/diffs/${source_code}/"
+    - name: update_log
+      type: file
+      location: "logs/brownfield/"
+    - name: regression_report
+      type: json
+    - name: rollback_snapshot
+      type: directory
+      location: "artifacts/brownfield/snapshots/${source_code}/"
+    - name: contradiction_flags
+      type: json
+      description: "Contradictions requiring human review"
