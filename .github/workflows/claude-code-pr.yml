@@ -1,13 +1,17 @@
 # GitHub Action: Claude Code PR Assistant
 # ========================================
-# Baseado no workflow Boris Cherny para @.claude em PRs
+# PURPOSE: Custom workflow that responds to @.claude / @claude mentions in PR comments.
+# Uses the Claude Code CLI directly (not the official Anthropic action).
 #
-# Quando alguém comenta @.claude em um PR:
-# 1. Claude analisa o contexto do PR
-# 2. Responde com insights/sugestões
-# 3. Pode atualizar CLAUDE.md se solicitado
+# DISTINCTION from other PR workflows:
+#   - claude.yml: Uses official anthropics/claude-code-action for auto-review + @claude mentions
+#   - claude-code-review.yml: Uses official anthropics/claude-code-action for PR review only
+#   - claude-code-pr.yml (THIS): Custom CLI-based workflow with context extraction
 #
-# Referência: Boris Cherny GitHub Action for Claude Code
+# SECURITY: All user-controlled data is passed via env: blocks, never via ${{ }} in run: blocks.
+# Ref: SECURITY-REMEDIATION-PLAN.md finding C-01
+#
+# Referência original: Boris Cherny GitHub Action for Claude Code
 
 name: Claude Code PR Assistant
 
@@ -33,18 +37,18 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
           fetch-depth: 0
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '20'
 
       - name: Get PR details
         id: pr-details
-        uses: actions/github-script@v7
+        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
         with:
           script: |
             const prNumber = context.issue?.number || context.payload.pull_request?.number;
@@ -76,15 +80,17 @@ jobs:
               comment_author: context.payload.comment.user.login
             };
 
+      # SECURITY FIX (C-01): User-controlled comment content is passed via env:
+      # to prevent shell injection. Never use ${{ }} with user data in run: blocks.
       - name: Parse Claude command
         id: parse-command
+        env:
+          PR_COMMENT: ${{ fromJson(steps.pr-details.outputs.result).comment }}
         run: |
-          COMMENT="${{ fromJson(steps.pr-details.outputs.result).comment }}"
-
           # Extract command after @.claude or @claude
-          COMMAND=$(echo "$COMMENT" | sed -n 's/.*@\.claude\s*\(.*\)/\1/p' | head -1)
+          COMMAND=$(echo "$PR_COMMENT" | sed -n 's/.*@\.claude\s*\(.*\)/\1/p' | head -1)
           if [ -z "$COMMAND" ]; then
-            COMMAND=$(echo "$COMMENT" | sed -n 's/.*@claude\s*\(.*\)/\1/p' | head -1)
+            COMMAND=$(echo "$PR_COMMENT" | sed -n 's/.*@claude\s*\(.*\)/\1/p' | head -1)
           fi
 
           # Default to "review" if no specific command
@@ -96,32 +102,42 @@ jobs:
 
       - name: Install Claude Code CLI
         run: |
-          npm install -g @anthropic-ai/claude-code
+          npm install -g @anthropic-ai/claude-code@latest
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
+      # SECURITY FIX (C-01): All PR metadata is passed via env: blocks.
       - name: Run Claude analysis
         id: claude-analysis
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PR_TITLE: ${{ fromJson(steps.pr-details.outputs.result).title }}
+          PR_BRANCH: ${{ fromJson(steps.pr-details.outputs.result).branch }}
+          PR_BASE: ${{ fromJson(steps.pr-details.outputs.result).base }}
+          PR_FILES: ${{ toJson(fromJson(steps.pr-details.outputs.result).files) }}
+          PR_BODY: ${{ fromJson(steps.pr-details.outputs.result).body }}
+          PR_COMMENT_AUTHOR: ${{ fromJson(steps.pr-details.outputs.result).comment_author }}
+          PR_COMMAND: ${{ steps.parse-command.outputs.command }}
         run: |
-          # Create context file
-          cat > /tmp/pr_context.md << 'EOF'
+          # Create context file using env vars (safe from injection)
+          cat > /tmp/pr_context.md << CTXEOF
           # PR Context
 
-          ## PR: ${{ fromJson(steps.pr-details.outputs.result).title }}
+          ## PR: ${PR_TITLE}
 
-          **Branch:** ${{ fromJson(steps.pr-details.outputs.result).branch }} -> ${{ fromJson(steps.pr-details.outputs.result).base }}
+          **Branch:** ${PR_BRANCH} -> ${PR_BASE}
 
           **Files Changed:**
-          ${{ toJson(fromJson(steps.pr-details.outputs.result).files) }}
+          ${PR_FILES}
 
           **PR Description:**
-          ${{ fromJson(steps.pr-details.outputs.result).body }}
+          ${PR_BODY}
 
           ## User Request
 
-          @${{ fromJson(steps.pr-details.outputs.result).comment_author }} asked:
-          ${{ steps.parse-command.outputs.command }}
-          EOF
+          @${PR_COMMENT_AUTHOR} asked:
+          ${PR_COMMAND}
+          CTXEOF
 
           # Run Claude
           RESPONSE=$(claude --print "$(cat /tmp/pr_context.md)" 2>&1 || echo "Error running Claude")
@@ -138,61 +154,67 @@ jobs:
           echo "response<<EOF" >> $GITHUB_OUTPUT
           echo "$RESPONSE" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
+      # SECURITY FIX (C-01): Response and author are read from env/outputs via JS,
+      # not via ${{ }} interpolation in template literals.
       - name: Post response as comment
-        uses: actions/github-script@v7
+        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
+        env:
+          CLAUDE_RESPONSE: ${{ steps.claude-analysis.outputs.response }}
+          COMMENT_AUTHOR: ${{ fromJson(steps.pr-details.outputs.result).comment_author }}
         with:
           script: |
-            const response = `${{ steps.claude-analysis.outputs.response }}`;
+            const response = process.env.CLAUDE_RESPONSE || 'No response generated';
+            const author = process.env.COMMENT_AUTHOR || 'unknown';
             const prNumber = context.issue?.number || context.payload.pull_request?.number;
 
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: prNumber,
-              body: `## Claude Code Response
-
-            ${response}
-
-            ---
-            *Triggered by @${{ fromJson(steps.pr-details.outputs.result).comment_author }}'s comment*`
+              body: `## Claude Code Response\n\n${response}\n\n---\n*Triggered by @${author}'s comment*`
             });
 
+      # SECURITY FIX (C-01): Command passed via env var
       - name: Check if CLAUDE.md update requested
         id: check-update
+        env:
+          PR_COMMAND: ${{ steps.parse-command.outputs.command }}
         run: |
-          COMMAND="${{ steps.parse-command.outputs.command }}"
-          if echo "$COMMAND" | grep -qi "update.*claude.md\|atualizar.*claude.md\|add.*rule\|adicionar.*regra"; then
+          if echo "$PR_COMMAND" | grep -qi "update.*claude.md\|atualizar.*claude.md\|add.*rule\|adicionar.*regra"; then
             echo "update_requested=true" >> $GITHUB_OUTPUT
           else
             echo "update_requested=false" >> $GITHUB_OUTPUT
           fi
 
+      # SECURITY FIX (C-01): All user data via env vars in git operations
       - name: Update CLAUDE.md if requested
         if: steps.check-update.outputs.update_requested == 'true'
+        env:
+          PR_COMMAND: ${{ steps.parse-command.outputs.command }}
+          PR_COMMENT_AUTHOR: ${{ fromJson(steps.pr-details.outputs.result).comment_author }}
+          PR_NUMBER: ${{ github.event.issue.number || github.event.pull_request.number }}
         run: |
           # Create a new branch for the update
           git config user.name "Claude Code Bot"
           git config user.email "claude-code-bot@users.noreply.github.com"
 
           BRANCH="claude-update-$(date +%s)"
-          git checkout -b $BRANCH
+          git checkout -b "$BRANCH"
 
           # Append context to CLAUDE.md
           echo "" >> CLAUDE.md
-          echo "## Auto-generated from PR #${{ github.event.issue.number || github.event.pull_request.number }}" >> CLAUDE.md
+          echo "## Auto-generated from PR #${PR_NUMBER}" >> CLAUDE.md
           echo "" >> CLAUDE.md
-          echo "Request: ${{ steps.parse-command.outputs.command }}" >> CLAUDE.md
+          echo "Request: ${PR_COMMAND}" >> CLAUDE.md
           echo "" >> CLAUDE.md
 
           git add CLAUDE.md
           git commit -m "docs: Update CLAUDE.md from PR comment
 
-          Triggered by @${{ fromJson(steps.pr-details.outputs.result).comment_author }}
-          PR: #${{ github.event.issue.number || github.event.pull_request.number }}"
+          Triggered by @${PR_COMMENT_AUTHOR}
+          PR: #${PR_NUMBER}"
 
-          git push origin $BRANCH
+          git push origin "$BRANCH"
 
           echo "Created update branch: $BRANCH"

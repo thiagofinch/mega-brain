@@ -24,10 +24,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '20'
           registry-url: 'https://registry.npmjs.org'
@@ -51,8 +51,11 @@ jobs:
 
       - name: Security scan — secret detection
         run: |
-          echo "Installing trufflehog..."
-          curl -sSfL https://raw.githubusercontent.com/trufflesecurity/trufflehog/main/scripts/install.sh | sh -s -- -b /usr/local/bin
+          echo "Installing trufflehog (pinned release)..."
+          TRUFFLEHOG_VERSION="3.88.22"
+          curl -sSfL "https://github.com/trufflesecurity/trufflehog/releases/download/v${TRUFFLEHOG_VERSION}/trufflehog_${TRUFFLEHOG_VERSION}_linux_amd64.tar.gz" -o trufflehog.tar.gz
+          tar xzf trufflehog.tar.gz -C /usr/local/bin trufflehog
+          rm trufflehog.tar.gz
 
           echo "Scanning repository for verified secrets..."
           trufflehog filesystem . --only-verified --fail --no-update 2>&1 || {
