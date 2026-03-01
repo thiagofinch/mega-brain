@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Workflow Module Schema",
+  "description": "Schema for composable workflow modules in Mega Brain",
+  "version": "1.0.0",
+  "type": "object",
+  "required": ["module"],
+  "properties": {
+    "module": {
+      "type": "object",
+      "required": ["id", "name", "version", "category", "interface", "execution"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^mod-[a-z][a-z0-9-]+$"
+        },
+        "name": { "type": "string" },
+        "version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "category": {
+          "type": "string",
+          "enum": ["INGESTION", "PROCESSING", "EXTRACTION", "OUTPUT", "VALIDATION", "ORCHESTRATION"]
+        },
+        "description": { "type": "string" },
+        "interface": {
+          "type": "object",
+          "required": ["inputs", "outputs"],
+          "properties": {
+            "inputs": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["name", "type"],
+                "properties": {
+                  "name": { "type": "string" },
+                  "type": { "type": "string" },
+                  "required": { "type": "boolean", "default": false },
+                  "default": {},
+                  "description": { "type": "string" }
+                }
+              }
+            },
+            "outputs": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["name", "type"],
+                "properties": {
+                  "name": { "type": "string" },
+                  "type": { "type": "string" },
+                  "schema": { "type": "string" },
+                  "description": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "quality_gate": {
+          "type": "object",
+          "properties": {
+            "conditions": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "on_failure": {
+              "type": "string",
+              "enum": ["HALT", "WARN", "RETRY", "SKIP"],
+              "default": "HALT"
+            }
+          }
+        },
+        "execution": {
+          "type": "object",
+          "required": ["type", "ref"],
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": ["task", "script", "workflow"]
+            },
+            "ref": { "type": "string" },
+            "timeout": { "type": "integer", "default": 300 },
+            "retries": { "type": "integer", "default": 0 }
+          }
+        },
+        "metadata": {
+          "type": "object",
+          "properties": {
+            "author": { "type": "string" },
+            "tags": { "type": "array", "items": { "type": "string" } },
+            "dependencies": { "type": "array", "items": { "type": "string" } }
+          }
+        }
+      }
+    }
+  }
+}
