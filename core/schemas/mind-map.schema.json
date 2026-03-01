@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Mind Map Schema",
+  "description": "Schema for cognitive mind maps that visualize interconnections between DNA elements",
+  "version": "1.0.0",
+  "type": "object",
+  "required": ["person", "version", "generated", "nodes", "edges", "statistics"],
+  "properties": {
+    "person": {
+      "type": "string",
+      "description": "Person identifier (e.g., ALEX-HORMOZI)"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "generated": {
+      "type": "string",
+      "format": "date"
+    },
+    "source_dna": {
+      "type": "string",
+      "description": "Path to the DNA source file"
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/node"
+      },
+      "minItems": 1
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/edge"
+      }
+    },
+    "clusters": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/cluster"
+      }
+    },
+    "orphans": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Node IDs with zero connections"
+    },
+    "statistics": {
+      "$ref": "#/$defs/statistics"
+    }
+  },
+  "$defs": {
+    "node": {
+      "type": "object",
+      "required": ["id", "label", "layer"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^(PHI|MM|HEU|FW|MET)-[A-Z]{2,4}-\\d{3}$",
+          "description": "DNA element ID"
+        },
+        "label": {
+          "type": "string",
+          "maxLength": 100
+        },
+        "layer": {
+          "type": "string",
+          "enum": ["L1", "L2", "L3", "L4", "L5"]
+        },
+        "strength": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "How central to the person's thinking (0.0-1.0)"
+        },
+        "frequency": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "How often referenced in source material"
+        },
+        "cluster": {
+          "type": "string",
+          "description": "Cluster ID this node belongs to"
+        },
+        "chunk_ids": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Source chunk IDs for traceability"
+        }
+      }
+    },
+    "edge": {
+      "type": "object",
+      "required": ["from", "to", "type", "confidence"],
+      "properties": {
+        "from": {
+          "type": "string",
+          "description": "Source node ID"
+        },
+        "to": {
+          "type": "string",
+          "description": "Target node ID"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["SUPPORTS", "CONTRADICTS", "IMPLEMENTS", "EXTENDS", "REQUIRES", "SPECIALIZES"]
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "evidence": {
+          "type": "string",
+          "description": "Chunk IDs or references supporting this edge"
+        },
+        "detection_method": {
+          "type": "string",
+          "enum": ["EXPLICIT_REFERENCE", "CO_OCCURRENCE", "SEMANTIC_SIMILARITY", "LOGICAL_INFERENCE"]
+        }
+      }
+    },
+    "cluster": {
+      "type": "object",
+      "required": ["id", "label", "nodes"],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "nodes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "statistics": {
+      "type": "object",
+      "required": ["total_nodes", "total_edges"],
+      "properties": {
+        "total_nodes": { "type": "integer" },
+        "total_edges": { "type": "integer" },
+        "avg_connections_per_node": { "type": "number" },
+        "orphan_count": { "type": "integer" },
+        "cross_layer_chains": { "type": "integer" },
+        "high_confidence_edge_pct": { "type": "number" }
+      }
+    }
+  }
+}

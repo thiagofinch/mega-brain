@@ -1,0 +1,160 @@
+# MEGA BRAIN - MIND MAPPER WORKFLOW
+# Padrão: Pedro (aios-core/squad-creator)
+# Versão: 1.0.0
+
+workflow:
+  id: wf-mind-mapper
+  name: "Cognitive Mind Mapping"
+  description: "Maps interconnections between DNA elements into navigable concept networks"
+  version: "1.0.0"
+
+  orchestrator: "@jarvis"
+
+  inputs:
+    - name: person
+      type: string
+      required: true
+      description: "Person identifier (e.g., ALEX-HORMOZI)"
+    - name: dna_path
+      type: string
+      required: true
+      description: "Path to DNA-CONFIG.yaml or DNA.yaml"
+    - name: chunks_path
+      type: string
+      required: false
+      description: "Path to CHUNKS-STATE.json for co-occurrence analysis"
+    - name: cross_person
+      type: boolean
+      default: false
+      description: "Include cross-person edge detection"
+
+  phases:
+    - id: phase_1
+      name: "NODE_EXTRACTION"
+      description: "Extract all DNA elements as nodes with metadata"
+      steps:
+        - execute:
+            command: "parse_dna_config"
+            inputs:
+              dna_path: "${dna_path}"
+        - execute:
+            command: "create_nodes"
+            inputs:
+              layers: ["L1", "L2", "L3", "L4", "L5"]
+        - execute:
+            command: "calculate_strength_scores"
+      checkpoint:
+        id: CP_NODES
+        blocking: true
+        validation:
+          - "all_elements_have_nodes"
+          - "strength_scores_calculated"
+
+    - id: phase_2
+      name: "EDGE_DETECTION"
+      description: "Detect relationships between nodes"
+      steps:
+        - execute:
+            command: "detect_explicit_references"
+            description: "Scan source chunks for direct cross-references"
+        - execute:
+            command: "analyze_co_occurrences"
+            inputs:
+              chunks_path: "${chunks_path}"
+              threshold: 3
+        - execute:
+            command: "compute_semantic_similarity"
+            inputs:
+              similarity_threshold: 0.82
+        - execute:
+            command: "infer_logical_connections"
+      checkpoint:
+        id: CP_EDGES
+        blocking: true
+        validation:
+          - "edges_created"
+          - "confidence_scores_assigned"
+
+    - id: phase_3
+      name: "CHAIN_DETECTION"
+      description: "Identify reasoning chains across layers"
+      steps:
+        - execute:
+            command: "trace_cross_layer_chains"
+            description: "Follow paths from L5 methodologies up to L1 philosophies"
+        - execute:
+            command: "identify_clusters"
+            description: "Group related nodes into semantic clusters"
+        - execute:
+            command: "detect_orphans"
+            description: "Flag nodes with zero connections"
+      checkpoint:
+        id: CP_CHAINS
+        blocking: true
+        validation:
+          - "chains_identified"
+          - "orphans_flagged"
+
+    - id: phase_4
+      name: "CROSS_PERSON"
+      description: "Detect cross-person connections (optional)"
+      condition: "${cross_person} == true"
+      steps:
+        - execute:
+            command: "load_other_mind_maps"
+        - execute:
+            command: "detect_cross_person_edges"
+            description: "Find overlaps, contradictions, and specializations"
+        - execute:
+            command: "classify_relationships"
+      checkpoint:
+        id: CP_CROSS
+        blocking: false
+
+    - id: phase_5
+      name: "OUTPUT_GENERATION"
+      description: "Generate machine and human readable outputs"
+      steps:
+        - execute:
+            command: "generate_mind_map_yaml"
+            output: "knowledge/dna/persons/${person}/MIND-MAP.yaml"
+        - execute:
+            command: "generate_mind_map_md"
+            output: "knowledge/dna/persons/${person}/MIND-MAP.md"
+        - execute:
+            command: "calculate_quality_metrics"
+        - execute:
+            command: "update_dna_config_with_connections"
+      checkpoint:
+        id: CP_OUTPUT
+        blocking: true
+        validation:
+          - "yaml_valid"
+          - "orphan_rate_below_10pct"
+          - "avg_connections_above_2"
+
+  transitions:
+    - from: phase_1
+      to: phase_2
+      condition: "nodes_extracted"
+    - from: phase_2
+      to: phase_3
+      condition: "edges_detected"
+    - from: phase_3
+      to: phase_4
+      condition: "chains_mapped"
+    - from: phase_4
+      to: phase_5
+      condition: "cross_person_complete_or_skipped"
+
+  outputs:
+    - name: mind_map_yaml
+      type: file
+      location: "knowledge/dna/persons/${person}/MIND-MAP.yaml"
+    - name: mind_map_md
+      type: file
+      location: "knowledge/dna/persons/${person}/MIND-MAP.md"
+    - name: quality_metrics
+      type: json
+    - name: orphan_report
+      type: array
