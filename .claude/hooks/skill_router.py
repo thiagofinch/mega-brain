@@ -23,6 +23,7 @@ ARQUITETURA:
 import os
 import re
 import json
+from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
@@ -30,6 +31,13 @@ PROJECT_ROOT = Path(os.environ.get('CLAUDE_PROJECT_DIR', '.'))
 SKILLS_PATH = PROJECT_ROOT / ".claude" / "skills"
 SUBAGENTS_PATH = PROJECT_ROOT / ".claude" / "jarvis" / "sub-agents"
 INDEX_PATH = PROJECT_ROOT / ".claude" / "mission-control" / "SKILL-INDEX.json"
+WHITELIST_PATH = PROJECT_ROOT / ".claude" / "SKILL-WHITELIST.json"
+
+# M-09: Allowed base directories for skill/sub-agent resolution
+ALLOWED_SKILL_PREFIXES = (
+    os.path.normpath('.claude/skills/'),
+    os.path.normpath('.claude/jarvis/sub-agents/'),
+)
 
 
 def scan_skills() -> List[Tuple[Path, str]]:
@@ -277,6 +285,73 @@ def get_item_context(item_path: str, item_type: str) -> str:
         return get_subagent_context(item_path)
 
 
+#================================
+# M-09: SECURITY - WHITELIST & PATH VALIDATION
+#================================
+
+def is_path_safe(item_path: str) -> bool:
+    """
+    M-09: Validate that skill/sub-agent path doesn't escape expected directories.
+    Prevents path traversal attacks via crafted SKILL.md paths.
+    """
+    normalized = os.path.normpath(item_path)
+    return any(normalized.startswith(prefix) for prefix in ALLOWED_SKILL_PREFIXES)
+
+
+def load_whitelist() -> Dict:
+    """Load skill/sub-agent whitelist. Empty dict = no whitelist (trust all)."""
+    if not WHITELIST_PATH.exists():
+        return {}
+    try:
+        with open(WHITELIST_PATH, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+
+def is_skill_trusted(item_name: str, item_type: str, whitelist: Dict) -> bool:
+    """
+    M-09: Check if skill/sub-agent is in the trusted whitelist.
+    If no whitelist file exists, all items in valid paths are trusted (graceful degradation).
+    """
+    if not whitelist:
+        return True  # No whitelist file = trust all (backward compatible)
+
+    blocked_list = whitelist.get('blocked', [])
+    if item_name in blocked_list:
+        return False
+
+    if item_type == "skill":
+        trusted_list = whitelist.get('trusted_skills', [])
+    else:
+        trusted_list = whitelist.get('trusted_subagents', [])
+
+    if '*' in trusted_list:
+        return True  # Wildcard = trust all of this type
+
+    return item_name in trusted_list
+
+
+def log_security_event(event_type: str, item_name: str, item_path: str):
+    """M-09: Log security events for skill routing."""
+    log_dir = PROJECT_ROOT / 'logs'
+    log_dir.mkdir(parents=True, exist_ok=True)
+    log_file = log_dir / 'skill-security.jsonl'
+
+    entry = {
+        'timestamp': datetime.now().isoformat(),
+        'event': event_type,
+        'item_name': item_name,
+        'item_path': item_path
+    }
+
+    try:
+        with open(log_file, 'a', encoding='utf-8') as f:
+            f.write(json.dumps(entry, ensure_ascii=False) + '\n')
+    except Exception:
+        pass
+
+
 def main():
     """
     Hook entry point for Claude Code UserPromptSubmit event.
@@ -302,6 +377,23 @@ def main():
         top = matches[0]
         item_type = top.get('type', 'skill')
         item_name = top.get('name', 'unknown')
+
+        # M-09: Path safety check — block path traversal
+        if not is_path_safe(top['path']):
+            log_security_event('path_traversal_blocked', item_name, top['path'])
+            print(json.dumps({'continue': True}))
+            return
+
+        # M-09: Whitelist check — block unwhitelisted items
+        whitelist = load_whitelist()
+        if not is_skill_trusted(item_name, item_type, whitelist):
+            log_security_event('unwhitelisted_blocked', item_name, top['path'])
+            type_label = "skill" if item_type == "skill" else "sub-agent"
+            print(json.dumps({
+                'continue': True,
+                'feedback': f"[SECURITY] {type_label} '{item_name}' not in trusted whitelist. Skipping auto-injection."
+            }))
+            return
 
         context = get_item_context(top['path'], item_type)
 
