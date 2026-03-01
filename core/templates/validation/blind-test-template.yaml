@@ -1,0 +1,250 @@
+# BLIND TEST TEMPLATE
+# Template for generating test cases for clone fidelity validation
+#
+# Version: 1.0.0
+# Protocol: core/protocols/blind-testing-protocol.md
+# Schema: core/schemas/fidelity-report.schema.json
+#
+# USAGE:
+#   1. Copy this template for each clone to be tested
+#   2. Fill in clone_info and source_materials
+#   3. Generate test cases following the distribution rules
+#   4. Each test case MUST have a source_reference (traceability)
+#   5. Randomize presentation order before delivering to evaluators
+
+---
+
+# =============================================================================
+# METADATA
+# =============================================================================
+
+metadata:
+  template_version: "1.0.0"
+  protocol_version: "1.0.0"
+  generated_at: "YYYY-MM-DDTHH:MM:SSZ"  # Fill with actual timestamp
+  generated_by: "JARVIS"
+
+# =============================================================================
+# CLONE INFORMATION
+# =============================================================================
+
+clone_info:
+  clone_id: ""           # e.g., "ALEX-HORMOZI"
+  clone_name: ""         # e.g., "Alex Hormozi"
+  agent_path: ""         # e.g., "agents/persons/ALEX-HORMOZI/"
+  soul_path: ""          # e.g., "agents/persons/ALEX-HORMOZI/SOUL.md"
+  memory_path: ""        # e.g., "agents/persons/ALEX-HORMOZI/MEMORY.md"
+  dna_config_path: ""    # e.g., "agents/persons/ALEX-HORMOZI/DNA-CONFIG.yaml"
+  clone_version: ""      # Version of AGENT.md at time of test generation
+  previous_fidelity: null  # Previous fidelity score if exists, null if first test
+
+# =============================================================================
+# SOURCE MATERIALS (used for test generation)
+# =============================================================================
+
+source_materials:
+  # List all materials used to create test cases
+  # Every test case must trace back to one of these
+  primary:
+    - path: ""           # e.g., "inbox/ALEX HORMOZI/YOUTUBE/$100M Offers.txt"
+      type: "transcription"
+      hours_of_content: 0
+    # Add more primary sources...
+
+  secondary:
+    - path: ""           # e.g., "knowledge/dna/persons/ALEX-HORMOZI/DNA.yaml"
+      type: "dna"
+    # Add more secondary sources...
+
+# =============================================================================
+# TEST DISTRIBUTION TARGETS
+# =============================================================================
+
+distribution:
+  total_target: 100      # Recommended: 100-120, minimum: 85
+  direct_quote:
+    target_count: 30     # 30% of total
+    difficulty_split:
+      easy: 10
+      medium: 12
+      hard: 8
+  decision_scenario:
+    target_count: 25     # 25% of total
+    cross_domain_minimum: 5  # At least 5 must cross domains
+  style:
+    target_count: 25     # 25% of total
+    dimensions_required:
+      - vocabulary
+      - rhetoric
+      - tone
+      - cadence
+      - analogy
+    min_per_dimension: 4
+  edge_case:
+    target_count: 20     # 20% of total
+    subtype_split:
+      paradox: 5
+      nuance: 5
+      contradiction: 3
+      evolution: 4
+      boundary: 3
+
+# =============================================================================
+# TEST CASES
+# =============================================================================
+
+# ---- DIRECT QUOTE TESTS (30%) ----
+# Evaluator sees two quotes, picks which is real.
+# Lower identification rate = higher fidelity.
+
+direct_quote_tests:
+
+  - test_id: "DQ-001"
+    topic: ""                # e.g., "Pricing Strategy"
+    difficulty: "easy"       # easy | medium | hard
+    real_quote: ""           # Exact quote from source material
+    clone_prompt: ""         # Prompt given to clone to generate comparison quote
+    clone_quote: ""          # Filled after clone generates response
+    source_reference: ""     # e.g., "^[RAIZ:/inbox/PERSON/FILE.txt:L100-105]"
+    presentation_order: null # "real_first" or "real_second" -- randomized at test time
+    notes: ""
+
+  # Template for additional direct quote tests:
+  # Copy the block above and increment test_id (DQ-002, DQ-003, etc.)
+  # Generate 30 total: 10 easy, 12 medium, 8 hard
+
+# ---- DECISION SCENARIO TESTS (25%) ----
+# Present scenario, collect clone decision, compare to documented real decision.
+
+decision_scenario_tests:
+
+  - test_id: "DS-001"
+    domain: ""               # e.g., "Sales Compensation"
+    cross_domain: false      # true if scenario spans multiple domains
+    scenario: ""             # Business scenario description
+    constraints: ""          # Key constraints in the scenario
+    real_decision: ""        # Documented real decision
+    real_reasoning: ""       # Documented reasoning behind the decision
+    source_reference: ""     # e.g., "^[RAIZ:/inbox/PERSON/FILE.txt:L200-215]"
+    scoring_criteria:
+      - criterion: ""       # e.g., "Recommended against individual raise"
+        met: null            # true | false -- filled at evaluation time
+      - criterion: ""
+        met: null
+      - criterion: ""
+        met: null
+      - criterion: ""
+        met: null
+      - criterion: ""
+        met: null
+    clone_decision: ""       # Filled after clone responds
+    clone_reasoning: ""      # Filled after clone responds
+    alignment_score: null    # 0-100, calculated from criteria
+    notes: ""
+
+  # Template for additional decision scenario tests:
+  # Copy the block above and increment test_id (DS-002, DS-003, etc.)
+  # Generate 25 total, at least 5 cross-domain
+
+# ---- STYLE TESTS (25%) ----
+# Evaluate if clone's linguistic style matches the original person.
+
+style_tests:
+
+  - test_id: "ST-001"
+    dimension: "vocabulary"  # vocabulary | rhetoric | tone | cadence | analogy
+    prompt: ""               # Open-ended prompt given to clone (min 200 words response)
+    reference_sources:
+      - path: ""             # Source file for style comparison
+        excerpt: ""          # Relevant excerpt showing the person's style
+      - path: ""
+        excerpt: ""
+      - path: ""
+        excerpt: ""
+    clone_response: ""       # Filled after clone responds (min 200 words)
+    checklist:
+      - item: ""             # e.g., "Uses characteristic term 'leverage'"
+        present: null        # true | false -- filled at evaluation time
+      - item: ""
+        present: null
+      - item: ""
+        present: null
+      - item: ""
+        present: null
+    scores:
+      vocabulary_match: null    # 0-100
+      rhetorical_match: null    # 0-100
+      tonal_match: null         # 0-100
+      cadence_match: null       # 0-100
+      overall: null             # 0-100 weighted composite
+    notes: ""
+
+  # Template for additional style tests:
+  # Copy the block above and increment test_id (ST-002, ST-003, etc.)
+  # Generate 25 total, each dimension tested at least 4 times
+
+# ---- EDGE CASE TESTS (20%) ----
+# Test nuanced, paradoxical, or counterintuitive positions.
+
+edge_case_tests:
+
+  - test_id: "EC-001"
+    subtype: "paradox"       # paradox | nuance | contradiction | evolution | boundary
+    setup: ""                # Context that makes the position non-obvious
+    expected_position: ""    # Documented nuanced position
+    trap_position: ""        # What a generic AI (without DNA) would say
+    source_reference: ""     # e.g., "^[RAIZ:/inbox/PERSON/FILE.txt:L500-520]"
+    evolution_timestamp: null  # For "evolution" subtype: when view changed
+    fidelity_criteria:
+      - criterion: ""       # e.g., "Holds both positions without resolving tension"
+        met: null            # true | false
+      - criterion: ""
+        met: null
+      - criterion: ""
+        met: null
+      - criterion: ""
+        met: null
+      - criterion: ""
+        met: null
+    clone_response: ""       # Filled after clone responds
+    fell_into_trap: null     # true if clone gave the trap_position
+    fidelity_score: null     # 0-100
+    notes: ""
+
+  # Template for additional edge case tests:
+  # Copy the block above and increment test_id (EC-002, EC-003, etc.)
+  # Generate 20 total: 5 paradox, 5 nuance, 3 contradiction, 4 evolution, 3 boundary
+
+# =============================================================================
+# EVALUATION SETUP
+# =============================================================================
+
+evaluation:
+  evaluators:
+    - evaluator_id: ""       # e.g., "EVAL-001"
+      qualification: ""      # Brief description of familiarity with the person
+      hours_consumed: 0      # Hours of original person's content consumed
+    # Minimum 3 evaluators, recommended 5
+
+  blinding:
+    randomization_seed: null   # Set before test delivery for reproducibility
+    max_tests_per_session: 40  # Anti-fatigue measure
+    test_order: "randomized"   # Tests intermixed across categories
+
+  schedule:
+    phase_1_preparation: ""    # Date range
+    phase_2_collection: ""     # Date range
+    phase_3_evaluation: ""     # Date range
+    phase_4_analysis: ""       # Date range
+
+# =============================================================================
+# RESULTS (filled after evaluation)
+# =============================================================================
+
+results:
+  completed_at: null
+  report_id: null              # e.g., "FR-2026-02-28-AH-001"
+  composite_fidelity: null     # 0-100
+  classification: null         # EXCEPTIONAL | TARGET_MET | ACCEPTABLE | NEEDS_IMPROVEMENT | FAILING
+  overall_result: null         # PASS | CONDITIONAL_PASS | FAIL
+  report_path: null            # Path to generated fidelity-report.md
