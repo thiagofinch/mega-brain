@@ -1,0 +1,170 @@
+# APEX Viability Report Template
+# Version: 1.0.0
+# Schema: core/schemas/viability-score.schema.json
+# Protocol: core/protocols/apex-viability-scoring.md
+# Task: TSK-012 (score-viability)
+#
+# Usage: Fill in all fields marked with <PLACEHOLDER>.
+# Remove comments before generating final report.
+# All scores must include evidence strings (min 20 chars).
+
+---
+
+viability_assessment:
+
+  # ──────────────────────────────────────────────
+  # CANDIDATE INFORMATION
+  # ──────────────────────────────────────────────
+  candidate:
+    name: "<CANDIDATE_FULL_NAME>"
+    domain: "<PRIMARY_DOMAIN>"          # e.g., "B2B Sales", "Marketing", "Finance"
+    aliases:
+      - "<ALIAS_1>"                     # Remove section if no aliases
+    source_summary:
+      total_hours_estimated: 0          # Estimated total hours of available content
+      source_types:
+        - "book"                        # Allowed: book, course, podcast_own, podcast_guest,
+        - "podcast_guest"               #   youtube_channel, youtube_guest, conference_keynote,
+        - "youtube_channel"             #   mastermind, workshop, social_media, blog_article,
+                                        #   academic_paper, interview, other
+      date_range:
+        earliest: "<YYYY>"             # Earliest content found
+        latest: "<YYYY>"               # Most recent content found
+      primary_language: "en"            # ISO 639-1 language code
+
+  # ──────────────────────────────────────────────
+  # DIMENSION SCORES (each 0-20)
+  # ──────────────────────────────────────────────
+  dimensions:
+
+    accessibility:
+      score: 0                          # 0-20
+      evidence: >
+        <EVIDENCE_STRING>
+        Describe: total content volume, source diversity, format types found.
+        Reference specific sources (e.g., "12 podcast episodes on Spotify, 1 book on Amazon").
+      red_flags: []                     # e.g., ["Content mostly behind paywall", "Primarily short-form"]
+      notes: ""
+
+    pattern_richness:
+      score: 0                          # 0-20
+      evidence: >
+        <EVIDENCE_STRING>
+        Describe: number of named frameworks, quantitative heuristics, decision trees found.
+        Reference specific frameworks by name (e.g., "CLOSER Framework", "Value Equation").
+      red_flags: []                     # e.g., ["No named frameworks", "Advice is purely anecdotal"]
+      notes: ""
+
+    expertise_depth:
+      score: 0                          # 0-20
+      evidence: >
+        <EVIDENCE_STRING>
+        Describe: years of experience, verifiable results, domain-specific depth.
+        Reference credentials, track record, or specific achievements.
+      red_flags: []                     # e.g., ["No verifiable track record", "Claims unsubstantiated"]
+      notes: ""
+
+    x_factor:
+      score: 0                          # 0-20
+      evidence: >
+        <EVIDENCE_STRING>
+        Describe: contrarian insights, proprietary concepts, differentiation from conventional wisdom.
+        Reference specific counterintuitive takes or coined terms.
+      red_flags: []                     # e.g., ["Content indistinguishable from generic advice"]
+      notes: ""
+
+    icp_match:
+      score: 0                          # 0-20 (default 15 if no specific user context)
+      evidence: >
+        <EVIDENCE_STRING>
+        Describe: domain overlap, scale relevance, market context fit, cultural fit, temporal relevance.
+        If no specific ICP context, explain default scoring rationale.
+      red_flags: []                     # e.g., ["Different market context (US vs target market)"]
+      notes: ""
+
+    consistency:
+      score: 0                          # 0-20
+      evidence: >
+        <EVIDENCE_STRING>
+        Describe: cross-source consistency check results. Mention specific topics compared,
+        acknowledged vs unacknowledged contradictions found.
+      red_flags: []                     # e.g., ["Unacknowledged contradiction on X topic"]
+      notes: ""
+
+  # ──────────────────────────────────────────────
+  # SCORING
+  # ──────────────────────────────────────────────
+  scoring:
+    raw_score: 0                        # Sum of all 6 dimension scores (0-120)
+    raw_maximum: 120
+    normalized_score: 0                 # (raw_score / 120) * 100, rounded to 1 decimal
+    icp_adjusted: false                 # true if ICP was weighted at 0.5x (no user context)
+    dimension_floor_violations: []
+    # Uncomment and fill if any dimension violates minimum floors:
+    #   - dimension: "accessibility"    # accessibility (floor=5), pattern_richness (floor=5), consistency (floor=5)
+    #     score: 3
+    #     floor: 5
+
+  # ──────────────────────────────────────────────
+  # CLASSIFICATION
+  # ──────────────────────────────────────────────
+  classification:
+    label: "AUTO-REJECT"                # AUTO-REJECT | VIABLE | STRONG | EXCEPTIONAL
+    action: "reject_and_archive"        # reject_and_archive | proceed_with_limitations | proceed_standard | proceed_priority
+    rejection_reason: ""                # Required for AUTO-REJECT. Concise explanation.
+    pipeline_priority: "none"           # none | normal | high
+    estimated_token_savings: ""         # For AUTO-REJECT: e.g., "~400K tokens saved"
+
+  # ──────────────────────────────────────────────
+  # LIMITATIONS (for VIABLE candidates)
+  # ──────────────────────────────────────────────
+  limitations:
+    - "<LIMITATION_1>"                  # e.g., "Low Accessibility (A=8) means agent will have coverage gaps"
+    # Remove section entirely for AUTO-REJECT or if no limitations apply
+
+  # ──────────────────────────────────────────────
+  # RECOMMENDATIONS
+  # ──────────────────────────────────────────────
+  recommendations:
+    - "<RECOMMENDATION_1>"             # e.g., "Request access to private workshop recordings to upgrade A score"
+    - "<RECOMMENDATION_2>"             # e.g., "Mark agent DNA as coverage:partial for topics outside available content"
+    # Recommendations should be actionable and specific
+
+  # ──────────────────────────────────────────────
+  # ASSESSMENT METADATA
+  # ──────────────────────────────────────────────
+  assessment_metadata:
+    assessed_at: "<ISO_8601_TIMESTAMP>" # e.g., "2026-02-28T14:30:00Z"
+    assessed_by: "@jarvis"              # "@jarvis" | "@human" | "hybrid"
+    protocol_version: "1.0.0"
+    research_time_minutes: 0            # Time spent on preliminary research
+    samples_reviewed: 0                 # Number of content samples reviewed
+    confidence: 0.0                     # Assessor confidence in overall score (0.0-1.0)
+
+# ──────────────────────────────────────────────
+# DECISION TREE REFERENCE
+# ──────────────────────────────────────────────
+#
+#   normalized_score >= 85  -->  EXCEPTIONAL  -->  proceed_priority   (pipeline_priority: high)
+#   normalized_score >= 70  -->  STRONG       -->  proceed_standard   (pipeline_priority: normal)
+#   normalized_score >= 50  -->  VIABLE       -->  proceed_with_limitations (pipeline_priority: normal)
+#   normalized_score <  50  -->  AUTO-REJECT  -->  reject_and_archive (pipeline_priority: none)
+#
+#   FLOOR CHECK (overrides total score):
+#   accessibility    < 5  -->  AUTO-REJECT regardless of total
+#   pattern_richness < 5  -->  AUTO-REJECT regardless of total
+#   consistency      < 5  -->  AUTO-REJECT regardless of total
+#
+# ──────────────────────────────────────────────
+# HANDOFF
+# ──────────────────────────────────────────────
+#
+#   IF classification.label IN [VIABLE, STRONG, EXCEPTIONAL]:
+#     --> Next Task: TSK-020 (extract-dna)
+#     --> Data Passed: candidate info, dimension scores, limitations
+#     --> Note: Weak dimensions should be flagged in DNA-CONFIG.yaml
+#
+#   IF classification.label == AUTO-REJECT:
+#     --> Archive report to logs/assessments/
+#     --> No further pipeline processing
+#
