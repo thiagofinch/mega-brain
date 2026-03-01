@@ -26,6 +26,7 @@ import json
 import sys
 import os
 import re
+import hashlib
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Optional, Dict, List, Any
@@ -114,6 +115,128 @@ CRITICAL_FILES = {
         'max_age_hours': 720  # 30 dias
     }
 }
+
+#================================
+# M-08: PERSONALITY FILE INTEGRITY
+#================================
+
+# Files injected into context that must be verified
+PERSONALITY_FILES = [
+    '.claude/jarvis/JARVIS-DNA-PERSONALITY.md',
+    'system/02-JARVIS-SOUL.md',
+    '.claude/jarvis/JARVIS-BOOT-SEQUENCE.md',
+    '.claude/jarvis/JARVIS-MEMORY.md',
+]
+
+INTEGRITY_MANIFEST_PATH = '.claude/jarvis/INTEGRITY-MANIFEST.json'
+
+
+def compute_file_hash(filepath: Path) -> Optional[str]:
+    """Compute SHA256 hash of a file for integrity verification."""
+    try:
+        sha256 = hashlib.sha256()
+        with open(filepath, 'rb') as f:
+            for chunk in iter(lambda: f.read(8192), b''):
+                sha256.update(chunk)
+        return sha256.hexdigest()
+    except Exception:
+        return None
+
+
+def load_integrity_manifest() -> Dict:
+    """Load integrity manifest from disk."""
+    project_dir = get_project_dir()
+    manifest_path = Path(project_dir) / INTEGRITY_MANIFEST_PATH
+    if not manifest_path.exists():
+        return {}
+    try:
+        with open(manifest_path, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+
+def save_integrity_manifest(manifest: Dict):
+    """Save integrity manifest to disk."""
+    project_dir = get_project_dir()
+    manifest_path = Path(project_dir) / INTEGRITY_MANIFEST_PATH
+    manifest_path.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        with open(manifest_path, 'w', encoding='utf-8') as f:
+            json.dump(manifest, f, indent=2, ensure_ascii=False)
+    except Exception:
+        pass
+
+
+def verify_personality_integrity() -> Dict:
+    """
+    M-08: Verify integrity of personality files against manifest.
+    Warn-only: never blocks session start.
+
+    On first run: creates manifest with current hashes.
+    On subsequent runs: compares hashes, warns if changed.
+    Does NOT auto-update manifest when changes detected (requires manual reset).
+    """
+    project_dir = get_project_dir()
+    manifest = load_integrity_manifest()
+    files_section = manifest.get('files', {})
+
+    result = {
+        'verified': [],
+        'changed': [],
+        'new_files': [],
+        'missing': [],
+        'manifest_exists': bool(files_section),
+    }
+
+    current_hashes = {}
+
+    for rel_path in PERSONALITY_FILES:
+        filepath = Path(project_dir) / rel_path
+        if not filepath.exists():
+            result['missing'].append(rel_path)
+            continue
+
+        current_hash = compute_file_hash(filepath)
+        if current_hash is None:
+            continue
+
+        current_hashes[rel_path] = current_hash
+
+        if rel_path in files_section:
+            expected_hash = files_section[rel_path].get('sha256')
+            if expected_hash and expected_hash != current_hash:
+                result['changed'].append(rel_path)
+            else:
+                result['verified'].append(rel_path)
+        else:
+            result['new_files'].append(rel_path)
+
+    now = datetime.now().isoformat()
+
+    if not files_section:
+        # First run: create manifest with current hashes (baseline)
+        new_manifest = {
+            'version': '1.0.0',
+            'description': 'Integrity manifest for personality files (M-08)',
+            'generated': now,
+            'last_verified': now,
+            'files': {}
+        }
+        for rel_path, file_hash in current_hashes.items():
+            new_manifest['files'][rel_path] = {
+                'sha256': file_hash,
+                'verified_at': now
+            }
+        save_integrity_manifest(new_manifest)
+    elif not result['changed']:
+        # No changes: update last_verified timestamp only
+        manifest['last_verified'] = now
+        save_integrity_manifest(manifest)
+    # If changes detected: DON'T update manifest - preserve old hashes for comparison
+
+    return result
+
 
 #================================
 # UTILITÁRIOS
@@ -836,6 +959,9 @@ def main():
         # === VERIFICAR INTEGRIDADE ===
         integrity = check_system_integrity()
 
+        # === M-08: VERIFY PERSONALITY FILE INTEGRITY ===
+        personality_integrity = verify_personality_integrity()
+
         # === CARREGAR TODOS OS ARQUIVOS ===
         state = load_state()
         memory = load_memory_owner()
@@ -878,6 +1004,19 @@ def main():
         warnings = format_integrity_warnings(integrity)
         if warnings:
             output_parts.append(warnings)
+
+        # M-08: Personality integrity warnings
+        if personality_integrity.get('changed'):
+            output_parts.append("┌──────────────────────────────────────────────────────────────────────────────┐")
+            output_parts.append("│  ⚠️ PERSONALITY INTEGRITY WARNING                                            │")
+            output_parts.append("├──────────────────────────────────────────────────────────────────────────────┤")
+            for changed_file in personality_integrity['changed']:
+                fname = changed_file.split('/')[-1][:50]
+                output_parts.append(f"│  Modified since last verified: {fname:<40}│")
+            output_parts.append("│  Run /verify-integrity to accept changes or investigate.                    │")
+            output_parts.append("└──────────────────────────────────────────────────────────────────────────────┘")
+        elif not personality_integrity.get('manifest_exists'):
+            output_parts.append("[INTEGRITY] First run: personality file manifest created.")
 
         # Sistemas carregados
         loaded = integrity.get('loaded', [])
