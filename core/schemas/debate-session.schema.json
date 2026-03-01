@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Debate Session Schema",
+  "description": "Schema for structured debate sessions with scoring and conflict resolution",
+  "version": "1.0.0",
+  "type": "object",
+  "required": ["session", "participants", "rounds", "outcome"],
+  "properties": {
+    "session": {
+      "type": "object",
+      "required": ["id", "question", "date"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^DEB-\\d{4}-\\d{3}$" },
+        "question": { "type": "string" },
+        "date": { "type": "string", "format": "date" },
+        "level": { "type": "string", "enum": ["STANDARD", "COMPLEX", "CRITICAL"] }
+      }
+    },
+    "participants": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 2
+    },
+    "rounds": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["round_number", "arguments"],
+        "properties": {
+          "round_number": { "type": "integer" },
+          "arguments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["agent", "type", "content"],
+              "properties": {
+                "agent": { "type": "string" },
+                "type": { "type": "string", "enum": ["CLAIM", "REBUTTAL", "CONCESSION"] },
+                "content": {
+                  "type": "object",
+                  "properties": {
+                    "claim": { "type": "string" },
+                    "evidence": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "dna_id": { "type": "string" },
+                          "quote": { "type": "string" },
+                          "confidence": { "type": "number" }
+                        }
+                      }
+                    },
+                    "reasoning": { "type": "string" },
+                    "confidence": { "type": "number", "minimum": 0, "maximum": 100 },
+                    "limitations": { "type": "string" }
+                  }
+                },
+                "score": {
+                  "type": "object",
+                  "properties": {
+                    "evidence_strength": { "type": "number" },
+                    "logical_coherence": { "type": "number" },
+                    "practical_applicability": { "type": "number" },
+                    "risk_awareness": { "type": "number" },
+                    "epistemic_honesty": { "type": "number" },
+                    "total": { "type": "number" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": { "type": "string", "enum": ["FACTUAL", "PHILOSOPHICAL", "METHODOLOGICAL", "CONTEXTUAL", "PRIORITY"] },
+          "description": { "type": "string" },
+          "agents": { "type": "array", "items": { "type": "string" } },
+          "status": { "type": "string", "enum": ["RESOLVED", "DEADLOCKED", "ESCALATED"] },
+          "resolution": { "type": "string" }
+        }
+      }
+    },
+    "outcome": {
+      "type": "object",
+      "required": ["status", "confidence"],
+      "properties": {
+        "status": { "type": "string", "enum": ["CONVERGED", "DOMINANT", "DEADLOCKED", "CONSENSUS"] },
+        "winning_position": {
+          "type": "object",
+          "properties": {
+            "agent": { "type": "string" },
+            "claim": { "type": "string" },
+            "score": { "type": "number" },
+            "evidence": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "dissenting_positions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "agent": { "type": "string" },
+              "claim": { "type": "string" },
+              "score": { "type": "number" },
+              "reason_for_dissent": { "type": "string" }
+            }
+          }
+        },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 100 },
+        "review_trigger": { "type": "string" }
+      }
+    }
+  }
+}
