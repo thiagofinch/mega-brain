@@ -1,0 +1,312 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "quality-gate.schema.json",
+  "title": "Quality Gate Record",
+  "description": "Schema for recording quality gate decisions in the mind cloning pipeline. Each gate represents a mandatory human validation checkpoint.",
+  "version": "1.0.0",
+  "type": "object",
+  "required": ["gate_id", "person_id", "status", "reviewer", "timestamp"],
+  "properties": {
+    "gate_id": {
+      "type": "string",
+      "enum": ["QG-1", "QG-2", "QG-3", "QG-4", "QG-5", "QG-6", "QG-7", "QG-8", "QG-9"],
+      "description": "Quality gate identifier"
+    },
+    "gate_name": {
+      "type": "string",
+      "enum": [
+        "GO/NO-GO Decision",
+        "Source Sufficiency",
+        "Layer 6 Validation",
+        "Layer 7 Validation",
+        "Layer 8 Validation",
+        "System Prompt Review",
+        "Fidelity Testing",
+        "Brownfield Safety",
+        "Production Approval"
+      ],
+      "description": "Human-readable gate name"
+    },
+    "person_id": {
+      "type": "string",
+      "pattern": "^[A-Z]{2,4}$",
+      "description": "Canonical person prefix (e.g., AH, CG, SO)"
+    },
+    "person_name": {
+      "type": "string",
+      "description": "Full name of the cloning subject"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["NOT_STARTED", "IN_PROGRESS", "AWAITING_REVIEW", "PASSED", "FAILED", "CONDITIONAL", "SKIPPED"],
+      "description": "Current status of the gate"
+    },
+    "decision": {
+      "type": "string",
+      "description": "The specific decision made (gate-dependent, e.g., PASS, REJECT, CONFIRM, FLAG, APPROVE, REVISE, DEPLOY, HOLD, ROLLBACK)"
+    },
+    "reviewer": {
+      "type": "string",
+      "description": "Identity of the human reviewer"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of the decision"
+    },
+    "inputs": {
+      "$ref": "#/definitions/gate_inputs",
+      "description": "Gate-specific input data that was reviewed"
+    },
+    "criteria_results": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/criterion_result"
+      },
+      "description": "Results of each pass criterion evaluation"
+    },
+    "conditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Conditions attached to a CONDITIONAL pass"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Free-text reviewer notes and rationale"
+    },
+    "prerequisite_gates": {
+      "type": "object",
+      "description": "Status of all prerequisite gates at time of this decision",
+      "patternProperties": {
+        "^QG-[1-9]$": {
+          "type": "string",
+          "enum": ["PASSED", "SKIPPED", "NOT_APPLICABLE"]
+        }
+      }
+    },
+    "attempt_number": {
+      "type": "integer",
+      "minimum": 1,
+      "default": 1,
+      "description": "Which attempt this is (increments on retry after failure)"
+    },
+    "previous_attempt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of previous attempt if this is a retry"
+    }
+  },
+  "definitions": {
+    "gate_inputs": {
+      "type": "object",
+      "description": "Gate-specific input data. Structure varies by gate_id.",
+      "properties": {
+        "apex_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "QG-1: APEX viability score"
+        },
+        "apex_dimensions": {
+          "type": "object",
+          "description": "QG-1: Per-dimension APEX scores",
+          "properties": {
+            "accessibility": { "type": "number", "minimum": 0, "maximum": 20 },
+            "pattern_richness": { "type": "number", "minimum": 0, "maximum": 20 },
+            "expertise_depth": { "type": "number", "minimum": 0, "maximum": 20 },
+            "x_factor": { "type": "number", "minimum": 0, "maximum": 20 },
+            "icp_match": { "type": "number", "minimum": 0, "maximum": 20 },
+            "consistency": { "type": "number", "minimum": 0, "maximum": 20 }
+          }
+        },
+        "total_sources": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "QG-2: Total number of sources inventoried"
+        },
+        "source_types": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "QG-2: Distinct source types found"
+        },
+        "quality_breakdown": {
+          "type": "object",
+          "description": "QG-2: Source quality distribution",
+          "properties": {
+            "high": { "type": "integer", "minimum": 0 },
+            "medium": { "type": "integer", "minimum": 0 },
+            "low": { "type": "integer", "minimum": 0 }
+          }
+        },
+        "values_extracted": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "QG-3: List of value IDs extracted (VAL-XX-NNN)"
+        },
+        "values_confirmed": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "QG-3: Value IDs confirmed by human"
+        },
+        "values_flagged": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "QG-3: Value IDs flagged for re-analysis"
+        },
+        "obsessions_extracted": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "QG-4: List of obsession IDs extracted (OBS-XX-NNN)"
+        },
+        "obsessions_confirmed": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "QG-4: Obsession IDs confirmed by human"
+        },
+        "obsessions_flagged": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "QG-4: Obsession IDs flagged as inaccurate"
+        },
+        "paradoxes_extracted": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "QG-5: List of paradox IDs extracted (PAR-XX-NNN)"
+        },
+        "paradoxes_confirmed": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "QG-5: Paradox IDs confirmed as genuine"
+        },
+        "paradoxes_rejected": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "QG-5: Paradox IDs rejected as artifacts"
+        },
+        "human_validated": {
+          "type": "boolean",
+          "description": "QG-5: Whether L8 human_validated flag was set to true"
+        },
+        "prompt_type": {
+          "type": "string",
+          "enum": ["generalista", "specialist", "both"],
+          "description": "QG-6: Type of system prompt reviewed"
+        },
+        "token_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "QG-6: Total token count of the prompt"
+        },
+        "layer_coverage": {
+          "type": "object",
+          "description": "QG-6: Which DNA layers are represented in the prompt",
+          "properties": {
+            "L1": { "type": "boolean" },
+            "L2": { "type": "boolean" },
+            "L3": { "type": "boolean" },
+            "L4": { "type": "boolean" },
+            "L5": { "type": "boolean" },
+            "L6": { "type": "boolean" },
+            "L7": { "type": "boolean" },
+            "L8": { "type": "boolean" }
+          }
+        },
+        "fidelity_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "QG-7: Overall fidelity score (0.0-1.0)"
+        },
+        "distinguishability_rate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "QG-7: Fraction of evaluators who identified the clone"
+        },
+        "fidelity_tier": {
+          "type": "string",
+          "enum": ["GOLD", "SILVER", "BRONZE", "FAIL"],
+          "description": "QG-7: Fidelity tier classification"
+        },
+        "test_sample_size": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "QG-7: Number of evaluators in fidelity test"
+        },
+        "per_dimension_fidelity": {
+          "type": "object",
+          "description": "QG-7: Per-dimension fidelity scores",
+          "properties": {
+            "voice": { "type": "number", "minimum": 0, "maximum": 1 },
+            "reasoning": { "type": "number", "minimum": 0, "maximum": 1 },
+            "values": { "type": "number", "minimum": 0, "maximum": 1 },
+            "domain_expertise": { "type": "number", "minimum": 0, "maximum": 1 }
+          }
+        },
+        "previous_fidelity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "QG-8: Fidelity score before update"
+        },
+        "new_fidelity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "QG-8: Fidelity score after update"
+        },
+        "fidelity_delta": {
+          "type": "number",
+          "minimum": -1,
+          "maximum": 1,
+          "description": "QG-8: Change in fidelity (negative = regression)"
+        },
+        "dna_changes": {
+          "type": "object",
+          "description": "QG-8: Summary of DNA changes in update",
+          "properties": {
+            "added": { "type": "integer", "minimum": 0 },
+            "modified": { "type": "integer", "minimum": 0 },
+            "removed": { "type": "integer", "minimum": 0 }
+          }
+        },
+        "clone_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "description": "QG-9: Version of the clone package"
+        },
+        "all_gates_summary": {
+          "type": "object",
+          "description": "QG-9: Summary status of all prerequisite gates",
+          "patternProperties": {
+            "^QG-[1-8]$": {
+              "type": "string",
+              "enum": ["PASSED", "CONDITIONAL", "SKIPPED"]
+            }
+          }
+        }
+      }
+    },
+    "criterion_result": {
+      "type": "object",
+      "required": ["criterion", "result"],
+      "properties": {
+        "criterion": {
+          "type": "string",
+          "description": "Description of the pass criterion"
+        },
+        "result": {
+          "type": "string",
+          "enum": ["MET", "NOT_MET", "PARTIAL", "NOT_APPLICABLE"],
+          "description": "Whether the criterion was met"
+        },
+        "evidence": {
+          "type": "string",
+          "description": "Evidence or rationale for the result"
+        }
+      }
+    }
+  }
+}

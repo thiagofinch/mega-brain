@@ -1,7 +1,7 @@
 # Schema Index
 
-> **Versão:** 1.0.0
-> **Última Atualização:** 2025-12-17
+> **Versão:** 1.1.0
+> **Última Atualização:** 2026-02-28
 
 ## Schemas Disponíveis
 
@@ -13,6 +13,7 @@
 | `narratives-state.schema.json` | `/artifacts/narratives/NARRATIVES-STATE.json` | Narrativas sintetizadas |
 | `file-registry.schema.json` | `/system/REGISTRY/file-registry.json` | Registry de arquivos processados |
 | `decisions-registry.schema.json` | `/logs/SYSTEM/decisions-registry.json` | Decisões e precedentes |
+| `dna-mental-8-layer.schema.json` | `/knowledge/dna/persons/{PERSON}/DNA-MENTAL.json` | 8-layer cognitive architecture (DNA Mental) |
 
 ## Sistema de IDs Unificado
 
@@ -24,6 +25,14 @@
 | Chunk ID | `SOURCE_ID` + `-` + `NNN` | `JL001-001`, `CG003-015` |
 | Decision ID | `YYYYMMDDHHMMSS-ORIGIN-DEST` | `20251215130249-CRO-CFO` |
 | Precedent ID | `PREC-YYYY-NNN` | `PREC-2025-001` |
+| Philosophy ID | `FIL-PREFIX-NNN` | `FIL-AH-001` |
+| Mental Model ID | `MM-PREFIX-NNN` | `MM-AH-005` |
+| Heuristic ID | `HEUR-PREFIX-NNN` | `HEUR-CG-018` |
+| Framework ID | `FW-PREFIX-NNN` | `FW-AH-003` |
+| Methodology ID | `MET-PREFIX-NNN` | `MET-CG-005` |
+| Value ID | `VAL-PREFIX-NNN` | `VAL-AH-001` |
+| Obsession ID | `OBS-PREFIX-NNN` | `OBS-AH-001` |
+| Paradox ID | `PAR-PREFIX-NNN` | `PAR-AH-001` |
 
 ### Prefixos de Fonte Registrados
 
