@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // Check for GSD updates in background, write result to cache
 // Called by SessionStart hook - runs once per session
+// NOTE: This is the ONLY hook with network access (npm registry query)
 
 const fs = require('fs');
 const path = require('path');
@@ -22,9 +23,10 @@ if (!fs.existsSync(cacheDir)) {
 }
 
 // Run check in background (spawn background process, windowsHide prevents console flash)
+// Security: uses execFileSync (no shell) with explicit timeout for network call
 const child = spawn(process.execPath, ['-e', `
   const fs = require('fs');
-  const { execSync } = require('child_process');
+  const { execFileSync } = require('child_process');
 
   const cacheFile = ${JSON.stringify(cacheFile)};
   const projectVersionFile = ${JSON.stringify(projectVersionFile)};
@@ -42,8 +44,14 @@ const child = spawn(process.execPath, ['-e', `
 
   let latest = null;
   try {
-    latest = execSync('npm view get-shit-done-cc version', { encoding: 'utf8', timeout: 10000, windowsHide: true }).trim();
-  } catch (e) {}
+    latest = execFileSync('npm', ['view', 'get-shit-done-cc', 'version'], {
+      encoding: 'utf8',
+      timeout: 10000,
+      windowsHide: true
+    }).trim();
+  } catch (e) {
+    // Network or npm failure - non-critical, write cache with error state
+  }
 
   const result = {
     update_available: latest && installed !== latest,
@@ -52,7 +60,11 @@ const child = spawn(process.execPath, ['-e', `
     checked: Math.floor(Date.now() / 1000)
   };
 
-  fs.writeFileSync(cacheFile, JSON.stringify(result));
+  try {
+    fs.writeFileSync(cacheFile, JSON.stringify(result));
+  } catch (e) {
+    // Cache write failure - non-critical
+  }
 `], {
   stdio: 'ignore',
   windowsHide: true,

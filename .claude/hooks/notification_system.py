@@ -35,10 +35,17 @@ PROJECT_ROOT = Path(os.environ.get('CLAUDE_PROJECT_DIR', '.'))
 LOGS_PATH = PROJECT_ROOT / 'logs' / 'notifications'
 LOGS_PATH.mkdir(parents=True, exist_ok=True)
 
+def _escape_applescript(s: str) -> str:
+    """Escape string for safe use inside AppleScript double-quoted strings."""
+    return s.replace('\\', '\\\\').replace('"', '\\"')
+
 def send_macos_notification(title: str, message: str, sound: str = "default"):
     """Send native macOS notification"""
+    safe_message = _escape_applescript(message)
+    safe_title = _escape_applescript(title)
+    safe_sound = _escape_applescript(sound)
     script = f'''
-    display notification "{message}" with title "{title}" sound name "{sound}"
+    display notification "{safe_message}" with title "{safe_title}" sound name "{safe_sound}"
     '''
     try:
         subprocess.run(['osascript', '-e', script], capture_output=True, timeout=5)

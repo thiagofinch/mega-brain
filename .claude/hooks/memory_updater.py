@@ -86,6 +86,8 @@ def update_memory_file(section, content):
     with open(memory_path, 'r', encoding='utf-8') as f:
         memory = f.read()
 
+    original_memory = memory  # snapshot for audit diff
+
     # Encontrar secao de decisoes e adicionar
     if section == 'decisions':
         # Procurar por "### Decisoes Importantes"
@@ -128,6 +130,15 @@ def update_memory_file(section, content):
     with open(memory_path, 'w', encoding='utf-8') as f:
         f.write(memory)
 
+    # Audit: log what changed
+    if memory != original_memory:
+        diff_lines = len(memory.splitlines()) - len(original_memory.splitlines())
+        audit_file_modification(
+            str(memory_path),
+            f'update_section:{section}',
+            f'+{diff_lines} lines, content: {content[:100]}'
+        )
+
     return True
 
 def log_update(update_type, content):
@@ -144,6 +155,25 @@ def log_update(update_type, content):
 
     with open(log_path, 'a', encoding='utf-8') as f:
         f.write(json.dumps(log_entry, ensure_ascii=False) + '\n')
+
+def audit_file_modification(file_path, modification_type, diff_summary):
+    """Audit log for ALL file modifications made by this hook."""
+    project_dir = get_project_dir()
+    audit_path = Path(project_dir) / 'logs' / 'memory-audit.jsonl'
+    audit_path.parent.mkdir(parents=True, exist_ok=True)
+
+    audit_entry = {
+        'timestamp': datetime.now().isoformat(),
+        'file_modified': str(file_path),
+        'modification_type': modification_type,
+        'diff_summary': diff_summary[:500]
+    }
+
+    try:
+        with open(audit_path, 'a', encoding='utf-8') as f:
+            f.write(json.dumps(audit_entry, ensure_ascii=False) + '\n')
+    except Exception:
+        pass  # Audit logging should never block the hook
 
 def main():
     """Funcao principal do hook."""

@@ -289,7 +289,7 @@ def on_user_message(content: str, metadata: Dict = None):
     """Handler para mensagem do usuário (UserPromptSubmit)."""
     entry = {
         'type': 'user_message',
-        'content': content[:2000],  # Limitar tamanho
+        'content': content[:200],  # Limitar tamanho (security: avoid logging sensitive data)
         'metadata': metadata or {}
     }
 
@@ -304,11 +304,20 @@ def on_user_message(content: str, metadata: Dict = None):
 
 def on_tool_use(tool_name: str, tool_input: Dict = None, result_preview: str = None):
     """Handler para uso de ferramenta (PostToolUse)."""
+    # Security: log only metadata, not full content (may contain secrets/tokens)
+    safe_input = None
+    if tool_input:
+        # Only log file paths and tool name, not content
+        safe_input = {}
+        for key in ['file_path', 'filepath', 'path', 'command', 'pattern']:
+            if key in tool_input:
+                safe_input[key] = str(tool_input[key])[:200]
+
     entry = {
         'type': 'tool_use',
         'tool': tool_name,
-        'input_preview': str(tool_input)[:500] if tool_input else None,
-        'result_preview': result_preview[:500] if result_preview else None
+        'input_preview': str(safe_input)[:200] if safe_input else None,
+        'result_preview': result_preview[:200] if result_preview else None
     }
 
     # Extrair arquivo se for Edit/Write/Read
@@ -325,7 +334,7 @@ def on_response_complete(preview: str = None):
     """Handler para resposta completa (Stop)."""
     entry = {
         'type': 'response',
-        'preview': preview[:500] if preview else '[response complete]'
+        'preview': preview[:200] if preview else '[response complete]'
     }
 
     append_to_jsonl(entry)
