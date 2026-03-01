@@ -1,5 +1,6 @@
 # === LAYER 3 - PERSONAL DATA (100% gitignored) ===
 .data/
+research/
 
 # === EXTERNAL FRAMEWORKS (NEVER track) ===
 .aios-core/
