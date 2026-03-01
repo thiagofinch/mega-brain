@@ -1,0 +1,768 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "dna-mental-8-layer.schema.json",
+  "title": "DNA Mental 8-Layer Cognitive Architecture",
+  "description": "Schema for the 8-layer DNA Mental cognitive architecture. Extends the original 5-layer system with Values Hierarchy (L6), Core Obsessions (L7), and Productive Paradoxes (L8).",
+  "version": "1.0.0",
+  "type": "object",
+  "required": ["metadata", "layers"],
+  "properties": {
+    "metadata": {
+      "$ref": "#/definitions/metadata"
+    },
+    "layers": {
+      "type": "object",
+      "required": ["L1_philosophies", "L2_mental_models", "L3_heuristics", "L4_frameworks", "L5_methodologies", "L6_values_hierarchy", "L7_core_obsessions", "L8_productive_paradoxes"],
+      "properties": {
+        "L1_philosophies": {
+          "$ref": "#/definitions/layer_philosophies"
+        },
+        "L2_mental_models": {
+          "$ref": "#/definitions/layer_mental_models"
+        },
+        "L3_heuristics": {
+          "$ref": "#/definitions/layer_heuristics"
+        },
+        "L4_frameworks": {
+          "$ref": "#/definitions/layer_frameworks"
+        },
+        "L5_methodologies": {
+          "$ref": "#/definitions/layer_methodologies"
+        },
+        "L6_values_hierarchy": {
+          "$ref": "#/definitions/layer_values_hierarchy"
+        },
+        "L7_core_obsessions": {
+          "$ref": "#/definitions/layer_core_obsessions"
+        },
+        "L8_productive_paradoxes": {
+          "$ref": "#/definitions/layer_productive_paradoxes"
+        }
+      }
+    },
+    "cross_layer_links": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/cross_layer_link"
+      },
+      "description": "Explicit connections between items across different layers"
+    },
+    "extraction_log": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/extraction_entry"
+      },
+      "description": "Audit trail of when layers were extracted and from which sources"
+    }
+  },
+  "definitions": {
+    "metadata": {
+      "type": "object",
+      "required": ["person_id", "person_name", "schema_version", "total_sources_processed", "created_at", "last_updated"],
+      "properties": {
+        "person_id": {
+          "type": "string",
+          "pattern": "^[A-Z]{2,4}$",
+          "description": "Canonical person prefix (e.g., AH, CG, SO)"
+        },
+        "person_name": {
+          "type": "string",
+          "description": "Full canonical name (e.g., Alex Hormozi)"
+        },
+        "schema_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "const": "1.0.0"
+        },
+        "total_sources_processed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "last_updated": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "layer_completeness": {
+          "type": "object",
+          "description": "Percentage completeness per layer (0-100)",
+          "properties": {
+            "L1": { "type": "number", "minimum": 0, "maximum": 100 },
+            "L2": { "type": "number", "minimum": 0, "maximum": 100 },
+            "L3": { "type": "number", "minimum": 0, "maximum": 100 },
+            "L4": { "type": "number", "minimum": 0, "maximum": 100 },
+            "L5": { "type": "number", "minimum": 0, "maximum": 100 },
+            "L6": { "type": "number", "minimum": 0, "maximum": 100 },
+            "L7": { "type": "number", "minimum": 0, "maximum": 100 },
+            "L8": { "type": "number", "minimum": 0, "maximum": 100 }
+          }
+        }
+      }
+    },
+
+    "source_reference": {
+      "type": "object",
+      "required": ["source_id", "chunk_id"],
+      "properties": {
+        "source_id": {
+          "type": "string",
+          "pattern": "^[A-Z]{2,4}\\d{3}$",
+          "description": "Source document ID (e.g., AH001, CG003)"
+        },
+        "chunk_id": {
+          "type": "string",
+          "pattern": "^[A-Z]{2,4}\\d{3}-\\d{3}$",
+          "description": "Specific chunk within source (e.g., AH001-015)"
+        },
+        "insight_id": {
+          "type": "string",
+          "description": "Optional reference to extracted insight"
+        },
+        "source_title": {
+          "type": "string"
+        },
+        "source_path": {
+          "type": "string",
+          "description": "Path to original file in inbox"
+        },
+        "quote": {
+          "type": "string",
+          "description": "Direct quote from source material"
+        }
+      }
+    },
+
+    "layer_philosophies": {
+      "type": "object",
+      "required": ["layer_id", "layer_name", "items"],
+      "properties": {
+        "layer_id": { "type": "string", "const": "L1" },
+        "layer_name": { "type": "string", "const": "Philosophies" },
+        "description": { "type": "string" },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/philosophy_item"
+          }
+        }
+      }
+    },
+    "philosophy_item": {
+      "type": "object",
+      "required": ["id", "statement", "domain", "sources", "confidence"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^FIL-[A-Z]{2,4}-\\d{3}$",
+          "description": "Philosophy ID (e.g., FIL-AH-001)"
+        },
+        "statement": {
+          "type": "string",
+          "minLength": 10,
+          "description": "Core belief statement"
+        },
+        "domain": {
+          "type": "string",
+          "description": "Domain of applicability (e.g., scaling, pricing, hiring)"
+        },
+        "sources": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/source_reference" },
+          "minItems": 1
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Extraction confidence (0.0-1.0)"
+        },
+        "reinforcement_count": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Number of independent sources that reinforce this philosophy"
+        }
+      }
+    },
+
+    "layer_mental_models": {
+      "type": "object",
+      "required": ["layer_id", "layer_name", "items"],
+      "properties": {
+        "layer_id": { "type": "string", "const": "L2" },
+        "layer_name": { "type": "string", "const": "Mental Models" },
+        "description": { "type": "string" },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/mental_model_item"
+          }
+        }
+      }
+    },
+    "mental_model_item": {
+      "type": "object",
+      "required": ["id", "name", "description", "trigger_questions", "domain", "sources", "confidence"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^MM-[A-Z]{2,4}-\\d{3}$",
+          "description": "Mental Model ID (e.g., MM-AH-001)"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the mental model"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 20,
+          "description": "How this model frames thinking"
+        },
+        "trigger_questions": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1,
+          "description": "Questions this model prompts the thinker to ask"
+        },
+        "domain": { "type": "string" },
+        "sources": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/source_reference" },
+          "minItems": 1
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+
+    "layer_heuristics": {
+      "type": "object",
+      "required": ["layer_id", "layer_name", "items"],
+      "properties": {
+        "layer_id": { "type": "string", "const": "L3" },
+        "layer_name": { "type": "string", "const": "Heuristics" },
+        "description": { "type": "string" },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/heuristic_item"
+          }
+        }
+      }
+    },
+    "heuristic_item": {
+      "type": "object",
+      "required": ["id", "rule", "domain", "type", "sources", "confidence"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^HEUR-[A-Z]{2,4}-\\d{3}$",
+          "description": "Heuristic ID (e.g., HEUR-AH-025)"
+        },
+        "rule": {
+          "type": "string",
+          "minLength": 10,
+          "description": "The practical rule or decision shortcut"
+        },
+        "domain": { "type": "string" },
+        "type": {
+          "type": "string",
+          "enum": ["quantitative", "qualitative"],
+          "description": "Whether the heuristic contains numeric thresholds"
+        },
+        "threshold": {
+          "type": "object",
+          "description": "Numeric threshold if type is quantitative",
+          "properties": {
+            "metric": { "type": "string" },
+            "operator": { "type": "string", "enum": ["<", "<=", "=", ">=", ">", "range"] },
+            "value": { "type": ["number", "string"] },
+            "unit": { "type": "string" }
+          }
+        },
+        "when_to_apply": {
+          "type": "string",
+          "description": "Context in which this heuristic applies"
+        },
+        "when_not_to_apply": {
+          "type": "string",
+          "description": "Context in which this heuristic should NOT be applied"
+        },
+        "sources": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/source_reference" },
+          "minItems": 1
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+
+    "layer_frameworks": {
+      "type": "object",
+      "required": ["layer_id", "layer_name", "items"],
+      "properties": {
+        "layer_id": { "type": "string", "const": "L4" },
+        "layer_name": { "type": "string", "const": "Frameworks" },
+        "description": { "type": "string" },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/framework_item"
+          }
+        }
+      }
+    },
+    "framework_item": {
+      "type": "object",
+      "required": ["id", "name", "description", "components", "domain", "sources", "confidence"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^FW-[A-Z]{2,4}-\\d{3}$",
+          "description": "Framework ID (e.g., FW-AH-003)"
+        },
+        "name": {
+          "type": "string",
+          "description": "Framework name (e.g., CLOSER Framework)"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 20
+        },
+        "components": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "description"],
+            "properties": {
+              "name": { "type": "string" },
+              "description": { "type": "string" },
+              "order": { "type": "integer" }
+            }
+          },
+          "minItems": 2,
+          "description": "Ordered components/steps of the framework"
+        },
+        "domain": { "type": "string" },
+        "output": {
+          "type": "string",
+          "description": "What applying this framework produces"
+        },
+        "sources": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/source_reference" },
+          "minItems": 1
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+
+    "layer_methodologies": {
+      "type": "object",
+      "required": ["layer_id", "layer_name", "items"],
+      "properties": {
+        "layer_id": { "type": "string", "const": "L5" },
+        "layer_name": { "type": "string", "const": "Methodologies" },
+        "description": { "type": "string" },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/methodology_item"
+          }
+        }
+      }
+    },
+    "methodology_item": {
+      "type": "object",
+      "required": ["id", "name", "description", "steps", "domain", "sources", "confidence"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^MET-[A-Z]{2,4}-\\d{3}$",
+          "description": "Methodology ID (e.g., MET-CG-005)"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 20
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["step_number", "action", "description"],
+            "properties": {
+              "step_number": { "type": "integer", "minimum": 1 },
+              "action": { "type": "string" },
+              "description": { "type": "string" },
+              "success_criteria": { "type": "string" }
+            }
+          },
+          "minItems": 2,
+          "description": "Ordered step-by-step implementation"
+        },
+        "prerequisites": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "What must be true before applying this methodology"
+        },
+        "domain": { "type": "string" },
+        "expected_outcome": { "type": "string" },
+        "sources": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/source_reference" },
+          "minItems": 1
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+
+    "layer_values_hierarchy": {
+      "type": "object",
+      "required": ["layer_id", "layer_name", "items"],
+      "properties": {
+        "layer_id": { "type": "string", "const": "L6" },
+        "layer_name": { "type": "string", "const": "Values Hierarchy" },
+        "description": {
+          "type": "string",
+          "default": "Values revealed through sacrifice, trade-offs, and resource allocation - not self-declarations. A person's true values are what they sacrifice for, not what they say they value."
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/value_item"
+          }
+        }
+      }
+    },
+    "value_item": {
+      "type": "object",
+      "required": ["id", "value", "rank", "evidence_type", "trade_off_evidence", "sources", "confidence"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^VAL-[A-Z]{2,4}-\\d{3}$",
+          "description": "Value ID (e.g., VAL-AH-001)"
+        },
+        "value": {
+          "type": "string",
+          "minLength": 3,
+          "description": "The value being ranked (e.g., Speed, Control, Freedom, Impact)"
+        },
+        "rank": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Position in hierarchy (1 = highest priority value)"
+        },
+        "evidence_type": {
+          "type": "string",
+          "enum": ["sacrifice", "trade_off", "resource_allocation", "repeated_choice", "crisis_behavior"],
+          "description": "How this value was revealed - never through self-declaration alone"
+        },
+        "trade_off_evidence": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["chose", "over", "context"],
+            "properties": {
+              "chose": {
+                "type": "string",
+                "description": "What they chose (reveals the value)"
+              },
+              "over": {
+                "type": "string",
+                "description": "What they sacrificed (reveals what is lower in hierarchy)"
+              },
+              "context": {
+                "type": "string",
+                "description": "Situation where the trade-off occurred"
+              },
+              "source": {
+                "$ref": "#/definitions/source_reference"
+              }
+            }
+          },
+          "minItems": 1,
+          "description": "Concrete evidence of trade-offs that reveal this value's position"
+        },
+        "declared_vs_revealed": {
+          "type": "string",
+          "enum": ["aligned", "contradicted", "not_declared"],
+          "description": "Whether person's self-declared values align with revealed behavior"
+        },
+        "sources": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/source_reference" },
+          "minItems": 3,
+          "description": "MINIMUM 3 independent sources required (triangulation)"
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+
+    "layer_core_obsessions": {
+      "type": "object",
+      "required": ["layer_id", "layer_name", "items"],
+      "properties": {
+        "layer_id": { "type": "string", "const": "L7" },
+        "layer_name": { "type": "string", "const": "Core Obsessions" },
+        "description": {
+          "type": "string",
+          "default": "The 2-3 deep cognitive drivers that appear in 50%+ of all source material. These are the gravitational forces that pull every framework, heuristic, and philosophy into orbit. Not topics - obsessions are the WHY behind the topics."
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/obsession_item"
+          },
+          "minItems": 1,
+          "maxItems": 5,
+          "description": "Strictly limited to 2-5 items. If more are found, the analysis is too shallow."
+        }
+      }
+    },
+    "obsession_item": {
+      "type": "object",
+      "required": ["id", "obsession", "description", "frequency", "manifestations", "sources", "confidence"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^OBS-[A-Z]{2,4}-\\d{3}$",
+          "description": "Obsession ID (e.g., OBS-AH-001)"
+        },
+        "obsession": {
+          "type": "string",
+          "minLength": 5,
+          "description": "Name of the core obsession (e.g., Leverage, Asymmetry, Volume)"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 50,
+          "description": "Deep description of what this obsession means to the person"
+        },
+        "frequency": {
+          "type": "number",
+          "minimum": 0.5,
+          "maximum": 1.0,
+          "description": "Fraction of source material where this obsession surfaces (must be >= 0.50)"
+        },
+        "manifestations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["layer", "item_id", "how"],
+            "properties": {
+              "layer": {
+                "type": "string",
+                "enum": ["L1", "L2", "L3", "L4", "L5", "L6"],
+                "description": "Which layer this obsession manifests in"
+              },
+              "item_id": {
+                "type": "string",
+                "description": "ID of the item in that layer (e.g., FIL-AH-003)"
+              },
+              "how": {
+                "type": "string",
+                "description": "How this obsession manifests in that specific item"
+              }
+            }
+          },
+          "minItems": 3,
+          "description": "Must manifest across at least 3 different layers"
+        },
+        "origin_hypothesis": {
+          "type": "string",
+          "description": "Hypothesis about where this obsession originates (biographical, experiential)"
+        },
+        "sources": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/source_reference" },
+          "minItems": 3,
+          "description": "MINIMUM 3 independent sources required (triangulation)"
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+
+    "layer_productive_paradoxes": {
+      "type": "object",
+      "required": ["layer_id", "layer_name", "items"],
+      "properties": {
+        "layer_id": { "type": "string", "const": "L8" },
+        "layer_name": { "type": "string", "const": "Productive Paradoxes" },
+        "description": {
+          "type": "string",
+          "default": "Contradictions that coexist contextually. These are NOT errors or inconsistencies - they are the nuanced, context-dependent thinking that makes a mind clone feel human. A naive system picks one side; a sophisticated clone holds both and knows when each applies. This is the GOLD LAYER - requires human validation before publishing."
+        },
+        "human_validated": {
+          "type": "boolean",
+          "default": false,
+          "description": "REQUIRED: Must be true before this layer is used in agent generation. Human must review and confirm paradoxes are genuine, not extraction errors."
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/paradox_item"
+          }
+        }
+      }
+    },
+    "paradox_item": {
+      "type": "object",
+      "required": ["id", "thesis", "antithesis", "synthesis", "thesis_context", "antithesis_context", "sources_thesis", "sources_antithesis", "confidence", "validation_status"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^PAR-[A-Z]{2,4}-\\d{3}$",
+          "description": "Paradox ID (e.g., PAR-AH-001)"
+        },
+        "thesis": {
+          "type": "string",
+          "minLength": 10,
+          "description": "One side of the contradiction (e.g., 'Give everything away for free')"
+        },
+        "antithesis": {
+          "type": "string",
+          "minLength": 10,
+          "description": "The opposing side (e.g., 'Charge premium prices')"
+        },
+        "synthesis": {
+          "type": "string",
+          "minLength": 20,
+          "description": "How both coexist - the contextual resolution (e.g., 'Free builds audience, premium extracts value from those who want speed/implementation')"
+        },
+        "thesis_context": {
+          "type": "string",
+          "description": "When/where the thesis applies"
+        },
+        "antithesis_context": {
+          "type": "string",
+          "description": "When/where the antithesis applies"
+        },
+        "domain": {
+          "type": "string",
+          "description": "Domain where this paradox operates"
+        },
+        "related_layers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "layer": { "type": "string" },
+              "item_id": { "type": "string" },
+              "side": { "type": "string", "enum": ["thesis", "antithesis", "both"] }
+            }
+          },
+          "description": "Which items in other layers relate to each side of the paradox"
+        },
+        "sources_thesis": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/source_reference" },
+          "minItems": 2,
+          "description": "MINIMUM 2 sources supporting the thesis side"
+        },
+        "sources_antithesis": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/source_reference" },
+          "minItems": 2,
+          "description": "MINIMUM 2 sources supporting the antithesis side"
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Confidence that this is a genuine productive paradox, not an extraction error"
+        },
+        "validation_status": {
+          "type": "string",
+          "enum": ["pending_human_review", "human_confirmed", "human_rejected", "auto_high_confidence"],
+          "description": "Human validation status - L8 items should not be used in agents until human_confirmed"
+        }
+      }
+    },
+
+    "cross_layer_link": {
+      "type": "object",
+      "required": ["from_layer", "from_id", "to_layer", "to_id", "relationship"],
+      "properties": {
+        "from_layer": {
+          "type": "string",
+          "enum": ["L1", "L2", "L3", "L4", "L5", "L6", "L7", "L8"]
+        },
+        "from_id": { "type": "string" },
+        "to_layer": {
+          "type": "string",
+          "enum": ["L1", "L2", "L3", "L4", "L5", "L6", "L7", "L8"]
+        },
+        "to_id": { "type": "string" },
+        "relationship": {
+          "type": "string",
+          "enum": ["derives_from", "implements", "manifests_in", "contradicts", "reinforces", "contextualizes"],
+          "description": "Nature of the cross-layer connection"
+        },
+        "description": {
+          "type": "string",
+          "description": "Human-readable explanation of the link"
+        }
+      }
+    },
+
+    "extraction_entry": {
+      "type": "object",
+      "required": ["timestamp", "layer", "action", "items_affected"],
+      "properties": {
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "layer": {
+          "type": "string",
+          "enum": ["L1", "L2", "L3", "L4", "L5", "L6", "L7", "L8"]
+        },
+        "action": {
+          "type": "string",
+          "enum": ["initial_extraction", "reinforcement", "revision", "human_validation", "paradox_confirmed", "paradox_rejected"]
+        },
+        "items_affected": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "List of item IDs affected"
+        },
+        "source_batch": {
+          "type": "string",
+          "description": "Batch ID that triggered this extraction"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
