@@ -201,8 +201,6 @@
       "Bash(chmod 777 *)",
       "Bash(git push --force *)",
       "Bash(git push --force)",
-      "Bash(git push *)",
-      "Bash(git push)",
       "Bash(git reset --hard *)",
       "Bash(npm publish *)",
       "Bash(npm publish)"
