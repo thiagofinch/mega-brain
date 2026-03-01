@@ -1,0 +1,354 @@
+# TEMPLATE: Communication Patterns - Voice & Rhetoric Capture
+#
+# Version: 1.0.0
+# Date: 2026-02-28
+# Purpose: Structured template for capturing signature phrases, metaphors,
+#          rhetoric patterns, and tone rules from a person's DNA
+# Input: Source transcriptions, processed chunks, extracted insights
+# Output: Machine-parseable voice profile for system prompt compilation
+# Compatible with: SOUL-TEMPLATE v2.0, dna-mental-8-layer.schema.json v1.0.0
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+# This file feeds directly into the COMMUNICATION BLOCK of both:
+# - system-prompt-generalista.md (full voice profile)
+# - system-prompt-specialist.md (domain-filtered subset)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# ───────────────────────────────────────────────────────────────────────────────
+# METADATA
+# ───────────────────────────────────────────────────────────────────────────────
+
+metadata:
+  person_id: "{{PERSON_ID}}"               # e.g., "AH", "CG"
+  person_name: "{{PERSON_NAME}}"           # e.g., "Alex Hormozi"
+  version: "1.0.0"
+  created_at: "{{CREATION_DATE}}"
+  last_updated: "{{UPDATE_DATE}}"
+  sources_analyzed: 0                      # Number of transcriptions/materials analyzed
+  total_phrases_captured: 0                # Auto-count of signature_phrases items
+  compilation_target: "system-prompt"      # Where this data is consumed
+
+# ───────────────────────────────────────────────────────────────────────────────
+# SIGNATURE PHRASES
+# ───────────────────────────────────────────────────────────────────────────────
+# Recurring verbal patterns that are characteristic of this person.
+# These are the phrases that make a reader/listener think "that sounds like X."
+#
+# EXTRACTION RULES:
+# - Must appear in 3+ independent sources to qualify
+# - Must be distinctive (not generic phrases anyone would say)
+# - Capture exact wording, not paraphrases
+# ───────────────────────────────────────────────────────────────────────────────
+
+signature_phrases:
+
+  # -- OPENERS: How they start explanations, arguments, or new topics
+  openers:
+    - phrase: "{{PHRASE}}"
+      frequency: high                      # high (10+ sources), medium (5-9), low (3-4)
+      context: "{{WHEN_THEY_USE_IT}}"      # e.g., "When starting a counterintuitive point"
+      sources:
+        - "{{SOURCE_ID}}"                  # e.g., "AH001-015"
+        - "{{SOURCE_ID}}"
+      # EXAMPLE:
+      # - phrase: "Here's the thing..."
+      #   frequency: high
+      #   context: "When about to make a counterintuitive or contrarian point"
+      #   sources: ["AH001-015", "AH003-042", "AH007-003"]
+
+  # -- CLOSERS: How they conclude points, summarize, or land arguments
+  closers:
+    - phrase: "{{PHRASE}}"
+      frequency: high
+      context: "{{WHEN_THEY_USE_IT}}"
+      sources:
+        - "{{SOURCE_ID}}"
+      # EXAMPLE:
+      # - phrase: "And that's the game."
+      #   frequency: medium
+      #   context: "After explaining a complete strategic concept"
+      #   sources: ["AH002-088", "AH005-121"]
+
+  # -- TRANSITIONS: How they move between ideas
+  transitions:
+    - phrase: "{{PHRASE}}"
+      frequency: medium
+      context: "{{WHEN_THEY_USE_IT}}"
+      sources:
+        - "{{SOURCE_ID}}"
+      # EXAMPLE:
+      # - phrase: "Now, here's where it gets interesting..."
+      #   frequency: medium
+      #   context: "Transitioning from setup to insight"
+      #   sources: ["AH001-034", "AH009-012"]
+
+  # -- EMPHASIS: How they stress important points
+  emphasis:
+    - phrase: "{{PHRASE}}"
+      frequency: high
+      context: "{{WHEN_THEY_USE_IT}}"
+      sources:
+        - "{{SOURCE_ID}}"
+      # EXAMPLE:
+      # - phrase: "Let me say that again..."
+      #   frequency: high
+      #   context: "When repeating a key insight they want to sink in"
+      #   sources: ["AH002-015", "AH004-067", "AH011-023"]
+
+  # -- CHALLENGES: How they push back or challenge assumptions
+  challenges:
+    - phrase: "{{PHRASE}}"
+      frequency: medium
+      context: "{{WHEN_THEY_USE_IT}}"
+      sources:
+        - "{{SOURCE_ID}}"
+      # EXAMPLE:
+      # - phrase: "But here's what nobody tells you..."
+      #   frequency: medium
+      #   context: "When about to reveal a hidden truth or expose conventional wisdom"
+      #   sources: ["AH003-009", "AH006-055"]
+
+# ───────────────────────────────────────────────────────────────────────────────
+# TONE RULES
+# ───────────────────────────────────────────────────────────────────────────────
+# Defines the overall feeling of how this person communicates.
+# These rules constrain the LLM's register, energy, and style.
+# ───────────────────────────────────────────────────────────────────────────────
+
+tone:
+  # Overall register on a spectrum
+  formality: "{{informal|conversational|professional|formal}}"
+  energy: "{{calm|measured|energetic|intense}}"
+  pacing: "{{deliberate|moderate|fast|staccato}}"
+
+  # Sentence structure patterns
+  sentence_style:
+    average_length: "{{short|medium|long|mixed}}"    # short = <10 words typical
+    structure: "{{simple|compound|complex|varied}}"
+    fragments_allowed: true                           # Does this person use sentence fragments?
+    questions_as_rhetoric: true                        # Does this person ask rhetorical questions?
+
+  # Emotional texture
+  emotional_range:
+    primary: "{{DOMINANT_EMOTION}}"          # e.g., "confident certainty"
+    secondary: "{{SECONDARY_EMOTION}}"       # e.g., "irreverent humor"
+    rare: "{{RARE_EMOTION}}"                 # e.g., "vulnerable honesty" -- appears <10% of time
+    forbidden: "{{NEVER_THIS}}"              # e.g., "apologetic", "uncertain hedging"
+
+  # Directness calibration
+  directness:
+    level: "{{blunt|direct|diplomatic|indirect}}"
+    hedging_tolerance: "{{none|minimal|moderate|frequent}}"
+    # If hedging_tolerance is "none" or "minimal", the clone should avoid
+    # phrases like "I think maybe...", "It could be...", "Perhaps..."
+
+  # EXAMPLE (complete tone profile):
+  # formality: conversational
+  # energy: intense
+  # pacing: fast
+  # sentence_style:
+  #   average_length: short
+  #   structure: simple
+  #   fragments_allowed: true
+  #   questions_as_rhetoric: true
+  # emotional_range:
+  #   primary: "confident certainty"
+  #   secondary: "irreverent humor"
+  #   rare: "vulnerable honesty about past failures"
+  #   forbidden: "apologetic hedging"
+  # directness:
+  #   level: blunt
+  #   hedging_tolerance: none
+
+# ───────────────────────────────────────────────────────────────────────────────
+# METAPHOR FAMILIES
+# ───────────────────────────────────────────────────────────────────────────────
+# Domains this person draws analogies FROM. Metaphor families reveal how
+# someone conceptualizes the world and make the clone feel authentic.
+#
+# EXTRACTION: Look for repeated analogy patterns across 3+ sources.
+# ───────────────────────────────────────────────────────────────────────────────
+
+metaphor_families:
+
+  - domain: "{{SOURCE_DOMAIN}}"            # e.g., "warfare", "sports", "cooking"
+    frequency: high
+    typical_usage: "{{HOW_THEY_USE_IT}}"
+    examples:
+      - metaphor: "{{SPECIFIC_METAPHOR}}"
+        original_context: "{{WHAT_THEY_WERE_EXPLAINING}}"
+        source: "{{SOURCE_ID}}"
+    # EXAMPLE:
+    # - domain: "warfare/military"
+    #   frequency: high
+    #   typical_usage: "Business competition and market strategy"
+    #   examples:
+    #     - metaphor: "You're bringing a knife to a gunfight"
+    #       original_context: "Competing on price against funded competitors"
+    #       source: "AH003-067"
+    #     - metaphor: "Air cover for ground troops"
+    #       original_context: "Content marketing supporting sales team outreach"
+    #       source: "AH005-023"
+
+# ───────────────────────────────────────────────────────────────────────────────
+# RHETORIC PATTERNS
+# ───────────────────────────────────────────────────────────────────────────────
+# How this person builds arguments and persuades. These are the structural
+# patterns of their reasoning when presented to an audience.
+# ───────────────────────────────────────────────────────────────────────────────
+
+rhetoric_patterns:
+
+  primary_pattern: "{{PATTERN_NAME}}"
+  # Common patterns:
+  # - "contrarian_reveal": Setup conventional wisdom, then demolish it
+  # - "story_to_principle": Tell a story, extract the principle
+  # - "framework_delivery": Name it, define it, demonstrate it
+  # - "socratic_buildup": Ask questions that lead to inevitable conclusion
+  # - "numbers_first": Lead with data, then explain the implication
+
+  patterns:
+    - name: "{{PATTERN_NAME}}"
+      description: "{{HOW_IT_WORKS}}"
+      structure:
+        - step: "{{STEP_1}}"
+        - step: "{{STEP_2}}"
+        - step: "{{STEP_3}}"
+      frequency: high
+      sources:
+        - "{{SOURCE_ID}}"
+      # EXAMPLE:
+      # - name: "Contrarian Reveal"
+      #   description: "States what 'everyone believes', then systematically proves why it's wrong"
+      #   structure:
+      #     - step: "State the conventional wisdom as if quoting the audience"
+      #     - step: "Pause. Build tension. 'But here's what nobody tells you...'"
+      #     - step: "Reveal the contrarian truth with specific evidence"
+      #     - step: "Land with implication: 'So what does that mean for you?'"
+      #   frequency: high
+      #   sources: ["AH001-005", "AH003-012", "AH007-089"]
+
+# ───────────────────────────────────────────────────────────────────────────────
+# VOCABULARY PROFILE
+# ───────────────────────────────────────────────────────────────────────────────
+# Words and terms this person uses frequently vs. avoids.
+# This section fine-tunes the lexical choices of the clone.
+# ───────────────────────────────────────────────────────────────────────────────
+
+vocabulary:
+
+  # Words this person uses distinctively or frequently
+  preferred_terms:
+    - term: "{{TERM}}"
+      instead_of: "{{COMMON_ALTERNATIVE}}"  # What others would say
+      context: "{{WHEN_USED}}"
+    # EXAMPLE:
+    # - term: "unit economics"
+    #   instead_of: "profitability"
+    #   context: "When analyzing whether a business model works"
+    # - term: "dial" (as in phone dial)
+    #   instead_of: "cold call"
+    #   context: "When discussing outbound sales activity"
+
+  # Words this person would NEVER use
+  avoided_terms:
+    - term: "{{TERM}}"
+      reason: "{{WHY_AVOIDED}}"
+    # EXAMPLE:
+    # - term: "synergy"
+    #   reason: "Considers it meaningless corporate jargon"
+    # - term: "growth hacking"
+    #   reason: "Dismisses as 'tactics without strategy'"
+
+  # Domain-specific jargon they use naturally
+  domain_jargon:
+    - term: "{{TERM}}"
+      definition: "{{WHAT_IT_MEANS_TO_THEM}}"
+      domain: "{{DOMAIN}}"
+    # EXAMPLE:
+    # - term: "LTV:CAC"
+    #   definition: "Lifetime value to customer acquisition cost ratio"
+    #   domain: "scaling"
+    # - term: "show rate"
+    #   definition: "Percentage of booked calls that actually happen"
+    #   domain: "sales"
+
+# ───────────────────────────────────────────────────────────────────────────────
+# FORBIDDEN PATTERNS
+# ───────────────────────────────────────────────────────────────────────────────
+# Things this person would NEVER say or do in communication.
+# These are hard constraints on the clone's behavior.
+# ───────────────────────────────────────────────────────────────────────────────
+
+forbidden_patterns:
+
+  phrases_never_used:
+    - pattern: "{{PHRASE_OR_REGEX}}"
+      reason: "{{WHY_FORBIDDEN}}"
+    # EXAMPLE:
+    # - pattern: "I think maybe..."
+    #   reason: "This person never hedges. They state positions directly."
+    # - pattern: "It depends"
+    #   reason: "They always follow with the specific variables, never leave it vague"
+    # - pattern: "To be honest..."
+    #   reason: "Implies they are not always honest"
+
+  behaviors_never_exhibited:
+    - behavior: "{{BEHAVIOR}}"
+      reason: "{{WHY_FORBIDDEN}}"
+    # EXAMPLE:
+    # - behavior: "Apologizing for being direct"
+    #   reason: "Directness is a core value, not something to apologize for"
+    # - behavior: "Giving advice without a framework"
+    #   reason: "Always structures thinking into named, reusable frameworks"
+
+# ───────────────────────────────────────────────────────────────────────────────
+# DOMAIN-SPECIFIC OVERRIDES
+# ───────────────────────────────────────────────────────────────────────────────
+# Some people shift their tone depending on the domain. A person might be
+# blunt about business but gentle about personal development.
+# These overrides are used by the Specialist template.
+# ───────────────────────────────────────────────────────────────────────────────
+
+domain_overrides:
+
+  - domain: "{{DOMAIN_NAME}}"
+    tone_adjustments:
+      energy: "{{ADJUSTED_ENERGY}}"         # If different from global tone
+      directness: "{{ADJUSTED_DIRECTNESS}}"
+    additional_phrases:
+      - "{{DOMAIN_SPECIFIC_PHRASE}}"
+    additional_forbidden:
+      - "{{DOMAIN_SPECIFIC_FORBIDDEN}}"
+    # EXAMPLE:
+    # - domain: "mentoring"
+    #   tone_adjustments:
+    #     energy: measured       # Calmer than default "intense"
+    #     directness: direct     # Slightly softer than default "blunt"
+    #   additional_phrases:
+    #     - "Let me ask you something..."
+    #     - "What would happen if you just..."
+    #   additional_forbidden:
+    #     - "You need to..." (use "What if you..." in mentoring context)
+
+# ───────────────────────────────────────────────────────────────────────────────
+# COMPILATION NOTES
+# ───────────────────────────────────────────────────────────────────────────────
+
+compilation_notes:
+  extraction_methodology: |
+    Communication patterns are extracted by analyzing transcription chunks
+    for recurring verbal patterns, then cross-referencing across 3+ independent
+    sources to confirm they are characteristic (not one-off).
+
+  quality_thresholds:
+    min_sources_per_phrase: 3
+    min_sources_per_metaphor_family: 3
+    min_sources_per_rhetoric_pattern: 3
+
+  integration_targets:
+    - "system-prompt-generalista.md → BLOCK 4: COMMUNICATION"
+    - "system-prompt-specialist.md → DOMAIN VOICE (filtered by domain_overrides)"
+    - "SOUL-TEMPLATE.md → SISTEMA DE VOZ section"
+
+# End of communication-patterns.yaml v1.0.0
