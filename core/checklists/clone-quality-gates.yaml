@@ -1,0 +1,232 @@
+# Clone Quality Gates Checklist
+# Template for tracking gate status per cloning subject
+# Reference: core/protocols/quality-gates-9-checkpoints.md
+# Schema: core/schemas/quality-gate.schema.json
+#
+# Usage:
+#   1. Copy this template for each new cloning subject
+#   2. Save as: logs/quality-gates/{person_id}/GATES-STATUS.yaml
+#   3. Update gate entries as each gate is evaluated
+#   4. Pipeline automation reads this file to enforce gate dependencies
+#
+# Version: 1.0.0
+# Created: 2026-02-28
+
+metadata:
+  person_id: ""          # e.g., "AH", "CG", "SO"
+  person_name: ""        # e.g., "Alex Hormozi"
+  clone_type: "greenfield"  # greenfield | brownfield
+  pipeline_started: ""   # ISO 8601 timestamp
+  pipeline_status: "NOT_STARTED"  # NOT_STARTED | IN_PROGRESS | BLOCKED | COMPLETE
+  current_gate: "QG-1"  # Which gate is active
+  last_updated: ""       # ISO 8601 timestamp
+
+# Gate Dependency Chain
+# QG-1 --> QG-2 --> QG-3 --> QG-4 --> QG-5 --> QG-6 --> QG-7 --> QG-9
+#                                                        |
+#                                                 QG-8 --+ (brownfield only)
+
+gates:
+
+  QG-1:
+    name: "GO/NO-GO Decision"
+    phase: "Pre-Pipeline"
+    trigger: "After APEX Viability Scoring"
+    depends_on: []
+    status: "NOT_STARTED"
+    # --- Fill after evaluation ---
+    decision: ""
+    reviewer: ""
+    timestamp: ""
+    apex_score: null
+    conditions: []
+    notes: ""
+    attempt: 1
+
+  QG-2:
+    name: "Source Sufficiency"
+    phase: "Research / Ingest"
+    trigger: "After source inventory complete"
+    depends_on: ["QG-1"]
+    status: "NOT_STARTED"
+    # --- Fill after evaluation ---
+    decision: ""
+    reviewer: ""
+    timestamp: ""
+    total_sources: null
+    source_types: []
+    quality_sources: null  # count of MEDIUM+ quality
+    conditions: []
+    notes: ""
+    attempt: 1
+
+  QG-3:
+    name: "Layer 6 Validation (Values Hierarchy)"
+    phase: "DNA Extraction"
+    trigger: "After L6 extraction complete"
+    depends_on: ["QG-2"]
+    status: "NOT_STARTED"
+    # --- Fill after evaluation ---
+    decision: ""
+    reviewer: ""
+    timestamp: ""
+    values_count: null
+    values_confirmed: []
+    values_flagged: []
+    flag_reasons: {}
+    conditions: []
+    notes: ""
+    attempt: 1
+
+  QG-4:
+    name: "Layer 7 Validation (Core Obsessions)"
+    phase: "DNA Extraction"
+    trigger: "After L7 extraction complete"
+    depends_on: ["QG-3"]
+    status: "NOT_STARTED"
+    # --- Fill after evaluation ---
+    decision: ""
+    reviewer: ""
+    timestamp: ""
+    obsessions_count: null
+    obsessions_confirmed: []
+    obsessions_flagged: []
+    flag_reasons: {}
+    conditions: []
+    notes: ""
+    attempt: 1
+
+  QG-5:
+    name: "Layer 8 Validation (Productive Paradoxes)"
+    phase: "DNA Extraction"
+    trigger: "After L8 extraction complete"
+    depends_on: ["QG-4"]
+    status: "NOT_STARTED"
+    importance: "GOLD GATE"
+    # --- Fill after evaluation ---
+    decision: ""
+    reviewer: ""
+    timestamp: ""
+    paradoxes_count: null
+    paradoxes_confirmed: []
+    paradoxes_rejected: []
+    rejection_reasons: {}
+    human_validated: false
+    conditions: []
+    notes: ""
+    attempt: 1
+
+  QG-6:
+    name: "System Prompt Review"
+    phase: "Agent Generation"
+    trigger: "After system prompts compiled from validated DNA"
+    depends_on: ["QG-5"]
+    status: "NOT_STARTED"
+    # --- Fill after evaluation ---
+    decision: ""
+    reviewer: ""
+    timestamp: ""
+    prompt_type: ""     # generalista | specialist | both
+    token_count: null
+    layer_coverage:
+      L1: false
+      L2: false
+      L3: false
+      L4: false
+      L5: false
+      L6: false
+      L7: false
+      L8: false
+    revisions_requested: []
+    conditions: []
+    notes: ""
+    attempt: 1
+
+  QG-7:
+    name: "Fidelity Testing"
+    phase: "Validation / Testing"
+    trigger: "After blind fidelity testing"
+    depends_on: ["QG-6"]
+    status: "NOT_STARTED"
+    # --- Fill after evaluation ---
+    decision: ""
+    reviewer: ""
+    timestamp: ""
+    test_sample_size: null
+    distinguishability_rate: null
+    fidelity_score: null
+    fidelity_tier: ""   # GOLD | SILVER | BRONZE | FAIL
+    per_dimension:
+      voice: null
+      reasoning: null
+      values: null
+      domain_expertise: null
+    failure_patterns: []
+    conditions: []
+    notes: ""
+    attempt: 1
+
+  QG-8:
+    name: "Brownfield Safety"
+    phase: "Update Validation"
+    trigger: "After updating existing production clone"
+    depends_on: ["QG-7"]
+    skip_if: "greenfield"
+    status: "NOT_STARTED"
+    # --- Fill after evaluation ---
+    decision: ""
+    reviewer: ""
+    timestamp: ""
+    previous_fidelity: null
+    new_fidelity: null
+    fidelity_delta: null
+    per_dimension_delta:
+      voice: null
+      reasoning: null
+      values: null
+      domain_expertise: null
+    dna_changes:
+      added: 0
+      modified: 0
+      removed: 0
+    conditions: []
+    notes: ""
+    attempt: 1
+
+  QG-9:
+    name: "Production Approval"
+    phase: "Deployment"
+    trigger: "All prerequisite gates passed"
+    depends_on: ["QG-7", "QG-8"]
+    status: "NOT_STARTED"
+    # --- Fill after evaluation ---
+    decision: ""
+    reviewer: ""
+    timestamp: ""
+    clone_version: ""
+    prerequisite_summary:
+      QG-1: "NOT_STARTED"
+      QG-2: "NOT_STARTED"
+      QG-3: "NOT_STARTED"
+      QG-4: "NOT_STARTED"
+      QG-5: "NOT_STARTED"
+      QG-6: "NOT_STARTED"
+      QG-7: "NOT_STARTED"
+      QG-8: "NOT_STARTED"
+    outstanding_conditions: []
+    conditions: []
+    notes: ""
+    attempt: 1
+
+# Summary (auto-computed from gate statuses)
+summary:
+  total_gates: 9
+  passed: 0
+  failed: 0
+  conditional: 0
+  skipped: 0
+  not_started: 9
+  in_progress: 0
+  awaiting_review: 0
+  completion_percentage: 0
+  blocking_gate: "QG-1"  # first non-passed gate in dependency chain
