@@ -9,13 +9,12 @@
  * accessing the premium content repository.
  */
 
-// Supabase connection — loaded from environment variables.
-// SUPABASE_URL and SUPABASE_ANON_KEY must be set in .env
-// Supabase anon keys are public by design (protected by RLS),
-// but we load from env to avoid hardcoding in source control.
+// Supabase connection — anon keys are public by design (protected by RLS).
+// Hardcoded here so `npx mega-brain-ai install` works without prior .env setup.
+// Env vars override if present (useful for development/testing).
 // See: https://supabase.com/docs/guides/auth#api-keys
-const SUPABASE_URL = process.env.SUPABASE_URL || '';
-const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY || '';
+const SUPABASE_URL = process.env.SUPABASE_URL || 'https://lgbzktgbhowxiwppycbi.supabase.co';
+const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxnYnprdGdiaG93eGl3cHB5Y2JpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE0NjgxMTUsImV4cCI6MjA4NzA0NDExNX0.fyidwl35q6rmj_AqaoW2rN_a1xCaDX2_LuKgwO2nTU4';
 
 const TIMEOUT_MS = 10000;
 const MAX_ATTEMPTS = 3;
