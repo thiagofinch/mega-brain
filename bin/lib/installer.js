@@ -16,7 +16,7 @@
 import { existsSync, mkdirSync, cpSync, writeFileSync, readFileSync, readdirSync, rmSync } from 'fs';
 import { resolve, dirname, join } from 'path';
 import { fileURLToPath } from 'url';
-import { execSync } from 'child_process';
+import { execFileSync } from 'child_process';
 import inquirer from 'inquirer';
 import chalk from 'chalk';
 import ora from 'ora';
@@ -370,7 +370,15 @@ async function fetchPremiumContent(targetDir, token, spinner) {
 
   mkdirSync(join(targetDir, '.layer-sync'), { recursive: true });
 
-  const authUrl = `https://x-access-token:${token}@github.com/${process.env.MEGA_BRAIN_GH_ORG || 'thiagofinch'}/mega-brain-premium.git`;
+  // L-09: Validate token format to prevent injection
+  const TOKEN_PATTERN = /^[a-zA-Z0-9_.\-]+$/;
+  if (!TOKEN_PATTERN.test(token)) {
+    throw new Error('Token contém caracteres inválidos.');
+  }
+
+  // M-04 + L-04 + L-10: Use execFileSync + http.extraheader (no token in URL/process list)
+  const repoUrl = `https://github.com/${process.env.MEGA_BRAIN_GH_ORG || 'thiagofinch'}/mega-brain-premium.git`;
+  const authHeader = `Authorization: Basic ${Buffer.from(`x-access-token:${token}`).toString('base64')}`;
 
   // --- CLONE ---
   if (!existsSync(join(tempDir, '.git'))) {
@@ -378,7 +386,10 @@ async function fetchPremiumContent(targetDir, token, spinner) {
     console.log(chalk.dim('  Isso pode levar alguns minutos dependendo da sua conexão.\n'));
 
     try {
-      execSync(`git clone --depth 1 "${authUrl}" "${tempDir}"`, {
+      execFileSync('git', [
+        '-c', `http.extraheader=${authHeader}`,
+        'clone', '--depth', '1', repoUrl, tempDir
+      ], {
         stdio: 'inherit',
         timeout: 600000,
       });

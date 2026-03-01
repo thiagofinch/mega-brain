@@ -25,7 +25,7 @@
 import { readFileSync, existsSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
-import { execSync } from 'child_process';
+import { execFileSync } from 'child_process';
 import inquirer from 'inquirer';
 import chalk from 'chalk';
 import ora from 'ora';
@@ -80,14 +80,14 @@ const LAYER2_EXCLUDED_PERSONAS = ['example-persona-1', 'example-persona-2'];
 // Git helpers
 // ---------------------------------------------------------------------------
 
-function git(cmd, opts = {}) {
+function git(args, opts = {}) {
   try {
     // Signal pre-push hook that push.js already validated this push
-    const env = cmd.startsWith('push ')
+    const env = args[0] === 'push'
       ? { ...process.env, MEGA_BRAIN_PUSH_VALIDATED: 'true', ...opts.env }
       : { ...process.env, ...opts.env };
 
-    return execSync(`git ${cmd}`, {
+    return execFileSync('git', args, {
       cwd: PROJECT_ROOT,
       encoding: 'utf-8',
       stdio: opts.silent ? 'pipe' : 'inherit',
@@ -100,12 +100,12 @@ function git(cmd, opts = {}) {
   }
 }
 
-function gitSilent(cmd) {
-  return git(cmd, { silent: true, stdio: 'pipe' }).trim();
+function gitSilent(...args) {
+  return git(args, { silent: true, stdio: 'pipe' }).trim();
 }
 
 function getRemotes() {
-  const output = gitSilent('remote -v');
+  const output = gitSilent('remote', '-v');
   const remotes = {};
   for (const line of output.split('\n')) {
     const match = line.match(/^(\S+)\s+(\S+)\s+\(push\)/);
@@ -115,15 +115,15 @@ function getRemotes() {
 }
 
 function getCurrentBranch() {
-  return gitSilent('rev-parse --abbrev-ref HEAD') || 'main';
+  return gitSilent('rev-parse', '--abbrev-ref', 'HEAD') || 'main';
 }
 
 function hasUncommittedChanges() {
-  return gitSilent('status --porcelain').length > 0;
+  return gitSilent('status', '--porcelain').length > 0;
 }
 
 function getStatusSummary() {
-  const status = gitSilent('status --porcelain');
+  const status = gitSilent('status', '--porcelain');
   if (!status) return null;
   const lines = status.split('\n').filter(Boolean);
   return {
@@ -244,7 +244,7 @@ function validateForLayer(layer) {
 
   if (layer === 1) {
     // --- Check phantom tracked files (files tracked but should be ignored) ---
-    const phantoms = gitSilent('ls-files -ci --exclude-standard');
+    const phantoms = gitSilent('ls-files', '-ci', '--exclude-standard');
     if (phantoms) {
       const phantomList = phantoms.split('\n').filter(Boolean);
       warnings.push(
@@ -335,8 +335,8 @@ function validateForLayer(layer) {
       for (const persona of LAYER2_EXCLUDED_PERSONAS) {
         // Check if any file inside the manifest path contains excluded persona name
         try {
-          const checkOutput = execSync(
-            `git ls-files "${mp}"`,
+          const checkOutput = execFileSync(
+            'git', ['ls-files', mp],
             { cwd: PROJECT_ROOT, encoding: 'utf-8', stdio: 'pipe' }
           ).trim();
           const matchingFiles = checkOutput.split('\n').filter((f) => f && f.includes(persona));
@@ -480,7 +480,7 @@ async function pushLayer1({ dryRun, message }) {
   // Step 2: git add -A (respects .gitignore)
   const addSpinner = ora({ text: 'Staging arquivos (respeitando .gitignore)...', color: 'cyan' }).start();
   try {
-    git('add -A', { silent: true, stdio: 'pipe' });
+    git(['add', '-A'], { silent: true, stdio: 'pipe' });
     addSpinner.succeed(chalk.green('Arquivos staged'));
   } catch (err) {
     addSpinner.fail(chalk.red(`Falha ao fazer staging: ${err.message}`));
@@ -488,14 +488,14 @@ async function pushLayer1({ dryRun, message }) {
   }
 
   // Check if there's anything to commit
-  const staged = gitSilent('diff --cached --stat');
+  const staged = gitSilent('diff', '--cached', '--stat');
   if (!staged) {
     console.log(chalk.dim('\n  Nenhuma mudanca para commit. Verificando se existe algo para push...\n'));
 
     // Still try to push in case there are local commits not yet pushed
     const pushSpinner = ora({ text: `Pushing para ${config.remote}/${branch}...`, color: 'cyan' }).start();
     try {
-      git(`push ${config.remote} ${branch}`, { silent: true, stdio: 'pipe' });
+      git(['push', config.remote, branch], { silent: true, stdio: 'pipe' });
       pushSpinner.succeed(chalk.green(`Push concluido para ${config.remote}/${branch}`));
     } catch (err) {
       if (err.stderr && err.stderr.includes('Everything up-to-date')) {
@@ -516,7 +516,7 @@ async function pushLayer1({ dryRun, message }) {
   // Step 4: git commit
   const commitSpinner = ora({ text: 'Criando commit...', color: 'cyan' }).start();
   try {
-    git(`commit -m "${commitMsg.replace(/"/g, '\\"')}"`, { silent: true, stdio: 'pipe' });
+    git(['commit', '-m', commitMsg], { silent: true, stdio: 'pipe' });
     commitSpinner.succeed(chalk.green('Commit criado'));
   } catch (err) {
     const output = err.stdout || err.stderr || '';
@@ -531,7 +531,7 @@ async function pushLayer1({ dryRun, message }) {
   // Step 5: git push public main
   const pushSpinner = ora({ text: `Pushing para ${config.remote}/${branch}...`, color: 'cyan' }).start();
   try {
-    git(`push ${config.remote} ${branch}`);
+    git(['push', config.remote, branch]);
     pushSpinner.succeed(chalk.green(`Push concluido para ${config.remote}/${branch}`));
   } catch (err) {
     pushSpinner.fail(chalk.red(`Falha no push: ${err.message}`));
@@ -543,7 +543,7 @@ async function pushLayer1({ dryRun, message }) {
   if (publishNpm) {
     const npmSpinner = ora({ text: 'Publicando no npm...', color: 'cyan' }).start();
     try {
-      execSync('npm publish', { cwd: PROJECT_ROOT, stdio: 'inherit' });
+      execFileSync('npm', ['publish'], { cwd: PROJECT_ROOT, stdio: 'inherit' });
       npmSpinner.succeed(chalk.green('Publicado no npm!'));
     } catch (err) {
       npmSpinner.fail(chalk.red(`Falha ao publicar no npm: ${err.message}`));
@@ -654,7 +654,7 @@ async function pushLayer2({ dryRun, message }) {
     if (!existsSync(fullPath)) continue;
 
     try {
-      git(`add -f "${path}"`, { silent: true, stdio: 'pipe' });
+      git(['add', '-f', path], { silent: true, stdio: 'pipe' });
       addedCount++;
       // Track which layer this path belongs to
       if (layer1Paths.includes(path)) layer1Added++;
@@ -676,7 +676,7 @@ async function pushLayer2({ dryRun, message }) {
   const commitMsg = message || 'feat(premium): update Layer 2 (Layer 1 + Premium content)';
   const commitSpinner = ora({ text: 'Criando commit premium...', color: 'yellow' }).start();
   try {
-    git(`commit -m "${commitMsg.replace(/"/g, '\\"')}"`, { silent: true, stdio: 'pipe', env: { MEGA_BRAIN_LAYER_PUSH: 'true' } });
+    git(['commit', '-m', commitMsg], { silent: true, stdio: 'pipe', env: { MEGA_BRAIN_LAYER_PUSH: 'true' } });
     commitSpinner.succeed(chalk.green('Commit premium criado'));
   } catch (err) {
     const output = (err.stdout || '') + (err.stderr || '');
@@ -691,7 +691,7 @@ async function pushLayer2({ dryRun, message }) {
   // Step 5: git push premium main --force
   const pushSpinner = ora({ text: `Pushing para ${config.remote}/${branch} (force)...`, color: 'yellow' }).start();
   try {
-    git(`push ${config.remote} ${branch} --force`);
+    git(['push', config.remote, branch, '--force']);
     pushSpinner.succeed(chalk.green(`Push concluido para ${config.remote}/${branch}`));
   } catch (err) {
     pushSpinner.fail(chalk.red(`Falha no push: ${err.message}`));
@@ -739,7 +739,7 @@ async function pushLayer3({ dryRun, message }) {
   // Step 1: Stage tracked files normally
   const addSpinner = ora({ text: 'Staging arquivos tracked...', color: 'red' }).start();
   try {
-    git('add -A', { silent: true, stdio: 'pipe' });
+    git(['add', '-A'], { silent: true, stdio: 'pipe' });
     addSpinner.succeed(chalk.green('Arquivos tracked staged'));
   } catch (err) {
     addSpinner.fail(chalk.red(`Falha ao fazer staging: ${err.message}`));
@@ -755,7 +755,7 @@ async function pushLayer3({ dryRun, message }) {
     if (!existsSync(fullPath)) continue;
 
     try {
-      git(`add -f "${manifestPath}"`, { silent: true, stdio: 'pipe' });
+      git(['add', '-f', manifestPath], { silent: true, stdio: 'pipe' });
       addedCount++;
     } catch {
       // Some paths may fail — that's ok
@@ -767,20 +767,20 @@ async function pushLayer3({ dryRun, message }) {
   // Step 3: Safety — unstage secrets that may have been caught
   for (const secretFile of SECRET_FILES) {
     try {
-      git(`reset HEAD -- "${secretFile}"`, { silent: true, stdio: 'pipe' });
+      git(['reset', 'HEAD', '--', secretFile], { silent: true, stdio: 'pipe' });
     } catch {
       // File may not exist or not be staged
     }
   }
 
   // Check if there's anything to commit
-  const staged = gitSilent('diff --cached --stat');
+  const staged = gitSilent('diff', '--cached', '--stat');
   if (!staged) {
     console.log(chalk.dim('\n  Nenhuma mudanca para commit. Pushing estado atual...\n'));
 
     const pushSpinner = ora({ text: `Pushing para ${config.remote}/${branch} (force)...`, color: 'red' }).start();
     try {
-      git(`push ${config.remote} ${branch} --force`);
+      git(['push', config.remote, branch, '--force']);
       pushSpinner.succeed(chalk.green(`Push concluido para ${config.remote}/${branch}`));
     } catch (err) {
       pushSpinner.fail(chalk.red(`Falha no push: ${err.message}`));
@@ -795,7 +795,7 @@ async function pushLayer3({ dryRun, message }) {
   // Step 5: git commit (bypass pre-commit hook via env var — this is a temporary commit)
   const commitSpinner = ora({ text: 'Criando commit de backup...', color: 'red' }).start();
   try {
-    git(`commit -m "${commitMsg.replace(/"/g, '\\"')}"`, { silent: true, stdio: 'pipe', env: { MEGA_BRAIN_LAYER_PUSH: 'true' } });
+    git(['commit', '-m', commitMsg], { silent: true, stdio: 'pipe', env: { MEGA_BRAIN_LAYER_PUSH: 'true' } });
     commitSpinner.succeed(chalk.green('Commit criado'));
   } catch (err) {
     const output = (err.stdout || '') + (err.stderr || '');
@@ -810,7 +810,7 @@ async function pushLayer3({ dryRun, message }) {
   // Step 6: git push backup main --force
   const pushSpinner = ora({ text: `Pushing para ${config.remote}/${branch} (force)...`, color: 'red' }).start();
   try {
-    git(`push ${config.remote} ${branch} --force`);
+    git(['push', config.remote, branch, '--force']);
     pushSpinner.succeed(chalk.green(`Push concluido para ${config.remote}/${branch}`));
   } catch (err) {
     pushSpinner.fail(chalk.red(`Falha no push: ${err.message}`));
@@ -834,7 +834,7 @@ async function pushLayer3({ dryRun, message }) {
 function resetLastCommit() {
   const resetSpinner = ora({ text: 'Limpando commit local (reset HEAD~1)...', color: 'gray' }).start();
   try {
-    git('reset HEAD~1', { silent: true, stdio: 'pipe' });
+    git(['reset', 'HEAD~1'], { silent: true, stdio: 'pipe' });
     resetSpinner.succeed(chalk.dim('Commit local removido (arquivos preservados)'));
   } catch (err) {
     resetSpinner.warn(chalk.yellow(`Nao foi possivel fazer reset: ${err.message}`));
@@ -853,7 +853,7 @@ async function autoSyncToBackup(branch) {
 
   const syncSpinner = ora({ text: 'Auto-sync para backup (Layer 3)...', color: 'gray' }).start();
   try {
-    git(`push backup ${branch} --force`, { silent: true, stdio: 'pipe' });
+    git(['push', 'backup', branch, '--force'], { silent: true, stdio: 'pipe' });
     syncSpinner.succeed(chalk.dim('Auto-sync para backup concluido'));
   } catch {
     syncSpinner.warn(chalk.dim('Auto-sync para backup falhou (nao critico)'));
