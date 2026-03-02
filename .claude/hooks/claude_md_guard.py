@@ -11,7 +11,7 @@ Architecture Rule Enforced:
   - .claude/CLAUDE.md (project instructions)
   - CLAUDE.md (repo root)
 
-  Agent memory MUST use .claude/agent-memory/{slug}/MEMORY.md
+  Agent memory lives at agents/{path}/MEMORY.md (resolved via AGENT-INDEX.yaml)
   NEVER create CLAUDE.md in code directories, data dirs, or subfolders.
 
 VETO CONDITIONS:
@@ -116,7 +116,7 @@ def main():
                     "decision": "allow",
                     "message": (
                         "Warning: CLAUDE.md Guard: Detected claude-mem-context in sanctioned file. "
-                        "Agent memory should use .claude/agent-memory/{slug}/MEMORY.md instead."
+                        "Agent memory lives at agents/{path}/MEMORY.md (resolved via AGENT-INDEX.yaml)."
                     )
                 }))
                 return
@@ -132,7 +132,7 @@ def main():
                 f"   Path: {relative_path}\n"
                 f"   Rule: CLAUDE.md files are NOT allowed outside sanctioned locations.\n"
                 f"   Sanctioned: {', '.join(sorted(SANCTIONED_CLAUDE_MD))}\n"
-                f"   Agent memory -> .claude/agent-memory/{{slug}}/MEMORY.md"
+                f"   Agent memory -> agents/{{path}}/MEMORY.md (via AGENT-INDEX.yaml)"
             )
         }))
 
