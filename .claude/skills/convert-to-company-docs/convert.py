@@ -26,6 +26,32 @@ except ImportError:
     sys.exit(1)
 
 
+# M-05: Allowed directories for file access (path restriction)
+ALLOWED_UPLOAD_DIRS = [
+    'knowledge/',
+    'docs/',
+    'agents/',
+    'core/',
+    'logs/',
+]
+
+PROJECT_ROOT = Path(os.environ.get('CLAUDE_PROJECT_DIR', '.')).resolve()
+
+
+def _is_path_allowed(file_path: str) -> bool:
+    """
+    M-05: Validate that file path is within allowed directories.
+    Prevents converting arbitrary files (e.g., .env, credentials) to Google Docs.
+    """
+    try:
+        resolved = Path(file_path).resolve()
+        rel = resolved.relative_to(PROJECT_ROOT)
+        rel_str = str(rel).replace('\\', '/')
+        return any(rel_str.startswith(prefix) for prefix in ALLOWED_UPLOAD_DIRS)
+    except (ValueError, RuntimeError):
+        return False
+
+
 # Cores Company (RGB normalizado 0-1)
 COLORS = {
     'background': {'red': 0.953, 'green': 0.953, 'blue': 0.953},      # #F3F3F3
@@ -312,6 +338,12 @@ class CompanyDocsConverter:
 
         if not os.path.exists(md_path):
             print(f"ERRO: Arquivo nao encontrado: {md_path}")
+            return None
+
+        # M-05: Validate file path is within allowed directories
+        if not _is_path_allowed(md_path):
+            print(f"ERRO [SECURITY]: Conversao bloqueada — path fora dos diretorios permitidos: {md_path}")
+            print(f"  Diretorios permitidos: {ALLOWED_UPLOAD_DIRS}")
             return None
 
         # Autenticar

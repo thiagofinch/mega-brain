@@ -23,6 +23,35 @@ except ImportError:
     sys.exit(1)
 
 
+# M-05: Allowed directories for upload (path restriction)
+ALLOWED_UPLOAD_DIRS = [
+    'knowledge/',
+    'docs/',
+    'agents/',
+    'core/',
+    'logs/',
+]
+
+PROJECT_ROOT = Path(os.environ.get('CLAUDE_PROJECT_DIR', '.')).resolve()
+
+
+def _is_upload_path_allowed(local_path: str) -> bool:
+    """
+    M-05: Validate that upload path is within allowed directories.
+    Prevents uploading arbitrary files (e.g., .env, credentials) to Google Drive.
+    """
+    try:
+        resolved = Path(local_path).resolve()
+        # Must be under project root
+        rel = resolved.relative_to(PROJECT_ROOT)
+        rel_str = str(rel).replace('\\', '/')
+        # Must start with one of the allowed prefixes
+        return any(rel_str.startswith(prefix) for prefix in ALLOWED_UPLOAD_DIRS)
+    except (ValueError, RuntimeError):
+        # relative_to raises ValueError if not relative
+        return False
+
+
 class GDriveSync:
     """Sincronizador de arquivos com Google Drive usando OAuth."""
 
@@ -202,6 +231,12 @@ class GDriveSync:
         """
         if not os.path.exists(local_path):
             print(f"ERRO: Arquivo nao encontrado: {local_path}")
+            return None
+
+        # M-05: Validate upload path is within allowed directories
+        if not _is_upload_path_allowed(local_path):
+            print(f"ERRO [SECURITY]: Upload bloqueado — path fora dos diretorios permitidos: {local_path}")
+            print(f"  Diretorios permitidos: {ALLOWED_UPLOAD_DIRS}")
             return None
 
         # Determina pasta destino

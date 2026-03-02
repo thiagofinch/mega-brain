@@ -21,9 +21,9 @@ SCOPES = [
     'https://www.googleapis.com/auth/drive.file'
 ]
 
-# Paths
-OAUTH_KEYS = Path(r"~/.config/mcp-gdrive/gcp-oauth.keys.json")
-TOKEN_FILE = Path(r"~/.config/mcp-gdrive/.gdrive-server-credentials.json")
+# Paths — use Path.home() for cross-platform ~ expansion (M-06 fix)
+OAUTH_KEYS = Path.home() / ".config" / "mcp-gdrive" / "gcp-oauth.keys.json"
+TOKEN_FILE = Path.home() / ".config" / "mcp-gdrive" / ".gdrive-server-credentials.json"
 
 
 def main():
