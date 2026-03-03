@@ -25,8 +25,8 @@ TRIGGERS:
 - Stop: Salva resposta do Claude + snapshot MD
 
 Author: JARVIS
-Version: 1.0.0
-Date: 2026-02-26
+Version: 1.1.0
+Date: 2026-03-01
 """
 
 import json
@@ -285,12 +285,13 @@ def save_markdown_snapshot():
 # EVENT HANDLERS
 #================================
 
-def on_user_message(content: str, metadata: Dict = None):
+def on_user_message(content: str, metadata: Dict = None, session_id: str = None):
     """Handler para mensagem do usuário (UserPromptSubmit)."""
     entry = {
         'type': 'user_message',
         'content': content[:2000],  # Limitar tamanho
-        'metadata': metadata or {}
+        'metadata': metadata or {},
+        'session_uuid': session_id
     }
 
     append_to_jsonl(entry)
@@ -302,13 +303,14 @@ def on_user_message(content: str, metadata: Dict = None):
         rotate_jsonl()
 
 
-def on_tool_use(tool_name: str, tool_input: Dict = None, result_preview: str = None):
+def on_tool_use(tool_name: str, tool_input: Dict = None, result_preview: str = None, session_id: str = None):
     """Handler para uso de ferramenta (PostToolUse)."""
     entry = {
         'type': 'tool_use',
         'tool': tool_name,
-        'input_preview': str(tool_input)[:500] if tool_input else None,
-        'result_preview': result_preview[:500] if result_preview else None
+        'input_preview': str(tool_input)[:2000] if tool_input else None,
+        'result_preview': result_preview[:500] if result_preview else None,
+        'session_uuid': session_id
     }
 
     # Extrair arquivo se for Edit/Write/Read
@@ -321,11 +323,12 @@ def on_tool_use(tool_name: str, tool_input: Dict = None, result_preview: str = N
     append_to_jsonl(entry)
 
 
-def on_response_complete(preview: str = None):
+def on_response_complete(preview: str = None, session_id: str = None):
     """Handler para resposta completa (Stop)."""
     entry = {
         'type': 'response',
-        'preview': preview[:500] if preview else '[response complete]'
+        'preview': preview[:500] if preview else '[response complete]',
+        'session_uuid': session_id
     }
 
     append_to_jsonl(entry)
@@ -372,6 +375,9 @@ def main():
     except:
         hook_input = {}
 
+    # Extrair session_id para cross-reference com --resume
+    session_id = hook_input.get('session_id')
+
     # Determinar tipo de evento
     event_type = None
 
@@ -379,25 +385,26 @@ def main():
     if 'prompt' in hook_input or 'user_prompt' in hook_input:
         event_type = 'user_message'
         content = hook_input.get('prompt') or hook_input.get('user_prompt', '')
-        on_user_message(content, hook_input)
+        on_user_message(content, hook_input, session_id)
 
     elif 'tool_name' in hook_input:
         event_type = 'tool_use'
         on_tool_use(
             hook_input.get('tool_name', 'unknown'),
             hook_input.get('tool_input'),
-            hook_input.get('tool_result', '')[:500] if hook_input.get('tool_result') else None
+            hook_input.get('tool_result', '')[:500] if hook_input.get('tool_result') else None,
+            session_id
         )
 
     elif 'stop_reason' in hook_input or 'response' in hook_input:
         event_type = 'response'
         preview = hook_input.get('response', '')[:500] if hook_input.get('response') else None
-        on_response_complete(preview)
+        on_response_complete(preview, session_id)
 
     else:
         # Fallback: tratar como resposta completa (Stop hook)
         event_type = 'response'
-        on_response_complete()
+        on_response_complete(session_id=session_id)
 
     # Output para o hook system
     summary = get_session_summary()
