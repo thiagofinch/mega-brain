@@ -1,0 +1,39 @@
+%%{init: {'theme': 'base'}}%%
+
+sequenceDiagram
+    participant U as User
+    participant CMD as Claude Commands
+    participant YT as YouTube API
+    participant AAI as AssemblyAI
+    participant INBOX as 00-INBOX
+    participant AGENT as B2B Sales Agent
+    participant KB as KNOWLEDGE/
+
+    Note over U,KB: Pipeline 1: YouTube Video Processing
+    U->>CMD: /process-video [YouTube URL]
+    CMD->>YT: Fetch transcript
+    YT-->>CMD: Return transcript data
+    CMD->>INBOX: Save transcript.txt
+    CMD-->>U: Transcript saved
+
+    Note over U,KB: Pipeline 2: Local File Processing
+    U->>CMD: /process-video [local file]
+    CMD->>AAI: Upload & transcribe
+    AAI-->>CMD: Return transcript
+    CMD->>INBOX: Save transcript.txt
+    CMD-->>U: Transcript saved
+
+    Note over U,KB: Pipeline 3: Knowledge Extraction
+    U->>CMD: /extract-knowledge [transcript]
+    CMD->>INBOX: Read transcript
+    CMD->>AGENT: Analyze content
+    AGENT->>AGENT: Detect themes
+    AGENT->>AGENT: Extract insights
+    AGENT->>KB: Create/update knowledge files
+    AGENT-->>U: Extraction complete
+
+    Note over U,KB: Utility: Scan INBOX
+    U->>CMD: /scan-inbox
+    CMD->>INBOX: List files
+    CMD->>CMD: Detect themes
+    CMD-->>U: Suggest actions

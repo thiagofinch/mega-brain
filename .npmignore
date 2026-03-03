@@ -135,5 +135,9 @@ chroma_db/
 *.bak
 *.tmp
 
+# === SYSTEM INTERNALS (never distribute) ===
+.aiox/
+.claude/agents/
+
 # === GIT (npm handles this, but explicit) ===
 .git/

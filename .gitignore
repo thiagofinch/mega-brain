@@ -3,9 +3,13 @@
 research/
 
 # === EXTERNAL FRAMEWORKS (NEVER track) ===
-.aios-core/
+.aiox/
 bilhon/
 .bilhon/
+
+# === INTEGRATED CONTENT (tracked, pushable) ===
+# Previously gitignored — now tracked per founder directive.
+# Internal references to source repo cleaned.
 
 # === ENVIRONMENT & SECRETS ===
 .env

@@ -1,11 +1,11 @@
 # INDEX: DOSSIERS
 
-> **Ultima atualizacao:** 2026-01-10
-> **Total:** 31 dossiers (10 PERSONS + 21 THEMES)
+> **Ultima atualizacao:** 2026-03-03
+> **Total:** 34 dossiers (11 PERSONS + 23 THEMES)
 
 ---
 
-## PERSON DOSSIERS (10)
+## PERSON DOSSIERS (11)
 
 | Dossier | Fonte Principal | DNA Elements | Status |
 |---------|-----------------|--------------|--------|
@@ -13,14 +13,15 @@
 | [DOSSIER-COLE-GORDON](persons/DOSSIER-COLE-GORDON.md) | Cole Gordon | ~373 | COMPLETE |
 | [DOSSIER-JEREMY-HAYNES](persons/DOSSIER-JEREMY-HAYNES.md) | Jeremy Haynes | ~1,483 | COMPLETE |
 | [DOSSIER-JEREMY-MINER](persons/DOSSIER-JEREMY-MINER.md) | Jeremy Miner | ~1,199 | COMPLETE |
-| [DOSSIER-THE-SCALABLE-COMPANY](persons/DOSSIER-THE-SCALABLE-COMPANY.md) | The Scalable Company | ~393 | **NEW** |
+| [DOSSIER-THE-SCALABLE-COMPANY](persons/DOSSIER-THE-SCALABLE-COMPANY.md) | The Scalable Company | ~393 | COMPLETE |
+| [DOSSIER-THIAGO-FINCH](persons/DOSSIER-THIAGO-FINCH.md) | Thiago Finch | ~87 | **NEW** |
 | [DOSSIER-JORDAN-LEE](persons/DOSSIER-JORDAN-LEE.md) | Jordan Lee | ~50 | PARTIAL |
 | [DOSSIER-RICHARD-LINDER](persons/DOSSIER-RICHARD-LINDER.md) | Richard Linder | ~30 | PARTIAL |
 | [DOSSIER-SAM-OVEN](persons/DOSSIER-SAM-OVEN.md) | Sam Ovens | ~40 | PARTIAL |
 
 ---
 
-## THEME DOSSIERS (21)
+## THEME DOSSIERS (23)
 
 ### Estrutura Organizacional (5)
 
@@ -46,15 +47,23 @@
 
 | Dossier | Tema | Fontes | Status |
 |---------|------|--------|--------|
-| [DOSSIER-NEPQ-METHODOLOGY](themes/DOSSIER-NEPQ-METHODOLOGY.md) | Metodologia NEPQ | JM 100% | **NEW** |
-| [DOSSIER-PAID-MEDIA-SCALING](themes/DOSSIER-PAID-MEDIA-SCALING.md) | Paid Media Scaling | JH 80% + AH 20% | **NEW** |
-| [DOSSIER-BUSINESS-OPERATING-SYSTEMS](themes/DOSSIER-BUSINESS-OPERATING-SYSTEMS.md) | Business Operating Systems | TSC 95% + AH 5% | **NEW** |
+| [DOSSIER-NEPQ-METHODOLOGY](themes/DOSSIER-NEPQ-METHODOLOGY.md) | Metodologia NEPQ | JM 100% | COMPLETE |
+| [DOSSIER-PAID-MEDIA-SCALING](themes/DOSSIER-PAID-MEDIA-SCALING.md) | Paid Media Scaling | JH 80% + AH 20% | COMPLETE |
+| [DOSSIER-BUSINESS-OPERATING-SYSTEMS](themes/DOSSIER-BUSINESS-OPERATING-SYSTEMS.md) | Business Operating Systems | TSC 90% + AH 5% + TF 5% | COMPLETE |
+| [DOSSIER-AI-KNOWLEDGE-SYSTEMS](themes/DOSSIER-AI-KNOWLEDGE-SYSTEMS.md) | AI Knowledge Systems | TF 100% | COMPLETE |
 
 ### Cascateamento REGRA #22 (5)
 
 | Dossier | Tema | Fontes | Status |
 |---------|------|--------|--------|
-| [DOSSIER-CLOSER-FRAMEWORK](themes/DOSSIER-CLOSER-FRAMEWORK.md) | CLOSER Framework | AH 100% | **NEW** |
+| [DOSSIER-CLOSER-FRAMEWORK](themes/DOSSIER-CLOSER-FRAMEWORK.md) | CLOSER Framework | AH 100% | COMPLETE |
+
+### Phase 6 - TF001 Dossier Compilation (2)
+
+| Dossier | Tema | Fontes | Status |
+|---------|------|--------|--------|
+| [DOSSIER-ENTREPRENEURIAL-MINDSET](themes/DOSSIER-ENTREPRENEURIAL-MINDSET.md) | Entrepreneurial Mindset | TF 100% | **NEW** |
+| [DOSSIER-OPERATIONS-SALES-BENCHMARKS](themes/DOSSIER-OPERATIONS-SALES-BENCHMARKS.md) | Operations & Sales Benchmarks | TF 100% | **NEW** |
 
 ---
 
@@ -65,23 +74,24 @@
 │                          DOSSIER STATISTICS                                 │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                             │
-│  Total Dossiers:        31                                                  │
-│  ├── Person Dossiers:   10                                                  │
-│  └── Theme Dossiers:    21                                                  │
+│  Total Dossiers:        34                                                  │
+│  ├── Person Dossiers:   11                                                  │
+│  └── Theme Dossiers:    23                                                  │
 │                                                                             │
-│  DNA Elements Cobertos: ~5,800+                                             │
-│  ├── Filosofias:        ~525                                                │
-│  ├── Modelos Mentais:   ~335                                                │
-│  ├── Heuristicas:       ~2,195                                              │
-│  ├── Frameworks:        ~855                                                │
-│  └── Metodologias:      ~583                                                │
+│  DNA Elements Cobertos: ~5,887+                                             │
+│  ├── Filosofias:        ~537  (+12 TF001)                                   │
+│  ├── Modelos Mentais:   ~346  (+11 TF001)                                   │
+│  ├── Heuristicas:       ~2,215 (+20 TF001)                                  │
+│  ├── Frameworks:        ~882  (+27 TF001)                                   │
+│  └── Metodologias:      ~600  (+17 TF001)                                   │
 │                                                                             │
-│  Fontes Primarias:      7                                                   │
-│  ├── Jeremy Miner       (~1,199 elementos)                                  │
+│  Fontes Primarias:      8                                                   │
 │  ├── Jeremy Haynes      (~1,483 elementos)                                  │
-│  ├── The Scalable Co.   (~393 elementos)   **NEW**                          │
+│  ├── Jeremy Miner       (~1,199 elementos)                                  │
+│  ├── The Scalable Co.   (~393 elementos)                                    │
 │  ├── Cole Gordon        (~373 elementos)                                    │
-│  └── Alex Hormozi       (~260 elementos)                                    │
+│  ├── Alex Hormozi       (~260 elementos)                                    │
+│  └── Thiago Finch       (~87 elementos)    **NEW**                          │
 │                                                                             │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
@@ -106,8 +116,12 @@
 | KLT-FRAMEWORK | LNS, PAID-MEDIA-SPECIALIST, CMO, MARKETING-COORDINATOR |
 | FUNIL-RH | HR-AGENT, SALES-MANAGER, BDR |
 | HIERARQUIA-SDR | BDR, SDR, SALES-MANAGER, HR-AGENT |
+| AI-KNOWLEDGE-SYSTEMS | CTO, COO, PRODUCT-MANAGER |
+| ENTREPRENEURIAL-MINDSET | CEO, COO, FOUNDER |
+| OPERATIONS-SALES-BENCHMARKS | CRO, SALES-MANAGER, BDR, CLOSER |
 
 ---
 
-*Index atualizado por JARVIS v3.33.0*
-*MISSION-2026-001 | Phase 5.6*
+*Index atualizado por JARVIS v2.2 | Phase 6 Dossier Compilation*
+*TF001 (Thiago Finch) adicionado: 1 person dossier + 2 theme dossiers criados + 2 atualizados*
+*2026-03-03*

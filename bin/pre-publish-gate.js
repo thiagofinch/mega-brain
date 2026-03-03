@@ -132,6 +132,16 @@ for (const file of packFiles) {
   }
 }
 
+// === STEP 3.5: Verify .aiox/ is NOT in the package ===
+const aiosCoreFiles = packFiles.filter(f => f.includes('.aiox/') || f.includes('_aios-core/') || f.includes('.claude/agents/'));
+if (aiosCoreFiles.length > 0) {
+  console.error(`${RED}[BLOCKED] AIOS Core content found in package! ${aiosCoreFiles.length} file(s):${NC}`);
+  for (const f of aiosCoreFiles.slice(0, 10)) {
+    console.error(`${RED}  ${f}${NC}`);
+  }
+  foundIssues += aiosCoreFiles.length;
+}
+
 // === STEP 4: Scan file contents for secrets ===
 const BINARY_EXTENSIONS = new Set([
   '.png', '.jpg', '.jpeg', '.gif', '.ico', '.svg',

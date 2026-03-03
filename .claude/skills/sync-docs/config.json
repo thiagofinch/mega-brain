@@ -32,6 +32,6 @@
   "paths": {
     "company_core": "/path/to/your/COMPANY-CORE",
     "mega_brain": "/path/to/your/Mega-Brain",
-    "aios_core": "/path/to/your/.aios-core"
+    "aios_core": "/path/to/your/.aiox"
   }
 }
