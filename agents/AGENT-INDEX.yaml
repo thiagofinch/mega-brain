@@ -7,10 +7,10 @@ version: "4.1.0"
 updated: "2026-03-03"
 
 totals:
-  minds: 6
+  minds: 5
   cargo: 14
   conclave: 3
-  total: 23
+  total: 22
 
 # =============================================================================
 # MINDS (L3) - Expert Mind Clones
@@ -18,11 +18,6 @@ totals:
 minds:
   - id: the-scalable-company
     path: agents/minds/the-scalable-company/
-    has_soul: true
-    has_memory: true
-    status: active
-  - id: thiago-finch
-    path: agents/minds/thiago-finch/
     has_soul: true
     has_memory: true
     status: active
