@@ -15,26 +15,26 @@
 
 ## What This Skill Does
 
-Detects and heals missed pipeline steps after any source processing. Uses `core/intelligence/pipeline_heal.py` as the detection engine.
+Detects and heals missed pipeline steps after any source processing. Uses `core/intelligence/pipeline/pipeline_heal.py` as the detection engine.
 
 ---
 
 ## Step 1: Run Detection
 
 ```bash
-python3 core/intelligence/pipeline_heal.py --check {SOURCE_ID}
+python3 core/intelligence/pipeline/pipeline_heal.py --check {SOURCE_ID}
 ```
 
 If SOURCE_ID is unknown, list available sources first:
 
 ```bash
-python3 core/intelligence/pipeline_heal.py --list-sources
+python3 core/intelligence/pipeline/pipeline_heal.py --list-sources
 ```
 
 To check ALL sources at once:
 
 ```bash
-python3 core/intelligence/pipeline_heal.py --check-all
+python3 core/intelligence/pipeline/pipeline_heal.py --check-all
 ```
 
 Parse the output to identify failed checks (lines with cross mark).
@@ -140,7 +140,7 @@ Run DNA extraction:
 After healing, re-run detection to confirm all checks pass:
 
 ```bash
-python3 core/intelligence/pipeline_heal.py --check {SOURCE_ID}
+python3 core/intelligence/pipeline/pipeline_heal.py --check {SOURCE_ID}
 ```
 
 ---

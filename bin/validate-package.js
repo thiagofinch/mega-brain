@@ -64,7 +64,7 @@ function getPackFiles(projectRoot) {
  * @returns {Object} Map of file path -> {layer, reason}
  */
 function classifyFiles(files, projectRoot) {
-  const auditPath = resolve(projectRoot, 'core/intelligence');
+  const auditPath = resolve(projectRoot, 'core/intelligence/validation');
 
   // Write a temp Python script to avoid shell quoting issues
   const pythonScript = `

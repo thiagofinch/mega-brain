@@ -1,7 +1,7 @@
 # core/intelligence/ - Processing Scripts
 # Scripts that detect roles, generate skills, analyze themes, etc.
 
-from .task_orchestrator import (
+from .pipeline.task_orchestrator import (
     TaskOrchestrator,
     load_workflow,
     list_workflows,
@@ -14,7 +14,7 @@ from .task_orchestrator import (
     TaskDefinition,
 )
 
-from .autonomous_processor import (
+from .pipeline.autonomous_processor import (
     AutonomousProcessor,
     FileQueue,
     QueueItem,

@@ -37,44 +37,7 @@ def update_pending_file(priority, item, action='add'):
     pending_path = Path(project_dir) / '.claude' / 'jarvis' / 'PENDING.md'
 
     if not pending_path.exists():
-        # Create initial PENDING.md if it doesn't exist
-        pending_path.parent.mkdir(parents=True, exist_ok=True)
-        initial_content = """# Pending Items
-
-*Ultima atualizacao: {date}*
-
-## Estatisticas
-
-| Categoria | Quantidade |
-|-----------|------------|
-| Alta Prioridade | 0 |
-| Media Prioridade | 0 |
-| Baixa Prioridade | 0 |
-| Aguardando Usuario | 0 |
-| **TOTAL PENDENTE** | **0** |
-
----
-
-## Alta Prioridade
-
-*Nenhum item de alta prioridade.*
-
-## Media Prioridade
-
-*Nenhum item de media prioridade.*
-
-## Baixa Prioridade
-
-*Nenhum item de baixa prioridade.*
-
-## Aguardando Resposta do Usuario
-
-*Nenhuma pergunta pendente.*
-
----
-""".format(date=datetime.now().strftime("%Y-%m-%d"))
-        with open(pending_path, 'w', encoding='utf-8') as f:
-            f.write(initial_content)
+        return False
 
     with open(pending_path, 'r', encoding='utf-8') as f:
         content = f.read()
@@ -174,7 +137,6 @@ def log_update(action, item):
     """Loga a atualizacao de pendencias."""
     project_dir = get_project_dir()
     log_path = Path(project_dir) / 'logs' / 'pending_updates.jsonl'
-    log_path.parent.mkdir(parents=True, exist_ok=True)
 
     log_entry = {
         'timestamp': datetime.now().isoformat(),

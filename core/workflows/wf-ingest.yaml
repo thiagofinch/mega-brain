@@ -25,6 +25,14 @@ workflow:
       description: "Código da fonte (e.g., CG, JM)"
 
   phases:
+    - id: phase_0
+      name: "PRE_VALIDATION"
+      description: "Valida presença de speaker labels antes do download"
+      task: "validate-speakers"
+      blocking: true
+      on_fail: "prompt_user_options"
+      condition: "source_file != null"
+
     - id: phase_1
       name: "DOWNLOAD"
       description: "Download ou cópia do material"

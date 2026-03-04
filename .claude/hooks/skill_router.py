@@ -44,17 +44,6 @@ def scan_skills() -> List[Tuple[Path, str]]:
                 if skill_md.exists():
                     items.append((item, "skill"))
 
-    # Scan DNA-generated skills
-    dna_generated = PROJECT_ROOT / ".aiox" / "development" / "skills" / "dna-generated"
-    if dna_generated.exists():
-        for persona_dir in dna_generated.iterdir():
-            if persona_dir.is_dir() and not persona_dir.name.startswith('_'):
-                for skill_dir in persona_dir.iterdir():
-                    if skill_dir.is_dir():
-                        skill_md = skill_dir / "SKILL.md"
-                        if skill_md.exists():
-                            items.append((skill_dir, "skill"))
-
     # Scan sub-agents
     if SUBAGENTS_PATH.exists():
         for item in SUBAGENTS_PATH.iterdir():
