@@ -204,6 +204,17 @@ core/intelligence/speakers/VOICE-REGISTRY.yaml
 core/intelligence/speakers/voice_embeddings/
 core/intelligence/speakers/*.pkl
 
+# Pessoas internas — dados L3 (nunca rastrear)
+# Colaboradores, parceiros, pessoas internas à operação
+knowledge/dossiers/persons/*-PEDRO-*.md
+knowledge/dossiers/persons/*-VALERIO-*.md
+knowledge/sources/pedro*/
+knowledge/sources/valerio*/
+agents/persons/pedro*/
+agents/persons/valerio*/
+inbox/pedro*/
+inbox/PEDRO*/
+
 # Frameworks externos (nunca rastrear)
 .aiox/
 bilhon/
@@ -345,6 +356,10 @@ bilhon/
 # .claude/templates
 !.claude/templates/
 !.claude/templates/**
+
+# .claude/agent-memory (persistent per-agent memory)
+!.claude/agent-memory/
+!.claude/agent-memory/**
 
 # .claude/get-shit-done
 !.claude/get-shit-done/
