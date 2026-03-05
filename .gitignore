@@ -136,7 +136,7 @@ logs/**
 .claude/monitoring/
 .claude/mission-control/
 .claude/learning-system/
-.claude/agent-memory/
+# .claude/agent-memory/ → tracked (persistent agent memory, L1 community)
 .claude/jarvis/
 .claude/audit-*.json
 .claude/guides/
@@ -260,6 +260,7 @@ bilhon/
 !.env.example
 !.mcp.example.json
 !README.md
+!CLAUDE.md
 !CONTRIBUTING.md
 !QUICK-START.md
 !API-KEYS-GUIDE.md
