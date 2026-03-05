@@ -188,6 +188,10 @@ reference/README-RALPH-*.md
 
 # Docs internos L3
 docs/referencias/
+docs/audit/
+
+# Artifacts audit (runtime output — L3 only)
+artifacts/audit/
 
 # Agentes populados L3 (boardroom outputs, voice)
 agents/boardroom/outputs/

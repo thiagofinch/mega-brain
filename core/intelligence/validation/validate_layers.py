@@ -25,7 +25,10 @@ from datetime import datetime, timezone
 
 # Import from sibling module in same directory
 sys.path.insert(0, str(Path(__file__).parent.parent))
+# Allow `from core.paths import ...` when run as a script
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent.parent))
 from audit_layers import classify_path, scan_repository
+from core.paths import ROUTING
 
 
 def _unquote_git_path(line: str) -> str:
@@ -265,7 +268,7 @@ def main():
     parser.add_argument(
         '--report',
         action='store_true',
-        help='Write JSON + Markdown reports to docs/audit/',
+        help='Write JSON + Markdown reports to artifacts/audit/',
     )
     parser.add_argument(
         '--verbose',
@@ -289,7 +292,7 @@ def main():
     print_summary(report)
 
     if args.report:
-        output_dir = repo_root / 'docs' / 'audit'
+        output_dir = ROUTING["audit_report"]
         output_dir.mkdir(parents=True, exist_ok=True)
 
         json_path = output_dir / 'VALIDATION-REPORT.json'

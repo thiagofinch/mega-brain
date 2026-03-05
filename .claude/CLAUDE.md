@@ -26,26 +26,25 @@ mega-brain/
 │   └── glossary/       -> Domain glossaries
 ├── agents/         -> AI agents (conclave, cargo, persons)
 ├── .claude/        -> Claude Code integration
-├── docs/           -> Documentation, PRDs, plans
-│   ├── prd/            -> Product requirements
-│   └── plans/          -> Plan mode outputs
+├── reference/      -> Documentation, guides, protocols
+├── .planning/      -> GSD plans, roadmap, state
 ├── bin/            -> CLI tools (npm)
 ├── inbox/          -> Raw materials (L3)
-├── artifacts/      -> Pipeline stages (L3)
+├── artifacts/      -> Generated outputs (audit, validation)
 ├── knowledge/      -> Knowledge base (L3)
 └── logs/           -> Session logs (L3)
 ```
 
 ## Plan Mode
 
-Plans MUST be saved to `docs/plans/` (not ~/.claude/plans/).
-When in plan mode, save the plan file to: `docs/plans/YYYY-MM-DD-description.md`
+Plans MUST be saved to `.planning/` (not ~/.claude/plans/).
+When in plan mode, save the plan file to: `.planning/YYYY-MM-DD-description.md`
 
 ### Layer System
 
 | Layer | Content | Git Status |
 |-------|---------|------------|
-| L1 (Community) | core/, agents/conclave, .claude/, bin/, docs/ | Tracked (npm package) |
+| L1 (Community) | core/, agents/conclave, .claude/, bin/, reference/ | Tracked (npm package) |
 | L2 (Pro) | agents/cargo, agents/sub-agents | Tracked (premium) |
 | L3 (Personal) | .data/, .env, agents/persons | Gitignored |
 

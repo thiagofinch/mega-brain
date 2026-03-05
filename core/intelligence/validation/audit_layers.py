@@ -10,7 +10,7 @@ Classifies every file and folder in the repository into layers:
 - DELETE: Marked for removal
 - REVIEW: Needs human review
 
-Output: JSON + Markdown reports in docs/audit/
+Output: JSON + Markdown reports in artifacts/audit/
 """
 
 import os
@@ -21,6 +21,10 @@ import argparse
 from pathlib import Path
 from datetime import datetime, timezone
 from typing import Dict, List, Tuple, Optional
+
+# Allow `from core.paths import ...` when run as a script
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent.parent))
+from core.paths import ROUTING
 
 # Classification patterns (from CONTEXT.md)
 L1_PATTERNS = [
@@ -428,8 +432,8 @@ def main():
     parser.add_argument(
         '--output-dir',
         type=str,
-        default='docs/audit',
-        help='Output directory for reports (default: docs/audit)',
+        default=None,
+        help='Output directory for reports (default: artifacts/audit/)',
     )
     parser.add_argument(
         '--verbose',
@@ -454,7 +458,7 @@ def main():
     data = scan_repository(repo_root, verbose=args.verbose)
 
     # Create output directory
-    output_dir = repo_root / args.output_dir
+    output_dir = Path(args.output_dir) if args.output_dir else ROUTING["audit_report"]
     output_dir.mkdir(parents=True, exist_ok=True)
 
     # Write JSON report
