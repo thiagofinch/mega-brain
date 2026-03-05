@@ -94,3 +94,7 @@ workflow:
       type: string
     - name: metadata
       type: json
+    - name: session_log
+      type: file
+      location: ".claude/sessions/SESSION-{timestamp}.md"
+      description: "Log automático da sessão de ingestão (skill /save)"

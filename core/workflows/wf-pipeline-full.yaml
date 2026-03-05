@@ -91,9 +91,78 @@ workflow:
           - "dual_location_logs"
           - "cascading_executed"
 
-    - id: phase_5
+    - id: phase_5_1
+      name: "FOUNDATION"
+      description: "Consolidação DNA + SOURCE log (por fonte)"
+      steps:
+        - execute:
+            task: "tasks/phase5-foundation.md"
+            inputs:
+              source_code: "${source_code}"
+              batch_ids: "${phase_4.batch_ids}"
+              dna_config_path: "${phase_3.dna_config_path}"
+      checkpoint:
+        id: CP_P5_FOUNDATION
+        blocking: true
+        validation:
+          - "dna_consolidated"
+          - "source_log_created"
+          - "template_5_1_displayed"
+
+    - id: phase_5_2
+      name: "PERSON_AGENTS"
+      description: "Criação/atualização do agente de pessoa (por fonte)"
+      steps:
+        - execute:
+            task: "tasks/phase5-person-agents.md"
+            inputs:
+              source_code: "${source_code}"
+              dna_config_path: "${phase_5_1.dna_config_path}"
+      checkpoint:
+        id: CP_P5_PERSON
+        blocking: true
+        validation:
+          - "agent_md_updated"
+          - "template_5_2_displayed"
+
+    - id: phase_5_3
+      name: "CARGO_AGENTS"
+      description: "Enriquecimento dos agentes de cargo (por fonte)"
+      steps:
+        - execute:
+            task: "tasks/phase5-cargo-agents.md"
+            inputs:
+              source_code: "${source_code}"
+              dna_config_path: "${phase_5_1.dna_config_path}"
+              agent_path: "${phase_5_2.agent_path}"
+      checkpoint:
+        id: CP_P5_CARGO
+        blocking: true
+        validation:
+          - "cargo_agents_enriched"
+          - "template_5_3_displayed"
+
+    - id: phase_5_4
+      name: "THEME_DOSSIERS"
+      description: "Criação/atualização de dossiers temáticos (por fonte)"
+      steps:
+        - execute:
+            task: "tasks/phase5-theme-dossiers.md"
+            inputs:
+              source_code: "${source_code}"
+              themes: "${phase_2.themes}"
+              batch_ids: "${phase_4.batch_ids}"
+      checkpoint:
+        id: CP_P5_THEMES
+        blocking: true
+        validation:
+          - "dossiers_updated"
+          - "version_check_passed"
+          - "template_5_4_displayed"
+
+    - id: phase_5_6
       name: "VALIDATION"
-      description: "Validação final e integridade"
+      description: "Validação de cascateamento e integridade"
       steps:
         - execute:
             task: "tasks/validate-cascade.md"
@@ -104,6 +173,10 @@ workflow:
         blocking: true
         validation:
           - "status_passed"
+
+    # Fases cross-source — executar manualmente após TODAS as fontes:
+    # phase5-org-live.md (TSK-054) → sincroniza estrutura organizacional
+    # phase5-final.md   (TSK-055) → relatório consolidado + session log
 
   # Transitions
   transitions:
@@ -117,7 +190,19 @@ workflow:
       to: phase_4
       condition: "checkpoint_passed"
     - from: phase_4
-      to: phase_5
+      to: phase_5_1
+      condition: "checkpoint_passed"
+    - from: phase_5_1
+      to: phase_5_2
+      condition: "checkpoint_passed"
+    - from: phase_5_2
+      to: phase_5_3
+      condition: "checkpoint_passed"
+    - from: phase_5_3
+      to: phase_5_4
+      condition: "checkpoint_passed"
+    - from: phase_5_4
+      to: phase_5_6
       condition: "checkpoint_passed"
 
   # Error handling

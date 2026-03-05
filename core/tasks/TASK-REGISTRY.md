@@ -66,6 +66,19 @@ Diferente de Skills (user-facing), Tasks são MACHINE-ONLY.
 | TSK-040 | validate-cascade | - | ✅ ACTIVE |
 | TSK-041 | verify-completeness | - | ✅ ACTIVE |
 
+### PHASE 5 TASKS
+
+| Task ID | Name | Template | Trigger | Status |
+|---------|------|----------|---------|--------|
+| TSK-050 | phase5-foundation | 5.1 FOUNDATION | Per-source | ✅ ACTIVE |
+| TSK-051 | phase5-person-agents | 5.2 PERSON AGENTS | Per-source | ✅ ACTIVE |
+| TSK-052 | phase5-cargo-agents | 5.3 CARGO AGENTS | Per-source | ✅ ACTIVE |
+| TSK-053 | phase5-theme-dossiers | 5.4 THEME DOSSIERS | Per-source | ✅ ACTIVE |
+| TSK-054 | phase5-org-live | 5.5 ORG-LIVE | Cross-source (manual) | ✅ ACTIVE |
+| TSK-055 | phase5-final | 5.FINAL CONSOLIDADO | Cross-source (manual) | ✅ ACTIVE |
+
+> **Nota:** TSK-040 (validate-cascade) cobre o sub-template 5.6 VALIDATION — não replicado.
+
 ---
 
 ## Dependency Graph
