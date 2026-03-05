@@ -6,7 +6,7 @@
 #   • Dados pessoais L3-only (inbox bruto, logs, sessions, company)
 #   • Secrets e credenciais (nunca em nenhuma layer)
 #   • Dev artifacts (node_modules, build, cache)
-#   • Injeções de frameworks externos (AIOS sync, etc.)
+#   • Injeções de frameworks externos (sync externo)
 #
 # Referências canônicas:
 #   .github/layer1-allowlist.txt  → o que é público (L1/npm)
@@ -130,8 +130,6 @@ logs/**
 06-LOGS/
 
 # Claude runtime state (L3 only)
-.claude/aios/elicitation_gate.jsonl
-.claude/aios/elicitation_state.json
 .claude/sessions/
 .claude/monitoring/
 .claude/mission-control/
@@ -143,7 +141,7 @@ logs/**
 .claude/handoffs/
 .claude/plans/
 .claude/temp/
-.claude/HORMOZI-*.md
+.claude/*-PERSONA-*.md
 .claude/LEDGER.md
 
 # System state pessoal (L3 only)
@@ -201,65 +199,34 @@ core/intelligence/speakers/voice_embeddings/
 core/intelligence/speakers/*.pkl
 
 # Pessoas internas — dados L3 (nunca rastrear)
-# Colaboradores, parceiros, pessoas internas à operação
-knowledge/external/dossiers/persons/*-PEDRO-*.md
-knowledge/external/dossiers/persons/*-VALERIO-*.md
-knowledge/external/sources/pedro*/
-knowledge/external/sources/valerio*/
-agents/persons/pedro*/
-agents/persons/valerio*/
-inbox/pedro*/
-inbox/PEDRO*/
+# Adicionar padrões específicos em .gitignore.local
 
 # Frameworks externos (nunca rastrear)
-.aiox/
-bilhon/
-.bilhon/
+# Adicionar padrões específicos em .gitignore.local
 
 
 # ══════════════════════════════════════════════════════════════════════
 # BLOCO 3 — INJEÇÕES DE FRAMEWORKS EXTERNOS
-# Tudo instalado via *sync, ide-sync, install scripts
+# Tudo instalado via sync externo, ide-sync, install scripts
 # Fica local na máquina — não pertence a nenhuma layer do mega-brain
 # ══════════════════════════════════════════════════════════════════════
 
-# Motor AIOS
-.aios-core/
-.aios/
+# Motores e frameworks externos (bloqueados pelo wildcard *)
+# Padrões específicos de brand em .git/info/exclude (local only)
 
-# Canonical source e projeções IDE
+# Projeções IDE externas
 .agents/
 .codex/
 .gemini/
 
-# Agentes injetados pelo *sync (wrappers AIOS — não são do mega-brain)
+# Agentes injetados por sync externo
 .claude/agents/
 
-# Skills injetadas com prefixo aios-
-.claude/skills/aios-*/
-
-# Antigravity agents (gerados pelo sync)
-.antigravity/rules/agents/
-
-# AIOS framework dirs
+# Misc dirs de frameworks externos
 .commands-bak/
 .agent/
 squads/
-
-# Commands injetados pelo AIOS
-.claude/commands/AIOS/
-.claude/commands/bilhon-docs/
-.claude/commands/doc-master/
-.claude/commands/mmos-squad/
-.claude/commands/mmosMapper/
-.claude/commands/synapse/
-.claude/commands/Ralph/
-.claude/commands/save/
-.claude/commands/resume/
-.claude/commands/sessions/
-
-# Rules injetadas
-.claude/rules/aios-native-knowledge.md
+.antigravity/rules/agents/
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -282,6 +249,17 @@ squads/
 !package.json
 !package-lock.json
 !requirements.txt
+!requirements-hooks.txt
+!pyproject.toml
+!biome.json
+!jsconfig.json
+!.editorconfig
+!.python-version
+!.nvmrc
+
+# Tests
+!tests/
+!tests/**
 
 # GitHub
 !.github/
@@ -329,15 +307,13 @@ squads/
 !.claude/settings.example.json
 !.claude/package.json
 
-# .claude/aios (estado de workflow — L1 template, não runtime)
-!.claude/aios/
-!.claude/aios/**
+# Runtime de sync externo — L3 only (padrões em .git/info/exclude)
 
 # .claude/commands (todos os seus commands)
 !.claude/commands/
 !.claude/commands/**
 
-# .claude/skills (todas as suas skills — exceto aios-* ignorado acima)
+# .claude/skills (todas as suas skills — exceto sync-injected ignorado via overrides)
 !.claude/skills/
 !.claude/skills/**
 
@@ -542,3 +518,23 @@ squads/
 !artifacts/narratives/**
 !artifacts/dna/
 !artifacts/dna/**
+
+
+# ══════════════════════════════════════════════════════════════════════
+# BLOCO 6 — DENY OVERRIDES (após allows — última palavra)
+# Re-ignora conteúdo injetado por sync externo que seria pego pelos
+# allows genéricos de .claude/commands/**, .claude/skills/**, etc.
+# Para padrões com nomes de marca: usar .git/info/exclude (local only)
+# ══════════════════════════════════════════════════════════════════════
+
+# Commands injetados por sync externo (override de !.claude/commands/**)
+.claude/commands/doc-master/
+.claude/commands/mmos-squad/
+.claude/commands/mmosMapper/
+.claude/commands/synapse/
+.claude/commands/Ralph/
+.claude/commands/save/
+.claude/commands/resume/
+.claude/commands/sessions/
+
+# Demais overrides com nomes de marca → .git/info/exclude
