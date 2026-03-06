@@ -1,0 +1,49 @@
+{
+    "products": {
+        "moletom_ziper": {
+            "name": "Moletom Masculino Zíper",
+            "cost": 35.00,
+            "patterns": [
+                "Zíper",
+                "Moletom Masculino"
+            ]
+        },
+        "moletom_infantil": {
+            "name": "Moletom Infantil",
+            "cost": 35.00,
+            "patterns": [
+                "Moletom Infantil"
+            ]
+        },
+        "carteira": {
+            "name": "Carteiras e Porta Cartões",
+            "cost": 16.00,
+            "patterns": [
+                "Carteira",
+                "Porta Cartão"
+            ]
+        },
+        "camiseta": {
+            "name": "Camiseta Unitária",
+            "cost": 13.00,
+            "patterns": [
+                "Camiseta 100% Algodão",
+                "Camiseta Igreen"
+            ]
+        },
+        "kit_3_camisetas": {
+            "name": "Kit 3 Camisetas",
+            "cost": 39.00,
+            "patterns": [
+                "Kit 3 Camisetas"
+            ]
+        },
+        "calca_moletom_infantil": {
+            "name": "Kit 3 Calça Moletom Infantil",
+            "cost": 45.00,
+            "patterns": [
+                "Kit 3 Calça Moletom"
+            ]
+        }
+    }
+}

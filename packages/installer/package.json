@@ -1,0 +1,39 @@
+{
+  "name": "@aiox/installer",
+  "version": "3.2.1",
+  "description": "AIOX Installer - Automated setup wizard for AIOX projects (greenfield & brownfield)",
+  "main": "src/index.js",
+  "bin": {
+    "aiox-installer": "./src/index.js"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:unit": "jest tests/unit",
+    "test:integration": "jest tests/integration"
+  },
+  "keywords": [
+    "aiox",
+    "installer",
+    "wizard",
+    "cli",
+    "setup",
+    "greenfield",
+    "brownfield"
+  ],
+  "author": "AIOX Fullstack Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.11.0",
+    "chalk": "^4.1.2",
+    "fs-extra": "^11.3.2"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0"
+  }
+}
+

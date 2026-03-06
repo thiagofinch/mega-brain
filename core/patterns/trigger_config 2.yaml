@@ -1,0 +1,193 @@
+# TRIGGER CONFIG - Intelligence Layer v2.0
+# Configuracao de thresholds para criacao automatica de artefatos
+# Mega Brain REGRA #22 + Detection Intelligence v2.0
+#
+# Versao: 2.0.0
+# Data: 2026-02-25
+#
+# Changelog v2.0:
+#   - agent_creation_cargo agora usa weighted_score (tiered: established/emerging/emergent)
+#   - Novos pesos de deteccao: direct=1.0, inferred=0.7, emergent=0.5
+#   - Status lifecycle: emergent_candidate -> tracking -> active
+#   - Backward compat: se weighted_score ausente, usa mention_count como fallback
+
+version: "2.0.0"
+
+# ===========================================================================
+# THRESHOLDS DE CRIACAO
+# ===========================================================================
+
+thresholds:
+  # Quando criar novo DOSSIER TEMATICO
+  dossier_creation:
+    min_occurrences: 15        # tema aparece 15+ vezes nos chunks/insights
+    min_sources: 2             # de pelo menos 2 fontes diferentes
+    min_frameworks: 2          # pelo menos 2 frameworks associados ao tema
+    min_relevance_score: 25.0  # score ponderado minimo
+
+  # Quando ATUALIZAR dossier existente
+  dossier_update:
+    stale_days: 30             # dossier desatualizado apos 30 dias
+    min_new_elements: 5        # pelo menos 5 novos elementos justificam update
+
+  # Quando criar AGENTE DE PESSOA
+  agent_creation_person:
+    min_sources: 2             # pelo menos 2 fontes processadas
+    min_dna_elements: 30       # pelo menos 30 elementos DNA extraidos
+    min_frameworks: 5          # pelo menos 5 frameworks unicos
+
+  # ---------------------------------------------------------------------------
+  # AGENTE DE CARGO - Tiered Thresholds (v2.0)
+  # ---------------------------------------------------------------------------
+  # Usa weighted_score em vez de mention_count bruto.
+  # weighted_score = direct*1.0 + inferred*0.7 + emergent*0.5
+  # Fallback: se weighted_score ausente, usa mention_count.
+  #
+  # Tier hierarchy:
+  #   established -> cria agente (status: "active")
+  #   emerging    -> monitora, promove quando atinge established (status: "tracking")
+  #   emergent    -> apenas monitora, NAO cria agente (status: "emergent_candidate")
+  # ---------------------------------------------------------------------------
+
+  agent_creation_cargo:
+    # Tier 1: Roles com evidencia forte - CRIAR AGENTE
+    established:
+      min_weighted_score: 10     # weighted_score >= 10
+      min_sources: 2             # de pelo menos 2 fontes
+      domain_match_required: true
+      status_output: "active"
+
+    # Tier 2: Roles emergentes com evidencia moderada - MONITORAR
+    emerging:
+      min_weighted_score: 5      # weighted_score >= 5
+      min_sources: 1             # pelo menos 1 fonte
+      domain_match_required: false
+      status_output: "tracking"
+      # Regras de promocao para established
+      promotion_rules:
+        min_weighted_score: 15   # se chegar a 15 com 2+ fontes, sobe
+        min_sources: 2
+
+    # Tier 3: Roles detectados por emergencia/inferencia - OBSERVAR
+    emergent:
+      min_weighted_score: 3      # weighted_score >= 3
+      min_sources: 1             # pelo menos 1 fonte
+      status_output: "emergent_candidate"
+      # NAO cria agente. Apenas rastreia.
+      # Sobe para emerging quando weighted_score >= 5
+
+    # Backward compat: flat thresholds usados se tiered nao encontrado
+    min_mentions: 10
+    min_sources: 2
+    min_responsibilities: 3
+    domain_match_required: true
+
+  # Canonicalizacao de entidades
+  entity_canonicalization:
+    fuzzy_threshold: 0.85      # similaridade minima para candidato a merge
+    auto_merge_threshold: 0.95 # acima disso, merge automatico
+    min_occurrences_to_confirm: 3  # mencoes para confirmar entidade nova
+
+# ===========================================================================
+# PESOS DE SCORING
+# ===========================================================================
+
+scoring:
+  # Pesos para calcular relevancia de tema (dossier_trigger)
+  dossier_relevance:
+    cross_source_weight: 3.0   # bonus por cada fonte adicional
+    framework_weight: 2.0      # bonus por framework nomeado
+    heuristic_weight: 1.5      # bonus por heuristica com numeros
+    methodology_weight: 2.0    # bonus por metodologia step-by-step
+    philosophy_weight: 1.0     # bonus por crenca/filosofia
+
+  # Pesos para detectar role (role_detector)
+  role_relevance:
+    job_description_weight: 3.0  # mencao com descricao de funcao
+    metric_weight: 2.0           # mencao com KPIs/metricas
+    responsibility_weight: 2.5   # mencao com responsabilidades
+    hierarchy_weight: 1.5        # mencao com relacao hierarquica
+
+  # Pesos de tipo de deteccao (role_detector v2.0)
+  detection_type:
+    direct: 1.0                # nome do cargo aparece no texto
+    inferred: 0.7              # atividade implica cargo
+    emergent: 0.5              # role desconhecido detectado por pattern generico
+
+# ===========================================================================
+# STATUS LABELS
+# ===========================================================================
+
+status_labels:
+  # Role lifecycle (v2.0 - baseado em weighted_score)
+  role_tracking:
+    active: 10       # weighted_score >= 10 + 2 fontes = CRIAR agente
+    tracking: 5      # weighted_score 5-9 = monitorar
+    emergent_candidate: 3  # weighted_score 3-4 = apenas rastrear
+    observed: 0      # weighted_score < 3 = detectado mas insignificante
+
+  dossier_readiness:
+    ready: 25.0      # score >= 25 = criar dossier
+    candidate: 15.0  # score 15-25 = candidato, monitorar
+    tracking: 0.0    # score < 15 = apenas rastrear
+
+# ===========================================================================
+# CRITERIOS FORMAIS DE CRIACAO DE DOSSIERS (Sprint 4.7)
+# ===========================================================================
+# Documenta explicitamente QUANDO e POR QUE criar/atualizar dossiers.
+# Estes criterios sao enforced por dossier_trigger.py.
+
+dossier_creation:
+  criterios_formais:
+    - "Tema aparece em 15+ chunks de 2+ fontes distintas"
+    - "Relevance score >= 25.0 (cross_source*3 + framework*2 + methodology*2)"
+    - "Tema NAO e alias de dossier existente (canonicalizacao via entity_normalizer)"
+    - "Tema tem frameworks OU metodologias associados (nao apenas mencoes genericas)"
+    - "Tema pertence a pelo menos 1 dominio do DOMAINS-TAXONOMY.yaml"
+  incrementacao:
+    - "Novo batch com 5+ novos insights sobre tema existente"
+    - "Dossier nao atualizado em 30+ dias com novos dados disponiveis"
+    - "Novo framework ou metodologia descoberto para tema existente"
+  exclusao:
+    - "Temas genericos demais (ex: 'business', 'success', 'money')"
+    - "Temas que sao aliases de entidades ja canonicalizadas"
+    - "Temas sem frameworks NEM metodologias (apenas mencoes narrativas)"
+
+# ===========================================================================
+# KPIs DE SUCESSO - INTELLIGENCE LAYER (Sprint 4.8)
+# ===========================================================================
+# Metricas para avaliar saude e eficacia do pipeline.
+# Medidos apos cada batch e em relatorios semanais.
+
+kpis_intelligence_layer:
+  detection:
+    roles_detected_target: 33          # minimo de roles unicos detectados
+    roles_detected_stretch: 50         # meta agressiva
+    domains_covered_target: 7          # dominios com pelo menos 1 role (vs 1 antes)
+    inference_accuracy_target: 80      # % de roles inferidos confirmados manualmente
+    emergent_capture_rate: 5           # roles emergentes por 100 batches
+
+  triggers:
+    new_dossiers_per_100_batches: "3-5"
+    new_agents_per_100_batches: "1-2"
+    false_positive_rate_max: 10        # % maximo de falsos positivos
+    trigger_latency_max_seconds: 30    # tempo maximo para avaliar triggers
+
+  registry:
+    entity_dedup_rate_target: 95       # % de duplicatas canonicalizadas
+    orphan_rate_max: 5                 # % maximo de entidades sem source
+    weighted_score_coverage: 100       # % de roles com weighted_score calculado
+
+  quality:
+    dossier_min_frameworks: 2          # frameworks minimos por dossier
+    agent_min_responsibilities: 3      # responsabilidades minimas por agente
+    role_chain_max_depth: 6            # profundidade maxima de hierarquia
+
+  baselines:
+    pre_v2_roles: 18                   # roles detectados antes do Sprint 4
+    post_v2_roles_target: 33           # roles apos Sprint 4
+    pre_v2_domains: 1                  # apenas "vendas"
+    post_v2_domains_target: 7          # vendas + marketing + content + growth + design + tech + legal
+    cmo_weighted_score_before: 2.0     # CMO antes
+    cmo_weighted_score_target: 10.0    # CMO depois
+    copywriter_target: 10.0            # COPYWRITER weighted_score alvo

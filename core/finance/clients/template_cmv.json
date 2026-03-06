@@ -1,0 +1,17 @@
+{
+    "client_id": "CLIENT_NAME_HERE",
+    "last_update": "2026-03-05",
+    "currency": "BRL",
+    "products": {
+        "PRODUCT_ID_OR_PATTERN": {
+            "name": "Human Readable Name",
+            "cost": 0.00,
+            "description": "Short description of what is included in this cost (supplier + tax + packaging)",
+            "patterns": [
+                "Exact word in Marketplace Item Title",
+                "SKU-Pattern"
+            ]
+        }
+    },
+    "default_cmv_fallback_rate": 0.35
+}
