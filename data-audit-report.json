@@ -1,10 +1,10 @@
 {
-    "timestamp": "2026-03-06T12:58:14.796559",
+    "timestamp": "2026-03-06T13:03:31.277836",
     "summary": {
-        "gmv": 1171.02,
-        "fees": 261.26,
+        "gmv": 1238.8899999999999,
+        "fees": 275.7,
         "ads": 70.52,
-        "net": 839.24
+        "net": 892.6699999999998
     },
     "orders": [
         {
@@ -185,6 +185,15 @@
             "Taxas_ML": 12.91,
             "Itens": [
                 "1x Moletom Infantil Canguru Capuz Blusa De Frio Aranha Desenho 16 Preto (R$ 43.99)"
+            ]
+        },
+        {
+            "ID": 2000015427007142,
+            "Status": "paid",
+            "Valor": 67.87,
+            "Taxas_ML": 14.440000000000001,
+            "Itens": [
+                "1x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
             ]
         }
     ]
