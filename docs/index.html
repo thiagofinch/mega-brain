@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="60">
+    <title>AIOX Live Dashboard - Hugo Jobs</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --border: #30363d;
+            --primary: #58a6ff;
+            --success: #3fb950;
+            --danger: #f85149;
+            --warning: #d29922;
+            --text: #c9d1d9;
+            --text-dim: #8b949e;
+            --accent: #d2a8ff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 1rem;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin: 0;
+            color: var(--primary);
+        }
+
+        .status-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(88, 166, 255, 0.1);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            border: 1px solid var(--primary);
+        }
+
+        .pulse {
+            width: 8px;
+            height: 8px;
+            background: var(--success);
+            border-radius: 50%;
+            animation: pulse-animation 2s infinite;
+        }
+
+        @keyframes pulse-animation {
+            0% {
+                box-shadow: 0 0 0 0px rgba(63, 185, 80, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(63, 185, 80, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0px rgba(63, 185, 80, 0);
+            }
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: var(--card);
+            padding: 1.2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            transition: transform 0.2s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary);
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-value {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            background: var(--card);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+
+        th {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 1rem;
+            color: var(--text-dim);
+            font-weight: 600;
+            border-bottom: 1px solid var(--border);
+        }
+
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 0.5rem;
+            }
+
+            h1 {
+                font-size: 1.2rem;
+            }
+
+            .stat-value {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <h1>AIOX LIVE Dashboard</h1>
+                <div style="font-size: 0.8rem; color: var(--text-dim);">
+                    Sincronizado via GitHub • <span id="last-update-time">23:03:58</span>
+                </div>
+            </div>
+            <div class="status-badge">
+                <div class="pulse"></div>
+                LIVE 5G
+            </div>
+        </header>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-label">GMV Bruto (Vendas)</div>
+                <div class="stat-value" id="total-gmv">R$ 3.031,66</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Investimento Ads</div>
+                <div class="stat-value" id="total-ads" style="color: var(--primary);">R$ 0,00</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Taxas ML Total</div>
+                <div class="stat-value" id="total-fees" style="color: var(--danger);">R$ 0,00</div>
+            </div>
+            <div class="stat-card" style="border-left: 4px solid var(--accent);">
+                <div class="stat-label">Saldo Líquido Real</div>
+                <div class="stat-value" id="total-net" style="color: var(--accent);">R$ 0,00</div>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pedido</th>
+                        <th>Status</th>
+                        <th>Valor</th>
+                        <th>Taxas</th>
+                        <th>Itens</th>
+                    </tr>
+                </thead>
+                <tbody id="order-rows">
+                <tr>
+                    <td>2000015405160560</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 67,87</td>
+                    <td>R$ 14,44</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Moletom Masculino Zíper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)</td>
+                </tr>
+                <tr>
+                    <td>2000015405249208</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 34,91</td>
+                    <td>R$ 11,44</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Carteira Couro Legítimo Slim 8 Porta Cartões E Cnh Hugo Jobs (R$ 34.91)</td>
+                </tr>
+                <tr>
+                    <td>2000015405352488</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 67,87</td>
+                    <td>R$ 6,39</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Moletom Masculino Zíper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)</td>
+                </tr>
+                <tr>
+                    <td>2000015405797514</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 23,90</td>
+                    <td>R$ 10,00</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Camiseta 100% Algodão Minimalista Frase Sincera Conforto (R$ 23.9)</td>
+                </tr>
+                <tr>
+                    <td>2000015406456978</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 34,91</td>
+                    <td>R$ 11,30</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Carteira Couro Legítimo Slim 8 Porta Cartões E Cnh Hugo Jobs (R$ 34.91)</td>
+                </tr>
+                <tr>
+                    <td>2000015406476876</td>
+                    <td><span style="color: #f85149; font-weight: bold;">CANCELLED</span></td>
+                    <td>R$ 67,87</td>
+                    <td>R$ 6,39</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Moletom Masculino Zíper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)</td>
+                </tr>
+                <tr>
+                    <td>2000015406563266</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 67,87</td>
+                    <td>R$ 14,44</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Moletom Masculino Zíper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)</td>
+                </tr>
+                <tr>
+                    <td>2000015406745992</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 67,87</td>
+                    <td>R$ 14,34</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Moletom Masculino Zíper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)</td>
+                </tr>
+                <tr>
+                    <td>2000015406798088</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 67,87</td>
+                    <td>R$ 14,44</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Moletom Masculino Zíper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)</td>
+                </tr>
+                <tr>
+                    <td>2000015406817582</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 43,99</td>
+                    <td>R$ 6,16</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Moletom Infantil Menino Menina Canguru Capuz Hugo Jobs 8 Cinza (R$ 43.99)</td>
+                </tr>
+                <tr>
+                    <td>2000015406966932</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 68,84</td>
+                    <td>R$ 14,48</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Kit 3 Camisetas 100% Algodão Estilosa Hugo Jobs Minimalista (R$ 68.84)</td>
+                </tr>
+                <tr>
+                    <td>2000015407078130</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 67,87</td>
+                    <td>R$ 14,34</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Moletom Masculino Zíper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)</td>
+                </tr>
+                <tr>
+                    <td>2000015407223374</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 67,87</td>
+                    <td>R$ 6,25</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Moletom Masculino Zíper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)</td>
+                </tr>
+                <tr>
+                    <td>2000015407267362</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 67,87</td>
+                    <td>R$ 14,44</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Moletom Masculino Zíper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)</td>
+                </tr>
+                <tr>
+                    <td>2000015407420100</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 67,87</td>
+                    <td>R$ 14,44</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Moletom Masculino Zíper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)</td>
+                </tr>
+                <tr>
+                    <td>2000015407707508</td>
+                    <td><span style="color: #f85149; font-weight: bold;">CANCELLED</span></td>
+                    <td>R$ 53,34</td>
+                    <td>R$ 12,72</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Blusa Moletom Estilosa Estampa Paris Hugo Jobs Gola Redonda (R$ 53.34)</td>
+                </tr>
+                <tr>
+                    <td>2000015407868030</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 87,98</td>
+                    <td>R$ 19,66</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">2x Moletom Infantil Menino Menina Canguru Capuz Hugo Jobs 10 Cinza (R$ 43.99)</td>
+                </tr>
+                <tr>
+                    <td>2000015408002928</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 67,87</td>
+                    <td>R$ 14,44</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Moletom Masculino Zíper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)</td>
+                </tr>
+                <tr>
+                    <td>2000015408252612</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 68,84</td>
+                    <td>R$ 14,48</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Kit 3 Camisetas 100% Algodão Estilosa Hugo Jobs Minimalista (R$ 68.84)</td>
+                </tr>
+                <tr>
+                    <td>2000015408460544</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 135,74</td>
+                    <td>R$ 22,49</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">2x Moletom Masculino Zíper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)</td>
+                </tr>
+                <tr>
+                    <td>2000015408510286</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 67,87</td>
+                    <td>R$ 6,39</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Moletom Masculino Zíper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)</td>
+                </tr>
+                <tr>
+                    <td>2000015408517370</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 67,87</td>
+                    <td>R$ 14,34</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Moletom Masculino Zíper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)</td>
+                </tr>
+                <tr>
+                    <td>2000015408537206</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 28,12</td>
+                    <td>R$ 29,54</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Camiseta Igreen Básica 100% Algodão (R$ 28.12)</td>
+                </tr>
+                <tr>
+                    <td>2000015408544252</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 56,24</td>
+                    <td>R$ 29,54</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">2x Camiseta Igreen Básica 100% Algodão (R$ 28.12)</td>
+                </tr>
+                <tr>
+                    <td>2000015408544254</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 28,12</td>
+                    <td>R$ 29,54</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Camiseta Igreen Básica 100% Algodão (R$ 28.12)</td>
+                </tr>
+                <tr>
+                    <td>2000015408536404</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 67,87</td>
+                    <td>R$ 6,39</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Moletom Masculino Zíper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)</td>
+                </tr>
+                <tr>
+                    <td>2000015408554218</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 67,87</td>
+                    <td>R$ 14,34</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Moletom Masculino Zíper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)</td>
+                </tr>
+                <tr>
+                    <td>2000015408577940</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 67,87</td>
+                    <td>R$ 14,34</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Moletom Masculino Zíper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)</td>
+                </tr>
+                <tr>
+                    <td>2000015408630810</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 34,91</td>
+                    <td>R$ 11,44</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Carteira Couro Legítimo Slim 8 Porta Cartões E Cnh Hugo Jobs (R$ 34.91)</td>
+                </tr>
+                <tr>
+                    <td>2000015409088830</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 67,87</td>
+                    <td>R$ 21,19</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Moletom Masculino Zíper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)</td>
+                </tr>
+                <tr>
+                    <td>2000015409087008</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 48,49</td>
+                    <td>R$ 19,44</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Blusa Moletom Gola Careca Unissex Lançamento Hugo - Full (R$ 48.49)</td>
+                </tr>
+                <tr>
+                    <td>2000015409796918</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 68,84</td>
+                    <td>R$ 14,48</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Kit 3 Camisetas 100% Algodão Estilosa Hugo Jobs Minimalista (R$ 68.84)</td>
+                </tr>
+                <tr>
+                    <td>2000015410922344</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 22,30</td>
+                    <td>R$ 9,67</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Porta Cartão Hugo Jobs Carteira Couro Rustico Fina Slim (R$ 22.3)</td>
+                </tr>
+                <tr>
+                    <td>2000015411217174</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 67,87</td>
+                    <td>R$ 6,39</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Moletom Masculino Zíper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)</td>
+                </tr>
+                <tr>
+                    <td>2000015411446268</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 34,91</td>
+                    <td>R$ 11,44</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Carteira Couro Legítimo Slim 8 Porta Cartões E Cnh Hugo Jobs (R$ 34.91)</td>
+                </tr>
+                <tr>
+                    <td>2000015411751716</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 77,99</td>
+                    <td>R$ 10,92</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Kit 3 Calça Moletom Infantil Flanelada Menino Menina Inverno Preto 12 (R$ 77.99)</td>
+                </tr>
+                <tr>
+                    <td>2000015412190550</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 67,87</td>
+                    <td>R$ 14,30</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Moletom Masculino Zíper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)</td>
+                </tr>
+                <tr>
+                    <td>2000015412359912</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 67,87</td>
+                    <td>R$ 14,44</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Moletom Masculino Zíper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)</td>
+                </tr>
+                <tr>
+                    <td>2000015412404746</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 43,99</td>
+                    <td>R$ 12,91</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Moletom Infantil Menino Menina Canguru Capuz Hugo Jobs 2 Preto (R$ 43.99)</td>
+                </tr>
+                <tr>
+                    <td>2000015412892860</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 34,91</td>
+                    <td>R$ 4,89</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Carteira Couro Legítimo Slim 8 Porta Cartões E Cnh Hugo Jobs (R$ 34.91)</td>
+                </tr>
+                <tr>
+                    <td>2000015413712380</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 67,87</td>
+                    <td>R$ 14,44</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Moletom Masculino Zíper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)</td>
+                </tr>
+                <tr>
+                    <td>2000015413785238</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 67,87</td>
+                    <td>R$ 14,34</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Moletom Masculino Zíper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)</td>
+                </tr>
+                <tr>
+                    <td>2000015414149346</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 67,87</td>
+                    <td>R$ 14,34</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Moletom Masculino Zíper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)</td>
+                </tr>
+                <tr>
+                    <td>2000015414161618</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 34,91</td>
+                    <td>R$ 11,44</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Carteira Couro Legítimo Slim 8 Porta Cartões E Cnh Hugo Jobs (R$ 34.91)</td>
+                </tr>
+                <tr>
+                    <td>2000015414218992</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 67,87</td>
+                    <td>R$ 14,34</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Moletom Masculino Zíper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)</td>
+                </tr>
+                <tr>
+                    <td>2000015414460948</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 67,87</td>
+                    <td>R$ 14,44</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Moletom Masculino Zíper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)</td>
+                </tr>
+                <tr>
+                    <td>2000015414669722</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 22,30</td>
+                    <td>R$ 3,12</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Porta Cartão Hugo Jobs Carteira Couro Rustico Fina Slim (R$ 22.3)</td>
+                </tr>
+                <tr>
+                    <td>2000015414779858</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 34,91</td>
+                    <td>R$ 4,89</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Carteira Couro Legítimo Slim 8 Porta Cartões E Cnh Hugo Jobs (R$ 34.91)</td>
+                </tr>
+                <tr>
+                    <td>2000015414871424</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 196,99</td>
+                    <td>R$ 45,77</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Kit 10 Camisetas Básicas 100% Algodão Anti-alérgico Atacado (R$ 196.99)</td>
+                </tr>
+                <tr>
+                    <td>2000015415025348</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 67,87</td>
+                    <td>R$ 14,34</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Moletom Masculino Zíper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)</td>
+                </tr>
+                <tr>
+                    <td>2000015415212510</td>
+                    <td><span style="color: #3fb950; font-weight: bold;">PAID</span></td>
+                    <td>R$ 67,87</td>
+                    <td>R$ 14,34</td>
+                    <td style="font-size: 0.8rem; color: #8b949e;">1x Moletom Masculino Zíper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+
+        <footer style="margin-top: 2rem; text-align: center; color: var(--text-dim); font-size: 0.75rem;">
+            AIOX Enterprise Intelligence • v4.0 • Hugo Jobs Edition
+        </footer>
+    </div>
+
+    <script>
+        const auditData = {
+    "timestamp": "2026-03-05T23:03:58.765068",
+    "summary": {
+        "gmv": 3031.659999999999,
+        "fees": 699.7000000000003,
+        "ads": 527.5,
+        "net": 1804.4599999999987
+    },
+    "orders": [
+        {
+            "ID": 2000015405160560,
+            "Status": "paid",
+            "Valor": 67.87,
+            "Taxas_ML": 14.440000000000001,
+            "Itens": [
+                "1x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
+            ]
+        },
+        {
+            "ID": 2000015405249208,
+            "Status": "paid",
+            "Valor": 34.91,
+            "Taxas_ML": 11.44,
+            "Itens": [
+                "1x Carteira Couro Leg\u00edtimo Slim 8 Porta Cart\u00f5es E Cnh Hugo Jobs (R$ 34.91)"
+            ]
+        },
+        {
+            "ID": 2000015405352488,
+            "Status": "paid",
+            "Valor": 67.87,
+            "Taxas_ML": 6.39,
+            "Itens": [
+                "1x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
+            ]
+        },
+        {
+            "ID": 2000015405797514,
+            "Status": "paid",
+            "Valor": 23.9,
+            "Taxas_ML": 10.0,
+            "Itens": [
+                "1x Camiseta 100% Algod\u00e3o Minimalista Frase Sincera Conforto (R$ 23.9)"
+            ]
+        },
+        {
+            "ID": 2000015406456978,
+            "Status": "paid",
+            "Valor": 34.91,
+            "Taxas_ML": 11.3,
+            "Itens": [
+                "1x Carteira Couro Leg\u00edtimo Slim 8 Porta Cart\u00f5es E Cnh Hugo Jobs (R$ 34.91)"
+            ]
+        },
+        {
+            "ID": 2000015406476876,
+            "Status": "cancelled",
+            "Valor": 67.87,
+            "Taxas_ML": 6.39,
+            "Itens": [
+                "1x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
+            ]
+        },
+        {
+            "ID": 2000015406563266,
+            "Status": "paid",
+            "Valor": 67.87,
+            "Taxas_ML": 14.440000000000001,
+            "Itens": [
+                "1x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
+            ]
+        },
+        {
+            "ID": 2000015406745992,
+            "Status": "paid",
+            "Valor": 67.87,
+            "Taxas_ML": 14.34,
+            "Itens": [
+                "1x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
+            ]
+        },
+        {
+            "ID": 2000015406798088,
+            "Status": "paid",
+            "Valor": 67.87,
+            "Taxas_ML": 14.440000000000001,
+            "Itens": [
+                "1x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
+            ]
+        },
+        {
+            "ID": 2000015406817582,
+            "Status": "paid",
+            "Valor": 43.99,
+            "Taxas_ML": 6.16,
+            "Itens": [
+                "1x Moletom Infantil Menino Menina Canguru Capuz Hugo Jobs 8 Cinza (R$ 43.99)"
+            ]
+        },
+        {
+            "ID": 2000015406966932,
+            "Status": "paid",
+            "Valor": 68.84,
+            "Taxas_ML": 14.48,
+            "Itens": [
+                "1x Kit 3 Camisetas 100% Algod\u00e3o Estilosa Hugo Jobs Minimalista (R$ 68.84)"
+            ]
+        },
+        {
+            "ID": 2000015407078130,
+            "Status": "paid",
+            "Valor": 67.87,
+            "Taxas_ML": 14.34,
+            "Itens": [
+                "1x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
+            ]
+        },
+        {
+            "ID": 2000015407223374,
+            "Status": "paid",
+            "Valor": 67.87,
+            "Taxas_ML": 6.25,
+            "Itens": [
+                "1x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
+            ]
+        },
+        {
+            "ID": 2000015407267362,
+            "Status": "paid",
+            "Valor": 67.87,
+            "Taxas_ML": 14.440000000000001,
+            "Itens": [
+                "1x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
+            ]
+        },
+        {
+            "ID": 2000015407420100,
+            "Status": "paid",
+            "Valor": 67.87,
+            "Taxas_ML": 14.440000000000001,
+            "Itens": [
+                "1x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
+            ]
+        },
+        {
+            "ID": 2000015407707508,
+            "Status": "cancelled",
+            "Valor": 53.34,
+            "Taxas_ML": 12.719999999999999,
+            "Itens": [
+                "1x Blusa Moletom Estilosa Estampa Paris Hugo Jobs Gola Redonda (R$ 53.34)"
+            ]
+        },
+        {
+            "ID": 2000015407868030,
+            "Status": "paid",
+            "Valor": 87.98,
+            "Taxas_ML": 19.66,
+            "Itens": [
+                "2x Moletom Infantil Menino Menina Canguru Capuz Hugo Jobs 10 Cinza (R$ 43.99)"
+            ]
+        },
+        {
+            "ID": 2000015408002928,
+            "Status": "paid",
+            "Valor": 67.87,
+            "Taxas_ML": 14.440000000000001,
+            "Itens": [
+                "1x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
+            ]
+        },
+        {
+            "ID": 2000015408252612,
+            "Status": "paid",
+            "Valor": 68.84,
+            "Taxas_ML": 14.48,
+            "Itens": [
+                "1x Kit 3 Camisetas 100% Algod\u00e3o Estilosa Hugo Jobs Minimalista (R$ 68.84)"
+            ]
+        },
+        {
+            "ID": 2000015408460544,
+            "Status": "paid",
+            "Valor": 135.74,
+            "Taxas_ML": 22.490000000000002,
+            "Itens": [
+                "2x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
+            ]
+        },
+        {
+            "ID": 2000015408510286,
+            "Status": "paid",
+            "Valor": 67.87,
+            "Taxas_ML": 6.39,
+            "Itens": [
+                "1x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
+            ]
+        },
+        {
+            "ID": 2000015408517370,
+            "Status": "paid",
+            "Valor": 67.87,
+            "Taxas_ML": 14.34,
+            "Itens": [
+                "1x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
+            ]
+        },
+        {
+            "ID": 2000015408537206,
+            "Status": "paid",
+            "Valor": 28.12,
+            "Taxas_ML": 29.54,
+            "Itens": [
+                "1x Camiseta Igreen B\u00e1sica 100% Algod\u00e3o (R$ 28.12)"
+            ]
+        },
+        {
+            "ID": 2000015408544252,
+            "Status": "paid",
+            "Valor": 56.24,
+            "Taxas_ML": 29.54,
+            "Itens": [
+                "2x Camiseta Igreen B\u00e1sica 100% Algod\u00e3o (R$ 28.12)"
+            ]
+        },
+        {
+            "ID": 2000015408544254,
+            "Status": "paid",
+            "Valor": 28.12,
+            "Taxas_ML": 29.54,
+            "Itens": [
+                "1x Camiseta Igreen B\u00e1sica 100% Algod\u00e3o (R$ 28.12)"
+            ]
+        },
+        {
+            "ID": 2000015408536404,
+            "Status": "paid",
+            "Valor": 67.87,
+            "Taxas_ML": 6.39,
+            "Itens": [
+                "1x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
+            ]
+        },
+        {
+            "ID": 2000015408554218,
+            "Status": "paid",
+            "Valor": 67.87,
+            "Taxas_ML": 14.34,
+            "Itens": [
+                "1x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
+            ]
+        },
+        {
+            "ID": 2000015408577940,
+            "Status": "paid",
+            "Valor": 67.87,
+            "Taxas_ML": 14.34,
+            "Itens": [
+                "1x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
+            ]
+        },
+        {
+            "ID": 2000015408630810,
+            "Status": "paid",
+            "Valor": 34.91,
+            "Taxas_ML": 11.44,
+            "Itens": [
+                "1x Carteira Couro Leg\u00edtimo Slim 8 Porta Cart\u00f5es E Cnh Hugo Jobs (R$ 34.91)"
+            ]
+        },
+        {
+            "ID": 2000015409088830,
+            "Status": "paid",
+            "Valor": 67.87,
+            "Taxas_ML": 21.19,
+            "Itens": [
+                "1x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
+            ]
+        },
+        {
+            "ID": 2000015409087008,
+            "Status": "paid",
+            "Valor": 48.49,
+            "Taxas_ML": 19.44,
+            "Itens": [
+                "1x Blusa Moletom Gola Careca Unissex Lan\u00e7amento Hugo - Full (R$ 48.49)"
+            ]
+        },
+        {
+            "ID": 2000015409796918,
+            "Status": "paid",
+            "Valor": 68.84,
+            "Taxas_ML": 14.48,
+            "Itens": [
+                "1x Kit 3 Camisetas 100% Algod\u00e3o Estilosa Hugo Jobs Minimalista (R$ 68.84)"
+            ]
+        },
+        {
+            "ID": 2000015410922344,
+            "Status": "paid",
+            "Valor": 22.3,
+            "Taxas_ML": 9.67,
+            "Itens": [
+                "1x Porta Cart\u00e3o Hugo Jobs Carteira Couro Rustico Fina Slim (R$ 22.3)"
+            ]
+        },
+        {
+            "ID": 2000015411217174,
+            "Status": "paid",
+            "Valor": 67.87,
+            "Taxas_ML": 6.39,
+            "Itens": [
+                "1x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
+            ]
+        },
+        {
+            "ID": 2000015411446268,
+            "Status": "paid",
+            "Valor": 34.91,
+            "Taxas_ML": 11.44,
+            "Itens": [
+                "1x Carteira Couro Leg\u00edtimo Slim 8 Porta Cart\u00f5es E Cnh Hugo Jobs (R$ 34.91)"
+            ]
+        },
+        {
+            "ID": 2000015411751716,
+            "Status": "paid",
+            "Valor": 77.99,
+            "Taxas_ML": 10.92,
+            "Itens": [
+                "1x Kit 3 Cal\u00e7a Moletom Infantil Flanelada Menino Menina Inverno Preto 12 (R$ 77.99)"
+            ]
+        },
+        {
+            "ID": 2000015412190550,
+            "Status": "paid",
+            "Valor": 67.87,
+            "Taxas_ML": 14.3,
+            "Itens": [
+                "1x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
+            ]
+        },
+        {
+            "ID": 2000015412359912,
+            "Status": "paid",
+            "Valor": 67.87,
+            "Taxas_ML": 14.440000000000001,
+            "Itens": [
+                "1x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
+            ]
+        },
+        {
+            "ID": 2000015412404746,
+            "Status": "paid",
+            "Valor": 43.99,
+            "Taxas_ML": 12.91,
+            "Itens": [
+                "1x Moletom Infantil Menino Menina Canguru Capuz Hugo Jobs 2 Preto (R$ 43.99)"
+            ]
+        },
+        {
+            "ID": 2000015412892860,
+            "Status": "paid",
+            "Valor": 34.91,
+            "Taxas_ML": 4.89,
+            "Itens": [
+                "1x Carteira Couro Leg\u00edtimo Slim 8 Porta Cart\u00f5es E Cnh Hugo Jobs (R$ 34.91)"
+            ]
+        },
+        {
+            "ID": 2000015413712380,
+            "Status": "paid",
+            "Valor": 67.87,
+            "Taxas_ML": 14.440000000000001,
+            "Itens": [
+                "1x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
+            ]
+        },
+        {
+            "ID": 2000015413785238,
+            "Status": "paid",
+            "Valor": 67.87,
+            "Taxas_ML": 14.34,
+            "Itens": [
+                "1x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
+            ]
+        },
+        {
+            "ID": 2000015414149346,
+            "Status": "paid",
+            "Valor": 67.87,
+            "Taxas_ML": 14.34,
+            "Itens": [
+                "1x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
+            ]
+        },
+        {
+            "ID": 2000015414161618,
+            "Status": "paid",
+            "Valor": 34.91,
+            "Taxas_ML": 11.44,
+            "Itens": [
+                "1x Carteira Couro Leg\u00edtimo Slim 8 Porta Cart\u00f5es E Cnh Hugo Jobs (R$ 34.91)"
+            ]
+        },
+        {
+            "ID": 2000015414218992,
+            "Status": "paid",
+            "Valor": 67.87,
+            "Taxas_ML": 14.34,
+            "Itens": [
+                "1x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
+            ]
+        },
+        {
+            "ID": 2000015414460948,
+            "Status": "paid",
+            "Valor": 67.87,
+            "Taxas_ML": 14.440000000000001,
+            "Itens": [
+                "1x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
+            ]
+        },
+        {
+            "ID": 2000015414669722,
+            "Status": "paid",
+            "Valor": 22.3,
+            "Taxas_ML": 3.12,
+            "Itens": [
+                "1x Porta Cart\u00e3o Hugo Jobs Carteira Couro Rustico Fina Slim (R$ 22.3)"
+            ]
+        },
+        {
+            "ID": 2000015414779858,
+            "Status": "paid",
+            "Valor": 34.91,
+            "Taxas_ML": 4.89,
+            "Itens": [
+                "1x Carteira Couro Leg\u00edtimo Slim 8 Porta Cart\u00f5es E Cnh Hugo Jobs (R$ 34.91)"
+            ]
+        },
+        {
+            "ID": 2000015414871424,
+            "Status": "paid",
+            "Valor": 196.99,
+            "Taxas_ML": 45.769999999999996,
+            "Itens": [
+                "1x Kit 10 Camisetas B\u00e1sicas 100% Algod\u00e3o Anti-al\u00e9rgico Atacado (R$ 196.99)"
+            ]
+        },
+        {
+            "ID": 2000015415025348,
+            "Status": "paid",
+            "Valor": 67.87,
+            "Taxas_ML": 14.34,
+            "Itens": [
+                "1x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
+            ]
+        },
+        {
+            "ID": 2000015415212510,
+            "Status": "paid",
+            "Valor": 67.87,
+            "Taxas_ML": 14.34,
+            "Itens": [
+                "1x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
+            ]
+        }
+    ]
+};
+        // Dados injetados dinamicamente via script Python no local-sync
+    </script>
+</body>
+
+</html>
