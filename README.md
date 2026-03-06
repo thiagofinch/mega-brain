@@ -159,6 +159,83 @@ npm run validate:layers
 node bin/pre-publish-gate.js
 ```
 
+
+## Production Deployment
+
+### Frontend Setup
+
+The `frontend/` directory contains a Next.js application.
+
+```bash
+# Install dependencies
+cd frontend
+npm ci
+
+# Run security audit before deploying
+npm run security:audit
+# Must return ZERO high severity vulnerabilities
+
+# Build for production
+npm run build
+
+# Start in production
+npm run start
+```
+
+### Environment Variables
+
+Copy `.env.example` to `.env` and configure all required variables:
+
+```bash
+cp .env.example .env
+# Edit .env with your values
+```
+
+**Required for production:**
+```bash
+NEXT_PUBLIC_API_URL=https://your-api-domain.com
+NEXT_PUBLIC_WEBSOCKET_URL=wss://your-api-domain.com/ws
+ALLOWED_ORIGINS=https://yourdomain.com,https://www.yourdomain.com
+CSRF_SECRET=<generate-random-string>
+REDIS_HOST=redis.internal
+REDIS_PASSWORD=<secure-password>
+```
+
+### Security Hardening
+
+This system includes:
+
+- **CSP** - Strict Content Security Policy with no `unsafe-inline` or `unsafe-eval`
+- **CSRF Protection** - Token-based protection on all state-changing endpoints
+- **Rate Limiting** - 100 requests/minute per IP
+- **Input Validation** - All API endpoints validate and sanitize inputs
+- **CORS Whitelist** - Only configured origins can access the API
+
+See [SECURITY-AUDIT.md](SECURITY-AUDIT.md) for the full security assessment.
+
+### Dependency Audit
+
+Check for vulnerabilities before deploying:
+
+```bash
+cd frontend
+npm audit --audit-level=high
+
+# Fix automatically (safe fixes only)
+npm audit fix
+```
+
+### Documentation
+
+| Document | Purpose |
+|----------|---------|
+| [DEPLOYMENT.md](DEPLOYMENT.md) | Step-by-step deployment runbook |
+| [TROUBLESHOOTING.md](TROUBLESHOOTING.md) | Common issues and solutions |
+| [API.md](API.md) | REST API endpoint documentation |
+| [SECURITY-AUDIT.md](SECURITY-AUDIT.md) | Security assessment and findings |
+
+---
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.

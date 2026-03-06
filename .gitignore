@@ -243,3 +243,36 @@ scripts/filter-patterns.txt
 # === LARGE FILES ===
 **/SellTheAgency.com_Presentation.pdf
 *.docx
+
+# === AGENT HANDOFF DOCUMENTS ===
+AGENT-*-HANDOFF.md
+BLOCKERS-AND-FIXES.md
+E2E-BASELINE-*.md
+WEEK*-SPRINT-TASKS.md
+PERFORMANCE-*.md
+TEST-*.md
+TEST-*.json
+TEST-*.txt
+DELIVERABLES-CHECKLIST.md
+SETUP-SUMMARY.txt
+FINAL-TEST-SUMMARY.txt
+00-READ-ME-FIRST.txt
+JARVIS-HANDOFF-*.md
+DATA-ENGINEER-DAY1-*.md
+DAY1-*.md
+FRONTEND-READY.md
+
+# === BUILD CONFIGURATIONS (Development only) ===
+Dockerfile.backend
+docker-compose.dev.yml
+Makefile
+DOCKER-QUICK-START.md
+FRONTEND-STARTUP.sh
+startup-local.sh
+
+# === BUILD OUTPUT ===
+frontend/
+src/
+server.js
+package-backend.json
+
