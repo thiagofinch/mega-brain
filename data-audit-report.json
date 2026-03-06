@@ -1,10 +1,10 @@
 {
-    "timestamp": "2026-03-06T18:16:34.767224",
+    "timestamp": "2026-03-06T19:52:42.657809",
     "summary": {
-        "gmv": 1615.1,
-        "fees": 367.4,
-        "ads": 110.41000000000001,
-        "net": 1137.2899999999997
+        "gmv": 2059.18,
+        "fees": 465.7699999999999,
+        "ads": 131.56,
+        "net": 1461.85
     },
     "orders": [
         {
@@ -266,6 +266,78 @@
             "Taxas_ML": 14.440000000000001,
             "Itens": [
                 "1x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
+            ]
+        },
+        {
+            "ID": 2000015431780494,
+            "Status": "paid",
+            "Valor": 67.87,
+            "Taxas_ML": 14.440000000000001,
+            "Itens": [
+                "1x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
+            ]
+        },
+        {
+            "ID": 2000015431777732,
+            "Status": "paid",
+            "Valor": 34.91,
+            "Taxas_ML": 11.44,
+            "Itens": [
+                "1x Carteira Couro Leg\u00edtimo Slim 8 Porta Cart\u00f5es E Cnh Hugo Jobs (R$ 34.91)"
+            ]
+        },
+        {
+            "ID": 2000015431808294,
+            "Status": "paid",
+            "Valor": 67.87,
+            "Taxas_ML": 14.440000000000001,
+            "Itens": [
+                "1x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
+            ]
+        },
+        {
+            "ID": 2000015431996560,
+            "Status": "paid",
+            "Valor": 67.87,
+            "Taxas_ML": 6.39,
+            "Itens": [
+                "1x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
+            ]
+        },
+        {
+            "ID": 2000015432003276,
+            "Status": "paid",
+            "Valor": 67.87,
+            "Taxas_ML": 14.34,
+            "Itens": [
+                "1x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
+            ]
+        },
+        {
+            "ID": 2000015432233110,
+            "Status": "paid",
+            "Valor": 67.87,
+            "Taxas_ML": 14.440000000000001,
+            "Itens": [
+                "1x Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com Capuz (R$ 67.87)"
+            ]
+        },
+        {
+            "ID": 2000015432269950,
+            "Status": "paid",
+            "Valor": 34.91,
+            "Taxas_ML": 11.44,
+            "Itens": [
+                "1x Carteira Couro Leg\u00edtimo Slim 8 Porta Cart\u00f5es E Cnh Hugo Jobs (R$ 34.91)"
+            ]
+        },
+        {
+            "ID": 2000015432416168,
+            "Status": "paid",
+            "Valor": 34.91,
+            "Taxas_ML": 11.44,
+            "Itens": [
+                "1x Carteira Couro Leg\u00edtimo Slim 8 Porta Cart\u00f5es E Cnh Hugo Jobs (R$ 34.91)"
             ]
         }
     ]
