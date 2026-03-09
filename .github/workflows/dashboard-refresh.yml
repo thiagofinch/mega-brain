@@ -1,0 +1,50 @@
+name: Dashboard Refresh
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'   # Every 15 minutes
+  workflow_dispatch:           # Manual trigger from GitHub UI
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  secrets: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Refresh ML token + Fetch data
+        env:
+          ML_CLIENT_ID: ${{ secrets.ML_CLIENT_ID }}
+          ML_CLIENT_SECRET: ${{ secrets.ML_CLIENT_SECRET }}
+          ML_REFRESH_TOKEN: ${{ secrets.ML_REFRESH_TOKEN }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+          GH_REPO: ${{ github.repository }}
+        run: python3 ci_fetch_dashboard.py
+
+      - name: Commit dashboard-data.json
+        run: |
+          git config user.name "JARVIS[bot]"
+          git config user.email "jarvis@aiox.co"
+          git add dashboard-data.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "data: dashboard refresh $(date -u '+%Y-%m-%d %H:%M') UTC"
+            git push
+          fi

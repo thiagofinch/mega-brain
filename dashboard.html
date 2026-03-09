@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIOX Sales Intelligence • Dark Cockpit Edition</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* AIOX Colors */
+            --bb-lime: #D1FF00;
+            --bb-dark: #050505;
+            --bb-surface: #0F0F11;
+            --bb-surface-alt: #1C1E19;
+            --bb-cream: rgb(244, 244, 232);
+            --bb-dim: rgba(245, 244, 231, 0.4);
+            --bb-border: rgba(156, 156, 156, 0.15);
+            --bb-gray-charcoal: #3D3D3D;
+            --bb-blue: #0099FF;
+            --bb-flare: #ED4609;
+
+            /* Easing & Motion */
+            --bb-ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+            --bb-ease-smooth: cubic-bezier(0.25, 0.1, 0.25, 1);
+            --bb-dur-fast: 0.2s;
+            --bb-dur-medium: 0.4s;
+            --bb-dur-slow: 0.7s;
+
+            /* Spacing */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 3rem;
+            --spacing-xl: 4rem;
+
+            /* Grid */
+            --grid-columns: 12;
+            --grid-gap: 24px;
+            --base-unit: 4px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bb-dark);
+            color: var(--bb-cream);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* ==================== BACKGROUND PATTERNS ==================== */
+
+        /* Dot Grid Pattern */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: radial-gradient(circle, var(--bb-lime) 1px, transparent 1px);
+            background-size: 16px 16px;
+            background-position: 0 0;
+            opacity: 0.04;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Scanlines Overlay */
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(0, 0, 0, 0.15) 2px,
+                rgba(0, 0, 0, 0.15) 4px
+            );
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .container {
+            position: relative;
+            z-index: 3;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-lg);
+
+            /* 12-column bento-style layout */
+            display: grid;
+            grid-template-columns: repeat(var(--grid-columns), 1fr);
+            gap: var(--grid-gap);
+        }
+
+        /* ==================== ANIMATIONS ==================== */
+        @keyframes orchestration-pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(209, 255, 0, 0.4);
+                transform: scale(1);
+            }
+            50% {
+                box-shadow: 0 0 0 20px rgba(209, 255, 0, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 20px rgba(209, 255, 0, 0);
+                transform: scale(1);
+            }
+        }
+
+        @keyframes glitch-reveal {
+            0% {
+                clip-path: inset(0 0 0 0);
+                filter: hue-rotate(0deg);
+            }
+            50% {
+                filter: hue-rotate(20deg);
+            }
+            100% {
+                clip-path: inset(0 0 0 0);
+                filter: hue-rotate(0deg);
+            }
+        }
+
+        @keyframes stagger-letters {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes neon-glow {
+            0%, 100% {
+                box-shadow: 0 0 10px rgba(209, 255, 0, 0.3), inset 0 0 10px rgba(209, 255, 0, 0.1);
+            }
+            50% {
+                box-shadow: 0 0 30px rgba(209, 255, 0, 0.6), inset 0 0 20px rgba(209, 255, 0, 0.2);
+            }
+        }
+
+        /* ==================== HEADER ==================== */
+        header {
+            grid-column: 1 / -1;
+            padding: var(--spacing-xl);
+            background: linear-gradient(135deg, var(--bb-surface) 0%, var(--bb-surface-alt) 100%);
+            border: 1px solid var(--bb-border);
+            position: relative;
+            overflow: hidden;
+            animation: glitch-reveal var(--bb-dur-slow) var(--bb-ease-smooth);
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--bb-lime), transparent);
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 1px,
+                rgba(0, 0, 0, 0.03) 1px,
+                rgba(0, 0, 0, 0.03) 2px
+            );
+            pointer-events: none;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 900;
+            margin-bottom: var(--spacing-sm);
+            letter-spacing: -0.02em;
+            position: relative;
+            z-index: 2;
+            line-height: 1.1;
+        }
+
+        h1 span {
+            color: var(--bb-lime);
+            display: block;
+            animation: stagger-letters var(--bb-dur-slow) var(--bb-ease-spring) 0.1s forwards;
+        }
+
+        .subtitle {
+            color: var(--bb-dim);
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 2;
+        }
+
+        .timestamp {
+            color: var(--bb-lime);
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.75rem;
+            margin-top: var(--spacing-sm);
+            position: relative;
+            z-index: 2;
+        }
+
+        .timestamp::before {
+            content: '> ';
+            margin-right: 0.5rem;
+        }
+
+        /* ==================== KPI CARDS ==================== */
+        .kpi-card {
+            background: linear-gradient(135deg, var(--bb-surface-alt) 0%, var(--bb-surface) 100%);
+            border: 1px solid var(--bb-border);
+            padding: var(--spacing-md);
+            position: relative;
+            cursor: pointer;
+            transition: all var(--bb-dur-medium) var(--bb-ease-spring);
+            overflow: hidden;
+            animation: stagger-letters var(--bb-dur-slow) var(--bb-ease-spring) backwards;
+        }
+
+        .kpi-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--bb-lime), transparent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform var(--bb-dur-medium) var(--bb-ease-spring);
+        }
+
+        .kpi-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(209, 255, 0, 0.1), transparent);
+            opacity: 0;
+            transition: opacity var(--bb-dur-fast);
+        }
+
+        .kpi-card:hover {
+            border-color: var(--bb-lime);
+            background: linear-gradient(135deg, rgba(209, 255, 0, 0.05) 0%, var(--bb-surface) 100%);
+            transform: translateY(-4px);
+            animation: orchestration-pulse 2s ease-in-out infinite;
+        }
+
+        .kpi-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .kpi-icon {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .kpi-label {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--bb-dim);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .kpi-value {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 900;
+            color: var(--bb-lime);
+            font-family: 'Roboto Mono', monospace;
+            letter-spacing: -0.02em;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .kpi-change {
+            display: inline-block;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 6px 10px;
+            border: 1px solid var(--bb-lime);
+            color: var(--bb-lime);
+            background: rgba(209, 255, 0, 0.05);
+            transition: all var(--bb-dur-medium) var(--bb-ease-spring);
+        }
+
+        .kpi-change:hover {
+            background: rgba(209, 255, 0, 0.15);
+            box-shadow: 0 0 20px rgba(209, 255, 0, 0.3);
+        }
+
+        /* Bento Grid Sizes */
+        .kpi-card:nth-child(1) { grid-column: span 4; }
+        .kpi-card:nth-child(2) { grid-column: span 4; }
+        .kpi-card:nth-child(3) { grid-column: span 4; }
+        .kpi-card:nth-child(4) { grid-column: span 4; }
+        .kpi-card:nth-child(5) { grid-column: span 4; }
+        .kpi-card:nth-child(6) { grid-column: span 4; }
+        .kpi-card:nth-child(7) { grid-column: span 4; }
+        .kpi-card:nth-child(8) { grid-column: span 4; }
+        .kpi-card:nth-child(9) { grid-column: span 4; }
+
+        /* ==================== SECTIONS ==================== */
+        .section {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, var(--bb-surface-alt) 0%, var(--bb-surface) 100%);
+            border: 1px solid var(--bb-border);
+            padding: var(--spacing-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--bb-lime), transparent);
+        }
+
+        .section h2 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 900;
+            margin-bottom: var(--spacing-lg);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            letter-spacing: -0.02em;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section h2::before {
+            content: '';
+            width: 4px;
+            height: 28px;
+            background: var(--bb-lime);
+            flex-shrink: 0;
+        }
+
+        .section h2::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, var(--bb-lime), transparent);
+        }
+
+        /* ==================== LUCRO BOX ==================== */
+        .lucro-box {
+            background: linear-gradient(135deg, rgba(209, 255, 0, 0.08) 0%, rgba(209, 255, 0, 0.03) 100%);
+            border: 2px solid var(--bb-lime);
+            border-radius: 0;
+            padding: var(--spacing-lg);
+            margin: var(--spacing-lg) 0;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.95rem;
+            line-height: 2;
+            position: relative;
+        }
+
+        .lucro-box::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(209, 255, 0, 0.02) 10px, rgba(209, 255, 0, 0.02) 20px);
+            pointer-events: none;
+        }
+
+        .lucro-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(209, 255, 0, 0.1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .lucro-item:last-child {
+            border-bottom: none;
+            border-top: 2px solid var(--bb-lime);
+            margin-top: var(--spacing-md);
+            padding-top: var(--spacing-md);
+            font-weight: 700;
+            font-size: 1.1em;
+            color: var(--bb-lime);
+        }
+
+        .lucro-item:last-child::before {
+            content: '💎 ';
+        }
+
+        /* ==================== TABLE ==================== */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--spacing-lg) 0;
+            font-family: 'Roboto Mono', monospace;
+            position: relative;
+            z-index: 2;
+        }
+
+        th {
+            background: transparent;
+            padding: var(--spacing-sm);
+            text-align: left;
+            font-weight: 700;
+            font-size: 0.75rem;
+            color: var(--bb-lime);
+            border-bottom: 2px solid var(--bb-lime);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+
+        td {
+            padding: var(--spacing-sm);
+            border-bottom: 1px solid var(--bb-border);
+            color: var(--bb-cream);
+            transition: all var(--bb-dur-fast) var(--bb-ease-smooth);
+        }
+
+        tr:hover td {
+            background: rgba(209, 255, 0, 0.03);
+            color: var(--bb-lime);
+        }
+
+        /* ==================== CHART ==================== */
+        .chart-container {
+            position: relative;
+            height: 300px;
+            margin: var(--spacing-lg) 0;
+            background: var(--bb-surface);
+            border: 1px solid var(--bb-border);
+            padding: var(--spacing-md);
+        }
+
+        /* ==================== BADGES ==================== */
+        .badge {
+            display: inline-block;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 6px 10px;
+            border: 1px solid;
+            margin: 4px;
+            transition: all var(--bb-dur-fast) var(--bb-ease-smooth);
+        }
+
+        .badge.success {
+            color: var(--bb-lime);
+            border-color: var(--bb-lime);
+            background: rgba(209, 255, 0, 0.05);
+        }
+
+        .badge.success:hover {
+            background: rgba(209, 255, 0, 0.15);
+            box-shadow: 0 0 15px rgba(209, 255, 0, 0.3);
+        }
+
+        .badge.warning {
+            color: var(--bb-flare);
+            border-color: var(--bb-flare);
+            background: rgba(237, 70, 9, 0.05);
+        }
+
+        .badge.warning:hover {
+            background: rgba(237, 70, 9, 0.15);
+        }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 1024px) {
+            .container {
+                grid-template-columns: repeat(8, 1fr);
+            }
+
+            .kpi-card:nth-child(1) { grid-column: span 4; }
+            .kpi-card:nth-child(2) { grid-column: span 4; }
+            .kpi-card:nth-child(3) { grid-column: span 4; }
+            .kpi-card:nth-child(4) { grid-column: span 4; }
+            .kpi-card:nth-child(5) { grid-column: span 4; }
+            .kpi-card:nth-child(6) { grid-column: span 4; }
+            .kpi-card:nth-child(7) { grid-column: span 4; }
+            .kpi-card:nth-child(8) { grid-column: span 4; }
+            .kpi-card:nth-child(9) { grid-column: span 4; }
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                grid-template-columns: 1fr;
+                padding: var(--spacing-md);
+            }
+
+            .kpi-card { grid-column: 1 !important; }
+            .section { grid-column: 1 !important; }
+
+            h1 { font-size: 1.8rem; }
+        }
+
+        /* ==================== SCROLLBAR ==================== */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bb-dark);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--bb-border);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--bb-lime);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <header>
+            <h1>AIOX Sales<span>Intelligence</span></h1>
+            <p class="subtitle">Dark Cockpit Edition • AI isn't the hero. You are.</p>
+            <p class="timestamp">SYS_ONLINE | LAST_UPDATE: <span id="timestamp"></span></p>
+        </header>
+
+        <!-- KPI ROW 1: RECEITA -->
+        <div class="kpi-card">
+            <div class="kpi-icon">📈</div>
+            <div class="kpi-label">Faturamento Hoje</div>
+            <div class="kpi-value" id="kpi-faturamento">—</div>
+            <span class="kpi-change" id="kpi-faturamento-badge">⟳ Carregando...</span>
+        </div>
+
+        <div class="kpi-card">
+            <div class="kpi-icon">🛒</div>
+            <div class="kpi-label">Vendas Hoje</div>
+            <div class="kpi-value" id="kpi-vendas">—</div>
+            <span class="kpi-change" id="kpi-vendas-badge">⟳ Carregando...</span>
+        </div>
+
+        <div class="kpi-card">
+            <div class="kpi-icon">💰</div>
+            <div class="kpi-label">Ticket Médio</div>
+            <div class="kpi-value" id="kpi-ticket">—</div>
+            <span class="kpi-change">↑ Vestuário</span>
+        </div>
+
+        <!-- KPI ROW 2: LUCRO -->
+        <div class="kpi-card">
+            <div class="kpi-icon">💵</div>
+            <div class="kpi-label">Lucro Bruto (Est.)</div>
+            <div class="kpi-value" id="kpi-lucro">—</div>
+            <span class="kpi-change">↑ 15% margin</span>
+        </div>
+
+        <div class="kpi-card">
+            <div class="kpi-icon">📊</div>
+            <div class="kpi-label">Margem Bruta</div>
+            <div class="kpi-value" id="kpi-margem">—</div>
+            <span class="kpi-change">📦 Vestuário</span>
+        </div>
+
+        <div class="kpi-card">
+            <div class="kpi-icon">🎯</div>
+            <div class="kpi-label">Lucro/Pedido</div>
+            <div class="kpi-value" id="kpi-lucro-pedido">—</div>
+            <span class="kpi-change" id="kpi-lucro-pedido-badge">⟳ Carregando...</span>
+        </div>
+
+        <!-- KPI ROW 3: SEMANA + STATUS -->
+        <div class="kpi-card">
+            <div class="kpi-icon">📅</div>
+            <div class="kpi-label">Vendas Semana</div>
+            <div class="kpi-value" id="kpi-semana">—</div>
+            <span class="kpi-change" id="kpi-semana-badge">↑ 7 dias</span>
+        </div>
+
+        <div class="kpi-card">
+            <div class="kpi-icon">⭐</div>
+            <div class="kpi-label">Reputação</div>
+            <div class="kpi-value">5★</div>
+            <span class="kpi-change">✓ 9.142 txns</span>
+        </div>
+
+        <div class="kpi-card">
+            <div class="kpi-icon">🏆</div>
+            <div class="kpi-label">Status</div>
+            <div class="kpi-value" id="kpi-status">—</div>
+            <span class="kpi-change" id="kpi-status-badge">⟳ Conectando...</span>
+        </div>
+
+        <!-- ANÁLISE FINANCEIRA (live) -->
+        <section class="section">
+            <h2>Análise Financeira • <span id="data-hoje">—</span></h2>
+            <div class="lucro-box">
+                <div class="lucro-item">
+                    <span>Faturamento Bruto</span>
+                    <span id="fin-faturamento">—</span>
+                </div>
+                <div class="lucro-item">
+                    <span>(-) Custos Diretos (85%)</span>
+                    <span id="fin-custos">—</span>
+                </div>
+                <div class="lucro-item">
+                    <span>(-) Impostos + Taxas (10%)</span>
+                    <span id="fin-impostos">—</span>
+                </div>
+                <div class="lucro-item">
+                    <span>Lucro Bruto</span>
+                    <span id="fin-lucro">—</span>
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Métrica</th>
+                        <th>Valor</th>
+                        <th>% Faturamento</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="fin-table-body">
+                    <tr><td colspan="4" style="text-align:center;color:var(--bb-dim)">⟳ Carregando dados ao vivo...</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- VOLUME CHART (live) -->
+        <section class="section">
+            <h2>Volume de Vendas • Últimos 7 Dias</h2>
+            <div class="chart-container">
+                <canvas id="volumeChart"></canvas>
+            </div>
+        </section>
+
+        <!-- CATEGORIAS (live) -->
+        <section class="section">
+            <h2>Distribuição de Vendas • <span id="data-hoje-cat">—</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Categoria</th>
+                        <th>Vendas</th>
+                        <th>Faturamento</th>
+                        <th>% Total</th>
+                        <th>Trend</th>
+                    </tr>
+                </thead>
+                <tbody id="cat-table-body">
+                    <tr><td colspan="5" style="text-align:center;color:var(--bb-dim)">⟳ Carregando...</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- TOP PRODUCTS (live) -->
+        <section class="section">
+            <h2>Top 5 Produtos • Hoje</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Produto</th>
+                        <th>Vendas</th>
+                        <th>Faturamento</th>
+                        <th>Lucro</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody id="top-table-body">
+                    <tr><td colspan="6" style="text-align:center;color:var(--bb-dim)">⟳ Carregando...</td></tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script>
+        // ── Timestamp ──────────────────────────────────────────────
+        function updateTimestamp() {
+            const now = new Date();
+            document.getElementById('timestamp').textContent = now.toLocaleString('pt-BR', {
+                year: 'numeric', month: '2-digit', day: '2-digit',
+                hour: '2-digit', minute: '2-digit', second: '2-digit'
+            });
+        }
+        updateTimestamp();
+        setInterval(updateTimestamp, 1000);
+
+        // ── Formatters ─────────────────────────────────────────────
+        const brl = v => 'R$ ' + Number(v).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        const fmtDate = iso => {
+            const d = new Date(iso);
+            return d.toLocaleDateString('pt-BR');
+        };
+
+        // ── Chart (initialized once, updated with live data) ───────
+        let volumeChart = null;
+        const chartOptions = {
+            responsive: true, maintainAspectRatio: false,
+            plugins: {
+                legend: { labels: { color: 'rgb(244,244,232)', font: { family: "'Roboto Mono',monospace", weight: 700, size: 12 }, padding: 20 } }
+            },
+            scales: {
+                y: { ticks: { color: 'rgba(245,244,231,0.4)', font: { family: "'Roboto Mono',monospace" } }, grid: { color: 'rgba(209,255,0,0.05)' }, border: { color: 'rgba(156,156,156,0.15)' } },
+                x: { ticks: { color: 'rgba(245,244,231,0.4)', font: { family: "'Roboto Mono',monospace" } }, grid: { color: 'rgba(209,255,0,0.05)' }, border: { color: 'rgba(156,156,156,0.15)' } }
+            }
+        };
+
+        function initChart(labels, data) {
+            const ctx = document.getElementById('volumeChart').getContext('2d');
+            volumeChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels,
+                    datasets: [{
+                        label: 'Pedidos/Dia', data,
+                        borderColor: '#D1FF00', backgroundColor: 'rgba(209,255,0,0.1)',
+                        borderWidth: 3, fill: true, tension: 0.4,
+                        pointRadius: 5, pointBackgroundColor: '#D1FF00',
+                        pointBorderColor: '#050505', pointBorderWidth: 2,
+                        pointHoverRadius: 7, pointHoverBorderWidth: 3
+                    }]
+                },
+                options: chartOptions
+            });
+        }
+
+        function updateChart(labels, data) {
+            if (!volumeChart) { initChart(labels, data); return; }
+            volumeChart.data.labels = labels;
+            volumeChart.data.datasets[0].data = data;
+            volumeChart.update();
+        }
+
+        // ── Render ─────────────────────────────────────────────────
+        function render(d) {
+            const k = d.kpis;
+            const today = fmtDate(d.updated_at);
+
+            // KPI cards
+            document.getElementById('kpi-faturamento').textContent = brl(k.faturamento_hoje);
+            document.getElementById('kpi-faturamento-badge').textContent = '🟢 API LIVE';
+            document.getElementById('kpi-vendas').textContent = k.vendas_hoje;
+            document.getElementById('kpi-vendas-badge').textContent = '↑ Hoje ' + today;
+            document.getElementById('kpi-ticket').textContent = brl(k.ticket_medio);
+            document.getElementById('kpi-lucro').textContent = brl(k.lucro_bruto);
+            document.getElementById('kpi-margem').textContent = k.margem_pct.toFixed(0) + '%';
+            document.getElementById('kpi-lucro-pedido').textContent = brl(k.lucro_por_pedido);
+            document.getElementById('kpi-lucro-pedido-badge').textContent = '✓ Est. ' + k.vendas_hoje + ' pedidos';
+            document.getElementById('kpi-semana').textContent = k.vendas_semana;
+            document.getElementById('kpi-semana-badge').textContent = 'Fat. ' + brl(k.faturamento_semana);
+            document.getElementById('kpi-status').textContent = 'LIVE';
+            document.getElementById('kpi-status-badge').textContent = '🟢 API OK';
+
+            // Dates
+            document.getElementById('data-hoje').textContent = today;
+            document.getElementById('data-hoje-cat').textContent = today;
+
+            // Financial analysis
+            const fat = k.faturamento_hoje;
+            document.getElementById('fin-faturamento').textContent = brl(fat);
+            document.getElementById('fin-custos').textContent = brl(fat * 0.85);
+            document.getElementById('fin-impostos').textContent = brl(fat * 0.10);
+            document.getElementById('fin-lucro').textContent = brl(k.lucro_bruto);
+
+            // Fin table
+            const topCat = d.categories[0] || {};
+            document.getElementById('fin-table-body').innerHTML = `
+                <tr><td>Faturamento Total</td><td>${brl(fat)}</td><td>100%</td><td><span class="badge success">✓ ${k.vendas_hoje} pedidos</span></td></tr>
+                <tr><td>Margem de Contribuição</td><td>${brl(k.lucro_bruto)}</td><td>${k.margem_pct.toFixed(0)}%</td><td><span class="badge success">✓ POSITIVA</span></td></tr>
+                <tr><td>Ticket Médio</td><td>${brl(k.ticket_medio)}</td><td>Vestuário</td><td><span class="badge success">✓ ESTÁVEL</span></td></tr>
+                <tr><td>Top Categoria</td><td>${topCat.nome || '—'}</td><td>${topCat.pct || 0}%</td><td><span class="badge success">↑ TRENDING</span></td></tr>
+            `;
+
+            // Categories table
+            document.getElementById('cat-table-body').innerHTML = d.categories.map(c =>
+                `<tr><td>${c.nome}</td><td>${c.vendas}</td><td>${brl(c.faturamento)}</td><td>${c.pct}%</td><td><span class="badge success">↑ LIVE</span></td></tr>`
+            ).join('') || '<tr><td colspan="5" style="color:var(--bb-dim)">Sem dados</td></tr>';
+
+            // Top 5 products
+            document.getElementById('top-table-body').innerHTML = d.top5.map((p, i) =>
+                `<tr>
+                    <td><strong>${i+1}º</strong></td>
+                    <td>${p.title}</td>
+                    <td>${p.vendas}</td>
+                    <td>${brl(p.faturamento)}</td>
+                    <td>${brl(p.lucro)}</td>
+                    <td><span class="badge success">${p.score}/100</span></td>
+                </tr>`
+            ).join('') || '<tr><td colspan="6" style="color:var(--bb-dim)">Sem dados</td></tr>';
+
+            // Chart
+            updateChart(d.chart.labels, d.chart.vendas);
+        }
+
+        // ── Fetch & Refresh ────────────────────────────────────────
+        const DATA_URL = 'dashboard-data.json';
+        const REFRESH_MS = 60000; // 60s
+
+        async function fetchData() {
+            try {
+                const r = await fetch(DATA_URL + '?t=' + Date.now());
+                if (!r.ok) throw new Error('HTTP ' + r.status);
+                const data = await r.json();
+                render(data);
+            } catch (e) {
+                document.getElementById('kpi-status').textContent = 'ERR';
+                document.getElementById('kpi-status-badge').textContent = '🔴 ' + e.message;
+                console.error('Dashboard fetch error:', e);
+            }
+        }
+
+        fetchData();
+        setInterval(fetchData, REFRESH_MS);
+
+        // ── Mouse tracking ─────────────────────────────────────────
+        document.querySelectorAll('.kpi-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                card.style.setProperty('--mouse-x', ((e.clientX - rect.left) / rect.width * 100) + '%');
+                card.style.setProperty('--mouse-y', ((e.clientY - rect.top) / rect.height * 100) + '%');
+            });
+        });
+    </script>
+</body>
+</html>
