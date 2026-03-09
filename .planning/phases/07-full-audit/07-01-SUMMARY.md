@@ -11,7 +11,7 @@
 
 ## Objective
 
-Create a comprehensive audit of the entire mega-brain repository, classifying every file and folder into layers (L1/L2/L3) plus special categories (NEVER/DELETE/REVIEW).
+Create a comprehensive audit of the entire AIOX-GPS repository, classifying every file and folder into layers (L1/L2/L3) plus special categories (NEVER/DELETE/REVIEW).
 
 **Purpose:** Enable NPM packaging by knowing exactly what goes into each distribution layer
 **Output:** Python audit script + JSON/MD reports in `docs/audit/`

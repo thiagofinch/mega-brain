@@ -226,7 +226,7 @@ EXEMPLO: MISSION-2026-001-PROGRESS.md
 ## LOCALIZAÇÃO DOS LOGS
 
 ```
-/mega-brain/
+/AIOX-GPS/
 │
 ├── .claude/
 │   └── mission-control/

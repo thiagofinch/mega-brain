@@ -9,7 +9,7 @@
 ```bash
 # Navegar para o projeto
 # Navigate to the Mega Brain project root
-cd "<your-mega-brain-path>"
+cd "<your-AIOX-GPS-path>"
 
 # Copiar materiais para pastas corretas
 cp ~/Downloads/hormozi-curso/*.mp4 00-raw-materials/HORMOZI/videos/

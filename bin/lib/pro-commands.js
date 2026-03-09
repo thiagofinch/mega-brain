@@ -40,15 +40,15 @@ export function showStatus() {
 
   if (state === 'GRACE') {
     lines.push('');
-    lines.push(chalk.yellow('  Revalidacao necessaria. Execute: mega-brain validate <email>'));
+    lines.push(chalk.yellow('  Revalidacao necessaria. Execute: AIOX-GPS validate <email>'));
   }
   if (state === 'EXPIRED') {
     lines.push('');
-    lines.push(chalk.red('  Licenca expirada. Execute: mega-brain validate <email>'));
+    lines.push(chalk.red('  Licenca expirada. Execute: AIOX-GPS validate <email>'));
   }
   if (state === 'COMMUNITY' || state === 'NOT_FOUND') {
     lines.push('');
-    lines.push(chalk.dim('  Upgrade: mega-brain upgrade'));
+    lines.push(chalk.dim('  Upgrade: AIOX-GPS upgrade'));
   }
 
   console.log(boxen(lines.join('\n'), {

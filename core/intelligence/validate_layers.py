@@ -274,7 +274,7 @@ def main():
     )
     args = parser.parse_args()
 
-    # Resolve repo root: core/intelligence/ -> core/ -> mega-brain/
+    # Resolve repo root: core/intelligence/ -> core/ -> AIOX-GPS/
     script_path = Path(__file__).resolve()
     repo_root = script_path.parent.parent.parent
 

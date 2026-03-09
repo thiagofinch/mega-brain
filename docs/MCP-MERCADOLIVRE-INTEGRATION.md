@@ -161,7 +161,7 @@ CFO automatically uses **real-time commission data** in calculations.
 
 ### Test 1: Server Initialization
 ```bash
-cd mega-brain
+cd AIOX-GPS
 python3 core/mcp/mercadolivre_mcp.py
 # Expected: ✅ MercadoLivre MCP Server initialized
 ```

@@ -6,7 +6,7 @@ from pathlib import Path
 import sys
 
 # Try to find token
-token_state_path = Path("/Users/kennydwillker/Documents/GitHub/Thiago Finch/mega-brain/.claude/mission-control/ML-TOKEN-STATE.json")
+token_state_path = Path("/Users/kennydwillker/Documents/GitHub/Thiago Finch/AIOX-GPS/.claude/mission-control/ML-TOKEN-STATE.json")
 if not token_state_path.exists():
     print("Token state not found")
     sys.exit(1)

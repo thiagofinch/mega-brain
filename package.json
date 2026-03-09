@@ -1,12 +1,12 @@
 {
-  "name": "mega-brain-ai",
+  "name": "AIOX-GPS-ai",
   "version": "1.3.0",
   "description": "AI Knowledge Management System - Transform expert materials into actionable playbooks",
   "type": "module",
   "bin": {
-    "mega-brain-ai": "bin/cli.js",
-    "mega-brain": "bin/cli.js",
-    "mega-brain-push": "bin/push.js"
+    "AIOX-GPS-ai": "bin/cli.js",
+    "AIOX-GPS": "bin/cli.js",
+    "AIOX-GPS-push": "bin/push.js"
   },
   "files": [
     ".antigravity/",
@@ -120,7 +120,7 @@
     "docs/pipeline-completa-v4.md",
     "docs/plan-mode-protocol.md",
     "docs/plans/",
-    "docs/prd-mega-brain-quality-uplift-v1.md",
+    "docs/prd-AIOX-GPS-quality-uplift-v1.md",
     "docs/prd/",
     "docs/prompts/",
     "docs/quick-start.md",
@@ -150,9 +150,9 @@
     "requirements.txt"
   ],
   "scripts": {
-    "start": "node bin/mega-brain.js",
-    "install-wizard": "node bin/mega-brain.js install",
-    "validate": "node bin/mega-brain.js validate",
+    "start": "node bin/AIOX-GPS.js",
+    "install-wizard": "node bin/AIOX-GPS.js install",
+    "validate": "node bin/AIOX-GPS.js validate",
     "validate:layers": "node bin/validate-package.js",
     "prepublishOnly": "node bin/pre-publish-gate.js",
     "lint": "eslint . --ext .ts,.tsx,.js --fix 2>/dev/null || echo 'ESLint OK'",

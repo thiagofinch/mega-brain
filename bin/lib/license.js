@@ -1,11 +1,11 @@
 // bin/lib/license.js
-// Manages ~/.mega-brain/license.json — local cache of license state
+// Manages ~/.AIOX-GPS/license.json — local cache of license state
 
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
 import { homedir } from 'os';
 
-const LICENSE_DIR = join(homedir(), '.mega-brain');
+const LICENSE_DIR = join(homedir(), '.AIOX-GPS');
 const LICENSE_PATH = join(LICENSE_DIR, 'license.json');
 const REVALIDATION_DAYS = 7;
 const GRACE_DAYS = 7;

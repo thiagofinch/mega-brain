@@ -5,7 +5,7 @@ from datetime import datetime
 from pathlib import Path
 import sys
 
-token_state_path = Path("/Users/kennydwillker/Documents/GitHub/Thiago Finch/mega-brain/.claude/mission-control/ML-TOKEN-STATE.json")
+token_state_path = Path("/Users/kennydwillker/Documents/GitHub/Thiago Finch/AIOX-GPS/.claude/mission-control/ML-TOKEN-STATE.json")
 with open(token_state_path, 'r') as f:
     state = json.load(f)
     default_user = state.get("default_user_id", "694166791")

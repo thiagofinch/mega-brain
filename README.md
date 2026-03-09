@@ -32,7 +32,7 @@ Built for solo entrepreneurs and small teams who want to operationalize the expe
 npm install
 
 # 2. Install and configure
-npx mega-brain-ai setup
+npx AIOX-GPS-ai setup
 
 # 3. Fill in API keys when prompted (only OPENAI_API_KEY is required)
 
@@ -84,7 +84,7 @@ Run `/setup` in Claude Code to configure keys interactively. Keys are stored in 
 ## Architecture
 
 ```
-mega-brain/
+AIOX-GPS/
 ├── core/           -> Processing engine (tasks, workflows, protocols, schemas)
 ├── agents/         -> AI agent definitions (conclave, cargo, minds, templates)
 ├── bin/            -> CLI tools and entry points

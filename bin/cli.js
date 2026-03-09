@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-import './mega-brain.js';
+import './AIOX-GPS.js';

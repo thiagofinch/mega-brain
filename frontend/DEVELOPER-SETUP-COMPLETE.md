@@ -326,7 +326,7 @@ npm run build
 
 ## 📞 Informações de Contato
 
-- **Local**: `/Users/kennydwillker/Documents/GitHub/Thiago Finch/mega-brain/frontend/`
+- **Local**: `/Users/kennydwillker/Documents/GitHub/Thiago Finch/AIOX-GPS/frontend/`
 - **Port**: 3000
 - **Process**: `node` com PID 90300
 - **Duration**: 1.3 segundos para ready

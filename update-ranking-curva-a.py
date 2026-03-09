@@ -4,7 +4,7 @@ from pathlib import Path
 import requests
 
 # Set path for token manager
-sys.path.insert(0, '/Users/kennydwillker/Documents/GitHub/Thiago Finch/mega-brain/core/mcp')
+sys.path.insert(0, '/Users/kennydwillker/Documents/GitHub/Thiago Finch/AIOX-GPS/core/mcp')
 from token_manager import MercadoLivreTokenManager
 
 manager = MercadoLivreTokenManager()

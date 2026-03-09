@@ -52,7 +52,7 @@ Pre-publish gate includes both secrets scan AND layer validation
 **Status: PASSED**
 
 ```
-PASS: install instructions (npx mega-brain-ai)
+PASS: install instructions (npx AIOX-GPS-ai)
 PASS: quick start section
 PASS: feature overview
 PASS: prerequisites (Node.js + Python)

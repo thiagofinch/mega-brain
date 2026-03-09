@@ -1,7 +1,7 @@
 # Mega Brain Layer Audit Report
 
 **Generated:** 2026-02-27T21:07:59.716881Z
-**Repository:** /Users/thiagofinch/Documents/Projects/mega-brain
+**Repository:** /Users/thiagofinch/Documents/Projects/AIOX-GPS
 **Total Items Classified:** 8799
 
 ## Summary
@@ -31,7 +31,7 @@
 - .antigravity/README.md
 - .antigravity/rules/
 - .antigravity/rules/.gitkeep
-- .antigravity/rules/mega-brain.md
+- .antigravity/rules/AIOX-GPS.md
 - .claude/
 - .claude/CLAUDE.md
 - .claude/agent-memory/

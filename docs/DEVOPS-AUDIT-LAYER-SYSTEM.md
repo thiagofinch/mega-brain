@@ -26,10 +26,10 @@
 
 ## 1. Executive Summary
 
-Mega Brain is an AI Knowledge Management System distributed as an npm package (`mega-brain-ai`). The codebase uses a **3-layer distribution model** to separate public open-source content (L1), premium paid content (L2), and personal user data (L3) — all managed from a single local repository with 3 different git remotes.
+Mega Brain is an AI Knowledge Management System distributed as an npm package (`AIOX-GPS-ai`). The codebase uses a **3-layer distribution model** to separate public open-source content (L1), premium paid content (L2), and personal user data (L3) — all managed from a single local repository with 3 different git remotes.
 
 **Key facts:**
-- Package name: `mega-brain-ai` (public on npmjs.com)
+- Package name: `AIOX-GPS-ai` (public on npmjs.com)
 - Current version: `1.3.0`
 - License: `UNLICENSED` (proprietary)
 - Node.js requirement: `>=18.0.0` (uses native `fetch`)
@@ -97,9 +97,9 @@ The programmatic classifier lives at `core/intelligence/audit_layers.py` and imp
 ### 3.1 Remote Configuration
 
 ```
-origin  → https://github.com/thiagofinch/mega-brain.git        (L1 — public)
-premium → https://github.com/thiagofinch/mega-brain-premium.git (L2 — private)
-backup  → https://github.com/thiagofinch/mega-brain-full.git    (L3 — private)
+origin  → https://github.com/thiagofinch/AIOX-GPS.git        (L1 — public)
+premium → https://github.com/thiagofinch/AIOX-GPS-premium.git (L2 — private)
+backup  → https://github.com/thiagofinch/AIOX-GPS-full.git    (L3 — private)
 ```
 
 ### 3.2 Data Flow
@@ -107,15 +107,15 @@ backup  → https://github.com/thiagofinch/mega-brain-full.git    (L3 — privat
 ```
 Local Repository (all 3 layers coexist)
 │
-├──[git push origin main]──────────→ mega-brain.git (L1 only)
+├──[git push origin main]──────────→ AIOX-GPS.git (L1 only)
 │   Uses: .gitignore to exclude L2/L3
 │   Method: Standard git push (respects .gitignore)
 │
-├──[git push premium main --force]─→ mega-brain-premium.git (L1 + L2)
+├──[git push premium main --force]─→ AIOX-GPS-premium.git (L1 + L2)
 │   Uses: layer1-allowlist.txt + layer2-manifest.txt
 │   Method: Temporary commit with git add -f, then git reset HEAD~1
 │
-└──[git push backup main --force]──→ mega-brain-full.git (L1 + L2 + L3)
+└──[git push backup main --force]──→ AIOX-GPS-full.git (L1 + L2 + L3)
     Uses: layer3-manifest.txt + git add -f
     Method: Temporary commit with git add -f, then git reset HEAD~1
     Safety: git reset HEAD -- .env (always unstaged)
@@ -139,7 +139,7 @@ This means **local `main` branch always reflects L1 state**. The L2 and L3 commi
 
 ```json
 {
-  "name": "mega-brain-ai",
+  "name": "AIOX-GPS-ai",
   "version": "1.3.0",
   "type": "module",
   "license": "UNLICENSED",
@@ -152,14 +152,14 @@ This means **local `main` branch always reflects L1 state**. The L2 and L3 commi
 ```json
 {
   "bin": {
-    "mega-brain-ai": "bin/cli.js",
-    "mega-brain": "bin/cli.js",
-    "mega-brain-push": "bin/push.js"
+    "AIOX-GPS-ai": "bin/cli.js",
+    "AIOX-GPS": "bin/cli.js",
+    "AIOX-GPS-push": "bin/push.js"
   }
 }
 ```
 
-Users install with: `npx mega-brain-ai install`
+Users install with: `npx AIOX-GPS-ai install`
 
 ### 4.3 Files Field (L1 Content Control)
 
@@ -197,9 +197,9 @@ All dependencies are for CLI UX (colors, prompts, spinners, boxes). No server-si
 
 ```json
 {
-  "start": "node bin/mega-brain.js",
-  "install-wizard": "node bin/mega-brain.js install",
-  "validate": "node bin/mega-brain.js validate",
+  "start": "node bin/AIOX-GPS.js",
+  "install-wizard": "node bin/AIOX-GPS.js install",
+  "validate": "node bin/AIOX-GPS.js validate",
   "validate:layers": "node bin/validate-package.js",
   "prepublishOnly": "node bin/pre-publish-gate.js"
 }
@@ -281,18 +281,18 @@ Exit codes:
 
 ## 6. CLI Installer & Setup Flow
 
-**File:** `bin/mega-brain.js` (entry point via `bin/cli.js`)
+**File:** `bin/AIOX-GPS.js` (entry point via `bin/cli.js`)
 
 ### 6.1 Available Commands
 
 ```
-npx mega-brain-ai install [name]  → Install Mega Brain (Premium or Community)
-npx mega-brain-ai setup           → Configure API keys (interactive wizard)
-npx mega-brain-ai validate <email>→ Validate MoneyClub buyer email
-npx mega-brain-ai push [--layer N]→ Push to Layer 1/2/3 remote
-npx mega-brain-ai upgrade         → Upgrade Community to Premium
-npx mega-brain-ai status          → Show Pro license status
-npx mega-brain-ai features        → List available vs locked features
+npx AIOX-GPS-ai install [name]  → Install Mega Brain (Premium or Community)
+npx AIOX-GPS-ai setup           → Configure API keys (interactive wizard)
+npx AIOX-GPS-ai validate <email>→ Validate MoneyClub buyer email
+npx AIOX-GPS-ai push [--layer N]→ Push to Layer 1/2/3 remote
+npx AIOX-GPS-ai upgrade         → Upgrade Community to Premium
+npx AIOX-GPS-ai status          → Show Pro license status
+npx AIOX-GPS-ai features        → List available vs locked features
 ```
 
 ### 6.2 Auto-Setup Trigger
@@ -313,7 +313,7 @@ If a user runs any command (except install/setup/push) and `.env` doesn't exist,
 ### 6.3 Install Flow (Simplified)
 
 ```
-npx mega-brain-ai install
+npx AIOX-GPS-ai install
     │
     ├── Show ASCII banner
     ├── Prompt: email validation (MoneyClub buyer check)
@@ -411,7 +411,7 @@ Email validated → premium_token returned
 ## 8. Smart Push System
 
 **File:** `bin/push.js` (1057 lines)
-**Binary:** `mega-brain-push` or `mega-brain push`
+**Binary:** `AIOX-GPS-push` or `AIOX-GPS push`
 
 ### 8.1 Push Flows by Layer
 
@@ -678,7 +678,7 @@ Layer 6: .gitleaks.toml
 ## Appendix A: File Structure Overview
 
 ```
-mega-brain/
+AIOX-GPS/
 ├── .claude/                    [L1] Claude Code integration
 │   ├── CLAUDE.md               [L1] Project instructions
 │   ├── hooks/                  [L1] 20+ Python hooks
@@ -697,7 +697,7 @@ mega-brain/
 │   └── sua-empresa/            [L3] Company data (gitignored)
 ├── bin/
 │   ├── cli.js                  [L1] Entry point (2 lines)
-│   ├── mega-brain.js           [L1] Main CLI (137 lines)
+│   ├── AIOX-GPS.js           [L1] Main CLI (137 lines)
 │   ├── push.js                 [L1] Smart push system (1057 lines)
 │   ├── pre-publish-gate.js     [L1] Security gate (230 lines)
 │   ├── validate-package.js     [L1] Layer validator (191 lines)
@@ -749,9 +749,9 @@ npm pack --dry-run
 node bin/pre-publish-gate.js
 
 # Smart push with dry-run
-mega-brain push --dry-run --layer 1
-mega-brain push --dry-run --layer 2
-mega-brain push --dry-run --layer 3
+AIOX-GPS push --dry-run --layer 1
+AIOX-GPS push --dry-run --layer 2
+AIOX-GPS push --dry-run --layer 3
 ```
 
 ---

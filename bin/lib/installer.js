@@ -125,7 +125,7 @@ export async function runInstaller(version, projectName) {
       message: chalk.cyan('Onde deseja instalar?'),
       choices: [
         { name: `Diretório atual  ${chalk.dim('(' + cwd + ')')}`, value: 'current' },
-        { name: `Novo diretório   ${chalk.dim('./mega-brain')}`, value: 'new' },
+        { name: `Novo diretório   ${chalk.dim('./AIOX-GPS')}`, value: 'new' },
         { name: 'Caminho personalizado', value: 'custom' },
       ],
     }]);
@@ -146,7 +146,7 @@ export async function runInstaller(version, projectName) {
       }
       case 'new':
       default:
-        targetDir = resolve(cwd, 'mega-brain');
+        targetDir = resolve(cwd, 'AIOX-GPS');
         break;
     }
   }
@@ -208,7 +208,7 @@ export async function runInstaller(version, projectName) {
       await fetchPremiumContent(targetDir, premiumToken, premiumSpinner);
     } catch (err) {
       premiumSpinner.warn(chalk.yellow(`Não foi possível baixar conteúdo premium: ${err.message}`));
-      console.log(chalk.dim('  Tente novamente depois com: mega-brain upgrade'));
+      console.log(chalk.dim('  Tente novamente depois com: AIOX-GPS upgrade'));
     }
   } else {
     stepHeader(5, 5, 'Instalação Completa');
@@ -255,7 +255,7 @@ export async function runUpgrade(version) {
 
   if (installed && license?.tier === 'pro') {
     console.log(chalk.green('\n  Mega Brain Pro ja esta instalado e ativo!'));
-    console.log(chalk.dim('  Use: mega-brain validate <email> para revalidar.\n'));
+    console.log(chalk.dim('  Use: AIOX-GPS validate <email> para revalidar.\n'));
     return;
   }
 
@@ -370,7 +370,7 @@ async function fetchPremiumContent(targetDir, token, spinner) {
 
   mkdirSync(join(targetDir, '.layer-sync'), { recursive: true });
 
-  const authUrl = `https://x-access-token:${token}@github.com/${process.env.MEGA_BRAIN_GH_ORG || 'thiagofinch'}/mega-brain-premium.git`;
+  const authUrl = `https://x-access-token:${token}@github.com/${process.env.MEGA_BRAIN_GH_ORG || 'thiagofinch'}/AIOX-GPS-premium.git`;
 
   // --- CLONE ---
   if (!existsSync(join(tempDir, '.git'))) {
@@ -501,7 +501,7 @@ function showPostInstallCommunity() {
     megaGradient('  Mega Brain COMMUNITY instalado!') + '\n\n'
     + chalk.white('  Você tem a estrutura. Agora precisa do cérebro.') + '\n\n'
     + chalk.dim('  Para ativar o PREMIUM a qualquer momento:') + '\n'
-    + chalk.cyan('    mega-brain upgrade') + '\n\n'
+    + chalk.cyan('    AIOX-GPS upgrade') + '\n\n'
     + chalk.dim('  Ou comece do zero alimentando o sistema:') + '\n'
     + chalk.cyan('    /ingest [URL do YouTube]') + chalk.dim('  — Importar conteúdo') + '\n'
     + chalk.cyan('    /process-jarvis') + chalk.dim('          — Processar pipeline') + '\n\n'

@@ -10,7 +10,7 @@
  */
 
 // Supabase connection — anon keys are public by design (protected by RLS).
-// Hardcoded here so `npx mega-brain-ai install` works without prior .env setup.
+// Hardcoded here so `npx AIOX-GPS-ai install` works without prior .env setup.
 // Env vars override if present (useful for development/testing).
 // See: https://supabase.com/docs/guides/auth#api-keys
 const SUPABASE_URL = process.env.SUPABASE_URL || 'https://lgbzktgbhowxiwppycbi.supabase.co';

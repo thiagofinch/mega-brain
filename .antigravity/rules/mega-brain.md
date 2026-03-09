@@ -28,7 +28,7 @@ bin/            -> CLI tools and installer
 2. Python hooks use `pathlib.Path` for cross-platform compatibility
 3. Follow naming conventions: folders=lowercase, configs=SCREAMING-CASE, scripts=snake_case
 4. `.env` is gitignored — never commit credentials
-5. Run `npx mega-brain-ai setup` for initial configuration
+5. Run `npx AIOX-GPS-ai setup` for initial configuration
 
 ## Configuration
 - `.env` is the ONLY source of truth for credentials

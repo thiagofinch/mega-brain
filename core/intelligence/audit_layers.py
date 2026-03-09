@@ -441,7 +441,7 @@ def main():
 
     # Determine repo root (parent of core/)
     script_path = Path(__file__).resolve()
-    repo_root = script_path.parent.parent.parent  # mega-brain/
+    repo_root = script_path.parent.parent.parent  # AIOX-GPS/
 
     if not (repo_root / 'core').exists():
         print(f"ERROR: Could not find repo root. Expected core/ in {repo_root}")

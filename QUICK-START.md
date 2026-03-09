@@ -2,7 +2,7 @@
 
 > Do zero ao primeiro insight em 5 minutos.
 
-Este guia assume que você já executou a instalação (`npx mega-brain install`) e o setup inicial (`/setup`). Se ainda não fez isso, consulte o [README.md](README.md).
+Este guia assume que você já executou a instalação (`npx AIOX-GPS install`) e o setup inicial (`/setup`). Se ainda não fez isso, consulte o [README.md](README.md).
 
 ---
 

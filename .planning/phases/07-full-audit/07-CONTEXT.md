@@ -16,7 +16,7 @@ Varrer 100% do repositório e classificar cada arquivo/pasta em L1 (público), L
 ### Critérios de classificação
 
 **Modelo de distribuição:**
-- **Community (npx mega-brain-ai):** Instala L1 apenas
+- **Community (npx AIOX-GPS-ai):** Instala L1 apenas
 - **Premium:** Instala L1 + L2 (versão completa)
 - **L3:** Nunca vai em pacote — backup pessoal do usuário
 

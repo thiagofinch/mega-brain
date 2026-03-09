@@ -268,10 +268,10 @@ After deployment, you'll have real-time visibility into:
 ### Quick Diagnosis
 ```bash
 # Check frontend
-curl -I https://mega-brain-prod-[id].vercel.app
+curl -I https://AIOX-GPS-prod-[id].vercel.app
 
 # Check backend
-curl https://mega-brain-api-[id].onrender.com/health
+curl https://AIOX-GPS-api-[id].onrender.com/health
 
 # Check database
 psql $DATABASE_URL -c "SELECT 1"
@@ -311,7 +311,7 @@ psql $DATABASE_URL -c "SELECT 1"
 ## 📁 DOCUMENTATION STRUCTURE
 
 ```
-mega-brain/
+AIOX-GPS/
 ├── DEPLOYMENT-SUMMARY.md
 │   └── This overview (read first)
 │

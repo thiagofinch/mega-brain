@@ -9,17 +9,17 @@
  *   Layer 3 (backup)  → Everything, no filtering → remote "backup"
  *
  * Usage:
- *   mega-brain push               Interactive layer selection
- *   mega-brain push --layer 1     Direct push to Layer 1
- *   mega-brain push --layer 2     Direct push to Layer 2
- *   mega-brain push --layer 3     Direct push to Layer 3
- *   mega-brain push --dry-run     Show what would happen without executing
- *   mega-brain push --message "x" Commit message (skips prompt)
+ *   AIOX-GPS push               Interactive layer selection
+ *   AIOX-GPS push --layer 1     Direct push to Layer 1
+ *   AIOX-GPS push --layer 2     Direct push to Layer 2
+ *   AIOX-GPS push --layer 3     Direct push to Layer 3
+ *   AIOX-GPS push --dry-run     Show what would happen without executing
+ *   AIOX-GPS push --message "x" Commit message (skips prompt)
  *
  * Remotes (configure via git remote):
- *   origin  → <your-github>/mega-brain.git
- *   premium → <your-github>/mega-brain-premium.git
- *   backup  → <your-github>/mega-brain-full.git
+ *   origin  → <your-github>/AIOX-GPS.git
+ *   premium → <your-github>/AIOX-GPS-premium.git
+ *   backup  → <your-github>/AIOX-GPS-full.git
  */
 
 import { readFileSync, existsSync } from 'fs';
@@ -44,21 +44,21 @@ const LAYER_CONFIG = {
     name: 'Community',
     label: 'Layer 1 — Community (publico, npm)',
     remote: 'origin',
-    remoteUrl: 'https://github.com/<your-username>/mega-brain.git',
+    remoteUrl: 'https://github.com/<your-username>/AIOX-GPS.git',
     color: '#6366f1',
   },
   2: {
     name: 'Premium',
     label: 'Layer 2 — Premium (MoneyClub, privado)',
     remote: 'premium',
-    remoteUrl: 'https://github.com/<your-username>/mega-brain-premium.git',
+    remoteUrl: 'https://github.com/<your-username>/AIOX-GPS-premium.git',
     color: '#f59e0b',
   },
   3: {
     name: 'Full Backup',
     label: 'Layer 3 — Full Backup (tudo, privado)',
     remote: 'backup',
-    remoteUrl: 'https://github.com/<your-username>/mega-brain-full.git',
+    remoteUrl: 'https://github.com/<your-username>/AIOX-GPS-full.git',
     color: '#ef4444',
   },
 };

@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-02-27T21:07:59.716881Z",
-  "repo_root": "/Users/thiagofinch/Documents/Projects/mega-brain",
+  "repo_root": "/Users/thiagofinch/Documents/Projects/AIOX-GPS",
   "summary": {
     "total_items": 8799,
     "by_layer": {
@@ -200,7 +200,7 @@
       "reason": "Core engine"
     },
     {
-      "path": ".cursor/rules/mega-brain.md",
+      "path": ".cursor/rules/AIOX-GPS.md",
       "layer": "L1",
       "type": "file",
       "reason": "Core engine"
@@ -992,7 +992,7 @@
       "reason": "Core engine"
     },
     {
-      "path": ".windsurf/rules/mega-brain.md",
+      "path": ".windsurf/rules/AIOX-GPS.md",
       "layer": "L1",
       "type": "file",
       "reason": "Core engine"
@@ -16448,7 +16448,7 @@
       "reason": "Core engine"
     },
     {
-      "path": "bin/mega-brain.js",
+      "path": "bin/AIOX-GPS.js",
       "layer": "L1",
       "type": "file",
       "reason": "Core engine"
@@ -23564,7 +23564,7 @@
       "reason": "Core engine"
     },
     {
-      "path": "docs/prd-mega-brain-quality-uplift-v1.md",
+      "path": "docs/prd-AIOX-GPS-quality-uplift-v1.md",
       "layer": "L1",
       "type": "file",
       "reason": "Core engine"
@@ -23678,7 +23678,7 @@
       "reason": "Core engine"
     },
     {
-      "path": "docs/plans/2026-02-23-mega-brain-pro-distribution.md",
+      "path": "docs/plans/2026-02-23-AIOX-GPS-pro-distribution.md",
       "layer": "L1",
       "type": "file",
       "reason": "Core engine"
@@ -23732,7 +23732,7 @@
       "reason": "Core engine"
     },
     {
-      "path": "docs/prd/prd-jarvis-mega-brain-v3.md",
+      "path": "docs/prd/prd-jarvis-AIOX-GPS-v3.md",
       "layer": "L1",
       "type": "file",
       "reason": "Core engine"
@@ -52796,7 +52796,7 @@
       "reason": "Core engine"
     },
     {
-      "path": ".antigravity/rules/mega-brain.md",
+      "path": ".antigravity/rules/AIOX-GPS.md",
       "layer": "L1",
       "type": "file",
       "reason": "Core engine"

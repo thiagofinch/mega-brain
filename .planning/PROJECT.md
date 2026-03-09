@@ -6,7 +6,7 @@ Sistema de hardening para a pipeline do Mega Brain, transformando-a de 60% funci
 
 ## Current Milestone: v1.3 NPM Packaging
 
-**Goal:** Make `mega-brain-ai` confidently publishable — resolve all REVIEW items, sync L1 audit with package contents, validate, and verify end-to-end.
+**Goal:** Make `AIOX-GPS-ai` confidently publishable — resolve all REVIEW items, sync L1 audit with package contents, validate, and verify end-to-end.
 
 **Target features:**
 - Full REVIEW item resolution (100% audit coverage)

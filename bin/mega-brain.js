@@ -5,13 +5,13 @@
  * CLI Entry Point
  *
  * Usage:
- *   npx mega-brain-ai install [name] - Install Mega Brain (optional project name)
- *   npx mega-brain-ai validate   - Validate MoneyClub email
- *   npx mega-brain-ai push       - Push to Layer 1/2/3 remote
- *   npx mega-brain-ai upgrade    - Upgrade Community to Premium
- *   npx mega-brain-ai status     - Show Pro license status
- *   npx mega-brain-ai features   - List available vs locked features
- *   npx mega-brain-ai --help     - Show help
+ *   npx AIOX-GPS-ai install [name] - Install Mega Brain (optional project name)
+ *   npx AIOX-GPS-ai validate   - Validate MoneyClub email
+ *   npx AIOX-GPS-ai push       - Push to Layer 1/2/3 remote
+ *   npx AIOX-GPS-ai upgrade    - Upgrade Community to Premium
+ *   npx AIOX-GPS-ai status     - Show Pro license status
+ *   npx AIOX-GPS-ai features   - List available vs locked features
+ *   npx AIOX-GPS-ai --help     - Show help
  */
 
 import { createRequire } from 'module';
@@ -53,7 +53,7 @@ async function main() {
       console.log(boxen(
         '  First time? Let\'s set up your environment.\n' +
         '  Running setup wizard...\n\n' +
-        '  (You can run this anytime with: npx mega-brain-ai setup)',
+        '  (You can run this anytime with: npx AIOX-GPS-ai setup)',
         { padding: 1, borderColor: 'cyan', borderStyle: 'round' }
       ));
       const { runSetup } = await import('./lib/setup-wizard.js');
@@ -69,7 +69,7 @@ async function main() {
     const { validateEmail } = await import('./lib/validate-email.js');
     const email = args[1];
     if (!email) {
-      console.error('\n  Uso: mega-brain validate <email>\n');
+      console.error('\n  Uso: AIOX-GPS validate <email>\n');
       process.exit(1);
     }
     const result = await validateEmail(email);
@@ -84,7 +84,7 @@ async function main() {
       await runUpgrade(pkg.version);
     } else {
       console.log('\n  Funcionalidade de upgrade será disponibilizada em breve.');
-      console.log('  Por enquanto, reinstale com: mega-brain install\n');
+      console.log('  Por enquanto, reinstale com: AIOX-GPS install\n');
     }
   } else if (command === 'status') {
     const { showStatus } = await import('./lib/pro-commands.js');
@@ -110,8 +110,8 @@ function showHelp() {
   Comandos:
     install [nome]  Instalar Mega Brain (PREMIUM ou Community)
     setup       Configurar API keys e dependencias (wizard interativo)
-    validate    Validar email MoneyClub (mega-brain validate <email>)
-    push        Push para Layer 1/2/3 (mega-brain push [--layer N])
+    validate    Validar email MoneyClub (AIOX-GPS validate <email>)
+    push        Push para Layer 1/2/3 (AIOX-GPS push [--layer N])
     upgrade     Atualizar Community para Premium
     status      Mostrar status da licenca Pro
     features    Listar features disponiveis vs bloqueadas
@@ -123,10 +123,10 @@ function showHelp() {
     Layer 3     Full Backup (pessoal) — tudo incluindo dados sensíveis
 
   Exemplos:
-    npx mega-brain-ai install
-    npx mega-brain-ai install meu-projeto
-    npx mega-brain-ai push --layer 1
-    npx mega-brain-ai push
+    npx AIOX-GPS-ai install
+    npx AIOX-GPS-ai install meu-projeto
+    npx AIOX-GPS-ai push --layer 1
+    npx AIOX-GPS-ai push
 `);
 }
 

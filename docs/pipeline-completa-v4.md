@@ -1153,7 +1153,7 @@ sao combinados e o sistema grava fisicamente nos destinos.
  ║                    ARVORE DO PROJETO                                      ║
  ╠═══════════════════════════════════════════════════════════════════════════╣
  ║                                                                           ║
- ║  mega-brain/                                                              ║
+ ║  AIOX-GPS/                                                              ║
  ║  │                                                                       ║
  ║  ├── .claude/                                                            ║
  ║  │   └── hooks/                    24 hooks (ciclo de vida da sessao)     ║

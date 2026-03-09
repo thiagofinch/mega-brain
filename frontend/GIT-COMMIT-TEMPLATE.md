@@ -83,7 +83,7 @@ TARGET METRICS:
 ✅ Bundle Size: < 300KB
 ✅ Accessibility: WCAG 2.1 AA
 
-Co-Authored-By: Performance Team <performance@mega-brain.dev>
+Co-Authored-By: Performance Team <performance@AIOX-GPS.dev>
 ```
 
 ## Pre-commit Checklist

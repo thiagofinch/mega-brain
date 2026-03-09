@@ -9,7 +9,7 @@
 ```bash
 # Navegar para o diretório
 # Navigate to the Mega Brain project root
-cd "<your-mega-brain-path>"
+cd "<your-AIOX-GPS-path>"
 
 # Executar o Ralph (processa todos os batches pendentes)
 ./ralph-cascateamento.sh
@@ -134,7 +134,7 @@ head -100 progress-batches.txt
 ## 📁 Arquivos do Sistema
 
 ```
-<your-mega-brain-path>/
+<your-AIOX-GPS-path>/
 ├── ralph-cascateamento.sh           # Script principal (EXECUTAR)
 ├── prd-batches-cascateamento.json   # PRD com 78 batches
 ├── prompt-batches.md                # Protocolo de cascateamento

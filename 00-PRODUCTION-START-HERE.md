@@ -60,7 +60,7 @@ Vercel (Frontend) → Render (Backend) → Supabase (Database) → DataDog (Moni
 ## Files in This Package
 
 ```
-mega-brain/
+AIOX-GPS/
 ├── 00-PRODUCTION-START-HERE.md           ← YOU ARE HERE
 ├── README-PRODUCTION-DEPLOYMENT.md       ← Read second
 ├── DEPLOYMENT-SUMMARY.md                 ← Read third
@@ -98,8 +98,8 @@ mega-brain/
 
 After 90 minutes, you'll have:
 
-✅ Frontend live at `https://mega-brain-prod-[id].vercel.app`  
-✅ Backend running at `https://mega-brain-api-[id].onrender.com`  
+✅ Frontend live at `https://AIOX-GPS-prod-[id].vercel.app`  
+✅ Backend running at `https://AIOX-GPS-api-[id].onrender.com`  
 ✅ Database connected with automatic daily backups  
 ✅ Real-time monitoring and alerting via DataDog  
 ✅ HTTPS/TLS on all services  
@@ -174,10 +174,10 @@ Vercel CDN
 **Quick diagnosis:**
 ```bash
 # Frontend
-curl -I https://mega-brain-prod-[id].vercel.app
+curl -I https://AIOX-GPS-prod-[id].vercel.app
 
 # Backend
-curl https://mega-brain-api-[id].onrender.com/health
+curl https://AIOX-GPS-api-[id].onrender.com/health
 
 # Database
 psql $DATABASE_URL -c "SELECT 1"

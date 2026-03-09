@@ -35,7 +35,7 @@ Claude é o cérebro do Mega Brain. Toda a inteligência do sistema -- processam
 3. Confirme seu email
 4. No painel, vá em **API Keys** no menu lateral
 5. Clique em **Create Key**
-6. Dê um nome descritivo: `mega-brain-prod`
+6. Dê um nome descritivo: `AIOX-GPS-prod`
 7. Copie a chave gerada (começa com `sk-ant-...`)
 8. Adicione créditos em **Billing** > **Add Credits** (mínimo $5)
 
@@ -138,7 +138,7 @@ Permite que o JARVIS ouça você. Transforma áudio/voz em texto (Speech-to-Text
 3. Confirme seu email
 4. No painel, vá em **API Keys** no menu lateral
 5. Clique em **Create a New API Key**
-6. Dê um nome: `mega-brain`
+6. Dê um nome: `AIOX-GPS`
 7. Em permissões, selecione **Member** (acesso completo)
 8. Clique em **Create Key**
 9. Copie a chave gerada imediatamente (ela não será mostrada novamente)
@@ -196,7 +196,7 @@ Permite importar documentos diretamente do Google Drive para o inbox do Mega Bra
 1. Acesse [console.cloud.google.com](https://console.cloud.google.com/)
 2. Crie um novo projeto (ou selecione existente):
    - Clique em **Select a project** > **New Project**
-   - Nome: `mega-brain`
+   - Nome: `AIOX-GPS`
    - Clique em **Create**
 3. Ative a API do Google Drive:
    - No menu lateral, vá em **APIs & Services** > **Library**
@@ -206,7 +206,7 @@ Permite importar documentos diretamente do Google Drive para o inbox do Mega Bra
    - Vá em **APIs & Services** > **Credentials**
    - Clique em **Create Credentials** > **OAuth client ID**
    - Em tipo, selecione **Desktop app**
-   - Nome: `mega-brain-drive`
+   - Nome: `AIOX-GPS-drive`
    - Clique em **Create**
 5. Baixe o arquivo JSON de credenciais:
    - Clique no ícone de download ao lado da credencial criada
@@ -222,7 +222,7 @@ Permite importar documentos diretamente do Google Drive para o inbox do Mega Bra
 
 ```bash
 # Copie o arquivo de credenciais para o Mega Brain
-cp credentials.json /caminho/para/mega-brain/system/credentials.json
+cp credentials.json /caminho/para/AIOX-GPS/system/credentials.json
 
 # No arquivo .env do Mega Brain
 GOOGLE_DRIVE_CREDENTIALS=system/credentials.json
@@ -262,7 +262,7 @@ Fornece embeddings de alta qualidade para busca semântica (RAG). Quando ativado
 3. Confirme seu email
 4. No painel, vá em **API Keys**
 5. Clique em **Create new API key**
-6. Nome: `mega-brain`
+6. Nome: `AIOX-GPS`
 7. Copie a chave gerada (começa com `pa-...`)
 
 ### Como configurar

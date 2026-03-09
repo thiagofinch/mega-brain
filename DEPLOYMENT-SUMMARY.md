@@ -210,8 +210,8 @@ After deployment, you'll be able to track:
 
 Your deployment is successful when:
 
-✅ Frontend loads at `https://mega-brain-prod-[random].vercel.app`  
-✅ Backend responds at `https://mega-brain-api-[random].onrender.com`  
+✅ Frontend loads at `https://AIOX-GPS-prod-[random].vercel.app`  
+✅ Backend responds at `https://AIOX-GPS-api-[random].onrender.com`  
 ✅ Database is connected and persisting data  
 ✅ DataDog shows APM traces from backend  
 ✅ DataDog shows RUM sessions from frontend  
@@ -230,10 +230,10 @@ Your deployment is successful when:
 **Step 1: Identify the Issue**
 ```bash
 # Check frontend
-curl -I https://mega-brain-prod-[random].vercel.app
+curl -I https://AIOX-GPS-prod-[random].vercel.app
 
 # Check backend
-curl https://mega-brain-api-[random].onrender.com/health
+curl https://AIOX-GPS-api-[random].onrender.com/health
 
 # Check database
 psql $DATABASE_URL -c "SELECT 1"
@@ -294,7 +294,7 @@ psql $DATABASE_URL -c "SELECT 1"
 ## 📚 FILE MANIFEST
 
 ```
-mega-brain/
+AIOX-GPS/
 ├── DEPLOYMENT-SUMMARY.md                    ← This file
 ├── PRODUCTION-DEPLOYMENT-GUIDE.md           ← Quick start (10 min read)
 ├── PRODUCTION-DEPLOYMENT-STRATEGY.md        ← Technical guide (45 min read)

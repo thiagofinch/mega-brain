@@ -113,13 +113,13 @@ echo '{"jsonrpc":"2.0","method":"initialize","params":{},"id":1}' \
 
 ```bash
 # Build
-docker build -t mega-brain-mcp:latest .
+docker build -t AIOX-GPS-mcp:latest .
 
 # Run
 docker run -e MERCADOLIVRE_ACCESS_TOKEN=<seu_token> \
            -e MERCADOLIVRE_CLIENT_ID=935927218612126 \
            -e MERCADOLIVRE_CLIENT_SECRET=6COi3Vk5e5z2uIsrNt4uLPResaET4RBp \
-           mega-brain-mcp:latest
+           AIOX-GPS-mcp:latest
 ```
 
 ### Claude Code (Integração nativa)

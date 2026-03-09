@@ -3,7 +3,7 @@
 **Criado:** 2026-02-27
 **Status:** PENDENTE IMPLEMENTAÇÃO
 
-## LAYER 1 - PÚBLICO (npx mega-brain-ai)
+## LAYER 1 - PÚBLICO (npx AIOX-GPS-ai)
 
 ### VAI:
 - `bin/` (CLI, setup)
