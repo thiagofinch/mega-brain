@@ -7,18 +7,24 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
-  secrets: write
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout main (get fetch script)
         uses: actions/checkout@v4
         with:
+          ref: main
           token: ${{ secrets.GH_PAT }}
+          path: main-branch
+
+      - name: Checkout gh-pages (for deploy)
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          token: ${{ secrets.GH_PAT }}
+          path: gh-pages-branch
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -28,23 +34,29 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
-      - name: Refresh ML token + Fetch data
+      - name: Refresh ML token + Fetch live data
         env:
           ML_CLIENT_ID: ${{ secrets.ML_CLIENT_ID }}
           ML_CLIENT_SECRET: ${{ secrets.ML_CLIENT_SECRET }}
           ML_REFRESH_TOKEN: ${{ secrets.ML_REFRESH_TOKEN }}
           GH_PAT: ${{ secrets.GH_PAT }}
           GH_REPO: ${{ github.repository }}
+        working-directory: main-branch
         run: python3 ci_fetch_dashboard.py
 
-      - name: Commit dashboard-data.json
+      - name: Deploy dashboard-data.json to gh-pages
         run: |
+          cp main-branch/dashboard-data.json gh-pages-branch/dashboard-data.json
+
+          cd gh-pages-branch
           git config user.name "JARVIS[bot]"
           git config user.email "jarvis@aiox.co"
           git add dashboard-data.json
+
           if git diff --staged --quiet; then
-            echo "No changes to commit"
+            echo "No data changes — skipping commit"
           else
-            git commit -m "data: dashboard refresh $(date -u '+%Y-%m-%d %H:%M') UTC"
-            git push
+            git commit -m "data: live refresh $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git push origin gh-pages
+            echo "✅ Deployed to gh-pages"
           fi
