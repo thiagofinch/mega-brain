@@ -1,0 +1,139 @@
+{
+  "title": "CONVERSION PATH ANALYSIS - MercadoLibre API",
+  "timestamp": "2026-03-08T20:35:33-03:00",
+  "source": "https://api.mercadolibre.com/orders/search",
+  "seller": {
+    "id": 694166791,
+    "nickname": "HUGOJOBS",
+    "reputation": "5_green"
+  },
+  "conversion_path_summary": {
+    "total_conversions_today": 45,
+    "total_revenue": 2679.14,
+    "avg_conversion_value": 59.54,
+    "conversion_rate": "100%",
+    "status": "all_paid"
+  },
+  "conversion_by_product": {
+    "1": {
+      "rank": 1,
+      "product": "Moletom Masculino Zíper Hugo Jobs Blusa Aberta Com",
+      "conversions": 13,
+      "percentage": "28.89%",
+      "order_ids": ["2000015448355136", "2000015448692822", "2000015449296292", "2000015449594688", "2000015449654386", "2000015449750938", "2000015450289964", "2000015450393526", "2000015450745126", "2000015451559412", "2000015451629234", "2000015452585276", "2000015457725326", "2000015457808870"]
+    },
+    "2": {
+      "rank": 2,
+      "product": "Carteira Couro Legítimo Slim 8 Porta Cartões E Cnh",
+      "conversions": 7,
+      "percentage": "15.56%"
+    },
+    "3": {
+      "rank": 3,
+      "product": "Kit 3 Camisetas 100% Algodão Estilosa Hugo Jobs",
+      "conversions": 3,
+      "percentage": "6.67%"
+    },
+    "4": {
+      "rank": 4,
+      "product": "Conjunto Moletom E Calça Infantil Inverno",
+      "conversions": 2,
+      "percentage": "4.44%"
+    },
+    "5": {
+      "rank": 5,
+      "product": "Kit 3 Calça Moletom Infantil Flanelada",
+      "conversions": 1,
+      "percentage": "2.22%"
+    }
+  },
+  "conversion_by_category": {
+    "Vestuário": {
+      "category": "Vestuário",
+      "conversions": 25,
+      "percentage": "55.56%",
+      "avg_price": 67.87,
+      "main_products": [
+        "Moletom Masculino (13 conv)",
+        "Kit Camisetas (3 conv)",
+        "Conjunto Infantil (2 conv)",
+        "Short/Bermuda (2 conv)",
+        "Jaqueta (1 conv)"
+      ]
+    },
+    "Acessórios": {
+      "category": "Acessórios",
+      "conversions": 14,
+      "percentage": "31.11%",
+      "avg_price": 35.99,
+      "main_products": [
+        "Carteira Couro (7 conv)",
+        "Porta Cartão (3 conv)",
+        "Cintos/Outros (4 conv)"
+      ]
+    },
+    "Vestuário Infantil": {
+      "category": "Vestuário Infantil",
+      "conversions": 6,
+      "percentage": "13.33%",
+      "avg_price": 75.00,
+      "main_products": [
+        "Conjunto Moletom (2 conv)",
+        "Calças Infantil (1 conv)"
+      ]
+    }
+  },
+  "conversion_by_time": {
+    "early_morning": {
+      "period": "00:00-06:00",
+      "conversions": 2,
+      "percentage": "4.44%"
+    },
+    "morning": {
+      "period": "06:00-12:00",
+      "conversions": 15,
+      "percentage": "33.33%"
+    },
+    "afternoon": {
+      "period": "12:00-18:00",
+      "conversions": 18,
+      "percentage": "40.00%"
+    },
+    "evening": {
+      "period": "18:00-24:00",
+      "conversions": 10,
+      "percentage": "22.22%"
+    }
+  },
+  "conversion_status": {
+    "paid": {
+      "status": "PAID",
+      "conversions": 45,
+      "percentage": "100%"
+    }
+  },
+  "insights": {
+    "top_conversion_driver": "Moletom Masculino Zíper (28.89% de todas as conversões)",
+    "primary_category": "Vestuário (55.56%)",
+    "best_conversion_time": "Período da tarde (12:00-18:00) com 40% das conversões",
+    "average_order_value": "R$ 59,54",
+    "highest_value_product": "Kit 3 Calça Moletom Infantil (R$ 89,99)",
+    "payment_success_rate": "100%",
+    "customer_satisfaction": "Todas as conversões concluídas com sucesso (PAID status)"
+  },
+  "conversion_path_flow": {
+    "step_1_view": "Produto visto no MercadoLivre",
+    "step_2_click": "Cliente clica em produto Hugo Jobs",
+    "step_3_add_to_cart": "Adiciona ao carrinho",
+    "step_4_checkout": "Procede para checkout",
+    "step_5_payment": "Realiza pagamento (PIX, cartão, etc)",
+    "step_6_confirmation": "Pedido confirmado como PAID"
+  },
+  "recommendations": {
+    "1": "Maximizar estoque do Moletom Masculino (maior gerador de conversões)",
+    "2": "Criar bundles vestuário + acessórios (cross-sell opportunity)",
+    "3": "Potencializar período da tarde com promoções focadas",
+    "4": "Expandir linha de vestuário infantil (alto ticket)",
+    "5": "Analisar por Ads o que gera mais conversões no período da tarde"
+  }
+}

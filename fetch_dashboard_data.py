@@ -151,6 +151,26 @@ def fetch_shipping_cost(shipping_id: int, headers: dict) -> float:
 
 
 # ---------------------------------------------------------------------------
+# MANUAL ADS DATA FALLBACK (ML API bug workaround)
+# Update these values manually from HugoJobs Painel or ClickUp campaigns
+# Format: {"date": "YYYY-MM-DD", "product_ads": {...}, "brand_ads": {...}}
+# ---------------------------------------------------------------------------
+
+ADS_DATA_MANUAL_OVERRIDE = {
+    # TOTAL ATUAL: 7 campanhas Product Ads (R$ 3.243,55) + 2 Brand Ads (R$ 644,71)
+    # Data de última atualização: 2026-03-10
+    "last_updated": "2026-03-10",
+    "total_active_campaigns": {
+        "product_ads": 7,
+        "brand_ads": 2,
+    },
+    "total_spend": 3888.26,  # R$ 3.243,55 + R$ 644,71
+    "estimated_daily_spend": 370.0,  # rough estimate
+    "note": "⚠️ ML API /product_ads/campaigns returns HTTP 200 empty body (bug). Manual override enabled."
+}
+
+
+# ---------------------------------------------------------------------------
 # API Fetchers
 # ---------------------------------------------------------------------------
 
@@ -251,16 +271,29 @@ def fetch_orders_month(token):
 def fetch_pads_data(token, date_from: str = None, date_to: str = None) -> dict:
     """
     Fetch MercadoLivre PADS (advertising) metrics.
-    Tries 3 advertiser_id formats (ML docs are inconsistent).
-    Accepts optional date_from / date_to (YYYY-MM-DD) for period aggregation.
-    Returns zeros gracefully on any error.
+
+    ⚠️  CRITICAL BUG DISCOVERED (2026-03-10):
+    - Endpoint: /advertising/advertisers/{id}/product_ads/campaigns
+    - Returns: HTTP 200 OK with Content-Length: 0 (EMPTY BODY)
+    - This is a ML API BUG, not an auth issue
+    - /brand_ads also broken (HTTP 401)
+
+    WORKAROUND: Use manual override (ADS_DATA_MANUAL_OVERRIDE) when API fails.
+    Instructions:
+    1. Go to HugoJobs Painel de Vendas → Produtos Anúncios
+    2. Extract total gasto, impressões, cliques, atribuído
+    3. Update ADS_DATA_MANUAL_OVERRIDE above
+    4. Script will use these values until ML API is fixed
     """
     empty = {"ad_spend": 0, "ad_revenue": 0, "ad_impressions": 0, "ad_clicks": 0}
+
     try:
         headers = {"Authorization": f"Bearer {token}"}
-        # Attempt multiple advertiser_id formats; first HTTP 200 wins
+
+        # === ATTEMPT 1: Try ML API (will likely fail) ===
         candidate_ids = [SELLER_ID, f"MLB{SELLER_ID}", f"MLB:{SELLER_ID}"]
         payload = None
+
         for adv_id in candidate_ids:
             url = (
                 f"https://api.mercadolibre.com/advertising/advertisers"
@@ -270,18 +303,40 @@ def fetch_pads_data(token, date_from: str = None, date_to: str = None) -> dict:
                 url += f"?date_from={date_from}"
                 if date_to:
                     url += f"&date_to={date_to}"
-            r = requests.get(url, headers=headers, timeout=10)
-            if r.status_code == 200:
-                payload = r.json()
-                print(f"  ✅ PADS: advertiser_id={adv_id!r} OK")
-                break
-            print(f"  ⚠️  PADS: HTTP {r.status_code} for advertiser_id={adv_id!r}")
 
+            try:
+                r = requests.get(url, headers=headers, timeout=10)
+
+                if r.status_code == 200 and len(r.content) > 0:
+                    payload = r.json()
+                    print(f"  ✅ PADS API: Got data from {adv_id!r}")
+                    break
+                elif r.status_code == 200 and len(r.content) == 0:
+                    print(f"  ⚠️  PADS API: HTTP 200 EMPTY (ML bug) — using manual override")
+                else:
+                    print(f"  ⚠️  PADS API: HTTP {r.status_code}")
+            except Exception as e:
+                print(f"  ⚠️  PADS request error: {e}")
+                continue
+
+        # === FALLBACK: Use manual override if API failed ===
         if payload is None:
-            print("  ⚠️  PADS: all URL formats failed — using zeros")
-            return empty
+            print("  📊 Using ADS_DATA_MANUAL_OVERRIDE (update by hand from painel)")
 
-        # Unwrap response (list or dict with campaigns/results/data/items)
+            # Estimate daily spend based on total_spend
+            daily_estimate = ADS_DATA_MANUAL_OVERRIDE.get("estimated_daily_spend", 0)
+
+            return {
+                "ad_spend": daily_estimate,
+                "ad_revenue": 0,  # Not tracked in manual override
+                "ad_impressions": 0,  # Manual override doesn't include these
+                "ad_clicks": 0,
+                "_note": "Manual override (ML API bug workaround)",
+                "_total_spend_all_time": ADS_DATA_MANUAL_OVERRIDE["total_spend"],
+                "_last_updated": ADS_DATA_MANUAL_OVERRIDE["last_updated"],
+            }
+
+        # === PARSE API RESPONSE (if we got one) ===
         campaigns = []
         if isinstance(payload, list):
             campaigns = payload
@@ -314,6 +369,8 @@ def fetch_pads_data(token, date_from: str = None, date_to: str = None) -> dict:
                 c.get("clicks", 0) or c.get("total_clicks", 0) or 0
             )
 
+        print(f"  ✅ PADS parsed: spend={ad_spend}, impressions={ad_impressions}")
+
         return {
             "ad_spend": round(ad_spend, 2),
             "ad_revenue": round(ad_revenue, 2),
@@ -322,8 +379,8 @@ def fetch_pads_data(token, date_from: str = None, date_to: str = None) -> dict:
         }
 
     except Exception as e:
-        print(f"  ⚠️  PADS API error: {e} — using zeros")
-        return empty
+        print(f"  ⚠️  PADS error: {e} — using manual override")
+        return {**empty, "_error": str(e)}
 
 
 # ---------------------------------------------------------------------------

@@ -1,0 +1,206 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║                   🤖 SUA EQUIPE INTEGRADA ESTÁ PRONTA                        ║
+║                                                                              ║
+║              17 Agentes + 203 Workers AIOX + JARVIS Orchestrator             ║
+║                           Mega Brain + Synkra AIOX                           ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  🧠 COMANDO CENTRAL                                                         ┃
+┃  ═════════════════════════════════════════════════════════════════════════  ┃
+┃                                                                             ┃
+┃  🤖 JARVIS Meta-Orchestrator                                                ┃
+┃     └─ Coordena todos os agentes                                           ┃
+┃     └─ Mantém contexto e estado                                            ┃
+┃     └─ Executa decisões automaticamente                                    ┃
+┃     └─ Loga tudo em MISSION-STATE                                          ┃
+┃                                                                             ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  ⚖️  CONCLAVE (Deliberação Estratégica)                                     ┃
+┃  ═════════════════════════════════════════════════════════════════════════  ┃
+┃                                                                             ┃
+┃  🔍 Crítico Metodológico    | 🔮 Sintetizador    | 😈 Advogado do Diabo  ┃
+┃  ────────────────────────────────────────────────────────────────────────  ┃
+┃  Earth (Analítico)           Air (Integrativo)     Fire (Provocativo)      ┃
+┃  • Audita fontes             • Síntese de opiniões • Ataca pressupostos    ┃
+┃  • Verifica rigor            • Resolve conflitos   • Testa resiliência    ┃
+┃  • Garante rastreabilidade   • Traduz complexidade • Encontra riscos      ┃
+┃                                                                             ┃
+┃  💬 Ativação: /conclave → 3 perspectivas em debate                         ┃
+┃                                                                             ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  🏢 C-LEVEL (Business Leadership)                                           ┃
+┃  ═════════════════════════════════════════════════════════════════════════  ┃
+┃                                                                             ┃
+┃  💰 CFO                    📊 CRO                 🎯 CMO                    ┃
+┃  ────────────────────────────────────────────────────────────────────────  ┃
+┃  Financial Strategy         Revenue & Conversions   Marketing & Growth      ┃
+┃  • Margem e custos          • Padrões de compra    • ROAS analysis         ┃
+┃  • Unit economics           • Conversão por horário • Orçamento ads        ┃
+┃  • Pricing strategy         • Comportamento comprador • Mix de canal       ┃
+┃                                                                             ┃
+┃  🎯 LISTING-OPTIMIZER                                                       ┃
+┃  ────────────────────────────────────────────────────────────────────────  ┃
+┃  Marketplace SEO & Ranking                                                 ┃
+┃  • Health Score (0-100)     • Ranking orgânico     • Benchmark vs concor.  ┃
+┃                                                                             ┃
+┃  💬 Invoque: "@cfo [pergunta]" ou "CFO, analisa..."                        ┃
+┃                                                                             ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  🔗 AIOX TEAM (Development & Operations)                                    ┃
+┃  ═════════════════════════════════════════════════════════════════════════  ┃
+┃                                                                             ┃
+┃  LEADERSHIP TIER:                                                           ┃
+┃  ┌─────────────────────────────────────────────────────────────────────┐   ┃
+┃  │                                                                     │   ┃
+┃  │  🔧 @devops (EXCLUSIVE: git push, releases, deployment)           │   ┃
+┃  │  🏗️ @architect (EXCLUSIVE: architecture, tech decisions)          │   ┃
+┃  │  📋 @scrum_master (EXCLUSIVE: story creation, sprint planning)    │   ┃
+┃  │  🎯 @product_owner (EXCLUSIVE: vision, prioritization)            │   ┃
+┃  │                                                                     │   ┃
+┃  └─────────────────────────────────────────────────────────────────────┘   ┃
+┃                                                                             ┃
+┃  EXECUTION TIER:                                                            ┃
+┃  ┌─────────────────────────────────────────────────────────────────────┐   ┃
+┃  │                                                                     │   ┃
+┃  │  💻 @developer (Implementation from @architect spec)              │   ┃
+┃  │  ✅ @qa (EXCLUSIVE: quality verdicts, test approval)              │   ┃
+┃  │  🔐 @security (EXCLUSIVE: vulnerability assessment)               │   ┃
+┃  │  📚 @devrel (Documentation & developer experience)                 │   ┃
+┃  │                                                                     │   ┃
+┃  └─────────────────────────────────────────────────────────────────────┘   ┃
+┃                                                                             ┃
+┃  SUPPORT TIER:                                                              ┃
+┃  ┌─────────────────────────────────────────────────────────────────────┐   ┃
+┃  │                                                                     │   ┃
+┃  │  🏥 @doctor (System health & diagnostics)                         │   ┃
+┃  │  📊 @analyst (Data analysis & business intelligence)              │   ┃
+┃  │  📖 @knowledge_keeper (Patterns & standards custodian)            │   ┃
+┃  │                                                                     │   ┃
+┃  └─────────────────────────────────────────────────────────────────────┘   ┃
+┃                                                                             ┃
+┃  💬 Invoque: "@architect [pergunta]" ou "/conclave" para decisões          ┃
+┃                                                                             ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                           🎬 EXEMPLOS DE USO                                ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+
+1️⃣  PERGUNTA SIMPLES DE NEGÓCIO
+    ─────────────────────────────
+    "CFO, qual é a margem real deste produto?"
+
+    → CFO analisa tarifas, impostos, shipping
+    → CFO retorna: "Margem = 35% após todos custos"
+
+
+2️⃣  PERGUNTA COMPLEXA (precisa de múltiplas perspectivas)
+    ─────────────────────────────────────────────
+    "Por que conversão caiu 15%?"
+
+    → CRO analisa dados de vendas por horário
+    → CMO analisa performance de ads
+    → LISTING-OPTIMIZER verifica Health Score
+    → JARVIS integra: "Conversão caiu porque:"
+         - Redução de traffic pago (CMO)
+         - Horários de pico mudaram (CRO)
+         - Health Score caiu de 92 para 78 (Listing-Opt)
+
+
+3️⃣  DECISÃO ESTRATÉGICA (ativa o Conclave)
+    ─────────────────────────────────────────
+    "Devemos refatorar a arquitetura de APIs?"
+
+    /conclave
+
+    → 🔍 Crítico audita: "Risco técnico = HIGH, custo = 40h"
+    → 😈 Advogado ataca: "E se descobrirmos bugs durante refactor?"
+    → 🔮 Sintetizador: "Recomendo: refactor 1 module por vez"
+
+    Você escolhe com 3 perspectivas validadas
+
+
+4️⃣  NOVA FEATURE (automático via equipe)
+    ────────────────────────────────────────
+    "Preciso de um dashboard de real-time metrics"
+
+    JARVIS COORDENA:
+
+    @scrum_master → ✅ Cria story com acceptance criteria
+    @architect    → ✅ Valida design, aprova API
+    @developer    → ✅ Implementa feature
+    @qa           → ✅ Testa, validação de qualidade
+    @devrel       → ✅ Documenta API
+    @devops       → ✅ Faz deploy
+    @knowledge_keeper → ✅ Cura padrões
+
+    JARVIS → ✅ Atualiza MISSION-STATE
+
+    Você acompanha, tudo coordenado automaticamente
+
+
+5️⃣  BUG URGENTE (hotfix)
+    ──────────────────────
+    "Dashboard está quebrado!"
+
+    JARVIS PRIORIZA:
+    @scrum_master → Story "Hotfix: Dashboard crash"
+    @developer    → Fix rápido
+    @qa           → Quick regression test
+    @devops       → Deploy em 5 minutos
+
+    Problema resolvido
+
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                      🔐 REGRAS QUE JARVIS ENFORÇA                            ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+✅ OBRIGATÓRIO:
+   • Toda tarefa começa com uma STORY (@scrum_master)
+   • Todo código passa por @architect ANTES de development
+   • Todo código passa por @qa ANTES de merge
+   • Só @devops pode fazer git push
+   • Toda decisão é rastreável até fonte
+
+❌ BLOQUEADO:
+   • Código sem story
+   • Merge sem @qa approval
+   • Deploy sem @security review
+   • Código sem tests passing
+   • git push de outro agente (apenas @devops)
+
+⚠️  WARNINGS:
+   • Invenção sem requisitos → WARN
+   • Qualidade < 70% → WARN
+   • Decision sem audit → WARN
+
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                          🟢 STATUS: OPERACIONAL                             ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+Sua equipe está pronta e operacional.
+
+Cada agente conhece seu papel.
+Cada autoridade é exclusiva.
+Cada processo é automatizado.
+
+JARVIS coordena. Você decide.
+
+Qual é sua primeira ordem, senhor?

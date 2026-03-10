@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-03-08T20:35:33-03:00",
+  "account": {
+    "nickname": "HUGOJOBS",
+    "user_id": 694166791,
+    "email": "hugojobs.co@gmail.com",
+    "country": "BR"
+  },
+  "today": {
+    "sales": 45,
+    "revenue": 2679.14,
+    "avg_order": 59.54,
+    "margin": 15
+  },
+  "week_total": 444,
+  "reputation": "5★ • 9.142 transactions"
+}

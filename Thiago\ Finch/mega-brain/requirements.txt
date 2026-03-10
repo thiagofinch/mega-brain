@@ -1,0 +1,6 @@
+# MercadoLivre MCP Server Dependencies
+# NOTE: Requires Python 3.10+ (mcp SDK minimum requirement)
+
+mcp>=1.0.0  # Model Context Protocol SDK
+requests>=2.28.0  # HTTP requests
+python-dotenv>=0.20.0  # Environment variable management

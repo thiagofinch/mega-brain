@@ -1,118 +1,174 @@
 {
-  "updated_at": "2026-03-09T01:01:02.150960",
+  "updated_at": "2026-03-10T17:14:42.795215",
   "kpis": {
-    "faturamento_hoje": 102.78,
-    "vendas_hoje": 2,
-    "ticket_medio": 51.39,
-    "cmv_total": 54.1,
-    "lucro_bruto": 48.68,
-    "margem_pct_real": 47.4,
-    "lucro_por_pedido": 24.34,
-    "taxa_ml_total": 11.28,
-    "shipping_total": 14.5,
-    "faturamento_liquido": 77.0,
-    "margem_liquida_pct": 22.3,
-    "lucro_liquido": 22.9,
-    "vendas_semana": 369,
-    "faturamento_semana": 24031.52,
-    "ad_spend": 0,
-    "ad_revenue": 0,
-    "organic_revenue": 102.78,
-    "acos": 0,
-    "tacos": 0.0
+    "faturamento_hoje": 3332.88,
+    "vendas_hoje": 51,
+    "ticket_medio": 65.35,
+    "cmv_total": 1786.27,
+    "lucro_bruto": 1546.61,
+    "margem_pct_real": 46.4,
+    "lucro_por_pedido": 30.33,
+    "taxa_ml_total": 355.82,
+    "shipping_total": 853.38,
+    "faturamento_liquido": 2123.68,
+    "margem_liquida_pct": 10.1,
+    "lucro_liquido": 337.41,
+    "vendas_semana": 419,
+    "faturamento_semana": 26623.99,
+    "ad_spend": 370.0,
+    "ad_revenue": 2749.48,
+    "organic_revenue": 3332.88,
+    "acos": 13.5,
+    "tacos": 11.1
   },
   "top5": [
     {
-      "vendas": 1,
-      "faturamento": 67.87,
-      "custo": 35.84,
-      "title": "Moletom Masculino Zíper Hugo Jobs Blusa Aberta Com",
-      "taxa_ml": 6.39,
+      "vendas": 33,
+      "faturamento": 2239.71,
+      "custo": 1182.72,
+      "title": "Moletom Masculino Z\u00edper Hugo Jobs Blusa Aberta Com",
+      "taxa_ml": 213.84,
       "full_unit_price": 99,
-      "lucro": 32.03,
+      "lucro": 1056.99,
       "margem_pct": 47.2,
-      "score": 82
+      "score": 99
     },
     {
-      "vendas": 1,
-      "faturamento": 34.91,
-      "custo": 18.26,
-      "title": "Carteira Couro Legítimo Slim 8 Porta Cartões E Cnh",
-      "taxa_ml": 4.89,
-      "full_unit_price": 59.99,
-      "lucro": 16.65,
-      "margem_pct": 47.7,
-      "score": 82
+      "vendas": 2,
+      "faturamento": 179.98,
+      "custo": 53.82,
+      "title": "Kit 3 Cal\u00e7a Moletom Infantil Flanelada Menino Meni",
+      "taxa_ml": 25.2,
+      "full_unit_price": 99,
+      "lucro": 126.16,
+      "margem_pct": 70.1,
+      "score": 84
+    },
+    {
+      "vendas": 2,
+      "faturamento": 179.98,
+      "custo": 53.82,
+      "title": "Kit 3 Cal\u00e7a Moletom Infantil Flanelada Menino Meni",
+      "taxa_ml": 25.17,
+      "full_unit_price": 99,
+      "lucro": 126.16,
+      "margem_pct": 70.1,
+      "score": 84
+    },
+    {
+      "vendas": 2,
+      "faturamento": 179.98,
+      "custo": 53.82,
+      "title": "Kit 3 Cal\u00e7a Moletom Infantil Flanelada Menino Meni",
+      "taxa_ml": 25.17,
+      "full_unit_price": 99,
+      "lucro": 126.16,
+      "margem_pct": 70.1,
+      "score": 84
+    },
+    {
+      "vendas": 6,
+      "faturamento": 168.72,
+      "custo": 215.04,
+      "title": "Camiseta Igreen B\u00e1sica 100% Algod\u00e3o",
+      "taxa_ml": 15.24,
+      "full_unit_price": 37.99,
+      "lucro": -46.32,
+      "margem_pct": -27.5,
+      "score": 92
     }
   ],
   "categories": [
     {
-      "nome": "Vestuário Adult",
-      "vendas": 1,
-      "faturamento": 67.87,
-      "custo": 35.84,
-      "taxa_ml": 6.39,
-      "pct": 66.0,
-      "margem_pct": 47.2
+      "nome": "Vestu\u00e1rio Adult",
+      "vendas": 40,
+      "faturamento": 2454.42,
+      "custo": 1433.6,
+      "taxa_ml": 235.5,
+      "pct": 73.6,
+      "margem_pct": 41.6
     },
     {
-      "nome": "Acessórios",
-      "vendas": 1,
-      "faturamento": 34.91,
-      "custo": 18.26,
-      "taxa_ml": 4.89,
-      "pct": 34.0,
-      "margem_pct": 47.7
+      "nome": "Vestu\u00e1rio Infantil",
+      "vendas": 11,
+      "faturamento": 804.57,
+      "custo": 322.8,
+      "taxa_ml": 109.97,
+      "pct": 24.1,
+      "margem_pct": 59.9
+    },
+    {
+      "nome": "Acess\u00f3rios",
+      "vendas": 2,
+      "faturamento": 73.89,
+      "custo": 29.87,
+      "taxa_ml": 10.35,
+      "pct": 2.2,
+      "margem_pct": 59.6
     }
   ],
   "chart": {
     "labels": [
-      "Ter (03)",
       "Qua (04)",
       "Qui (05)",
       "Sex (06)",
-      "Sáb (07)",
+      "S\u00e1b (07)",
       "Dom (08)",
-      "Seg (09)"
+      "Seg (09)",
+      "Ter (10)"
     ],
     "vendas": [
-      55,
       71,
       69,
-      50,
-      64,
+      49,
+      59,
       57,
-      0
+      63,
+      51
     ],
     "faturamento": [
-      3364.82,
       4243.56,
       4209.9,
-      3162.44,
-      5479.36,
+      3094.57,
+      4159.25,
       3404.65,
-      0
+      4179.18,
+      3332.88
     ]
   },
   "meta": {
     "seller_id": "694166791",
-    "source": "MercadoLivre API v1 — LIVE",
-    "total_orders_fetched": 2,
-    "pads_campaigns_found": false
+    "source": "MercadoLivre API v1 \u2014 LIVE",
+    "total_orders_fetched": 51,
+    "pads_campaigns_found": true
   },
   "semana": {
-    "vendas": 369,
-    "faturamento": 24031.52,
-    "taxa_ml": 2758.93,
-    "faturamento_menos_taxa": 21272.59,
-    "ticket_medio": 65.13
+    "vendas": 419,
+    "faturamento": 26623.99,
+    "taxa_ml": 2746.61,
+    "faturamento_menos_taxa": 23877.38,
+    "ticket_medio": 63.54,
+    "ad_spend": 2243.55,
+    "ad_revenue": 19293.71,
+    "ad_impressions": 0,
+    "ad_clicks": 0,
+    "organic_revenue": 26623.99,
+    "acos": 11.6,
+    "tacos": 8.4
   },
   "mes": {
-    "vendas": 455,
-    "faturamento": 29758.57,
-    "taxa_ml": 3866.71,
-    "faturamento_menos_taxa": 25891.86,
-    "ticket_medio": 65.4,
+    "vendas": 562,
+    "faturamento": 35814.78,
+    "taxa_ml": 4591.84,
+    "faturamento_menos_taxa": 31222.94,
+    "ticket_medio": 63.73,
+    "ad_spend": 3888.26,
+    "ad_revenue": 20403.48,
+    "ad_impressions": 0,
+    "ad_clicks": 0,
+    "organic_revenue": 35814.78,
+    "acos": 19.1,
+    "tacos": 10.9,
     "chart": {
       "labels": [
         "Dom (01)",
@@ -121,31 +177,34 @@
         "Qua (04)",
         "Qui (05)",
         "Sex (06)",
-        "Sáb (07)",
+        "S\u00e1b (07)",
         "Dom (08)",
-        "Seg (09)"
+        "Seg (09)",
+        "Ter (10)"
       ],
       "vendas": [
         21,
         67,
-        55,
+        54,
         71,
         69,
-        50,
-        64,
+        49,
+        59,
         57,
-        0
+        63,
+        51
       ],
       "faturamento": [
         1349.93,
         4476.04,
-        3364.82,
+        3296.95,
         4243.56,
         4209.9,
-        3162.44,
-        5479.36,
+        3094.57,
+        4159.25,
         3404.65,
-        0
+        4179.18,
+        3332.88
       ]
     }
   }

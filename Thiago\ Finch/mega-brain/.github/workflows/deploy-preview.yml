@@ -1,0 +1,87 @@
+name: Deploy Preview to Vercel
+
+on:
+  pull_request:
+    branches: [main, develop]
+    types: [opened, synchronize, reopened]
+    paths:
+      - "frontend/**"
+      - ".github/workflows/deploy-preview.yml"
+      - "vercel.json"
+
+jobs:
+  deploy-preview:
+    name: Deploy Preview Build
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      pull-requests: write
+      statuses: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Deploy to Vercel Preview
+        uses: amondnet/vercel-action@v25
+        id: vercel
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          working-directory: frontend
+          scope: ${{ secrets.VERCEL_ORG_ID }}
+          production: false
+
+      - name: Comment PR with Preview URL
+        uses: actions/github-script@v7
+        if: success()
+        with:
+          script: |
+            const previewUrl = "${{ steps.vercel.outputs.preview-url }}";
+            const comment = `
+            ✅ **Preview Deployed**
+
+            🔗 [View Preview](${previewUrl})
+
+            **Environment Variables Status:** ✓
+            **Build Status:** ✓
+
+            Preview URL: \`${previewUrl}\`
+            `;
+
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: comment
+            });
+
+      - name: Update PR Status
+        uses: actions/github-script@v7
+        if: success()
+        with:
+          script: |
+            github.rest.checks.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: 'Vercel Preview',
+              head_sha: context.sha,
+              status: 'completed',
+              conclusion: 'success',
+              details_url: '${{ steps.vercel.outputs.preview-url }}'
+            });
+
+      - name: Notify deployment failure
+        uses: actions/github-script@v7
+        if: failure()
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '❌ Preview deployment failed. Check the workflow logs.'
+            });

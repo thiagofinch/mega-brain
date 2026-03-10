@@ -1,0 +1,245 @@
+# 📦 AIOX-GPS UPSTREAM MANIFEST
+# Rastreamento de customizações vs AIOX-CORE upstream
+
+version: "1.0.0"
+timestamp: "2026-03-08T01:47:00Z"
+upstream_repo: "https://github.com/SynkraAI/aiox-core"
+local_repo: "aiox-gps"
+
+---
+
+## 🎯 COMPONENTES SINCRONIZADOS
+
+components:
+
+  # Agentes
+  agents:
+    status: "SINCRONIZADO"
+    upstream_count: 11
+    local_additions: 8
+    total: 19
+    last_sync: "2026-03-08T01:45:00Z"
+
+    upstream_base:
+      - "@developer"
+      - "@qa"
+      - "@devops"
+      - "@architect"
+      - "@sm" # scrum master
+      - "@po" # product owner
+      - "@analyst"
+      - "@pm" # product manager
+      - "@ux-expert"
+      - "@github-devops"
+      - "@aiox-master"
+
+    custom_additions:
+      - "@cfo" # boardroom
+      - "@cro" # boardroom
+      - "@cmo" # boardroom
+      - "@coo" # boardroom
+      - "@synthesizer" # conclave
+      - "@devil-advocate" # conclave
+      - "@critic" # conclave
+      - "@critico-metodologico" # conclave
+
+  # Tasks
+  tasks:
+    status: "SINCRONIZADO"
+    upstream_count: 45
+    local_additions: 15
+    notes: "Todas as tasks upstream disponíveis, 15 tasks customizadas localmente"
+
+  # Templates
+  templates:
+    status: "PARCIALMENTE SINCRONIZADO"
+    upstream_count: 20
+    custom_overrides: 5
+
+    custom_templates:
+      - "dashboard-kpi-template.html"
+      - "conclave-debate-template.md"
+      - "boardroom-decision-template.md"
+      - "mercadolivre-integration-template.yaml"
+      - "jarvis-orchestration-template.md"
+
+  # Workflows
+  workflows:
+    status: "SINCRONIZADO"
+    upstream_count: 5
+    custom_additions: 3
+
+    custom_workflows:
+      - "wf-kpi-consolidation.yaml" # CRO + CFO
+      - "wf-dashboard-sync.yaml" # Real-time updates
+      - "wf-mercadolivre-rotation.yaml" # Token management
+
+---
+
+## 🔧 CUSTOMIZAÇÕES PRINCIPAIS
+
+customizations:
+
+  dashboard:
+    file: "dashboard.html"
+    type: "UI/Frontend"
+    date_created: "2026-03-08"
+    status: "✅ NOVO - Design glassmorphism"
+    features:
+      - Dark mode premium
+      - Glassmorphism backdrop-filter
+      - KPI cards com hover effects
+      - Chart.js interactive graphs
+      - Real-time timestamp
+      - Fully responsive
+      - 100% custom CSS
+    not_from_upstream: true
+    contribution_ready: true # Pode ser PR ao AIOX-core
+
+  kpi_structure:
+    file: ".claude/jarvis/kpi-structure.md"
+    type: "Business Logic"
+    date_created: "2026-03-08"
+    status: "✅ CONSOLIDADO - CRO + CFO"
+    sections:
+      - "RECEITA (CRO responsibility)"
+      - "LUCRO (CFO responsibility)"
+      - "PERFORMANCE (Shared)"
+    collaboration_type: "Conclave Debate"
+    not_from_upstream: true
+
+  mercadolivre_integration:
+    file: "core/mcp/mercadolivre_mcp.py"
+    type: "Integration"
+    status: "✅ OPERACIONAL"
+    features:
+      - Token rotation (6h)
+      - Real-time sales sync
+      - 7.863 transactions tracked
+    not_from_upstream: true
+
+  jarvis_orchestrator:
+    file: "core/intelligence/task_orchestrator.py"
+    type: "Core System"
+    status: "✅ OPERACIONAL"
+    note: "Meta-agente que controla AIOX-core"
+    not_from_upstream: true
+
+  agentes_boardroom:
+    path: "agents/boardroom/"
+    type: "Agent Squad"
+    status: "✅ CUSTOM"
+    agents: ["@CFO", "@CRO", "@CMO", "@COO"]
+    not_from_upstream: true
+
+  agentes_conclave:
+    path: "agents/conclave/"
+    type: "Agent Squad"
+    status: "✅ CUSTOM"
+    agents: ["@SYNTHESIZER", "@DEVIL-ADVOCATE", "@CRITIC", "@CRITICO-METODOLOGICO"]
+    collaboration_type: "Structured Debate"
+    not_from_upstream: true
+
+---
+
+## 📊 SINCRONIZAÇÃO STATUS
+
+sync_tracking:
+
+  last_fetch:
+    date: "2026-03-08T01:45:00Z"
+    source: "SynkraAI/aiox-core"
+    status: "SUCCESS"
+
+  files_synced:
+    agents: "✅ 11 base agents"
+    tasks: "✅ 45+ base tasks"
+    templates: "✅ 20 base templates"
+    workflows: "✅ 5 base workflows"
+
+  local_overrides:
+    count: 8
+    status: "✅ Não conflita com upstream"
+
+  breaking_changes: "NENHUM"
+
+---
+
+## 🚀 PRÓXIMA SINCRONIZAÇÃO
+
+next_sync:
+  planned_date: "2026-03-15" # Uma semana
+  frequency: "WEEKLY"
+
+  what_to_check:
+    - Security patches from aiox-core
+    - New agent templates
+    - Task refactorings
+    - Performance improvements
+
+  what_NOT_to_overwrite:
+    - "dashboard.html" (custom redesign)
+    - "agents/boardroom/" (custom squad)
+    - "agents/conclave/" (custom squad)
+    - "core/jarvis/" (JARVIS orchestrator)
+    - ".claude/jarvis/" (local state)
+    - "core/mcp/mercadolivre_*" (integration)
+
+---
+
+## 📈 CONTRIBUTION READINESS
+
+ready_for_upstream_pr:
+
+  dashboard_html:
+    ready: true
+    reason: "Design moderne, pode servir de template para comunidade"
+    pr_title: "feat: Glassmorphism dashboard design template"
+    pr_body: |
+      Adiciona template de dashboard moderno com:
+      - Dark mode com gradiente
+      - Glassmorphism CSS
+      - KPI cards responsivos
+      - Chart.js integration
+
+  kpi_structure:
+    ready: false
+    reason: "Muito específico para caso de uso (MercadoLivre)"
+
+  boardroom_agents:
+    ready: false
+    reason: "Customização muito específica (CFO/CRO)"
+
+---
+
+## ✅ CHECKLIST SEMANAL DE SINCRONIZAÇÃO
+
+checklist:
+  - [ ] git fetch aiox-core
+  - [ ] Revisar mudanças (git log aiox-core/main -5)
+  - [ ] Identificar security patches (marcar como crítico)
+  - [ ] Merge de mudanças (git merge aiox-core/main)
+  - [ ] Testar que customizações não foram quebradas
+  - [ ] Documentar em SYNC-AIOX-UPSTREAM.md
+  - [ ] git push origin main
+  - [ ] Atualizar UPSTREAM-MANIFEST.yaml
+
+---
+
+## 📞 REFERÊNCIAS
+
+docs:
+  - "SYNC-AIOX-UPSTREAM.md" # Documentação detalhada
+  - ".claude/CLAUDE.md" # Regras locais
+  - ".claude/jarvis/JARVIS-MEMORY.md" # Estado de JARVIS
+  - "AIOX-GPS/" # Este diretório
+
+upstream:
+  - "https://github.com/SynkraAI/aiox-core"
+  - "https://github.com/SynkraAI/aiox-core/issues"
+
+---
+
+**Manifest Version:** 1.0.0
+**Last Updated:** 2026-03-08T01:47:00Z
+**Status:** ✅ SINCRONIZADO E PRONTO

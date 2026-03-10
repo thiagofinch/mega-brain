@@ -1,0 +1,32 @@
+{
+  "name": "mega-brain",
+  "version": 2,
+  "buildCommand": "cd frontend && npm run build",
+  "outputDirectory": "frontend/.next",
+  "framework": "nextjs",
+  "env": {
+    "NEXT_PUBLIC_API_URL": {
+      "description": "API Base URL for backend calls"
+    },
+    "NEXT_PUBLIC_WS_URL": {
+      "description": "WebSocket server URL for real-time updates"
+    },
+    "DATABASE_URL": {
+      "description": "PostgreSQL connection string (used only in API routes)"
+    },
+    "REDIS_URL": {
+      "description": "Redis connection URL for caching"
+    },
+    "MERCADOLIVRE_API_KEY": {
+      "description": "MercadoLivre API authentication key"
+    },
+    "MERCADOLIVRE_API_SECRET": {
+      "description": "MercadoLivre API secret"
+    }
+  },
+  "regions": ["sfo1"],
+  "deploymentChecks": {
+    "enabled": true
+  },
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD -- frontend || exit 0"
+}

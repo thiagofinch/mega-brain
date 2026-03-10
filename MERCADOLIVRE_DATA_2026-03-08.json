@@ -1,0 +1,63 @@
+{
+  "timestamp": "2026-03-08T20:35:33-03:00",
+  "account": {
+    "nickname": "HUGOJOBS",
+    "user_id": 694166791,
+    "email": "hugojobs.co@gmail.com",
+    "country": "BR",
+    "status": "active"
+  },
+  "seller_reputation": {
+    "level": "5_green",
+    "total_transactions": 9142,
+    "rating": "⭐⭐⭐⭐⭐ (Vendedor Confiável)"
+  },
+  "today_sales": {
+    "date": "2026-03-08",
+    "total_orders": 45,
+    "total_revenue": "R$ 2.679,14",
+    "status": "paid",
+    "orders": [
+      {
+        "order_id": "2000015448355136",
+        "time": "23:22",
+        "product": "Moletom Masculino Zíper Hugo Jobs Blusa Aberta Com",
+        "price": "R$ 67,87",
+        "status": "paid"
+      },
+      {
+        "order_id": "2000015448692822",
+        "time": "00:20",
+        "product": "Moletom Masculino Zíper Hugo Jobs Blusa Aberta Com",
+        "price": "R$ 67,87",
+        "status": "paid"
+      },
+      {
+        "order_id": "2000015449296292",
+        "time": "04:28",
+        "product": "Moletom Masculino Zíper Hugo Jobs Blusa Aberta Com",
+        "price": "R$ 67,87",
+        "status": "paid"
+      }
+    ]
+  },
+  "weekly_stats": {
+    "period": "2026-03-02 to 2026-03-08",
+    "total_orders": 444,
+    "daily_breakdown": {
+      "2026-03-02 (Monday)": 73,
+      "2026-03-03 (Tuesday)": 60,
+      "2026-03-04 (Wednesday)": 71,
+      "2026-03-05 (Thursday)": 76,
+      "2026-03-06 (Friday)": 53,
+      "2026-03-07 (Saturday)": 64,
+      "2026-03-08 (Sunday)": 47
+    }
+  },
+  "products": {
+    "active_listings": 0,
+    "note": "Listagens podem estar em rascunho ou modo privado"
+  },
+  "api_status": "✅ Operacional",
+  "token_status": "✅ Válido"
+}

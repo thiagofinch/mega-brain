@@ -1,0 +1,97 @@
+{
+  "sync_timestamp": "2026-03-08T02:39:28.254175",
+  "source": "MercadoLivre API v1 (100% REAL)",
+  "api_endpoints_accessed": [
+    "\u2705 /users/me (200)",
+    "\u26a0\ufe0f /users/me/sales (404)"
+  ],
+  "data": {
+    "user": {
+      "id": 694166791,
+      "nickname": "HUGOJOBS",
+      "email": "hugojobs.co@gmail.com",
+      "first_name": "Hman",
+      "last_name": "LTDA",
+      "status": {
+        "billing": {
+          "allow": true,
+          "codes": []
+        },
+        "buy": {
+          "allow": true,
+          "codes": [],
+          "immediate_payment": {
+            "reasons": [],
+            "required": false
+          }
+        },
+        "confirmed_email": true,
+        "shopping_cart": {
+          "buy": "allowed",
+          "sell": "allowed"
+        },
+        "immediate_payment": false,
+        "list": {
+          "allow": true,
+          "codes": [],
+          "immediate_payment": {
+            "reasons": [],
+            "required": false
+          }
+        },
+        "mercadoenvios": "not_accepted",
+        "mercadopago_account_type": "personal",
+        "mercadopago_tc_accepted": true,
+        "required_action": null,
+        "sell": {
+          "allow": true,
+          "codes": [],
+          "immediate_payment": {
+            "reasons": [],
+            "required": false
+          }
+        },
+        "site_status": "active",
+        "user_type": "complete_registration"
+      },
+      "seller_reputation": {
+        "level_id": "5_green",
+        "power_seller_status": "silver",
+        "transactions": {
+          "canceled": 807,
+          "completed": 8293,
+          "period": "historic",
+          "ratings": {
+            "negative": 0.24,
+            "neutral": 0.11,
+            "positive": 0.65
+          },
+          "total": 9100
+        },
+        "metrics": {
+          "sales": {
+            "period": "60 days",
+            "completed": 1172
+          },
+          "claims": {
+            "period": "60 days",
+            "rate": 0.0072,
+            "value": 9
+          },
+          "delayed_handling_time": {
+            "period": "60 days",
+            "rate": 0.0024,
+            "value": 3
+          },
+          "cancellations": {
+            "period": "60 days",
+            "rate": 0,
+            "value": 0
+          }
+        }
+      },
+      "points": 66,
+      "registration_date": "2021-06-19T15:48:02.000-04:00"
+    }
+  }
+}

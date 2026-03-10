@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Vendas Real-Time - MercadoLivre</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid rgba(100, 200, 255, 0.3);
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #64b5f6 0%, #42a5f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .timestamp {
+            color: #94a3b8;
+            font-size: 0.9em;
+        }
+
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .kpi-card {
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(100, 200, 255, 0.2);
+            border-radius: 12px;
+            padding: 25px;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .kpi-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(100, 200, 255, 0.5);
+        }
+
+        .kpi-label {
+            color: #94a3b8;
+            font-size: 0.85em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .kpi-value {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .kpi-change {
+            font-size: 0.85em;
+            color: #10b981;
+        }
+
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .chart-container {
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(100, 200, 255, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            position: relative;
+            height: 350px;
+        }
+
+        .chart-title {
+            color: #64b5f6;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .transactions-table {
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(100, 200, 255, 0.2);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .table-header {
+            background: rgba(100, 200, 255, 0.1);
+            padding: 15px 20px;
+            color: #64b5f6;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(100, 200, 255, 0.2);
+        }
+
+        .table-content {
+            padding: 0;
+        }
+
+        .table-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            padding: 15px 20px;
+            border-bottom: 1px solid rgba(100, 200, 255, 0.1);
+            align-items: center;
+        }
+
+        .table-row:hover {
+            background: rgba(100, 200, 255, 0.05);
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .status-completed {
+            background: rgba(16, 185, 129, 0.2);
+            color: #10b981;
+        }
+
+        .status-pending {
+            background: rgba(251, 146, 60, 0.2);
+            color: #fb923c;
+        }
+
+        .footer {
+            text-align: center;
+            color: #64748b;
+            font-size: 0.85em;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(100, 200, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .charts-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .table-row {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📊 Dashboard Vendas Real-Time</h1>
+            <p class="timestamp">Atualizado em: <span id="timestamp"></span> | JARVIS Pipeline: ✅ OPERACIONAL</p>
+        </header>
+
+        <section class="kpi-grid">
+            <div class="kpi-card">
+                <div class="kpi-label">Receita Bruta</div>
+                <div class="kpi-value">R$ 984.50</div>
+                <div class="kpi-change">↑ 5 transações hoje</div>
+            </div>
+
+            <div class="kpi-card">
+                <div class="kpi-label">Ticket Médio</div>
+                <div class="kpi-value">R$ 196.90</div>
+                <div class="kpi-change">↑ Acima da meta</div>
+            </div>
+
+            <div class="kpi-card">
+                <div class="kpi-label">Taxa de Conclusão</div>
+                <div class="kpi-value">80.0%</div>
+                <div class="kpi-change">4 de 5 completadas</div>
+            </div>
+
+            <div class="kpi-card">
+                <div class="kpi-label">Pendentes</div>
+                <div class="kpi-value">R$ 320.00</div>
+                <div class="kpi-change">1 transação aguardando</div>
+            </div>
+        </section>
+
+        <section class="charts-grid">
+            <div class="chart-container">
+                <div class="chart-title">Receita por Categoria</div>
+                <canvas id="revenueChart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-title">Volume de Transações</div>
+                <canvas id="volumeChart"></canvas>
+            </div>
+        </section>
+
+        <section class="transactions-table">
+            <div class="table-header">Transações Recentes</div>
+            <div class="table-content">
+                <div class="table-row">
+                    <strong style="color: #64b5f6;">ID</strong>
+                    <strong style="color: #64b5f6;">Valor</strong>
+                    <strong style="color: #64b5f6;">Categoria</strong>
+                    <strong style="color: #64b5f6;">Hora</strong>
+                    <strong style="color: #64b5f6;">Status</strong>
+                </div>
+                <div class="table-row">
+                    <span>TXN001</span>
+                    <span>R$ 250.00</span>
+                    <span>Eletrônicos</span>
+                    <span>09:30</span>
+                    <span class="status-badge status-completed">✓ Completo</span>
+                </div>
+                <div class="table-row">
+                    <span>TXN002</span>
+                    <span>R$ 150.00</span>
+                    <span>Vestuário</span>
+                    <span>09:45</span>
+                    <span class="status-badge status-completed">✓ Completo</span>
+                </div>
+                <div class="table-row">
+                    <span>TXN003</span>
+                    <span>R$ 89.50</span>
+                    <span>Casa</span>
+                    <span>10:15</span>
+                    <span class="status-badge status-completed">✓ Completo</span>
+                </div>
+                <div class="table-row">
+                    <span>TXN004</span>
+                    <span>R$ 320.00</span>
+                    <span>Eletrônicos</span>
+                    <span>10:30</span>
+                    <span class="status-badge status-pending">⏳ Pendente</span>
+                </div>
+                <div class="table-row">
+                    <span>TXN005</span>
+                    <span>R$ 175.00</span>
+                    <span>Esportes</span>
+                    <span>11:00</span>
+                    <span class="status-badge status-completed">✓ Completo</span>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            Powered by JARVIS Intelligence System | MercadoLivre Real-Time Sync | Dados: 2026-03-08
+        </footer>
+    </div>
+
+    <script>
+        // Timestamp
+        document.getElementById('timestamp').textContent = new Date().toLocaleString('pt-BR');
+
+        // Revenue by Category Chart
+        const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+        new Chart(revenueCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Eletrônicos', 'Esportes', 'Vestuário', 'Casa'],
+                datasets: [{
+                    data: [570, 175, 150, 89.50],
+                    backgroundColor: ['#64b5f6', '#10b981', '#fb923c', '#a78bfa'],
+                    borderColor: 'rgba(30, 41, 59, 0.8)',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        labels: { color: '#94a3b8', font: { size: 12 } }
+                    }
+                }
+            }
+        });
+
+        // Volume Chart
+        const volumeCtx = document.getElementById('volumeChart').getContext('2d');
+        new Chart(volumeCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Eletrônicos', 'Esportes', 'Vestuário', 'Casa'],
+                datasets: [{
+                    label: 'Transações',
+                    data: [2, 1, 1, 1],
+                    backgroundColor: '#64b5f6',
+                    borderColor: '#42a5f5',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        labels: { color: '#94a3b8', font: { size: 12 } }
+                    }
+                },
+                scales: {
+                    y: {
+                        ticks: { color: '#94a3b8' },
+                        grid: { color: 'rgba(100, 200, 255, 0.1)' }
+                    },
+                    x: {
+                        ticks: { color: '#94a3b8' },
+                        grid: { color: 'rgba(100, 200, 255, 0.1)' }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,876 @@
+# KPI-TRACKER.yaml - Dashboard Vendor Performance Metrics
+# Versão: 1.0.0
+# Criado: 2026-03-06
+# Responsável: Product Manager
+# Propósito: Definir métricas de sucesso para dashboard vendor (decisão < 2 min)
+
+---
+
+project_metadata:
+  name: "Vendor Dashboard"
+  owner: "Product Team"
+  last_updated: "2026-03-06T00:00:00Z"
+  refresh_interval_seconds: 30
+  target_audience: "Vendor (Online Seller)"
+  decision_time_target_seconds: 120
+
+# ==============================================================================
+# TIER 1: PRIMARY KPIs (Visibilidade Total Negócio)
+# ==============================================================================
+primary_kpis:
+
+  total_vendor_revenue_today:
+    display_name: "Faturamento do Dia (Hoje)"
+    description: "Revenue total acumulado vendedor - base para toda decisão"
+
+    current_value: "R$ 0.00"
+    target_value: "R$ 50,000.00"  # Target aspiracional
+    previous_day_value: "R$ 45,230.00"
+
+    unit: "BRL"
+    format: "currency_br"
+    refresh_frequency_seconds: 30
+
+    thresholds:
+      critical_low: "R$ 5,000.00"  # Abaixo disso = algo quebrou
+      warning_low: "R$ 15,000.00"  # Abaixo do esperado
+      healthy_min: "R$ 25,000.00"  # Operação normal
+      good_min: "R$ 40,000.00"     # Excelente
+
+    variance_vs_yesterday:
+      target_growth_percent: 15
+      current_percent: 0
+      formula: "(current - previous_day) / previous_day * 100"
+
+    escalation_rule:
+      condition: "current < critical_low"
+      alert_level: "CRITICAL"
+      notify: ["vendor", "ops_team"]
+      action: "Check sync status, API health, payment processing"
+
+  net_margin_percentage:
+    display_name: "Margem Líquida %"
+    description: "Percentual de lucro após custos, impostos, comissões"
+
+    current_value: 0.0
+    target_value: 45.0  # 45% target margin
+    previous_day_value: 42.5
+
+    unit: "percent"
+    format: "decimal_1"
+    refresh_frequency_seconds: 60
+
+    components:
+      gross_revenue: "100%"
+      cogs: "-35%"  # Cost of goods
+      marketplace_fees: "-12%"  # Marketplace commission
+      platform_fees: "-5%"  # Payment processing
+      other_costs: "-3%"
+      net_margin: "45%"
+
+    thresholds:
+      critical: 20.0  # Below 20% = urgent review
+      warning: 30.0   # Below 30% = suboptimal
+      healthy: 40.0   # 40%+ = good
+      excellent: 50.0 # 50%+ = excellent
+
+    variance_vs_target:
+      current_vs_target: -5  # -5 percentage points
+      formula: "current_margin - target_margin"
+
+    escalation_rule:
+      condition: "current < 30"
+      alert_level: "WARNING"
+      notify: ["vendor", "finance_team"]
+      action: "Review cost structure, identify high-cost products"
+
+  commissions_paid_today:
+    display_name: "Comissões Pagas (Hoje)"
+    description: "Total de comissões processadas para vendor"
+
+    current_value: "R$ 0.00"
+    target_value: "R$ 7,500.00"
+    previous_day_value: "R$ 6,784.50"
+
+    unit: "BRL"
+    format: "currency_br"
+    refresh_frequency_seconds: 45
+
+    calculation:
+      revenue_base: "total_vendor_revenue_today"
+      commission_rate: "15%"
+      formula: "revenue_base * commission_rate"
+
+    thresholds:
+      critical_zero: "R$ 0.00"  # No commissions processed
+      low: "R$ 2,000.00"        # Below expected
+      healthy: "R$ 5,000.00"    # Normal
+      high: "R$ 10,000.00"      # Excellent
+
+    payment_status:
+      processed_percent: 0
+      pending_percent: 0
+      failed_percent: 0
+
+    escalation_rule:
+      condition: "(current == 0) OR (failed_percent > 5)"
+      alert_level: "CRITICAL"
+      notify: ["vendor", "payments_team", "finance"]
+      action: "Immediate payment processing audit required"
+
+# ==============================================================================
+# TIER 2: SECONDARY KPIs (Profundidade Operacional)
+# ==============================================================================
+secondary_kpis:
+
+  top_products_by_revenue:
+    display_name: "Top 5 Produtos (Hoje)"
+    description: "Ranking de produtos com maior faturamento"
+
+    refresh_frequency_seconds: 30
+    limit: 5
+
+    metrics_per_product:
+      - product_id
+      - product_name
+      - units_sold
+      - revenue_today
+      - revenue_percent_of_total
+      - margin_percent
+      - price_average
+      - ranking_position
+
+    data_structure:
+      - rank: 1
+        name: "[Top Product]"
+        revenue: "R$ 0.00"
+        percentage: "0%"
+        margin: "0%"
+        units: 0
+
+    insights:
+      total_products_active: 0
+      concentration_top3: "0%"
+      concentration_top5: "0%"
+
+    escalation_rule:
+      condition: "concentration_top1 > 70"
+      alert_level: "WARNING"
+      notify: ["vendor"]
+      action: "High concentration risk - diversify product mix"
+
+  marketplace_mix_percentage:
+    display_name: "Mix por Marketplace"
+    description: "Distribuição de revenue por plataforma (%)"
+
+    refresh_frequency_seconds: 60
+
+    platforms:
+      mercado_livre:
+        current_percent: 0
+        target_percent: 50
+        revenue_today: "R$ 0.00"
+        units_sold: 0
+        commission_rate: "12%"
+      shopee:
+        current_percent: 0
+        target_percent: 30
+        revenue_today: "R$ 0.00"
+        units_sold: 0
+        commission_rate: "15%"
+      amazon:
+        current_percent: 0
+        target_percent: 15
+        revenue_today: "R$ 0.00"
+        units_sold: 0
+        commission_rate: "18%"
+      own_website:
+        current_percent: 0
+        target_percent: 5
+        revenue_today: "R$ 0.00"
+        units_sold: 0
+        commission_rate: "0%"
+
+    variance_from_target:
+      mercado_livre_diff: 0
+      shopee_diff: 0
+      amazon_diff: 0
+      own_website_diff: 0
+
+    concentration_risk:
+      top_marketplace_percent: 0
+      threshold_warning: 60  # Alert if > 60%
+      threshold_critical: 80 # Alert if > 80%
+
+    escalation_rule:
+      condition: "top_marketplace > 80"
+      alert_level: "CRITICAL"
+      notify: ["vendor", "strategy_team"]
+      action: "Extreme platform dependency - urgent diversification needed"
+
+  daily_variance_vs_yesterday:
+    display_name: "Variação vs Ontem"
+    description: "Mudanças percentuais e absolutas em 24h"
+
+    refresh_frequency_seconds: 120
+
+    metrics:
+      revenue_change_absolute:
+        current: "R$ 0.00"
+        percent: "0.0%"
+        trend: "flat"  # up, down, flat
+        formula: "(today - yesterday) / yesterday * 100"
+
+      units_sold_change:
+        current: 0
+        percent: "0.0%"
+        trend: "flat"
+
+      order_count_change:
+        current: 0
+        percent: "0.0%"
+        trend: "flat"
+
+      margin_change:
+        current: "0.0%"
+        trend: "flat"
+
+    interpretation:
+      positive_percent: "0% - Crescimento esperado"
+      negative_percent: "0% - Investigar causa"
+
+    escalation_rule:
+      condition: "revenue_change_percent < -20"
+      alert_level: "WARNING"
+      notify: ["vendor"]
+      action: "Revenue down 20%+ from yesterday - investigate promotions, inventory"
+
+  orders_this_hour:
+    display_name: "Pedidos Última Hora"
+    description: "Volume de orders nos últimos 60 minutos"
+
+    refresh_frequency_seconds: 60
+    current_value: 0
+    target_value: 8
+
+    trend_last_4hours:
+      hour_minus_3: 0
+      hour_minus_2: 0
+      hour_minus_1: 0
+      current_hour: 0
+
+    thresholds:
+      critical_zero: 0
+      low: 2
+      healthy: 5
+      good: 10
+
+    escalation_rule:
+      condition: "current == 0 AND time > 08:00 AND time < 22:00"
+      alert_level: "WARNING"
+      notify: ["vendor"]
+      action: "No orders in business hours - check listings, promotional status"
+
+  active_promotions:
+    display_name: "Promoções Ativas"
+    description: "Número e performance de promoções rodando"
+
+    refresh_frequency_seconds: 300
+
+    metrics:
+      total_active: 0
+      total_scheduled: 0
+      promotions_with_good_roi: 0
+      promotions_with_negative_roi: 0
+
+    list:
+      - promotion_id: "[ID]"
+        name: "[Promo Name]"
+        status: "active"
+        discount_percent: 0
+        revenue_attributed: "R$ 0.00"
+        roi: "0%"
+        created_date: "[DATE]"
+
+    escalation_rule:
+      condition: "promotions_with_negative_roi > 2"
+      alert_level: "WARNING"
+      notify: ["vendor", "marketing_team"]
+      action: "Multiple promotions with negative ROI - pause or optimize"
+
+# ==============================================================================
+# TIER 3: ALERT THRESHOLDS (Sistema de Avisos)
+# ==============================================================================
+alert_thresholds:
+
+  commission_threshold:
+    metric: "commissions_paid_today"
+    critical_trigger: "> 20%"  # Commission > 20% of revenue
+    warning_trigger: "> 18%"
+    info_trigger: "> 15%"
+    message:
+      critical: "Comissões acima de 20% - revisar mix de marketplaces e negociar taxas"
+      warning: "Comissões em 18% - monitorar se sustentável"
+    escalation:
+      notify: ["vendor", "finance"]
+      action: "Review pricing strategy and marketplace selection"
+
+  failed_syncs_threshold:
+    metric: "sync_health"
+    critical_trigger: "> 2 falhas em 10 minutos"
+    warning_trigger: "> 1 falha em 10 minutos"
+    info_trigger: "qualquer falha"
+    message:
+      critical: "Sistema de sincronização crítico - dados podem estar desatualizado"
+      warning: "Falhas de sincronização detectadas"
+    escalation:
+      notify: ["vendor", "ops_team", "devops"]
+      action: "Immediate system health check required"
+
+  data_freshness_threshold:
+    metric: "data_freshness_age_minutes"
+    critical_trigger: "> 30 minutos"
+    warning_trigger: "> 10 minutos"
+    info_trigger: "> 5 minutos"
+    message:
+      critical: "Dados com atraso crítico - podem estar obsoletos"
+      warning: "Dados com atraso - pode afetar decisões"
+    escalation:
+      notify: ["vendor", "ops_team"]
+      action: "Check data pipeline, API responses, database health"
+
+  load_time_threshold:
+    metric: "page_load_time_seconds"
+    critical_trigger: "> 5 segundos"
+    warning_trigger: "> 2 segundos"
+    good_threshold: "< 1 segundo"
+    message:
+      critical: "Dashboard lentíssimo - investigar performance"
+      warning: "Dashboard lento - decisões podem ser atrasadas"
+    escalation:
+      notify: ["vendor", "devops"]
+      action: "Performance profiling, CDN check, database optimization"
+
+  inventory_depletion_warning:
+    metric: "low_stock_products"
+    critical_trigger: "Stock-out em top produto"
+    warning_trigger: "< 5 unidades em qualquer top 5 produto"
+    info_trigger: "< 20 unidades em qualquer produto"
+    message:
+      critical: "Produto top sem estoque - oportunidade de venda perdida"
+      warning: "Produtos top com estoque baixo - ressuprimento urgente"
+    escalation:
+      notify: ["vendor", "supply_chain"]
+      action: "Immediate restocking or adjust pricing/promotions"
+
+  marketplace_dependency:
+    metric: "marketplace_concentration"
+    critical_trigger: "> 80%"
+    warning_trigger: "> 60%"
+    message:
+      critical: "Risco crítico - vendedor depende MUITO de 1 marketplace"
+      warning: "Risco elevado - considerar diversificação"
+    escalation:
+      notify: ["vendor", "strategy"]
+      action: "Develop multi-marketplace strategy"
+
+# ==============================================================================
+# TIER 4: DASHBOARD EFFECTIVENESS (UX/Decisão)
+# ==============================================================================
+dashboard_effectiveness:
+
+  decision_speed:
+    target_seconds: 120  # 2 minutes to actionable decision
+    current_seconds: 0
+
+    breakdown:
+      page_load: 1        # 1 second
+      initial_render: 0.5 # 0.5 seconds
+      data_digest: 1.5    # 1.5 minutes to understand + decide
+      action_execution: 0.5 # 0.5 seconds to act
+
+    formula: "page_load + initial_render + data_digest + action_execution"
+
+    success_rate_percent: 0
+    threshold_acceptable: 120
+    threshold_excellent: 60
+
+    escalation_rule:
+      condition: "current > 180"
+      alert_level: "CRITICAL"
+      notify: ["product", "devops"]
+      action: "UX/Performance review - slow decision time affects revenue"
+
+  real_time_update_responsiveness:
+    target_seconds: 10  # Update visible within 10 seconds
+    current_seconds: 0
+
+    test_scenario: "Generate order in marketplace → see in dashboard"
+
+    thresholds:
+      excellent: "< 5 seconds"
+      good: "< 10 seconds"
+      acceptable: "< 30 seconds"
+      poor: "> 30 seconds"
+
+    escalation_rule:
+      condition: "current > 30"
+      alert_level: "WARNING"
+      notify: ["vendor", "devops"]
+      action: "Data pipeline latency investigation"
+
+  anomaly_detection_visibility:
+    metric: "% anomalies detected and highlighted"
+    current_percent: 0
+    target_percent: 95  # 95% of anomalies surfaced to user
+
+    anomalies_to_detect:
+      - "Revenue drop > 30% hour-over-hour"
+      - "Commission spike > 20%"
+      - "Stock-out on top products"
+      - "Failed marketplace sync"
+      - "Unusual traffic spike (bot orders?)"
+      - "Payment processing failures"
+      - "Negative ROI promotions"
+
+    escalation_rule:
+      condition: "detection_rate < 70"
+      alert_level: "WARNING"
+      notify: ["product", "devops"]
+      action: "Audit anomaly detection rules and alerting"
+
+  user_engagement:
+    metric: "Dashboard opens per day"
+    current_value: 0
+    target_value: 25  # 25 times per day = highly engaged
+
+    engagement_by_time:
+      morning_peak: "08:00-12:00"  # Expected high usage
+      afternoon_peak: "14:00-18:00"
+      evening_peak: "20:00-22:00"
+      low_periods: "22:00-08:00"
+
+    interpretation:
+      > 25_opens: "Highly engaged - dashboard is mission-critical tool"
+      10_25_opens: "Good engagement"
+      < 10_opens: "Low engagement - review usability or notification strategy"
+
+  action_taken_after_view:
+    metric: "% of dashboard sessions that lead to action"
+    current_percent: 0
+    target_percent: 75  # 75% of views lead to decision/action
+
+    actions_tracked:
+      - "Price adjustment"
+      - "Promotion pause/creation"
+      - "Inventory reorder"
+      - "Marketplace settings change"
+      - "Product delisting"
+
+    interpretation:
+      "> 75%": "Dashboard is driving decisions effectively"
+      "50-75%": "Good effectiveness"
+      "< 50%": "Dashboard may not be actionable - review insights and CTAs"
+
+# ==============================================================================
+# TIER 5: TECHNICAL PERFORMANCE METRICS
+# ==============================================================================
+technical_metrics:
+
+  page_load_time:
+    target_milliseconds: 1000  # 1 second
+    current_milliseconds: 0
+
+    browser_measurements:
+      metric_name: "Largest Contentful Paint (LCP)"
+      target_ms: 1000
+      threshold_poor_ms: 3000
+      threshold_fair_ms: 2500
+      threshold_good_ms: 1000
+
+    lighthouse_scores:
+      performance: 0  # Target 90+
+      target: 90
+      acceptable: 70
+
+    breakdown_desktop:
+      dns_lookup_ms: 50
+      tcp_connection_ms: 100
+      time_to_first_byte_ms: 200
+      html_download_ms: 100
+      javascript_parse_ms: 200
+      render_ms: 200
+      react_hydration_ms: 150
+
+    escalation_rule:
+      condition: "current > 2000"
+      alert_level: "WARNING"
+      notify: ["devops", "frontend"]
+      action: "Performance investigation - profiling, code splitting, CDN optimization"
+
+  data_sync_latency:
+    target_milliseconds: 500  # 500ms from marketplace API to dashboard
+    current_milliseconds: 0
+
+    breakdown:
+      api_call_to_marketplace: 150
+      marketplace_response_time: 100
+      data_transformation: 100
+      database_write: 100
+      cache_update: 50
+
+    threshold_warning_ms: 1500
+    threshold_critical_ms: 3000
+
+    sync_frequency_seconds: 30
+
+    escalation_rule:
+      condition: "current > 1500"
+      alert_level: "WARNING"
+      notify: ["devops", "backend"]
+      action: "Data pipeline optimization needed"
+
+  animation_frame_rate:
+    target_fps: 60  # 60 FPS smooth animations
+    current_fps: 0
+
+    tests:
+      - name: "Chart redraw performance"
+        target_fps: 60
+      - name: "Table scroll performance"
+        target_fps: 60
+      - name: "Modal transitions"
+        target_fps: 60
+
+    threshold_acceptable_fps: 50
+    threshold_poor_fps: 30
+
+    escalation_rule:
+      condition: "current < 50"
+      alert_level: "WARNING"
+      notify: ["frontend"]
+      action: "React performance audit - memoization, virtualization, re-renders"
+
+  core_web_vitals:
+
+    largest_contentful_paint_lcp:
+      metric: "LCP"
+      description: "Largest visible element render time"
+      target_seconds: 1.0
+      current_seconds: 0
+      status: "NOT_MEASURED"
+      threshold_good_s: 1.0
+      threshold_fair_s: 2.5
+      threshold_poor_s: 3.0
+
+    first_input_delay_fid:
+      metric: "FID"
+      description: "Time to first user interaction response"
+      target_seconds: 0.1
+      current_seconds: 0
+      status: "NOT_MEASURED"
+      threshold_good_s: 0.1
+      threshold_fair_s: 0.25
+      threshold_poor_s: 0.5
+
+    cumulative_layout_shift_cls:
+      metric: "CLS"
+      description: "Visual stability (unexpected layout shifts)"
+      target_score: 0.05
+      current_score: 0
+      status: "NOT_MEASURED"
+      threshold_good: 0.05
+      threshold_fair: 0.1
+      threshold_poor: 0.25
+
+    interaction_to_next_paint_inp:
+      metric: "INP"
+      description: "Responsiveness of interactions"
+      target_seconds: 0.2
+      current_seconds: 0
+      status: "NOT_MEASURED"
+      threshold_good_s: 0.2
+      threshold_fair_s: 0.5
+      threshold_poor_s: 1.0
+
+    overall_status: "NOT_MEASURED"
+    target_all_green: true
+    escalation_rule:
+      condition: "any_metric_poor"
+      alert_level: "WARNING"
+      notify: ["frontend", "devops"]
+      action: "Core Web Vitals optimization required - affects SEO and user experience"
+
+  api_response_errors:
+    target_error_rate_percent: 0.1  # <0.1% error rate
+    current_error_rate_percent: 0
+
+    error_categories:
+      timeout_errors:
+        count: 0
+        threshold_warning: 5
+        threshold_critical: 10
+
+      authentication_errors:
+        count: 0
+        threshold_warning: 2
+        threshold_critical: 10
+
+      data_validation_errors:
+        count: 0
+        threshold_warning: 5
+        threshold_critical: 20
+
+      external_api_errors:
+        count: 0
+        threshold_warning: 3
+        threshold_critical: 10
+
+      database_errors:
+        count: 0
+        threshold_warning: 2
+        threshold_critical: 5
+
+    escalation_rule:
+      condition: "error_rate > 1.0"
+      alert_level: "CRITICAL"
+      notify: ["devops", "backend", "ops"]
+      action: "Immediate system health check required"
+
+  uptime_availability:
+    target_percent: 99.9  # 99.9% = 4.3 minutes downtime per month
+    current_percent: 0
+
+    sla_commitment:
+      tier_1: "99.9% availability"
+      tier_2: "4.3 minutes downtime/month maximum"
+      tier_3: "30 second incident response"
+
+    tracking:
+      incidents_this_month: 0
+      total_downtime_minutes: 0
+      mean_time_to_recovery_minutes: 0
+
+    escalation_rule:
+      condition: "downtime > 5 minutes in any hour"
+      alert_level: "CRITICAL"
+      notify: ["devops", "ops", "cto"]
+      action: "Incident response activated"
+
+  database_performance:
+    target_query_time_ms: 100
+    current_avg_query_time_ms: 0
+
+    slow_queries:
+      count: 0
+      threshold_warning: 3
+      threshold_critical: 10
+
+    connection_pool:
+      available: 0
+      in_use: 0
+      target_utilization_percent: 70
+
+    escalation_rule:
+      condition: "avg_query_time > 500"
+      alert_level: "WARNING"
+      notify: ["devops", "dba"]
+      action: "Database query optimization and indexing review"
+
+# ==============================================================================
+# TIER 6: BUSINESS HEALTH SCORECARD
+# ==============================================================================
+business_health_scorecard:
+
+  overall_health_score:
+    calculation: "weighted average of all primary + secondary KPIs"
+    current_score: 0
+    target_score: 95  # Out of 100
+
+    score_ranges:
+      90_100: "EXCELLENT - Dashboard driving strong business decisions"
+      80_89: "GOOD - Operational, minor improvements needed"
+      70_79: "FAIR - Some issues affecting decision-making"
+      60_69: "POOR - Multiple issues, user experience degraded"
+      below_60: "CRITICAL - Dashboard unusable, immediate action needed"
+
+    weightings:
+      revenue_health: 0.35      # 35% weight
+      technical_health: 0.25    # 25% weight
+      data_freshness: 0.20      # 20% weight
+      user_engagement: 0.10     # 10% weight
+      availability: 0.10        # 10% weight
+
+  revenue_health:
+    components:
+      - total_vendor_revenue_today: 0.40
+      - net_margin_percentage: 0.30
+      - commissions_paid_today: 0.30
+    current_score: 0
+    target_score: 95
+
+  technical_health:
+    components:
+      - page_load_time: 0.30
+      - core_web_vitals: 0.30
+      - api_error_rate: 0.25
+      - uptime: 0.15
+    current_score: 0
+    target_score: 95
+
+  data_freshness_health:
+    components:
+      - data_age_minutes: 0.50
+      - sync_error_count: 0.50
+    current_score: 0
+    target_score: 95
+
+# ==============================================================================
+# MONITORING & ALERTING CONFIGURATION
+# ==============================================================================
+monitoring_config:
+
+  alert_channels:
+    - type: "in_app"
+      destination: "Dashboard notification badge"
+      latency_target_seconds: 5
+
+    - type: "email"
+      destination: "vendor@email.com"
+      conditions: ["CRITICAL", "WARNING_persistent"]
+      latency_target_minutes: 5
+
+    - type: "sms"
+      destination: "vendor_phone"
+      conditions: ["CRITICAL_revenue", "CRITICAL_payment_failed"]
+      latency_target_seconds: 30
+
+    - type: "slack"
+      destination: "ops_channel"
+      conditions: ["CRITICAL", "devops_incidents"]
+      latency_target_minutes: 1
+
+    - type: "dashboard_panel"
+      destination: "Admin KPI dashboard"
+      latency_target_seconds: 30
+
+  check_frequency:
+    primary_kpis: 30    # Check every 30 seconds
+    secondary_kpis: 60  # Check every 60 seconds
+    technical_metrics: 10  # Check every 10 seconds
+    business_scorecard: 300  # Check every 5 minutes
+
+  data_retention:
+    real_time_metrics: "72 hours"
+    daily_aggregates: "13 months"
+    historical_trends: "36 months"
+
+  reporting_schedule:
+    daily_summary: "22:00 each day"
+    weekly_digest: "Sunday 20:00"
+    monthly_review: "Last day of month 18:00"
+
+# ==============================================================================
+# SUCCESS CRITERIA & COMPLETION CHECKLIST
+# ==============================================================================
+success_criteria:
+
+  primary_metrics_health:
+    revenue_today_target: "R$ 50,000.00"
+    margin_target_percent: 45
+    commissions_processed_percent: 100
+
+    success_condition: "All 3 metrics >= 80% of target"
+
+  secondary_metrics_completeness:
+    top_products_visible: true
+    marketplace_mix_accurate: true
+    daily_variance_calculated: true
+
+    success_condition: "All secondary metrics populated and updating"
+
+  alert_system_responsiveness:
+    critical_alert_latency_seconds: 5
+    warning_alert_latency_seconds: 30
+
+    success_condition: "All alerts firing within SLA"
+
+  dashboard_performance:
+    load_time_seconds: 1.0
+    core_web_vitals_all_green: true
+    uptime_percent: 99.9
+
+    success_condition: "All technical metrics in 'green' zone"
+
+  user_engagement:
+    decision_time_seconds: 120
+    action_rate_percent: 75
+    daily_opens: 25
+
+    success_condition: "Dashboard is primary decision tool for vendor"
+
+  business_impact:
+    health_score: 95
+    revenue_growth_percent: 15
+    commission_accuracy_percent: 99.9
+
+    success_condition: "Dashboard driving measurable business value"
+
+# ==============================================================================
+# IMPLEMENTATION ROADMAP
+# ==============================================================================
+implementation_phases:
+
+  phase_1_foundation:
+    name: "Foundation (Week 1)"
+    items:
+      - "Implement primary KPI calculations"
+      - "Set up real-time data syncing"
+      - "Create alert triggering system"
+      - "Build basic dashboard UI"
+    success_metrics:
+      - "All 3 primary KPIs showing on dashboard"
+      - "Data updates every 30 seconds"
+      - "Critical alerts firing correctly"
+
+  phase_2_expansion:
+    name: "Expansion (Week 2-3)"
+    items:
+      - "Add secondary KPI visualizations"
+      - "Implement anomaly detection"
+      - "Optimize page load time"
+      - "Add real-time update animations"
+    success_metrics:
+      - "All secondary KPIs visible and updating"
+      - "Page load < 1 second"
+      - "Core Web Vitals all green"
+
+  phase_3_optimization:
+    name: "Optimization (Week 4-5)"
+    items:
+      - "Fine-tune alert thresholds based on data"
+      - "Implement user engagement tracking"
+      - "Add predictive insights"
+      - "Performance tuning and caching"
+    success_metrics:
+      - "Alert accuracy > 95%"
+      - "User opens > 10/day"
+      - "Decision time < 2 minutes"
+
+  phase_4_scale:
+    name: "Scale & Maintain (Week 6+)"
+    items:
+      - "Multi-vendor support"
+      - "Historical trend analysis"
+      - "Custom threshold configuration"
+      - "Advanced reporting and exports"
+    success_metrics:
+      - "Health score >= 95"
+      - "Revenue growth >= 15% attributed"
+      - "Uptime >= 99.9%"
+
+---
+# END OF KPI-TRACKER.yaml
+# Last Updated: 2026-03-06
+# Version: 1.0.0
+# Status: READY_FOR_IMPLEMENTATION

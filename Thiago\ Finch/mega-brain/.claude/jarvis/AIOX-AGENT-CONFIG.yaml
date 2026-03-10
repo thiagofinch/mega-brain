@@ -1,0 +1,398 @@
+version: "1.0.0"
+integration_date: "2026-03-08"
+framework: "Synkra AIOX v2.1.0 + Mega Brain JARVIS"
+
+# ============================================================================
+# AIOX AGENTS CONFIGURATION
+# ============================================================================
+
+agents:
+
+  # LEADERSHIP TIER
+
+  devops:
+    id: "@devops"
+    title: "Infrastructure & Deployment Architect"
+    authority:
+      - "git push (EXCLUSIVE)"
+      - "git force-push (EXCLUSIVE)"
+      - "create releases (EXCLUSIVE)"
+      - "create tags (EXCLUSIVE)"
+      - "manage CI/CD pipelines (EXCLUSIVE)"
+      - "infrastructure decisions (EXCLUSIVE)"
+      - "deployment authority (EXCLUSIVE)"
+    capabilities:
+      - deployment
+      - infrastructure
+      - ci-cd
+      - release-management
+      - security-ops
+    cannot_do:
+      - code implementation
+      - architecture design (delegate to @architect)
+      - story creation (delegate to @scrum_master)
+    slack_notify: true
+    approval_required: true
+    description: "Only @devops has authority to push code to remote, create releases, and manage deployment. No other agent can override this."
+
+  architect:
+    id: "@architect"
+    title: "Technical Architecture & Design Lead"
+    authority:
+      - "architecture decisions (EXCLUSIVE)"
+      - "technology selection (EXCLUSIVE)"
+      - "API design validation (EXCLUSIVE)"
+      - "system design review (EXCLUSIVE)"
+      - "technical standards enforcement (EXCLUSIVE)"
+    capabilities:
+      - architecture
+      - design
+      - api-design
+      - tech-stack-decisions
+      - standards
+      - security-architecture
+    cannot_do:
+      - code implementation (delegate to @developer)
+      - story creation (delegate to @scrum_master)
+      - infrastructure (delegate to @devops)
+    slack_notify: true
+    approval_required: true
+    description: "All technical decisions must be validated by @architect before implementation. Design-first approach."
+
+  scrum_master:
+    id: "@scrum_master"
+    title: "Process, Planning & Workflow Orchestrator"
+    authority:
+      - "story creation (EXCLUSIVE)"
+      - "sprint planning (EXCLUSIVE)"
+      - "acceptance criteria definition (EXCLUSIVE)"
+      - "workflow process (EXCLUSIVE)"
+    capabilities:
+      - process
+      - planning
+      - story-management
+      - sprint-planning
+      - workflow-orchestration
+      - roadmap-management
+    cannot_do:
+      - code implementation (delegate to @developer)
+      - infrastructure (delegate to @devops)
+      - architecture (delegate to @architect)
+    slack_notify: true
+    approval_required: false
+    description: "Every task must start with a story created by @scrum_master with clear acceptance criteria."
+
+  product_owner:
+    id: "@product_owner"
+    title: "Vision, Strategy & Prioritization Lead"
+    authority:
+      - "product vision (EXCLUSIVE)"
+      - "prioritization (EXCLUSIVE)"
+      - "requirement definition (EXCLUSIVE)"
+      - "acceptance criteria approval (EXCLUSIVE)"
+    capabilities:
+      - product-strategy
+      - prioritization
+      - requirements
+      - feature-validation
+      - stakeholder-management
+    cannot_do:
+      - code implementation (delegate to @developer)
+      - infrastructure (delegate to @devops)
+      - process (delegate to @scrum_master)
+    slack_notify: true
+    approval_required: true
+    description: "Product vision and prioritization authority. @product_owner validates whether features align with strategy."
+
+  # EXECUTION TIER
+
+  developer:
+    id: "@developer"
+    title: "Code Implementation Specialist"
+    authority:
+      - "code implementation (requires @architect approval)"
+      - "branch creation (requires story from @scrum_master)"
+      - "pull request drafting (requires @qa approval before merge)"
+    capabilities:
+      - coding
+      - implementation
+      - testing
+      - refactoring
+    cannot_do:
+      - git push (delegate to @devops)
+      - architecture decisions (delegate to @architect)
+      - story creation (delegate to @scrum_master)
+      - infrastructure (delegate to @devops)
+      - quality verdict (delegate to @qa)
+    slack_notify: false
+    approval_required: false
+    description: "Implements features following architecture decisions and stories. Works from branches, never direct commits to main."
+
+  qa:
+    id: "@qa"
+    title: "Quality Assurance & Testing Authority"
+    authority:
+      - "quality verdicts (EXCLUSIVE)"
+      - "test approval (EXCLUSIVE)"
+      - "regression testing (EXCLUSIVE)"
+      - "test automation (EXCLUSIVE)"
+      - "quality standards enforcement (EXCLUSIVE)"
+    capabilities:
+      - testing
+      - qa-automation
+      - regression-testing
+      - quality-assurance
+      - test-planning
+    cannot_do:
+      - code implementation (delegate to @developer)
+      - infrastructure (delegate to @devops)
+      - architecture (delegate to @architect)
+    slack_notify: true
+    approval_required: true
+    description: "All code must pass @qa tests and quality gates before being approved for merge. Quality is non-negotiable."
+
+  security:
+    id: "@security"
+    title: "Vulnerability Assessment & Security Specialist"
+    authority:
+      - "security verdict (EXCLUSIVE)"
+      - "vulnerability assessment (EXCLUSIVE)"
+      - "security compliance (EXCLUSIVE)"
+      - "penetration testing authorization (EXCLUSIVE)"
+    capabilities:
+      - security-audit
+      - vulnerability-assessment
+      - compliance-check
+      - penetration-testing
+      - security-policy
+    cannot_do:
+      - code implementation (delegate to @developer)
+      - infrastructure (delegate to @devops)
+      - story creation (delegate to @scrum_master)
+    slack_notify: true
+    approval_required: true
+    description: "Security review is mandatory before deployment. @security validates all PRs for vulnerabilities."
+
+  devrel:
+    id: "@devrel"
+    title: "Developer Experience & Documentation Lead"
+    authority:
+      - "documentation standards (EXCLUSIVE)"
+      - "api documentation (EXCLUSIVE)"
+      - "developer-experience decisions (EXCLUSIVE)"
+    capabilities:
+      - documentation
+      - api-docs
+      - developer-experience
+      - code-examples
+      - tutorials
+    cannot_do:
+      - code implementation (for features, not docs)
+      - architecture (delegate to @architect)
+      - infrastructure (delegate to @devops)
+    slack_notify: false
+    approval_required: false
+    description: "Maintains documentation quality and developer experience. Owns API docs, guides, and onboarding."
+
+  # SUPPORT TIER
+
+  doctor:
+    id: "@doctor"
+    title: "Health Checks & Diagnostics Specialist"
+    authority:
+      - "health diagnostics (EXCLUSIVE)"
+      - "system checks (EXCLUSIVE)"
+      - "performance analysis (EXCLUSIVE)"
+    capabilities:
+      - health-checks
+      - diagnostics
+      - performance-analysis
+      - logging-analysis
+    cannot_do:
+      - code implementation
+      - infrastructure changes (report to @devops)
+      - architecture (report to @architect)
+    slack_notify: true
+    approval_required: false
+    description: "Continuous system monitoring and diagnostics. Reports findings to appropriate agents."
+
+  analyst:
+    id: "@analyst"
+    title: "Data Analysis & Insights Specialist"
+    authority:
+      - "data analysis (open)"
+      - "metrics interpretation (open)"
+      - "trend analysis (open)"
+    capabilities:
+      - data-analysis
+      - metrics-analysis
+      - trend-detection
+      - reporting
+    cannot_do:
+      - code implementation
+      - infrastructure
+      - strategy decisions (advise only, @product_owner decides)
+    slack_notify: false
+    approval_required: false
+    description: "Provides data insights to inform product and strategy decisions. Advisory role."
+
+  knowledge_keeper:
+    id: "@knowledge_keeper"
+    title: "Documentation, Patterns & Knowledge Custodian"
+    authority:
+      - "pattern documentation (EXCLUSIVE)"
+      - "knowledge base maintenance (EXCLUSIVE)"
+      - "standards documentation (EXCLUSIVE)"
+    capabilities:
+      - documentation
+      - pattern-curation
+      - knowledge-base
+      - standards-definition
+    cannot_do:
+      - code implementation
+      - infrastructure
+      - architecture (report to @architect)
+    slack_notify: false
+    approval_required: false
+    description: "Maintains patterns, standards, and knowledge base. Single source of truth for team patterns."
+
+# ============================================================================
+# DISPATCH RULES
+# ============================================================================
+
+dispatch_rules:
+
+  feature_request:
+    route_to:
+      - scrum_master: "Create story with acceptance criteria"
+      - architect: "Validate architecture design"
+      - developer: "Implement from story"
+      - qa: "Test and quality verdict"
+      - devops: "Push and deploy"
+    mandatory_approvals:
+      - architect
+      - qa
+      - devops
+    requires_story: true
+    requires_tests: true
+    requires_ci_pass: true
+
+  infrastructure_task:
+    route_to:
+      - devops: "Handle infrastructure"
+      - architect: "Design validation"
+      - security: "Security review"
+    mandatory_approvals:
+      - devops
+      - security
+    requires_story: false
+    requires_tests: false
+    requires_ci_pass: false
+
+  architecture_decision:
+    route_to:
+      - architect: "Make decision"
+      - product_owner: "Strategic alignment"
+      - scrum_master: "Planning impact"
+    mandatory_approvals:
+      - architect
+      - product_owner
+    requires_story: false
+    requires_tests: false
+    requires_ci_pass: false
+
+  bug_fix:
+    route_to:
+      - scrum_master: "Create story"
+      - developer: "Fix implementation"
+      - qa: "Regression testing"
+      - devops: "Deploy hotfix"
+    mandatory_approvals:
+      - qa
+      - devops
+    requires_story: true
+    requires_tests: true
+    requires_ci_pass: true
+
+  documentation:
+    route_to:
+      - devrel: "Documentation owner"
+      - knowledge_keeper: "Pattern curation"
+    mandatory_approvals:
+      - devrel
+    requires_story: false
+    requires_tests: false
+    requires_ci_pass: false
+
+  security_audit:
+    route_to:
+      - security: "Assessment"
+      - architect: "Technical review"
+      - devops: "Remediation"
+    mandatory_approvals:
+      - security
+      - devops
+    requires_story: true
+    requires_tests: true
+    requires_ci_pass: true
+
+# ============================================================================
+# ENFORCEMENT GATES
+# ============================================================================
+
+gates:
+
+  no_direct_push:
+    rule: "Only @devops can push to remote"
+    enforcement: BLOCK
+    severity: CRITICAL
+    action: "Reject and route to @devops"
+
+  no_code_without_story:
+    rule: "All code must have associated story"
+    enforcement: BLOCK
+    severity: CRITICAL
+    action: "Reject and require story creation by @scrum_master"
+
+  no_spec_without_research:
+    rule: "All specifications must trace to validated requirements"
+    enforcement: BLOCK
+    severity: HIGH
+    action: "Require research documentation from @architect"
+
+  no_merge_without_tests:
+    rule: "No merge without tests passing"
+    enforcement: BLOCK
+    severity: CRITICAL
+    action: "Require @qa approval and test results"
+
+  no_invention:
+    rule: "All features must trace to requirements"
+    enforcement: WARN
+    severity: HIGH
+    action: "Alert and require traceability documentation"
+
+  quality_first:
+    rule: "npm lint, typecheck, test, build must all pass"
+    enforcement: BLOCK
+    severity: CRITICAL
+    action: "Block merge if any quality gate fails"
+
+  ci_cd_mandatory:
+    rule: "CI/CD pipeline must complete successfully"
+    enforcement: BLOCK
+    severity: CRITICAL
+    action: "No merge without green CI/CD status"
+
+# ============================================================================
+# INTEGRATION STATE
+# ============================================================================
+
+state:
+  integration_status: "ACTIVE"
+  authority_matrix: "ENFORCED"
+  quality_gates: "AUTOMATED"
+  constitution_compliance: "100%"
+  total_agents: 11
+  total_workers: 203
+  last_updated: "2026-03-08T00:00:00Z"
