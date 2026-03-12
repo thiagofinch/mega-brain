@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "file-registry.schema.json",
+  "title": "File Registry",
+  "description": "Schema for file-registry.json - tracking all processed files with MD5 hashes",
+  "type": "object",
+  "required": ["version", "last_scan", "total_files", "files"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "last_scan": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "total_files": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/file_entry"
+      }
+    }
+  },
+  "definitions": {
+    "file_entry": {
+      "type": "object",
+      "required": ["path", "md5", "size", "modified", "status"],
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "Relative path from project root"
+        },
+        "md5": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{32}$"
+        },
+        "size": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "modified": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["pending", "processing", "processed", "error", "skipped"]
+        },
+        "source_id": {
+          "type": "string",
+          "pattern": "^[A-Z]{2,4}\\d{3}$",
+          "description": "Link to CHUNKS-STATE source_id when processed"
+        },
+        "processed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "chunk_count": {
+          "type": "integer",
+          "description": "Number of chunks generated from this file"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+# Mega Brain — Hook Dependencies
+# These are the ONLY dependencies for .claude/hooks/ (distributed with npm package).
+# Hooks MUST use stdlib + PyYAML only. No heavy ML/AI packages here.
+#
+# For full development dependencies, see pyproject.toml [project.optional-dependencies]
+PyYAML>=6.0,<7.0

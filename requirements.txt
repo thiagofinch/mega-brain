@@ -1,0 +1,16 @@
+# Mega Brain - Python Dependencies
+# Hooks in .claude/hooks/ use only stdlib + PyYAML
+# Scripts in scripts/ may require additional packages (dev-only, not distributed)
+PyYAML>=6.0
+
+# === SPEAKER DIARIZATION (core/intelligence/speakers/) ===
+# Install: pip install -r requirements.txt
+# Note: pyannote.audio requires HuggingFace model license:
+#   https://huggingface.co/pyannote/speaker-diarization
+# Cloud fallbacks (no GPU): ASSEMBLYAI_API_KEY or DEEPGRAM_API_KEY in .env
+pyannote.audio>=3.1.0
+torch>=2.0.0
+torchaudio>=2.0.0
+numpy>=1.24.0
+scipy>=1.10.0
+assemblyai>=0.28.0

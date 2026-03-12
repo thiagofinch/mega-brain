@@ -1,0 +1,682 @@
+# ══════════════════════════════════════════════════════════════════════
+# MEGA-BRAIN .gitignore — WHITELIST + LAYER ARCHITECTURE
+#
+# Este repo representa o estado de trabalho completo (L1 + L2).
+# O .gitignore bloqueia por padrão:
+#   • Dados pessoais L3-only (inbox bruto, logs, sessions, company)
+#   • Secrets e credenciais (nunca em nenhuma layer)
+#   • Dev artifacts (node_modules, build, cache)
+#   • Injeções de frameworks externos (sync externo)
+#
+# Referências canônicas:
+#   .github/layer1-allowlist.txt  → o que é público (L1/npm)
+#   .github/layer2-manifest.txt   → o que é premium (L2)
+#   .github/layer3-manifest.txt   → o que é backup pessoal (L3)
+#   .planning/LAYER-PLAN.md       → decisões arquiteturais
+#
+# REGRA: arquivo novo não listado aqui → ignorado por padrão.
+# Para compartilhar algo novo: adicione explicitamente abaixo.
+# ══════════════════════════════════════════════════════════════════════
+
+
+# ── WHITELIST BASE ────────────────────────────────────────────────────
+# Ignorar tudo por padrão. Apenas o que está nos blocos de ALLOW sobe.
+*
+!*/
+
+
+# ══════════════════════════════════════════════════════════════════════
+# BLOCO 1 — NUNCA (nenhuma layer)
+# Secrets, credenciais, dev artifacts, OS, binários
+# ══════════════════════════════════════════════════════════════════════
+
+# Secrets & env
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+*.secret
+*.credentials
+credentials.json
+token.json
+token_write.json
+settings.local.json
+.mcp.json
+mcp_servers.json
+.claude/settings.local.json
+
+# Dev artifacts
+node_modules/
+__pycache__/
+*.py[cod]
+.venv/
+.venv-rag/
+venv/
+*.egg-info/
+dist/
+build/
+.next/
+storybook-static/
+*.tsbuildinfo
+
+# Databases & cache
+chroma_db/
+.chroma/
+*.db
+*.sqlite
+.layer-sync/
+
+# OS & IDE
+.DS_Store
+Thumbs.db
+nul
+.vscode/
+.idea/
+.obsidian/
+
+# Media & binários pesados
+*.mp4
+*.mp3
+*.wav
+*.m4a
+*.mov
+*.avi
+*.mkv
+*.b64
+*.pkl
+*.tgz
+*.docx
+**/SellTheAgency.com_Presentation.pdf
+
+# Backups de código
+*_BACKUP_*.py
+*.bak
+*.tmp
+
+# Artefatos de root
+_audit.ps1
+npm-publish-error.log
+scripts/filter-patterns.txt
+
+# Security scanner output
+docs/DOSSIE-SEGURANCA-*.md
+docs/CREDENTIAL-ROTATION-*.md
+
+# SQL schema files (contain infrastructure details)
+*.sql
+
+# GitHub layer-rules (gerado automaticamente)
+.github/layer-rules.yaml
+
+# Gitignore local (override por máquina)
+.gitignore.local
+
+
+# ══════════════════════════════════════════════════════════════════════
+# BLOCO 2 — LAYER 3 ONLY (backup pessoal — não sobe para repo L2)
+# Conteúdo gerado em runtime, pessoal, ou bruto
+# ══════════════════════════════════════════════════════════════════════
+
+# Bucket inboxes (material bruto original — L3 only)
+# Root inbox/ was eliminated in S03; raw materials live in bucket inboxes now.
+workspace/inbox/**
+knowledge/personal/inbox/**
+# knowledge/business/inbox/** is re-denied below in BLOCO 4
+
+# Logs de sessão completos (L3 only)
+logs/**
+*.jsonl
+06-LOGS/
+
+# Claude runtime state (L3 only)
+.claude/sessions/
+.claude/monitoring/
+.claude/mission-control/
+.claude/learning-system/
+.claude/agent-memory/
+.claude/jarvis/
+.claude/audit-*.json
+.claude/guides/
+.claude/handoffs/
+.claude/plans/
+.claude/temp/
+.claude/*-PERSONA-*.md
+.claude/LEDGER.md
+
+# System state pessoal (L3 only)
+system/backups/
+system/registry/
+system/temp/
+system/archive/
+system/checkpoints/
+system/memory/
+system/moc/
+system/traces/
+system/DIAGNOSTICO-*.md
+system/SESSION-STATE.md
+system/JARVIS-STATE.json
+system/jarvis-voice/audiobooks/
+system/jarvis-voice/voice_id*.txt
+system/jarvis-voice/vapi_config.json
+system/user-preferences.json
+system/rules-for-claude.md
+system/database/import-buyers.mjs
+system/database/import-buyers.sh
+system/docs/MEGA-BRAIN-MANIFESTO-COMPLETO.md
+system/docs/MOGA-BRAIN-EXPLICACAO-COMPLETA.md
+
+# Empresa (L3 only — dados pessoais de negócio)
+agents/sua-empresa/**
+.company-data/
+company-data/
+
+# Dados pessoais & externos
+.data/
+research/
+archive/
+_IMPORT/
+_import/
+vendor/
+processing/
+
+# Reference company-specific
+reference/prds/prd-company-*.md
+reference/README-RALPH-*.md
+
+# Docs internos L3
+docs/referencias/
+
+# Agentes populados L3 (boardroom outputs, voice)
+agents/boardroom/outputs/
+agents/boardroom/config/voice_mapping.json
+agents/shared-memory/*.yaml
+agents/shared-memory/*.md
+agents/archive/
+agents/discovery/
+
+# Agent categories with sensitive data (L3 only — S06)
+agents/business/**
+agents/personal/**
+core/intelligence/speakers/VOICE-REGISTRY.yaml
+core/intelligence/speakers/voice_embeddings/
+core/intelligence/speakers/*.pkl
+
+# Pessoas internas — dados L3 (nunca rastrear)
+# Adicionar padrões específicos em .gitignore.local
+
+# Frameworks externos (nunca rastrear)
+# Adicionar padrões específicos em .gitignore.local
+
+
+# ══════════════════════════════════════════════════════════════════════
+# BLOCO 3 — INJEÇÕES DE FRAMEWORKS EXTERNOS
+# Tudo instalado via sync externo, ide-sync, install scripts
+# Fica local na máquina — não pertence a nenhuma layer do mega-brain
+# ══════════════════════════════════════════════════════════════════════
+
+# Motores e frameworks externos (bloqueados pelo wildcard *)
+# Padrões específicos de brand em .git/info/exclude (local only)
+
+# Frameworks externos (nunca rastrear — AIOS-Core, IDE sync)
+.aios-core/
+.claude/aios/
+
+# Projeções IDE externas
+.agents/
+.codex/
+.gemini/
+
+# Agentes injetados por sync externo
+.claude/agents/
+
+# Misc dirs de frameworks externos
+.commands-bak/
+.agent/
+squads/
+.antigravity/rules/agents/
+
+
+
+# ══════════════════════════════════════════════════════════════════════
+# BLOCO 4 — ALLOW: LAYER 1 (público — vai para npm e repo público)
+# Fonte: .github/layer1-allowlist.txt
+# ══════════════════════════════════════════════════════════════════════
+
+# Root
+!.gitignore
+!.gitattributes
+!.gitleaks.toml
+!.npmignore
+!.claudeignore
+!.env.example
+!.mcp.example.json
+!README.md
+!CONTRIBUTING.md
+!QUICK-START.md
+!API-KEYS-GUIDE.md
+!package.json
+!package-lock.json
+!requirements.txt
+!requirements-hooks.txt
+!pyproject.toml
+!biome.json
+!jsconfig.json
+!.editorconfig
+!.python-version
+!.nvmrc
+
+# Tests
+!tests/
+!tests/**
+
+# GitHub
+!.github/
+!.github/CODEOWNERS
+!.github/ISSUE_TEMPLATE/
+!.github/ISSUE_TEMPLATE/**
+!.github/PULL_REQUEST_TEMPLATE.md
+!.github/assets/
+!.github/assets/**
+!.github/layer1-allowlist.txt
+!.github/layer2-manifest.txt
+!.github/layer3-manifest.txt
+!.github/workflows/
+!.github/workflows/**
+
+# Planning
+!.planning/
+!.planning/**
+
+# Antigravity (IDE integration — só o que é do projeto)
+!.antigravity/
+!.antigravity/README.md
+!.antigravity/rules/
+!.antigravity/rules/.gitkeep
+!.antigravity/rules/mega-brain.md
+
+# Cursor
+!.cursor/
+!.cursor/agents.yaml
+!.cursor/rules/
+!.cursor/rules/mega-brain.md
+
+# Windsurf
+!.windsurf/
+!.windsurf/agents.yaml
+!.windsurf/rules/
+!.windsurf/rules/mega-brain.md
+
+# Claude Code — arquivos de projeto (não runtime)
+!.claude/
+!.claude/CLAUDE.md
+!.claude/agents.yaml
+!.claude/gsd-file-manifest.json
+!.claude/settings.json
+!.claude/settings.example.json
+!.claude/package.json
+
+# Runtime de sync externo — L3 only (padrões em .git/info/exclude)
+
+# .claude/commands (todos os seus commands)
+!.claude/commands/
+!.claude/commands/**
+
+# .claude/skills (todas as suas skills — exceto sync-injected ignorado via overrides)
+!.claude/skills/
+!.claude/skills/**
+
+# .claude/hooks
+!.claude/hooks/
+!.claude/hooks/**
+
+# .claude/rules
+!.claude/rules/
+!.claude/rules/**
+
+# .claude/scripts
+!.claude/scripts/
+!.claude/scripts/**
+
+# .claude/templates
+!.claude/templates/
+!.claude/templates/**
+
+# .claude/agent-memory (persistent per-agent memory)
+!.claude/agent-memory/
+!.claude/agent-memory/**
+
+# .claude/get-shit-done
+!.claude/get-shit-done/
+!.claude/get-shit-done/**
+
+# .claude/projects (estrutura pública)
+!.claude/projects/
+!.claude/projects/**
+
+# .claude/mission-control (README público)
+!.claude/mission-control/
+!.claude/mission-control/README.md
+
+# Agents — estrutura pública L1
+!agents/
+!agents/AGENT-INDEX.yaml
+!agents/MASTER-AGENT.md
+!agents/README.md
+!agents/persona-registry.yaml
+!agents/_templates/
+!agents/_templates/**
+!agents/boardroom/
+!agents/boardroom/CHECKLIST-MASTER.md
+!agents/boardroom/INTEGRATION-GUIDE.md
+!agents/boardroom/README.md
+!agents/boardroom/config/
+!agents/boardroom/config/BOARDROOM-CONFIG.md
+!agents/boardroom/config/TTS-INTEGRATION.md
+!agents/boardroom/config/VOICE-PROFILES.md
+!agents/boardroom/scripts/
+!agents/boardroom/scripts/**
+!agents/boardroom/templates/
+!agents/boardroom/templates/**
+!agents/boardroom/workflows/
+!agents/boardroom/workflows/**
+# agents/conclave/ moved to agents/system/conclave/ in S06
+!agents/system/
+!agents/system/**
+!agents/constitution/
+!agents/constitution/**
+# agents/minds/ renamed to agents/external/ in S06
+!agents/external/
+!agents/external/.gitkeep
+!agents/external/_example/
+!agents/external/_example/**
+!agents/cargo/
+!agents/cargo/.gitkeep
+!agents/sua-empresa/
+!agents/sua-empresa/.gitkeep
+!agents/sua-empresa/README.md
+!agents/sua-empresa/_example/
+!agents/sua-empresa/_example/**
+!agents/sua-empresa/org/.gitkeep
+!agents/sua-empresa/roles/.gitkeep
+!agents/sua-empresa/jds/.gitkeep
+!agents/sua-empresa/operations/.gitkeep
+!agents/sua-empresa/metrics/.gitkeep
+!agents/sua-empresa/memory/.gitkeep
+!agents/sua-empresa/sow/.gitkeep
+!agents/shared-memory/
+!agents/shared-memory/.gitkeep
+
+# Artifacts — scaffolding L1
+!artifacts/
+!artifacts/README.md
+!artifacts/chunks/
+!artifacts/chunks/.gitkeep
+!artifacts/canonical/
+!artifacts/canonical/.gitkeep
+!artifacts/insights/
+!artifacts/insights/.gitkeep
+!artifacts/narratives/
+!artifacts/narratives/.gitkeep
+
+# Bin (CLI)
+!bin/
+!bin/**
+
+# Core engine
+!core/
+!core/**
+
+# Docs
+!docs/
+!docs/**
+
+# Inbox scaffolding (root inbox/ eliminated in S03 — bucket inboxes now)
+# Bucket inboxes scaffolding handled via their parent bucket allows
+
+# Knowledge scaffolding L1 (bucket structure)
+!knowledge/
+!knowledge/README.md
+!knowledge/NAVIGATION-MAP.json
+!knowledge/external/
+!knowledge/external/README.md
+!knowledge/external/index.md
+!knowledge/external/dossiers/
+!knowledge/external/dossiers/persons/
+!knowledge/external/dossiers/persons/.gitkeep
+!knowledge/external/dossiers/themes/
+!knowledge/external/dossiers/themes/.gitkeep
+!knowledge/external/dossiers/system/
+!knowledge/external/dossiers/system/.gitkeep
+!knowledge/external/playbooks/
+!knowledge/external/playbooks/.gitkeep
+!knowledge/external/sources/
+!knowledge/external/sources/.gitkeep
+!knowledge/external/dna/
+!knowledge/external/dna/.gitkeep
+!knowledge/external/inbox/
+!knowledge/external/inbox/.gitkeep
+
+# Workspace — root level (L1 template, L2 populated)
+!workspace/
+!workspace/**
+
+# Knowledge business — bucket structure (L1 scaffold)
+!knowledge/business/
+!knowledge/business/**
+
+# Knowledge business inbox — raw materials (L3, re-deny after allow)
+knowledge/business/inbox/**
+
+# Knowledge personal — L3 ONLY (never commit content)
+# The personal/.gitignore blocks everything except itself and index.md
+!knowledge/personal/
+!knowledge/personal/.gitignore
+!knowledge/personal/index.md
+
+# Logs scaffolding L1
+!logs/
+!logs/.gitkeep
+!logs/README.md
+!logs/batches/
+!logs/batches/.gitkeep
+!logs/decisions/
+!logs/decisions/**
+!logs/sessions/
+!logs/sessions/.gitkeep
+
+# Reference
+!reference/
+!reference/**
+
+# Scripts
+!scripts/
+!scripts/**
+
+# System (estrutura pública)
+!system/
+!system/**
+
+
+# ══════════════════════════════════════════════════════════════════════
+# BLOCO 5 — ALLOW: LAYER 2 (premium — repo privado com conteúdo real)
+# Fonte: .github/layer2-manifest.txt
+# Adicionar aqui quando conteúdo absorvido for compartilhado no L2
+# ══════════════════════════════════════════════════════════════════════
+
+# Knowledge external populado (dossiers, playbooks, dna, sources reais)
+!knowledge/external/dossiers/**
+!knowledge/external/playbooks/**
+!knowledge/external/dna/**
+!knowledge/external/sources/**
+!knowledge/external/TAG-RESOLVER.json
+!knowledge/external/inbox/**
+
+# Workspace populado (root level, not inside knowledge/)
+# Already covered by !workspace/** in BLOCO 4
+
+# Expert agents populados (renamed from minds/ to external/ in S06)
+!agents/external/**
+
+# Cargo agents populados
+!agents/cargo/**
+
+# Artifacts processados
+!artifacts/chunks/**
+!artifacts/canonical/**
+!artifacts/insights/**
+!artifacts/narratives/**
+!artifacts/dna/
+!artifacts/dna/**
+
+
+# ══════════════════════════════════════════════════════════════════════
+# BLOCO 6 — DENY OVERRIDES (após allows — última palavra)
+# Re-ignora conteúdo injetado por sync externo que seria pego pelos
+# allows genéricos de .claude/commands/**, .claude/skills/**, etc.
+# Para padrões com nomes de marca: usar .git/info/exclude (local only)
+# ══════════════════════════════════════════════════════════════════════
+
+# Commands injetados por sync externo (override de !.claude/commands/**)
+.claude/commands/doc-master/
+.claude/commands/mmos-squad/
+.claude/commands/mmosMapper/
+.claude/commands/Ralph/
+.claude/commands/save/
+.claude/commands/resume/
+.claude/commands/sessions/
+
+# Squad-synced commands (aios-stage IDE sync)
+.claude/commands/AIOX/
+.claude/commands/claude-code-mastery/
+.claude/commands/copy/
+.claude/commands/DomainDecoder/
+.claude/commands/face-forge/
+.claude/commands/SquadCreator/
+.claude/commands/synapse/
+.claude/commands/tribunal/
+.claude/commands/greet.md
+
+# Squad-synced skills (aios-stage IDE sync)
+.claude/skills/advisory-board/
+.claude/skills/bob-orchestrator/
+.claude/skills/book-summary/
+.claude/skills/brand/
+.claude/skills/c-level/
+.claude/skills/cli-router/
+.claude/skills/clone-mind/
+.claude/skills/commit/
+.claude/skills/context-cleaner/
+.claude/skills/copy/
+.claude/skills/copy-workflow/
+.claude/skills/cybersecurity/
+.claude/skills/data/
+.claude/skills/db-sage/
+.claude/skills/deep-research/
+.claude/skills/deep-strategic-planning/
+.claude/skills/deploy/
+.claude/skills/design/
+.claude/skills/desktop-commander/
+.claude/skills/doc-rot/
+.claude/skills/domain-decoder/
+.claude/skills/enhance-workflow/
+.claude/skills/epic-cycle/
+.claude/skills/etl-ops/
+.claude/skills/execute-epic/
+.claude/skills/face-forge/
+.claude/skills/franchise/
+.claude/skills/hormozi/
+.claude/skills/llm-scan/
+.claude/skills/movement/
+.claude/skills/new-etl/
+.claude/skills/print-to-code/
+.claude/skills/pv-axioma-assessment/
+.claude/skills/refactor-workflow/
+.claude/skills/session-launcher/
+.claude/skills/skill-creator/
+.claude/skills/spy/
+.claude/skills/squad-creator/
+.claude/skills/squad-guide/
+.claude/skills/story-cycle/
+.claude/skills/storytelling/
+.claude/skills/tech-research/
+.claude/skills/tech-search/
+.claude/skills/test-at-file/
+.claude/skills/test-memory-injection/
+.claude/skills/test-multi-skills/
+.claude/skills/traffic-masters/
+.claude/skills/transcribe/
+.claude/skills/tribunal/
+.claude/skills/validate-dod/
+.claude/skills/validation-fork-test/
+.claude/skills/validation-test/
+.claude/skills/x-research-skill/
+
+# Demais overrides com nomes de marca → .git/info/exclude
+
+
+# ══════════════════════════════════════════════════════════════════════
+# BLOCO 7 — HYGIENE DENY (L3 content that was previously tracked)
+# These MUST come last — they override the allows in BLOCO 4/5
+# Added: 2026-03-12
+# ══════════════════════════════════════════════════════════════════════
+
+# Workspace — only scaffolding allowed (templates, gitkeeps, domains, providers)
+# All populated content is L3
+workspace/*.yaml
+workspace/*.json
+workspace/*.md
+workspace/bilhon-central/
+workspace/team/
+workspace/meetings/
+workspace/businesses/
+workspace/inbox/
+workspace/events/
+workspace/finance/
+workspace/strategy/
+workspace/org/
+workspace/automations/
+workspace/tools/
+workspace/config/mappings/**
+!workspace/config/mappings/.gitkeep
+
+# Tests, planning, docs — L3 only (not needed for machine to function)
+tests/
+.planning/
+docs/
+
+# Reference — sensitive files
+reference/N8N-MCP-CONFIG.md
+reference/IMPLEMENTATION-LOG.md
+reference/templates/phase5/
+
+# Agents — collaborators and founder (not public experts)
+agents/external/alan-nicolas/
+agents/external/pedro-valerio/
+agents/external/thiago-finch/
+knowledge/external/dna/persons/alan-nicolas/
+knowledge/external/dna/persons/pedro-valerio/
+knowledge/external/dna/persons/thiago-finch/
+
+# Skills — removed
+.claude/skills/aios-master/
+
+# Artifacts — runtime data (scaffolding already allowed above)
+artifacts/chunks/**
+!artifacts/chunks/.gitkeep
+artifacts/canonical/**
+!artifacts/canonical/.gitkeep
+artifacts/insights/**
+!artifacts/insights/.gitkeep
+artifacts/narratives/**
+!artifacts/narratives/.gitkeep
+
+# Knowledge external inbox — raw materials (L3)
+knowledge/external/inbox/**
+!knowledge/external/inbox/.gitkeep

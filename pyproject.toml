@@ -1,0 +1,90 @@
+[project]
+name = "mega-brain"
+version = "1.3.0"
+requires-python = ">=3.11"
+dependencies = [
+    "PyYAML>=6.0,<7.0",
+]
+
+[project.optional-dependencies]
+pipeline = [
+    "PyYAML>=6.0,<7.0",
+]
+speakers = [
+    "pyannote.audio>=3.1.0",
+    "torch>=2.0.0,<3.0.0",
+    "torchaudio>=2.0.0,<3.0.0",
+    "numpy>=1.24.0",
+    "scipy>=1.10.0",
+    "assemblyai>=0.28.0",
+]
+rag = [
+    "voyageai>=0.3.0",
+    "rank-bm25>=0.2.2",
+]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "ruff>=0.8",
+    "pyright>=1.1",
+]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+src = ["core", ".claude/hooks"]
+exclude = [
+    "core/intelligence/pipeline/read_ai_*.py",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "SIM", "RUF"]
+ignore = [
+    "E501",    # line too long — handled by formatter
+    "UP007",   # Use X | Y for union — keep Optional for 3.11 compat
+    "RUF013",  # implicit-optional — existing codebase pattern, fix gradually
+    "SIM102",  # collapsible-if — readability preference
+    "SIM108",  # if-else-block-instead-of-if-exp — readability preference
+    "SIM110",  # reimplemented-builtin — clarity over brevity
+    "SIM103",  # needless-bool — clarity preference
+    "SIM105",  # suppressible-exception — explicit try/except is clearer
+    "SIM116",  # if-else-block-instead-of-dict-lookup — readability
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["core"]
+
+[tool.ruff.lint.per-file-ignores]
+".claude/hooks/*" = ["E722", "F401", "RUF001"]  # hooks: bare except, re-exports, unicode emoji
+"core/intelligence/speakers/*" = ["F401"]  # conditional imports for optional GPU deps
+"core/intelligence/pipeline/read_ai_*" = ["E999"]  # special syntax files
+"core/intelligence/entities/*" = ["RUF001"]  # unicode chars in business domain strings
+"core/intelligence/pipeline/autonomous_processor.py" = ["N818"]  # legacy exception name
+"core/intelligence/rag/evaluator.py" = ["RUF034"]  # useless if-else in demo code
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.pyright]
+pythonVersion = "3.11"
+typeCheckingMode = "basic"
+include = ["core"]
+exclude = [
+    ".claude/hooks",
+    "**/__pycache__",
+    "core/intelligence/pipeline/read_ai_*.py",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests/python"]
+python_files = "test_*.py"
+python_functions = "test_*"
+addopts = "-v --tb=short"
+
+[tool.coverage.run]
+source = ["core/intelligence"]
+omit = ["*/__pycache__/*", "*/__init__.py"]
+
+[tool.coverage.report]
+fail_under = 40
+show_missing = true

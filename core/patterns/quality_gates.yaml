@@ -1,0 +1,259 @@
+# QUALITY GATES - Intelligence Layer v1.0
+# =========================================
+# Gates de qualidade para impedir criacao de artefatos ruins.
+# Inspirado em: Squad Creator quality-gates.yaml (10 gates),
+#               veto-conditions.yaml (18 vetos), MMOS APEX scoring (6 dim)
+#
+# Tipos de gate:
+#   auto    - Verificacao automatica, bloqueia sem intervencao humana
+#   hybrid  - Verificacao automatica + aprovacao humana obrigatoria
+#   manual  - Aprovacao humana obrigatoria (sem pre-check automatico)
+#
+# Versao: 1.0.0
+# Data: 2026-02-26
+
+version: "1.0.0"
+
+# ===========================================================================
+# QUALITY GATES
+# ===========================================================================
+
+gates:
+  # --- Gate 1: Viabilidade de Entidade ---
+  QG-MB-1.1:
+    name: "Entity Viability"
+    phase: "entity_detection"
+    type: "auto"
+    description: "Verifica se entidade detectada tem evidencia suficiente"
+    criteria:
+      - "weighted_score >= 10 (established tier)"
+      - "sources >= 2 (pelo menos 2 fontes distintas)"
+      - "domain_match confirmado em DOMAINS-TAXONOMY"
+    action_on_pass: "Marcar como 'active', disponivel para criacao de agente"
+    action_on_fail: "Marcar como 'tracking', nao criar agente"
+    severity: "blocking"
+
+  QG-MB-1.2:
+    name: "Entity Deduplication"
+    phase: "entity_detection"
+    type: "auto"
+    description: "Verifica se entidade nao e duplicata de existente"
+    criteria:
+      - "Fuzzy score < 0.85 contra todas as entidades existentes"
+      - "NAO e alias de entidade ja canonicalizada"
+    action_on_pass: "Criar como entidade nova"
+    action_on_fail: "Adicionar a review_queue para merge manual"
+    severity: "blocking"
+
+  # --- Gate 2: Qualidade de Dossier ---
+  QG-MB-2.1:
+    name: "Dossier Quality"
+    phase: "dossier_creation"
+    type: "auto"
+    description: "Verifica criterios minimos para criar dossier tematico"
+    criteria:
+      - "relevance_score >= 25.0"
+      - "occurrences >= 15 em 2+ fontes"
+      - "frameworks >= 2 OU metodologias >= 1"
+      - "NAO e alias de dossier existente"
+      - "Tema pertence a pelo menos 1 dominio do DOMAINS-TAXONOMY"
+    action_on_pass: "Criar dossier"
+    action_on_fail: "Marcar como 'candidate', monitorar"
+    severity: "blocking"
+
+  # --- Gate 3: Qualidade de Agente ---
+  QG-MB-3.1:
+    name: "Agent Creation Quality"
+    phase: "agent_creation"
+    type: "hybrid"
+    description: "Verifica criterios para criar agente de cargo"
+    criteria:
+      - "SOW gerado com executor_type definido"
+      - "Pelo menos 3 responsibilities no registry"
+      - "Domain match com DOMAINS-TAXONOMY"
+      - "weighted_score >= established threshold (10)"
+      - "Se Hybrid/Human: humano deve aprovar"
+    action_on_pass: "Criar agente"
+    action_on_fail: "Bloquear criacao, gerar candidatura para revisao"
+    severity: "blocking"
+
+  QG-MB-3.2:
+    name: "Agent Knowledge Base"
+    phase: "agent_creation"
+    type: "auto"
+    description: "Verifica se agente tem base de conhecimento suficiente"
+    criteria:
+      - "Pelo menos 1 framework DNA associado ao dominio"
+      - "Pelo menos 2 fontes de conhecimento"
+      - "Nao duplica agente de cargo existente"
+    action_on_pass: "Agente criado com skills linkadas"
+    action_on_fail: "Agente criado como 'draft' sem skills"
+    severity: "warning"
+
+  # --- Gate 4: Qualidade de Skill ---
+  QG-MB-4.1:
+    name: "Skill Quality"
+    phase: "skill_generation"
+    type: "auto"
+    description: "Verifica qualidade de skill gerada automaticamente"
+    criteria:
+      - "Framework source verificavel (source_id existe)"
+      - "Workflow com >= 3 steps"
+      - "Evidence com conteudo (>50 chars)"
+      - "Skill nao duplica skill existente (nome + persona)"
+    action_on_pass: "Publicar skill"
+    action_on_fail: "Marcar skill como 'draft', nao publicar"
+    severity: "warning"
+
+  # --- Gate 5: Business Model Consistency ---
+  QG-MB-5.1:
+    name: "Business Model Consistency"
+    phase: "business_model_detection"
+    type: "hybrid"
+    description: "Verifica consistencia de modelo de negocio detectado"
+    criteria:
+      - "Role chain sem ciclos (A->B->C->A proibido)"
+      - "Departamentos com pelo menos 1 role detectado"
+      - "Revenue signals consistentes com team_size"
+      - "Role consolidation tem evidencia verificavel"
+    action_on_pass: "Modelo de negocio validado"
+    action_on_fail: "Flaggar para revisao manual"
+    severity: "warning"
+
+  # --- Gate 6: SOW Completeness ---
+  QG-MB-6.1:
+    name: "SOW Completeness"
+    phase: "sow_generation"
+    type: "auto"
+    description: "Verifica se SOW dual-purpose esta completo"
+    criteria:
+      - "executor_type definido (Worker/Agent/Hybrid/Human)"
+      - "Pelo menos 2 tools sugeridas"
+      - "Pelo menos 2 tasks atribuidas"
+      - "Pelo menos 2 KPIs definidos"
+      - "Department definido"
+    action_on_pass: "SOW publicado"
+    action_on_fail: "SOW salvo como 'incomplete', flaggado"
+    severity: "warning"
+
+# ===========================================================================
+# VETO CONDITIONS
+# ===========================================================================
+# Condicoes que IMPEDEM fisicamente a criacao de artefatos.
+# Vetos sao bloqueantes (nao warnings). Nao podem ser overridden.
+
+veto_conditions:
+  MB_VC_001:
+    name: "Source Quality"
+    condition: "< 2 fontes distintas para entidade"
+    applies_to: ["agent_creation"]
+    action: "VETO - nao criar agente ate ter 2+ fontes"
+
+  MB_VC_002:
+    name: "Domain Orphan"
+    condition: "Role sem domain_match em DOMAINS-TAXONOMY"
+    applies_to: ["agent_creation"]
+    action: "VETO - adicionar ao taxonomy primeiro"
+
+  MB_VC_003:
+    name: "Circular Hierarchy"
+    condition: "Role chain com ciclo detectado (A->B->...->A)"
+    applies_to: ["business_model_detection"]
+    action: "VETO - corrigir hierarquia antes de aceitar"
+
+  MB_VC_004:
+    name: "Generic Agent"
+    condition: "Agente criado sem frameworks ou DNAs especificos"
+    applies_to: ["agent_creation"]
+    action: "VETO - minds first, never generic"
+
+  MB_VC_005:
+    name: "Skill Without Evidence"
+    condition: "Skill gerada sem source_id verificavel"
+    applies_to: ["skill_generation"]
+    action: "VETO - marcar como draft, nao publicar"
+
+  MB_VC_006:
+    name: "Duplicate Entity"
+    condition: "Entidade com fuzzy score >= 0.95 contra existente"
+    applies_to: ["entity_detection"]
+    action: "VETO - auto-merge com existente"
+
+  MB_VC_007:
+    name: "Empty SOW"
+    condition: "SOW sem responsibilities E sem tasks"
+    applies_to: ["sow_generation"]
+    action: "VETO - nao publicar SOW vazio"
+
+  MB_VC_008:
+    name: "Orphan Dossier"
+    condition: "Dossier sem nenhuma fonte ou chunk associado"
+    applies_to: ["dossier_creation"]
+    action: "VETO - nao criar dossier sem evidencia"
+
+# ===========================================================================
+# VIABILITY SCORING (APEX Adaptado)
+# ===========================================================================
+# Scoring multidimensional para avaliar viabilidade de criar agente de persona.
+# Adaptado do APEX do MMOS (6 dimensoes).
+
+viability_scoring:
+  dimensions:
+    A_availability:
+      description: "Volume e variedade de conteudo disponivel"
+      weight: 1.0
+      min_threshold: 5
+      scoring:
+        "10h+ content, 3+ source_types": 10
+        "5-10h, 2 source_types": 7
+        "1-5h, 1 source_type": 5
+        "< 1h": 3
+
+    P_persona_clarity:
+      description: "Consistencia de personalidade nas fontes"
+      weight: 0.9
+      min_threshold: 5
+      scoring:
+        "Voice consistente, frameworks unicos, filosofia clara": 10
+        "Voice identificavel, alguns frameworks": 7
+        "Voice variavel, poucos frameworks": 5
+        "Sem voice distinta": 3
+
+    E_evolution:
+      description: "Cobertura temporal e evolucao"
+      weight: 0.8
+      min_threshold: 5
+      scoring:
+        "5+ anos de conteudo, evolucao visivel": 10
+        "2-5 anos, alguma evolucao": 7
+        "1-2 anos": 5
+        "< 1 ano ou snapshot unico": 3
+
+    X_expertise:
+      description: "Frameworks originais e singularidade"
+      weight: 0.9
+      min_threshold: 5
+      scoring:
+        "10+ frameworks originais, metodologia unica": 10
+        "5-10 frameworks, alguma originalidade": 7
+        "2-5 frameworks, maioria generica": 5
+        "< 2 frameworks": 3
+
+    S_strategic_fit:
+      description: "Alinhamento com objetivos do Mega Brain"
+      weight: 0.8
+      min_threshold: 5
+      scoring:
+        "Alinhamento direto com dominios core": 10
+        "Alinhamento parcial": 7
+        "Alinhamento tangencial": 5
+        "Sem alinhamento claro": 3
+
+  decision_rules:
+    go: 7.0           # APEX >= 7.0 -> GO (criar agente completo)
+    conditional: 5.0   # APEX 5.0-6.9 -> CONDICIONAL (criar com ressalvas)
+    no_go: 0.0         # APEX < 5.0 -> NO-GO (apenas tracking)
+
+  auto_rejection:
+    threshold: 5.0
+    message: "APEX score abaixo do minimo. Entidade mantida em tracking."
