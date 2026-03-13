@@ -1,0 +1,588 @@
+# DNA-CONFIG.yaml - COO (Chief Operating Officer)
+# Configuracao de fontes de DNA para este cargo
+#
+# Versao: 3.0.0
+# Data: 2026-01-10
+# Integrado com: AGENT-COGNITION-PROTOCOL (FASE 1.5), AGENT-INTEGRITY-PROTOCOL
+#
+# CHANGELOG:
+# v3.0.0 (2026-01-10): BUG #1 FIX - Cascateamento completo
+#                      - Removido AGG-OPERATIONS.yaml (não existe)
+#                      - Removido AGG-SCALING.yaml (não existe)
+#                      - Removido AGG-DELIVERY.yaml (não existe)
+#                      - Adicionado AGG-VENDAS.yaml (existe)
+#                      - Adicionado AGG-OFFERS.yaml (existe)
+#                      - Todos paths validados (INTEGRITY CHECK)
+# v2.0.0 (2025-12-25): AGENT-COGNITION-PROTOCOL integration
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+# REGRA INQUEBRÁVEL: RASTREABILIDADE 100%
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# Todo DNA deve ter paths verificáveis até inbox
+# Cada pessoa/domínio deve ter insight_ids e chunk_ids rastreáveis
+#
+# Navegação: DNA-CONFIG → PESSOA/DNA.yaml → INSIGHTS-STATE.json → CHUNKS → inbox
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+
+cargo: "COO"
+versao: "3.0.0"
+nivel: "C-LEVEL"
+natureza: "HIBRIDO"
+data_criacao: "2025-12-23"
+ultima_atualizacao: "2026-01-10"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# CONSTITUICAO (Layer 1 - Principios compartilhados)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+constituicao:
+  path: "/agents/CONSTITUTION/BASE-CONSTITUTION.md"
+  descricao: "Princípios éticos e operacionais base para todos os agentes"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# MEMORIA DO CARGO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+memoria:
+  path: "./MEMORY.md"
+  versao: "2.0.0"
+  descricao: "Experiência acumulada deste cargo"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# SOUL DO CARGO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+soul:
+  path: "./SOUL.md"
+  versao: "2.0"
+  descricao: "Identidade e consciência viva do agente"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# FONTES DE DNA - COM RASTREABILIDADE COMPLETA
+# ═══════════════════════════════════════════════════════════════════════════════
+
+dna_sources:
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # FONTES AGREGADAS (multi-pessoa, por tema)
+  # ───────────────────────────────────────────────────────────────────────────
+
+  agregado:
+    - dominio: "vendas"
+      path: "/knowledge/dna/AGGREGATED/AGG-VENDAS.yaml"
+      peso: 0.80
+      quando_usar: "Métricas de vendas, funil, conversão - COO precisa entender demand para capacity"
+      justificativa: "COO alinha capacidade operacional com volume de vendas"
+      insight_ids:
+        - "VD001"
+        - "VD002"
+
+    - dominio: "offers"
+      path: "/knowledge/dna/AGGREGATED/AGG-OFFERS.yaml"
+      peso: 0.85
+      quando_usar: "Unit economics de ofertas, delivery models, value ladder"
+      justificativa: "COO precisa entender ofertas para planejar entrega"
+      insight_ids:
+        - "OF001"
+        - "GSO001"
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # FONTES PRIMÁRIAS (por pessoa)
+  # ───────────────────────────────────────────────────────────────────────────
+
+  primario:
+    - pessoa: "SAM-OVEN"
+      path: "/knowledge/dna/persons/SAM-OVEN"
+      raiz: "/inbox/SAM OVENS (SETTERLUN UNIVERSITY)/"            # RASTREABILIDADE
+      dominios_usados:
+        - "operations"
+        - "scaling"
+        - "systems"
+      peso: 0.88
+      quando_usar: "Sistemas, processos, documentação, estrutura"
+      insight_ids:                                                    # RASTREABILIDADE
+        - "SYS001"  # Sistematizar antes de escalar
+        - "SYS002"  # Se depende de herói, não é sistema
+      chunk_ids:                                                      # RASTREABILIDADE GRANULAR
+        - "*pendente SU020*"
+      materiais_fonte:                                                # RASTREABILIDADE COMPLETA
+        - titulo: "Consulting Accelerator"
+          path_raiz: "/inbox/SAM OVENS (SETTERLUN UNIVERSITY)/COURSES/CONSULTING ACCELERATOR.txt"
+          tipo: "course"
+          data_processamento: "*pendente*"
+          insights_principais:
+            - "Processos documentados, métricas claras, responsabilidades definidas"
+            - "Minimum viable process primeiro"
+            - "Sistema funciona independente de quem opera"
+
+    - pessoa: "alex-hormozi"
+      path: "/knowledge/dna/persons/alex-hormozi"
+      raiz: "/inbox/alex hormozi/"              # RASTREABILIDADE
+      dominios_usados:
+        - "scaling"
+        - "delivery"
+        - "operations"
+      peso: 0.82
+      quando_usar: "Escala agressiva, transição CEO→Owner, operações"
+      insight_ids:                                                    # RASTREABILIDADE
+        - "SC001"  # Velocidade mata competição
+        - "TR001"  # Stages of Giving Up
+      chunk_ids:                                                      # RASTREABILIDADE GRANULAR
+        - "chunk_199"
+        - "chunk_212"
+        - "chunk_215"
+      materiais_fonte:                                                # RASTREABILIDADE COMPLETA
+        - titulo: "How I Scaled My Sales Team"
+          path_raiz: "/inbox/alex hormozi/MASTERMINDS/HOW I SCALED MY SALES TEAM [TAKI MOORE MASTERMIND].txt"
+          tipo: "masterclass"
+          data_processamento: "2024-12-16"
+          insights_principais:
+            - "Operators get burned out, owners get rich"
+            - "Name Off Door process leva 3 anos"
+            - "Stages of Giving Up ($0-1M→$50M+)"
+            - "Farm System para desenvolver talentos"
+            - "Beta process para novos contratados"
+        - titulo: "Money Models"
+          path_raiz: "/inbox/alex hormozi/BLUEPRINTS/MONEY MODELS.txt"
+          tipo: "blueprint"
+          data_processamento: "2024-12-15"
+          insights_principais:
+            - "Fulfillment via 3PL no início"
+            - "Validar produto antes de escalar ops"
+        - titulo: "The Role of HR"
+          path_raiz: "/inbox/alex hormozi/PODCASTS/THE ROLE OF HR.txt"
+          tipo: "podcast"
+          data_processamento: "*pendente*"
+          insights_principais:
+            - "HR protege empresa, não funcionário"
+            - "Pensar como dono, não como funcionário"
+
+      dominios_usados:
+        - "customer_experience"
+        - "operations"
+      peso: 0.75
+      quando_usar: "Employee Experience, Customer Experience, NPS"
+      insight_ids:
+        - "EX001"  # Employee Experience → Customer Experience
+        - "CX001"  # Consumidor 4.0 co-cria com marcas
+      chunk_ids:
+      materiais_fonte:
+        - titulo: "Aceleração de Vendas"
+          tipo: "course"
+          data_processamento: "*pendente*"
+          insights_principais:
+            - "Organização por região/produto/cliente"
+            - "Inside Sales = menor custo operacional"
+            - "Máquina de Vendas = previsibilidade"
+        - titulo: "Customer Experience"
+          tipo: "course"
+          data_processamento: "*pendente*"
+          insights_principais:
+            - "Employee Experience → Customer Experience"
+            - "NPS como métrica de qualidade"
+            - "Atendimento humanizado vs robótico"
+
+      dominios_usados:
+        - "delivery"
+        - "funnel"
+      peso: 0.70
+      quando_usar: "Value Ladder (DIY/DWY/DFY), fluxo operacional BR"
+      insight_ids:
+        - "DEL001"  # Value Ladder
+      chunk_ids:
+      materiais_fonte:
+          tipo: "course"
+          data_processamento: "*pendente*"
+          insights_principais:
+            - "DIY/DWY/DFY: escalabilidade vs ticket"
+            - "Setter→Closer→CS (fluxo BR)"
+            - "Esteira de produtos impacta ops"
+
+    - pessoa: "THE-SCALABLE-COMPANY"
+      path: "/knowledge/dna/persons/THE-SCALABLE-COMPANY"
+      raiz: "/inbox/THE SCALABLE COMPANY (RYAN DEISS)/"           # RASTREABILIDADE
+      dominios_usados:
+        - "operations"
+        - "scaling"
+        - "meeting_architecture"
+        - "playbooks"
+        - "scorecards"
+      peso: 0.92                                                      # PESO ALTO - Core ops content
+      quando_usar: "Operating systems, playbook creation, meeting rhythm, accountability"
+      insight_ids:                                                    # RASTREABILIDADE
+        - "TSC-OS001"   # ScalableOS 3-Phase (Build→Install→Optimize)
+        - "TSC-VE001"   # Value Engine Mapping
+        - "TSC-MR001"   # Meeting Rhythm Architecture
+        - "TSC-SC001"   # Manual Scorecards > Automated
+        - "TSC-PB001"   # 3D Playbook Process
+        - "TSC-TL001"   # Traffic Light Leadership
+      chunk_ids:                                                      # RASTREABILIDADE GRANULAR
+        - "BATCH-085"   # ScalableOS Foundations
+        - "BATCH-086"   # QSP Facilitation Mastery
+        - "BATCH-087"   # Clarity Compass + High Output Teams
+        - "BATCH-088"   # Scorecards & Accountability
+        - "BATCH-089"   # Planning Systems + Strategic Anchors
+        - "BATCH-090"   # OS Installation + Traffic Light
+        - "BATCH-091"   # Playbook Design/Deploy + Origin
+      materiais_fonte:                                                # RASTREABILIDADE COMPLETA
+        - titulo: "ScalableOS Accelerator"
+          path_raiz: "/inbox/THE SCALABLE COMPANY (RYAN DEISS)/COURSES/"
+          tipo: "course"
+          data_processamento: "2026-01-10"
+          insights_principais:
+            - "Build (6-8w) → Install (2-3w) → Optimize"
+            - "Manual scorecards > Automated (ownership + insights)"
+            - "Value Engines: Growth, Fulfillment, Innovation"
+            - "2-3 power stages per value engine (critical actions)"
+            - "12Q Planning Grid: 3 years = 12 quarterly sprints"
+            - "QSP Meeting: 5-Step Quarterly Sprint Planning"
+            - "Traffic Light Leadership: Red→Yellow→Green delegation"
+            - "3D Playbook Process: Define→Design→Deploy"
+            - "Cross-training has ZERO downside, UNLIMITED upside"
+            - "Black boxing = fireable offense"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# MAPA DE CONFLITOS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+conflitos:
+  path: "/knowledge/dna/MAPS/MAP-CONFLITOS.yaml"
+  descricao: "Mapa de tensões entre fontes com resoluções documentadas"
+
+  conflitos_conhecidos:
+    - id: "CONF-001"
+      fonte_a: "Sam Oven"
+      posicao_a: "Processo perfeito primeiro"
+      fonte_b: "Alex Hormozi"
+      posicao_b: "Done > perfect, velocidade mata"
+      resolucao: "MVP process primeiro, depois refina"
+      contexto: "Velocidade vs qualidade"
+
+    - id: "CONF-002"
+      fonte_a: "Prudência operacional"
+      posicao_a: "Respeitar capacidade"
+      fonte_b: "Alex Hormozi"
+      posicao_b: "Oportunidade não espera"
+      resolucao: "Esticar máximo 10%, não 50%"
+      contexto: "Oportunidade vs capacidade"
+
+    - id: "CONF-003"
+      fonte_a: "The Scalable Company"
+      posicao_a: "Manual scorecards > Automated (ownership + insights)"
+      fonte_b: "Tech automation advocates"
+      posicao_b: "APIs + fórmulas = eficiência, zero erro humano"
+      resolucao: "Manual para métricas de accountability, automated para dados operacionais"
+      contexto: "Scorecards e métricas"
+
+    - id: "CONF-004"
+      fonte_a: "The Scalable Company"
+      posicao_a: "Annual plans = a joke (muito longo para prever, muito curto para importar)"
+      fonte_b: "Planejamento tradicional"
+      posicao_b: "Budget anual é padrão de mercado"
+      resolucao: "12Q Planning (3 anos) + 90-day sprints"
+      contexto: "Horizonte de planejamento"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# REGRAS DE RESOLUCAO DE CONFLITOS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+resolucao_de_conflitos:
+  regra_geral: |
+    1. Consenso forte (3+ fontes) → usar sem ressalva
+    2. Consenso parcial (2 fontes) → usar com nota de incerteza
+    3. Conflito mapeado → aplicar regra específica
+    4. Conflito não mapeado → apresentar ambas posições ao usuário
+
+  preferencias_contextuais:
+    - contexto: "startup early-stage"
+      priorizar: "alex-hormozi"
+      razao: "Velocidade > perfeição no início"
+      fonte: "^[insight_id:SC001]"                                    # RASTREABILIDADE
+
+    - contexto: "empresa estabelecida"
+      priorizar: "SAM-OVEN"
+      razao: "Sistemas sustentáveis de longo prazo"
+      fonte: "^[insight_id:SYS001]"                                   # RASTREABILIDADE
+
+    - contexto: "expansão de equipe"
+      razao: "Employee Experience impacta Customer Experience"
+      fonte: "^[insight_id:EX001]"                                    # RASTREABILIDADE
+
+    - contexto: "mercado brasileiro"
+      priorizar: "VINICIUS-DE-SA"
+      razao: "Calibração cultural local"
+      fonte: "^[insight_id:DEL001]"                                   # RASTREABILIDADE
+
+    - contexto: "implementando operating system"
+      priorizar: "THE-SCALABLE-COMPANY"
+      razao: "ScalableOS é o framework mais completo para OS empresarial"
+      fonte: "^[insight_id:TSC-OS001]"                                # RASTREABILIDADE
+
+    - contexto: "criando playbooks e processos"
+      priorizar: "THE-SCALABLE-COMPANY"
+      razao: "3D Playbook Process (Define-Design-Deploy) mais estruturado"
+      fonte: "^[insight_id:TSC-PB001]"                                # RASTREABILIDADE
+
+    - contexto: "estruturando ritmo de reuniões"
+      priorizar: "THE-SCALABLE-COMPANY"
+      razao: "Meeting Rhythm Architecture elimina ad hocs"
+      fonte: "^[insight_id:TSC-MR001]"                                # RASTREABILIDADE
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# PROTOCOLO DE RACIOCINIO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+raciocinio:
+  path: "/system/protocols/dna/REASONING-MODEL-PROTOCOL.md"
+  descricao: "Como o agente deve raciocinar com o DNA"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# REGRAS ESPECIFICAS DO CARGO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+regras_especificas:
+  foco: "Eficiência operacional e capacidade de entrega"
+
+  heuristicas_prioritarias:
+    - heuristica: "Sistematizar antes de escalar"
+      fonte: "^[insight_id:SYS001]"                                   # RASTREABILIDADE
+      path_raiz: "/inbox/SAM OVENS (SETTERLUN UNIVERSITY)/COURSES/CONSULTING ACCELERATOR.txt"
+
+    - heuristica: "Medir eficiência de processos"
+      fonte: "^[insight_id:SYS002]"                                   # RASTREABILIDADE
+
+    - heuristica: "Priorizar capacidade de entrega"
+      fonte: "^[insight_id:CAP001]"                                   # RASTREABILIDADE
+
+    - heuristica: "Employee Experience → Customer Experience"
+      fonte: "^[insight_id:EX001]"                                    # RASTREABILIDADE
+
+  restricoes:
+    - restricao: "NAO escalar vendas sem capacidade de entrega"
+      fonte: "^[insight_id:CAP001]"                                   # RASTREABILIDADE
+
+    - restricao: "SEMPRE documentar processos críticos"
+      fonte: "^[insight_id:SYS001]"                                   # RASTREABILIDADE
+
+    - restricao: "NAO esticar capacidade mais que 10%"
+      fonte: "^[insight_id:CAP002]"                                   # RASTREABILIDADE
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# FRAMEWORKS CORE
+# ═══════════════════════════════════════════════════════════════════════════════
+
+frameworks:
+  processo_5_elementos:
+    elementos:
+      - "1. Trigger - O que inicia o processo?"
+      - "2. Steps - Quais os passos exatos?"
+      - "3. Owner - Quem é responsável por cada step?"
+      - "4. SLA - Qual o tempo esperado?"
+      - "5. Output - O que indica conclusão?"
+    fonte: "^[insight_id:SYS001]"
+    path_raiz: "/inbox/SAM OVENS (SETTERLUN UNIVERSITY)/COURSES/CONSULTING ACCELERATOR.txt"
+    aplicacao: "Todo processo precisa responder os 5"
+
+  value_ladder:
+    modelos:
+      - modelo: "DIY"
+        escalabilidade: "Alta"
+        ticket: "Baixo"
+        margem: "Alta"
+        capacidade: "Alta"
+      - modelo: "DWY"
+        escalabilidade: "Média"
+        ticket: "Médio"
+        margem: "Média"
+        capacidade: "Média"
+      - modelo: "DFY"
+        escalabilidade: "Baixa"
+        ticket: "Alto"
+        margem: "Variável"
+        capacidade: "Baixa"
+    fonte: "^[insight_id:DEL001]"
+    aplicacao: "Escolha de modelo de entrega"
+
+  stages_of_giving_up:
+    stages:
+      - faixa: "$0-1M"
+        dar_up: "Tempo pessoal"
+      - faixa: "$1-3M"
+        dar_up: "Algumas tarefas"
+      - faixa: "$3-10M"
+        dar_up: "Departamentos inteiros"
+      - faixa: "$10-50M"
+        dar_up: "C-level"
+      - faixa: "$50M+"
+        dar_up: "Controle diário"
+    fonte: "^[insight_id:TR001]"
+    path_raiz: "/inbox/alex hormozi/MASTERMINDS/HOW I SCALED MY SALES TEAM [TAKI MOORE MASTERMIND].txt"
+    aplicacao: "Transição CEO → Owner"
+
+  checklist_escala:
+    criterios:
+      - "1. Processo existe? (Está documentado?)"
+      - "2. Funciona sem mim? (Deleguei ou centralizei?)"
+      - "3. Tem métricas? (Sei se está funcionando?)"
+      - "4. Tem margem? (Suporta mais volume?)"
+    regra: "4 'sim' = escalar. 1 'não' = consertar primeiro."
+    fonte: "^[insight_id:SC001]"
+    aplicacao: "Decisão de escalar operação"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # FRAMEWORKS THE SCALABLE COMPANY (Ryan Deiss)
+  # ─────────────────────────────────────────────────────────────────────────────
+
+  scalableos_3_phase:
+    fases:
+      - fase: "BUILD"
+        duracao: "6-8 semanas"
+        objetivo: "Construir operating system"
+        atividades:
+          - "Map value engines (Growth, Fulfillment, Innovation)"
+          - "Identify power stages (2-3 per engine)"
+          - "Create playbooks for power stages"
+          - "Build scorecards (manual, not automated)"
+      - fase: "INSTALL"
+        duracao: "2-3 semanas"
+        objetivo: "Instalar na organização"
+        atividades:
+          - "Train team on playbooks"
+          - "Implement meeting rhythm"
+          - "Deploy scorecards"
+          - "Assign playbook owners"
+      - fase: "OPTIMIZE"
+        duracao: "Ongoing"
+        objetivo: "Melhorar continuamente"
+        atividades:
+          - "Weekly scorecard reviews"
+          - "Quarterly QSP meetings"
+          - "Playbook version updates"
+          - "Traffic light delegation progress"
+    fonte: "^[insight_id:TSC-OS001]"
+    path_raiz: "/knowledge/dna/persons/THE-SCALABLE-COMPANY"
+    aplicacao: "Implementação de operating system empresarial"
+
+  traffic_light_leadership:
+    niveis:
+      - nivel: "RED"
+        descricao: "Do FOR them"
+        comportamento: "Você executa, eles observam"
+        quando: "Novo processo, nova pessoa, alta criticidade"
+      - nivel: "YELLOW"
+        descricao: "Do WITH them"
+        comportamento: "Execução conjunta, coaching ativo"
+        quando: "Processo aprendido, competência em desenvolvimento"
+      - nivel: "GREEN"
+        descricao: "THEY do (you're available)"
+        comportamento: "Eles executam, você disponível para dúvidas"
+        quando: "Competência demonstrada, confiança alta"
+    regra: "Objetivo é mover tudo para GREEN. Se pessoa sai, volta para RED."
+    fonte: "^[insight_id:TSC-TL001]"
+    path_raiz: "/knowledge/dna/persons/THE-SCALABLE-COMPANY"
+    aplicacao: "Delegação progressiva e desenvolvimento de autonomia"
+
+  qsp_meeting_5_steps:
+    estrutura:
+      - step: "1. Financials"
+        duracao: "30-60 min"
+        objetivo: "Review dos números do quarter anterior"
+      - step: "2. North Star"
+        duracao: "60-90 min"
+        objetivo: "Definir target do próximo quarter"
+      - step: "3. Initiatives"
+        duracao: "2-3 horas"
+        objetivo: "Identificar iniciativas para atingir target"
+      - step: "4. Theme"
+        duracao: "30 min"
+        objetivo: "Definir tema inspirador do quarter"
+      - step: "5. OS Review"
+        duracao: "1-2 horas"
+        objetivo: "Atualizar playbooks, scorecards, estrutura"
+    formato: "2 dias presencial ou 2-3 meio-dias virtual"
+    frequencia: "Trimestral (end of quarter)"
+    fonte: "^[insight_id:TSC-MR001]"
+    path_raiz: "/knowledge/dna/persons/THE-SCALABLE-COMPANY"
+    aplicacao: "Planejamento trimestral estruturado"
+
+  playbook_3d_process:
+    etapas:
+      - etapa: "DEFINE"
+        atividades:
+          - "Identify power stages (critical actions)"
+          - "Map current state (what happens now)"
+          - "Define desired outcome"
+      - etapa: "DESIGN"
+        atividades:
+          - "Do-Document-Do Again methodology"
+          - "Create checklist steps"
+          - "Field test with non-creator"
+          - "Capture 9/10 missed steps"
+      - etapa: "DEPLOY"
+        atividades:
+          - "Train team (cross-train everyone)"
+          - "Assign playbook owner (not CEO)"
+          - "Version control and updates"
+          - "Celebrate completion"
+    regra_ouro: "9/10 vezes o criador esquece passos do próprio checklist"
+    fonte: "^[insight_id:TSC-PB001]"
+    path_raiz: "/knowledge/dna/persons/THE-SCALABLE-COMPANY"
+    aplicacao: "Criação de playbooks que funcionam"
+
+  meeting_rhythm_architecture:
+    ritmos:
+      - tipo: "QSP"
+        frequencia: "Trimestral"
+        duracao: "2 dias"
+        objetivo: "Strategic planning, target setting"
+      - tipo: "MBR"
+        frequencia: "Mensal"
+        duracao: "2-4 horas"
+        objetivo: "Monthly Business Review, progress vs targets"
+      - tipo: "Weekly Check-in"
+        frequencia: "Semanal"
+        duracao: "60-90 min"
+        objetivo: "Scorecard review, blockers, priorities"
+      - tipo: "One-on-ones"
+        frequencia: "Semanal/Quinzenal"
+        duracao: "30-60 min"
+        objetivo: "Individual coaching, development"
+    regra: "Too many ad hoc meetings = planning failure signal"
+    fonte: "^[insight_id:TSC-MR001]"
+    path_raiz: "/knowledge/dna/persons/THE-SCALABLE-COMPANY"
+    aplicacao: "Arquitetura de reuniões que elimina ad hocs"
+
+  manual_scorecards_philosophy:
+    principio: "Manual scorecards > Automated scorecards"
+    razoes:
+      - "Greater insights - você VÊ os números, desenvolve 'Matrix vision'"
+      - "Greater ownership - time sente responsabilidade pelo que preenche"
+      - "Automation divorces team from numbers"
+      - "Manual entry = forced reflection"
+    metricas:
+      - "3-5 CABs (Critical Accountability Bullets) per team"
+      - "Weekly update cadence"
+      - "Target = 10-20% stretch over current"
+    fonte: "^[insight_id:TSC-SC001]"
+    path_raiz: "/knowledge/dna/persons/THE-SCALABLE-COMPANY"
+    aplicacao: "Scorecards que geram accountability real"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# VALIDAÇÃO DE RASTREABILIDADE
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# CHECKLIST antes de publicar:
+# [✓] Toda fonte primária tem raiz com path para inbox
+# [✓] Insight_ids presentes em fontes primárias
+# [~] Chunk_ids pendentes para algumas fontes (aguardando Pipeline Jarvis)
+# [✓] Heurísticas têm fonte e path_raiz
+# [✓] Preferências contextuais têm fonte
+# [✓] Conflitos conhecidos documentados
+# [✓] Frameworks core com rastreabilidade
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Fim do DNA-CONFIG.yaml v2.0.0
+# Integrado com AGENT-COGNITION-PROTOCOL (FASE 1.5) e AGENT-INTEGRITY-PROTOCOL

@@ -1,0 +1,78 @@
+{
+  "role_id": "MARKETER",
+  "canonical_name": "Marketer",
+  "version": "1.0.0",
+  "generated_at": "2026-02-26T07:20:11.594612+00:00",
+  "ai_config": {
+    "executor_type": "Agent",
+    "autonomy_level": 70,
+    "tools_required": [
+      "Social Media Scheduler",
+      "Design Tool (Canva)",
+      "Ad Platform (Meta/Google)",
+      "Analytics Dashboard"
+    ],
+    "tasks_assigned": [],
+    "decision_authority": "Pode decidir dentro de parametros definidos, escala excecoes",
+    "escalation_triggers": [
+      "Confianca < 70%",
+      "Erro repetido 2x",
+      "Caso nao coberto por regras"
+    ]
+  },
+  "human_config": {
+    "job_title": "Marketer",
+    "department": "Marketing",
+    "reports_to": null,
+    "manages": [],
+    "responsibilities": [],
+    "kpis": [
+      "Target attainment (%)",
+      "Tasks completed on time (%)"
+    ],
+    "skills_required": [
+      "Paid advertising",
+      "Analytics",
+      "A/B testing",
+      "Content creation",
+      "Social media management",
+      "Storytelling"
+    ]
+  },
+  "shared": {
+    "domains": [
+      "marketing",
+      "growth",
+      "content"
+    ],
+    "competencies": [],
+    "frameworks_used": [],
+    "knowledge_sources": [
+      "AH-YT001",
+      "AH-YT002",
+      "AH-YT003",
+      "AH-YT004",
+      "AH-YT016",
+      "AH-YT017",
+      "AH-YT018",
+      "CG-SM001",
+      "RL001",
+      "UNK"
+    ]
+  },
+  "executor_decision": {
+    "question_1_predictable": false,
+    "question_2_pure_function": false,
+    "question_3_nlp_required": true,
+    "question_4_error_impact": "MEDIUM",
+    "question_5_strategic": false,
+    "question_6_ai_assist": true,
+    "result": "Agent",
+    "rationale": "Precisa NLP mas impacto de erro e gerenciavel. IA executa com monitoramento."
+  },
+  "metadata": {
+    "weighted_score": 105.0,
+    "source_count": 10,
+    "responsibility_count": 0
+  }
+}

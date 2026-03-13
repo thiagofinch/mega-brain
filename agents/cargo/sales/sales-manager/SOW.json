@@ -1,0 +1,87 @@
+{
+  "role_id": "SALES-MANAGER",
+  "canonical_name": "Sales Manager",
+  "version": "1.0.0",
+  "generated_at": "2026-02-26T07:20:11.590681+00:00",
+  "ai_config": {
+    "executor_type": "Hybrid",
+    "autonomy_level": 50,
+    "tools_required": [
+      "CRM (HubSpot/Pipedrive)",
+      "Calendar (Calendly)",
+      "Project Management (ClickUp)",
+      "Reporting Dashboard"
+    ],
+    "tasks_assigned": [
+      "Run 1-on-1s",
+      "Review team metrics",
+      "Coach team members"
+    ],
+    "decision_authority": "Prepara e sugere, humano decide em casos criticos",
+    "escalation_triggers": [
+      "Decisao acima do threshold de autonomia",
+      "Excecao de processo",
+      "Impacto financeiro > threshold",
+      "Conflito entre regras"
+    ]
+  },
+  "human_config": {
+    "job_title": "Sales Manager",
+    "department": "Sales",
+    "reports_to": null,
+    "manages": [],
+    "responsibilities": [],
+    "kpis": [
+      "Team target attainment (%)",
+      "Employee retention (%)",
+      "Ramp time (days)"
+    ],
+    "skills_required": [
+      "Negotiation",
+      "Communication",
+      "Objection handling",
+      "Leadership",
+      "Coaching",
+      "Performance management"
+    ]
+  },
+  "shared": {
+    "domains": [
+      "vendas",
+      "management",
+      "compensation",
+      "hiring",
+      "operations",
+      "scaling"
+    ],
+    "competencies": [],
+    "frameworks_used": [],
+    "knowledge_sources": [
+      "SS001",
+      "CG001",
+      "G4001",
+      "FSS001",
+      "CG004",
+      "AH-YT002",
+      "AH-YT003",
+      "AH-YT004",
+      "AH-YT010",
+      "AH-YT012"
+    ]
+  },
+  "executor_decision": {
+    "question_1_predictable": false,
+    "question_2_pure_function": false,
+    "question_3_nlp_required": true,
+    "question_4_error_impact": "CRITICAL",
+    "question_5_strategic": true,
+    "question_6_ai_assist": true,
+    "result": "Hybrid",
+    "rationale": "Requer julgamento estrategico mas IA pode preparar e assistir."
+  },
+  "metadata": {
+    "weighted_score": 285.0,
+    "source_count": 13,
+    "responsibility_count": 0
+  }
+}

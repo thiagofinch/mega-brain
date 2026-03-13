@@ -1,0 +1,75 @@
+{
+  "role_id": "DATA-ANALYST",
+  "canonical_name": "Data Analyst",
+  "version": "1.0.0",
+  "generated_at": "2026-02-26T07:20:11.594833+00:00",
+  "ai_config": {
+    "executor_type": "Agent",
+    "autonomy_level": 70,
+    "tools_required": [
+      "Ad Platform (Meta/Google)",
+      "Analytics Dashboard",
+      "IDE",
+      "Git",
+      "CI/CD Pipeline",
+      "Project Management (ClickUp)",
+      "Reporting Dashboard"
+    ],
+    "tasks_assigned": [],
+    "decision_authority": "Pode decidir dentro de parametros definidos, escala excecoes",
+    "escalation_triggers": [
+      "Confianca < 70%",
+      "Erro repetido 2x",
+      "Caso nao coberto por regras"
+    ]
+  },
+  "human_config": {
+    "job_title": "Data Analyst",
+    "department": "Engineering",
+    "reports_to": null,
+    "manages": [],
+    "responsibilities": [],
+    "kpis": [
+      "Reports delivered on time (%)",
+      "Data accuracy (%)",
+      "Insights acted upon"
+    ],
+    "skills_required": [
+      "Programming",
+      "System design",
+      "Debugging",
+      "Paid advertising",
+      "Analytics",
+      "A/B testing"
+    ]
+  },
+  "shared": {
+    "domains": [
+      "technology",
+      "operations",
+      "growth",
+      "marketing"
+    ],
+    "competencies": [],
+    "frameworks_used": [],
+    "knowledge_sources": [
+      "AH-YT002",
+      "AH-YT016"
+    ]
+  },
+  "executor_decision": {
+    "question_1_predictable": false,
+    "question_2_pure_function": false,
+    "question_3_nlp_required": true,
+    "question_4_error_impact": "MEDIUM",
+    "question_5_strategic": false,
+    "question_6_ai_assist": true,
+    "result": "Agent",
+    "rationale": "Precisa NLP mas impacto de erro e gerenciavel. IA executa com monitoramento."
+  },
+  "metadata": {
+    "weighted_score": 24.0,
+    "source_count": 2,
+    "responsibility_count": 0
+  }
+}

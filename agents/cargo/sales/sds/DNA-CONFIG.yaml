@@ -1,0 +1,375 @@
+# DNA-CONFIG.yaml - SDS (Sales Development Specialist)
+# Configuracao de fontes de DNA para este cargo
+#
+# Versao: 2.0.0
+# Data: 2025-12-25
+# Integrado com: AGENT-COGNITION-PROTOCOL (FASE 1.5), AGENT-INTEGRITY-PROTOCOL
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+# REGRA INQUEBRÁVEL: RASTREABILIDADE 100%
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# Todo DNA deve ter paths verificáveis até inbox
+# Cada pessoa/domínio deve ter insight_ids e chunk_ids rastreáveis
+#
+# Navegação: DNA-CONFIG → PESSOA/DNA.yaml → INSIGHTS-STATE.json → CHUNKS → inbox
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+
+cargo: "SDS"
+versao: "3.0.0"
+nivel: "SALES"
+natureza: "HIBRIDO"
+data_criacao: "2025-12-23"
+ultima_atualizacao: "2026-01-10"
+
+# CHANGELOG:
+# v3.0.0 (2026-01-10): BUG #1/#3 FIX - Cascateamento completo
+#                      - Verificado AGG-OUTBOUND.yaml (existe)
+#                      - Verificado AGG-VENDAS.yaml (existe)
+#                      - Todos paths validados (INTEGRITY CHECK)
+# v2.0.0 (2025-12-25): Integração AGENT-COGNITION-PROTOCOL
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# CONSTITUICAO (Layer 1 - Principios compartilhados)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+constituicao:
+  path: "/agents/CONSTITUTION/BASE-CONSTITUTION.md"
+  descricao: "Princípios éticos e operacionais base para todos os agentes"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# MEMORIA DO CARGO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+memoria:
+  path: "./MEMORY.md"
+  versao: "2.0.0"
+  descricao: "Experiência acumulada deste cargo"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# SOUL DO CARGO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+soul:
+  path: "./SOUL.md"
+  versao: "2.0"
+  descricao: "Identidade e consciência viva do agente"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# FONTES DE DNA - COM RASTREABILIDADE COMPLETA
+# ═══════════════════════════════════════════════════════════════════════════════
+
+dna_sources:
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # FONTES AGREGADAS (multi-pessoa, por tema)
+  # ───────────────────────────────────────────────────────────────────────────
+
+  agregado:
+    - dominio: "vendas"
+      path: "/knowledge/dna/AGGREGATED/AGG-VENDAS.yaml"
+      peso: 0.88
+      quando_usar: "Qualificação e discovery"
+      insight_ids:
+        - "VEND001"
+        - "QUAL001"
+
+    - dominio: "outbound"
+      path: "/knowledge/dna/AGGREGATED/AGG-OUTBOUND.yaml"
+      peso: 0.82
+      quando_usar: "Prospecção e pipeline"
+      insight_ids:
+        - "OUT001"
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # FONTES PRIMÁRIAS (por pessoa)
+  # ───────────────────────────────────────────────────────────────────────────
+
+  primario:
+    - pessoa: "cole-gordon"
+      path: "/knowledge/dna/persons/cole-gordon"
+      raiz: "/inbox/COLE GORDON/"                                            # RASTREABILIDADE
+      dominios_usados:
+        - "vendas"
+        - "discovery"
+        - "qualificacao"
+      peso: 0.90
+      quando_usar: "Discovery, 7 Beliefs, qualificação, handoff"
+      insight_ids:                                                             # RASTREABILIDADE
+        - "7B001"    # 7 Beliefs Framework
+        - "CG-DISC001" # Discovery profunda
+        - "CG-HELL001" # Hell Island vs Heaven Island
+        - "CG-DICK001" # Dickens Process
+        - "CG-CONS001" # Consistency Bias
+        - "CG-TRUST001" # Trust no Discovery
+      chunk_ids:                                                               # RASTREABILIDADE GRANULAR
+        - "*aguardando CG004 no Pipeline Jarvis*"
+      materiais_fonte:                                                         # RASTREABILIDADE COMPLETA
+        - titulo: "Sales Masterclass"
+          path_raiz: "/inbox/COLE GORDON/COURSES/SALES MASTERCLASS.txt"
+          tipo: "course"
+          data_processamento: "2025-12-16"
+          insights_principais:
+            - "7 Beliefs: 6 no Discovery, 1 no Pitch"
+            - "Pain + Doubt + Cost + Desire + Money + Support"
+            - "Hell Island vs Heaven Island - tensão interna"
+            - "Dickens Process - projetar 1-3-5-10 anos"
+            - "Consistency Bias - fazer prospect DIZER"
+            - "Trust é construída no Discovery, não no rapport"
+        - titulo: "7 Ways to Increase Show Rates"
+          path_raiz: "/inbox/COLE GORDON/PODCASTS/"
+          tipo: "podcast"
+          data_processamento: "2024-12-15"
+          insights_principais:
+            - "Qualificação impacta show rate"
+            - "Discovery bem feita = maior conversão"
+
+    - pessoa: "JORDAN-LEE"
+      path: "/knowledge/dna/persons/JORDAN-LEE"
+      raiz: "/inbox/JORDAN LEE (AI BUSINESS)/"                              # RASTREABILIDADE
+      dominios_usados:
+        - "outbound"
+        - "pipeline"
+      peso: 0.80
+      quando_usar: "Manutenção de pipeline, volume de leads"
+      insight_ids:                                                             # RASTREABILIDADE
+        - "JL-PIPE001" # Flow constante de leads
+      chunk_ids:
+        - "*pendente JL001*"
+      materiais_fonte:
+        - titulo: "Outbound Mastery"
+          path_raiz: "/inbox/JORDAN LEE (AI BUSINESS)/PODCASTS/"
+          tipo: "podcast"
+          data_processamento: "*pendente*"
+          insights_principais:
+            - "Flow constante de leads qualificados"
+            - "Pipeline cheio mantém a máquina funcionando"
+
+    - pessoa: "alex-hormozi"
+      path: "/knowledge/dna/persons/alex-hormozi"
+      raiz: "/inbox/alex hormozi/"                        # RASTREABILIDADE
+      dominios_usados:
+        - "farm_system"
+        - "progressao"
+      peso: 0.85
+      quando_usar: "Farm System, progressão de carreira"
+      insight_ids:                                                             # RASTREABILIDADE
+        - "SS001" # Farm System
+        - "FARM-SDS001" # SDS no Farm System
+      chunk_ids:
+        - "*pendente SS001*"
+      materiais_fonte:
+        - titulo: "How I Scaled My Sales Team"
+          path_raiz: "/inbox/alex hormozi/PODCASTS/HOW I SCALED MY SALES TEAM.txt"
+          tipo: "podcast"
+          data_processamento: "2024-12-15"
+          insights_principais:
+            - "SDS é Double-A do Farm System"
+            - "OTE $60k/ano (US)"
+            - "60+ dias consistente para virar Closer"
+            - "Discovery profunda antes de passar"
+
+      dominios_usados:
+        - "modelo_brasileiro"
+        - "setter"
+      peso: 0.75
+      quando_usar: "Modelo brasileiro, Setter = BDR+SDS"
+      insight_ids:                                                             # RASTREABILIDADE
+      chunk_ids:
+      materiais_fonte:
+          tipo: "course"
+          data_processamento: "2024-12-15"
+          insights_principais:
+            - "Setter = BDR + SDS no Brasil"
+            - "ICP tríplice: consciente + transformação + financeiro"
+            - "Setter entrega valor + qualifica"
+
+      dominios_usados:
+        - "discovery"
+        - "inside_sales"
+      peso: 0.65
+      quando_usar: "SPIN Selling, Inside Sales BR"
+      insight_ids:
+      chunk_ids:
+      materiais_fonte:
+        - titulo: "Aceleração de Vendas"
+          tipo: "course"
+          data_processamento: "*pendente*"
+          insights_principais:
+            - "SPIN Selling para discovery"
+            - "Inside Sales como modelo operacional"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# MAPA DE CONFLITOS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+conflitos:
+  path: "/knowledge/dna/MAPS/MAP-CONFLITOS.yaml"
+  descricao: "Mapa de tensões entre fontes com resoluções documentadas"
+
+  conflitos_conhecidos:
+    - id: "CONF-001"
+      fonte_a: "US Model"
+      posicao_a: "Discovery 30min"
+      fonte_b: "BR Context"
+      posicao_b: "Brasileiro fala mais"
+      resolucao: "45-60min no Brasil"
+      contexto: "Cultura mais conversacional"
+
+    - id: "CONF-002"
+      fonte_a: "Sabedoria convencional"
+      posicao_a: "Rapport constrói trust"
+      fonte_b: "Cole Gordon"
+      posicao_b: "Trust no Discovery"
+      resolucao: "Perguntas certas > small talk"
+      contexto: "Resultado comprovado do Cole"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# REGRAS DE RESOLUCAO DE CONFLITOS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+resolucao_de_conflitos:
+  regra_geral: |
+    1. Consenso forte (3+ fontes) → usar sem ressalva
+    2. Consenso parcial (2 fontes) → usar com nota de incerteza
+    3. Conflito mapeado → aplicar regra específica
+    4. Conflito não mapeado → apresentar ambas posições ao usuário
+
+  preferencias_contextuais:
+    - contexto: "discovery e qualificação"
+      priorizar: "cole-gordon"
+      razao: "Especialista em 7 Beliefs e técnicas de discovery"
+      fonte: "^[insight_id:7B001]"                                             # RASTREABILIDADE
+
+    - contexto: "pipeline e volume"
+      priorizar: "JORDAN-LEE"
+      razao: "Foco em flow constante"
+      fonte: "^[insight_id:JL-PIPE001]"                                        # RASTREABILIDADE
+
+    - contexto: "mercado brasileiro"
+      razao: "Calibração cultural e modelo local"
+
+    - contexto: "progressão de carreira"
+      priorizar: "alex-hormozi"
+      razao: "Farm System é referência"
+      fonte: "^[insight_id:SS001]"                                             # RASTREABILIDADE
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# PROTOCOLO DE RACIOCINIO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+raciocinio:
+  path: "/system/protocols/dna/REASONING-MODEL-PROTOCOL.md"
+  descricao: "Como o agente deve raciocinar com o DNA"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# REGRAS ESPECIFICAS DO CARGO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+regras_especificas:
+  foco: "Qualificar leads e maximizar conversão para o closer"
+
+  heuristicas_prioritarias:
+    - heuristica: "Instalar 6 Beliefs antes de passar"
+      fonte: "^[insight_id:7B001]"                                             # RASTREABILIDADE
+      path_raiz: "/inbox/COLE GORDON/COURSES/SALES MASTERCLASS.txt"
+
+    - heuristica: "Trust se constrói no Discovery, não no rapport"
+      fonte: "^[insight_id:CG-TRUST001]"                                       # RASTREABILIDADE
+      path_raiz: "/inbox/COLE GORDON/COURSES/SALES MASTERCLASS.txt"
+
+    - heuristica: "Confirmar compromisso antes de agendar"
+      fonte: "^[insight_id:CG-DISC001]"                                        # RASTREABILIDADE
+
+    - heuristica: "Follow-up proativo antes da call"
+      fonte: "^[insight_id:CG002]"                                             # RASTREABILIDADE
+
+  restricoes:
+    - restricao: "NAO agendar sem qualificação completa (6 Beliefs)"
+      fonte: "^[insight_id:7B001]"                                             # RASTREABILIDADE
+
+    - restricao: "NAO prometer resultados específicos"
+      fonte: "^[insight_id:CG-DISC001]"                                        # RASTREABILIDADE
+
+    - restricao: "NAO passar lead sem handoff completo"
+      fonte: "^[insight_id:CG-HAND001]"                                        # RASTREABILIDADE
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# FRAMEWORKS CORE
+# ═══════════════════════════════════════════════════════════════════════════════
+
+frameworks:
+  seven_beliefs:
+    discovery_beliefs:
+      - belief: "1. PAIN"
+        descricao: "Tenho um problema real que precisa resolver"
+      - belief: "2. DOUBT"
+        descricao: "Sozinho, não vou conseguir"
+      - belief: "3. COST"
+        descricao: "Se não resolver, vai piorar/custar caro"
+      - belief: "4. DESIRE"
+        descricao: "Existe um futuro melhor possível"
+      - belief: "5. MONEY"
+        descricao: "O investimento vale o resultado"
+      - belief: "6. SUPPORT"
+        descricao: "Preciso de ajuda especializada"
+    pitch_belief:
+      - belief: "7. VEHICLE"
+        descricao: "ESTA solução é a certa pra mim"
+        responsavel: "Closer"
+    fonte: "^[insight_id:7B001]"
+    path_raiz: "/inbox/COLE GORDON/COURSES/SALES MASTERCLASS.txt"
+    aplicacao: "6 Beliefs no Discovery (SDS), 1 no Pitch (Closer)"
+
+  hell_heaven_island:
+    hell_island:
+      - "Problema atual"
+      - "Custo do status quo"
+      - "Dor que sente"
+      - "Consequências de não agir"
+    heaven_island:
+      - "Resultado desejado"
+      - "Benefícios claros"
+      - "Vida após resolver"
+      - "Ganhos tangíveis"
+    objetivo: "Criar tensão interna entre os dois estados"
+    fonte: "^[insight_id:CG-HELL001]"
+    path_raiz: "/inbox/COLE GORDON/COURSES/SALES MASTERCLASS.txt"
+    aplicacao: "Visualização durante Discovery para amplificar motivação"
+
+  dickens_process:
+    perguntas:
+      - "Se NÃO resolver, em 1 ano, onde você estará?"
+      - "E em 3 anos, como vai ser?"
+      - "Daqui a 5 anos, o que acontece?"
+      - "E em 10 anos? Como você se sente com isso?"
+    objetivo: "Amplificar custo de não agir"
+    fonte: "^[insight_id:CG-DICK001]"
+    path_raiz: "/inbox/COLE GORDON/COURSES/SALES MASTERCLASS.txt"
+    aplicacao: "Usar na fase de IMPACTO do Discovery"
+
+  consistency_bias:
+    tecnica: "Fazer prospect DIZER as beliefs, não só concordar"
+    principio: "Cialdini - pessoas mantêm consistência com o que disseram"
+    fonte: "^[insight_id:CG-CONS001]"
+    path_raiz: "/inbox/COLE GORDON/COURSES/SALES MASTERCLASS.txt"
+    aplicacao: "Perguntar em vez de afirmar durante Discovery"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# VALIDAÇÃO DE RASTREABILIDADE
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# CHECKLIST antes de publicar:
+# [✓] Toda fonte primária tem raiz com path para inbox
+# [✓] Insight_ids presentes em fontes primárias
+# [~] Chunk_ids pendentes para algumas fontes (aguardando Pipeline Jarvis)
+# [✓] Heurísticas têm fonte e path_raiz
+# [✓] Preferências contextuais têm fonte
+# [✓] Conflitos conhecidos documentados
+# [✓] Frameworks core com rastreabilidade (7 Beliefs, Hell/Heaven, Dickens)
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Fim do DNA-CONFIG.yaml v2.0.0
+# Integrado com AGENT-COGNITION-PROTOCOL (FASE 1.5) e AGENT-INTEGRITY-PROTOCOL

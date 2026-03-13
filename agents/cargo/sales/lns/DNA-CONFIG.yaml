@@ -1,0 +1,246 @@
+# DNA-CONFIG.yaml - LNS (Lead Nurture Specialist)
+# Configuracao de fontes de DNA para este cargo
+#
+# Versao: 3.0.0
+# Data: 2026-01-10
+# Template: DNA-CONFIG-V2 (100% rastreabilidade)
+#
+# CHANGELOG:
+# v3.0.0 (2026-01-10): BUG #1 FIX - Cascateamento completo
+#                      - Adicionado seção dna_agregado com AGG-VENDAS.yaml
+#                      - Todos paths validados (INTEGRITY CHECK)
+# v2.0.0 (2025-12-26): Integração AGENT-COGNITION-PROTOCOL
+
+cargo: "LNS"
+versao: "3.0.0"
+nivel: "SALES"
+
+# ═══════════════════════════════════════════════════════════════════
+# DNA AGREGADO (multi-fonte)
+# ═══════════════════════════════════════════════════════════════════
+
+dna_agregado:
+  - dominio: "vendas"
+    path: "/knowledge/dna/AGGREGATED/AGG-VENDAS.yaml"
+    peso: 0.75
+    quando_usar: "Perguntas gerais sobre vendas e processos comerciais"
+    justificativa: "LNS precisa entender contexto geral de vendas para nutrir leads"
+
+# ═══════════════════════════════════════════════════════════════════
+# COMPOSICAO DO DNA
+# ═══════════════════════════════════════════════════════════════════
+
+dna_primario:
+  - pessoa: "cole-gordon"
+    peso: 0.88
+    dominios_absorvidos:
+      - "Show Rate Optimization"
+      - "7 Levers Framework"
+      - "Follow-up Strategy"
+      - "Recovery Sequences"
+    path: "/knowledge/dna/persons/cole-gordon"
+    justificativa: "Principal autoridade em show rate e nurturing"
+
+  - pessoa: "jeremy-haynes"
+    peso: 0.92  # AUMENTADO em Phase 5.3 - Principal fonte de nurturing
+    dominios_absorvidos:
+      - "Email Hammer Strategy"
+      - "Interest Levels Ladder"
+      - "Content Ads Coordination"
+      - "Call Funnels"
+      - "Venus Fly Trap 1.0"      # NOVO Phase 5.3
+      - "Venus Fly Trap 2.0"      # NOVO Phase 5.3
+      - "Follow-Up Architecture"  # NOVO Phase 5.3
+      - "Tornado Ad Strategy"     # NOVO Phase 5.3
+    path: "/knowledge/dna/persons/jeremy-haynes"
+    justificativa: "Master em elevacao de interesse pre-call e automacao Venus Fly Trap"
+    # ENRIQUECIDO Phase 5.3 com Venus Fly Trap e Follow-Up Architecture completo
+    insights_adicionais:
+      - id: "JH-VFT001"
+        tema: "Venus Fly Trap 1.0"
+        descricao: "Automacao pre-call com video personalizado + 3 touchpoints automaticos"
+        aplicacao: "Sistema de nurturing automatizado para elevar show rate"
+      - id: "JH-VFT002"
+        tema: "Venus Fly Trap 2.0"
+        descricao: "Versao avancada com AI video + sequencia de 5 touchpoints + retargeting"
+        aplicacao: "Nurturing avancado para leads high-intent"
+      - id: "JH-FUA001"
+        tema: "Follow-Up Architecture 3-Tier"
+        descricao: "Tier 1 (0-48h): Alta frequencia. Tier 2 (3-14d): Media. Tier 3 (15-90d): Baixa"
+        aplicacao: "70-80% dos no-closes sao recuperaveis com cadencia correta"
+      - id: "JH-TORN001"
+        tema: "Tornado Ad Strategy"
+        descricao: "Dominar feed do prospect com ads em multiplas plataformas simultaneamente"
+        aplicacao: "Complemento ao nurturing - prospect ve ads enquanto recebe emails"
+
+    peso: 0.75
+    dominios_absorvidos:
+      - "Sales Farming"
+      - "Reativacao de Leads"
+      - "Calibracao Brasil"
+      - "WhatsApp Strategy"
+    justificativa: "Fonte de adaptacao cultural BR e reativacao"
+
+# ═══════════════════════════════════════════════════════════════════
+# MATERIAIS ABSORVIDOS
+# ═══════════════════════════════════════════════════════════════════
+
+materiais_absorvidos:
+  cole_gordon:
+    - titulo: "7 Ways to Increase Show Rates"
+      arquivo: "CG002"
+      path_original: "/inbox/COLE GORDON/"
+      insights_extraidos:
+        - "Application grading 1-4"
+        - "Speed to lead < 15min"
+        - "Double booking quando < 66%"
+        - "Reminder sequence multi-touch"
+        - "Value stacking entre booking e call"
+        - "Commitment device verbal"
+        - "Friction reduction (link direto)"
+
+    - titulo: "The Role of the LNS"
+      arquivo: "CG003"
+      path_original: "/inbox/COLE GORDON/"
+      insights_extraidos:
+        - "LNS como papel dedicado"
+        - "Show rate contribution +10-15%"
+        - "Recovery de no-shows 50%+"
+        - "Touch points 3-5 por lead"
+
+  jeremy_haynes:
+    - titulo: "Call Funnels - Hammer Strategy"
+      arquivo: "JH002"
+      path_original: "/inbox/JEREMY HAYNES (CALL FUNNELS)/"
+      insights_extraidos:
+        - "Email Hammer: 12 emails em 48h"
+        - "Interest Levels Ladder"
+        - "Texts vs Emails (purpose diferente)"
+        - "Content Ads como suporte"
+        - "50-80% open rates esperado"
+        - "FRAMING nao lembretes"
+
+    - titulo: "Closer Chefe Roadmap - Sales Farming"
+      insights_extraidos:
+        - "Sales Farming = reativacao"
+        - "Cadencia 30-60-90 dias"
+        - "10-20% reativacao = vendas 'de graca'"
+        - "Mensagem personalizada com contexto"
+
+# ═══════════════════════════════════════════════════════════════════
+# TAGS DE INSIGHT (para SOUL.md e MEMORY.md)
+# ═══════════════════════════════════════════════════════════════════
+
+insights_absorvidos:
+  - id: "CG-7LEV001"
+    tema: "7 Levers of Show Rate"
+    fonte: "Cole Gordon"
+    confianca: "ALTA"
+    aplicacao: "Framework central de operacao"
+
+  - id: "CG-RECOV001"
+    tema: "Recovery Sequence"
+    fonte: "Cole Gordon"
+    confianca: "ALTA"
+    aplicacao: "No-show recovery 5min/15min/1h/24h"
+
+  - id: "JH-HAMM001"
+    tema: "Email Hammer Strategy"
+    fonte: "Jeremy Haynes"
+    confianca: "ALTA"
+    aplicacao: "12 emails em 48h para elevar interesse"
+
+  - id: "JH-INTLV001"
+    tema: "Interest Levels Ladder"
+    fonte: "Jeremy Haynes"
+    confianca: "ALTA"
+    aplicacao: "Mover leads 2-4 niveis antes da call"
+
+    tema: "Sales Farming"
+    confianca: "MEDIA"
+    aplicacao: "Reativacao de leads nao convertidos 30-60-90"
+
+  - id: "BR-WA001"
+    tema: "WhatsApp como Canal #1"
+    fonte: "Calibracao Brasil"
+    confianca: "ALTA"
+    aplicacao: "WhatsApp > Email no Brasil"
+
+# ═══════════════════════════════════════════════════════════════════
+# TENSOES ENTRE FONTES
+# ═══════════════════════════════════════════════════════════════════
+
+tensoes:
+  - id: "TENS001"
+    titulo: "Frequencia de Contato"
+    fontes_conflitantes:
+      - "Jeremy Haynes: 12 emails em 48h (agressivo)"
+      - "Cole Gordon: 3-5 touchpoints (moderado)"
+    resolucao: "Usar Haynes para leads quentes, Gordon para padrao"
+    aplicar_quando: "Decisao sobre cadencia"
+
+  - id: "TENS002"
+    titulo: "Canal Principal"
+    fontes_conflitantes:
+      - "US Sources: Email como canal primario"
+      - "BR Sources: WhatsApp como canal primario"
+    resolucao: "WhatsApp para Brasil, Email para complemento"
+    aplicar_quando: "Escolha de canal de comunicacao"
+
+# ═══════════════════════════════════════════════════════════════════
+# REGRAS ESPECIFICAS DO CARGO
+# ═══════════════════════════════════════════════════════════════════
+
+regras_especificas:
+  foco: "Maximizar show rate e reativar leads frios"
+
+  heuristicas_prioritarias:
+    - "Show rate > 80% e meta inegociavel"
+    - "Confirmar booking em < 15 minutos"
+    - "Valor em cada touchpoint, nao so lembretes"
+    - "Elevar interesse antes da call (Interest Ladder)"
+    - "Recovery imediato de no-shows (5min)"
+
+  restricoes:
+    - "NAO ser percebido como spam"
+    - "NAO enviar mensagens genericas"
+    - "SEMPRE personalizar com contexto do lead"
+    - "NAO abandonar lead - mudar cadencia"
+
+# ═══════════════════════════════════════════════════════════════════
+# RASTREABILIDADE
+# ═══════════════════════════════════════════════════════════════════
+
+rastreabilidade:
+  soul_md: "./SOUL.md"
+  memory_md: "./MEMORY.md"
+  agent_md: "./AGENT.md"
+
+  dossiers_relacionados:
+    - "/knowledge/dossiers/persons/DOSSIER-COLE-GORDON.md"
+    - "/knowledge/dossiers/persons/DOSSIER-JEREMY-HAYNES.md"
+    - "/knowledge/dossiers/THEMES/DOSSIER-05-METRICAS.md"
+
+  sources_relacionados:
+    - "/knowledge/SOURCES/cole-gordon/05-METRICAS.md"
+    - "/knowledge/SOURCES/jeremy-haynes/02-PROCESSO-VENDAS.md"
+
+# ═══════════════════════════════════════════════════════════════════
+# CHANGELOG
+# ═══════════════════════════════════════════════════════════════════
+
+changelog:
+  - versao: "2.0.0"
+    data: "2025-12-26"
+    mudancas:
+      - "Upgrade para Template V2"
+      - "Adicionado Jeremy Haynes como fonte primaria"
+      - "Incluido materiais_absorvidos detalhado"
+      - "Adicionado insights_absorvidos com IDs"
+      - "Documentado tensoes entre fontes"
+      - "100% rastreabilidade implementada"
+
+  - versao: "1.0.0"
+    data: "2025-12-23"
+    mudancas:
+      - "Versao inicial minimal"

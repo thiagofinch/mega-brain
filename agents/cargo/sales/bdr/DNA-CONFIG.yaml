@@ -1,0 +1,393 @@
+# DNA-CONFIG.yaml - BDR (Business Development Representative)
+# Configuracao de fontes de DNA para este cargo
+#
+# Versao: 2.0.0
+# Data: 2025-12-25
+# Integrado com: AGENT-COGNITION-PROTOCOL (FASE 1.5), AGENT-INTEGRITY-PROTOCOL
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+# REGRA INQUEBRÁVEL: RASTREABILIDADE 100%
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# Todo DNA deve ter paths verificáveis até inbox
+# Cada pessoa/domínio deve ter insight_ids e chunk_ids rastreáveis
+#
+# Navegação: DNA-CONFIG → PESSOA/DNA.yaml → INSIGHTS-STATE.json → CHUNKS → inbox
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+
+cargo: "BDR"
+versao: "3.0.0"
+nivel: "SALES"
+natureza: "HIBRIDO"
+data_criacao: "2025-12-23"
+ultima_atualizacao: "2026-01-10"
+
+# CHANGELOG:
+# v3.0.0 (2026-01-10): BUG #1/#3 FIX - Cascateamento completo
+#                      - Verificado AGG-OUTBOUND.yaml (existe)
+#                      - Verificado AGG-VENDAS.yaml (existe)
+#                      - Todos paths validados (INTEGRITY CHECK)
+# v2.0.0 (2025-12-25): Integração AGENT-COGNITION-PROTOCOL
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# CONSTITUICAO (Layer 1 - Principios compartilhados)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+constituicao:
+  path: "/agents/CONSTITUTION/BASE-CONSTITUTION.md"
+  descricao: "Princípios éticos e operacionais base para todos os agentes"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# MEMORIA DO CARGO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+memoria:
+  path: "./MEMORY.md"
+  versao: "2.0.0"
+  descricao: "Experiência acumulada deste cargo"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# SOUL DO CARGO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+soul:
+  path: "./SOUL.md"
+  versao: "2.0"
+  descricao: "Identidade e consciência viva do agente"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# FONTES DE DNA - COM RASTREABILIDADE COMPLETA
+# ═══════════════════════════════════════════════════════════════════════════════
+
+dna_sources:
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # FONTES AGREGADAS (multi-pessoa, por tema)
+  # ───────────────────────────────────────────────────────────────────────────
+
+  agregado:
+    - dominio: "outbound"
+      path: "/knowledge/dna/AGGREGATED/AGG-OUTBOUND.yaml"
+      peso: 0.90
+      quando_usar: "Estratégias de prospecção outbound"
+      insight_ids:
+        - "OUT001"
+        - "OUT002"
+
+    - dominio: "vendas"
+      path: "/knowledge/dna/AGGREGATED/AGG-VENDAS.yaml"
+      peso: 0.80
+      quando_usar: "Qualificação inicial e handoff"
+      insight_ids:
+        - "VEND001"
+        - "QUAL001"
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # FONTES PRIMÁRIAS (por pessoa)
+  # ───────────────────────────────────────────────────────────────────────────
+
+  primario:
+    - pessoa: "JORDAN-LEE"
+      path: "/knowledge/dna/persons/JORDAN-LEE"
+      raiz: "/inbox/JORDAN LEE (AI BUSINESS)/"                              # RASTREABILIDADE
+      dominios_usados:
+        - "outbound"
+        - "vendas"
+        - "volume"
+      peso: 0.90
+      quando_usar: "Fonte primária para outbound, volume, cadências"
+      insight_ids:                                                             # RASTREABILIDADE
+        - "JL001"  # Volume como diferencial
+        - "CAD001" # Multi-touch cadence
+        - "PERS001" # Personalização escala
+      chunk_ids:                                                               # RASTREABILIDADE GRANULAR
+        - "*pendente JL001*"
+      materiais_fonte:                                                         # RASTREABILIDADE COMPLETA
+        - titulo: "Outbound Mastery"
+          path_raiz: "/inbox/JORDAN LEE (AI BUSINESS)/PODCASTS/"
+          tipo: "podcast"
+          data_processamento: "*pendente*"
+          insights_principais:
+            - "Volume é o preço de entrada"
+            - "Personalização escala - não é sobre template"
+            - "Multi-touch, multi-channel sempre"
+            - "Consistência bate intensidade"
+
+    - pessoa: "cole-gordon"
+      path: "/knowledge/dna/persons/cole-gordon"
+      raiz: "/inbox/COLE GORDON/"                              # RASTREABILIDADE
+      dominios_usados:
+        - "qualificacao"
+        - "handoff"
+      peso: 0.82
+      quando_usar: "Qualificação de leads, handoff para closer"
+      insight_ids:                                                             # RASTREABILIDADE
+        - "CG-QUAL001" # Qualificação protege tempo do closer
+        - "GOLD001" # Regra dos 50%
+      chunk_ids:
+        - "*aguardando CG001 no Pipeline Jarvis*"
+      materiais_fonte:
+        - titulo: "Sales Masterclass"
+          path_raiz: "/inbox/COLE GORDON/COURSES/SALES MASTERCLASS.txt"
+          tipo: "course"
+          data_processamento: "2024-12-15"
+          insights_principais:
+            - "BDR é primeiro filtro - qualidade antes de quantidade"
+            - "Cada minuto do closer vale dinheiro"
+            - "50% chance de close mínimo para agendar"
+
+    - pessoa: "alex-hormozi"
+      path: "/knowledge/dna/persons/alex-hormozi"
+      raiz: "/inbox/alex hormozi/"                        # RASTREABILIDADE
+      dominios_usados:
+        - "farm_system"
+        - "metricas"
+      peso: 0.85
+      quando_usar: "Farm System, progressão de carreira, métricas de volume"
+      insight_ids:                                                             # RASTREABILIDADE
+        - "SS001" # Farm System
+        - "VOL001" # 100 dials/day
+      chunk_ids:
+        - "*pendente SS001*"
+      materiais_fonte:
+        - titulo: "How I Scaled My Sales Team"
+          path_raiz: "/inbox/alex hormozi/PODCASTS/HOW I SCALED MY SALES TEAM.txt"
+          tipo: "podcast"
+          data_processamento: "2024-12-15"
+          insights_principais:
+            - "Farm System: A-Ball → Double-A → Triple-A → Major League"
+            - "BDR = entrada, 100 dials/dia, OTE $40k"
+            - "30-60 dias consistente para subir de nível"
+            - "Performance, não tempo de casa"
+
+      dominios_usados:
+        - "sdr_br"
+        - "modelo_brasileiro"
+        - "dimensionamento"
+      peso: 0.75
+      quando_usar: "Modelo brasileiro, 4 tipos de SDR, dimensionamento"
+      insight_ids:                                                             # RASTREABILIDADE
+        - "DIM001" # 15-25 leads/SDR
+      chunk_ids:
+      materiais_fonte:
+          tipo: "course"
+          data_processamento: "2025-12-16"
+          insights_principais:
+            - "4 Tipos SDR: Funis, Social Seller, Hunter, Sales Farmer"
+            - "Setter = BDR + SDS no Brasil"
+            - "15-25 leads/dia = 1 SDR"
+            - "Remuneração: R$2k fixo + R$10-15/agendamento"
+
+      dominios_usados:
+        - "social_selling"
+        - "inside_sales"
+        - "sdr_formation"          # ADICIONADO Phase 5.3
+        - "qualification"          # ADICIONADO Phase 5.3
+        - "icp"                    # ADICIONADO Phase 5.3
+        - "outbound_br"            # ADICIONADO Phase 5.3
+      quando_usar: "Formação SDR completa, ICP Tríplice, 2QOC, qualificação, calibração Brasil"
+      insight_ids:
+      chunk_ids:
+      materiais_fonte:
+        - titulo: "Aceleração de Vendas + Formação SDR"
+          tipo: "course"
+          data_processamento: "2026-01-09"  # ATUALIZADO Phase 5.3
+          insights_principais:
+            - "Social Selling: $1 → $5 ROI"
+            - "Inside Sales = menor custo operacional"
+            - "LinkedIn para autoridade B2B"
+            - "2QOC Alfredo Soares: 2 Qualificações + Objeções + Compromisso"
+            - "ICP Tríplice: Demográfica + Psicográfica + Comportamental"
+            - "7 Elementos do Rapport: Espelhamento, Nome, Interesse, Pontos Comuns, Escuta Ativa, Elogios Sinceros, Vulnerabilidade"
+            - "5 Hard Skills SDR: CRM, Prospecção, Qualificação, Ferramentas, Cadência"
+            - "9 Soft Skills SDR: Resiliência, Escuta, Comunicação, Empatia, Organização, Curiosidade, Adaptabilidade, Coachability, Competitividade"
+            - "Passagem de bastão: timing crítico para não perder momentum"
+            - "CX = diferencial competitivo (89% brasileiros consideram tão importante quanto produto)"
+            - "Terminologia BR: LDR, Closer, Executivo de Vendas (não SDS, BC, AE)"
+            - "Jornada Ampulheta: Awareness → Consideration → Purchase → Onboarding → Usage → Advocacy"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# MAPA DE CONFLITOS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+conflitos:
+  path: "/knowledge/dna/MAPS/MAP-CONFLITOS.yaml"
+  descricao: "Mapa de tensões entre fontes com resoluções documentadas"
+
+  conflitos_conhecidos:
+    - id: "CONF-001"
+      fonte_a: "Hormozi"
+      posicao_a: "100 dials/dia"
+      fonte_b: "Realidade BR"
+      posicao_b: "Mix de canais mais efetivo"
+      resolucao: "50-80 calls + 20 WA"
+      contexto: "Calibração cultural BR"
+
+    - id: "CONF-002"
+      fonte_a: "Jordan Lee"
+      posicao_a: "Volume é rei"
+      fonte_b: "Cole Gordon"
+      posicao_b: "Qualidade primeiro"
+      resolucao: "Volume COM qualificação"
+      contexto: "Ambos importam - não sacrificar nenhum"
+
+    - id: "CONF-003"
+      fonte_a: "US Model"
+      posicao_a: "BDR e SDS separados"
+      posicao_b: "Setter híbrido"
+      resolucao: "Depende do tamanho da operação"
+      contexto: "1-2 SDRs: híbrido. 5+: especializa"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# REGRAS DE RESOLUCAO DE CONFLITOS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+resolucao_de_conflitos:
+  regra_geral: |
+    1. Consenso forte (3+ fontes) → usar sem ressalva
+    2. Consenso parcial (2 fontes) → usar com nota de incerteza
+    3. Conflito mapeado → aplicar regra específica
+    4. Conflito não mapeado → apresentar ambas posições ao usuário
+
+  preferencias_contextuais:
+    - contexto: "prospecção pura"
+      priorizar: "JORDAN-LEE"
+      razao: "Especialista em volume e outbound"
+      fonte: "^[insight_id:JL001]"                                             # RASTREABILIDADE
+
+    - contexto: "qualificação"
+      priorizar: "cole-gordon"
+      razao: "Foco em proteger tempo do closer"
+      fonte: "^[insight_id:CG-QUAL001]"                                        # RASTREABILIDADE
+
+    - contexto: "mercado brasileiro"
+      razao: "Calibração cultural e modelo local"
+
+    - contexto: "progressão de carreira"
+      priorizar: "alex-hormozi"
+      razao: "Farm System é referência"
+      fonte: "^[insight_id:SS001]"                                             # RASTREABILIDADE
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# PROTOCOLO DE RACIOCINIO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+raciocinio:
+  path: "/system/protocols/dna/REASONING-MODEL-PROTOCOL.md"
+  descricao: "Como o agente deve raciocinar com o DNA"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# REGRAS ESPECIFICAS DO CARGO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+regras_especificas:
+  foco: "Gerar oportunidades qualificadas via outbound"
+
+  heuristicas_prioritarias:
+    - heuristica: "Volume com personalização"
+      fonte: "^[insight_id:JL001]"                                             # RASTREABILIDADE
+      path_raiz: "/inbox/JORDAN LEE (AI BUSINESS)/PODCASTS/"
+
+    - heuristica: "Multi-touch, multi-channel sempre"
+      fonte: "^[insight_id:CAD001]"                                            # RASTREABILIDADE
+
+    - heuristica: "Qualificar antes de agendar"
+      fonte: "^[insight_id:CG-QUAL001]"                                        # RASTREABILIDADE
+      path_raiz: "/inbox/COLE GORDON/COURSES/SALES MASTERCLASS.txt"
+
+    - heuristica: "15-25 leads/dia = 1 SDR"
+      fonte: "^[insight_id:DIM001]"                                            # RASTREABILIDADE
+
+  restricoes:
+    - restricao: "NAO agendar sem ICP fit"
+      fonte: "^[insight_id:CG-QUAL001]"                                        # RASTREABILIDADE
+
+    - restricao: "NAO prometer o que closer não pode entregar"
+      fonte: "^[insight_id:GOLD001]"                                           # RASTREABILIDADE
+
+    - restricao: "NAO usar só um canal"
+      fonte: "^[insight_id:CAD001]"                                            # RASTREABILIDADE
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# FRAMEWORKS CORE
+# ═══════════════════════════════════════════════════════════════════════════════
+
+frameworks:
+  farm_system:
+    niveis:
+      - nivel: "A-Ball"
+        papel: "BDR"
+        ote: "$40k/ano"
+        metricas: "100 dials/dia"
+      - nivel: "Double-A"
+        papel: "SDS"
+        ote: "$60k/ano"
+        metricas: "Qualificação"
+      - nivel: "Triple-A"
+        papel: "Junior Closer"
+        ote: "$80k/ano"
+        metricas: "Closes supervisionados"
+      - nivel: "Major League"
+        papel: "Senior Closer"
+        ote: "$120k+"
+        metricas: "Auto-suficiente"
+    fonte: "^[insight_id:SS001]"
+    path_raiz: "/inbox/alex hormozi/PODCASTS/HOW I SCALED MY SALES TEAM.txt"
+    aplicacao: "Progressão de carreira baseada em métricas, não tempo"
+
+  quatro_tipos_sdr:
+    tipos:
+      - tipo: "SDR 1 - Funis"
+        descricao: "Leads de funis (VSL, isca paga)"
+        perfil: "Processo, consistência"
+      - tipo: "SDR 2 - Social Seller"
+        descricao: "Instagram, LinkedIn, relacionamento"
+        perfil: "Criativo, relacional"
+      - tipo: "SDR 3 - Hunter"
+        descricao: "Cold call, outbound puro"
+        perfil: "Agressivo, resiliente"
+      - tipo: "SDR 4 - Sales Farmer"
+        descricao: "Reativação de base, leads mortos"
+        perfil: "Persistente, criativo"
+    aplicacao: "Especialização de SDR por perfil e canal"
+
+  icp_qualification:
+    criterios:
+      - "Fit Empresarial: tamanho, indústria, modelo"
+      - "Autoridade: poder de decisão"
+      - "Dor Detectável: sinais de problema"
+      - "Timing: urgência visível"
+    regra: "3 de 4 para prospectar"
+    fonte: "^[insight_id:ICP001]"
+    aplicacao: "Filtro antes de qualquer contato"
+
+  multi_touch_cadence:
+    dias:
+      - "Dia 1: Email personalizado + LinkedIn connection"
+      - "Dia 3: Follow-up email + LinkedIn message"
+      - "Dia 5: Primeira ligação + WhatsApp"
+      - "Dia 8: Email com case study"
+      - "Dia 12: Segunda ligação + WhatsApp"
+      - "Dia 15: Break-up email"
+    fonte: "^[insight_id:CAD001]"
+    path_raiz: "/inbox/JORDAN LEE (AI BUSINESS)/PODCASTS/"
+    aplicacao: "Cadência multi-canal padrão"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# VALIDAÇÃO DE RASTREABILIDADE
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# CHECKLIST antes de publicar:
+# [✓] Toda fonte primária tem raiz com path para inbox
+# [✓] Insight_ids presentes em fontes primárias
+# [~] Chunk_ids pendentes para algumas fontes (aguardando Pipeline Jarvis)
+# [✓] Heurísticas têm fonte e path_raiz
+# [✓] Preferências contextuais têm fonte
+# [✓] Conflitos conhecidos documentados
+# [✓] Frameworks core com rastreabilidade
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Fim do DNA-CONFIG.yaml v2.0.0
+# Integrado com AGENT-COGNITION-PROTOCOL (FASE 1.5) e AGENT-INTEGRITY-PROTOCOL

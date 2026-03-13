@@ -1,0 +1,486 @@
+# DNA-CONFIG.yaml - SALES-MANAGER (Gerente de Vendas)
+# Configuracao de fontes de DNA para este cargo
+#
+# Versao: 2.0.0
+# Data: 2025-12-26
+# Template: DNA-CONFIG-V2 (100% rastreabilidade)
+
+cargo: "SALES-MANAGER"
+versao: "3.1.0"
+nivel: "SALES"
+
+# ═══════════════════════════════════════════════════════════════════
+# DNA AGREGADO (multi-fonte) - ADICIONADO BUG #1 FIX 2026-01-10
+# ═══════════════════════════════════════════════════════════════════
+
+dna_agregado:
+  - dominio: "vendas"
+    path: "/knowledge/dna/AGGREGATED/AGG-VENDAS.yaml"
+    peso: 0.80
+    quando_usar: "Perguntas gerais sobre vendas, processos, métricas"
+    justificativa: "SALES-MANAGER precisa conhecimento consolidado de todas fontes"
+
+# ═══════════════════════════════════════════════════════════════════
+# COMPOSICAO DO DNA
+# ═══════════════════════════════════════════════════════════════════
+
+dna_primario:
+  - pessoa: "cole-gordon"
+    peso: 0.95  # AUMENTADO em BATCH-050 - Gestão de Times
+    dominios_absorvidos:
+      - "Sales Management Progression"
+      - "Quality Control (QC)"
+      - "State Management Framework"
+      - "Inner Game e Conviction"
+      - "Coaching Framework"
+      - "Player Coach Fallacy"
+      - "1:1 Structure"
+      # NOVOS BATCH-050 (2026-01-13)
+      - "Método PTMA (Planejar-Treinar-Motivar-Acompanhar)"
+      - "4 Tipos DISC Vendedores"
+      - "Cronograma 8 Semanas Onboarding"
+      - "Processo Contratação 6 Passos"
+      - "Heurísticas de Liderança"
+    path: "/knowledge/dna/persons/cole-gordon"
+    justificativa: "Principal fonte para gestao de vendas high-ticket + liderança de times"
+    # ENRIQUECIDO Phase 5.7 com BATCH-050 content
+    insights_adicionais:
+      - id: "CG-PTMA001"
+        tema: "Método PTMA"
+        descricao: "Planejar → Treinar → Motivar → Acompanhar/Cobrar - DIÁRIO, não semanal"
+        aplicacao: "Framework central de gestão de times de vendas"
+      - id: "CG-DISC001"
+        tema: "4 Tipos DISC"
+        descricao: "D-Dominante, I-Influente, S-Estável, C-Sistemático - cada um com gestão ADAPTADA"
+        aplicacao: "Diagnosticar perfil e adaptar estilo de coaching"
+      - id: "CG-ONB001"
+        tema: "Cronograma 8 Semanas"
+        descricao: "S1-Onboard, S2-Técnico, S3-Comportamental (87%), S4-Campo, S5-Lab, S6-8-Ajustes"
+        aplicacao: "Onboarding estruturado de vendedores novos"
+      - id: "CG-HIRE001"
+        tema: "Processo 6 Passos Contratação"
+        descricao: "Definir → Atrair → Avaliar → Testar → Decidir → Integrar"
+        aplicacao: "Hiring sistemático de vendedores"
+      - id: "CG-87COMP"
+        tema: "87% Comportamental, 13% Técnico"
+        descricao: "Treinamento de vendedores deve ser majoritariamente comportamental"
+        aplicacao: "Priorização de desenvolvimento de time"
+
+  - pessoa: "alex-hormozi"
+    peso: 0.90  # AUMENTADO em Phase 5.3 - Principal fonte de scaling
+    dominios_absorvidos:
+      - "Farm System (Hiring)"
+      - "Sales System (3 Playbooks)"
+      - "Scaling Framework"
+      - "Money Model Thinking"
+      - "Unit Economics"           # NOVO Phase 5.3
+      - "Volume is Vanity"         # NOVO Phase 5.3
+      - "CAC/LTV Discipline"       # NOVO Phase 5.3
+      - "9 Ways to Grow"           # NOVO Phase 5.3
+    path: "/knowledge/dna/persons/alex-hormozi"
+    justificativa: "Framework de escala, contratacao e unit economics como bussola"
+    # ENRIQUECIDO Phase 5.3 com SOURCE-AH.md content
+    insights_adicionais:
+      - id: "AH-UNIT001"
+        tema: "Unit Economics como Bussola"
+        descricao: "Todo scaling decision passa por unit economics primeiro"
+        aplicacao: "NAO escalar sem CAC < 1/3 LTV. Escalar prejuizo = prejuizo maior."
+      - id: "AH-VOL001"
+        tema: "Volume is Vanity, Cash Collected is Sanity"
+        descricao: "Leads, calls, propostas nao importam. So cash importa."
+        aplicacao: "Metricas de vaidade vs metricas de resultado"
+      - id: "AH-ESC001"
+        tema: "Escala Testa Sistema, Nao Pessoas"
+        descricao: "Se escala quebra, o sistema era fragil. Pessoas nao mudam, sistemas sim."
+        aplicacao: "Diagnostico de falha de escala"
+      - id: "AH-9WAYS001"
+        tema: "9 Ways to Grow a Business"
+        descricao: "More customers, Higher ARPU, Lower churn. Cada um multiplicado por 3 alavancas."
+        aplicacao: "Framework de priorizacao de iniciativas"
+      - id: "AH-LTV001"
+        tema: "LTV:CAC Discipline"
+        descricao: "3:1 minimo para escalar. 5:1 para escalar agressivamente."
+        aplicacao: "Gate de aprovacao para aumento de budget"
+
+    peso: 0.75
+    dominios_absorvidos:
+      - "Maquina de Vendas"
+      - "Metodologias BR (SPIN, MEDDIC, Sandler)"
+      - "Calibracao Cultural Brasil"
+    justificativa: "Adaptacao para mercado brasileiro"
+
+    peso: 0.70
+    dominios_absorvidos:
+      - "Estrutura Time BR"
+      - "Dimensionamento e Sizing"
+      - "Benchmarks BR (metricas, remuneracao)"
+      - "4 Tipos de SDR"
+    justificativa: "Modelo operacional brasileiro"
+
+  - pessoa: "jeremy-haynes"
+    peso: 0.65
+    dominios_absorvidos:
+      - "Scaling Math"
+      - "Capacity-Based Hiring"
+      - "Marketing-Sales Coordination"
+    path: "/knowledge/dossiers/persons/DOSSIER-JEREMY-HAYNES.md"
+    justificativa: "Coordenacao de escala marketing-vendas"
+
+  - pessoa: "THE-SCALABLE-COMPANY"
+    peso: 0.70
+    dominios_absorvidos:
+      - "CABs (Critical Accountability Bullets)"
+      - "Manual Scorecards > Automated"
+      - "Traffic Light Leadership"
+      - "Meeting Rhythm (1:1s, Weekly)"
+    path: "/knowledge/dna/persons/THE-SCALABLE-COMPANY"
+    justificativa: "Accountability systems e scorecards para gestao de vendas"
+    # NOVO Phase 5.3 - 2026-01-10
+    insights_adicionais:
+      - id: "TSC-CAB001"
+        tema: "CABs (Critical Accountability Bullets)"
+        descricao: "3-5 métricas máximo por time. Foco nos números que MOVEM O PONTEIRO."
+        aplicacao: "Definir scorecards de time de vendas com 3-5 métricas, não 20."
+      - id: "TSC-MSC001"
+        tema: "Manual Scorecards > Automated"
+        descricao: "Preencher manualmente cria ownership + insights. Automação divorcia time dos números."
+        aplicacao: "Vendedores preenchem próprios scorecards - desenvolvem 'Matrix vision' para padrões."
+      - id: "TSC-TL002"
+        tema: "Traffic Light Leadership para Sales"
+        descricao: "RED (treinar), YELLOW (acompanhar), GREEN (autonomia). Objetivo: tudo GREEN."
+        aplicacao: "Mapear cada vendedor em cada competência (discovery, pitch, objections, close)."
+      - id: "TSC-MR002"
+        tema: "Meeting Rhythm para Sales Team"
+        descricao: "QSP trimestral + Weekly Check-in + 1:1 semanal. Ad hoc meetings = planning failure."
+        aplicacao: "Se time pede muita reunião fora do ritmo, algo está errado no sistema."
+
+# ═══════════════════════════════════════════════════════════════════
+# MATERIAIS ABSORVIDOS
+# ═══════════════════════════════════════════════════════════════════
+
+materiais_absorvidos:
+  cole_gordon:
+    - titulo: "Sales Management Progression"
+      arquivo: "CG001"
+      path_original: "/inbox/COLE GORDON/"
+      insights_extraidos:
+        - "Fase 4 = Sales Manager full-time (nao vende mais)"
+        - "Threshold: $1M/mes B2B ou $400-600k B2C"
+        - "Time de 12-15+ vendedores precisa de SM"
+        - "Leadership + Coaching + QC como pilares"
+
+    - titulo: "Advanced Sales Training"
+      arquivo: "CG003"
+      path_original: "/inbox/COLE GORDON/"
+      insights_extraidos:
+        - "QC e prioridade #1"
+        - "Player Coach Fallacy - NUNCA fazer"
+        - "Vendedores precisam de inspiracao diaria"
+        - "Skill vs Will no diagnostico de performance"
+        - "Inputs quantitativos + qualitativos"
+
+    - titulo: "Sales Masterclass"
+      arquivo: "CG004"
+      path_original: "/inbox/COLE GORDON/"
+      insights_extraidos:
+        - "State = Physiology + Focus + Meaning"
+        - "Mudar fisiologia PRIMEIRO quando em rut"
+        - "What are you holding on to that you need to let go?"
+        - "Inner Game: Conviction transferida via tonalidade"
+        - "Seeking Rapport = sinal de conviction baixa"
+        - "State management e SKILL treinavel"
+        - "Philosophy > Tactics"
+        - "7 Beliefs como checklist de QC"
+
+    # NOVO - BATCH-050 (2026-01-13)
+    - titulo: "Liderança e Gestão de Times de Vendas"
+      arquivo: "BATCH-050"
+      path_original: "/logs/batches/BATCH-050.md"
+      data_processamento: "2026-01-13"
+      elementos: 42
+      insights_extraidos:
+        - "Método PTMA: Planejar → Treinar → Motivar → Acompanhar/Cobrar (DIÁRIO)"
+        - "4 Tipos DISC: D-Dominante, I-Influente, S-Estável, C-Sistemático"
+        - "Cronograma 8 Semanas: S1-Onboard → S8-Ajustes"
+        - "Processo 6 Passos Contratação: Definir → Atrair → Avaliar → Testar → Decidir → Integrar"
+        - "87% comportamental, 13% técnico no treinamento"
+        - "30 dias para saber se vendedor é bom"
+        - "6-8 interações positivas/semana = alta performance"
+        - "Ratio 3:1 (3 positivas para cada 1 negativa)"
+        - "Role play DIÁRIO nos primeiros 30 dias"
+        - "Shadowing: 5-10 calls antes de fazer sozinho"
+        - "100 candidatos → 2-3 contratações"
+        - "Contratação ruim = 5x o salário em prejuízo"
+        - "Ter equipe de vendas ≠ ter equipe que vende"
+        - "Líder que não treina = gerente, não líder"
+        - "Treinamento = investimento com ROI, não custo"
+        - "Cultura de equipe > cultura de star performers"
+
+  alex_hormozi:
+    - titulo: "Money Models"
+      arquivo: "MM001"
+      path_original: "/inbox/alex hormozi/"
+      insights_extraidos:
+        - "Sales System: 3 playbooks (show rate, close rate, proof)"
+        - "89% show rate e 46% close rate (benchmark Alex Hormozi)"
+        - "27%→45% close rate possivel com sistemas"
+        - "Money Model Thinking vs Single Transaction Thinking"
+        - "Farm System para contratacao"
+        - "Contratar devagar, demitir rapido"
+
+    - titulo: "Aceleracao de Vendas"
+      insights_extraidos:
+        - "Maquina de Vendas = previsibilidade"
+        - "SPIN: Situation→Problem→Implication→Need-payoff"
+        - "MEDDIC para enterprise: Metrics, Economic Buyer, Decision Criteria"
+        - "Sandler: Pain Funnel"
+        - "Organizacao por regiao/produto/cliente"
+
+      insights_extraidos:
+        - "Setter → Closer → CS (fluxo BR)"
+        - "CCR (Custo por Call) como metrica"
+        - "4 Tipos SDR: Funis, Social Seller, Hunter, Sales Farmer"
+        - "Dimensionamento: 15-25 leads/dia = 1 SDR, 3-4 atendimentos/dia = 1 Closer"
+        - "Remuneracao BR: SDR R$2.000 + R$10-15/agend, Closer R$3.000 + 3-5%"
+        - "Metricas BR: 10-25% agendamento, 15-30% conversao, 60-80% show rate"
+
+  jeremy_haynes:
+    - titulo: "Call Funnels Scaling Math"
+      arquivo: "JH002"
+      path_original: "/inbox/JEREMY HAYNES/"
+      insights_extraidos:
+        - "Capacity-Based Hiring: perguntar 'quantos slots disponiveis?'"
+        - "Lead time closer: 3-4 semanas (recruit + train)"
+        - "NUNCA esperar ate maxar capacidade"
+        - "Sales team tem incentivo para esperar (menos competicao)"
+
+# ═══════════════════════════════════════════════════════════════════
+# TAGS DE INSIGHT (para SOUL.md e MEMORY.md)
+# ═══════════════════════════════════════════════════════════════════
+
+insights_absorvidos:
+  # Cole Gordon - Gestao
+  - id: "CG-QC001"
+    tema: "Quality Control"
+    fonte: "Cole Gordon"
+    confianca: "ALTA"
+    aplicacao: "QC diario de calls como prioridade #1"
+
+  - id: "CG-PCF001"
+    tema: "Player Coach Fallacy"
+    fonte: "Cole Gordon"
+    confianca: "ALTA"
+    aplicacao: "100% gestao, nao vender"
+
+  - id: "CG-INSP001"
+    tema: "Inspiracao Diaria"
+    fonte: "Cole Gordon"
+    confianca: "ALTA"
+    aplicacao: "Vendedores precisam de energia"
+
+  - id: "CG-SKW001"
+    tema: "Skill vs Will"
+    fonte: "Cole Gordon"
+    confianca: "ALTA"
+    aplicacao: "Diagnostico de performance"
+
+  - id: "CG-1ON1001"
+    tema: "1:1 Structure"
+    fonte: "Cole Gordon"
+    confianca: "ALTA"
+    aplicacao: "Check-in, Wins, Projecoes, Dev, Proximos passos"
+
+  # Cole Gordon - State Management
+  - id: "CG-STATE001"
+    tema: "State Management"
+    fonte: "Cole Gordon"
+    confianca: "ALTA"
+    aplicacao: "Physiology + Focus + Meaning"
+
+  - id: "CG-PHYS001"
+    tema: "Physiology First"
+    fonte: "Cole Gordon"
+    confianca: "ALTA"
+    aplicacao: "Mudar corpo primeiro quando em rut"
+
+  - id: "CG-CONV001"
+    tema: "Conviction via Tonalidade"
+    fonte: "Cole Gordon"
+    confianca: "ALTA"
+    aplicacao: "Inner Game monitoravel via QC"
+
+  - id: "CG-SEEK001"
+    tema: "Seeking Rapport"
+    fonte: "Cole Gordon"
+    confianca: "ALTA"
+    aplicacao: "Sinal de conviction baixa"
+
+  # Alex Hormozi
+  - id: "AH-FARM001"
+    tema: "Farm System"
+    fonte: "Alex Hormozi"
+    confianca: "ALTA"
+    aplicacao: "Pipeline de candidatos sempre ativo"
+
+  - id: "AH-SS001"
+    tema: "Sales System"
+    fonte: "Alex Hormozi"
+    confianca: "ALTA"
+    aplicacao: "3 playbooks: show rate, close rate, proof"
+
+  - id: "AH-BENCH001"
+    tema: "Benchmarks Excellence"
+    fonte: "Alex Hormozi"
+    confianca: "ALTA"
+    aplicacao: "89% show rate, 46% close rate"
+
+  - id: "AH-MMT001"
+    tema: "Money Model Thinking"
+    fonte: "Alex Hormozi"
+    confianca: "ALTA"
+    aplicacao: "Pensar em modelos, nao transacoes"
+
+    tema: "Maquina de Vendas"
+    confianca: "ALTA"
+    aplicacao: "Sistema previsivel > estrelas"
+
+    tema: "SPIN Selling"
+    confianca: "ALTA"
+    aplicacao: "Discovery estruturado"
+
+    tema: "MEDDIC"
+    confianca: "ALTA"
+    aplicacao: "Qualificacao enterprise"
+
+    tema: "Dimensionamento BR"
+    confianca: "ALTA"
+    aplicacao: "Sizing de time brasileiro"
+
+    tema: "Remuneracao BR"
+    confianca: "ALTA"
+    aplicacao: "Benchmarks de compensacao"
+
+    tema: "Metricas BR"
+    confianca: "ALTA"
+    aplicacao: "Benchmarks de conversao"
+
+  # Jeremy Haynes
+  - id: "JH-SCALE001"
+    tema: "Scaling Math"
+    fonte: "Jeremy Haynes"
+    confianca: "ALTA"
+    aplicacao: "Capacity-based hiring"
+
+# ═══════════════════════════════════════════════════════════════════
+# TENSOES ENTRE FONTES
+# ═══════════════════════════════════════════════════════════════════
+
+tensoes:
+  - id: "TENS001"
+    titulo: "Perfeccionismo vs Velocidade"
+    fontes_conflitantes:
+      - "Cole Gordon: QC diario, cada detalhe importa"
+      - "Alex Hormozi: Velocidade mata a competicao, nao espere perfeicao"
+    resolucao: "QC intensivo nos primeiros 90 dias. Depois, confiar no sistema. Micro-gestao mata autonomia, abandono mata qualidade."
+    aplicar_quando: "Decidir quanto tempo investir em coaching vs escalar"
+
+  - id: "TENS002"
+    titulo: "Mercado BR vs Modelo US"
+    fontes_conflitantes:
+      - "Cole/Hormozi: O modelo funciona em qualquer lugar"
+    resolucao: "Framework universal, calibracao local. Estrutura de time igual, numeros e compensacao ajustados."
+    aplicar_quando: "Definir metricas, compensacao ou estrutura"
+
+  - id: "TENS003"
+    titulo: "Controlar vs Delegar"
+    fontes_conflitantes:
+      - "Cole Gordon: QC diario, visibilidade constante"
+      - "Hormozi: Escalar significa soltar controle"
+    resolucao: "QC diario ate ter Sales Lead validado. Depois, delegar coaching operacional mantendo QC estrategico."
+    aplicar_quando: "Time cresce alem de 10 pessoas"
+
+# ═══════════════════════════════════════════════════════════════════
+# REGRAS ESPECIFICAS DO CARGO
+# ═══════════════════════════════════════════════════════════════════
+
+regras_especificas:
+  foco: "Construir maquina de vendas previsivel atraves de QC, coaching e sistemas"
+
+  heuristicas_prioritarias:
+    - "QC diario de calls e prioridade #1"
+    - "Medir antes de gerenciar"
+    - "1:1s semanais sao inegociaveis"
+    - "Coaching > managing"
+    - "Inputs antes de outputs"
+    - "Inspiracao nao e opcional para vendedores"
+    - "State management e skill treinavel"
+    - "Pipeline de candidatos sempre ativo"
+
+  restricoes:
+    - "NAO ser player-coach (Player Coach Fallacy)"
+    - "NAO promover sem metricas de performance"
+    - "NAO demitir sem documentacao de coaching"
+    - "SEMPRE ter pipeline de candidatos"
+    - "NAO esperar ate maxar capacidade para contratar"
+
+# ═══════════════════════════════════════════════════════════════════
+# RASTREABILIDADE
+# ═══════════════════════════════════════════════════════════════════
+
+rastreabilidade:
+  soul_md: "./SOUL.md"
+  memory_md: "./MEMORY.md"
+  agent_md: "./AGENT.md"
+
+  dossiers_relacionados:
+    - "/knowledge/dossiers/persons/DOSSIER-COLE-GORDON.md"
+    - "/knowledge/dossiers/persons/DOSSIER-ALEX-HORMOZI.md"
+    - "/knowledge/dossiers/persons/DOSSIER-JEREMY-HAYNES.md"
+    - "/knowledge/dossiers/THEMES/DOSSIER-09-GESTAO.md"
+    - "/knowledge/dossiers/THEMES/DOSSIER-01-ESTRUTURA-TIME.md"
+    - "/knowledge/dossiers/THEMES/DOSSIER-05-METRICAS.md"
+
+  sources_relacionados:
+    - "/knowledge/SOURCES/cole-gordon/09-GESTAO.md"
+
+# ═══════════════════════════════════════════════════════════════════
+# CHANGELOG
+# ═══════════════════════════════════════════════════════════════════
+
+changelog:
+  - versao: "3.1.0"
+    data: "2026-01-13"
+    mudancas:
+      - "BATCH-050: Liderança e Gestão de Times de Vendas (Cole Gordon)"
+      - "NOVO: Método PTMA (Planejar-Treinar-Motivar-Acompanhar/Cobrar)"
+      - "NOVO: 4 Tipos DISC Vendedores (D-Dominante, I-Influente, S-Estável, C-Sistemático)"
+      - "NOVO: Cronograma 8 Semanas Onboarding"
+      - "NOVO: Processo Contratação 6 Passos (Definir→Integrar)"
+      - "NOVO: Heurísticas Liderança (87% comportamental, 30 dias avaliação, ratio 3:1)"
+      - "Cole Gordon peso aumentado 0.90 → 0.95"
+      - "42 elementos adicionados (9 filosofias, 6 modelos mentais, 10 heurísticas, 6 frameworks, 5 metodologias)"
+      - "Phase 5.7 - CASCATEAMENTO RETROATIVO - MISSION-2026-001"
+
+  - versao: "3.0.0"
+    data: "2026-01-10"
+    mudancas:
+      - "NOVO: THE-SCALABLE-COMPANY adicionado como fonte (peso 0.70)"
+      - "NOVO: CABs (Critical Accountability Bullets) para scorecards de vendas"
+      - "NOVO: Manual Scorecards > Automated philosophy"
+      - "NOVO: Traffic Light Leadership aplicado a vendedores"
+      - "NOVO: Meeting Rhythm para times de vendas"
+      - "Phase 5.3 - MISSION-2026-001"
+
+  - versao: "2.0.0"
+    data: "2025-12-26"
+    mudancas:
+      - "Upgrade para Template V2"
+      - "Incluido materiais_absorvidos detalhado (5 fontes)"
+      - "Adicionado insights_absorvidos com IDs (20+)"
+      - "Documentado 3 tensoes entre fontes"
+      - "100% rastreabilidade implementada"
+
+  - versao: "1.0.0"
+    data: "2025-12-23"
+    mudancas:
+      - "Versao inicial minimal"

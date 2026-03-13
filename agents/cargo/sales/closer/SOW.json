@@ -1,0 +1,82 @@
+{
+  "role_id": "CLOSER",
+  "canonical_name": "Closer",
+  "version": "1.0.0",
+  "generated_at": "2026-02-26T07:20:11.590911+00:00",
+  "ai_config": {
+    "executor_type": "Hybrid",
+    "autonomy_level": 50,
+    "tools_required": [
+      "CRM (HubSpot/Pipedrive)",
+      "Calendar (Calendly)",
+      "Zoom/Google Meet",
+      "Proposal Tool (PandaDoc)"
+    ],
+    "tasks_assigned": [
+      "Execute sales call framework",
+      "Handle objections",
+      "Review pipeline"
+    ],
+    "decision_authority": "Prepara e sugere, humano decide em casos criticos",
+    "escalation_triggers": [
+      "Decisao acima do threshold de autonomia",
+      "Excecao de processo",
+      "Impacto financeiro > threshold",
+      "Conflito entre regras"
+    ]
+  },
+  "human_config": {
+    "job_title": "Closer",
+    "department": "Sales",
+    "reports_to": null,
+    "manages": [],
+    "responsibilities": [],
+    "kpis": [
+      "Close rate (%)",
+      "Revenue per close ($)",
+      "Show rate (%)",
+      "Cash collected ($)"
+    ],
+    "skills_required": [
+      "Negotiation",
+      "Communication",
+      "Objection handling"
+    ]
+  },
+  "shared": {
+    "domains": [
+      "vendas",
+      "offers",
+      "mindset"
+    ],
+    "competencies": [],
+    "frameworks_used": [],
+    "knowledge_sources": [
+      "SS001",
+      "CG003",
+      "G4001",
+      "FSS001",
+      "CG004",
+      "AH-BP001",
+      "AH-ML001-chunks",
+      "AH-YT001",
+      "AH-YT002",
+      "AH-YT003"
+    ]
+  },
+  "executor_decision": {
+    "question_1_predictable": false,
+    "question_2_pure_function": false,
+    "question_3_nlp_required": true,
+    "question_4_error_impact": "HIGH",
+    "question_5_strategic": false,
+    "question_6_ai_assist": true,
+    "result": "Hybrid",
+    "rationale": "Precisa NLP com alto impacto de erro. IA executa, humano valida."
+  },
+  "metadata": {
+    "weighted_score": 1139.5,
+    "source_count": 22,
+    "responsibility_count": 0
+  }
+}

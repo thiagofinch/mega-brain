@@ -1,0 +1,61 @@
+{
+  "role_id": "PAID-MEDIA-SPECIALIST",
+  "canonical_name": "Paid Media Specialist",
+  "version": "1.0.0",
+  "generated_at": "2026-02-26T07:20:11.595098+00:00",
+  "ai_config": {
+    "executor_type": "Hybrid",
+    "autonomy_level": 50,
+    "tools_required": [],
+    "tasks_assigned": [
+      "Manage ad campaigns",
+      "Optimize ROAS",
+      "Scale winning ads"
+    ],
+    "decision_authority": "Prepara e sugere, humano decide em casos criticos",
+    "escalation_triggers": [
+      "Decisao acima do threshold de autonomia",
+      "Excecao de processo",
+      "Impacto financeiro > threshold",
+      "Conflito entre regras"
+    ]
+  },
+  "human_config": {
+    "job_title": "Paid Media Specialist",
+    "department": "General",
+    "reports_to": null,
+    "manages": [],
+    "responsibilities": [],
+    "kpis": [
+      "ROAS",
+      "CPA ($)",
+      "Ad spend managed ($)",
+      "Conversion rate (%)"
+    ],
+    "skills_required": []
+  },
+  "shared": {
+    "domains": [],
+    "competencies": [],
+    "frameworks_used": [],
+    "knowledge_sources": [
+      "AH-YT002",
+      "CG-SM001"
+    ]
+  },
+  "executor_decision": {
+    "question_1_predictable": false,
+    "question_2_pure_function": false,
+    "question_3_nlp_required": false,
+    "question_4_error_impact": "MEDIUM",
+    "question_5_strategic": false,
+    "question_6_ai_assist": true,
+    "result": "Hybrid",
+    "rationale": "Classificacao por dominio primario (geral)."
+  },
+  "metadata": {
+    "weighted_score": 15.0,
+    "source_count": 2,
+    "responsibility_count": 0
+  }
+}

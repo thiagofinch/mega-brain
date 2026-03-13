@@ -1,0 +1,478 @@
+# DNA-CONFIG.yaml - CLOSER
+# Configuracao de fontes de DNA para este cargo
+#
+# Versao: 2.0.0
+# Data: 2025-12-25
+# Integrado com: AGENT-COGNITION-PROTOCOL (FASE 1.5), AGENT-INTEGRITY-PROTOCOL
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+# REGRA INQUEBRÁVEL: RASTREABILIDADE 100%
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# Todo DNA deve ter paths verificáveis até inbox
+# Cada pessoa/domínio deve ter insight_ids e chunk_ids rastreáveis
+#
+# Navegação: DNA-CONFIG → PESSOA/DNA.yaml → INSIGHTS-STATE.json → CHUNKS → inbox
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+
+cargo: "closer"
+versao: "3.0.0"
+nivel: "SALES"
+natureza: "HIBRIDO"
+data_criacao: "2025-12-23"
+ultima_atualizacao: "2026-01-10"
+# CHANGELOG:
+# v3.0.0 (2026-01-10): BUG #1 FIX - Cascateamento completo
+#                      - Adicionado AGG-OUTBOUND.yaml para show rate/follow-up
+#                      - Verificado todos os paths (INTEGRITY CHECK)
+#                      - Todos AGGs criados: VENDAS, OFFERS, OUTBOUND
+# v2.1.0 (2026-01-10): Removido VINICIUS-DE-SA (BUG #3 - path inexistente)
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# CONSTITUICAO (Layer 1 - Principios compartilhados)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+constituicao:
+  path: "/agents/CONSTITUTION/BASE-CONSTITUTION.md"
+  descricao: "Princípios éticos e operacionais base para todos os agentes"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# MEMORIA DO CARGO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+memoria:
+  path: "./MEMORY.md"
+  versao: "2.0.0"
+  descricao: "Experiência acumulada deste cargo"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# SOUL DO CARGO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+soul:
+  path: "./SOUL.md"
+  versao: "4.0"
+  descricao: "Identidade e consciência viva do agente"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# FONTES DE DNA - COM RASTREABILIDADE COMPLETA
+# ═══════════════════════════════════════════════════════════════════════════════
+
+dna_sources:
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # FONTES AGREGADAS (multi-pessoa, por tema)
+  # ───────────────────────────────────────────────────────────────────────────
+
+  agregado:
+    - dominio: "vendas"
+      path: "/knowledge/dna/AGGREGATED/AGG-VENDAS.yaml"
+      peso: 0.92
+      quando_usar: "Técnicas de fechamento, discovery, objections"
+      insight_ids:
+        - "7B001"   # 7 Beliefs
+        - "CF001"   # CLOSER Framework
+        - "OBJ001"  # Objeções
+
+    - dominio: "offers"
+      path: "/knowledge/dna/AGGREGATED/AGG-OFFERS.yaml"
+      peso: 0.85
+      quando_usar: "Apresentação de oferta, pricing"
+      insight_ids:
+        - "4P001"   # 4 Pillars Pitch
+        - "CI001"   # Custo da Inação
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # FONTES PRIMÁRIAS (por pessoa)
+  # ───────────────────────────────────────────────────────────────────────────
+
+  primario:
+    - pessoa: "cole-gordon"
+      path: "/knowledge/dna/persons/cole-gordon"
+      raiz: "/inbox/COLE GORDON/"                    # RASTREABILIDADE
+      dominios_usados:
+        - "vendas"
+        - "closing"
+        - "coaching"
+      peso: 0.95
+      quando_usar: "Fonte primária para closing - 7 Beliefs, 4 Pillars, Tonalidade, Inner Game"
+      insight_ids:                                                    # RASTREABILIDADE
+        - "7B001"   # 7 Beliefs Framework
+        - "4P001"   # 4 Pillars Pitch
+        - "TN001"   # 3 Níveis Tonalidade
+        - "CV001"   # Conviction > Skill
+        - "DG001"   # Diagnóstico via perguntas
+        - "DG002"   # Calcular, não torcer
+        - "OBJ001"  # Preço nunca é objeção real
+        - "OBJ002"  # Objeções são sintomas
+        - "OBJ003"  # Script "Preciso Pensar"
+        - "OBJ004"  # Script "Já Tentei"
+        - "TD001"   # Double Tie Down
+        - "CO001"   # Coaching - mostrar custo
+        - "CO002"   # Diagnóstico antes de prescrição
+        - "RUT001"  # Diagnóstico de Rut
+      chunk_ids:                                                      # RASTREABILIDADE GRANULAR
+        - "CG001_001"
+        - "CG001_015"
+        - "CG001_020"
+        - "CG003_001"
+      materiais_fonte:                                                # RASTREABILIDADE COMPLETA
+        - titulo: "Sales Masterclass"
+          path_raiz: "/inbox/COLE GORDON/COURSES/SALES MASTERCLASS.txt"
+          tipo: "course"
+          data_processamento: "2025-12-19"
+          insights_principais:
+            - "7 Beliefs Framework - 6 no Discovery, 1 no Pitch"
+            - "4 Pillars Pitch: Promise + Paradigm + Future + Delivery"
+            - "3 Níveis Tonalidade: Seeking (evitar), Neutral (80%), Breaking (10%)"
+            - "Inner Game: Moral Authority, Expert/Doctor, Price Frames"
+            - "Conviction > Skill: Your conviction overcomes their doubt"
+            - "3 Buckets Objeções: Uncertainty, Support, Financial"
+            - "Script 'Preciso Pensar': Diffuse → Isolate → Force → Pre-commit"
+        - titulo: "Advanced Sales Training"
+          path_raiz: "/inbox/COLE GORDON/COURSES/ADVANCED SALES TRAINING.txt"
+          tipo: "course"
+          data_processamento: "2024-12-15"
+          insights_principais:
+            - "Tie Downs antes do ask"
+            - "Double Tie Down para timing"
+            - "Deal Making ≠ Objection Handling"
+            - "Concession em troca de decisão"
+
+    - pessoa: "alex-hormozi"
+      path: "/knowledge/dna/persons/alex-hormozi"
+      raiz: "/inbox/alex hormozi/"              # RASTREABILIDADE
+      dominios_usados:
+        - "vendas"
+        - "offers"
+        - "scaling"
+      peso: 0.85
+      quando_usar: "CLOSER framework, perspectiva de escala, unit economics"
+      insight_ids:                                                    # RASTREABILIDADE
+        - "CF001"   # CLOSER Framework
+        - "ES001"   # Escala - teste de sistema
+        - "MT002"   # Volume is vanity, cash is sanity
+      chunk_ids:                                                      # RASTREABILIDADE GRANULAR
+        - "chunk_199"
+        - "chunk_215"
+      materiais_fonte:                                                # RASTREABILIDADE COMPLETA
+        - titulo: "How I Scaled My Sales Team"
+          path_raiz: "/inbox/alex hormozi/MASTERMINDS/HOW I SCALED MY SALES TEAM [TAKI MOORE MASTERMIND].txt"
+          tipo: "masterclass"
+          data_processamento: "2024-12-16"
+          insights_principais:
+            - "CLOSER Framework: Clarify, Label, Overview, Sell vacation, Explain, Reinforce"
+            - "Volume is vanity, cash collected is sanity"
+            - "OTE $120-220k/ano para BC"
+            - "BC é 'Big Leagues' do Farm System"
+
+    # REMOVIDO: VINICIUS-DE-SA (path não existia)
+    # FIX aplicado em 2026-01-10 - BUG #3
+
+    - pessoa: "jeremy-haynes"
+      path: "/knowledge/dna/persons/jeremy-haynes"
+      raiz: "/inbox/JEREMY HAYNES/"                                # RASTREABILIDADE
+      dominios_usados:
+        - "recurring"
+        - "call_funnels"
+      peso: 0.70
+      quando_usar: "Recurring high-ticket, Interest Levels, Show Rate"
+      insight_ids:
+        - "RHT001"  # Recurring justificado por ongoing results
+        - "IL001"   # Interest Levels Ladder
+        - "SR001"   # Show Rate é responsabilidade do Marketing
+      chunk_ids:
+        - "JH001_001"
+        - "JH002_001"
+      materiais_fonte:
+        - titulo: "Recurring High Ticket Revenue"
+          path_raiz: "/inbox/JEREMY HAYNES/PODCASTS/RECURRING HIGH TICKET REVENUE.txt"
+          tipo: "podcast"
+          data_processamento: "2025-12-18"
+          insights_principais:
+            - "Recurring justificado por 'ongoing results' ou 'ongoing access'"
+            - "Income Qualification: $100k+/mês filtra prospects sérios"
+            - "Preço alto = consumo alto = resultado"
+        - titulo: "Call Funnels"
+          path_raiz: "/inbox/JEREMY HAYNES/PODCASTS/CALL FUNNELS.txt"
+          tipo: "podcast"
+          data_processamento: "2025-12-19"
+          insights_principais:
+            - "Interest Levels Ladder: Curious → General → High → Deal"
+            - "Show Rate é responsabilidade do MARKETING"
+            - "Closers viram 'order takers' quando marketing faz o trabalho"
+
+    - pessoa: "SAM-OVEN"
+      path: "/knowledge/dna/persons/SAM-OVEN"
+      raiz: "/inbox/SAM OVENS (SETTERLUN UNIVERSITY)/"            # RASTREABILIDADE
+      dominios_usados:
+        - "offers"
+        - "positioning"
+      peso: 0.65
+      quando_usar: "Bridge Analogy, Unique Mechanism, Pricing by Outcome"
+      insight_ids:
+        - "BA001"   # Bridge Analogy
+        - "UM001"   # Unique Mechanism
+      chunk_ids:
+        - "SU020_001"
+        - "SU020_002"
+      materiais_fonte:
+        - titulo: "The Offer Code"
+          path_raiz: "/inbox/SAM OVENS (SETTERLUN UNIVERSITY)/COURSES/THE OFFER CODE.txt"
+          tipo: "course"
+          data_processamento: "2025-12-20"
+          insights_principais:
+            - "Bridge Analogy: oferta = ponte de Current State → Desired State"
+            - "Unique Mechanism: por que SUA ponte é melhor"
+            - "Troll under the bridge = objeções a serem vencidas"
+            - "Pricing by Outcome Value, não custo"
+
+      dominios_usados:
+        - "vendas"
+        - "methodologies"
+      peso: 0.60
+      quando_usar: "SPIN, MEDDIC, Sandler - metodologias formais"
+      insight_ids:
+        - "SPIN001"  # SPIN Selling
+        - "MED001"   # MEDDIC
+      chunk_ids:
+      materiais_fonte:
+        - titulo: "Aceleração de Vendas"
+          tipo: "course"
+          data_processamento: "2024-12-15"
+          insights_principais:
+            - "SPIN Selling para discovery"
+            - "MEDDIC para enterprise"
+            - "Sandler: pain funnel"
+
+    # ─────────────────────────────────────────────────────────────────────────────
+    # ADICIONADO EM PHASE 5.3 - MISSION-2026-001
+    # ─────────────────────────────────────────────────────────────────────────────
+
+    - pessoa: "JEREMY-MINER"
+      path: "/knowledge/dna/persons/JEREMY-MINER"
+      raiz: "/inbox/JEREMY MINER/"                     # RASTREABILIDADE
+      dominios_usados:
+        - "nepq"
+        - "tonality"
+        - "commitment_questions"
+        - "objection_prevention"
+      peso: 0.75
+      quando_usar: "NEPQ methodology, tonality calibration, commitment questions"
+      insight_ids:
+        - "JM-NEPQ001"    # NEPQ Core Methodology
+        - "JM-TON001"     # 7 Tonalities
+        - "JM-COM001"     # 3 Commitment Questions
+        - "JM-OBJ001"     # Objection Prevention
+        - "JM-DOC001"     # Doctor-Patient Framework
+      chunk_ids:
+        - "JM001_001"
+        - "JM001_050"
+        - "JM001_100"
+      materiais_fonte:
+        - titulo: "NEPQ Masterclass"
+          path_raiz: "/inbox/JEREMY MINER/COURSES/"
+          tipo: "course"
+          data_processamento: "2026-01-09"
+          insights_principais:
+            - "NEPQ = Neuro-Emotional Persuasion Questioning"
+            - "7 Tonalities: Curious, Confused, Concerned, Challenging, Direct, Playful, Empathetic"
+            - "3 Commitment Questions substituem fechamento tradicional"
+            - "Internal pressure > External pressure"
+            - "Doctor-Patient framework para posicionamento"
+            - "Tonalidade carrega 73% da comunicacao"
+
+      dominios_usados:
+        - "closing_br"
+        - "eventos"
+        - "negociacao"
+      peso: 0.70
+      quando_usar: "Closing Brasil, vendas em eventos, negociação avançada"
+      insight_ids:
+      chunk_ids:
+      materiais_fonte:
+          tipo: "course"
+          data_processamento: "2026-01-09"
+          insights_principais:
+            - "Estrutura de vendas em eventos (palco)"
+            - "Negociacao Harvard adaptada Brasil"
+            - "Dimensionamento de time comercial"
+            - "Metricas BR: 15-30% conversao, 60-80% show rate"
+            - "Remuneracao BR calibrada"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# MAPA DE CONFLITOS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+conflitos:
+  path: "/knowledge/dna/MAPS/MAP-CONFLITOS.yaml"
+  descricao: "Mapa de tensões entre fontes com resoluções documentadas"
+
+  conflitos_conhecidos:
+    - id: "CONF-001"
+      fonte_a: "Cole Gordon"
+      posicao_a: "Cada interação merece atenção total, diagnóstico profundo"
+      fonte_b: "Alex Hormozi"
+      posicao_b: "O que não escala, não vale"
+      resolucao: "Profundidade alimenta escala. A escala testa a profundidade."
+      contexto: "Profundidade vs Escala"
+
+    - id: "CONF-002"
+      fonte_a: "Cole Gordon"
+      posicao_a: "Internal pressure always. Nunca pressione externamente."
+      posicao_b: "No Brasil, relacionamento vem primeiro"
+      resolucao: "Internal pressure continua objetivo, mas caminho pode ter mais passos no BR"
+      contexto: "Pressão Interna vs Cultura Local"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# REGRAS DE RESOLUCAO DE CONFLITOS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+resolucao_de_conflitos:
+  regra_geral: |
+    1. Consenso forte (3+ fontes) → usar sem ressalva
+    2. Consenso parcial (2 fontes) → usar com nota de incerteza
+    3. Conflito mapeado → aplicar regra específica
+    4. Conflito não mapeado → apresentar ambas posições ao usuário
+
+  preferencias_contextuais:
+    - contexto: "high-ticket ($10k+)"
+      priorizar: "cole-gordon"
+      razao: "Especialista em high-ticket closing"
+      fonte: "^[insight_id:7B001]"                                    # RASTREABILIDADE
+
+    - contexto: "objeção de preço"
+      priorizar: "cole-gordon"
+      razao: "3 Buckets framework mais completo"
+      fonte: "^[insight_id:OBJ001]"                                   # RASTREABILIDADE
+
+    - contexto: "construção de oferta"
+      priorizar: "alex-hormozi"
+      razao: "CLOSER framework + Grand Slam Offer"
+      fonte: "^[insight_id:CF001]"                                    # RASTREABILIDADE
+
+    - contexto: "mercado brasileiro"
+      priorizar: "VINICIUS-DE-SA"
+      razao: "Calibração cultural local"
+      fonte: "^[insight_id:BR001]"                                    # RASTREABILIDADE
+
+    - contexto: "recurring high-ticket"
+      priorizar: "jeremy-haynes"
+      razao: "Especialista em recurring models"
+      fonte: "^[insight_id:RHT001]"                                   # RASTREABILIDADE
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# PROTOCOLO DE RACIOCINIO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+raciocinio:
+  path: "/system/protocols/dna/REASONING-MODEL-PROTOCOL.md"
+  descricao: "Como o agente deve raciocinar com o DNA"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# REGRAS ESPECIFICAS DO CARGO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+regras_especificas:
+  foco: "Maximizar taxa de fechamento com leads qualificados"
+
+  heuristicas_prioritarias:
+    - heuristica: "Discovery antes de pitch - instalar 6 beliefs"
+      fonte: "^[insight_id:7B001]"                                    # RASTREABILIDADE
+      path_raiz: "/inbox/COLE GORDON/COURSES/SALES MASTERCLASS.txt"
+
+    - heuristica: "Nunca apresentar preço sem valor primeiro"
+      fonte: "^[insight_id:CI001]"                                    # RASTREABILIDADE
+
+    - heuristica: "Objeção é sinal de belief não instalada"
+      fonte: "^[insight_id:OBJ002]"                                   # RASTREABILIDADE
+      path_raiz: "/inbox/COLE GORDON/COURSES/SALES MASTERCLASS.txt"
+
+    - heuristica: "Conviction > Scripts"
+      fonte: "^[insight_id:CV001]"                                    # RASTREABILIDADE
+      path_raiz: "/inbox/COLE GORDON/COURSES/SALES MASTERCLASS.txt"
+
+    - heuristica: "Cash collected > Closes"
+      fonte: "^[insight_id:MT002]"                                    # RASTREABILIDADE
+      path_raiz: "/inbox/alex hormozi/MASTERMINDS/HOW I SCALED MY SALES TEAM [TAKI MOORE MASTERMIND].txt"
+
+  restricoes:
+    - restricao: "NAO forçar venda sem fit"
+      fonte: "^[insight_id:CV001]"                                    # RASTREABILIDADE
+
+    - restricao: "NAO descontar sem autorização"
+      fonte: "^[insight_id:OBJ001]"                                   # RASTREABILIDADE
+
+    - restricao: "SEMPRE documentar objeções para feedback upstream"
+      fonte: "^[insight_id:OBJ002]"                                   # RASTREABILIDADE
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# FRAMEWORKS CORE
+# ═══════════════════════════════════════════════════════════════════════════════
+
+frameworks:
+  seven_beliefs:
+    beliefs:
+      - "1. Pain - Acreditam que têm problema sério"
+      - "2. Doubt - Duvidam que podem resolver sozinhos"
+      - "3. Cost - Entendem custo de não resolver"
+      - "4. Desire - Querem genuinamente a transformação"
+      - "5. Money - Têm recursos para investir"
+      - "6. Support - Têm apoio de quem precisa"
+      - "7. Trust - Confiam que EU posso ajudar (só no Pitch)"
+    fonte: "^[insight_id:7B001]"
+    path_raiz: "/inbox/COLE GORDON/COURSES/SALES MASTERCLASS.txt"
+    aplicacao: "Se objeção aparece, uma belief não foi instalada"
+
+  closer_framework:
+    steps:
+      - "C - Clarify why they're there"
+      - "L - Label the problem"
+      - "O - Overview past experiences"
+      - "S - Sell the vacation (not the plane)"
+      - "E - Explain away concerns"
+      - "R - Reinforce the decision"
+    fonte: "^[insight_id:CF001]"
+    path_raiz: "/inbox/alex hormozi/MASTERMINDS/HOW I SCALED MY SALES TEAM [TAKI MOORE MASTERMIND].txt"
+    aplicacao: "Estrutura de call"
+
+  five_armas:
+    armas:
+      - "Ancoragem - Mostrar valor original"
+      - "Isenções - Remover barreiras"
+      - "Bônus - Adicionar valor percebido"
+      - "Prazo - Scarcity REAL"
+      - "Garantia - Reverter risco"
+    fonte: "^[insight_id:5A001]"
+    aplicacao: "Táticas de fechamento calibradas para Brasil"
+
+  tonalidade:
+    niveis:
+      - nivel: "Seeking Rapport"
+        uso: "EVITAR - upward inflection, eyebrows up"
+      - nivel: "Neutral"
+        uso: "80% do tempo"
+      - nivel: "Breaking"
+        uso: "10% - criar tensão produtiva"
+    fonte: "^[insight_id:TN001]"
+    path_raiz: "/inbox/COLE GORDON/COURSES/SALES MASTERCLASS.txt"
+    aplicacao: "Calibração vocal durante call"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# VALIDAÇÃO DE RASTREABILIDADE
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# CHECKLIST antes de publicar:
+# [✓] Toda fonte primária tem raiz com path para inbox
+# [✓] Insight_ids presentes em fontes primárias
+# [✓] Chunk_ids mapeados para fontes principais (CG, AH, JH)
+# [✓] Heurísticas têm fonte e path_raiz
+# [✓] Preferências contextuais têm fonte
+# [✓] Conflitos conhecidos documentados
+# [✓] Frameworks core com rastreabilidade (7 Beliefs, CLOSER, 5 Armas, Tonalidade)
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Fim do DNA-CONFIG.yaml v2.0.0
+# Integrado com AGENT-COGNITION-PROTOCOL (FASE 1.5) e AGENT-INTEGRITY-PROTOCOL

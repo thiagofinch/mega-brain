@@ -1,0 +1,75 @@
+{
+  "role_id": "HR-DIRECTOR",
+  "canonical_name": "Hr Director",
+  "version": "1.0.0",
+  "generated_at": "2026-02-26T07:20:11.593834+00:00",
+  "ai_config": {
+    "executor_type": "Hybrid",
+    "autonomy_level": 50,
+    "tools_required": [
+      "Project Management (ClickUp)",
+      "Reporting Dashboard"
+    ],
+    "tasks_assigned": [],
+    "decision_authority": "Prepara e sugere, humano decide em casos criticos",
+    "escalation_triggers": [
+      "Decisao acima do threshold de autonomia",
+      "Excecao de processo",
+      "Impacto financeiro > threshold",
+      "Conflito entre regras"
+    ]
+  },
+  "human_config": {
+    "job_title": "Hr Director",
+    "department": "Human Resources",
+    "reports_to": null,
+    "manages": [],
+    "responsibilities": [],
+    "kpis": [
+      "Team target attainment (%)",
+      "Employee retention (%)",
+      "Ramp time (days)"
+    ],
+    "skills_required": [
+      "Leadership",
+      "Coaching",
+      "Performance management"
+    ]
+  },
+  "shared": {
+    "domains": [
+      "hiring",
+      "management",
+      "compensation",
+      "operations",
+      "scaling"
+    ],
+    "competencies": [],
+    "frameworks_used": [],
+    "knowledge_sources": [
+      "HR001",
+      "AH-HR001",
+      "UNK",
+      "AH-BP001",
+      "AH-YT002",
+      "AH-YT003",
+      "AH-YT012",
+      "RL001"
+    ]
+  },
+  "executor_decision": {
+    "question_1_predictable": false,
+    "question_2_pure_function": false,
+    "question_3_nlp_required": false,
+    "question_4_error_impact": "CRITICAL",
+    "question_5_strategic": true,
+    "question_6_ai_assist": true,
+    "result": "Hybrid",
+    "rationale": "Requer julgamento estrategico mas IA pode preparar e assistir."
+  },
+  "metadata": {
+    "weighted_score": 66.0,
+    "source_count": 8,
+    "responsibility_count": 0
+  }
+}

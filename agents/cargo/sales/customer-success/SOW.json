@@ -1,0 +1,75 @@
+{
+  "role_id": "CUSTOMER-SUCCESS",
+  "canonical_name": "Customer Success",
+  "version": "1.0.0",
+  "generated_at": "2026-02-26T07:20:11.593434+00:00",
+  "ai_config": {
+    "executor_type": "Hybrid",
+    "autonomy_level": 50,
+    "tools_required": [
+      "CRM (HubSpot/Pipedrive)",
+      "Calendar (Calendly)",
+      "Project Management (ClickUp)",
+      "Reporting Dashboard"
+    ],
+    "tasks_assigned": [],
+    "decision_authority": "Prepara e sugere, humano decide em casos criticos",
+    "escalation_triggers": [
+      "Decisao acima do threshold de autonomia",
+      "Excecao de processo",
+      "Impacto financeiro > threshold",
+      "Conflito entre regras"
+    ]
+  },
+  "human_config": {
+    "job_title": "Customer Success",
+    "department": "Sales",
+    "reports_to": null,
+    "manages": [],
+    "responsibilities": [],
+    "kpis": [
+      "Target attainment (%)",
+      "Tasks completed on time (%)"
+    ],
+    "skills_required": [
+      "Negotiation",
+      "Communication",
+      "Objection handling"
+    ]
+  },
+  "shared": {
+    "domains": [
+      "delivery",
+      "vendas",
+      "operations"
+    ],
+    "competencies": [],
+    "frameworks_used": [],
+    "knowledge_sources": [
+      "G4002",
+      "FSS001",
+      "AH-YT003",
+      "AH-YT007",
+      "AH-YT012",
+      "AH-YT017",
+      "CG-SM001",
+      "SS001",
+      "UNK"
+    ]
+  },
+  "executor_decision": {
+    "question_1_predictable": false,
+    "question_2_pure_function": false,
+    "question_3_nlp_required": true,
+    "question_4_error_impact": "HIGH",
+    "question_5_strategic": false,
+    "question_6_ai_assist": true,
+    "result": "Hybrid",
+    "rationale": "Precisa NLP com alto impacto de erro. IA executa, humano valida."
+  },
+  "metadata": {
+    "weighted_score": 95.0,
+    "source_count": 9,
+    "responsibility_count": 0
+  }
+}

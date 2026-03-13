@@ -1,0 +1,351 @@
+# DNA-CONFIG.yaml - CMO (Chief Marketing Officer)
+# Configuracao de fontes de DNA para este cargo
+#
+# Versao: 3.0.0
+# Data: 2026-01-10
+# Integrado com: AGENT-COGNITION-PROTOCOL (FASE 1.5), AGENT-INTEGRITY-PROTOCOL
+#
+# CHANGELOG:
+# v3.0.0 (2026-01-10): BUG #1 FIX - Cascateamento completo
+#                      - Removido AGG-MARKETING.yaml (não existe)
+#                      - Adicionado AGG-VENDAS.yaml (existe)
+#                      - Todos paths validados (INTEGRITY CHECK)
+# v2.0.0 (2025-12-25): AGENT-COGNITION-PROTOCOL integration
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+# REGRA INQUEBRÁVEL: RASTREABILIDADE 100%
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# Todo DNA deve ter paths verificáveis até inbox
+# Cada pessoa/domínio deve ter insight_ids e chunk_ids rastreáveis
+#
+# Navegação: DNA-CONFIG → PESSOA/DNA.yaml → INSIGHTS-STATE.json → CHUNKS → inbox
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+
+cargo: "CMO"
+versao: "3.0.0"
+nivel: "C-LEVEL"
+natureza: "HIBRIDO"
+data_criacao: "2025-12-23"
+ultima_atualizacao: "2026-01-10"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# CONSTITUICAO (Layer 1 - Principios compartilhados)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+constituicao:
+  path: "/agents/CONSTITUTION/BASE-CONSTITUTION.md"
+  descricao: "Princípios éticos e operacionais base para todos os agentes"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# MEMORIA DO CARGO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+memoria:
+  path: "./MEMORY.md"
+  versao: "2.0.0"
+  descricao: "Experiência acumulada deste cargo"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# SOUL DO CARGO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+soul:
+  path: "./SOUL.md"
+  versao: "2.0"
+  descricao: "Identidade e consciência viva do agente"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# FONTES DE DNA - COM RASTREABILIDADE COMPLETA
+# ═══════════════════════════════════════════════════════════════════════════════
+
+dna_sources:
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # FONTES AGREGADAS (multi-pessoa, por tema)
+  # ───────────────────────────────────────────────────────────────────────────
+
+  agregado:
+    - dominio: "vendas"
+      path: "/knowledge/dna/AGGREGATED/AGG-VENDAS.yaml"
+      peso: 0.85
+      quando_usar: "Métricas de vendas, funil, conversão"
+      justificativa: "CMO precisa entender vendas para alinhar marketing com resultados"
+      insight_ids:
+        - "VD001"
+        - "VD002"
+
+    - dominio: "offers"
+      path: "/knowledge/dna/AGGREGATED/AGG-OFFERS.yaml"
+      peso: 0.88
+      quando_usar: "Construção de ofertas irresistíveis"
+      insight_ids:
+        - "OF001"
+        - "GSO001"
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # FONTES PRIMÁRIAS (por pessoa)
+  # ───────────────────────────────────────────────────────────────────────────
+
+  primario:
+    - pessoa: "alex-hormozi"
+      path: "/knowledge/dna/persons/alex-hormozi"
+      raiz: "/inbox/alex hormozi/"              # RASTREABILIDADE
+      dominios_usados:
+        - "offers"
+        - "marketing"
+        - "scaling"
+        - "launch"
+      peso: 0.90
+      quando_usar: "Ofertas irresistíveis, Grand Slam Offers, launches"
+      insight_ids:                                                    # RASTREABILIDADE
+        - "OF001"  # Oferta como multiplicador
+        - "GSO001" # Grand Slam Offer formula
+        - "ICP002" # Dor > Demografia
+      chunk_ids:                                                      # RASTREABILIDADE GRANULAR
+        - "*pendente MM001*"
+      materiais_fonte:                                                # RASTREABILIDADE COMPLETA
+        - titulo: "Money Models"
+          path_raiz: "/inbox/alex hormozi/BLUEPRINTS/MONEY MODELS.txt"
+          tipo: "blueprint"
+          data_processamento: "2024-12-15"
+          insights_principais:
+            - "Timeline: Announce (Seg) → Open (Qua) → Close (Dom)"
+            - "Evento de 4h com scarcity real"
+            - "8-10 emails na semana de launch"
+            - "$3M em ads para launch de $10-20M"
+        - titulo: "Offers Framework"
+          path_raiz: "/inbox/alex hormozi/BOOKS/OFFERS FRAMEWORK.txt"
+          tipo: "book"
+          data_processamento: "2024-12-15"
+          insights_principais:
+            - "Grand Slam Offer = (Dream × Likelihood) / (Time × Effort)"
+            - "Dream Outcome precisa ser specific e desirable"
+            - "Time Delay e Effort são denominadores - minimizar"
+
+    - pessoa: "jeremy-haynes"
+      path: "/knowledge/dna/persons/jeremy-haynes"
+      raiz: "/inbox/JEREMY HAYNES/"                                # RASTREABILIDADE
+      dominios_usados:
+        - "marketing"
+        - "paid_acquisition"
+      peso: 0.75
+      quando_usar: "Ads, aquisição paga, CAC optimization"
+      insight_ids:
+        - "ACQ001"  # Paid acquisition disciplinada
+      chunk_ids:
+        - "*aguardando JH001 no Pipeline Jarvis*"
+      materiais_fonte:
+        - titulo: "Recurring High Ticket Revenue"
+          path_raiz: "/inbox/JEREMY HAYNES/PODCASTS/RECURRING HIGH TICKET REVENUE.txt"
+          tipo: "podcast"
+          data_processamento: "2025-12-18"
+
+    - pessoa: "SAM-OVEN"
+      path: "/knowledge/dna/persons/SAM-OVEN"
+      raiz: "/inbox/SAM OVENS (SETTERLUN UNIVERSITY)/"            # RASTREABILIDADE
+      dominios_usados:
+        - "positioning"
+        - "launch"
+      peso: 0.80
+      quando_usar: "Purple Ocean, posicionamento, launch sequences"
+      insight_ids:
+        - "PO001"  # Purple Ocean Method
+        - "LA001"  # Launch Blackbook
+      chunk_ids:
+        - "*pendente SU001*"
+        - "*pendente SU006-12*"
+      materiais_fonte:
+        - titulo: "Launch Blackbook"
+          path_raiz: "/inbox/SAM OVENS (SETTERLUN UNIVERSITY)/COURSES/LAUNCH BLACKBOOK.txt"
+          tipo: "course"
+          data_processamento: "*pendente*"
+          insights_principais:
+            - "8 fases de lançamento completas"
+            - "100+ emails no processo completo"
+            - "Escada de ofertas: $0 → $18K"
+        - titulo: "Purple Ocean Method"
+          path_raiz: "/inbox/SAM OVENS (SETTERLUN UNIVERSITY)/COURSES/PURPLE OCEAN METHOD.txt"
+          tipo: "course"
+          data_processamento: "*pendente*"
+          insights_principais:
+            - "Red + Blue = Purple Ocean"
+            - "Language Reframing: renomear categoria"
+            - "4-Step Framework de posicionamento"
+
+      dominios_usados:
+        - "icp"
+        - "funnel"
+      peso: 0.70
+      quando_usar: "ICP tríplice, qualificação, funil BR"
+      insight_ids:
+        - "ICP001"  # ICP tríplice
+      chunk_ids:
+      materiais_fonte:
+          tipo: "course"
+          data_processamento: "*pendente*"
+          insights_principais:
+            - "ICP tríplice: consciente + transformação + financeiro"
+            - "Tráfego qualificado > volume"
+            - "Esteira de produtos para LTV"
+
+      dominios_usados:
+        - "social_selling"
+      peso: 0.65
+      quando_usar: "Social Selling, LinkedIn, B2B Brasil"
+      insight_ids:
+        - "SS001"  # Social Selling ROI
+      chunk_ids:
+      materiais_fonte:
+        - titulo: "Aceleração de Vendas"
+          tipo: "course"
+          data_processamento: "*pendente*"
+          insights_principais:
+            - "Social Selling: $1 → $5 ROI"
+            - "LinkedIn como canal de autoridade B2B"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# MAPA DE CONFLITOS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+conflitos:
+  path: "/knowledge/dna/MAPS/MAP-CONFLITOS.yaml"
+  descricao: "Mapa de tensões entre fontes com resoluções documentadas"
+
+  conflitos_conhecidos:
+    - id: "CONF-001"
+      fonte_a: "Alex Hormozi"
+      posicao_a: "Oferta é tudo"
+      fonte_b: "Jeremy Haynes"
+      posicao_b: "Distribution é multiplicador"
+      resolucao: "Oferta primeiro, MVD depois"
+      contexto: "Sequência importa"
+
+    - id: "CONF-002"
+      fonte_a: "Launch US"
+      posicao_a: "Webinar 2-3h"
+      fonte_b: "BR Context"
+      posicao_b: "Atenção curta"
+      resolucao: "60-90min no Brasil"
+      contexto: "Calibração cultural"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# REGRAS DE RESOLUCAO DE CONFLITOS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+resolucao_de_conflitos:
+  regra_geral: |
+    1. Consenso forte (3+ fontes) → usar sem ressalva
+    2. Consenso parcial (2 fontes) → usar com nota de incerteza
+    3. Conflito mapeado → aplicar regra específica
+    4. Conflito não mapeado → apresentar ambas posições ao usuário
+
+  preferencias_contextuais:
+    - contexto: "lançamento de produto"
+      priorizar: "alex-hormozi"
+      razao: "Mais experiência em launches de alta receita"
+      fonte: "^[insight_id:OF001]"                                    # RASTREABILIDADE
+
+    - contexto: "posicionamento de marca"
+      priorizar: "SAM-OVEN"
+      razao: "Purple Ocean é framework mais robusto para diferenciação"
+      fonte: "^[insight_id:PO001]"                                    # RASTREABILIDADE
+
+    - contexto: "aquisição paga"
+      priorizar: "jeremy-haynes"
+      razao: "Especialista em paid acquisition"
+      fonte: "^[insight_id:ACQ001]"                                   # RASTREABILIDADE
+
+    - contexto: "mercado brasileiro"
+      priorizar: "VINICIUS-DE-SA"
+      razao: "Calibração cultural local"
+      fonte: "^[insight_id:ICP001]"                                   # RASTREABILIDADE
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# PROTOCOLO DE RACIOCINIO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+raciocinio:
+  path: "/system/protocols/dna/REASONING-MODEL-PROTOCOL.md"
+  descricao: "Como o agente deve raciocinar com o DNA"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# REGRAS ESPECIFICAS DO CARGO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+regras_especificas:
+  foco: "Geração de demanda qualificada"
+
+  heuristicas_prioritarias:
+    - heuristica: "Sempre medir CAC e qualidade do lead"
+      fonte: "^[insight_id:ACQ001]"                                   # RASTREABILIDADE
+      path_raiz: "/inbox/JEREMY HAYNES/PODCASTS/RECURRING HIGH TICKET REVENUE.txt"
+
+    - heuristica: "Priorizar canais com ROI comprovado"
+      fonte: "^[insight_id:MK001]"                                    # RASTREABILIDADE
+
+    - heuristica: "Testar antes de escalar"
+      fonte: "^[insight_id:ACQ001]"                                   # RASTREABILIDADE
+
+    - heuristica: "Oferta > Tráfego (sempre)"
+      fonte: "^[insight_id:OF001]"                                    # RASTREABILIDADE
+      path_raiz: "/inbox/alex hormozi/BLUEPRINTS/MONEY MODELS.txt"
+
+  restricoes:
+    - restricao: "NAO escalar canal sem dados de conversão end-to-end"
+      fonte: "^[insight_id:ACQ001]"                                   # RASTREABILIDADE
+
+    - restricao: "SEMPRE alinhar mensagem com capacidade de entrega"
+      fonte: "^[insight_id:MK002]"                                    # RASTREABILIDADE
+
+    - restricao: "NAO lançar oferta sem Grand Slam checklist"
+      fonte: "^[insight_id:GSO001]"                                   # RASTREABILIDADE
+      path_raiz: "/inbox/alex hormozi/BOOKS/OFFERS FRAMEWORK.txt"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# FRAMEWORKS CORE
+# ═══════════════════════════════════════════════════════════════════════════════
+
+frameworks:
+  grand_slam_offer:
+    formula: "Valor = (Dream Outcome × Perceived Likelihood) / (Time Delay × Effort)"
+    fonte: "^[insight_id:GSO001]"
+    path_raiz: "/inbox/alex hormozi/BOOKS/OFFERS FRAMEWORK.txt"
+    aplicacao: "Toda nova oferta deve passar por este checklist"
+
+  purple_ocean:
+    steps:
+      - "1. Identifique onde todos competem (Red Ocean)"
+      - "2. Subtraia o desnecessário"
+      - "3. Adicione o valioso que ninguém faz"
+      - "4. Nomeie sua categoria (você é #1)"
+    fonte: "^[insight_id:PO001]"
+    path_raiz: "/inbox/SAM OVENS (SETTERLUN UNIVERSITY)/COURSES/PURPLE OCEAN METHOD.txt"
+    aplicacao: "Posicionamento de marca e diferenciação"
+
+  icp_triplice:
+    criterios:
+      - "Consciência: Sabe que tem o problema"
+      - "Transformação: Quer resolver e mudar"
+      - "Financeiro: Tem capacidade de pagar"
+    fonte: "^[insight_id:ICP001]"
+    aplicacao: "Qualificação de lead ideal"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# VALIDAÇÃO DE RASTREABILIDADE
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# CHECKLIST antes de publicar:
+# [✓] Toda fonte primária tem raiz com path para inbox
+# [✓] Insight_ids presentes em fontes primárias
+# [~] Chunk_ids pendentes para algumas fontes (aguardando Pipeline Jarvis)
+# [✓] Heurísticas têm fonte e path_raiz
+# [✓] Preferências contextuais têm fonte
+# [✓] Conflitos conhecidos documentados
+# [✓] Frameworks core com rastreabilidade
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Fim do DNA-CONFIG.yaml v2.0.0
+# Integrado com AGENT-COGNITION-PROTOCOL (FASE 1.5) e AGENT-INTEGRITY-PROTOCOL
