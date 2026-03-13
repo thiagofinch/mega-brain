@@ -1,0 +1,72 @@
+# DNA-CONFIG — Liam Ottley
+# AI Operating Systems pioneer, Morningside AI founder
+# Version: 1.0.0
+# Last Updated: 2026-03-12
+
+person:
+  name: "Liam Ottley"
+  slug: "liam-ottley"
+  companies:
+    - "Morningside AI"
+    - "Personal Brand"
+    - "Education Business"
+    - "AI SaaS Product"
+  domains:
+    - ai-operating-systems
+    - ai-agent-workforces
+    - business-automation
+    - founder-productivity
+    - ai-consulting
+  location: "Cape Town, South Africa"
+  experience: "7 years business, 3 years AI-focused"
+
+dna_sources:
+  - id: LO-001
+    title: "The AI Operating System — What It Is and Why You Need One"
+    type: youtube
+    platform: YouTube
+    status: processed
+    date_processed: "2026-03-12"
+
+  - id: LO-002
+    title: "I Built an AI Workforce — Here's What Happened"
+    type: youtube
+    platform: YouTube
+    status: processed
+    date_processed: "2026-03-12"
+
+  - id: LO-003
+    title: "How I Made $1M in 7 Days Using AI"
+    type: youtube
+    platform: YouTube
+    status: processed
+    date_processed: "2026-03-12"
+
+dna_layers:
+  philosophies:
+    count: 7
+    file: "PHILOSOPHIES.yaml"
+  mental_models:
+    count: 5
+    file: "MENTAL-MODELS.yaml"
+  heuristics:
+    count: 8
+    file: "HEURISTICS.yaml"
+  frameworks:
+    count: 4
+    file: "FRAMEWORKS.yaml"
+  methodologies:
+    count: 3
+    file: "METHODOLOGIES.yaml"
+  total_elements: 27
+
+raiz:
+  inbox_path: "knowledge/external/inbox/liam-ottley/"
+  dna_path: "knowledge/external/dna/persons/liam-ottley/"
+  dossier_path: "knowledge/external/dossiers/persons/DOSSIER-LIAM-OTTLEY.md"
+
+metadata:
+  version: "1.0.0"
+  created: "2026-03-12"
+  last_updated: "2026-03-12"
+  extracted_by: "Pickle Rick (The Resourceful Builder)"

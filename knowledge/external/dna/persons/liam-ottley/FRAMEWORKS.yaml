@@ -1,0 +1,112 @@
+# L4 FRAMEWORKS — Liam Ottley
+# Structured methodologies and processes for AIOS and AI Workforces
+# Version: 1.0.0
+
+frameworks:
+  - id: FW-LO-001
+    name: "5-Layer AIOS Architecture"
+    description: >
+      The complete architecture for building an AI Operating System, organized as
+      5 concentric layers that wrap around an existing business model:
+
+      LAYER 1 — CONTEXT: The system understands what the business IS. Business rules,
+      standard operating procedures, team structure, product details, customer profiles,
+      brand voice. Implemented via CLAUDE.md, context files, and structured documentation.
+      Without this layer, the AI is generic and useless.
+
+      LAYER 2 — DATA: The system connects to all information sources. CRM, email,
+      calendar, analytics, financial data, communication channels. Implemented via
+      MCP servers, API integrations, and data pipelines. Without this layer, the AI
+      is blind to reality.
+
+      LAYER 3 — INTELLIGENCE: The system makes sense of the data. Pattern recognition,
+      anomaly detection, insight generation, trend analysis, knowledge synthesis.
+      Implemented via RAG pipelines, knowledge graphs, and analytical agents. Without
+      this layer, the AI has data but no understanding.
+
+      LAYER 4 — AUTOMATE: The system acts on intelligence. Task execution, workflow
+      automation, decision-making, communication handling, scheduling. Implemented via
+      skills, cron jobs, webhooks, and agent actions. Without this layer, the AI
+      understands but cannot act.
+
+      LAYER 5 — BUILD: The system creates new capabilities. New automations, new
+      integrations, new agents, new products. This is the meta-layer where the AIOS
+      improves itself. Implemented via development workflows, epic cycles, and
+      self-improvement loops. Without this layer, the system is static.
+    source: LO-001
+    quote: "5 layers: Context, Data, Intelligence, Automate, Build. Each one wraps tighter around your business."
+
+  - id: FW-LO-002
+    name: "AI Workforce Architecture"
+    description: >
+      A framework for replacing traditional departments with digital AI teams.
+      Each department becomes a team of specialized AI agents that coordinate,
+      hand off work, and operate autonomously:
+
+      MARKETING TEAM: Content creator agent, distribution agent, analytics agent,
+      SEO agent, social media manager agent. Produces content calendar, distributes
+      across channels, measures performance, optimizes.
+
+      SALES TEAM: Lead qualifier agent, outreach agent, follow-up agent, proposal
+      agent. Qualifies inbound, conducts outreach sequences, manages pipeline.
+
+      OPERATIONS TEAM: Task router agent, scheduler agent, documentation agent,
+      quality assurance agent. Routes work, manages calendars, maintains SOPs.
+
+      CREATIVE TEAM: Design agent, copywriting agent, video editing agent, brand
+      consistency agent. Produces assets, maintains brand guidelines.
+
+      Each team has a coordinator agent that manages priorities, escalates to humans
+      when needed, and reports to the founder's daily brief.
+    source: LO-002
+    quote: "Digital teams per department. Marketing team, sales team, ops team, creative team. All AI."
+
+  - id: FW-LO-003
+    name: "Task Audit Matrix"
+    description: >
+      A structured framework for identifying which tasks to automate first:
+
+      STEP 1 — LIST: Write down every task you perform in a typical week. Include
+      recurring tasks, ad-hoc tasks, communication tasks, decision tasks. Be
+      exhaustive — most founders undercount by 40%.
+
+      STEP 2 — CATEGORIZE: For each task, assign an AI capability score:
+      YES = AI can do this fully today (no human needed)
+      PARTIALLY = AI can assist but needs human review/decision
+      NO = Requires human judgment, creativity, or relationship
+
+      STEP 3 — MEASURE BANDWIDTH: For each task, estimate weekly hours consumed.
+
+      STEP 4 — PRIORITIZE: Sort by (AI_capability=YES) AND (bandwidth=HIGH) first.
+      These are your highest-ROI automations. Then PARTIALLY+HIGH. Then YES+LOW.
+
+      STEP 5 — EXECUTE: Build automations starting from the top of the prioritized
+      list. Each automation reclaims bandwidth that compounds into subsequent builds.
+    source: LO-001
+    quote: "List every task. Can AI do it: yes, partially, no. Sort by time consumed. Automate from the top."
+
+  - id: FW-LO-004
+    name: "Claude Code AIOS Stack"
+    description: >
+      The specific technology stack Liam uses to implement his AIOS, centered on
+      Claude Code as the execution engine:
+
+      ENGINE: Claude Code — the AI reasoning and execution layer. Handles complex
+      multi-step tasks, code generation, file management, and agent coordination.
+
+      CONTEXT: CLAUDE.md and structured context files — business rules, SOPs, team
+      info, product details. Loaded at session start, referenced throughout.
+
+      DATA: MCP servers — connect to external systems (CRM, email, calendar, analytics,
+      databases). Each MCP server is a typed interface to an external data source.
+
+      SKILLS: Claude Code skills — reusable capabilities triggered by keywords or
+      commands. Each skill is a packaged automation (e.g., /daily-brief, /process-inbox).
+
+      CRON: Scheduled tasks — automated recurring actions. Cron triggers skills on
+      schedule (daily briefs, weekly reports, inbox processing).
+
+      MOBILE: Telegram bot — the mobile command interface. Send commands, receive
+      updates, approve decisions from phone. The away-from-desk bridge.
+    source: LO-001
+    quote: "Claude Code plus context files plus MCP integrations plus skills plus cron plus Telegram. That's the stack."

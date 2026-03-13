@@ -1,0 +1,112 @@
+# L5 METHODOLOGIES — Liam Ottley
+# Step-by-step implementations for AIOS, sprints, and AI workforces
+# Version: 1.0.0
+
+methodologies:
+  - id: MET-LO-001
+    name: "AIOS Implementation Sequence"
+    description: >
+      The complete step-by-step methodology for building an AI Operating System
+      from scratch. Seven sequential steps, each building on the previous:
+
+      STEP 1 — CONTEXT SETUP: Create comprehensive business context documents.
+      CLAUDE.md with business identity, team structure, product details, brand voice.
+      Operating procedures documented. Customer profiles defined. This takes 2-3 days
+      of focused documentation work. Do NOT skip or abbreviate.
+
+      STEP 2 — DATA INTEGRATION: Connect all business data sources via MCP servers
+      or API integrations. CRM, email, calendar, analytics, financial systems,
+      communication channels. Each connection = one more sense the AIOS has.
+      Target: every data source the founder checks daily is connected.
+
+      STEP 3 — INTELLIGENCE LAYER: Build the analytical and synthesis capabilities.
+      RAG pipeline for searching business knowledge. Knowledge graph for connecting
+      entities. Insight extraction from meetings, calls, and documents. The system
+      should be able to answer "what happened last week?" accurately.
+
+      STEP 4 — TASK AUDIT: Apply the Task Audit Matrix (FW-LO-003). List all tasks,
+      categorize by AI capability, prioritize by bandwidth impact. This produces
+      the automation roadmap — the ordered list of what to build.
+
+      STEP 5 — AUTOMATE LOOP: Build automations from the top of the prioritized list.
+      Each automation is a skill or cron job. Test each one. Measure bandwidth
+      reclaimed. Loop: build automation → test → deploy → measure → next automation.
+      Target: 60-70% automation within 30 days.
+
+      STEP 6 — MOBILE BRIDGE: Set up the away-from-desk interface. Telegram bot,
+      mobile notifications, approval workflows. The founder should be able to
+      manage the business from their phone. Test with a full day away from desk.
+
+      STEP 7 — BUILD PHASE: The AIOS is now operational. Use reclaimed bandwidth to
+      build new capabilities, enter new markets, or create productized versions of
+      your automations to sell. The system is self-improving from this point.
+    source: LO-001
+    quote: "Context, Data, Intelligence, Task Audit, Automate Loop, Mobile Bridge, Build. In that order."
+
+  - id: MET-LO-002
+    name: "7-Day Sprint Methodology"
+    description: >
+      The methodology Liam used to generate $1M NZD in 7 days, demonstrating
+      maximum AIOS leverage. Each day has a specific focus:
+
+      DAY 1-2 — RESEARCH: Use the AIOS intelligence layer to research the target
+      market, identify the offer, analyze competitors, and map the audience. The AI
+      workforce handles research tasks in parallel — market analysis, competitor
+      teardowns, audience profiling. Human role: strategic direction and final
+      offer design.
+
+      DAY 3-4 — CONTENT: AI content team produces all marketing assets. Sales page
+      copy, email sequences, social media content, video scripts, ad creative. The
+      founder provides creative direction; the AI workforce executes production.
+      Output: complete marketing stack ready to deploy.
+
+      DAY 5 — INFRASTRUCTURE: Set up delivery, payment, and fulfillment systems.
+      Landing pages, payment processors, onboarding sequences, access management.
+      AI handles configuration and testing; human handles vendor decisions and
+      account setup.
+
+      DAY 6 — DELIVER: Launch the offer. AI distribution agents push content across
+      channels. AI sales agents handle inbound inquiries and qualification. Human
+      handles high-touch sales conversations and closing.
+
+      DAY 7 — COLLECT: Process payments, onboard customers, collect feedback. AI
+      handles administrative tasks; human handles relationship management.
+
+      RESULT: $1M NZD collected in 7 days. This methodology is repeatable when
+      the AIOS is fully operational.
+    source: LO-003
+    quote: "Day 1-2 research, Day 3-4 content, Day 5 infrastructure, Day 6 deliver, Day 7 collect. $1M in 7 days."
+
+  - id: MET-LO-003
+    name: "AI Workforce Build Process"
+    description: >
+      The step-by-step process for building an AI workforce for a specific department,
+      which can also be sold as a service ($3K-$10K+ per build):
+
+      STEP 1 — DEFINE DEPARTMENT: Choose the target department (marketing, sales,
+      operations, creative, finance). Document its current responsibilities, workflows,
+      inputs/outputs, and success metrics. Interview the team if one exists.
+
+      STEP 2 — MAP AGENT ROLES: Break the department into individual roles. Each role
+      becomes an AI agent. For a marketing department: content creator, distributor,
+      analytics analyst, SEO specialist, social media manager. Define each agent's
+      scope, inputs, outputs, and decision authority.
+
+      STEP 3 — BUILD CORE AGENT: Start with the highest-impact agent in the department.
+      Build its context (what it knows), its skills (what it can do), and its triggers
+      (when it activates). Test thoroughly before moving to the next agent.
+
+      STEP 4 — ADD COORDINATION: Build the coordinator agent that manages the team.
+      It routes tasks between agents, manages priorities, escalates to humans when
+      needed, and produces status reports. The coordinator is the "manager" of the
+      digital team.
+
+      STEP 5 — TEST: Run the AI workforce alongside the human team (if one exists)
+      for 1-2 weeks. Compare outputs. Identify gaps. Adjust agent behaviors.
+
+      STEP 6 — PACKAGE AND SELL: Once the AI workforce is proven, package it as a
+      transferable module. Document the setup, create deployment instructions, and
+      sell to other businesses in the same industry. Pricing: $3K-$10K+ depending
+      on complexity and industry.
+    source: LO-002
+    quote: "Define the department. Map agent roles. Build the core agent. Add coordination. Test. Package and sell for $3K to $10K plus."
