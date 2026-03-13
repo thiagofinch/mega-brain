@@ -370,7 +370,7 @@ async function fetchPremiumContent(targetDir, token, spinner) {
 
   mkdirSync(join(targetDir, '.layer-sync'), { recursive: true });
 
-  const authUrl = `https://x-access-token:${token}@github.com/${process.env.MEGA_BRAIN_GH_ORG || 'mega-brain-ai'}/mega-brain-premium.git`;
+  const authUrl = `https://x-access-token:${token}@github.com/${process.env.MEGA_BRAIN_GH_ORG || 'thiagofinch'}/mega-brain-premium.git`;
 
   // --- CLONE ---
   if (!existsSync(join(tempDir, '.git'))) {
