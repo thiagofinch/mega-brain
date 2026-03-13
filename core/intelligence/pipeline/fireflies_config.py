@@ -17,7 +17,7 @@ import sys
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from core.paths import INBOX, LOGS, MISSION_CONTROL, WORKSPACE
+from core.paths import LOGS, MISSION_CONTROL, ROUTING
 
 # ============================================================================
 # Defaults
@@ -53,12 +53,12 @@ class FirefliesConfig:
     poll_interval_minutes: int = 5
     page_size: int = 50
 
-    # Destinations (match Read.ai paths for unified meetings inbox)
+    # Destinations — route to knowledge bucket inboxes (3-bucket arch)
     empresa_dir: Path = field(
-        default_factory=lambda: WORKSPACE / "inbox" / "meetings"
+        default_factory=lambda: ROUTING["business_inbox"]
     )
     pessoal_dir: Path = field(
-        default_factory=lambda: INBOX / "PESSOAL" / "MEETINGS"
+        default_factory=lambda: ROUTING["personal_inbox"]
     )
 
     # State & Logs

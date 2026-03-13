@@ -227,6 +227,20 @@ class FirefliesSync:
 
         dest_path.write_text(formatted, encoding="utf-8")
 
+        # Auto-organize within the bucket inbox (entity/type structure)
+        # MeetingRouter uses "empresa"/"pessoal" but organize_inbox expects
+        # "business"/"personal" — map between the two naming conventions.
+        _BUCKET_MAP = {"empresa": "business", "pessoal": "personal"}
+        org_bucket = _BUCKET_MAP.get(classification.bucket, "business")
+        try:
+            from core.intelligence.pipeline.inbox_organizer import organize_inbox
+            organize_inbox(org_bucket)
+        except Exception as exc:
+            self._log("organize_warning", {
+                "bucket": org_bucket,
+                "error": str(exc),
+            })
+
         # Update state
         self.state.setdefault("processed_ids", []).append(transcript_id)
         self.state["meetings_processed"] = (
