@@ -9,11 +9,17 @@ Tests cover:
 
 from __future__ import annotations
 
+# Check if mammoth is available
+import importlib.util
 import types
 from pathlib import Path
 from unittest.mock import MagicMock, patch
 
 import pytest
+
+HAS_MAMMOTH = importlib.util.find_spec("mammoth") is not None
+
+needs_mammoth = pytest.mark.skipif(not HAS_MAMMOTH, reason="mammoth not installed")
 
 # ---------------------------------------------------------------------------
 # Fixtures
@@ -54,6 +60,7 @@ def sample_docx(tmp_path: Path) -> Path:
 # ---------------------------------------------------------------------------
 
 
+@needs_mammoth
 class TestExtractDocx:
     def test_raises_file_not_found(self):
         from core.intelligence.pipeline.extractors.docx_extractor import extract_docx
@@ -99,6 +106,7 @@ class TestExtractDocx:
 # ---------------------------------------------------------------------------
 
 
+@needs_mammoth
 class TestExtractDocxRaw:
     def test_raises_file_not_found(self):
         from core.intelligence.pipeline.extractors.docx_extractor import extract_docx_raw
@@ -131,6 +139,7 @@ class TestExtractDocxRaw:
 # ---------------------------------------------------------------------------
 
 
+@needs_mammoth
 class TestExtractDocxToInbox:
     def test_creates_file_in_inbox(self, fake_mammoth, sample_docx, tmp_path):
         fake_knowledge = tmp_path / "knowledge" / "external"

@@ -4,10 +4,23 @@ Uses tmp_path for full isolation -- each test gets its own ChromaDB directory.
 Synthetic embeddings (small float lists) are used; no real model needed.
 """
 
+# Check if chromadb is available
+import importlib.util
+
 import pytest
 
-from core.intelligence.rag.chroma_store import ChromaStore
-from core.intelligence.rag.vector_store import SearchResult, VectorStore
+HAS_CHROMADB = importlib.util.find_spec("chromadb") is not None
+
+needs_chromadb = pytest.mark.skipif(not HAS_CHROMADB, reason="chromadb not installed")
+
+# Skip entire module import if chromadb not available
+if HAS_CHROMADB:
+    from core.intelligence.rag.chroma_store import ChromaStore
+    from core.intelligence.rag.vector_store import SearchResult, VectorStore
+else:
+    ChromaStore = None  # type: ignore[misc, assignment]
+    VectorStore = None  # type: ignore[misc, assignment]
+    SearchResult = None  # type: ignore[misc, assignment]
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -29,6 +42,7 @@ def _make_store(tmp_path, name: str = "test_collection") -> ChromaStore:
 # ---------------------------------------------------------------------------
 
 
+@needs_chromadb
 class TestVectorStoreABC:
     """VectorStore is abstract and cannot be instantiated directly."""
 
@@ -42,6 +56,7 @@ class TestVectorStoreABC:
 # ---------------------------------------------------------------------------
 
 
+@needs_chromadb
 class TestSearchResult:
     """SearchResult dataclass has correct fields and defaults."""
 
@@ -63,6 +78,7 @@ class TestSearchResult:
 # ---------------------------------------------------------------------------
 
 
+@needs_chromadb
 class TestChromaStoreInit:
     """ChromaStore initialization and persist directory."""
 
@@ -82,6 +98,7 @@ class TestChromaStoreInit:
 # ---------------------------------------------------------------------------
 
 
+@needs_chromadb
 class TestChromaStoreAdd:
     """Single and batch add operations."""
 
@@ -122,6 +139,7 @@ class TestChromaStoreAdd:
 # ---------------------------------------------------------------------------
 
 
+@needs_chromadb
 class TestChromaStoreSearch:
     """Similarity search returns ranked results."""
 
@@ -164,6 +182,7 @@ class TestChromaStoreSearch:
 # ---------------------------------------------------------------------------
 
 
+@needs_chromadb
 class TestChromaStoreGet:
     """Retrieve specific chunks by ID."""
 
@@ -188,6 +207,7 @@ class TestChromaStoreGet:
 # ---------------------------------------------------------------------------
 
 
+@needs_chromadb
 class TestChromaStoreDelete:
     """Chunk deletion."""
 
@@ -222,6 +242,7 @@ class TestChromaStoreDelete:
 # ---------------------------------------------------------------------------
 
 
+@needs_chromadb
 class TestChromaStoreClear:
     """Clear removes all chunks."""
 
@@ -249,6 +270,7 @@ class TestChromaStoreClear:
 # ---------------------------------------------------------------------------
 
 
+@needs_chromadb
 class TestChromaStorePersistence:
     """Data survives store re-instantiation (on-disk persistence)."""
 

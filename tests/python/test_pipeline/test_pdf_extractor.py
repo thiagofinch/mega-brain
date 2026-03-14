@@ -2,10 +2,16 @@
 
 from __future__ import annotations
 
+# Check if pymupdf is available
+import importlib.util
 from pathlib import Path
 from unittest.mock import patch
 
 import pytest
+
+HAS_PYMUPDF = importlib.util.find_spec("fitz") is not None
+
+needs_pymupdf = pytest.mark.skipif(not HAS_PYMUPDF, reason="pymupdf not installed")
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -29,6 +35,7 @@ def _create_test_pdf(path: Path, pages: list[str]) -> None:
 # ---------------------------------------------------------------------------
 
 
+@needs_pymupdf
 class TestExtractPdf:
     """Tests for the extract_pdf function."""
 
@@ -122,6 +129,7 @@ class TestExtractPdf:
 # ---------------------------------------------------------------------------
 
 
+@needs_pymupdf
 class TestExtractPdfToInbox:
     """Tests for the extract_pdf_to_inbox function."""
 
