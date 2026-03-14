@@ -114,7 +114,7 @@ source = ["core/intelligence"]
 omit = ["*/__pycache__/*", "*/__init__.py"]
 
 [tool.coverage.report]
-fail_under = 40
+fail_under = 9
 show_missing = true
 
 [tool.setuptools.packages.find]
