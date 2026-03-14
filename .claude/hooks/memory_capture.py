@@ -27,7 +27,8 @@ def main():
         if not raw.strip():
             sys.exit(0)
         hook_input = json.loads(raw)
-    except Exception:
+    except Exception as e:
+        print(json.dumps({"continue": True, "error": f"memory_capture parse: {e}"}))
         sys.exit(0)
 
     tool_name = hook_input.get("tool_name", "")
@@ -60,8 +61,8 @@ def main():
     try:
         with open(memory_file, "a", encoding="utf-8") as f:
             f.write(json.dumps(entry, ensure_ascii=False) + "\n")
-    except Exception:
-        pass  # Fail silently
+    except Exception as e:
+        print(json.dumps({"continue": True, "warning": f"memory_capture write: {e}"}))
 
     sys.exit(0)
 

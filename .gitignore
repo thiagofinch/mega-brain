@@ -56,6 +56,8 @@ mcp_servers.json
 node_modules/
 __pycache__/
 *.py[cod]
+.ruff_cache/
+.claude/trash/
 .venv/
 .venv-rag/
 venv/
@@ -646,8 +648,8 @@ workspace/tools/
 workspace/config/mappings/**
 !workspace/config/mappings/.gitkeep
 
-# Tests, planning, docs — L3 only (not needed for machine to function)
-tests/
+# Planning, docs — L3 only (not needed for machine to function)
+# NOTE: tests/ removed from deny — already allowed in BLOCO 4 (lines 278-279)
 .planning/
 docs/
 
@@ -680,3 +682,13 @@ artifacts/narratives/**
 # Knowledge external inbox — raw materials (L3)
 knowledge/external/inbox/**
 !knowledge/external/inbox/.gitkeep
+
+# Google service account credentials
+.credentials/
+
+# Google Drive scripts (contain email, SA references)
+scripts/google-drive/
+scripts/google-drive/**
+
+# Local apps (deployed separately, not in repo)
+apps/

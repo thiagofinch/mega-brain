@@ -109,11 +109,12 @@ def main():
 
         print(json.dumps(output))
 
-    except Exception:
+    except Exception as e:
         # Em caso de erro, não bloquear a operação
         error_output = {
             'continue': True,
-            'feedback': None
+            'feedback': None,
+            'error': str(e)
         }
         print(json.dumps(error_output))
 

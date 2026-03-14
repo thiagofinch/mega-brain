@@ -119,10 +119,12 @@ def main():
     try:
         raw = sys.stdin.read()
         if not raw.strip():
+            print(json.dumps({"decision": "allow"}))
             sys.exit(0)
 
         hook_input = json.loads(raw)
     except (json.JSONDecodeError, Exception):
+        print(json.dumps({"decision": "allow"}))
         sys.exit(0)
 
     tool_name = hook_input.get("tool_name", "")
@@ -130,17 +132,20 @@ def main():
 
     # Only care about Write and Edit
     if tool_name not in ("Write", "Edit"):
+        print(json.dumps({"decision": "allow"}))
         sys.exit(0)
 
     # Get the file path being written/edited
     file_path = tool_input.get("file_path", "")
     if not file_path:
+        print(json.dumps({"decision": "allow"}))
         sys.exit(0)
 
     # Only care about .py files and .md files in template dirs
     is_py = file_path.endswith(".py")
     is_template = file_path.endswith(".md") and "core/templates/" in file_path
     if not is_py and not is_template:
+        print(json.dumps({"decision": "allow"}))
         sys.exit(0)
 
     # Convert to relative path
@@ -149,6 +154,7 @@ def main():
     # Check if file is in a watched directory
     matched_dir = find_watched_dir(rel_path)
     if not matched_dir:
+        print(json.dumps({"decision": "allow"}))
         sys.exit(0)
 
     # Scan agent files for references to this directory
@@ -156,6 +162,7 @@ def main():
     affected_agents = scan_agents(matched_dir, file_name, rel_path)
 
     if not affected_agents:
+        print(json.dumps({"decision": "allow"}))
         sys.exit(0)
 
     # Build warning message
@@ -183,6 +190,7 @@ def main():
 if __name__ == "__main__":
     try:
         main()
-    except Exception:
+    except Exception as e:
         # fail-OPEN: internal errors must never block the developer
+        print(json.dumps({"decision": "allow", "error": str(e)}))
         sys.exit(0)

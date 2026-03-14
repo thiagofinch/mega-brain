@@ -346,9 +346,9 @@ def main():
         exit_code = validator.validate()
         sys.exit(exit_code)
 
-    except Exception:
+    except Exception as e:
         # Fail-OPEN: internal error = don't block user operations
-        print(json.dumps({"decision": "allow"}))
+        print(json.dumps({"decision": "allow", "error": str(e)}))
         sys.exit(0)
 
 

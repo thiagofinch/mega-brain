@@ -489,8 +489,8 @@ def hook_main():
         feedback = f"[REGRA #8] {message}" if success else None
         print(json.dumps({'continue': True, 'feedback': feedback}))
 
-    except Exception:
-        print(json.dumps({'continue': True}))
+    except Exception as e:
+        print(json.dumps({'continue': True, 'error': str(e)}))
 
 
 if __name__ == "__main__":

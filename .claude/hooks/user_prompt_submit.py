@@ -117,8 +117,8 @@ def main():
 
         print(json.dumps(output))
 
-    except Exception:
-        print(json.dumps({'continue': True, 'feedback': None}))
+    except Exception as e:
+        print(json.dumps({'continue': True, 'feedback': None, 'error': str(e)}))
 
 
 if __name__ == '__main__':

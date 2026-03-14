@@ -60,7 +60,9 @@ def main():
 
             if c.get("merged", 0) > 0 or p.get("pruned", 0) > 0:
                 agents_processed.append(agent_id)
-        except Exception:
+        except Exception as e:
+            # Log but continue processing other agents
+            agents_processed.append(f"{agent_id}:error:{e!s:.50}")
             continue
 
     result = {

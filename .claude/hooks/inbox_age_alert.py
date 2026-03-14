@@ -267,7 +267,7 @@ def check_inbox_health() -> dict:
                 fpath = Path(root) / f
                 total_files += 1
                 total_size += fpath.stat().st_size
-            except:
+            except Exception:
                 continue
 
     old_files = get_old_files()
@@ -341,8 +341,8 @@ def main():
         else:
             print(json.dumps({'continue': True}))
 
-    except Exception:
-        print(json.dumps({'continue': True}))
+    except Exception as e:
+        print(json.dumps({'continue': True, 'error': str(e)}))
 
 
 def cli_test():

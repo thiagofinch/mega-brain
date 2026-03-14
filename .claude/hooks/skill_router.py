@@ -361,8 +361,8 @@ def main():
         else:
             print(json.dumps({'continue': True}))
 
-    except Exception:
-        print(json.dumps({'continue': True}))
+    except Exception as e:
+        print(json.dumps({'continue': True, 'error': str(e)}))
 
 
 def cli_test():

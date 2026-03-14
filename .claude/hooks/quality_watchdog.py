@@ -362,8 +362,8 @@ def main():
             'feedback': feedback if feedback else None
         }))
 
-    except Exception:
-        print(json.dumps({'continue': True}))
+    except Exception as e:
+        print(json.dumps({'continue': True, 'error': str(e)}))
 
 
 def cli_test():

@@ -91,7 +91,7 @@ def append_to_jsonl(entry: dict[str, Any]) -> bool:
             emergency = Config.SESSIONS_DIR / "emergency.jsonl"
             with open(emergency, 'a', encoding='utf-8') as f:
                 f.write(json.dumps(entry, ensure_ascii=False) + '\n')
-        except:
+        except Exception:
             pass
         return False
 
@@ -127,7 +127,7 @@ def count_jsonl_entries() -> int:
         with open(Config.CURRENT_JSONL, encoding='utf-8') as f:
             for _ in f:
                 count += 1
-    except:
+    except Exception:
         pass
     return count
 
@@ -139,7 +139,7 @@ def get_jsonl_size_mb() -> float:
 
     try:
         return Config.CURRENT_JSONL.stat().st_size / (1024 * 1024)
-    except:
+    except Exception:
         return 0
 
 
@@ -371,7 +371,7 @@ def main():
     try:
         input_data = sys.stdin.read()
         hook_input = json.loads(input_data) if input_data else {}
-    except:
+    except Exception:
         hook_input = {}
 
     # Extrair session_id para cross-reference com --resume

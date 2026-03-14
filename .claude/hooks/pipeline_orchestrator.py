@@ -395,9 +395,9 @@ def main() -> None:
     """PostToolUse hook entry point. Reads JSON from stdin, routes."""
     try:
         data = json.load(sys.stdin)
-    except Exception:
+    except Exception as e:
         # If stdin is empty or not JSON, pass through silently
-        print(json.dumps({"continue": True}))
+        print(json.dumps({"continue": True, "error": str(e)}))
         return
 
     tool_name = data.get("tool_name", "")
