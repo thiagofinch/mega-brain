@@ -367,7 +367,7 @@ class PipelineHealDetector:
 
     def _check_agent_memory(self, sid: str, slug: str) -> CheckResult:
         """P7.4: Verify agent MEMORY.md has this source_id."""
-        mem_path = f"agents/minds/{slug}/MEMORY.md"
+        mem_path = f"agents/external/{slug}/MEMORY.md"
         full = self.root / mem_path
         if not full.exists():
             return CheckResult(
@@ -484,7 +484,7 @@ class PipelineHealDetector:
 
     def _check_soul(self, sid: str, slug: str) -> CheckResult:
         """P8.1.9: Verify SOUL.md is updated with this source_id."""
-        soul_path = f"agents/minds/{slug}/SOUL.md"
+        soul_path = f"agents/external/{slug}/SOUL.md"
         full = self.root / soul_path
         if not full.exists():
             return CheckResult(

@@ -20,7 +20,7 @@ knowledge/dna/
 knowledge/sources/
 
 # Expert agents (cloned minds)
-agents/minds/
+agents/external/
 
 # Cargo agents (C-level, sales, marketing roles)
 agents/cargo/

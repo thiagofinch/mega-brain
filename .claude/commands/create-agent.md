@@ -32,7 +32,7 @@ argument-hint: [ID] --layer [L0|L1|L2|L3|L4|SUB] --name "..." --role "..." [--el
 | L0 | `core/jarvis/` | System agents | Manual |
 | L1 | `agents/conclave/` | Conclave (debate) | `/conclave` |
 | L2 | `agents/boardroom/` | C-Level executives | Threshold ≥10 |
-| L3 | `agents/minds/` | Expert mind clones | Pipeline Phase 5.2 |
+| L3 | `agents/external/` | Expert mind clones | Pipeline Phase 5.2 |
 | L4 | `agents/cargo/` | Operational roles | Threshold ≥5 |
 | SUB | `.claude/jarvis/sub-agents/` | JARVIS operatives | Keywords |
 

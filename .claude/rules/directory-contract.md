@@ -1,10 +1,10 @@
 # Directory Contract -- Mega Brain
 
-> **Version:** 3.0.0
+> **Version:** 4.0.0
 > **Source of Truth:** `core/paths.py`
 > **Enforcement:** `.claude/hooks/directory_contract_guard.py` (PreToolUse, WARN)
 > **Keywords:** "directory", "output", "path", "onde salvar", "where to save", "bucket"
-> **Last Updated:** 2026-03-09 (S12 rewrite -- EPIC-REORG-001)
+> **Last Updated:** 2026-03-13 (S13 workspace restructure -- ClickUp mirror + businesses DNA)
 
 ---
 
@@ -56,33 +56,106 @@ knowledge/
 
 ---
 
-## 2. Workspace (Prescriptive Strata)
+## 2. Workspace (Prescriptive Strata — ClickUp Mirror)
 
 Workspace is NOT a knowledge bucket. It is the prescriptive operations layer:
 how the company SHOULD function. L1 when template scaffolding, L2 when populated
-with real business data.
+with real business data. Structure mirrors ClickUp spaces for 1:1 mapping.
+
+Scaffold template: `core/templates/workspace/WORKSPACE-SCAFFOLD.yaml`
+ClickUp IDs: `workspace/_system/CLICKUP-IDS.json`
 
 ```
-workspace/                  <- PRESCRIPTIVE -- how the company SHOULD function
-├── workspace.yaml          -> Manifest (workspace identity + metadata)
-├── structure.yaml          -> Org structure definition
-├── relationships.yaml      -> Business relationships map
-├── businesses/             -> Per-brand subdirectories
-│   └── {brand}/                -> acme-edu/, acme-ai/, etc.
-├── domains/                -> Cross-cutting business rules (sales, marketing, ops)
-├── _templates/             -> Validated SOPs (promoted from knowledge/business/sops/)
-├── providers/              -> Tool adapters and integrations
-├── config/                 -> Global configuration
-├── _ref/                   -> Reference foundations
-├── team/                   -> Team data (SOW, TAS, scorecards)
-├── strategy/               -> Strategic documents
-├── events/                 -> Business events
-├── meetings/               -> Meeting dossiers
-├── org/                    -> Organization structure docs
-├── finance/                -> Financial data
-├── automations/            -> Tool configs
-├── tools/                  -> Detected tools log
-└── inbox/                  -> Business inbox (backward compat with root inbox/)
+workspace/                      <- PRESCRIPTIVE -- how the company SHOULD function
+├── workspace.yaml              -> Manifest (workspace identity + metadata)
+├── structure.yaml              -> Org structure definition
+├── relationships.yaml          -> Business relationships map
+├── MASTER-INDEX.md             -> General workspace index
+│
+├── _system/                    -> Internal config, IDs, references
+│   ├── config/
+│   ├── _ref/
+│   ├── CLICKUP-IDS.json
+│   └── DRIVE-FOLDER-IDS.json
+├── _templates/                 -> Validated SOPs (promoted from knowledge/business/sops/)
+├── inbox/                      -> Triage staging area
+│
+├── businesses/                 -> Strategic DNA per Business Unit (12 folders each)
+│   └── {bu}/                       -> bilhon/, clickmax/, furion-ai/, ...
+│       ├── _preserved/             -> Backups, previous versions
+│       ├── ai/                     -> AI agents, prompts, automations
+│       ├── analytics/              -> Dashboards, KPIs, metrics
+│       ├── brand/                  -> Identity, guidelines, voice
+│       ├── company/                -> Context, state, corporate docs
+│       ├── copy/                   -> Sales copy, landing pages, emails
+│       ├── design-system/          -> Tokens, components, design guidelines
+│       ├── evidence/               -> Cases, social proof, testimonials
+│       ├── movement/               -> Brand narrative, manifesto, community
+│       ├── operations/             -> SOPs, processes, playbooks
+│       ├── products/               -> Specs, features, roadmap
+│       └── tech/                   -> Stack, architecture, configs
+│
+├── aios/                       -> Space: AI Management (ClickUp 901313609429)
+│   ├── squads/
+│   ├── agents/
+│   ├── tasks/
+│   ├── checklists/
+│   ├── templates/
+│   ├── tools/
+│   ├── knowledge/
+│   ├── workflows/
+│   └── library/
+│
+├── ops/                        -> Space: Bilhon Ops (ClickUp 901313609435)
+│   ├── processos-sops/
+│   │   ├── templates-de-tarefas/
+│   │   └── gestao-de-processos/
+│   ├── meetings/               -> Meeting dossiers (from pipeline)
+│   ├── eventos/                -> Business events
+│   └── sprints/
+│       ├── backlog/
+│       └── sprint-atual/
+│
+├── delivery/                   -> Space: Delivery (ClickUp 901313609439)
+│   ├── prospeccao-leads/
+│   ├── gestao-projetos/
+│   ├── copy/
+│   ├── edicao/
+│   ├── producao-filmagem/
+│   ├── account-cs/
+│   ├── genai/
+│   ├── content-factory/
+│   ├── trafego-pago/
+│   └── (each with operational subfolders)
+│
+├── comercial/                  -> Space: Comercial (ClickUp 901313609444)
+│   └── crm/
+│       ├── pipeline-sdr/
+│       ├── pipeline-closer/
+│       ├── clientes/
+│       ├── parceiros/
+│       ├── people/
+│       └── propostas-comerciais/
+│
+├── gestao/                     -> Space: Gestao (ClickUp 901313609445)
+│   ├── juridico/
+│   ├── financeiro/
+│   ├── administrativo/
+│   └── acessos-ferramentas/
+│
+├── gente-cultura/              -> Space: Gente & Cultura (ClickUp 901313609446)
+│   ├── okrs/
+│   ├── recrutamento/
+│   ├── equipe/                 -> SOWs, TAs, scorecards, ORGANOGRAM
+│   └── educacional/
+│
+├── marketing/                  -> Space: Marketing (ClickUp 901313609456)
+│   ├── performance-growth/
+│   ├── campanhas-lancamentos/
+│   └── creative-library/
+│
+└── strategy/                   -> Strategic documents (no ClickUp equivalent)
+    └── decisions/
 ```
 
 ### Workspace vs Business Bucket
@@ -94,6 +167,15 @@ workspace/                  <- PRESCRIPTIVE -- how the company SHOULD function
 | Updates | Manual / deliberate | Automatic / pipeline-driven |
 | Git | Tracked (L1 template, L2 populated) | Gitignored (L3 runtime data) |
 | Analogy | Company handbook | Company diary |
+
+### Businesses DNA vs Delivery Operations
+
+| Aspect | `businesses/{bu}/` | `delivery/` space |
+|--------|-------------------|-------------------|
+| Nature | Strategic DNA per business unit | Day-to-day operational tracking |
+| Content | Brand, copy, design-system, analytics | Task queues, sprints, delivery pipelines |
+| Updates | Deliberate (strategic decisions) | Constant (daily operations) |
+| Analogy | Birth certificate of the business | Daily agenda of the business |
 
 ---
 
@@ -361,6 +443,15 @@ Each knowledge bucket has its own isolated RAG index to prevent cross-contaminat
 | `knowledge/` root files | Must go into a specific bucket | `external/`, `business/`, or `personal/` |
 | `{company}/` at root | Old company dir, migrated | `workspace/businesses/{company}/` |
 | `inbox/` at root | Distributed to bucket inboxes (S03) | `knowledge/{bucket}/inbox/` or `workspace/inbox/` |
+| `workspace/domains/` | Removed S13: replaced by departmental spaces | `workspace/{space}/` (aios, ops, delivery, etc.) |
+| `workspace/providers/` | Removed S13: replaced by gestao subfolder | `workspace/gestao/acessos-ferramentas/` |
+| `workspace/team/` | Removed S13: migrated to gente-cultura | `workspace/gente-cultura/equipe/` |
+| `workspace/finance/` | Removed S13: migrated to gestao | `workspace/gestao/financeiro/` |
+| `workspace/meetings/` | Removed S13: migrated to ops | `workspace/ops/meetings/` |
+| `workspace/org/` | Removed S13: migrated to gestao | `workspace/gestao/administrativo/` |
+| `workspace/automations/` | Removed S13: migrated to aios | `workspace/aios/workflows/` |
+| `workspace/tools/` | Removed S13: migrated to gestao | `workspace/gestao/acessos-ferramentas/` |
+| Company files at workspace root | Must go into businesses/{bu}/company/ | `workspace/businesses/bilhon/company/` |
 | New top-level dirs | Filesystem contract violation | Update this contract first |
 | Hardcoded paths in scripts | Breaks when dirs move | Import from `core/paths.py` |
 | L3 data in L1/L2 | Security / privacy leak | Keep in gitignored dirs only |
@@ -396,7 +487,7 @@ cargo_agent = AGENTS_CARGO / "sales" / "closer" / "AGENT.md"
 
 # WRONG: hardcoded paths (will break on reorganization)
 output = Path("knowledge/dna/persons/alex-hormozi")     # PROHIBITED (stale)
-output = Path("agents/minds/alex-hormozi")               # PROHIBITED (old structure)
+output = Path("agents/external/alex-hormozi")             # PROHIBITED (hardcoded)
 output = Path("inbox/raw-file.txt")                      # PROHIBITED (root inbox removed)
 ```
 
@@ -457,3 +548,4 @@ workspace/_templates/         (promoted, official)
 | 1.0.0 | 2025-12-01 | Initial contract |
 | 2.0.0 | 2026-03-05 | Added workspace at root, 3-bucket architecture |
 | 3.0.0 | 2026-03-09 | S12 full rewrite: knowledge/business/ bucket, agent categories (5 types), workspace strata, 76+ routing keys, SOP promotion flow, decision tree |
+| 4.0.0 | 2026-03-13 | S13 workspace restructure: 7 departmental spaces (ClickUp mirror), businesses DNA (12 folders per BU), removed flat dirs (domains, providers, team, finance, org, meetings, automations, tools), 100+ routing keys, WORKSPACE-SCAFFOLD.yaml template, CLICKUP-IDS.json |

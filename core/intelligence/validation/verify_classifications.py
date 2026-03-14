@@ -49,7 +49,7 @@ SPOT_CHECKS = [
     ('agents/cargo/.gitkeep', 'L1', 'Empty structure marker'),
     ('knowledge/.gitkeep', 'L1', 'Empty structure marker'),
     # L2 — Premium content
-    ('agents/minds/some-agent/AGENT.md', 'L2', 'Mind clone agent'),
+    ('agents/external/some-agent/AGENT.md', 'L2', 'Mind clone agent'),
     ('agents/cargo/some-role/AGENT.md', 'L2', 'Cargo agent'),
     ('knowledge/external/dossiers/some-file.md', 'L2', 'Knowledge dossier'),
     # L3 — Personal data

@@ -80,10 +80,10 @@ agents:
       command: "/advocate"
       path: "agents/conclave/advogado-do-diabo/"
 
-  minds:
+  external:
     - id: cole-gordon
       command: "/cole"
-      path: "agents/minds/cole-gordon/"
+      path: "agents/external/cole-gordon/"
 ```
 
 ---

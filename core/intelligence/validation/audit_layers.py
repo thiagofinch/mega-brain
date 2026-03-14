@@ -33,7 +33,7 @@ L1_PATTERNS = [
     # Empty structures with .gitkeep
     'inbox/.gitkeep',
     'knowledge/.gitkeep',
-    'agents/minds/.gitkeep',
+    'agents/external/.gitkeep',
     'agents/cargo/.gitkeep',
     'artifacts/insights/.gitkeep',
     'artifacts/chunks/.gitkeep',
@@ -82,7 +82,7 @@ L1_PATTERNS = [
 
 L2_PATTERNS = [
     # Populated content (everything L1 + absorbed)
-    'agents/minds/',
+    'agents/external/',
     'agents/cargo/',
     'knowledge/external/dossiers/',
     'knowledge/external/playbooks/',

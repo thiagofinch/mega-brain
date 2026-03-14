@@ -107,7 +107,7 @@ def resolve_agent_path(agent_name: str) -> Optional[Path]:
 
     Searches in:
     - agents/cargo/*/
-    - agents/minds/*/
+    - agents/external/*/
     - agents/boardroom/*/
     - agents/sua-empresa/*/
     """
@@ -118,7 +118,7 @@ def resolve_agent_path(agent_name: str) -> Optional[Path]:
     base_name = agent_name.replace(".md", "")
 
     # Search patterns
-    search_dirs = ["cargo", "minds", "boardroom", "sua-empresa"]
+    search_dirs = ["cargo", "external", "boardroom", "sua-empresa"]
 
     for category in search_dirs:
         category_path = AGENTS_PATH / category

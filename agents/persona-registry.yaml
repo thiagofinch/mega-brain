@@ -36,7 +36,7 @@ layers:
   L3_MINDS:
     name: "Mind Clones"
     icon: "🧠"
-    location: "agents/minds/"
+    location: "agents/external/"
     description: "Especialistas clonados via DNA extraction"
     trigger: "pipeline"
     phase: "5.2"
@@ -128,35 +128,35 @@ minds:
     icon: "🎯"
     element: "Fire"
     source: "The Scalable Company"
-    location: "agents/minds/cole-gordon/"
+    location: "agents/external/cole-gordon/"
 
   - id: alex-hormozi
     role: "Business Growth Expert"
     icon: "💪"
     element: "Fire"
     source: "$100M Offers"
-    location: "agents/minds/alex-hormozi/"
+    location: "agents/external/alex-hormozi/"
 
   - id: jeremy-miner
     role: "NEPQ Sales Expert"
     icon: "🧠"
     element: "Water"
     source: "7th Level Communications"
-    location: "agents/minds/jeremy-miner/"
+    location: "agents/external/jeremy-miner/"
 
   - id: jeremy-haynes
     role: "Agency Scaling Expert"
     icon: "🚀"
     element: "Air"
     source: "Agency Growth Secrets"
-    location: "agents/minds/jeremy-haynes/"
+    location: "agents/external/jeremy-haynes/"
 
   - id: the-scalable-company
     role: "Sales Framework Collection"
     icon: "📚"
     element: "Earth"
     source: "TSC Methodology"
-    location: "agents/minds/the-scalable-company/"
+    location: "agents/external/the-scalable-company/"
 
 # =============================================================================
 # CARGO ROLES (L4)

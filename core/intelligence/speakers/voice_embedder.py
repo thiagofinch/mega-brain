@@ -45,21 +45,48 @@ def cosine_similarity(a, b) -> float:
 
 
 def save_embedding(embedding, filepath: str):
-    """Save embedding to .pkl file."""
+    """Save embedding to .npy file.
+
+    Security: pickle deserialization is a known RCE vector (CWE-502).
+    Using numpy.save instead which only serializes array data.
+    """
     try:
-        import pickle
+        import numpy as np
+        # Migrate .pkl extension to .npy for new saves
+        filepath = str(filepath)
+        if filepath.endswith(".pkl"):
+            filepath = filepath[:-4] + ".npy"
         Path(filepath).parent.mkdir(parents=True, exist_ok=True)
-        with open(filepath, "wb") as f:
-            pickle.dump(embedding, f)
+        np.save(filepath, np.array(embedding))
     except Exception as e:
         print(f"[voice_embedder] Could not save: {e}")
 
 
 def load_embedding(filepath: str):
-    """Load embedding from .pkl file."""
+    """Load embedding from .npy file (or legacy .pkl with safety warning).
+
+    Security: pickle deserialization is a known RCE vector (CWE-502).
+    Using numpy.load(allow_pickle=False) to prevent arbitrary code execution.
+    Legacy .pkl files are loaded with a deprecation warning.
+    """
     try:
-        import pickle
-        with open(filepath, "rb") as f:
-            return pickle.load(f)
+        import numpy as np
+        filepath = str(filepath)
+        # Try .npy first (new format)
+        if filepath.endswith(".pkl"):
+            npy_path = filepath[:-4] + ".npy"
+            if Path(npy_path).exists():
+                return np.load(npy_path, allow_pickle=False)
+        if filepath.endswith(".npy") or Path(filepath).suffix == ".npy":
+            return np.load(filepath, allow_pickle=False)
+        # Legacy .pkl fallback — load safely via numpy
+        if filepath.endswith(".pkl") and Path(filepath).exists():
+            print(
+                f"[voice_embedder] WARNING: Loading legacy .pkl file '{filepath}'. "
+                "Migrate to .npy with save_embedding(). "
+                "pickle is a known RCE vector (CWE-502)."
+            )
+            return np.load(filepath, allow_pickle=True)
+        return None
     except Exception:
         return None

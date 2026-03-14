@@ -789,7 +789,7 @@ agent = AGENTS_EXTERNAL / "jeremy-haynes" / "AGENT.md"
 
 # ERRADO: paths hardcoded (quebram em reorganizacao)
 Path("knowledge/dna/persons/alex-hormozi")   # STALE
-Path("agents/minds/alex-hormozi")             # OLD STRUCTURE
+Path("agents/external/alex-hormozi")            # OLD STRUCTURE (was agents/minds/)
 Path("inbox/raw-file.txt")                    # ROOT INBOX REMOVED
 ```
 

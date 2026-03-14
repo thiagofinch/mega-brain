@@ -22,7 +22,7 @@ LAYER_PATHS = {
     "L0": "core/jarvis/",
     "L1": "agents/conclave/",
     "L2": "agents/boardroom/",
-    "L3": "agents/minds/",
+    "L3": "agents/external/",
     "L4": "agents/cargo/",
     "SUB": ".claude/jarvis/sub-agents/"
 }
@@ -52,7 +52,7 @@ def detect_layer(file_path: str) -> str:
         return 'L1'
     elif 'boardroom/' in file_path:
         return 'L2'
-    elif 'minds/' in file_path:
+    elif 'external/' in file_path:
         return 'L3'
     elif 'cargo/' in file_path:
         return 'L4'
@@ -80,8 +80,8 @@ def scan_agents() -> dict:
         'sub_agents': []
     }
 
-    # Scan minds
-    minds_dir = AGENTS_DIR / "minds"
+    # Scan external (expert mind clones)
+    minds_dir = AGENTS_DIR / "external"
     if minds_dir.exists():
         for agent_dir in minds_dir.iterdir():
             if agent_dir.is_dir() and not agent_dir.name.startswith('_'):
@@ -146,15 +146,15 @@ version: "4.1.0"
 updated: "{datetime.now().strftime('%Y-%m-%d')}"
 
 totals:
-  minds: {total_minds}
+  external: {total_minds}
   cargo: {total_cargo}
   conclave: {total_conclave}
   total: {total}
 
 # =============================================================================
-# MINDS (L3) - Expert Mind Clones
+# EXTERNAL (L2) - Expert Mind Clones
 # =============================================================================
-minds:
+external:
 """
     for agent in agents['minds']:
         content += f"""  - id: {agent['id']}
