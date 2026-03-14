@@ -1,0 +1,30 @@
+# Preset: Business Meeting Processing
+# Use for: Team meetings, client calls, strategy sessions
+name: meeting
+description: Processing preset for business meetings and calls
+version: "1.0"
+
+ingestion:
+  source_type: meeting
+  expected_formats: [".txt", ".json"]
+  scope: business  # Routes to knowledge/business/
+
+chunking:
+  strategy: speaker_aware
+  max_tokens: 1500
+  overlap: 150
+  preserve_speakers: true
+
+extraction:
+  mce_enabled: false  # Meetings don't generate MCE
+  extract_types:
+    - decisions
+    - action_items
+    - insights
+    - topics
+
+output:
+  create_insight: true
+  create_narrative: true
+  create_sop: auto  # Detect if process described
+  batch_size: 1  # one meeting per batch

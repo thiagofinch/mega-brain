@@ -1,0 +1,32 @@
+# Preset: Book/Document Processing
+# Use for: Business books, whitepapers, research papers
+name: book
+description: Processing preset for books and long-form documents
+version: "1.0"
+
+ingestion:
+  source_type: book
+  expected_formats: [".pdf", ".epub", ".docx"]
+  scope: external
+
+chunking:
+  strategy: chapter_aware
+  max_tokens: 3000
+  overlap: 300
+  preserve_headers: true
+
+extraction:
+  mce_enabled: true
+  extract_layers:
+    - philosophies
+    - mental_models
+    - heuristics
+    - frameworks
+    - methodologies
+  min_insights_for_agent: 5
+
+output:
+  create_dna: true
+  create_dossier: true
+  create_playbook: true
+  batch_size: 12  # chapters per batch

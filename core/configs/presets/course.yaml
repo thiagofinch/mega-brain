@@ -1,0 +1,32 @@
+# Preset: Expert Course Processing
+# Use for: Online courses, masterminds, training programs
+name: course
+description: Processing preset for expert educational courses
+version: "1.0"
+
+ingestion:
+  source_type: course
+  expected_formats: [".txt", ".docx", ".pdf", ".mp4"]
+  scope: external  # Routes to knowledge/external/
+
+chunking:
+  strategy: semantic
+  max_tokens: 2000
+  overlap: 200
+  preserve_headers: true
+
+extraction:
+  mce_enabled: true
+  extract_layers:
+    - philosophies
+    - mental_models
+    - heuristics
+    - frameworks
+    - methodologies
+  min_insights_for_agent: 3
+
+output:
+  create_dna: true
+  create_dossier: true
+  create_playbook: true
+  batch_size: 8  # files per batch

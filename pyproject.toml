@@ -63,6 +63,7 @@ known-first-party = ["core"]
 "core/intelligence/speakers/*" = ["F401"]  # conditional imports for optional GPU deps
 "core/intelligence/pipeline/read_ai_*" = ["E999"]  # special syntax files
 "core/intelligence/entities/*" = ["RUF001"]  # unicode chars in business domain strings
+"core/intelligence/pipeline/extractors/*" = ["RUF001"]  # unicode chars in HTML entity decoding
 "core/intelligence/pipeline/autonomous_processor.py" = ["N818"]  # legacy exception name
 "core/intelligence/rag/evaluator.py" = ["RUF034"]  # useless if-else in demo code
 
