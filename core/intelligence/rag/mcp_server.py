@@ -10,6 +10,11 @@ Tools available:
   - search_deep: Full pipeline with all layers
   - get_agent_context: Trimmed context for a specific agent
   - resolve_chunk: chunk_id → source → text
+  - graph_query: Query knowledge graph for entity relationships
+  - agent_lookup: Look up agent by name across categories
+  - dossier_search: Search dossiers by topic or person
+  - pipeline_status: Get pipeline operational status
+  - quality_report: Get recent quality scores
 
 Usage:
   python3 -m core.intelligence.rag.mcp_server
@@ -22,8 +27,8 @@ MCP config (.mcp.json):
     }
   }
 
-Versao: 1.0.0
-Data: 2026-03-01
+Versao: 2.0.0
+Data: 2026-03-14
 """
 
 import json
@@ -314,6 +319,14 @@ TOOL_HANDLERS = {
     "resolve_chunk": handle_resolve_chunk,
 }
 
+# ---------------------------------------------------------------------------
+# EXTENDED TOOLS (from mcp_tools.py)
+# ---------------------------------------------------------------------------
+from .mcp_tools import EXTENDED_TOOL_HANDLERS, EXTENDED_TOOLS
+
+TOOLS.extend(EXTENDED_TOOLS)
+TOOL_HANDLERS.update(EXTENDED_TOOL_HANDLERS)
+
 
 # ---------------------------------------------------------------------------
 # MCP SERVER LOOP
@@ -332,7 +345,7 @@ def handle_request(request: dict) -> None:
                 "capabilities": {"tools": {}},
                 "serverInfo": {
                     "name": "mega-brain-knowledge",
-                    "version": "1.0.0",
+                    "version": "2.0.0",
                 },
             },
         )
