@@ -185,8 +185,8 @@ def main() -> int:
         python video_extractor.py <youtube_url> <source_tag>
         python video_extractor.py <local_file> <source_tag>
     """
-    import sys
     import json
+    import sys
 
     logging.basicConfig(
         level=logging.INFO,
