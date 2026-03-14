@@ -62,9 +62,7 @@ logger = logging.getLogger(__name__)
 # ---------------------------------------------------------------------------
 
 # Log file for enrichment events.
-ENRICHER_LOG: Path = ROUTING.get(
-    "memory_enricher_log", LOGS / "memory-enricher.jsonl"
-)
+ENRICHER_LOG: Path = ROUTING.get("memory_enricher_log", LOGS / "memory-enricher.jsonl")
 
 # MCE extraction threshold: 3+ cumulative insights per person triggers MCE.
 MCE_INSIGHT_THRESHOLD: int = 3
@@ -494,9 +492,7 @@ def _append_insight(memory_path: Path, insight: Insight) -> bool:
             history_pos = text.find(HISTORY_SECTION_HEADER_ALT)
 
         if history_pos != -1:
-            insert_block = (
-                f"\n{INSIGHTS_SECTION_HEADER}\n{entry_text}\n\n---\n\n"
-            )
+            insert_block = f"\n{INSIGHTS_SECTION_HEADER}\n{entry_text}\n\n---\n\n"
             text = text[:history_pos] + insert_block + text[history_pos:]
         else:
             # No history section either -- append at EOF
@@ -530,13 +526,7 @@ def _append_insight(memory_path: Path, insight: Insight) -> bool:
                     + text[next_section:]
                 )
             else:
-                text = (
-                    text[:insert_pos].rstrip()
-                    + "\n"
-                    + entry_text
-                    + "\n\n"
-                    + text[insert_pos:]
-                )
+                text = text[:insert_pos].rstrip() + "\n" + entry_text + "\n\n" + text[insert_pos:]
         else:
             # No next section -- append at end of file
             text = text.rstrip() + "\n" + entry_text + "\n"
@@ -554,14 +544,8 @@ def _append_insight(memory_path: Path, insight: Insight) -> bool:
 
         # Find next ## after history
         next_after_history = None
-        for match in SECTION_MARKER_RE.finditer(
-            history_remaining[len(HISTORY_SECTION_HEADER) :]
-        ):
-            next_after_history = (
-                history_section_start
-                + len(HISTORY_SECTION_HEADER)
-                + match.start()
-            )
+        for match in SECTION_MARKER_RE.finditer(history_remaining[len(HISTORY_SECTION_HEADER) :]):
+            next_after_history = history_section_start + len(HISTORY_SECTION_HEADER) + match.start()
             break
 
         # Find the last occurrence of "\n|" in the history table area
@@ -592,9 +576,7 @@ def _append_insight(memory_path: Path, insight: Insight) -> bool:
     # Write back
     try:
         memory_path.write_text(text, encoding="utf-8")
-        logger.info(
-            "Appended insight '%s' to %s", insight.chunk_id, memory_path
-        )
+        logger.info("Appended insight '%s' to %s", insight.chunk_id, memory_path)
         return True
     except Exception as exc:
         logger.warning("Failed to write %s: %s", memory_path, exc)
@@ -700,32 +682,25 @@ def enrich(insights: list[dict[str, str] | Insight]) -> dict[str, Any]:
             normalized.append(item)
         elif isinstance(item, dict):
             try:
-                normalized.append(Insight(**{
-                    k: v for k, v in item.items()
-                    if k in Insight.__slots__
-                }))
+                normalized.append(
+                    Insight(**{k: v for k, v in item.items() if k in Insight.__slots__})
+                )
             except TypeError as exc:
                 results["errors"].append(f"Invalid insight dict: {exc}")
                 continue
         else:
-            results["errors"].append(
-                f"Unsupported insight type: {type(item).__name__}"
-            )
+            results["errors"].append(f"Unsupported insight type: {type(item).__name__}")
             continue
 
     enriched_agents: set[str] = set()
 
     for insight in normalized:
         if not insight.person_slug:
-            results["errors"].append(
-                f"Missing person_slug for chunk_id={insight.chunk_id}"
-            )
+            results["errors"].append(f"Missing person_slug for chunk_id={insight.chunk_id}")
             continue
 
         if not insight.chunk_id:
-            results["errors"].append(
-                f"Missing chunk_id for person_slug={insight.person_slug}"
-            )
+            results["errors"].append(f"Missing chunk_id for person_slug={insight.person_slug}")
             continue
 
         # Find all target agent directories

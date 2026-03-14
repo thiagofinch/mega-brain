@@ -76,31 +76,40 @@ MCE_LAYER_KEYS = {
 
 # Entity types
 ENTITY_TYPES = [
-    "pessoa", "dominio", "filosofia", "modelo_mental",
-    "heuristica", "framework", "metodologia",
+    "pessoa",
+    "dominio",
+    "filosofia",
+    "modelo_mental",
+    "heuristica",
+    "framework",
+    "metodologia",
     # MCE entity types
-    "behavioral_pattern", "value", "obsession", "paradox", "voice_trait",
+    "behavioral_pattern",
+    "value",
+    "obsession",
+    "paradox",
+    "voice_trait",
 ]
 
 # Relationship types
 REL_TYPES = [
-    "TEM",              # Pessoa → DNA entry
-    "PERTENCE_A",       # Entry → Dominio
-    "GERA",             # Filosofia → ModeloMental
-    "PRODUZ",           # ModeloMental → Heuristica
-    "MATERIALIZA",      # Heuristica → Framework
-    "IMPLEMENTA",       # Framework → Metodologia
+    "TEM",  # Pessoa → DNA entry
+    "PERTENCE_A",  # Entry → Dominio
+    "GERA",  # Filosofia → ModeloMental
+    "PRODUZ",  # ModeloMental → Heuristica
+    "MATERIALIZA",  # Heuristica → Framework
+    "IMPLEMENTA",  # Framework → Metodologia
     "RELACIONADA_COM",  # Cross-layer reference (filosofia_relacionada, etc.)
-    "COMPLEMENTA",      # Pessoa → Pessoa
-    "TENSIONA",         # Pessoa → Pessoa (conflict)
-    "ALINHA",           # Pessoa → Pessoa (agreement)
-    "CONSOME",          # Agente → Pessoa DNA
+    "COMPLEMENTA",  # Pessoa → Pessoa
+    "TENSIONA",  # Pessoa → Pessoa (conflict)
+    "ALINHA",  # Pessoa → Pessoa (agreement)
+    "CONSOME",  # Agente → Pessoa DNA
     # MCE relationship types
-    "MANIFESTA",        # Pessoa → behavioral_pattern
-    "PRIORIZA",         # Pessoa → value
-    "OBSECADO_COM",     # Pessoa → obsession
+    "MANIFESTA",  # Pessoa → behavioral_pattern
+    "PRIORIZA",  # Pessoa → value
+    "OBSECADO_COM",  # Pessoa → obsession
     "TENSIONA_PARADOXO",  # Pessoa → paradox
-    "EXPRESSA",         # Pessoa → voice_trait
+    "EXPRESSA",  # Pessoa → voice_trait
 ]
 
 
@@ -187,8 +196,9 @@ class KnowledgeGraph:
     def get_entity(self, entity_id: str) -> Entity | None:
         return self.entities.get(entity_id)
 
-    def get_neighbors(self, entity_id: str, rel_type: str | None = None
-                      ) -> list[tuple[str, str, float]]:
+    def get_neighbors(
+        self, entity_id: str, rel_type: str | None = None
+    ) -> list[tuple[str, str, float]]:
         """Get neighbors of an entity. Returns [(entity_id, rel_type, weight)]."""
         neighbors = self.adj.get(entity_id, [])
         if rel_type:
@@ -199,12 +209,12 @@ class KnowledgeGraph:
         return [e for e in self.entities.values() if e.type == entity_type]
 
     def get_entities_by_person(self, person: str) -> list[Entity]:
-        return [e for e in self.entities.values()
-                if e.person.lower() == person.lower()]
+        return [e for e in self.entities.values() if e.person.lower() == person.lower()]
 
     def get_entities_by_domain(self, domain: str) -> list[Entity]:
-        return [e for e in self.entities.values()
-                if domain.lower() in [d.lower() for d in e.domains]]
+        return [
+            e for e in self.entities.values() if domain.lower() in [d.lower() for d in e.domains]
+        ]
 
     @property
     def stats(self) -> dict:
@@ -300,12 +310,14 @@ def build_graph(dna_dir: Path | None = None) -> KnowledgeGraph:
         person_id = f"PESSOA:{person}"
 
         # Add person entity
-        graph.add_entity(Entity(
-            entity_id=person_id,
-            entity_type="pessoa",
-            label=person.replace("-", " ").title(),
-            person=person,
-        ))
+        graph.add_entity(
+            Entity(
+                entity_id=person_id,
+                entity_type="pessoa",
+                label=person.replace("-", " ").title(),
+                person=person,
+            )
+        )
 
         # Process CONFIG.yaml for person-to-person relationships
         config_path = person_dir / "CONFIG.yaml"
@@ -327,9 +339,13 @@ def build_graph(dna_dir: Path | None = None) -> KnowledgeGraph:
                     continue
 
                 # Determine label
-                label = (entry.get("nome") or entry.get("regra")
-                         or entry.get("declaracao") or entry.get("crenca")
-                         or entry_id)
+                label = (
+                    entry.get("nome")
+                    or entry.get("regra")
+                    or entry.get("declaracao")
+                    or entry.get("crenca")
+                    or entry_id
+                )
                 if isinstance(label, str) and len(label) > 100:
                     label = label[:100] + "..."
 
@@ -342,15 +358,17 @@ def build_graph(dna_dir: Path | None = None) -> KnowledgeGraph:
 
                 # Add entity
                 entity_type = _layer_to_type(layer)
-                graph.add_entity(Entity(
-                    entity_id=entry_id,
-                    entity_type=entity_type,
-                    label=label,
-                    person=person,
-                    domains=domains,
-                    layer=layer,
-                    weight=weight,
-                ))
+                graph.add_entity(
+                    Entity(
+                        entity_id=entry_id,
+                        entity_type=entity_type,
+                        label=label,
+                        person=person,
+                        domains=domains,
+                        layer=layer,
+                        weight=weight,
+                    )
+                )
 
                 # Edge: Pessoa → Entry (TEM)
                 graph.add_edge(Edge(person_id, entry_id, "TEM", weight=weight))
@@ -359,11 +377,13 @@ def build_graph(dna_dir: Path | None = None) -> KnowledgeGraph:
                 for domain in domains:
                     domain_id = f"DOMINIO:{domain.lower()}"
                     if domain_id not in graph.entities:
-                        graph.add_entity(Entity(
-                            entity_id=domain_id,
-                            entity_type="dominio",
-                            label=domain,
-                        ))
+                        graph.add_entity(
+                            Entity(
+                                entity_id=domain_id,
+                                entity_type="dominio",
+                                label=domain,
+                            )
+                        )
                     all_domains.add(domain.lower())
                     graph.add_edge(Edge(entry_id, domain_id, "PERTENCE_A"))
 
@@ -412,8 +432,7 @@ def _layer_to_type(layer: str) -> str:
     return mapping.get(layer, layer)
 
 
-def _add_cross_layer_edges(graph: KnowledgeGraph, entry: dict,
-                           entry_id: str, layer: str) -> None:
+def _add_cross_layer_edges(graph: KnowledgeGraph, entry: dict, entry_id: str, layer: str) -> None:
     """Add cross-layer relationship edges.
 
     Supports both OLD format (relacionado_a: list) and
@@ -460,8 +479,7 @@ def _add_cross_layer_edges(graph: KnowledgeGraph, entry: dict,
                 graph.add_edge(Edge(ref, entry_id, rel_type))
 
 
-def _process_config(graph: KnowledgeGraph, config_path: Path,
-                    person: str, person_id: str) -> None:
+def _process_config(graph: KnowledgeGraph, config_path: Path, person: str, person_id: str) -> None:
     """Process CONFIG.yaml for person-to-person relationships."""
     try:
         with open(config_path, encoding="utf-8") as f:
@@ -476,9 +494,11 @@ def _process_config(graph: KnowledgeGraph, config_path: Path,
     if not isinstance(conexoes, dict):
         return
 
-    for rel_key, rel_type in [("complementa", "COMPLEMENTA"),
-                               ("tensiona", "TENSIONA"),
-                               ("alinha", "ALINHA")]:
+    for rel_key, rel_type in [
+        ("complementa", "COMPLEMENTA"),
+        ("tensiona", "TENSIONA"),
+        ("alinha", "ALINHA"),
+    ]:
         items = conexoes.get(rel_key, [])
         if not isinstance(items, list):
             continue
@@ -491,10 +511,14 @@ def _process_config(graph: KnowledgeGraph, config_path: Path,
                 continue
             other_id = f"PESSOA:{other_person.lower().replace(' ', '-')}"
             note = item.get("nota", "")
-            graph.add_edge(Edge(
-                person_id, other_id, rel_type,
-                metadata={"em": item.get("em", ""), "nota": note},
-            ))
+            graph.add_edge(
+                Edge(
+                    person_id,
+                    other_id,
+                    rel_type,
+                    metadata={"em": item.get("em", ""), "nota": note},
+                )
+            )
 
     # Agent consumption relationships
     rastreabilidade = config.get("rastreabilidade", {})
@@ -508,19 +532,22 @@ def _process_config(graph: KnowledgeGraph, config_path: Path,
             if agent_path:
                 agent_id = f"AGENTE:{agent_path.rstrip('/').split('/')[-1]}"
                 if agent_id not in graph.entities:
-                    graph.add_entity(Entity(
-                        entity_id=agent_id,
-                        entity_type="agente",
-                        label=agent_path.rstrip("/").split("/")[-1].upper(),
-                    ))
+                    graph.add_entity(
+                        Entity(
+                            entity_id=agent_id,
+                            entity_type="agente",
+                            label=agent_path.rstrip("/").split("/")[-1].upper(),
+                        )
+                    )
                 graph.add_edge(Edge(agent_id, person_id, "CONSOME", weight=peso))
 
 
 # ---------------------------------------------------------------------------
 # MCE (Mind-Clone Enhancement) PROCESSING
 # ---------------------------------------------------------------------------
-def _process_mce_files(graph: KnowledgeGraph, person_dir: Path,
-                       person: str, person_id: str) -> None:
+def _process_mce_files(
+    graph: KnowledgeGraph, person_dir: Path, person: str, person_id: str
+) -> None:
     """Process MCE YAML files for a person (behavioral patterns, values, voice).
 
     Gracefully skips if files don't exist (backward compatible).
@@ -530,8 +557,9 @@ def _process_mce_files(graph: KnowledgeGraph, person_dir: Path,
     _process_voice_dna(graph, person_dir, person, person_id)
 
 
-def _process_behavioral_patterns(graph: KnowledgeGraph, person_dir: Path,
-                                 person: str, person_id: str) -> None:
+def _process_behavioral_patterns(
+    graph: KnowledgeGraph, person_dir: Path, person: str, person_id: str
+) -> None:
     """Process BEHAVIORAL-PATTERNS.yaml → behavioral_pattern entities."""
     filepath = person_dir / "BEHAVIORAL-PATTERNS.yaml"
     if not filepath.exists():
@@ -549,23 +577,30 @@ def _process_behavioral_patterns(graph: KnowledgeGraph, person_dir: Path,
             if not entry_id:
                 continue
 
-        label = (entry.get("nome") or entry.get("name") or entry.get("pattern")
-                 or entry.get("description", "")[:100] or entry_id)
+        label = (
+            entry.get("nome")
+            or entry.get("name")
+            or entry.get("pattern")
+            or entry.get("description", "")[:100]
+            or entry_id
+        )
         if isinstance(label, str) and len(label) > 100:
             label = label[:100] + "..."
 
         domains = _extract_domains(entry)
         weight = _extract_weight(entry)
 
-        graph.add_entity(Entity(
-            entity_id=entry_id,
-            entity_type="behavioral_pattern",
-            label=label,
-            person=person,
-            domains=domains,
-            layer="behavioral_patterns",
-            weight=weight,
-        ))
+        graph.add_entity(
+            Entity(
+                entity_id=entry_id,
+                entity_type="behavioral_pattern",
+                label=label,
+                person=person,
+                domains=domains,
+                layer="behavioral_patterns",
+                weight=weight,
+            )
+        )
 
         graph.add_edge(Edge(person_id, entry_id, "MANIFESTA", weight=weight))
 
@@ -576,8 +611,9 @@ def _process_behavioral_patterns(graph: KnowledgeGraph, person_dir: Path,
         _add_mce_cross_refs(graph, entry, entry_id)
 
 
-def _process_values_hierarchy(graph: KnowledgeGraph, person_dir: Path,
-                              person: str, person_id: str) -> None:
+def _process_values_hierarchy(
+    graph: KnowledgeGraph, person_dir: Path, person: str, person_id: str
+) -> None:
     """Process VALUES-HIERARCHY.yaml → value, obsession, paradox entities."""
     filepath = person_dir / "VALUES-HIERARCHY.yaml"
     if not filepath.exists():
@@ -596,8 +632,7 @@ def _process_values_hierarchy(graph: KnowledgeGraph, person_dir: Path,
             if not entry_id:
                 continue
 
-        label = (entry.get("nome") or entry.get("name") or entry.get("value")
-                 or entry_id)
+        label = entry.get("nome") or entry.get("name") or entry.get("value") or entry_id
         if isinstance(label, str) and len(label) > 100:
             label = label[:100] + "..."
 
@@ -607,15 +642,17 @@ def _process_values_hierarchy(graph: KnowledgeGraph, person_dir: Path,
 
         domains = _extract_domains(entry)
 
-        graph.add_entity(Entity(
-            entity_id=entry_id,
-            entity_type="value",
-            label=label,
-            person=person,
-            domains=domains,
-            layer="values",
-            weight=rank,
-        ))
+        graph.add_entity(
+            Entity(
+                entity_id=entry_id,
+                entity_type="value",
+                label=label,
+                person=person,
+                domains=domains,
+                layer="values",
+                weight=rank,
+            )
+        )
 
         graph.add_edge(Edge(person_id, entry_id, "PRIORIZA", weight=rank))
 
@@ -634,23 +671,24 @@ def _process_values_hierarchy(graph: KnowledgeGraph, person_dir: Path,
             if not entry_id:
                 continue
 
-        label = (entry.get("nome") or entry.get("name") or entry.get("obsession")
-                 or entry_id)
+        label = entry.get("nome") or entry.get("name") or entry.get("obsession") or entry_id
         if isinstance(label, str) and len(label) > 100:
             label = label[:100] + "..."
 
         domains = _extract_domains(entry)
         weight = _extract_weight(entry)
 
-        graph.add_entity(Entity(
-            entity_id=entry_id,
-            entity_type="obsession",
-            label=label,
-            person=person,
-            domains=domains,
-            layer="obsessions",
-            weight=weight,
-        ))
+        graph.add_entity(
+            Entity(
+                entity_id=entry_id,
+                entity_type="obsession",
+                label=label,
+                person=person,
+                domains=domains,
+                layer="obsessions",
+                weight=weight,
+            )
+        )
 
         graph.add_edge(Edge(person_id, entry_id, "OBSECADO_COM", weight=weight))
 
@@ -669,23 +707,30 @@ def _process_values_hierarchy(graph: KnowledgeGraph, person_dir: Path,
             if not entry_id:
                 continue
 
-        label = (entry.get("nome") or entry.get("name") or entry.get("paradox")
-                 or entry.get("tension", "")[:100] or entry_id)
+        label = (
+            entry.get("nome")
+            or entry.get("name")
+            or entry.get("paradox")
+            or entry.get("tension", "")[:100]
+            or entry_id
+        )
         if isinstance(label, str) and len(label) > 100:
             label = label[:100] + "..."
 
         domains = _extract_domains(entry)
         weight = _extract_weight(entry)
 
-        graph.add_entity(Entity(
-            entity_id=entry_id,
-            entity_type="paradox",
-            label=label,
-            person=person,
-            domains=domains,
-            layer="paradoxes",
-            weight=weight,
-        ))
+        graph.add_entity(
+            Entity(
+                entity_id=entry_id,
+                entity_type="paradox",
+                label=label,
+                person=person,
+                domains=domains,
+                layer="paradoxes",
+                weight=weight,
+            )
+        )
 
         graph.add_edge(Edge(person_id, entry_id, "TENSIONA_PARADOXO", weight=weight))
 
@@ -701,8 +746,9 @@ def _process_values_hierarchy(graph: KnowledgeGraph, person_dir: Path,
         _add_mce_cross_refs(graph, entry, entry_id)
 
 
-def _process_voice_dna(graph: KnowledgeGraph, person_dir: Path,
-                       person: str, person_id: str) -> None:
+def _process_voice_dna(
+    graph: KnowledgeGraph, person_dir: Path, person: str, person_id: str
+) -> None:
     """Process VOICE-DNA.yaml → voice_trait entities."""
     filepath = person_dir / "VOICE-DNA.yaml"
     if not filepath.exists():
@@ -714,8 +760,14 @@ def _process_voice_dna(graph: KnowledgeGraph, person_dir: Path,
 
     # Collect voice traits from multiple possible sections
     all_traits: list[dict] = []
-    for key in ("signature_phrases", "metaphors", "catchphrases",
-                "verbal_patterns", "frases_signature", "metaforas"):
+    for key in (
+        "signature_phrases",
+        "metaphors",
+        "catchphrases",
+        "verbal_patterns",
+        "frases_signature",
+        "metaforas",
+    ):
         section = data.get(key)
         if isinstance(section, list):
             for item in section:
@@ -724,10 +776,12 @@ def _process_voice_dna(graph: KnowledgeGraph, person_dir: Path,
                         item["source_section"] = key
                     all_traits.append(item)
                 elif isinstance(item, str):
-                    all_traits.append({
-                        "phrase": item,
-                        "source_section": key,
-                    })
+                    all_traits.append(
+                        {
+                            "phrase": item,
+                            "source_section": key,
+                        }
+                    )
 
     counter = 0
     for entry in all_traits:
@@ -737,22 +791,30 @@ def _process_voice_dna(graph: KnowledgeGraph, person_dir: Path,
             abbrev = person[:2].upper()
             entry_id = f"VT-{abbrev}-{counter:03d}"
 
-        label = (entry.get("phrase") or entry.get("nome") or entry.get("name")
-                 or entry.get("metaphor") or entry.get("text") or entry_id)
+        label = (
+            entry.get("phrase")
+            or entry.get("nome")
+            or entry.get("name")
+            or entry.get("metaphor")
+            or entry.get("text")
+            or entry_id
+        )
         if isinstance(label, str) and len(label) > 100:
             label = label[:100] + "..."
 
         weight = _extract_weight(entry)
 
-        graph.add_entity(Entity(
-            entity_id=entry_id,
-            entity_type="voice_trait",
-            label=label,
-            person=person,
-            layer="voice_dna",
-            weight=weight,
-            metadata={"section": entry.get("source_section", "")},
-        ))
+        graph.add_entity(
+            Entity(
+                entity_id=entry_id,
+                entity_type="voice_trait",
+                label=label,
+                person=person,
+                layer="voice_dna",
+                weight=weight,
+                metadata={"section": entry.get("source_section", "")},
+            )
+        )
 
         graph.add_edge(Edge(person_id, entry_id, "EXPRESSA", weight=weight))
 
@@ -804,8 +866,14 @@ def _extract_weight(entry: dict) -> float:
 
 def _generate_mce_id(prefix: str, person: str, entry: dict) -> str:
     """Generate an ID for an MCE entry that lacks one."""
-    label = (entry.get("nome") or entry.get("name") or entry.get("pattern")
-             or entry.get("value") or entry.get("phrase") or "")
+    label = (
+        entry.get("nome")
+        or entry.get("name")
+        or entry.get("pattern")
+        or entry.get("value")
+        or entry.get("phrase")
+        or ""
+    )
     if not label:
         return ""
     abbrev = person[:2].upper()
@@ -819,15 +887,16 @@ def _ensure_domain_entity(graph: KnowledgeGraph, domain: str) -> None:
     """Ensure a domain entity exists in the graph."""
     domain_id = f"DOMINIO:{domain.lower()}"
     if domain_id not in graph.entities:
-        graph.add_entity(Entity(
-            entity_id=domain_id,
-            entity_type="dominio",
-            label=domain,
-        ))
+        graph.add_entity(
+            Entity(
+                entity_id=domain_id,
+                entity_type="dominio",
+                label=domain,
+            )
+        )
 
 
-def _add_mce_cross_refs(graph: KnowledgeGraph, entry: dict,
-                        entry_id: str) -> None:
+def _add_mce_cross_refs(graph: KnowledgeGraph, entry: dict, entry_id: str) -> None:
     """Add cross-reference edges from MCE entries to DNA entries."""
     # Direct references via related_to / relacionado_a
     rel_list = entry.get("relacionado_a", entry.get("related_to", []))
@@ -836,8 +905,7 @@ def _add_mce_cross_refs(graph: KnowledgeGraph, entry: dict,
     if isinstance(rel_list, list):
         for ref in rel_list:
             if isinstance(ref, str) and ref.startswith(
-                ("FIL-", "MM-", "HEUR-", "FW-", "MET-",
-                 "BP-", "VAL-", "OBS-", "PAR-", "VT-"),
+                ("FIL-", "MM-", "HEUR-", "FW-", "MET-", "BP-", "VAL-", "OBS-", "PAR-", "VT-"),
             ):
                 graph.add_edge(Edge(entry_id, ref, "RELACIONADA_COM"))
 
@@ -845,8 +913,7 @@ def _add_mce_cross_refs(graph: KnowledgeGraph, entry: dict,
 # ---------------------------------------------------------------------------
 # COMMUNITY DETECTION (LazyGraphRAG-style)
 # ---------------------------------------------------------------------------
-def detect_communities(graph: KnowledgeGraph,
-                       min_community_size: int = 3) -> list[dict]:
+def detect_communities(graph: KnowledgeGraph, min_community_size: int = 3) -> list[dict]:
     """Simple community detection via connected components on domain subgraphs.
 
     Returns list of communities: [{
@@ -875,13 +942,15 @@ def detect_communities(graph: KnowledgeGraph,
             if entity and entity.person:
                 persons.add(entity.person)
 
-        communities.append({
-            "id": f"COMM:{domain}",
-            "domain": domain,
-            "entities": sorted(entity_ids),
-            "persons": sorted(persons),
-            "size": len(entity_ids),
-        })
+        communities.append(
+            {
+                "id": f"COMM:{domain}",
+                "domain": domain,
+                "entities": sorted(entity_ids),
+                "persons": sorted(persons),
+                "size": len(entity_ids),
+            }
+        )
 
     return sorted(communities, key=lambda c: -c["size"])
 
@@ -908,16 +977,16 @@ def get_graph() -> KnowledgeGraph:
 # ---------------------------------------------------------------------------
 def main():
     import argparse
+
     parser = argparse.ArgumentParser(description="Build Knowledge Graph")
     parser.add_argument("--build", action="store_true", help="Force rebuild")
     parser.add_argument("--stats", action="store_true", help="Show stats only")
-    parser.add_argument("--communities", action="store_true",
-                        help="Detect communities")
+    parser.add_argument("--communities", action="store_true", help="Detect communities")
     args = parser.parse_args()
 
-    print(f"\n{'='*60}")
+    print(f"\n{'=' * 60}")
     print("KNOWLEDGE GRAPH BUILDER")
-    print(f"{'='*60}\n")
+    print(f"{'=' * 60}\n")
 
     if args.stats and GRAPH_FILE.exists():
         graph = KnowledgeGraph()
@@ -941,14 +1010,13 @@ def main():
         print(f"  {r}: {c}")
 
     if args.communities:
-        print(f"\n{'─'*60}")
+        print(f"\n{'─' * 60}")
         print("COMMUNITIES:\n")
         communities = detect_communities(graph)
         for comm in communities[:15]:
-            print(f"  {comm['domain']}: {comm['size']} entities, "
-                  f"persons={comm['persons']}")
+            print(f"  {comm['domain']}: {comm['size']} entities, persons={comm['persons']}")
 
-    print(f"\n{'='*60}\n")
+    print(f"\n{'=' * 60}\n")
 
 
 if __name__ == "__main__":

@@ -3,6 +3,7 @@
 Maintains a registry of SHA256 hashes for processed files.
 When pipeline runs, only new/changed files are processed.
 """
+
 import hashlib
 import json
 from datetime import datetime, timezone
@@ -80,9 +81,7 @@ class HashRegistry:
         }
         self._save()
 
-    def register_batch(
-        self, file_paths: list[str | Path], batch_id: str | None = None
-    ) -> None:
+    def register_batch(self, file_paths: list[str | Path], batch_id: str | None = None) -> None:
         """Register multiple files as processed."""
         for fp in file_paths:
             fp = Path(fp)

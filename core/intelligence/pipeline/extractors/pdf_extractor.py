@@ -37,9 +37,7 @@ def extract_pdf(path: str | Path, *, include_images: bool = False) -> str:
     try:
         import fitz
     except ImportError as e:
-        raise ImportError(
-            "pymupdf not installed. Run: pip install pymupdf"
-        ) from e
+        raise ImportError("pymupdf not installed. Run: pip install pymupdf") from e
 
     path = Path(path)
     if not path.exists():

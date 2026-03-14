@@ -31,37 +31,30 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
-#=================================
+# =================================
 # CONFIGURATION
-#=================================
+# =================================
 
-PROJECT_DIR = Path(os.environ.get('CLAUDE_PROJECT_DIR', '.'))
-STATE_PATH = PROJECT_DIR / '.claude' / 'mission-control' / 'PIPELINE-STATE.json'
-LOG_PATH = PROJECT_DIR / 'logs' / 'pipeline-checkpoints.jsonl'
+PROJECT_DIR = Path(os.environ.get("CLAUDE_PROJECT_DIR", "."))
+STATE_PATH = PROJECT_DIR / ".claude" / "mission-control" / "PIPELINE-STATE.json"
+LOG_PATH = PROJECT_DIR / "logs" / "pipeline-checkpoints.jsonl"
 
 # Pipeline phases configuration
 PIPELINE_PHASES = {
-    'ingest': {
-        'id': 'CP_INGEST',
-        'order': 1,
-        'markers': ['inbox/', 'ingest', 'download']
+    "ingest": {"id": "CP_INGEST", "order": 1, "markers": ["inbox/", "ingest", "download"]},
+    "chunk": {"id": "CP_CHUNK", "order": 2, "markers": ["chunks/", "CHUNKS-STATE", "chunking"]},
+    "canonical": {
+        "id": "CP_CANONICAL",
+        "order": 3,
+        "markers": ["canonical/", "entities", "entity-resolution"],
     },
-    'chunk': {
-        'id': 'CP_CHUNK',
-        'order': 2,
-        'markers': ['chunks/', 'CHUNKS-STATE', 'chunking']
-    },
-    'canonical': {
-        'id': 'CP_CANONICAL',
-        'order': 3,
-        'markers': ['canonical/', 'entities', 'entity-resolution']
-    }
 }
 
 
-#=================================
+# =================================
 # STATE MANAGEMENT
-#=================================
+# =================================
+
 
 def create_default_state() -> dict[str, Any]:
     """
@@ -71,31 +64,31 @@ def create_default_state() -> dict[str, Any]:
         Default pipeline state structure
     """
     return {
-        'version': '1.0.0',
-        'current_phase': None,
-        'phases': {
-            'ingest': {
-                'status': 'pending',
-                'files': [],
-                'timestamp': None,
-                'checkpoint_id': 'CP_INGEST'
+        "version": "1.0.0",
+        "current_phase": None,
+        "phases": {
+            "ingest": {
+                "status": "pending",
+                "files": [],
+                "timestamp": None,
+                "checkpoint_id": "CP_INGEST",
             },
-            'chunk': {
-                'status': 'pending',
-                'files': [],
-                'timestamp': None,
-                'checkpoint_id': 'CP_CHUNK'
+            "chunk": {
+                "status": "pending",
+                "files": [],
+                "timestamp": None,
+                "checkpoint_id": "CP_CHUNK",
             },
-            'canonical': {
-                'status': 'pending',
-                'files': [],
-                'timestamp': None,
-                'checkpoint_id': 'CP_CANONICAL'
-            }
+            "canonical": {
+                "status": "pending",
+                "files": [],
+                "timestamp": None,
+                "checkpoint_id": "CP_CANONICAL",
+            },
         },
-        'last_checkpoint': None,
-        'history': [],
-        'retry_enabled': True
+        "last_checkpoint": None,
+        "history": [],
+        "retry_enabled": True,
     }
 
 
@@ -108,23 +101,25 @@ def load_state() -> dict[str, Any]:
     """
     if STATE_PATH.exists():
         try:
-            with open(STATE_PATH, encoding='utf-8') as f:
+            with open(STATE_PATH, encoding="utf-8") as f:
                 state = json.load(f)
                 # Ensure all required keys exist
-                if 'version' not in state:
-                    state['version'] = '1.0.0'
-                if 'phases' not in state:
-                    state['phases'] = create_default_state()['phases']
-                if 'retry_enabled' not in state:
-                    state['retry_enabled'] = True
+                if "version" not in state:
+                    state["version"] = "1.0.0"
+                if "phases" not in state:
+                    state["phases"] = create_default_state()["phases"]
+                if "retry_enabled" not in state:
+                    state["retry_enabled"] = True
                 return state
         except (json.JSONDecodeError, OSError) as e:
-            log_checkpoint({
-                'type': 'error',
-                'action': 'load_state',
-                'error': str(e),
-                'fallback': 'creating_default'
-            })
+            log_checkpoint(
+                {
+                    "type": "error",
+                    "action": "load_state",
+                    "error": str(e),
+                    "fallback": "creating_default",
+                }
+            )
 
     return create_default_state()
 
@@ -141,21 +136,18 @@ def save_state(state: dict[str, Any]) -> bool:
     """
     try:
         STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
-        with open(STATE_PATH, 'w', encoding='utf-8') as f:
+        with open(STATE_PATH, "w", encoding="utf-8") as f:
             json.dump(state, f, indent=2, ensure_ascii=False)
         return True
     except OSError as e:
-        log_checkpoint({
-            'type': 'error',
-            'action': 'save_state',
-            'error': str(e)
-        })
+        log_checkpoint({"type": "error", "action": "save_state", "error": str(e)})
         return False
 
 
-#=================================
+# =================================
 # PHASE DETECTION
-#=================================
+# =================================
+
 
 def detect_phase_from_path(file_path: str) -> str | None:
     """
@@ -167,10 +159,10 @@ def detect_phase_from_path(file_path: str) -> str | None:
     Returns:
         Phase name (ingest/chunk/canonical) or None
     """
-    normalized_path = file_path.lower().replace('\\', '/')
+    normalized_path = file_path.lower().replace("\\", "/")
 
     for phase_name, config in PIPELINE_PHASES.items():
-        for marker in config['markers']:
+        for marker in config["markers"]:
             if marker.lower() in normalized_path:
                 return phase_name
 
@@ -190,25 +182,26 @@ def detect_phase_completion(tool_input: dict[str, Any], state: dict[str, Any]) -
     Returns:
         Phase name if completion detected, None otherwise
     """
-    file_path = tool_input.get('file_path', '')
+    file_path = tool_input.get("file_path", "")
 
     # Check for state file updates (strong signal of completion)
-    if 'STATE.json' in file_path or 'STATE.yaml' in file_path:
+    if "STATE.json" in file_path or "STATE.yaml" in file_path:
         phase = detect_phase_from_path(file_path)
         if phase:
             # Check if this phase has files processed
-            phase_data = state.get('phases', {}).get(phase, {})
-            if phase_data.get('files'):
+            phase_data = state.get("phases", {}).get(phase, {})
+            if phase_data.get("files"):
                 return phase
 
     return None
 
 
-#=================================
+# =================================
 # CHECKPOINT OPERATIONS
-#=================================
+# =================================
 
-def save_checkpoint(phase: str, files: list[str], status: str = 'complete') -> dict[str, Any]:
+
+def save_checkpoint(phase: str, files: list[str], status: str = "complete") -> dict[str, Any]:
     """
     Save checkpoint for a phase.
 
@@ -223,42 +216,46 @@ def save_checkpoint(phase: str, files: list[str], status: str = 'complete') -> d
     state = load_state()
 
     # Update phase data
-    if phase in state['phases']:
+    if phase in state["phases"]:
         timestamp = datetime.now().isoformat()
-        state['phases'][phase]['status'] = status
-        state['phases'][phase]['timestamp'] = timestamp
+        state["phases"][phase]["status"] = status
+        state["phases"][phase]["timestamp"] = timestamp
 
         # Add new files (avoid duplicates)
-        existing_files = set(state['phases'][phase]['files'])
+        existing_files = set(state["phases"][phase]["files"])
         new_files = [f for f in files if f not in existing_files]
-        state['phases'][phase]['files'].extend(new_files)
+        state["phases"][phase]["files"].extend(new_files)
 
         # Update current phase
-        state['current_phase'] = phase
-        state['last_checkpoint'] = {
-            'phase': phase,
-            'status': status,
-            'timestamp': timestamp,
-            'file_count': len(state['phases'][phase]['files'])
+        state["current_phase"] = phase
+        state["last_checkpoint"] = {
+            "phase": phase,
+            "status": status,
+            "timestamp": timestamp,
+            "file_count": len(state["phases"][phase]["files"]),
         }
 
         # Add to history
-        state['history'].append({
-            'phase': phase,
-            'status': status,
-            'timestamp': timestamp,
-            'files_count': len(new_files)
-        })
+        state["history"].append(
+            {
+                "phase": phase,
+                "status": status,
+                "timestamp": timestamp,
+                "files_count": len(new_files),
+            }
+        )
 
         # Save updated state
         if save_state(state):
-            log_checkpoint({
-                'type': 'checkpoint_saved',
-                'phase': phase,
-                'status': status,
-                'files_count': len(new_files),
-                'total_files': len(state['phases'][phase]['files'])
-            })
+            log_checkpoint(
+                {
+                    "type": "checkpoint_saved",
+                    "phase": phase,
+                    "status": status,
+                    "files_count": len(new_files),
+                    "total_files": len(state["phases"][phase]["files"]),
+                }
+            )
 
     return state
 
@@ -275,13 +272,13 @@ def can_retry_phase(phase: str) -> bool:
     """
     state = load_state()
 
-    if not state.get('retry_enabled', True):
+    if not state.get("retry_enabled", True):
         return False
 
-    phase_data = state.get('phases', {}).get(phase, {})
-    status = phase_data.get('status', 'pending')
+    phase_data = state.get("phases", {}).get(phase, {})
+    status = phase_data.get("status", "pending")
 
-    return status in ['failed', 'pending', 'retry_pending']
+    return status in ["failed", "pending", "retry_pending"]
 
 
 def get_resume_point() -> str | None:
@@ -294,16 +291,13 @@ def get_resume_point() -> str | None:
     state = load_state()
 
     # Sort phases by order
-    phases_by_order = sorted(
-        PIPELINE_PHASES.items(),
-        key=lambda x: x[1]['order']
-    )
+    phases_by_order = sorted(PIPELINE_PHASES.items(), key=lambda x: x[1]["order"])
 
     for phase_name, _ in phases_by_order:
-        phase_data = state.get('phases', {}).get(phase_name, {})
-        status = phase_data.get('status', 'pending')
+        phase_data = state.get("phases", {}).get(phase_name, {})
+        status = phase_data.get("status", "pending")
 
-        if status not in ['complete']:
+        if status not in ["complete"]:
             return phase_name
 
     return None
@@ -321,15 +315,13 @@ def mark_for_retry(phase: str) -> bool:
     """
     state = load_state()
 
-    if phase in state['phases']:
-        state['phases'][phase]['status'] = 'retry_pending'
-        state['phases'][phase]['files'] = []  # Clear files list
+    if phase in state["phases"]:
+        state["phases"][phase]["status"] = "retry_pending"
+        state["phases"][phase]["files"] = []  # Clear files list
 
-        log_checkpoint({
-            'type': 'retry_marked',
-            'phase': phase,
-            'timestamp': datetime.now().isoformat()
-        })
+        log_checkpoint(
+            {"type": "retry_marked", "phase": phase, "timestamp": datetime.now().isoformat()}
+        )
 
         return save_state(state)
 
@@ -346,31 +338,32 @@ def get_pipeline_status() -> dict[str, Any]:
     state = load_state()
 
     status = {
-        'version': state.get('version', '1.0.0'),
-        'current_phase': state.get('current_phase'),
-        'retry_enabled': state.get('retry_enabled', True),
-        'phases': {}
+        "version": state.get("version", "1.0.0"),
+        "current_phase": state.get("current_phase"),
+        "retry_enabled": state.get("retry_enabled", True),
+        "phases": {},
     }
 
-    for phase_name in ['ingest', 'chunk', 'canonical']:
-        phase_data = state.get('phases', {}).get(phase_name, {})
-        status['phases'][phase_name] = {
-            'status': phase_data.get('status', 'pending'),
-            'file_count': len(phase_data.get('files', [])),
-            'timestamp': phase_data.get('timestamp'),
-            'checkpoint_id': phase_data.get('checkpoint_id', f'CP_{phase_name.upper()}')
+    for phase_name in ["ingest", "chunk", "canonical"]:
+        phase_data = state.get("phases", {}).get(phase_name, {})
+        status["phases"][phase_name] = {
+            "status": phase_data.get("status", "pending"),
+            "file_count": len(phase_data.get("files", [])),
+            "timestamp": phase_data.get("timestamp"),
+            "checkpoint_id": phase_data.get("checkpoint_id", f"CP_{phase_name.upper()}"),
         }
 
     resume_point = get_resume_point()
     if resume_point:
-        status['resume_from'] = resume_point
+        status["resume_from"] = resume_point
 
     return status
 
 
-#=================================
+# =================================
 # LOGGING
-#=================================
+# =================================
+
 
 def log_checkpoint(action: dict[str, Any]) -> None:
     """
@@ -381,18 +374,19 @@ def log_checkpoint(action: dict[str, Any]) -> None:
     """
     LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
 
-    action['timestamp'] = datetime.now().isoformat()
+    action["timestamp"] = datetime.now().isoformat()
 
     try:
-        with open(LOG_PATH, 'a', encoding='utf-8') as f:
-            f.write(json.dumps(action, ensure_ascii=False) + '\n')
+        with open(LOG_PATH, "a", encoding="utf-8") as f:
+            f.write(json.dumps(action, ensure_ascii=False) + "\n")
     except OSError:
         pass  # Silent fail for logging
 
 
-#=================================
+# =================================
 # VALIDATION
-#=================================
+# =================================
+
 
 def validate_phase_completion(phase: str) -> bool:
     """
@@ -409,18 +403,18 @@ def validate_phase_completion(phase: str) -> bool:
         True if validation passes
     """
     state = load_state()
-    phase_data = state.get('phases', {}).get(phase, {})
+    phase_data = state.get("phases", {}).get(phase, {})
 
     # Check: At least one file processed
-    files = phase_data.get('files', [])
+    files = phase_data.get("files", [])
     if not files:
         return False
 
     # Check: State file exists for chunk and canonical
-    if phase in ['chunk', 'canonical']:
+    if phase in ["chunk", "canonical"]:
         state_markers = {
-            'chunk': PROJECT_DIR / 'processing' / 'chunks' / 'CHUNKS-STATE.json',
-            'canonical': PROJECT_DIR / 'processing' / 'canonical' / 'ENTITIES-STATE.json'
+            "chunk": PROJECT_DIR / "processing" / "chunks" / "CHUNKS-STATE.json",
+            "canonical": PROJECT_DIR / "processing" / "canonical" / "ENTITIES-STATE.json",
         }
 
         state_file = state_markers.get(phase)
@@ -430,9 +424,10 @@ def validate_phase_completion(phase: str) -> bool:
     return True
 
 
-#=================================
+# =================================
 # MAIN HOOK ENTRY
-#=================================
+# =================================
+
 
 def process_tool_use(tool_input: dict[str, Any]) -> dict[str, Any]:
     """
@@ -444,50 +439,46 @@ def process_tool_use(tool_input: dict[str, Any]) -> dict[str, Any]:
     Returns:
         Hook output
     """
-    file_path = tool_input.get('file_path', '')
+    file_path = tool_input.get("file_path", "")
 
     # Detect phase from file path
     phase = detect_phase_from_path(file_path)
 
     if not phase:
-        return {'continue': True, 'feedback': None}
+        return {"continue": True, "feedback": None}
 
     state = load_state()
 
     # Check if phase is in retry mode
-    phase_data = state.get('phases', {}).get(phase, {})
-    if phase_data.get('status') == 'retry_pending':
+    phase_data = state.get("phases", {}).get(phase, {})
+    if phase_data.get("status") == "retry_pending":
         # Update to in_progress
-        phase_data['status'] = 'in_progress'
+        phase_data["status"] = "in_progress"
         save_state(state)
-        log_checkpoint({
-            'type': 'retry_started',
-            'phase': phase,
-            'file': file_path
-        })
+        log_checkpoint({"type": "retry_started", "phase": phase, "file": file_path})
 
     # Register file as processed
-    if file_path not in phase_data.get('files', []):
-        save_checkpoint(phase, [file_path], status='in_progress')
+    if file_path not in phase_data.get("files", []):
+        save_checkpoint(phase, [file_path], status="in_progress")
 
     # Check if phase completed
     completed_phase = detect_phase_completion(tool_input, state)
     if completed_phase:
         # Validate completion
         if validate_phase_completion(completed_phase):
-            save_checkpoint(completed_phase, [], status='complete')
+            save_checkpoint(completed_phase, [], status="complete")
             return {
-                'continue': True,
-                'feedback': f"[JARVIS] Pipeline checkpoint: {completed_phase} phase complete"
+                "continue": True,
+                "feedback": f"[JARVIS] Pipeline checkpoint: {completed_phase} phase complete",
             }
         else:
-            save_checkpoint(completed_phase, [], status='needs_attention')
+            save_checkpoint(completed_phase, [], status="needs_attention")
             return {
-                'continue': True,
-                'feedback': f"[JARVIS] Pipeline checkpoint: {completed_phase} needs attention (validation failed)"
+                "continue": True,
+                "feedback": f"[JARVIS] Pipeline checkpoint: {completed_phase} needs attention (validation failed)",
             }
 
-    return {'continue': True, 'feedback': None}
+    return {"continue": True, "feedback": None}
 
 
 def main():
@@ -498,18 +489,18 @@ def main():
     if len(sys.argv) > 1:
         command = sys.argv[1]
 
-        if command == 'status':
+        if command == "status":
             status = get_pipeline_status()
             print("\n=== PIPELINE STATUS ===\n")
             print(f"Version: {status['version']}")
             print(f"Current Phase: {status.get('current_phase', 'None')}")
             print(f"Retry Enabled: {status['retry_enabled']}")
 
-            if 'resume_from' in status:
+            if "resume_from" in status:
                 print(f"Resume From: {status['resume_from']}")
 
             print("\nPhases:")
-            for phase_name, phase_data in status['phases'].items():
+            for phase_name, phase_data in status["phases"].items():
                 print(f"  {phase_name}:")
                 print(f"    Status: {phase_data['status']}")
                 print(f"    Files: {phase_data['file_count']}")
@@ -518,7 +509,7 @@ def main():
             print()
             return
 
-        elif command == 'retry':
+        elif command == "retry":
             phase = sys.argv[2] if len(sys.argv) > 2 else None
             if not phase:
                 print("Usage: pipeline_checkpoint.py retry <phase>")
@@ -535,7 +526,7 @@ def main():
                 print(f"[JARVIS] Failed to mark phase '{phase}' for retry")
             return
 
-        elif command == 'resume':
+        elif command == "resume":
             resume_phase = get_resume_point()
             if resume_phase:
                 print(f"[JARVIS] Resume from phase: {resume_phase}")
@@ -543,7 +534,7 @@ def main():
                 print("[JARVIS] All phases complete - nothing to resume")
             return
 
-        elif command == 'reset':
+        elif command == "reset":
             state = create_default_state()
             if save_state(state):
                 print("[JARVIS] Pipeline state reset to default")
@@ -561,7 +552,7 @@ def main():
         input_data = sys.stdin.read()
         hook_input = json.loads(input_data) if input_data else {}
 
-        tool_input = hook_input.get('tool_input', {})
+        tool_input = hook_input.get("tool_input", {})
 
         # Process tool use
         output = process_tool_use(tool_input)
@@ -570,9 +561,9 @@ def main():
 
     except Exception as e:
         error_output = {
-            'continue': True,
-            'feedback': f"[JARVIS] Pipeline checkpoint error: {e!s}",
-            'error': str(e)
+            "continue": True,
+            "feedback": f"[JARVIS] Pipeline checkpoint error: {e!s}",
+            "error": str(e),
         }
         print(json.dumps(error_output))
 

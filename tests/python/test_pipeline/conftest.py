@@ -127,13 +127,7 @@ def tmp_inbox(tmp_path: Path) -> dict[str, Path]:
 def mock_llm_response() -> dict:
     """A generic mock LLM response for tests that need one."""
     return {
-        "choices": [
-            {
-                "message": {
-                    "content": "This is a mock LLM response for testing purposes."
-                }
-            }
-        ],
+        "choices": [{"message": {"content": "This is a mock LLM response for testing purposes."}}],
         "usage": {"prompt_tokens": 100, "completion_tokens": 50},
     }
 

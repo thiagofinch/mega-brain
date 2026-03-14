@@ -26,10 +26,10 @@ from .graph_builder import KnowledgeGraph, get_graph
 # ---------------------------------------------------------------------------
 # CONFIG
 # ---------------------------------------------------------------------------
-PPR_ALPHA = 0.15        # Teleport probability (higher = more focused on seeds)
-PPR_ITERATIONS = 20     # Max iterations for convergence
-PPR_TOLERANCE = 1e-6    # Convergence threshold
-DEFAULT_TOP_K = 15      # Default results to return
+PPR_ALPHA = 0.15  # Teleport probability (higher = more focused on seeds)
+PPR_ITERATIONS = 20  # Max iterations for convergence
+PPR_TOLERANCE = 1e-6  # Convergence threshold
+DEFAULT_TOP_K = 15  # Default results to return
 
 
 # ---------------------------------------------------------------------------
@@ -50,7 +50,7 @@ def activate_seeds(
 
     # Tokenize query
     query_lower = query.lower()
-    query_tokens = set(re.findall(r'[a-z\u00e0-\u024f]{3,}', query_lower))
+    query_tokens = set(re.findall(r"[a-z\u00e0-\u024f]{3,}", query_lower))
 
     if not query_tokens:
         return seeds
@@ -61,7 +61,7 @@ def activate_seeds(
 
         # Match against label
         label_lower = entity.label.lower()
-        label_tokens = set(re.findall(r'[a-z\u00e0-\u024f]{3,}', label_lower))
+        label_tokens = set(re.findall(r"[a-z\u00e0-\u024f]{3,}", label_lower))
         overlap = query_tokens & label_tokens
         if overlap:
             score += len(overlap) / max(len(query_tokens), 1)
@@ -119,9 +119,7 @@ def personalized_pagerank(
 
     # Normalize seed scores to form teleport distribution
     total_seed = sum(seeds.values())
-    teleport: dict[str, float] = {
-        k: v / total_seed for k, v in seeds.items()
-    }
+    teleport: dict[str, float] = {k: v / total_seed for k, v in seeds.items()}
 
     # Initialize scores
     all_nodes = set(graph.entities.keys())
@@ -171,8 +169,9 @@ def personalized_pagerank(
 class AssociativeResult:
     """Result from associative memory query."""
 
-    def __init__(self, entity_id: str, entity_type: str, label: str,
-                 person: str, score: float, is_seed: bool):
+    def __init__(
+        self, entity_id: str, entity_type: str, label: str, person: str, score: float, is_seed: bool
+    ):
         self.entity_id = entity_id
         self.entity_type = entity_type
         self.label = label
@@ -255,14 +254,16 @@ def associative_search(
         if person_filter and entity.person.lower() != person_filter.lower():
             continue
 
-        results.append(AssociativeResult(
-            entity_id=entity.id,
-            entity_type=entity.type,
-            label=entity.label,
-            person=entity.person,
-            score=score,
-            is_seed=entity_id in seeds,
-        ))
+        results.append(
+            AssociativeResult(
+                entity_id=entity.id,
+                entity_type=entity.type,
+                label=entity.label,
+                person=entity.person,
+                score=score,
+                is_seed=entity_id in seeds,
+            )
+        )
 
     # Sort by score
     results.sort(key=lambda r: -r.score)
@@ -270,8 +271,10 @@ def associative_search(
 
     return {
         "query": query,
-        "seeds": [{"entity_id": k, "score": round(v, 4)}
-                  for k, v in sorted(seeds.items(), key=lambda x: -x[1])],
+        "seeds": [
+            {"entity_id": k, "score": round(v, 4)}
+            for k, v in sorted(seeds.items(), key=lambda x: -x[1])
+        ],
         "results": [r.to_dict() for r in results],
         "total_activated": len([s for s in ppr_scores.values() if s > 0]),
     }
@@ -329,13 +332,14 @@ def main():
     import time
 
     parser = argparse.ArgumentParser(description="Associative Memory (HippoRAG)")
-    parser.add_argument("--build", action="store_true",
-                        help="Load/validate graph and confirm readiness")
+    parser.add_argument(
+        "--build", action="store_true", help="Load/validate graph and confirm readiness"
+    )
     parser.add_argument("--query", type=str, help="Query text")
-    parser.add_argument("--cross-expert", type=str,
-                        help="Find cross-expert connections for concept")
-    parser.add_argument("--source-person", type=str,
-                        help="Source person for cross-expert query")
+    parser.add_argument(
+        "--cross-expert", type=str, help="Find cross-expert connections for concept"
+    )
+    parser.add_argument("--source-person", type=str, help="Source person for cross-expert query")
     parser.add_argument("--top-k", type=int, default=15)
     # Support positional query for backwards compatibility
     parser.add_argument("query_positional", nargs="?", help=argparse.SUPPRESS)
@@ -343,9 +347,9 @@ def main():
 
     query = args.query or args.query_positional
 
-    print(f"\n{'='*60}")
+    print(f"\n{'=' * 60}")
     print("ASSOCIATIVE MEMORY (HippoRAG 2)")
-    print(f"{'='*60}\n")
+    print(f"{'=' * 60}\n")
 
     if args.build:
         t0 = time.time()
@@ -364,8 +368,9 @@ def main():
         for r, c in sorted(stats["edges_by_type"].items()):
             print(f"  {r}: {c}")
         print(f"\nAssociative memory index: READY")
-        print(f"PPR config: alpha={PPR_ALPHA}, iterations={PPR_ITERATIONS}, "
-              f"tolerance={PPR_TOLERANCE}")
+        print(
+            f"PPR config: alpha={PPR_ALPHA}, iterations={PPR_ITERATIONS}, tolerance={PPR_TOLERANCE}"
+        )
 
     elif args.cross_expert:
         result = find_cross_expert_connections(
@@ -379,14 +384,18 @@ def main():
         if result["source_results"]:
             print(f"  From {result['source_person']}:")
             for r in result["source_results"][:5]:
-                print(f"    [{r['entity_type']}] {r['entity_id']}: "
-                      f"{r['label'][:50]} (score={r['score']:.4f})")
+                print(
+                    f"    [{r['entity_type']}] {r['entity_id']}: "
+                    f"{r['label'][:50]} (score={r['score']:.4f})"
+                )
 
         for person, entries in result["cross_expert"].items():
             print(f"\n  From {person}:")
             for r in entries[:5]:
-                print(f"    [{r['entity_type']}] {r['entity_id']}: "
-                      f"{r['label'][:50]} (score={r['score']:.4f})")
+                print(
+                    f"    [{r['entity_type']}] {r['entity_id']}: "
+                    f"{r['label'][:50]} (score={r['score']:.4f})"
+                )
 
     elif query:
         result = associative_search(query, top_k=args.top_k)
@@ -401,16 +410,18 @@ def main():
         print(f"\nResults ({len(result['results'])}):")
         for r in result["results"]:
             seed_marker = " [SEED]" if r["is_seed"] else ""
-            print(f"  [{r['entity_type']}] {r['entity_id']}: "
-                  f"{r['label'][:50]} (person={r['person']}, "
-                  f"score={r['score']:.6f}){seed_marker}")
+            print(
+                f"  [{r['entity_type']}] {r['entity_id']}: "
+                f"{r['label'][:50]} (person={r['person']}, "
+                f"score={r['score']:.6f}){seed_marker}"
+            )
     else:
         print("Usage:")
         print("  --build                     Validate graph, show stats")
-        print("  --query \"text\"              Associative search")
-        print("  --cross-expert \"concept\"    Cross-expert connections")
+        print('  --query "text"              Associative search')
+        print('  --cross-expert "concept"    Cross-expert connections')
 
-    print(f"\n{'='*60}\n")
+    print(f"\n{'=' * 60}\n")
 
 
 if __name__ == "__main__":

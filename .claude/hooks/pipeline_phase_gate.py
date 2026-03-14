@@ -182,10 +182,14 @@ def main():
     if warnings:
         feedback = "[PHASE-GATE] " + " | ".join(warnings)
 
-    print(json.dumps({
-        "continue": True,  # WARN, not BLOCK
-        "feedback": feedback,
-    }))
+    print(
+        json.dumps(
+            {
+                "continue": True,  # WARN, not BLOCK
+                "feedback": feedback,
+            }
+        )
+    )
 
 
 if __name__ == "__main__":

@@ -76,9 +76,7 @@ class ChromaStore(VectorStore):
             kwargs["metadatas"] = metadatas
         self._collection.add(**kwargs)
 
-    def search(
-        self, query_embedding: list[float], top_k: int = 10
-    ) -> list[SearchResult]:
+    def search(self, query_embedding: list[float], top_k: int = 10) -> list[SearchResult]:
         """Search by embedding vector similarity.
 
         Returns results sorted by descending similarity (highest first).
@@ -97,9 +95,7 @@ class ChromaStore(VectorStore):
                     SearchResult(
                         chunk_id=chunk_id,
                         text=results["documents"][0][i] if results["documents"] else "",
-                        metadata=(
-                            results["metadatas"][0][i] if results["metadatas"] else {}
-                        ),
+                        metadata=(results["metadatas"][0][i] if results["metadatas"] else {}),
                         score=1.0 - results["distances"][0][i],
                     )
                 )
@@ -108,9 +104,7 @@ class ChromaStore(VectorStore):
     def get(self, chunk_id: str) -> SearchResult | None:
         """Get a specific chunk by ID. Returns None if not found."""
         try:
-            result = self._collection.get(
-                ids=[chunk_id], include=["documents", "metadatas"]
-            )
+            result = self._collection.get(ids=[chunk_id], include=["documents", "metadatas"])
             if result["ids"]:
                 return SearchResult(
                     chunk_id=chunk_id,

@@ -27,6 +27,7 @@ except ImportError:
 # Data classes
 # ---------------------------------------------------------------------------
 
+
 @dataclass
 class CheckResult:
     step_id: str
@@ -64,6 +65,7 @@ class HealReport:
 # ---------------------------------------------------------------------------
 # Detector
 # ---------------------------------------------------------------------------
+
 
 class PipelineHealDetector:
     """Detects missed pipeline steps for processed sources."""
@@ -112,17 +114,13 @@ class PipelineHealDetector:
     @property
     def chunks_state(self) -> dict:
         if self._chunks_cache is None:
-            self._chunks_cache = (
-                self._load_json("processing/chunks/CHUNKS-STATE.json") or {}
-            )
+            self._chunks_cache = self._load_json("processing/chunks/CHUNKS-STATE.json") or {}
         return self._chunks_cache
 
     @property
     def insights_state(self) -> dict:
         if self._insights_cache is None:
-            self._insights_cache = (
-                self._load_json("processing/insights/INSIGHTS-STATE.json") or {}
-            )
+            self._insights_cache = self._load_json("processing/insights/INSIGHTS-STATE.json") or {}
         return self._insights_cache
 
     @property
@@ -136,9 +134,7 @@ class PipelineHealDetector:
     @property
     def file_registry(self) -> dict:
         if self._registry_cache is None:
-            self._registry_cache = (
-                self._load_json("system/REGISTRY/file-registry.json") or {}
-            )
+            self._registry_cache = self._load_json("system/REGISTRY/file-registry.json") or {}
         return self._registry_cache
 
     # -- Source helpers ------------------------------------------------------
@@ -200,11 +196,12 @@ class PipelineHealDetector:
         """P2: Verify CHUNKS-STATE has chunks for this source."""
         src = self._find_source(sid)
         if src and src.get("chunk_count", 0) > 0:
-            return CheckResult(
-                "P2", "Chunking", True, f"{src['chunk_count']} chunks"
-            )
+            return CheckResult("P2", "Chunking", True, f"{src['chunk_count']} chunks")
         return CheckResult(
-            "P2", "Chunking", False, f"No chunks for {sid}",
+            "P2",
+            "Chunking",
+            False,
+            f"No chunks for {sid}",
             f"Run /process-jarvis Phase 2 for {sid}",
         )
 
@@ -213,7 +210,9 @@ class PipelineHealDetector:
         cmap = self._load_json("processing/canonical/CANONICAL-MAP.json")
         if cmap is None:
             return CheckResult(
-                "P3", "Entity Resolution", False,
+                "P3",
+                "Entity Resolution",
+                False,
                 "CANONICAL-MAP.json not found",
                 f"Run /process-jarvis Phase 3 for {sid}",
             )
@@ -230,11 +229,15 @@ class PipelineHealDetector:
         text = json.dumps(cmap)
         if sid in text or count > 0:
             return CheckResult(
-                "P3", "Entity Resolution", True,
+                "P3",
+                "Entity Resolution",
+                True,
                 f"{max(count, 1)} entities",
             )
         return CheckResult(
-            "P3", "Entity Resolution", False,
+            "P3",
+            "Entity Resolution",
+            False,
             f"No entities for {sid}",
             f"Run /process-jarvis Phase 3 for {sid}",
         )
@@ -250,17 +253,20 @@ class PipelineHealDetector:
                 chunks = insight.get("chunks", [])
                 if any(str(c).startswith(prefix) for c in chunks):
                     count += 1
-                    if insight.get("confidence") == "HIGH" or insight.get(
-                        "priority"
-                    ) == "HIGH":
+                    if insight.get("confidence") == "HIGH" or insight.get("priority") == "HIGH":
                         high_count += 1
         if count > 0:
             return CheckResult(
-                "P4", "Insights", True,
+                "P4",
+                "Insights",
+                True,
                 f"{count} insights ({high_count} HIGH)",
             )
         return CheckResult(
-            "P4", "Insights", False, f"No insights for {sid}",
+            "P4",
+            "Insights",
+            False,
+            f"No insights for {sid}",
             f"Run /process-jarvis Phase 4 for {sid}",
         )
 
@@ -274,17 +280,24 @@ class PipelineHealDetector:
                 narrative = data.get("narrative", "")
                 sections = narrative.count("##") if narrative else 0
                 return CheckResult(
-                    "P5", "Narratives", True,
+                    "P5",
+                    "Narratives",
+                    True,
                     f"1 person, ~{max(sections, 1)} sections",
                 )
         # Fallback: check if source_id appears anywhere in narratives
         if sid in json.dumps(persons):
             return CheckResult(
-                "P5", "Narratives", True,
+                "P5",
+                "Narratives",
+                True,
                 "Source referenced in narratives",
             )
         return CheckResult(
-            "P5", "Narratives", False, f"No narrative for {name}",
+            "P5",
+            "Narratives",
+            False,
+            f"No narrative for {name}",
             f"Run /process-jarvis Phase 5 for {sid}",
         )
 
@@ -293,22 +306,25 @@ class PipelineHealDetector:
         dossier_dir = self.root / "knowledge" / "external" / "dossiers" / "persons"
         if not dossier_dir.exists():
             return CheckResult(
-                "P6.2", "Person Dossier", False,
+                "P6.2",
+                "Person Dossier",
+                False,
                 "Dossier directory not found",
                 f"Run /process-jarvis Phase 6.2 for {sid}",
             )
         name = self._source_name(sid)
         dossier_name = f"DOSSIER-{name.upper().replace(' ', '-')}.md"
         if (dossier_dir / dossier_name).exists():
-            return CheckResult(
-                "P6.2", "Person Dossier", True, dossier_name
-            )
+            return CheckResult("P6.2", "Person Dossier", True, dossier_name)
         # Try slug-based match
         for f in dossier_dir.glob("DOSSIER-*.md"):
             if slug in f.name.lower().replace("-", " ").replace(" ", "-"):
                 return CheckResult("P6.2", "Person Dossier", True, f.name)
         return CheckResult(
-            "P6.2", "Person Dossier", False, f"No dossier for {name}",
+            "P6.2",
+            "Person Dossier",
+            False,
+            f"No dossier for {name}",
             f"Run /process-jarvis Phase 6.2 for {sid}",
         )
 
@@ -317,7 +333,9 @@ class PipelineHealDetector:
         theme_dir = self.root / "knowledge" / "external" / "dossiers" / "themes"
         if not theme_dir.exists():
             return CheckResult(
-                "P6.3", "Theme Dossiers", False,
+                "P6.3",
+                "Theme Dossiers",
+                False,
                 "Theme dossier directory not found",
                 f"Run /process-jarvis Phase 6.3 for {sid}",
             )
@@ -327,11 +345,11 @@ class PipelineHealDetector:
             if self._file_contains(rel, sid):
                 found.append(f.stem.replace("DOSSIER-", ""))
         if found:
-            return CheckResult(
-                "P6.3", "Theme Dossiers", True, f"{len(found)} themes"
-            )
+            return CheckResult("P6.3", "Theme Dossiers", True, f"{len(found)} themes")
         return CheckResult(
-            "P6.3", "Theme Dossiers", False,
+            "P6.3",
+            "Theme Dossiers",
+            False,
             f"No theme dossiers reference {sid}",
             f"Run /process-jarvis Phase 6.3 for {sid}",
         )
@@ -341,14 +359,18 @@ class PipelineHealDetector:
         nav = self._load_json("knowledge/NAVIGATION-MAP.json")
         if nav is None:
             return CheckResult(
-                "P6.6", "Navigation Map", False,
+                "P6.6",
+                "Navigation Map",
+                False,
                 "NAVIGATION-MAP.json not found",
                 "Run python3 core/intelligence/nav_map_builder.py",
             )
         text = json.dumps(nav)
         if sid in text:
             return CheckResult(
-                "P6.6", "Navigation Map", True,
+                "P6.6",
+                "Navigation Map",
+                True,
                 "Source in NAVIGATION-MAP.json",
             )
         # Check if person dossier is in the nav map
@@ -356,11 +378,15 @@ class PipelineHealDetector:
         name = self._source_name(sid)
         if slug in text.lower() or name.upper() in text.upper():
             return CheckResult(
-                "P6.6", "Navigation Map", True,
+                "P6.6",
+                "Navigation Map",
+                True,
                 "Person referenced in NAVIGATION-MAP.json",
             )
         return CheckResult(
-            "P6.6", "Navigation Map", False,
+            "P6.6",
+            "Navigation Map",
+            False,
             f"No {sid} entry in NAVIGATION-MAP.json",
             "Run python3 core/intelligence/nav_map_builder.py",
         )
@@ -371,14 +397,18 @@ class PipelineHealDetector:
         full = self.root / mem_path
         if not full.exists():
             return CheckResult(
-                "P7.4", "Agent MEMORY", False,
+                "P7.4",
+                "Agent MEMORY",
+                False,
                 f"No MEMORY.md at {mem_path}",
                 f"Create {mem_path} with {sid} insights",
             )
         if self._file_contains(mem_path, sid):
             return CheckResult("P7.4", "Agent MEMORY", True, mem_path)
         return CheckResult(
-            "P7.4", "Agent MEMORY", False,
+            "P7.4",
+            "Agent MEMORY",
+            False,
             f"MEMORY.md exists but no {sid} ref",
             f"Update {mem_path} with {sid} insights",
         )
@@ -393,16 +423,15 @@ class PipelineHealDetector:
         ]:
             idx_path = self.root / rel
             if idx_path.exists():
-                chunks_path = (
-                    self.root / "processing" / "chunks" / "CHUNKS-STATE.json"
-                )
+                chunks_path = self.root / "processing" / "chunks" / "CHUNKS-STATE.json"
                 if chunks_path.exists():
                     if idx_path.stat().st_mtime >= chunks_path.stat().st_mtime:
-                        return CheckResult(
-                            "P8.1.1", "RAG Index", True, "BM25 current"
-                        )
+                        return CheckResult("P8.1.1", "RAG Index", True, "BM25 current")
                     return CheckResult(
-                        "P8.1.1", "RAG Index", False, "BM25 index outdated",
+                        "P8.1.1",
+                        "RAG Index",
+                        False,
+                        "BM25 index outdated",
                         "Run python3 core/intelligence/rag/hybrid_index.py --build",
                     )
                 return CheckResult(
@@ -411,11 +440,17 @@ class PipelineHealDetector:
         # No index file found — check if hybrid_index.py exists at all
         if (self.root / "core/intelligence/rag/hybrid_index.py").exists():
             return CheckResult(
-                "P8.1.1", "RAG Index", False, "BM25 index not built",
+                "P8.1.1",
+                "RAG Index",
+                False,
+                "BM25 index not built",
                 "Run python3 core/intelligence/rag/hybrid_index.py --build",
             )
         return CheckResult(
-            "P8.1.1", "RAG Index", False, "RAG system not found",
+            "P8.1.1",
+            "RAG Index",
+            False,
+            "RAG system not found",
             "Install RAG system first",
         )
 
@@ -426,11 +461,11 @@ class PipelineHealDetector:
         name_upper = name.upper()
         for fpath in files:
             if sid in fpath or name_upper in fpath.upper():
-                return CheckResult(
-                    "P8.1.2", "File Registry", True, "Entry found"
-                )
+                return CheckResult("P8.1.2", "File Registry", True, "Entry found")
         return CheckResult(
-            "P8.1.2", "File Registry", False,
+            "P8.1.2",
+            "File Registry",
+            False,
             f"No entry for {sid}",
             "Run python3 scripts/file_registry.py --scan",
         )
@@ -444,18 +479,24 @@ class PipelineHealDetector:
             if (self.root / rel).exists():
                 if self._file_contains(rel, sid):
                     return CheckResult(
-                        "P8.1.3", "Session State", True,
+                        "P8.1.3",
+                        "Session State",
+                        True,
                         f"Referenced in {rel}",
                     )
         # State file exists but no reference
         if (self.root / ".claude/mission-control/MISSION-STATE.json").exists():
             return CheckResult(
-                "P8.1.3", "Session State", False,
+                "P8.1.3",
+                "Session State",
+                False,
                 f"State exists but no {sid} ref",
                 f"Update session state with {sid} completion",
             )
         return CheckResult(
-            "P8.1.3", "Session State", False,
+            "P8.1.3",
+            "Session State",
+            False,
             "No session state file found",
             "Create session state tracking",
         )
@@ -466,19 +507,25 @@ class PipelineHealDetector:
         if dna_dir.exists():
             yaml_files = list(dna_dir.glob("*.yaml"))
             return CheckResult(
-                "P8.1.8", "DNA Auto-Create", True,
+                "P8.1.8",
+                "DNA Auto-Create",
+                True,
                 f"{len(yaml_files)} files",
             )
         # DNA doesn't exist — check if it should
         density = self._dossier_density(sid, slug)
         if density >= 3:
             return CheckResult(
-                "P8.1.8", "DNA Auto-Create", False,
+                "P8.1.8",
+                "DNA Auto-Create",
+                False,
                 f"DNA missing: density {density}/5 >= threshold",
                 f"Run /extract-dna {slug} to create DNA from dossier",
             )
         return CheckResult(
-            "P8.1.8", "DNA Auto-Create", True,
+            "P8.1.8",
+            "DNA Auto-Create",
+            True,
             f"DNA not needed: density {density}/5 < 3 threshold",
         )
 
@@ -488,16 +535,18 @@ class PipelineHealDetector:
         full = self.root / soul_path
         if not full.exists():
             return CheckResult(
-                "P8.1.9", "SOUL Update", False,
+                "P8.1.9",
+                "SOUL Update",
+                False,
                 f"No SOUL.md at {soul_path}",
                 f"Create SOUL.md for {slug} with {sid} insights",
             )
         if self._file_contains(soul_path, sid):
-            return CheckResult(
-                "P8.1.9", "SOUL Update", True, f"SOUL.md has {sid} ref"
-            )
+            return CheckResult("P8.1.9", "SOUL Update", True, f"SOUL.md has {sid} ref")
         return CheckResult(
-            "P8.1.9", "SOUL Update", False,
+            "P8.1.9",
+            "SOUL Update",
+            False,
             f"No {sid} ref in SOUL.md",
             f"Update {soul_path} with {sid} insights",
         )
@@ -511,16 +560,22 @@ class PipelineHealDetector:
             if (self.root / rel).exists():
                 if self._file_contains(rel, sid):
                     return CheckResult(
-                        "P8.3.5", "INBOX Registry", True,
+                        "P8.3.5",
+                        "INBOX Registry",
+                        True,
                         f"Entry in {rel}",
                     )
                 return CheckResult(
-                    "P8.3.5", "INBOX Registry", False,
+                    "P8.3.5",
+                    "INBOX Registry",
+                    False,
                     f"Registry exists but no {sid} entry",
                     f"Add {sid} entry to {rel}",
                 )
         return CheckResult(
-            "P8.3.5", "INBOX Registry", False,
+            "P8.3.5",
+            "INBOX Registry",
+            False,
             "INBOX-REGISTRY not found",
             f"Create INBOX-REGISTRY with {sid} entry",
         )
@@ -553,10 +608,18 @@ class PipelineHealDetector:
             return 0
 
         markers = [
-            "tl;dr", "philosoph", "filosof",
-            "modus operandi", "operacion",
-            "arsenal", "framework", "heuristic", "heuristica",
-            "trap", "armadilha", "ponto cego",
+            "tl;dr",
+            "philosoph",
+            "filosof",
+            "modus operandi",
+            "operacion",
+            "arsenal",
+            "framework",
+            "heuristic",
+            "heuristica",
+            "trap",
+            "armadilha",
+            "ponto cego",
         ]
         found = set()
         for m in markers:
@@ -591,10 +654,7 @@ class PipelineHealDetector:
         pct = report.score_pct
         filled = int(pct / 100 * 15)
         bar = "\u2588" * filled + "\u2591" * (15 - filled)
-        lines.append(
-            f"  SCORE: {report.passed_count}/{report.total_count} "
-            f"{bar} {pct}%"
-        )
+        lines.append(f"  SCORE: {report.passed_count}/{report.total_count} {bar} {pct}%")
         lines.append("")
 
         # Individual checks
@@ -645,29 +705,34 @@ class PipelineHealDetector:
 # CLI
 # ---------------------------------------------------------------------------
 
+
 def main() -> None:
-    parser = argparse.ArgumentParser(
-        description="Pipeline Auto-Heal Detection Engine"
-    )
+    parser = argparse.ArgumentParser(description="Pipeline Auto-Heal Detection Engine")
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument(
-        "--check", metavar="SOURCE_ID",
+        "--check",
+        metavar="SOURCE_ID",
         help="Check a specific source_id",
     )
     group.add_argument(
-        "--check-all", action="store_true",
+        "--check-all",
+        action="store_true",
         help="Check all known sources",
     )
     group.add_argument(
-        "--list-sources", action="store_true",
+        "--list-sources",
+        action="store_true",
         help="List all source_ids from CHUNKS-STATE",
     )
     parser.add_argument(
-        "--json", action="store_true",
+        "--json",
+        action="store_true",
         help="Output as JSON instead of ASCII",
     )
     parser.add_argument(
-        "--root", type=Path, default=None,
+        "--root",
+        type=Path,
+        default=None,
         help="Project root (auto-detected if omitted)",
     )
 

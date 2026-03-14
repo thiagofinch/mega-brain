@@ -127,6 +127,7 @@ def load_dna_layers(slug: str, bucket: str = "external") -> dict[str, list[dict]
 # INSIGHT READERS
 # ---------------------------------------------------------------------------
 
+
 def load_insights(insight_ids: list[str] | None = None) -> list[dict]:
     """
     Load insights from artifacts/insights/.
@@ -163,6 +164,7 @@ def load_insights(insight_ids: list[str] | None = None) -> list[dict]:
 # ---------------------------------------------------------------------------
 # SECTION RENDERERS
 # ---------------------------------------------------------------------------
+
 
 def _render_header(
     slug: str,
@@ -218,7 +220,9 @@ def _render_header(
     lines.append("|-------|-------|")
     lines.append(f"| Nome | {person_name} |")
     if config.get("padroes_comportamentais", {}).get("tom_de_comunicacao", {}).get("estilo"):
-        lines.append(f"| Estilo | {config['padroes_comportamentais']['tom_de_comunicacao']['estilo']} |")
+        lines.append(
+            f"| Estilo | {config['padroes_comportamentais']['tom_de_comunicacao']['estilo']} |"
+        )
     lines.append(f"| Fontes Processadas | {n_fontes} |")
     lines.append(f"| Insights Totais | {total_insights} |")
     lines.append(f"| Slug | {slug_upper} |")
@@ -258,7 +262,9 @@ def _render_dna_section(layers: dict[str, list[dict]], slug: str) -> str:
                 lines.append(f"- {declaracao}")
             else:
                 lines.append(f"- (Item {item_id})")
-            lines.append(f"  ^[SOURCE:knowledge/external/dna/persons/{slug}/{filename}.yaml:{item_id}]")
+            lines.append(
+                f"  ^[SOURCE:knowledge/external/dna/persons/{slug}/{filename}.yaml:{item_id}]"
+            )
 
         remaining = len(items) - len(rendered)
         if remaining > 0:
@@ -326,7 +332,9 @@ def _render_sources_section(config: dict[str, Any], slug: str) -> str:
         title = f.get("source_title", "?")
         chunks = f.get("chunks_usados", 0)
         lines.append(f"| {sid} | {title} | {chunks} |")
-        lines.append(f"^[SOURCE:knowledge/external/dna/persons/{slug}/CONFIG.yaml:fontes_utilizadas:{sid}]")
+        lines.append(
+            f"^[SOURCE:knowledge/external/dna/persons/{slug}/CONFIG.yaml:fontes_utilizadas:{sid}]"
+        )
 
     lines.append("")
     lines.append("---")
@@ -342,7 +350,11 @@ def _render_connections_section(config: dict[str, Any]) -> str:
 
     lines = ["## Conexoes", ""]
 
-    for kind, label in [("complementa", "Complementa"), ("tensiona", "Tensiona"), ("alinha", "Alinha com")]:
+    for kind, label in [
+        ("complementa", "Complementa"),
+        ("tensiona", "Tensiona"),
+        ("alinha", "Alinha com"),
+    ]:
         items = conexoes.get(kind, [])
         if items:
             lines.append(f"### {label}")
@@ -374,6 +386,7 @@ def _render_footer(slug: str) -> str:
 # INCREMENTAL APPEND
 # ---------------------------------------------------------------------------
 
+
 def _render_incremental_section(
     insight_ids: list[str],
     insights: list[dict],
@@ -404,9 +417,7 @@ def _render_incremental_section(
             lines.append(f"   ^[SOURCE:INSIGHTS-STATE.json:{chunk_ref}]")
         lines.append("")
 
-    lines.append(
-        f"*Secao adicionada por `dossier_compiler.py` em {now}*"
-    )
+    lines.append(f"*Secao adicionada por `dossier_compiler.py` em {now}*")
     lines.append("")
     return "\n".join(lines)
 
@@ -414,6 +425,7 @@ def _render_incremental_section(
 # ---------------------------------------------------------------------------
 # CORE: compile_dossier
 # ---------------------------------------------------------------------------
+
 
 def compile_dossier(
     slug: str,
@@ -468,7 +480,9 @@ def compile_dossier(
         with open(dossier_path, "a", encoding="utf-8") as f:
             f.write(section)
 
-        _log_compilation(slug, category, bucket, dossier_path, mode="append", n_insights=len(insights))
+        _log_compilation(
+            slug, category, bucket, dossier_path, mode="append", n_insights=len(insights)
+        )
         return dossier_path
 
     # Fresh compilation
@@ -493,6 +507,7 @@ def compile_dossier(
 # ---------------------------------------------------------------------------
 # LOGGING
 # ---------------------------------------------------------------------------
+
 
 def _log_compilation(
     slug: str,
@@ -525,6 +540,7 @@ def _log_compilation(
 # ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
+
 
 def main() -> None:
     """CLI entry point."""

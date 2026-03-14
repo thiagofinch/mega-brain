@@ -122,10 +122,13 @@ class FirefliesSync:
         processed_set = set(self.state.get("processed_ids", []))
         new_ones = [t for t in transcripts if t.get("id") not in processed_set]
 
-        self._log("discovery_complete", {
-            "total": len(transcripts),
-            "new": len(new_ones),
-        })
+        self._log(
+            "discovery_complete",
+            {
+                "total": len(transcripts),
+                "new": len(new_ones),
+            },
+        )
 
         succeeded = 0
         failed = 0
@@ -234,37 +237,38 @@ class FirefliesSync:
         org_bucket = _BUCKET_MAP.get(classification.bucket, "business")
         try:
             from core.intelligence.pipeline.inbox_organizer import organize_inbox
+
             organize_inbox(org_bucket)
         except Exception as exc:
-            self._log("organize_warning", {
-                "bucket": org_bucket,
-                "error": str(exc),
-            })
+            self._log(
+                "organize_warning",
+                {
+                    "bucket": org_bucket,
+                    "error": str(exc),
+                },
+            )
 
         # Update state
         self.state.setdefault("processed_ids", []).append(transcript_id)
-        self.state["meetings_processed"] = (
-            self.state.get("meetings_processed", 0) + 1
-        )
+        self.state["meetings_processed"] = self.state.get("meetings_processed", 0) + 1
         if classification.bucket == "empresa":
-            self.state["routed_empresa"] = (
-                self.state.get("routed_empresa", 0) + 1
-            )
+            self.state["routed_empresa"] = self.state.get("routed_empresa", 0) + 1
         else:
-            self.state["routed_pessoal"] = (
-                self.state.get("routed_pessoal", 0) + 1
-            )
+            self.state["routed_pessoal"] = self.state.get("routed_pessoal", 0) + 1
         self.state["last_sync_at"] = datetime.now(timezone.utc).isoformat()
 
-        self._log("processed", {
-            "id": transcript_id,
-            "tag": tag,
-            "title": data.get("title"),
-            "bucket": classification.bucket,
-            "score": classification.score,
-            "confidence": classification.confidence,
-            "destination": str(dest_path),
-        })
+        self._log(
+            "processed",
+            {
+                "id": transcript_id,
+                "tag": tag,
+                "title": data.get("title"),
+                "bucket": classification.bucket,
+                "score": classification.score,
+                "confidence": classification.confidence,
+                "destination": str(dest_path),
+            },
+        )
 
         # Checkpoint after every transcript
         self._save_state()
@@ -335,9 +339,7 @@ class FirefliesSync:
         raw_kw = summary.get("keywords")
         if raw_kw:
             lines.append("--- KEYWORDS ---")
-            kw_list: list[str] = (
-                raw_kw if isinstance(raw_kw, list) else [raw_kw]
-            )
+            kw_list: list[str] = raw_kw if isinstance(raw_kw, list) else [raw_kw]
             lines.extend([", ".join(str(k) for k in kw_list), ""])
 
         # Transcript sentences
@@ -419,9 +421,7 @@ class FirefliesSync:
                     result: dict[str, Any] = json.loads(resp.read().decode("utf-8"))
 
                 if "errors" in result:
-                    raise RuntimeError(
-                        f"GraphQL errors: {json.dumps(result['errors'])}"
-                    )
+                    raise RuntimeError(f"GraphQL errors: {json.dumps(result['errors'])}")
                 return result.get("data", {})
 
             except urllib.error.HTTPError as exc:
@@ -438,9 +438,7 @@ class FirefliesSync:
                     continue
                 raise
 
-        raise RuntimeError(
-            f"GraphQL request failed after {MAX_RETRIES} attempts: {last_error}"
-        )
+        raise RuntimeError(f"GraphQL request failed after {MAX_RETRIES} attempts: {last_error}")
 
     # ── State ──────────────────────────────────────────────────────
 
@@ -448,9 +446,7 @@ class FirefliesSync:
         """Load sync state from JSON file, or return fresh state."""
         if self.config.state_path.exists():
             try:
-                return json.loads(
-                    self.config.state_path.read_text(encoding="utf-8")
-                )
+                return json.loads(self.config.state_path.read_text(encoding="utf-8"))
             except (json.JSONDecodeError, OSError):
                 pass
 

@@ -29,7 +29,7 @@ import time
 from datetime import datetime
 from pathlib import Path
 
-PROJECT_ROOT = Path(os.environ.get('CLAUDE_PROJECT_DIR', '.'))
+PROJECT_ROOT = Path(os.environ.get("CLAUDE_PROJECT_DIR", "."))
 STATE_DIR = PROJECT_ROOT / ".claude" / "jarvis"
 STATE_FILE = STATE_DIR / "STATE.json"
 
@@ -37,6 +37,7 @@ STATE_FILE = STATE_DIR / "STATE.json"
 try:
     sys.path.insert(0, str(PROJECT_ROOT / ".claude" / "hooks"))
     from resolve_agent_path import resolve_memory_path
+
     _HAS_RESOLVER = True
 except ImportError:
     _HAS_RESOLVER = False
@@ -51,7 +52,7 @@ def load_state() -> dict:
     if not STATE_FILE.exists():
         return {}
     try:
-        with open(STATE_FILE, encoding='utf-8') as f:
+        with open(STATE_FILE, encoding="utf-8") as f:
             return json.load(f)
     except (OSError, json.JSONDecodeError):
         return {}
@@ -100,7 +101,7 @@ def create_memory_file(memory_path: Path, agent_slug: str) -> None:
 ---
 
 """
-    memory_path.write_text(header, encoding='utf-8')
+    memory_path.write_text(header, encoding="utf-8")
 
 
 def build_session_entry(agent_slug: str, metadata: dict) -> str:
@@ -129,16 +130,22 @@ def append_to_memory(memory_path: Path, entry: str) -> bool:
         if not memory_path.exists():
             return False
 
-        content = memory_path.read_text(encoding='utf-8')
-        new_content = content.rstrip('\n') + '\n\n' + entry
+        content = memory_path.read_text(encoding="utf-8")
+        new_content = content.rstrip("\n") + "\n\n" + entry
 
-        final_lines = new_content.split('\n')
+        final_lines = new_content.split("\n")
         if len(final_lines) > 200:
             header = final_lines[:20]
             recent = final_lines[-175:]
-            final_lines = [*header, "", "<!-- Older entries trimmed by agent_memory_persister.py -->", "", *recent]
+            final_lines = [
+                *header,
+                "",
+                "<!-- Older entries trimmed by agent_memory_persister.py -->",
+                "",
+                *recent,
+            ]
 
-        memory_path.write_text('\n'.join(final_lines), encoding='utf-8')
+        memory_path.write_text("\n".join(final_lines), encoding="utf-8")
         return True
     except Exception:
         return False
@@ -169,10 +176,14 @@ def main():
             return
 
         if check_timeout(start_time):
-            print(json.dumps({
-                "continue": True,
-                "feedback": "[MB] Memory persister skipped (timeout after state load)"
-            }))
+            print(
+                json.dumps(
+                    {
+                        "continue": True,
+                        "feedback": "[MB] Memory persister skipped (timeout after state load)",
+                    }
+                )
+            )
             return
 
         agent_slug = raw_slug
@@ -182,10 +193,14 @@ def main():
             create_memory_file(memory_path, agent_slug)
 
         if check_timeout(start_time):
-            print(json.dumps({
-                "continue": True,
-                "feedback": "[MB] Memory persister skipped (timeout before entry build)"
-            }))
+            print(
+                json.dumps(
+                    {
+                        "continue": True,
+                        "feedback": "[MB] Memory persister skipped (timeout before entry build)",
+                    }
+                )
+            )
             return
 
         metadata = get_session_metadata(state)
@@ -203,10 +218,11 @@ def main():
         print(json.dumps(output))
 
     except Exception as e:
-        print(json.dumps({
-            "continue": True,
-            "feedback": f"[MB] Memory persister error (fail-open): {e!s}"
-        }))
+        print(
+            json.dumps(
+                {"continue": True, "feedback": f"[MB] Memory persister error (fail-open): {e!s}"}
+            )
+        )
 
 
 if __name__ == "__main__":

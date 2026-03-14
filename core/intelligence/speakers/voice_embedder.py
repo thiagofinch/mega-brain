@@ -2,6 +2,7 @@
 Voice Embedder — Extracts a unique embedding vector from an audio segment.
 Uses pyannote.audio SpeakerEmbedding when available.
 """
+
 from pathlib import Path
 
 
@@ -16,13 +17,11 @@ def extract_embedding(audio_file: str, segment_start: float = None, segment_end:
         from pyannote.audio import Inference, Model
         from pyannote.core import Segment
 
-        model = Model.from_pretrained("pyannote/embedding",
-                                      use_auth_token=False)
+        model = Model.from_pretrained("pyannote/embedding", use_auth_token=False)
         inference = Inference(model, window="whole")
 
         if segment_start is not None and segment_end is not None:
-            embedding = inference.crop(audio_file,
-                                       Segment(segment_start, segment_end))
+            embedding = inference.crop(audio_file, Segment(segment_start, segment_end))
         else:
             embedding = inference(audio_file)
         return embedding
@@ -37,6 +36,7 @@ def cosine_similarity(a, b) -> float:
     """Cosine similarity between two embedding vectors."""
     try:
         import numpy as np
+
         a = np.array(a)
         b = np.array(b)
         return float(np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b) + 1e-8))
@@ -52,6 +52,7 @@ def save_embedding(embedding, filepath: str):
     """
     try:
         import numpy as np
+
         # Migrate .pkl extension to .npy for new saves
         filepath = str(filepath)
         if filepath.endswith(".pkl"):
@@ -71,6 +72,7 @@ def load_embedding(filepath: str):
     """
     try:
         import numpy as np
+
         filepath = str(filepath)
         # Try .npy first (new format)
         if filepath.endswith(".pkl"):

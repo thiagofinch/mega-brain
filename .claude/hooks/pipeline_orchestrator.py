@@ -88,6 +88,7 @@ _DISCOVERY_STATE = MISSION_CONTROL / "DISCOVERY-STATE.json"
 # LOGGING
 # ---------------------------------------------------------------------------
 
+
 def _log_event(
     route: str,
     file_path: str,
@@ -113,6 +114,7 @@ def _log_event(
 # ---------------------------------------------------------------------------
 # ROUTE 1: INBOX ORGANIZER
 # ---------------------------------------------------------------------------
+
 
 def _route_inbox_organizer(file_path: str) -> bool:
     """Trigger inbox_organizer when files land in a bucket inbox.
@@ -151,6 +153,7 @@ def _route_inbox_organizer(file_path: str) -> bool:
 # ---------------------------------------------------------------------------
 # ROUTE 2: SOP DETECTOR
 # ---------------------------------------------------------------------------
+
 
 def _route_sop_detector(file_path: str) -> bool:
     """Trigger sop_detector when insight JSON is written to business insights."""
@@ -191,6 +194,7 @@ def _route_sop_detector(file_path: str) -> bool:
 # ---------------------------------------------------------------------------
 # ROUTE 3: DOSSIER COMPILER (checks trigger log for CREATE decisions)
 # ---------------------------------------------------------------------------
+
 
 def _route_dossier_compiler(file_path: str) -> bool:
     """Trigger dossier_compiler if the written file is a trigger log with CREATE.
@@ -243,6 +247,7 @@ def _route_dossier_compiler(file_path: str) -> bool:
 # ---------------------------------------------------------------------------
 # ROUTE 4: AGENT GENERATOR (checks discovery state for READY persons)
 # ---------------------------------------------------------------------------
+
 
 def _route_agent_generator(file_path: str) -> bool:
     """Trigger agent_generator when the discovery state file is written with READY.
@@ -299,6 +304,7 @@ def _route_agent_generator(file_path: str) -> bool:
 # ---------------------------------------------------------------------------
 # ROUTE 5: INSIGHT SPEAKER LINKER (meeting transcripts)
 # ---------------------------------------------------------------------------
+
 
 def _route_insight_speaker_linker(file_path: str) -> bool:
     """Trigger insight_speaker_linker for meeting transcripts.
@@ -391,6 +397,7 @@ _ROUTES: list[tuple[str, callable]] = [
 # HOOK ENTRY POINT
 # ---------------------------------------------------------------------------
 
+
 def main() -> None:
     """PostToolUse hook entry point. Reads JSON from stdin, routes."""
     try:
@@ -416,7 +423,7 @@ def main() -> None:
     normalized = file_path
     root_str = str(_ROOT)
     if normalized.startswith(root_str):
-        normalized = normalized[len(root_str):].lstrip("/")
+        normalized = normalized[len(root_str) :].lstrip("/")
 
     # Try each route in order; first match wins
     messages: list[str] = []

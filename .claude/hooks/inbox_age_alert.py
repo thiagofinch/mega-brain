@@ -26,11 +26,11 @@ import sys
 from datetime import datetime, timedelta
 from pathlib import Path
 
-#==================================
+# ==================================
 # CONFIGURACAO
-#==================================
+# ==================================
 
-PROJECT_ROOT = Path(os.environ.get('CLAUDE_PROJECT_DIR', '.'))
+PROJECT_ROOT = Path(os.environ.get("CLAUDE_PROJECT_DIR", "."))
 INBOX_PATH = PROJECT_ROOT / "inbox"
 MAX_AGE_DAYS = 3
 ALERT_LOG = PROJECT_ROOT / "logs" / "inbox_alerts.jsonl"
@@ -43,9 +43,9 @@ IGNORE_PREFIXES = {"_", ".", "__"}
 IGNORE_FOLDERS = {"_BACKUP", "_OLD", "_ARCHIVE", "__pycache__"}
 
 
-#==================================
+# ==================================
 # FUNCOES PRINCIPAIS
-#==================================
+# ==================================
 
 
 def get_old_files(max_age_days: int = MAX_AGE_DAYS) -> list[dict]:
@@ -69,8 +69,7 @@ def get_old_files(max_age_days: int = MAX_AGE_DAYS) -> list[dict]:
         dirs[:] = [
             d
             for d in dirs
-            if not any(d.startswith(p) for p in IGNORE_PREFIXES)
-            and d not in IGNORE_FOLDERS
+            if not any(d.startswith(p) for p in IGNORE_PREFIXES) and d not in IGNORE_FOLDERS
         ]
 
         for f in files:
@@ -171,9 +170,7 @@ ATENCAO, senhor. {len(old_files)} arquivo(s) no INBOX com mais de {MAX_AGE_DAYS}
 """
 
     for f in old_files[:10]:
-        name_display = (
-            f["name"][:50] if len(f["name"]) <= 50 else f["name"][:47] + "..."
-        )
+        name_display = f["name"][:50] if len(f["name"]) <= 50 else f["name"][:47] + "..."
         alert += f"|  [{f['age_days']:>3}d] {name_display:<50}      |\n"
 
     if len(old_files) > 10:
@@ -256,8 +253,7 @@ def check_inbox_health() -> dict:
         dirs[:] = [
             d
             for d in dirs
-            if not any(d.startswith(p) for p in IGNORE_PREFIXES)
-            and d not in IGNORE_FOLDERS
+            if not any(d.startswith(p) for p in IGNORE_PREFIXES) and d not in IGNORE_FOLDERS
         ]
 
         for f in files:
@@ -290,9 +286,9 @@ def check_inbox_health() -> dict:
     }
 
 
-#==================================
+# ==================================
 # INTEGRACAO COM SESSION_START
-#==================================
+# ==================================
 
 
 def get_session_context(old_files: list[dict]) -> dict:
@@ -318,9 +314,9 @@ def get_session_context(old_files: list[dict]) -> dict:
     }
 
 
-#==================================
+# ==================================
 # MAIN
-#==================================
+# ==================================
 
 
 def main():
@@ -337,12 +333,12 @@ def main():
         if old_files:
             log_alert(old_files)
             summary = generate_summary(old_files)
-            print(json.dumps({'continue': True, 'feedback': summary}))
+            print(json.dumps({"continue": True, "feedback": summary}))
         else:
-            print(json.dumps({'continue': True}))
+            print(json.dumps({"continue": True}))
 
     except Exception as e:
-        print(json.dumps({'continue': True, 'error': str(e)}))
+        print(json.dumps({"continue": True, "error": str(e)}))
 
 
 def cli_test():
@@ -359,7 +355,7 @@ def cli_test():
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1 and sys.argv[1] == '--test':
+    if len(sys.argv) > 1 and sys.argv[1] == "--test":
         cli_test()
     else:
         main()

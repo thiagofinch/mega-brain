@@ -24,6 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 try:
     sys.path.insert(0, str(BASE_DIR))
     from core.paths import AGENTS, ARTIFACTS, KNOWLEDGE_EXTERNAL, LOGS, MISSION_CONTROL
+
     AGENT_DISCOVERY = AGENTS / "discovery"
 except ImportError:
     KNOWLEDGE_EXTERNAL = BASE_DIR / "knowledge" / "external"
@@ -48,7 +49,13 @@ MIN_DOSSIER_BYTES = 3072
 CARGO_CRITICAL = 10
 CARGO_IMPORTANT = 5
 
-SKIP_FILES = {".gitkeep", ".DS_Store", "DOSSIER-EXAMPLE.md", "HORMOZI-FULL-AGENT.md", "HORMOZI-RESUMO.md"}
+SKIP_FILES = {
+    ".gitkeep",
+    ".DS_Store",
+    "DOSSIER-EXAMPLE.md",
+    "HORMOZI-FULL-AGENT.md",
+    "HORMOZI-RESUMO.md",
+}
 
 # Extra keyword expansions for common slugs (auto-discovery handles the rest)
 KEYWORD_EXPAND = {
@@ -70,6 +77,7 @@ KEYWORD_EXPAND = {
 # ═══════════════════════════════════════════════════════════════════
 # DATA CLASSES
 # ═══════════════════════════════════════════════════════════════════
+
 
 @dataclass
 class PersonRecord:
@@ -97,6 +105,7 @@ class CargoRole:
 # AXIS 1: PERSON SCAN
 # ═══════════════════════════════════════════════════════════════════
 
+
 def scan_persons() -> list[PersonRecord]:
     persons: dict[str, PersonRecord] = {}
 
@@ -107,7 +116,8 @@ def scan_persons() -> list[PersonRecord]:
             rec = persons.setdefault(d.name, PersonRecord(slug=d.name))
             try:
                 rec.dna_yaml_count = sum(
-                    1 for f in os.scandir(d.path)
+                    1
+                    for f in os.scandir(d.path)
                     if f.is_file() and f.name.endswith((".yaml", ".yml"))
                 )
             except OSError:
@@ -146,7 +156,11 @@ def scan_persons() -> list[PersonRecord]:
     for rec in persons.values():
         if rec.agent_exists:
             rec.status = "HAS_AGENT"
-        elif rec.dna_yaml_count >= MIN_DNA_YAMLS and rec.dossier_exists and rec.dossier_bytes >= MIN_DOSSIER_BYTES:
+        elif (
+            rec.dna_yaml_count >= MIN_DNA_YAMLS
+            and rec.dossier_exists
+            and rec.dossier_bytes >= MIN_DOSSIER_BYTES
+        ):
             rec.status = "READY"
         elif rec.dna_yaml_count >= MIN_DNA_YAMLS:
             rec.status = "NEEDS_DOSSIER"
@@ -160,6 +174,7 @@ def scan_persons() -> list[PersonRecord]:
 # ═══════════════════════════════════════════════════════════════════
 # AXIS 2: CARGO SCAN (auto-discovered from agents/cargo/)
 # ═══════════════════════════════════════════════════════════════════
+
 
 def discover_cargo_roles() -> list[CargoRole]:
     """Auto-discover cargo roles from agents/cargo/{area}/{role}/ filesystem.
@@ -211,14 +226,16 @@ def count_cargo_mentions(roles: list[CargoRole]) -> None:
             if d.is_dir() and not d.name.startswith(("_", ".")):
                 try:
                     files.extend(
-                        Path(f.path) for f in os.scandir(d.path)
+                        Path(f.path)
+                        for f in os.scandir(d.path)
                         if f.is_file() and f.name.endswith((".yaml", ".yml"))
                     )
                 except OSError:
                     pass
     if DOSSIER_DIR.is_dir():
         files.extend(
-            Path(f.path) for f in os.scandir(DOSSIER_DIR)
+            Path(f.path)
+            for f in os.scandir(DOSSIER_DIR)
             if f.is_file() and f.name.endswith(".md") and f.name not in SKIP_FILES
         )
 
@@ -250,6 +267,7 @@ def count_cargo_mentions(roles: list[CargoRole]) -> None:
 # OUTPUT
 # ═══════════════════════════════════════════════════════════════════
 
+
 def generate_outputs(persons: list[PersonRecord], cargo: list[CargoRole]) -> tuple[str, dict]:
     now = datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
 
@@ -269,14 +287,21 @@ def generate_outputs(persons: list[PersonRecord], cargo: list[CargoRole]) -> tup
     ]
     for p in persons:
         kb = str(p.dossier_bytes // 1024) if p.dossier_exists else "-"
-        st = {"HAS_AGENT": "`●`", "READY": "**READY**", "NEEDS_DOSSIER": "~dossier", "NEEDS_DNA": "~dna"}.get(p.status, "-")
+        st = {
+            "HAS_AGENT": "`●`",
+            "READY": "**READY**",
+            "NEEDS_DOSSIER": "~dossier",
+            "NEEDS_DNA": "~dna",
+        }.get(p.status, "-")
         ag = "Yes" if p.agent_exists else "**No**"
         lines.append(f"| {p.slug} | {p.dna_yaml_count} | {kb} | {p.insight_count} | {ag} | {st} |")
 
     if p_ready:
         lines.extend(["", "### Create"])
         for p in p_ready:
-            lines.append(f"- **{p.slug}** — {p.dna_yaml_count} DNA, {p.dossier_bytes // 1024}KB dossier")
+            lines.append(
+                f"- **{p.slug}** — {p.dna_yaml_count} DNA, {p.dossier_bytes // 1024}KB dossier"
+            )
 
     # Cargo by area
     areas: dict[str, list[CargoRole]] = {}
@@ -290,7 +315,9 @@ def generate_outputs(persons: list[PersonRecord], cargo: list[CargoRole]) -> tup
         lines.append("|------|----------|---------|-------|--------|")
         for r in sorted(areas[area], key=lambda x: x.mentions, reverse=True):
             ag = "Yes" if r.has_agent else "**No**"
-            st = {"HAS_AGENT": "`●`", "CRITICAL": "**CRITICAL**", "IMPORTANT": "IMPORTANT"}.get(r.status, "Track")
+            st = {"HAS_AGENT": "`●`", "CRITICAL": "**CRITICAL**", "IMPORTANT": "IMPORTANT"}.get(
+                r.status, "Track"
+            )
             lines.append(f"| {r.slug} | {r.mentions} | {r.source_count} | {ag} | {st} |")
         lines.append("")
 
@@ -307,14 +334,26 @@ def generate_outputs(persons: list[PersonRecord], cargo: list[CargoRole]) -> tup
         "version": "3.1.0",
         "scanned_at": now,
         "persons": [
-            {"slug": p.slug, "status": p.status, "dna": p.dna_yaml_count,
-             "dossier_kb": p.dossier_bytes // 1024, "insights": p.insight_count,
-             "has_agent": p.agent_exists, "priority": p.priority}
+            {
+                "slug": p.slug,
+                "status": p.status,
+                "dna": p.dna_yaml_count,
+                "dossier_kb": p.dossier_bytes // 1024,
+                "insights": p.insight_count,
+                "has_agent": p.agent_exists,
+                "priority": p.priority,
+            }
             for p in persons
         ],
         "cargo": [
-            {"slug": r.slug, "area": r.area, "mentions": r.mentions,
-             "sources": r.source_count, "has_agent": r.has_agent, "status": r.status}
+            {
+                "slug": r.slug,
+                "area": r.area,
+                "mentions": r.mentions,
+                "sources": r.source_count,
+                "has_agent": r.has_agent,
+                "status": r.status,
+            }
             for r in cargo
         ],
     }
@@ -340,7 +379,9 @@ def log_events(persons: list[PersonRecord], cargo: list[CargoRole]):
             items.append({"type": "person", "id": p.slug, "status": "READY"})
     for r in cargo:
         if r.status == "CRITICAL" and not r.has_agent:
-            items.append({"type": "cargo", "id": r.slug, "status": "CRITICAL", "mentions": r.mentions})
+            items.append(
+                {"type": "cargo", "id": r.slug, "status": "CRITICAL", "mentions": r.mentions}
+            )
     if not items:
         return
     CREATION_LOG.parent.mkdir(parents=True, exist_ok=True)

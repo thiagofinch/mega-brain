@@ -30,7 +30,7 @@ from pathlib import Path
 # CONFIGURATION
 # ================================
 
-PROJECT_DIR = Path(os.environ.get('CLAUDE_PROJECT_DIR', os.getcwd()))
+PROJECT_DIR = Path(os.environ.get("CLAUDE_PROJECT_DIR", os.getcwd()))
 SESSIONS_DIR = PROJECT_DIR / ".claude" / "sessions"
 INDEX_FILE = SESSIONS_DIR / "SESSION-INDEX.json"
 CURRENT_JSONL = SESSIONS_DIR / "current.jsonl"
@@ -47,11 +47,12 @@ MAX_INDEX_ENTRIES = 200  # Keep last 200 sessions
 # INDEX OPERATIONS
 # ================================
 
+
 def load_index():
     """Load existing session index."""
     if INDEX_FILE.exists():
         try:
-            with open(INDEX_FILE, encoding='utf-8') as f:
+            with open(INDEX_FILE, encoding="utf-8") as f:
                 data = json.load(f)
                 if isinstance(data, dict) and "sessions" in data:
                     return data
@@ -71,7 +72,7 @@ def save_index(index_data):
     index_data["last_updated"] = datetime.now().isoformat()
 
     try:
-        with open(INDEX_FILE, 'w', encoding='utf-8') as f:
+        with open(INDEX_FILE, "w", encoding="utf-8") as f:
             json.dump(index_data, f, indent=2, ensure_ascii=False)
     except OSError:
         pass
@@ -103,15 +104,15 @@ def extract_first_prompt_from_jsonl():
         return None
 
     try:
-        with open(CURRENT_JSONL, encoding='utf-8') as f:
+        with open(CURRENT_JSONL, encoding="utf-8") as f:
             for line in f:
                 line = line.strip()
                 if not line:
                     continue
                 try:
                     entry = json.loads(line)
-                    if entry.get('type') == 'user_message':
-                        content = entry.get('content', '')
+                    if entry.get("type") == "user_message":
+                        content = entry.get("content", "")
                         # Return first 200 chars for searchability
                         return content[:200].strip()
                 except json.JSONDecodeError:
@@ -126,11 +127,12 @@ def extract_first_prompt_from_jsonl():
 # EVENT HANDLERS
 # ================================
 
+
 def on_session_start(hook_input):
     """Register new session on SessionStart."""
-    session_id = hook_input.get('session_id', '')
+    session_id = hook_input.get("session_id", "")
 
-    if not session_id or session_id == 'unknown':
+    if not session_id or session_id == "unknown":
         return
 
     index = load_index()
@@ -152,7 +154,7 @@ def on_session_start(hook_input):
         "last_activity": datetime.now().isoformat(),
         "first_prompt": None,  # Will be filled on Stop
         "transcript": transcript_path,
-        "cwd": str(PROJECT_DIR)
+        "cwd": str(PROJECT_DIR),
     }
 
     index["sessions"].append(entry)
@@ -161,9 +163,9 @@ def on_session_start(hook_input):
 
 def on_stop(hook_input):
     """Update session on Stop with first prompt and last activity."""
-    session_id = hook_input.get('session_id', '')
+    session_id = hook_input.get("session_id", "")
 
-    if not session_id or session_id == 'unknown':
+    if not session_id or session_id == "unknown":
         return
 
     index = load_index()
@@ -200,6 +202,7 @@ def on_stop(hook_input):
 # MAIN
 # ================================
 
+
 def detect_event(hook_input):
     """Detect which event triggered this hook."""
     # If there's a stop_reason or the hook is called from Stop event,
@@ -207,7 +210,7 @@ def detect_event(hook_input):
     # We use the presence of 'stop_reason' or the absence of 'prompt'
     # combined with existing session in index as heuristic.
 
-    session_id = hook_input.get('session_id', '')
+    session_id = hook_input.get("session_id", "")
 
     # Check if this session is already in the index
     if session_id:
@@ -215,9 +218,9 @@ def detect_event(hook_input):
         existing = find_session(index, session_id)
         if existing:
             # Already registered = this is a Stop event
-            return 'stop'
+            return "stop"
 
-    return 'session_start'
+    return "session_start"
 
 
 def main():
@@ -229,7 +232,7 @@ def main():
 
     event = detect_event(hook_input)
 
-    if event == 'session_start':
+    if event == "session_start":
         on_session_start(hook_input)
     else:
         on_stop(hook_input)
@@ -238,5 +241,5 @@ def main():
     print(json.dumps({"continue": True}))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

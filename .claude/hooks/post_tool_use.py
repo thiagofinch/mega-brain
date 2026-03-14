@@ -18,29 +18,32 @@ from pathlib import Path
 
 def get_project_dir():
     """Obtém o diretório do projeto."""
-    return os.environ.get('CLAUDE_PROJECT_DIR', os.getcwd())
+    return os.environ.get("CLAUDE_PROJECT_DIR", os.getcwd())
+
 
 def load_actions_log():
     """Carrega log de ações."""
     project_dir = get_project_dir()
-    log_path = Path(project_dir) / 'logs' / 'actions.json'
+    log_path = Path(project_dir) / "logs" / "actions.json"
 
     if log_path.exists():
-        with open(log_path, encoding='utf-8') as f:
+        with open(log_path, encoding="utf-8") as f:
             return json.load(f)
-    return {'actions': []}
+    return {"actions": []}
+
 
 def save_actions_log(log):
     """Salva log de ações."""
     project_dir = get_project_dir()
-    log_path = Path(project_dir) / 'logs' / 'actions.json'
+    log_path = Path(project_dir) / "logs" / "actions.json"
     log_path.parent.mkdir(parents=True, exist_ok=True)
 
     # Manter apenas últimas 100 ações
-    log['actions'] = log['actions'][-100:]
+    log["actions"] = log["actions"][-100:]
 
-    with open(log_path, 'w', encoding='utf-8') as f:
+    with open(log_path, "w", encoding="utf-8") as f:
         json.dump(log, f, indent=2, ensure_ascii=False)
+
 
 def detect_patterns(actions):
     """Detecta padrões nas ações recentes."""
@@ -51,7 +54,7 @@ def detect_patterns(actions):
     recent = actions[-10:]
     file_counts = {}
     for action in recent:
-        file_path = action.get('file_path', '')
+        file_path = action.get("file_path", "")
         if file_path:
             file_counts[file_path] = file_counts.get(file_path, 0) + 1
 
@@ -59,12 +62,13 @@ def detect_patterns(actions):
     repeated = [f for f, c in file_counts.items() if c >= 3]
     if repeated:
         return {
-            'type': 'repeated_edits',
-            'files': repeated,
-            'suggestion': 'Arquivo editado múltiplas vezes. Considerar refatoração.'
+            "type": "repeated_edits",
+            "files": repeated,
+            "suggestion": "Arquivo editado múltiplas vezes. Considerar refatoração.",
         }
 
     return None
+
 
 def main():
     """Função principal do hook."""
@@ -74,49 +78,43 @@ def main():
         hook_input = json.loads(input_data) if input_data else {}
 
         # Extrair informações da ferramenta
-        tool_name = hook_input.get('tool_name', 'unknown')
-        tool_input = hook_input.get('tool_input', {})
+        tool_name = hook_input.get("tool_name", "unknown")
+        tool_input = hook_input.get("tool_input", {})
 
-        file_path = tool_input.get('file_path', '')
+        file_path = tool_input.get("file_path", "")
 
         # Carregar log
         log = load_actions_log()
 
         # Registrar ação
         action = {
-            'timestamp': datetime.now().isoformat(),
-            'tool': tool_name,
-            'file_path': file_path,
-            'session_id': hook_input.get('session_id', 'unknown')
+            "timestamp": datetime.now().isoformat(),
+            "tool": tool_name,
+            "file_path": file_path,
+            "session_id": hook_input.get("session_id", "unknown"),
         }
-        log['actions'].append(action)
+        log["actions"].append(action)
 
         # Salvar log
         save_actions_log(log)
 
         # Detectar padrões
-        pattern = detect_patterns(log['actions'])
+        pattern = detect_patterns(log["actions"])
 
         # Preparar feedback
         feedback = None
         if pattern:
             feedback = f"[JARVIS] Padrão detectado: {pattern['suggestion']}"
 
-        output = {
-            'continue': True,
-            'feedback': feedback
-        }
+        output = {"continue": True, "feedback": feedback}
 
         print(json.dumps(output))
 
     except Exception as e:
         # Em caso de erro, não bloquear a operação
-        error_output = {
-            'continue': True,
-            'feedback': None,
-            'error': str(e)
-        }
+        error_output = {"continue": True, "feedback": None, "error": str(e)}
         print(json.dumps(error_output))
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()

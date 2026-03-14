@@ -59,7 +59,9 @@ def get_thresholds():
     return {
         "fuzzy_threshold": ec.get("fuzzy_threshold", DEFAULT_FUZZY_THRESHOLD),
         "auto_merge_threshold": ec.get("auto_merge_threshold", DEFAULT_AUTO_MERGE_THRESHOLD),
-        "min_occurrences_to_confirm": ec.get("min_occurrences_to_confirm", DEFAULT_MIN_OCCURRENCES_TO_CONFIRM),
+        "min_occurrences_to_confirm": ec.get(
+            "min_occurrences_to_confirm", DEFAULT_MIN_OCCURRENCES_TO_CONFIRM
+        ),
     }
 
 
@@ -91,12 +93,12 @@ def create_empty_registry():
             "version": 0,
             "created_at": datetime.now(UTC).isoformat(),
             "updated_at": datetime.now(UTC).isoformat(),
-            "description": "ENTITY-REGISTRY - Single Source of Truth for Mega Brain entities"
+            "description": "ENTITY-REGISTRY - Single Source of Truth for Mega Brain entities",
         },
         "persons": {},
         "themes": {},
         "roles": {},
-        "concepts": {}
+        "concepts": {},
     }
 
 
@@ -234,8 +236,9 @@ def find_best_match(name, candidates, threshold=None):
 # ---------------------------------------------------------------------------
 # CORE: NORMALIZE ENTITY
 # ---------------------------------------------------------------------------
-def normalize_entity(name, entity_type, registry=None, source_id=None,
-                     auto_save=False, domain_hint=None):
+def normalize_entity(
+    name, entity_type, registry=None, source_id=None, auto_save=False, domain_hint=None
+):
     """
     Main normalization function. Resolves a raw entity name to its canonical form.
 
@@ -269,16 +272,16 @@ def normalize_entity(name, entity_type, registry=None, source_id=None,
     thresholds = get_thresholds()
     norm_name = normalize_text(name)
     if not norm_name:
-        return {"canonical": name, "match_type": "empty", "score": 0.0,
-                "entity_type": entity_type, "created": False}
+        return {
+            "canonical": name,
+            "match_type": "empty",
+            "score": 0.0,
+            "entity_type": entity_type,
+            "created": False,
+        }
 
     # Map entity_type to registry section
-    section_map = {
-        "person": "persons",
-        "theme": "themes",
-        "role": "roles",
-        "concept": "concepts"
-    }
+    section_map = {"person": "persons", "theme": "themes", "role": "roles", "concept": "concepts"}
     section = section_map.get(entity_type, "concepts")
     entities = registry.get(section, {})
 
@@ -288,8 +291,13 @@ def normalize_entity(name, entity_type, registry=None, source_id=None,
             _increment_entity(data, source_id)
             if auto_save:
                 save_registry(registry)
-            return {"canonical": canonical, "match_type": "exact", "score": 1.0,
-                    "entity_type": entity_type, "created": False}
+            return {
+                "canonical": canonical,
+                "match_type": "exact",
+                "score": 1.0,
+                "entity_type": entity_type,
+                "created": False,
+            }
 
     # ----- STEP 2: Exact match on aliases -----
     for canonical, data in entities.items():
@@ -298,12 +306,18 @@ def normalize_entity(name, entity_type, registry=None, source_id=None,
                 _increment_entity(data, source_id)
                 if auto_save:
                     save_registry(registry)
-                return {"canonical": canonical, "match_type": "alias", "score": 1.0,
-                        "entity_type": entity_type, "created": False}
+                return {
+                    "canonical": canonical,
+                    "match_type": "alias",
+                    "score": 1.0,
+                    "entity_type": entity_type,
+                    "created": False,
+                }
 
     # ----- STEP 3: Fuzzy match -----
-    best_canonical, best_score = find_best_match(name, entities,
-                                                  threshold=thresholds["fuzzy_threshold"])
+    best_canonical, best_score = find_best_match(
+        name, entities, threshold=thresholds["fuzzy_threshold"]
+    )
 
     # ----- STEP 4: Domain-aware boost -----
     if domain_hint and entity_type in ("role", "theme"):
@@ -319,8 +333,13 @@ def normalize_entity(name, entity_type, registry=None, source_id=None,
         _increment_entity(entity_data, source_id)
         if auto_save:
             save_registry(registry)
-        return {"canonical": best_canonical, "match_type": "fuzzy", "score": best_score,
-                "entity_type": entity_type, "created": False}
+        return {
+            "canonical": best_canonical,
+            "match_type": "fuzzy",
+            "score": best_score,
+            "entity_type": entity_type,
+            "created": False,
+        }
 
     if best_canonical and best_score >= thresholds["fuzzy_threshold"]:
         # Candidate merge: add to review queue
@@ -328,8 +347,13 @@ def normalize_entity(name, entity_type, registry=None, source_id=None,
         _increment_entity(entities[best_canonical], source_id)
         if auto_save:
             save_registry(registry)
-        return {"canonical": best_canonical, "match_type": "fuzzy_candidate", "score": best_score,
-                "entity_type": entity_type, "created": False}
+        return {
+            "canonical": best_canonical,
+            "match_type": "fuzzy_candidate",
+            "score": best_score,
+            "entity_type": entity_type,
+            "created": False,
+        }
 
     # ----- STEP 5: Check taxonomy before creating new -----
     taxonomy_match = _check_taxonomy(name, entity_type)
@@ -338,14 +362,21 @@ def normalize_entity(name, entity_type, registry=None, source_id=None,
         canonical = taxonomy_match["canonical"]
         if canonical not in entities:
             entities[canonical] = _create_entity(
-                canonical, entity_type, source_id,
+                canonical,
+                entity_type,
+                source_id,
                 aliases=[name] if normalize_text(name) != normalize_text(canonical) else [],
-                domain_ids=taxonomy_match.get("domain_ids", [])
+                domain_ids=taxonomy_match.get("domain_ids", []),
             )
             if auto_save:
                 save_registry(registry)
-            return {"canonical": canonical, "match_type": "taxonomy", "score": 1.0,
-                    "entity_type": entity_type, "created": True}
+            return {
+                "canonical": canonical,
+                "match_type": "taxonomy",
+                "score": 1.0,
+                "entity_type": entity_type,
+                "created": True,
+            }
 
     # ----- STEP 6: New entity -----
     canonical = _make_canonical_name(name, entity_type)
@@ -353,18 +384,29 @@ def normalize_entity(name, entity_type, registry=None, source_id=None,
         entities[canonical] = _create_entity(canonical, entity_type, source_id)
         if auto_save:
             save_registry(registry)
-        return {"canonical": canonical, "match_type": "new", "score": 0.0,
-                "entity_type": entity_type, "created": True}
+        return {
+            "canonical": canonical,
+            "match_type": "new",
+            "score": 0.0,
+            "entity_type": entity_type,
+            "created": True,
+        }
 
-    return {"canonical": canonical, "match_type": "existing", "score": 1.0,
-            "entity_type": entity_type, "created": False}
+    return {
+        "canonical": canonical,
+        "match_type": "existing",
+        "score": 1.0,
+        "entity_type": entity_type,
+        "created": False,
+    }
 
 
 # ---------------------------------------------------------------------------
 # BATCH NORMALIZATION
 # ---------------------------------------------------------------------------
-def normalize_entities_batch(entities_list, entity_type, registry=None,
-                             source_id=None, auto_save=True):
+def normalize_entities_batch(
+    entities_list, entity_type, registry=None, source_id=None, auto_save=True
+):
     """
     Normalize a list of entity names in batch.
 
@@ -383,8 +425,9 @@ def normalize_entities_batch(entities_list, entity_type, registry=None,
 
     results = []
     for name in entities_list:
-        result = normalize_entity(name, entity_type, registry=registry,
-                                  source_id=source_id, auto_save=False)
+        result = normalize_entity(
+            name, entity_type, registry=registry, source_id=source_id, auto_save=False
+        )
         results.append(result)
 
     if auto_save:
@@ -407,8 +450,7 @@ def _increment_entity(entity_data, source_id=None):
     entity_data["last_seen"] = datetime.now(UTC).isoformat()
 
 
-def _create_entity(canonical, entity_type, source_id=None, aliases=None,
-                   domain_ids=None):
+def _create_entity(canonical, entity_type, source_id=None, aliases=None, domain_ids=None):
     """Create a new entity entry."""
     now = datetime.now(UTC).isoformat()
     count_key = "mention_count" if entity_type in ("person", "role") else "occurrence_count"
@@ -496,7 +538,9 @@ def _check_taxonomy(name, entity_type):
             canonical = role_map[norm]
             tax = load_taxonomy()
             cargo_data = tax.get("cargos", {}).get(canonical, {})
-            domains = cargo_data.get("dominios_primarios", []) + cargo_data.get("dominios_secundarios", [])
+            domains = cargo_data.get("dominios_primarios", []) + cargo_data.get(
+                "dominios_secundarios", []
+            )
             return {"canonical": canonical, "domain_ids": domains}
 
     elif entity_type == "person":
@@ -505,7 +549,9 @@ def _check_taxonomy(name, entity_type):
             canonical = person_map[norm]
             tax = load_taxonomy()
             person_data = tax.get("pessoas", {}).get(canonical, {})
-            domains = person_data.get("expertise_primaria", []) + person_data.get("expertise_secundaria", [])
+            domains = person_data.get("expertise_primaria", []) + person_data.get(
+                "expertise_secundaria", []
+            )
             return {"canonical": canonical, "domain_ids": domains}
 
     elif entity_type == "theme":
@@ -526,7 +572,7 @@ def _add_to_review_queue(name, candidate_canonical, score, entity_type, source_i
         "score": round(score, 4),
         "entity_type": entity_type,
         "source_id": source_id,
-        "status": "pending"
+        "status": "pending",
     }
     REVIEW_QUEUE_PATH.parent.mkdir(parents=True, exist_ok=True)
     with open(REVIEW_QUEUE_PATH, "a", encoding="utf-8") as f:

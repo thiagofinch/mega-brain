@@ -29,10 +29,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent.parent
 MEMORY_DIR = ROOT / ".data" / "agent_memory"
 SHARED_STORE = MEMORY_DIR / "_shared"
-CONSOLIDATION_THRESHOLD = 0.85   # Cosine sim above this = merge candidates
-PRUNE_MIN_SCORE = 0.1            # Entries below this get pruned
-PRUNE_MAX_AGE_DAYS = 90          # Entries older than this lose score
-MAX_ENTRIES_DEFAULT = 200        # Default max entries per agent
+CONSOLIDATION_THRESHOLD = 0.85  # Cosine sim above this = merge candidates
+PRUNE_MIN_SCORE = 0.1  # Entries below this get pruned
+PRUNE_MAX_AGE_DAYS = 90  # Entries older than this lose score
+MAX_ENTRIES_DEFAULT = 200  # Default max entries per agent
 
 # Composite scoring weights (CrewAI validated defaults)
 W_SEMANTIC = 0.5
@@ -50,14 +50,14 @@ class MemoryEntry:
     content: str
     agent_id: str
     entry_id: str = ""
-    scope: str = "long_term"          # long_term | session | core
-    importance: float = 0.5           # 0.0 to 1.0
+    scope: str = "long_term"  # long_term | session | core
+    importance: float = 0.5  # 0.0 to 1.0
     tags: list[str] = field(default_factory=list)
-    source: str = ""                  # ^[FONTE:...] or batch ID
-    created_at: float = 0.0          # Unix timestamp
-    last_referenced: float = 0.0     # Unix timestamp
+    source: str = ""  # ^[FONTE:...] or batch ID
+    created_at: float = 0.0  # Unix timestamp
+    last_referenced: float = 0.0  # Unix timestamp
     reference_count: int = 0
-    pinned: bool = False              # Pinned entries survive pruning
+    pinned: bool = False  # Pinned entries survive pruning
 
     def __post_init__(self):
         if not self.entry_id:
@@ -85,9 +85,7 @@ class MemoryEntry:
         """Overall score combining importance, recency, and reference count."""
         ref_score = min(self.reference_count / 10.0, 1.0)
         return (
-            W_IMPORTANCE * self.importance
-            + W_RECENCY * self.recency_score
-            + W_SEMANTIC * ref_score
+            W_IMPORTANCE * self.importance + W_RECENCY * self.recency_score + W_SEMANTIC * ref_score
         )
 
     def to_dict(self) -> dict:
@@ -201,16 +199,16 @@ class MemoryStore:
 
     # ── SEARCH ──────────────────────────────────────────────────────
 
-    def search(self, query: str, top_k: int = 10,
-               scope: str | None = None,
-               tags: list[str] | None = None) -> list[MemoryEntry]:
+    def search(
+        self, query: str, top_k: int = 10, scope: str | None = None, tags: list[str] | None = None
+    ) -> list[MemoryEntry]:
         """Search memories by keyword relevance + composite score.
 
         Uses keyword matching weighted by composite_score.
         For semantic search, use the RAG pipeline instead.
         """
         self._ensure_loaded()
-        query_tokens = set(re.findall(r'[a-z\u00e0-\u024f]{3,}', query.lower()))
+        query_tokens = set(re.findall(r"[a-z\u00e0-\u024f]{3,}", query.lower()))
         if not query_tokens:
             return self.top(top_k, scope=scope, tags=tags)
 
@@ -222,7 +220,7 @@ class MemoryStore:
                 continue
 
             content_lower = entry.content.lower()
-            content_tokens = set(re.findall(r'[a-z\u00e0-\u024f]{3,}', content_lower))
+            content_tokens = set(re.findall(r"[a-z\u00e0-\u024f]{3,}", content_lower))
             overlap = query_tokens & content_tokens
             if not overlap:
                 continue
@@ -245,8 +243,9 @@ class MemoryStore:
             self._save()
         return [e for e, _ in scored[:top_k]]
 
-    def top(self, n: int = 10, scope: str | None = None,
-            tags: list[str] | None = None) -> list[MemoryEntry]:
+    def top(
+        self, n: int = 10, scope: str | None = None, tags: list[str] | None = None
+    ) -> list[MemoryEntry]:
         """Get top N entries by composite score."""
         self._ensure_loaded()
         entries = list(self._entries.values())
@@ -259,8 +258,9 @@ class MemoryStore:
 
     # ── PRUNE ───────────────────────────────────────────────────────
 
-    def prune(self, max_entries: int = MAX_ENTRIES_DEFAULT,
-              min_score: float = PRUNE_MIN_SCORE) -> dict:
+    def prune(
+        self, max_entries: int = MAX_ENTRIES_DEFAULT, min_score: float = PRUNE_MIN_SCORE
+    ) -> dict:
         """Remove low-value entries, keeping pinned and high-scoring ones.
 
         Strategy:
@@ -273,14 +273,8 @@ class MemoryStore:
         before = len(self._entries)
 
         # Separate protected vs pruneable
-        protected = {
-            eid: e for eid, e in self._entries.items()
-            if e.pinned or e.scope == "core"
-        }
-        pruneable = {
-            eid: e for eid, e in self._entries.items()
-            if eid not in protected
-        }
+        protected = {eid: e for eid, e in self._entries.items() if e.pinned or e.scope == "core"}
+        pruneable = {eid: e for eid, e in self._entries.items() if eid not in protected}
 
         # Remove below min_score
         pruned_ids = []
@@ -291,9 +285,7 @@ class MemoryStore:
 
         # If still over limit, remove lowest scoring
         if len(protected) + len(pruneable) > max_entries:
-            sorted_pruneable = sorted(
-                pruneable.items(), key=lambda x: x[1].composite_score
-            )
+            sorted_pruneable = sorted(pruneable.items(), key=lambda x: x[1].composite_score)
             excess = len(protected) + len(pruneable) - max_entries
             for eid, _ in sorted_pruneable[:excess]:
                 pruned_ids.append(eid)
@@ -328,14 +320,14 @@ class MemoryStore:
         for i, a in enumerate(entries_list):
             if a.entry_id in to_remove:
                 continue
-            a_tokens = set(re.findall(r'[a-z\u00e0-\u024f]{3,}', a.content.lower()))
+            a_tokens = set(re.findall(r"[a-z\u00e0-\u024f]{3,}", a.content.lower()))
             if not a_tokens:
                 continue
 
-            for b in entries_list[i + 1:]:
+            for b in entries_list[i + 1 :]:
                 if b.entry_id in to_remove:
                     continue
-                b_tokens = set(re.findall(r'[a-z\u00e0-\u024f]{3,}', b.content.lower()))
+                b_tokens = set(re.findall(r"[a-z\u00e0-\u024f]{3,}", b.content.lower()))
                 if not b_tokens:
                     continue
 
@@ -369,9 +361,9 @@ class MemoryStore:
 
     # ── EXPORT ──────────────────────────────────────────────────────
 
-    def export_for_context(self, query: str | None = None,
-                           max_entries: int = 20,
-                           max_chars: int = 8000) -> str:
+    def export_for_context(
+        self, query: str | None = None, max_entries: int = 20, max_chars: int = 8000
+    ) -> str:
         """Export memories formatted for LLM context injection.
 
         If query provided, uses search relevance.
@@ -414,12 +406,10 @@ class MemoryStore:
             "pinned": pinned,
             "total_references": total_refs,
             "avg_importance": (
-                sum(e.importance for e in self._entries.values()) /
-                max(len(self._entries), 1)
+                sum(e.importance for e in self._entries.values()) / max(len(self._entries), 1)
             ),
             "avg_composite_score": (
-                sum(e.composite_score for e in self._entries.values()) /
-                max(len(self._entries), 1)
+                sum(e.composite_score for e in self._entries.values()) / max(len(self._entries), 1)
             ),
         }
 
@@ -447,8 +437,7 @@ class SharedMemoryStore(MemoryStore):
 
     def search_by_agent(self, agent_id: str, top_k: int = 10) -> list[MemoryEntry]:
         """Search shared memories that involve a specific agent."""
-        return self.search(f"agent:{agent_id}", top_k=top_k,
-                           tags=[f"agent:{agent_id}"])
+        return self.search(f"agent:{agent_id}", top_k=top_k, tags=[f"agent:{agent_id}"])
 
 
 # ---------------------------------------------------------------------------
@@ -508,7 +497,9 @@ def shared_search(query: str, top_k: int = 10) -> list[MemoryEntry]:
 def main():
     if len(sys.argv) < 3:
         print("Usage:")
-        print("  memory_manager.py write <agent_id> <content> [--importance 0.8] [--tags tag1,tag2]")
+        print(
+            "  memory_manager.py write <agent_id> <content> [--importance 0.8] [--tags tag1,tag2]"
+        )
         print("  memory_manager.py search <agent_id> <query> [--top-k 10]")
         print("  memory_manager.py prune <agent_id> [--max-entries 200]")
         print("  memory_manager.py consolidate <agent_id>")
@@ -520,9 +511,9 @@ def main():
     cmd = sys.argv[1]
     agent_id = sys.argv[2]
 
-    print(f"\n{'='*60}")
+    print(f"\n{'=' * 60}")
     print("MEMORY MANAGER")
-    print(f"{'='*60}\n")
+    print(f"{'=' * 60}\n")
 
     if cmd == "write":
         content = sys.argv[3] if len(sys.argv) > 3 else ""
@@ -548,8 +539,10 @@ def main():
         results = memory_search(agent_id, query, top_k=top_k)
         print(f"Results for '{query}' ({len(results)}):\n")
         for r in results:
-            print(f"  [{r.entry_id}] score={r.composite_score:.3f} "
-                  f"refs={r.reference_count} imp={r.importance}")
+            print(
+                f"  [{r.entry_id}] score={r.composite_score:.3f} "
+                f"refs={r.reference_count} imp={r.importance}"
+            )
             print(f"    {r.content[:120]}...")
             print()
 
@@ -596,7 +589,7 @@ def main():
         for r in results:
             print(f"  [{r.entry_id}] {r.content[:100]}...")
 
-    print(f"\n{'='*60}\n")
+    print(f"\n{'=' * 60}\n")
 
 
 if __name__ == "__main__":

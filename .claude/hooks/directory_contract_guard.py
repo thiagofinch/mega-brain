@@ -7,6 +7,7 @@ WARN (exit 1), not BLOCK (exit 2). Follows ANTHROPIC-STANDARDS.
 Trigger: PreToolUse (Write, Edit)
 Timeout: 30
 """
+
 import json
 import sys
 from pathlib import Path
@@ -58,10 +59,7 @@ def main():
     top_dir = rel.parts[0] if rel.parts else ""
     if top_dir in PROHIBITED_DIRS:
         alt = ALTERNATIVES.get(top_dir, "Check core/paths.py for correct location")
-        msg = (
-            f"[Directory Contract] Writing to '{top_dir}/' is prohibited. "
-            f"Use: {alt}"
-        )
+        msg = f"[Directory Contract] Writing to '{top_dir}/' is prohibited. Use: {alt}"
         print(json.dumps({"decision": "allow", "message": msg}))
         sys.exit(0)
 

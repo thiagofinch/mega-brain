@@ -156,9 +156,7 @@ class GeminiAnalyzer:
             self._client = genai.GenerativeModel(self.model_name)
             logger.info("Gemini analyzer initialized with model %s", self.model_name)
         except ImportError:
-            logger.warning(
-                "google-generativeai not installed -- Gemini analyzer unavailable"
-            )
+            logger.warning("google-generativeai not installed -- Gemini analyzer unavailable")
             self._client = None
 
     # -- core API -----------------------------------------------------------

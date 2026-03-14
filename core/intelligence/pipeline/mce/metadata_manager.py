@@ -181,9 +181,7 @@ class MetadataManager:
     def completed_phase_names(self) -> list[str]:
         """Return a list of phase names that are marked complete."""
         return [
-            name
-            for name, data in self.phases_completed.items()
-            if data.get("completed", False)
+            name for name, data in self.phases_completed.items() if data.get("completed", False)
         ]
 
     @property

@@ -344,6 +344,7 @@ def _relative_to_root(path: Path) -> str:
 # YAML / FILE HELPERS
 # ---------------------------------------------------------------------------
 
+
 def _read_yaml(path: Path) -> dict[str, Any]:
     """Read a YAML file, returning empty dict on failure."""
     if not path.exists():
@@ -388,6 +389,7 @@ def _write_yaml(path: Path, data: dict[str, Any], header: str = "") -> None:
 # ---------------------------------------------------------------------------
 # AGENT INFO EXTRACTION
 # ---------------------------------------------------------------------------
+
 
 def _extract_title_from_agent_md(text: str, slug: str) -> str:
     """Extract a title from AGENT.md content."""
@@ -457,6 +459,7 @@ def _extract_keywords_from_dna(dna_config: dict[str, Any], max_words: int = 5) -
 # ---------------------------------------------------------------------------
 # ACTIVATION.yaml GENERATOR
 # ---------------------------------------------------------------------------
+
 
 def _generate_activation_yaml(
     slug: str,
@@ -541,6 +544,7 @@ def _generate_activation_yaml(
 # ---------------------------------------------------------------------------
 # IDE COMMAND GENERATORS
 # ---------------------------------------------------------------------------
+
 
 def _generate_claude_command(
     slug: str,
@@ -649,6 +653,7 @@ def _generate_gemini_command(
 # ---------------------------------------------------------------------------
 # MASTER REGISTRY UPDATER
 # ---------------------------------------------------------------------------
+
 
 def _update_master_registry(
     slug: str,
@@ -765,6 +770,7 @@ def _log_event(
 # CORE: generate_activation
 # ---------------------------------------------------------------------------
 
+
 def generate_activation(
     slug: str,
     category: str,
@@ -865,7 +871,12 @@ def generate_activation(
     if cursor_yaml.parent.exists() or True:
         # Create .cursor/ if it doesn't exist for future use
         wrote = _update_cursor_windsurf_yaml(
-            cursor_yaml, slug, nickname_data, title, category, agent_dir,
+            cursor_yaml,
+            slug,
+            nickname_data,
+            title,
+            category,
+            agent_dir,
         )
         if wrote:
             rel_cursor = _relative_to_root(cursor_yaml)
@@ -876,7 +887,12 @@ def generate_activation(
     windsurf_yaml = _ROOT / ".windsurf" / "agents.yaml"
     if windsurf_yaml.parent.exists() or True:
         wrote = _update_cursor_windsurf_yaml(
-            windsurf_yaml, slug, nickname_data, title, category, agent_dir,
+            windsurf_yaml,
+            slug,
+            nickname_data,
+            title,
+            category,
+            agent_dir,
         )
         if wrote:
             rel_windsurf = _relative_to_root(windsurf_yaml)
@@ -888,7 +904,11 @@ def generate_activation(
     if (_ROOT / ".gemini").exists():
         gemini_path = gemini_dir / f"{slug}.md"
         gemini_content = _generate_gemini_command(
-            slug, nickname_data, title, agent_dir, category,
+            slug,
+            nickname_data,
+            title,
+            agent_dir,
+            category,
         )
         _write_text(gemini_path, gemini_content)
         rel_gemini = _relative_to_root(gemini_path)
@@ -914,6 +934,7 @@ def generate_activation(
 # ---------------------------------------------------------------------------
 # BATCH: generate_all
 # ---------------------------------------------------------------------------
+
 
 def _discover_all_agents() -> list[tuple[str, str, Path]]:
     """Walk the agents/ tree and find all directories with AGENT.md.
@@ -989,33 +1010,39 @@ def batch_generate_all(*, force: bool = False) -> dict[str, Any]:
         activation_path = agent_dir / "ACTIVATION.yaml"
         if activation_path.exists() and not force:
             summary["skipped"] += 1
-            summary["details"].append({
-                "slug": slug,
-                "category": category,
-                "status": "skipped",
-                "reason": "ACTIVATION.yaml exists",
-            })
+            summary["details"].append(
+                {
+                    "slug": slug,
+                    "category": category,
+                    "status": "skipped",
+                    "reason": "ACTIVATION.yaml exists",
+                }
+            )
             continue
 
         result = generate_activation(slug, category, force=force)
 
         if result["errors"]:
             summary["errored"] += 1
-            summary["details"].append({
-                "slug": slug,
-                "category": category,
-                "status": "error",
-                "errors": result["errors"],
-            })
+            summary["details"].append(
+                {
+                    "slug": slug,
+                    "category": category,
+                    "status": "error",
+                    "errors": result["errors"],
+                }
+            )
         else:
             summary["activated"] += 1
-            summary["details"].append({
-                "slug": slug,
-                "category": category,
-                "status": "activated",
-                "created": result["created"],
-                "updated": result["updated"],
-            })
+            summary["details"].append(
+                {
+                    "slug": slug,
+                    "category": category,
+                    "status": "activated",
+                    "created": result["created"],
+                    "updated": result["updated"],
+                }
+            )
 
     _log_event(
         "_batch",
@@ -1029,6 +1056,7 @@ def batch_generate_all(*, force: bool = False) -> dict[str, Any]:
 # ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
+
 
 def main() -> None:
     """CLI entry point."""

@@ -45,9 +45,7 @@ class VectorStore(ABC):
         ...
 
     @abstractmethod
-    def search(
-        self, query_embedding: list[float], top_k: int = 10
-    ) -> list[SearchResult]:
+    def search(self, query_embedding: list[float], top_k: int = 10) -> list[SearchResult]:
         """Search by embedding vector similarity."""
         ...
 

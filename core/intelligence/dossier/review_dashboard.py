@@ -40,7 +40,13 @@ CHECKPOINTS = {
         "name": "Agent Creation Approval",
         "trigger": "Novo role com weighted_score >= 10 pronto para criacao de agente",
         "question": "Este cargo deve virar agente? [Aprovar/Rejeitar/Adiar]",
-        "context_fields": ["sow_path", "weighted_score", "sources", "executor_type", "responsibilities"],
+        "context_fields": [
+            "sow_path",
+            "weighted_score",
+            "sources",
+            "executor_type",
+            "responsibilities",
+        ],
     },
     "HC-2": {
         "name": "Business Model Validation",
@@ -92,14 +98,16 @@ def gather_pending_reviews(registry=None):
         executor_type = role_data.get("executor_type", "?")
 
         if ws >= 10 and sources >= 2 and not has_agent:
-            pending["HC-1"].append({
-                "role": role_name,
-                "weighted_score": ws,
-                "sources": sources,
-                "executor_type": executor_type,
-                "sow_generated": sow_generated,
-                "responsibilities": len(role_data.get("responsibilities", [])),
-            })
+            pending["HC-1"].append(
+                {
+                    "role": role_name,
+                    "weighted_score": ws,
+                    "sources": sources,
+                    "executor_type": executor_type,
+                    "sow_generated": sow_generated,
+                    "responsibilities": len(role_data.get("responsibilities", [])),
+                }
+            )
 
     pending["HC-1"].sort(key=lambda x: -x["weighted_score"])
 
@@ -110,28 +118,33 @@ def gather_pending_reviews(registry=None):
         if bm and bm.get("detected"):
             role_chain = bm.get("role_chain", {})
             if len(role_chain) >= 4:
-                pending["HC-2"].append({
-                    "person": person_name,
-                    "departments": bm.get("departments", []),
-                    "team_size": bm.get("team_size_estimate", "?"),
-                    "role_chain_depth": len(role_chain),
-                    "role_consolidation": len(bm.get("role_consolidation", [])),
-                })
+                pending["HC-2"].append(
+                    {
+                        "person": person_name,
+                        "departments": bm.get("departments", []),
+                        "team_size": bm.get("team_size_estimate", "?"),
+                        "role_chain_depth": len(role_chain),
+                        "role_consolidation": len(bm.get("role_consolidation", [])),
+                    }
+                )
 
     # --- HC-3: Skills pending review ---
     try:
         import yaml
+
         if SKILLS_REGISTRY_PATH.exists():
             with open(SKILLS_REGISTRY_PATH, encoding="utf-8") as f:
                 skills_reg = yaml.safe_load(f) or {}
             for persona, data in skills_reg.get("personas", {}).items():
                 count = data.get("skills_count", 0)
                 if count >= 5:
-                    pending["HC-3"].append({
-                        "persona": persona,
-                        "skills_count": count,
-                        "skill_ids": data.get("skills", [])[:5],
-                    })
+                    pending["HC-3"].append(
+                        {
+                            "persona": persona,
+                            "skills_count": count,
+                            "skill_ids": data.get("skills", [])[:5],
+                        }
+                    )
     except Exception:
         pass
 
@@ -173,8 +186,10 @@ def display_dashboard(pending):
         print(f"  {'─' * 50}")
         for i, item in enumerate(items[:10], 1):
             sow_icon = "SOW" if item["sow_generated"] else "---"
-            print(f"  [{i:2d}] {item['role']:25s}  ws={item['weighted_score']:6.1f}  "
-                  f"src={item['sources']}  exec={item['executor_type']:8s}  {sow_icon}")
+            print(
+                f"  [{i:2d}] {item['role']:25s}  ws={item['weighted_score']:6.1f}  "
+                f"src={item['sources']}  exec={item['executor_type']:8s}  {sow_icon}"
+            )
     else:
         print("\n  AGENTS PENDENTES (HC-1): Nenhum")
 
@@ -184,8 +199,10 @@ def display_dashboard(pending):
         print(f"\n  BUSINESS MODELS P/ VALIDACAO (HC-2): {len(items)}")
         print(f"  {'─' * 50}")
         for i, item in enumerate(items, 1):
-            print(f"  [{i:2d}] {item['person']:25s}  chain_depth={item['role_chain_depth']}  "
-                  f"team={item['team_size']}  depts={len(item['departments'])}")
+            print(
+                f"  [{i:2d}] {item['person']:25s}  chain_depth={item['role_chain_depth']}  "
+                f"team={item['team_size']}  depts={len(item['departments'])}"
+            )
     else:
         print("\n  BUSINESS MODELS (HC-2): Nenhum")
 
@@ -205,9 +222,11 @@ def display_dashboard(pending):
         print(f"\n  MERGES PENDENTES (HC-4): {len(items)}")
         print(f"  {'─' * 50}")
         for i, item in enumerate(items[:10], 1):
-            print(f"  [{i:2d}] \"{item.get('raw_name', '?')}\" <-> "
-                  f"\"{item.get('candidate_canonical', '?')}\" "
-                  f"(score: {item.get('score', 0):.2f}, type: {item.get('entity_type', '?')})")
+            print(
+                f'  [{i:2d}] "{item.get("raw_name", "?")}" <-> '
+                f'"{item.get("candidate_canonical", "?")}" '
+                f"(score: {item.get('score', 0):.2f}, type: {item.get('entity_type', '?')})"
+            )
     else:
         print("\n  MERGES (HC-4): Nenhum")
 
@@ -285,8 +304,10 @@ def approve_merge(raw_name, canonical, registry=None):
             for line in f:
                 try:
                     entry = json.loads(line.strip())
-                    if (entry.get("raw_name") == raw_name and
-                            entry.get("candidate_canonical") == canonical):
+                    if (
+                        entry.get("raw_name") == raw_name
+                        and entry.get("candidate_canonical") == canonical
+                    ):
                         entry["status"] = "merged"
                     lines.append(json.dumps(entry, ensure_ascii=False))
                 except json.JSONDecodeError:

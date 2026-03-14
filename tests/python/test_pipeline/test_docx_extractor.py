@@ -33,12 +33,8 @@ class _FakeResult:
 def fake_mammoth():
     """Create a fake mammoth module with working extract/convert methods."""
     mod = types.ModuleType("mammoth")
-    mod.convert_to_html = MagicMock(
-        return_value=_FakeResult("<p>Hello <strong>world</strong></p>")
-    )
-    mod.extract_raw_text = MagicMock(
-        return_value=_FakeResult("Hello world")
-    )
+    mod.convert_to_html = MagicMock(return_value=_FakeResult("<p>Hello <strong>world</strong></p>"))
+    mod.extract_raw_text = MagicMock(return_value=_FakeResult("Hello world"))
     return mod
 
 

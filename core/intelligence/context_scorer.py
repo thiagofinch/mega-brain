@@ -76,9 +76,7 @@ def build_adaptive_context(
         store = get_store(agent_id)
         if store.count > 0:
             agent_budget = int(max_chars * 0.7)  # 70% for agent memory
-            agent_ctx = store.export_for_context(
-                query=query, max_chars=agent_budget
-            )
+            agent_ctx = store.export_for_context(query=query, max_chars=agent_budget)
             if agent_ctx:
                 parts.append(f"## Agent Memory ({agent_id})\n{agent_ctx}")
                 chars_used += len(parts[-1])
@@ -91,9 +89,7 @@ def build_adaptive_context(
         if shared.count > 0:
             shared_budget = max_chars - chars_used
             if shared_budget > 500:
-                shared_ctx = shared.export_for_context(
-                    query=query, max_chars=shared_budget
-                )
+                shared_ctx = shared.export_for_context(query=query, max_chars=shared_budget)
                 if shared_ctx:
                     parts.append(f"## Shared Decisions\n{shared_ctx}")
 

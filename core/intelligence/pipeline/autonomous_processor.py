@@ -33,13 +33,13 @@ from core.intelligence.pipeline.task_orchestrator import TaskOrchestrator
 # Configuration and Constants
 # ============================================================================
 
-PROJECT_DIR = Path(os.getenv('CLAUDE_PROJECT_DIR', '.')).resolve()
-QUEUE_STATE_PATH = PROJECT_DIR / '.claude' / 'mission-control' / 'QUEUE-STATE.json'
-STOP_SIGNAL_PATH = PROJECT_DIR / '.claude' / 'mission-control' / 'STOP-AUTONOMOUS'
-PROCESSOR_STATE_PATH = PROJECT_DIR / '.claude' / 'mission-control' / 'AUTONOMOUS-STATE.json'
-MONITOR_PATH = PROJECT_DIR / '.claude' / 'mission-control' / 'AUTONOMOUS-MONITOR.json'
-CHECKPOINT_PATH = PROJECT_DIR / '.claude' / 'mission-control' / 'AUTONOMOUS-CHECKPOINT.json'
-LOG_PATH = PROJECT_DIR / 'logs' / 'autonomous-processing.jsonl'
+PROJECT_DIR = Path(os.getenv("CLAUDE_PROJECT_DIR", ".")).resolve()
+QUEUE_STATE_PATH = PROJECT_DIR / ".claude" / "mission-control" / "QUEUE-STATE.json"
+STOP_SIGNAL_PATH = PROJECT_DIR / ".claude" / "mission-control" / "STOP-AUTONOMOUS"
+PROCESSOR_STATE_PATH = PROJECT_DIR / ".claude" / "mission-control" / "AUTONOMOUS-STATE.json"
+MONITOR_PATH = PROJECT_DIR / ".claude" / "mission-control" / "AUTONOMOUS-MONITOR.json"
+CHECKPOINT_PATH = PROJECT_DIR / ".claude" / "mission-control" / "AUTONOMOUS-CHECKPOINT.json"
+LOG_PATH = PROJECT_DIR / "logs" / "autonomous-processing.jsonl"
 
 DEFAULT_TIMEOUT_SECONDS = 300  # 5 minutes
 DEFAULT_CHECKPOINT_INTERVAL = 5  # Save checkpoint every N files
@@ -51,9 +51,11 @@ BACKOFF_BASE = 2  # Exponential: 2^attempt seconds
 # Data Classes
 # ============================================================================
 
+
 @dataclass
 class QueueItem:
     """Represents a file in the processing queue."""
+
     file_path: str
     priority: int = 0  # Higher = more priority
     added_at: str = ""
@@ -65,6 +67,7 @@ class QueueItem:
 @dataclass
 class ProcessingResult:
     """Result of processing a single file."""
+
     file_path: str
     success: bool
     error: str | None = None
@@ -75,6 +78,7 @@ class ProcessingResult:
 @dataclass
 class ProcessorState:
     """Tracks the autonomous processor state."""
+
     status: str = "idle"  # idle, running, stopped, completed
     started_at: str | None = None
     stopped_at: str | None = None
@@ -86,6 +90,7 @@ class ProcessorState:
 @dataclass
 class MonitoringStatus:
     """Real-time status for external monitoring."""
+
     status: str  # idle, running, stopped, completed
     current_file: str | None
     files_in_queue: int
@@ -102,6 +107,7 @@ class MonitoringStatus:
 @dataclass
 class Checkpoint:
     """Checkpoint for crash recovery."""
+
     version: str = "1.0.0"
     created_at: str = ""
     queue_snapshot: list[dict[str, Any]] = field(default_factory=list)
@@ -114,6 +120,7 @@ class Checkpoint:
 # FileQueue: FIFO Queue with Priority and Persistence
 # ============================================================================
 
+
 class FileQueue:
     """FIFO queue with priority support and persistence."""
 
@@ -125,7 +132,7 @@ class FileQueue:
         """Add file to queue. Higher priority = processed first."""
         # Check if already in queue
         for item in self.items:
-            if item.file_path == file_path and item.status in ['pending', 'processing']:
+            if item.file_path == file_path and item.status in ["pending", "processing"]:
                 # Update priority if higher
                 if priority > item.priority:
                     item.priority = priority
@@ -134,29 +141,27 @@ class FileQueue:
 
         # Add new item
         item = QueueItem(
-            file_path=file_path,
-            priority=priority,
-            added_at=datetime.utcnow().isoformat() + 'Z'
+            file_path=file_path, priority=priority, added_at=datetime.utcnow().isoformat() + "Z"
         )
         self.items.append(item)
         self._save()
 
     def pop(self) -> QueueItem | None:
         """Get next file (highest priority first, then FIFO)."""
-        pending = [item for item in self.items if item.status == 'pending']
+        pending = [item for item in self.items if item.status == "pending"]
         if not pending:
             return None
 
         # Sort by priority (desc) then added_at (asc)
         pending.sort(key=lambda x: (-x.priority, x.added_at))
         next_item = pending[0]
-        next_item.status = 'processing'
+        next_item.status = "processing"
         self._save()
         return next_item
 
     def peek(self) -> QueueItem | None:
         """Preview next file without removing."""
-        pending = [item for item in self.items if item.status == 'pending']
+        pending = [item for item in self.items if item.status == "pending"]
         if not pending:
             return None
 
@@ -167,8 +172,8 @@ class FileQueue:
         """Mark file as completed or failed."""
         for item in self.items:
             if item.file_path == file_path:
-                item.status = 'completed' if success else 'failed'
-                item.last_attempt = datetime.utcnow().isoformat() + 'Z'
+                item.status = "completed" if success else "failed"
+                item.last_attempt = datetime.utcnow().isoformat() + "Z"
                 self._save()
                 return
 
@@ -176,18 +181,18 @@ class FileQueue:
         """Mark file as timed out."""
         for item in self.items:
             if item.file_path == file_path:
-                item.status = 'timeout'
-                item.last_attempt = datetime.utcnow().isoformat() + 'Z'
+                item.status = "timeout"
+                item.last_attempt = datetime.utcnow().isoformat() + "Z"
                 self._save()
                 return
 
     def get_pending(self) -> list[QueueItem]:
         """Get all pending items."""
-        return [item for item in self.items if item.status == 'pending']
+        return [item for item in self.items if item.status == "pending"]
 
     def get_failed(self) -> list[QueueItem]:
         """Get all failed items (for retry consideration)."""
-        return [item for item in self.items if item.status in ['failed', 'timeout']]
+        return [item for item in self.items if item.status in ["failed", "timeout"]]
 
     def is_empty(self) -> bool:
         """Check if queue has no pending items."""
@@ -206,9 +211,7 @@ class FileQueue:
             with open(QUEUE_STATE_PATH) as f:
                 data = json.load(f)
 
-            self.items = [
-                QueueItem(**item) for item in data.get('items', [])
-            ]
+            self.items = [QueueItem(**item) for item in data.get("items", [])]
         except Exception as e:
             print(f"Warning: Failed to load queue state: {e}", file=sys.stderr)
 
@@ -217,12 +220,12 @@ class FileQueue:
         QUEUE_STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
 
         data = {
-            'version': '1.0.0',
-            'updated_at': datetime.utcnow().isoformat() + 'Z',
-            'items': [asdict(item) for item in self.items]
+            "version": "1.0.0",
+            "updated_at": datetime.utcnow().isoformat() + "Z",
+            "items": [asdict(item) for item in self.items],
         }
 
-        with open(QUEUE_STATE_PATH, 'w') as f:
+        with open(QUEUE_STATE_PATH, "w") as f:
             json.dump(data, f, indent=2)
 
     def clear(self) -> None:
@@ -235,8 +238,10 @@ class FileQueue:
 # AutonomousProcessor: Main Processing Engine
 # ============================================================================
 
+
 class TimeoutException(Exception):
     """Raised when file processing times out."""
+
     pass
 
 
@@ -248,7 +253,11 @@ def _timeout_handler(signum, frame):
 class AutonomousProcessor:
     """Main autonomous processing engine."""
 
-    def __init__(self, workflow_id: str = "wf-pipeline-full", checkpoint_interval: int = DEFAULT_CHECKPOINT_INTERVAL):
+    def __init__(
+        self,
+        workflow_id: str = "wf-pipeline-full",
+        checkpoint_interval: int = DEFAULT_CHECKPOINT_INTERVAL,
+    ):
         self.queue = FileQueue()
         self.orchestrator = TaskOrchestrator(workflow_id)
         self.state = self._load_state()
@@ -276,8 +285,8 @@ class AutonomousProcessor:
         self._clear_stop_signal()
 
         # Initialize state
-        self.state.status = 'running'
-        self.state.started_at = datetime.utcnow().isoformat() + 'Z'
+        self.state.status = "running"
+        self.state.started_at = datetime.utcnow().isoformat() + "Z"
         self.state.files_processed = 0
         self.state.files_failed = 0
         self._save_state()
@@ -295,19 +304,21 @@ class AutonomousProcessor:
                     break
 
                 self.state.current_file = item.file_path
-                self._current_file_started = datetime.utcnow().isoformat() + 'Z'
+                self._current_file_started = datetime.utcnow().isoformat() + "Z"
                 self._save_state()
 
                 # Update monitor before processing
                 self._update_monitor()
 
                 # Log start
-                self._log_event({
-                    'event': 'file_started',
-                    'file': item.file_path,
-                    'attempt': item.attempts + 1,
-                    'priority': item.priority
-                })
+                self._log_event(
+                    {
+                        "event": "file_started",
+                        "file": item.file_path,
+                        "attempt": item.attempts + 1,
+                        "priority": item.priority,
+                    }
+                )
 
                 # Process file
                 result = self._process_file(item)
@@ -320,34 +331,40 @@ class AutonomousProcessor:
                     self.queue.mark_complete(item.file_path, True)
                     self.state.files_processed += 1
                     self._last_completed_file = item.file_path
-                    self._log_event({
-                        'event': 'file_completed',
-                        'file': item.file_path,
-                        'duration': result.duration_seconds
-                    })
+                    self._log_event(
+                        {
+                            "event": "file_completed",
+                            "file": item.file_path,
+                            "duration": result.duration_seconds,
+                        }
+                    )
                 else:
                     # Check if should retry
                     item.attempts += 1
                     if self._should_retry(item):
                         # Re-queue with backoff
                         self._requeue_with_backoff(item)
-                        self._log_event({
-                            'event': 'file_requeued',
-                            'file': item.file_path,
-                            'attempt': item.attempts,
-                            'backoff': self._calculate_backoff(item.attempts),
-                            'error': result.error
-                        })
+                        self._log_event(
+                            {
+                                "event": "file_requeued",
+                                "file": item.file_path,
+                                "attempt": item.attempts,
+                                "backoff": self._calculate_backoff(item.attempts),
+                                "error": result.error,
+                            }
+                        )
                     else:
                         # Max retries exceeded
                         self.queue.mark_complete(item.file_path, False)
                         self.state.files_failed += 1
-                        self._log_event({
-                            'event': 'file_failed',
-                            'file': item.file_path,
-                            'attempts': item.attempts,
-                            'error': result.error
-                        })
+                        self._log_event(
+                            {
+                                "event": "file_failed",
+                                "file": item.file_path,
+                                "attempts": item.attempts,
+                                "error": result.error,
+                            }
+                        )
 
                 self._save_state()
 
@@ -362,22 +379,19 @@ class AutonomousProcessor:
 
             # Determine why we stopped
             if self._should_stop():
-                stopped_by = 'stop_signal'
-                self.state.status = 'stopped'
+                stopped_by = "stop_signal"
+                self.state.status = "stopped"
             else:
-                stopped_by = 'queue_empty'
-                self.state.status = 'completed'
+                stopped_by = "queue_empty"
+                self.state.status = "completed"
 
         except Exception as e:
-            self.state.status = 'failed'
-            self._log_event({
-                'event': 'processor_error',
-                'error': str(e)
-            })
+            self.state.status = "failed"
+            self._log_event({"event": "processor_error", "error": str(e)})
             raise
 
         finally:
-            self.state.stopped_at = datetime.utcnow().isoformat() + 'Z'
+            self.state.stopped_at = datetime.utcnow().isoformat() + "Z"
             self.state.current_file = None
             self._save_state()
 
@@ -385,10 +399,10 @@ class AutonomousProcessor:
             self._update_monitor()
 
         return {
-            'processed': self.state.files_processed,
-            'failed': self.state.files_failed,
-            'stopped_by': stopped_by,
-            'status': self.state.status
+            "processed": self.state.files_processed,
+            "failed": self.state.files_failed,
+            "stopped_by": stopped_by,
+            "status": self.state.status,
         }
 
     def stop(self) -> None:
@@ -420,13 +434,13 @@ class AutonomousProcessor:
         old_handler = None
         try:
             # Try to use signal (Unix/Linux/Mac)
-            if hasattr(signal, 'SIGALRM'):
+            if hasattr(signal, "SIGALRM"):
                 old_handler = signal.signal(signal.SIGALRM, _timeout_handler)
                 signal.alarm(self.timeout_seconds)
 
             # Execute via orchestrator
             try:
-                self.orchestrator.execute({'files': [item.file_path]})
+                self.orchestrator.execute({"files": [item.file_path]})
                 success = True
             except TimeoutException:
                 error = f"Timeout after {self.timeout_seconds}s"
@@ -436,7 +450,7 @@ class AutonomousProcessor:
 
         finally:
             # Cancel timeout
-            if hasattr(signal, 'SIGALRM'):
+            if hasattr(signal, "SIGALRM"):
                 signal.alarm(0)
                 if old_handler:
                     signal.signal(signal.SIGALRM, old_handler)
@@ -448,7 +462,7 @@ class AutonomousProcessor:
             success=success,
             error=error,
             duration_seconds=duration,
-            attempts=item.attempts + 1
+            attempts=item.attempts + 1,
         )
 
     def _should_retry(self, item: QueueItem) -> bool:
@@ -457,13 +471,13 @@ class AutonomousProcessor:
 
     def _calculate_backoff(self, attempts: int) -> float:
         """Calculate exponential backoff: 2^attempts seconds."""
-        return BACKOFF_BASE ** attempts
+        return BACKOFF_BASE**attempts
 
     def _requeue_with_backoff(self, item: QueueItem) -> None:
         """Re-add item to queue after backoff delay."""
         # Update item status and re-add
-        item.status = 'pending'
-        item.last_attempt = datetime.utcnow().isoformat() + 'Z'
+        item.status = "pending"
+        item.last_attempt = datetime.utcnow().isoformat() + "Z"
         # Note: Backoff is tracked but not enforced with sleep
         # Caller can decide to delay processing if needed
 
@@ -475,7 +489,7 @@ class AutonomousProcessor:
         try:
             with open(PROCESSOR_STATE_PATH) as f:
                 data = json.load(f)
-            return ProcessorState(**data.get('state', {}))
+            return ProcessorState(**data.get("state", {}))
         except Exception as e:
             print(f"Warning: Failed to load processor state: {e}", file=sys.stderr)
             return ProcessorState()
@@ -485,35 +499,35 @@ class AutonomousProcessor:
         PROCESSOR_STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
 
         data = {
-            'version': '1.0.0',
-            'updated_at': datetime.utcnow().isoformat() + 'Z',
-            'state': asdict(self.state)
+            "version": "1.0.0",
+            "updated_at": datetime.utcnow().isoformat() + "Z",
+            "state": asdict(self.state),
         }
 
-        with open(PROCESSOR_STATE_PATH, 'w') as f:
+        with open(PROCESSOR_STATE_PATH, "w") as f:
             json.dump(data, f, indent=2)
 
     def _log_event(self, event: dict[str, Any]) -> None:
         """Append event to JSONL log."""
         LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
 
-        event['timestamp'] = datetime.utcnow().isoformat() + 'Z'
+        event["timestamp"] = datetime.utcnow().isoformat() + "Z"
 
-        with open(LOG_PATH, 'a') as f:
-            f.write(json.dumps(event) + '\n')
+        with open(LOG_PATH, "a") as f:
+            f.write(json.dumps(event) + "\n")
 
     def get_status(self) -> dict[str, Any]:
         """Return current processor status."""
         return {
-            'status': self.state.status,
-            'started_at': self.state.started_at,
-            'stopped_at': self.state.stopped_at,
-            'files_processed': self.state.files_processed,
-            'files_failed': self.state.files_failed,
-            'current_file': self.state.current_file,
-            'queue_size': self.queue.size(),
-            'queue_pending': len(self.queue.get_pending()),
-            'queue_failed': len(self.queue.get_failed())
+            "status": self.state.status,
+            "started_at": self.state.started_at,
+            "stopped_at": self.state.stopped_at,
+            "files_processed": self.state.files_processed,
+            "files_failed": self.state.files_failed,
+            "current_file": self.state.current_file,
+            "queue_size": self.queue.size(),
+            "queue_pending": len(self.queue.get_pending()),
+            "queue_failed": len(self.queue.get_failed()),
         }
 
     def _calculate_avg_duration(self) -> float:
@@ -535,37 +549,39 @@ class AutonomousProcessor:
             files_processed=self.state.files_processed,
             files_failed=self.state.files_failed,
             started_at=self.state.started_at,
-            last_updated=datetime.utcnow().isoformat() + 'Z',
+            last_updated=datetime.utcnow().isoformat() + "Z",
             current_file_started=self._current_file_started,
             estimated_remaining_files=self.queue.size(),
             avg_file_duration_seconds=avg_duration,
-            error_rate_percent=round(error_rate, 1)
+            error_rate_percent=round(error_rate, 1),
         )
 
         MONITOR_PATH.parent.mkdir(parents=True, exist_ok=True)
-        with open(MONITOR_PATH, 'w') as f:
+        with open(MONITOR_PATH, "w") as f:
             json.dump(asdict(status), f, indent=2)
 
     def _save_checkpoint(self) -> None:
         """Save checkpoint for crash recovery."""
         checkpoint = Checkpoint(
             version="1.0.0",
-            created_at=datetime.utcnow().isoformat() + 'Z',
+            created_at=datetime.utcnow().isoformat() + "Z",
             queue_snapshot=[asdict(item) for item in self.queue.items],
             processor_state=asdict(self.state),
             files_processed_since_start=self.state.files_processed,
-            last_completed_file=self._last_completed_file
+            last_completed_file=self._last_completed_file,
         )
 
         CHECKPOINT_PATH.parent.mkdir(parents=True, exist_ok=True)
-        with open(CHECKPOINT_PATH, 'w') as f:
+        with open(CHECKPOINT_PATH, "w") as f:
             json.dump(asdict(checkpoint), f, indent=2)
 
-        self._log_event({
-            'event': 'checkpoint_saved',
-            'files_processed': self.state.files_processed,
-            'queue_size': self.queue.size()
-        })
+        self._log_event(
+            {
+                "event": "checkpoint_saved",
+                "files_processed": self.state.files_processed,
+                "queue_size": self.queue.size(),
+            }
+        )
 
     def _should_checkpoint(self) -> bool:
         """Check if checkpoint should be saved (every N files)."""
@@ -580,33 +596,36 @@ class AutonomousProcessor:
             with open(CHECKPOINT_PATH) as f:
                 data = json.load(f)
 
-            self.queue.items = [QueueItem(**item) for item in data['queue_snapshot']]
+            self.queue.items = [QueueItem(**item) for item in data["queue_snapshot"]]
             self.queue._save()
 
-            state_data = data['processor_state']
+            state_data = data["processor_state"]
             self.state = ProcessorState(**state_data)
 
-            self._log_event({
-                'event': 'checkpoint_restored',
-                'from_checkpoint': data['created_at'],
-                'queue_size': len(self.queue.items)
-            })
+            self._log_event(
+                {
+                    "event": "checkpoint_restored",
+                    "from_checkpoint": data["created_at"],
+                    "queue_size": len(self.queue.items),
+                }
+            )
             return True
         except Exception as e:
-            self._log_event({'event': 'checkpoint_restore_failed', 'error': str(e)})
+            self._log_event({"event": "checkpoint_restore_failed", "error": str(e)})
             return False
 
     def resume(self) -> dict[str, Any]:
         """Resume processing from last checkpoint."""
         restored = self._restore_from_checkpoint()
         if not restored:
-            return {'success': False, 'error': 'No checkpoint found'}
+            return {"success": False, "error": "No checkpoint found"}
         return self.run()
 
 
 # ============================================================================
 # CLI Interface
 # ============================================================================
+
 
 def print_usage():
     print("""
@@ -646,7 +665,7 @@ def main():
 
     command = sys.argv[1].lower()
 
-    if command == 'queue':
+    if command == "queue":
         if len(sys.argv) < 3:
             print_usage()
             sys.exit(1)
@@ -654,7 +673,7 @@ def main():
         subcommand = sys.argv[2].lower()
         queue = FileQueue()
 
-        if subcommand == 'add':
+        if subcommand == "add":
             if len(sys.argv) < 4:
                 print("Error: Missing file path")
                 sys.exit(1)
@@ -663,7 +682,7 @@ def main():
             queue.add(file_path, priority)
             print(f"Added: {file_path} (priority={priority})")
 
-        elif subcommand == 'list':
+        elif subcommand == "list":
             pending = queue.get_pending()
             if not pending:
                 print("Queue is empty")
@@ -672,47 +691,49 @@ def main():
                 for item in pending:
                     print(f"  [{item.priority}] {item.file_path}")
 
-        elif subcommand == 'clear':
+        elif subcommand == "clear":
             queue.clear()
             print("Queue cleared")
 
-        elif subcommand == 'size':
+        elif subcommand == "size":
             print(f"Queue size: {queue.size()}")
 
         else:
             print(f"Unknown queue command: {subcommand}")
             sys.exit(1)
 
-    elif command == 'run':
+    elif command == "run":
         timeout = DEFAULT_TIMEOUT_SECONDS
         checkpoint_interval = DEFAULT_CHECKPOINT_INTERVAL
         for arg in sys.argv[2:]:
-            if arg.startswith('--timeout='):
-                timeout = int(arg.split('=')[1])
-            elif arg.startswith('--checkpoint='):
-                checkpoint_interval = int(arg.split('=')[1])
+            if arg.startswith("--timeout="):
+                timeout = int(arg.split("=")[1])
+            elif arg.startswith("--checkpoint="):
+                checkpoint_interval = int(arg.split("=")[1])
 
         processor = AutonomousProcessor(checkpoint_interval=checkpoint_interval)
-        print(f"Starting autonomous processing (timeout={timeout}s, checkpoint every {checkpoint_interval} files)...")
+        print(
+            f"Starting autonomous processing (timeout={timeout}s, checkpoint every {checkpoint_interval} files)..."
+        )
         result = processor.run(timeout_seconds=timeout)
         print("\nCompleted:")
         print(f"  Processed: {result['processed']}")
         print(f"  Failed: {result['failed']}")
         print(f"  Stopped by: {result['stopped_by']}")
 
-    elif command == 'stop':
+    elif command == "stop":
         processor = AutonomousProcessor()
         processor.stop()
         print("Stop signal sent")
 
-    elif command == 'status':
+    elif command == "status":
         processor = AutonomousProcessor()
         status = processor.get_status()
         print("Processor Status:")
         for key, value in status.items():
             print(f"  {key}: {value}")
 
-    elif command == 'monitor':
+    elif command == "monitor":
         if not MONITOR_PATH.exists():
             print("No monitoring data available")
         else:
@@ -722,13 +743,13 @@ def main():
             for key, value in data.items():
                 print(f"  {key}: {value}")
 
-    elif command == 'checkpoint':
+    elif command == "checkpoint":
         if len(sys.argv) < 3:
             print("Usage: checkpoint [show|clear]")
             sys.exit(1)
 
         subcommand = sys.argv[2].lower()
-        if subcommand == 'show':
+        if subcommand == "show":
             if not CHECKPOINT_PATH.exists():
                 print("No checkpoint available")
             else:
@@ -739,7 +760,7 @@ def main():
                 print(f"  Files processed: {data['files_processed_since_start']}")
                 print(f"  Queue items: {len(data['queue_snapshot'])}")
                 print(f"  Last file: {data['last_completed_file']}")
-        elif subcommand == 'clear':
+        elif subcommand == "clear":
             if CHECKPOINT_PATH.exists():
                 CHECKPOINT_PATH.unlink()
                 print("Checkpoint cleared")
@@ -748,25 +769,25 @@ def main():
         else:
             print(f"Unknown checkpoint command: {subcommand}")
 
-    elif command == 'resume':
+    elif command == "resume":
         processor = AutonomousProcessor()
         print("Resuming from checkpoint...")
         result = processor.resume()
-        if not result.get('success', True):
+        if not result.get("success", True):
             print(f"Resume failed: {result.get('error')}")
         else:
             print("\nCompleted:")
             print(f"  Processed: {result.get('processed', 0)}")
             print(f"  Failed: {result.get('failed', 0)}")
 
-    elif command == 'retry-failed':
+    elif command == "retry-failed":
         queue = FileQueue()
         failed = queue.get_failed()
         if not failed:
             print("No failed files to retry")
         else:
             for item in failed:
-                item.status = 'pending'
+                item.status = "pending"
                 item.attempts = 0
             queue._save()
             print(f"Re-queued {len(failed)} failed files")
@@ -777,7 +798,7 @@ def main():
         sys.exit(1)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
 
 
@@ -786,11 +807,11 @@ if __name__ == '__main__':
 # ============================================================================
 
 __all__ = [
-    'AutonomousProcessor',
-    'Checkpoint',
-    'FileQueue',
-    'MonitoringStatus',
-    'ProcessingResult',
-    'ProcessorState',
-    'QueueItem',
+    "AutonomousProcessor",
+    "Checkpoint",
+    "FileQueue",
+    "MonitoringStatus",
+    "ProcessingResult",
+    "ProcessorState",
+    "QueueItem",
 ]

@@ -467,12 +467,14 @@ def cmd_batch(source_slug: str) -> dict[str, Any]:
         all_batch_ids.append(bid)
         src_name = getattr(br, "source_name", "").lower().replace(" ", "-")
         if src_name == source_slug or source_slug in src_name:
-            batches_for_slug.append({
-                "batch_id": bid,
-                "source_code": getattr(br, "source_code", ""),
-                "file_count": getattr(br, "file_count", 0),
-                "total_size_bytes": getattr(br, "total_size_bytes", 0),
-            })
+            batches_for_slug.append(
+                {
+                    "batch_id": bid,
+                    "source_code": getattr(br, "source_code", ""),
+                    "file_count": getattr(br, "file_count", 0),
+                    "total_size_bytes": getattr(br, "total_size_bytes", 0),
+                }
+            )
 
     # Update state: move to chunking if still at init
     if sm.state == "init" and batches_for_slug:
@@ -645,12 +647,14 @@ def cmd_status(slug: str | None = None) -> dict[str, Any]:
                 if d.is_dir():
                     sm = PipelineStateMachine(d.name)
                     mgr = MetadataManager.load(d.name)
-                    active.append({
-                        "slug": d.name,
-                        "state": sm.state,
-                        "status": mgr.pipeline_status if mgr else "unknown",
-                        "phases_complete": len(mgr.completed_phase_names) if mgr else 0,
-                    })
+                    active.append(
+                        {
+                            "slug": d.name,
+                            "state": sm.state,
+                            "status": mgr.pipeline_status if mgr else "unknown",
+                            "phases_complete": len(mgr.completed_phase_names) if mgr else 0,
+                        }
+                    )
 
         elapsed = (time.monotonic() - t0) * 1000
         return _build_result(
@@ -815,19 +819,19 @@ def main(argv: list[str] | None = None) -> int:
     try:
         if command == "ingest":
             if not rest:
-                print('Error: ingest requires <file_path>', file=sys.stderr)
+                print("Error: ingest requires <file_path>", file=sys.stderr)
                 return 1
             result = cmd_ingest(rest[0])
 
         elif command == "batch":
             if not rest:
-                print('Error: batch requires <source_slug>', file=sys.stderr)
+                print("Error: batch requires <source_slug>", file=sys.stderr)
                 return 1
             result = cmd_batch(rest[0])
 
         elif command == "finalize":
             if not rest:
-                print('Error: finalize requires <slug>', file=sys.stderr)
+                print("Error: finalize requires <slug>", file=sys.stderr)
                 return 1
             result = cmd_finalize(rest[0])
 
@@ -837,7 +841,7 @@ def main(argv: list[str] | None = None) -> int:
 
         elif command == "full":
             if not rest:
-                print('Error: full requires <file_path>', file=sys.stderr)
+                print("Error: full requires <file_path>", file=sys.stderr)
                 return 1
             result = cmd_full(rest[0])
 

@@ -110,17 +110,13 @@ class TestEmbeddingServiceDummy:
         svc._initialised = True
         return svc
 
-    def test_embed_generates_consistent_embeddings(
-        self, tmp_path: Path
-    ) -> None:
+    def test_embed_generates_consistent_embeddings(self, tmp_path: Path) -> None:
         svc = self._make_service(tmp_path)
         emb1 = svc.embed("hello")
         emb2 = svc.embed("hello")  # cached
         assert emb1 == emb2
 
-    def test_embed_different_texts_produce_different_embeddings(
-        self, tmp_path: Path
-    ) -> None:
+    def test_embed_different_texts_produce_different_embeddings(self, tmp_path: Path) -> None:
         svc = self._make_service(tmp_path)
         emb1 = svc.embed("text one")
         emb2 = svc.embed("text two")
@@ -152,9 +148,7 @@ class TestEmbeddingServiceDummy:
         assert all(len(e) == 64 for e in results)
         assert svc.cache.stats()["cached_embeddings"] == 3
 
-    def test_embed_batch_uses_cache_for_known_items(
-        self, tmp_path: Path
-    ) -> None:
+    def test_embed_batch_uses_cache_for_known_items(self, tmp_path: Path) -> None:
         svc = self._make_service(tmp_path)
         # Pre-cache one item
         svc.embed("alpha")

@@ -256,22 +256,15 @@ def available_buckets() -> dict[str, dict]:
 def main() -> None:
     """CLI entry point for bucket query router."""
     if len(sys.argv) < 2:
-        print(
-            "Usage: python3 -m core.intelligence.rag.bucket_query_router "
-            '"<query>" [bucket]'
-        )
+        print('Usage: python3 -m core.intelligence.rag.bucket_query_router "<query>" [bucket]')
         print("  bucket: external | business | personal | all | auto  (default: all)")
         print()
         print("Examples:")
         print('  python3 -m core.intelligence.rag.bucket_query_router "Hormozi offer"')
         print(
-            '  python3 -m core.intelligence.rag.bucket_query_router '
-            '"team meeting notes" business'
+            '  python3 -m core.intelligence.rag.bucket_query_router "team meeting notes" business'
         )
-        print(
-            '  python3 -m core.intelligence.rag.bucket_query_router '
-            '"closing framework" auto'
-        )
+        print('  python3 -m core.intelligence.rag.bucket_query_router "closing framework" auto')
         sys.exit(1)
 
     question = sys.argv[1]

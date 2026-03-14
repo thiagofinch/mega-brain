@@ -43,7 +43,7 @@ def validate_json_file(file_path: Path) -> bool:
         True if valid JSON, False otherwise
     """
     try:
-        with open(file_path, encoding='utf-8') as f:
+        with open(file_path, encoding="utf-8") as f:
             json.load(f)
         return True
     except json.JSONDecodeError as e:
@@ -87,9 +87,9 @@ def main():
             failed += 1
 
     # Summary
-    print(f"\n{'='*80}")
+    print(f"\n{'=' * 80}")
     print("📊 SUMMARY")
-    print(f"{'='*80}")
+    print(f"{'=' * 80}")
     print(f"✅ Passed: {passed}/{len(json_files)}")
     print(f"❌ Failed: {failed}/{len(json_files)}")
 

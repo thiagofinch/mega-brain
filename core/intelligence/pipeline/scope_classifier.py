@@ -177,7 +177,11 @@ def _load_known_experts() -> set[str]:
     try:
         from core.intelligence.pipeline.inbox_organizer import ENTITY_ALIASES
 
-        _company_kws = {k.strip().lower() for k in os.environ.get("MEGA_BRAIN_COMPANY_KEYWORDS", "").split(",") if k.strip()}
+        _company_kws = {
+            k.strip().lower()
+            for k in os.environ.get("MEGA_BRAIN_COMPANY_KEYWORDS", "").split(",")
+            if k.strip()
+        }
         for _alias, slug in ENTITY_ALIASES.items():
             # Only add slugs that look like person names (contain a hyphen)
             # and are not company names
@@ -377,7 +381,9 @@ def _email_matches_company(email: str) -> bool:
 # ---------------------------------------------------------------------------
 
 
-def _signal_path(file_path: str, scores: dict[str, int], reasons: list[str], signals: dict[str, object]) -> None:
+def _signal_path(
+    file_path: str, scores: dict[str, int], reasons: list[str], signals: dict[str, object]
+) -> None:
     """Analyze file path to determine bucket affinity.
 
     Mutually exclusive: exactly one sub-signal fires (the most specific match).
@@ -393,7 +399,7 @@ def _signal_path(file_path: str, scores: dict[str, int], reasons: list[str], sig
     # Resolve to relative path for pattern matching
     root_str = str(ROOT).lower().replace("\\", "/")
     if path_lower.startswith(root_str):
-        path_lower = path_lower[len(root_str):].lstrip("/")
+        path_lower = path_lower[len(root_str) :].lstrip("/")
 
     # Order: most specific first
 
@@ -515,9 +521,7 @@ def _signal_participants(
 
     # 2f: Only owner + non-company attendees (personal meeting)
     is_owner_organizer = (
-        ctx.organizer_email
-        and owner_email
-        and ctx.organizer_email.lower() == owner_email
+        ctx.organizer_email and owner_email and ctx.organizer_email.lower() == owner_email
     )
     if is_owner_organizer and company_attendees == 0 and external_attendees > 0:
         scores["personal"] += PARTICIPANT_PERSONAL_MEETING
@@ -561,9 +565,9 @@ def _signal_entities(
     for slug in experts:
         parts = slug.split("-")
         patterns = [
-            " ".join(parts),     # "alex hormozi"
-            "-".join(parts),     # "alex-hormozi"
-            "".join(parts),      # "alexhormozi"
+            " ".join(parts),  # "alex hormozi"
+            "-".join(parts),  # "alex-hormozi"
+            "".join(parts),  # "alexhormozi"
         ]
         for pattern in patterns:
             if pattern in text_lower:
@@ -876,9 +880,9 @@ def _log_decision(decision: ScopeDecision, file_path: str, duration_ms: int) -> 
     try:
         _SCOPE_LOG.parent.mkdir(parents=True, exist_ok=True)
         entry = {
-            "timestamp": __import__("datetime").datetime.now(
-                __import__("datetime").timezone.utc
-            ).isoformat(),
+            "timestamp": __import__("datetime")
+            .datetime.now(__import__("datetime").timezone.utc)
+            .isoformat(),
             "file_path": file_path,
             "primary_bucket": decision.primary_bucket,
             "cascade_buckets": decision.cascade_buckets,
@@ -995,10 +999,7 @@ def _classify_internal(ctx: ClassificationContext, start_time: float) -> ScopeDe
         confidence = min(1.0, max(0.0, confidence))
 
     # Cascade: non-primary buckets scoring above threshold
-    cascade = [
-        b for b in scores
-        if b != primary and scores[b] >= CASCADE_THRESHOLD
-    ]
+    cascade = [b for b in scores if b != primary and scores[b] >= CASCADE_THRESHOLD]
 
     decision = ScopeDecision(
         primary_bucket=primary,

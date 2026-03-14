@@ -18,7 +18,7 @@ from datetime import datetime
 from pathlib import Path
 
 # Caminhos
-BASE_PATH = Path(os.environ.get('CLAUDE_PROJECT_DIR', '.'))
+BASE_PATH = Path(os.environ.get("CLAUDE_PROJECT_DIR", "."))
 LOGS_MD = BASE_PATH / "logs" / "batches"
 LOGS_JSON = BASE_PATH / ".claude" / "mission-control" / "batch-logs"
 ENFORCEMENT_LOG = BASE_PATH / "logs" / "enforcement.jsonl"
@@ -36,7 +36,7 @@ def log_enforcement(action: str, batch_id: str, details: dict):
         "timestamp": datetime.now().isoformat(),
         "action": action,
         "batch_id": batch_id,
-        "details": details
+        "details": details,
     }
     with open(ENFORCEMENT_LOG, "a", encoding="utf-8") as f:
         f.write(json.dumps(entry, ensure_ascii=False) + "\n")
@@ -51,7 +51,7 @@ def extract_batch_id_from_filename(filename: str) -> str | None:
     - BATCH-001-JEREMY-HAYNES-SOPS-20260104.md
     """
     # Tenta extrair número do batch
-    match = re.search(r'BATCH[_-]?(\d+)', filename, re.IGNORECASE)
+    match = re.search(r"BATCH[_-]?(\d+)", filename, re.IGNORECASE)
     if match:
         return match.group(1).zfill(3)  # Padroniza para 3 dígitos
     return None
@@ -76,7 +76,7 @@ def extract_metadata_from_md(md_path: Path) -> dict:
             "frameworks": 0,
             "heuristicas": 0,
             "metodologias": 0,
-            "modelos_mentais": 0
+            "modelos_mentais": 0,
         },
         "key_frameworks": [],
         "key_heuristicas": [],
@@ -84,20 +84,20 @@ def extract_metadata_from_md(md_path: Path) -> dict:
         "key_metodologias": [],
         "auto_generated": True,
         "generated_from": str(md_path.name),
-        "generated_at": datetime.now().isoformat()
+        "generated_at": datetime.now().isoformat(),
     }
 
     # Extrai batch_id do nome do arquivo
-    batch_match = re.search(r'BATCH[_-]?(\d+)', md_path.name, re.IGNORECASE)
+    batch_match = re.search(r"BATCH[_-]?(\d+)", md_path.name, re.IGNORECASE)
     if batch_match:
         metadata["batch_id"] = f"BATCH-{batch_match.group(1).zfill(3)}"
 
     # Extrai SOURCE
     source_patterns = [
-        r'SOURCE\s+([A-Z][A-Z\s\(\)\.]+)',
-        r'FONTE\s+([A-Z][A-Z\s\(\)\.]+)',
-        r'Source:\s*([^\n]+)',
-        r'\|\s*SOURCE\s*\|\s*([^\|]+)',
+        r"SOURCE\s+([A-Z][A-Z\s\(\)\.]+)",
+        r"FONTE\s+([A-Z][A-Z\s\(\)\.]+)",
+        r"Source:\s*([^\n]+)",
+        r"\|\s*SOURCE\s*\|\s*([^\|]+)",
     ]
     for pattern in source_patterns:
         match = re.search(pattern, content, re.IGNORECASE)
@@ -110,18 +110,18 @@ def extract_metadata_from_md(md_path: Path) -> dict:
         # Extract source hint from filename by removing BATCH-XXX prefix and extension
         name_upper = md_path.stem.upper()
         # Remove BATCH-NNN- prefix
-        source_hint = re.sub(r'^BATCH[_-]?\d+[_-]?', '', name_upper).strip('-_ ')
+        source_hint = re.sub(r"^BATCH[_-]?\d+[_-]?", "", name_upper).strip("-_ ")
         if source_hint:
             # Convert dash/underscore separated name to readable form
-            metadata["source"] = source_hint.replace('-', ' ').replace('_', ' ').strip()
+            metadata["source"] = source_hint.replace("-", " ").replace("_", " ").strip()
 
     # Extrai metricas
     metrics_patterns = {
-        "filosofias": r'Filosofias\s*[:\|]?\s*(\d+)',
-        "frameworks": r'Frameworks?\s*[:\|]?\s*(\d+)',
-        "heuristicas": r'Heur[ií]sticas?\s*[:\|]?\s*(\d+)',
-        "metodologias": r'Metodologias?\s*[:\|]?\s*(\d+)',
-        "modelos_mentais": r'Modelos?\s*Mentais?\s*[:\|]?\s*(\d+)'
+        "filosofias": r"Filosofias\s*[:\|]?\s*(\d+)",
+        "frameworks": r"Frameworks?\s*[:\|]?\s*(\d+)",
+        "heuristicas": r"Heur[ií]sticas?\s*[:\|]?\s*(\d+)",
+        "metodologias": r"Metodologias?\s*[:\|]?\s*(\d+)",
+        "modelos_mentais": r"Modelos?\s*Mentais?\s*[:\|]?\s*(\d+)",
     }
 
     for key, pattern in metrics_patterns.items():
@@ -130,28 +130,41 @@ def extract_metadata_from_md(md_path: Path) -> dict:
             metadata["extraction_summary"][key] = int(match.group(1))
 
     # Extrai arquivos processados da tabela
-    table_pattern = r'\|\s*\d+\s*\|\s*([^\|]+)\s*\|'
+    table_pattern = r"\|\s*\d+\s*\|\s*([^\|]+)\s*\|"
     files = re.findall(table_pattern, content)
     metadata["files"] = [f.strip() for f in files if f.strip() and "Arquivo" not in f]
     metadata["files_processed"] = len(metadata["files"])
 
     # Extrai filosofias destaque
-    filosofias_section = re.search(r'PHILOSOPHIES.*?```(.*?)```', content, re.DOTALL | re.IGNORECASE)
+    filosofias_section = re.search(
+        r"PHILOSOPHIES.*?```(.*?)```", content, re.DOTALL | re.IGNORECASE
+    )
     if filosofias_section:
         filosofias = re.findall(r'"([^"]+)"', filosofias_section.group(1))
         metadata["key_filosofias"] = filosofias[:12]  # Limita a 12
 
     # Extrai frameworks
-    frameworks_section = re.search(r'KEY FRAMEWORKS(.*?)(?:##|FILOSOFIAS|HEURISTICAS|```\s*\n\s*##)', content, re.DOTALL | re.IGNORECASE)
+    frameworks_section = re.search(
+        r"KEY FRAMEWORKS(.*?)(?:##|FILOSOFIAS|HEURISTICAS|```\s*\n\s*##)",
+        content,
+        re.DOTALL | re.IGNORECASE,
+    )
     if frameworks_section:
         # Busca nomes de frameworks entre boxes ASCII
-        framework_names = re.findall(r'[\u2500-\u257F]\s*([A-Z][A-Za-z0-9\s\(\)\-]+?)\s*[\u2500-\u257F]', frameworks_section.group(1))
+        framework_names = re.findall(
+            r"[\u2500-\u257F]\s*([A-Z][A-Za-z0-9\s\(\)\-]+?)\s*[\u2500-\u257F]",
+            frameworks_section.group(1),
+        )
         if not framework_names:
-            framework_names = re.findall(r'([A-Z][A-Z\s\-]+(?:Framework|Method|System|Model|Process))', frameworks_section.group(1), re.IGNORECASE)
+            framework_names = re.findall(
+                r"([A-Z][A-Z\s\-]+(?:Framework|Method|System|Model|Process))",
+                frameworks_section.group(1),
+                re.IGNORECASE,
+            )
         metadata["key_frameworks"] = list(set(framework_names))[:12]
 
     # Extrai heuristicas
-    heuristicas_section = re.search(r'HEURISTICS.*?```(.*?)```', content, re.DOTALL | re.IGNORECASE)
+    heuristicas_section = re.search(r"HEURISTICS.*?```(.*?)```", content, re.DOTALL | re.IGNORECASE)
     if heuristicas_section:
         heuristicas = re.findall(r'"([^"]+)"', heuristicas_section.group(1))
         metadata["key_heuristicas"] = [{"heuristica": h, "rating": 4} for h in heuristicas[:17]]
@@ -169,7 +182,7 @@ def create_json_from_md(batch_id: str, md_path: Path) -> bool:
         source_upper = metadata["source"].upper().strip()
         if source_upper:
             # Generate short code from initials of source name words
-            words = source_upper.replace('(', '').replace(')', '').replace('.', '').split()
+            words = source_upper.replace("(", "").replace(")", "").replace(".", "").split()
             if len(words) == 1:
                 source_code = f"-{words[0][:3]}"
             else:
@@ -181,19 +194,22 @@ def create_json_from_md(batch_id: str, md_path: Path) -> bool:
         with open(json_path, "w", encoding="utf-8") as f:
             json.dump(metadata, f, indent=2, ensure_ascii=False)
 
-        log_enforcement("CREATE_JSON", batch_id, {
-            "source_md": str(md_path.name),
-            "created_json": json_filename,
-            "files_processed": metadata["files_processed"]
-        })
+        log_enforcement(
+            "CREATE_JSON",
+            batch_id,
+            {
+                "source_md": str(md_path.name),
+                "created_json": json_filename,
+                "files_processed": metadata["files_processed"],
+            },
+        )
 
         return True
 
     except Exception as e:
-        log_enforcement("ERROR_CREATE_JSON", batch_id, {
-            "source_md": str(md_path.name),
-            "error": str(e)
-        })
+        log_enforcement(
+            "ERROR_CREATE_JSON", batch_id, {"source_md": str(md_path.name), "error": str(e)}
+        )
         return False
 
 
@@ -218,7 +234,7 @@ def create_md_from_json(batch_id: str, json_path: Path) -> bool:
 
         md_content = f"""# BATCH-{batch_id}
 
-> **AUTO-GENERATED from JSON** - {datetime.now().strftime('%Y-%m-%d %H:%M')}
+> **AUTO-GENERATED from JSON** - {datetime.now().strftime("%Y-%m-%d %H:%M")}
 > Original JSON: {json_path.name}
 
 ## BATCH SUMMARY
@@ -228,7 +244,7 @@ def create_md_from_json(batch_id: str, json_path: Path) -> bool:
 | SOURCE | {source} |
 | ARQUIVOS | {files_processed} |
 | TIMESTAMP | {timestamp} |
-| STATUS | {data.get('status', 'COMPLETE')} |
+| STATUS | {data.get("status", "COMPLETE")} |
 
 ## METRICAS
 
@@ -256,14 +272,14 @@ def create_md_from_json(batch_id: str, json_path: Path) -> bool:
         if data.get("key_filosofias"):
             md_content += "\n## FILOSOFIAS DESTAQUE\n\n"
             for fil in data["key_filosofias"]:
-                md_content += f"- \"{fil}\"\n"
+                md_content += f'- "{fil}"\n'
 
         md_content += f"""
 ---
 
 ```
 AUTO-GENERATED BY DUAL-LOCATION ENFORCEMENT HOOK
-JARVIS v3.33 | {datetime.now().strftime('%Y-%m-%d %H:%M')}
+JARVIS v3.33 | {datetime.now().strftime("%Y-%m-%d %H:%M")}
 ```
 """
 
@@ -273,18 +289,16 @@ JARVIS v3.33 | {datetime.now().strftime('%Y-%m-%d %H:%M')}
         with open(md_path, "w", encoding="utf-8") as f:
             f.write(md_content)
 
-        log_enforcement("CREATE_MD", batch_id, {
-            "source_json": str(json_path.name),
-            "created_md": md_filename
-        })
+        log_enforcement(
+            "CREATE_MD", batch_id, {"source_json": str(json_path.name), "created_md": md_filename}
+        )
 
         return True
 
     except Exception as e:
-        log_enforcement("ERROR_CREATE_MD", batch_id, {
-            "source_json": str(json_path.name),
-            "error": str(e)
-        })
+        log_enforcement(
+            "ERROR_CREATE_MD", batch_id, {"source_json": str(json_path.name), "error": str(e)}
+        )
         return False
 
 
@@ -322,8 +336,12 @@ def enforce_dual_location(batch_id: str) -> tuple[bool, str]:
     Retorna (success, message)
     """
     # Busca arquivos existentes para este batch
-    md_files = list(LOGS_MD.glob(f"BATCH-{batch_id}*.md")) + list(LOGS_MD.glob(f"BATCH-{batch_id.lstrip('0')}*.md"))
-    json_files = list(LOGS_JSON.glob(f"BATCH-{batch_id}*.json")) + list(LOGS_JSON.glob(f"BATCH-{batch_id.lstrip('0')}*.json"))
+    md_files = list(LOGS_MD.glob(f"BATCH-{batch_id}*.md")) + list(
+        LOGS_MD.glob(f"BATCH-{batch_id.lstrip('0')}*.md")
+    )
+    json_files = list(LOGS_JSON.glob(f"BATCH-{batch_id}*.json")) + list(
+        LOGS_JSON.glob(f"BATCH-{batch_id.lstrip('0')}*.json")
+    )
 
     md_exists = len(md_files) > 0
     json_exists = len(json_files) > 0
@@ -358,7 +376,7 @@ def enforce_single_batch(batch_id: str) -> dict:
         "batch_id": batch_id,
         "success": success,
         "message": message,
-        "timestamp": datetime.now().isoformat()
+        "timestamp": datetime.now().isoformat(),
     }
 
     return result
@@ -386,7 +404,7 @@ def main():
         "json_only": 0,
         "created_json": 0,
         "created_md": 0,
-        "errors": 0
+        "errors": 0,
     }
 
     # Ordena por numero do batch
@@ -442,8 +460,8 @@ def main():
     print(f"  Erros:                   {stats['errors']}")
     print()
 
-    final_complete = stats['complete'] + stats['created_json'] + stats['created_md']
-    compliance = (final_complete / stats['total'] * 100) if stats['total'] > 0 else 0
+    final_complete = stats["complete"] + stats["created_json"] + stats["created_md"]
+    compliance = (final_complete / stats["total"] * 100) if stats["total"] > 0 else 0
 
     print(f"  COMPLIANCE FINAL:        {final_complete}/{stats['total']} ({compliance:.1f}%)")
     print()
@@ -451,10 +469,7 @@ def main():
     print("=" * 70)
 
     # Log final
-    log_enforcement("FULL_SCAN", "ALL", {
-        "stats": stats,
-        "compliance": compliance
-    })
+    log_enforcement("FULL_SCAN", "ALL", {"stats": stats, "compliance": compliance})
 
     return stats
 
@@ -469,32 +484,32 @@ def hook_main():
         input_data = sys.stdin.read()
         hook_input = json.loads(input_data) if input_data else {}
 
-        tool_input = hook_input.get('tool_input', {})
-        file_path = tool_input.get('file_path', '')
+        tool_input = hook_input.get("tool_input", {})
+        file_path = tool_input.get("file_path", "")
 
         # Only trigger for batch files
-        if 'BATCH' not in file_path.upper():
-            print(json.dumps({'continue': True}))
+        if "BATCH" not in file_path.upper():
+            print(json.dumps({"continue": True}))
             return
 
         # Extract batch ID from path
         batch_id = extract_batch_id_from_filename(Path(file_path).name)
         if not batch_id:
-            print(json.dumps({'continue': True}))
+            print(json.dumps({"continue": True}))
             return
 
         ensure_directories()
         success, message = enforce_dual_location(batch_id)
 
         feedback = f"[REGRA #8] {message}" if success else None
-        print(json.dumps({'continue': True, 'feedback': feedback}))
+        print(json.dumps({"continue": True, "feedback": feedback}))
 
     except Exception as e:
-        print(json.dumps({'continue': True, 'error': str(e)}))
+        print(json.dumps({"continue": True, "error": str(e)}))
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1 and sys.argv[1] == '--full':
+    if len(sys.argv) > 1 and sys.argv[1] == "--full":
         main()
     else:
         hook_main()

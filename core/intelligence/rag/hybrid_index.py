@@ -37,8 +37,8 @@ BM25_INDEX_FILE = INDEX_DIR / "bm25.json"
 CHUNKS_FILE = INDEX_DIR / "chunks.json"
 
 VOYAGE_MODEL = "voyage-3"  # voyage-context-3 when available
-VOYAGE_BATCH_SIZE = 64     # Max items per API call
-EMBEDDING_DIM = 1024       # voyage-3 dimension
+VOYAGE_BATCH_SIZE = 64  # Max items per API call
+EMBEDDING_DIM = 1024  # voyage-3 dimension
 
 
 # ---------------------------------------------------------------------------
@@ -72,9 +72,7 @@ class BM25Index:
             for term in set(tokens):
                 self.doc_freqs[term] = self.doc_freqs.get(term, 0) + 1
 
-        self.avg_doc_length = (
-            sum(self.doc_lengths) / max(self.n_docs, 1)
-        )
+        self.avg_doc_length = sum(self.doc_lengths) / max(self.n_docs, 1)
 
     def query(self, query_text: str, top_k: int = 30) -> list[tuple[int, float]]:
         """Search BM25 index. Returns [(doc_index, score), ...]."""
@@ -125,7 +123,8 @@ class BM25Index:
 def _tokenize(text: str) -> list[str]:
     """Simple tokenizer: lowercase, split on non-alphanum, filter short."""
     import re
-    tokens = re.findall(r'[a-z\u00e0-\u024f]{2,}', text.lower())
+
+    tokens = re.findall(r"[a-z\u00e0-\u024f]{2,}", text.lower())
     return tokens
 
 
@@ -145,6 +144,7 @@ class VectorIndex:
 
         try:
             import voyageai
+
             client = voyageai.Client()
         except (ImportError, Exception) as e:
             print(f"[VectorIndex] voyageai not available: {e}")
@@ -154,15 +154,14 @@ class VectorIndex:
 
         # Batch embed
         for i in range(0, len(texts), batch_size):
-            batch = texts[i:i + batch_size]
+            batch = texts[i : i + batch_size]
             # Truncate very long texts
             batch = [t[:8000] for t in batch]
             try:
-                result = client.embed(batch, model=VOYAGE_MODEL,
-                                      input_type="document")
+                result = client.embed(batch, model=VOYAGE_MODEL, input_type="document")
                 self.vectors.extend(result.embeddings)
             except Exception as e:
-                print(f"[VectorIndex] Embedding batch {i//batch_size} failed: {e}")
+                print(f"[VectorIndex] Embedding batch {i // batch_size} failed: {e}")
                 self.vectors.extend([[0.0] * self.dim for _ in batch])
 
             # Rate limiting
@@ -176,9 +175,9 @@ class VectorIndex:
 
         try:
             import voyageai
+
             client = voyageai.Client()
-            result = client.embed([query_text[:8000]], model=VOYAGE_MODEL,
-                                  input_type="query")
+            result = client.embed([query_text[:8000]], model=VOYAGE_MODEL, input_type="query")
             query_vec = result.embeddings[0]
         except Exception:
             return []
@@ -226,8 +225,7 @@ class HybridIndex:
         self.vector = VectorIndex()
         self.built: bool = False
 
-    def build(self, chunks: list[Chunk] | None = None,
-              skip_vectors: bool = False) -> dict:
+    def build(self, chunks: list[Chunk] | None = None, skip_vectors: bool = False) -> dict:
         """Build both indexes from chunks.
 
         Args:
@@ -328,18 +326,19 @@ def get_index() -> HybridIndex:
 # ---------------------------------------------------------------------------
 def main():
     import argparse
+
     parser = argparse.ArgumentParser(description="Build hybrid RAG index")
-    parser.add_argument("--full", action="store_true",
-                        help="Full build with vector embeddings")
-    parser.add_argument("--bm25-only", action="store_true",
-                        help="Build only BM25 index (no API calls)")
+    parser.add_argument("--full", action="store_true", help="Full build with vector embeddings")
+    parser.add_argument(
+        "--bm25-only", action="store_true", help="Build only BM25 index (no API calls)"
+    )
     args = parser.parse_args()
 
     skip_vectors = args.bm25_only or not args.full
 
-    print(f"\n{'='*60}")
+    print(f"\n{'=' * 60}")
     print("HYBRID INDEX BUILDER")
-    print(f"{'='*60}")
+    print(f"{'=' * 60}")
     if skip_vectors:
         print("[BM25-only mode — no vector embeddings]\n")
     else:
@@ -355,7 +354,7 @@ def main():
 
     idx.save()
     print(f"\nIndex saved to: {INDEX_DIR}")
-    print(f"{'='*60}\n")
+    print(f"{'=' * 60}\n")
 
 
 if __name__ == "__main__":

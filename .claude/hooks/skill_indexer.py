@@ -14,7 +14,7 @@ import os
 import sys
 from pathlib import Path
 
-PROJECT_ROOT = Path(os.environ.get('CLAUDE_PROJECT_DIR', '.'))
+PROJECT_ROOT = Path(os.environ.get("CLAUDE_PROJECT_DIR", "."))
 sys.path.insert(0, str(PROJECT_ROOT / ".claude" / "hooks"))
 
 try:
@@ -29,13 +29,15 @@ def main():
     """Função principal - executa indexação."""
     try:
         index = build_index()
-        skills_count = index.get('skills_count', 0)
-        subagents_count = index.get('subagents_count', 0)
-        keywords_count = len(index.get('keyword_map', {}))
+        skills_count = index.get("skills_count", 0)
+        subagents_count = index.get("subagents_count", 0)
+        keywords_count = len(index.get("keyword_map", {}))
 
         # Output compacto para não poluir o chat
         # Formato compatível com outros hooks SessionStart
-        print(f"Skills: {skills_count} | Sub-Agents: {subagents_count} | Keywords: {keywords_count}")
+        print(
+            f"Skills: {skills_count} | Sub-Agents: {subagents_count} | Keywords: {keywords_count}"
+        )
 
     except Exception as e:
         # Falha silenciosa para não bloquear sessão

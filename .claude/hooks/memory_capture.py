@@ -10,6 +10,7 @@ Exit codes:
 Trigger: PostToolUse (Agent)
 Timeout: 30
 """
+
 import json
 import sys
 from datetime import UTC, datetime

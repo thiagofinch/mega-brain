@@ -135,9 +135,7 @@ def split_memory(
 
     for sec in sections:
         # Check if it's a priority/index section
-        is_index = any(
-            p.lower() in sec.title.lower() for p in INDEX_SECTIONS
-        )
+        is_index = any(p.lower() in sec.title.lower() for p in INDEX_SECTIONS)
         if is_index:
             index_secs.append(sec)
             continue
@@ -192,13 +190,15 @@ def split_memory(
         domain_file.write_text("\n\n".join(parts), encoding="utf-8")
         size = domain_file.stat().st_size
 
-        index_entries.append({
-            "domain": domain,
-            "file": f"memory/{domain}.md",
-            "sections": len(secs),
-            "size_bytes": size,
-            "section_titles": [s.title for s in secs],
-        })
+        index_entries.append(
+            {
+                "domain": domain,
+                "file": f"memory/{domain}.md",
+                "sections": len(secs),
+                "size_bytes": size,
+                "section_titles": [s.title for s in secs],
+            }
+        )
 
     # 4. Write _INDEX.yaml
     index_yaml = {
@@ -213,12 +213,10 @@ def split_memory(
     }
     index_path = memory_dir / "_INDEX.yaml"
     with open(index_path, "w", encoding="utf-8") as f:
-        yaml.dump(index_yaml, f, default_flow_style=False, allow_unicode=True,
-                  sort_keys=False)
+        yaml.dump(index_yaml, f, default_flow_style=False, allow_unicode=True, sort_keys=False)
 
     # 5. Write new lightweight MEMORY.md (index only)
-    new_memory = _build_index_memory(agent_path.name, index_secs, index_entries,
-                                     original_size)
+    new_memory = _build_index_memory(agent_path.name, index_secs, index_entries, original_size)
     memory_path.write_text(new_memory, encoding="utf-8")
 
     # Build result
@@ -264,8 +262,7 @@ def _build_index_memory(
     for entry in domain_entries:
         size_kb = round(entry["size_bytes"] / 1024, 1)
         parts.append(
-            f"| {entry['domain']} | {entry['sections']} | {size_kb}KB | "
-            f"`{entry['file']}` |"
+            f"| {entry['domain']} | {entry['sections']} | {size_kb}KB | `{entry['file']}` |"
         )
     parts.append("")
 
@@ -316,27 +313,21 @@ def split_all_agents(
 # ---------------------------------------------------------------------------
 def main():
     import argparse
-    parser = argparse.ArgumentParser(
-        description="Split monolithic MEMORY.md into per-domain files"
-    )
+
+    parser = argparse.ArgumentParser(description="Split monolithic MEMORY.md into per-domain files")
     parser.add_argument(
-        "agent", nargs="?",
-        help="Agent name (e.g. CLOSER) or 'all' for batch processing"
+        "agent", nargs="?", help="Agent name (e.g. CLOSER) or 'all' for batch processing"
     )
+    parser.add_argument("--dry-run", action="store_true", help="Only report what would happen")
     parser.add_argument(
-        "--dry-run", action="store_true",
-        help="Only report what would happen"
-    )
-    parser.add_argument(
-        "--min-kb", type=int, default=50,
-        help="Minimum MEMORY.md size in KB to split (default: 50)"
+        "--min-kb", type=int, default=50, help="Minimum MEMORY.md size in KB to split (default: 50)"
     )
     args = parser.parse_args()
 
     if not args.agent or args.agent.lower() == "all":
-        print(f"\n{'='*60}")
+        print(f"\n{'=' * 60}")
         print("MEMORY SPLITTER - Batch Mode")
-        print(f"{'='*60}")
+        print(f"{'=' * 60}")
         if args.dry_run:
             print("[DRY RUN] No files will be modified.\n")
 
@@ -375,9 +366,9 @@ def main():
             print(f"Error: {result['error']}")
             sys.exit(1)
 
-        print(f"\n{'='*60}")
+        print(f"\n{'=' * 60}")
         print(f"MEMORY SPLITTER: {result['agent']}")
-        print(f"{'='*60}")
+        print(f"{'=' * 60}")
         if args.dry_run:
             print("[DRY RUN] No files will be modified.\n")
         print(f"Original: {result['original_size_kb']}KB, {result['sections_total']} sections")
@@ -388,7 +379,7 @@ def main():
         print(f"\nDomains ({len(result['domains'])}):")
         for dom, info in result["domains"].items():
             print(f"  {dom}: {info['sections']} sections, {info['size_kb']}KB → {info['file']}")
-        print(f"\n{'='*60}\n")
+        print(f"\n{'=' * 60}\n")
 
 
 if __name__ == "__main__":

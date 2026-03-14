@@ -33,7 +33,7 @@ from .ontology_layer import (
 # ---------------------------------------------------------------------------
 # CONFIG
 # ---------------------------------------------------------------------------
-GRAPH_WEIGHT = 0.4   # Weight of graph results in fusion
+GRAPH_WEIGHT = 0.4  # Weight of graph results in fusion
 HYBRID_WEIGHT = 0.6  # Weight of hybrid search results in fusion
 
 
@@ -90,27 +90,28 @@ def _query_global(query: str, graph: KnowledgeGraph, top_k: int) -> list[dict]:
 
     # Extract domain from query
     query_lower = query.lower()
-    query_tokens = set(re.findall(r'[a-z\u00e0-\u024f]{3,}', query_lower))
+    query_tokens = set(re.findall(r"[a-z\u00e0-\u024f]{3,}", query_lower))
 
     results = []
     for comm in communities:
-        domain_tokens = set(re.findall(r'[a-z\u00e0-\u024f]{3,}',
-                                       comm["domain"].lower()))
+        domain_tokens = set(re.findall(r"[a-z\u00e0-\u024f]{3,}", comm["domain"].lower()))
         overlap = query_tokens & domain_tokens
         if overlap:
             # Get entities from this community
             for eid in comm["entities"][:top_k]:
                 entity = graph.get_entity(eid)
                 if entity:
-                    results.append({
-                        "entity_id": entity.id,
-                        "entity_type": entity.type,
-                        "label": entity.label,
-                        "person": entity.person,
-                        "domain": comm["domain"],
-                        "score": entity.weight * (len(overlap) / max(len(query_tokens), 1)),
-                        "strategy": "global",
-                    })
+                    results.append(
+                        {
+                            "entity_id": entity.id,
+                            "entity_type": entity.type,
+                            "label": entity.label,
+                            "person": entity.person,
+                            "domain": comm["domain"],
+                            "score": entity.weight * (len(overlap) / max(len(query_tokens), 1)),
+                            "strategy": "global",
+                        }
+                    )
 
     results.sort(key=lambda r: -r["score"])
     return results[:top_k]
@@ -129,44 +130,46 @@ def _query_ontological(query: str, graph: KnowledgeGraph, top_k: int) -> list[di
             break
 
     # Detect domain from query
-    query_tokens = set(re.findall(r'[a-z\u00e0-\u024f]{3,}', query_lower))
+    query_tokens = set(re.findall(r"[a-z\u00e0-\u024f]{3,}", query_lower))
 
     if target_layer:
         # Query specific layer
         layer_results = query_by_layer(target_layer, graph=graph)
         for r in layer_results[:top_k]:
-            results.append({
-                "entity_id": r.entity_id,
-                "entity_type": r.entity_type,
-                "label": r.label,
-                "person": r.person,
-                "score": r.score,
-                "strategy": "ontological",
-                "path": r.path,
-            })
+            results.append(
+                {
+                    "entity_id": r.entity_id,
+                    "entity_type": r.entity_type,
+                    "label": r.label,
+                    "person": r.person,
+                    "score": r.score,
+                    "strategy": "ontological",
+                    "path": r.path,
+                }
+            )
     else:
         # Try to match domains
         for entity in graph.entities.values():
             if entity.type not in LAYER_HIERARCHY:
                 continue
             domain_match = any(
-                t in d.lower() for d in entity.domains for t in query_tokens
-                if len(t) >= 4
+                t in d.lower() for d in entity.domains for t in query_tokens if len(t) >= 4
             )
-            label_match = any(t in entity.label.lower() for t in query_tokens
-                              if len(t) >= 4)
+            label_match = any(t in entity.label.lower() for t in query_tokens if len(t) >= 4)
             if domain_match or label_match:
                 score = entity.weight
                 if label_match:
                     score *= 1.5
-                results.append({
-                    "entity_id": entity.id,
-                    "entity_type": entity.type,
-                    "label": entity.label,
-                    "person": entity.person,
-                    "score": score,
-                    "strategy": "ontological",
-                })
+                results.append(
+                    {
+                        "entity_id": entity.id,
+                        "entity_type": entity.type,
+                        "label": entity.label,
+                        "person": entity.person,
+                        "score": score,
+                        "strategy": "ontological",
+                    }
+                )
 
     results.sort(key=lambda r: -r["score"])
     return results[:top_k]
@@ -178,15 +181,17 @@ def _query_associative(query: str, graph: KnowledgeGraph, top_k: int) -> list[di
 
     results = []
     for r in assoc_result.get("results", []):
-        results.append({
-            "entity_id": r["entity_id"],
-            "entity_type": r["entity_type"],
-            "label": r["label"],
-            "person": r["person"],
-            "score": r["score"],
-            "strategy": "associative",
-            "is_seed": r.get("is_seed", False),
-        })
+        results.append(
+            {
+                "entity_id": r["entity_id"],
+                "entity_type": r["entity_type"],
+                "label": r["label"],
+                "person": r["person"],
+                "score": r["score"],
+                "strategy": "associative",
+                "is_seed": r.get("is_seed", False),
+            }
+        )
 
     return results
 
@@ -196,20 +201,22 @@ def _query_hierarchical(query: str, graph: KnowledgeGraph, top_k: int) -> list[d
     results = []
 
     # Try to find a specific entity ID in the query
-    id_match = re.search(r'((?:FIL|MM|HEUR|FW|MET)-[A-Z]+-\d+)', query.upper())
+    id_match = re.search(r"((?:FIL|MM|HEUR|FW|MET)-[A-Z]+-\d+)", query.upper())
     if id_match:
         entity_id = id_match.group(1)
         trace_results = trace_hierarchy(entity_id, direction="both", graph=graph)
         for r in trace_results:
-            results.append({
-                "entity_id": r.entity_id,
-                "entity_type": r.entity_type,
-                "label": r.label,
-                "person": r.person,
-                "score": r.score,
-                "strategy": "hierarchical",
-                "path": r.path,
-            })
+            results.append(
+                {
+                    "entity_id": r.entity_id,
+                    "entity_type": r.entity_type,
+                    "label": r.label,
+                    "person": r.person,
+                    "score": r.score,
+                    "strategy": "hierarchical",
+                    "path": r.path,
+                }
+            )
     else:
         # Fall back to associative search
         return _query_associative(query, graph, top_k)
@@ -345,24 +352,25 @@ def _fuse_graph_and_hybrid(
 # ---------------------------------------------------------------------------
 def main():
     import argparse
+
     parser = argparse.ArgumentParser(description="Graph Query Engine")
     parser.add_argument("query", nargs="?", help="Query text")
-    parser.add_argument("--strategy", choices=["global", "ontological",
-                                                "associative", "hierarchical",
-                                                "factual"],
-                        help="Force query strategy")
-    parser.add_argument("--no-hybrid", action="store_true",
-                        help="Disable hybrid search fusion")
+    parser.add_argument(
+        "--strategy",
+        choices=["global", "ontological", "associative", "hierarchical", "factual"],
+        help="Force query strategy",
+    )
+    parser.add_argument("--no-hybrid", action="store_true", help="Disable hybrid search fusion")
     parser.add_argument("--top-k", type=int, default=10)
     args = parser.parse_args()
 
     if not args.query:
-        print("Usage: python3 -m core.intelligence.rag.graph_query \"query\"")
+        print('Usage: python3 -m core.intelligence.rag.graph_query "query"')
         sys.exit(1)
 
-    print(f"\n{'='*60}")
+    print(f"\n{'=' * 60}")
     print("GRAPH QUERY ENGINE")
-    print(f"{'='*60}")
+    print(f"{'=' * 60}")
     print(f"Query: {args.query}\n")
 
     result = graph_search(
@@ -383,14 +391,14 @@ def main():
 
     print("FUSED RESULTS:")
     for i, r in enumerate(result["fused_results"]):
-        print(f"  #{i+1} [{r['source']}] {r['id']}")
+        print(f"  #{i + 1} [{r['source']}] {r['id']}")
         print(f"     {r['label'][:60]}")
         if r.get("person"):
             print(f"     Person: {r['person']}")
         print(f"     Score: {r['score']:.6f}")
         print()
 
-    print(f"{'='*60}\n")
+    print(f"{'=' * 60}\n")
 
 
 if __name__ == "__main__":

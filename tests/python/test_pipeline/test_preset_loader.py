@@ -1,10 +1,19 @@
 """Tests for pipeline preset loader."""
+
 import pytest
 
 from core.configs.preset_loader import load_preset, list_presets, VALID_PRESETS
 
 
-REQUIRED_TOP_LEVEL_KEYS = {"name", "description", "version", "ingestion", "chunking", "extraction", "output"}
+REQUIRED_TOP_LEVEL_KEYS = {
+    "name",
+    "description",
+    "version",
+    "ingestion",
+    "chunking",
+    "extraction",
+    "output",
+}
 
 
 class TestLoadPreset:

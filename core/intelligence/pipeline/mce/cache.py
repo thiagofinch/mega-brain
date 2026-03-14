@@ -355,7 +355,4 @@ class MCECache:
         return len(self._l2)
 
     def __repr__(self) -> str:
-        return (
-            f"MCECache(l1={self.l1_size}, l2={self.l2_size}, "
-            f"hit_rate={self.stats.hit_rate:.1%})"
-        )
+        return f"MCECache(l1={self.l1_size}, l2={self.l2_size}, hit_rate={self.stats.hit_rate:.1%})"

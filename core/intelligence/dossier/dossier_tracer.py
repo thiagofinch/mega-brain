@@ -55,9 +55,16 @@ class DNAEntry:
         "person",
     )
 
-    def __init__(self, entry_id: str, layer: str, person: str,
-                 keywords: list[str], content_preview: str,
-                 dominios: list[str], chunk_ids: list[str]):
+    def __init__(
+        self,
+        entry_id: str,
+        layer: str,
+        person: str,
+        keywords: list[str],
+        content_preview: str,
+        dominios: list[str],
+        chunk_ids: list[str],
+    ):
         self.id = entry_id
         self.layer = layer
         self.person = person
@@ -72,12 +79,21 @@ def _extract_keywords(entry: dict) -> list[str]:
     keywords = []
 
     # Common fields that contain matchable text
-    for field in ("regra", "nome", "descricao", "principio", "titulo",
-                  "name", "description", "title", "rule"):
+    for field in (
+        "regra",
+        "nome",
+        "descricao",
+        "principio",
+        "titulo",
+        "name",
+        "description",
+        "title",
+        "rule",
+    ):
         val = entry.get(field, "")
         if isinstance(val, str) and val:
             # Extract significant words (>3 chars)
-            words = re.findall(r'[a-zA-Z\u00C0-\u024F]{4,}', val.lower())
+            words = re.findall(r"[a-zA-Z\u00C0-\u024F]{4,}", val.lower())
             keywords.extend(words)
             # Also keep the full text for phrase matching
             keywords.append(val.lower())
@@ -93,9 +109,19 @@ def _extract_keywords(entry: dict) -> list[str]:
 def _extract_content_preview(entry: dict) -> str:
     """Extract a content preview string for matching."""
     parts = []
-    for field in ("regra", "nome", "descricao", "principio", "titulo",
-                  "name", "description", "acao_recomendada",
-                  "contexto_de_uso", "passos", "steps"):
+    for field in (
+        "regra",
+        "nome",
+        "descricao",
+        "principio",
+        "titulo",
+        "name",
+        "description",
+        "acao_recomendada",
+        "contexto_de_uso",
+        "passos",
+        "steps",
+    ):
         val = entry.get(field)
         if isinstance(val, str):
             parts.append(val)
@@ -174,15 +200,17 @@ def load_all_dna_entries() -> list[DNAEntry]:
                     if isinstance(cids, list):
                         chunk_ids.extend(cids)
 
-                entries.append(DNAEntry(
-                    entry_id=entry_id,
-                    layer=prefix,
-                    person=person,
-                    keywords=_extract_keywords(entry),
-                    content_preview=_extract_content_preview(entry),
-                    dominios=entry.get("dominios", []),
-                    chunk_ids=chunk_ids,
-                ))
+                entries.append(
+                    DNAEntry(
+                        entry_id=entry_id,
+                        layer=prefix,
+                        person=person,
+                        keywords=_extract_keywords(entry),
+                        content_preview=_extract_content_preview(entry),
+                        dominios=entry.get("dominios", []),
+                        chunk_ids=chunk_ids,
+                    )
+                )
 
     return entries
 
@@ -320,12 +348,14 @@ def trace_dossier(
 
             score = _match_score(sec_text, entry)
             if score >= MATCH_THRESHOLD:
-                matches_found.append({
-                    "section": sec_title,
-                    "entry_id": entry.id,
-                    "score": round(score, 2),
-                    "layer": entry.layer,
-                })
+                matches_found.append(
+                    {
+                        "section": sec_title,
+                        "entry_id": entry.id,
+                        "score": round(score, 2),
+                        "layer": entry.layer,
+                    }
+                )
 
                 if not dry_run:
                     # Add reference at end of the section's first paragraph
@@ -336,8 +366,7 @@ def trace_dossier(
                             # Add ref at end of this line
                             if not _already_has_ref(modified_lines[line_idx], entry.id):
                                 modified_lines[line_idx] = (
-                                    modified_lines[line_idx].rstrip()
-                                    + f" ^[{entry.id}]"
+                                    modified_lines[line_idx].rstrip() + f" ^[{entry.id}]"
                                 )
                                 refs_added += 1
                             break
@@ -405,7 +434,8 @@ def trace_all_dossiers(dry_run: bool = False) -> dict:
     # Coverage report
     total_dossiers = len(results["persons_dossiers"]) + len(results["theme_dossiers"])
     dossiers_with_refs = sum(
-        1 for d in results["persons_dossiers"] + results["theme_dossiers"]
+        1
+        for d in results["persons_dossiers"] + results["theme_dossiers"]
         if d.get("refs_added", 0) > 0 or d.get("refs_existing", 0) > 0
     )
 
@@ -418,14 +448,10 @@ def trace_all_dossiers(dry_run: bool = False) -> dict:
     results["coverage"] = {
         "total_dossiers": total_dossiers,
         "dossiers_with_refs": dossiers_with_refs,
-        "dossier_coverage_pct": round(
-            dossiers_with_refs / max(total_dossiers, 1) * 100, 1
-        ),
+        "dossier_coverage_pct": round(dossiers_with_refs / max(total_dossiers, 1) * 100, 1),
         "total_dna_entries": len(dna_entries),
         "dna_entries_matched": len(matched_ids),
-        "dna_coverage_pct": round(
-            len(matched_ids) / max(len(dna_entries), 1) * 100, 1
-        ),
+        "dna_coverage_pct": round(len(matched_ids) / max(len(dna_entries), 1) * 100, 1),
     }
 
     return results
@@ -436,23 +462,20 @@ def trace_all_dossiers(dry_run: bool = False) -> dict:
 # ---------------------------------------------------------------------------
 def main():
     import argparse
-    parser = argparse.ArgumentParser(
-        description="Add DNA traceability references to dossier files"
+
+    parser = argparse.ArgumentParser(description="Add DNA traceability references to dossier files")
+    parser.add_argument(
+        "target", nargs="?", default="all", help="'all' or path to specific dossier file"
     )
     parser.add_argument(
-        "target", nargs="?", default="all",
-        help="'all' or path to specific dossier file"
-    )
-    parser.add_argument(
-        "--dry-run", action="store_true",
-        help="Only report matches without modifying files"
+        "--dry-run", action="store_true", help="Only report matches without modifying files"
     )
     args = parser.parse_args()
 
     if args.target == "all":
-        print(f"\n{'='*60}")
+        print(f"\n{'=' * 60}")
         print("DOSSIER TRACER - Full Scan")
-        print(f"{'='*60}")
+        print(f"{'=' * 60}")
         if args.dry_run:
             print("[DRY RUN] No files will be modified.\n")
 
@@ -477,16 +500,20 @@ def main():
             print(f"  {d['file']}: {d.get('sections', 0)} sections, {status}{existing}")
 
         cov = result["coverage"]
-        print(f"\n{'='*60}")
+        print(f"\n{'=' * 60}")
         print("COVERAGE REPORT")
-        print(f"{'='*60}")
-        print(f"Dossiers: {cov['dossiers_with_refs']}/{cov['total_dossiers']} "
-              f"({cov['dossier_coverage_pct']}%)")
-        print(f"DNA entries matched: {cov['dna_entries_matched']}/{cov['total_dna_entries']} "
-              f"({cov['dna_coverage_pct']}%)")
+        print(f"{'=' * 60}")
+        print(
+            f"Dossiers: {cov['dossiers_with_refs']}/{cov['total_dossiers']} "
+            f"({cov['dossier_coverage_pct']}%)"
+        )
+        print(
+            f"DNA entries matched: {cov['dna_entries_matched']}/{cov['total_dna_entries']} "
+            f"({cov['dna_coverage_pct']}%)"
+        )
         print(f"Total refs added: {result['total_refs_added']}")
         print(f"Total refs existing: {result['total_refs_existing']}")
-        print(f"{'='*60}\n")
+        print(f"{'=' * 60}\n")
     else:
         target = Path(args.target)
         if not target.is_absolute():
@@ -498,9 +525,9 @@ def main():
         dna_entries = load_all_dna_entries()
         result = trace_dossier(target, dna_entries, dry_run=args.dry_run)
 
-        print(f"\n{'='*60}")
+        print(f"\n{'=' * 60}")
         print(f"DOSSIER TRACER: {result['file']}")
-        print(f"{'='*60}")
+        print(f"{'=' * 60}")
         if args.dry_run:
             print("[DRY RUN]\n")
         print(f"Person: {result.get('person', 'N/A')}")
@@ -510,9 +537,8 @@ def main():
         if result.get("matches"):
             print(f"\nMatches ({len(result['matches'])}):")
             for m in result["matches"]:
-                print(f"  [{m['layer']}] {m['entry_id']} → {m['section']} "
-                      f"(score: {m['score']})")
-        print(f"{'='*60}\n")
+                print(f"  [{m['layer']}] {m['entry_id']} → {m['section']} (score: {m['score']})")
+        print(f"{'=' * 60}\n")
 
 
 if __name__ == "__main__":

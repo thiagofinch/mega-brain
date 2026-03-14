@@ -41,6 +41,7 @@ class PipelineResult:
 # PUBLIC API
 # ---------------------------------------------------------------------------
 
+
 def query(
     query_text: str,
     agent_id: str | None = None,
@@ -150,9 +151,8 @@ def verify(response: str, pipeline_result: PipelineResult) -> dict:
 # PRIVATE HELPERS
 # ---------------------------------------------------------------------------
 
-def _build_memory_context(
-    query_text: str, agent_id: str | None, intent: str
-) -> str:
+
+def _build_memory_context(query_text: str, agent_id: str | None, intent: str) -> str:
     """Build memory context using context_scorer."""
     try:
         # Use context_scorer if available
@@ -197,7 +197,7 @@ def _build_memory_context(
 # ---------------------------------------------------------------------------
 def main():
     if len(sys.argv) < 2:
-        print("Usage: python3 -m core.intelligence.rag.pipeline \"query\" [--agent AGENT_ID]")
+        print('Usage: python3 -m core.intelligence.rag.pipeline "query" [--agent AGENT_ID]')
         sys.exit(1)
 
     agent_id = None
@@ -206,7 +206,7 @@ def main():
         idx = args.index("--agent")
         if idx + 1 < len(args):
             agent_id = args[idx + 1]
-            args = args[:idx] + args[idx + 2:]
+            args = args[:idx] + args[idx + 2 :]
 
     query_text = " ".join(args)
 

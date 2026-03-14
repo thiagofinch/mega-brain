@@ -39,6 +39,7 @@ TRIGGER_CONFIG_PATH = BASE_DIR / "scripts" / "trigger_config.yaml"
 TRIGGERS_LOG_PATH = BASE_DIR / "logs" / "triggers.jsonl"
 DOSSIERS_THEMES_DIR = BASE_DIR / "knowledge" / "external" / "dossiers" / "themes"
 
+
 # ---------------------------------------------------------------------------
 # CONFIG
 # ---------------------------------------------------------------------------
@@ -183,9 +184,11 @@ def evaluate_all_themes(registry=None):
             # else: dossier exists and is up-to-date, skip
         else:
             # Check if should be created
-            if (occurrences >= creation_thresholds["min_occurrences"] and
-                    n_sources >= creation_thresholds["min_sources"] and
-                    score >= creation_thresholds["min_relevance_score"]):
+            if (
+                occurrences >= creation_thresholds["min_occurrences"]
+                and n_sources >= creation_thresholds["min_sources"]
+                and score >= creation_thresholds["min_relevance_score"]
+            ):
                 entry["reasons"] = [
                     f"occurrences={occurrences} >= {creation_thresholds['min_occurrences']}",
                     f"sources={n_sources} >= {creation_thresholds['min_sources']}",
@@ -195,9 +198,13 @@ def evaluate_all_themes(registry=None):
             elif score >= candidate_score:
                 entry["missing"] = []
                 if occurrences < creation_thresholds["min_occurrences"]:
-                    entry["missing"].append(f"occurrences: {occurrences}/{creation_thresholds['min_occurrences']}")
+                    entry["missing"].append(
+                        f"occurrences: {occurrences}/{creation_thresholds['min_occurrences']}"
+                    )
                 if n_sources < creation_thresholds["min_sources"]:
-                    entry["missing"].append(f"sources: {n_sources}/{creation_thresholds['min_sources']}")
+                    entry["missing"].append(
+                        f"sources: {n_sources}/{creation_thresholds['min_sources']}"
+                    )
                 results["candidates"].append(entry)
             else:
                 results["tracking"].append(entry)
@@ -230,7 +237,9 @@ def _check_update_needed(canonical, theme_data, thresholds):
             mtime = datetime.fromtimestamp(full_path.stat().st_mtime, tz=UTC)
             age_days = (datetime.now(UTC) - mtime).days
             if age_days >= thresholds["stale_days"]:
-                reasons.append(f"stale: {age_days} days old (threshold: {thresholds['stale_days']})")
+                reasons.append(
+                    f"stale: {age_days} days old (threshold: {thresholds['stale_days']})"
+                )
 
     # Check if theme has new sources not reflected in dossier
     # (simple heuristic: if occurrence_count is high but sources grew)
@@ -305,7 +314,9 @@ def main():
         print("\n--- CREATE DOSSIER TRIGGERS ---")
         for entry in results["create"]:
             print(f"  [CREATE] {entry['theme']}")
-            print(f"           Score: {entry['score']} | Occ: {entry['occurrences']} | Sources: {entry['sources']}")
+            print(
+                f"           Score: {entry['score']} | Occ: {entry['occurrences']} | Sources: {entry['sources']}"
+            )
             for reason in entry.get("reasons", []):
                 print(f"           -> {reason}")
 

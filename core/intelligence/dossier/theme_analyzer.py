@@ -310,8 +310,7 @@ def analyze_chunk_file(filepath, registry=None):
 
     # Normalize and deduplicate
     return _normalize_and_compile(
-        all_themes, all_persons, all_roles,
-        source_id, len(chunks), detected_format, registry
+        all_themes, all_persons, all_roles, source_id, len(chunks), detected_format, registry
     )
 
 
@@ -329,13 +328,13 @@ def _analyze_insights_file(data, source_id, registry):
 
     count = data.get("insights_extracted", len(data.get("insights", [])))
     return _normalize_and_compile(
-        all_themes, all_persons, all_roles,
-        source_id, count, "insight", registry
+        all_themes, all_persons, all_roles, source_id, count, "insight", registry
     )
 
 
-def _normalize_and_compile(all_themes, all_persons, all_roles,
-                           source_id, chunk_count, detected_format, registry):
+def _normalize_and_compile(
+    all_themes, all_persons, all_roles, source_id, chunk_count, detected_format, registry
+):
     """Normalize extracted data and compile results."""
     domain_aliases = get_domain_aliases()
 
@@ -352,8 +351,7 @@ def _normalize_and_compile(all_themes, all_persons, all_roles,
         seen_themes.add(norm)
 
         result = normalize_entity(
-            raw_theme, "theme", registry=registry,
-            source_id=source_id, auto_save=False
+            raw_theme, "theme", registry=registry, source_id=source_id, auto_save=False
         )
         themes_found.append(result["canonical"])
         if result["created"]:
@@ -377,8 +375,7 @@ def _normalize_and_compile(all_themes, all_persons, all_roles,
         seen_persons.add(norm)
 
         result = normalize_entity(
-            raw_person, "person", registry=registry,
-            source_id=source_id, auto_save=False
+            raw_person, "person", registry=registry, source_id=source_id, auto_save=False
         )
         persons_found.append(result["canonical"])
 
@@ -392,8 +389,7 @@ def _normalize_and_compile(all_themes, all_persons, all_roles,
         seen_roles.add(norm)
 
         result = normalize_entity(
-            raw_role, "role", registry=registry,
-            source_id=source_id, auto_save=False
+            raw_role, "role", registry=registry, source_id=source_id, auto_save=False
         )
         roles_mentioned.append(result["canonical"])
 
@@ -456,13 +452,15 @@ def analyze_all_chunks(registry=None, save=True):
         if "error" in result:
             continue
 
-        files_processed.append({
-            "file": fpath.name,
-            "source_id": result["source_id"],
-            "format": result["format"],
-            "themes": len(result["themes_found"]),
-            "new_themes": len(result["themes_new"]),
-        })
+        files_processed.append(
+            {
+                "file": fpath.name,
+                "source_id": result["source_id"],
+                "format": result["format"],
+                "themes": len(result["themes_found"]),
+                "new_themes": len(result["themes_new"]),
+            }
+        )
 
         for t in result["themes_found"]:
             all_themes[t] += 1
@@ -485,13 +483,15 @@ def analyze_all_chunks(registry=None, save=True):
         if "error" in result:
             continue
 
-        files_processed.append({
-            "file": fpath.name,
-            "source_id": result["source_id"],
-            "format": result["format"],
-            "themes": len(result["themes_found"]),
-            "new_themes": len(result["themes_new"]),
-        })
+        files_processed.append(
+            {
+                "file": fpath.name,
+                "source_id": result["source_id"],
+                "format": result["format"],
+                "themes": len(result["themes_found"]),
+                "new_themes": len(result["themes_new"]),
+            }
+        )
 
         for t in result["themes_found"]:
             all_themes[t] += 1

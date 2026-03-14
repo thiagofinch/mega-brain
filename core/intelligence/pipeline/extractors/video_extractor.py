@@ -43,6 +43,7 @@ def is_video_support_available() -> bool:
     """
     try:
         from core.intelligence.pipeline.ss_bridge import is_ss_video_available
+
         return is_ss_video_available()
     except ImportError:
         return False
@@ -71,8 +72,7 @@ def extract_video(
 
     if not is_ss_video_available():
         raise RuntimeError(
-            "Video support not available. "
-            "Run bin/install-skill-seekers-video.sh to install."
+            "Video support not available. Run bin/install-skill-seekers-video.sh to install."
         )
 
     return ingest_video(url_or_path, source_tag, bucket)
@@ -164,6 +164,7 @@ def get_video_status() -> dict:
         # Get more details from ss_bridge
         try:
             from core.intelligence.pipeline.ss_bridge import get_bridge_status
+
             bridge_status = get_bridge_status()
             status["ss_version"] = bridge_status.get("ss_version")
             status["venv_path"] = bridge_status.get("venv_path")
@@ -174,6 +175,7 @@ def get_video_status() -> dict:
 
 
 # ── CLI ─────────────────────────────────────────────────────────────────────
+
 
 def main() -> int:
     """CLI entry point for video extraction.
@@ -225,4 +227,5 @@ def main() -> int:
 
 if __name__ == "__main__":
     import sys
+
     sys.exit(main())

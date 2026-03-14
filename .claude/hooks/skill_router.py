@@ -25,7 +25,7 @@ import os
 import re
 from pathlib import Path
 
-PROJECT_ROOT = Path(os.environ.get('CLAUDE_PROJECT_DIR', '.'))
+PROJECT_ROOT = Path(os.environ.get("CLAUDE_PROJECT_DIR", "."))
 SKILLS_PATH = PROJECT_ROOT / ".claude" / "skills"
 SUBAGENTS_PATH = PROJECT_ROOT / ".claude" / "jarvis" / "sub-agents"
 AGENT_MEMORY_PATH = PROJECT_ROOT / ".claude" / "agent-memory"
@@ -53,7 +53,7 @@ def scan_skills() -> list[tuple[Path, str]]:
     # Scan skills
     if SKILLS_PATH.exists():
         for item in SKILLS_PATH.iterdir():
-            if item.is_dir() and not item.name.startswith('_'):
+            if item.is_dir() and not item.name.startswith("_"):
                 skill_md = item / "SKILL.md"
                 if skill_md.exists():
                     items.append((item, "skill"))
@@ -61,7 +61,7 @@ def scan_skills() -> list[tuple[Path, str]]:
     # Scan sub-agents
     if SUBAGENTS_PATH.exists():
         for item in SUBAGENTS_PATH.iterdir():
-            if item.is_dir() and not item.name.startswith('_'):
+            if item.is_dir() and not item.name.startswith("_"):
                 agent_md = item / "AGENT.md"
                 if agent_md.exists():
                     items.append((item, "sub-agent"))
@@ -81,13 +81,13 @@ def extract_metadata(item_path: Path, item_type: str) -> dict:
         return {}
 
     try:
-        content = md_file.read_text(encoding='utf-8')
+        content = md_file.read_text(encoding="utf-8")
     except Exception:
         return {}
 
     # Extrai header (primeiras 40 linhas para garantir captura)
-    lines = content.split('\n')[:40]
-    header = '\n'.join(lines)
+    lines = content.split("\n")[:40]
+    header = "\n".join(lines)
 
     metadata = {
         "path": str(item_path.relative_to(PROJECT_ROOT)),
@@ -96,35 +96,40 @@ def extract_metadata(item_path: Path, item_type: str) -> dict:
         "auto_trigger": "",
         "keywords": [],
         "priority": "MÉDIA",
-        "description": ""
+        "description": "",
     }
 
     # Auto-Trigger (múltiplos formatos)
-    for pattern in [r'\*\*Auto-Trigger:\*\*\s*(.+)', r'> \*\*Auto-Trigger:\*\*\s*(.+)']:
+    for pattern in [r"\*\*Auto-Trigger:\*\*\s*(.+)", r"> \*\*Auto-Trigger:\*\*\s*(.+)"]:
         match = re.search(pattern, header)
         if match:
             metadata["auto_trigger"] = match.group(1).strip()
             break
 
     # Keywords - múltiplos formatos suportados
-    for pattern in [r'\*\*Keywords:\*\*\s*(.+)', r'> \*\*Keywords:\*\*\s*(.+)']:
+    for pattern in [r"\*\*Keywords:\*\*\s*(.+)", r"> \*\*Keywords:\*\*\s*(.+)"]:
         match = re.search(pattern, header)
         if match:
             raw = match.group(1).strip()
             # Parse keywords (pode ser "a", "b", "c" ou a, b, c ou [a, b, c])
             keywords = re.findall(r'["\']?([^",\'\[\]]+)["\']?', raw)
-            metadata["keywords"] = [k.strip().lower() for k in keywords if k.strip() and len(k.strip()) > 1]
+            metadata["keywords"] = [
+                k.strip().lower() for k in keywords if k.strip() and len(k.strip()) > 1
+            ]
             break
 
     # Prioridade
-    for pattern in [r'\*\*Prioridade:\*\*\s*(ALTA|MÉDIA|BAIXA)', r'> \*\*Prioridade:\*\*\s*(ALTA|MÉDIA|BAIXA)']:
+    for pattern in [
+        r"\*\*Prioridade:\*\*\s*(ALTA|MÉDIA|BAIXA)",
+        r"> \*\*Prioridade:\*\*\s*(ALTA|MÉDIA|BAIXA)",
+    ]:
         match = re.search(pattern, header, re.I)
         if match:
             metadata["priority"] = match.group(1).upper()
             break
 
     # Description (primeira linha após # Header)
-    match = re.search(r'^#\s+[^\n]+\n+##?\s*([^\n]+)', content)
+    match = re.search(r"^#\s+[^\n]+\n+##?\s*([^\n]+)", content)
     if match:
         metadata["description"] = match.group(1).strip()
 
@@ -147,7 +152,7 @@ def build_index() -> dict:
         "total_count": len(items),
         "skills": {},
         "subagents": {},
-        "keyword_map": {}
+        "keyword_map": {},
     }
 
     for item_path, item_type in items:
@@ -166,16 +171,18 @@ def build_index() -> dict:
             for keyword in metadata.get("keywords", []):
                 if keyword not in index["keyword_map"]:
                     index["keyword_map"][keyword] = []
-                index["keyword_map"][keyword].append({
-                    "name": item_name,
-                    "type": item_type,
-                    "path": metadata["path"],
-                    "priority": metadata["priority"]
-                })
+                index["keyword_map"][keyword].append(
+                    {
+                        "name": item_name,
+                        "type": item_type,
+                        "path": metadata["path"],
+                        "priority": metadata["priority"],
+                    }
+                )
 
     # Salva índice
     INDEX_PATH.parent.mkdir(parents=True, exist_ok=True)
-    with open(INDEX_PATH, 'w', encoding='utf-8') as f:
+    with open(INDEX_PATH, "w", encoding="utf-8") as f:
         json.dump(index, f, indent=2, ensure_ascii=False)
 
     return index
@@ -186,7 +193,7 @@ def match_prompt(prompt: str, index: dict = None) -> list[dict]:
     if index is None:
         if INDEX_PATH.exists():
             try:
-                with open(INDEX_PATH, encoding='utf-8') as f:
+                with open(INDEX_PATH, encoding="utf-8") as f:
                     index = json.load(f)
             except Exception:
                 index = build_index()
@@ -207,13 +214,15 @@ def match_prompt(prompt: str, index: dict = None) -> list[dict]:
                 item_name = item_info["name"]
                 if item_name not in seen_items:
                     seen_items.add(item_name)
-                    matches.append({
-                        "name": item_name,
-                        "type": item_info["type"],
-                        "path": item_info["path"],
-                        "priority": item_info["priority"],
-                        "matched_keyword": keyword
-                    })
+                    matches.append(
+                        {
+                            "name": item_name,
+                            "type": item_info["type"],
+                            "path": item_info["path"],
+                            "priority": item_info["priority"],
+                            "matched_keyword": keyword,
+                        }
+                    )
 
     # Ordena por prioridade
     matches.sort(key=lambda x: priority_order.get(x["priority"], 1))
@@ -228,13 +237,13 @@ def get_skill_instructions(skill_path: str) -> str:
         return ""
 
     try:
-        content = full_path.read_text(encoding='utf-8')
+        content = full_path.read_text(encoding="utf-8")
     except Exception:
         return ""
 
     # Retorna primeiras 100 linhas (instruções principais)
-    lines = content.split('\n')[:100]
-    return '\n'.join(lines)
+    lines = content.split("\n")[:100]
+    return "\n".join(lines)
 
 
 def get_skill_summary(skill_path: str) -> str:
@@ -244,12 +253,12 @@ def get_skill_summary(skill_path: str) -> str:
         return ""
 
     try:
-        content = full_path.read_text(encoding='utf-8')
+        content = full_path.read_text(encoding="utf-8")
     except Exception:
         return ""
 
-    lines = content.split('\n')[:20]
-    return '\n'.join(lines)
+    lines = content.split("\n")[:20]
+    return "\n".join(lines)
 
 
 def get_subagent_context(subagent_path: str) -> str:
@@ -262,10 +271,10 @@ def get_subagent_context(subagent_path: str) -> str:
     agent_md = base_path / "AGENT.md"
     if agent_md.exists():
         try:
-            content = agent_md.read_text(encoding='utf-8')
+            content = agent_md.read_text(encoding="utf-8")
             # Primeiras 150 linhas do AGENT.md
-            lines = content.split('\n')[:150]
-            context_parts.append("=== AGENT INSTRUCTIONS ===\n" + '\n'.join(lines))
+            lines = content.split("\n")[:150]
+            context_parts.append("=== AGENT INSTRUCTIONS ===\n" + "\n".join(lines))
         except Exception:
             pass
 
@@ -273,14 +282,14 @@ def get_subagent_context(subagent_path: str) -> str:
     soul_md = base_path / "SOUL.md"
     if soul_md.exists():
         try:
-            content = soul_md.read_text(encoding='utf-8')
+            content = soul_md.read_text(encoding="utf-8")
             # Primeiras 50 linhas do SOUL.md (personalidade é mais compacta)
-            lines = content.split('\n')[:50]
-            context_parts.append("\n=== AGENT PERSONALITY ===\n" + '\n'.join(lines))
+            lines = content.split("\n")[:50]
+            context_parts.append("\n=== AGENT PERSONALITY ===\n" + "\n".join(lines))
         except Exception:
             pass
 
-    return '\n'.join(context_parts)
+    return "\n".join(context_parts)
 
 
 def get_item_context(item_path: str, item_type: str) -> str:
@@ -306,7 +315,7 @@ def get_agent_memory(agent_name: str) -> str:
     if not memory_file.exists():
         return ""
     try:
-        return memory_file.read_text(encoding='utf-8')
+        return memory_file.read_text(encoding="utf-8")
     except Exception:
         return ""
 
@@ -322,9 +331,9 @@ def main():
         input_data = sys.stdin.read()
         hook_input = json.loads(input_data) if input_data else {}
 
-        prompt = hook_input.get('prompt', '')
+        prompt = hook_input.get("prompt", "")
         if not prompt:
-            print(json.dumps({'continue': True}))
+            print(json.dumps({"continue": True}))
             return
 
         feedback_parts = []
@@ -334,35 +343,33 @@ def main():
         if cargo_agent:
             memory = get_agent_memory(cargo_agent)
             if memory:
-                feedback_parts.append(
-                    f"[AGENT-MEMORY LOADED: {cargo_agent.upper()}]\n\n{memory}"
-                )
+                feedback_parts.append(f"[AGENT-MEMORY LOADED: {cargo_agent.upper()}]\n\n{memory}")
 
         # Check for skill/sub-agent matches
         matches = match_prompt(prompt)
 
         if matches:
             top = matches[0]
-            item_type = top.get('type', 'skill')
-            item_name = top.get('name', 'unknown')
+            item_type = top.get("type", "skill")
+            item_name = top.get("name", "unknown")
 
-            context = get_item_context(top['path'], item_type)
+            context = get_item_context(top["path"], item_type)
 
             if context:
                 type_label = "SKILL" if item_type == "skill" else "SUB-AGENT"
                 part = f"[{type_label} AUTO-ACTIVATED: {item_name}]\n"
-                part += f"Keyword: \"{top['matched_keyword']}\"\n"
+                part += f'Keyword: "{top["matched_keyword"]}"\n'
                 part += f"Priority: {top['priority']}\n\n"
                 part += context
                 feedback_parts.append(part)
 
         if feedback_parts:
-            print(json.dumps({'continue': True, 'feedback': '\n\n---\n\n'.join(feedback_parts)}))
+            print(json.dumps({"continue": True, "feedback": "\n\n---\n\n".join(feedback_parts)}))
         else:
-            print(json.dumps({'continue': True}))
+            print(json.dumps({"continue": True}))
 
     except Exception as e:
-        print(json.dumps({'continue': True, 'error': str(e)}))
+        print(json.dumps({"continue": True, "error": str(e)}))
 
 
 def cli_test():
@@ -374,15 +381,15 @@ def cli_test():
     print(f"Keywords mapeadas: {len(index['keyword_map'])}")
 
     print("\nKeywords disponíveis:")
-    for kw in sorted(index['keyword_map'].keys()):
-        items = [f"{s['name']} ({s['type']})" for s in index['keyword_map'][kw]]
+    for kw in sorted(index["keyword_map"].keys()):
+        items = [f"{s['name']} ({s['type']})" for s in index["keyword_map"][kw]]
         print(f"  '{kw}' → {items}")
 
     test_prompts = [
         "preciso analisar este PDF",
         "criar uma planilha excel",
         "jarvis, status do sistema",
-        "processar vídeo do youtube"
+        "processar vídeo do youtube",
     ]
 
     for test_prompt in test_prompts:
@@ -390,14 +397,17 @@ def cli_test():
         print(f"\nMatches para '{test_prompt}':")
         if matches:
             for m in matches:
-                print(f"  - {m['name']} ({m['type']}, keyword: {m['matched_keyword']}, priority: {m['priority']})")
+                print(
+                    f"  - {m['name']} ({m['type']}, keyword: {m['matched_keyword']}, priority: {m['priority']})"
+                )
         else:
             print("  (nenhum match)")
 
 
 if __name__ == "__main__":
     import sys
-    if len(sys.argv) > 1 and sys.argv[1] == '--test':
+
+    if len(sys.argv) > 1 and sys.argv[1] == "--test":
         cli_test()
     else:
         main()

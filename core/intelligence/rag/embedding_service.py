@@ -48,9 +48,7 @@ class EmbeddingCache:
         self._misses += 1
         return None
 
-    def put(
-        self, text: str, embedding: list[float], model: str = "default"
-    ) -> None:
+    def put(self, text: str, embedding: list[float], model: str = "default") -> None:
         """Store embedding in cache."""
         key = self._key(text, model)
         cache_file = self._dir / f"{key}.json"
@@ -137,9 +135,7 @@ class EmbeddingService:
             if env_file.exists():
                 for line in env_file.read_text(encoding="utf-8").splitlines():
                     if line.startswith("VOYAGE_API_KEY="):
-                        api_key = (
-                            line.split("=", 1)[1].strip().strip('"').strip("'")
-                        )
+                        api_key = line.split("=", 1)[1].strip().strip('"').strip("'")
                         break
         if not api_key:
             return False
@@ -234,10 +230,7 @@ class EmbeddingService:
     def _dummy_embed(self, text: str) -> list[float]:
         """Deterministic dummy embedding for testing without any provider."""
         h = hashlib.md5(text.encode()).hexdigest()  # noqa: S324
-        raw = [
-            int(h[i : i + 2], 16) / 255.0
-            for i in range(0, min(len(h), self._dimension * 2), 2)
-        ]
+        raw = [int(h[i : i + 2], 16) / 255.0 for i in range(0, min(len(h), self._dimension * 2), 2)]
         # Pad to dimension if hex digest is shorter
         while len(raw) < self._dimension:
             raw.append(0.0)

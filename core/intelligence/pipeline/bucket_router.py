@@ -32,7 +32,10 @@ logger = logging.getLogger(__name__)
 MODES = {
     "expert-only": {"buckets": ["external"], "description": "Expert knowledge only"},
     "business": {"buckets": ["external", "workspace"], "description": "Experts + company data"},
-    "full-3d": {"buckets": ["external", "workspace", "personal"], "description": "All 3 dimensions"},
+    "full-3d": {
+        "buckets": ["external", "workspace", "personal"],
+        "description": "All 3 dimensions",
+    },
     "personal": {"buckets": ["personal"], "description": "Personal data only"},
     "company-only": {"buckets": ["workspace"], "description": "Company data only"},
 }
@@ -47,6 +50,7 @@ BUCKET_PATHS = {
 # ---------------------------------------------------------------------------
 # AGENT ACCESS
 # ---------------------------------------------------------------------------
+
 
 def load_agent_index() -> dict:
     """Load AGENT-INDEX.yaml and return parsed dict."""
@@ -95,6 +99,7 @@ def get_agent_buckets(agent_id: str) -> list[str]:
 # ---------------------------------------------------------------------------
 # ACCESS CONTROL
 # ---------------------------------------------------------------------------
+
 
 def get_allowed_paths(mode: str) -> list[Path]:
     """Get filesystem paths allowed for a given mode.
@@ -197,6 +202,7 @@ def format_missing_context_warning(mode: str) -> str:
 # ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
+
 
 def main() -> int:
     """CLI entry point."""

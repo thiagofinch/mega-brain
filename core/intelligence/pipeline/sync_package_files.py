@@ -14,6 +14,7 @@ Usage:
     python3 core/intelligence/sync_package_files.py --allowlist   # Print allowlist
     python3 core/intelligence/sync_package_files.py --allowlist --apply  # Write allowlist
 """
+
 import argparse
 import json
 import sys
@@ -26,24 +27,24 @@ from audit_layers import L2_PATTERNS, L3_PATTERNS, NEVER_PATTERNS, scan_reposito
 
 # Files auto-included by npm (do NOT add to files array)
 NPM_AUTO_INCLUDED = {
-    'package.json',
-    'README.md',
-    'README',
-    'CHANGELOG.md',
-    'CHANGELOG',
-    'LICENSE',
-    'LICENSE.md',
-    'LICENCE',
-    'LICENCE.md',
+    "package.json",
+    "README.md",
+    "README",
+    "CHANGELOG.md",
+    "CHANGELOG",
+    "LICENSE",
+    "LICENSE.md",
+    "LICENCE",
+    "LICENCE.md",
 }
 
 # L1 paths to EXCLUDE from npm package
 # (development-only content that shouldn't ship to consumers)
 EXCLUDE_FROM_PACKAGE = {
-    '.planning',       # GSD planning system (dev-only)
-    'docs/audit',      # Generated audit reports (dev-only)
-    '.npmignore',      # npm uses it but doesn't pack it
-    'package-lock.json',  # npm excludes this from pack
+    ".planning",  # GSD planning system (dev-only)
+    "docs/audit",  # Generated audit reports (dev-only)
+    ".npmignore",  # npm uses it but doesn't pack it
+    "package-lock.json",  # npm excludes this from pack
 }
 
 
@@ -54,7 +55,7 @@ def _is_excluded(rel_path: str) -> bool:
         return True
     # Check directory prefix match
     for excl in EXCLUDE_FROM_PACKAGE:
-        if rel_path.startswith(excl + '/'):
+        if rel_path.startswith(excl + "/"):
             return True
     return False
 
@@ -78,11 +79,11 @@ def compute_files_array(repo_root: Path) -> list:
     all_files_by_dir = defaultdict(list)  # dir -> [(rel_path, layer)]
     l1_files = set()
 
-    for item in data['classifications']:
-        if item['type'] != 'file':
+    for item in data["classifications"]:
+        if item["type"] != "file":
             continue
-        rel = item['path']
-        layer = item['layer']
+        rel = item["path"]
+        layer = item["layer"]
 
         # Skip npm auto-included root files
         if rel in NPM_AUTO_INCLUDED:
@@ -91,15 +92,15 @@ def compute_files_array(repo_root: Path) -> list:
         if _is_excluded(rel):
             continue
 
-        parts = rel.split('/')
+        parts = rel.split("/")
         if len(parts) == 1:
-            dir_key = '.'
+            dir_key = "."
         else:
-            dir_key = '/'.join(parts[:-1])
+            dir_key = "/".join(parts[:-1])
 
         all_files_by_dir[dir_key].append((rel, layer))
 
-        if layer == 'L1':
+        if layer == "L1":
             l1_files.add(rel)
 
     if not l1_files:
@@ -111,19 +112,19 @@ def compute_files_array(repo_root: Path) -> list:
 
     # First, compute purity for leaf directories
     for dir_key, items in all_files_by_dir.items():
-        is_pure = all(layer == 'L1' for _, layer in items)
+        is_pure = all(layer == "L1" for _, layer in items)
         dir_purity[dir_key] = is_pure
 
     # Now compute purity for parent directories (a parent is pure only if all
     # its children directories are also pure AND its own files are all L1)
-    all_dirs = sorted(dir_purity.keys(), key=lambda d: d.count('/'), reverse=True)
+    all_dirs = sorted(dir_purity.keys(), key=lambda d: d.count("/"), reverse=True)
 
     # Build parent -> children map
     children_map = defaultdict(set)
     for d in all_dirs:
-        parts = d.split('/')
+        parts = d.split("/")
         if len(parts) > 1:
-            parent = '/'.join(parts[:-1])
+            parent = "/".join(parts[:-1])
             children_map[parent].add(d)
 
     # Propagate purity upward
@@ -140,7 +141,7 @@ def compute_files_array(repo_root: Path) -> list:
 
     def _find_deepest_pure_ancestor(file_path: str) -> str:
         """Find the deepest directory that is pure L1 and covers this file."""
-        parts = file_path.split('/')
+        parts = file_path.split("/")
         if len(parts) == 1:
             return None  # Root file, no directory to use
 
@@ -148,7 +149,7 @@ def compute_files_array(repo_root: Path) -> list:
         # (this gives maximum coverage with minimum entries)
         best = None
         for i in range(1, len(parts)):
-            dir_path = '/'.join(parts[:i])
+            dir_path = "/".join(parts[:i])
             if dir_purity.get(dir_path, False):
                 best = dir_path
                 break  # Use shallowest pure ancestor for maximum rollup
@@ -161,14 +162,14 @@ def compute_files_array(repo_root: Path) -> list:
             continue
 
         ancestor = _find_deepest_pure_ancestor(f)
-        if ancestor and ancestor != '.':
+        if ancestor and ancestor != ".":
             # Use directory glob
-            entry = ancestor + '/'
+            entry = ancestor + "/"
             if entry not in entries:
                 entries.add(entry)
                 # Mark all L1 files under this directory as covered
                 for other_f in l1_files:
-                    if other_f.startswith(ancestor + '/'):
+                    if other_f.startswith(ancestor + "/"):
                         covered_files.add(other_f)
         else:
             # Individual file (root-level or in mixed directory)
@@ -182,7 +183,7 @@ def compute_files_array(repo_root: Path) -> list:
         # Check if any existing entry already covers this one
         is_covered = False
         for existing in final_entries:
-            if existing.endswith('/') and entry.startswith(existing):
+            if existing.endswith("/") and entry.startswith(existing):
                 is_covered = True
                 break
         if not is_covered:
@@ -199,9 +200,11 @@ def generate_npmignore(repo_root: Path) -> str:
     lines.append("# ===========================================")
     lines.append("# AUTO-GENERATED from audit layer classifications.")
     lines.append("# Source of truth: core/intelligence/audit_layers.py")
-    lines.append("# Regenerate: python3 core/intelligence/sync_package_files.py --npmignore --apply")
+    lines.append(
+        "# Regenerate: python3 core/intelligence/sync_package_files.py --npmignore --apply"
+    )
     lines.append("#")
-    lines.append("# Defense-in-depth: package.json \"files\" is the")
+    lines.append('# Defense-in-depth: package.json "files" is the')
     lines.append("# primary whitelist. This file is the SECOND layer.")
     lines.append("# ===========================================")
     lines.append("")
@@ -220,23 +223,23 @@ def generate_npmignore(repo_root: Path) -> str:
     lines.append("# === L2 CONTENT (Premium -- not in public package) ===")
     lines.append("# Source: L2_PATTERNS in audit_layers.py")
     for pattern in sorted(L2_PATTERNS):
-        lines.append(pattern.rstrip('/') + '/')
+        lines.append(pattern.rstrip("/") + "/")
     lines.append("")
 
     # L3 content
     lines.append("# === L3 CONTENT (Personal -- never distributed) ===")
     lines.append("# Source: L3_PATTERNS in audit_layers.py")
     for pattern in sorted(L3_PATTERNS):
-        lines.append(pattern.rstrip('/') + '/')
+        lines.append(pattern.rstrip("/") + "/")
     lines.append("")
 
     # NEVER content
     lines.append("# === NEVER CONTENT (Secrets/sensitive) ===")
     lines.append("# Source: NEVER_PATTERNS in audit_layers.py")
     for pattern in sorted(NEVER_PATTERNS):
-        if pattern.endswith('/'):
+        if pattern.endswith("/"):
             lines.append(pattern)
-        elif '.' in pattern and not pattern.startswith('.'):
+        elif "." in pattern and not pattern.startswith("."):
             # File pattern
             lines.append(pattern)
         else:
@@ -278,11 +281,22 @@ def generate_npmignore(repo_root: Path) -> str:
     # L2-only skills
     lines.append("# === L2-ONLY SKILLS (premium layer) ===")
     l2_skills = [
-        "council", "executor", "fase-2-5-tagging",
-        "gdrive-transcription-downloader", "hybrid-source-reading",
-        "ler-planilha", "smart-download-tagger", "source-sync",
-        "sync-docs", "chronicler", "gemini-fallback",
-        "jarvis", "jarvis-briefing", "resume", "save", "verify",
+        "council",
+        "executor",
+        "fase-2-5-tagging",
+        "gdrive-transcription-downloader",
+        "hybrid-source-reading",
+        "ler-planilha",
+        "smart-download-tagger",
+        "source-sync",
+        "sync-docs",
+        "chronicler",
+        "gemini-fallback",
+        "jarvis",
+        "jarvis-briefing",
+        "resume",
+        "save",
+        "verify",
     ]
     for skill in sorted(l2_skills):
         lines.append(f".claude/skills/{skill}/")
@@ -331,22 +345,24 @@ def generate_npmignore(repo_root: Path) -> str:
     lines.append("# === GIT (npm handles this, but explicit) ===")
     lines.append(".git/")
 
-    return '\n'.join(lines) + '\n'
+    return "\n".join(lines) + "\n"
 
 
 def generate_allowlist(files_array: list, repo_root: Path) -> str:
     """Generate layer1-allowlist.txt from package.json files array."""
-    now = datetime.now(UTC).strftime('%Y-%m-%d')
+    now = datetime.now(UTC).strftime("%Y-%m-%d")
     lines = []
     lines.append("# Layer 1 Allowlist - PUBLIC content (free/community)")
     lines.append("# ==============================================================")
     lines.append("# AUTO-GENERATED from package.json files field.")
-    lines.append("# Regenerate: python3 core/intelligence/sync_package_files.py --allowlist --apply")
+    lines.append(
+        "# Regenerate: python3 core/intelligence/sync_package_files.py --allowlist --apply"
+    )
     lines.append("#")
     lines.append("# ONLY paths listed here are included in Layer 1 (public repo).")
     lines.append("# Everything else is PREMIUM by default (Layer 2+).")
     lines.append("#")
-    lines.append("# SYNCED WITH: package.json \"files\" field")
+    lines.append('# SYNCED WITH: package.json "files" field')
     lines.append(f"# AUDITED: {now}")
     lines.append("# ==============================================================")
     lines.append("")
@@ -354,27 +370,27 @@ def generate_allowlist(files_array: list, repo_root: Path) -> str:
     # Group entries by top-level directory
     groups = defaultdict(list)
     for entry in files_array:
-        parts = entry.split('/')
+        parts = entry.split("/")
         top = parts[0]
         groups[top].append(entry)
 
     # Category labels
     labels = {
-        '.': 'Root files',
-        '.antigravity': 'IDE integration (Antigravity)',
-        '.claude': 'Claude Code integration',
-        '.cursor': 'IDE integration (Cursor)',
-        '.github': 'GitHub integration',
-        '.windsurf': 'IDE integration (Windsurf)',
-        'agents': 'Agent system',
-        'artifacts': 'Artifact scaffolding',
-        'bin': 'CLI tools',
-        'core': 'Core engine',
-        'docs': 'Documentation',
-        'inbox': 'Inbox scaffolding',
-        'knowledge': 'Knowledge scaffolding',
-        'logs': 'Logs scaffolding',
-        'reference': 'Reference materials',
+        ".": "Root files",
+        ".antigravity": "IDE integration (Antigravity)",
+        ".claude": "Claude Code integration",
+        ".cursor": "IDE integration (Cursor)",
+        ".github": "GitHub integration",
+        ".windsurf": "IDE integration (Windsurf)",
+        "agents": "Agent system",
+        "artifacts": "Artifact scaffolding",
+        "bin": "CLI tools",
+        "core": "Core engine",
+        "docs": "Documentation",
+        "inbox": "Inbox scaffolding",
+        "knowledge": "Knowledge scaffolding",
+        "logs": "Logs scaffolding",
+        "reference": "Reference materials",
     }
 
     for top in sorted(groups.keys()):
@@ -384,32 +400,38 @@ def generate_allowlist(files_array: list, repo_root: Path) -> str:
             lines.append(entry)
         lines.append("")
 
-    return '\n'.join(lines)
+    return "\n".join(lines)
 
 
 def main():
     parser = argparse.ArgumentParser(
-        description='Sync package.json files field with L1 audit classifications.',
+        description="Sync package.json files field with L1 audit classifications.",
     )
     parser.add_argument(
-        '--print', dest='print_mode', action='store_true',
-        help='Print computed files array as JSON to stdout',
+        "--print",
+        dest="print_mode",
+        action="store_true",
+        help="Print computed files array as JSON to stdout",
     )
     parser.add_argument(
-        '--apply', action='store_true',
-        help='Apply changes to the target file (package.json, .npmignore, or allowlist)',
+        "--apply",
+        action="store_true",
+        help="Apply changes to the target file (package.json, .npmignore, or allowlist)",
     )
     parser.add_argument(
-        '--diff', action='store_true',
-        help='Show diff between current and computed files array',
+        "--diff",
+        action="store_true",
+        help="Show diff between current and computed files array",
     )
     parser.add_argument(
-        '--npmignore', action='store_true',
-        help='Generate .npmignore content',
+        "--npmignore",
+        action="store_true",
+        help="Generate .npmignore content",
     )
     parser.add_argument(
-        '--allowlist', action='store_true',
-        help='Generate layer1-allowlist.txt content',
+        "--allowlist",
+        action="store_true",
+        help="Generate layer1-allowlist.txt content",
     )
     args = parser.parse_args()
 
@@ -421,7 +443,7 @@ def main():
     script_path = Path(__file__).resolve()
     repo_root = script_path.parent.parent.parent  # mega-brain/
 
-    if not (repo_root / 'core').exists():
+    if not (repo_root / "core").exists():
         print(f"ERROR: Could not find repo root. Expected core/ in {repo_root}", file=sys.stderr)
         sys.exit(1)
 
@@ -429,9 +451,9 @@ def main():
     if args.npmignore:
         content = generate_npmignore(repo_root)
         if args.apply:
-            npmignore_path = repo_root / '.npmignore'
+            npmignore_path = repo_root / ".npmignore"
             npmignore_path.write_text(content)
-            line_count = len(content.strip().split('\n'))
+            line_count = len(content.strip().split("\n"))
             print(f"Wrote .npmignore ({line_count} lines)", file=sys.stderr)
         else:
             print(content)
@@ -442,7 +464,7 @@ def main():
         files_array = compute_files_array(repo_root)
         content = generate_allowlist(files_array, repo_root)
         if args.apply:
-            allowlist_path = repo_root / '.github' / 'layer1-allowlist.txt'
+            allowlist_path = repo_root / ".github" / "layer1-allowlist.txt"
             allowlist_path.parent.mkdir(parents=True, exist_ok=True)
             allowlist_path.write_text(content)
             entry_count = len(files_array)
@@ -459,10 +481,10 @@ def main():
         return 0
 
     if args.diff:
-        pkg_path = repo_root / 'package.json'
+        pkg_path = repo_root / "package.json"
         with open(pkg_path) as f:
             pkg = json.load(f)
-        current = set(pkg.get('files', []))
+        current = set(pkg.get("files", []))
         computed = set(files_array)
 
         added = sorted(computed - current)
@@ -483,22 +505,25 @@ def main():
         return 0
 
     if args.apply:
-        pkg_path = repo_root / 'package.json'
+        pkg_path = repo_root / "package.json"
         with open(pkg_path) as f:
             pkg = json.load(f)
 
-        old_count = len(pkg.get('files', []))
-        pkg['files'] = files_array
+        old_count = len(pkg.get("files", []))
+        pkg["files"] = files_array
 
-        with open(pkg_path, 'w') as f:
+        with open(pkg_path, "w") as f:
             json.dump(pkg, f, indent=2)
-            f.write('\n')
+            f.write("\n")
 
-        print(f"Updated package.json: {old_count} entries -> {len(files_array)} entries", file=sys.stderr)
+        print(
+            f"Updated package.json: {old_count} entries -> {len(files_array)} entries",
+            file=sys.stderr,
+        )
         return 0
 
     return 0
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     sys.exit(main())

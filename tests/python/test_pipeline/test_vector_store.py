@@ -14,6 +14,7 @@ from core.intelligence.rag.chroma_store import ChromaStore
 # Helpers
 # ---------------------------------------------------------------------------
 
+
 def _emb(seed: float, dim: int = 8) -> list[float]:
     """Generate a deterministic synthetic embedding vector."""
     return [seed + i * 0.01 for i in range(dim)]
@@ -28,6 +29,7 @@ def _make_store(tmp_path, name: str = "test_collection") -> ChromaStore:
 # ABC contract tests
 # ---------------------------------------------------------------------------
 
+
 class TestVectorStoreABC:
     """VectorStore is abstract and cannot be instantiated directly."""
 
@@ -39,6 +41,7 @@ class TestVectorStoreABC:
 # ---------------------------------------------------------------------------
 # SearchResult dataclass
 # ---------------------------------------------------------------------------
+
 
 class TestSearchResult:
     """SearchResult dataclass has correct fields and defaults."""
@@ -60,6 +63,7 @@ class TestSearchResult:
 # ChromaStore -- initialization
 # ---------------------------------------------------------------------------
 
+
 class TestChromaStoreInit:
     """ChromaStore initialization and persist directory."""
 
@@ -77,6 +81,7 @@ class TestChromaStoreInit:
 # ---------------------------------------------------------------------------
 # ChromaStore -- add / count
 # ---------------------------------------------------------------------------
+
 
 class TestChromaStoreAdd:
     """Single and batch add operations."""
@@ -116,6 +121,7 @@ class TestChromaStoreAdd:
 # ---------------------------------------------------------------------------
 # ChromaStore -- search
 # ---------------------------------------------------------------------------
+
 
 class TestChromaStoreSearch:
     """Similarity search returns ranked results."""
@@ -158,6 +164,7 @@ class TestChromaStoreSearch:
 # ChromaStore -- get
 # ---------------------------------------------------------------------------
 
+
 class TestChromaStoreGet:
     """Retrieve specific chunks by ID."""
 
@@ -180,6 +187,7 @@ class TestChromaStoreGet:
 # ---------------------------------------------------------------------------
 # ChromaStore -- delete
 # ---------------------------------------------------------------------------
+
 
 class TestChromaStoreDelete:
     """Chunk deletion."""
@@ -214,6 +222,7 @@ class TestChromaStoreDelete:
 # ChromaStore -- clear
 # ---------------------------------------------------------------------------
 
+
 class TestChromaStoreClear:
     """Clear removes all chunks."""
 
@@ -239,6 +248,7 @@ class TestChromaStoreClear:
 # ---------------------------------------------------------------------------
 # ChromaStore -- persistence
 # ---------------------------------------------------------------------------
+
 
 class TestChromaStorePersistence:
     """Data survives store re-instantiation (on-disk persistence)."""

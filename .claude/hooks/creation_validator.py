@@ -29,7 +29,7 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
-PROJECT_ROOT = Path(os.environ.get('CLAUDE_PROJECT_DIR', '.'))
+PROJECT_ROOT = Path(os.environ.get("CLAUDE_PROJECT_DIR", "."))
 LOG_FILE = PROJECT_ROOT / "logs" / "creation_validations.jsonl"
 
 
@@ -50,10 +50,10 @@ class CreationValidator:
         """Extrai file_path e content do tool input."""
         try:
             # Tool input pode ser JSON ou string
-            if self.tool_input.startswith('{'):
+            if self.tool_input.startswith("{"):
                 data = json.loads(self.tool_input)
-                self.file_path = data.get('file_path', '')
-                self.content = data.get('content', '')
+                self.file_path = data.get("file_path", "")
+                self.content = data.get("content", "")
             else:
                 # Tenta extrair de formato string
                 self.file_path = self.tool_input
@@ -101,48 +101,48 @@ class CreationValidator:
             print(json.dumps({"decision": "allow"}))
             return 0  # Pass
 
-    #=============================
+    # =============================
     # DETECÇÃO DE TIPO
-    #=============================
+    # =============================
 
     def _is_hook_creation(self, path: Path) -> bool:
         """Detecta se é criação/modificação de hook."""
         # settings.local.json contém hooks
-        if path.name == 'settings.local.json':
+        if path.name == "settings.local.json":
             return True
         # Scripts em .claude/hooks/
-        if '.claude/hooks/' in str(path) and path.suffix == '.py':
+        if ".claude/hooks/" in str(path) and path.suffix == ".py":
             return True
         return False
 
     def _is_skill_creation(self, path: Path) -> bool:
         """Detecta se é criação/modificação de skill."""
         # SKILL.md em .claude/skills/
-        if '.claude/skills/' in str(path) and path.name == 'SKILL.md':
+        if ".claude/skills/" in str(path) and path.name == "SKILL.md":
             return True
         # Commands em .claude/commands/
-        if '.claude/commands/' in str(path) and path.suffix == '.md':
+        if ".claude/commands/" in str(path) and path.suffix == ".md":
             return True
         return False
 
     def _is_mcp_creation(self, path: Path) -> bool:
         """Detecta se é criação/modificação de MCP config."""
         # settings.local.json com mcpServers
-        if path.name == 'settings.local.json' and self.content:
+        if path.name == "settings.local.json" and self.content:
             return '"mcpServers"' in self.content
         return False
 
     def _is_sdk_subagent(self, path: Path) -> bool:
         """Detecta se é criação/modificação de SDK sub-agent."""
         # AGENT.md em .claude/jarvis/sub-agents/
-        if '.claude/jarvis/sub-agents/' in str(path):
-            if path.name in ('AGENT.md', 'CONFIG.yaml'):
+        if ".claude/jarvis/sub-agents/" in str(path):
+            if path.name in ("AGENT.md", "CONFIG.yaml"):
                 return True
         return False
 
-    #=============================
+    # =============================
     # VALIDAÇÕES
-    #=============================
+    # =============================
 
     def _validate_hook(self):
         """
@@ -154,24 +154,24 @@ class CreationValidator:
             return
 
         # Validar settings.local.json
-        if self.file_path.endswith('settings.local.json'):
+        if self.file_path.endswith("settings.local.json"):
             try:
                 data = json.loads(self.content)
-                hooks = data.get('hooks', {})
+                hooks = data.get("hooks", {})
 
                 for event, matchers in hooks.items():
                     for matcher in matchers:
-                        for hook in matcher.get('hooks', []):
+                        for hook in matcher.get("hooks", []):
                             # Verificar timeout
-                            if 'timeout' not in hook:
+                            if "timeout" not in hook:
                                 self.warnings.append(
                                     f"Hook em {event} sem 'timeout'. "
                                     f"Regra Anthropic: todo hook DEVE ter timeout: 30"
                                 )
 
                             # Verificar supressão de erros
-                            command = hook.get('command', '')
-                            if '2>/dev/null || true' in command:
+                            command = hook.get("command", "")
+                            if "2>/dev/null || true" in command:
                                 self.warnings.append(
                                     f"Hook em {event} usa '2>/dev/null || true'. "
                                     f"Regra Anthropic: usar exit codes apropriados (0, 1, 2)"
@@ -180,9 +180,9 @@ class CreationValidator:
                 self.warnings.append("settings.local.json com JSON inválido")
 
         # Validar script Python de hook
-        elif self.file_path.endswith('.py'):
+        elif self.file_path.endswith(".py"):
             # Verificar se usa sys.exit com códigos corretos
-            if 'sys.exit' not in self.content:
+            if "sys.exit" not in self.content:
                 self.warnings.append(
                     "Hook Python sem sys.exit(). "
                     "Regra Anthropic: usar exit code 0 (ok), 1 (warn), 2 (block)"
@@ -198,10 +198,10 @@ class CreationValidator:
             return
 
         required_headers = [
-            ('Auto-Trigger:', 'Auto-Trigger'),
-            ('Keywords:', 'Keywords'),
-            ('Prioridade:', 'Prioridade'),
-            ('Tools:', 'Tools')
+            ("Auto-Trigger:", "Auto-Trigger"),
+            ("Keywords:", "Keywords"),
+            ("Prioridade:", "Prioridade"),
+            ("Tools:", "Tools"),
         ]
 
         for pattern, name in required_headers:
@@ -212,10 +212,9 @@ class CreationValidator:
                 )
 
         # Verificar seção "Quando NÃO Ativar"
-        if 'Quando NÃO Ativar' not in self.content and 'When NOT to Activate' not in self.content:
+        if "Quando NÃO Ativar" not in self.content and "When NOT to Activate" not in self.content:
             self.warnings.append(
-                "SKILL.md sem seção 'Quando NÃO Ativar'. "
-                "Regra Anthropic: seção obrigatória"
+                "SKILL.md sem seção 'Quando NÃO Ativar'. Regra Anthropic: seção obrigatória"
             )
 
     def _validate_mcp(self):
@@ -229,11 +228,11 @@ class CreationValidator:
 
         # Padrões de tokens sensíveis
         sensitive_patterns = [
-            (r'eyJ[A-Za-z0-9_-]+\.eyJ[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+', 'JWT token'),
-            (r'sk-[A-Za-z0-9]{20,}', 'API key (sk-)'),
-            (r'pk_[A-Za-z0-9_]{20,}', 'API key (pk_)'),
-            (r'ntn_[A-Za-z0-9]{20,}', 'Notion token'),
-            (r'xox[baprs]-[A-Za-z0-9-]+', 'Slack token'),
+            (r"eyJ[A-Za-z0-9_-]+\.eyJ[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+", "JWT token"),
+            (r"sk-[A-Za-z0-9]{20,}", "API key (sk-)"),
+            (r"pk_[A-Za-z0-9_]{20,}", "API key (pk_)"),
+            (r"ntn_[A-Za-z0-9]{20,}", "Notion token"),
+            (r"xox[baprs]-[A-Za-z0-9-]+", "Slack token"),
         ]
 
         for pattern, token_type in sensitive_patterns:
@@ -255,11 +254,11 @@ class CreationValidator:
             return
 
         # Validar AGENT.md
-        if self.file_path.endswith('AGENT.md'):
+        if self.file_path.endswith("AGENT.md"):
             required_headers = [
-                ('Keywords:', 'Keywords'),
-                ('allowedTools:', 'allowedTools'),
-                ('maxTurns:', 'maxTurns')
+                ("Keywords:", "Keywords"),
+                ("allowedTools:", "allowedTools"),
+                ("maxTurns:", "maxTurns"),
             ]
 
             for pattern, name in required_headers:
@@ -272,43 +271,43 @@ class CreationValidator:
             # Verificar ["*"] proibido
             if '["*"]' in self.content or "['*']" in self.content:
                 self.errors.append(
-                    "CRÍTICO: Sub-Agent com allowedTools: [\"*\"]! "
+                    'CRÍTICO: Sub-Agent com allowedTools: ["*"]! '
                     "Regra Anthropic: NUNCA dar acesso total. "
                     "Use lista explícita de tools."
                 )
 
         # Validar CONFIG.yaml
-        elif self.file_path.endswith('CONFIG.yaml'):
-            if 'allowedTools:' not in self.content:
+        elif self.file_path.endswith("CONFIG.yaml"):
+            if "allowedTools:" not in self.content:
                 self.warnings.append(
-                    "CONFIG.yaml sem 'allowedTools'. "
-                    "Regra Anthropic: definir tools permitidas"
+                    "CONFIG.yaml sem 'allowedTools'. Regra Anthropic: definir tools permitidas"
                 )
-            if 'maxTurns:' not in self.content:
+            if "maxTurns:" not in self.content:
                 self.warnings.append(
-                    "CONFIG.yaml sem 'maxTurns'. "
-                    "Regra Anthropic: definir limite de iterações"
+                    "CONFIG.yaml sem 'maxTurns'. Regra Anthropic: definir limite de iterações"
                 )
 
-    #=============================
+    # =============================
     # OUTPUT
-    #=============================
+    # =============================
 
     def _output_warnings(self):
         """Output warnings em formato JSON para Claude processar."""
         msg = "; ".join(self.warnings)
-        print(json.dumps({
-            "decision": "allow",
-            "message": f"[Creation Validator] {msg}"
-        }, ensure_ascii=False))
+        print(
+            json.dumps(
+                {"decision": "allow", "message": f"[Creation Validator] {msg}"}, ensure_ascii=False
+            )
+        )
 
     def _output_errors(self):
         """Output errors em formato JSON para Claude processar."""
         msg = "; ".join(self.errors)
-        print(json.dumps({
-            "decision": "block",
-            "reason": f"[Creation Validator] {msg}"
-        }, ensure_ascii=False))
+        print(
+            json.dumps(
+                {"decision": "block", "reason": f"[Creation Validator] {msg}"}, ensure_ascii=False
+            )
+        )
 
     def _log_validation(self):
         """Loga resultado da validação para auditoria."""
@@ -320,11 +319,11 @@ class CreationValidator:
                 "file": self.file_path,
                 "warnings": self.warnings,
                 "errors": self.errors,
-                "exit_code": 2 if self.errors else (1 if self.warnings else 0)
+                "exit_code": 2 if self.errors else (1 if self.warnings else 0),
             }
 
-            with open(LOG_FILE, 'a', encoding='utf-8') as f:
-                f.write(json.dumps(log_entry, ensure_ascii=False) + '\n')
+            with open(LOG_FILE, "a", encoding="utf-8") as f:
+                f.write(json.dumps(log_entry, ensure_ascii=False) + "\n")
         except Exception:
             pass  # Falha de log não deve bloquear operação
 

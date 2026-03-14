@@ -98,37 +98,116 @@ IMPERATIVE_PREFIXES: list[str] = [
 # Area classification keywords
 AREA_KEYWORDS: dict[str, list[str]] = {
     "comercial": [
-        "venda", "vendas", "sales", "closer", "closing", "lead", "prospect",
-        "pipeline", "funil", "funnel", "follow-up", "follow up", "demo",
-        "proposta", "proposal", "negociacao", "deal", "CRM",
+        "venda",
+        "vendas",
+        "sales",
+        "closer",
+        "closing",
+        "lead",
+        "prospect",
+        "pipeline",
+        "funil",
+        "funnel",
+        "follow-up",
+        "follow up",
+        "demo",
+        "proposta",
+        "proposal",
+        "negociacao",
+        "deal",
+        "CRM",
     ],
     "producao": [
-        "produção", "producao", "conteúdo", "conteudo", "content", "design",
-        "página", "pagina", "page", "landing", "copy", "criativo", "creative",
-        "edição", "edicao", "edit", "video", "thumbnail",
+        "produção",
+        "producao",
+        "conteúdo",
+        "conteudo",
+        "content",
+        "design",
+        "página",
+        "pagina",
+        "page",
+        "landing",
+        "copy",
+        "criativo",
+        "creative",
+        "edição",
+        "edicao",
+        "edit",
+        "video",
+        "thumbnail",
     ],
     "financeiro": [
-        "financeiro", "finance", "pagamento", "payment", "nota fiscal",
-        "invoice", "contabilidade", "accounting", "DRE", "fluxo de caixa",
-        "cash flow", "imposto", "tax", "reembolso", "refund",
+        "financeiro",
+        "finance",
+        "pagamento",
+        "payment",
+        "nota fiscal",
+        "invoice",
+        "contabilidade",
+        "accounting",
+        "DRE",
+        "fluxo de caixa",
+        "cash flow",
+        "imposto",
+        "tax",
+        "reembolso",
+        "refund",
     ],
     "onboarding": [
-        "onboarding", "integração", "integracao", "boas vindas", "welcome",
-        "primeiro dia", "first day", "treinamento", "training", "ramp",
+        "onboarding",
+        "integração",
+        "integracao",
+        "boas vindas",
+        "welcome",
+        "primeiro dia",
+        "first day",
+        "treinamento",
+        "training",
+        "ramp",
     ],
     "marketing": [
-        "marketing", "tráfego", "trafego", "traffic", "ads", "campanha",
-        "campaign", "mídia", "midia", "media", "email marketing", "SEO",
-        "social media", "redes sociais",
+        "marketing",
+        "tráfego",
+        "trafego",
+        "traffic",
+        "ads",
+        "campanha",
+        "campaign",
+        "mídia",
+        "midia",
+        "media",
+        "email marketing",
+        "SEO",
+        "social media",
+        "redes sociais",
     ],
     "suporte": [
-        "suporte", "support", "CS", "customer success", "atendimento",
-        "ticket", "chamado", "reclamação", "reclamacao", "complaint",
+        "suporte",
+        "support",
+        "CS",
+        "customer success",
+        "atendimento",
+        "ticket",
+        "chamado",
+        "reclamação",
+        "reclamacao",
+        "complaint",
     ],
     "operacoes": [
-        "operação", "operacao", "operations", "processo", "process",
-        "automação", "automacao", "automation", "workflow", "sistema",
-        "system", "ferramenta", "tool",
+        "operação",
+        "operacao",
+        "operations",
+        "processo",
+        "process",
+        "automação",
+        "automacao",
+        "automation",
+        "workflow",
+        "sistema",
+        "system",
+        "ferramenta",
+        "tool",
     ],
 }
 
@@ -150,6 +229,7 @@ _SEQUENCE_PATTERN = re.compile(
 # ---------------------------------------------------------------------------
 # SCORING
 # ---------------------------------------------------------------------------
+
 
 def _score_process_likelihood(text: str) -> int:
     """Score how likely a text describes a process (0-100).
@@ -177,8 +257,7 @@ def _score_process_likelihood(text: str) -> int:
 
     # Imperative verbs
     imperative_count = sum(
-        1 for pref in IMPERATIVE_PREFIXES
-        if re.search(rf"\b{re.escape(pref)}\b", text_lower)
+        1 for pref in IMPERATIVE_PREFIXES if re.search(rf"\b{re.escape(pref)}\b", text_lower)
     )
     if imperative_count >= 3:
         score += 15
@@ -207,6 +286,7 @@ def _classify_area(text: str) -> str:
 # ---------------------------------------------------------------------------
 # STEP EXTRACTION
 # ---------------------------------------------------------------------------
+
 
 def _extract_steps(text: str) -> list[dict[str, str]]:
     """Extract sequential steps from process text.
@@ -274,6 +354,7 @@ def _extract_steps(text: str) -> list[dict[str, str]]:
 # INSIGHT NORMALIZATION
 # ---------------------------------------------------------------------------
 
+
 def _normalize_insight(raw: dict) -> dict:
     """Normalize different insight JSON formats into a common shape.
 
@@ -323,16 +404,24 @@ def _normalize_insight(raw: dict) -> dict:
 # SLUG GENERATION
 # ---------------------------------------------------------------------------
 
+
 def _slugify(text: str) -> str:
     """Convert text to a filesystem-safe slug."""
     text = text.lower().strip()
     # Remove accents (simplified)
     replacements = {
-        "á": "a", "à": "a", "ã": "a", "â": "a",
-        "é": "e", "ê": "e",
+        "á": "a",
+        "à": "a",
+        "ã": "a",
+        "â": "a",
+        "é": "e",
+        "ê": "e",
         "í": "i",
-        "ó": "o", "ô": "o", "õ": "o",
-        "ú": "u", "ü": "u",
+        "ó": "o",
+        "ô": "o",
+        "õ": "o",
+        "ú": "u",
+        "ü": "u",
         "ç": "c",
     }
     for src, dst in replacements.items():
@@ -438,7 +527,10 @@ def detect_sops(insights_path: Path) -> list[dict]:
             detected.append(sop)
             logger.info(
                 "Detected SOP: %s (%s) score=%d steps=%d",
-                sop_id, norm["title"][:50], score, len(steps),
+                sop_id,
+                norm["title"][:50],
+                score,
+                len(steps),
             )
 
     logger.info("Total SOPs detected: %d", len(detected))
@@ -504,6 +596,7 @@ def save_sop_draft(sop: dict, area: str | None = None) -> Path:
 # ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
+
 
 def main() -> int:
     """CLI entry point for SOP detection."""

@@ -30,6 +30,7 @@ import pytest
 # Helpers: patch core.paths at module level to avoid import-time side effects
 # ---------------------------------------------------------------------------
 
+
 @pytest.fixture(autouse=True)
 def _isolate_ss_bridge(tmp_path, monkeypatch):
     """Isolate ss_bridge from real filesystem and clear config cache."""
@@ -94,7 +95,9 @@ class TestIsSSAvailable:
         (venv / "bin" / "python").touch()
         monkeypatch.setattr(mod, "_get_venv_path", lambda: venv)
 
-        failed = subprocess.CompletedProcess(args=[], returncode=1, stdout="", stderr="ModuleNotFoundError")
+        failed = subprocess.CompletedProcess(
+            args=[], returncode=1, stdout="", stderr="ModuleNotFoundError"
+        )
         with patch.object(subprocess, "run", return_value=failed):
             assert mod.is_ss_available() is False
 
@@ -120,7 +123,9 @@ class TestIsSSAvailable:
         (venv / "bin" / "python").touch()
         monkeypatch.setattr(mod, "_get_venv_path", lambda: venv)
 
-        with patch.object(subprocess, "run", side_effect=subprocess.TimeoutExpired(cmd="test", timeout=10)):
+        with patch.object(
+            subprocess, "run", side_effect=subprocess.TimeoutExpired(cmd="test", timeout=10)
+        ):
             assert mod.is_ss_available() is False
 
 
@@ -158,7 +163,9 @@ class TestIsSSVideoAvailable:
         monkeypatch.setattr(mod, "_get_venv_path", lambda: venv)
         monkeypatch.setattr(mod, "is_ss_available", lambda: True)
 
-        failed = subprocess.CompletedProcess(args=[], returncode=1, stdout="", stderr="No module named 'torch'")
+        failed = subprocess.CompletedProcess(
+            args=[], returncode=1, stdout="", stderr="No module named 'torch'"
+        )
         with patch.object(subprocess, "run", return_value=failed):
             assert mod.is_ss_video_available() is False
 
@@ -341,7 +348,9 @@ class TestIngestPdf:
         # Mock the fallback extractor
         mock_extract = MagicMock(return_value="Extracted text from PDF")
         with patch.dict("sys.modules", {}):
-            with patch("core.intelligence.pipeline.extractors.extract_pdf", mock_extract, create=True):
+            with patch(
+                "core.intelligence.pipeline.extractors.extract_pdf", mock_extract, create=True
+            ):
                 result = mod.ingest_pdf(pdf, "test-tag", use_fallback=True)
 
         assert result.name == "doc.md"
@@ -373,7 +382,9 @@ class TestIngestPdf:
         mock_extract = MagicMock(return_value="Fallback text")
 
         with patch.object(mod, "call_ss", return_value=failed):
-            with patch("core.intelligence.pipeline.extractors.extract_pdf", mock_extract, create=True):
+            with patch(
+                "core.intelligence.pipeline.extractors.extract_pdf", mock_extract, create=True
+            ):
                 result = mod.ingest_pdf(pdf, "tag")
 
         assert result.name == "broken.md"
@@ -489,7 +500,9 @@ class TestIngestVideo:
 
         monkeypatch.setattr(mod, "is_ss_video_available", lambda: True)
 
-        failed = subprocess.CompletedProcess(args=[], returncode=1, stdout="", stderr="ffmpeg error")
+        failed = subprocess.CompletedProcess(
+            args=[], returncode=1, stdout="", stderr="ffmpeg error"
+        )
         with patch.object(mod, "call_ss", return_value=failed):
             with pytest.raises(RuntimeError, match="Video ingestion failed"):
                 mod.ingest_video("https://youtube.com/watch?v=test12345ab", "tag")
@@ -500,7 +513,9 @@ class TestIngestVideo:
 
         monkeypatch.setattr(mod, "is_ss_video_available", lambda: True)
 
-        with patch.object(mod, "call_ss", side_effect=subprocess.TimeoutExpired(cmd="test", timeout=300)):
+        with patch.object(
+            mod, "call_ss", side_effect=subprocess.TimeoutExpired(cmd="test", timeout=300)
+        ):
             with pytest.raises(RuntimeError, match="timed out"):
                 mod.ingest_video("https://youtube.com/watch?v=test12345ab", "tag")
 

@@ -23,62 +23,143 @@ from pathlib import Path
 # Keywords que indicam intenção de modificar arquivos
 MODIFYING_KEYWORDS = [
     # Português
-    "criar", "crie", "criando", "criação",
-    "atualizar", "atualize", "atualizando", "atualização",
-    "modificar", "modifique", "modificando", "modificação",
-    "implementar", "implemente", "implementando", "implementação",
-    "adicionar", "adicione", "adicionando", "adição",
-    "remover", "remova", "removendo", "remoção",
-    "deletar", "delete", "deletando",
-    "refatorar", "refatore", "refatorando", "refatoração",
-    "corrigir", "corrija", "corrigindo", "correção",
-    "fix", "fixing", "fixed",
-    "editar", "edite", "editando", "edição",
-    "escrever", "escreva", "escrevendo",
-    "gerar", "gere", "gerando", "geração",
-    "mudar", "mude", "mudando", "mudança",
-
+    "criar",
+    "crie",
+    "criando",
+    "criação",
+    "atualizar",
+    "atualize",
+    "atualizando",
+    "atualização",
+    "modificar",
+    "modifique",
+    "modificando",
+    "modificação",
+    "implementar",
+    "implemente",
+    "implementando",
+    "implementação",
+    "adicionar",
+    "adicione",
+    "adicionando",
+    "adição",
+    "remover",
+    "remova",
+    "removendo",
+    "remoção",
+    "deletar",
+    "delete",
+    "deletando",
+    "refatorar",
+    "refatore",
+    "refatorando",
+    "refatoração",
+    "corrigir",
+    "corrija",
+    "corrigindo",
+    "correção",
+    "fix",
+    "fixing",
+    "fixed",
+    "editar",
+    "edite",
+    "editando",
+    "edição",
+    "escrever",
+    "escreva",
+    "escrevendo",
+    "gerar",
+    "gere",
+    "gerando",
+    "geração",
+    "mudar",
+    "mude",
+    "mudando",
+    "mudança",
     # Inglês
-    "create", "creating", "creation",
-    "update", "updating",
-    "modify", "modifying", "modification",
-    "implement", "implementing", "implementation",
-    "add", "adding",
-    "remove", "removing", "removal",
-    "delete", "deleting", "deletion",
-    "refactor", "refactoring",
-    "edit", "editing",
-    "write", "writing",
-    "generate", "generating",
-    "change", "changing",
-
+    "create",
+    "creating",
+    "creation",
+    "update",
+    "updating",
+    "modify",
+    "modifying",
+    "modification",
+    "implement",
+    "implementing",
+    "implementation",
+    "add",
+    "adding",
+    "remove",
+    "removing",
+    "removal",
+    "delete",
+    "deleting",
+    "deletion",
+    "refactor",
+    "refactoring",
+    "edit",
+    "editing",
+    "write",
+    "writing",
+    "generate",
+    "generating",
+    "change",
+    "changing",
     # Comandos específicos
-    "novo arquivo", "new file",
-    "nova feature", "new feature",
-    "novo hook", "new hook",
-    "nova skill", "new skill",
-    "novo agente", "new agent",
-    "bug fix", "bugfix",
+    "novo arquivo",
+    "new file",
+    "nova feature",
+    "new feature",
+    "novo hook",
+    "new hook",
+    "nova skill",
+    "new skill",
+    "novo agente",
+    "new agent",
+    "bug fix",
+    "bugfix",
 ]
 
 # Keywords que indicam exceções (não precisa Plan Mode)
 EXCEPTION_KEYWORDS = [
     # Leitura/consulta
-    "mostrar", "show", "exibir", "display",
-    "ler", "read", "leia",
-    "buscar", "search", "find", "procurar",
-    "verificar", "check", "verify",
-    "status", "estado",
-    "listar", "list",
-    "onde estamos", "where are we",
-    "o que é", "what is",
-    "como funciona", "how does",
-    "explique", "explain",
-    "descreva", "describe",
-
+    "mostrar",
+    "show",
+    "exibir",
+    "display",
+    "ler",
+    "read",
+    "leia",
+    "buscar",
+    "search",
+    "find",
+    "procurar",
+    "verificar",
+    "check",
+    "verify",
+    "status",
+    "estado",
+    "listar",
+    "list",
+    "onde estamos",
+    "where are we",
+    "o que é",
+    "what is",
+    "como funciona",
+    "how does",
+    "explique",
+    "explain",
+    "descreva",
+    "describe",
     # Comandos slash (já são skills)
-    "/jarvis", "/status", "/save", "/resume",
-    "/conclave", "/verify", "/config",
+    "/jarvis",
+    "/status",
+    "/save",
+    "/resume",
+    "/conclave",
+    "/verify",
+    "/config",
 ]
 
 # Log file
@@ -105,14 +186,14 @@ def check_plan_mode_required(prompt: str) -> dict:
                 "required": False,
                 "keywords_found": [],
                 "exception_found": exc,
-                "confidence": "HIGH"
+                "confidence": "HIGH",
             }
 
     # Verificar keywords de modificação
     found_keywords = []
     for kw in MODIFYING_KEYWORDS:
         # Usar word boundary para evitar falsos positivos
-        pattern = r'\b' + re.escape(kw) + r'\b'
+        pattern = r"\b" + re.escape(kw) + r"\b"
         if re.search(pattern, prompt_lower):
             found_keywords.append(kw)
 
@@ -121,7 +202,7 @@ def check_plan_mode_required(prompt: str) -> dict:
             "required": False,
             "keywords_found": [],
             "exception_found": None,
-            "confidence": "HIGH"
+            "confidence": "HIGH",
         }
 
     # Determinar confiança baseado em quantidade de keywords
@@ -136,7 +217,7 @@ def check_plan_mode_required(prompt: str) -> dict:
         "required": True,
         "keywords_found": found_keywords,
         "exception_found": None,
-        "confidence": confidence
+        "confidence": confidence,
     }
 
 
@@ -151,7 +232,7 @@ def log_warning(prompt: str, analysis: dict):
             "prompt_preview": prompt[:200] + "..." if len(prompt) > 200 else prompt,
             "keywords_found": analysis["keywords_found"],
             "confidence": analysis["confidence"],
-            "action": "WARNING_ISSUED"
+            "action": "WARNING_ISSUED",
         }
 
         with open(LOG_FILE, "a", encoding="utf-8") as f:
@@ -197,10 +278,7 @@ def main():
         )
 
         # Retornar com aviso (não bloqueia - exit 0)
-        print(json.dumps({
-            "continue": True,
-            "feedback": warning_msg
-        }))
+        print(json.dumps({"continue": True, "feedback": warning_msg}))
         sys.exit(0)
 
     except json.JSONDecodeError:
@@ -209,10 +287,7 @@ def main():
         sys.exit(0)
     except Exception as e:
         # Erro inesperado - logar e continuar (não bloquear)
-        print(json.dumps({
-            "continue": True,
-            "warning": f"enforce_plan_mode hook error: {e!s}"
-        }))
+        print(json.dumps({"continue": True, "warning": f"enforce_plan_mode hook error: {e!s}"}))
         sys.exit(0)  # Don't block on internal errors
 
 

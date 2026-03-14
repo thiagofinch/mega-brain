@@ -26,10 +26,10 @@ from .query_analyzer import analyze_query, discover_agents, load_taxonomy
 # ---------------------------------------------------------------------------
 # CONFIG
 # ---------------------------------------------------------------------------
-DEFAULT_AGENT_HEADER_LINES = 50   # Lines from AGENT.md header
-DEFAULT_MEMORY_BUDGET_KB = 30     # Max KB per agent from MEMORY
-DEFAULT_MAX_SECTIONS = 10         # Max memory sections per agent
-DEFAULT_TOTAL_BUDGET_KB = 150     # Total context budget across all agents
+DEFAULT_AGENT_HEADER_LINES = 50  # Lines from AGENT.md header
+DEFAULT_MEMORY_BUDGET_KB = 30  # Max KB per agent from MEMORY
+DEFAULT_MAX_SECTIONS = 10  # Max memory sections per agent
+DEFAULT_TOTAL_BUDGET_KB = 150  # Total context budget across all agents
 
 # Files to always load completely (small enough)
 ALWAYS_FULL = {"SOUL.md", "DNA-CONFIG.yaml", "SOW.md", "SOW.json"}
@@ -76,12 +76,14 @@ def parse_memory_sections(text: str) -> list[MemorySection]:
         if line.startswith("## "):
             if current_title or current_lines:
                 content = "\n".join(current_lines)
-                sections.append(MemorySection(
-                    title=current_title,
-                    content=content,
-                    start_line=current_start,
-                    end_line=i - 1,
-                ))
+                sections.append(
+                    MemorySection(
+                        title=current_title,
+                        content=content,
+                        start_line=current_start,
+                        end_line=i - 1,
+                    )
+                )
             current_title = line[3:].strip()
             current_lines = [line]
             current_start = i
@@ -91,12 +93,14 @@ def parse_memory_sections(text: str) -> list[MemorySection]:
     # Last section
     if current_title or current_lines:
         content = "\n".join(current_lines)
-        sections.append(MemorySection(
-            title=current_title,
-            content=content,
-            start_line=current_start,
-            end_line=len(lines) - 1,
-        ))
+        sections.append(
+            MemorySection(
+                title=current_title,
+                content=content,
+                start_line=current_start,
+                end_line=len(lines) - 1,
+            )
+        )
 
     return sections
 
@@ -307,9 +311,7 @@ def assemble_agent_context(
 
         for sec in sections:
             # Always include priority sections
-            is_priority = any(
-                p.lower() in sec.title.lower() for p in PRIORITY_SECTIONS
-            )
+            is_priority = any(p.lower() in sec.title.lower() for p in PRIORITY_SECTIONS)
             if sec.relevance_score <= -0.5 and not is_priority:
                 continue
             if current_bytes + sec.size_bytes > budget_bytes and not is_priority:
@@ -400,8 +402,7 @@ def assemble_debate_context(
     else:
         # Auto-select from analysis
         agents_to_load = [
-            (a["name"], a["score"], a["reason"])
-            for a in analysis["recommended_agents"]
+            (a["name"], a["score"], a["reason"]) for a in analysis["recommended_agents"]
         ]
 
     # Calculate per-agent budget
@@ -410,10 +411,7 @@ def assemble_debate_context(
 
     # Extract query tokens for section scoring
     query_lower = query.lower()
-    query_tokens = [
-        t for t in re.sub(r"[^\w\s-]", " ", query_lower).split()
-        if len(t) > 2
-    ]
+    query_tokens = [t for t in re.sub(r"[^\w\s-]", " ", query_lower).split() if len(t) > 2]
 
     # Assemble context for each agent
     agent_contexts = []
@@ -447,8 +445,10 @@ def assemble_debate_context(
 # ---------------------------------------------------------------------------
 def main():
     if len(sys.argv) < 2:
-        print("Usage: python3 -m core.intelligence.context_assembler \"<query>\" [agent1,agent2]")
-        print("Example: python3 -m core.intelligence.context_assembler \"Devo mudar comissao?\" CRO,CFO,CLOSER")
+        print('Usage: python3 -m core.intelligence.context_assembler "<query>" [agent1,agent2]')
+        print(
+            'Example: python3 -m core.intelligence.context_assembler "Devo mudar comissao?" CRO,CFO,CLOSER'
+        )
         sys.exit(1)
 
     query = sys.argv[1]
@@ -458,9 +458,9 @@ def main():
 
     result = assemble_debate_context(query, agent_names=agent_names)
 
-    print(f"\n{'='*70}")
+    print(f"\n{'=' * 70}")
     print("CONTEXT ASSEMBLY")
-    print(f"{'='*70}")
+    print(f"{'=' * 70}")
     print(f"Query: {result['query']}")
     print(f"Agents: {result['agent_count']}")
     print(f"Total context: {result['total_context_kb']}KB")
@@ -469,12 +469,14 @@ def main():
     for ctx in result["agents"]:
         print(f"  {ctx['agent_name']}:")
         print(f"    Size: {ctx['total_size_kb']}KB")
-        print(f"    MEMORY: {ctx['memory_sections_loaded']}/{ctx['memory_sections_total']} sections")
+        print(
+            f"    MEMORY: {ctx['memory_sections_loaded']}/{ctx['memory_sections_total']} sections"
+        )
         print(f"    MEMORY reduction: {ctx['memory_reduction_pct']}%")
         print(f"    Reason: {ctx.get('selection_reason', 'N/A')}")
         print()
 
-    print(f"{'='*70}\n")
+    print(f"{'=' * 70}\n")
 
 
 if __name__ == "__main__":

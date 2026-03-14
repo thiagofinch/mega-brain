@@ -145,8 +145,8 @@ def tokenize_query(query: str) -> list[str]:
     # Generate bigrams for compound terms
     tokens = list(words)
     for i in range(len(words) - 1):
-        tokens.append(f"{words[i]}-{words[i+1]}")
-        tokens.append(f"{words[i]} {words[i+1]}")
+        tokens.append(f"{words[i]}-{words[i + 1]}")
+        tokens.append(f"{words[i]} {words[i + 1]}")
 
     return tokens
 
@@ -253,10 +253,7 @@ def select_agents_for_domains(
 
     # Sort and limit
     sorted_agents = sorted(agent_scores.items(), key=lambda x: -x[1][0])
-    return [
-        (name, score, reason)
-        for name, (score, reason) in sorted_agents[:max_agents]
-    ]
+    return [(name, score, reason) for name, (score, reason) in sorted_agents[:max_agents]]
 
 
 # ---------------------------------------------------------------------------
@@ -309,16 +306,16 @@ def analyze_query(query: str, max_agents: int = 5) -> dict:
 # ---------------------------------------------------------------------------
 def main():
     if len(sys.argv) < 2:
-        print("Usage: python3 query_analyzer.py \"<query>\"")
-        print("Example: python3 query_analyzer.py \"Devo mudar comissao do closer?\"")
+        print('Usage: python3 query_analyzer.py "<query>"')
+        print('Example: python3 query_analyzer.py "Devo mudar comissao do closer?"')
         sys.exit(1)
 
     query = " ".join(sys.argv[1:])
     result = analyze_query(query)
 
-    print(f"\n{'='*70}")
+    print(f"\n{'=' * 70}")
     print("QUERY ANALYSIS")
-    print(f"{'='*70}")
+    print(f"{'=' * 70}")
     print(f"Query: {result['query']}")
     print("\nDomains detected:")
     for d in result["domains"]:
@@ -331,7 +328,7 @@ def main():
         print(f"  - {a['name']} (score: {a['score']}, reason: {a['reason']})")
 
     print(f"\nContext budget: ~{result['context_budget_kb']}KB")
-    print(f"{'='*70}\n")
+    print(f"{'=' * 70}\n")
 
     # Also output JSON for piping
     print(json.dumps(result, indent=2, ensure_ascii=False))

@@ -203,11 +203,9 @@ def handle_search_knowledge(params: dict) -> dict:
     # Apply filters
     results = result.get("results", [])
     if person:
-        results = [r for r in results
-                   if person.lower() in r.get("person", "").lower()]
+        results = [r for r in results if person.lower() in r.get("person", "").lower()]
     if domain:
-        results = [r for r in results
-                   if domain.lower() in r.get("domain", "").lower()]
+        results = [r for r in results if domain.lower() in r.get("domain", "").lower()]
 
     return {
         "query": query,
@@ -327,14 +325,17 @@ def handle_request(request: dict) -> None:
     req_id = request.get("id")
 
     if method == "initialize":
-        _send_response(req_id, {
-            "protocolVersion": "2024-11-05",
-            "capabilities": {"tools": {}},
-            "serverInfo": {
-                "name": "mega-brain-knowledge",
-                "version": "1.0.0",
+        _send_response(
+            req_id,
+            {
+                "protocolVersion": "2024-11-05",
+                "capabilities": {"tools": {}},
+                "serverInfo": {
+                    "name": "mega-brain-knowledge",
+                    "version": "1.0.0",
+                },
             },
-        })
+        )
 
     elif method == "notifications/initialized":
         pass  # No response needed for notifications
@@ -353,12 +354,14 @@ def handle_request(request: dict) -> None:
 
         try:
             result = handler(arguments)
-            _send_response(req_id, {
-                "content": [
-                    {"type": "text", "text": json.dumps(result, indent=2,
-                                                         ensure_ascii=False)}
-                ],
-            })
+            _send_response(
+                req_id,
+                {
+                    "content": [
+                        {"type": "text", "text": json.dumps(result, indent=2, ensure_ascii=False)}
+                    ],
+                },
+            )
         except Exception as e:
             _send_error(req_id, -32000, f"Tool error: {e!s}")
 
@@ -406,11 +409,12 @@ def run_server():
 def main():
     """CLI mode for testing tools directly."""
     import argparse
+
     parser = argparse.ArgumentParser(description="MCP Knowledge Server")
-    parser.add_argument("--serve", action="store_true",
-                        help="Run as MCP server (stdio)")
-    parser.add_argument("--test", type=str,
-                        help="Test a tool: search_knowledge, resolve_chunk, etc.")
+    parser.add_argument("--serve", action="store_true", help="Run as MCP server (stdio)")
+    parser.add_argument(
+        "--test", type=str, help="Test a tool: search_knowledge, resolve_chunk, etc."
+    )
     parser.add_argument("--query", type=str, help="Query for testing")
     parser.add_argument("--chunk-id", type=str, help="Chunk ID for resolve")
     args = parser.parse_args()
@@ -420,9 +424,9 @@ def main():
         return
 
     if args.test:
-        print(f"\n{'='*60}")
+        print(f"\n{'=' * 60}")
         print("MCP KNOWLEDGE SERVER - Test Mode")
-        print(f"{'='*60}\n")
+        print(f"{'=' * 60}\n")
 
         handler = TOOL_HANDLERS.get(args.test)
         if not handler:
@@ -438,13 +442,13 @@ def main():
 
         result = handler(params)
         print(json.dumps(result, indent=2, ensure_ascii=False))
-        print(f"\n{'='*60}\n")
+        print(f"\n{'=' * 60}\n")
         return
 
     # Default: show available tools
-    print(f"\n{'='*60}")
+    print(f"\n{'=' * 60}")
     print("MCP KNOWLEDGE SERVER")
-    print(f"{'='*60}\n")
+    print(f"{'=' * 60}\n")
     print("Available tools:\n")
     for tool in TOOLS:
         print(f"  {tool['name']}")
@@ -452,7 +456,7 @@ def main():
         print()
     print("Run with --serve to start MCP server")
     print("Run with --test <tool> --query <query> to test\n")
-    print(f"{'='*60}\n")
+    print(f"{'=' * 60}\n")
 
 
 if __name__ == "__main__":

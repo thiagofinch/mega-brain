@@ -41,6 +41,7 @@ QUALITY_GATES_PATH = BASE_DIR / "scripts" / "quality_gates.yaml"
 CHUNKS_DIR = BASE_DIR / "processing" / "chunks"
 VIABILITY_LOG_PATH = BASE_DIR / "logs" / "viability_scoring.jsonl"
 
+
 # ---------------------------------------------------------------------------
 # CONFIG
 # ---------------------------------------------------------------------------
@@ -157,7 +158,9 @@ def score_person(person_name, registry=None):
         rationale = f"APEX {apex_score} >= {go_threshold}. Agente completo recomendado."
     elif apex_score >= conditional_threshold:
         decision = "CONDITIONAL"
-        rationale = f"APEX {apex_score} entre {conditional_threshold}-{go_threshold}. Criar com ressalvas."
+        rationale = (
+            f"APEX {apex_score} entre {conditional_threshold}-{go_threshold}. Criar com ressalvas."
+        )
     else:
         decision = "NO-GO"
         rationale = f"APEX {apex_score} < {conditional_threshold}. Apenas tracking."
@@ -398,14 +401,16 @@ def check_quality_gates(entity_type, entity_data, phase, registry=None):
             continue
 
         passed, reason = _evaluate_gate(gate, entity_data, registry)
-        results.append({
-            "gate_id": gate_id,
-            "name": gate.get("name", ""),
-            "type": gate.get("type", "auto"),
-            "passed": passed,
-            "reason": reason,
-            "severity": gate.get("severity", "warning"),
-        })
+        results.append(
+            {
+                "gate_id": gate_id,
+                "name": gate.get("name", ""),
+                "type": gate.get("type", "auto"),
+                "passed": passed,
+                "reason": reason,
+                "severity": gate.get("severity", "warning"),
+            }
+        )
 
     # Check veto conditions
     for veto_id, veto in vetos.items():
@@ -414,14 +419,16 @@ def check_quality_gates(entity_type, entity_data, phase, registry=None):
             triggered, reason = _evaluate_veto(veto, entity_data)
             if triggered:
                 veto_count += 1
-                results.append({
-                    "gate_id": veto_id,
-                    "name": veto.get("name", ""),
-                    "type": "veto",
-                    "passed": False,
-                    "reason": reason,
-                    "severity": "blocking",
-                })
+                results.append(
+                    {
+                        "gate_id": veto_id,
+                        "name": veto.get("name", ""),
+                        "type": "veto",
+                        "passed": False,
+                        "reason": reason,
+                        "severity": "blocking",
+                    }
+                )
 
     passed_count = sum(1 for r in results if r["passed"])
     failed_count = sum(1 for r in results if not r["passed"])
@@ -539,9 +546,7 @@ def _log_scores(results):
             "person": result["person"],
             "apex_score": result["apex_score"],
             "decision": result["decision"],
-            "dimension_scores": {
-                k: v["score"] for k, v in result["scores"].items()
-            },
+            "dimension_scores": {k: v["score"] for k, v in result["scores"].items()},
         }
         with open(VIABILITY_LOG_PATH, "a", encoding="utf-8") as f:
             f.write(json.dumps(log_entry, ensure_ascii=False) + "\n")

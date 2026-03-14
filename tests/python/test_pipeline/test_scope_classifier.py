@@ -153,6 +153,7 @@ class TestClassifyBusinessContent:
     def test_meeting_text_with_decisions(self, sample_meeting_transcript, monkeypatch):
         monkeypatch.setenv("READ_AI_COMPANY_KEYWORDS", "bilhon,clickmax")
         import core.intelligence.pipeline.scope_classifier as sc
+
         monkeypatch.setattr(sc, "_company_keywords", None)
 
         ctx = ClassificationContext(
@@ -345,6 +346,7 @@ class TestSignalTopics:
     def test_company_keyword_from_env(self, monkeypatch):
         monkeypatch.setenv("READ_AI_COMPANY_KEYWORDS", "acme,widgetco")
         import core.intelligence.pipeline.scope_classifier as sc
+
         monkeypatch.setattr(sc, "_company_keywords", None)
 
         scores = {"external": 0, "business": 0, "personal": 0}

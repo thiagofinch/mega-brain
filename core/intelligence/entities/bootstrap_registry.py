@@ -41,7 +41,15 @@ from entity_normalizer import (
 BASE_DIR = Path(__file__).parent.parent
 CANONICAL_MAP_PATH = BASE_DIR / "processing" / "canonical" / "CANONICAL-MAP.json"
 TAXONOMY_PATH = BASE_DIR / "knowledge" / "dna" / "DOMAINS-TAXONOMY.yaml"
-ROLE_TRACKING_PATH = BASE_DIR / "system" / "backups" / "v3.4.0-pre-refactor" / "05-agents" / "discovery" / "role-tracking.md"
+ROLE_TRACKING_PATH = (
+    BASE_DIR
+    / "system"
+    / "backups"
+    / "v3.4.0-pre-refactor"
+    / "05-agents"
+    / "discovery"
+    / "role-tracking.md"
+)
 DOSSIERS_PERSONS = BASE_DIR / "knowledge" / "dossiers" / "persons"
 DOSSIERS_THEMES = BASE_DIR / "knowledge" / "dossiers" / "themes"
 AGENTS_PERSONS = BASE_DIR / "agents" / "persons"
@@ -53,15 +61,28 @@ NOW = datetime.now(UTC).isoformat()
 # EXISTING AGENTS MAP (hardcoded from filesystem scan)
 # ---------------------------------------------------------------------------
 EXISTING_PERSON_AGENTS = [
-    "alex-hormozi", "cole-gordon", "jeremy-haynes",
-    "jeremy-miner", "the-scalable-company"
+    "alex-hormozi",
+    "cole-gordon",
+    "jeremy-haynes",
+    "jeremy-miner",
+    "the-scalable-company",
 ]
 
 EXISTING_CARGO_AGENTS = [
-    "CRO", "CMO", "COO", "CFO",
-    "BDR", "CLOSER", "SDS", "LNS",
-    "SALES-MANAGER", "SALES-LEAD", "SALES-COORDINATOR",
-    "CUSTOMER-SUCCESS", "NEPQ-SPECIALIST", "PAID-MEDIA-SPECIALIST"
+    "CRO",
+    "CMO",
+    "COO",
+    "CFO",
+    "BDR",
+    "CLOSER",
+    "SDS",
+    "LNS",
+    "SALES-MANAGER",
+    "SALES-LEAD",
+    "SALES-COORDINATOR",
+    "CUSTOMER-SUCCESS",
+    "NEPQ-SPECIALIST",
+    "PAID-MEDIA-SPECIALIST",
 ]
 
 # Theme dossier filenames -> canonical theme names
@@ -91,16 +112,30 @@ EXISTING_THEME_DOSSIERS = {
 }
 
 EXISTING_PERSON_DOSSIERS = [
-    "Alex Hormozi", "Cole Gordon", "Jeremy Haynes", "Jeremy Miner",
-    "Jordan Lee", "Richard Linder", "Sam Oven", "The Scalable Company"
+    "Alex Hormozi",
+    "Cole Gordon",
+    "Jeremy Haynes",
+    "Jeremy Miner",
+    "Jordan Lee",
+    "Richard Linder",
+    "Sam Oven",
+    "The Scalable Company",
 ]
 
 # Historical role mention counts from role-tracking.md
 ROLE_TRACKING_DATA = {
     "BDR": {"mentions": 15, "status": "CRIADO", "sources": ["SS001", "G4001", "FSS001"]},
     "SDS": {"mentions": 20, "status": "CRIADO", "sources": ["SS001", "G4001", "FSS001", "CG004"]},
-    "CLOSER": {"mentions": 40, "status": "CRIADO", "sources": ["SS001", "CG003", "G4001", "FSS001", "CG004"]},
-    "SALES-MANAGER": {"mentions": 55, "status": "CRIADO", "sources": ["SS001", "CG001", "G4001", "FSS001", "CG004"]},
+    "CLOSER": {
+        "mentions": 40,
+        "status": "CRIADO",
+        "sources": ["SS001", "CG003", "G4001", "FSS001", "CG004"],
+    },
+    "SALES-MANAGER": {
+        "mentions": 55,
+        "status": "CRIADO",
+        "sources": ["SS001", "CG001", "G4001", "FSS001", "CG004"],
+    },
     "SALES-LEAD": {"mentions": 15, "status": "CRIADO", "sources": ["CG001"]},
     "SALES-COORDINATOR": {"mentions": 10, "status": "CRIADO", "sources": ["CG001", "FSS001"]},
     "LNS": {"mentions": 12, "status": "CRIADO", "sources": ["CG002", "CG003", "FSS001"]},
@@ -130,7 +165,9 @@ def bootstrap_persons(registry):
     if CANONICAL_MAP_PATH.exists():
         with open(CANONICAL_MAP_PATH, encoding="utf-8") as f:
             cmap = json.load(f)
-        for canonical, aliases_list in cmap.get("canonical_state", {}).get("canonical_map", {}).items():
+        for canonical, aliases_list in (
+            cmap.get("canonical_state", {}).get("canonical_map", {}).items()
+        ):
             alias_names = [a["alias"] for a in aliases_list if a["alias"] != canonical]
             canonical_entries.append((canonical, alias_names))
 
@@ -149,7 +186,7 @@ def bootstrap_persons(registry):
                 "status": "tracking",
                 "created_at": NOW,
                 "last_seen": NOW,
-                "migrated_from": "CANONICAL-MAP.json"
+                "migrated_from": "CANONICAL-MAP.json",
             }
 
     # 2. Enrich with DOMAINS-TAXONOMY data
@@ -167,9 +204,8 @@ def bootstrap_persons(registry):
                 break
 
         if match:
-            persons[match]["domains"] = (
-                pdata.get("expertise_primaria", []) +
-                pdata.get("expertise_secundaria", [])
+            persons[match]["domains"] = pdata.get("expertise_primaria", []) + pdata.get(
+                "expertise_secundaria", []
             )
             if pdata.get("contexto"):
                 persons[match]["taxonomy_context"] = pdata["contexto"]
@@ -183,14 +219,13 @@ def bootstrap_persons(registry):
                 "has_dna": False,
                 "has_dossier": False,
                 "domains": (
-                    pdata.get("expertise_primaria", []) +
-                    pdata.get("expertise_secundaria", [])
+                    pdata.get("expertise_primaria", []) + pdata.get("expertise_secundaria", [])
                 ),
                 "taxonomy_context": pdata.get("contexto", ""),
                 "status": "tracking",
                 "created_at": NOW,
                 "last_seen": NOW,
-                "migrated_from": "DOMAINS-TAXONOMY.yaml"
+                "migrated_from": "DOMAINS-TAXONOMY.yaml",
             }
 
     # 3. Mark has_agent from existing person agents
@@ -208,7 +243,9 @@ def bootstrap_persons(registry):
             if normalize_text(k) == normalize_text(person_name):
                 persons[k]["has_dossier"] = True
                 slug = person_name.upper().replace(" ", "-")
-                persons[k]["dossier_path"] = f"knowledge/external/dossiers/persons/DOSSIER-{slug}.md"
+                persons[k]["dossier_path"] = (
+                    f"knowledge/external/dossiers/persons/DOSSIER-{slug}.md"
+                )
                 break
 
     return len(persons)
@@ -236,15 +273,15 @@ def bootstrap_roles(registry):
             "sources": [],
             "has_agent": False,
             "domain_ids": (
-                cargo_data.get("dominios_primarios", []) +
-                cargo_data.get("dominios_secundarios", [])
+                cargo_data.get("dominios_primarios", [])
+                + cargo_data.get("dominios_secundarios", [])
             ),
             "responsibilities": [],
             "pessoa_default": cargo_data.get("pessoa_prioritaria_default", ""),
             "status": "tracking",
             "created_at": NOW,
             "last_seen": NOW,
-            "migrated_from": "DOMAINS-TAXONOMY.yaml"
+            "migrated_from": "DOMAINS-TAXONOMY.yaml",
         }
 
     # 2. Enrich with role-tracking historical data
@@ -271,7 +308,7 @@ def bootstrap_roles(registry):
                 "status": "tracking",
                 "created_at": NOW,
                 "last_seen": NOW,
-                "migrated_from": "role-tracking.md"
+                "migrated_from": "role-tracking.md",
             }
 
     # 3. Mark has_agent from existing cargo agents
@@ -344,7 +381,7 @@ def bootstrap_themes(registry):
                 "status": "active",
                 "created_at": NOW,
                 "last_seen": NOW,
-                "migrated_from": "filesystem_scan"
+                "migrated_from": "filesystem_scan",
             }
 
     # 2. Map themes to domains more precisely
@@ -447,7 +484,7 @@ def bootstrap_concepts(registry):
                 "status": "seed",
                 "created_at": NOW,
                 "last_seen": NOW,
-                "migrated_from": "bootstrap_seed"
+                "migrated_from": "bootstrap_seed",
             }
 
     return len(concepts)

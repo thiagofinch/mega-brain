@@ -251,8 +251,7 @@ def detect(slug: str) -> WorkflowMode:
                 new_sources.append(f)
 
         logger.info(
-            "Brownfield detected for %s: agent=%s, dna=%s, mce=%s, "
-            "new_sources=%d, delta=%d",
+            "Brownfield detected for %s: agent=%s, dna=%s, mce=%s, new_sources=%d, delta=%d",
             slug,
             has_agent,
             has_dna,

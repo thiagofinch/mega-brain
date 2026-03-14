@@ -20,9 +20,9 @@ import yaml
 # CONFIG
 # ---------------------------------------------------------------------------
 BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent  # mega-brain/
-CHUNK_SIZE = 2048       # ~512 tokens (4 chars/token avg)
-CHUNK_OVERLAP = 307     # ~15% of 2048
-MIN_CHUNK_SIZE = 100    # Skip chunks smaller than this
+CHUNK_SIZE = 2048  # ~512 tokens (4 chars/token avg)
+CHUNK_OVERLAP = 307  # ~15% of 2048
+MIN_CHUNK_SIZE = 100  # Skip chunks smaller than this
 
 # What to index
 INDEX_SOURCES = {
@@ -101,11 +101,13 @@ def _split_by_sections(text: str) -> list[dict]:
         if line.startswith("## "):
             if current_lines:
                 content = "\n".join(current_lines)
-                sections.append({
-                    "section": current_section,
-                    "content": content,
-                    "start_char": current_start,
-                })
+                sections.append(
+                    {
+                        "section": current_section,
+                        "content": content,
+                        "start_char": current_start,
+                    }
+                )
             current_section = line[3:].strip()
             current_lines = [line]
             current_start = char_offset
@@ -115,17 +117,20 @@ def _split_by_sections(text: str) -> list[dict]:
 
     if current_lines:
         content = "\n".join(current_lines)
-        sections.append({
-            "section": current_section,
-            "content": content,
-            "start_char": current_start,
-        })
+        sections.append(
+            {
+                "section": current_section,
+                "content": content,
+                "start_char": current_start,
+            }
+        )
 
     return sections
 
 
-def _recursive_split(text: str, max_size: int = CHUNK_SIZE,
-                     overlap: int = CHUNK_OVERLAP) -> list[str]:
+def _recursive_split(
+    text: str, max_size: int = CHUNK_SIZE, overlap: int = CHUNK_OVERLAP
+) -> list[str]:
     """Recursively split text into chunks with overlap."""
     if len(text) <= max_size:
         return [text] if len(text) >= MIN_CHUNK_SIZE else []
@@ -154,7 +159,7 @@ def _recursive_split(text: str, max_size: int = CHUNK_SIZE,
     # Fallback: hard split
     chunks = []
     for i in range(0, len(text), max_size - overlap):
-        chunk = text[i:i + max_size]
+        chunk = text[i : i + max_size]
         if len(chunk) >= MIN_CHUNK_SIZE:
             chunks.append(chunk)
     return chunks
@@ -163,8 +168,9 @@ def _recursive_split(text: str, max_size: int = CHUNK_SIZE,
 # ---------------------------------------------------------------------------
 # FILE CHUNKERS
 # ---------------------------------------------------------------------------
-def chunk_markdown(filepath: Path, person: str = "", domain: str = "",
-                   layer: str = "") -> list[Chunk]:
+def chunk_markdown(
+    filepath: Path, person: str = "", domain: str = "", layer: str = ""
+) -> list[Chunk]:
     """Chunk a markdown file preserving ## section hierarchy."""
     try:
         text = filepath.read_text(encoding="utf-8")
@@ -184,17 +190,19 @@ def chunk_markdown(filepath: Path, person: str = "", domain: str = "",
         offset = 0
         for i, sub_text in enumerate(sub_chunks):
             start = sec_start + offset
-            chunks.append(Chunk(
-                text=sub_text,
-                source_file=rel_path,
-                person=person,
-                domain=domain,
-                layer=layer,
-                section=sec_name,
-                start_char=start,
-                end_char=start + len(sub_text),
-                metadata={"section_index": i},
-            ))
+            chunks.append(
+                Chunk(
+                    text=sub_text,
+                    source_file=rel_path,
+                    person=person,
+                    domain=domain,
+                    layer=layer,
+                    section=sec_name,
+                    start_char=start,
+                    end_char=start + len(sub_text),
+                    metadata={"section_index": i},
+                )
+            )
             offset += len(sub_text)
 
     return chunks
@@ -245,16 +253,18 @@ def chunk_yaml(filepath: Path, person: str = "", layer: str = "") -> list[Chunk]
         domains = entry.get("dominios", [])
         domain = domains[0] if domains else ""
 
-        chunks.append(Chunk(
-            text=text,
-            source_file=rel_path,
-            person=person,
-            domain=domain,
-            layer=layer_name,
-            section=entry_id,
-            chunk_id=entry_id,
-            metadata={"entry_index": i, "domains": domains},
-        ))
+        chunks.append(
+            Chunk(
+                text=text,
+                source_file=rel_path,
+                person=person,
+                domain=domain,
+                layer=layer_name,
+                section=entry_id,
+                chunk_id=entry_id,
+                metadata={"entry_index": i, "domains": domains},
+            )
+        )
 
     return chunks
 
@@ -323,9 +333,9 @@ def _domain_from_theme(stem: str) -> str:
 # CLI
 # ---------------------------------------------------------------------------
 def main():
-    print(f"\n{'='*60}")
+    print(f"\n{'=' * 60}")
     print("CHUNKER - Knowledge Base")
-    print(f"{'='*60}\n")
+    print(f"{'=' * 60}\n")
 
     chunks = chunk_all()
 
@@ -348,7 +358,7 @@ def main():
     print("\nBy person:")
     for person, count in sorted(by_person.items()):
         print(f"  {person}: {count}")
-    print(f"\n{'='*60}\n")
+    print(f"\n{'=' * 60}\n")
 
 
 if __name__ == "__main__":

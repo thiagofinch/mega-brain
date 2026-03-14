@@ -47,7 +47,9 @@ def _patch_router_paths(tmp_path: Path, monkeypatch: pytest.MonkeyPatch):
 
     # Also monkeypatch inbox_organizer import inside trigger_organizer
     # to avoid real filesystem operations
-    monkeypatch.setattr(sr, "trigger_organizer", lambda bucket, result: result.organized_buckets.append(bucket))
+    monkeypatch.setattr(
+        sr, "trigger_organizer", lambda bucket, result: result.organized_buckets.append(bucket)
+    )
 
     return bucket_inboxes
 
@@ -209,6 +211,7 @@ class TestRoute:
 
     def test_high_confidence_moves_file(self, _patch_router_paths, monkeypatch):
         import core.intelligence.pipeline.smart_router as sr
+
         # Restore real trigger_organizer behavior for this test
         monkeypatch.setattr(sr, "trigger_organizer", lambda b, r: r.organized_buckets.append(b))
 
@@ -235,6 +238,7 @@ class TestRoute:
 
     def test_low_confidence_triage(self, _patch_router_paths, monkeypatch):
         import core.intelligence.pipeline.smart_router as sr
+
         # We need to mock add_to_triage_queue to avoid real filesystem writes
         triage_calls = []
         monkeypatch.setattr(sr, "add_to_triage_queue", lambda fp, d, b: triage_calls.append(b))
@@ -344,6 +348,7 @@ class TestTriageQueue:
 
     def test_queue_created_on_first_add(self, _patch_router_paths, tmp_path, monkeypatch):
         import core.intelligence.pipeline.smart_router as sr
+
         queue_path = tmp_path / "TRIAGE-QUEUE.json"
         monkeypatch.setattr(sr, "TRIAGE_QUEUE", queue_path)
 
@@ -360,6 +365,7 @@ class TestTriageQueue:
 
     def test_queue_appends_entries(self, _patch_router_paths, tmp_path, monkeypatch):
         import core.intelligence.pipeline.smart_router as sr
+
         queue_path = tmp_path / "TRIAGE-QUEUE.json"
         monkeypatch.setattr(sr, "TRIAGE_QUEUE", queue_path)
 
@@ -432,6 +438,7 @@ class TestRouteLogging:
 
     def test_log_file_created(self, _patch_router_paths, tmp_path, monkeypatch):
         import core.intelligence.pipeline.smart_router as sr
+
         log_path = tmp_path / "smart-router.jsonl"
         monkeypatch.setattr(sr, "SMART_ROUTER_LOG", log_path)
 

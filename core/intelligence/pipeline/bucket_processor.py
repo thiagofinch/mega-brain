@@ -99,49 +99,103 @@ BUCKETS = {
 # Workspace classification patterns
 WORKSPACE_PATTERNS = {
     "org": [
-        r"organograma", r"org\s*chart", r"hierarquia", r"estrutura.*time",
-        r"headcount", r"departamento",
+        r"organograma",
+        r"org\s*chart",
+        r"hierarquia",
+        r"estrutura.*time",
+        r"headcount",
+        r"departamento",
     ],
     "team": [
-        r"cargo", r"role", r"job\s*description", r"\bJD\b", r"contrata",
-        r"requisitos.*vaga", r"onboarding",
+        r"cargo",
+        r"role",
+        r"job\s*description",
+        r"\bJD\b",
+        r"contrata",
+        r"requisitos.*vaga",
+        r"onboarding",
     ],
     "finance": [
-        r"\bMRR\b", r"\bCAC\b", r"\bLTV\b", r"\bchurn\b", r"receita",
-        r"faturamento", r"\bDRE\b", r"P&L", r"fluxo.*caixa", r"cash\s*flow",
-        r"budget", r"custo\s*fixo",
+        r"\bMRR\b",
+        r"\bCAC\b",
+        r"\bLTV\b",
+        r"\bchurn\b",
+        r"receita",
+        r"faturamento",
+        r"\bDRE\b",
+        r"P&L",
+        r"fluxo.*caixa",
+        r"cash\s*flow",
+        r"budget",
+        r"custo\s*fixo",
     ],
     "meetings": [
-        r"reuni[aã]o", r"meeting", r"call\b", r"standup", r"daily",
-        r"retrospectiva", r"1[:\-]1", r"one.*on.*one", r"ata\b",
+        r"reuni[aã]o",
+        r"meeting",
+        r"call\b",
+        r"standup",
+        r"daily",
+        r"retrospectiva",
+        r"1[:\-]1",
+        r"one.*on.*one",
+        r"ata\b",
     ],
     "automations": [
-        r"automa[çc][aã]o", r"\bn8n\b", r"zapier", r"make\.com",
-        r"workflow", r"integra[çc][aã]o",
+        r"automa[çc][aã]o",
+        r"\bn8n\b",
+        r"zapier",
+        r"make\.com",
+        r"workflow",
+        r"integra[çc][aã]o",
     ],
     "tools": [
-        r"\bCRM\b", r"ferramenta", r"software", r"plataforma",
-        r"clickup", r"notion", r"slack", r"hubspot",
+        r"\bCRM\b",
+        r"ferramenta",
+        r"software",
+        r"plataforma",
+        r"clickup",
+        r"notion",
+        r"slack",
+        r"hubspot",
     ],
 }
 
 # Personal classification patterns
 PERSONAL_PATTERNS = {
     "email": [
-        r"email", r"e-mail", r"inbox", r"newsletter", r"digest",
+        r"email",
+        r"e-mail",
+        r"inbox",
+        r"newsletter",
+        r"digest",
     ],
     "messages": [
-        r"whatsapp", r"telegram", r"mensagem", r"chat\b", r"DM\b",
+        r"whatsapp",
+        r"telegram",
+        r"mensagem",
+        r"chat\b",
+        r"DM\b",
         r"direct\s*message",
     ],
     "calls": [
-        r"liga[çc][aã]o", r"call\b", r"telefonema", r"grava[çc][aã]o",
+        r"liga[çc][aã]o",
+        r"call\b",
+        r"telefonema",
+        r"grava[çc][aã]o",
         r"transcri[çc][aã]o.*call",
     ],
     "cognitive": [
-        r"reflex[aã]o", r"journal", r"di[áa]rio", r"insight.*pessoal",
-        r"nota.*mental", r"observa[çc][aã]o", r"aprendizado",
-        r"sa[uú]de", r"health", r"rela[çc]", r"growth",
+        r"reflex[aã]o",
+        r"journal",
+        r"di[áa]rio",
+        r"insight.*pessoal",
+        r"nota.*mental",
+        r"observa[çc][aã]o",
+        r"aprendizado",
+        r"sa[uú]de",
+        r"health",
+        r"rela[çc]",
+        r"growth",
     ],
 }
 
@@ -215,14 +269,16 @@ def scan_inbox(bucket: str) -> list[dict]:
         rel = filepath.relative_to(inbox_path)
         inbox_subfolder = rel.parts[0] if len(rel.parts) > 1 else ""
 
-        files.append({
-            "path": filepath,
-            "name": filepath.name,
-            "size": filepath.stat().st_size,
-            "extension": filepath.suffix.lower(),
-            "inbox_subfolder": inbox_subfolder,
-            "bucket": bucket,
-        })
+        files.append(
+            {
+                "path": filepath,
+                "name": filepath.name,
+                "size": filepath.stat().st_size,
+                "extension": filepath.suffix.lower(),
+                "inbox_subfolder": inbox_subfolder,
+                "bucket": bucket,
+            }
+        )
 
     return sorted(files, key=lambda f: f["name"])
 
@@ -230,6 +286,7 @@ def scan_inbox(bucket: str) -> list[dict]:
 # ---------------------------------------------------------------------------
 # FILE READER
 # ---------------------------------------------------------------------------
+
 
 def read_file_content(filepath: Path) -> str:
     """Read text content from a file.
@@ -260,6 +317,7 @@ def read_file_content(filepath: Path) -> str:
 # ---------------------------------------------------------------------------
 # PROCESSOR
 # ---------------------------------------------------------------------------
+
 
 def process_file(file_meta: dict) -> dict:
     """Process a single file from an inbox.
@@ -372,6 +430,7 @@ def process_all_buckets() -> dict:
 # LOGGING
 # ---------------------------------------------------------------------------
 
+
 def _write_process_log(summary: dict) -> None:
     """Write processing log to logs/ directory."""
     log_dir = LOGS / "bucket-processing"
@@ -385,6 +444,7 @@ def _write_process_log(summary: dict) -> None:
 # ---------------------------------------------------------------------------
 # STATUS
 # ---------------------------------------------------------------------------
+
 
 def bucket_status() -> dict:
     """Get status of all 3 knowledge buckets.
@@ -415,8 +475,7 @@ def bucket_status() -> dict:
             count = 0
             if subdir_path.exists():
                 count = sum(
-                    1 for f in subdir_path.rglob("*")
-                    if f.is_file() and not f.name.startswith(".")
+                    1 for f in subdir_path.rglob("*") if f.is_file() and not f.name.startswith(".")
                 )
             bucket_info["subdirs"][subdir_name] = count
             bucket_info["processed_files"] += count
@@ -429,6 +488,7 @@ def bucket_status() -> dict:
 # ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
+
 
 def main() -> int:
     """CLI entry point."""
@@ -453,14 +513,18 @@ def main() -> int:
     if bucket == "all":
         results = process_all_buckets()
         for name, summary in results.items():
-            print(f"\n[{name}] {summary.get('label', '')}: "
-                  f"{summary.get('processed', 0)} processed, "
-                  f"{summary.get('skipped', 0)} skipped")
+            print(
+                f"\n[{name}] {summary.get('label', '')}: "
+                f"{summary.get('processed', 0)} processed, "
+                f"{summary.get('skipped', 0)} skipped"
+            )
     elif bucket in BUCKETS:
         summary = process_bucket(bucket)
-        print(f"\n[{bucket}] {summary.get('label', '')}: "
-              f"{summary.get('processed', 0)} processed, "
-              f"{summary.get('skipped', 0)} skipped")
+        print(
+            f"\n[{bucket}] {summary.get('label', '')}: "
+            f"{summary.get('processed', 0)} processed, "
+            f"{summary.get('skipped', 0)} skipped"
+        )
     else:
         print("Usage: python bucket_processor.py [external|workspace|personal|all]")
         return 1

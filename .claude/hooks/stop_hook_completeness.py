@@ -24,16 +24,17 @@ from datetime import datetime
 from pathlib import Path
 
 # Fix Windows cp1252 encoding
-if sys.platform == 'win32':
-    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
-    sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+if sys.platform == "win32":
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
-PROJECT_ROOT = Path(os.environ.get('CLAUDE_PROJECT_DIR', '.'))
-MISSION_CONTROL = PROJECT_ROOT / '.claude' / 'mission-control'
-LEDGER_PATH = PROJECT_ROOT / '.claude' / 'LEDGER.md'
-INBOX_PATH = PROJECT_ROOT / 'inbox'
-LOGS_PATH = PROJECT_ROOT / '.claude' / 'logs' / 'stop_hooks'
+PROJECT_ROOT = Path(os.environ.get("CLAUDE_PROJECT_DIR", "."))
+MISSION_CONTROL = PROJECT_ROOT / ".claude" / "mission-control"
+LEDGER_PATH = PROJECT_ROOT / ".claude" / "LEDGER.md"
+INBOX_PATH = PROJECT_ROOT / "inbox"
+LOGS_PATH = PROJECT_ROOT / ".claude" / "logs" / "stop_hooks"
 LOGS_PATH.mkdir(parents=True, exist_ok=True)
+
 
 def count_inbox_files() -> int:
     """Count processable files in INBOX"""
@@ -41,22 +42,23 @@ def count_inbox_files() -> int:
         return 0
 
     count = 0
-    exclude_patterns = ['_DUPLICATAS', '_BACKUP', '.DS_Store', '_INDEX']
+    exclude_patterns = ["_DUPLICATAS", "_BACKUP", ".DS_Store", "_INDEX"]
 
-    for item in INBOX_PATH.rglob('*'):
+    for item in INBOX_PATH.rglob("*"):
         if item.is_file():
             # Skip excluded patterns
             if any(excl in str(item) for excl in exclude_patterns):
                 continue
             # Count txt, md, docx files
-            if item.suffix.lower() in ['.txt', '.md', '.docx', '.pdf']:
+            if item.suffix.lower() in [".txt", ".md", ".docx", ".pdf"]:
                 count += 1
 
     return count
 
+
 def check_pending_batches() -> tuple[int, int]:
     """Check if there are pending batches based on MISSION-STATE"""
-    state_file = MISSION_CONTROL / 'MISSION-STATE.json'
+    state_file = MISSION_CONTROL / "MISSION-STATE.json"
 
     if not state_file.exists():
         return 0, 0
@@ -65,13 +67,14 @@ def check_pending_batches() -> tuple[int, int]:
         with open(state_file) as f:
             state = json.load(f)
 
-        current = state.get('current_state', {})
-        batch_current = current.get('batch_current', 0)
-        batch_total = current.get('batch_total', 0)
+        current = state.get("current_state", {})
+        batch_current = current.get("batch_current", 0)
+        batch_total = current.get("batch_total", 0)
 
         return batch_current, batch_total
     except Exception:
         return 0, 0
+
 
 def read_ledger() -> dict:
     """Read current ledger state"""
@@ -83,34 +86,36 @@ def read_ledger() -> dict:
 
         # Parse simple ledger format
         ledger = {
-            'has_pending_task': '⏳' in content or 'PENDING' in content.upper(),
-            'last_task': '',
-            'next_action': ''
+            "has_pending_task": "⏳" in content or "PENDING" in content.upper(),
+            "last_task": "",
+            "next_action": "",
         }
 
         # Extract next action
-        if 'Próxima Ação:' in content or 'Next Action:' in content:
-            lines = content.split('\n')
+        if "Próxima Ação:" in content or "Next Action:" in content:
+            lines = content.split("\n")
             for i, line in enumerate(lines):
-                if 'Próxima Ação' in line or 'Next Action' in line:
+                if "Próxima Ação" in line or "Next Action" in line:
                     if i + 1 < len(lines):
-                        ledger['next_action'] = lines[i + 1].strip('- ')
+                        ledger["next_action"] = lines[i + 1].strip("- ")
 
         return ledger
     except Exception:
         return {}
 
+
 def log_stop_check(reason: str, should_continue: bool, details: dict):
     """Log stop check"""
-    log_file = LOGS_PATH / 'stop_checks.jsonl'
+    log_file = LOGS_PATH / "stop_checks.jsonl"
     entry = {
-        'timestamp': datetime.now().isoformat(),
-        'reason': reason,
-        'should_continue': should_continue,
-        'details': details
+        "timestamp": datetime.now().isoformat(),
+        "reason": reason,
+        "should_continue": should_continue,
+        "details": details,
     }
-    with open(log_file, 'a') as f:
-        f.write(json.dumps(entry) + '\n')
+    with open(log_file, "a") as f:
+        f.write(json.dumps(entry) + "\n")
+
 
 def check_completeness():
     """Core completeness check logic. Returns list of issues."""
@@ -119,27 +124,29 @@ def check_completeness():
 
     # Check 1: INBOX files
     inbox_count = count_inbox_files()
-    details['inbox_files'] = inbox_count
+    details["inbox_files"] = inbox_count
     if inbox_count > 10:
         issues.append(f"INBOX has {inbox_count} files waiting to be processed")
 
     # Check 2: Pending batches
     batch_current, batch_total = check_pending_batches()
-    details['batch_current'] = batch_current
-    details['batch_total'] = batch_total
+    details["batch_current"] = batch_current
+    details["batch_total"] = batch_total
     if batch_total > 0 and batch_current < batch_total:
         remaining = batch_total - batch_current
-        issues.append(f"Batch processing incomplete: {batch_current}/{batch_total} ({remaining} remaining)")
+        issues.append(
+            f"Batch processing incomplete: {batch_current}/{batch_total} ({remaining} remaining)"
+        )
 
     # Check 3: Ledger pending tasks
     ledger = read_ledger()
-    details['ledger'] = ledger
-    if ledger.get('has_pending_task'):
-        next_action = ledger.get('next_action', 'Unknown')
+    details["ledger"] = ledger
+    if ledger.get("has_pending_task"):
+        next_action = ledger.get("next_action", "Unknown")
         issues.append(f"Ledger shows pending task: {next_action}")
 
     # Log the check
-    log_stop_check('stop_hook_check', len(issues) > 0, details)
+    log_stop_check("stop_hook_check", len(issues) > 0, details)
 
     return issues
 
@@ -180,8 +187,8 @@ def cli_test():
         print("STOP HOOK: All clear, no pending tasks detected.")
 
 
-if __name__ == '__main__':
-    if len(sys.argv) > 1 and sys.argv[1] == '--test':
+if __name__ == "__main__":
+    if len(sys.argv) > 1 and sys.argv[1] == "--test":
         cli_test()
     else:
         main()

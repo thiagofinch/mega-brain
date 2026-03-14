@@ -30,7 +30,7 @@ import sys
 import time
 from pathlib import Path
 
-PROJECT_ROOT = Path(os.environ.get('CLAUDE_PROJECT_DIR', '.'))
+PROJECT_ROOT = Path(os.environ.get("CLAUDE_PROJECT_DIR", "."))
 STATE_DIR = PROJECT_ROOT / ".claude" / "jarvis"
 STATE_FILE = STATE_DIR / "STATE.json"
 
@@ -38,6 +38,7 @@ STATE_FILE = STATE_DIR / "STATE.json"
 try:
     sys.path.insert(0, str(PROJECT_ROOT / ".claude" / "hooks"))
     from resolve_agent_path import resolve_memory_path
+
     _HAS_RESOLVER = True
 except ImportError:
     _HAS_RESOLVER = False
@@ -45,9 +46,9 @@ except ImportError:
 
 # Context Brackets
 BRACKET_LAYER_MAP = {
-    "FRESH":    {"layer": 0, "max_tokens": 0,    "max_lines": 0},
-    "MODERATE": {"layer": 1, "max_tokens": 50,   "max_lines": 5},
-    "DEPLETED": {"layer": 2, "max_tokens": 200,  "max_lines": 20},
+    "FRESH": {"layer": 0, "max_tokens": 0, "max_lines": 0},
+    "MODERATE": {"layer": 1, "max_tokens": 50, "max_lines": 5},
+    "DEPLETED": {"layer": 2, "max_tokens": 200, "max_lines": 20},
     "CRITICAL": {"layer": 3, "max_tokens": 1000, "max_lines": 50},
 }
 
@@ -68,6 +69,7 @@ _score_context_budget = None
 try:
     sys.path.insert(0, str(PROJECT_ROOT))
     from core.intelligence.context_scorer import score_context_budget as _scb
+
     _score_context_budget = _scb
     _HAS_SCORER = True
 except Exception:
@@ -81,6 +83,7 @@ _INTENT_QUICK_PATTERNS = [
     ("analytical", _re.compile(r"(anali[sz]|estrat|why|por.?qu[eê]|implic|trade.?off)", _re.I)),
     ("factual_complex", _re.compile(r"(framework|metodolog|how.+work|como funciona|expli)", _re.I)),
 ]
+
 
 def _quick_classify_intent(prompt_text: str) -> str:
     """Lightweight intent classification (~0.1ms). No heavy imports."""

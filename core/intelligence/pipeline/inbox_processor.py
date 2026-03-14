@@ -51,6 +51,7 @@ SKIP_NAMES = {".DS_Store", "Thumbs.db", ".gitkeep"}
 
 # ── File Processing ─────────────────────────────────────────────────────────
 
+
 def _detect_source_tag(filepath: Path) -> str:
     """Detect source tag from file path or filename.
 
@@ -196,6 +197,7 @@ def process_file(
 
 # ── Inbox Processing ────────────────────────────────────────────────────────
 
+
 def process_inbox(
     bucket: Literal["external", "business", "personal"] = "external",
     delete_originals: bool = False,
@@ -243,10 +245,9 @@ def process_inbox(
 
     # Filter out skipped files
     extractable = [
-        f for f in extractable
-        if f.is_file()
-        and f.name not in SKIP_NAMES
-        and not f.name.startswith(".")
+        f
+        for f in extractable
+        if f.is_file() and f.name not in SKIP_NAMES and not f.name.startswith(".")
     ]
 
     processed = 0
@@ -259,11 +260,13 @@ def process_inbox(
         md_sibling = filepath.with_suffix(".md")
         if md_sibling.exists():
             skipped += 1
-            results.append({
-                "input": str(filepath),
-                "status": "skipped",
-                "reason": "markdown exists",
-            })
+            results.append(
+                {
+                    "input": str(filepath),
+                    "status": "skipped",
+                    "reason": "markdown exists",
+                }
+            )
             continue
 
         # Process
@@ -277,19 +280,23 @@ def process_inbox(
 
         if result["success"]:
             processed += 1
-            results.append({
-                "input": str(filepath),
-                "output": result["output"],
-                "status": "processed",
-                "method": result["method"],
-            })
+            results.append(
+                {
+                    "input": str(filepath),
+                    "output": result["output"],
+                    "status": "processed",
+                    "method": result["method"],
+                }
+            )
         else:
             failed += 1
-            results.append({
-                "input": str(filepath),
-                "status": "failed",
-                "error": result["error"],
-            })
+            results.append(
+                {
+                    "input": str(filepath),
+                    "status": "failed",
+                    "error": result["error"],
+                }
+            )
 
     summary = {
         "bucket": bucket,
@@ -328,6 +335,7 @@ def process_all_inboxes(
 
 # ── Logging ─────────────────────────────────────────────────────────────────
 
+
 def _write_process_log(summary: dict) -> None:
     """Append process log entry to JSONL file."""
     log_dir = LOGS / "inbox-processor"
@@ -339,6 +347,7 @@ def _write_process_log(summary: dict) -> None:
 
 
 # ── CLI ─────────────────────────────────────────────────────────────────────
+
 
 def main() -> int:
     """CLI entry point.
@@ -364,6 +373,7 @@ def main() -> int:
         # Check ss_bridge availability
         try:
             from core.intelligence.pipeline.ss_bridge import get_bridge_status
+
             status = get_bridge_status()
             print(f"  SS Available:       {status['ss_available']}")
             print(f"  SS Video Available: {status['ss_video_available']}")
@@ -386,20 +396,18 @@ def main() -> int:
                 extractable.extend(inbox_path.rglob(f"*{ext.upper()}"))
 
             extractable = [
-                f for f in extractable
-                if f.is_file()
-                and f.name not in SKIP_NAMES
-                and not f.name.startswith(".")
+                f
+                for f in extractable
+                if f.is_file() and f.name not in SKIP_NAMES and not f.name.startswith(".")
             ]
 
             # Count those without markdown sibling
-            needs_processing = [
-                f for f in extractable
-                if not f.with_suffix(".md").exists()
-            ]
+            needs_processing = [f for f in extractable if not f.with_suffix(".md").exists()]
 
-            print(f"  [{bucket:10s}] {len(extractable)} extractable, "
-                  f"{len(needs_processing)} need processing")
+            print(
+                f"  [{bucket:10s}] {len(extractable)} extractable, "
+                f"{len(needs_processing)} need processing"
+            )
 
         print()
         return 0
@@ -411,12 +419,12 @@ def main() -> int:
         result = process_file(Path(cmd))
         print(f"Input:  {result['input']}")
         print(f"Status: {'success' if result['success'] else 'failed'}")
-        if result['success']:
+        if result["success"]:
             print(f"Output: {result['output']}")
             print(f"Method: {result['method']}")
         else:
             print(f"Error:  {result['error']}")
-        return 0 if result['success'] else 1
+        return 0 if result["success"] else 1
 
     # Process bucket
     if cmd in BUCKET_INBOXES:
@@ -458,4 +466,5 @@ def _print_summary(bucket: str, summary: dict) -> None:
 
 if __name__ == "__main__":
     import sys
+
     sys.exit(main())

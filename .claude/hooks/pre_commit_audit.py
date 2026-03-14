@@ -25,8 +25,8 @@ from pathlib import Path
 
 # ── Resolve repo root ──────────────────────────────────────────────────────
 
-SCRIPT_DIR = Path(__file__).resolve().parent          # .claude/hooks/
-REPO_ROOT = SCRIPT_DIR.parent.parent                   # mega-brain/
+SCRIPT_DIR = Path(__file__).resolve().parent  # .claude/hooks/
+REPO_ROOT = SCRIPT_DIR.parent.parent  # mega-brain/
 
 # ── Import classify_path from audit_layers ─────────────────────────────────
 
@@ -45,11 +45,11 @@ NC = "\033[0m"
 # ── Secret patterns (fast subset — full set in pre-publish-gate.js) ────────
 
 SECRET_PATTERNS = [
-    re.compile(r"ghp_[A-Za-z0-9]{36}"),          # GitHub PAT
-    re.compile(r"sk-ant-[A-Za-z0-9\-]{90,}"),    # Anthropic
-    re.compile(r"sk-[A-Za-z0-9]{48}"),            # OpenAI
-    re.compile(r"AKIA[0-9A-Z]{16}"),              # AWS
-    re.compile(r"ntn_[A-Za-z0-9]{40,}"),          # Notion
+    re.compile(r"ghp_[A-Za-z0-9]{36}"),  # GitHub PAT
+    re.compile(r"sk-ant-[A-Za-z0-9\-]{90,}"),  # Anthropic
+    re.compile(r"sk-[A-Za-z0-9]{48}"),  # OpenAI
+    re.compile(r"AKIA[0-9A-Z]{16}"),  # AWS
+    re.compile(r"ntn_[A-Za-z0-9]{40,}"),  # Notion
 ]
 
 # ── Template registry (personal file → template) ──────────────────────────
@@ -63,23 +63,49 @@ TEMPLATE_REGISTRY = {
 # ── Binary extensions to skip during secret scanning ───────────────────────
 
 BINARY_EXTENSIONS = {
-    ".png", ".jpg", ".jpeg", ".gif", ".ico", ".svg", ".webp",
-    ".woff", ".woff2", ".ttf", ".eot",
-    ".pdf", ".zip", ".tar", ".gz", ".bz2", ".7z",
-    ".mp3", ".mp4", ".wav", ".webm", ".ogg",
-    ".pyc", ".pyo", ".so", ".dylib", ".dll",
-    ".sqlite", ".db",
+    ".png",
+    ".jpg",
+    ".jpeg",
+    ".gif",
+    ".ico",
+    ".svg",
+    ".webp",
+    ".woff",
+    ".woff2",
+    ".ttf",
+    ".eot",
+    ".pdf",
+    ".zip",
+    ".tar",
+    ".gz",
+    ".bz2",
+    ".7z",
+    ".mp3",
+    ".mp4",
+    ".wav",
+    ".webm",
+    ".ogg",
+    ".pyc",
+    ".pyo",
+    ".so",
+    ".dylib",
+    ".dll",
+    ".sqlite",
+    ".db",
 }
 
 
 # ── Helper functions ───────────────────────────────────────────────────────
+
 
 def get_staged_files() -> list[str]:
     """Return list of staged file paths (excludes deletes)."""
     try:
         result = subprocess.run(
             ["git", "diff", "--cached", "--name-only", "--diff-filter=ACMR"],
-            capture_output=True, text=True, cwd=str(REPO_ROOT),
+            capture_output=True,
+            text=True,
+            cwd=str(REPO_ROOT),
         )
         if result.returncode != 0:
             return []
@@ -108,7 +134,9 @@ def check_security(files: list[str], classifications: dict[str, tuple[str, str]]
     # Check NEVER-layer files
     for f, (layer, reason) in classifications.items():
         if layer == "NEVER":
-            issues.append(f"{RED}BLOCKED:{NC} {f} is NEVER-layer ({reason}). Remove: git reset HEAD -- {f}")
+            issues.append(
+                f"{RED}BLOCKED:{NC} {f} is NEVER-layer ({reason}). Remove: git reset HEAD -- {f}"
+            )
 
     # Scan staged file contents for secret patterns
     for f in files:
@@ -161,7 +189,9 @@ def check_template_freshness(files: list[str]) -> list[str]:
     return warnings
 
 
-def check_gitignore_drift(files: list[str], classifications: dict[str, tuple[str, str]]) -> list[str]:
+def check_gitignore_drift(
+    files: list[str], classifications: dict[str, tuple[str, str]]
+) -> list[str]:
     """INFO-level: staged files whose layer doesn't match .gitignore expectations."""
     infos = []
 
@@ -201,7 +231,13 @@ def check_package_json_drift(classifications: dict[str, tuple[str, str]]) -> lis
         return infos
 
     # Files npm auto-includes regardless of "files" array
-    npm_auto_included = {"package.json", "package-lock.json", "README.md", "LICENSE", "CHANGELOG.md"}
+    npm_auto_included = {
+        "package.json",
+        "package-lock.json",
+        "README.md",
+        "LICENSE",
+        "CHANGELOG.md",
+    }
 
     # Check staged L1 files that aren't covered by any package.json entry
     for f, (layer, _reason) in classifications.items():
@@ -274,14 +310,16 @@ def format_report(
 
 # ── Main ───────────────────────────────────────────────────────────────────
 
+
 def main() -> int:
     # Bypass for push.js temporary commits
     if os.environ.get("MEGA_BRAIN_LAYER_PUSH") == "true":
+        print(json.dumps({"decision": "allow"}))
         return 0
 
     files = get_staged_files()
     if not files:
-        print(f"[pre-commit] No staged files — {GREEN}PASSED{NC}")
+        print(json.dumps({"decision": "allow"}))
         return 0
 
     classifications = classify_staged(files)
@@ -293,9 +331,13 @@ def main() -> int:
     infos.extend(check_package_json_drift(classifications))
 
     report = format_report(files, classifications, blocks, warnings, infos)
-    print(report)
 
-    return 1 if blocks else 0
+    if blocks:
+        print(json.dumps({"decision": "block", "reason": report}))
+        return 1
+    else:
+        print(json.dumps({"decision": "allow"}))
+        return 0
 
 
 if __name__ == "__main__":

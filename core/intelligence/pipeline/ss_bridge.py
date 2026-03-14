@@ -110,6 +110,7 @@ def _is_fallback_enabled() -> bool:
 
 # ── Logging ─────────────────────────────────────────────────────────────────
 
+
 def _log_operation(
     operation: str,
     success: bool,
@@ -141,6 +142,7 @@ def _log_operation(
 
 
 # ── Availability Check ──────────────────────────────────────────────────────
+
 
 def is_ss_available() -> bool:
     """Check if Skill Seekers is installed and available.
@@ -203,6 +205,7 @@ def is_ss_video_available() -> bool:
 
 # ── Core Subprocess Interface ───────────────────────────────────────────────
 
+
 def call_ss(
     command: list[str],
     timeout: int | None = None,
@@ -250,6 +253,7 @@ def call_ss(
 
 # ── Output Path Resolution ──────────────────────────────────────────────────
 
+
 def _resolve_output_path(
     source_tag: str,
     filename: str,
@@ -280,6 +284,7 @@ def _resolve_output_path(
 
 # ── Ingest Functions ────────────────────────────────────────────────────────
 
+
 def ingest_pdf(
     pdf_path: Path,
     source_tag: str,
@@ -302,6 +307,7 @@ def ingest_pdf(
         FileNotFoundError: If PDF file doesn't exist
     """
     import time
+
     start_time = time.time()
 
     pdf_path = Path(pdf_path).resolve()
@@ -391,6 +397,7 @@ def ingest_docx(
         FileNotFoundError: If DOCX file doesn't exist
     """
     import time
+
     start_time = time.time()
 
     docx_path = Path(docx_path).resolve()
@@ -477,6 +484,7 @@ def ingest_video(
         RuntimeError: If SS video support not available
     """
     import time
+
     start_time = time.time()
 
     if not is_ss_video_available():
@@ -486,14 +494,13 @@ def ingest_video(
             input_path=url_or_path,
             error="SS video support not installed",
         )
-        raise RuntimeError(
-            "SS video support not installed. Run bin/install-skill-seekers-video.sh"
-        )
+        raise RuntimeError("SS video support not installed. Run bin/install-skill-seekers-video.sh")
 
     # Determine output filename
     if url_or_path.startswith(("http://", "https://")):
         # Extract video ID from URL for filename
         import re
+
         video_id_match = re.search(r"(?:v=|/)([a-zA-Z0-9_-]{11})", url_or_path)
         video_id = video_id_match.group(1) if video_id_match else "video"
         output_filename = f"{video_id}_transcript.md"
@@ -558,6 +565,7 @@ def ingest_website(
     """
     import time
     import hashlib
+
     start_time = time.time()
 
     if not is_ss_available():
@@ -607,6 +615,7 @@ def ingest_website(
 
 
 # ── Utility Functions ───────────────────────────────────────────────────────
+
 
 def get_ss_version() -> str | None:
     """Get the installed Skill Seekers version.

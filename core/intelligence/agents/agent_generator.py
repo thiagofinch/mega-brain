@@ -88,6 +88,7 @@ _MCE_LAYERS = (
 # YAML / FILE HELPERS
 # ---------------------------------------------------------------------------
 
+
 def _read_yaml(path: Path) -> dict[str, Any]:
     """Read a YAML file, returning empty dict on failure."""
     if not path.exists():
@@ -130,6 +131,7 @@ def _extract_items(data: dict[str, Any], yaml_key: str) -> list[dict]:
 # ---------------------------------------------------------------------------
 # DNA LOADERS
 # ---------------------------------------------------------------------------
+
 
 def _load_dna_config(slug: str, category: str) -> dict[str, Any]:
     """Load CONFIG.yaml from the person's DNA directory."""
@@ -206,7 +208,12 @@ def _load_dossier_tldr(slug: str, category: str) -> str:
     if not result:
         for line in lines:
             stripped = line.strip()
-            if stripped and not stripped.startswith("#") and not stripped.startswith(">") and not stripped.startswith("---"):
+            if (
+                stripped
+                and not stripped.startswith("#")
+                and not stripped.startswith(">")
+                and not stripped.startswith("---")
+            ):
                 return stripped
     return result
 
@@ -214,6 +221,7 @@ def _load_dossier_tldr(slug: str, category: str) -> str:
 # ---------------------------------------------------------------------------
 # MCE LOADERS
 # ---------------------------------------------------------------------------
+
 
 def _get_dna_dir(slug: str, category: str) -> Path:
     """Return the DNA directory for a person."""
@@ -318,7 +326,9 @@ def _load_mce_layer_counts(mce_data: dict[str, dict[str, Any]]) -> dict[str, int
         if filename == "BEHAVIORAL-PATTERNS":
             items = data.get("behavioral_patterns") or data.get("patterns") or []
         elif filename == "VALUES-HIERARCHY":
-            items = data.get("values_hierarchy") or data.get("values") or data.get("hierarchy") or []
+            items = (
+                data.get("values_hierarchy") or data.get("values") or data.get("hierarchy") or []
+            )
         elif filename == "VOICE-DNA":
             # Count total top-level keys as a proxy for richness
             items = [k for k in data if k not in ("version", "versao", "metadata", "metadados")]
@@ -331,6 +341,7 @@ def _load_mce_layer_counts(mce_data: dict[str, dict[str, Any]]) -> dict[str, int
 # ---------------------------------------------------------------------------
 # FILE GENERATORS
 # ---------------------------------------------------------------------------
+
 
 def _generate_agent_md(
     slug: str,
@@ -366,18 +377,24 @@ def _generate_agent_md(
     sections.append("## QUEM SOU\n")
     if dossier_tldr:
         sections.append(dossier_tldr)
-        sections.append(f"\n^[SOURCE:knowledge/external/dossiers/persons/DOSSIER-{slug.upper()}.md:TL;DR]\n")
+        sections.append(
+            f"\n^[SOURCE:knowledge/external/dossiers/persons/DOSSIER-{slug.upper()}.md:TL;DR]\n"
+        )
     else:
         sintese = config.get("sintese", {})
         em_uma_frase = sintese.get("em_uma_frase", "")
         paragrafo = sintese.get("paragrafo", "")
         if em_uma_frase:
             sections.append(f"> {em_uma_frase}")
-            sections.append(f"^[SOURCE:knowledge/external/dna/persons/{slug}/CONFIG.yaml:sintese]\n")
+            sections.append(
+                f"^[SOURCE:knowledge/external/dna/persons/{slug}/CONFIG.yaml:sintese]\n"
+            )
         if paragrafo:
             sections.append(paragrafo.strip() + "\n")
         if not em_uma_frase and not paragrafo:
-            sections.append(f"*Agente {person_name} - identidade a ser populada com dados do Pipeline.*\n")
+            sections.append(
+                f"*Agente {person_name} - identidade a ser populada com dados do Pipeline.*\n"
+            )
     sections.append("\n---\n")
 
     sections.append("## FORMACAO\n")
@@ -390,7 +407,9 @@ def _generate_agent_md(
             title = f.get("source_title", "?")
             chunks = f.get("chunks_usados", 0)
             sections.append(f"| {sid} | {title} | {chunks} |")
-        sections.append(f"\n^[SOURCE:knowledge/external/dna/persons/{slug}/CONFIG.yaml:fontes_utilizadas]\n")
+        sections.append(
+            f"\n^[SOURCE:knowledge/external/dna/persons/{slug}/CONFIG.yaml:fontes_utilizadas]\n"
+        )
     else:
         sections.append("*Fontes a serem registradas via Pipeline.*\n")
     sections.append("\n---\n")
@@ -404,7 +423,9 @@ def _generate_agent_md(
         hl = highlights.get(filename, [])
         hl_str = ", ".join(hl) if hl else "-"
         sections.append(f"| {label} | {count} | {hl_str} |")
-    sections.append(f"\n^[SOURCE:knowledge/external/dna/persons/{slug}/CONFIG.yaml:distribuicao_por_camada]\n")
+    sections.append(
+        f"\n^[SOURCE:knowledge/external/dna/persons/{slug}/CONFIG.yaml:distribuicao_por_camada]\n"
+    )
     sections.append("\n---\n")
 
     # --- PARTE 3B: MCE DNA (Behavioral + Identity) ---
@@ -470,9 +491,7 @@ def _generate_agent_md(
         sections.append("\n---\n")
     else:
         sections.append("## MCE DNA (Behavioral + Identity)\n")
-        sections.append(
-            "*[MCE layers pendentes -- executar /pipeline-mce]*\n\n---\n"
-        )
+        sections.append("*[MCE layers pendentes -- executar /pipeline-mce]*\n\n---\n")
 
     sections.append("## MEMORY\n")
     sections.append("*Stub - to be populated by Pipeline processing and agent interactions.*\n")
@@ -484,8 +503,12 @@ def _generate_agent_md(
     sections.append(f"- CONFIG: `knowledge/external/dna/persons/{slug}/CONFIG.yaml`")
     sections.append("- Insights: `artifacts/insights/`")
     if _has_mce(mce_data):
-        sections.append(f"- MCE Behavioral: `knowledge/external/dna/persons/{slug}/BEHAVIORAL-PATTERNS.yaml`")
-        sections.append(f"- MCE Values: `knowledge/external/dna/persons/{slug}/VALUES-HIERARCHY.yaml`")
+        sections.append(
+            f"- MCE Behavioral: `knowledge/external/dna/persons/{slug}/BEHAVIORAL-PATTERNS.yaml`"
+        )
+        sections.append(
+            f"- MCE Values: `knowledge/external/dna/persons/{slug}/VALUES-HIERARCHY.yaml`"
+        )
         sections.append(f"- MCE Voice: `knowledge/external/dna/persons/{slug}/VOICE-DNA.yaml`")
     sections.append("\n\n---\n")
     sections.append(f"*Auto-generated by `agent_generator.py` v2.0.0 on {now}*\n")
@@ -524,7 +547,9 @@ def _generate_soul_md(
     parts.append("```")
     parts.append("=" * 64)
     parts.append(f"{'':>{(64 - len(person_name.upper())) // 2}}{person_name.upper()}")
-    parts.append(f'{"":>{(64 - len(em_uma_frase or "Identidade em construcao") - 2) // 2}}"{em_uma_frase or "Identidade em construcao"}"')
+    parts.append(
+        f'{"":>{(64 - len(em_uma_frase or "Identidade em construcao") - 2) // 2}}"{em_uma_frase or "Identidade em construcao"}"'
+    )
     parts.append("=" * 64)
     parts.append(f"\n  DNA COMPOSITION\n  {person_name:<30} ████████████████████  100%")
     parts.append(f'\n  FRASE QUE ME DEFINE\n  "{pergunta or em_uma_frase or "..."}"')
@@ -533,7 +558,9 @@ def _generate_soul_md(
     parts.append("## QUEM SOU EU\n")
     if paragrafo:
         parts.append(paragrafo.strip())
-        parts.append(f"\n^[SOURCE:knowledge/external/dna/persons/{slug}/CONFIG.yaml:sintese:paragrafo]\n")
+        parts.append(
+            f"\n^[SOURCE:knowledge/external/dna/persons/{slug}/CONFIG.yaml:sintese:paragrafo]\n"
+        )
     else:
         parts.append(f"*Identidade de {person_name} a ser construida com dados do Pipeline.*\n")
     parts.append("\n---\n")
@@ -543,7 +570,9 @@ def _generate_soul_md(
     parts.append(f"^[SOURCE:knowledge/external/dna/persons/{slug}/FILOSOFIAS.yaml]\n\n---\n")
 
     parts.append("## COMO PENSO\n")
-    parts.append("*Modelos mentais a serem populados a partir de MODELOS-MENTAIS.yaml do Pipeline.*\n")
+    parts.append(
+        "*Modelos mentais a serem populados a partir de MODELOS-MENTAIS.yaml do Pipeline.*\n"
+    )
     parts.append(f"^[SOURCE:knowledge/external/dna/persons/{slug}/MODELOS-MENTAIS.yaml]\n\n---\n")
 
     parts.append("## MINHAS REGRAS DE DECISAO\n")
@@ -560,7 +589,9 @@ def _generate_soul_md(
     if ponto_cego:
         parts.append("### Limitacoes que Reconheco\n")
         parts.append(ponto_cego)
-        parts.append(f"\n^[SOURCE:knowledge/external/dna/persons/{slug}/CONFIG.yaml:sintese:ponto_cego]\n")
+        parts.append(
+            f"\n^[SOURCE:knowledge/external/dna/persons/{slug}/CONFIG.yaml:sintese:ponto_cego]\n"
+        )
     else:
         parts.append("*Limitacoes a serem identificadas com processamento adicional.*\n")
     # --- MCE-ENHANCED SECTIONS ---
@@ -599,9 +630,7 @@ def _generate_soul_md(
         if val_highlights:
             for i, val in enumerate(val_highlights, 1):
                 parts.append(f"{i}. **{val}**")
-        parts.append(
-            f"\n^[SOURCE:knowledge/external/dna/persons/{slug}/VALUES-HIERARCHY.yaml]\n"
-        )
+        parts.append(f"\n^[SOURCE:knowledge/external/dna/persons/{slug}/VALUES-HIERARCHY.yaml]\n")
 
     if vd_data:
         voice_info = _extract_voice_highlights(vd_data)
@@ -660,9 +689,7 @@ def _generate_soul_md(
                 parts.append("\n### Sistema Imunologico\n")
                 for key, val in immune.items():
                     parts.append(f"- **{key}:** {val}")
-            parts.append(
-                f"\n^[SOURCE:knowledge/external/dna/persons/{slug}/VOICE-DNA.yaml]\n"
-            )
+            parts.append(f"\n^[SOURCE:knowledge/external/dna/persons/{slug}/VOICE-DNA.yaml]\n")
 
     parts.append("\n---\n")
     mce_tag = " [MCE-ENHANCED]" if _has_mce(mce_data) else ""
@@ -696,7 +723,11 @@ def _generate_memory_md(slug, category, config):
     parts.append("*A ser populado com processamento de materiais via Pipeline.*\n\n---\n")
     parts.append("## EXPRESSOES CARACTERISTICAS\n")
 
-    frases = config.get("padroes_comportamentais", {}).get("linguagem_caracteristica", {}).get("frases_de_efeito", [])
+    frases = (
+        config.get("padroes_comportamentais", {})
+        .get("linguagem_caracteristica", {})
+        .get("frases_de_efeito", [])
+    )
     if frases:
         parts.append("| Expressao | Contexto de Uso | chunk_id | PATH_RAIZ |")
         parts.append("|-----------|-----------------|----------|-----------|")
@@ -796,12 +827,15 @@ def _generate_dna_config_yaml(
         f"# DNA Source: knowledge/external/dna/persons/{slug}/\n\n"
     )
 
-    return header + yaml.dump(dna_config, default_flow_style=False, allow_unicode=True, sort_keys=False)
+    return header + yaml.dump(
+        dna_config, default_flow_style=False, allow_unicode=True, sort_keys=False
+    )
 
 
 # ---------------------------------------------------------------------------
 # CORE: generate_agent
 # ---------------------------------------------------------------------------
+
 
 def generate_agent(slug: str, category: str) -> dict[str, list[str]]:
     """Generate agent files from DNA + Dossier.
@@ -822,7 +856,9 @@ def generate_agent(slug: str, category: str) -> dict[str, list[str]]:
 
     if agent_dir.exists() and any(agent_dir.iterdir()):
         existing = [f.name for f in agent_dir.iterdir() if f.is_file()]
-        logger.warning("Agent directory '%s' already exists with files: %s. Skipping.", agent_dir, existing)
+        logger.warning(
+            "Agent directory '%s' already exists with files: %s. Skipping.", agent_dir, existing
+        )
         result["skipped"].append(str(agent_dir))
         _log_generation(slug, category, result)
         return result
@@ -843,12 +879,22 @@ def generate_agent(slug: str, category: str) -> dict[str, list[str]]:
 
     files_to_create = {
         "AGENT.md": _generate_agent_md(
-            slug, category, config, layer_counts, highlights, dossier_tldr, mce_data,
+            slug,
+            category,
+            config,
+            layer_counts,
+            highlights,
+            dossier_tldr,
+            mce_data,
         ),
         "SOUL.md": _generate_soul_md(slug, category, config, mce_data),
         "MEMORY.md": _generate_memory_md(slug, category, config),
         "DNA-CONFIG.yaml": _generate_dna_config_yaml(
-            slug, category, config, layer_counts, mce_data,
+            slug,
+            category,
+            config,
+            layer_counts,
+            mce_data,
         ),
     }
 
@@ -874,6 +920,7 @@ def generate_agent(slug: str, category: str) -> dict[str, list[str]]:
 # LOGGING
 # ---------------------------------------------------------------------------
 
+
 def _log_generation(slug, category, result):
     """Append a generation event to the agent creation log."""
     log_path = LOGS / "agent-creation.jsonl"
@@ -897,14 +944,19 @@ def _log_generation(slug, category, result):
 # CLI
 # ---------------------------------------------------------------------------
 
+
 def main() -> None:
     """CLI entry point."""
     import argparse
 
     parser = argparse.ArgumentParser(description="Generate agent files from DNA + Dossier.")
     parser.add_argument("slug", help="Kebab-case slug (e.g. 'alex-hormozi')")
-    parser.add_argument("--category", default="external", choices=["external", "business", "personal"],
-                        help="Agent category (default: external)")
+    parser.add_argument(
+        "--category",
+        default="external",
+        choices=["external", "business", "personal"],
+        help="Agent category (default: external)",
+    )
 
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")

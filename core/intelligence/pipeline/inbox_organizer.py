@@ -47,10 +47,27 @@ DNA_PERSONS_DIR = KNOWLEDGE_EXTERNAL / "dna" / "persons"
 
 # Files we can organize (everything else is skipped silently)
 SUPPORTED_EXTENSIONS = {
-    ".txt", ".md", ".json", ".yaml", ".yml", ".csv",
-    ".docx", ".pdf", ".doc", ".xlsx", ".xls",
-    ".mp3", ".mp4", ".wav", ".m4a", ".webm",
-    ".png", ".jpg", ".jpeg", ".gif", ".svg",
+    ".txt",
+    ".md",
+    ".json",
+    ".yaml",
+    ".yml",
+    ".csv",
+    ".docx",
+    ".pdf",
+    ".doc",
+    ".xlsx",
+    ".xls",
+    ".mp3",
+    ".mp4",
+    ".wav",
+    ".m4a",
+    ".webm",
+    ".png",
+    ".jpg",
+    ".jpeg",
+    ".gif",
+    ".svg",
 }
 
 # Skip dotfiles and OS metadata
@@ -166,19 +183,33 @@ def _load_known_entities() -> set[str]:
 
     # Names that are content-type folders, NOT entities — must be excluded
     _CONTENT_TYPE_NAMES = {
-        "calls", "courses", "documents", "email", "masterclasses",
-        "masterminds", "meetings", "misc", "notes", "podcasts",
-        "recordings", "screenshots", "scripts", "voice-memos",
-        "whatsapp", "youtube",
+        "calls",
+        "courses",
+        "documents",
+        "email",
+        "masterclasses",
+        "masterminds",
+        "meetings",
+        "misc",
+        "notes",
+        "podcasts",
+        "recordings",
+        "screenshots",
+        "scripts",
+        "voice-memos",
+        "whatsapp",
+        "youtube",
     }
 
     # 2. Business inbox subdirectories (already-organized entities)
     biz_inbox = BUCKET_INBOXES.get("business")
     if biz_inbox and biz_inbox.exists():
         for entry in biz_inbox.iterdir():
-            if (entry.is_dir()
-                    and not entry.name.startswith((".", "_"))
-                    and entry.name not in _CONTENT_TYPE_NAMES):
+            if (
+                entry.is_dir()
+                and not entry.name.startswith((".", "_"))
+                and entry.name not in _CONTENT_TYPE_NAMES
+            ):
                 entities.add(entry.name)
 
     # 3. Business people directory (collaborator clones)
@@ -195,9 +226,11 @@ def _load_known_entities() -> set[str]:
     personal_inbox = BUCKET_INBOXES.get("personal")
     if personal_inbox and personal_inbox.exists():
         for entry in personal_inbox.iterdir():
-            if (entry.is_dir()
-                    and not entry.name.startswith((".", "_"))
-                    and entry.name not in _CONTENT_TYPE_NAMES):
+            if (
+                entry.is_dir()
+                and not entry.name.startswith((".", "_"))
+                and entry.name not in _CONTENT_TYPE_NAMES
+            ):
                 entities.add(entry.name)
 
     # 5. All alias targets (may not have dirs yet)
@@ -215,8 +248,8 @@ def _slugify(name: str) -> str:
     """
     s = name.lower().strip()
     s = re.sub(r"[^\w\s-]", " ", s)  # remove non-word chars except hyphens
-    s = re.sub(r"[\s_]+", "-", s)     # spaces/underscores to hyphens
-    s = re.sub(r"-+", "-", s)         # collapse multiple hyphens
+    s = re.sub(r"[\s_]+", "-", s)  # spaces/underscores to hyphens
+    s = re.sub(r"-+", "-", s)  # collapse multiple hyphens
     return s.strip("-")
 
 
@@ -296,36 +329,97 @@ def detect_entity(filepath: Path) -> str:
 # Map of keyword patterns to content type directory names.
 # Order matters: first match wins, so more specific patterns come first.
 CONTENT_TYPE_PATTERNS: list[tuple[str, list[str]]] = [
-    ("masterclasses", [
-        r"masterclass", r"master[\-_\s]class",
-    ]),
-    ("masterminds", [
-        r"mastermind", r"inner[\-_\s]circle",
-    ]),
-    ("courses", [
-        r"course", r"module", r"modulo", r"aula", r"\bead\b", r"lesson",
-        r"licao", r"treinamento", r"training",
-    ]),
-    ("podcasts", [
-        r"podcast", r"\bep\b\.?", r"episode", r"episodio",
-    ]),
-    ("youtube", [
-        r"youtube", r"\byt\b", r"\[yt\]", r"video",
-        r"youtube\.com", r"watch\?v=",
-    ]),
-    ("calls", [
-        r"\bcall\b", r"\bmeet\b", r"meeting", r"reuni[aã]o",
-        r"grava[cç][aã]o", r"recording", r"zoom", r"google\s*meet",
-        r"lideranc", r"semanal", r"standup",
-    ]),
-    ("scripts", [
-        r"\bscript\b", r"\btemplate\b", r"roteiro",
-    ]),
-    ("documents", [
-        r"blueprint", r"\bpdf\b", r"\bdoc\b", r"contrato", r"contract",
-        r"proposta", r"proposal", r"planilha", r"spreadsheet",
-        r"whitepaper", r"ebook", r"e[\-_]book", r"guia", r"guide",
-    ]),
+    (
+        "masterclasses",
+        [
+            r"masterclass",
+            r"master[\-_\s]class",
+        ],
+    ),
+    (
+        "masterminds",
+        [
+            r"mastermind",
+            r"inner[\-_\s]circle",
+        ],
+    ),
+    (
+        "courses",
+        [
+            r"course",
+            r"module",
+            r"modulo",
+            r"aula",
+            r"\bead\b",
+            r"lesson",
+            r"licao",
+            r"treinamento",
+            r"training",
+        ],
+    ),
+    (
+        "podcasts",
+        [
+            r"podcast",
+            r"\bep\b\.?",
+            r"episode",
+            r"episodio",
+        ],
+    ),
+    (
+        "youtube",
+        [
+            r"youtube",
+            r"\byt\b",
+            r"\[yt\]",
+            r"video",
+            r"youtube\.com",
+            r"watch\?v=",
+        ],
+    ),
+    (
+        "calls",
+        [
+            r"\bcall\b",
+            r"\bmeet\b",
+            r"meeting",
+            r"reuni[aã]o",
+            r"grava[cç][aã]o",
+            r"recording",
+            r"zoom",
+            r"google\s*meet",
+            r"lideranc",
+            r"semanal",
+            r"standup",
+        ],
+    ),
+    (
+        "scripts",
+        [
+            r"\bscript\b",
+            r"\btemplate\b",
+            r"roteiro",
+        ],
+    ),
+    (
+        "documents",
+        [
+            r"blueprint",
+            r"\bpdf\b",
+            r"\bdoc\b",
+            r"contrato",
+            r"contract",
+            r"proposta",
+            r"proposal",
+            r"planilha",
+            r"spreadsheet",
+            r"whitepaper",
+            r"ebook",
+            r"e[\-_]book",
+            r"guia",
+            r"guide",
+        ],
+    ),
 ]
 
 # Extension-based fallbacks when filename keywords don't match
@@ -380,6 +474,7 @@ def detect_content_type(filepath: Path) -> str:
 # COMBINED CLASSIFIER
 # ---------------------------------------------------------------------------
 
+
 def classify_file(filepath: Path) -> tuple[str, str]:
     """Classify a file into (entity_slug, content_type).
 
@@ -398,6 +493,7 @@ def classify_file(filepath: Path) -> tuple[str, str]:
 # ---------------------------------------------------------------------------
 # ORGANIZER
 # ---------------------------------------------------------------------------
+
 
 def _is_already_organized(filepath: Path, inbox_root: Path) -> bool:
     """Check if a file is already in an entity/type subdirectory.
@@ -492,10 +588,9 @@ def organize_inbox(bucket: str = "external") -> dict:
 
     # Collect all files first (avoid mutating directory during iteration)
     all_files = sorted(
-        f for f in inbox_root.rglob("*")
-        if f.is_file()
-        and f.name not in SKIP_NAMES
-        and not f.name.startswith(".")
+        f
+        for f in inbox_root.rglob("*")
+        if f.is_file() and f.name not in SKIP_NAMES and not f.name.startswith(".")
     )
 
     for filepath in all_files:
@@ -547,7 +642,10 @@ def organize_inbox(bucket: str = "external") -> dict:
             organized += 1
             logger.info(
                 "Moved: %s -> %s/%s/%s",
-                filepath.name, entity, content_type, filepath.name,
+                filepath.name,
+                entity,
+                content_type,
+                filepath.name,
             )
 
         except OSError as e:
@@ -591,6 +689,7 @@ def organize_all_inboxes() -> dict:
 # CLEANUP
 # ---------------------------------------------------------------------------
 
+
 def _cleanup_empty_dirs(root: Path) -> None:
     """Remove empty directories under root (bottom-up).
 
@@ -610,8 +709,7 @@ def _cleanup_empty_dirs(root: Path) -> None:
         # Check if dir is empty or contains only skippable files
         contents = list(dirpath.iterdir())
         real_contents = [
-            c for c in contents
-            if c.name not in SKIP_NAMES and not c.name.startswith(".")
+            c for c in contents if c.name not in SKIP_NAMES and not c.name.startswith(".")
         ]
         if not real_contents:
             # Remove dotfiles too, then the empty dir
@@ -628,6 +726,7 @@ def _cleanup_empty_dirs(root: Path) -> None:
 # LOGGING
 # ---------------------------------------------------------------------------
 
+
 def _write_organize_log(summary: dict) -> None:
     """Append organize log entry to JSONL file."""
     log_dir = LOGS / "inbox-organizer"
@@ -641,6 +740,7 @@ def _write_organize_log(summary: dict) -> None:
 # ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
+
 
 def main() -> int:
     """CLI entry point.
@@ -668,20 +768,17 @@ def main() -> int:
                 continue
 
             files = [
-                f for f in inbox_path.rglob("*")
+                f
+                for f in inbox_path.rglob("*")
                 if f.is_file()
                 and f.name not in SKIP_NAMES
                 and not f.name.startswith(".")
                 and f.suffix.lower() in SUPPORTED_EXTENSIONS
             ]
 
-            unorganized = [
-                f for f in files
-                if not _is_already_organized(f, inbox_path)
-            ]
+            unorganized = [f for f in files if not _is_already_organized(f, inbox_path)]
 
-            print(f"  [{bucket:10s}] {len(files)} files total, "
-                  f"{len(unorganized)} need organizing")
+            print(f"  [{bucket:10s}] {len(files)} files total, {len(unorganized)} need organizing")
 
             if unorganized:
                 for f in unorganized[:5]:

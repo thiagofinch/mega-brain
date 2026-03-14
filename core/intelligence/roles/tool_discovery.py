@@ -44,7 +44,11 @@ TOOL_REGISTRY = {
     },
     "BDR": {
         "essential": ["CRM", "Dialer (JustCall/AirCall)", "Email Sequencer (Instantly/Smartlead)"],
-        "recommended": ["LinkedIn Sales Navigator", "Lead Database (Apollo/ZoomInfo)", "Intent Data"],
+        "recommended": [
+            "LinkedIn Sales Navigator",
+            "Lead Database (Apollo/ZoomInfo)",
+            "Intent Data",
+        ],
         "mcp_available": ["hubspot-mcp", "gmail-mcp"],
     },
     "SDR": {
@@ -82,7 +86,6 @@ TOOL_REGISTRY = {
         "recommended": ["Onboarding Platform", "Knowledge Base", "Health Score Dashboard"],
         "mcp_available": ["hubspot-mcp", "intercom-mcp"],
     },
-
     # === MARKETING ===
     "COPYWRITER": {
         "essential": ["Google Docs/Notion", "Reference Library", "Brief Template"],
@@ -104,7 +107,6 @@ TOOL_REGISTRY = {
         "recommended": ["Webinar Platform", "Payment Processor", "Deadline Funnel"],
         "mcp_available": ["clickup-mcp", "google-sheets-mcp"],
     },
-
     # === CONTENT/DESIGN ===
     "CONTENT-CREATOR": {
         "essential": ["Content Calendar (Notion/Trello)", "Video Editor", "Social Platforms"],
@@ -121,7 +123,6 @@ TOOL_REGISTRY = {
         "recommended": ["Community Management Tool", "Listening Tool", "UGC Platform"],
         "mcp_available": ["notion-mcp"],
     },
-
     # === GROWTH ===
     "MEDIA-BUYER": {
         "essential": ["Ad Platforms (Meta/Google/TikTok)", "Analytics", "Tracking (UTMs/Pixels)"],
@@ -138,10 +139,13 @@ TOOL_REGISTRY = {
         "recommended": ["Product Analytics (Mixpanel)", "Referral Tool", "Viral Loop Builder"],
         "mcp_available": ["google-analytics-mcp"],
     },
-
     # === OPERATIONS ===
     "PROJECT-MANAGER": {
-        "essential": ["Project Management (ClickUp/Asana)", "Communication (Slack)", "Docs (Notion)"],
+        "essential": [
+            "Project Management (ClickUp/Asana)",
+            "Communication (Slack)",
+            "Docs (Notion)",
+        ],
         "recommended": ["Time Tracking", "Resource Planning", "Retrospective Tool"],
         "mcp_available": ["clickup-mcp", "slack-mcp", "notion-mcp"],
     },
@@ -160,14 +164,12 @@ TOOL_REGISTRY = {
         "recommended": ["Code Review Tool", "Monitoring (Datadog)", "Documentation (Notion)"],
         "mcp_available": ["github-mcp", "slack-mcp"],
     },
-
     # === HR ===
     "HR-DIRECTOR": {
         "essential": ["ATS (Lever/Greenhouse)", "HRIS (Gusto/BambooHR)", "Payroll"],
         "recommended": ["Engagement Survey", "Performance Review Tool", "Onboarding Platform"],
         "mcp_available": ["google-sheets-mcp", "slack-mcp"],
     },
-
     # === C-LEVEL ===
     "CRO": {
         "essential": ["CRM (Admin)", "Revenue Dashboard", "Forecasting Tool"],
@@ -213,11 +215,14 @@ def discover_tools(role_name, registry=None):
     role_upper = role_name.upper()
 
     # Get from tool registry
-    tools = TOOL_REGISTRY.get(role_upper, {
-        "essential": ["Project Management Tool", "Communication Tool"],
-        "recommended": ["Documentation Tool", "Analytics"],
-        "mcp_available": [],
-    })
+    tools = TOOL_REGISTRY.get(
+        role_upper,
+        {
+            "essential": ["Project Management Tool", "Communication Tool"],
+            "recommended": ["Documentation Tool", "Analytics"],
+            "mcp_available": [],
+        },
+    )
 
     # Get autonomy from registry SOW data
     if registry:
@@ -299,13 +304,33 @@ def _generate_command_loader(role_name):
     # Task templates per role category
     task_map = {
         "closer": [
-            {"command": "*execute-close", "task": "closer-call-framework.md", "desc": "Framework de call completo"},
-            {"command": "*objection-handle", "task": "closer-objections.md", "desc": "Tratamento de objecoes"},
-            {"command": "*pipeline-review", "task": "closer-pipeline.md", "desc": "Review de pipeline"},
+            {
+                "command": "*execute-close",
+                "task": "closer-call-framework.md",
+                "desc": "Framework de call completo",
+            },
+            {
+                "command": "*objection-handle",
+                "task": "closer-objections.md",
+                "desc": "Tratamento de objecoes",
+            },
+            {
+                "command": "*pipeline-review",
+                "task": "closer-pipeline.md",
+                "desc": "Review de pipeline",
+            },
         ],
         "bdr": [
-            {"command": "*outbound-sequence", "task": "bdr-sequence.md", "desc": "Sequencia de outbound"},
-            {"command": "*qualify-lead", "task": "bdr-qualification.md", "desc": "Qualificacao de lead"},
+            {
+                "command": "*outbound-sequence",
+                "task": "bdr-sequence.md",
+                "desc": "Sequencia de outbound",
+            },
+            {
+                "command": "*qualify-lead",
+                "task": "bdr-qualification.md",
+                "desc": "Qualificacao de lead",
+            },
             {"command": "*cold-call", "task": "bdr-cold-call.md", "desc": "Script de cold call"},
         ],
         "setter": [
@@ -317,21 +342,45 @@ def _generate_command_loader(role_name):
             {"command": "*audit-copy", "task": "copy-audit.md", "desc": "Audit de copy existente"},
         ],
         "media buyer": [
-            {"command": "*campaign-setup", "task": "media-campaign.md", "desc": "Setup de campanha"},
-            {"command": "*optimize-ads", "task": "media-optimization.md", "desc": "Otimizacao de ads"},
+            {
+                "command": "*campaign-setup",
+                "task": "media-campaign.md",
+                "desc": "Setup de campanha",
+            },
+            {
+                "command": "*optimize-ads",
+                "task": "media-optimization.md",
+                "desc": "Otimizacao de ads",
+            },
         ],
         "content creator": [
-            {"command": "*create-content", "task": "content-creation.md", "desc": "Criacao de conteudo"},
-            {"command": "*content-calendar", "task": "content-planning.md", "desc": "Planejamento de conteudo"},
+            {
+                "command": "*create-content",
+                "task": "content-creation.md",
+                "desc": "Criacao de conteudo",
+            },
+            {
+                "command": "*content-calendar",
+                "task": "content-planning.md",
+                "desc": "Planejamento de conteudo",
+            },
         ],
         "sales manager": [
             {"command": "*team-review", "task": "manager-review.md", "desc": "Review de equipe"},
             {"command": "*run-1on1", "task": "manager-1on1.md", "desc": "Conduzir 1-on-1"},
-            {"command": "*comp-plan", "task": "manager-compensation.md", "desc": "Plano de compensacao"},
+            {
+                "command": "*comp-plan",
+                "task": "manager-compensation.md",
+                "desc": "Plano de compensacao",
+            },
         ],
         "data analyst": [
             {"command": "*run-analysis", "task": "analyst-report.md", "desc": "Rodar analise"},
-            {"command": "*build-dashboard", "task": "analyst-dashboard.md", "desc": "Construir dashboard"},
+            {
+                "command": "*build-dashboard",
+                "task": "analyst-dashboard.md",
+                "desc": "Construir dashboard",
+            },
         ],
     }
 
@@ -347,7 +396,11 @@ def _generate_command_loader(role_name):
     return {
         "critical_rule": "Ao ativar este agente, CARREGAR as tasks associadas ANTES de executar.",
         "mandatory_tasks": [
-            {"command": f"*execute-{role_name.lower()}", "task": f"{role_name.lower()}-main.md", "desc": "Task principal"},
+            {
+                "command": f"*execute-{role_name.lower()}",
+                "task": f"{role_name.lower()}-main.md",
+                "desc": "Task principal",
+            },
         ],
     }
 
@@ -366,12 +419,14 @@ def generate_command_loader_md(discovery):
     for task in cl["mandatory_tasks"]:
         lines.append(f"| {task['command']} | {task['task']} | {task['desc']} |")
 
-    lines.extend([
-        "",
-        "### Tools Disponiveis",
-        "| Tool | Tipo | Status |",
-        "|------|------|--------|",
-    ])
+    lines.extend(
+        [
+            "",
+            "### Tools Disponiveis",
+            "| Tool | Tipo | Status |",
+            "|------|------|--------|",
+        ]
+    )
     for tool in discovery["tools"]["essential"]:
         lines.append(f"| {tool} | Essential | Pendente |")
     for tool in discovery["tools"]["mcp_available"]:
@@ -389,8 +444,10 @@ def main():
         results = discover_all_tools(save=True)
 
         for d in results:
-            print(f"  {d['role']:25s}  executor={d['executor_type']:8s}  "
-                  f"autonomy={d['autonomy_level']}% (tier {d['autonomy_tier']})")
+            print(
+                f"  {d['role']:25s}  executor={d['executor_type']:8s}  "
+                f"autonomy={d['autonomy_level']}% (tier {d['autonomy_tier']})"
+            )
             print(f"    Essential: {', '.join(d['tools']['essential'][:3])}")
             if d["tools"]["mcp_available"]:
                 print(f"    MCP: {', '.join(d['tools']['mcp_available'])}")

@@ -73,19 +73,37 @@ ROLE_CONSOLIDATION_PATTERNS = [
 
 # Departments normalization map
 DEPARTMENT_ALIASES = {
-    "sales": "Sales", "vendas": "Sales", "comercial": "Sales",
-    "marketing": "Marketing", "mkt": "Marketing",
-    "ops": "Operations", "operations": "Operations", "operacoes": "Operations",
-    "hr": "Human Resources", "people": "Human Resources", "rh": "Human Resources",
-    "finance": "Finance", "financeiro": "Finance",
-    "product": "Product", "produto": "Product",
-    "engineering": "Engineering", "tech": "Engineering", "dev": "Engineering",
-    "customer": "Customer Success", "cs": "Customer Success", "suporte": "Customer Success",
-    "content": "Content", "conteudo": "Content",
-    "acquisition": "Acquisition", "aquisicao": "Acquisition",
-    "growth": "Growth", "crescimento": "Growth",
-    "design": "Design", "creative": "Design",
-    "legal": "Legal", "juridico": "Legal",
+    "sales": "Sales",
+    "vendas": "Sales",
+    "comercial": "Sales",
+    "marketing": "Marketing",
+    "mkt": "Marketing",
+    "ops": "Operations",
+    "operations": "Operations",
+    "operacoes": "Operations",
+    "hr": "Human Resources",
+    "people": "Human Resources",
+    "rh": "Human Resources",
+    "finance": "Finance",
+    "financeiro": "Finance",
+    "product": "Product",
+    "produto": "Product",
+    "engineering": "Engineering",
+    "tech": "Engineering",
+    "dev": "Engineering",
+    "customer": "Customer Success",
+    "cs": "Customer Success",
+    "suporte": "Customer Success",
+    "content": "Content",
+    "conteudo": "Content",
+    "acquisition": "Acquisition",
+    "aquisicao": "Acquisition",
+    "growth": "Growth",
+    "crescimento": "Growth",
+    "design": "Design",
+    "creative": "Design",
+    "legal": "Legal",
+    "juridico": "Legal",
 }
 
 
@@ -118,12 +136,14 @@ def detect_business_model(text, source_id=None):
             dept_raw = match.group(1).strip()
             dept_norm = _normalize_department(dept_raw)
             if dept_norm:
-                results["departments"].append({
-                    "name": dept_norm,
-                    "raw": dept_raw,
-                    "context": _extract_ctx(text, match.start(), match.end()),
-                    "source_id": source_id,
-                })
+                results["departments"].append(
+                    {
+                        "name": dept_norm,
+                        "raw": dept_raw,
+                        "context": _extract_ctx(text, match.start(), match.end()),
+                        "source_id": source_id,
+                    }
+                )
 
     # Detect team sizes
     for pattern in TEAM_SIZE_PATTERNS:
@@ -132,11 +152,13 @@ def detect_business_model(text, source_id=None):
             if size_str.isdigit():
                 size = int(size_str)
                 if 1 <= size <= 100000:  # sanity check
-                    results["team_sizes"].append({
-                        "size": size,
-                        "context": _extract_ctx(text, match.start(), match.end()),
-                        "source_id": source_id,
-                    })
+                    results["team_sizes"].append(
+                        {
+                            "size": size,
+                            "context": _extract_ctx(text, match.start(), match.end()),
+                            "source_id": source_id,
+                        }
+                    )
 
     # Detect revenue signals
     for pattern in REVENUE_PATTERNS:
@@ -146,12 +168,14 @@ def detect_business_model(text, source_id=None):
             multiplier = groups[1] if len(groups) > 1 else None
             amount = _parse_amount(amount_str, multiplier)
             if amount:
-                results["revenue_signals"].append({
-                    "amount": amount,
-                    "raw": match.group(0).strip(),
-                    "context": _extract_ctx(text, match.start(), match.end()),
-                    "source_id": source_id,
-                })
+                results["revenue_signals"].append(
+                    {
+                        "amount": amount,
+                        "raw": match.group(0).strip(),
+                        "context": _extract_ctx(text, match.start(), match.end()),
+                        "source_id": source_id,
+                    }
+                )
 
     # Detect role consolidation
     for pattern in ROLE_CONSOLIDATION_PATTERNS:
@@ -161,17 +185,21 @@ def detect_business_model(text, source_id=None):
                 role1 = groups[0].strip() if groups[0] else None
                 role2 = groups[1].strip() if groups[1] else None
                 if role1 and role2:
-                    results["role_consolidation"].append({
-                        "roles": [role1.upper(), role2.upper()],
+                    results["role_consolidation"].append(
+                        {
+                            "roles": [role1.upper(), role2.upper()],
+                            "evidence": _extract_ctx(text, match.start(), match.end()),
+                            "source_id": source_id,
+                        }
+                    )
+            elif "hats" in match.group(0) or "chapeus" in match.group(0):
+                results["role_consolidation"].append(
+                    {
+                        "roles": ["MULTIPLE"],
                         "evidence": _extract_ctx(text, match.start(), match.end()),
                         "source_id": source_id,
-                    })
-            elif "hats" in match.group(0) or "chapeus" in match.group(0):
-                results["role_consolidation"].append({
-                    "roles": ["MULTIPLE"],
-                    "evidence": _extract_ctx(text, match.start(), match.end()),
-                    "source_id": source_id,
-                })
+                    }
+                )
 
     return results
 
@@ -219,13 +247,15 @@ def scan_all_chunks(registry=None, save=True):
         registry = load_registry()
 
     # Aggregate per person
-    person_models = defaultdict(lambda: {
-        "departments": [],
-        "team_sizes": [],
-        "revenue_signals": [],
-        "role_consolidation": [],
-        "sources": set(),
-    })
+    person_models = defaultdict(
+        lambda: {
+            "departments": [],
+            "team_sizes": [],
+            "revenue_signals": [],
+            "role_consolidation": [],
+            "sources": set(),
+        }
+    )
 
     files_scanned = 0
     total_depts = 0
@@ -314,12 +344,14 @@ def _update_registry_business_models(person_models, registry):
             key = tuple(sorted(rc["roles"]))
             if key not in seen:
                 seen.add(key)
-                consolidations.append({
-                    "roles": rc["roles"],
-                    "evidence": rc["evidence"],
-                })
+                consolidations.append(
+                    {
+                        "roles": rc["roles"],
+                        "evidence": rc["evidence"],
+                    }
+                )
 
-        has_data = (dept_names or sizes or revenue_sigs or consolidations)
+        has_data = dept_names or sizes or revenue_sigs or consolidations
 
         persons[person_name]["business_model"] = {
             "detected": has_data,

@@ -3,6 +3,7 @@
 Presets are YAML configurations that define how different content types
 should be processed through the Mega Brain pipeline.
 """
+
 from pathlib import Path
 
 import yaml
@@ -47,11 +48,13 @@ def list_presets() -> list[dict]:
     for name in VALID_PRESETS:
         try:
             config = load_preset(name)
-            presets.append({
-                "name": config.get("name", name),
-                "description": config.get("description", ""),
-                "scope": config.get("ingestion", {}).get("scope", "unknown"),
-            })
+            presets.append(
+                {
+                    "name": config.get("name", name),
+                    "description": config.get("description", ""),
+                    "scope": config.get("ingestion", {}).get("scope", "unknown"),
+                }
+            )
         except (FileNotFoundError, yaml.YAMLError):
             presets.append({"name": name, "description": "ERROR", "scope": "unknown"})
     return presets

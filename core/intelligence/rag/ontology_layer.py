@@ -17,7 +17,6 @@ Versao: 1.0.0
 Data: 2026-03-01
 """
 
-
 from .graph_builder import KnowledgeGraph, get_graph
 
 # ---------------------------------------------------------------------------
@@ -46,8 +45,15 @@ DEFAULT_DEPTH = 2
 class OntologyResult:
     """Result from an ontology-aware query."""
 
-    def __init__(self, entity_id: str, entity_type: str, label: str,
-                 person: str, score: float, path: list[str]):
+    def __init__(
+        self,
+        entity_id: str,
+        entity_type: str,
+        label: str,
+        person: str,
+        score: float,
+        path: list[str],
+    ):
         self.entity_id = entity_id
         self.entity_type = entity_type
         self.label = label
@@ -94,14 +100,16 @@ def trace_hierarchy(
     visited: set[str] = {entity_id}
 
     # Add starting entity
-    results.append(OntologyResult(
-        entity_id=entity.id,
-        entity_type=entity.type,
-        label=entity.label,
-        person=entity.person,
-        score=1.0,
-        path=[entity.id],
-    ))
+    results.append(
+        OntologyResult(
+            entity_id=entity.id,
+            entity_type=entity.type,
+            label=entity.label,
+            person=entity.person,
+            score=1.0,
+            path=[entity.id],
+        )
+    )
 
     if direction in ("up", "both"):
         _traverse(g, entity_id, "up", max_depth, visited, [entity_id], results)
@@ -153,17 +161,18 @@ def _traverse(
         new_path = [*path, neighbor_id]
         score = weight * (0.8 ** (len(new_path) - 1))  # Decay with distance
 
-        results.append(OntologyResult(
-            entity_id=neighbor.id,
-            entity_type=neighbor.type,
-            label=neighbor.label,
-            person=neighbor.person,
-            score=score,
-            path=new_path,
-        ))
+        results.append(
+            OntologyResult(
+                entity_id=neighbor.id,
+                entity_type=neighbor.type,
+                label=neighbor.label,
+                person=neighbor.person,
+                score=score,
+                path=new_path,
+            )
+        )
 
-        _traverse(graph, neighbor_id, direction, depth - 1,
-                  visited, new_path, results)
+        _traverse(graph, neighbor_id, direction, depth - 1, visited, new_path, results)
 
 
 def query_by_layer(
@@ -191,14 +200,16 @@ def query_by_layer(
         if domain and domain.lower() not in [d.lower() for d in entity.domains]:
             continue
 
-        results.append(OntologyResult(
-            entity_id=entity.id,
-            entity_type=entity.type,
-            label=entity.label,
-            person=entity.person,
-            score=entity.weight,
-            path=[entity.id],
-        ))
+        results.append(
+            OntologyResult(
+                entity_id=entity.id,
+                entity_type=entity.type,
+                label=entity.label,
+                person=entity.person,
+                score=entity.weight,
+                path=[entity.id],
+            )
+        )
 
     return sorted(results, key=lambda r: -r.score)
 
@@ -218,9 +229,7 @@ def find_by_domain(
     Returns: {layer: [OntologyResult, ...]} grouped by ontology layer
     """
     g = graph or get_graph()
-    by_layer: dict[str, list[OntologyResult]] = {
-        layer: [] for layer in LAYER_HIERARCHY
-    }
+    by_layer: dict[str, list[OntologyResult]] = {layer: [] for layer in LAYER_HIERARCHY}
 
     domain_entities = g.get_entities_by_domain(domain)
 
@@ -240,8 +249,7 @@ def find_by_domain(
 
         # Expand: trace hierarchy
         if expand:
-            expanded = trace_hierarchy(entity.id, direction="both",
-                                       max_depth=1, graph=g)
+            expanded = trace_hierarchy(entity.id, direction="both", max_depth=1, graph=g)
             for exp in expanded:
                 if exp.entity_id != entity.id and exp.entity_type in by_layer:
                     # Reduce score for expanded results
@@ -279,14 +287,17 @@ def find_conflicts(
     # Check edges between the two persons
     for edge in g.edges:
         if edge.rel_type == "TENSIONA":
-            if ((edge.source == p1_id and edge.target == p2_id) or
-                    (edge.source == p2_id and edge.target == p1_id)):
-                conflicts.append({
-                    "type": "tension",
-                    "between": [person1, person2],
-                    "topic": edge.metadata.get("em", ""),
-                    "note": edge.metadata.get("nota", ""),
-                })
+            if (edge.source == p1_id and edge.target == p2_id) or (
+                edge.source == p2_id and edge.target == p1_id
+            ):
+                conflicts.append(
+                    {
+                        "type": "tension",
+                        "between": [person1, person2],
+                        "topic": edge.metadata.get("em", ""),
+                        "note": edge.metadata.get("nota", ""),
+                    }
+                )
 
     # Find overlapping domains with different approaches
     p1_entities = g.get_entities_by_person(person1)
@@ -301,19 +312,25 @@ def find_conflicts(
 
     shared_domains = p1_domains & p2_domains
     for domain in shared_domains:
-        p1_heur = [e for e in p1_entities
-                   if e.type == "heuristica" and domain in
-                   [d.lower() for d in e.domains]]
-        p2_heur = [e for e in p2_entities
-                   if e.type == "heuristica" and domain in
-                   [d.lower() for d in e.domains]]
+        p1_heur = [
+            e
+            for e in p1_entities
+            if e.type == "heuristica" and domain in [d.lower() for d in e.domains]
+        ]
+        p2_heur = [
+            e
+            for e in p2_entities
+            if e.type == "heuristica" and domain in [d.lower() for d in e.domains]
+        ]
         if p1_heur and p2_heur:
-            conflicts.append({
-                "type": "competing_heuristics",
-                "domain": domain,
-                "person1_count": len(p1_heur),
-                "person2_count": len(p2_heur),
-            })
+            conflicts.append(
+                {
+                    "type": "competing_heuristics",
+                    "domain": domain,
+                    "person1_count": len(p1_heur),
+                    "person2_count": len(p2_heur),
+                }
+            )
 
     return conflicts
 
@@ -338,13 +355,15 @@ def find_numeric_heuristics(
 
         # Check if entity has threshold metadata
         if entity.metadata.get("has_threshold"):
-            results.append({
-                "entity_id": entity.id,
-                "label": entity.label,
-                "person": entity.person,
-                "domains": entity.domains,
-                "weight": entity.weight,
-            })
+            results.append(
+                {
+                    "entity_id": entity.id,
+                    "label": entity.label,
+                    "person": entity.person,
+                    "domains": entity.domains,
+                    "weight": entity.weight,
+                }
+            )
 
     return results
 
@@ -365,30 +384,28 @@ def _get_layer_index(entity_type: str) -> int:
 # ---------------------------------------------------------------------------
 def main():
     import argparse
+
     parser = argparse.ArgumentParser(description="Ontology Layer (OG-RAG)")
     parser.add_argument("--trace", type=str, help="Trace hierarchy from entity ID")
     parser.add_argument("--domain", type=str, help="Find by domain")
-    parser.add_argument("--layer", type=str, help="Query by layer",
-                        choices=LAYER_HIERARCHY)
+    parser.add_argument("--layer", type=str, help="Query by layer", choices=LAYER_HIERARCHY)
     parser.add_argument("--person", type=str, help="Filter by person")
     parser.add_argument("--conflicts", nargs=2, help="Find conflicts between persons")
     args = parser.parse_args()
 
-    print(f"\n{'='*60}")
+    print(f"\n{'=' * 60}")
     print("ONTOLOGY LAYER (OG-RAG)")
-    print(f"{'='*60}\n")
+    print(f"{'=' * 60}\n")
 
     graph = get_graph()
-    print(f"Graph: {graph.stats['total_entities']} entities, "
-          f"{graph.stats['total_edges']} edges\n")
+    print(f"Graph: {graph.stats['total_entities']} entities, {graph.stats['total_edges']} edges\n")
 
     if args.trace:
         results = trace_hierarchy(args.trace, graph=graph)
         print(f"Hierarchy trace for: {args.trace}\n")
         for r in results:
             indent = "  " * (len(r.path) - 1)
-            print(f"{indent}[{r.entity_type}] {r.entity_id}: "
-                  f"{r.label[:60]} (score={r.score:.2f})")
+            print(f"{indent}[{r.entity_type}] {r.entity_id}: {r.label[:60]} (score={r.score:.2f})")
 
     elif args.domain:
         by_layer = find_by_domain(args.domain, graph=graph)
@@ -398,8 +415,7 @@ def main():
             if entries:
                 print(f"  {layer.upper()} ({len(entries)}):")
                 for r in entries[:5]:
-                    print(f"    [{r.person}] {r.entity_id}: "
-                          f"{r.label[:50]} (score={r.score:.2f})")
+                    print(f"    [{r.person}] {r.entity_id}: {r.label[:50]} (score={r.score:.2f})")
 
     elif args.layer:
         results = query_by_layer(args.layer, person=args.person, graph=graph)
@@ -414,15 +430,17 @@ def main():
             if c["type"] == "tension":
                 print(f"  TENSION in {c['topic']}: {c['note']}")
             else:
-                print(f"  COMPETING HEURISTICS in {c['domain']}: "
-                      f"{c['person1_count']} vs {c['person2_count']}")
+                print(
+                    f"  COMPETING HEURISTICS in {c['domain']}: "
+                    f"{c['person1_count']} vs {c['person2_count']}"
+                )
     else:
         # Default: show layer distribution
         for layer in LAYER_HIERARCHY:
             entities = graph.get_entities_by_type(layer)
             print(f"  {layer}: {len(entities)} entities")
 
-    print(f"\n{'='*60}\n")
+    print(f"\n{'=' * 60}\n")
 
 
 if __name__ == "__main__":

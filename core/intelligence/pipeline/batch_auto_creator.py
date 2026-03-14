@@ -65,9 +65,7 @@ try:
 except ImportError:
     MAX_BATCH_SIZE = 5
 
-    def partition_files(
-        files: list[Path], max_size: int = MAX_BATCH_SIZE
-    ) -> list[dict]:
+    def partition_files(files: list[Path], max_size: int = MAX_BATCH_SIZE) -> list[dict]:
         """Minimal fallback if batch_governor is not importable."""
         batches = []
         num = 1
@@ -79,9 +77,7 @@ except ImportError:
                     "source_hint": "unknown",
                     "files": [str(f) for f in chunk],
                     "count": len(chunk),
-                    "total_size": sum(
-                        f.stat().st_size for f in chunk if f.exists()
-                    ),
+                    "total_size": sum(f.stat().st_size for f in chunk if f.exists()),
                 }
             )
             num += 1
@@ -98,18 +94,14 @@ logger = logging.getLogger("batch_auto_creator")
 MIN_FILES: int = int(os.environ.get("BATCH_MIN_FILES", "3"))
 
 # Registry file path.
-BATCH_REGISTRY_PATH: Path = ROUTING.get(
-    "batch_registry", MISSION_CONTROL / "BATCH-REGISTRY.json"
-)
+BATCH_REGISTRY_PATH: Path = ROUTING.get("batch_registry", MISSION_CONTROL / "BATCH-REGISTRY.json")
 
 # Log paths (dual-location per REGRA #8).
 BATCH_JSON_DIR: Path = MISSION_CONTROL / "batch-logs"
 BATCH_MD_DIR: Path = ROUTING.get("batch_log", LOGS / "batches")
 
 # JSONL audit log.
-AUTO_CREATOR_LOG: Path = ROUTING.get(
-    "batch_auto_creator_log", LOGS / "batch-auto-creator.jsonl"
-)
+AUTO_CREATOR_LOG: Path = ROUTING.get("batch_auto_creator_log", LOGS / "batch-auto-creator.jsonl")
 
 # Only scan external bucket for now (business/personal later).
 SCAN_BUCKETS: list[str] = ["external"]
@@ -509,8 +501,7 @@ def write_batch_md(
     now_full = datetime.now(UTC).isoformat()
 
     file_list_lines = "\n".join(
-        f"| {i + 1} | `{Path(f).name}` | pending |"
-        for i, f in enumerate(file_paths)
+        f"| {i + 1} | `{Path(f).name}` | pending |" for i, f in enumerate(file_paths)
     )
 
     content = f"""# {batch_id}
@@ -689,9 +680,7 @@ def trigger_workspace_sync() -> bool:
 
         result = sync()
         if result.errors:
-            logger.warning(
-                "Workspace sync had errors: %s", result.errors
-            )
+            logger.warning("Workspace sync had errors: %s", result.errors)
         return not result.errors
     except ImportError:
         logger.debug("workspace_sync not available; skipping workspace sync")
@@ -769,9 +758,7 @@ def scan_and_create(
 
         # Collect person directories (first-level subdirs).
         person_dirs = sorted(
-            d
-            for d in inbox_root.iterdir()
-            if d.is_dir() and not d.name.startswith("_")
+            d for d in inbox_root.iterdir() if d.is_dir() and not d.name.startswith("_")
         )
         result.persons_scanned += len(person_dirs)
 
@@ -784,9 +771,7 @@ def scan_and_create(
             result.files_scanned += len(all_files)
 
             # Filter out already-batched files.
-            unprocessed = [
-                f for f in all_files if not _is_file_batched(registry, f)
-            ]
+            unprocessed = [f for f in all_files if not _is_file_batched(registry, f)]
             already_batched = len(all_files) - len(unprocessed)
             result.files_already_batched += already_batched
 
@@ -797,9 +782,7 @@ def scan_and_create(
                 continue
 
             # Partition using batch_governor (respects MAX_BATCH_SIZE=5).
-            batches = partition_files(
-                unprocessed, max_size=MAX_BATCH_SIZE
-            )
+            batches = partition_files(unprocessed, max_size=MAX_BATCH_SIZE)
 
             for batch_plan in batches:
                 batch_files: list[str] = batch_plan["files"]
@@ -830,9 +813,7 @@ def scan_and_create(
 
                 # Collision check: if JSON file already exists, increment.
                 collision_attempts = 0
-                while (
-                    BATCH_JSON_DIR / f"{batch_id}.json"
-                ).exists() and collision_attempts < 10:
+                while (BATCH_JSON_DIR / f"{batch_id}.json").exists() and collision_attempts < 10:
                     batch_num += 1
                     batch_id = f"BATCH-{batch_num:03d}-{source_code}"
                     collision_attempts += 1
@@ -850,9 +831,7 @@ def scan_and_create(
                 )
 
                 # Register files in registry.
-                register_files(
-                    registry, batch_id, entity_slug, source_code, batch_files
-                )
+                register_files(registry, batch_id, entity_slug, source_code, batch_files)
 
                 # Trigger cascading (non-fatal if it fails).
                 cascading_ok = trigger_cascading(md_path)
@@ -913,9 +892,7 @@ def show_status() -> None:
     total_batches = len(registry.get("batches", {}))
     next_num = registry.get("next_batch_number", 0)
     updated = registry.get("updated_at", "never")
-    legacy_count = sum(
-        1 for v in registry.get("files", {}).values() if v.get("legacy")
-    )
+    legacy_count = sum(1 for v in registry.get("files", {}).values() if v.get("legacy"))
 
     print("BATCH-REGISTRY.json Status")
     print(f"  Total files registered:  {total_files}")

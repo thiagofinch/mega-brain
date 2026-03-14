@@ -1,4 +1,5 @@
 """Tests for content_hasher — incremental pipeline processing via SHA256 hashes."""
+
 from __future__ import annotations
 
 import json
@@ -16,6 +17,7 @@ from core.intelligence.pipeline.content_hasher import (
 # ---------------------------------------------------------------------------
 # hash_file / hash_text
 # ---------------------------------------------------------------------------
+
 
 class TestHashFile:
     """Tests for the hash_file() function."""
@@ -55,6 +57,7 @@ class TestHashText:
 # ---------------------------------------------------------------------------
 # HashRegistry
 # ---------------------------------------------------------------------------
+
 
 class TestHashRegistry:
     """Tests for the HashRegistry class."""

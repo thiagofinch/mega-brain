@@ -34,6 +34,7 @@ BASE_DIR = Path(__file__).parent.parent
 TRIGGER_CONFIG_PATH = BASE_DIR / "scripts" / "trigger_config.yaml"
 TRIGGERS_LOG_PATH = BASE_DIR / "logs" / "triggers.jsonl"
 
+
 # ---------------------------------------------------------------------------
 # CONFIG
 # ---------------------------------------------------------------------------
@@ -79,10 +80,13 @@ def get_cargo_thresholds():
                 "min_sources": ac["emerging"].get("min_sources", 1),
                 "domain_match_required": ac["emerging"].get("domain_match_required", False),
                 "status_output": ac["emerging"].get("status_output", "tracking"),
-                "promotion_rules": ac["emerging"].get("promotion_rules", {
-                    "min_weighted_score": 15,
-                    "min_sources": 2,
-                }),
+                "promotion_rules": ac["emerging"].get(
+                    "promotion_rules",
+                    {
+                        "min_weighted_score": 15,
+                        "min_sources": 2,
+                    },
+                ),
             },
             "emergent": {
                 "min_weighted_score": ac["emergent"].get("min_weighted_score", 3),
@@ -152,12 +156,14 @@ def evaluate_person_agents(registry=None):
         domains = data.get("domains", [])
 
         if has_agent:
-            results["existing"].append({
-                "person": canonical,
-                "agent_path": data.get("agent_path", ""),
-                "sources": n_sources,
-                "mentions": mention_count,
-            })
+            results["existing"].append(
+                {
+                    "person": canonical,
+                    "agent_path": data.get("agent_path", ""),
+                    "sources": n_sources,
+                    "mentions": mention_count,
+                }
+            )
             continue
 
         meets_sources = n_sources >= thresholds["min_sources"]
@@ -173,9 +179,13 @@ def evaluate_person_agents(registry=None):
             missing.append(f"sources: {n_sources}/{thresholds['min_sources']}")
 
         if meets_content:
-            reasons.append(f"mentions={mention_count} >= {thresholds['min_dna_elements']} (proxy for DNA)")
+            reasons.append(
+                f"mentions={mention_count} >= {thresholds['min_dna_elements']} (proxy for DNA)"
+            )
         else:
-            missing.append(f"mentions: {mention_count}/{thresholds['min_dna_elements']} (proxy for DNA)")
+            missing.append(
+                f"mentions: {mention_count}/{thresholds['min_dna_elements']} (proxy for DNA)"
+            )
 
         if meets_frameworks:
             reasons.append(f"domains={len(domains)} (diverse)")
@@ -183,20 +193,24 @@ def evaluate_person_agents(registry=None):
             missing.append(f"domains: {len(domains)}/2")
 
         if meets_sources and meets_content:
-            results["create"].append({
-                "person": canonical,
-                "reasons": reasons,
-                "sources": n_sources,
-                "mentions": mention_count,
-                "domains": domains,
-            })
+            results["create"].append(
+                {
+                    "person": canonical,
+                    "reasons": reasons,
+                    "sources": n_sources,
+                    "mentions": mention_count,
+                    "domains": domains,
+                }
+            )
         elif n_sources >= 1 or mention_count >= 5:
-            results["candidates"].append({
-                "person": canonical,
-                "missing": missing,
-                "sources": n_sources,
-                "mentions": mention_count,
-            })
+            results["candidates"].append(
+                {
+                    "person": canonical,
+                    "missing": missing,
+                    "sources": n_sources,
+                    "mentions": mention_count,
+                }
+            )
 
     results["create"].sort(key=lambda x: -x["mentions"])
     results["candidates"].sort(key=lambda x: -x["mentions"])
@@ -246,13 +260,15 @@ def evaluate_cargo_agents(registry=None):
         breakdown = data.get("mention_breakdown", {})
 
         if has_agent:
-            results["existing"].append({
-                "role": canonical,
-                "agent_path": data.get("agent_path", ""),
-                "mentions": mention_count,
-                "weighted_score": weighted_score,
-                "sources": n_sources,
-            })
+            results["existing"].append(
+                {
+                    "role": canonical,
+                    "agent_path": data.get("agent_path", ""),
+                    "mentions": mention_count,
+                    "weighted_score": weighted_score,
+                    "sources": n_sources,
+                }
+            )
             continue
 
         has_domain = len(domain_ids) > 0 or canonical in taxonomy_cargos
@@ -276,16 +292,18 @@ def evaluate_cargo_agents(registry=None):
                     f"inferred={breakdown.get('inferred', 0)}, "
                     f"emergent={breakdown.get('emergent', 0)}"
                 )
-            results["create"].append({
-                "role": canonical,
-                "reasons": reasons,
-                "mention_count": mention_count,
-                "weighted_score": weighted_score,
-                "sources": n_sources,
-                "domain_ids": domain_ids,
-                "tier": "established",
-                "status_output": est["status_output"],
-            })
+            results["create"].append(
+                {
+                    "role": canonical,
+                    "reasons": reasons,
+                    "mention_count": mention_count,
+                    "weighted_score": weighted_score,
+                    "sources": n_sources,
+                    "domain_ids": domain_ids,
+                    "tier": "established",
+                    "status_output": est["status_output"],
+                }
+            )
             continue
 
         # --- Tier 2: EMERGING (track, candidate for promotion) ---
@@ -304,21 +322,22 @@ def evaluate_cargo_agents(registry=None):
 
             # Check promotion eligibility
             promo = emg.get("promotion_rules", {})
-            promo_eligible = (
-                weighted_score >= promo.get("min_weighted_score", 15) and
-                n_sources >= promo.get("min_sources", 2)
-            )
+            promo_eligible = weighted_score >= promo.get(
+                "min_weighted_score", 15
+            ) and n_sources >= promo.get("min_sources", 2)
 
-            results["candidates"].append({
-                "role": canonical,
-                "missing": missing,
-                "mention_count": mention_count,
-                "weighted_score": weighted_score,
-                "sources": n_sources,
-                "tier": "emerging",
-                "status": status,
-                "promotion_eligible": promo_eligible,
-            })
+            results["candidates"].append(
+                {
+                    "role": canonical,
+                    "missing": missing,
+                    "mention_count": mention_count,
+                    "weighted_score": weighted_score,
+                    "sources": n_sources,
+                    "tier": "emerging",
+                    "status": status,
+                    "promotion_eligible": promo_eligible,
+                }
+            )
             continue
 
         # --- Tier 3: EMERGENT (observe only) ---
@@ -330,15 +349,17 @@ def evaluate_cargo_agents(registry=None):
             missing = [
                 f"weighted_score: {weighted_score:.1f}/{emg['min_weighted_score']} (need for emerging)",
             ]
-            results["candidates"].append({
-                "role": canonical,
-                "missing": missing,
-                "mention_count": mention_count,
-                "weighted_score": weighted_score,
-                "sources": n_sources,
-                "tier": "emergent",
-                "status": status,
-            })
+            results["candidates"].append(
+                {
+                    "role": canonical,
+                    "missing": missing,
+                    "mention_count": mention_count,
+                    "weighted_score": weighted_score,
+                    "sources": n_sources,
+                    "tier": "emergent",
+                    "status": status,
+                }
+            )
 
     results["create"].sort(key=lambda x: -x["weighted_score"])
     results["candidates"].sort(key=lambda x: -x["weighted_score"])
@@ -424,8 +445,10 @@ def main():
     if cr["create"]:
         print(f"\n  CREATE TRIGGERS - ESTABLISHED ({len(cr['create'])}):")
         for e in cr["create"]:
-            print(f"    [CREATE] {e['role']} (ws={e['weighted_score']:.1f}, "
-                  f"{e['sources']} sources, tier={e['tier']})")
+            print(
+                f"    [CREATE] {e['role']} (ws={e['weighted_score']:.1f}, "
+                f"{e['sources']} sources, tier={e['tier']})"
+            )
             for r in e["reasons"]:
                 print(f"             -> {r}")
 
@@ -439,26 +462,32 @@ def main():
             for e in emerging[:5]:
                 promo = " [PROMO ELIGIBLE]" if e.get("promotion_eligible") else ""
                 m = ", ".join(e["missing"])
-                print(f"    [~] {e['role']} (ws={e['weighted_score']:.1f}, "
-                      f"status={e.get('status', '?')}){promo}")
+                print(
+                    f"    [~] {e['role']} (ws={e['weighted_score']:.1f}, "
+                    f"status={e.get('status', '?')}){promo}"
+                )
                 print(f"        missing: {m}")
 
         if emergent:
             print(f"\n  EMERGENT (Observing) ({len(emergent)}):")
             for e in emergent[:5]:
-                print(f"    [.] {e['role']} (ws={e['weighted_score']:.1f}, "
-                      f"status={e.get('status', '?')})")
+                print(
+                    f"    [.] {e['role']} (ws={e['weighted_score']:.1f}, "
+                    f"status={e.get('status', '?')})"
+                )
 
     # Summary
     total_create = len(pr["create"]) + len(cr["create"])
     total_existing = len(pr["existing"]) + len(cr["existing"])
     n_emerging = len([c for c in cr.get("candidates", []) if c.get("tier") == "emerging"])
     n_emergent = len([c for c in cr.get("candidates", []) if c.get("tier") == "emergent"])
-    print(f"\n{'='*70}")
-    print(f"  SUMMARY: {total_existing} active | {total_create} triggers | "
-          f"{n_emerging} emerging | {n_emergent} emergent | "
-          f"{len(pr['candidates'])} person candidates")
-    print(f"{'='*70}")
+    print(f"\n{'=' * 70}")
+    print(
+        f"  SUMMARY: {total_existing} active | {total_create} triggers | "
+        f"{n_emerging} emerging | {n_emergent} emergent | "
+        f"{len(pr['candidates'])} person candidates"
+    )
+    print(f"{'=' * 70}")
 
     if should_log:
         log_decisions(pr, cr)

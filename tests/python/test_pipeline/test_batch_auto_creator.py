@@ -240,7 +240,10 @@ class TestRegistry:
     def test_register_files_updates_batches(self, _patch_batch_paths):
         registry = load_or_init_registry()
         register_files(
-            registry, "BATCH-001-CG", "cole-gordon", "CG",
+            registry,
+            "BATCH-001-CG",
+            "cole-gordon",
+            "CG",
             ["/path/a.txt", "/path/b.txt"],
         )
         assert "BATCH-001-CG" in registry["batches"]
@@ -266,7 +269,9 @@ class TestWriteBatchJson:
     def test_json_file_created(self, _patch_batch_paths):
         paths = _patch_batch_paths
         json_path = write_batch_json(
-            "BATCH-001-AH", "AH", "alex-hormozi",
+            "BATCH-001-AH",
+            "AH",
+            "alex-hormozi",
             ["/path/file1.txt", "/path/file2.txt"],
             total_size=5000,
         )
@@ -278,7 +283,9 @@ class TestWriteBatchJson:
 
     def test_json_contains_source_info(self, _patch_batch_paths):
         json_path = write_batch_json(
-            "BATCH-010-CG", "CG", "cole-gordon",
+            "BATCH-010-CG",
+            "CG",
+            "cole-gordon",
             ["/path/file.txt"],
             total_size=1000,
         )
@@ -295,7 +302,9 @@ class TestWriteBatchMd:
 
     def test_md_file_created(self, _patch_batch_paths):
         md_path = write_batch_md(
-            "BATCH-001-AH", "AH", "alex-hormozi",
+            "BATCH-001-AH",
+            "AH",
+            "alex-hormozi",
             ["/path/file1.txt", "/path/file2.txt"],
             total_size=5000,
         )
@@ -306,7 +315,9 @@ class TestWriteBatchMd:
 
     def test_md_contains_file_table(self, _patch_batch_paths):
         md_path = write_batch_md(
-            "BATCH-005-JH", "JH", "jeremy-haynes",
+            "BATCH-005-JH",
+            "JH",
+            "jeremy-haynes",
             ["/path/a.txt", "/path/b.txt", "/path/c.txt"],
             total_size=9000,
         )
@@ -327,7 +338,7 @@ class TestScanAndCreate:
         person_dir = inbox / entity / "courses"
         person_dir.mkdir(parents=True, exist_ok=True)
         for i in range(count):
-            (person_dir / f"lesson-{i+1}.txt").write_text(f"lesson {i+1} content")
+            (person_dir / f"lesson-{i + 1}.txt").write_text(f"lesson {i + 1} content")
 
     def test_creates_batch_when_above_threshold(self, _patch_batch_paths):
         paths = _patch_batch_paths
@@ -440,15 +451,19 @@ class TestRegistryBootstrap:
     def test_bootstrap_from_existing_json(self, _patch_batch_paths):
         paths = _patch_batch_paths
         existing = paths["batch_json_dir"] / "BATCH-050-JH.json"
-        existing.write_text(json.dumps({
-            "batch_id": "BATCH-050-JH",
-            "source": "JH",
-            "source_name": "Jeremy Haynes",
-            "files_processed": ["file1.txt", "file2.txt"],
-            "files_count": 2,
-            "generated_at": "2026-01-15T00:00:00Z",
-            "status": "COMPLETE",
-        }))
+        existing.write_text(
+            json.dumps(
+                {
+                    "batch_id": "BATCH-050-JH",
+                    "source": "JH",
+                    "source_name": "Jeremy Haynes",
+                    "files_processed": ["file1.txt", "file2.txt"],
+                    "files_count": 2,
+                    "generated_at": "2026-01-15T00:00:00Z",
+                    "status": "COMPLETE",
+                }
+            )
+        )
 
         registry = load_or_init_registry()
 
@@ -487,4 +502,4 @@ class TestDualLocationLogs:
         person_dir = inbox / entity / "courses"
         person_dir.mkdir(parents=True, exist_ok=True)
         for i in range(count):
-            (person_dir / f"lesson-{i+1}.txt").write_text(f"lesson {i+1}")
+            (person_dir / f"lesson-{i + 1}.txt").write_text(f"lesson {i + 1}")

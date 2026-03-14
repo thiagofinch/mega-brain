@@ -38,7 +38,8 @@ def _load_index(project_root: Path) -> dict:
 
     try:
         import yaml
-        with open(index_path, encoding='utf-8') as f:
+
+        with open(index_path, encoding="utf-8") as f:
             _index_cache = yaml.safe_load(f) or {}
             _index_mtime = current_mtime
             return _index_cache
@@ -55,15 +56,15 @@ def _parse_index_simple(index_path: Path) -> dict:
 
     result = {"_simple": []}
     try:
-        content = index_path.read_text(encoding='utf-8')
-        lines = content.split('\n')
+        content = index_path.read_text(encoding="utf-8")
+        lines = content.split("\n")
         current_id = None
         for line in lines:
             stripped = line.strip()
-            if stripped.startswith('- id:'):
-                current_id = stripped.split(':', 1)[1].strip()
-            elif stripped.startswith('path:') and current_id:
-                path_val = stripped.split(':', 1)[1].strip()
+            if stripped.startswith("- id:"):
+                current_id = stripped.split(":", 1)[1].strip()
+            elif stripped.startswith("path:") and current_id:
+                path_val = stripped.split(":", 1)[1].strip()
                 result["_simple"].append({"id": current_id, "path": path_val})
                 current_id = None
         _index_cache = result
@@ -84,21 +85,21 @@ def _search_agents(index: dict, slug: str) -> str | None:
         return None
 
     # Search flat lists: minds, conclave
-    for layer in ['minds', 'conclave']:
+    for layer in ["minds", "conclave"]:
         agents = index.get(layer)
         if isinstance(agents, list):
             for agent in agents:
-                if isinstance(agent, dict) and agent.get('id') == slug:
-                    return agent.get('path')
+                if isinstance(agent, dict) and agent.get("id") == slug:
+                    return agent.get("path")
 
     # Search nested dict: cargo (sales, marketing, c-level, etc.)
-    cargo = index.get('cargo')
+    cargo = index.get("cargo")
     if isinstance(cargo, dict):
         for _area_key, area_agents in cargo.items():
             if isinstance(area_agents, list):
                 for agent in area_agents:
-                    if isinstance(agent, dict) and agent.get('id') == slug:
-                        return agent.get('path')
+                    if isinstance(agent, dict) and agent.get("id") == slug:
+                        return agent.get("path")
 
     return None
 

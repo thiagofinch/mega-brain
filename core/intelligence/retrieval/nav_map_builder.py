@@ -29,17 +29,17 @@ DOSSIERS_DIR = BASE_DIR / "knowledge" / "external" / "dossiers"
 # Matches: CG001_010, AH-YT007_001, chunk_199, BATCH-041, etc.
 CHUNK_ID_PATTERNS = [
     # Standard format: XX000_000
-    re.compile(r'\b([A-Z]{2}\d{3}_\d{3})\b'),
+    re.compile(r"\b([A-Z]{2}\d{3}_\d{3})\b"),
     # Extended format: XX-YY000_000
-    re.compile(r'\b([A-Z]{2}-[A-Z]{2,4}\d{3}_\d{3})\b'),
+    re.compile(r"\b([A-Z]{2}-[A-Z]{2,4}\d{3}_\d{3})\b"),
     # chunk_NNN format
-    re.compile(r'\b(chunk_\d+)\b'),
+    re.compile(r"\b(chunk_\d+)\b"),
     # Source ID format: XX-XXNNN
-    re.compile(r'\b([A-Z]{2}-[A-Z]{2,4}\d{3})\b'),
+    re.compile(r"\b([A-Z]{2}-[A-Z]{2,4}\d{3})\b"),
 ]
 
 # Pattern for BATCH references: [BATCH-041]
-BATCH_PATTERN = re.compile(r'\[BATCH-(\d{3})\]')
+BATCH_PATTERN = re.compile(r"\[BATCH-(\d{3})\]")
 
 
 # ---------------------------------------------------------------------------
@@ -168,6 +168,7 @@ def build_nav_map(dry_run: bool = False) -> dict:
 
     if not dry_run:
         from datetime import datetime
+
         nav_map["last_updated"] = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
         save_nav_map(nav_map)
 
@@ -188,12 +189,14 @@ def _process_dossier_category(
         # Check if already mapped (not _pending_mapping)
         if not sections.get("_pending_mapping", False):
             stats["already_mapped"] += 1
-            stats["details"].append({
-                "file": filename,
-                "category": category_name,
-                "action": "already_mapped",
-                "sections": len(sections),
-            })
+            stats["details"].append(
+                {
+                    "file": filename,
+                    "category": category_name,
+                    "action": "already_mapped",
+                    "sections": len(sections),
+                }
+            )
             continue
 
         # Find the actual file
@@ -205,12 +208,14 @@ def _process_dossier_category(
                 filepath = BASE_DIR / alt_path.lstrip("/")
             if not filepath.exists():
                 stats["skipped"] += 1
-                stats["details"].append({
-                    "file": filename,
-                    "category": category_name,
-                    "action": "skipped",
-                    "reason": "file not found",
-                })
+                stats["details"].append(
+                    {
+                        "file": filename,
+                        "category": category_name,
+                        "action": "skipped",
+                        "reason": "file not found",
+                    }
+                )
                 continue
 
         # Extract sections and chunk_ids
@@ -220,12 +225,14 @@ def _process_dossier_category(
             # File exists but no chunk_ids found in content
             # Still replace _pending_mapping with empty sections dict
             # so we know we've scanned it
-            stats["details"].append({
-                "file": filename,
-                "category": category_name,
-                "action": "scanned_no_chunks",
-                "sections_found": 0,
-            })
+            stats["details"].append(
+                {
+                    "file": filename,
+                    "category": category_name,
+                    "action": "scanned_no_chunks",
+                    "sections_found": 0,
+                }
+            )
             if not dry_run:
                 entry["sections"] = {}
                 entry["total_chunks"] = 0
@@ -238,13 +245,15 @@ def _process_dossier_category(
             entry["total_chunks"] = count_total_chunks(new_sections)
 
         stats["updated"] += 1
-        stats["details"].append({
-            "file": filename,
-            "category": category_name,
-            "action": "updated",
-            "sections": len(new_sections),
-            "total_chunks": count_total_chunks(new_sections),
-        })
+        stats["details"].append(
+            {
+                "file": filename,
+                "category": category_name,
+                "action": "updated",
+                "sections": len(new_sections),
+                "total_chunks": count_total_chunks(new_sections),
+            }
+        )
 
 
 def _discover_new_dossiers(
@@ -282,13 +291,15 @@ def _discover_new_dossiers(
                 dossiers.setdefault(category, {})[filepath.name] = new_entry
 
             stats["new_entries"] += 1
-            stats["details"].append({
-                "file": filepath.name,
-                "category": category,
-                "action": "new_entry",
-                "sections": len(new_sections),
-                "total_chunks": count_total_chunks(new_sections),
-            })
+            stats["details"].append(
+                {
+                    "file": filepath.name,
+                    "category": category,
+                    "action": "new_entry",
+                    "sections": len(new_sections),
+                    "total_chunks": count_total_chunks(new_sections),
+                }
+            )
 
 
 # ---------------------------------------------------------------------------
@@ -296,18 +307,16 @@ def _discover_new_dossiers(
 # ---------------------------------------------------------------------------
 def main():
     import argparse
+
     parser = argparse.ArgumentParser(
         description="Build/update NAVIGATION-MAP.json from dossier files"
     )
-    parser.add_argument(
-        "--dry-run", action="store_true",
-        help="Only report what would change"
-    )
+    parser.add_argument("--dry-run", action="store_true", help="Only report what would change")
     args = parser.parse_args()
 
-    print(f"\n{'='*60}")
+    print(f"\n{'=' * 60}")
     print("NAVIGATION MAP BUILDER")
-    print(f"{'='*60}")
+    print(f"{'=' * 60}")
     if args.dry_run:
         print("[DRY RUN] No files will be modified.\n")
 
@@ -325,11 +334,9 @@ def main():
         for d in result["details"]:
             action = d["action"]
             if action == "updated":
-                print(f"  {d['file']}: {d['sections']} sections, "
-                      f"{d['total_chunks']} chunks")
+                print(f"  {d['file']}: {d['sections']} sections, {d['total_chunks']} chunks")
             elif action == "new_entry":
-                print(f"  {d['file']}: NEW - {d['sections']} sections, "
-                      f"{d['total_chunks']} chunks")
+                print(f"  {d['file']}: NEW - {d['sections']} sections, {d['total_chunks']} chunks")
             elif action == "already_mapped":
                 print(f"  {d['file']}: already mapped ({d['sections']} sections)")
             elif action == "scanned_no_chunks":
@@ -337,7 +344,7 @@ def main():
             elif action == "skipped":
                 print(f"  {d['file']}: SKIPPED - {d.get('reason', 'unknown')}")
 
-    print(f"\n{'='*60}\n")
+    print(f"\n{'=' * 60}\n")
 
 
 if __name__ == "__main__":

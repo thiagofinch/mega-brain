@@ -12,6 +12,7 @@ import pytest
 # Helpers
 # ---------------------------------------------------------------------------
 
+
 def _create_test_pdf(path: Path, pages: list[str]) -> None:
     """Create a minimal PDF with given page texts using PyMuPDF."""
     import fitz
@@ -27,6 +28,7 @@ def _create_test_pdf(path: Path, pages: list[str]) -> None:
 # ---------------------------------------------------------------------------
 # extract_pdf
 # ---------------------------------------------------------------------------
+
 
 class TestExtractPdf:
     """Tests for the extract_pdf function."""
@@ -120,6 +122,7 @@ class TestExtractPdf:
 # extract_pdf_to_inbox
 # ---------------------------------------------------------------------------
 
+
 class TestExtractPdfToInbox:
     """Tests for the extract_pdf_to_inbox function."""
 
@@ -131,14 +134,10 @@ class TestExtractPdfToInbox:
         # Mock KNOWLEDGE_EXTERNAL to use tmp_path
         fake_knowledge = tmp_path / "knowledge" / "external"
 
-        with patch(
-            "core.intelligence.pipeline.pdf_extractor.extract_pdf"
-        ) as mock_extract:
+        with patch("core.intelligence.pipeline.pdf_extractor.extract_pdf") as mock_extract:
             mock_extract.return_value = "extracted text"
             # We need to patch the import inside the function
-            with patch(
-                "core.paths.KNOWLEDGE_EXTERNAL", fake_knowledge
-            ):
+            with patch("core.paths.KNOWLEDGE_EXTERNAL", fake_knowledge):
                 from core.intelligence.pipeline.pdf_extractor import extract_pdf_to_inbox
 
                 result = extract_pdf_to_inbox(pdf_path, "alex-hormozi")
@@ -167,14 +166,13 @@ class TestExtractPdfToInbox:
 # ImportError handling
 # ---------------------------------------------------------------------------
 
+
 class TestImportErrorHandling:
     """Tests for graceful handling when pymupdf is not installed."""
 
     def test_fitz_none_raises_import_error(self) -> None:
         """When fitz is None, extract_pdf raises ImportError."""
-        with patch(
-            "core.intelligence.pipeline.pdf_extractor.fitz", None
-        ):
+        with patch("core.intelligence.pipeline.pdf_extractor.fitz", None):
             from core.intelligence.pipeline.pdf_extractor import extract_pdf
 
             with pytest.raises(ImportError, match="pymupdf is required"):

@@ -64,6 +64,7 @@ _TIMESTAMP_RE = re.compile(
 # TRANSCRIPT PARSING
 # ---------------------------------------------------------------------------
 
+
 def _build_speaker_map(transcript_text: str) -> list[dict]:
     """Parse a transcript and build a list of segments with speaker + timestamp.
 
@@ -94,18 +95,20 @@ def _build_speaker_map(transcript_text: str) -> list[dict]:
 
                 # If no timestamp from pattern, try to find one nearby
                 if not timestamp:
-                    nearby = transcript_text[max(0, m.start() - 20):m.end() + 30]
+                    nearby = transcript_text[max(0, m.start() - 20) : m.end() + 30]
                     ts_match = _TIMESTAMP_RE.search(nearby)
                     if ts_match:
                         timestamp = ts_match.group(1)
 
-                segments.append({
-                    "speaker": speaker,
-                    "timestamp": timestamp,
-                    "start_char": m.start(),
-                    "end_char": end,
-                    "text": text[:500],  # Truncate for matching
-                })
+                segments.append(
+                    {
+                        "speaker": speaker,
+                        "timestamp": timestamp,
+                        "start_char": m.start(),
+                        "end_char": end,
+                        "text": text[:500],  # Truncate for matching
+                    }
+                )
 
             logger.info(
                 "Parsed %d segments using pattern: %s",
@@ -173,6 +176,7 @@ def _find_best_segment(
 # INSIGHT NORMALIZATION (same as sop_detector for consistency)
 # ---------------------------------------------------------------------------
 
+
 def _get_insight_text(insight: dict) -> str:
     """Extract the primary text content from an insight dict."""
     # evidence is the original quote — best for matching
@@ -189,6 +193,7 @@ def _get_insight_id(insight: dict) -> str:
 # ---------------------------------------------------------------------------
 # PUBLIC API
 # ---------------------------------------------------------------------------
+
 
 def link_speakers(
     insights_path: Path,
@@ -263,7 +268,11 @@ def link_speakers(
             if "speaker" not in insight:
                 insight["speaker"] = (
                     insight.get("person")
-                    or (insight.get("source", {}).get("speaker") if isinstance(insight.get("source"), dict) else None)
+                    or (
+                        insight.get("source", {}).get("speaker")
+                        if isinstance(insight.get("source"), dict)
+                        else None
+                    )
                     or None
                 )
             if "timestamp" not in insight:
@@ -311,6 +320,7 @@ def save_linked_insights(result: dict, output_path: Path) -> Path:
 # ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
+
 
 def main() -> int:
     """CLI entry point for insight-speaker linking."""

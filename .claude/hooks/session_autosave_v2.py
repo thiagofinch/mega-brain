@@ -40,15 +40,16 @@ from enum import Enum
 from pathlib import Path
 from typing import Any, Optional
 
-#=================================
+# =================================
 # CONFIGURATION
-#=================================
+# =================================
+
 
 class Config:
     """Configuracao centralizada do sistema de autosave."""
 
     # Diretorios
-    PROJECT_DIR = Path(os.environ.get('CLAUDE_PROJECT_DIR', '.'))
+    PROJECT_DIR = Path(os.environ.get("CLAUDE_PROJECT_DIR", "."))
     SESSIONS_DIR = PROJECT_DIR / ".claude" / "sessions"
     MISSION_CONTROL_DIR = PROJECT_DIR / ".claude" / "mission-control"
     LOGS_DIR = PROJECT_DIR / "logs"
@@ -72,6 +73,7 @@ class Config:
 
 class SaveTrigger(Enum):
     """Tipos de trigger para auto-save."""
+
     BATCH_COMPLETE = "batch_complete"
     TASK_COMPLETE = "task_complete"
     TIME_INTERVAL = "time_interval"
@@ -87,6 +89,7 @@ class SaveTrigger(Enum):
 
 class ActionType(Enum):
     """Tipos de acao registraveis."""
+
     BATCH_PROCESS = "batch_process"
     FILE_CREATE = "file_create"
     FILE_MODIFY = "file_modify"
@@ -99,13 +102,15 @@ class ActionType(Enum):
     OTHER = "other"
 
 
-#=================================
+# =================================
 # DATA CLASSES
-#=================================
+# =================================
+
 
 @dataclass
 class Action:
     """Representa uma acao registrada na sessao."""
+
     timestamp: str
     action_type: str
     description: str
@@ -116,13 +121,14 @@ class Action:
         return asdict(self)
 
     @classmethod
-    def from_dict(cls, data: dict[str, Any]) -> 'Action':
+    def from_dict(cls, data: dict[str, Any]) -> "Action":
         return cls(**data)
 
 
 @dataclass
 class FileModification:
     """Representa uma modificacao de arquivo."""
+
     filepath: str
     operation: str  # created, modified, deleted
     timestamp: str
@@ -133,13 +139,14 @@ class FileModification:
         return asdict(self)
 
     @classmethod
-    def from_dict(cls, data: dict[str, Any]) -> 'FileModification':
+    def from_dict(cls, data: dict[str, Any]) -> "FileModification":
         return cls(**data)
 
 
 @dataclass
 class SessionData:
     """Dados completos de uma sessao."""
+
     session_id: str
     started_at: str
     last_activity: str
@@ -156,20 +163,28 @@ class SessionData:
 
     def to_dict(self) -> dict[str, Any]:
         data = asdict(self)
-        data['actions'] = [a.to_dict() if isinstance(a, Action) else a for a in self.actions]
-        data['files_modified'] = [f.to_dict() if isinstance(f, FileModification) else f for f in self.files_modified]
+        data["actions"] = [a.to_dict() if isinstance(a, Action) else a for a in self.actions]
+        data["files_modified"] = [
+            f.to_dict() if isinstance(f, FileModification) else f for f in self.files_modified
+        ]
         return data
 
     @classmethod
-    def from_dict(cls, data: dict[str, Any]) -> 'SessionData':
-        data['actions'] = [Action.from_dict(a) if isinstance(a, dict) else a for a in data.get('actions', [])]
-        data['files_modified'] = [FileModification.from_dict(f) if isinstance(f, dict) else f for f in data.get('files_modified', [])]
+    def from_dict(cls, data: dict[str, Any]) -> "SessionData":
+        data["actions"] = [
+            Action.from_dict(a) if isinstance(a, dict) else a for a in data.get("actions", [])
+        ]
+        data["files_modified"] = [
+            FileModification.from_dict(f) if isinstance(f, dict) else f
+            for f in data.get("files_modified", [])
+        ]
         return cls(**data)
 
 
-#=================================
+# =================================
 # SESSION MANAGER
-#=================================
+# =================================
+
 
 class SessionManager:
     """
@@ -177,7 +192,7 @@ class SessionManager:
     Implementa REGRA #11 do CLAUDE.md.
     """
 
-    _instance: Optional['SessionManager'] = None
+    _instance: Optional["SessionManager"] = None
     _lock = threading.Lock()
 
     def __new__(cls):
@@ -202,8 +217,12 @@ class SessionManager:
 
     def _ensure_directories(self):
         """Garante que todos os diretorios existam."""
-        for directory in [Config.SESSIONS_DIR, Config.MISSION_CONTROL_DIR,
-                          Config.LOGS_DIR, Config.HANDOFFS_DIR]:
+        for directory in [
+            Config.SESSIONS_DIR,
+            Config.MISSION_CONTROL_DIR,
+            Config.LOGS_DIR,
+            Config.HANDOFFS_DIR,
+        ]:
             directory.mkdir(parents=True, exist_ok=True)
 
     def _generate_session_id(self) -> str:
@@ -215,11 +234,11 @@ class SessionManager:
         """Carrega sessao existente ou cria nova."""
         if Config.AUTOSAVE_STATE.exists():
             try:
-                with open(Config.AUTOSAVE_STATE, encoding='utf-8') as f:
+                with open(Config.AUTOSAVE_STATE, encoding="utf-8") as f:
                     state = json.load(f)
 
                 # Verificar se sessao ainda e valida (menos de 2 horas)
-                last_activity = datetime.fromisoformat(state.get('last_activity', '2000-01-01'))
+                last_activity = datetime.fromisoformat(state.get("last_activity", "2000-01-01"))
                 if datetime.now() - last_activity < timedelta(hours=2):
                     self.session = SessionData.from_dict(state)
                     self.session.last_activity = datetime.now().isoformat()
@@ -248,14 +267,14 @@ class SessionManager:
             decisions=[],
             next_steps=[],
             notes=[],
-            conversation_summary=""
+            conversation_summary="",
         )
 
     def _load_mission_state(self) -> dict[str, Any]:
         """Carrega estado da missao do MISSION-STATE.json."""
         if Config.MISSION_STATE.exists():
             try:
-                with open(Config.MISSION_STATE, encoding='utf-8') as f:
+                with open(Config.MISSION_STATE, encoding="utf-8") as f:
                     return json.load(f)
             except Exception:
                 pass
@@ -265,21 +284,23 @@ class SessionManager:
         """Carrega estado do JARVIS."""
         if Config.JARVIS_STATE.exists():
             try:
-                with open(Config.JARVIS_STATE, encoding='utf-8') as f:
+                with open(Config.JARVIS_STATE, encoding="utf-8") as f:
                     return json.load(f)
             except Exception:
                 pass
         return {}
 
-    #=============================
+    # =============================
     # LOGGING ACTIONS
-    #=============================
+    # =============================
 
-    def log_action(self,
-                   action_type: ActionType,
-                   description: str,
-                   details: dict[str, Any] = None,
-                   files_affected: list[str] = None) -> None:
+    def log_action(
+        self,
+        action_type: ActionType,
+        description: str,
+        details: dict[str, Any] = None,
+        files_affected: list[str] = None,
+    ) -> None:
         """
         Registra uma acao na sessao.
 
@@ -291,10 +312,12 @@ class SessionManager:
         """
         action = Action(
             timestamp=datetime.now().isoformat(),
-            action_type=action_type.value if isinstance(action_type, ActionType) else str(action_type),
+            action_type=action_type.value
+            if isinstance(action_type, ActionType)
+            else str(action_type),
             description=description,
             details=details or {},
-            files_affected=files_affected or []
+            files_affected=files_affected or [],
         )
 
         self.session.actions.append(action)
@@ -307,11 +330,13 @@ class SessionManager:
         # Persistir estado temporario
         self._save_autosave_state()
 
-    def log_file_modified(self,
-                          filepath: str,
-                          operation: str = "modified",
-                          size_before: int = None,
-                          size_after: int = None) -> None:
+    def log_file_modified(
+        self,
+        filepath: str,
+        operation: str = "modified",
+        size_before: int = None,
+        size_after: int = None,
+    ) -> None:
         """
         Registra modificacao de arquivo.
 
@@ -326,7 +351,7 @@ class SessionManager:
             operation=operation,
             timestamp=datetime.now().isoformat(),
             size_before=size_before,
-            size_after=size_after
+            size_after=size_after,
         )
 
         self.session.files_modified.append(mod)
@@ -338,10 +363,7 @@ class SessionManager:
 
         self._save_autosave_state()
 
-    def log_decision(self,
-                     decision: str,
-                     reasoning: str,
-                     alternatives: list[str] = None) -> None:
+    def log_decision(self, decision: str, reasoning: str, alternatives: list[str] = None) -> None:
         """
         Registra uma decisao tomada.
 
@@ -350,12 +372,14 @@ class SessionManager:
             reasoning: Raciocinio por tras
             alternatives: Alternativas consideradas
         """
-        self.session.decisions.append({
-            'timestamp': datetime.now().isoformat(),
-            'decision': decision,
-            'reasoning': reasoning,
-            'alternatives': alternatives or []
-        })
+        self.session.decisions.append(
+            {
+                "timestamp": datetime.now().isoformat(),
+                "decision": decision,
+                "reasoning": reasoning,
+                "alternatives": alternatives or [],
+            }
+        )
 
         self.session.last_activity = datetime.now().isoformat()
         self._save_autosave_state()
@@ -389,26 +413,18 @@ class SessionManager:
         self.session.conversation_summary = summary
         self._save_autosave_state()
 
-    #=============================
+    # =============================
     # SAVE TRIGGERS
-    #=============================
+    # =============================
 
     def trigger_batch_complete(self, batch_id: str, details: dict = None) -> str:
         """Trigger: Batch completado."""
-        self.log_action(
-            ActionType.BATCH_PROCESS,
-            f"Batch {batch_id} completado",
-            details
-        )
+        self.log_action(ActionType.BATCH_PROCESS, f"Batch {batch_id} completado", details)
         return self.save(SaveTrigger.BATCH_COMPLETE)
 
     def trigger_task_complete(self, task_name: str, details: dict = None) -> str:
         """Trigger: Tarefa significativa completada."""
-        self.log_action(
-            ActionType.OTHER,
-            f"Tarefa completada: {task_name}",
-            details
-        )
+        self.log_action(ActionType.OTHER, f"Tarefa completada: {task_name}", details)
         return self.save(SaveTrigger.TASK_COMPLETE)
 
     def trigger_destructive_operation(self, operation: str) -> str:
@@ -422,15 +438,12 @@ class SessionManager:
 
     def trigger_phase_change(self, old_phase: int, new_phase: int) -> str:
         """Trigger: Mudanca de fase."""
-        self.log_action(
-            ActionType.PHASE_CHANGE,
-            f"Mudanca de fase: {old_phase} -> {new_phase}"
-        )
+        self.log_action(ActionType.PHASE_CHANGE, f"Mudanca de fase: {old_phase} -> {new_phase}")
         return self.save(SaveTrigger.TASK_COMPLETE)
 
-    #=============================
+    # =============================
     # CORE SAVE LOGIC
-    #=============================
+    # =============================
 
     def should_save(self, trigger: SaveTrigger = None) -> bool:
         """
@@ -445,7 +458,7 @@ class SessionManager:
             SaveTrigger.DESTRUCTIVE_OP,
             SaveTrigger.USER_EXIT,
             SaveTrigger.SESSION_END,
-            SaveTrigger.MANUAL
+            SaveTrigger.MANUAL,
         ]
 
         if trigger in critical_triggers:
@@ -513,7 +526,7 @@ class SessionManager:
         session_filename = f"{self.session.session_id}.md"
         session_filepath = Config.SESSIONS_DIR / session_filename
 
-        with open(session_filepath, 'w', encoding='utf-8') as f:
+        with open(session_filepath, "w", encoding="utf-8") as f:
             f.write(session_content)
 
         # Atualizar LATEST-SESSION.md
@@ -531,7 +544,7 @@ class SessionManager:
     def _save_autosave_state(self):
         """Salva estado temporario do autosave."""
         try:
-            with open(Config.AUTOSAVE_STATE, 'w', encoding='utf-8') as f:
+            with open(Config.AUTOSAVE_STATE, "w", encoding="utf-8") as f:
                 json.dump(self.session.to_dict(), f, indent=2, ensure_ascii=False)
         except Exception as e:
             print(f"[JARVIS] Erro ao salvar autosave state: {e}")
@@ -541,7 +554,7 @@ class SessionManager:
         latest_content = f"""# LATEST SESSION - Auto-Updated
 
 **Session ID:** {self.session.session_id}
-**Last Save:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+**Last Save:** {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
 **Trigger:** {trigger.value}
 **Save Count:** {self.session.save_count}
 
@@ -550,18 +563,18 @@ class SessionManager:
 {content}
 """
 
-        with open(Config.LATEST_SESSION, 'w', encoding='utf-8') as f:
+        with open(Config.LATEST_SESSION, "w", encoding="utf-8") as f:
             f.write(latest_content)
 
     def _create_handoff(self):
         """Cria arquivo HANDOFF para proxima sessao."""
-        timestamp = datetime.now().strftime('%Y%m%d-%H%M%S')
+        timestamp = datetime.now().strftime("%Y%m%d-%H%M%S")
         handoff_file = Config.HANDOFFS_DIR / f"HANDOFF-{timestamp}.md"
 
         mission = self.session.mission_state
-        current_state = mission.get('current_state', {})
+        current_state = mission.get("current_state", {})
 
-        content = f"""# HANDOFF - {datetime.now().strftime('%Y-%m-%d %H:%M')}
+        content = f"""# HANDOFF - {datetime.now().strftime("%Y-%m-%d %H:%M")}
 
 > **Gerado por:** Session Autosave V2
 > **Session ID:** {self.session.session_id}
@@ -573,10 +586,10 @@ class SessionManager:
 
 | Campo | Valor |
 |-------|-------|
-| Fase | {current_state.get('phase', 'N/A')} - {current_state.get('phase_name', 'N/A')} |
-| Status | {current_state.get('status', 'N/A')} |
-| Progresso | {current_state.get('percent_complete', 0):.1f}% |
-| Fonte Atual | {current_state.get('source_code', 'N/A')} |
+| Fase | {current_state.get("phase", "N/A")} - {current_state.get("phase_name", "N/A")} |
+| Status | {current_state.get("status", "N/A")} |
+| Progresso | {current_state.get("percent_complete", 0):.1f}% |
+| Fonte Atual | {current_state.get("source_code", "N/A")} |
 
 ---
 
@@ -650,29 +663,37 @@ class SessionManager:
 *Auto-generated by Session Autosave V2*
 """
 
-        with open(handoff_file, 'w', encoding='utf-8') as f:
+        with open(handoff_file, "w", encoding="utf-8") as f:
             f.write(content)
 
         # Atualizar link para ultimo HANDOFF
         latest_handoff = Config.HANDOFFS_DIR / "HANDOFF-LATEST.md"
-        with open(latest_handoff, 'w', encoding='utf-8') as f:
+        with open(latest_handoff, "w", encoding="utf-8") as f:
             f.write(content)
 
     def _format_session_markdown(self, trigger: SaveTrigger) -> str:
         """Formata sessao em Markdown estruturado."""
         now = datetime.now()
         mission = self.session.mission_state
-        current_state = mission.get('current_state', {})
+        current_state = mission.get("current_state", {})
 
         # Calcular estatisticas
         actions_by_type = {}
         for action in self.session.actions:
-            atype = action.action_type if isinstance(action, Action) else action.get('action_type', 'other')
+            atype = (
+                action.action_type
+                if isinstance(action, Action)
+                else action.get("action_type", "other")
+            )
             actions_by_type[atype] = actions_by_type.get(atype, 0) + 1
 
         files_by_op = {}
         for mod in self.session.files_modified:
-            op = mod.operation if isinstance(mod, FileModification) else mod.get('operation', 'modified')
+            op = (
+                mod.operation
+                if isinstance(mod, FileModification)
+                else mod.get("operation", "modified")
+            )
             files_by_op[op] = files_by_op.get(op, 0) + 1
 
         md = f"""# {self.session.session_id}
@@ -698,21 +719,21 @@ class SessionManager:
 ## ESTADO DA MISSAO
 
 ```
-+{'='*70}+
-|{'MISSION STATE':^70}|
-+{'='*70}+
-| Fase: {current_state.get('phase', 'N/A')!s:>3} - {current_state.get('phase_name', 'N/A'):<54} |
-| Status: {current_state.get('status', 'N/A'):<60} |
-| Progresso: {str(current_state.get('percent_complete', 0)) + '%':<58} |
-| Fonte: {current_state.get('source_code', 'N/A'):<61} |
-+{'='*70}+
++{"=" * 70}+
+|{"MISSION STATE":^70}|
++{"=" * 70}+
+| Fase: {current_state.get("phase", "N/A")!s:>3} - {current_state.get("phase_name", "N/A"):<54} |
+| Status: {current_state.get("status", "N/A"):<60} |
+| Progresso: {str(current_state.get("percent_complete", 0)) + "%":<58} |
+| Fonte: {current_state.get("source_code", "N/A"):<61} |
++{"=" * 70}+
 ```
 
 ---
 
 ## RESUMO DA CONVERSA
 
-{self.session.conversation_summary or '_Nenhum resumo registrado nesta sessao._'}
+{self.session.conversation_summary or "_Nenhum resumo registrado nesta sessao._"}
 
 ---
 
@@ -770,11 +791,11 @@ class SessionManager:
 """
 
         for decision in self.session.decisions:
-            md += f"""### {decision.get('decision', 'Decisao')[:50]}
+            md += f"""### {decision.get("decision", "Decisao")[:50]}
 
-- **Raciocinio:** {decision.get('reasoning', '-')}
-- **Alternativas:** {', '.join(decision.get('alternatives', [])) or 'Nenhuma'}
-- **Quando:** {decision.get('timestamp', '-')}
+- **Raciocinio:** {decision.get("reasoning", "-")}
+- **Alternativas:** {", ".join(decision.get("alternatives", [])) or "Nenhuma"}
+- **Quando:** {decision.get("timestamp", "-")}
 
 """
 
@@ -861,9 +882,9 @@ class SessionManager:
             pass
 
 
-#=================================
+# =================================
 # GLOBAL API
-#=================================
+# =================================
 
 _session_manager: SessionManager | None = None
 
@@ -891,12 +912,12 @@ def trigger_save(reason: str = "manual") -> str:
 
     # Mapear reason para trigger
     reason_map = {
-        'batch_complete': SaveTrigger.BATCH_COMPLETE,
-        'task_complete': SaveTrigger.TASK_COMPLETE,
-        'destructive': SaveTrigger.DESTRUCTIVE_OP,
-        'user_exit': SaveTrigger.USER_EXIT,
-        'pause': SaveTrigger.PAUSE_DETECTED,
-        'time': SaveTrigger.TIME_INTERVAL
+        "batch_complete": SaveTrigger.BATCH_COMPLETE,
+        "task_complete": SaveTrigger.TASK_COMPLETE,
+        "destructive": SaveTrigger.DESTRUCTIVE_OP,
+        "user_exit": SaveTrigger.USER_EXIT,
+        "pause": SaveTrigger.PAUSE_DETECTED,
+        "time": SaveTrigger.TIME_INTERVAL,
     }
 
     for key, val in reason_map.items():
@@ -907,10 +928,9 @@ def trigger_save(reason: str = "manual") -> str:
     return session.save(trigger)
 
 
-def log_action(action: str,
-               action_type: str = "other",
-               details: dict = None,
-               files: list = None) -> None:
+def log_action(
+    action: str, action_type: str = "other", details: dict = None, files: list = None
+) -> None:
     """
     API para registrar acao.
 
@@ -1008,21 +1028,22 @@ def get_session_status() -> dict:
     """Retorna status atual da sessao."""
     session = get_session()
     return {
-        'session_id': session.session.session_id,
-        'started_at': session.session.started_at,
-        'last_activity': session.session.last_activity,
-        'last_save': session.session.last_save,
-        'save_count': session.session.save_count,
-        'actions_count': len(session.session.actions),
-        'files_modified_count': len(session.session.files_modified),
-        'pending_tasks': len(session.session.pending_tasks),
-        'should_save': session.should_save()
+        "session_id": session.session.session_id,
+        "started_at": session.session.started_at,
+        "last_activity": session.session.last_activity,
+        "last_save": session.session.last_save,
+        "save_count": session.session.save_count,
+        "actions_count": len(session.session.actions),
+        "files_modified_count": len(session.session.files_modified),
+        "pending_tasks": len(session.session.pending_tasks),
+        "should_save": session.should_save(),
     }
 
 
-#=================================
+# =================================
 # CLI INTERFACE
-#=================================
+# =================================
+
 
 def main():
     """Interface de linha de comando."""
@@ -1045,43 +1066,43 @@ def main():
 
     cmd = sys.argv[1].lower()
 
-    if cmd == 'save':
-        reason = sys.argv[2] if len(sys.argv) > 2 else 'manual'
+    if cmd == "save":
+        reason = sys.argv[2] if len(sys.argv) > 2 else "manual"
         result = trigger_save(reason)
         print(f"[JARVIS] Sessao salva: {result}")
 
-    elif cmd == 'status':
+    elif cmd == "status":
         status = get_session_status()
         print("[JARVIS] Status da Sessao:")
         print("-" * 40)
         for key, val in status.items():
             print(f"  {key}: {val}")
 
-    elif cmd == 'log':
-        action = ' '.join(sys.argv[2:]) if len(sys.argv) > 2 else 'Acao generica'
+    elif cmd == "log":
+        action = " ".join(sys.argv[2:]) if len(sys.argv) > 2 else "Acao generica"
         log_action(action)
         print(f"[JARVIS] Acao registrada: {action}")
 
-    elif cmd == 'file':
+    elif cmd == "file":
         if len(sys.argv) < 3:
             print("Uso: file <path> [operation]")
             return
         filepath = sys.argv[2]
-        operation = sys.argv[3] if len(sys.argv) > 3 else 'modified'
+        operation = sys.argv[3] if len(sys.argv) > 3 else "modified"
         log_file(filepath, operation)
         print(f"[JARVIS] Arquivo registrado: {operation} - {filepath}")
 
-    elif cmd == 'pending':
-        task = ' '.join(sys.argv[2:]) if len(sys.argv) > 2 else 'Tarefa pendente'
+    elif cmd == "pending":
+        task = " ".join(sys.argv[2:]) if len(sys.argv) > 2 else "Tarefa pendente"
         add_pending(task)
         print(f"[JARVIS] Pendencia adicionada: {task}")
 
-    elif cmd == 'note':
-        note = ' '.join(sys.argv[2:]) if len(sys.argv) > 2 else 'Nota importante'
+    elif cmd == "note":
+        note = " ".join(sys.argv[2:]) if len(sys.argv) > 2 else "Nota importante"
         add_note(note)
         print(f"[JARVIS] Nota adicionada: {note}")
 
-    elif cmd == 'test':
+    elif cmd == "test":
         print("[JARVIS] Executando teste do Session Autosave V2...")
         print("-" * 40)
 
@@ -1100,7 +1121,7 @@ def main():
         log_decision(
             "Usar formato Markdown para logs",
             "Melhor legibilidade e compatibilidade",
-            ["JSON puro", "YAML", "Plain text"]
+            ["JSON puro", "YAML", "Plain text"],
         )
 
         # Pendencias e notas

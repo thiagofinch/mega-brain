@@ -29,7 +29,16 @@ FILE_ACTIONS = {
 
 # Knowledge themes for classification
 THEMES = {
-    "01-estrutura-time": ["team", "structure", "org", "bdr", "sds", "bc", "hierarchy", "christmas tree"],
+    "01-estrutura-time": [
+        "team",
+        "structure",
+        "org",
+        "bdr",
+        "sds",
+        "bc",
+        "hierarchy",
+        "christmas tree",
+    ],
     "02-processo-vendas": ["sales", "process", "closing", "closer", "call", "pitch", "objection"],
     "03-contratacao": ["hiring", "recruit", "interview", "onboard", "candidate", "farm system"],
     "04-comissionamento": ["compensation", "commission", "ote", "salary", "bonus", "incentive"],

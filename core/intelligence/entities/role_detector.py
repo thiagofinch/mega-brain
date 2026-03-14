@@ -112,8 +112,8 @@ def load_role_vocabulary():
             "strong_patterns": pdata.get("strong_patterns", []),
             "exclude_patterns": pdata.get("exclude_patterns", []),
             "domains": (
-                cargo_data.get("dominios_primarios", []) +
-                cargo_data.get("dominios_secundarios", [])
+                cargo_data.get("dominios_primarios", [])
+                + cargo_data.get("dominios_secundarios", [])
             ),
         }
 
@@ -126,8 +126,8 @@ def load_role_vocabulary():
                 "strong_patterns": [],
                 "exclude_patterns": [],
                 "domains": (
-                    cargo_data.get("dominios_primarios", []) +
-                    cargo_data.get("dominios_secundarios", [])
+                    cargo_data.get("dominios_primarios", [])
+                    + cargo_data.get("dominios_secundarios", [])
                 ),
             }
 
@@ -168,12 +168,14 @@ def _detect_known_roles(text, role_vocab):
                 continue
             for m in matches:
                 context = _extract_context(text, m.start(), m.end())
-                role_matches.append({
-                    "sub_type": "strong",
-                    "weight": WEIGHT_STRONG,
-                    "match": m.group(),
-                    "context": context,
-                })
+                role_matches.append(
+                    {
+                        "sub_type": "strong",
+                        "weight": WEIGHT_STRONG,
+                        "match": m.group(),
+                        "context": context,
+                    }
+                )
 
         # Normal patterns (weight: 1x)
         for pattern in vocab.get("patterns", []):
@@ -183,28 +185,31 @@ def _detect_known_roles(text, role_vocab):
                 continue
             for m in matches:
                 already = any(
-                    d["match"] in m.group() or m.group() in d["match"]
-                    for d in role_matches
+                    d["match"] in m.group() or m.group() in d["match"] for d in role_matches
                 )
                 if already:
                     continue
                 context = _extract_context(text, m.start(), m.end())
-                role_matches.append({
-                    "sub_type": "normal",
-                    "weight": WEIGHT_DIRECT,
-                    "match": m.group(),
-                    "context": context,
-                })
+                role_matches.append(
+                    {
+                        "sub_type": "normal",
+                        "weight": WEIGHT_DIRECT,
+                        "match": m.group(),
+                        "context": context,
+                    }
+                )
 
         if role_matches:
             total_weight = sum(d["weight"] for d in role_matches)
-            detections.append({
-                "name": role_canonical,
-                "type": "direct",
-                "weight": total_weight,
-                "raw_matches": len(role_matches),
-                "contexts": [d["context"] for d in role_matches[:3]],
-            })
+            detections.append(
+                {
+                    "name": role_canonical,
+                    "type": "direct",
+                    "weight": total_weight,
+                    "raw_matches": len(role_matches),
+                    "contexts": [d["context"] for d in role_matches[:3]],
+                }
+            )
 
     return detections
 
@@ -235,13 +240,15 @@ def _infer_roles_from_context(text):
             for m in matches:
                 if role_canonical not in seen_roles:
                     context = _extract_context(text, m.start(), m.end())
-                    detections.append({
-                        "name": role_canonical,
-                        "type": "inferred",
-                        "weight": WEIGHT_INFERRED,
-                        "activity": m.group(),
-                        "contexts": [context],
-                    })
+                    detections.append(
+                        {
+                            "name": role_canonical,
+                            "type": "inferred",
+                            "weight": WEIGHT_INFERRED,
+                            "activity": m.group(),
+                            "contexts": [context],
+                        }
+                    )
                     seen_roles.add(role_canonical)
 
     return detections
@@ -267,48 +274,241 @@ def _detect_emergent_roles(text, known_roles):
 
     # Common trailing words that regex greedily captures but aren't role names
     trailing_noise = {
-        "for", "is", "are", "was", "were", "in", "on", "at", "to", "of",
-        "and", "or", "the", "a", "an", "who", "that", "this", "with",
-        "all", "por", "para", "que", "com", "do", "da", "dos", "das",
-        "no", "na", "nos", "nas", "de", "em", "um", "uma",
+        "for",
+        "is",
+        "are",
+        "was",
+        "were",
+        "in",
+        "on",
+        "at",
+        "to",
+        "of",
+        "and",
+        "or",
+        "the",
+        "a",
+        "an",
+        "who",
+        "that",
+        "this",
+        "with",
+        "all",
+        "por",
+        "para",
+        "que",
+        "com",
+        "do",
+        "da",
+        "dos",
+        "das",
+        "no",
+        "na",
+        "nos",
+        "nas",
+        "de",
+        "em",
+        "um",
+        "uma",
     }
 
     # Common English words that are NOT role names (broad filter for single-word matches)
     # Emergent detection is aggressive by design; this filter prevents noise.
     _common_non_roles = {
         # Verbs
-        "have", "has", "had", "get", "got", "make", "made", "take", "took",
-        "give", "gave", "want", "need", "know", "think", "say", "said",
-        "go", "went", "come", "came", "see", "saw", "find", "found",
-        "put", "set", "run", "ran", "let", "keep", "kept", "call",
-        "try", "tried", "start", "stop", "pay", "paid", "build", "built",
-        "close", "open", "send", "sent", "sell", "sold", "buy", "bought",
-        "train", "hire", "fire", "qualify", "scale", "grow", "grew",
-        "approach", "handle", "manage", "lead", "drive", "drove",
+        "have",
+        "has",
+        "had",
+        "get",
+        "got",
+        "make",
+        "made",
+        "take",
+        "took",
+        "give",
+        "gave",
+        "want",
+        "need",
+        "know",
+        "think",
+        "say",
+        "said",
+        "go",
+        "went",
+        "come",
+        "came",
+        "see",
+        "saw",
+        "find",
+        "found",
+        "put",
+        "set",
+        "run",
+        "ran",
+        "let",
+        "keep",
+        "kept",
+        "call",
+        "try",
+        "tried",
+        "start",
+        "stop",
+        "pay",
+        "paid",
+        "build",
+        "built",
+        "close",
+        "open",
+        "send",
+        "sent",
+        "sell",
+        "sold",
+        "buy",
+        "bought",
+        "train",
+        "hire",
+        "fire",
+        "qualify",
+        "scale",
+        "grow",
+        "grew",
+        "approach",
+        "handle",
+        "manage",
+        "lead",
+        "drive",
+        "drove",
         # Adjectives / Adverbs
-        "good", "bad", "best", "worst", "better", "worse", "right", "wrong",
-        "big", "small", "long", "short", "high", "low", "fast", "slow",
-        "exact", "same", "different", "many", "much", "more", "most",
-        "less", "least", "only", "just", "really", "very", "even",
-        "enough", "sure", "every", "whole", "entire", "real", "true",
-        "top", "bottom", "front", "back", "full", "early", "late",
+        "good",
+        "bad",
+        "best",
+        "worst",
+        "better",
+        "worse",
+        "right",
+        "wrong",
+        "big",
+        "small",
+        "long",
+        "short",
+        "high",
+        "low",
+        "fast",
+        "slow",
+        "exact",
+        "same",
+        "different",
+        "many",
+        "much",
+        "more",
+        "most",
+        "less",
+        "least",
+        "only",
+        "just",
+        "really",
+        "very",
+        "even",
+        "enough",
+        "sure",
+        "every",
+        "whole",
+        "entire",
+        "real",
+        "true",
+        "top",
+        "bottom",
+        "front",
+        "back",
+        "full",
+        "early",
+        "late",
         # Nouns (generic, not roles)
-        "time", "year", "month", "week", "day", "hour", "number", "money",
-        "way", "thing", "point", "fact", "case", "place", "reason",
-        "result", "end", "problem", "question", "answer", "example",
-        "level", "type", "kind", "sort", "step", "stage", "process",
-        "system", "model", "method", "plan", "goal", "value", "cost",
-        "price", "rate", "deal", "offer", "meeting", "event",
-        "launch", "growth", "revenue", "profit", "loss", "margin",
-        "leads", "pipeline", "funnel", "script", "pitch",
-        "objection", "closing", "follow-up", "outreach", "campaign",
-        "setting", "inbound", "outbound",
+        "time",
+        "year",
+        "month",
+        "week",
+        "day",
+        "hour",
+        "number",
+        "money",
+        "way",
+        "thing",
+        "point",
+        "fact",
+        "case",
+        "place",
+        "reason",
+        "result",
+        "end",
+        "problem",
+        "question",
+        "answer",
+        "example",
+        "level",
+        "type",
+        "kind",
+        "sort",
+        "step",
+        "stage",
+        "process",
+        "system",
+        "model",
+        "method",
+        "plan",
+        "goal",
+        "value",
+        "cost",
+        "price",
+        "rate",
+        "deal",
+        "offer",
+        "meeting",
+        "event",
+        "launch",
+        "growth",
+        "revenue",
+        "profit",
+        "loss",
+        "margin",
+        "leads",
+        "pipeline",
+        "funnel",
+        "script",
+        "pitch",
+        "objection",
+        "closing",
+        "follow-up",
+        "outreach",
+        "campaign",
+        "setting",
+        "inbound",
+        "outbound",
         # Pronouns / Determiners
-        "you", "they", "them", "we", "us", "he", "she", "him", "her",
-        "its", "my", "your", "his", "their", "our", "who", "what",
+        "you",
+        "they",
+        "them",
+        "we",
+        "us",
+        "he",
+        "she",
+        "him",
+        "her",
+        "its",
+        "my",
+        "your",
+        "his",
+        "their",
+        "our",
+        "who",
+        "what",
         # Compound noise
-        "exact-same", "best-possible", "get-your", "train-your",
-        "the-launch", "mortgage-leads",
+        "exact-same",
+        "best-possible",
+        "get-your",
+        "train-your",
+        "the-launch",
+        "mortgage-leads",
     }
 
     for pattern in emergence_data["patterns"]:
@@ -352,7 +552,11 @@ def _detect_emergent_roles(text, known_roles):
             # Multi-word with pronoun/article pattern (e.g. "if-your", "get-your")
             if len(words) >= 2 and any(w in trailing_noise or w in stopwords for w in words):
                 # At least one meaningful word must remain
-                meaningful = [w for w in words if w not in trailing_noise and w not in stopwords and w not in _common_non_roles]
+                meaningful = [
+                    w
+                    for w in words
+                    if w not in trailing_noise and w not in stopwords and w not in _common_non_roles
+                ]
                 if not meaningful:
                     continue
 
@@ -364,13 +568,15 @@ def _detect_emergent_roles(text, known_roles):
                 continue
             seen.add(normalized)
 
-            detections.append({
-                "name": normalized,
-                "type": "emergent",
-                "weight": WEIGHT_EMERGENT,
-                "raw": raw,
-                "contexts": [_extract_context(text, 0, min(100, len(text)))],
-            })
+            detections.append(
+                {
+                    "name": normalized,
+                    "type": "emergent",
+                    "weight": WEIGHT_EMERGENT,
+                    "raw": raw,
+                    "contexts": [_extract_context(text, 0, min(100, len(text)))],
+                }
+            )
 
     return detections
 
@@ -426,8 +632,7 @@ def detect_roles_in_text(text, source_id=None, registry=None):
             else:
                 # Use normalize_entity for known roles (taxonomy lookup)
                 result = normalize_entity(
-                    role_name, "role", registry=registry,
-                    source_id=source_id, auto_save=False
+                    role_name, "role", registry=registry, source_id=source_id, auto_save=False
                 )
                 role_name = result["canonical"]
 
@@ -436,12 +641,14 @@ def detect_roles_in_text(text, source_id=None, registry=None):
         if role_data:
             _update_role_detection(role_data, det, source_id)
 
-        all_detections.append({
-            "role": role_name,
-            "detection_type": det["type"],
-            "weight": det["weight"],
-            "contexts": det.get("contexts", []),
-        })
+        all_detections.append(
+            {
+                "role": role_name,
+                "detection_type": det["type"],
+                "weight": det["weight"],
+                "contexts": det.get("contexts", []),
+            }
+        )
 
     # Check triggers for all detected roles
     triggers = []
@@ -488,9 +695,7 @@ def _update_role_detection(role_data, detection, source_id):
     # Ensure v2.0 fields exist (backward compat)
     if "mention_breakdown" not in role_data:
         old_count = role_data.get("mention_count", 0)
-        role_data["mention_breakdown"] = {
-            "direct": old_count, "inferred": 0, "emergent": 0
-        }
+        role_data["mention_breakdown"] = {"direct": old_count, "inferred": 0, "emergent": 0}
     if "weighted_score" not in role_data:
         role_data["weighted_score"] = float(role_data.get("mention_count", 0))
     if "detection_history" not in role_data:
@@ -502,16 +707,14 @@ def _update_role_detection(role_data, detection, source_id):
 
     # Update total mention_count
     role_data["mention_count"] = (
-        breakdown.get("direct", 0) +
-        breakdown.get("inferred", 0) +
-        breakdown.get("emergent", 0)
+        breakdown.get("direct", 0) + breakdown.get("inferred", 0) + breakdown.get("emergent", 0)
     )
 
     # Recalculate weighted_score
     role_data["weighted_score"] = (
-        breakdown.get("direct", 0) * WEIGHT_DIRECT +
-        breakdown.get("inferred", 0) * WEIGHT_INFERRED +
-        breakdown.get("emergent", 0) * WEIGHT_EMERGENT
+        breakdown.get("direct", 0) * WEIGHT_DIRECT
+        + breakdown.get("inferred", 0) * WEIGHT_INFERRED
+        + breakdown.get("emergent", 0) * WEIGHT_EMERGENT
     )
 
     # Add source
@@ -633,14 +836,17 @@ def detect_roles_in_file(filepath, registry=None, save=True):
 
     # Build summary
     role_summary = []
-    for role, breakdown in sorted(all_detections.items(),
-                                   key=lambda x: sum(x[1].values()), reverse=True):
+    for role, breakdown in sorted(
+        all_detections.items(), key=lambda x: sum(x[1].values()), reverse=True
+    ):
         total = sum(breakdown.values())
-        role_summary.append({
-            "role": role,
-            "total_mentions": total,
-            "breakdown": dict(breakdown),
-        })
+        role_summary.append(
+            {
+                "role": role,
+                "total_mentions": total,
+                "breakdown": dict(breakdown),
+            }
+        )
 
     return {
         "source_id": source_id,
@@ -693,18 +899,23 @@ def scan_all_chunks(registry=None, save=True):
 
     # Build sorted summary
     summary = []
-    for role, breakdown in sorted(all_detections.items(),
-                                   key=lambda x: sum(x[1].values()), reverse=True):
+    for role, breakdown in sorted(
+        all_detections.items(), key=lambda x: sum(x[1].values()), reverse=True
+    ):
         total = sum(breakdown.values())
-        ws = (breakdown.get("direct", 0) * WEIGHT_DIRECT +
-              breakdown.get("inferred", 0) * WEIGHT_INFERRED +
-              breakdown.get("emergent", 0) * WEIGHT_EMERGENT)
-        summary.append({
-            "role": role,
-            "total_mentions": total,
-            "weighted_score": round(ws, 1),
-            "breakdown": dict(breakdown),
-        })
+        ws = (
+            breakdown.get("direct", 0) * WEIGHT_DIRECT
+            + breakdown.get("inferred", 0) * WEIGHT_INFERRED
+            + breakdown.get("emergent", 0) * WEIGHT_EMERGENT
+        )
+        summary.append(
+            {
+                "role": role,
+                "total_mentions": total,
+                "weighted_score": round(ws, 1),
+                "breakdown": dict(breakdown),
+            }
+        )
 
     return {
         "files_scanned": files_scanned,
@@ -810,10 +1021,12 @@ def main():
         print("-" * 74)
         for det in result["roles_detected"]:
             bd = det.get("breakdown", {})
-            print(f"  {det['role']:<28} {det['total_mentions']:>6} "
-                  f"{det['weighted_score']:>7.1f} "
-                  f"{bd.get('direct', 0):>7} {bd.get('inferred', 0):>7} "
-                  f"{bd.get('emergent', 0):>7}")
+            print(
+                f"  {det['role']:<28} {det['total_mentions']:>6} "
+                f"{det['weighted_score']:>7.1f} "
+                f"{bd.get('direct', 0):>7} {bd.get('inferred', 0):>7} "
+                f"{bd.get('emergent', 0):>7}"
+            )
 
         if result.get("new_roles"):
             unique_new = set(d["role"] for d in result["new_roles"])
@@ -824,10 +1037,12 @@ def main():
         if result["triggers_activated"]:
             print(f"\n--- TRIGGERS ACTIVATED ({len(result['triggers_activated'])}) ---")
             for t in result["triggers_activated"]:
-                print(f"  [!] {t['role']}: {t['trigger_type']} "
-                      f"(ws={t.get('weighted_score', '?')}, "
-                      f"tier={t.get('tier', '?')}, "
-                      f"sources={t.get('source_count', '?')})")
+                print(
+                    f"  [!] {t['role']}: {t['trigger_type']} "
+                    f"(ws={t.get('weighted_score', '?')}, "
+                    f"tier={t.get('tier', '?')}, "
+                    f"sources={t.get('source_count', '?')})"
+                )
         else:
             print("\nNo new triggers activated.")
 

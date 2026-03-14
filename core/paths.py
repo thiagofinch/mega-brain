@@ -8,6 +8,7 @@ Usage:
     from core.paths import ROUTING, LOGS, ARTIFACTS
     output_path = ROUTING["audit_report"] / "AUDIT-REPORT.json"
 """
+
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -116,8 +117,18 @@ AGENT_DISCOVERY = AGENTS / "discovery"
 
 # ── BUSINESS UNIT TEMPLATE (12 standard folders per BU) ──────────
 BU_TEMPLATE_DIRS = [
-    "_preserved", "ai", "analytics", "brand", "company", "copy",
-    "design-system", "evidence", "movement", "operations", "products", "tech",
+    "_preserved",
+    "ai",
+    "analytics",
+    "brand",
+    "company",
+    "copy",
+    "design-system",
+    "evidence",
+    "movement",
+    "operations",
+    "products",
+    "tech",
 ]
 
 # ── OUTPUT ROUTING ───────────────────────────────────────────────

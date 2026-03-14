@@ -76,8 +76,7 @@ def score_batch(batch_path: str | Path, batch_id: str | None = None) -> QualityS
     clarity_items = sum([has_headers, has_sections, has_lists, reasonable_length])
     clarity = min(25, int(clarity_items / 4 * 25))
     details["clarity"] = (
-        f"headers={has_headers}, sections={has_sections}, "
-        f"lists={has_lists}, length={line_count}"
+        f"headers={has_headers}, sections={has_sections}, lists={has_lists}, length={line_count}"
     )
 
     # Completeness (0-25): Check expected sections
@@ -154,8 +153,16 @@ def score_agent(agent_dir: str | Path) -> QualityScore:
     if agent_md.exists():
         text = agent_md.read_text(encoding="utf-8")
         v3_parts = [
-            "COMPOSICAO", "IDENTIDADE", "NEURAL", "OPERACIONAL", "VOZ",
-            "DECISAO", "CONEXAO", "DEBATE", "MEMORIA", "EXPANSAO",
+            "COMPOSICAO",
+            "IDENTIDADE",
+            "NEURAL",
+            "OPERACIONAL",
+            "VOZ",
+            "DECISAO",
+            "CONEXAO",
+            "DEBATE",
+            "MEMORIA",
+            "EXPANSAO",
         ]
         parts_found = sum(1 for p in v3_parts if p.upper() in text.upper())
         completeness = min(25, int(parts_found / len(v3_parts) * 25))

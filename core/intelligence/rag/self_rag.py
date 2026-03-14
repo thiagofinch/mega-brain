@@ -24,14 +24,24 @@ import re
 # ---------------------------------------------------------------------------
 # CONFIG
 # ---------------------------------------------------------------------------
-MIN_CLAIM_LENGTH = 20         # Minimum chars for a claim
-MATCH_THRESHOLD = 0.25        # Minimum overlap score to consider supported
-FAITHFULNESS_TARGET = 0.9     # Target faithfulness score
+MIN_CLAIM_LENGTH = 20  # Minimum chars for a claim
+MATCH_THRESHOLD = 0.25  # Minimum overlap score to consider supported
+FAITHFULNESS_TARGET = 0.9  # Target faithfulness score
 SPECULATION_MARKERS = [
-    "provavelmente", "talvez", "acredito que", "penso que",
-    "probably", "maybe", "i think", "i believe",
-    "possivelmente", "possibly", "might", "could be",
-    "na minha opiniao", "in my opinion",
+    "provavelmente",
+    "talvez",
+    "acredito que",
+    "penso que",
+    "probably",
+    "maybe",
+    "i think",
+    "i believe",
+    "possivelmente",
+    "possibly",
+    "might",
+    "could be",
+    "na minha opiniao",
+    "in my opinion",
 ]
 
 
@@ -49,7 +59,7 @@ def extract_claims(response: str) -> list[dict]:
     claims = []
 
     # Split into sentences
-    sentences = re.split(r'(?<=[.!?])\s+', response)
+    sentences = re.split(r"(?<=[.!?])\s+", response)
 
     for i, sentence in enumerate(sentences):
         sentence = sentence.strip()
@@ -61,7 +71,7 @@ def extract_claims(response: str) -> list[dict]:
             continue
 
         # Skip meta-commentary
-        if re.match(r'^(?:vou|let me|aqui|here|note|nota)', sentence.lower()):
+        if re.match(r"^(?:vou|let me|aqui|here|note|nota)", sentence.lower()):
             continue
 
         # Classify claim type
@@ -75,14 +85,16 @@ def extract_claims(response: str) -> list[dict]:
                 break
 
         # Check for RAG citations (already supported)
-        has_citation = bool(re.search(r'\[RAG:', sentence))
+        has_citation = bool(re.search(r"\[RAG:", sentence))
 
-        claims.append({
-            "text": sentence,
-            "type": claim_type,
-            "line": i + 1,
-            "has_citation": has_citation,
-        })
+        claims.append(
+            {
+                "text": sentence,
+                "type": claim_type,
+                "line": i + 1,
+                "has_citation": has_citation,
+            }
+        )
 
     return claims
 
@@ -104,13 +116,11 @@ def verify_claim(claim: str, chunks: list[str]) -> dict:
         }
     """
     if not chunks:
-        return {"supported": False, "score": 0.0,
-                "best_chunk_idx": -1, "matching_terms": []}
+        return {"supported": False, "score": 0.0, "best_chunk_idx": -1, "matching_terms": []}
 
     claim_tokens = _tokenize(claim)
     if not claim_tokens:
-        return {"supported": False, "score": 0.0,
-                "best_chunk_idx": -1, "matching_terms": []}
+        return {"supported": False, "score": 0.0, "best_chunk_idx": -1, "matching_terms": []}
 
     best_score = 0.0
     best_idx = -1
@@ -145,8 +155,8 @@ def verify_claim(claim: str, chunks: list[str]) -> dict:
                 score += 0.1 * phrase_len * len(phrase_overlap)
 
         # Bonus for number matches
-        claim_numbers = set(re.findall(r'\d+(?:\.\d+)?%?', claim_lower))
-        chunk_numbers = set(re.findall(r'\d+(?:\.\d+)?%?', chunk_lower))
+        claim_numbers = set(re.findall(r"\d+(?:\.\d+)?%?", claim_lower))
+        chunk_numbers = set(re.findall(r"\d+(?:\.\d+)?%?", chunk_lower))
         number_overlap = claim_numbers & chunk_numbers
         if number_overlap:
             score += 0.2 * len(number_overlap)
@@ -208,12 +218,14 @@ def verify_response(
     for claim in claims:
         if claim["type"] == "speculative":
             speculative_count += 1
-            verified_claims.append({
-                "text": claim["text"],
-                "type": "speculative",
-                "supported": None,  # Not verified (explicitly speculative)
-                "score": None,
-            })
+            verified_claims.append(
+                {
+                    "text": claim["text"],
+                    "type": "speculative",
+                    "supported": None,  # Not verified (explicitly speculative)
+                    "score": None,
+                }
+            )
             continue
 
         # Verify factual claims
@@ -230,14 +242,16 @@ def verify_response(
         else:
             unsupported_count += 1
 
-        verified_claims.append({
-            "text": claim["text"],
-            "type": claim["type"],
-            "supported": verification["supported"],
-            "score": verification["score"],
-            "source_chunk": source_chunk,
-            "matching_terms": verification["matching_terms"],
-        })
+        verified_claims.append(
+            {
+                "text": claim["text"],
+                "type": claim["type"],
+                "supported": verification["supported"],
+                "score": verification["score"],
+                "source_chunk": source_chunk,
+                "matching_terms": verification["matching_terms"],
+            }
+        )
 
     # Calculate faithfulness
     factual_claims = supported_count + unsupported_count
@@ -277,12 +291,14 @@ def suggest_corrections(verification: dict) -> list[dict]:
 
     for claim in verification.get("claims", []):
         if claim.get("supported") is False:
-            corrections.append({
-                "original": claim["text"],
-                "issue": "unsupported_by_context",
-                "suggestion": "Mark as speculation or remove",
-                "score": claim.get("score", 0),
-            })
+            corrections.append(
+                {
+                    "original": claim["text"],
+                    "issue": "unsupported_by_context",
+                    "suggestion": "Mark as speculation or remove",
+                    "score": claim.get("score", 0),
+                }
+            )
 
     return corrections
 
@@ -292,23 +308,23 @@ def suggest_corrections(verification: dict) -> list[dict]:
 # ---------------------------------------------------------------------------
 def _tokenize(text: str) -> list[str]:
     """Simple tokenizer for verification."""
-    return re.findall(r'[a-z\u00e0-\u024f]{2,}', text.lower())
+    return re.findall(r"[a-z\u00e0-\u024f]{2,}", text.lower())
 
 
 def _get_ngrams(tokens: list[str], n: int) -> set:
     """Get n-grams from token list."""
     if len(tokens) < n:
         return set()
-    return {tuple(tokens[i:i+n]) for i in range(len(tokens) - n + 1)}
+    return {tuple(tokens[i : i + n]) for i in range(len(tokens) - n + 1)}
 
 
 # ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
 def main():
-    print(f"\n{'='*60}")
+    print(f"\n{'=' * 60}")
     print("SELF-RAG VERIFICATION")
-    print(f"{'='*60}\n")
+    print(f"{'=' * 60}\n")
 
     # Demo verification
     demo_response = """
@@ -359,7 +375,7 @@ def main():
             print(f"  - {corr['original'][:60]}...")
             print(f"    Issue: {corr['issue']}")
 
-    print(f"\n{'='*60}\n")
+    print(f"\n{'=' * 60}\n")
 
 
 if __name__ == "__main__":

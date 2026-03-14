@@ -56,13 +56,15 @@ def partition_files(
         for i in range(0, len(group_files), max_size):
             chunk = group_files[i : i + max_size]
             batch_id = f"BATCH-{batch_num:03d}"
-            batches.append({
-                "id": batch_id,
-                "source_hint": source,
-                "files": [str(f) for f in chunk],
-                "count": len(chunk),
-                "total_size": sum(f.stat().st_size for f in chunk if f.exists()),
-            })
+            batches.append(
+                {
+                    "id": batch_id,
+                    "source_hint": source,
+                    "files": [str(f) for f in chunk],
+                    "count": len(chunk),
+                    "total_size": sum(f.stat().st_size for f in chunk if f.exists()),
+                }
+            )
             batch_num += 1
 
     return batches

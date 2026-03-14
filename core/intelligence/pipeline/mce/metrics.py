@@ -304,8 +304,7 @@ class MetricsTracker:
                 "total_duration_seconds": round(self.total_duration_seconds, 1),
                 "phases_completed": self.phases_completed,
                 "phases": {
-                    name: round(timer.duration_seconds, 1)
-                    for name, timer in self._phases.items()
+                    name: round(timer.duration_seconds, 1) for name, timer in self._phases.items()
                 },
             }
             with open(log_path, "a", encoding="utf-8") as f:

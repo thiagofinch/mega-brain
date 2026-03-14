@@ -54,17 +54,11 @@ class FirefliesConfig:
     page_size: int = 50
 
     # Destinations — route to knowledge bucket inboxes (3-bucket arch)
-    empresa_dir: Path = field(
-        default_factory=lambda: ROUTING["business_inbox"]
-    )
-    pessoal_dir: Path = field(
-        default_factory=lambda: ROUTING["personal_inbox"]
-    )
+    empresa_dir: Path = field(default_factory=lambda: ROUTING["business_inbox"])
+    pessoal_dir: Path = field(default_factory=lambda: ROUTING["personal_inbox"])
 
     # State & Logs
-    state_path: Path = field(
-        default_factory=lambda: MISSION_CONTROL / "FIREFLIES-STATE.json"
-    )
+    state_path: Path = field(default_factory=lambda: MISSION_CONTROL / "FIREFLIES-STATE.json")
     log_dir: Path = field(
         default_factory=lambda: LOGS / "read-ai-harvest"  # shared log dir
     )
@@ -76,8 +70,7 @@ class FirefliesConfig:
             errors.append("FIREFLIES_API_KEY is required")
         if not self.company_domains:
             errors.append(
-                "Company domains are required "
-                "(set READ_AI_COMPANY_DOMAINS or COMPANY_DOMAINS)"
+                "Company domains are required (set READ_AI_COMPANY_DOMAINS or COMPANY_DOMAINS)"
             )
         return errors
 
@@ -158,9 +151,7 @@ def load_config() -> FirefliesConfig:
         company_domains=domains,
         company_keywords=keywords,
         tag_prefix=os.getenv("FIREFLIES_TAG_PREFIX", "MEET"),
-        poll_interval_minutes=int(
-            os.getenv("FIREFLIES_POLL_INTERVAL", "5")
-        ),
+        poll_interval_minutes=int(os.getenv("FIREFLIES_POLL_INTERVAL", "5")),
         page_size=int(os.getenv("FIREFLIES_PAGE_SIZE", "50")),
     )
     return cfg

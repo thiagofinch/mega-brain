@@ -3,12 +3,15 @@ Speaker Gate — QG-SPEAKER-001
 Validates presence of speaker labels in a text transcript.
 Part of phase_0: PRE_VALIDATION in wf-ingest.yaml.
 """
+
 import re
 from pathlib import Path
 
 LABEL_PATTERNS = [
-    re.compile(r"^[A-ZÀ-Ú][a-zà-ú\s\-]{2,40}:\s", re.MULTILINE),   # "Nome Sobrenome: texto"
-    re.compile(r"^\[?\d{1,2}:\d{2}\]?\s+[A-ZÀ-Ú][a-zà-ú\s]{2,30}:", re.MULTILINE),  # "[00:00] Nome:"
+    re.compile(r"^[A-ZÀ-Ú][a-zà-ú\s\-]{2,40}:\s", re.MULTILINE),  # "Nome Sobrenome: texto"
+    re.compile(
+        r"^\[?\d{1,2}:\d{2}\]?\s+[A-ZÀ-Ú][a-zà-ú\s]{2,30}:", re.MULTILINE
+    ),  # "[00:00] Nome:"
     re.compile(r"^(Speaker\s+\d+|SPEAKER_\d+):", re.MULTILINE | re.IGNORECASE),  # "Speaker 1:"
 ]
 
@@ -91,6 +94,7 @@ def run_gate(file_path: str, auto_mode: bool = False) -> dict:
 
 if __name__ == "__main__":
     import sys
+
     if len(sys.argv) < 2:
         print("Usage: python speaker_gate.py <transcript_file>")
         sys.exit(1)

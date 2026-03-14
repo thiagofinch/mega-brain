@@ -20,29 +20,31 @@ from pathlib import Path
 
 def get_project_dir():
     """Obtem o diretorio do projeto."""
-    return os.environ.get('CLAUDE_PROJECT_DIR', os.getcwd())
+    return os.environ.get("CLAUDE_PROJECT_DIR", os.getcwd())
+
 
 def load_memory():
     """Carrega JARVIS-MEMORY.md atual."""
     project_dir = get_project_dir()
-    memory_path = Path(project_dir) / '.claude' / 'jarvis' / 'JARVIS-MEMORY.md'
+    memory_path = Path(project_dir) / ".claude" / "jarvis" / "JARVIS-MEMORY.md"
 
     if memory_path.exists():
-        with open(memory_path, encoding='utf-8') as f:
+        with open(memory_path, encoding="utf-8") as f:
             return f.read()
     return None
+
 
 def detect_decision(message):
     """Detecta se a mensagem contem uma decisao importante."""
     decision_patterns = [
-        r'decid[io]',
-        r'escolh[eo]',
-        r'prefer[eo]',
-        r'vamos (usar|fazer|implementar)',
-        r'aprovo',
-        r'confirmo',
-        r'sim,?\s*(pode|faz|continua)',
-        r'nao,?\s*(nao pode|nao faz)',
+        r"decid[io]",
+        r"escolh[eo]",
+        r"prefer[eo]",
+        r"vamos (usar|fazer|implementar)",
+        r"aprovo",
+        r"confirmo",
+        r"sim,?\s*(pode|faz|continua)",
+        r"nao,?\s*(nao pode|nao faz)",
     ]
 
     message_lower = message.lower()
@@ -51,15 +53,16 @@ def detect_decision(message):
             return True
     return False
 
+
 def detect_preference(message):
     """Detecta se a mensagem demonstra uma preferencia."""
     preference_patterns = [
-        r'gosto (de|quando)',
-        r'prefiro',
-        r'sempre (quero|faz)',
-        r'nunca (quero|faz)',
-        r'melhor (assim|dessa forma)',
-        r'perfeito',
+        r"gosto (de|quando)",
+        r"prefiro",
+        r"sempre (quero|faz)",
+        r"nunca (quero|faz)",
+        r"melhor (assim|dessa forma)",
+        r"perfeito",
     ]
 
     message_lower = message.lower()
@@ -67,6 +70,7 @@ def detect_preference(message):
         if re.search(pattern, message_lower):
             return True
     return False
+
 
 def extract_decision_summary(message):
     """Extrai um resumo da decisao."""
@@ -76,75 +80,76 @@ def extract_decision_summary(message):
         summary += "..."
     return summary
 
+
 def update_memory_file(section, content):
     """Atualiza uma secao especifica do JARVIS-MEMORY.md."""
     project_dir = get_project_dir()
-    memory_path = Path(project_dir) / '.claude' / 'jarvis' / 'JARVIS-MEMORY.md'
+    memory_path = Path(project_dir) / ".claude" / "jarvis" / "JARVIS-MEMORY.md"
 
     if not memory_path.exists():
         return False
 
-    with open(memory_path, encoding='utf-8') as f:
+    with open(memory_path, encoding="utf-8") as f:
         memory = f.read()
 
     # Encontrar secao de decisoes e adicionar
-    if section == 'decisions':
+    if section == "decisions":
         # Procurar por "### Decisoes Importantes"
-        if '### Decisoes Importantes' in memory:
+        if "### Decisoes Importantes" in memory:
             # Adicionar nova decisao
-            date_str = datetime.now().strftime('%Y-%m-%d')
+            date_str = datetime.now().strftime("%Y-%m-%d")
             new_entry = f"\n{date_str}:\n├─ {content}\n"
 
             # Inserir apos o header da secao
-            parts = memory.split('### Decisoes Importantes')
+            parts = memory.split("### Decisoes Importantes")
             if len(parts) == 2:
                 # Encontrar o bloco de codigo
-                if '```' in parts[1]:
-                    code_start = parts[1].find('```')
-                    code_end = parts[1].find('```', code_start + 3)
+                if "```" in parts[1]:
+                    code_start = parts[1].find("```")
+                    code_end = parts[1].find("```", code_start + 3)
                     if code_end > code_start:
                         # Inserir antes do fechamento do bloco
                         before = parts[1][:code_end]
                         after = parts[1][code_end:]
                         parts[1] = before + new_entry + after
-                        memory = '### Decisoes Importantes'.join(parts)
+                        memory = "### Decisoes Importantes".join(parts)
 
     # Atualizar timestamp
     memory = re.sub(
-        r'\*Ultima atualizacao: \d{4}-\d{2}-\d{2}\*',
-        f'*Ultima atualizacao: {datetime.now().strftime("%Y-%m-%d")}*',
-        memory
+        r"\*Ultima atualizacao: \d{4}-\d{2}-\d{2}\*",
+        f"*Ultima atualizacao: {datetime.now().strftime('%Y-%m-%d')}*",
+        memory,
     )
 
     # Incrementar contador de interacoes
-    match = re.search(r'\*Interacoes registradas: (\d+)\*', memory)
+    match = re.search(r"\*Interacoes registradas: (\d+)\*", memory)
     if match:
         count = int(match.group(1)) + 1
         memory = re.sub(
-            r'\*Interacoes registradas: \d+\*',
-            f'*Interacoes registradas: {count}*',
-            memory
+            r"\*Interacoes registradas: \d+\*", f"*Interacoes registradas: {count}*", memory
         )
 
-    with open(memory_path, 'w', encoding='utf-8') as f:
+    with open(memory_path, "w", encoding="utf-8") as f:
         f.write(memory)
 
     return True
 
+
 def log_update(update_type, content):
     """Loga a atualizacao de memoria."""
     project_dir = get_project_dir()
-    log_path = Path(project_dir) / 'logs' / 'memory_updates.jsonl'
+    log_path = Path(project_dir) / "logs" / "memory_updates.jsonl"
     log_path.parent.mkdir(parents=True, exist_ok=True)
 
     log_entry = {
-        'timestamp': datetime.now().isoformat(),
-        'type': update_type,
-        'content': content[:200]
+        "timestamp": datetime.now().isoformat(),
+        "type": update_type,
+        "content": content[:200],
     }
 
-    with open(log_path, 'a', encoding='utf-8') as f:
-        f.write(json.dumps(log_entry, ensure_ascii=False) + '\n')
+    with open(log_path, "a", encoding="utf-8") as f:
+        f.write(json.dumps(log_entry, ensure_ascii=False) + "\n")
+
 
 def main():
     """Funcao principal do hook."""
@@ -152,21 +157,21 @@ def main():
         # Ler input do hook
         input_data = sys.stdin.read()
         if not input_data:
-            print(json.dumps({'continue': True}))
+            print(json.dumps({"continue": True}))
             return
 
         hook_input = json.loads(input_data)
 
         # Extrair mensagem do usuario (se disponivel)
-        message = hook_input.get('message', '')
+        message = hook_input.get("message", "")
         if not message:
             # Tentar extrair de outros campos
-            message = hook_input.get('content', '')
+            message = hook_input.get("content", "")
             if not message:
-                message = hook_input.get('text', '')
+                message = hook_input.get("text", "")
 
         if not message:
-            print(json.dumps({'continue': True}))
+            print(json.dumps({"continue": True}))
             return
 
         updated = False
@@ -174,30 +179,25 @@ def main():
         # Detectar decisoes
         if detect_decision(message):
             summary = extract_decision_summary(message)
-            if update_memory_file('decisions', summary):
-                log_update('decision', summary)
+            if update_memory_file("decisions", summary):
+                log_update("decision", summary)
                 updated = True
 
         # Detectar preferencias
         if detect_preference(message):
             summary = extract_decision_summary(message)
-            log_update('preference', summary)
+            log_update("preference", summary)
             updated = True
 
         # Output
-        output = {
-            'continue': True,
-            'memory_updated': updated
-        }
+        output = {"continue": True, "memory_updated": updated}
 
         print(json.dumps(output))
 
     except Exception as e:
         # Nao bloquear em caso de erro
-        print(json.dumps({
-            'continue': True,
-            'error': str(e)
-        }))
+        print(json.dumps({"continue": True, "error": str(e)}))
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()

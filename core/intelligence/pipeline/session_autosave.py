@@ -14,7 +14,9 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
-MEGA_BRAIN_ROOT = os.getenv("MEGA_BRAIN_ROOT", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+MEGA_BRAIN_ROOT = os.getenv(
+    "MEGA_BRAIN_ROOT", os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+)
 SESSION_DIR = Path(MEGA_BRAIN_ROOT) / ".claude" / "sessions"
 AUTOSAVE_LOG = SESSION_DIR / "autosave-activity.jsonl"
 

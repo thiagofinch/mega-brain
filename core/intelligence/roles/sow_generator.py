@@ -43,24 +43,44 @@ SOW_LOG_PATH = BASE_DIR / "logs" / "sow_generation.jsonl"
 ROLE_EXECUTOR_HINTS = {
     # Roles that are typically Worker (predictable, function-like)
     "worker_indicators": [
-        "data entry", "report", "dashboard", "scheduling",
-        "email sequence", "auto-responder", "template",
+        "data entry",
+        "report",
+        "dashboard",
+        "scheduling",
+        "email sequence",
+        "auto-responder",
+        "template",
     ],
     # Roles that are typically Agent (need NLP, context understanding)
     "agent_indicators": [
-        "content creation", "copywriting", "social media",
-        "research", "analysis", "strategy",
+        "content creation",
+        "copywriting",
+        "social media",
+        "research",
+        "analysis",
+        "strategy",
     ],
     # Roles that are typically Hybrid (strategic + AI-assistable)
     "hybrid_indicators": [
-        "sales", "closing", "negotiation", "pitch",
-        "hiring", "interview", "management", "leadership",
-        "consulting", "coaching",
+        "sales",
+        "closing",
+        "negotiation",
+        "pitch",
+        "hiring",
+        "interview",
+        "management",
+        "leadership",
+        "consulting",
+        "coaching",
     ],
     # Roles that are typically Human (high-stakes, judgment-critical)
     "human_indicators": [
-        "legal", "compliance", "financial decision",
-        "firing", "termination", "crisis",
+        "legal",
+        "compliance",
+        "financial decision",
+        "firing",
+        "termination",
+        "crisis",
     ],
 }
 
@@ -89,10 +109,10 @@ DOMAIN_EXECUTOR_DEFAULTS = {
 
 # Autonomy levels by executor type
 AUTONOMY_LEVELS = {
-    "Worker": 90,     # Near-full automation
-    "Agent": 70,      # AI executes, human monitors
-    "Hybrid": 50,     # AI prepares, human decides
-    "Human": 10,      # Human drives, AI assists
+    "Worker": 90,  # Near-full automation
+    "Agent": 70,  # AI executes, human monitors
+    "Hybrid": 50,  # AI prepares, human decides
+    "Human": 10,  # Human drives, AI assists
 }
 
 
@@ -123,13 +143,12 @@ def generate_sow(role_name, registry=None):
 
     # Taxonomy domains
     if not domain_ids and cargo_taxonomy:
-        domain_ids = (cargo_taxonomy.get("dominios_primarios", []) +
-                      cargo_taxonomy.get("dominios_secundarios", []))
+        domain_ids = cargo_taxonomy.get("dominios_primarios", []) + cargo_taxonomy.get(
+            "dominios_secundarios", []
+        )
 
     # Executor Decision
-    executor_decision = _evaluate_executor_type(
-        role_name, responsibilities, domain_ids, role_data
-    )
+    executor_decision = _evaluate_executor_type(role_name, responsibilities, domain_ids, role_data)
     executor_type = executor_decision["result"]
     autonomy = AUTONOMY_LEVELS.get(executor_type, 50)
 
@@ -139,7 +158,6 @@ def generate_sow(role_name, registry=None):
         "canonical_name": role_name.replace("-", " ").title(),
         "version": "1.0.0",
         "generated_at": datetime.now(UTC).isoformat(),
-
         # === AI CONFIG ===
         "ai_config": {
             "executor_type": executor_type,
@@ -149,7 +167,6 @@ def generate_sow(role_name, registry=None):
             "decision_authority": _decision_authority(executor_type),
             "escalation_triggers": _escalation_triggers(executor_type, role_name),
         },
-
         # === HUMAN CONFIG ===
         "human_config": {
             "job_title": role_name.replace("-", " ").title(),
@@ -160,7 +177,6 @@ def generate_sow(role_name, registry=None):
             "kpis": _suggest_kpis(role_name, domain_ids),
             "skills_required": _suggest_skills(role_name, domain_ids),
         },
-
         # === SHARED ===
         "shared": {
             "domains": domain_ids,
@@ -168,10 +184,8 @@ def generate_sow(role_name, registry=None):
             "frameworks_used": [],  # Populated by skill_generator later
             "knowledge_sources": sources[:10],
         },
-
         # === EXECUTOR DECISION ===
         "executor_decision": executor_decision,
-
         # === METADATA ===
         "metadata": {
             "weighted_score": weighted_score,
@@ -215,84 +229,98 @@ def generate_sow_markdown(sow):
     for tool in ai["tools_required"]:
         lines.append(f"- {tool}")
 
-    lines.extend([
-        "",
-        "### Tasks Assigned",
-    ])
+    lines.extend(
+        [
+            "",
+            "### Tasks Assigned",
+        ]
+    )
     for task in ai["tasks_assigned"]:
         lines.append(f"- {task}")
 
-    lines.extend([
-        "",
-        "### Escalation Triggers",
-    ])
+    lines.extend(
+        [
+            "",
+            "### Escalation Triggers",
+        ]
+    )
     for trigger in ai["escalation_triggers"]:
         lines.append(f"- {trigger}")
 
-    lines.extend([
-        "",
-        "---",
-        "",
-        "## Job Description (Human)",
-        "",
-        f"**Job Title:** {human['job_title']}",
-        f"**Department:** {human['department']}",
-        f"**Reports To:** {human['reports_to'] or 'TBD'}",
-    ])
+    lines.extend(
+        [
+            "",
+            "---",
+            "",
+            "## Job Description (Human)",
+            "",
+            f"**Job Title:** {human['job_title']}",
+            f"**Department:** {human['department']}",
+            f"**Reports To:** {human['reports_to'] or 'TBD'}",
+        ]
+    )
 
     if human["manages"]:
         lines.append(f"**Manages:** {', '.join(human['manages'])}")
 
-    lines.extend([
-        "",
-        "### Responsibilities",
-    ])
+    lines.extend(
+        [
+            "",
+            "### Responsibilities",
+        ]
+    )
     for resp in human["responsibilities"]:
         lines.append(f"- {resp}")
 
-    lines.extend([
-        "",
-        "### KPIs",
-    ])
+    lines.extend(
+        [
+            "",
+            "### KPIs",
+        ]
+    )
     for kpi in human["kpis"]:
         lines.append(f"- {kpi}")
 
-    lines.extend([
-        "",
-        "### Skills Required",
-    ])
+    lines.extend(
+        [
+            "",
+            "### Skills Required",
+        ]
+    )
     for skill in human["skills_required"]:
         lines.append(f"- {skill}")
 
-    lines.extend([
-        "",
-        "---",
-        "",
-        "## Executor Decision Analysis",
-        "",
-        "| Question | Answer |",
-        "|----------|--------|",
-        f"| 1. Output 100% previsivel? | {'Sim' if ed['question_1_predictable'] else 'Nao'} |",
-        f"| 2. Pode ser funcao pura? | {'Sim' if ed['question_2_pure_function'] else 'Nao'} |",
-        f"| 3. Precisa NLP? | {'Sim' if ed['question_3_nlp_required'] else 'Nao'} |",
-        f"| 4. Impacto de erro? | {ed['question_4_error_impact']} |",
-        f"| 5. Requer julgamento estrategico? | {'Sim' if ed['question_5_strategic'] else 'Nao'} |",
-        f"| 6. IA pode assistir? | {'Sim' if ed['question_6_ai_assist'] else 'Nao'} |",
-        "",
-        f"**Result:** {ed['result']}",
-        f"**Rationale:** {ed['rationale']}",
-        "",
-        "---",
-        "",
-        "## Shared Context",
-        "",
-        f"**Domains:** {', '.join(shared['domains'])}",
-        f"**Sources:** {sow['metadata']['source_count']}",
-        f"**Weighted Score:** {sow['metadata']['weighted_score']}",
-        "",
-        "---",
-        f"Auto-generated by Mega Brain Intelligence Layer | {sow['generated_at'][:10]}",
-    ])
+    lines.extend(
+        [
+            "",
+            "---",
+            "",
+            "## Executor Decision Analysis",
+            "",
+            "| Question | Answer |",
+            "|----------|--------|",
+            f"| 1. Output 100% previsivel? | {'Sim' if ed['question_1_predictable'] else 'Nao'} |",
+            f"| 2. Pode ser funcao pura? | {'Sim' if ed['question_2_pure_function'] else 'Nao'} |",
+            f"| 3. Precisa NLP? | {'Sim' if ed['question_3_nlp_required'] else 'Nao'} |",
+            f"| 4. Impacto de erro? | {ed['question_4_error_impact']} |",
+            f"| 5. Requer julgamento estrategico? | {'Sim' if ed['question_5_strategic'] else 'Nao'} |",
+            f"| 6. IA pode assistir? | {'Sim' if ed['question_6_ai_assist'] else 'Nao'} |",
+            "",
+            f"**Result:** {ed['result']}",
+            f"**Rationale:** {ed['rationale']}",
+            "",
+            "---",
+            "",
+            "## Shared Context",
+            "",
+            f"**Domains:** {', '.join(shared['domains'])}",
+            f"**Sources:** {sow['metadata']['source_count']}",
+            f"**Weighted Score:** {sow['metadata']['weighted_score']}",
+            "",
+            "---",
+            f"Auto-generated by Mega Brain Intelligence Layer | {sow['generated_at'][:10]}",
+        ]
+    )
 
     return "\n".join(lines)
 
@@ -324,17 +352,21 @@ def generate_all_sows(registry=None, save=True):
             role_data["executor_type"] = sow["ai_config"]["executor_type"]
             role_data["autonomy_level"] = sow["ai_config"]["autonomy_level"]
 
-            generated.append({
-                "role": role_name,
-                "executor_type": sow["ai_config"]["executor_type"],
-                "autonomy": sow["ai_config"]["autonomy_level"],
-                "weighted_score": ws,
-            })
+            generated.append(
+                {
+                    "role": role_name,
+                    "executor_type": sow["ai_config"]["executor_type"],
+                    "autonomy": sow["ai_config"]["autonomy_level"],
+                    "weighted_score": ws,
+                }
+            )
         else:
-            skipped.append({
-                "role": role_name,
-                "reason": f"ws={ws}, sources={len(sources)}",
-            })
+            skipped.append(
+                {
+                    "role": role_name,
+                    "reason": f"ws={ws}, sources={len(sources)}",
+                }
+            )
 
     if save:
         save_registry(registry)
@@ -397,7 +429,9 @@ def _evaluate_executor_type(role_name, responsibilities, domain_ids, role_data):
     else:
         # Fallback: use domain default
         result = _domain_default_executor(domain_ids)
-        rationale = f"Classificacao por dominio primario ({domain_ids[0] if domain_ids else 'geral'})."
+        rationale = (
+            f"Classificacao por dominio primario ({domain_ids[0] if domain_ids else 'geral'})."
+        )
 
     return {
         "question_1_predictable": q1,
@@ -413,16 +447,31 @@ def _evaluate_executor_type(role_name, responsibilities, domain_ids, role_data):
 
 def _is_output_predictable(role_lower, resp_text):
     """Q1: Is output 100% predictable?"""
-    predictable_keywords = ["data entry", "report generation", "template",
-                            "scheduling", "auto-", "automated"]
+    predictable_keywords = [
+        "data entry",
+        "report generation",
+        "template",
+        "scheduling",
+        "auto-",
+        "automated",
+    ]
     return any(kw in role_lower or kw in resp_text for kw in predictable_keywords)
 
 
 def _requires_nlp(role_lower, resp_text, domain_ids):
     """Q3: Does it require NLP?"""
     nlp_domains = {"copywriting", "content", "marketing", "vendas", "outbound"}
-    nlp_keywords = ["write", "create", "draft", "respond", "communicate",
-                     "pitch", "present", "negotiate", "coach"]
+    nlp_keywords = [
+        "write",
+        "create",
+        "draft",
+        "respond",
+        "communicate",
+        "pitch",
+        "present",
+        "negotiate",
+        "coach",
+    ]
     has_nlp_domain = bool(set(domain_ids) & nlp_domains)
     has_nlp_keyword = any(kw in resp_text for kw in nlp_keywords)
     return has_nlp_domain or has_nlp_keyword
@@ -441,10 +490,29 @@ def _error_impact(role_lower, domain_ids):
 
 def _requires_strategic_judgment(role_lower, resp_text, domain_ids):
     """Q5: Requires strategic judgment?"""
-    strategic_keywords = ["strategy", "decision", "judgment", "evaluate",
-                          "negotiate", "hire", "fire", "budget", "prioritize"]
-    strategic_roles = ["manager", "director", "head", "lead", "chief", "vp",
-                       "cro", "cmo", "coo", "cfo"]
+    strategic_keywords = [
+        "strategy",
+        "decision",
+        "judgment",
+        "evaluate",
+        "negotiate",
+        "hire",
+        "fire",
+        "budget",
+        "prioritize",
+    ]
+    strategic_roles = [
+        "manager",
+        "director",
+        "head",
+        "lead",
+        "chief",
+        "vp",
+        "cro",
+        "cmo",
+        "coo",
+        "cfo",
+    ]
     has_strategic_keyword = any(kw in resp_text for kw in strategic_keywords)
     is_strategic_role = any(sr in role_lower for sr in strategic_roles)
     return has_strategic_keyword or is_strategic_role
@@ -565,12 +633,18 @@ def _suggest_skills(role_name, domain_ids):
 def _primary_department(domain_ids):
     """Map primary domain to department name."""
     dept_map = {
-        "vendas": "Sales", "outbound": "Sales",
-        "marketing": "Marketing", "copywriting": "Marketing",
-        "content": "Content", "growth": "Growth/Marketing",
-        "operations": "Operations", "technology": "Engineering",
-        "hiring": "Human Resources", "management": "Management",
-        "design": "Design", "legal": "Legal",
+        "vendas": "Sales",
+        "outbound": "Sales",
+        "marketing": "Marketing",
+        "copywriting": "Marketing",
+        "content": "Content",
+        "growth": "Growth/Marketing",
+        "operations": "Operations",
+        "technology": "Engineering",
+        "hiring": "Human Resources",
+        "management": "Management",
+        "design": "Design",
+        "legal": "Legal",
     }
     for d in domain_ids:
         if d in dept_map:
@@ -598,8 +672,12 @@ def _escalation_triggers(executor_type, role_name):
     elif executor_type == "Agent":
         return ["Confianca < 70%", "Erro repetido 2x", "Caso nao coberto por regras"]
     elif executor_type == "Hybrid":
-        return ["Decisao acima do threshold de autonomia", "Excecao de processo",
-                "Impacto financeiro > threshold", "Conflito entre regras"]
+        return [
+            "Decisao acima do threshold de autonomia",
+            "Excecao de processo",
+            "Impacto financeiro > threshold",
+            "Conflito entre regras",
+        ]
     elif executor_type == "Human":
         return ["IA detecta inconsistencia", "Prazo critico", "Compliance check"]
     return []
@@ -627,10 +705,18 @@ def _domain_dir(sow):
     """Determine directory name for SOW storage."""
     domains = sow["shared"]["domains"]
     domain_to_dir = {
-        "vendas": "sales", "outbound": "sales", "marketing": "marketing",
-        "copywriting": "marketing", "content": "content", "growth": "growth",
-        "operations": "operations", "technology": "tech", "hiring": "hr",
-        "management": "management", "design": "design", "legal": "legal",
+        "vendas": "sales",
+        "outbound": "sales",
+        "marketing": "marketing",
+        "copywriting": "marketing",
+        "content": "content",
+        "growth": "growth",
+        "operations": "operations",
+        "technology": "tech",
+        "hiring": "hr",
+        "management": "management",
+        "design": "design",
+        "legal": "legal",
     }
     for d in domains:
         if d in domain_to_dir:
@@ -683,8 +769,10 @@ def main():
         if result["details"]:
             print("\n--- Generated SOWs ---")
             for d in result["details"]:
-                print(f"  {d['role']:25s}  executor={d['executor_type']:8s}  "
-                      f"autonomy={d['autonomy']}%  ws={d['weighted_score']:.1f}")
+                print(
+                    f"  {d['role']:25s}  executor={d['executor_type']:8s}  "
+                    f"autonomy={d['autonomy']}%  ws={d['weighted_score']:.1f}"
+                )
 
         if result["skipped_details"]:
             print("\n--- Skipped (top 10) ---")

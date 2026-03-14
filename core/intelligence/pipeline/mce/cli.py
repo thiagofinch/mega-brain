@@ -403,7 +403,8 @@ def build_parser() -> argparse.ArgumentParser:
         help="Only run workflow detection (greenfield/brownfield)",
     )
     parser.add_argument(
-        "--verbose", "-v",
+        "--verbose",
+        "-v",
         action="store_true",
         default=False,
         help="Enable verbose output",

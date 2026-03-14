@@ -30,42 +30,34 @@ def parse_stdin():
 
 def should_trigger(file_path: str) -> bool:
     """Check if this file change should trigger sync."""
-    triggers = [
-        'persona-registry.yaml',
-        'AGENT-INDEX.yaml',
-        'agents.yaml'
-    ]
+    triggers = ["persona-registry.yaml", "AGENT-INDEX.yaml", "agents.yaml"]
     return any(t in file_path for t in triggers)
 
 
 def count_agents() -> dict:
     """Count agents by type."""
-    counts = {
-        'minds': 0,
-        'cargo': 0,
-        'conclave': 0,
-        'total': 0
-    }
+    counts = {"minds": 0, "cargo": 0, "conclave": 0, "total": 0}
 
     # Count minds
     minds_dir = AGENTS_DIR / "minds"
     if minds_dir.exists():
-        counts['minds'] = len([d for d in minds_dir.iterdir()
-                               if d.is_dir() and not d.name.startswith('_')])
+        counts["minds"] = len(
+            [d for d in minds_dir.iterdir() if d.is_dir() and not d.name.startswith("_")]
+        )
 
     # Count conclave
     conclave_dir = AGENTS_DIR / "conclave"
     if conclave_dir.exists():
-        counts['conclave'] = len([d for d in conclave_dir.iterdir() if d.is_dir()])
+        counts["conclave"] = len([d for d in conclave_dir.iterdir() if d.is_dir()])
 
     # Count cargo (recursive)
     cargo_dir = AGENTS_DIR / "cargo"
     if cargo_dir.exists():
         for group in cargo_dir.iterdir():
             if group.is_dir():
-                counts['cargo'] += len([d for d in group.iterdir() if d.is_dir()])
+                counts["cargo"] += len([d for d in group.iterdir() if d.is_dir()])
 
-    counts['total'] = counts['minds'] + counts['cargo'] + counts['conclave']
+    counts["total"] = counts["minds"] + counts["cargo"] + counts["conclave"]
     return counts
 
 
@@ -84,16 +76,16 @@ Defined in `AGENT-INDEX.yaml`, activated via slash commands.
 
 | Type | Count | Purpose |
 |------|-------|---------|
-| CARGO | {counts['cargo']} | Functional roles (Sales, Marketing, Ops) |
-| MINDS | {counts['minds']} | Expert mind clones |
-| CONCLAVE | {counts['conclave']} | Multi-perspective deliberation |
+| CARGO | {counts["cargo"]} | Functional roles (Sales, Marketing, Ops) |
+| MINDS | {counts["minds"]} | Expert mind clones |
+| CONCLAVE | {counts["conclave"]} | Multi-perspective deliberation |
 | SYSTEM | 2 | JARVIS, Agent-Creator |
 
-**Total Active Agents:** {counts['total']}"""
+**Total Active Agents:** {counts["total"]}"""
 
     # Find and replace the Agents section
     # Pattern matches from "## Agents" to the next "##" or end
-    pattern = r'## Agents\n.*?(?=\n## |\Z)'
+    pattern = r"## Agents\n.*?(?=\n## |\Z)"
 
     if re.search(pattern, content, re.DOTALL):
         new_content = re.sub(pattern, new_section, content, flags=re.DOTALL)
@@ -111,11 +103,11 @@ def log_sync(file_path: str, success: bool):
         "timestamp": datetime.now().isoformat(),
         "trigger_file": file_path,
         "success": success,
-        "counts": count_agents()
+        "counts": count_agents(),
     }
 
-    with open(SYNC_LOG, 'a') as f:
-        f.write(json.dumps(entry) + '\n')
+    with open(SYNC_LOG, "a") as f:
+        f.write(json.dumps(entry) + "\n")
 
 
 def main():
@@ -123,14 +115,14 @@ def main():
     try:
         data = parse_stdin()
 
-        tool_name = data.get('tool_name', '')
-        tool_input = data.get('tool_input', {})
+        tool_name = data.get("tool_name", "")
+        tool_input = data.get("tool_input", {})
 
-        if tool_name not in ['Write', 'Edit']:
+        if tool_name not in ["Write", "Edit"]:
             print(json.dumps({"continue": True}))
             return
 
-        file_path = tool_input.get('file_path', '')
+        file_path = tool_input.get("file_path", "")
 
         # Check if this should trigger sync
         if not should_trigger(file_path):
@@ -143,18 +135,19 @@ def main():
 
         if success:
             counts = count_agents()
-            print(json.dumps({
-                "continue": True,
-                "message": f"📝 CLAUDE.md agents section synced ({counts['total']} agents)"
-            }))
+            print(
+                json.dumps(
+                    {
+                        "continue": True,
+                        "message": f"📝 CLAUDE.md agents section synced ({counts['total']} agents)",
+                    }
+                )
+            )
         else:
             print(json.dumps({"continue": True}))
 
     except Exception as e:
-        print(json.dumps({
-            "continue": True,
-            "warning": f"CLAUDE.md sync error: {e!s}"
-        }))
+        print(json.dumps({"continue": True, "warning": f"CLAUDE.md sync error: {e!s}"}))
         sys.exit(0)
 
 

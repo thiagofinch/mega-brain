@@ -229,9 +229,11 @@ def run_suite(
 
         if verbose:
             status = "PASS" if eval_result.passed else "FAIL"
-            print(f"[{status}] precision={eval_result.context_precision:.2f} "
-                  f"recall={eval_result.context_recall:.2f} "
-                  f"latency={eval_result.latency_ms:.0f}ms")
+            print(
+                f"[{status}] precision={eval_result.context_precision:.2f} "
+                f"recall={eval_result.context_recall:.2f} "
+                f"latency={eval_result.latency_ms:.0f}ms"
+            )
 
     # Aggregate
     passed = sum(1 for r in results if r.passed)
@@ -272,36 +274,38 @@ def save_results(summary: dict, eval_dir: Path | None = None) -> Path:
 # ---------------------------------------------------------------------------
 def main():
     import argparse
+
     parser = argparse.ArgumentParser(description="RAG Evaluation")
-    parser.add_argument("--test-suite", choices=["basic"], default="basic",
-                        help="Which test suite to run")
-    parser.add_argument("--save", action="store_true",
-                        help="Save results to disk")
-    parser.add_argument("--quiet", action="store_true",
-                        help="Minimal output")
+    parser.add_argument(
+        "--test-suite", choices=["basic"], default="basic", help="Which test suite to run"
+    )
+    parser.add_argument("--save", action="store_true", help="Save results to disk")
+    parser.add_argument("--quiet", action="store_true", help="Minimal output")
     args = parser.parse_args()
 
-    print(f"\n{'='*60}")
+    print(f"\n{'=' * 60}")
     print("RAG EVALUATOR")
-    print(f"{'='*60}\n")
+    print(f"{'=' * 60}\n")
 
     suite = BASIC_TEST_SUITE if args.test_suite == "basic" else BASIC_TEST_SUITE
 
     summary = run_suite(suite, verbose=not args.quiet)
 
-    print(f"\n{'─'*60}")
-    print(f"RESULTS: {summary['passed']}/{summary['suite_size']} passed "
-          f"({summary['pass_rate']*100:.0f}%)")
+    print(f"\n{'─' * 60}")
+    print(
+        f"RESULTS: {summary['passed']}/{summary['suite_size']} passed "
+        f"({summary['pass_rate'] * 100:.0f}%)"
+    )
     print(f"Avg Precision: {summary['avg_precision']:.3f}")
     print(f"Avg Recall:    {summary['avg_recall']:.3f}")
     print(f"Avg Latency:   {summary['avg_latency_ms']:.0f}ms")
-    print(f"{'─'*60}")
+    print(f"{'─' * 60}")
 
     if args.save:
         filepath = save_results(summary)
         print(f"\nResults saved to: {filepath}")
 
-    print(f"\n{'='*60}\n")
+    print(f"\n{'=' * 60}\n")
 
     # Exit code based on pass rate
     sys.exit(0 if summary["pass_rate"] >= 0.6 else 1)

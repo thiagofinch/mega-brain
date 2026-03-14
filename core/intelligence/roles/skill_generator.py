@@ -253,9 +253,7 @@ def scan_all_and_generate(registry=None, save=True):
         "personas_found": len(persona_frameworks),
         "total_frameworks": sum(len(v) for v in persona_frameworks.values()),
         "total_skills_generated": total_skills,
-        "per_persona": {
-            k: len(v) for k, v in persona_frameworks.items()
-        },
+        "per_persona": {k: len(v) for k, v in persona_frameworks.items()},
     }
 
 
@@ -281,58 +279,70 @@ def _save_skill_md(persona_slug, skill):
     ]
 
     # When to Use
-    lines.extend([
-        "## Quando Usar",
-        "",
-        f"Framework aplicavel quando o contexto envolve {skill['source_persona']} "
-        f"e a situacao requer um processo estruturado de {skill['name'].lower()}.",
-        "",
-    ])
+    lines.extend(
+        [
+            "## Quando Usar",
+            "",
+            f"Framework aplicavel quando o contexto envolve {skill['source_persona']} "
+            f"e a situacao requer um processo estruturado de {skill['name'].lower()}.",
+            "",
+        ]
+    )
 
     # When NOT to Use
-    lines.extend([
-        "## Quando NAO Usar",
-        "",
-        "- Contexto nao relacionado ao dominio original",
-        "- Quando uma abordagem mais simples resolve",
-        "- Quando o framework conflita com outro framework ativo",
-        "",
-    ])
+    lines.extend(
+        [
+            "## Quando NAO Usar",
+            "",
+            "- Contexto nao relacionado ao dominio original",
+            "- Quando uma abordagem mais simples resolve",
+            "- Quando o framework conflita com outro framework ativo",
+            "",
+        ]
+    )
 
     # Workflow
-    lines.extend([
-        "## Workflow",
-        "",
-    ])
+    lines.extend(
+        [
+            "## Workflow",
+            "",
+        ]
+    )
     if skill["workflow_steps"]:
         for i, step in enumerate(skill["workflow_steps"], 1):
             lines.append(f"{i}. {step}")
     else:
-        lines.append("_Framework detectado mas steps nao extraidos automaticamente. "
-                      "Consultar evidencia original._")
+        lines.append(
+            "_Framework detectado mas steps nao extraidos automaticamente. "
+            "Consultar evidencia original._"
+        )
     lines.append("")
 
     # Output
-    lines.extend([
-        "## Output Esperado",
-        "",
-        f"Resultado estruturado seguindo os {skill['step_count']} passos do framework.",
-        "",
-    ])
+    lines.extend(
+        [
+            "## Output Esperado",
+            "",
+            f"Resultado estruturado seguindo os {skill['step_count']} passos do framework.",
+            "",
+        ]
+    )
 
     # Evidence
-    lines.extend([
-        "## Evidencia e Atribuicao",
-        "",
-        f"**Source ID:** {skill['source_id']}",
-        "",
-        "```",
-        f"{skill['evidence'][:500]}",
-        "```",
-        "",
-        "---",
-        f"Auto-gerado por Mega Brain Intelligence Layer | {datetime.now(UTC).strftime('%Y-%m-%d')}",
-    ])
+    lines.extend(
+        [
+            "## Evidencia e Atribuicao",
+            "",
+            f"**Source ID:** {skill['source_id']}",
+            "",
+            "```",
+            f"{skill['evidence'][:500]}",
+            "```",
+            "",
+            "---",
+            f"Auto-gerado por Mega Brain Intelligence Layer | {datetime.now(UTC).strftime('%Y-%m-%d')}",
+        ]
+    )
 
     with open(filepath, "w", encoding="utf-8") as f:
         f.write("\n".join(lines))
@@ -363,7 +373,9 @@ def _classify_layer(context):
         return "L3"  # Mental models / processes
     if any(kw in ctx_lower for kw in ["believe", "acredit", "philosophy", "filosofia", "mindset"]):
         return "L4"  # Values / beliefs
-    if any(kw in ctx_lower for kw in ["always", "never", "rule", "regra", "principle", "principio"]):
+    if any(
+        kw in ctx_lower for kw in ["always", "never", "rule", "regra", "principle", "principio"]
+    ):
         return "L4"  # Values / principles
     if any(kw in ctx_lower for kw in ["feel", "emotion", "intuition", "gut", "instinto"]):
         return "L2"  # Recognition patterns
@@ -426,11 +438,13 @@ def _find_step_sequences(text):
                     if len(current_steps) >= 3:
                         ctx_start = max(0, current_start - 100)
                         ctx_end = min(len(text), i * 80)
-                        sequences.append({
-                            "steps": current_steps,
-                            "step_count": len(current_steps),
-                            "context": text[ctx_start:ctx_end][:500],
-                        })
+                        sequences.append(
+                            {
+                                "steps": current_steps,
+                                "step_count": len(current_steps),
+                                "context": text[ctx_start:ctx_end][:500],
+                            }
+                        )
                     current_steps = []
                     current_start = i
 
@@ -438,20 +452,24 @@ def _find_step_sequences(text):
         else:
             if current_steps and len(current_steps) >= 3:
                 ctx_start = max(0, current_start - 100)
-                sequences.append({
-                    "steps": current_steps,
-                    "step_count": len(current_steps),
-                    "context": "\n".join(lines[max(0, current_start - 2):i])[:500],
-                })
+                sequences.append(
+                    {
+                        "steps": current_steps,
+                        "step_count": len(current_steps),
+                        "context": "\n".join(lines[max(0, current_start - 2) : i])[:500],
+                    }
+                )
             current_steps = []
 
     # Don't forget last sequence
     if current_steps and len(current_steps) >= 3:
-        sequences.append({
-            "steps": current_steps,
-            "step_count": len(current_steps),
-            "context": "\n".join(lines[-min(20, len(lines)):])[:500],
-        })
+        sequences.append(
+            {
+                "steps": current_steps,
+                "step_count": len(current_steps),
+                "context": "\n".join(lines[-min(20, len(lines)) :])[:500],
+            }
+        )
 
     return sequences
 
@@ -465,7 +483,7 @@ def _infer_framework_name(steps, full_text):
     first_step = steps[0]
     idx = full_text.find(first_step)
     if idx > 20:
-        before = full_text[max(0, idx - 200):idx].strip()
+        before = full_text[max(0, idx - 200) : idx].strip()
         # Look for a title/header before the steps
         lines = before.split("\n")
         for line in reversed(lines):
@@ -486,8 +504,10 @@ def _is_duplicate_framework(new_fw, existing):
             return True
         # Check if steps overlap significantly
         if fw["steps"] and new_fw["steps"]:
-            overlap = len(set(s.lower()[:30] for s in fw["steps"]) &
-                          set(s.lower()[:30] for s in new_fw["steps"]))
+            overlap = len(
+                set(s.lower()[:30] for s in fw["steps"])
+                & set(s.lower()[:30] for s in new_fw["steps"])
+            )
             if overlap >= 3:
                 return True
     return False
@@ -536,10 +556,35 @@ def _detect_persona(source_id, data):
 def _is_noise(text):
     """Check if text is noise (too generic, stop words, etc.)."""
     noise_words = {
-        "the", "a", "an", "this", "that", "these", "those",
-        "and", "or", "but", "if", "then", "so", "because",
-        "you", "your", "they", "them", "we", "our", "i", "my",
-        "it", "its", "is", "are", "was", "were", "be",
+        "the",
+        "a",
+        "an",
+        "this",
+        "that",
+        "these",
+        "those",
+        "and",
+        "or",
+        "but",
+        "if",
+        "then",
+        "so",
+        "because",
+        "you",
+        "your",
+        "they",
+        "them",
+        "we",
+        "our",
+        "i",
+        "my",
+        "it",
+        "its",
+        "is",
+        "are",
+        "was",
+        "were",
+        "be",
     }
     words = text.lower().split()
     if len(words) <= 1:
@@ -576,8 +621,7 @@ def main():
 
         if result["per_persona"]:
             print("\n--- Per Persona ---")
-            for persona, count in sorted(result["per_persona"].items(),
-                                          key=lambda x: -x[1]):
+            for persona, count in sorted(result["per_persona"].items(), key=lambda x: -x[1]):
                 print(f"  {persona:30s}  {count} frameworks")
 
     elif len(sys.argv) > 1:

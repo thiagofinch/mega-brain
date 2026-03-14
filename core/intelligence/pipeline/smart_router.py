@@ -639,7 +639,9 @@ def _cli_triage() -> None:
     for i, entry in enumerate(unresolved, 1):
         fp = Path(entry["file_path"]).name
         print(f"  {i}. {fp}")
-        print(f"     Current: {entry['current_bucket']}  ->  Suggested: {entry['suggested_bucket']}")
+        print(
+            f"     Current: {entry['current_bucket']}  ->  Suggested: {entry['suggested_bucket']}"
+        )
         print(f"     Confidence: {entry['confidence']}  |  Added: {entry['added_at']}")
         if entry.get("reasons"):
             print(f"     Reasons: {', '.join(entry['reasons'][:3])}")

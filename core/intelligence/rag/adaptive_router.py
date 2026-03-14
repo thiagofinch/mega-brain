@@ -232,9 +232,7 @@ def route_query(
 
     # Build context string for LLM consumption
     if result["results"]:
-        result["context"] = _build_context_string(
-            result["results"], max_tokens
-        )
+        result["context"] = _build_context_string(result["results"], max_tokens)
 
     result["latency_ms"] = round((time.time() - t0) * 1000, 1)
     return result
@@ -244,12 +242,14 @@ def _extract_sources(results: list[dict]) -> list[dict]:
     """Extract source references from hybrid search results."""
     sources = []
     for r in results:
-        sources.append({
-            "chunk_id": r.get("chunk_id", ""),
-            "source_file": r.get("source_file", ""),
-            "person": r.get("person", ""),
-            "section": r.get("section", ""),
-        })
+        sources.append(
+            {
+                "chunk_id": r.get("chunk_id", ""),
+                "source_file": r.get("source_file", ""),
+                "person": r.get("person", ""),
+                "section": r.get("section", ""),
+            }
+        )
     return sources
 
 
@@ -257,12 +257,14 @@ def _extract_sources_from_fused(results: list[dict]) -> list[dict]:
     """Extract source references from fused results."""
     sources = []
     for r in results:
-        sources.append({
-            "id": r.get("id", ""),
-            "source": r.get("source", ""),
-            "person": r.get("person", ""),
-            "source_file": r.get("source_file", ""),
-        })
+        sources.append(
+            {
+                "id": r.get("id", ""),
+                "source": r.get("source", ""),
+                "person": r.get("person", ""),
+                "source_file": r.get("source_file", ""),
+            }
+        )
     return sources
 
 
@@ -274,8 +276,7 @@ def _build_context_string(results: list[dict], max_tokens: int) -> str:
 
     for r in results:
         # Get text from different result formats
-        text = (r.get("text_preview", "") or r.get("label", "")
-                or r.get("text", ""))
+        text = r.get("text_preview", "") or r.get("label", "") or r.get("text", "")
         if not text:
             continue
 
@@ -301,14 +302,14 @@ def _build_context_string(results: list[dict], max_tokens: int) -> str:
 # ---------------------------------------------------------------------------
 def main():
     if len(sys.argv) < 2:
-        print("Usage: python3 -m core.intelligence.rag.adaptive_router \"query\"")
+        print('Usage: python3 -m core.intelligence.rag.adaptive_router "query"')
         sys.exit(1)
 
     query = " ".join(sys.argv[1:])
 
-    print(f"\n{'='*60}")
+    print(f"\n{'=' * 60}")
     print("ADAPTIVE ROUTER")
-    print(f"{'='*60}")
+    print(f"{'=' * 60}")
     print(f"Query: {query}\n")
 
     result = route_query(query)
@@ -323,12 +324,12 @@ def main():
         for i, r in enumerate(result["results"][:5]):
             rid = r.get("chunk_id", r.get("id", "?"))
             label = r.get("text_preview", r.get("label", ""))[:60]
-            print(f"  #{i+1} {rid}: {label}")
+            print(f"  #{i + 1} {rid}: {label}")
 
     if result["sources"]:
         print(f"\nSources: {len(result['sources'])}")
 
-    print(f"\n{'='*60}\n")
+    print(f"\n{'=' * 60}\n")
 
 
 if __name__ == "__main__":

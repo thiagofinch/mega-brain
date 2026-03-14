@@ -22,10 +22,10 @@ from .hybrid_index import HybridIndex, get_index
 # CONFIG
 # ---------------------------------------------------------------------------
 DEFAULT_TOP_K = 10
-RRF_K = 60              # RRF constant (higher = more weight to lower ranks)
-VECTOR_TOP = 30          # Candidates from vector search
-BM25_TOP = 30            # Candidates from BM25 search
-RERANK_CANDIDATES = 50   # Max candidates for reranking
+RRF_K = 60  # RRF constant (higher = more weight to lower ranks)
+VECTOR_TOP = 30  # Candidates from vector search
+BM25_TOP = 30  # Candidates from BM25 search
+RERANK_CANDIDATES = 50  # Max candidates for reranking
 
 
 # ---------------------------------------------------------------------------
@@ -117,9 +117,9 @@ def strategic_order(results: list[tuple[int, float]]) -> list[tuple[int, float]]
         return results
 
     # Split into odd and even positions
-    front = results[::2]   # 0, 2, 4, ... (strongest)
-    back = results[1::2]   # 1, 3, 5, ... (second tier)
-    back.reverse()         # Reverse so 2nd strongest is at the end
+    front = results[::2]  # 0, 2, 4, ... (strongest)
+    back = results[1::2]  # 1, 3, 5, ... (second tier)
+    back.reverse()  # Reverse so 2nd strongest is at the end
 
     return front + back
 
@@ -295,12 +295,14 @@ def build_rag_context(
 
         citation = f"[RAG:{r['chunk_id']}]"
         context_parts.append(f"{citation} {chunk_text}")
-        sources.append({
-            "chunk_id": r["chunk_id"],
-            "source_file": r["source_file"],
-            "person": r["person"],
-            "section": r["section"],
-        })
+        sources.append(
+            {
+                "chunk_id": r["chunk_id"],
+                "source_file": r["source_file"],
+                "person": r["person"],
+                "section": r["section"],
+            }
+        )
         total_chars += len(chunk_text)
 
     return {
@@ -316,15 +318,15 @@ def build_rag_context(
 # ---------------------------------------------------------------------------
 def main():
     if len(sys.argv) < 2:
-        print("Usage: python3 -m core.intelligence.rag.hybrid_query \"<query>\"")
-        print("Example: python3 -m core.intelligence.rag.hybrid_query \"commission structure\"")
+        print('Usage: python3 -m core.intelligence.rag.hybrid_query "<query>"')
+        print('Example: python3 -m core.intelligence.rag.hybrid_query "commission structure"')
         sys.exit(1)
 
     query = " ".join(sys.argv[1:])
 
-    print(f"\n{'='*60}")
+    print(f"\n{'=' * 60}")
     print("HYBRID QUERY ENGINE")
-    print(f"{'='*60}")
+    print(f"{'=' * 60}")
     print(f"Query: {query}\n")
 
     result = hybrid_search(query)
@@ -334,8 +336,10 @@ def main():
         sys.exit(1)
 
     pipe = result["pipeline"]
-    print(f"Pipeline: vector={pipe['vector']}, bm25={pipe['bm25']}, "
-          f"rrf={pipe['rrf']}, reranked={pipe['reranked']}")
+    print(
+        f"Pipeline: vector={pipe['vector']}, bm25={pipe['bm25']}, "
+        f"rrf={pipe['rrf']}, reranked={pipe['reranked']}"
+    )
     print(f"Latency: {result['latency_ms']}ms\n")
 
     for r in result["results"]:
@@ -348,7 +352,7 @@ def main():
         print(f"     Preview: {r['text_preview'][:100]}...")
         print()
 
-    print(f"{'='*60}\n")
+    print(f"{'=' * 60}\n")
 
 
 if __name__ == "__main__":

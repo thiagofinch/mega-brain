@@ -26,20 +26,22 @@ import yaml
 # Configuration and Constants
 # ============================================================================
 
-PROJECT_DIR = Path(os.getenv('CLAUDE_PROJECT_DIR', '.')).resolve()
-WORKFLOW_DIR = PROJECT_DIR / 'core' / 'workflows'
-TASK_DIR = PROJECT_DIR / 'core' / 'tasks'
-STATE_PATH = PROJECT_DIR / '.claude' / 'mission-control' / 'ORCHESTRATOR-STATE.json'
-LOG_PATH = PROJECT_DIR / 'logs' / 'orchestrator-execution.jsonl'
+PROJECT_DIR = Path(os.getenv("CLAUDE_PROJECT_DIR", ".")).resolve()
+WORKFLOW_DIR = PROJECT_DIR / "core" / "workflows"
+TASK_DIR = PROJECT_DIR / "core" / "tasks"
+STATE_PATH = PROJECT_DIR / ".claude" / "mission-control" / "ORCHESTRATOR-STATE.json"
+LOG_PATH = PROJECT_DIR / "logs" / "orchestrator-execution.jsonl"
 
 
 # ============================================================================
 # Data Classes
 # ============================================================================
 
+
 @dataclass
 class TaskDefinition:
     """Represents a parsed task from a task markdown file."""
+
     task_id: str
     name: str
     execution_type: str
@@ -53,6 +55,7 @@ class TaskDefinition:
 @dataclass
 class WorkflowPhase:
     """Represents a phase in a workflow."""
+
     id: str
     name: str
     description: str = ""
@@ -64,6 +67,7 @@ class WorkflowPhase:
 @dataclass
 class WorkflowDefinition:
     """Represents a complete workflow configuration."""
+
     id: str
     name: str
     description: str = ""
@@ -76,6 +80,7 @@ class WorkflowDefinition:
 @dataclass
 class ProgressReport:
     """Progress report for workflow execution."""
+
     current_task: str
     current_phase: str
     progress_percent: float
@@ -89,6 +94,7 @@ class ProgressReport:
 @dataclass
 class ExecutionState:
     """Tracks the execution state of a workflow."""
+
     workflow_id: str
     current_phase: str | None = None
     current_step: int = 0
@@ -104,6 +110,7 @@ class ExecutionState:
 # ============================================================================
 # YAML Loading Functions
 # ============================================================================
+
 
 def load_workflow(workflow_path: Path) -> WorkflowDefinition:
     """
@@ -123,35 +130,35 @@ def load_workflow(workflow_path: Path) -> WorkflowDefinition:
     if not workflow_path.exists():
         raise FileNotFoundError(f"Workflow file not found: {workflow_path}")
 
-    with open(workflow_path, encoding='utf-8') as f:
+    with open(workflow_path, encoding="utf-8") as f:
         data = yaml.safe_load(f)
 
-    if not data or 'workflow' not in data:
+    if not data or "workflow" not in data:
         raise ValueError(f"Invalid workflow structure in {workflow_path}")
 
-    wf_data = data['workflow']
+    wf_data = data["workflow"]
 
     # Parse phases
     phases = []
-    for idx, phase_data in enumerate(wf_data.get('phases', [])):
+    for idx, phase_data in enumerate(wf_data.get("phases", [])):
         phase = WorkflowPhase(
-            id=phase_data.get('id', f'phase_{idx}'),
-            name=phase_data.get('name', f'Phase {idx}'),
-            description=phase_data.get('description', ''),
-            steps=phase_data.get('steps', []),
-            checkpoint=phase_data.get('checkpoint'),
-            order=idx
+            id=phase_data.get("id", f"phase_{idx}"),
+            name=phase_data.get("name", f"Phase {idx}"),
+            description=phase_data.get("description", ""),
+            steps=phase_data.get("steps", []),
+            checkpoint=phase_data.get("checkpoint"),
+            order=idx,
         )
         phases.append(phase)
 
     workflow = WorkflowDefinition(
-        id=wf_data.get('id', workflow_path.stem),
-        name=wf_data.get('name', ''),
-        description=wf_data.get('description', ''),
+        id=wf_data.get("id", workflow_path.stem),
+        name=wf_data.get("name", ""),
+        description=wf_data.get("description", ""),
         phases=phases,
-        transitions=wf_data.get('transitions', []),
-        inputs=wf_data.get('inputs', {}),
-        outputs=wf_data.get('outputs', {})
+        transitions=wf_data.get("transitions", []),
+        inputs=wf_data.get("inputs", {}),
+        outputs=wf_data.get("outputs", {}),
     )
 
     return workflow
@@ -167,7 +174,7 @@ def list_workflows() -> list[Path]:
     if not WORKFLOW_DIR.exists():
         return []
 
-    return sorted(WORKFLOW_DIR.glob('*.yaml'))
+    return sorted(WORKFLOW_DIR.glob("*.yaml"))
 
 
 def resolve_workflow(workflow_id: str) -> Path | None:
@@ -201,6 +208,7 @@ def resolve_workflow(workflow_id: str) -> Path | None:
 # Task Resolution Functions
 # ============================================================================
 
+
 def load_task_definition(task_path: Path) -> TaskDefinition:
     """
     Parse a task markdown file and extract the task definition.
@@ -218,11 +226,11 @@ def load_task_definition(task_path: Path) -> TaskDefinition:
     if not task_path.exists():
         raise FileNotFoundError(f"Task file not found: {task_path}")
 
-    with open(task_path, encoding='utf-8') as f:
+    with open(task_path, encoding="utf-8") as f:
         content = f.read()
 
     # Extract task anatomy table
-    anatomy_pattern = r'\|\s*Field\s*\|\s*Value\s*\|.*?\n((?:\|[^\n]+\n)+)'
+    anatomy_pattern = r"\|\s*Field\s*\|\s*Value\s*\|.*?\n((?:\|[^\n]+\n)+)"
     match = re.search(anatomy_pattern, content, re.DOTALL)
 
     if not match:
@@ -230,25 +238,25 @@ def load_task_definition(task_path: Path) -> TaskDefinition:
 
     # Parse table rows
     anatomy = {}
-    for line in match.group(1).split('\n'):
-        if '|' in line:
-            parts = [p.strip() for p in line.split('|') if p.strip()]
+    for line in match.group(1).split("\n"):
+        if "|" in line:
+            parts = [p.strip() for p in line.split("|") if p.strip()]
             if len(parts) >= 2:
                 anatomy[parts[0]] = parts[1]
 
     # Extract inputs and outputs sections
-    inputs = _extract_table_section(content, r'## Inputs')
-    outputs = _extract_table_section(content, r'## Outputs')
+    inputs = _extract_table_section(content, r"## Inputs")
+    outputs = _extract_table_section(content, r"## Outputs")
 
     task_def = TaskDefinition(
-        task_id=anatomy.get('task_id', task_path.stem),
-        name=anatomy.get('task_name', task_path.stem),
-        execution_type=anatomy.get('execution_type', 'Agent'),
-        responsible=anatomy.get('responsible', '@jarvis'),
+        task_id=anatomy.get("task_id", task_path.stem),
+        name=anatomy.get("task_name", task_path.stem),
+        execution_type=anatomy.get("execution_type", "Agent"),
+        responsible=anatomy.get("responsible", "@jarvis"),
         inputs=inputs,
         outputs=outputs,
-        description=anatomy.get('description', ''),
-        path=task_path
+        description=anatomy.get("description", ""),
+        path=task_path,
     )
 
     return task_def
@@ -268,8 +276,8 @@ def resolve_task(task_ref: str) -> Path:
         FileNotFoundError: If task file doesn't exist
     """
     # Handle both absolute and relative references
-    if task_ref.startswith('tasks/'):
-        task_path = TASK_DIR / task_ref.replace('tasks/', '')
+    if task_ref.startswith("tasks/"):
+        task_path = TASK_DIR / task_ref.replace("tasks/", "")
     else:
         task_path = PROJECT_DIR / task_ref
 
@@ -281,21 +289,21 @@ def resolve_task(task_ref: str) -> Path:
 
 def _extract_table_section(content: str, section_header: str) -> dict[str, Any]:
     """Extract a table section from markdown content."""
-    pattern = rf'{section_header}.*?\n\|[^\n]+\|.*?\n((?:\|[^\n]+\n)+)'
+    pattern = rf"{section_header}.*?\n\|[^\n]+\|.*?\n((?:\|[^\n]+\n)+)"
     match = re.search(pattern, content, re.DOTALL)
 
     if not match:
         return {}
 
     result = {}
-    for line in match.group(1).split('\n'):
-        if '|' in line and not line.strip().startswith('|---'):
-            parts = [p.strip() for p in line.split('|') if p.strip()]
+    for line in match.group(1).split("\n"):
+        if "|" in line and not line.strip().startswith("|---"):
+            parts = [p.strip() for p in line.split("|") if p.strip()]
             if len(parts) >= 2:
                 result[parts[0]] = {
-                    'type': parts[1] if len(parts) > 1 else '',
-                    'required': parts[2] if len(parts) > 2 else '',
-                    'description': parts[3] if len(parts) > 3 else ''
+                    "type": parts[1] if len(parts) > 1 else "",
+                    "required": parts[2] if len(parts) > 2 else "",
+                    "description": parts[3] if len(parts) > 3 else "",
                 }
 
     return result
@@ -304,6 +312,7 @@ def _extract_table_section(content: str, section_header: str) -> dict[str, Any]:
 # ============================================================================
 # State Management
 # ============================================================================
+
 
 def create_default_state(workflow_id: str) -> ExecutionState:
     """
@@ -316,9 +325,7 @@ def create_default_state(workflow_id: str) -> ExecutionState:
         ExecutionState object with initial values
     """
     return ExecutionState(
-        workflow_id=workflow_id,
-        started_at=datetime.utcnow().isoformat(),
-        status="not_started"
+        workflow_id=workflow_id, started_at=datetime.utcnow().isoformat(), status="not_started"
     )
 
 
@@ -333,7 +340,7 @@ def load_state() -> ExecutionState | None:
         return None
 
     try:
-        with open(STATE_PATH, encoding='utf-8') as f:
+        with open(STATE_PATH, encoding="utf-8") as f:
             data = json.load(f)
 
         # Reconstruct ExecutionState from dict
@@ -352,7 +359,7 @@ def save_state(state: ExecutionState) -> None:
     """
     STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
 
-    with open(STATE_PATH, 'w', encoding='utf-8') as f:
+    with open(STATE_PATH, "w", encoding="utf-8") as f:
         json.dump(asdict(state), f, indent=2)
 
 
@@ -365,15 +372,16 @@ def log_execution(event: dict[str, Any]) -> None:
     """
     LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
 
-    event['timestamp'] = datetime.utcnow().isoformat()
+    event["timestamp"] = datetime.utcnow().isoformat()
 
-    with open(LOG_PATH, 'a', encoding='utf-8') as f:
-        f.write(json.dumps(event) + '\n')
+    with open(LOG_PATH, "a", encoding="utf-8") as f:
+        f.write(json.dumps(event) + "\n")
 
 
 # ============================================================================
 # Core Orchestrator Class
 # ============================================================================
+
 
 class TaskOrchestrator:
     """
@@ -405,11 +413,13 @@ class TaskOrchestrator:
         self.state = load_state() or create_default_state(workflow_id)
         self.task_cache: dict[str, TaskDefinition] = {}
 
-        log_execution({
-            'event': 'orchestrator_initialized',
-            'workflow_id': workflow_id,
-            'phases': len(self.workflow.phases)
-        })
+        log_execution(
+            {
+                "event": "orchestrator_initialized",
+                "workflow_id": workflow_id,
+                "phases": len(self.workflow.phases),
+            }
+        )
 
     def execute(self, inputs: dict[str, Any]) -> dict[str, Any]:
         """
@@ -425,33 +435,37 @@ class TaskOrchestrator:
         self.state.started_at = datetime.utcnow().isoformat()
         save_state(self.state)
 
-        log_execution({
-            'event': 'workflow_started',
-            'workflow_id': self.workflow.id,
-            'inputs': list(inputs.keys())
-        })
+        log_execution(
+            {
+                "event": "workflow_started",
+                "workflow_id": self.workflow.id,
+                "inputs": list(inputs.keys()),
+            }
+        )
 
         for phase in self.workflow.phases:
             result = self._execute_phase(phase, inputs)
-            if not result['success']:
+            if not result["success"]:
                 self.state.status = "failed"
                 save_state(self.state)
                 return result
 
             # Accumulate outputs from each phase
-            inputs.update(result.get('outputs', {}))
+            inputs.update(result.get("outputs", {}))
 
         self.state.status = "completed"
         self.state.completed_at = datetime.utcnow().isoformat()
         save_state(self.state)
 
-        log_execution({
-            'event': 'workflow_completed',
-            'workflow_id': self.workflow.id,
-            'duration_seconds': self._calculate_duration()
-        })
+        log_execution(
+            {
+                "event": "workflow_completed",
+                "workflow_id": self.workflow.id,
+                "duration_seconds": self._calculate_duration(),
+            }
+        )
 
-        return {'success': True, 'outputs': inputs}
+        return {"success": True, "outputs": inputs}
 
     def _execute_phase(self, phase: WorkflowPhase, inputs: dict[str, Any]) -> dict[str, Any]:
         """
@@ -468,11 +482,7 @@ class TaskOrchestrator:
         self.state.current_step = 0
         save_state(self.state)
 
-        log_execution({
-            'event': 'phase_started',
-            'phase_id': phase.id,
-            'phase_name': phase.name
-        })
+        log_execution({"event": "phase_started", "phase_id": phase.id, "phase_name": phase.name})
 
         phase_outputs = {}
 
@@ -481,20 +491,17 @@ class TaskOrchestrator:
             save_state(self.state)
 
             result = self._execute_step(step, inputs)
-            if not result['success']:
+            if not result["success"]:
                 return result
 
-            phase_outputs.update(result.get('outputs', {}))
+            phase_outputs.update(result.get("outputs", {}))
 
         # Store phase outputs in state
         self.state.phase_outputs[phase.id] = phase_outputs
 
-        log_execution({
-            'event': 'phase_completed',
-            'phase_id': phase.id
-        })
+        log_execution({"event": "phase_completed", "phase_id": phase.id})
 
-        return {'success': True, 'outputs': phase_outputs}
+        return {"success": True, "outputs": phase_outputs}
 
     def _execute_step(self, step: dict[str, Any], inputs: dict[str, Any]) -> dict[str, Any]:
         """
@@ -507,28 +514,30 @@ class TaskOrchestrator:
         Returns:
             Dict with 'success' boolean and execution metadata
         """
-        if 'execute' in step:
-            exec_config = step['execute']
+        if "execute" in step:
+            exec_config = step["execute"]
 
-            if 'task' in exec_config:
-                task_def = self._resolve_and_cache_task(exec_config['task'])
+            if "task" in exec_config:
+                task_def = self._resolve_and_cache_task(exec_config["task"])
 
-                log_execution({
-                    'event': 'task_identified',
-                    'task_id': task_def.task_id,
-                    'task_name': task_def.name,
-                    'responsible': task_def.responsible
-                })
+                log_execution(
+                    {
+                        "event": "task_identified",
+                        "task_id": task_def.task_id,
+                        "task_name": task_def.name,
+                        "responsible": task_def.responsible,
+                    }
+                )
 
                 # Return task for Claude to execute
                 return {
-                    'success': True,
-                    'task': asdict(task_def),
-                    'needs_execution': True,
-                    'outputs': {}
+                    "success": True,
+                    "task": asdict(task_def),
+                    "needs_execution": True,
+                    "outputs": {},
                 }
 
-        return {'success': True, 'outputs': {}}
+        return {"success": True, "outputs": {}}
 
     def _resolve_and_cache_task(self, task_ref: str) -> TaskDefinition:
         """
@@ -567,8 +576,8 @@ class TaskOrchestrator:
             return None
 
         step = current_phase.steps[self.state.current_step]
-        if 'execute' in step and 'task' in step['execute']:
-            return self._resolve_and_cache_task(step['execute']['task'])
+        if "execute" in step and "task" in step["execute"]:
+            return self._resolve_and_cache_task(step["execute"]["task"])
 
         return None
 
@@ -580,19 +589,15 @@ class TaskOrchestrator:
             task_id: ID of the completed task
             outputs: Output data from the task
         """
-        self.state.history.append({
-            'task_id': task_id,
-            'completed_at': datetime.utcnow().isoformat(),
-            'outputs': outputs
-        })
+        self.state.history.append(
+            {"task_id": task_id, "completed_at": datetime.utcnow().isoformat(), "outputs": outputs}
+        )
 
         save_state(self.state)
 
-        log_execution({
-            'event': 'task_completed',
-            'task_id': task_id,
-            'outputs': list(outputs.keys())
-        })
+        log_execution(
+            {"event": "task_completed", "task_id": task_id, "outputs": list(outputs.keys())}
+        )
 
     def _calculate_duration(self) -> float:
         """Calculate execution duration in seconds."""
@@ -621,7 +626,7 @@ class TaskOrchestrator:
             tasks_total=total_tasks,
             estimated_remaining_seconds=estimated_remaining,
             started_at=self.state.started_at or "",
-            elapsed_seconds=self._calculate_elapsed()
+            elapsed_seconds=self._calculate_elapsed(),
         )
 
     def _count_completed_tasks(self) -> int:
@@ -650,6 +655,7 @@ class TaskOrchestrator:
 # ============================================================================
 # Public API
 # ============================================================================
+
 
 def print_usage():
     print("""
@@ -737,24 +743,25 @@ def cmd_reset():
 
 def main():
     import sys
+
     if len(sys.argv) < 2:
         print_usage()
         sys.exit(1)
 
     command = sys.argv[1].lower()
 
-    if command == 'list':
+    if command == "list":
         cmd_list()
-    elif command == 'status':
+    elif command == "status":
         cmd_status()
-    elif command == 'run':
+    elif command == "run":
         if len(sys.argv) < 3:
             print("[ERROR] Usage: run <workflow_id>")
             sys.exit(1)
         cmd_run(sys.argv[2])
-    elif command == 'progress':
+    elif command == "progress":
         cmd_progress()
-    elif command == 'reset':
+    elif command == "reset":
         cmd_reset()
     else:
         print(f"[ERROR] Unknown command: {command}")
@@ -762,20 +769,20 @@ def main():
         sys.exit(1)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
 
 
 __all__ = [
-    'ExecutionState',
-    'ProgressReport',
-    'TaskDefinition',
-    'TaskOrchestrator',
-    'WorkflowDefinition',
-    'WorkflowPhase',
-    'list_workflows',
-    'load_task_definition',
-    'load_workflow',
-    'resolve_task',
-    'resolve_workflow',
+    "ExecutionState",
+    "ProgressReport",
+    "TaskDefinition",
+    "TaskOrchestrator",
+    "WorkflowDefinition",
+    "WorkflowPhase",
+    "list_workflows",
+    "load_task_definition",
+    "load_workflow",
+    "resolve_task",
+    "resolve_workflow",
 ]

@@ -53,12 +53,24 @@ def get_owner_aliases() -> list[str]:
 
 # Path patterns that indicate each bucket
 _WORKSPACE_INDICATORS = [
-    "empresa", "business", "meetings", "workspace",
-    "financeiro", "financial", "calls", "ata",
+    "empresa",
+    "business",
+    "meetings",
+    "workspace",
+    "financeiro",
+    "financial",
+    "calls",
+    "ata",
 ]
 _PERSONAL_INDICATORS = [
-    "pessoal", "personal", "cognitive", "journal",
-    "reflexao", "saude", "health", "private",
+    "pessoal",
+    "personal",
+    "cognitive",
+    "journal",
+    "reflexao",
+    "saude",
+    "health",
+    "private",
 ]
 
 
@@ -158,6 +170,7 @@ def get_output_path(bucket: str, phase_output: str) -> Path | None:
 # DUAL-ROUTING
 # ---------------------------------------------------------------------------
 
+
 def should_dual_route(text: str) -> bool:
     """Check if content mentions the owner and should be dual-routed.
 
@@ -218,6 +231,7 @@ def extract_cognitive_insights(text: str) -> list[str]:
 # ---------------------------------------------------------------------------
 # ROUTE SUMMARY (for pipeline Phase 1 output)
 # ---------------------------------------------------------------------------
+
 
 def route_file(file_path: str | Path) -> dict:
     """Complete routing decision for a file entering the pipeline.

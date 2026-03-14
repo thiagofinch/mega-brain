@@ -78,13 +78,37 @@ KPI_PATTERNS = [
 
 # Known role keywords for matching
 KNOWN_ROLES = {
-    "closer", "closers", "bdr", "bdrs", "sdr", "sdrs", "sds",
-    "setter", "setters", "sales manager", "sales lead",
-    "sales coordinator", "lns", "customer success",
-    "cro", "cfo", "cmo", "coo", "hr director",
-    "rep", "reps", "sales rep", "sales reps",
-    "manager", "managers", "lead", "leads",
-    "vendedor", "vendedores", "gerente", "coordenador",
+    "closer",
+    "closers",
+    "bdr",
+    "bdrs",
+    "sdr",
+    "sdrs",
+    "sds",
+    "setter",
+    "setters",
+    "sales manager",
+    "sales lead",
+    "sales coordinator",
+    "lns",
+    "customer success",
+    "cro",
+    "cfo",
+    "cmo",
+    "coo",
+    "hr director",
+    "rep",
+    "reps",
+    "sales rep",
+    "sales reps",
+    "manager",
+    "managers",
+    "lead",
+    "leads",
+    "vendedor",
+    "vendedores",
+    "gerente",
+    "coordenador",
 }
 
 
@@ -119,13 +143,15 @@ def detect_org_patterns(text, source_id=None):
             subordinate = _clean_role(match.group(1))
             superior = _clean_role(match.group(2))
             if _is_likely_role(subordinate) or _is_likely_role(superior):
-                results["hierarchy"].append({
-                    "subordinate": subordinate,
-                    "superior": superior,
-                    "relation": "reports_to",
-                    "context": _extract_ctx(text, match.start(), match.end()),
-                    "source_id": source_id,
-                })
+                results["hierarchy"].append(
+                    {
+                        "subordinate": subordinate,
+                        "superior": superior,
+                        "relation": "reports_to",
+                        "context": _extract_ctx(text, match.start(), match.end()),
+                        "source_id": source_id,
+                    }
+                )
 
     # Detect manages patterns
     for pattern in MANAGES_PATTERNS:
@@ -140,14 +166,16 @@ def detect_org_patterns(text, source_id=None):
                 subordinate = _clean_role(groups[1])
                 count = "?"
             if _is_likely_role(superior) or _is_likely_role(subordinate):
-                results["hierarchy"].append({
-                    "superior": superior,
-                    "subordinate": subordinate,
-                    "relation": "manages",
-                    "count": count,
-                    "context": _extract_ctx(text, match.start(), match.end()),
-                    "source_id": source_id,
-                })
+                results["hierarchy"].append(
+                    {
+                        "superior": superior,
+                        "subordinate": subordinate,
+                        "relation": "manages",
+                        "count": count,
+                        "context": _extract_ctx(text, match.start(), match.end()),
+                        "source_id": source_id,
+                    }
+                )
 
     # Detect team sizes
     for pattern in TEAM_SIZE_PATTERNS:
@@ -156,12 +184,14 @@ def detect_org_patterns(text, source_id=None):
             size = groups[0]
             role = _clean_role(groups[1])
             if _is_likely_role(role):
-                results["team_sizes"].append({
-                    "role": role,
-                    "size": int(size) if size.isdigit() else size,
-                    "context": _extract_ctx(text, match.start(), match.end()),
-                    "source_id": source_id,
-                })
+                results["team_sizes"].append(
+                    {
+                        "role": role,
+                        "size": int(size) if size.isdigit() else size,
+                        "context": _extract_ctx(text, match.start(), match.end()),
+                        "source_id": source_id,
+                    }
+                )
 
     # Detect progressions
     for pattern in PROGRESSION_PATTERNS:
@@ -169,12 +199,14 @@ def detect_org_patterns(text, source_id=None):
             from_role = _clean_role(match.group(1))
             to_role = _clean_role(match.group(2))
             if _is_likely_role(from_role) or _is_likely_role(to_role):
-                results["progressions"].append({
-                    "from_role": from_role,
-                    "to_role": to_role,
-                    "context": _extract_ctx(text, match.start(), match.end()),
-                    "source_id": source_id,
-                })
+                results["progressions"].append(
+                    {
+                        "from_role": from_role,
+                        "to_role": to_role,
+                        "context": _extract_ctx(text, match.start(), match.end()),
+                        "source_id": source_id,
+                    }
+                )
 
     # Detect responsibilities
     for pattern in RESPONSIBILITY_PATTERNS:
@@ -182,12 +214,14 @@ def detect_org_patterns(text, source_id=None):
             role = _clean_role(match.group(1))
             responsibility = match.group(2).strip()
             if _is_likely_role(role):
-                results["responsibilities"].append({
-                    "role": role,
-                    "responsibility": responsibility,
-                    "context": _extract_ctx(text, match.start(), match.end()),
-                    "source_id": source_id,
-                })
+                results["responsibilities"].append(
+                    {
+                        "role": role,
+                        "responsibility": responsibility,
+                        "context": _extract_ctx(text, match.start(), match.end()),
+                        "source_id": source_id,
+                    }
+                )
 
     # Detect KPIs
     for pattern in KPI_PATTERNS:
@@ -205,13 +239,15 @@ def detect_org_patterns(text, source_id=None):
                     value = groups[1]
                     metric = groups[2].strip()
                 if _is_likely_role(role):
-                    results["kpis"].append({
-                        "role": role,
-                        "metric": metric,
-                        "value": value,
-                        "context": _extract_ctx(text, match.start(), match.end()),
-                        "source_id": source_id,
-                    })
+                    results["kpis"].append(
+                        {
+                            "role": role,
+                            "metric": metric,
+                            "value": value,
+                            "context": _extract_ctx(text, match.start(), match.end()),
+                            "source_id": source_id,
+                        }
+                    )
 
     return results
 

@@ -116,8 +116,7 @@ class SyncResult:
                 for e in self.synced
             ],
             "skipped": [
-                {"rule": e.rule, "source": e.source, "reason": e.reason}
-                for e in self.skipped
+                {"rule": e.rule, "source": e.source, "reason": e.reason} for e in self.skipped
             ],
             "errors": self.errors,
             "duration_ms": self.duration_ms,
@@ -140,11 +139,18 @@ def _slugify(text: str) -> str:
 
     text = text.lower().strip()
     replacements = {
-        "\u00e1": "a", "\u00e0": "a", "\u00e3": "a", "\u00e2": "a",
-        "\u00e9": "e", "\u00ea": "e",
+        "\u00e1": "a",
+        "\u00e0": "a",
+        "\u00e3": "a",
+        "\u00e2": "a",
+        "\u00e9": "e",
+        "\u00ea": "e",
         "\u00ed": "i",
-        "\u00f3": "o", "\u00f4": "o", "\u00f5": "o",
-        "\u00fa": "u", "\u00fc": "u",
+        "\u00f3": "o",
+        "\u00f4": "o",
+        "\u00f5": "o",
+        "\u00fa": "u",
+        "\u00fc": "u",
         "\u00e7": "c",
     }
     for src, dst in replacements.items():
@@ -287,11 +293,13 @@ def _sync_sops(result: SyncResult, *, dry_run: bool = False) -> None:
 
         status = str(data.get("status", "")).lower()
         if status not in APPROVED_STATUSES:
-            result.skipped.append(SyncEntry(
-                rule="sop_promotion",
-                source=_relative_to_root(sop_path),
-                reason=f"status={status} (need: {', '.join(sorted(APPROVED_STATUSES))})",
-            ))
+            result.skipped.append(
+                SyncEntry(
+                    rule="sop_promotion",
+                    source=_relative_to_root(sop_path),
+                    reason=f"status={status} (need: {', '.join(sorted(APPROVED_STATUSES))})",
+                )
+            )
             continue
 
         # Determine destination: workspace/_templates/{area}/{slug}.sync.yaml
@@ -301,20 +309,24 @@ def _sync_sops(result: SyncResult, *, dry_run: bool = False) -> None:
 
         # Check if newer
         if not _is_newer(sop_path, dest):
-            result.skipped.append(SyncEntry(
-                rule="sop_promotion",
-                source=_relative_to_root(sop_path),
-                reason="destination is newer or same age",
-            ))
+            result.skipped.append(
+                SyncEntry(
+                    rule="sop_promotion",
+                    source=_relative_to_root(sop_path),
+                    reason="destination is newer or same age",
+                )
+            )
             continue
 
         # Check if human-edited
         if _is_human_edited(dest):
-            result.skipped.append(SyncEntry(
-                rule="sop_promotion",
-                source=_relative_to_root(sop_path),
-                reason="destination is human-edited (sacred)",
-            ))
+            result.skipped.append(
+                SyncEntry(
+                    rule="sop_promotion",
+                    source=_relative_to_root(sop_path),
+                    reason="destination is human-edited (sacred)",
+                )
+            )
             continue
 
         action = "updated" if dest.exists() else "created"
@@ -334,12 +346,14 @@ def _sync_sops(result: SyncResult, *, dry_run: bool = False) -> None:
                 },
             )
 
-        result.synced.append(SyncEntry(
-            rule="sop_promotion",
-            source=_relative_to_root(sop_path),
-            destination=_relative_to_root(dest),
-            action=action,
-        ))
+        result.synced.append(
+            SyncEntry(
+                rule="sop_promotion",
+                source=_relative_to_root(sop_path),
+                destination=_relative_to_root(dest),
+                action=action,
+            )
+        )
         logger.info("SOP promoted: %s -> %s (%s)", sop_path.name, dest.name, action)
 
 
@@ -359,7 +373,8 @@ def _sync_decisions(result: SyncResult, *, dry_run: bool = False) -> None:
         return
 
     decision_files = sorted(
-        f for f in BUSINESS_DECISIONS.rglob("*")
+        f
+        for f in BUSINESS_DECISIONS.rglob("*")
         if f.is_file()
         and f.suffix in (".md", ".yaml", ".yml", ".json")
         and not f.name.startswith(".")
@@ -373,19 +388,23 @@ def _sync_decisions(result: SyncResult, *, dry_run: bool = False) -> None:
         dest = dest_dir / f"{slug}{SYNC_SUFFIX}"
 
         if not _is_newer(dec_path, dest):
-            result.skipped.append(SyncEntry(
-                rule="decision_sync",
-                source=_relative_to_root(dec_path),
-                reason="destination is newer or same age",
-            ))
+            result.skipped.append(
+                SyncEntry(
+                    rule="decision_sync",
+                    source=_relative_to_root(dec_path),
+                    reason="destination is newer or same age",
+                )
+            )
             continue
 
         if _is_human_edited(dest):
-            result.skipped.append(SyncEntry(
-                rule="decision_sync",
-                source=_relative_to_root(dec_path),
-                reason="destination is human-edited (sacred)",
-            ))
+            result.skipped.append(
+                SyncEntry(
+                    rule="decision_sync",
+                    source=_relative_to_root(dec_path),
+                    reason="destination is human-edited (sacred)",
+                )
+            )
             continue
 
         # Extract title from file
@@ -423,12 +442,14 @@ def _sync_decisions(result: SyncResult, *, dry_run: bool = False) -> None:
                 metadata={"original_filename": dec_path.name},
             )
 
-        result.synced.append(SyncEntry(
-            rule="decision_sync",
-            source=_relative_to_root(dec_path),
-            destination=_relative_to_root(dest),
-            action=action,
-        ))
+        result.synced.append(
+            SyncEntry(
+                rule="decision_sync",
+                source=_relative_to_root(dec_path),
+                destination=_relative_to_root(dest),
+                action=action,
+            )
+        )
         logger.info("Decision synced: %s -> %s (%s)", dec_path.name, dest.name, action)
 
 
@@ -449,7 +470,8 @@ def _sync_companies(result: SyncResult, *, dry_run: bool = False) -> None:
         return
 
     dossier_files = sorted(
-        f for f in companies_dir.rglob("*")
+        f
+        for f in companies_dir.rglob("*")
         if f.is_file()
         and f.suffix in (".md", ".yaml", ".yml", ".json")
         and not f.name.startswith(".")
@@ -458,11 +480,7 @@ def _sync_companies(result: SyncResult, *, dry_run: bool = False) -> None:
 
     for dos_path in dossier_files:
         # Derive company slug from filename (e.g., DOSSIER-ACME-CORP.md -> acme-corp)
-        slug = _slugify(
-            dos_path.stem
-            .replace("DOSSIER-", "")
-            .replace("dossier-", "")
-        )
+        slug = _slugify(dos_path.stem.replace("DOSSIER-", "").replace("dossier-", ""))
         if not slug:
             slug = _slugify(dos_path.stem)
 
@@ -470,19 +488,23 @@ def _sync_companies(result: SyncResult, *, dry_run: bool = False) -> None:
         dest = dest_dir / f"intel{SYNC_SUFFIX}"
 
         if not _is_newer(dos_path, dest):
-            result.skipped.append(SyncEntry(
-                rule="company_sync",
-                source=_relative_to_root(dos_path),
-                reason="destination is newer or same age",
-            ))
+            result.skipped.append(
+                SyncEntry(
+                    rule="company_sync",
+                    source=_relative_to_root(dos_path),
+                    reason="destination is newer or same age",
+                )
+            )
             continue
 
         if _is_human_edited(dest):
-            result.skipped.append(SyncEntry(
-                rule="company_sync",
-                source=_relative_to_root(dos_path),
-                reason="destination is human-edited (sacred)",
-            ))
+            result.skipped.append(
+                SyncEntry(
+                    rule="company_sync",
+                    source=_relative_to_root(dos_path),
+                    reason="destination is human-edited (sacred)",
+                )
+            )
             continue
 
         # Extract title
@@ -513,12 +535,14 @@ def _sync_companies(result: SyncResult, *, dry_run: bool = False) -> None:
                 },
             )
 
-        result.synced.append(SyncEntry(
-            rule="company_sync",
-            source=_relative_to_root(dos_path),
-            destination=_relative_to_root(dest),
-            action=action,
-        ))
+        result.synced.append(
+            SyncEntry(
+                rule="company_sync",
+                source=_relative_to_root(dos_path),
+                destination=_relative_to_root(dest),
+                action=action,
+            )
+        )
         logger.info("Company dossier synced: %s -> %s (%s)", dos_path.name, dest.name, action)
 
 
@@ -558,8 +582,7 @@ def _sync_team_insights(result: SyncResult, *, dry_run: bool = False) -> None:
             source_path = item
             # Count files inside for summary
             file_count = sum(
-                1 for f in item.rglob("*")
-                if f.is_file() and not f.name.startswith(".")
+                1 for f in item.rglob("*") if f.is_file() and not f.name.startswith(".")
             )
             summary = f"{file_count} insight file(s) for {person_slug}"
         else:
@@ -572,19 +595,23 @@ def _sync_team_insights(result: SyncResult, *, dry_run: bool = False) -> None:
         dest = dest_dir / f"insights{SYNC_SUFFIX}"
 
         if not _is_newer(source_path, dest):
-            result.skipped.append(SyncEntry(
-                rule="team_insight_sync",
-                source=_relative_to_root(source_path),
-                reason="destination is newer or same age",
-            ))
+            result.skipped.append(
+                SyncEntry(
+                    rule="team_insight_sync",
+                    source=_relative_to_root(source_path),
+                    reason="destination is newer or same age",
+                )
+            )
             continue
 
         if _is_human_edited(dest):
-            result.skipped.append(SyncEntry(
-                rule="team_insight_sync",
-                source=_relative_to_root(source_path),
-                reason="destination is human-edited (sacred)",
-            ))
+            result.skipped.append(
+                SyncEntry(
+                    rule="team_insight_sync",
+                    source=_relative_to_root(source_path),
+                    reason="destination is human-edited (sacred)",
+                )
+            )
             continue
 
         title = person_slug.replace("-", " ").title()
@@ -603,15 +630,15 @@ def _sync_team_insights(result: SyncResult, *, dry_run: bool = False) -> None:
                 },
             )
 
-        result.synced.append(SyncEntry(
-            rule="team_insight_sync",
-            source=_relative_to_root(source_path),
-            destination=_relative_to_root(dest),
-            action=action,
-        ))
-        logger.info(
-            "Team insights synced: %s -> %s (%s)", person_slug, dest.name, action
+        result.synced.append(
+            SyncEntry(
+                rule="team_insight_sync",
+                source=_relative_to_root(source_path),
+                destination=_relative_to_root(dest),
+                action=action,
+            )
         )
+        logger.info("Team insights synced: %s -> %s (%s)", person_slug, dest.name, action)
 
 
 # ---------------------------------------------------------------------------
@@ -631,8 +658,7 @@ def _log_sync(result: SyncResult, *, dry_run: bool = False) -> None:
             "error_count": len(result.errors),
             "duration_ms": result.duration_ms,
             "synced": [
-                {"rule": e.rule, "source": e.source, "action": e.action}
-                for e in result.synced
+                {"rule": e.rule, "source": e.source, "action": e.action} for e in result.synced
             ],
         }
         with open(SYNC_LOG, "a", encoding="utf-8") as f:
@@ -731,9 +757,7 @@ def main() -> int:
 
     parser = argparse.ArgumentParser(
         prog="workspace_sync",
-        description=(
-            "Sync business knowledge to workspace (descriptive -> prescriptive)."
-        ),
+        description=("Sync business knowledge to workspace (descriptive -> prescriptive)."),
     )
     parser.add_argument(
         "--dry-run",
