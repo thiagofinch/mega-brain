@@ -54,12 +54,12 @@ def _patch_router_paths(tmp_path: Path, monkeypatch: pytest.MonkeyPatch):
     return bucket_inboxes
 
 
-from core.intelligence.pipeline.smart_router import (  # noqa: E402
+from dataclasses import dataclass, field
+
+from core.intelligence.pipeline.smart_router import (
     ACTION_MOVE,
     ACTION_NOOP,
     ACTION_TRIAGE,
-    AUTO_ROUTE_THRESHOLD,
-    SKIP_THRESHOLD,
     RouteResult,
     _is_ref_file,
     _resolve_collision,
@@ -70,8 +70,6 @@ from core.intelligence.pipeline.smart_router import (  # noqa: E402
     move_to_bucket,
     route,
 )
-
-from dataclasses import dataclass, field
 
 
 @dataclass

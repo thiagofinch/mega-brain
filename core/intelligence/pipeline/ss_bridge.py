@@ -25,14 +25,13 @@ import json
 import logging
 import os
 import subprocess
-import sys
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
 import yaml
 
-from core.paths import ROUTING, KNOWLEDGE_EXTERNAL, KNOWLEDGE_BUSINESS, KNOWLEDGE_PERSONAL
+from core.paths import KNOWLEDGE_BUSINESS, KNOWLEDGE_EXTERNAL, KNOWLEDGE_PERSONAL, ROUTING
 
 logger = logging.getLogger(__name__)
 
@@ -124,7 +123,7 @@ def _log_operation(
         return
 
     entry = {
-        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "timestamp": datetime.now(UTC).isoformat(),
         "operation": operation,
         "success": success,
         "input": input_path,
@@ -563,8 +562,8 @@ def ingest_website(
     Raises:
         RuntimeError: If SS not available
     """
-    import time
     import hashlib
+    import time
 
     start_time = time.time()
 

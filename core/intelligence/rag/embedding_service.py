@@ -15,7 +15,6 @@ import json
 import os
 from pathlib import Path
 
-
 DEFAULT_CACHE_DIR = Path(".data/embedding_cache")
 
 
@@ -229,7 +228,7 @@ class EmbeddingService:
 
     def _dummy_embed(self, text: str) -> list[float]:
         """Deterministic dummy embedding for testing without any provider."""
-        h = hashlib.md5(text.encode()).hexdigest()  # noqa: S324
+        h = hashlib.md5(text.encode()).hexdigest()
         raw = [int(h[i : i + 2], 16) / 255.0 for i in range(0, min(len(h), self._dimension * 2), 2)]
         # Pad to dimension if hex digest is shorter
         while len(raw) < self._dimension:

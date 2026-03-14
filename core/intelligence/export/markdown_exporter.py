@@ -8,7 +8,7 @@ It produces clean, portable markdown files.
 
 from __future__ import annotations
 
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
@@ -165,7 +165,7 @@ class MarkdownExporter(KnowledgeExporter):
         metadata: dict[str, Any] | None,
     ) -> str:
         """Create export metadata header."""
-        now = datetime.now(timezone.utc).isoformat(timespec="seconds")
+        now = datetime.now(UTC).isoformat(timespec="seconds")
 
         lines = [
             "---",

@@ -2,8 +2,7 @@
 
 import pytest
 
-from core.configs.preset_loader import load_preset, list_presets, VALID_PRESETS
-
+from core.configs.preset_loader import VALID_PRESETS, list_presets, load_preset
 
 REQUIRED_TOP_LEVEL_KEYS = {
     "name",

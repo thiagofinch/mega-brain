@@ -25,8 +25,7 @@ from __future__ import annotations
 import json
 import logging
 import os
-import shutil
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Literal
 
@@ -125,8 +124,8 @@ def process_file(
 
     try:
         from core.intelligence.pipeline.ss_bridge import (
-            ingest_pdf,
             ingest_docx,
+            ingest_pdf,
             is_ss_available,
         )
 
@@ -305,7 +304,7 @@ def process_inbox(
         "skipped": skipped,
         "failed": failed,
         "results": results,
-        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "timestamp": datetime.now(UTC).isoformat(),
     }
 
     # Write log
@@ -439,7 +438,7 @@ def main() -> int:
             _print_summary(bucket, summary)
         return 0
 
-    print(f"Usage: python inbox_processor.py [external|business|personal|all|<file>]")
+    print("Usage: python inbox_processor.py [external|business|personal|all|<file>]")
     return 1
 
 

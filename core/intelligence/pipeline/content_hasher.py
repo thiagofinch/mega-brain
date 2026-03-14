@@ -6,9 +6,8 @@ When pipeline runs, only new/changed files are processed.
 
 import hashlib
 import json
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
-
 
 DEFAULT_REGISTRY = Path(".data/content_hashes.json")
 
@@ -76,7 +75,7 @@ class HashRegistry:
         file_path = Path(file_path)
         self._hashes[str(file_path)] = {
             "hash": hash_file(file_path),
-            "processed_at": datetime.now(timezone.utc).isoformat(),
+            "processed_at": datetime.now(UTC).isoformat(),
             "batch_id": batch_id,
         }
         self._save()
@@ -87,7 +86,7 @@ class HashRegistry:
             fp = Path(fp)
             self._hashes[str(fp)] = {
                 "hash": hash_file(fp),
-                "processed_at": datetime.now(timezone.utc).isoformat(),
+                "processed_at": datetime.now(UTC).isoformat(),
                 "batch_id": batch_id,
             }
         self._save()

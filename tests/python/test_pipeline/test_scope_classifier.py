@@ -64,7 +64,7 @@ def _reset_caches(monkeypatch: pytest.MonkeyPatch, tmp_path: Path):
     monkeypatch.delenv("MEGA_BRAIN_COMPANY_KEYWORDS", raising=False)
 
 
-from core.intelligence.pipeline.scope_classifier import (  # noqa: E402
+from core.intelligence.pipeline.scope_classifier import (
     ClassificationContext,
     ScopeDecision,
     _detect_source_type,

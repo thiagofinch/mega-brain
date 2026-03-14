@@ -186,7 +186,7 @@ def _render_header(
         f"> **Category:** {category}",
         f"> **Version:** {version}",
         f"> **Generated:** {now}",
-        f"> **Source:** dossier_compiler.py v1.0.0 (S08)",
+        "> **Source:** dossier_compiler.py v1.0.0 (S08)",
         "",
         "---",
         "",

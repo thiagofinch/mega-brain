@@ -11,14 +11,14 @@ Autor: JARVIS
 Data: 2026-01-08
 """
 
-import os
-import sys
 import json
+import os
 import re
-from pathlib import Path
+import sys
+from collections import defaultdict
 from datetime import datetime
 from difflib import SequenceMatcher
-from collections import defaultdict
+from pathlib import Path
 
 # Tentar importar unidecode para normalizar acentos
 try:
@@ -32,9 +32,9 @@ except ImportError:
 
 # Tentar importar Google Sheets API
 try:
+    from google.auth.transport.requests import Request
     from google.oauth2.credentials import Credentials
     from google_auth_oauthlib.flow import InstalledAppFlow
-    from google.auth.transport.requests import Request
     from googleapiclient.discovery import build
 
     GOOGLE_API_AVAILABLE = True
@@ -712,23 +712,23 @@ def run_de_para():
     # Salva versao resumida legivel
     summary_file = OUTPUT_PATH / "DE-PARA-SUMMARY.md"
     with open(summary_file, "w", encoding="utf-8") as f:
-        f.write(f"# DE-PARA SUMMARY\n\n")
+        f.write("# DE-PARA SUMMARY\n\n")
         f.write(f"Data: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
-        f.write(f"## TOTAIS\n\n")
+        f.write("## TOTAIS\n\n")
         f.write(f"- Planilha: {total_planilha} items\n")
         f.write(f"- INBOX: {total_inbox} arquivos\n")
         f.write(f"- Match Rate: {match_rate:.1f}%\n\n")
-        f.write(f"## STATUS\n\n")
+        f.write("## STATUS\n\n")
         f.write(f"- MATCHED: {total_matched}\n")
         f.write(f"- MISSING: {total_missing}\n")
         f.write(f"- EXTRA: {total_extra}\n\n")
-        f.write(f"## POR FONTE\n\n")
+        f.write("## POR FONTE\n\n")
         for source, data in sorted(report["by_source"].items()):
             status = "OK" if data["missing"] == 0 else f"{data['missing']} faltando"
             f.write(f"- {source}: {data['matched']}/{data['planilha']} ({status})\n")
 
         if missing:
-            f.write(f"\n## TOP FALTANTES\n\n")
+            f.write("\n## TOP FALTANTES\n\n")
             for source, items in sorted(missing_by_source.items(), key=lambda x: -len(x[1]))[:5]:
                 f.write(f"\n### {source} ({len(items)} faltando)\n\n")
                 for item in items[:10]:

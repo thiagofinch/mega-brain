@@ -68,7 +68,7 @@ def query(
     t0 = time.time()
 
     # Step 1: Classify intent
-    from .adaptive_router import Pipeline, classify_intent, route_query, select_pipeline
+    from .adaptive_router import Pipeline, classify_intent, route_query
 
     intent = classify_intent(query_text)
 

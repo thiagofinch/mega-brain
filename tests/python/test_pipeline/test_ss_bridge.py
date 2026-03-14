@@ -20,11 +20,9 @@ from __future__ import annotations
 
 import json
 import subprocess
-from pathlib import Path
 from unittest.mock import MagicMock, patch
 
 import pytest
-
 
 # ---------------------------------------------------------------------------
 # Helpers: patch core.paths at module level to avoid import-time side effects
@@ -347,11 +345,11 @@ class TestIngestPdf:
 
         # Mock the fallback extractor
         mock_extract = MagicMock(return_value="Extracted text from PDF")
-        with patch.dict("sys.modules", {}):
-            with patch(
-                "core.intelligence.pipeline.extractors.extract_pdf", mock_extract, create=True
-            ):
-                result = mod.ingest_pdf(pdf, "test-tag", use_fallback=True)
+        with (
+            patch.dict("sys.modules", {}),
+            patch("core.intelligence.pipeline.extractors.extract_pdf", mock_extract, create=True),
+        ):
+            result = mod.ingest_pdf(pdf, "test-tag", use_fallback=True)
 
         assert result.name == "doc.md"
 
@@ -381,11 +379,11 @@ class TestIngestPdf:
         failed = subprocess.CompletedProcess(args=[], returncode=1, stdout="", stderr="parse error")
         mock_extract = MagicMock(return_value="Fallback text")
 
-        with patch.object(mod, "call_ss", return_value=failed):
-            with patch(
-                "core.intelligence.pipeline.extractors.extract_pdf", mock_extract, create=True
-            ):
-                result = mod.ingest_pdf(pdf, "tag")
+        with (
+            patch.object(mod, "call_ss", return_value=failed),
+            patch("core.intelligence.pipeline.extractors.extract_pdf", mock_extract, create=True),
+        ):
+            result = mod.ingest_pdf(pdf, "tag")
 
         assert result.name == "broken.md"
 
@@ -513,11 +511,13 @@ class TestIngestVideo:
 
         monkeypatch.setattr(mod, "is_ss_video_available", lambda: True)
 
-        with patch.object(
-            mod, "call_ss", side_effect=subprocess.TimeoutExpired(cmd="test", timeout=300)
+        with (
+            patch.object(
+                mod, "call_ss", side_effect=subprocess.TimeoutExpired(cmd="test", timeout=300)
+            ),
+            pytest.raises(RuntimeError, match="timed out"),
         ):
-            with pytest.raises(RuntimeError, match="timed out"):
-                mod.ingest_video("https://youtube.com/watch?v=test12345ab", "tag")
+            mod.ingest_video("https://youtube.com/watch?v=test12345ab", "tag")
 
 
 # ---------------------------------------------------------------------------

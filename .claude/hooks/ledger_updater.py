@@ -22,12 +22,12 @@ Actions:
 - session_end: Finaliza sessão
 """
 
-import sys
-import os
 import json
+import os
 import re
-from pathlib import Path
+import sys
 from datetime import datetime
+from pathlib import Path
 
 # Fix Windows cp1252 encoding
 if sys.platform == "win32":
@@ -60,7 +60,7 @@ def get_mission_state() -> dict:
     if not MISSION_STATE_PATH.exists():
         return {}
     try:
-        with open(MISSION_STATE_PATH, "r", encoding="utf-8") as f:
+        with open(MISSION_STATE_PATH, encoding="utf-8") as f:
             return json.load(f)
     except Exception:
         return {}

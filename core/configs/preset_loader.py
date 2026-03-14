@@ -8,7 +8,6 @@ from pathlib import Path
 
 import yaml
 
-
 PRESETS_DIR = Path(__file__).parent / "presets"
 
 VALID_PRESETS = ["course", "meeting", "podcast", "book"]

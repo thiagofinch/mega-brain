@@ -20,8 +20,7 @@ import sys
 import time
 import urllib.error
 import urllib.request
-from datetime import datetime, timezone
-from pathlib import Path
+from datetime import UTC, datetime
 from typing import Any
 
 from core.intelligence.pipeline.fireflies_config import (
@@ -255,7 +254,7 @@ class FirefliesSync:
             self.state["routed_empresa"] = self.state.get("routed_empresa", 0) + 1
         else:
             self.state["routed_pessoal"] = self.state.get("routed_pessoal", 0) + 1
-        self.state["last_sync_at"] = datetime.now(timezone.utc).isoformat()
+        self.state["last_sync_at"] = datetime.now(UTC).isoformat()
 
         self._log(
             "processed",
@@ -476,7 +475,7 @@ class FirefliesSync:
         log_file = self.config.log_dir / "fireflies-sync.jsonl"
         log_file.parent.mkdir(parents=True, exist_ok=True)
         entry: dict[str, Any] = {
-            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "timestamp": datetime.now(UTC).isoformat(),
             "source": "fireflies",
             "event": event,
             **data,
@@ -495,11 +494,11 @@ def _epoch_ms_to_str(date_value: Any) -> str:
     if date_value is None:
         return "Unknown"
     if isinstance(date_value, (int, float)) and date_value > 1e12:
-        dt = datetime.fromtimestamp(date_value / 1000, tz=timezone.utc)
+        dt = datetime.fromtimestamp(date_value / 1000, tz=UTC)
         return dt.strftime("%Y-%m-%d %H:%M")
     if isinstance(date_value, (int, float)) and date_value > 0:
         # Possibly epoch seconds
-        dt = datetime.fromtimestamp(date_value, tz=timezone.utc)
+        dt = datetime.fromtimestamp(date_value, tz=UTC)
         return dt.strftime("%Y-%m-%d %H:%M")
     return str(date_value)
 
@@ -571,7 +570,7 @@ def main() -> None:
     if cmd == "run":
         result = sync.run()
         if result.get("success"):
-            print(f"Sync completed.")
+            print("Sync completed.")
             print(f"  Discovered:  {result['discovered']}")
             print(f"  New:         {result['new']}")
             print(f"  Succeeded:   {result['succeeded']}")

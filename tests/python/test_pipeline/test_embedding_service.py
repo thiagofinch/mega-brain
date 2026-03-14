@@ -13,7 +13,6 @@ import pytest
 
 from core.intelligence.rag.embedding_service import EmbeddingCache, EmbeddingService
 
-
 # ============================================================================
 # EmbeddingCache
 # ============================================================================

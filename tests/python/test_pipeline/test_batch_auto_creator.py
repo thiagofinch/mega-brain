@@ -75,7 +75,7 @@ def _patch_batch_paths(tmp_path: Path, monkeypatch: pytest.MonkeyPatch):
     }
 
 
-from core.intelligence.pipeline.batch_auto_creator import (  # noqa: E402
+from core.intelligence.pipeline.batch_auto_creator import (
     BatchResult,
     ScanResult,
     _extract_batch_number,

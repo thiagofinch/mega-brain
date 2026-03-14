@@ -6,9 +6,8 @@ Synthetic embeddings (small float lists) are used; no real model needed.
 
 import pytest
 
-from core.intelligence.rag.vector_store import SearchResult, VectorStore
 from core.intelligence.rag.chroma_store import ChromaStore
-
+from core.intelligence.rag.vector_store import SearchResult, VectorStore
 
 # ---------------------------------------------------------------------------
 # Helpers

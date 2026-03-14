@@ -11,7 +11,7 @@ from __future__ import annotations
 
 import json
 from dataclasses import asdict, dataclass
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 
@@ -110,7 +110,7 @@ def score_batch(batch_path: str | Path, batch_id: str | None = None) -> QualityS
         traceability=traceability,
         total=total,
         grade=_grade(total),
-        timestamp=datetime.now(timezone.utc).isoformat(),
+        timestamp=datetime.now(UTC).isoformat(),
         details=details,
     )
 
@@ -192,7 +192,7 @@ def score_agent(agent_dir: str | Path) -> QualityScore:
         traceability=traceability,
         total=total,
         grade=_grade(total),
-        timestamp=datetime.now(timezone.utc).isoformat(),
+        timestamp=datetime.now(UTC).isoformat(),
         details=details,
     )
 

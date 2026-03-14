@@ -4,10 +4,9 @@ Auto-organize INBOX files based on content type.
 Watches the 00-INBOX folder and suggests actions for new files.
 """
 
-import os
 import sys
-from pathlib import Path
 from datetime import datetime
+from pathlib import Path
 
 # Paths
 MEGA_BRAIN_ROOT = Path(__file__).parent.parent
@@ -86,7 +85,7 @@ def scan_inbox() -> list:
 
             # For transcripts, detect themes
             if info["type"] == "transcript":
-                with open(item, "r", encoding="utf-8") as f:
+                with open(item, encoding="utf-8") as f:
                     content = f.read()
                 info["themes"] = detect_themes(content)
                 info["word_count"] = len(content.split())
@@ -120,7 +119,7 @@ def suggest_actions(files: list) -> None:
             print(f"  Action: Run /process-video {file['path']}")
 
         elif file["type"] == "document":
-            print(f"  Action: Read and extract knowledge manually")
+            print("  Action: Read and extract knowledge manually")
 
         print()
 

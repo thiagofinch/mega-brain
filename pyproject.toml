@@ -53,6 +53,7 @@ select = ["E", "F", "W", "I", "N", "UP", "B", "SIM", "RUF"]
 ignore = [
     "E501",    # line too long — handled by formatter
     "UP007",   # Use X | Y for union — keep Optional for 3.11 compat
+    "UP035",   # deprecated typing imports — existing codebase pattern
     "RUF013",  # implicit-optional — existing codebase pattern, fix gradually
     "SIM102",  # collapsible-if — readability preference
     "SIM108",  # if-else-block-instead-of-if-exp — readability preference
@@ -60,6 +61,12 @@ ignore = [
     "SIM103",  # needless-bool — clarity preference
     "SIM105",  # suppressible-exception — explicit try/except is clearer
     "SIM116",  # if-else-block-instead-of-dict-lookup — readability
+    "SIM117",  # nested with statements — readability preference
+    "B007",    # unused loop variables — common with os.walk patterns
+    "B023",    # loop variable binding — existing patterns
+    "B904",    # raise from exceptions — fix gradually
+    "B905",    # zip without strict — existing pattern
+    "N806",    # uppercase variable in function — constant-like naming
 ]
 
 [tool.ruff.lint.isort]
@@ -73,6 +80,9 @@ known-first-party = ["core"]
 "core/intelligence/pipeline/extractors/*" = ["RUF001"]  # unicode chars in HTML entity decoding
 "core/intelligence/pipeline/autonomous_processor.py" = ["N818"]  # legacy exception name
 "core/intelligence/rag/evaluator.py" = ["RUF034"]  # useless if-else in demo code
+"core/intelligence/pipeline/mce/cli.py" = ["E402"]  # imports after sys.path manipulation
+"core/intelligence/validation/*" = ["F841"]  # unused variables in validation logic
+"tests/*" = ["E402", "F841", "RUF059"]  # test files: imports, fixtures, unpacked vars
 
 [tool.ruff.format]
 quote-style = "double"

@@ -21,7 +21,6 @@ from core.paths import (
     INBOX,
     KNOWLEDGE_EXTERNAL,
     KNOWLEDGE_PERSONAL,
-    ROOT,
     WORKSPACE,
 )
 

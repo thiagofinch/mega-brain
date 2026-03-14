@@ -361,13 +361,13 @@ def main():
         print(f"Entities: {stats['total_entities']}")
         print(f"Edges: {stats['total_edges']}")
         print(f"Adjacency entries: {len(g.adj)}")
-        print(f"\nBy type:")
+        print("\nBy type:")
         for t, c in sorted(stats["entities_by_type"].items()):
             print(f"  {t}: {c}")
-        print(f"\nBy relation:")
+        print("\nBy relation:")
         for r, c in sorted(stats["edges_by_type"].items()):
             print(f"  {r}: {c}")
-        print(f"\nAssociative memory index: READY")
+        print("\nAssociative memory index: READY")
         print(
             f"PPR config: alpha={PPR_ALPHA}, iterations={PPR_ITERATIONS}, tolerance={PPR_TOLERANCE}"
         )
