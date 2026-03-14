@@ -7,10 +7,10 @@ version: "4.1.0"
 updated: "2026-03-13"
 
 totals:
-  external: 5
+  external: 6
   cargo: 14
   conclave: 3
-  total: 22
+  total: 23
 
 # =============================================================================
 # EXTERNAL (L3) - Expert Mind Clones
@@ -38,6 +38,11 @@ external:
     status: active
   - id: jeremy-miner
     path: agents/external/jeremy-miner/
+    has_soul: true
+    has_memory: true
+    status: active
+  - id: liam-ottley
+    path: agents/external/liam-ottley/
     has_soul: true
     has_memory: true
     status: active

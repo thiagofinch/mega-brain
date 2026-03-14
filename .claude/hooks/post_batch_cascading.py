@@ -1684,7 +1684,7 @@ def process_batch(batch_path: str) -> dict:
         try:
             import sys
 
-            scripts_path = str(Path(PROJECT_DIR) / "scripts")
+            scripts_path = str(Path(PROJECT_DIR) / ".claude" / "scripts")
             if scripts_path not in sys.path:
                 sys.path.insert(0, scripts_path)
             from validate_cascading_integrity import validate_batch_integrity

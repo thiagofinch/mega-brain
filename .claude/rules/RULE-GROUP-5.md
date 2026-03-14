@@ -30,7 +30,7 @@
 
 ```bash
 # EXECUTAR ANTES DE DECLARAR FASE 5 COMPLETA:
-python3 scripts/validate_phase5.py --fix
+python3 .claude/scripts/validate_phase5.py --fix
 ```
 
 ### O Que o Script Verifica:
@@ -64,7 +64,7 @@ python3 scripts/validate_phase5.py --fix
 │  ANTES DE DECLARAR FASE 5 COMPLETA:                                         │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                             │
-│  1. Executar: python3 scripts/validate_phase5.py                         │
+│  1. Executar: python3 .claude/scripts/validate_phase5.py                         │
 │                                                                             │
 │  2. Se FAILED:                                                              │
 │     → Ler lista de dossiers desatualizados                                  │

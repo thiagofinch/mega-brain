@@ -37,7 +37,7 @@ except ImportError:
 DNA_PERSONS = KNOWLEDGE_EXTERNAL / "dna" / "persons"
 DOSSIER_DIR = KNOWLEDGE_EXTERNAL / "dossiers" / "persons"
 INSIGHTS_DIR = ARTIFACTS / "insights"
-MINDS_DIR = AGENTS / "minds"
+MINDS_DIR = AGENTS / "external"
 CARGO_DIR = AGENTS / "cargo"
 ROLE_TRACKING = AGENT_DISCOVERY / "role-tracking.md"
 DISCOVERY_STATE = MISSION_CONTROL / "DISCOVERY-STATE.json"
@@ -280,7 +280,7 @@ def generate_outputs(persons: list[PersonRecord], cargo: list[CargoRole]) -> tup
         "",
         f"> Auto-generated: {now} | v3.1.0",
         "",
-        "## Person Agents (minds/)",
+        "## Person Agents (external/)",
         "",
         "| Slug | DNA | Dossier KB | Insights | Agent | Status |",
         "|------|-----|------------|----------|-------|--------|",
