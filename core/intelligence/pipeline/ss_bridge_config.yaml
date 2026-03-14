@@ -1,0 +1,33 @@
+# Skill Seekers Bridge Configuration
+# ====================================
+# Settings for calling Skill Seekers CLI from Mega Brain.
+# SS runs in an isolated venv to avoid dependency conflicts.
+
+skill_seekers:
+  # Path to Skill Seekers virtual environment
+  venv_path: "~/.venvs/skill-seekers"
+
+  # Maximum execution time for SS commands (seconds)
+  timeout_seconds: 300
+
+  # Output format for text extraction
+  output_format: "markdown"
+
+  # Whether to fall back to pymupdf/mammoth when SS not available
+  fallback_enabled: true
+
+  # Logging level for bridge operations
+  log_level: "INFO"
+
+# CLI commands available in SS
+commands:
+  pdf: "skill-seekers-pdf"
+  docx: "skill-seekers-word"
+  video: "skill-seekers-video"
+  web: "skill-seekers-doc-scrape"
+
+# Output directory templates (relative to knowledge/ buckets)
+output_templates:
+  external: "external/inbox/{source_tag}"
+  business: "business/inbox/{source_tag}"
+  personal: "personal/inbox/{source_tag}"

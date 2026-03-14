@@ -22,6 +22,10 @@ rag = [
     "voyageai>=0.3.0",
     "rank-bm25>=0.2.2",
 ]
+extractors = [
+    "pymupdf>=1.24.0",
+    "mammoth>=1.8.0",
+]
 dev = [
     "pytest>=8.0",
     "pytest-cov>=5.0",
@@ -80,6 +84,12 @@ testpaths = ["tests/python"]
 python_files = "test_*.py"
 python_functions = "test_*"
 addopts = "-v --tb=short"
+markers = [
+    "unit: Fast isolated tests (no filesystem, no network)",
+    "integration: Tests that touch filesystem or state files",
+    "e2e: End-to-end pipeline tests",
+    "slow: Tests that take >5s",
+]
 
 [tool.coverage.run]
 source = ["core/intelligence"]
