@@ -1,0 +1,48 @@
+# Git
+.git
+.gitignore
+
+# Node
+node_modules
+package-lock.json
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+.venv*
+venv/
+
+# IDE
+.vscode
+.cursor
+.windsurf
+.idea
+
+# Data (mounted as volumes, not baked in)
+.data/
+logs/
+artifacts/
+processing/
+research/
+
+# Claude Code
+.claude/hooks/
+.claude/skills/
+.claude/rules/
+.claude/sessions/
+.claude/mission-control/
+.claude/trash/
+.claude/agent-memory/
+
+# Build artifacts
+docs/
+reference/
+tests/
+.aiox-core/
+archive/
+
+# Secrets
+.env
+*.key
+credentials.json

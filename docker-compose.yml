@@ -1,0 +1,66 @@
+# Mega Brain AI -- Service Stack
+#
+# Usage:
+#   docker compose up -d          # Start all services
+#   docker compose up agent-api   # Start only agent API
+#   docker compose logs -f        # Follow logs
+#   docker compose down           # Stop all
+
+version: "3.8"
+
+services:
+  # Agent Query API (FastAPI)
+  agent-api:
+    build: .
+    container_name: mega-brain-api
+    ports:
+      - "8200:8200"
+    volumes:
+      - ./agents:/app/agents:ro
+      - ./knowledge:/app/knowledge:ro
+      - ./.data:/app/.data
+    environment:
+      - PYTHONPATH=/app
+    command: uvicorn core.api.agent_server:app --host 0.0.0.0 --port 8200
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8200/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  # RAG MCP Server
+  rag-server:
+    build: .
+    container_name: mega-brain-rag
+    ports:
+      - "8100:8100"
+    volumes:
+      - ./.data:/app/.data
+      - ./knowledge:/app/knowledge:ro
+    environment:
+      - PYTHONPATH=/app
+      - VOYAGE_API_KEY=${VOYAGE_API_KEY:-}
+    command: python3 -m core.intelligence.rag.mcp_server
+    restart: unless-stopped
+
+  # ChromaDB (persistent vector store)
+  chromadb:
+    image: chromadb/chroma:latest
+    container_name: mega-brain-chroma
+    ports:
+      - "8000:8000"
+    volumes:
+      - chroma-data:/chroma/chroma
+    environment:
+      - IS_PERSISTENT=TRUE
+      - ANONYMIZED_TELEMETRY=FALSE
+    restart: unless-stopped
+
+volumes:
+  chroma-data:
+    driver: local
+
+networks:
+  default:
+    name: mega-brain-net
