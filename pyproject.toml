@@ -22,6 +22,9 @@ rag = [
     "voyageai>=0.3.0",
     "rank-bm25>=0.2.2",
 ]
+vectordb = [
+    "chromadb>=1.0.0",
+]
 extractors = [
     "pymupdf>=1.24.0",
     "mammoth>=1.8.0",
