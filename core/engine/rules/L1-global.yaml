@@ -4,30 +4,70 @@ description: Project-wide rules for all contexts
 rules:
 - id: sequential-processing
   severity: warn
-  description: Do not advance pipeline steps without completing the current one
+  description: Do not advance pipeline steps without completing the current one. Phases
+    are sequential and blocking.
   tags:
   - pipeline
 - id: dual-location-logging
   severity: info
-  description: Pipeline processing generates logs in both markdown and JSONL
+  description: Pipeline processing generates logs in both markdown and JSONL (dual-location).
+    If it was not logged, it was not processed.
   tags:
   - logging
 - id: directory-contract
   severity: warn
-  description: All output must land in paths defined by core/paths.py ROUTING
+  description: All output must land in paths defined by core/paths.py ROUTING. See
+    reference/DIRECTORY-CONTRACT.md for the full contract.
   tags:
   - architecture
   - governance
 - id: template-enforcement
   severity: warn
-  description: Agent creation must follow Template V3 structure
+  description: Agent creation must follow Template V3 structure with all 11 mandatory
+    parts and traceable citations.
   tags:
   - agents
   - templates
 - id: cascading-mandatory
   severity: warn
-  description: Knowledge cascading to dossiers, playbooks, agents is mandatory after
-    extraction
+  description: Knowledge cascading to dossiers, playbooks, and agents is mandatory
+    after extraction. Existing dossiers must be updated, not ignored.
   tags:
   - pipeline
   - knowledge
+- id: hook-timeout-required
+  severity: warn
+  description: Every hook in settings.json must have a timeout value (30s recommended).
+    Hooks must use proper exit codes 0 (success), 1 (warning), 2 (block).
+  tags:
+  - hooks
+  - standards
+- id: mcp-native-tools-first
+  severity: info
+  description: Always prefer native Claude Code tools (Read, Write, Edit, Glob, Grep,
+    Bash) over MCP servers for local file operations.
+  tags:
+  - mcp
+  - tools
+- id: session-persistence
+  severity: warn
+  description: Session state must be saved automatically at key checkpoints (batch
+    completion, significant actions, before destructive operations). Use .claude/sessions/
+    for logs.
+  tags:
+  - session
+  - persistence
+- id: plan-mode-complex-tasks
+  severity: info
+  description: Complex tasks (new features, multi-file refactors, large batches) should
+    use plan mode before execution. Plans save to docs/plans/.
+  tags:
+  - planning
+  - workflow
+- id: source-marking
+  severity: warn
+  description: Every file entering the pipeline must have clear source identification.
+    Format [SOURCE]_[ORIGINAL_NAME].[ext]. No anonymous files allowed.
+  tags:
+  - pipeline
+  - traceability

@@ -1050,8 +1050,8 @@ updated: "2026-02-27"
 
 | Protocolo | Path |
 |-----------|------|
-| AGENT-COGNITION-PROTOCOL | `.claude/rules/agent-cognition.md` |
-| EPISTEMIC-PROTOCOL | `.claude/rules/epistemic-standards.md` |
+| AGENT-COGNITION-PROTOCOL | `reference/protocols/agent-cognition.md` |
+| EPISTEMIC-PROTOCOL | `reference/protocols/epistemic-standards.md` |
 | AGENT-INTERACTION | `.claude/rules/agent-interaction.md` |
 | WAR-ROOM | `core/templates/debates/war-room.md` |
 | MEMORY-PROTOCOL | `core/templates/agents/memory-template.md` |

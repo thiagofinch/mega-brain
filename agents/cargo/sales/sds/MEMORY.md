@@ -714,8 +714,8 @@ Sou o especialista em **Discovery e Qualificação**. Minha função é instalar
 - `.claude/rules/agent-interaction.md`
 - `core/templates/debates/war-room.md`
 - `core/templates/agents/memory-template.md`
-- `.claude/rules/agent-cognition.md` (FASE 1.5)
-- `.claude/rules/agent-integrity.md`
+- `reference/protocols/agent-cognition.md` (FASE 1.5)
+- `reference/protocols/agent-integrity.md`
 
 ---
 

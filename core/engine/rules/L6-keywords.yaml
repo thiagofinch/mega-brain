@@ -4,24 +4,78 @@ description: Rules triggered by keyword detection in prompts
 rules:
 - id: batch-processing-rules
   severity: info
-  description: 'Batch processing: log every batch, update state, verify before advancing'
+  description: 'Batch processing: log every batch with template V2 (14 sections),
+    update MISSION-STATE.json, verify before advancing. Show complete log in chat.'
   tags:
   - batch
   - pipeline
   - processing
 - id: agent-creation-rules
   severity: info
-  description: 'Agent creation: use Template V3, include 11 parts, traceable citations'
+  description: 'Agent creation: use Template V3 with 11 mandatory parts, ASCII headers,
+    progress bars, traceable citations ^[SOURCE:file:line]. Validate all parts before
+    saving.'
   tags:
   - agent
   - create
   - dossier
 - id: github-workflow-rules
   severity: info
-  description: 'Code changes: follow Issue→Branch→PR→Merge workflow'
+  description: 'Code changes: follow Issue -> Branch -> PR -> Merge workflow. Never
+    commit directly to main. 6 verification levels required before merge.'
   tags:
   - github
   - git
   - push
   - pr
   - branch
+- id: phase5-execution
+  severity: info
+  description: 'Phase 5 execution: use official templates per subfase (5.1-5.6), process
+    one source at a time (isolation), advance automatically between subfases without
+    asking, cascade to dossiers/agents/playbooks.'
+  tags:
+  - phase
+  - dossier
+  - cascading
+  - agent
+- id: conclave-protocol
+  severity: info
+  description: 'Conclave (council debate): agents in /agents/ are activated only via
+    /conclave for formal multi-agent deliberation. Sub-agents in /.claude/jarvis/sub-agents/
+    handle day-to-day delegation.'
+  tags:
+  - conclave
+  - council
+  - debate
+- id: source-sync-rules
+  severity: info
+  description: 'Source sync: before processing new content, run /source-sync to compare
+    planilha snapshot vs local files. Tag at source (planilha) before download. Update
+    PLANILHA-INDEX.json after sync.'
+  tags:
+  - sync
+  - planilha
+  - download
+- id: session-management
+  severity: info
+  description: 'Session management: read MISSION-STATE.json at session start, report
+    exact position with numbers (phase, batch, percentage). Save session on completion,
+    significant actions, and before exit.'
+  tags:
+  - session
+  - save
+  - resume
+  - state
+- id: knowledge-bucket-routing
+  severity: info
+  description: 'Knowledge bucket routing: expert content -> knowledge/external/, company
+    content -> knowledge/business/, personal content -> knowledge/personal/, operational
+    docs -> workspace/. Each bucket has isolated RAG index.'
+  tags:
+  - bucket
+  - inbox
+  - knowledge
+  - personal
+  - external
+  - business

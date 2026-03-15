@@ -440,8 +440,8 @@ Qualquer coisa to por aqui!"
 
 ## PROTOCOLOS APLICAVEIS
 
-- `.claude/rules/agent-cognition.md`
-- `.claude/rules/epistemic-standards.md`
+- `reference/protocols/agent-cognition.md`
+- `reference/protocols/epistemic-standards.md`
 - `.claude/rules/agent-interaction.md`
 - `core/templates/debates/war-room.md`
 - `core/templates/agents/memory-template.md`

@@ -909,8 +909,8 @@ updated: "2026-02-27"
 │  PROTOCOLOS APLICAVEIS:                                                          │
 │  ├── .claude/rules/agent-interaction.md                                  │
 │  ├── core/templates/agents/memory-template.md                                    │
-│  ├── .claude/rules/epistemic-standards.md                                 │
-│  └── .claude/rules/agent-integrity.md                           │
+│  ├── reference/protocols/epistemic-standards.md                                 │
+│  └── reference/protocols/agent-integrity.md                           │
 │                                                                                  │
 │  TEMPLATE:                                                                       │
 │  └── /agents/_TEMPLATES/AGENT-MD-ULTRA-ROBUSTO-V3.md                         │

@@ -58,7 +58,7 @@
 #
 # ⚠️ PROTOCOLO DE INTEGRIDADE: Todo conteúdo abaixo é 100% rastreável.
 # Formato: ^[FONTE:arquivo:linha] ou ^[derivado:arquivo:método]
-# Ver: .claude/rules/agent-integrity.md
+# Ver: reference/protocols/agent-integrity.md
 #
 # ═══════════════════════════════════════════════════════════════════════════════
 
@@ -450,12 +450,12 @@ DNA Composition conforme definido em SOUL.md ^[SOUL.md:20-25]:
 │   │                              │   Inversão, Antifragilidade              │  │
 │   │                              │ → SEMPRE aplicar em decisões             │  │
 │   ├──────────────────────────────┼──────────────────────────────────────────┤  │
-│   │ AGENT-COGNITION-PROTOCOL     │ .claude/rules/agent-cognition... │  │
+│   │ AGENT-COGNITION-PROTOCOL     │ reference/protocols/agent-cognition... │  │
 │   │                              │ → Fases: Percepção → Raciocínio →        │  │
 │   │                              │   Decisão → Ação                         │  │
 │   │                              │ → SEMPRE aplicar ao processar pergunta   │  │
 │   ├──────────────────────────────┼──────────────────────────────────────────┤  │
-│   │ EPISTEMIC-PROTOCOL           │ .claude/rules/epistemic-standards  │  │
+│   │ EPISTEMIC-PROTOCOL           │ reference/protocols/epistemic-standards  │  │
 │   │                              │ → Gestão de incerteza                    │  │
 │   │                              │ → Calibração de confiança                │  │
 │   │                              │ → SEMPRE declarar confiança em respostas │  │
@@ -2217,11 +2217,11 @@ DNA Composition conforme definido em SOUL.md ^[SOUL.md:20-25]:
 │   │  │  → Princípios: Empirismo, Pareto, Inversão, Antifragilidade     │  │  │
 │   │  │  → SEMPRE aplicar em decisões importantes                       │  │  │
 │   │  │                                                                  │  │  │
-│   │  │  .claude/rules/agent-cognition.md               │  │  │
+│   │  │  reference/protocols/agent-cognition.md               │  │  │
 │   │  │  → Fases: Percepção → Raciocínio → Decisão → Ação               │  │  │
 │   │  │  → SEMPRE seguir ao processar perguntas                         │  │  │
 │   │  │                                                                  │  │  │
-│   │  │  .claude/rules/epistemic-standards.md                     │  │  │
+│   │  │  reference/protocols/epistemic-standards.md                     │  │  │
 │   │  │  → Gestão de incerteza e calibração de confiança                │  │  │
 │   │  │  → SEMPRE declarar confiança em respostas                       │  │  │
 │   │  │                                                                  │  │  │

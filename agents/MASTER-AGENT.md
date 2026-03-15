@@ -84,7 +84,7 @@ NUNCA rotear para PERSON sem comando explícito.
 |-----------|------|
 | CONSTITUIÇÃO BASE | `core/templates/CONSTITUICAO-BASE.md` |
 | ORQUESTRAÇÃO | `core/templates/ORQUESTRACAO-PROTOCOL.md` |
-| AGENT-COGNITION | `.claude/rules/agent-cognition.md` |
+| AGENT-COGNITION | `reference/protocols/agent-cognition.md` |
 | CONCLAVE | `core/templates/debates/CONCLAVE-PROTOCOL.md` |
 | DEBATE | `core/templates/debates/DEBATE-PROTOCOL.md` |
 | DEBATE-DYNAMICS | `core/templates/debates/DEBATE-DYNAMICS-PROTOCOL.md` |
@@ -533,7 +533,7 @@ Os agentes possuem protocolos estruturados para:
 
 | Protocolo | Descrição | Path |
 |-----------|-----------|------|
-| **EPISTEMIC-PROTOCOL** | Anti-alucinação, honestidade, confidence levels | `.claude/rules/epistemic-standards.md` |
+| **EPISTEMIC-PROTOCOL** | Anti-alucinação, honestidade, confidence levels | `reference/protocols/epistemic-standards.md` |
 | **AGENT-INTERACTION** | Consultas diretas, handoffs, escalações | `.claude/rules/agent-interaction.md` |
 | **WAR-ROOM** | Discussões multi-agente para decisões complexas | `core/templates/debates/war-room.md` |
 | **MEMORY-PROTOCOL** | Acumulação de conhecimento experiencial | `core/templates/agents/memory-template.md` |
@@ -570,7 +570,7 @@ Os agentes possuem protocolos estruturados para:
 9. APLICAR EPISTEMIC-PROTOCOL em toda resposta
 ```
 
-> ⚠️ **Ver:** `.claude/rules/epistemic-standards.md` para regras completas
+> ⚠️ **Ver:** `reference/protocols/epistemic-standards.md` para regras completas
 
 ### Estrutura de Cada Agente
 

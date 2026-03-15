@@ -1,0 +1,26 @@
+##############################################################################
+# DNA-CONFIG - Agent Pointer
+# Points to full DNA at knowledge/external/dna/persons/liam-ottley/
+##############################################################################
+
+persona:
+  name: "Liam Ottley"
+  slug: "liam-ottley"
+  type: "PERSON"
+  category: "external"
+
+dna_path: "knowledge/external/dna/persons/liam-ottley"
+
+dna_sources:
+  - id: "LO-001"
+    title: "The Biggest Shift in Business Since the Internet Just Happened"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/The Biggest Shift in Business Since the Internet Just Happened [youtube.com_watch_v=oC1h922cDoY].txt"
+  - id: "LO-002"
+    title: "How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE [youtube.com_watch_v=pTTvyQDK_tk].txt"
+  - id: "LO-003"
+    title: "What Is an AI Operating System (And Why Every Business Will Need One)"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/What Is an AI Operating System (And Why Every Business Will Need One) [youtube.com_watch_v=DXcVT07bQ6g].txt"
+
+total_elements: 35
+version: "1.0.0"

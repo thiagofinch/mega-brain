@@ -1,0 +1,101 @@
+# DNA-CONFIG: ALEX HORMOZI
+# Agente SOLO - Fonte única (100%)
+# Atualizado: 2026-01-10 (Fase 5 Consolidation)
+
+tipo: SOLO
+pessoa: Alex Hormozi
+peso: 1.0
+
+# Referência ao DNA real
+dna_location: /knowledge/dna/persons/alex-hormozi/
+
+# Arquivos de DNA
+dna_files:
+  config: CONFIG.yaml
+  filosofias: FILOSOFIAS.yaml
+  modelos_mentais: MODELOS-MENTAIS.yaml
+  heuristicas: HEURISTICAS.yaml
+  frameworks: FRAMEWORKS.yaml
+  metodologias: METODOLOGIAS.yaml
+
+# Domínios de expertise
+dominios:
+  - vendas
+  - hiring
+  - compensation
+  - scaling
+  - operations
+  - unit_economics
+  - closing
+  - lead_generation
+  - team_building
+  - pricing_psychology
+
+# Fontes processadas
+fontes:
+  - id: AH-SS001
+    titulo: "How I Scaled My Sales Team [Taki Moore Mastermind]"
+    insights: 30
+
+  - id: AH-HR001
+    titulo: "The Role of HR"
+    insights: 5
+
+  - id: AH-CP001
+    titulo: "Closing Playbook"
+    insights: 20
+
+  - id: AH-ML001
+    titulo: "Money Models - MASTER DOC"
+    insights: 25
+
+  - id: AH-YT
+    titulo: "Alex Hormozi YouTube (19 videos)"
+    insights: 30
+
+  - id: BATCH-127
+    titulo: "CLOSER Framework + Team Scaling"
+    insights: 112
+
+  - id: BATCH-128
+    titulo: "No-Based Questions + Core Four + Price Raising"
+    insights: 148
+
+# Métricas de DNA
+metricas:
+  total_insights: 260
+  distribuicao:
+    filosofias: 37
+    modelos_mentais: 30
+    heuristicas: 83
+    frameworks: 63
+    metodologias: 47
+  peso_medio: 0.88
+
+# Conflitos
+conflitos: []  # Agente SOLO não tem conflitos internos
+
+# Conexões com outras pessoas
+conexoes:
+  complementa:
+    - pessoa: Cole Gordon
+      em: Inner game e técnicas de fechamento
+    - pessoa: Jeremy Haynes
+      em: Show rate optimization
+    - pessoa: Jeremy Miner
+      em: NEPQ objection handling overlaps
+
+  tensiona:
+    - pessoa: Sam Oven
+      em: DFY vs DWY
+
+  alinha:
+    - pessoa: Jordan Lee
+      em: Hiring philosophy
+    - pessoa: Full Sales System
+      em: Team structure e compensation
+
+# Metadados
+versao: "3.0.0"
+criado_em: "2024-12-25"
+atualizado_em: "2026-01-10"

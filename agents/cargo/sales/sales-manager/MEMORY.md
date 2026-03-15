@@ -1260,8 +1260,8 @@ PERGUNTA DIAGNOSTICO DE OURO:
 
 | Protocolo | Path | Ref |
 |-----------|------|-----|
-| AGENT-COGNITION-PROTOCOL | `.claude/rules/agent-cognition.md` | ^[SOUL.md:273] |
-| EPISTEMIC-PROTOCOL | `.claude/rules/epistemic-standards.md` | ^[SOUL.md:274] |
+| AGENT-COGNITION-PROTOCOL | `reference/protocols/agent-cognition.md` | ^[SOUL.md:273] |
+| EPISTEMIC-PROTOCOL | `reference/protocols/epistemic-standards.md` | ^[SOUL.md:274] |
 | AGENT-INTERACTION | `.claude/rules/agent-interaction.md` | ^[SOUL.md:275] |
 | WAR-ROOM | `core/templates/debates/war-room.md` | ^[SOUL.md:276] |
 | MEMORY-PROTOCOL | `core/templates/agents/memory-template.md` | ^[SOUL.md:277] |

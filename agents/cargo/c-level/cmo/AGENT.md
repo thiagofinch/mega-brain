@@ -48,7 +48,7 @@ updated: "2026-02-27"
 #
 # ⚠️ PROTOCOLO DE INTEGRIDADE: Todo conteúdo abaixo é 100% rastreável.
 # Formato: ^[FONTE:arquivo:linha] ou ^[derivado:arquivo:método]
-# Ver: .claude/rules/agent-integrity.md
+# Ver: reference/protocols/agent-integrity.md
 #
 # ═══════════════════════════════════════════════════════════════════════════════
 
@@ -325,10 +325,10 @@ DNA Composition conforme definido em SOUL.md ^[SOUL.md:20-25]:
 │   │ CONSTITUIÇÃO BASE    │ core/templates/CONSTITUICAO-BASE.md         ││
 │   │                      │ → Empirismo, Pareto, Inversão, Antifragilidade    ││
 │   ├──────────────────────┼────────────────────────────────────────────────────┤│
-│   │ AGENT-COGNITION      │ .claude/rules/agent-cognition.md  ││
+│   │ AGENT-COGNITION      │ reference/protocols/agent-cognition.md  ││
 │   │                      │ → Percepção → Raciocínio → Decisão → Ação         ││
 │   ├──────────────────────┼────────────────────────────────────────────────────┤│
-│   │ EPISTEMIC-PROTOCOL   │ .claude/rules/epistemic-standards.md        ││
+│   │ EPISTEMIC-PROTOCOL   │ reference/protocols/epistemic-standards.md        ││
 │   │                      │ → Anti-alucinação, confidence levels              ││
 │   ├──────────────────────┼────────────────────────────────────────────────────┤│
 │   │ REASONING-MODEL      │ core/templates/agents/REASONING-MODEL-PROTOCOL ││

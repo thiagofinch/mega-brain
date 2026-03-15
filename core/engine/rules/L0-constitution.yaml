@@ -4,7 +4,8 @@ description: Non-negotiable rules that always apply
 rules:
 - id: no-secrets-in-files
   severity: block
-  description: Never store API keys, tokens, or credentials in tracked files
+  description: Never store API keys, tokens, or credentials in tracked files. Use .env
+    and reference-only entries.
   tags:
   - security
 - id: no-hardcoded-paths
@@ -15,20 +16,44 @@ rules:
 - id: epistemic-honesty
   severity: warn
   description: Separate facts (with sources) from recommendations. Declare confidence
-    level.
+    level. Never present hypothesis as fact.
   tags:
   - quality
 - id: agent-integrity
   severity: block
   description: All agent content must be 100% traceable to sources. Zero invention.
+    Every assertion needs ^[SOURCE] citation.
   tags:
   - agents
 - id: formal-workflow-required
   severity: block
   description: >
     Todo briefing de projeto/epic DEVE seguir o fluxo formal:
-    @pm (PRD) → @architect (viabilidade) → @sm (stories com DoD) → @po (backlog priorizado)
-    → execução por story (@dev → @qa → @devops). Nunca pular direto para código.
+    @pm (PRD) -> @architect (viabilidade) -> @sm (stories com DoD) -> @po (backlog priorizado)
+    -> execucao por story (@dev -> @qa -> @devops). Nunca pular direto para codigo.
   tags:
   - workflow
   - governance
+- id: agent-traceability
+  severity: block
+  description: All agent files (AGENT.md, SOUL.md, MEMORY.md) must have traceable
+    citations to source files. Navigation chain AGENT -> SOUL -> MEMORY -> DNA -> SOURCES
+    must be verifiable.
+  tags:
+  - agents
+  - traceability
+- id: no-invention
+  severity: block
+  description: Never invent content for agents. Fortifying (expanding within DNA limits)
+    is allowed; inventing (creating content not in sources) is prohibited. If information
+    is not found after 5 search iterations, declare it absent.
+  tags:
+  - agents
+  - quality
+- id: mcp-credentials-env-only
+  severity: block
+  description: MCP server configurations must never contain plaintext tokens. All
+    credentials must use environment variables via shell profile or .env file.
+  tags:
+  - security
+  - mcp

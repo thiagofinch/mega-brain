@@ -59,7 +59,7 @@ updated: "2026-02-27"
 #
 # ⚠️ PROTOCOLO DE INTEGRIDADE: Todo conteúdo abaixo é 100% rastreável.
 # Formato: ^[FONTE:arquivo:linha] ou ^[derivado:arquivo:método]
-# Ver: .claude/rules/agent-integrity.md
+# Ver: reference/protocols/agent-integrity.md
 #
 # ═══════════════════════════════════════════════════════════════════════════════
 
@@ -372,11 +372,11 @@ DNA Composition conforme definido em SOUL.md ^[SOUL.md:22-25]:
 │   ┌──────────────────────────────┬──────────────────────────────────────────┐  │
 │   │ PROTOCOLO                    │ PATH + FUNÇÃO                            │  │
 │   ├──────────────────────────────┼──────────────────────────────────────────┤  │
-│   │ AGENT-COGNITION-PROTOCOL     │ .claude/rules/agent-cognition... │  │
+│   │ AGENT-COGNITION-PROTOCOL     │ reference/protocols/agent-cognition... │  │
 │   │                              │ → Fases: Percepção → Raciocínio →        │  │
 │   │                              │   Decisão → Ação                         │  │
 │   ├──────────────────────────────┼──────────────────────────────────────────┤  │
-│   │ EPISTEMIC-PROTOCOL           │ .claude/rules/epistemic-standards  │  │
+│   │ EPISTEMIC-PROTOCOL           │ reference/protocols/epistemic-standards  │  │
 │   │                              │ → Gestão de incerteza                    │  │
 │   │                              │ → Calibração de confiança                │  │
 │   ├──────────────────────────────┼──────────────────────────────────────────┤  │

@@ -711,8 +711,8 @@
 
 | Protocolo | Descricao | Path |
 |-----------|-----------|------|
-| **AGENT-COGNITION-PROTOCOL** | Ativacao, raciocinio, validacao | `.claude/rules/agent-cognition.md` |
-| **EPISTEMIC-PROTOCOL** | Anti-alucinacao, confidence levels | `.claude/rules/epistemic-standards.md` |
+| **AGENT-COGNITION-PROTOCOL** | Ativacao, raciocinio, validacao | `reference/protocols/agent-cognition.md` |
+| **EPISTEMIC-PROTOCOL** | Anti-alucinacao, confidence levels | `reference/protocols/epistemic-standards.md` |
 | **AGENT-INTERACTION** | Consulta e resposta entre agentes | `.claude/rules/agent-interaction.md` |
 | **WAR-ROOM** | Discussoes para decisoes complexas | `core/templates/debates/war-room.md` |
 | **MEMORY-PROTOCOL** | Acumular conhecimento experiencial | `core/templates/agents/memory-template.md` |
