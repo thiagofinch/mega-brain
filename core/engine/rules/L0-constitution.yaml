@@ -1,0 +1,25 @@
+layer: L0
+name: Constitution
+description: Non-negotiable rules that always apply
+rules:
+- id: no-secrets-in-files
+  severity: block
+  description: Never store API keys, tokens, or credentials in tracked files
+  tags:
+  - security
+- id: no-hardcoded-paths
+  severity: warn
+  description: Use core.paths ROUTING constants, not hardcoded paths
+  tags:
+  - architecture
+- id: epistemic-honesty
+  severity: warn
+  description: Separate facts (with sources) from recommendations. Declare confidence
+    level.
+  tags:
+  - quality
+- id: agent-integrity
+  severity: block
+  description: All agent content must be 100% traceable to sources. Zero invention.
+  tags:
+  - agents

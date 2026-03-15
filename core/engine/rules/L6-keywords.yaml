@@ -1,0 +1,27 @@
+layer: L6
+name: Keyword Rules
+description: Rules triggered by keyword detection in prompts
+rules:
+- id: batch-processing-rules
+  severity: info
+  description: 'Batch processing: log every batch, update state, verify before advancing'
+  tags:
+  - batch
+  - pipeline
+  - processing
+- id: agent-creation-rules
+  severity: info
+  description: 'Agent creation: use Template V3, include 11 parts, traceable citations'
+  tags:
+  - agent
+  - create
+  - dossier
+- id: github-workflow-rules
+  severity: info
+  description: 'Code changes: follow Issue→Branch→PR→Merge workflow'
+  tags:
+  - github
+  - git
+  - push
+  - pr
+  - branch

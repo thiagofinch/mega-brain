@@ -1,0 +1,33 @@
+layer: L1
+name: Global Rules
+description: Project-wide rules for all contexts
+rules:
+- id: sequential-processing
+  severity: warn
+  description: Do not advance pipeline steps without completing the current one
+  tags:
+  - pipeline
+- id: dual-location-logging
+  severity: info
+  description: Pipeline processing generates logs in both markdown and JSONL
+  tags:
+  - logging
+- id: directory-contract
+  severity: warn
+  description: All output must land in paths defined by core/paths.py ROUTING
+  tags:
+  - architecture
+  - governance
+- id: template-enforcement
+  severity: warn
+  description: Agent creation must follow Template V3 structure
+  tags:
+  - agents
+  - templates
+- id: cascading-mandatory
+  severity: warn
+  description: Knowledge cascading to dossiers, playbooks, agents is mandatory after
+    extraction
+  tags:
+  - pipeline
+  - knowledge
