@@ -30,7 +30,7 @@ ensures bucket isolation, proper layer classification, and consistent routing.
 |----------|------|---------|
 | Directory Contract | `.claude/rules/directory-contract.md` | Filesystem rules |
 | paths.py | `core/paths.py` | Routing constants |
-| SOURCE-TREE.md | `reference/SOURCE-TREE.md` | Current directory structure |
+| SOURCE-TREE.md | `docs/architecture/source-tree.md` | Current directory structure |
 
 ---
 
@@ -85,5 +85,5 @@ STEP 5: DELIVER VERDICT
 |------|------|
 | READS | `.claude/rules/directory-contract.md` |
 | READS | `core/paths.py` |
-| READS | `reference/SOURCE-TREE.md` |
+| READS | `docs/architecture/source-tree.md` |
 | DEPENDS_ON | Directory Contract v3.0.0 |

@@ -653,7 +653,7 @@ workspace/config/mappings/**
 # NOTE: tests/ removed from deny — already allowed in BLOCO 4 (lines 278-279)
 .planning/
 docs/*
-!docs/framework/
+!docs/architecture/
 
 # Reference — sensitive files
 reference/N8N-MCP-CONFIG.md

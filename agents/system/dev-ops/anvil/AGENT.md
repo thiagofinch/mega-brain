@@ -104,4 +104,4 @@ STEP 5: VERIFY
 | READS | `core/` (existing code patterns) |
 | READS | `core/paths.py` (routing constants) |
 | WRITES | `core/`, `.claude/hooks/`, `scripts/` |
-| DEPENDS_ON | CODE-STANDARDS.md |
+| DEPENDS_ON | `docs/architecture/coding-standards.md` |
