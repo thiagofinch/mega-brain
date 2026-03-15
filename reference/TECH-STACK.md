@@ -68,15 +68,14 @@
 
 ---
 
-## MCP Servers (5)
+## MCP Servers (4)
 
 | Server | Package | Purpose |
 |--------|---------|---------|
 | mega-brain-knowledge | Python (`core/intelligence/rag/mcp_server.py`) | RAG search |
+| mega-brain | `@anthropic/filesystem-mcp` | Filesystem access |
 | n8n-mcp | `n8n-mcp` | Workflow automation |
-| clickup | `@nazruden/clickup-server` | Task management |
-| miro | `@llmindset/mcp-miro` | Visual brainstorming |
-| notion | `@notionhq/notion-mcp-server` | External knowledge base |
+| read-ai | `mcp-remote` (OAuth) | Meeting transcriptions |
 
 ---
 
