@@ -31,7 +31,7 @@ Toda afirmação que contenha DADOS, NÚMEROS ou METODOLOGIAS deve seguir:
 
 ^[COLE-GORDON:CLOSER-TRAINING:Script-Discovery] "80% da call é descoberta, 20% é apresentação"
 
-^[[SUA EMPRESA]-CONTEXT:Financeiro:MRR] "MRR atual: R$637K"
+^[[SUA EMPRESA]-CONTEXT:Financeiro:MRR] "MRR atual: R$XXXk"
 
 
 ^[JEREMY-MINER:NEPQ:Tonalidade] "Tonalidade representa 40% do impacto em vendas"
@@ -234,7 +234,7 @@ Ao rebater posição de outro cargo:
 ```
 ✅ CORRETO:
 "Discordo do CRO sobre o ticket de R$150K.
-^[[SUA EMPRESA]-CONTEXT:Histórico] mostra que nosso maior ticket fechado foi R$80K.
+^[[SUA EMPRESA]-CONTEXT:Histórico] mostra que nosso maior ticket fechado foi R$XXK.
 Sugiro validar elasticidade antes."
 
 ❌ INCORRETO:

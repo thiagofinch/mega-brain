@@ -157,8 +157,11 @@ def update_assistant():
             "tools": TOOLS_CONFIG
         },
         "serverUrl": "YOUR_NGROK_URL/vapi/webhook",  # Placeholder - precisa ngrok
-        "serverUrlSecret": os.environ.get("VAPI_WEBHOOK_SECRET", "your-webhook-secret-here")
+        "serverUrlSecret": os.environ.get("VAPI_WEBHOOK_SECRET", "")
     }
+
+    if not payload.get("serverUrlSecret"):
+        print("\n⚠️  AVISO: VAPI_WEBHOOK_SECRET não configurado. Webhook ficará sem autenticação.")
 
     print("\n⚠️  ATENÇÃO: Para as tools funcionarem, você precisa:")
     print("   1. Iniciar o webhook server: python vapi_webhook_server.py")
@@ -226,7 +229,7 @@ def set_server_url(ngrok_url: str):
         },
         json={
             "serverUrl": full_url,
-            "serverUrlSecret": os.environ.get("VAPI_WEBHOOK_SECRET", "your-webhook-secret-here")
+            "serverUrlSecret": os.environ.get("VAPI_WEBHOOK_SECRET", "")
         }
     )
 

@@ -151,15 +151,15 @@ class TestClassifyBusinessContent:
         assert decision.primary_bucket == "business"
 
     def test_meeting_text_with_decisions(self, sample_meeting_transcript, monkeypatch):
-        monkeypatch.setenv("READ_AI_COMPANY_KEYWORDS", "bilhon,clickmax")
+        monkeypatch.setenv("READ_AI_COMPANY_KEYWORDS", "acme-co,acme")
         import core.intelligence.pipeline.scope_classifier as sc
 
         monkeypatch.setattr(sc, "_company_keywords", None)
 
         ctx = ClassificationContext(
             text=sample_meeting_transcript,
-            filename="bilhon-weekly.txt",
-            file_path="/knowledge/business/inbox/bilhon-weekly.txt",
+            filename="acme-weekly.txt",
+            file_path="/knowledge/business/inbox/acme-weekly.txt",
             source_type_hint="meeting",
         )
         decision = classify(ctx)

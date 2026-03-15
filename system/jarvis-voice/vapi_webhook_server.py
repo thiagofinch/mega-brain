@@ -36,7 +36,8 @@ def tool_mission_status() -> dict:
     connector.reload_state()
 
     # Lê o arquivo de progresso para dados mais atualizados
-    progress_path = Path(Config.MEGA_BRAIN_PATH) / "logs/MISSIONS/MISSION-2026-001-PROGRESS.md"
+    mission_id = connector.state.get("mission", {}).get("id", "MISSION-CURRENT")
+    progress_path = Path(Config.MEGA_BRAIN_PATH) / f"logs/MISSIONS/{mission_id}-PROGRESS.md"
 
     try:
         # Dados do state

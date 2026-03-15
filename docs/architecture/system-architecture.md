@@ -317,8 +317,7 @@ agents/
 |   |-- the-scalable-company/
 |   |-- full-sales-system/
 |   |-- g4-educacao/
-|   |-- alan-nicolas/               [L3 -- gitignored]
-|   |-- pedro-valerio/              [L3 -- gitignored]
+|   |-- {your-collaborators}/        [L3 -- gitignored]
 |   `-- _example/
 |
 |-- cargo/                          [L2] Functional role agents (12 categories)
@@ -390,7 +389,7 @@ knowledge/
 |
 |-- business/                       Bucket 2: Company Operations [L3 except scaffold]
 |   |-- inbox/                      Raw business materials
-|   |   `-- {person-or-company}/    bilhon/, furion/, alan-nicolas/, etc.
+|   |   `-- {person-or-company}/    your-company/, collaborator-name/, etc.
 |   |-- people/                     Collaborative DNA clones
 |   |-- dossiers/                   Company/theme/person dossiers
 |   |-- insights/                   Meeting insights (by-meeting, by-person, by-theme)
@@ -450,12 +449,10 @@ workspace/                          PRESCRIPTIVE -- how the company SHOULD funct
 |-- inbox/                          Triage staging [deprecated per pipeline gaps, gitignored]
 |
 |-- businesses/                     Strategic DNA per Business Unit (12 folders each)
-|   |-- bilhon/
-|   |-- clickmax/
-|   |-- furion-ai/
-|   |-- money-club/
-|   |-- outsider/
-|   `-- univ-outlier/
+|   |-- {your-company}/
+|   |-- {brand-1}/
+|   |-- {brand-2}/
+|   `-- {brand-N}/
 |
 |-- aios/                           AI Management space
 |-- ops/                            Operations space (meetings, SOPs, sprints)

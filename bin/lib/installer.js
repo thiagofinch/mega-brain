@@ -370,7 +370,12 @@ async function fetchPremiumContent(targetDir, token, spinner) {
 
   mkdirSync(join(targetDir, '.layer-sync'), { recursive: true });
 
-  const authUrl = `https://x-access-token:${token}@github.com/${process.env.MEGA_BRAIN_GH_ORG || 'thiagofinch'}/mega-brain-premium.git`;
+  const ghOrg = process.env.MEGA_BRAIN_GH_ORG;
+  if (!ghOrg) {
+    throw new Error('MEGA_BRAIN_GH_ORG não configurado. Configure esta variável de ambiente.');
+  }
+  const ghRepo = process.env.MEGA_BRAIN_GH_REPO || 'mega-brain-premium';
+  const authUrl = `https://x-access-token:${token}@github.com/${ghOrg}/${ghRepo}.git`;
 
   // --- CLONE ---
   if (!existsSync(join(tempDir, '.git'))) {

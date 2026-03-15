@@ -40,8 +40,6 @@ import yaml
 # ---------------------------------------------------------------------------
 # PATH SETUP
 # ---------------------------------------------------------------------------
-_ROOT = Path(__file__).resolve().parent.parent.parent.parent
-sys.path.insert(0, str(_ROOT))
 
 from core.paths import AGENTS, COMMANDS, LOGS  # noqa: E402
 
@@ -52,80 +50,9 @@ logger = logging.getLogger(__name__)
 # ---------------------------------------------------------------------------
 
 OFFICIAL_NICKNAMES: dict[str, dict[str, str]] = {
-    # -- External Experts --
-    "alex-hormozi": {
-        "name": "Alex",
-        "icon": "\U0001f48a",
-        "archetype": "Visionary",
-        "tagline": "Scaling, offers, unit economics",
-    },
-    "cole-gordon": {
-        "name": "Cole",
-        "icon": "\U0001f3af",
-        "archetype": "Builder",
-        "tagline": "Sales systems, compensation",
-    },
-    "jeremy-miner": {
-        "name": "Miner",
-        "icon": "\U0001f9e0",
-        "archetype": "Flow Master",
-        "tagline": "NEPQ, neuro-persuasion",
-    },
-    "jeremy-haynes": {
-        "name": "Haynes",
-        "icon": "\U0001f4e1",
-        "archetype": "Architect",
-        "tagline": "Paid media, client acquisition",
-    },
-    "sam-oven": {
-        "name": "Sam",
-        "icon": "\u2699\ufe0f",
-        "archetype": "Engineer",
-        "tagline": "Systems, scaling, operations",
-    },
-    "jordan-lee": {
-        "name": "Jordan",
-        "icon": "\U0001f4ca",
-        "archetype": "Analyst",
-        "tagline": "Data-driven sales",
-    },
-    "richard-linder": {
-        "name": "Linder",
-        "icon": "\U0001f3d7\ufe0f",
-        "archetype": "Builder",
-        "tagline": "Founder-first hiring",
-    },
-    "pedro-valerio": {
-        "name": "Pedro",
-        "icon": "\U0001f527",
-        "archetype": "Architect",
-        "tagline": "Process, automation, systems",
-    },
-    "alan-nicolas": {
-        "name": "Alan",
-        "icon": "\U0001f916",
-        "archetype": "Operator",
-        "tagline": "AI operations, execution",
-    },
-    "full-sales-system": {
-        "name": "FSS",
-        "icon": "\U0001f4cb",
-        "archetype": "Guardian",
-        "tagline": "Full sales methodology",
-    },
-    "g4-educacao": {
-        "name": "G4",
-        "icon": "\U0001f393",
-        "archetype": "Visionary",
-        "tagline": "Brazilian business education",
-    },
-    "the-scalable-company": {
-        "name": "TSC",
-        "icon": "\U0001f4c8",
-        "archetype": "Architect",
-        "tagline": "Scalable business models",
-    },
-    # -- External Roles (hybrid) --
+    # -- External experts and persons loaded dynamically from agents/ directories --
+    # See _load_agent_nicknames() below.
+    # -- Cargo Roles (hybrid) --
     "cfo": {
         "name": "Warren",
         "icon": "\U0001f4b0",
@@ -222,13 +149,7 @@ OFFICIAL_NICKNAMES: dict[str, dict[str, str]] = {
         "archetype": "Engineer",
         "tagline": "Paid traffic, ROAS optimization",
     },
-    # -- Personal --
-    "thiago-finch": {
-        "name": "Thiago",
-        "icon": "\U0001f9ec",
-        "archetype": "Oracle",
-        "tagline": "Cross-bucket, final arbiter",
-    },
+    # -- Personal agents loaded dynamically from agents/personal/ --
     # -- System --
     "conclave": {
         "name": "Council",
@@ -243,6 +164,43 @@ OFFICIAL_NICKNAMES: dict[str, dict[str, str]] = {
         "tagline": "Executive episodes",
     },
 }
+
+def _load_agent_nicknames() -> None:
+    """Scan agents/ directories and populate OFFICIAL_NICKNAMES dynamically."""
+    for category in ("external", "business", "personal"):
+        agents_dir = AGENTS / category
+        if not agents_dir.is_dir():
+            continue
+        for agent_dir in sorted(agents_dir.iterdir()):
+            if not agent_dir.is_dir() or agent_dir.name.startswith(("_", ".")):
+                continue
+            slug = agent_dir.name
+            if slug in OFFICIAL_NICKNAMES:
+                continue
+            # Try to read DNA-CONFIG.yaml for metadata
+            dna_path = agent_dir / "DNA-CONFIG.yaml"
+            name = slug.split("-")[0].title()
+            icon = "\U0001f4a1"
+            archetype = "Expert"
+            tagline = ""
+            if dna_path.exists():
+                try:
+                    data = yaml.safe_load(dna_path.read_text(encoding="utf-8")) or {}
+                    name = data.get("display_name", name)
+                    icon = data.get("icon", icon)
+                    archetype = data.get("archetype", archetype)
+                    tagline = data.get("tagline", tagline)
+                except Exception:
+                    pass
+            OFFICIAL_NICKNAMES[slug] = {
+                "name": name,
+                "icon": icon,
+                "archetype": archetype,
+                "tagline": tagline,
+            }
+
+
+_load_agent_nicknames()
 
 # Archetype -> default tone mapping
 _ARCHETYPE_TONES: dict[str, str] = {

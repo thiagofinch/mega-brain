@@ -12,7 +12,6 @@
 #   .github/layer1-allowlist.txt  → o que é público (L1/npm)
 #   .github/layer2-manifest.txt   → o que é premium (L2)
 #   .github/layer3-manifest.txt   → o que é backup pessoal (L3)
-#   .planning/LAYER-PLAN.md       → decisões arquiteturais
 #
 # REGRA: arquivo novo não listado aqui → ignorado por padrão.
 # Para compartilhar algo novo: adicione explicitamente abaixo.
@@ -293,10 +292,6 @@ squads/
 !.github/workflows/
 !.github/workflows/**
 
-# Planning
-!.planning/
-!.planning/**
-
 # Antigravity (IDE integration — só o que é do projeto)
 !.antigravity/
 !.antigravity/README.md
@@ -320,7 +315,6 @@ squads/
 !.claude/
 !.claude/CLAUDE.md
 !.claude/agents.yaml
-!.claude/gsd-file-manifest.json
 !.claude/settings.json
 !.claude/settings.example.json
 !.claude/package.json
@@ -354,10 +348,6 @@ squads/
 # .claude/agent-memory (persistent per-agent memory)
 !.claude/agent-memory/
 !.claude/agent-memory/**
-
-# .claude/get-shit-done
-!.claude/get-shit-done/
-!.claude/get-shit-done/**
 
 # .claude/projects (estrutura pública)
 !.claude/projects/
@@ -635,7 +625,7 @@ knowledge/business/inbox/**
 workspace/*.yaml
 workspace/*.json
 workspace/*.md
-workspace/bilhon-central/
+workspace/*-central/
 workspace/team/
 workspace/meetings/
 workspace/businesses/
@@ -649,9 +639,8 @@ workspace/tools/
 workspace/config/mappings/**
 !workspace/config/mappings/.gitkeep
 
-# Planning, docs — L3 only (not needed for machine to function)
+# Docs — L3 only (not needed for machine to function)
 # NOTE: tests/ removed from deny — already allowed in BLOCO 4 (lines 278-279)
-.planning/
 docs/*
 !docs/architecture/
 
@@ -660,13 +649,8 @@ reference/N8N-MCP-CONFIG.md
 reference/IMPLEMENTATION-LOG.md
 reference/templates/phase5/
 
-# Agents — collaborators and founder (not public experts)
-agents/external/alan-nicolas/
-agents/external/pedro-valerio/
-agents/external/thiago-finch/
-knowledge/external/dna/persons/alan-nicolas/
-knowledge/external/dna/persons/pedro-valerio/
-knowledge/external/dna/persons/thiago-finch/
+# Agents — collaborators and founder (L3, not distributed)
+# Add your own entries to .git/info/exclude for person-specific exclusions
 
 # Skills — removed
 .claude/skills/aios-master/

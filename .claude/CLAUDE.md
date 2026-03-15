@@ -18,7 +18,7 @@ mega-brain/
 ├── agents/         -> AI agents (5 categories)
 │   ├── external/       -> Expert mind clones (Hormozi, Cole, etc.)
 │   ├── business/       -> Collaborator clones
-│   ├── personal/       -> Founder clone (thiago-finch)
+│   ├── personal/       -> Founder clone
 │   ├── cargo/          -> Functional roles (Closer, CRO, etc.)
 │   ├── system/         -> Infrastructure (conclave, boardroom)
 │   ├── discovery/      -> Role tracking (auto-generated)
@@ -127,7 +127,7 @@ Configured in `settings.json` (distributed) and `settings.local.json` (local ove
 | UserPromptSubmit | `skill_router.py`, `quality_watchdog.py`, `memory_updater.py` |
 | PreToolUse | `creation_validator.py`, `claude_md_guard.py` |
 | PostToolUse | `post_tool_use.py`, `enforce_dual_location.py` |
-| Stop | `stop_hook_completeness.py`, `ralph_wiggum.py` |
+| Stop | `stop_hook_completeness.py`, `session_end.py` |
 
 ## Rules (Lazy Loading)
 

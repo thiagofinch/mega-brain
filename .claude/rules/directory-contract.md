@@ -81,7 +81,7 @@ workspace/                      <- PRESCRIPTIVE -- how the company SHOULD functi
 ├── inbox/                      -> Triage staging area
 │
 ├── businesses/                 -> Strategic DNA per Business Unit (12 folders each)
-│   └── {bu}/                       -> bilhon/, clickmax/, furion-ai/, ...
+│   └── {bu}/                       -> your-company/, brand-1/, brand-2/, ...
 │       ├── _preserved/             -> Backups, previous versions
 │       ├── ai/                     -> AI agents, prompts, automations
 │       ├── analytics/              -> Dashboards, KPIs, metrics
@@ -106,7 +106,7 @@ workspace/                      <- PRESCRIPTIVE -- how the company SHOULD functi
 │   ├── workflows/
 │   └── library/
 │
-├── ops/                        -> Space: Bilhon Ops (ClickUp 901313609435)
+├── ops/                        -> Space: Company Ops
 │   ├── processos-sops/
 │   │   ├── templates-de-tarefas/
 │   │   └── gestao-de-processos/
@@ -447,7 +447,7 @@ Each knowledge bucket has its own isolated RAG index to prevent cross-contaminat
 | `workspace/org/` | Removed S13: migrated to gestao | `workspace/gestao/administrativo/` |
 | `workspace/automations/` | Removed S13: migrated to aios | `workspace/aios/workflows/` |
 | `workspace/tools/` | Removed S13: migrated to gestao | `workspace/gestao/acessos-ferramentas/` |
-| Company files at workspace root | Must go into businesses/{bu}/company/ | `workspace/businesses/bilhon/company/` |
+| Company files at workspace root | Must go into businesses/{bu}/company/ | `workspace/businesses/{your-company}/company/` |
 | New top-level dirs | Filesystem contract violation | Update this contract first |
 | Hardcoded paths in scripts | Breaks when dirs move | Import from `core/paths.py` |
 | L3 data in L1/L2 | Security / privacy leak | Keep in gitignored dirs only |

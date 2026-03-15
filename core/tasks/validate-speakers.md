@@ -12,7 +12,7 @@ Blocks pipeline and presents options if labels are absent in multi-voice content
 
 ## Detection Patterns
 
-- `Nome Sobrenome: texto` (e.g., "Pedro Valerio Lopez: Então...")
+- `Nome Sobrenome: texto` (e.g., "Speaker Name: Então...")
 - `[00:00] Nome:` (timestamp + name)
 - `Speaker 1:` / `SPEAKER_00:` (auto-diarized)
 

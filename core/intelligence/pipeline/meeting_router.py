@@ -19,7 +19,7 @@ Usage:
     )
     result = router.classify(
         organizer_email="user@example.com",
-        attendee_emails=["john@gmail.com"],
+        attendee_emails=["john@example.com"],
         title="Weekly Sync",
     )
     print(result.bucket, result.score)

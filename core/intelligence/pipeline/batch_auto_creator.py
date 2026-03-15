@@ -46,19 +46,7 @@ from pathlib import Path
 # IMPORTS: core.paths and batch_governor
 # ---------------------------------------------------------------------------
 
-try:
-    from core.paths import LOGS, MISSION_CONTROL, ROUTING
-except ImportError:
-    # Fallback for standalone execution
-    _ROOT = Path(__file__).resolve().parent.parent.parent.parent
-    LOGS = _ROOT / "logs"
-    MISSION_CONTROL = _ROOT / ".claude" / "mission-control"
-    ROUTING = {
-        "external_inbox": _ROOT / "knowledge" / "external" / "inbox",
-        "batch_log": LOGS / "batches",
-        "batch_registry": MISSION_CONTROL / "BATCH-REGISTRY.json",
-        "batch_auto_creator_log": LOGS / "batch-auto-creator.jsonl",
-    }
+from core.paths import LOGS, MISSION_CONTROL, ROUTING
 
 try:
     from core.intelligence.pipeline.batch_governor import MAX_BATCH_SIZE, partition_files
@@ -117,21 +105,17 @@ SKIP_NAMES: set[str] = {".DS_Store", "Thumbs.db", ".gitkeep", "__pycache__"}
 # ---------------------------------------------------------------------------
 
 SOURCE_CODE_MAP: dict[str, str] = {
-    "alex-hormozi": "AH",
-    "cole-gordon": "CG",
-    "jeremy-haynes": "JH",
-    "jeremy-miner": "JM",
-    "sam-oven": "SO",
-    "pedro-valerio": "PV",
-    "alan-nicolas": "AN",
-    "richard-linder": "RL",
-    "jordan-lee": "JL",
-    "tallis-gomes": "TG",
-    "g4-educacao": "G4",
-    "the-scalable-company": "TSC",
-    "full-sales-system": "FSS",
-    "thiago-finch": "TF",
+    # Loaded dynamically from MEGA_BRAIN_SOURCE_CODES env var (format: slug:CODE,slug:CODE)
+    # Example: "expert-name": "EX",
 }
+
+# Load user-specific source codes from env
+_custom_codes = os.environ.get("MEGA_BRAIN_SOURCE_CODES", "")
+for _pair in _custom_codes.split(","):
+    _pair = _pair.strip()
+    if ":" in _pair:
+        _slug, _code = _pair.split(":", 1)
+        SOURCE_CODE_MAP[_slug.strip()] = _code.strip().upper()
 
 
 # ---------------------------------------------------------------------------

@@ -45,9 +45,10 @@ except ImportError:
     )
 
 # Configuracoes
-PROJECT_ROOT = Path(__file__).parent.parent
-INBOX_PATH = PROJECT_ROOT / "00-INBOX"
-OUTPUT_PATH = PROJECT_ROOT / ".claude" / "mission-control"
+from core.paths import MISSION_CONTROL, ROOT
+
+INBOX_PATH = ROOT / "00-INBOX"  # Legacy path (no longer exists)
+OUTPUT_PATH = MISSION_CONTROL
 SPREADSHEET_ID = os.environ.get("MEGA_BRAIN_SPREADSHEET_ID", "")
 
 # OAuth Config (mesma do gdrive_manager.py)
@@ -76,28 +77,20 @@ IGNORE_FOLDERS = [
 VALID_EXTENSIONS = {".txt", ".docx", ".pdf", ".md"}
 
 # Mapeamento de cursos para pastas INBOX
-COURSE_TO_FOLDER = {
-    "FullSales System": "FULL SALES SYSTEM",
-    "Alex Hormozi": "ALEX HORMOZI (ACQUISITION.COM)",
-    "Grupo Silva": "GRUPO SILVA",
-    "Client Accelerator": "CLIENT ACCELERATOR",
-    "EAD de Closer": ["COLE GORDON (CLOSERS.IO)", "EAD CLOSER (G4)"],
-    "G4": "G4 EDUCACAO (GESTAO 4.0)",
-    "Viver de AI": "VIVER DE AI",
-    "Sales Training With Jeremy Haynes": "JEREMY HAYNES",
-    "Inner Circle Mastermind Talks": "JEREMY HAYNES",
-    "Inner Circle Weekly Group Call Recordings": "JEREMY HAYNES",
-    "Ultra High Ticket Closer": "JEREMY HAYNES",
-    "Agency Owners Blueprint Accelerator": "JEREMY HAYNES",
-    "Perfect Cold Video Pitch": "JEREMY HAYNES",
-    "Land Your First Agency Client": "JEREMY HAYNES",
-    "30 Days Challenge": "JEREMY HAYNES",
-    "Scale The Agency": "JEREMY HAYNES",
-    "Marketer Mindset Masterclass": "JEREMY HAYNES",
-    "Jeremy Miner": "JEREMY MINER (7TH LEVEL)",
-    "The Scalable Company": "THE SCALABLE COMPANY",
-    "Programa de Aceleração Fullsales": "FULL SALES SYSTEM",
+COURSE_TO_FOLDER: dict[str, str | list[str]] = {
+    # Loaded dynamically from MEGA_BRAIN_COURSE_MAP env var
+    # Format: JSON string {"Course Name": "FOLDER_NAME", ...}
+    # Example: "Example Course": "EXAMPLE FOLDER",
 }
+
+# Load user-specific course mapping from env (JSON format)
+_course_map_raw = os.environ.get("MEGA_BRAIN_COURSE_MAP", "")
+if _course_map_raw:
+    try:
+        import json as _json
+        COURSE_TO_FOLDER.update(_json.loads(_course_map_raw))
+    except Exception:
+        pass
 
 
 def get_credentials():

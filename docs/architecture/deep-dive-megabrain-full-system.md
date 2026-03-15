@@ -398,9 +398,9 @@ From `SKILL-INDEX.json`:
 
 | Slug | metadata.yaml | metrics.yaml | pipeline_state.yaml | Status |
 |------|--------------|-------------|--------------------|---------|
-| `liam-ottley` | YES | YES | YES | Has full state machine |
-| `alan-nicolas` | YES | YES | NO | Metadata + metrics only |
-| `allfluence` | YES | YES | NO | Metadata + metrics only |
+| `{expert-slug}` | YES | YES | YES | Has full state machine |
+| `{collaborator-slug}` | YES | YES | NO | Metadata + metrics only |
+| `{company-slug}` | YES | YES | NO | Metadata + metrics only |
 | `calls` | YES | YES | NO | Metadata + metrics only |
 | `meet-0004` | YES | YES | NO | Metadata + metrics only |
 | `meet-4162` | YES | YES | NO | Metadata + metrics only |

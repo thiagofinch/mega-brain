@@ -25,6 +25,25 @@ import pytest
 MODULE = "core.intelligence.pipeline.inbox_organizer"
 
 
+# Test-only aliases — these are NOT real names; they simulate the user's config.
+_TEST_ENTITY_ALIASES: dict[str, str] = {
+    "hormozi": "alex-hormozi",
+    "alex hormozi": "alex-hormozi",
+    "cole": "cole-gordon",
+    "cole gordon": "cole-gordon",
+    "acme-co": "acme-co",
+    "acme": "acme-co",
+    "outsider": "outsider",
+    "otodus": "outsider",
+    "outsider 2.0": "outsider",
+    "otodus system": "outsider",
+    "finch": "founder-name",
+    "krueger": "collaborator-a",
+    "acme-brand": "acme-co",
+    "billion": "acme-co",
+}
+
+
 @pytest.fixture()
 def _patch_paths(tmp_path: Path, monkeypatch: pytest.MonkeyPatch):
     """Redirect all module-level paths to tmp_path so tests never touch the real FS."""
@@ -43,6 +62,7 @@ def _patch_paths(tmp_path: Path, monkeypatch: pytest.MonkeyPatch):
     )
     monkeypatch.setattr(f"{MODULE}.DNA_PERSONS_DIR", dna)
     monkeypatch.setattr(f"{MODULE}.LOGS", logs)
+    monkeypatch.setattr(f"{MODULE}.ENTITY_ALIASES", dict(_TEST_ENTITY_ALIASES))
 
     return inbox, logs, dna
 
@@ -138,12 +158,12 @@ class TestBusinessMeetingClassification:
     """Meeting files with [MEET-XXXX] tags classify correctly."""
 
     def test_meet_tag_detected_as_calls(self, _patch_paths):
-        fp = Path("/inbox/[MEET-0050] Bilhon Weekly.txt")
+        fp = Path("/inbox/[MEET-0050] Acme-Co Weekly.txt")
         assert detect_content_type(fp) == "calls"
 
-    def test_bilhon_entity_detected(self, _patch_paths):
-        fp = Path("/inbox/[MEET-0050] Bilhon Weekly.txt")
-        assert detect_entity(fp) == "bilhon"
+    def test_company_entity_detected(self, _patch_paths):
+        fp = Path("/inbox/[MEET-0050] Acme Weekly.txt")
+        assert detect_entity(fp) == "acme-co"
 
 
 # ===========================================================================
@@ -294,9 +314,9 @@ class TestEntityAliasResolution:
         fp = Path("/inbox/hormozi sales training.txt")
         assert detect_entity(fp) == "alex-hormozi"
 
-    def test_clickmax_resolves_to_bilhon(self, _patch_paths):
-        fp = Path("/inbox/clickmax campaign report.txt")
-        assert detect_entity(fp) == "bilhon"
+    def test_brand_alias_resolves_to_parent(self, _patch_paths):
+        fp = Path("/inbox/acme-brand campaign report.txt")
+        assert detect_entity(fp) == "acme-co"
 
     def test_otodus_resolves_to_outsider(self, _patch_paths):
         fp = Path("/inbox/otodus system design.txt")
@@ -307,17 +327,17 @@ class TestEntityAliasResolution:
         fp = Path("/inbox/cole closer training.txt")
         assert detect_entity(fp) == "cole-gordon"
 
-    def test_finch_resolves_to_thiago_finch(self, _patch_paths):
+    def test_finch_resolves_to_founder(self, _patch_paths):
         fp = Path("/inbox/finch personal notes.txt")
-        assert detect_entity(fp) == "thiago-finch"
+        assert detect_entity(fp) == "founder-name"
 
-    def test_krueger_resolves_to_rodrigo_krueger(self, _patch_paths):
+    def test_krueger_resolves_to_collaborator(self, _patch_paths):
         fp = Path("/inbox/krueger strategy doc.txt")
-        assert detect_entity(fp) == "rodrigo-krueger"
+        assert detect_entity(fp) == "collaborator-a"
 
-    def test_billion_resolves_to_bilhon(self, _patch_paths):
+    def test_billion_resolves_to_acme(self, _patch_paths):
         fp = Path("/inbox/billion meeting notes.txt")
-        assert detect_entity(fp) == "bilhon"
+        assert detect_entity(fp) == "acme-co"
 
 
 # ===========================================================================

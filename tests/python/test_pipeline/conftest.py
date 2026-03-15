@@ -21,17 +21,17 @@ import pytest
 def sample_meeting_transcript() -> str:
     """A realistic meeting transcript with company keywords and decisions."""
     return (
-        "[MEET-0050] Bilhon Weekly -- 2026-03-12\n"
-        "Participants: thiago@bilhon.com, joao@bilhon.com, maria@bilhon.com\n"
-        "Organizer: thiago@bilhon.com\n\n"
-        "Thiago: Bom, pessoal, vamos revisar os KPIs da semana.\n"
-        "Joao: O MRR subiu 12% -- estamos em R$180k agora.\n"
-        "Maria: Churn caiu para 4.2%, abaixo do target de 5%.\n"
-        "Thiago: Otimo. Decidimos que vamos contratar mais um SDR.\n"
+        "[MEET-0050] Acme-Co Weekly -- 2026-03-12\n"
+        "Participants: alice@example.com, bob@example.com, carol@example.com\n"
+        "Organizer: alice@example.com\n\n"
+        "Alice: Bom, pessoal, vamos revisar os KPIs da semana.\n"
+        "Bob: O MRR subiu 12% -- estamos em R$180k agora.\n"
+        "Carol: Churn caiu para 4.2%, abaixo do target de 5%.\n"
+        "Alice: Otimo. Decidimos que vamos contratar mais um SDR.\n"
         "Action items:\n"
-        "- Joao: publicar vaga no LinkedIn ate sexta\n"
-        "- Maria: revisar scorecard do SDR\n"
-        "- Thiago: aprovar budget com financeiro\n"
+        "- Bob: publicar vaga no LinkedIn ate sexta\n"
+        "- Carol: revisar scorecard do SDR\n"
+        "- Alice: aprovar budget com financeiro\n"
         "Proximos passos: revisao na weekly de segunda.\n"
     )
 
