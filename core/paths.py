@@ -165,7 +165,7 @@ ROUTING = {
     "diarization": PROCESSING,
     "voice_embeddings": DATA / "voice_embeddings",
     # Agent outputs
-    "sow_output": AGENTS / "sua-empresa" / "sow",
+    "sow_output": WORKSPACE / "gente-cultura" / "equipe" / "sow",
     "generated_skill": SKILLS,
     # Downloads
     "download": INBOX,

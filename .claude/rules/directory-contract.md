@@ -210,9 +210,6 @@ agents/
 ├── discovery/      <- Auto-generated role tracking
 │   └── role-tracking.md
 │
-├── sua-empresa/    <- Company-specific agent outputs
-│   └── sow/            -> Statements of Work
-│
 ├── constitution/   <- Governance rules for agent behavior
 │
 └── _templates/     <- Agent creation templates
@@ -242,7 +239,7 @@ agents/
 | `agents/cargo/` | Cargo Agents | Functional role hybrids | Tracked (L2) |
 | `agents/system/` | System Agents | Conclave, boardroom, JARVIS | Tracked (L1) |
 | `agents/discovery/` | Agent Discovery | Auto-generated role tracking | Gitignored (L3) |
-| `agents/sua-empresa/` | Company Agents | SOW generation outputs | Tracked (L2) |
+| `workspace/gente-cultura/equipe/sow/` | SOW Outputs | Statement of Work docs | Tracked (L2) |
 | `agents/_templates/` | Templates | Agent creation templates (V3) | Tracked (L1) |
 | `agents/constitution/` | Governance | Agent behavior rules | Tracked (L1) |
 | `reference/` | Documentation | Guides, protocols, templates | Tracked (L1) |
@@ -325,7 +322,7 @@ Scripts MUST use these constants instead of hardcoding paths.
 
 | Script/Hook | Writes To | ROUTING Key |
 |-------------|-----------|-------------|
-| `sow_generator.py` | `agents/sua-empresa/sow/` | `ROUTING["sow_output"]` |
+| `sow_generator.py` | `workspace/gente-cultura/equipe/sow/` | `ROUTING["sow_output"]` |
 | Generated skills | `.claude/skills/` | `ROUTING["generated_skill"]` |
 | Role tracking | `agents/discovery/role-tracking.md` | `ROUTING["role_tracking"]` |
 | Agent creation trigger | `agents/discovery/` | `ROUTING["discovery_state"]` |
