@@ -49,6 +49,7 @@ from core.paths import (  # noqa: E402
     BUSINESS_INSIGHTS,
     BUSINESS_SOPS,
     LOGS,
+    ROOT as _ROOT,
     ROUTING,
     WORKSPACE_BUSINESSES,
     WORKSPACE_STRATEGY,

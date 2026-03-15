@@ -94,12 +94,12 @@ Defined in `AGENT-INDEX.yaml`, activated via slash commands.
 
 | Type | Count | Purpose |
 |------|-------|---------|
-| CARGO | 29 | Functional roles (Sales, Marketing, Ops) |
-| MINDS | 0 | Expert mind clones |
-| CONCLAVE | 0 | Multi-perspective deliberation |
+| CARGO | 14 | Functional roles (Sales, Marketing, C-Level) |
+| MINDS | 6 | Expert mind clones |
+| CONCLAVE | 3 | Multi-perspective deliberation |
 | SYSTEM | 2 | JARVIS, Agent-Creator |
 
-**Total Active Agents:** 29
+**Total Active Agents:** 23
 ## Configuration
 
 - **`.env`** is the ONLY source of truth for credentials
