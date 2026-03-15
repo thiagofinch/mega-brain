@@ -162,3 +162,24 @@ Decisões difíceis sobre cortes, demissões, ou priorização.
 | 2025-12-27 | Pipeline JARVIS | AH-CP001 (Closing Playbook) |
 | 2025-12-28 | Pipeline JARVIS | AH-ML001, AH-YT |
 | 2026-01-10 | Fase 5 Consolidation | BATCH-127, BATCH-128 (+260 elementos) |
+| 2026-03-15 | MCE Pipeline E2E | AH-0009, AH-0014, AH-0015 (+10 insights, 5 patterns, identity, voice DNA) |
+
+---
+
+## MCE EXTRACTION (2026-03-15)
+
+### New Insights (10)
+- Trust has 3 dimensions: self, system, world [MODELO-MENTAL]
+- Damaging admission: negative-BUT-positive amplifier [FRAMEWORK]
+- Warning label strategy makes positive assumed [HEURISTICA]
+- 4.7★/3000 > 5★/19 — negatives validate positives [FILOSOFIA]
+- 3 question types: yes/neutral/no-based [FRAMEWORK]
+- 'Fair enough' close via reciprocity [HEURISTICA]
+- No-based upsell: 95% acceptance rate [METODOLOGIA]
+- Price raising: home base → anchor above → prepay discount [FRAMEWORK]
+- Clear pipeline before price raise = scarcity [HEURISTICA]
+- 99/100 pricing fear is mental, not market [FILOSOFIA]
+
+### Identity Core
+**MASTER OBSESSION:** Making the honest path the most persuasive path (9/10)
+**PARADOX:** Values raw honesty AND uses psychological manipulation — honesty IS the technique

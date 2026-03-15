@@ -935,6 +935,32 @@ O $100M Closing Playbook é o catálogo definitivo de técnicas de fechamento. C
 
 ---
 
+## MCE Identity Profile (E2E Test — 3 sources)
+
+### Value Hierarchy
+**Tier 1 (Existential):** Integrity in persuasion (9.5) | Trust as currency (9.2) | Systems over talent (9.0)
+**Tier 2 (Operational):** Psychological leverage (8.5) | Cash flow optimization (8.1) | Volume and repetition (7.8)
+
+### Master Obsession
+Making the honest path the most persuasive path (intensity: 9/10)
+
+### Paradoxes
+1. Values raw honesty AND uses sophisticated psychological manipulation — resolves because honesty IS the technique
+2. Teaches simple frameworks BUT acknowledges mastery requires talent + high-volume reps
+
+### Behavioral Patterns
+- Negative-BUT-positive structure in all claims (always)
+- Anchors above target price, creates downsell path (always)
+- No-based questions for closing (frequently)
+- Announces changes in advance to create scarcity (always)
+- Credits specific mentors/sources for every technique (always)
+
+### Voice DNA
+Certainty: 9.2 | Authority: 8.5 | Warmth: 7.8 | Directness: 9.0 | Humor: 7.5 | Formality: 3.2
+
+---
+
 *Compilado via JARVIS v3.33.0*
 *MISSION-2026-001 | Phase 5.4 - DOSSIER Update*
+*MCE E2E Test: 2026-03-15*
 *Validado: 2026-01-10*

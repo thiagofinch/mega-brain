@@ -1,0 +1,32 @@
+version: '1.0'
+person: alex-hormozi
+layer: FRAMEWORKS
+last_updated: '2026-03-15T20:59:53.216059+00:00'
+entries:
+- id: fra_001
+  name: 'Damaging admission: negative-BUT-positive. ''But'' amplifies s'
+  description: 'Damaging admission: negative-BUT-positive. ''But'' amplifies second
+    half. Integrity-based persuasion.'
+  source_chunks:
+  - chunk_630
+  - chunk_631
+  confidence: 0.95
+  priority: HIGH
+- id: fra_002
+  name: '3 question types: yes-based, neutral, no-based. No-based str'
+  description: '3 question types: yes-based, neutral, no-based. No-based strongest
+    — people feel safe saying no.'
+  source_chunks:
+  - chunk_632
+  - chunk_633
+  confidence: 0.94
+  priority: HIGH
+- id: fra_003
+  name: 'Price raising: 1) home base. 2) anchor above. 3) prepayment '
+  description: 'Price raising: 1) home base. 2) anchor above. 3) prepayment = real
+    price. 4) uneven splits.'
+  source_chunks:
+  - chunk_634
+  - chunk_635
+  confidence: 0.96
+  priority: HIGH

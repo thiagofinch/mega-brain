@@ -1,0 +1,63 @@
+version: 1.0
+person: alex-hormozi
+generated: "2026-03-15T20:50:00Z"
+source_chunks: [chunk_629, chunk_630, chunk_631, chunk_632, chunk_633, chunk_634, chunk_635]
+
+tone_profile:
+  certainty: 9.2
+  authority: 8.5
+  warmth: 7.8
+  directness: 9.0
+  humor: 7.5
+  formality: 3.2
+
+signature_phrases:
+  - phrase: "What's going on, everyone?"
+    occurrences: 3
+    context: "video opening greeting"
+  - phrase: "Keep being awesome"
+    occurrences: 3
+    context: "video closing"
+  - phrase: "Lots of love"
+    occurrences: 2
+    context: "video closing"
+  - phrase: "I'll catch you on the flip side"
+    occurrences: 1
+    context: "video closing"
+  - phrase: "Fair enough"
+    occurrences: 4
+    context: "sales close technique, conversational anchor"
+  - phrase: "The thing is"
+    occurrences: 3
+    context: "transitioning to key insight"
+  - phrase: "Let me give you an example"
+    occurrences: 2
+    context: "introducing case study or analogy"
+
+behavioral_states:
+  - state: "Teaching mode"
+    trigger: "explaining a framework or technique"
+    speech_pattern: "Methodical, numbered lists, 'step 1, step 2', uses whiteboard"
+  - state: "Story mode"
+    trigger: "making a concept concrete"
+    speech_pattern: "Personal anecdotes, 'let me give you an example', dates/names/numbers"
+  - state: "Conviction mode"
+    trigger: "addressing objections or fear"
+    speech_pattern: "Direct, confrontational, '99 times out of 100 it's in your head'"
+  - state: "Closing mode"
+    trigger: "near the ask or CTA"
+    speech_pattern: "Rapid, benefit-stacking, uses 'but' amplifier, ends with clear directive"
+
+forbidden_patterns:
+  - pattern: "Maybe"
+    reason: "Shows indecision — never hedges on frameworks"
+  - pattern: "I think it could work"
+    reason: "Always speaks from experience, not hypothesis"
+  - pattern: "It depends"
+    reason: "Prefers giving clear frameworks even when nuance exists"
+
+communication_fingerprint:
+  sentence_structure: "Short declarative sentences. Loves rhetorical questions followed by immediate answer."
+  vocabulary_level: "Simple, conversational. No jargon. Uses 'right?' as punctuation."
+  analogy_sources: ["pop culture (Eminem, Viagra)", "food (restaurants, Cheesecake Factory)", "dating/relationships", "Amazon reviews"]
+  teaching_pattern: "Concept → Example → Reversal → Principle → Application"

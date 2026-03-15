@@ -1,0 +1,20 @@
+version: '1.0'
+person: alex-hormozi
+layer: PHILOSOPHIES
+last_updated: '2026-03-15T20:59:53.216059+00:00'
+entries:
+- id: fil_001
+  name: 4.7 stars/3000 ratings > 5 stars/19. Negative reviews valida
+  description: 4.7 stars/3000 ratings > 5 stars/19. Negative reviews validate positive
+    ones.
+  source_chunks:
+  - chunk_631
+  confidence: 0.88
+  priority: MEDIUM
+- id: fil_002
+  name: 99/100 pricing fear is in your head, not the market.
+  description: 99/100 pricing fear is in your head, not the market.
+  source_chunks:
+  - chunk_634
+  confidence: 0.85
+  priority: MEDIUM

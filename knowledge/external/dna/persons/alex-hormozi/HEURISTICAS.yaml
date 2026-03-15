@@ -1,0 +1,28 @@
+version: '1.0'
+person: alex-hormozi
+layer: HEURISTICS
+last_updated: '2026-03-15T20:59:53.216059+00:00'
+entries:
+- id: heu_001
+  name: 'Warning label strategy: warning about adverse effects makes '
+  description: 'Warning label strategy: warning about adverse effects makes positive
+    assumed. Viagra example.'
+  source_chunks:
+  - chunk_631
+  confidence: 0.9
+  priority: HIGH
+- id: heu_002
+  name: '''Fair enough'' close: concession + reciprocity. From Jordan B'
+  description: '''Fair enough'' close: concession + reciprocity. From Jordan Belfort.'
+  source_chunks:
+  - chunk_632
+  confidence: 0.91
+  priority: HIGH
+- id: heu_003
+  name: Clear pipeline before price raise. Announce = scarcity/urgen
+  description: Clear pipeline before price raise. Announce = scarcity/urgency + cashflow
+    boost.
+  source_chunks:
+  - chunk_635
+  confidence: 0.89
+  priority: HIGH

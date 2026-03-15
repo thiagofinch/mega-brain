@@ -1,0 +1,13 @@
+version: '1.0'
+person: alex-hormozi
+layer: METHODOLOGIES
+last_updated: '2026-03-15T20:59:53.216059+00:00'
+entries:
+- id: met_001
+  name: 'No-based upsell: ''You don''t want anything else?'' = 95% accep'
+  description: 'No-based upsell: ''You don''t want anything else?'' = 95% acceptance
+    rate.'
+  source_chunks:
+  - chunk_633
+  confidence: 0.93
+  priority: HIGH

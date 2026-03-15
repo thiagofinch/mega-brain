@@ -1,0 +1,12 @@
+version: '1.0'
+person: alex-hormozi
+layer: MENTAL-MODELS
+last_updated: '2026-03-15T20:59:53.216059+00:00'
+entries:
+- id: mod_001
+  name: 'Trust has 3 dimensions: self, system, world. All aligned = t'
+  description: 'Trust has 3 dimensions: self, system, world. All aligned = they buy.'
+  source_chunks:
+  - chunk_629
+  confidence: 0.92
+  priority: HIGH
