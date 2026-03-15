@@ -14,7 +14,7 @@ updated: "2026-02-27"
 # ═══════════════════════════════════════════════════════════════════════════════
 # AGENTE: CRITICO METODOLOGICO
 # ═══════════════════════════════════════════════════════════════════════════════
-# ARQUIVO: /agents/conclave/critico-metodologico/AGENT.md
+# ARQUIVO: /agents/system/conclave/critico-metodologico/AGENT.md
 # ID: @critico-metodologico
 # LAYER: L1 (Conclave)
 # ELEMENT: Earth (Analytical, Grounded, Thorough)

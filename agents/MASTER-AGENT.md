@@ -38,7 +38,7 @@ CAMADA 2: AGENTES ESPECIALIZADOS
 └── ⚠️ CARGO já tem DNA de Cole + Hormozi
 
 CAMADA 3: COUNCIL
-├── Path: /agents/conclave/
+├── Path: /agents/system/conclave/
 ├── Protocol: core/templates/debates/CONCLAVE-PROTOCOL.md
 └── Ordem: Crítico → Advogado → Sintetizador
 ```

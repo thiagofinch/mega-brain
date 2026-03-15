@@ -409,9 +409,9 @@ Rules are lazy-loaded via keyword matching from the UserPromptSubmit hook (skill
 
 | ID | Path |
 |----|------|
-| critico-metodologico | agents/conclave/critico-metodologico/ |
-| sintetizador | agents/conclave/sintetizador/ |
-| advogado-do-diabo | agents/conclave/advogado-do-diabo/ |
+| critico-metodologico | agents/system/conclave/critico-metodologico/ |
+| sintetizador | agents/system/conclave/sintetizador/ |
+| advogado-do-diabo | agents/system/conclave/advogado-do-diabo/ |
 
 ### 8.4 Agent File Structure (per agent)
 

@@ -49,7 +49,7 @@ When in plan mode, save the plan file to: `docs/plans/YYYY-MM-DD-description.md`
 
 | Layer | Content | Git Status |
 |-------|---------|------------|
-| L1 (Community) | core/, agents/conclave, .claude/, bin/, docs/ | Tracked (npm package) |
+| L1 (Community) | core/, agents/system/conclave, .claude/, bin/, docs/ | Tracked (npm package) |
 | L2 (Pro) | agents/cargo, knowledge/external/ (populated) | Tracked (premium) |
 | L3 (Personal) | .data/, .env, agents/external/, knowledge/personal/ | Gitignored |
 
@@ -96,10 +96,10 @@ Defined in `AGENT-INDEX.yaml`, activated via slash commands.
 |------|-------|---------|
 | CARGO | 29 | Functional roles (Sales, Marketing, Ops) |
 | MINDS | 0 | Expert mind clones |
-| CONCLAVE | 3 | Multi-perspective deliberation |
+| CONCLAVE | 0 | Multi-perspective deliberation |
 | SYSTEM | 2 | JARVIS, Agent-Creator |
 
-**Total Active Agents:** 32
+**Total Active Agents:** 29
 ## Configuration
 
 - **`.env`** is the ONLY source of truth for credentials

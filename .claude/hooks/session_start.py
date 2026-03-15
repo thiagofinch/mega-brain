@@ -59,7 +59,7 @@ except ImportError:
 
 CRITICAL_FILES = {
     "state": {
-        "paths": [".claude/jarvis/STATE.json", "system/JARVIS-STATE.json"],
+        "paths": [".claude/jarvis/STATE.json"],
         "required": True,
         "max_age_hours": 48,
     },
@@ -120,7 +120,7 @@ def check_file_age(filepath: Path) -> dict:
         mtime = datetime.fromtimestamp(filepath.stat().st_mtime)
         age = datetime.now() - mtime
         return {"modified": mtime, "age_hours": age.total_seconds() / 3600, "age_days": age.days}
-    except Exception:
+    except Exception as e:  # noqa: F841
         return {"modified": None, "age_hours": 999, "age_days": 999}
 
 
@@ -128,7 +128,7 @@ def read_file_safe(filepath: Path) -> str | None:
     """Lê arquivo com tratamento de erros."""
     try:
         return filepath.read_text(encoding="utf-8")
-    except Exception:
+    except Exception as e:  # noqa: F841
         return None
 
 
@@ -868,9 +868,9 @@ def main():
                 if chronicler_output:
                     output_parts.append("\n")
                     output_parts.append(chronicler_output)
-            except Exception:
+            except Exception as e:
                 # Chronicler é opcional, não bloqueia se falhar
-                pass
+                sys.stderr.write(f"[session_start] chronicler error: {e}\n")
 
         # === REGISTRAR SESSÃO ===
         project_dir = get_project_dir()

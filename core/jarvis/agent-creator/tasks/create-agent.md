@@ -61,7 +61,7 @@ responsible: "@agent-creator"
 ```python
 LAYER_FOLDERS = {
     "L0": "core/jarvis/",
-    "L1": "agents/conclave/",
+    "L1": "agents/system/conclave/",
     "L2": "agents/boardroom/",
     "L3": "agents/external/",
     "L4": "agents/cargo/",

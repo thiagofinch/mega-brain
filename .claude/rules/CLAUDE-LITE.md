@@ -40,14 +40,13 @@
 
 ```
 /.claude/jarvis/
-├── JARVIS-STATE.json           ← Estado atual
+├── STATE.json                  ← Estado atual (SINGLE source of truth)
 ├── JARVIS-MEMORY.md            ← Memória relacional
 └── JARVIS-DNA-PERSONALITY.md   ← DNA de personalidade
 
 /system/
 ├── 02-JARVIS-SOUL.md           ← Personalidade completa
-├── 03-JARVIS-DNA.yaml          ← Framework cognitivo
-└── JARVIS-STATE.json           ← Estado global
+└── 03-JARVIS-DNA.yaml          ← Framework cognitivo
 ```
 
 ---

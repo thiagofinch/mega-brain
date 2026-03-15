@@ -58,7 +58,7 @@ class Config:
     # Arquivos principais
     LATEST_SESSION = SESSIONS_DIR / "LATEST-SESSION.md"
     MISSION_STATE = MISSION_CONTROL_DIR / "MISSION-STATE.json"
-    JARVIS_STATE = PROJECT_DIR / "system" / "JARVIS-STATE.json"
+    JARVIS_STATE = PROJECT_DIR / ".claude" / "jarvis" / "STATE.json"
     AUTOSAVE_STATE = MISSION_CONTROL_DIR / "AUTOSAVE-STATE.json"
 
     # Timings (em segundos)
@@ -243,8 +243,9 @@ class SessionManager:
                     self.session = SessionData.from_dict(state)
                     self.session.last_activity = datetime.now().isoformat()
                     return
-            except Exception:
-                pass
+            except Exception as e:
+                import sys
+                print(f"[JARVIS] Warning: failed to load existing session: {e}", file=sys.stderr)
 
         # Criar nova sessao
         self.session = self._create_new_session()
@@ -276,8 +277,9 @@ class SessionManager:
             try:
                 with open(Config.MISSION_STATE, encoding="utf-8") as f:
                     return json.load(f)
-            except Exception:
-                pass
+            except Exception as e:
+                import sys
+                print(f"[JARVIS] Warning: failed to load MISSION-STATE.json: {e}", file=sys.stderr)
         return {"status": "unknown", "message": "MISSION-STATE.json nao encontrado"}
 
     def _load_jarvis_state(self) -> dict[str, Any]:
@@ -286,8 +288,9 @@ class SessionManager:
             try:
                 with open(Config.JARVIS_STATE, encoding="utf-8") as f:
                     return json.load(f)
-            except Exception:
-                pass
+            except Exception as e:
+                import sys
+                print(f"[JARVIS] Warning: failed to load JARVIS-STATE.json: {e}", file=sys.stderr)
         return {}
 
     # =============================
@@ -878,8 +881,13 @@ class SessionManager:
         """Handler para encerramento."""
         try:
             self.save(SaveTrigger.SESSION_END)
-        except Exception:
-            pass
+        except Exception as e:
+            # atexit handler: stderr output is best-effort, cannot guarantee delivery
+            import sys
+            try:
+                print(f"[JARVIS] Warning: failed to save session on exit: {e}", file=sys.stderr)
+            except Exception as e2:
+                pass  # stderr may be closed during interpreter shutdown
 
 
 # =================================

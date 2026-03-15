@@ -20,7 +20,7 @@ UPDATE_LOG = BASE_DIR / "logs" / "agent-index-updates.jsonl"
 # Layer paths
 LAYER_PATHS = {
     "L0": "core/jarvis/",
-    "L1": "agents/conclave/",
+    "L1": "agents/system/conclave/",
     "L2": "agents/boardroom/",
     "L3": "agents/external/",
     "L4": "agents/cargo/",
@@ -32,7 +32,7 @@ def parse_stdin():
     """Parse JSON from stdin."""
     try:
         return json.load(sys.stdin)
-    except Exception:
+    except Exception as e:  # noqa: F841
         return {}
 
 
@@ -97,7 +97,7 @@ def scan_agents() -> dict:
                     )
 
     # Scan conclave
-    conclave_dir = AGENTS_DIR / "conclave"
+    conclave_dir = AGENTS_DIR / "system" / "conclave"
     if conclave_dir.exists():
         for agent_dir in conclave_dir.iterdir():
             if agent_dir.is_dir():

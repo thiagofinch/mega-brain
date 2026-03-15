@@ -33,7 +33,7 @@
 - Core processing engine (`core/`)
 - CLI binaries (`bin/`)
 - Claude Code integration templates (`.claude/`)
-- Conclave (collaborative agent templates) (`agents/conclave/`)
+- Conclave (collaborative agent templates) (`agents/system/conclave/`)
 - Agent templates (`agents/_templates/`)
 - Documentation (`docs/`)
 - Empty structure markers (`.gitkeep` files anywhere)
@@ -46,7 +46,7 @@ core/intelligence/audit_layers.py → L1 (Core engine)
 bin/                           → L1 (Core engine)
 .claude/                       → L1 (Core engine)
 .claude/rules/RULE-GROUP-1.md  → L1 (Core engine)
-agents/conclave/               → L1 (Core engine)
+agents/system/conclave/               → L1 (Core engine)
 docs/                          → L1 (Core engine)
 inbox/.gitkeep                 → L1 (Empty structure marker)
 knowledge/external/dossiers/persons/.gitkeep → L1 (Empty structure marker)
@@ -280,7 +280,7 @@ Follow these steps in order — stop at the first match:
 - If YES → classify as **L2** (unless it's a `.gitkeep` or empty directory, which is L1)
 
 **Step 5: Check L1 patterns**
-- Does the path start with: `core/`, `bin/`, `.claude/`, `agents/conclave/`, `agents/_templates/`, `docs/`?
+- Does the path start with: `core/`, `bin/`, `.claude/`, `agents/system/conclave/`, `agents/_templates/`, `docs/`?
 - Is it a `.gitkeep` file anywhere in the repo?
 - If YES → classify as **L1**
 
@@ -303,7 +303,7 @@ These are real paths from the Phase 7 audit with confirmed classifications:
 | `bin/` | L1 | Core engine |
 | `.claude/` | L1 | Core engine |
 | `.claude/rules/RULE-GROUP-1.md` | L1 | Core engine |
-| `agents/conclave/` | L1 | Core engine |
+| `agents/system/conclave/` | L1 | Core engine |
 | `docs/` | L1 | Core engine |
 | `docs/LAYERS.md` | L1 | Core engine documentation |
 | `inbox/.gitkeep` | L1 | Empty structure marker |

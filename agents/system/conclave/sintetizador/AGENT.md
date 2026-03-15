@@ -14,7 +14,7 @@ updated: "2026-02-27"
 # ═══════════════════════════════════════════════════════════════════════════════
 # AGENTE: SINTETIZADOR
 # ═══════════════════════════════════════════════════════════════════════════════
-# ARQUIVO: /agents/conclave/sintetizador/AGENT.md
+# ARQUIVO: /agents/system/conclave/sintetizador/AGENT.md
 # ID: @sintetizador
 # LAYER: L1 (Conclave)
 # ELEMENT: Air (Integrative, Adaptive, Communicative)

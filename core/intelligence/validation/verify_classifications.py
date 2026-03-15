@@ -44,7 +44,7 @@ SPOT_CHECKS = [
     ("agents/boardroom/README.md", "L1", "Boardroom docs"),
     ("agents/constitution/BASE-CONSTITUTION.md", "L1", "Agent constitution"),
     ("agents/AGENT-INDEX.yaml", "L1", "Agent index"),
-    ("agents/conclave/CONCLAVE-PROTOCOL.md", "L1", "Conclave protocol"),
+    ("agents/system/conclave/CONCLAVE-PROTOCOL.md", "L1", "Conclave protocol"),
     # L1 — Structure markers
     ("inbox/.gitkeep", "L1", "Empty structure marker"),
     ("agents/cargo/.gitkeep", "L1", "Empty structure marker"),

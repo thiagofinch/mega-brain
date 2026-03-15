@@ -75,10 +75,10 @@ agents:
   conclave:
     - id: critic
       command: "/critic"
-      path: "agents/conclave/critico-metodologico/"
+      path: "agents/system/conclave/critico-metodologico/"
     - id: devils-advocate
       command: "/advocate"
-      path: "agents/conclave/advogado-do-diabo/"
+      path: "agents/system/conclave/advogado-do-diabo/"
 
   external:
     - id: cole-gordon

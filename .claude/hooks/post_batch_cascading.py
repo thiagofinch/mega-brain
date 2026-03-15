@@ -676,7 +676,7 @@ def find_agent_path(agent_name: str) -> Path | None:
     Busca em:
     - /agents/persons/
     - /agents/cargo/
-    - /agents/conclave/
+    - /agents/system/conclave/
     """
     # Normalizar nome
     normalized = agent_name.upper().replace(" ", "-")

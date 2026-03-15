@@ -65,7 +65,7 @@ workflow:
       steps:
         - execute:
             command: "invoke_critic"
-            agent: "agents/conclave/CRITIC/AGENT.md"
+            agent: "agents/system/conclave/CRITIC/AGENT.md"
         - execute:
             command: "evaluate_process"
         - execute:
@@ -83,7 +83,7 @@ workflow:
       steps:
         - execute:
             command: "invoke_advocate"
-            agent: "agents/conclave/ADVOCATE/AGENT.md"
+            agent: "agents/system/conclave/ADVOCATE/AGENT.md"
         - execute:
             command: "challenge_premises"
         - execute:
@@ -101,7 +101,7 @@ workflow:
       steps:
         - execute:
             command: "invoke_synthesizer"
-            agent: "agents/conclave/SYNTHESIZER/AGENT.md"
+            agent: "agents/system/conclave/SYNTHESIZER/AGENT.md"
         - execute:
             command: "integrate_perspectives"
         - execute:

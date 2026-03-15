@@ -14,7 +14,7 @@ updated: "2026-02-27"
 # ═══════════════════════════════════════════════════════════════════════════════
 # AGENTE: ADVOGADO DO DIABO
 # ═══════════════════════════════════════════════════════════════════════════════
-# ARQUIVO: /agents/conclave/advogado-do-diabo/AGENT.md
+# ARQUIVO: /agents/system/conclave/advogado-do-diabo/AGENT.md
 # ID: @advogado-do-diabo
 # LAYER: L1 (Conclave)
 # ELEMENT: Fire (Provocative, Challenging, Transformative)

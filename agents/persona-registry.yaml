@@ -18,7 +18,7 @@ layers:
   L1_CONCLAVE:
     name: "Conclave"
     icon: "👑"
-    location: "agents/conclave/"
+    location: "agents/system/conclave/"
     description: "Deliberação constitucional multi-perspectiva"
     trigger: "manual"
     command: "/conclave"
@@ -105,19 +105,19 @@ conclave:
     role: "Analytical Guardian"
     icon: "🔍"
     element: "Earth"
-    location: "agents/conclave/critico-metodologico/"
+    location: "agents/system/conclave/critico-metodologico/"
 
   - id: advogado-do-diabo
     role: "Devil's Advocate"
     icon: "😈"
     element: "Fire"
-    location: "agents/conclave/advogado-do-diabo/"
+    location: "agents/system/conclave/advogado-do-diabo/"
 
   - id: sintetizador
     role: "Integration Architect"
     icon: "🔮"
     element: "Air"
-    location: "agents/conclave/sintetizador/"
+    location: "agents/system/conclave/sintetizador/"
 
 # =============================================================================
 # MIND CLONES (L3)

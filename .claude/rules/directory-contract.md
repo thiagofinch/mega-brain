@@ -245,7 +245,6 @@ agents/
 | `reference/` | Documentation | Guides, protocols, templates | Tracked (L1) |
 | `bin/` | CLI Tools | npm executables | Tracked (L1) |
 | `system/` | System Config | JARVIS state, DNA, soul | Tracked (L1) |
-| `.planning/` | GSD Plans | Phases, roadmap, state | Tracked (L1) |
 | `.claude/` | Config + Runtime | Hooks, skills, commands, rules | Tracked (L1) |
 | `workspace/` | Operations | Prescriptive business structure | Tracked (L1 template, L2 populated) |
 | `knowledge/external/` | Bucket 1 | Expert dna, dossiers, playbooks | Tracked (L2) |

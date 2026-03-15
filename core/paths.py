@@ -144,6 +144,7 @@ ROUTING = {
     "pipeline_state": MISSION_CONTROL,
     "skill_index": MISSION_CONTROL,
     "autosave_state": MISSION_CONTROL,
+    "jarvis_state": JARVIS / "STATE.json",
     # Logs (append-only JSONL)
     "batch_log": LOGS / "batches",
     "handoff": LOGS / "handoffs",

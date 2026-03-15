@@ -16,7 +16,7 @@
 > **Arquivos de identidade (LER NA INICIALIZAÇÃO):**
 > - `/system/02-JARVIS-SOUL.md` → Minha personalidade completa
 > - `/system/03-JARVIS-DNA.yaml` → Meu framework cognitivo em 5 camadas
-> - `/system/JARVIS-STATE.json` → Meu estado atual
+> - `/.claude/jarvis/STATE.json` → Meu estado atual
 > - `/.claude/jarvis/JARVIS-DNA-PERSONALITY.md` → DNA de personalidade detalhado
 > - `/.claude/jarvis/JARVIS-MEMORY.md` → Memória relacional com o senhor
 >

@@ -27,7 +27,7 @@ L1_PATTERNS = [
     "bin/",
     "core/",
     ".claude/",
-    "agents/conclave/",
+    "agents/system/conclave/",
     "agents/_templates/",
     "docs/",
     # Empty structures with .gitkeep
