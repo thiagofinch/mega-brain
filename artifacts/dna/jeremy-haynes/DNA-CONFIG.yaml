@@ -1,0 +1,499 @@
+# DNA-CONFIG.yaml - JEREMY HAYNES
+# Extraído via DNA-EXTRACTION-PROTOCOL.md (Phase 3.2)
+# Fonte: 31 SOPs Jeremy Haynes + 24 insights de vídeos
+# Data: 2026-01-04
+
+version: "1.0.0"
+pessoa: "jeremy-haynes"
+fonte_ids:
+  - "JH-SOP001"
+  - "JH-SOP002"
+  - "JH-SOP003"
+  - "JH-SOP004"
+  - "JH-SOP005"
+  - "JH-SOP006"
+  - "JH-SOP007"
+  - "JH-SOP008"
+  - "JH-SOP009"
+  - "JH-SOP010"
+  - "JH-SOP011"
+  - "JH-SOP012"
+  - "JH-SOP013"
+  - "JH-SOP014"
+  - "JH-SOP015"
+  - "JH-SOP016"
+  - "JH-SOP017"
+  - "JH-SOP018"
+  - "JH-SOP019"
+  - "JH-SOP020"
+  - "JH-SOP021"
+  - "JH-SOP022"
+  - "JH-SOP023"
+  - "JH-SOP024"
+  - "JH-SOP025"
+  - "JH-SOP026"
+  - "JH-SOP027"
+  - "JH-SOP028"
+  - "JH-SOP029"
+  - "JH-SOP030"
+  - "JH-SOP031"
+extracted_at: "2026-01-04T17:45:00Z"
+total_items: 55
+
+# ═══════════════════════════════════════════════════════════════════════════
+# CAMADA 1: FILOSOFIAS
+# Crenças, valores, axiomas fundamentais
+# ═══════════════════════════════════════════════════════════════════════════
+
+filosofias:
+  count: 8
+  items:
+    - id: "FIL001"
+      texto: "The confused mind always says no - eliminate confusion with strategic saturation"
+      chunks: ["JH-SOP002_015", "JH-SOP002_001"]
+      confidence: "HIGH"
+      insight_ids: ["SPJH001", "ASJH001"]
+
+    - id: "FIL002"
+      texto: "Turn sales reps into 'cashiers' - pre-sell before the call so they just collect money"
+      chunks: ["JH-SOP011_001", "JH-SOP002_001"]
+      confidence: "HIGH"
+      insight_ids: ["SPJH002"]
+
+    - id: "FIL003"
+      texto: "Money solves almost every problem: security, shelter, food quality, environments, better people, travel comfort"
+      chunks: ["JH-SOP019_002"]
+      confidence: "HIGH"
+      insight_ids: ["BPJH001"]
+
+    - id: "FIL004"
+      texto: "Challenge positioning > Virtual Event - implies work/commitment, creates accountability, sets expectation of results DURING event"
+      chunks: ["JH-SOP024_011"]
+      confidence: "HIGH"
+      insight_ids: ["CFJH001"]
+
+    - id: "FIL005"
+      texto: "Book as Trophy - treat as symbol/badge of higher-level thinking, not a giveaway"
+      chunks: ["JH-SOP025_002"]
+      confidence: "HIGH"
+      insight_ids: ["BFJH002"]
+
+    - id: "FIL006"
+      texto: "Authentic visual framing > Forced 'Lambo & Mansion' vibes - don't fake it if not your style"
+      chunks: ["JH-SOP028_003"]
+      confidence: "HIGH"
+      insight_ids: ["VFJH002"]
+
+    - id: "FIL007"
+      texto: "Conviction is essential - leads see through lack of genuine belief in what you're selling"
+      chunks: ["JH-SOP018_002"]
+      confidence: "HIGH"
+      insight_ids: ["SRJH001"]
+
+    - id: "FIL008"
+      texto: "Onboarding makes or breaks deal longevity - first 30 days define multi-year relationships"
+      chunks: ["JH-SOP010_002"]
+      confidence: "HIGH"
+      insight_ids: ["OPJH003"]
+
+# ═══════════════════════════════════════════════════════════════════════════
+# CAMADA 2: MODELOS MENTAIS
+# Formas de pensar, frameworks conceituais
+# ═══════════════════════════════════════════════════════════════════════════
+
+modelos_mentais:
+  count: 7
+  items:
+    - id: "MM001"
+      texto: "3 Prospect Types: Ready to Buy (5-10%) vs Needs Convinced (30%) vs Cold Mass - target Ready to Buy first"
+      chunks: ["JH-SOP028_002"]
+      confidence: "HIGH"
+      insight_ids: ["PSJH001"]
+
+    - id: "MM002"
+      texto: "Market Sophistication Stage 3-4 requires thoroughness as deciding factor - prospects need more nurturing"
+      chunks: ["JH-SOP002_013"]
+      confidence: "HIGH"
+      insight_ids: ["SPJH003"]
+
+    - id: "MM003"
+      texto: "Interest Spectrum: No Interest → Curiosity → [progression stages] - every lead exists somewhere on this spectrum"
+      chunks: ["JH-SOP030_002"]
+      confidence: "HIGH"
+      insight_ids: ["PSJH002"]
+
+    - id: "MM004"
+      texto: "2nd Layer Questions: Answer follow-up questions that arise from initial answers (NY bagel/water analogy)"
+      chunks: ["JH-SOP002_004"]
+      confidence: "HIGH"
+      insight_ids: ["SPJH004"]
+
+    - id: "MM005"
+      texto: "Biggest businesses do 1 of 3: make people money, save people time, or solve problems"
+      chunks: ["JH-SOP019_003"]
+      confidence: "HIGH"
+      insight_ids: ["BPJH002"]
+
+    - id: "MM006"
+      texto: "Familiarity Bias + Mere-Exposure Effect: Repeated exposure builds trust even without conscious engagement"
+      chunks: ["JH-SOP002_002", "JH-SOP002_014"]
+      confidence: "HIGH"
+      insight_ids: ["SPJH001"]
+
+    - id: "MM007"
+      texto: "Context Match: ad background should visually match buyer's life (founder desk, Stripe dashboard, SaaS app)"
+      chunks: ["JH-SOP025_002"]
+      confidence: "HIGH"
+      insight_ids: ["BFJH001"]
+
+# ═══════════════════════════════════════════════════════════════════════════
+# CAMADA 3: HEURÍSTICAS ★
+# Regras práticas COM NÚMEROS - o ouro do sistema
+# ═══════════════════════════════════════════════════════════════════════════
+
+heuristicas:
+  count: 13
+  items:
+    - id: "HEU001"
+      texto: "Hammer Them Strategy: 15-20+ pieces of content in 72h window before sales call dramatically increases show rates"
+      numeros: "15-20+ pieces, 72 hours"
+      chunks: ["JH-SOP002_001", "JH-SOP002_002"]
+      confidence: "HIGH"
+      prioridade: "ALTA"
+      insight_ids: ["ASJH001"]
+      rating: "★★★★★"
+
+    - id: "HEU002"
+      texto: "Short Form = 30-50 vertical videos under 90s for awareness; Long Form = 15-30 videos 10min-2h for 'safety' (trust building)"
+      numeros: "30-50 short, 15-30 long, <90s short, 10min-2h long"
+      chunks: ["JH-SOP002_012"]
+      confidence: "HIGH"
+      prioridade: "ALTA"
+      insight_ids: ["ASJH004"]
+      rating: "★★★★★"
+
+    - id: "HEU003"
+      texto: "Cost per engagement $0.01-0.02 vs conversion campaigns $0.50-2.00 - spending 100X less than competitors"
+      numeros: "CPE $0.01-0.02, CPC $0.50-2.00, 100X difference"
+      chunks: ["JH-SOP011_005"]
+      confidence: "HIGH"
+      prioridade: "ALTA"
+      insight_ids: ["ASJH005"]
+      rating: "★★★★★"
+
+    - id: "HEU004"
+      texto: "If CTR < 2%: rotate creatives every 72 hours (headlines, copy, images, videos, dynamic vs static)"
+      numeros: "CTR < 2%, rotate every 72h"
+      chunks: ["JH-SOP006_002"]
+      confidence: "HIGH"
+      prioridade: "ALTA"
+      insight_ids: ["ARJH001"]
+      rating: "★★★★"
+
+    - id: "HEU005"
+      texto: "Client Reporting: 15 min/week, start with ROI + revenue generated, CC client + sales person"
+      numeros: "15 min/week"
+      chunks: ["JH-SOP005_001", "JH-SOP005_002"]
+      confidence: "HIGH"
+      prioridade: "MEDIA"
+      insight_ids: ["OPJH001"]
+      rating: "★★★★"
+
+    - id: "HEU006"
+      texto: "5 Point Client Retention Star: 5-10 hours/month investment retains clients for multi-year relationships"
+      numeros: "5-10 hours/month"
+      chunks: ["JH-SOP010_001"]
+      confidence: "HIGH"
+      prioridade: "ALTA"
+      insight_ids: ["OPJH002"]
+      rating: "★★★★"
+
+    - id: "HEU007"
+      texto: "Monthly webinar + $10k product + phone CTA: $80k spend → 12k registrations, ~12% show rate"
+      numeros: "$80k spend, 12k registrations, 12% show rate, $10k product"
+      chunks: ["JH-SOP004_002"]
+      confidence: "HIGH"
+      prioridade: "ALTA"
+      insight_ids: ["FSJH001"]
+      rating: "★★★★"
+
+    - id: "HEU008"
+      texto: "3 Prospect Types distribution: Ready to Buy (5-10%), Needs Convinced (30%), Cold Mass (60-65%)"
+      numeros: "5-10% ready, 30% needs convinced, 60-65% cold"
+      chunks: ["JH-SOP028_002"]
+      confidence: "HIGH"
+      prioridade: "ALTA"
+      insight_ids: ["PSJH001"]
+      rating: "★★★★"
+
+    - id: "HEU009"
+      texto: "Perfect Cold Video Pitch: 5-15 min, shortens sales cycle by reducing questions/objections upfront"
+      numeros: "5-15 min per video"
+      chunks: ["JH-SOP021_001"]
+      confidence: "HIGH"
+      prioridade: "ALTA"
+      insight_ids: ["COJH001"]
+      rating: "★★★★"
+
+    - id: "HEU010"
+      texto: "Challenge Funnel: $7 tickets × 717 sold + $15k backend offer = proven model"
+      numeros: "$7 tickets, 717 sold, $15k backend"
+      chunks: ["JH-SOP024_031"]
+      confidence: "HIGH"
+      prioridade: "ALTA"
+      insight_ids: ["CFJH002"]
+      rating: "★★★"
+
+    - id: "HEU011"
+      texto: "Challenge Funnel: $1 tickets × 293 sold → $119k backend cash collected with $15-20k backend offer"
+      numeros: "$1 tickets, 293 sold, $119k collected, $15-20k backend"
+      chunks: ["JH-SOP024_031"]
+      confidence: "HIGH"
+      prioridade: "ALTA"
+      insight_ids: ["CFJH003"]
+      rating: "★★★"
+
+    - id: "HEU012"
+      texto: "Day 2 Structure: Multi-layered social proof (30-45 min) + Vulnerability/Authenticity (15-20 min)"
+      numeros: "30-45 min proof, 15-20 min vulnerability"
+      chunks: ["JH-SOP024_021"]
+      confidence: "HIGH"
+      prioridade: "ALTA"
+      insight_ids: ["CFJH004"]
+      rating: "★★★"
+
+    - id: "HEU013"
+      texto: "Exception rule: If ads are profitable with CTR below 2%, no need to change creatives"
+      numeros: "CTR < 2% + profitable = keep"
+      chunks: ["JH-SOP006_002"]
+      confidence: "HIGH"
+      prioridade: "MEDIA"
+      insight_ids: ["ARJH002"]
+      rating: "★★★"
+
+# ═══════════════════════════════════════════════════════════════════════════
+# CAMADA 4: FRAMEWORKS
+# Sistemas nomeados com componentes identificáveis
+# ═══════════════════════════════════════════════════════════════════════════
+
+frameworks:
+  count: 11
+  items:
+    - id: "FW001"
+      nome: "Hammer Them Strategy"
+      componentes:
+        - "15-20+ content pieces"
+        - "72h window before call"
+        - "Short Form + Long Form + Sales Outreach"
+        - "Familiarity Bias activation"
+      chunks: ["JH-SOP002_001", "JH-SOP002_002"]
+      confidence: "HIGH"
+      insight_ids: ["ASJH001"]
+
+    - id: "FW002"
+      nome: "4 Pillars of Pre-Call Content"
+      componentes:
+        - "Questions (address main questions)"
+        - "2nd Layer Questions (follow-ups)"
+        - "Objections (pre-handle)"
+        - "Expectations (set properly)"
+      chunks: ["JH-SOP002_004", "JH-SOP002_005"]
+      confidence: "HIGH"
+      insight_ids: ["ASJH002"]
+
+    - id: "FW003"
+      nome: "3 Critical Nurture Lines"
+      componentes:
+        - "Short Form Ads"
+        - "Long Form Content"
+        - "Sales Team Outreach (manual for 100% inbox deliverability)"
+      chunks: ["JH-SOP002_010"]
+      confidence: "HIGH"
+      insight_ids: ["ASJH003"]
+
+    - id: "FW004"
+      nome: "DSL (Deck Sales Letter)"
+      componentes:
+        - "Replace VSL video with embedded Google Slides"
+        - "Consumer goes at own pace"
+        - "Increases play rates"
+        - "Works for $8k-$50k offers"
+      chunks: ["JH-SOP016_001", "JH-SOP016_003"]
+      confidence: "HIGH"
+      insight_ids: ["FSJH003"]
+
+    - id: "FW005"
+      nome: "VSL 7 Key Steps"
+      componentes:
+        - "Highlight Value"
+        - "Compare/Contrast"
+        - "Use Facts/Trends"
+        - "Filter Audience"
+        - "Clear CTA"
+      chunks: ["JH-SOP003_002", "JH-SOP003_003"]
+      confidence: "HIGH"
+      insight_ids: ["FSJH004"]
+
+    - id: "FW006"
+      nome: "5 Point Client Retention Star"
+      componentes:
+        - "5-10 hours/month investment"
+        - "Weekly reporting"
+        - "Proactive communication"
+        - "Google Drive asset management"
+        - "Multi-year relationship focus"
+      chunks: ["JH-SOP010_001"]
+      confidence: "HIGH"
+      insight_ids: ["OPJH002"]
+
+    - id: "FW007"
+      nome: "Interest Spectrum Model"
+      componentes:
+        - "No Interest (cold)"
+        - "Curiosity (warming)"
+        - "Interest (engaged)"
+        - "Ready to Act (hot)"
+      chunks: ["JH-SOP030_002"]
+      confidence: "HIGH"
+      insight_ids: ["PSJH002"]
+
+    - id: "FW008"
+      nome: "3 Business Types Model"
+      componentes:
+        - "Make people money"
+        - "Save people time"
+        - "Solve problems"
+      chunks: ["JH-SOP019_003"]
+      confidence: "HIGH"
+      insight_ids: ["BPJH002"]
+
+    - id: "FW009"
+      nome: "Book Funnel Visual System"
+      componentes:
+        - "Context Match (background = buyer's life)"
+        - "Book as Trophy (angle it, frame it)"
+        - "Headline = Outcome"
+        - "Physical > PDF"
+      chunks: ["JH-SOP025_002", "JH-SOP025_003"]
+      confidence: "HIGH"
+      insight_ids: ["BFJH001", "BFJH002", "BFJH003", "BFJH004"]
+
+    - id: "FW010"
+      nome: "Confirmation Page Strategy"
+      componentes:
+        - "Steer prospect research"
+        - "Address Reddit/Trustpilot concerns"
+        - "Proactive social media handling"
+      chunks: ["JH-SOP029_002", "JH-SOP029_003"]
+      confidence: "HIGH"
+      insight_ids: ["FSJH005"]
+
+    - id: "FW011"
+      nome: "In-Network Hiring"
+      componentes:
+        - "FB groups where people can vouch"
+        - "Referrals from talent sources/trainers"
+        - "Dan Lok/Desmond for closers"
+        - "Culture index personality survey"
+      chunks: ["JH-SOP008_001", "JH-SOP008_002"]
+      confidence: "HIGH"
+      insight_ids: ["HJJH001", "HJJH002", "HJJH003"]
+
+# ═══════════════════════════════════════════════════════════════════════════
+# CAMADA 5: METODOLOGIAS
+# Processos passo-a-passo com sequência temporal
+# ═══════════════════════════════════════════════════════════════════════════
+
+metodologias:
+  count: 5
+  items:
+    - id: "MET001"
+      nome: "Hammer Them Strategy (Full Process)"
+      etapas:
+        - "Day -30 to -7: Build content library (30-50 short, 15-30 long)"
+        - "Day -3: Start heavy retargeting of booked leads"
+        - "Day -2: Intensify with short form + long form mix"
+        - "Day -1: Sales team manual outreach begins"
+        - "Day 0: 15-20+ touchpoints achieved, lead arrives pre-sold"
+      chunks: ["JH-SOP002_001", "JH-SOP002_002", "JH-SOP002_010", "JH-SOP002_012"]
+      confidence: "HIGH"
+      insight_ids: ["ASJH001", "ASJH002", "ASJH003", "ASJH004"]
+
+    - id: "MET002"
+      nome: "Challenge Funnel (4-Day Structure)"
+      etapas:
+        - "Day 1: Hook + Problem identification + Initial value"
+        - "Day 2: Multi-layered social proof (30-45 min) + Vulnerability (15-20 min)"
+        - "Day 3: Solution reveal + Framework teaching"
+        - "Day 4: Offer presentation + Close + Phone CTA"
+      chunks: ["JH-SOP024_011", "JH-SOP024_021", "JH-SOP024_031", "JH-SOP024_041"]
+      confidence: "HIGH"
+      insight_ids: ["CFJH001", "CFJH002", "CFJH003", "CFJH004", "CFJH005", "CFJH006"]
+
+    - id: "MET003"
+      nome: "Monthly Webinar Funnel"
+      etapas:
+        - "Setup: $10k product, phone CTA"
+        - "Ad Spend: ~$80k/month"
+        - "Target: 12k registrations"
+        - "Expect: ~12% show rate"
+        - "Focus: Lower CPL than weekly webinars"
+      chunks: ["JH-SOP004_002", "JH-SOP004_003"]
+      confidence: "HIGH"
+      insight_ids: ["FSJH001", "FSJH002"]
+
+    - id: "MET004"
+      nome: "Cold Video Pitch Process"
+      etapas:
+        - "Prepare lead list in batch (don't hunt between pitches)"
+        - "Record 5-15 min personalized video per lead"
+        - "Address common questions/objections proactively"
+        - "Send via email or DM"
+        - "Follow up with call booking"
+      chunks: ["JH-SOP021_001", "JH-SOP021_002"]
+      confidence: "HIGH"
+      insight_ids: ["COJH001", "COJH002"]
+
+    - id: "MET005"
+      nome: "Client Onboarding & Retention"
+      etapas:
+        - "Week 1: Onboarding call + Google Drive setup for assets"
+        - "Weekly: 15 min reporting (ROI first)"
+        - "Monthly: 5-10 hours proactive investment"
+        - "Quarterly: Strategic review"
+        - "Ongoing: 5 Point Retention Star implementation"
+      chunks: ["JH-SOP005_001", "JH-SOP005_002", "JH-SOP010_001", "JH-SOP010_002"]
+      confidence: "HIGH"
+      insight_ids: ["OPJH001", "OPJH002", "OPJH003"]
+
+# ═══════════════════════════════════════════════════════════════════════════
+# METADADOS
+# ═══════════════════════════════════════════════════════════════════════════
+
+metadata:
+  extraction_method: "DNA-EXTRACTION-PROTOCOL.md v1.0.0"
+  narrative_source: "NARRATIVES-STATE.json"
+  insight_source: "INSIGHTS-STATE.json"
+  total_chunks_referenced: 47
+  total_insights_referenced: 50
+
+  camadas_summary:
+    filosofias: 8
+    modelos_mentais: 7
+    heuristicas: 13
+    frameworks: 11
+    metodologias: 5
+
+  quality_indicators:
+    heuristicas_with_numbers: 13
+    frameworks_with_components: 11
+    metodologias_with_steps: 5
+    high_confidence_items: 44
+    medium_confidence_items: 0
+    low_confidence_items: 0
+
+  next_steps:
+    - "Generate SOUL.md from filosofias + modelos_mentais"
+    - "Generate MEMORY.md from heuristicas + frameworks + metodologias"
+    - "Update DOSSIER-JEREMY-HAYNES.md with DNA reference"
+    - "Feed AGENT-JEREMY-HAYNES.md with cognitive DNA"

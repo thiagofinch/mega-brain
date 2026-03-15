@@ -1,0 +1,147 @@
+# WORKSPACE-SCAFFOLD.yaml — Default shell for new Mega Brain installations
+# Used by: bin/lib/installer.js → scaffoldWorkspace()
+# Version: 1.0.0 (S13 restructure)
+#
+# This file defines the complete workspace directory tree.
+# Every new project gets this structure on `npx mega-brain-ai setup`.
+
+version: "1.0.0"
+description: "Workspace scaffold — 7 departmental spaces + businesses DNA + system"
+
+# ── Root files (created with placeholders) ────────────────────────
+root_files:
+  - workspace.yaml
+  - structure.yaml
+  - relationships.yaml
+  - MASTER-INDEX.md
+
+# ── System & Templates ────────────────────────────────────────────
+system:
+  - _system/config
+  - _system/_ref
+  - _templates
+  - inbox/calls
+  - inbox/documents
+  - inbox/financial
+  - inbox/meetings
+  - inbox/slack
+
+# ── Business Unit Template (12 folders per BU) ───────────────────
+# Each business created via CLI gets these 12 subdirectories.
+bu_template:
+  - _preserved
+  - ai
+  - analytics
+  - brand
+  - company
+  - copy
+  - design-system
+  - evidence
+  - movement
+  - operations
+  - products
+  - tech
+
+# ── 7 Departmental Spaces ─────────────────────────────────────────
+
+aios:
+  - squads
+  - agents
+  - tasks
+  - checklists
+  - templates
+  - tools
+  - knowledge
+  - workflows
+  - library
+
+ops:
+  - processos-sops/templates-de-tarefas
+  - processos-sops/gestao-de-processos
+  - meetings
+  - eventos
+  - sprints/backlog
+  - sprints/sprint-atual
+
+delivery:
+  - prospeccao-leads/prospeccao-sdr
+  - prospeccao-leads/triagem-qualificacao
+  - prospeccao-leads/banco-de-leads
+  - gestao-projetos/ideacao
+  - gestao-projetos/projetos
+  - gestao-projetos/gestao-parceiros
+  - gestao-projetos/producao-entregas
+  - copy/producao-copy
+  - edicao/fila-edicao
+  - edicao/fila-edicao-freelas
+  - edicao/banco-editores
+  - producao-filmagem/fila-gravacao
+  - producao-filmagem/lab
+  - account-cs/onboarding-clientes
+  - account-cs/entregaveis
+  - account-cs/aceites-aprovacoes
+  - account-cs/health-score
+  - genai/fila-geracao
+  - genai/assets
+  - content-factory/biblioteca-referencias
+  - content-factory/trend-hunters
+  - content-factory/inventario
+  - trafego-pago/campanhas-ativas
+  - trafego-pago/analises-reports
+  - trafego-pago/criativos-ads
+
+comercial:
+  - crm/pipeline-sdr
+  - crm/pipeline-closer
+  - crm/clientes
+  - crm/parceiros
+  - crm/people
+  - crm/propostas-comerciais
+
+gestao:
+  - juridico/modelos-contrato
+  - juridico/gestao-contratual
+  - juridico/processos-juridicos
+  - juridico/contratos-colab-parceiros
+  - financeiro/auditorias
+  - financeiro/compras
+  - financeiro/contas-a-pagar
+  - financeiro/custos-fixos
+  - financeiro/nf-invoices
+  - financeiro/contas-a-receber
+  - financeiro/cartoes
+  - administrativo/processo-seletivo
+  - administrativo/time
+  - administrativo/emails-acesso
+  - acessos-ferramentas/tutoriais
+  - acessos-ferramentas/cursos
+  - acessos-ferramentas/ferramentas
+
+gente-cultura:
+  - okrs/okrs-empresa
+  - okrs/okrs-por-area
+  - recrutamento/pipeline-recrutamento
+  - recrutamento/banco-talentos
+  - equipe/pessoas
+  - equipe/cargos
+  - equipe/sow
+  - equipe/scorecards
+  - equipe/onboarding
+  - equipe/offboarding
+  - educacional/treinamentos
+  - educacional/1-1s
+  - educacional/avaliacoes-desempenho
+
+marketing:
+  - performance-growth/trafego-midia-paga
+  - performance-growth/seo-organico
+  - performance-growth/metricas-dashboards
+  - campanhas-lancamentos/campanhas-ativas
+  - campanhas-lancamentos/lancamentos
+  - campanhas-lancamentos/calendario-editorial
+  - creative-library/banco-criativos
+  - creative-library/referencias
+  - creative-library/brand-assets
+
+strategy:
+  - decisions
