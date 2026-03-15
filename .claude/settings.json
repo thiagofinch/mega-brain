@@ -171,6 +171,16 @@
             "timeout": 5000
           }
         ]
+      },
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/governance_auto_update.py",
+            "timeout": 15000
+          }
+        ]
       }
     ],
     "Stop": [
