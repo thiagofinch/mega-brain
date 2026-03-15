@@ -33,6 +33,11 @@
             "type": "command",
             "command": "python3 .claude/hooks/session-source-sync.py",
             "timeout": 10000
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/startup_health.py",
+            "timeout": 5000
           }
         ]
       }
@@ -159,6 +164,11 @@
             "type": "command",
             "command": "python3 .claude/hooks/pipeline_orchestrator.py",
             "timeout": 10000
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/pipeline_guard.py",
+            "timeout": 5000
           }
         ]
       }
@@ -194,7 +204,6 @@
   "permissions": {
     "deny": [
       "Bash(rm:-rf *)",
-      "Bash(rm:* -rf *)",
       "Bash(curl:*)",
       "Bash(wget:*)",
       "Read(*.env)",

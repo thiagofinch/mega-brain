@@ -1,0 +1,172 @@
+# Worker Registry — Mega Brain
+# Auto-discoverable registry of all pipeline, RAG, hook, and agent workers.
+#
+# Format:
+#   id: unique slug
+#   type: pipeline | mce | rag | hook | agent | utility
+#   path: relative to project root
+#   routing_key: key in core/paths.py ROUTING dict (if applicable)
+#   status: active | deprecated | experimental
+#
+# Epic 3.4 — Governance Engine
+# Version: 1.0.0
+
+workers:
+
+  # ── MCE Pipeline (core extraction engine) ──────────────────────────
+
+  - id: mce-orchestrate
+    type: mce
+    path: core/intelligence/pipeline/mce/orchestrate.py
+    status: active
+
+  - id: mce-state-machine
+    type: mce
+    path: core/intelligence/pipeline/mce/state_machine.py
+    status: active
+
+  - id: mce-cli
+    type: mce
+    path: core/intelligence/pipeline/mce/cli.py
+    status: active
+
+  - id: mce-cache
+    type: mce
+    path: core/intelligence/pipeline/mce/cache.py
+    status: active
+
+  - id: mce-metrics
+    type: mce
+    path: core/intelligence/pipeline/mce/metrics.py
+    status: active
+
+  - id: mce-metadata-manager
+    type: mce
+    path: core/intelligence/pipeline/mce/metadata_manager.py
+    status: active
+
+  - id: mce-workflow-detector
+    type: mce
+    path: core/intelligence/pipeline/mce/workflow_detector.py
+    status: active
+
+  # ── RAG (retrieval-augmented generation) ────────────────────────────
+
+  - id: rag-chunker
+    type: rag
+    path: core/intelligence/rag/chunker.py
+    routing_key: rag_chunks
+    status: active
+
+  - id: rag-pipeline
+    type: rag
+    path: core/intelligence/rag/pipeline.py
+    status: active
+
+  - id: rag-hybrid-index
+    type: rag
+    path: core/intelligence/rag/hybrid_index.py
+    routing_key: rag_vectors
+    status: active
+
+  - id: rag-graph-builder
+    type: rag
+    path: core/intelligence/rag/graph_builder.py
+    routing_key: graph
+    status: active
+
+  - id: rag-evaluator
+    type: rag
+    path: core/intelligence/rag/evaluator.py
+    status: active
+
+  - id: rag-mcp-tools
+    type: rag
+    path: core/intelligence/rag/mcp_tools.py
+    status: active
+
+  # ── Pipeline (ingestion + processing) ──────────────────────────────
+
+  - id: batch-auto-creator
+    type: pipeline
+    path: core/intelligence/pipeline/batch_auto_creator.py
+    status: active
+
+  - id: memory-enricher
+    type: pipeline
+    path: core/intelligence/pipeline/memory_enricher.py
+    status: active
+
+  - id: workspace-sync
+    type: pipeline
+    path: core/intelligence/pipeline/workspace_sync.py
+    status: active
+
+  - id: pipeline-heal
+    type: pipeline
+    path: core/intelligence/pipeline/pipeline_heal.py
+    status: active
+
+  - id: fireflies-sync
+    type: pipeline
+    path: core/intelligence/pipeline/fireflies_config.py
+    status: active
+
+  - id: read-ai-oauth
+    type: pipeline
+    path: core/intelligence/pipeline/read_ai_oauth.py
+    status: active
+
+  - id: sync-package-files
+    type: utility
+    path: core/intelligence/pipeline/sync_package_files.py
+    status: active
+
+  # ── Hooks (lifecycle events) ───────────────────────────────────────
+
+  - id: hook-startup-health
+    type: hook
+    path: .claude/hooks/startup_health.py
+    status: active
+
+  - id: hook-pipeline-guard
+    type: hook
+    path: .claude/hooks/pipeline_guard.py
+    status: active
+
+  - id: hook-pipeline-orchestrator
+    type: hook
+    path: .claude/hooks/pipeline_orchestrator.py
+    status: active
+
+  - id: hook-skill-router
+    type: hook
+    path: .claude/hooks/skill_router.py
+    status: active
+
+  - id: hook-session-autosave
+    type: hook
+    path: .claude/hooks/session_autosave_v2.py
+    status: active
+
+  - id: hook-directory-guard
+    type: hook
+    path: .claude/hooks/directory_contract_guard.py
+    status: active
+
+  - id: hook-quality-watchdog
+    type: hook
+    path: .claude/hooks/quality_watchdog.py
+    status: active
+
+  # ── Governance ─────────────────────────────────────────────────────
+
+  - id: governance-engine
+    type: utility
+    path: core/governance/engine.py
+    status: active
+
+  - id: registry-schema
+    type: utility
+    path: core/registry/schema.py
+    status: active
