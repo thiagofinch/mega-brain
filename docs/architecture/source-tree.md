@@ -75,7 +75,7 @@ mega-brain/
 │   │   ├── jeremy-haynes/
 │   │   ├── jeremy-miner/
 │   │   ├── naming-strategist/
-│   └── ... (+621 more)
+│   └── ... (+616 more)
 ├── knowledge/
 │   ├── business/
 │   │   ├── decisions/
@@ -186,28 +186,6 @@ mega-brain/
 │   │   └── phase5/
 │   ├── API-KEYS-GUIDE.md
 │   └── ... (+19 more)
-├── system/
-│   ├── docs/
-│   │   ├── architecture/
-│   │   ├── hooks/
-│   │   ├── CHANGELOG-ARCHITECTURE.md
-│   │   ├── HOOK-INSTALLATION.md
-│   │   ├── MEGA-BRAIN-DEMO-COMPLETA.md
-│   │   ├── MEGA-BRAIN-MANIFESTO-COMPLETO.md
-│   │   ├── MOGA-BRAIN-EXPLICACAO-COMPLETA.md
-│   │   └── STRATEGIC-INTEGRATION-GUIDE.md
-│   ├── glossary/
-│   │   ├── digital.md
-│   │   ├── finance.md
-│   │   ├── INDEX.md
-│   │   ├── marketing.md
-│   │   ├── operations.md
-│   │   └── sales.md
-│   ├── jarvis-voice/
-│   │   ├── static/
-│   │   ├── voice-clone/
-│   │   ├── .env.example
-│   └── ... (+48 more)
 ```
 
 ---

@@ -1,6 +1,6 @@
 # Synapse Rules Digest (Auto-Generated)
 
-> Generated: 2026-03-15 19:15 UTC
+> Generated: 2026-03-15 19:46 UTC
 > Source: core/engine/rules/*.yaml
 > Rules: 26 across 3 layers
 
