@@ -7,29 +7,34 @@
 # that differentiates premium from community shell.
 #
 # RULE: Layer 2 excludes Layer 3 personal data.
-# REVIEWED: 2026-02-27 (verified against audit_layers.py L2_PATTERNS)
+# REVIEWED: 2026-03-12 (updated paths for S12 reorg)
 # ================================================================
 
 # === PREMIUM ADDITIONS (on top of Layer 1) ===
 
 # Knowledge base (pre-digested expert content)
-knowledge/dossiers/
-knowledge/playbooks/
-knowledge/dna/
-knowledge/sources/
+knowledge/external/dossiers/
+knowledge/external/playbooks/
+knowledge/external/dna/
+knowledge/external/sources/
 
 # Expert agents (cloned minds)
-agents/minds/
+agents/external/
 
 # Cargo agents (C-level, sales, marketing roles)
 agents/cargo/
+
+# Company operational structure (populated SOWs)
+agents/sua-empresa/
 
 # Processed content
 artifacts/
 
 # === LAYER 3 EXCLUSIONS (never in Layer 2) ===
 # These are stripped from Layer 2 pushes:
-#   - inbox/          (raw user uploads)
+#   - knowledge/external/inbox/  (raw user uploads)
+#   - knowledge/business/        (company operations data)
+#   - knowledge/personal/        (founder cognitive data)
 #   - logs/           (session logs)
 #   - .env*           (API keys)
 #   - .mcp.json       (MCP secrets)
@@ -39,4 +44,5 @@ artifacts/
 #   - .claude/monitoring/    (runtime state)
 #   - system/backups/        (personal backups)
 #   - system/jarvis-voice/audiobooks/  (personal audio)
-#   - .company-data/  (company data - Layer 3)
+#   - .data/           (RAG indexes, embeddings)
+#   - workspace/       (company-specific operations data)

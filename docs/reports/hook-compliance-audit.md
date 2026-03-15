@@ -1,27 +1,28 @@
 # Hook Error Handling Compliance Audit
 
-> **Version:** 1.0.0
+> **Version:** 2.0.0
 > **Date:** 2026-03-14
-> **Auditor:** Story 2.2 -- Hooks Standardize Error Handling
+> **Auditor:** Bug 6 -- Silent Exception Elimination
 > **Standard:** Anthropic Standards (ANTHROPIC-STANDARDS.md)
 > **Exit Codes:** 0=Success, 1=Warning, 2=Error/Block
+> **Previous:** v1.0.0 (Story 2.2 -- 14 hooks, 19 edits)
 
 ---
 
 ## Summary
 
-| Metric | Count |
-|--------|-------|
-| Total Python files in .claude/hooks/ | 37 |
-| Actual hook scripts (invoked by settings) | 33 |
-| Utility modules (not hooks) | 2 (resolve_agent_path.py, session_autosave_v2.py) |
-| Not a hook (agent_index_updater.py, claude_md_agent_sync.py) | 2 |
-| COMPLIANT | 17 |
-| NON-COMPLIANT (needs fix) | 16 |
-| CRITICAL violations (bare except:) | 4 |
-| HIGH violations (swallowed errors, no JSON) | 7 |
-| MEDIUM violations (missing error string in JSON) | 4 |
-| LOW violations (exit 0 on error instead of 1) | 1 |
+| Metric | Before (v1.0) | After (v2.0) |
+|--------|---------------|--------------|
+| Total Python files in .claude/hooks/ | 37 | 37 |
+| `except Exception` without `as e` | 32+ | 0 |
+| Bare `except:` (catches SystemExit) | 5 | 0 |
+| Silent `pass` at hook exit points | 8+ | 0 |
+| Silent `pass` in helpers (acceptable) | - | 6 |
+| Hooks with JSON error output | 17 | 37 |
+| COMPLIANT | 17 | 37 |
+| NON-COMPLIANT | 16 | 0 |
+| Hook test pass rate (valid input) | untested | 35/35 |
+| Hook test pass rate (garbage input) | untested | 35/35 |
 
 ---
 

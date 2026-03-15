@@ -284,14 +284,14 @@ def _extract_mce_pipeline_steps() -> list[dict[str, str]]:
         {"step": "0", "name": "Detect", "script": "workflow_detector.py", "type": "deterministic"},
         {"step": "1", "name": "Ingest", "script": "orchestrate.py", "type": "deterministic"},
         {"step": "2", "name": "Batch", "script": "batch_auto_creator.py", "type": "deterministic"},
-        {"step": "3", "name": "Chunk", "script": "prompt-mce-chunk.md", "type": "llm"},
+        {"step": "3", "name": "Chunk", "script": "prompt-1.1-chunking.md", "type": "llm"},
         {"step": "4", "name": "Entity Extraction", "script": "gemini_analyzer.py", "type": "llm"},
-        {"step": "5", "name": "Insight/DNA Extraction", "script": "prompt-mce-extract.md", "type": "llm"},
+        {"step": "5", "name": "Insight/DNA Extraction", "script": "prompt-2.1-insight-extraction.md", "type": "llm"},
         {"step": "6", "name": "MCE Behavioral", "script": "prompt-mce-behavioral.md", "type": "llm"},
         {"step": "7", "name": "MCE Identity", "script": "prompt-mce-identity.md", "type": "llm"},
         {"step": "8", "name": "MCE Voice", "script": "prompt-mce-voice.md", "type": "llm"},
         {"step": "9", "name": "Identity Checkpoint", "script": "human-review", "type": "manual"},
-        {"step": "10", "name": "Consolidation", "script": "prompt-mce-consolidate.md", "type": "llm"},
+        {"step": "10", "name": "Consolidation", "script": "dossier-compilation.md", "type": "llm"},
         {"step": "11", "name": "Finalize", "script": "orchestrate.py", "type": "deterministic"},
     ]
 

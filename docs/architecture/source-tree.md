@@ -75,7 +75,7 @@ mega-brain/
 │   │   ├── jeremy-haynes/
 │   │   ├── jeremy-miner/
 │   │   ├── naming-strategist/
-│   └── ... (+636 more)
+│   └── ... (+621 more)
 ├── knowledge/
 │   ├── business/
 │   │   ├── decisions/
@@ -178,14 +178,14 @@ mega-brain/
 │   │   └── README.md
 │   ├── prds/
 │   │   └── prd-jarvis-mega-brain-v3.md
+│   ├── protocols/
+│   │   ├── agent-cognition.md
+│   │   ├── agent-integrity.md
+│   │   └── epistemic-standards.md
 │   ├── templates/
 │   │   └── phase5/
 │   ├── API-KEYS-GUIDE.md
-│   ├── CONSELHO.md
-│   ├── CONTEXT7_README.md
-│   ├── CONTRIBUTING.md
-│   ├── DEPTH-SEEKING-PROTOCOL.md
-│   └── ... (+15 more)
+│   └── ... (+19 more)
 ├── system/
 │   ├── docs/
 │   │   ├── architecture/

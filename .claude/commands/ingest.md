@@ -6,7 +6,7 @@ argument-hint: [URL or path] [--person "Name"] [--type TYPE] [--process]
 
 # INGEST - Ingestão de Material
 
-> **Versão:** 1.0.0
+> **Versão:** 2.0.0
 > **Workflow:** `core/workflows/wf-ingest.yaml`
 > **Pipeline:** Jarvis v2.1 → Etapa de Entrada
 
@@ -68,23 +68,37 @@ ELSE:
   INFER from source (PODCAST, MASTERCLASS, COURSE, VSL, etc.)
 ```
 
-### Step 3: Determinar Destino
+### Step 3: Determine Bucket and Filename
 ```
-DESTINATION = inbox/{PERSON} ({COMPANY})/{CONTENT_TYPE}/
+BUCKET DETECTION (use scope_classifier logic):
+  IF expert content (course, podcast, masterclass, YouTube expert) → bucket = "external"
+  IF company meeting, internal doc → bucket = "business"
+  IF personal note, founder reflection → bucket = "personal"
+
+DESTINATION = knowledge/{BUCKET}/inbox/
 
 IF YouTube:
   FILENAME = {VIDEO_TITLE} [youtube.com_watch_v={ID}].txt
 ELSE:
   FILENAME = {ORIGINAL_NAME}.txt
 
-SOURCE_ID = Generate hash (ex: CG005, JL010)
+DO NOT create entity or content-type subdirectories manually.
+The organize_inbox() function handles entity detection + content type classification automatically.
 ```
 
-### Step 4: Salvar Conteúdo
+### Step 4: Save Content and Auto-Organize
 ```
 CREATE directory if not exists: {DESTINATION}
 WRITE content to: {DESTINATION}/{FILENAME}
 WORD_COUNT = count words
+
+THEN run auto-organize:
+  python3 -c "from core.intelligence.pipeline.inbox_organizer import organize_inbox; r = organize_inbox('{BUCKET}'); print(f'Organized: {r[\"organized\"]} files')"
+
+This auto-detects:
+  - ENTITY from filename (e.g., "Alex Hormozi" → alex-hormozi/)
+  - CONTENT TYPE from keywords (e.g., "youtube.com" → youtube/, "podcast" → podcasts/)
+  - Moves file to: knowledge/{BUCKET}/inbox/{ENTITY}/{CONTENT_TYPE}/{FILENAME}
 ```
 
 ### Step 5: Gerar INGEST REPORT
@@ -99,8 +113,9 @@ WORD_COUNT = count words
    Tipo: {VIDEO | DOCUMENTO | AUDIO}
 
 📁 DESTINO
-   Path: inbox/{PESSOA}/{TIPO}/{arquivo}.txt
-   Source ID: {SOURCE_ID}
+   Bucket: {BUCKET}
+   Drop: knowledge/{BUCKET}/inbox/{FILENAME}
+   Organized to: knowledge/{BUCKET}/inbox/{ENTITY}/{CONTENT_TYPE}/{FILENAME}
 
 📊 ESTATÍSTICAS
    Palavras: {WORD_COUNT}
@@ -108,7 +123,7 @@ WORD_COUNT = count words
    Pessoa detectada: {PERSON_NAME}
 
 ⭐️ PRÓXIMA ETAPA
-   Para processar: /process-jarvis "inbox/{PESSOA}/{TIPO}/{arquivo}.txt"
+   Para processar: /process-jarvis "knowledge/{BUCKET}/inbox/{ENTITY}/{CONTENT_TYPE}/{arquivo}.txt"
    Ou: /inbox para ver todos pendentes
 
 ═══════════════════════════════════════════════════════════════════════════════

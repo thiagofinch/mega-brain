@@ -30,6 +30,7 @@ REPO_ROOT = ROOT  # alias for backward compat within this file
 
 # ── Import classify_path from audit_layers ─────────────────────────────────
 
+sys.path.insert(0, str(REPO_ROOT))
 sys.path.insert(0, str(REPO_ROOT / "core" / "intelligence" / "validation"))
 from audit_layers import classify_path  # noqa: E402
 

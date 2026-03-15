@@ -1,7 +1,7 @@
 # HANDOFF: Bug 6 — 101 Silent Exception Patterns in Hooks
 
 > **Data:** 2026-03-14
-> **Status:** PENDENTE — ultimo bug aberto
+> **Status:** COMPLETO — todos os 37 hooks em conformidade
 > **Prioridade:** ALTA
 > **Sessao anterior:** 9 commits, 502 testes, bugs 1-5 corrigidos
 

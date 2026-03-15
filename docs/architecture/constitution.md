@@ -23,14 +23,14 @@ feed 23 agents through a 12-step MCE pipeline, governed by
 | 0 | Detect | `workflow_detector.py` | deterministic |
 | 1 | Ingest | `orchestrate.py` | deterministic |
 | 2 | Batch | `batch_auto_creator.py` | deterministic |
-| 3 | Chunk | `prompt-mce-chunk.md` | llm |
+| 3 | Chunk | `prompt-1.1-chunking.md` | llm |
 | 4 | Entity Extraction | `gemini_analyzer.py` | llm |
-| 5 | Insight/DNA Extraction | `prompt-mce-extract.md` | llm |
+| 5 | Insight/DNA Extraction | `prompt-2.1-insight-extraction.md` | llm |
 | 6 | MCE Behavioral | `prompt-mce-behavioral.md` | llm |
 | 7 | MCE Identity | `prompt-mce-identity.md` | llm |
 | 8 | MCE Voice | `prompt-mce-voice.md` | llm |
 | 9 | Identity Checkpoint | `human-review` | manual |
-| 10 | Consolidation | `prompt-mce-consolidate.md` | llm |
+| 10 | Consolidation | `dossier-compilation.md` | llm |
 | 11 | Finalize | `orchestrate.py` | deterministic |
 
 ## Agent Registry
