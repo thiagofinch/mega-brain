@@ -1,126 +1,52 @@
-# DNA-CONFIG: COLE GORDON
-# Agente SOLO - Fonte única (100%)
+##############################################################################
+# DNA-CONFIG - Agent Pointer
+# Points to full DNA at knowledge/external/dna/persons/cole-gordon/
+##############################################################################
 
-tipo: SOLO
-pessoa: Cole Gordon
-peso: 1.0
+persona:
+  name: "Cole Gordon"
+  slug: "cole-gordon"
+  type: "PERSON"
+  category: "external"
 
-# Referência ao DNA real
-dna_location: /knowledge/dna/persons/cole-gordon/
+dna_path: "knowledge/external/dna/persons/cole-gordon"
 
-# Arquivos de DNA
-dna_files:
-  config: CONFIG.yaml
-  filosofias: FILOSOFIAS.yaml
-  modelos_mentais: MODELOS-MENTAIS.yaml
-  heuristicas: HEURISTICAS.yaml
-  frameworks: FRAMEWORKS.yaml
-  metodologias: METODOLOGIAS.yaml
+dna_layers:
+  philosophies:
+    file: "FILOSOFIAS.yaml"
+    count: 14
+  mental_models:
+    file: "MODELOS-MENTAIS.yaml"
+    count: 11
+  heuristics:
+    file: "HEURISTICAS.yaml"
+    count: 22
+  frameworks:
+    file: "FRAMEWORKS.yaml"
+    count: 12
+  methodologies:
+    file: "METODOLOGIAS.yaml"
+    count: 9
 
-# Domínios de expertise
-dominios:
-  - vendas
-  - fechamento
-  - objecoes
-  - tonalidade
-  - discovery
-  - show_rate
-  - lideranca
-  - gestao_times
-  - recrutamento
-  - treinamento
+dna_sources:
+  - id: "CG001"
+    title: "5-Hour Masterclass / 7 Beliefs Framework"
+  - id: "CG002"
+    title: "Show Rate Framework"
+  - id: "CG003"
+    title: "85min Training"
+  - id: "CG004"
+    title: "Team Building"
+  - id: "BATCH-005"
+    title: "Courses (Pipeline)"
+  - id: "BATCH-006"
+    title: "Marketing (Pipeline)"
+  - id: "BATCH-007"
+    title: "Masterminds (Pipeline)"
+  - id: "BATCH-008"
+    title: "Podcasts (Pipeline)"
+  - id: "BATCH-050"
+    title: "CURSO 16 - Lideranca e Gestao de Times de Vendas"
 
-# Fontes processadas
-fontes:
-  - id: CG001
-    titulo: "5-Hour Masterclass / 7 Beliefs Framework"
-    insights: 36
-
-  - id: CG002
-    titulo: "Show Rate Framework"
-    insights: 12
-
-  - id: CG003
-    titulo: "85min Training"
-    insights: 20
-
-  - id: CG004
-    titulo: "Team Building"
-    insights: 8
-
-  - id: BATCH-005
-    titulo: "Courses (Pipeline)"
-    insights: 89
-
-  - id: BATCH-006
-    titulo: "Marketing (Pipeline)"
-    insights: 102
-
-  - id: BATCH-007
-    titulo: "Masterminds (Pipeline)"
-    insights: 71
-
-  - id: BATCH-008
-    titulo: "Podcasts (Pipeline)"
-    insights: 67
-
-  - id: BATCH-050
-    titulo: "CURSO 16 - Liderança e Gestão de Times de Vendas"
-    insights: 42
-    elementos:
-      filosofias: 9
-      modelos_mentais: 6
-      heuristicas: 10
-      frameworks: 6
-      metodologias: 5
-    frameworks_chave:
-      - "Método PTMA (Planejar-Treinar-Motivar-Acompanhar)"
-      - "4 Tipos de Vendedores (DISC)"
-      - "Cronograma 8 Semanas para Vendedor Novo"
-      - "Processo de Contratação Estratégica (6 passos)"
-
-# Métricas de DNA
-metricas:
-  total_insights: 447
-  distribuicao:
-    filosofias: 14
-    modelos_mentais: 11
-    heuristicas: 22
-    frameworks: 12
-    metodologias: 9
-  peso_medio: 0.88
-
-# Conflitos
-conflitos: []  # Agente SOLO não tem conflitos internos
-
-# Conexões com outras pessoas
-conexoes:
-  complementa:
-    - pessoa: Alex Hormozi
-      em: Estrutura de time e Farm System
-    - pessoa: Full Sales System
-      em: Contexto brasileiro e calibração cultural
-
-  tensiona:
-    - pessoa: Vendedores tradicionais
-      em: Pressão externa vs interna
-
-  alinha:
-    - pessoa: Robert Cialdini
-      em: Consistency Bias (fundamentação científica)
-
-# Metadados
-versao: "2.0.0"
-criado_em: "2024-12-25"
-atualizado_em: "2026-01-13"
-
-# Histórico de Cascateamento
-cascateamento_log:
-  - batch: BATCH-050
-    data: "2026-01-13"
-    elementos_adicionados: 42
-    novos_dominios:
-      - lideranca
-      - gestao_times
-      - recrutamento
-      - treinamento
+total_elements: 447
+version: "1.0.0"

@@ -1,159 +1,45 @@
-# DNA-CONFIG - JEREMY MINER AGENT
-# Configuração de referências para o DNA do agente
-# Versão: 1.0.0 | Criado: 2026-01-09
+##############################################################################
+# DNA-CONFIG - Agent Pointer
+# Points to full DNA at knowledge/external/dna/persons/jeremy-miner/
+##############################################################################
 
-meta:
+persona:
   name: "Jeremy Miner"
-  type: "person"
-  version: "3.0.0"
-  created_at: "2026-01-09T20:35:00Z"
-  updated_at: "2026-01-10T17:30:00Z"
+  slug: "jeremy-miner"
+  type: "PERSON"
+  category: "external"
 
-# Fonte primária (100%)
-sources:
-  primary:
-    name: "Jeremy Miner"
-    weight: 1.0
-    ref: "/knowledge/dna/persons/JEREMY-MINER/"
-    empresa: "Jeremy Miner"
-    metodologia: "NEPQ - Neuro Emotional Persuasion Questions"
+dna_path: "knowledge/external/dna/persons/jeremy-miner"
 
-  secondary: []  # Agente PESSOA = 100% de uma única fonte
-
-# Referências às 5 camadas do DNA
-layers:
-  filosofias:
+dna_layers:
+  philosophies:
+    file: "FILOSOFIAS.yaml"
     count: 198
-    top_count: 25
-    ref: "/knowledge/dna/persons/JEREMY-MINER/FILOSOFIAS.yaml"
-    temas_principais:
-      - "Question-Based Selling"
-      - "Self-Persuasion"
-      - "Anti-Traditional Sales"
-      - "Tonality Importance"
-      - "Discovery Excellence"
-
-  modelos_mentais:
+  mental_models:
+    file: "MODELOS-MENTAIS.yaml"
     count: 98
-    top_count: 15
-    ref: "/knowledge/dna/persons/JEREMY-MINER/MODELOS-MENTAIS.yaml"
-    destaques:
-      - "Two Truths Psychology"
-      - "Doctor-Patient Model"
-      - "Onion Peeling Model"
-      - "Chase-Run Dynamic"
-      - "Self-Persuasion Superiority"
-
-  heuristicas:
+  heuristics:
+    file: "HEURISTICAS.yaml"
     count: 537
-    top_count: 50
-    ref: "/knowledge/dna/persons/JEREMY-MINER/HEURISTICAS.yaml"
-    metricas_chave:
-      - nome: "Comunicação não-verbal"
-        valor: 72
-        unidade: "%"
-      - nome: "Pain vs Pleasure"
-        valor: 2.5
-        unidade: "x"
-      - nome: "Vendedores desconfortáveis"
-        valor: 82
-        unidade: "%"
-      - nome: "Two Truths contradiction"
-        valor: 99
-        unidade: "%"
-      - nome: "Discovery = venda"
-        valor: "80-90"
-        unidade: "%"
-
   frameworks:
+    file: "FRAMEWORKS.yaml"
     count: 212
-    top_count: 20
-    ref: "/knowledge/dna/persons/JEREMY-MINER/FRAMEWORKS.yaml"
-    principais:
-      - "NEPQ 6-Phase Framework"
-      - "7 Tonalities Framework"
-      - "Two Truths Framework"
-      - "3-Step Objection Diffusing"
-      - "3 Commitment Questions"
-      - "Spouse Objection Handling"
-
-  metodologias:
+  methodologies:
+    file: "METODOLOGIAS.yaml"
     count: 154
-    top_count: 15
-    ref: "/knowledge/dna/persons/JEREMY-MINER/METODOLOGIAS.yaml"
-    processos_chave:
-      - "NEPQ Complete Sequence"
-      - "Cold Call Opening Protocol"
-      - "Objection Prevention Protocol"
-      - "Commitment Sequence"
-      - "Spouse Objection Protocol"
 
-# Estatísticas consolidadas
-statistics:
-  total_elements: 1199
-  peso_medio: 0.88
-  alta_confianca_percent: 95.9
-  arquivos_fonte: 153
-  batches_processados: 16
-  batch_range: "BATCH-052 a BATCH-067"
+dna_sources:
+  - id: "JM-YT"
+    title: "Jeremy Miner YouTube (150+ videos)"
+    raiz: "knowledge/external/sources/jeremy-miner/raw/"
+  - id: "BATCH-052"
+    title: "NEPQ Foundation + Question-Based Selling"
+  - id: "BATCH-058"
+    title: "Objection Handling + Tonality Mastery"
+  - id: "BATCH-063"
+    title: "Cold Calling + Rapport + Live Calls"
+  - id: "BATCH-067"
+    title: "Closing Techniques + Spouse Objection Protocol"
 
-# Rastreabilidade
-traceability:
-  source_consolidation: "/logs/SOURCES/SOURCE-JM.md"
-  dossier: "/knowledge/dossiers/persons/DOSSIER-JEREMY-MINER.md"
-  config: "/knowledge/dna/persons/JEREMY-MINER/CONFIG.yaml"
-
-# Cross-references
-cross_references:
-  complementares:
-    - agent: "alex-hormozi"
-      overlap: "Doctor-Patient Model, Detachment"
-      tipo: "COMPLEMENTAR"
-    - agent: "cole-gordon"
-      overlap: "SPIN foundation, Tonality"
-      tipo: "COMPLEMENTAR"
-    - agent: "G4-EDUCACAO"
-      overlap: "Rapport, Follow-up"
-      tipo: "COMPLEMENTAR"
-
-  contrarios:
-    - conceito: "Traditional Sales (ABC)"
-      posicao_jeremy: "Commitment questions, self-persuasion"
-      posicao_tradicional: "Always Be Closing, pressure"
-    - conceito: "External Enthusiasm"
-      posicao_jeremy: "Internal enthusiasm, neutral stance"
-      posicao_tradicional: "High energy, fake enthusiasm"
-
-# Contribuições únicas deste agente
-unique_contributions:
-  - "Two Truths Psychology (original)"
-  - "7 Tonalities Framework (proprietário)"
-  - "Confused Tone for objections (inovação)"
-  - "Self-Persuasion Trigger Point (original)"
-  - "NEPQ 6-Phase Question Framework"
-  - "3 Commitment Questions vs traditional closing"
-  - "'Selling is NOT a numbers game' (contrarian)"
-
-# Metadados
-metadata:
-  pipeline: "Jarvis v3.33.0"
-  missao: "MISSION-2026-001"
-  fase: "PHASE-5-CONSOLIDATION"
-  extraido_por: "Claude Code"
-
-# Changelog
-changelog:
-  - data: "2026-01-10T17:30:00Z"
-    acao: "Fase 5 Consolidation - Verificação e atualização de versão"
-    mudancas:
-      - "Versão atualizada para 3.0.0 (alinhamento com outras fontes)"
-      - "Confirmado: 1,199 elementos completos de 153 arquivos"
-      - "Confirmado: 16 batches processados (BATCH-052 a BATCH-067)"
-      - "DNA mais rico do sistema (maior fonte individual)"
-    versao: "3.0.0"
-  - data: "2026-01-09T20:35:00Z"
-    acao: "Criação inicial do DNA-CONFIG"
-    mudancas:
-      - "1,199 elementos extraídos via Phase 5.2"
-      - "198 filosofias, 98 modelos, 537 heurísticas, 212 frameworks, 154 metodologias"
-    versao: "1.0.0"
+total_elements: 1199
+version: "1.0.0"

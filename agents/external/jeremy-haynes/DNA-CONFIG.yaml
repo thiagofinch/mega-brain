@@ -1,110 +1,49 @@
-batches_processed:
-- batch_id: BATCH-084
-  date: '2026-01-11'
-  elements: 0
-- batch_id: BATCH-083
-  date: '2026-01-11'
-  elements: 0
-cross_references:
-  complementares:
-  - agent: ALEX-HORMOZI
-    overlap: Scaling philosophy, Unit economics
-    tipo: COMPLEMENTAR
-  - agent: JEREMY-MINER
-    overlap: Call optimization, Show rate
-    tipo: COMPLEMENTAR
-  - agent: COLE-GORDON
-    overlap: High-ticket funnels
-    tipo: COMPLEMENTAR
-last_batch: BATCH-083
-last_updated: '2026-01-11T00:38:22.394903'
-layers:
-  filosofias:
+##############################################################################
+# DNA-CONFIG - Agent Pointer
+# Points to full DNA at knowledge/external/dna/persons/jeremy-haynes/
+##############################################################################
+
+persona:
+  name: "Jeremy Haynes"
+  slug: "jeremy-haynes"
+  type: "PERSON"
+  category: "external"
+
+dna_path: "knowledge/external/dna/persons/jeremy-haynes"
+
+dna_layers:
+  philosophies:
+    file: "FILOSOFIAS.yaml"
     count: 226
-    ref: /knowledge/dna/persons/jeremy-haynes/FILOSOFIAS.yaml
-    temas_principais:
-    - Paid Media as Math
-    - Testing Volume
-    - Follow-Up Architecture
-    - Show Rate Optimization
-    - Systems Over Tactics
-  frameworks:
-    count: 290
-    principais:
-    - Hydra Strategy
-    - Venus Fly Trap 1.0 & 2.0
-    - DSL (Deck Sales Letter)
-    - Hammer Strategy
-    - Follow-Up Architecture
-    - Tornado Ad Strategy
-    - Andromeda Algorithm
-    - Mini Webinar
-    ref: /knowledge/dna/persons/jeremy-haynes/FRAMEWORKS.yaml
-  heuristicas:
-    count: 618
-    metricas_chave:
-    - nome: DSL engagement
-      unidade: '%'
-      valor: 77
-    - nome: Hammer show rate
-      unidade: '%'
-      valor: 50-80
-    - nome: Recoverable no-close
-      unidade: '%'
-      valor: 70-80
-    - nome: Andromeda creatives/week
-      unidade: +
-      valor: 50
-    ref: /knowledge/dna/persons/jeremy-haynes/HEURISTICAS.yaml
-  metodologias:
-    count: 200
-    processos_chave:
-    - Call Funnel Setup
-    - Creative Testing Protocol
-    - Show Rate Optimization
-    - Follow-Up Sequences
-    ref: /knowledge/dna/persons/jeremy-haynes/METODOLOGIAS.yaml
-  modelos_mentais:
+  mental_models:
+    file: "MODELOS-MENTAIS.yaml"
     count: 149
-    destaques:
-    - Interest Spectrum
-    - Time Collapsing
-    - Break Glass Mentality
-    - DSL vs VSL
-    ref: /knowledge/dna/persons/jeremy-haynes/MODELOS-MENTAIS.yaml
-meta:
-  created_at: '2026-01-09T20:55:00Z'
-  name: Jeremy Haynes
-  type: PERSON
-  updated_at: '2026-01-09T20:55:00Z'
-  version: 1.0.0
-metadata:
-  extraido_por: Claude Code
-  fase: PHASE-5.2-PERSON-AGENTS
-  missao: MISSION-2026-001
-  pipeline: Jarvis v3.32.0
-sources:
-  primary:
-    empresa: Megalodon Marketing / Inner Circle
-    especialidade: Paid Media, Ad Strategies, High-Ticket Funnels
-    name: Jeremy Haynes
-    ref: /knowledge/dna/persons/jeremy-haynes/
-    weight: 1.0
-  secondary: []
-statistics:
-  arquivos_fonte: 170
-  batch_range: BATCH-068 a BATCH-084
-  batches_processados: 17
-  total_elements: 1483
-traceability:
-  config: /knowledge/dna/persons/jeremy-haynes/CONFIG.yaml
-  dossier: /knowledge/dossiers/persons/DOSSIER-JEREMY-HAYNES.md
-  source_consolidation: /logs/SOURCES/SOURCE-JH.md
-unique_contributions:
-- Hydra Strategy (proprietário)
-- Venus Fly Trap (proprietário)
-- DSL vs VSL analysis
-- Hammer Strategy (proprietário)
-- Follow-Up Architecture 3-tier
-- Andromeda Algorithm (proprietário)
-- Interest Spectrum model
+  heuristics:
+    file: "HEURISTICAS.yaml"
+    count: 618
+  frameworks:
+    file: "FRAMEWORKS.yaml"
+    count: 290
+  methodologies:
+    file: "METODOLOGIAS.yaml"
+    count: 200
+
+dna_sources:
+  - id: "BATCH-068"
+    title: "AOBA - Agency Owner Black Academy"
+    raiz: "knowledge/external/sources/jeremy-haynes/raw/aoba-agency-owner-black-academy/"
+  - id: "BATCH-076"
+    title: "Inner Circle Sessions"
+    raiz: "knowledge/external/sources/jeremy-haynes/raw/inner-circle/"
+  - id: "BATCH-078"
+    title: "LYFC - Lead Your First Client"
+    raiz: "knowledge/external/sources/jeremy-haynes/raw/lyfc-lead-your-first-client/"
+  - id: "BATCH-080"
+    title: "MMM - Million Money Mindset"
+    raiz: "knowledge/external/sources/jeremy-haynes/raw/mmm-million-money-mindset/"
+  - id: "BATCH-082"
+    title: "Sales Training"
+    raiz: "knowledge/external/sources/jeremy-haynes/raw/sales-training/"
+
+total_elements: 1483
+version: "1.0.0"

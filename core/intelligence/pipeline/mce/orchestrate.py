@@ -150,6 +150,25 @@ except ImportError:
 _ORCHESTRATE_LOG = LOGS / "mce-orchestrate.jsonl"
 
 # ---------------------------------------------------------------------------
+# Constants
+# ---------------------------------------------------------------------------
+
+# Directory names that should never be used as a source slug.
+# When _slug_from_path() encounters one of these as the candidate, it walks
+# one level higher in the path to find the real person/source directory.
+_SLUG_SKIP_DIRS: set[str] = {
+    "PESSOAL",
+    "EMPRESA",
+    "EXTERNAL",
+    "BUSINESS",
+    "PERSONAL",
+    "RAW",
+    "CALLS",
+    "MEETINGS",
+    "INBOX",
+}
+
+# ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
 
@@ -180,24 +199,37 @@ def _json_out(data: dict[str, Any]) -> None:
 def _slug_from_path(file_path: str | Path) -> str:
     """Best-effort slug extraction from a file path.
 
-    Looks for known inbox patterns like:
+    Looks for known inbox/sources patterns like:
     - ``knowledge/external/inbox/{slug}/...``
+    - ``knowledge/external/sources/{slug}/raw/...``
     - ``workspace/inbox/{category}/{slug}/...``
 
-    Falls back to the immediate parent directory name, slugified.
+    Directory names listed in :data:`_SLUG_SKIP_DIRS` are skipped so the
+    function walks up until it finds a meaningful slug.
+
+    Falls back to the immediate parent directory name (also skipping
+    entries in ``_SLUG_SKIP_DIRS``), slugified.
     """
     parts = Path(file_path).resolve().parts
-    # Try to find 'inbox' in the path and take the next component
+    # Try to find 'inbox' or 'sources' in the path and take the next component
     for i, part in enumerate(parts):
-        if part.lower() == "inbox" and i + 1 < len(parts):
+        if part.lower() in {"inbox", "sources"} and i + 1 < len(parts):
             candidate = parts[i + 1]
-            # Skip generic category folders
-            if candidate.upper() in {"PESSOAL", "EMPRESA", "EXTERNAL", "BUSINESS", "PERSONAL"}:
-                if i + 2 < len(parts):
-                    candidate = parts[i + 2]
-            return candidate.lower().replace(" ", "-").replace("_", "-")
+            # Skip generic category / structural folders
+            offset = 2
+            while candidate.upper() in _SLUG_SKIP_DIRS and i + offset < len(parts):
+                candidate = parts[i + offset]
+                offset += 1
+            if candidate.upper() not in _SLUG_SKIP_DIRS:
+                return candidate.lower().replace(" ", "-").replace("_", "-")
 
-    # Fallback: parent directory name
+    # Fallback: walk up parent directories until we find a non-skip name
+    p = Path(file_path).resolve()
+    for ancestor in p.parents:
+        if ancestor.name and ancestor.name.upper() not in _SLUG_SKIP_DIRS:
+            return ancestor.name.lower().replace(" ", "-").replace("_", "-")
+
+    # Ultimate fallback: immediate parent
     parent = Path(file_path).parent.name
     return parent.lower().replace(" ", "-").replace("_", "-")
 
