@@ -1,0 +1,525 @@
+{
+  "total": 65,
+  "colaboradores": [
+    {
+      "area": "PRODUTORA",
+      "nome": "Homer Henricco",
+      "funcao": "Audiovisual",
+      "remuneracao": "R$ 18.000,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "FURION",
+      "nome": "Scoder",
+      "funcao": "---",
+      "remuneracao": "R$ 31.560,35",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "Diretor Jurídico, Conselheiro",
+      "nome": "Cláudio Camozzi",
+      "funcao": "Consultoria Premiun",
+      "remuneracao": "R$ 30.000,00",
+      "status": "REDUZIR",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "MARKETING",
+      "nome": "Gustavo Santos Teixeira",
+      "funcao": "Aanalista de BKO Pleno I",
+      "remuneracao": "R$ 7.500,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "MARKETING",
+      "nome": "João Cruz",
+      "funcao": "Copywriting",
+      "remuneracao": "R$ 6.000,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "MARKETING",
+      "nome": "Alessandro Weding",
+      "funcao": "Gestor de Tráfego",
+      "remuneracao": "R$ 4.000,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "MARKETING",
+      "nome": "Digital Blandy",
+      "funcao": "Estruturação e Execução de Automatização de Vendas via Webinars",
+      "remuneracao": "R$ 0,00",
+      "status": "DESLIGAR",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "MARKETING",
+      "nome": "Digital Blandy",
+      "funcao": "Consultoria de Implementação de Funis para Webinars",
+      "remuneracao": "R$ 0,00",
+      "status": "DESLIGAR",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "ADM / Cultura & Gente / Logística",
+      "nome": "Nathália Gomes",
+      "funcao": "CHRO",
+      "remuneracao": "R$ 30.000,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "ADM / Cultura & Gente / Logística",
+      "nome": "Welington Silva",
+      "funcao": "Analista de Departamento Pessoal Sênior",
+      "remuneracao": "R$ 11.116,54",
+      "status": "",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "COPS",
+      "nome": "Amanda Audino",
+      "funcao": "Customer Excellence",
+      "remuneracao": "R$ 30.000,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "COPS",
+      "nome": "Bruna Teixeira",
+      "funcao": "Analistas de Back Office Júnior IV",
+      "remuneracao": "R$ 3.361,30",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "COPS",
+      "nome": "Selma Duarte",
+      "funcao": "Analista de Atendimento Pleno I",
+      "remuneracao": "R$ 2.510,27",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "COPS",
+      "nome": "Cor Jesum Duarte",
+      "funcao": "Chief Experience Officer",
+      "remuneracao": "R$ 7.815,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "COPS",
+      "nome": "Carolina Pedrini",
+      "funcao": "Gestora de Comunidade",
+      "remuneracao": "R$ 8.000,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "COPS",
+      "nome": "Danilo Luiz",
+      "funcao": "Customer Success",
+      "remuneracao": "R$ 4.500,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "COPS",
+      "nome": "Ana Cristina Alves",
+      "funcao": "Analista de Atendimento",
+      "remuneracao": "R$ 5.848,14",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "COPS",
+      "nome": "Jordan da Rocha Leal",
+      "funcao": "Analista de Atendimento",
+      "remuneracao": "R$ 5.848,14",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "COPS",
+      "nome": "Bruno Martins",
+      "funcao": "Atendimento",
+      "remuneracao": "R$ 2.500,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "COPS",
+      "nome": "Jean Oliveira",
+      "funcao": "Atendimento",
+      "remuneracao": "R$ 3.000,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "CLICKMAX",
+      "nome": "Leandro Resende",
+      "funcao": "CEO Clickmax",
+      "remuneracao": "R$ 50.000,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "CLICKMAX",
+      "nome": "Leandro Resende",
+      "funcao": "CEO Clickmax",
+      "remuneracao": "R$0,00",
+      "status": "DESLIGAR",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "CLICKMAX",
+      "nome": "Amanda Merien Cristina Silva",
+      "funcao": "Design de Landing Pages",
+      "remuneracao": "R$ 9.000,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "CLICKMAX",
+      "nome": "André Wallace Ferreira",
+      "funcao": "Designer",
+      "remuneracao": "R$ 15.000,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "CLICKMAX",
+      "nome": "André Tessmann",
+      "funcao": "Tecnologia",
+      "remuneracao": "R$ 30.000,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "CLICKMAX",
+      "nome": "André Von",
+      "funcao": "Desenvolvimento Back End e Arquitetura de Sistemas",
+      "remuneracao": "R$ 15.000,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "CLICKMAX",
+      "nome": "Arthur Fioretti",
+      "funcao": "Fullstack Software Enginner",
+      "remuneracao": "R$ 20.000,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "CLICKMAX",
+      "nome": "Marlos Henri",
+      "funcao": "Group Product Manager",
+      "remuneracao": "R$ 27.451,88",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "CLICKMAX",
+      "nome": "João Cabral",
+      "funcao": "Desenvolvedor",
+      "remuneracao": "R$ 14.880,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "CLICKMAX",
+      "nome": "Paulo Santa Rita de Santana",
+      "funcao": "Desenvolvedor Backend",
+      "remuneracao": "R$ 13.500,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "CLICKMAX",
+      "nome": "Richard Renato de Jesus",
+      "funcao": "Desenvolvedor Backend",
+      "remuneracao": "R$0,00",
+      "status": "DESLIGADO (A)",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "CLICKMAX",
+      "nome": "Rodrigo Godoy",
+      "funcao": "Marketing",
+      "remuneracao": "R$ 9.000,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "CLICKMAX",
+      "nome": "Thiago Marques",
+      "funcao": "Desenvolvedor",
+      "remuneracao": "R$ 14.400,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "CLICKMAX",
+      "nome": "Rafael Torales",
+      "funcao": "Design de Produto",
+      "remuneracao": "R$ 20.000,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "CLICKMAX",
+      "nome": "Renato Carvalho",
+      "funcao": "Design",
+      "remuneracao": "R$ 16.000,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "CLICKMAX",
+      "nome": "Filipe Fernandes",
+      "funcao": "Fronted Developer",
+      "remuneracao": "R$ 10.000,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "CLICKMAX",
+      "nome": "Saulo Santana",
+      "funcao": "Desenvolvedor de Front-End - Zion",
+      "remuneracao": "R$ 6.000,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "CLICKMAX",
+      "nome": "Luigi Jordânio Almeida de Oliveira",
+      "funcao": "Desenvolvedor Fullstack",
+      "remuneracao": "R$ 15.000,00",
+      "status": "EM ANÁLISE",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "CLICKMAX",
+      "nome": "Lucas Neves",
+      "funcao": "N/A",
+      "remuneracao": "R$ 0,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "CLICKMAX",
+      "nome": "Marttech",
+      "funcao": "Fábrica de Desenvolvedores",
+      "remuneracao": "R$ 12.472,31",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "CLICKMAX",
+      "nome": "Elton Carvalho",
+      "funcao": "",
+      "remuneracao": "R$ 4.000,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "CLICKMAX",
+      "nome": "Gabriel",
+      "funcao": "",
+      "remuneracao": "",
+      "status": "",
+      "tipo": ""
+    },
+    {
+      "area": "BRANDING",
+      "nome": "Eduardo Heluany",
+      "funcao": "Branding",
+      "remuneracao": "R$ 10.000,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "BRANDING",
+      "nome": "Maria Luiza Buss Saturno",
+      "funcao": "Analista de Mídias Sociais Pleno III",
+      "remuneracao": "R$ 4.300,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "BRANDING",
+      "nome": "Ana Flávia Damião Silva",
+      "funcao": "Analista de Atendimento Júnior II",
+      "remuneracao": "R$ 2.104,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "BRANDING",
+      "nome": "João Pedro Pereira da Silva",
+      "funcao": "Edição de Conteúdo",
+      "remuneracao": "R$ 1.700,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "BRANDING",
+      "nome": "Caua Azevedo",
+      "funcao": "Designer",
+      "remuneracao": "R$ 1.100,00",
+      "status": "MANTER",
+      "tipo": "Freelancer"
+    },
+    {
+      "area": "PRODUTOS EDUCACIONAIS",
+      "nome": "Tiago Brendon Duarte",
+      "funcao": "Produto Educacional",
+      "remuneracao": "R$ 30.000,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "PRODUTOS EDUCACIONAIS",
+      "nome": "Paulo Lucas",
+      "funcao": "Design",
+      "remuneracao": "R$ 9.000,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "PRODUTOS EDUCACIONAIS",
+      "nome": "Will Bernardo",
+      "funcao": "Design Instrucional",
+      "remuneracao": "R$ 7.500,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "OPERAÇÕES",
+      "nome": "Romulo Elias Saldanha dos Santos",
+      "funcao": "Operação",
+      "remuneracao": "R$37.500,00",
+      "status": "REDUZIR",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "OPERAÇÕES",
+      "nome": "Aquila Trindade",
+      "funcao": "Infraestrutura",
+      "remuneracao": "R$ 23.680,24",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "OPERAÇÕES",
+      "nome": "Isaque Cardoso de Paulo",
+      "funcao": "Gestor de Projetos",
+      "remuneracao": "R$ 14.000,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "COMERCIAL",
+      "nome": "Gustavo Peçanha",
+      "funcao": "Líder Comercial",
+      "remuneracao": "R$ 8.500,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "COMERCIAL",
+      "nome": "Taynara Teodosio",
+      "funcao": "Comercial",
+      "remuneracao": "R$ 5.000,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "COMERCIAL",
+      "nome": "Anna Paula Martins",
+      "funcao": "Comercial",
+      "remuneracao": "R$ 3.000,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "COMERCIAL",
+      "nome": "Nathalia Nogueira",
+      "funcao": "Comercial",
+      "remuneracao": "R$ 3.000,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "COMERCIAL",
+      "nome": "João Antonio - KAPE",
+      "funcao": "Discord",
+      "remuneracao": "",
+      "status": "",
+      "tipo": "Freelancer"
+    },
+    {
+      "area": "COPS",
+      "nome": "Taise Araújo Duarte",
+      "funcao": "Coordenadora de Atendimento Pleno II",
+      "remuneracao": "R$ 4.259,80",
+      "status": "",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "FINANCEIRO",
+      "nome": "Paloma Fonseca",
+      "funcao": "Head do Financeiro",
+      "remuneracao": "R$ 21.495,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "FINANCEIRO",
+      "nome": "Jessica Dias",
+      "funcao": "Assistente Executiva",
+      "remuneracao": "R$ 7.300,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "FINANCEIRO",
+      "nome": "Noemi Barbosa",
+      "funcao": "Coordenadora Administrativa",
+      "remuneracao": "R$ 5.000,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "FINANCEIRO",
+      "nome": "Marcel Rosa",
+      "funcao": "Especialista em Controladoria e Planejamento Financeiro",
+      "remuneracao": "R$ 5.000,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "FINANCEIRO",
+      "nome": "Laura Heloisa",
+      "funcao": "Analista Financeiro Pleno",
+      "remuneracao": "R$ 5.000,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    },
+    {
+      "area": "FINANCEIRO",
+      "nome": "Rômulo Rocha",
+      "funcao": "Analista de TI e Infraestrutura",
+      "remuneracao": "R$ 12.000,00",
+      "status": "MANTER",
+      "tipo": "Fixo"
+    }
+  ]
+}

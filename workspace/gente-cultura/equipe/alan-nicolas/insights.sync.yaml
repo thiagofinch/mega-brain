@@ -1,0 +1,14 @@
+# Auto-synced reference -- workspace_sync.py
+# Source of truth: see source_path below
+sync_ref: true
+version: 1.0.0
+source_type: team_insights
+source_path: knowledge/business/insights/by-person/alan-nicolas.md
+title: 'Insights: Alan Nicolas'
+summary: Insight summary for alan-nicolas
+synced_at: '2026-03-14T02:25:05.066808+00:00'
+auto_generated: true
+human_edited: false
+metadata:
+  person_slug: alan-nicolas
+  file_count: 1
