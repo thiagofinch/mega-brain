@@ -1,0 +1,425 @@
+Transcrição Completa: 3 Ryan Clogg
+[00:00] "All right, Jeremy's kicking me off in 45. So, we're gonna make this fun."
+[00:08] "So, here, fun fact, this mural board has every single YouTube video I've ever done."
+[00:18] [AUDIENCE] "What the fuck?"
+[00:22] [RYAN] "So, this is a compilation of those. But yes, as Jeremy said, so this is how I started off all of the YouTube videos. We're going to start it off the same here."
+[00:38] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "YouTube Video Wall"
+NÚMEROS: Todos os vídeos já feitos
+VISUAL: Mural com thumbnails de cada vídeo do canal
+[00:45] "Last year, we did 30 million in our info coaching business. We've now crossed over 80 million in total cash."
+[00:58] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Revenue Milestones"
+NÚMEROS: $30M ano passado, $80M+ total cash collected
+VISUAL: Marcos de receita acumulada
+[01:05] "Jeremy, what you jamming?"
+[01:08] [JEREMY] "What's that weird sound again?"
+[01:12] [RYAN] "Yes, you did. It's every time we talk about cash collected."
+[01:20] "And I'm not selling anything like a lot of these guys do who made content on YouTube."
+[01:30] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "YouTube Strategy Clarification"
+NÚMEROS: 120 dias consecutivos de vídeos
+VISUAL: Não vende nada, apenas compartilha jornada
+[01:38] "I went 120 days in a row, four months straight. And yesterday was my first day not doing it."
+[01:50] "All I share on the channel is what did work, what didn't work, and what we are actively doing to scale to 100 million a year. That's the target."
+[02:08] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Content Focus"
+NÚMEROS: Meta: $100M/ano
+VISUAL: O que funcionou, o que não funcionou, o que está sendo feito
+[02:15] "That's what we throw out there. And I do all of it to attract top talent which has worked fantastic."
+[02:28] "So after 30 days through, all of a sudden we started getting real good. We got marketing texts, we got chief of sales, everything coming from this direct opportunities which is insane."
+[02:48] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Talent Acquisition Results"
+NÚMEROS: Após 30 dias
+VISUAL: CMO, Chief of Sales, etc. vindos do YouTube
+[02:55] "Like this is not about this but it's insane. There are 10ks, 50ks consulting offers left to right. Take parts of my company. I take none of it because I do not sell anything."
+[03:18] "And network, which is this right here. Nobody knew who I was in this room four months ago. A couple people do now which is a win for me. That's all."
+[03:35] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Network Building"
+NÚMEROS: 4 meses atrás = desconhecido
+VISUAL: Networking como objetivo secundário do conteúdo
+[03:42] "So today we're going to go through the initial stats just so you have some context."
+[03:52] "I'm literally ideally going to talk for like 10 minutes and just give you as much context as possible and then you can ask anything: marketing, tech, sales, fulfillment, ops, anything you want to know and we can navigate it for your business. That's the goal."
+[04:15] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Session Format"
+NÚMEROS: 10 min apresentação + Q&A
+VISUAL: Open forum para qualquer área do negócio
+[04:22] "So of the 80 million cash collected, we have 1.2 million leads. We have 310,000 applications, 130,000 bookings, 21,000 buyers only, which is an interesting thing."
+[04:45] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Funnel Metrics Overview"
+NÚMEROS: 1.2M leads, 310K apps, 130K bookings, 21K buyers
+VISUAL: Funil completo de conversão
+[04:52] "We can talk about mid and high ticket buyers and we just now recently launched low ticket and just testing. We've done 6,700 units of a low ticket."
+[05:10] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Product Mix"
+NÚMEROS: 6.700 unidades low ticket (novo)
+VISUAL: Mid + high ticket (histórico), low ticket (teste recente)
+[05:18] "So our offer journey... and then I'll get into the funnel breakdowns and then this will be like the fun part here is where I get into all this and this."
+[05:35] "But essentially we started off when I came on, there were two co-founders that started this."
+[05:45] "I like to think of these businesses as the expert and the marketer. And then when you get to a certain scale you need the operator, right?"
+[06:00] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Business Trinity"
+NÚMEROS: 3 papéis essenciais
+VISUAL: Expert + Marketer + Operator (podem ser 1 pessoa ou 3)
+[06:08] "And those can be one person. Those are just the roles themselves. For us, it turned into three actual people."
+[06:20] "So, we had the marketer and we had the expert, the brand face. We serve 40 to 60 year old women as our target demo."
+[06:35] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Target Demographic"
+NÚMEROS: 40-60 anos, mulheres
+VISUAL: Nicho específico: fitness feminino maduro
+[06:42] "I'm obviously not necessarily the personality that aligns with that. So, we have an expert in the space that we grew through paid."
+[06:58] "So, they came together and essentially the other internet marketing guy was the marketer. He found her like face to face in a gym, started running localized ads for her to get clients locally."
+[07:20] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Origin Story"
+NÚMEROS: N/A
+VISUAL: Marketer encontra expert no gym, ads locais inicialmente
+[07:28] "And then quickly thereafter, they got into Ovanan's consulting.com program and got into uplevel productize the thing around her."
+[07:45] "At that same time, I had bought that product real quick, learned that I didn't want to be the face man and a consultant or whatever he was trying to do at that point."
+[08:05] "I met him in the group. So for 5,500 bucks, I learned how to do this call funnel."
+[08:18] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Ryan's Entry Point"
+NÚMEROS: $5.500 investimento inicial
+VISUAL: Aprendeu call funnel, conheceu co-fundador no programa
+[08:25] "I met the co-founder of the two in there, instantly got on, started building sales pages, was making two grand every like six to eight weeks, whatever it could spit out."
+[08:45] "And they were trying to sell a $27 a month app. So, it was like the classic fitness $27 a month, but it was all paid, which a lot of you will know in this room. Those economics do not work, right?"
+[09:08] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Original Failed Model"
+NÚMEROS: $27/mês app
+VISUAL: Paid ads para low ticket mensal = economics ruins
+[09:15] "And they were starting to not work because it's a whole LTV game. It's an ascension game. Nobody understood that. We did not understand that that was how that worked."
+[09:35] "He called me and said, 'How do we take this thing to 10 million?' I said, 'We do call funnels. Let's do a call funnel.'"
+[09:50] "He said, 'Okay, cool. Do you want to be co-owner?' So, I was like number four or five on the team. I was literally building pages. Became a co-owner at that time."
+[10:10] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Ryan Becomes Co-Owner"
+NÚMEROS: Pessoa #4-5 no time
+VISUAL: De page builder para co-owner através de solução de call funnel
+[10:18] "And then since then, we went up and to the right. So, we moved into a call funnel model."
+[10:30] "So that's where we were doing this mid ticket right here. So I'm calling it mid ticket because we sold our initial thing over the phone at $500. It was $497 over the phone."
+[10:50] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Mid Ticket Phase"
+NÚMEROS: $497 inicial
+VISUAL: Primeiro produto vendido por telefone
+[10:58] "Which again, anyone here, economics, those do not work. But at that time we were getting $60 to $80 calls and the math, it did work."
+[11:18] "So right there after, we bumped it to $1,000 bucks, then $1,500. We were doing the sales training. We were onboarding the reps. We were managing the sales team. We were taking calls."
+[11:40] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Price Evolution"
+NÚMEROS: $497 → $1K → $1.5K
+VISUAL: Aumento progressivo enquanto testavam mercado
+[11:48] "And then that is how we went 100, 250, it was like 280, 310, 600, all the way up to a million and we were selling info."
+[12:08] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Growth to $1M/Month"
+NÚMEROS: $100K → $250K → $280K → $310K → $600K → $1M
+VISUAL: Trajetória de crescimento vendendo info
+[12:15] "So at that time it's paid, all driven exclusively paid. We have a big organic engine but it exists as middle and bottom of funnel, not as front content like a lot of these guys crush with."
+[12:38] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Traffic Strategy"
+NÚMEROS: 99% paid
+VISUAL: Orgânico = middle/bottom funnel, não top
+[12:45] "So at that time we were doing about a million a month humming there, doing solid margins because again, info, great margins on fulfillment side of things."
+[13:05] "And I'm happy to talk a lot about that about the economics around that side of the business. And then we moved to high ticket and we started selling one-to-one coaching."
+[13:22] "So recurring annualized coaching. At that time I believe it was $6,000, 5 or 6,000 when we started selling it."
+[13:38] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "High Ticket Launch"
+NÚMEROS: $5K-$6K coaching 1-on-1
+VISUAL: Pivô para coaching recorrente anualizado
+[13:45] "And we technically were selling two things over the phone. You could pick, the sales rep could pick which one if they wanted to sell the info thing for $1,000 or $1,500 or if they wanted to sell the high ticket recurring coaching."
+[14:10] "And the sales reps get paid on the cash. So obviously incentivized to go this direction."
+[14:22] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Dual Offer Strategy"
+NÚMEROS: Info ($1-1.5K) ou Coaching ($5-6K)
+VISUAL: Rep escolhe baseado em comissão de cash
+[14:30] "But if it didn't make sense, almost like a downsell, right? Then burn the boats, can't sell the info anymore."
+[14:45] "You have two weeks to sell the rest of the info to anyone in your pipeline and then we're shutting it down and we moved all coaching."
+[15:00] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Burn the Boats Moment"
+NÚMEROS: 2 semanas de transição
+VISUAL: Eliminação forçada de info, 100% coaching
+[15:08] "So in that year, you'll see up here, this is where that year happened. So we're basically at around 10. It was like 9ish, 10, 12, 30."
+[15:28] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Explosion Year"
+NÚMEROS: $9-10M → $12M → $30M
+VISUAL: Crescimento explosivo com coaching
+[15:35] "Everything broke. Everything. We were not tracking the numbers. Everything was going up and to the right, but CPA is rising at the same time."
+[15:52] "And we have costs going through the roof on everywhere. We stacked up to over 100 team at that point. We moved everyone W2."
+[16:10] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "The Breaking Point"
+NÚMEROS: 100+ team members, todos W2
+VISUAL: Crescimento descontrolado, tudo quebrando simultaneamente
+[16:18] "Like everything you could change, we changed. So margin as a percentage dove, but as dollars went up."
+[16:35] "So we only made a little bit more cash in profit terms. And I do want to kind of talk about that here. And then when we were doing 10 million, which is crazy."
+[16:55] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Margin Compression"
+NÚMEROS: N/A
+VISUAL: Receita sobe, % de margem cai, lucro absoluto sobe pouco
+[17:02] "And then in end of Q3 of last year, we're like we need to clean this up. Everything dipped down. We're basically doing 1.5 into the beginning of this year."
+[17:22] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "The Crash"
+NÚMEROS: $30M → $1.5M/mês
+VISUAL: Colapso para breakeven com estrutura gigante
+[17:30] "And that's when we decided what we're going to do with it. It was no longer going to be a cash flow info coaching biz, which it already wasn't at that point."
+[17:48] "We on accident turned it off of that. We have this huge team W2. Let's take this large."
+[18:05] "And that's when we're like, all right, let's actually do this. Let's really all lean in and take this serious."
+[18:20] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Strategic Pivot Decision"
+NÚMEROS: N/A
+VISUAL: Decisão de construir empresa real vs cash flow biz
+[18:28] "So now $1.5, $1.58, $1.59, and then we did $3 million. Last month we did $3 million again. This month right now we're at $2.2 today."
+[18:50] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Recovery Trajectory"
+NÚMEROS: $1.5M → $1.58M → $1.59M → $3M → $3M → $2.2M (atual)
+VISUAL: Recuperação e estabilização em novo patamar
+[18:58] "So goal is here trying to take it to 10 million on info coaching. Then we're trying to hit exit velocity, introduce things in our market."
+[19:18] "Can be things like supplements, can be things like peptides, can be things like other things of telemedicine. I can go on and on about that."
+[19:35] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Exit Velocity Strategy"
+NÚMEROS: Meta: $10M/mês info coaching
+VISUAL: Backend: supplements, peptides, telemedicine
+[19:42] "But essentially that was the shift of the offers. We went from low ticket direct to cart, we went to info over the phone through a VSSL opt-in funnel, and then we went to high ticket in the exact same VSSL opt-in funnel."
+[20:08] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Offer Evolution Complete"
+NÚMEROS: N/A
+VISUAL: $27 cart → Info phone → High ticket phone (mesmo funil)
+[20:15] "And now this next iteration is this multi-funnel and multi-buyer funnel. And now let me break down the pages."
+[20:30] "Jeremy, you got your scrolling opposite of mine."
+[20:38] "All right, so in an effort not to confuse you guys, how big is this on the screen? Oh, yeah. Plenty big. Okay."
+[20:52] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Funnel Breakdown Section"
+NÚMEROS: N/A
+VISUAL: Transição para visualização detalhada de funnels
+[21:00] "So this one funnel here, the classic VSSL opt-in funnel did 72 million of this before we launched another funnel."
+[21:18] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Core Funnel Performance"
+NÚMEROS: $72M de 1 único funil
+VISUAL: VSSL opt-in como cavalo de batalha
+[21:25] "We hammered it to the level that the CPA was rising and we kept hammering it, right? Not good."
+[21:38] "And this is why these new ones have been introduced. But all to say, you can hit one and hit it hard."
+[21:52] "And we're doing volume through this. This is no 25k AOV game. This is mass market direct to consumer."
+[22:10] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Mass Market Strategy"
+NÚMEROS: Não é $25K AOV
+VISUAL: Volume play, não high AOV play
+[22:18] "So we're running this. We run majority on Meta. Opt-in page is going to be your name and email."
+[22:32] "We do not do phone number because it's a 25ish% drop and we've tested it and we haven't gotten the efficiency in the throughput of less leads."
+[22:52] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Opt-in Page Strategy"
+NÚMEROS: 25% drop com phone number
+VISUAL: Nome + email apenas, sem telefone
+[23:00] "Basically, is your dollar per lead more in relation. Right. So opt-in page going to go to a VSSL page. That's kind of your classic gated."
+[23:20] "Our VSSLs are longer form. So they're going to be 25 minutes, 30 minutes. We have different variations of them. And then the CTA is going to pop on there."
+[23:40] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "VSSL Format"
+NÚMEROS: 25-30 minutos
+VISUAL: Long form gated, múltiplas variações
+[23:48] "An important thing we tested that we think is a big thing for us is in the beginning it's like you stay to the end you get all these bonuses. If you stay to the end, you get all these bonuses."
+[24:10] "No matter if they stay to the end or not, at the end of it they get sent the bonuses. In email, that's in other pages on here."
+[24:28] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Bonus Delivery Strategy"
+NÚMEROS: N/A
+VISUAL: Bonuses enviados independente de completar VSSL
+[24:35] "But essentially the idea being it's consumption, consumption, consumption. Because for someone direct cold to come in and mass market then pay 7,000, 8,000 whatever it is over the phone at that point, we focus on consumption."
+[25:00] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Consumption Focus"
+NÚMEROS: $7K-$8K phone sale de cold traffic
+VISUAL: Consumo como ponte para venda high ticket
+[25:08] "So that's been our target this entire time. They go through an application, they now have a router for 70 million. We didn't have a router."
+[25:25] "They go through a router and we have one financial qualifier on it. That's how much did you invest in yourself in the past?"
+[25:42] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Application Router"
+NÚMEROS: $70M sem router antes
+VISUAL: 1 qualificação financeira: investimento passado em saúde/fitness
+[25:50] "How much have you invested in your health and fitness journey thus far? Right? Because it's not like how much money do you make? How much have you saved up? What is your monthly business income?"
+[26:12] "Like we don't have that opportunity. We don't have ROI justification."
+[26:22] "So for us, we have less than 1K, 1 to 5, 5 to 10, 10 to 20, and 20 plus."
+[26:38] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Investment Brackets"
+NÚMEROS: <$1K, $1-5K, $5-10K, $10-20K, $20K+
+VISUAL: Segmentação por investimento histórico em fitness
+[26:45] "Anything less than 1K qualifies as a DQ, but it still goes to a booking page. They still close. They just close at half the rate."
+[27:05] "Now, that's important for us because of the availability. And we play the game for volume, which a lot of people in this room probably don't want to do and sometimes can't depending on the economics."
+[27:28] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "DQ Strategy"
+NÚMEROS: 50% close rate de DQs
+VISUAL: DQs ainda vão para booking, volume play permite isso
+[27:35] "So, we do. Now, when we get to a point that calendars are roughly, it's an actual unit count. So when there are 20 units, let's say left on the next day, it'll throttle it off and only allow quality bookings through."
+[28:00] "And it pushes them to a DQ low ticket bridge page, which I'll get into those later."
+[28:15] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Calendar Throttling"
+NÚMEROS: 20 slots = threshold
+VISUAL: Automação que redireciona DQs para low ticket quando calendário cheio
+[28:22] "But the simple thing is booking page, success page. We now have introduced, which we didn't for the first 72 million, even have setters."
+[28:42] "It was closers only, 30 minute calls, 200, 300, 400 calls a day, every day, seven days a week."
+[29:00] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Original Model: No Setters"
+NÚMEROS: $72M sem setters, 200-400 calls/dia, 30 min cada
+VISUAL: Closers direto, volume insano de calls
+[29:08] "So success page, we now have setters that do the ad confirmations because the market got into a place where show rates weren't as... it was more common to do this and the market was driving show rates down."
+[29:32] "Unless you add all the amazing things Jeremy talks about with hammer them strategy and all this stuff. We didn't directly have any of those."
+[29:50] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Setter Addition"
+NÚMEROS: N/A
+VISUAL: Setters para confirmações, resposta a show rates caindo
+[29:58] "So as that came in we now have setters, they go to a closer and they check out on terms."
+[30:12] "Reason I have terms page on there is because I've used this video multiple times and I talk about tracking and I don't necessarily want to go down this rabbit hole."
+[30:30] "But we use our terms page to fire the pixel because we get browser events from it because that is when the user checks out through a phone call funnel which is very uncommon."
+[30:52] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Terms Page Tracking Hack"
+NÚMEROS: N/A
+VISUAL: Terms page dispara pixel com live deal amount, browser + server events
+[31:00] "A lot of the time people are just firing a server event like from Hyros or something that says hey this person purchased your high ticket and it maps back."
+[31:18] "We do it direct on the browser and the server from the terms page with the live deal amount. So that's the journey. That's funnel number one."
+[31:38] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Funnel #1 Complete"
+NÚMEROS: $72M de performance
+VISUAL: VSSL opt-in → App → Router → Booking → Setter → Closer → Terms
+[31:45] "Now, what's happening over here? Can you guys hear me? Sorry, I feel like I'm echoing in this."
+[32:00] "We have then now introduced other messaging funnels with the same brand face."
+[32:15] "And in an effort to kind of pipe dream, but sell this one day. It's diversification, it's risk mitigation, it's all these things on the front end, on the product side, on XYZ."
+[32:38] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Diversification Strategy"
+NÚMEROS: N/A
+VISUAL: Múltiplos funnels com mesma brand face, risk mitigation para exit
+[32:45] "So on here we have two different messaging funnels from the same brand face, which is the co-founder."
+[33:00] "And then in another color up here, we are now introducing different brand faces."
+[33:15] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Multi-Brand Face Strategy"
+NÚMEROS: N/A
+VISUAL: Mesma brand face com diferentes mensagens + novas brand faces
+[33:22] "So we have a brand face in there that we tested on ad level. So we tested two of them on the ad level sending to the core VSSL."
+[33:42] "So over here, imagine you have three different faces all going to the core funnel and they were converting and working."
+[34:00] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Testing New Faces: Phase 1"
+NÚMEROS: 3 faces testadas
+VISUAL: Ads com novas faces → VSSL original (incongruente mas funcionou)
+[34:08] "Next iteration of that was okay cool, they resonate... the market resonates with that brand face. Now let's give them their own landing page of their own VSSL."
+[34:28] "So go the next iteration down instead of hey cool brand face let's build an entire front end around you. It's one step at a time."
+[34:48] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Testing New Faces: Phase 2"
+NÚMEROS: N/A
+VISUAL: Novas faces agora com próprio opt-in + próprio VSSL
+[34:55] "So ads cool, they worked with non-congruent landing and seeing another person on the landing page, but basically a pass off to the company, right?"
+[35:15] "So now this new iteration is them having their own opt-in page, their own VSSL page. Those are cracking for us and working well."
+[35:35] "Now this one very funny and just like another side tangent, we track all these funnels meticulously. We have everything HubSpot in the core of this."
+[35:55] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Tracking Infrastructure"
+NÚMEROS: N/A
+VISUAL: HubSpot como core CRM, tracking meticuloso de todos os funnels
+[36:02] "So this for example on this VSSL, the CTA on this one talks about how you're applying for this expensive program and all this stuff."
+[36:20] "Highest show rates, highest close rates, right? Costs little different. So, it's an economics and a play there."
+[36:38] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "VSSL Messaging Impact"
+NÚMEROS: N/A
+VISUAL: CTA sobre "expensive program" = melhores show + close rates
+[36:45] "But just to show the difference in essentially the same throughput or the same flow with a different throughput because of how the messaging occurs."
+[37:05] "Now, the next funnel type is a DTA, which I know is very very common, especially in this high ticket kind of realm and in the business sophistication."
+[37:25] "Jeremy says if you fucking hate money, I think, you use an opt-in page."
+[37:38] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "DTA Funnel (No Opt-in)"
+NÚMEROS: N/A
+VISUAL: Direct to application, sem opt-in page
+[37:45] "So this is no opt-in page. This is going direct to a VSSL with an application directly under it."
+[38:00] "This almost acts as a retargeting asset for us more so than it does... our CMO calls this the value vortex system."
+[38:20] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Value Vortex System"
+NÚMEROS: N/A
+VISUAL: DTA como retargeting, não aquisição primária
+[38:28] "It's all of these in one because someone comes in this funnel and they come over here and they come into this funnel."
+[38:45] "And then to quickly kind of shut up and get to questions we have a low ticket. This one has the best economics but the issue is we can't get the net CPA because of the positioning of the offer."
+[39:10] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Low Ticket Funnel"
+NÚMEROS: N/A
+VISUAL: Melhores economics, problema = net CPA pelo posicionamento
+[39:18] "So, they're going to a sales page. On the front end sales page, they're going to have name and email that they're going to put in to go to checkout."
+[39:38] "It's then going to bring them to a second page so you get the lead, right? So, you can retarget to them when they're a lead, not a buyer."
+[40:00] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Low Ticket Lead Capture"
+NÚMEROS: N/A
+VISUAL: Nome + email antes de checkout, lead capture prioritário
+[40:08] "They purchase. When they purchase, the only AOV boosters you have are going to be order form bumps. We don't do any upsells. We don't do cross sales."
+[40:28] "We don't try to optimize for increasing post-purchase because the entire goal is to get them to book a call, right?"
+[40:45] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "No Upsells Strategy"
+NÚMEROS: N/A
+VISUAL: Apenas order bumps, zero upsells, objetivo = book call
+[40:52] "We are trying to collapse the timeline from them going from a low ticket to a high ticket."
+[41:08] "So for us we get 60 to 80% of the people depending, so we can call it 70% of the people that buy the low ticket to book a call."
+[41:28] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Low Ticket to Call Rate"
+NÚMEROS: 60-80% (média 70%) book call após compra
+VISUAL: Ascensão massiva para call de implementação
+[41:35] "That's an onboarding implementation quick start whatever call and that is with a setter, 15-minute zoom call."
+[41:52] "They get on there, they then get set with a closer. Those have the highest show rates and the highest close rates in the entire company. The best throughput."
+[42:15] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Low Ticket Buyer Performance"
+NÚMEROS: 86% show rate (mencionado depois)
+VISUAL: Melhor throughput de toda empresa, melhores métricas
+[42:22] "The only issue is then the economics of how much does it cost to get them on the phone with a closer which directly is a function of all the percents but really is a function of what is the cost to acquire a customer on the low ticket."
+[42:50] "So for us right now, call it 50, call it 100 units we can do a day but if we're only getting an ascension rate through of 5%..."
+[43:10] 📊 SLIDE DETECTADO
+─────────────────────────────
+TEXTO: "Volume Math Problem"
+NÚMEROS: 100 low ticket/dia × 5% ascension = 5 high ticket
+VISUAL: Necessidade de 200-500 low ticket/dia para atingir volume desejado de high ticket
+[43:18] "If you're selling 100 a day on average you're going to get five high ticket out of that right? 100 low ticket to five high ticket."
+[43:35] "I want to sell 20, 30, 40 backend. So, I need to sell two, three, four, 500 low tickets a day. And this one is not that, right? The positioning of that offer is not there."
+[44:00] "So, does all that make sense so far?"
+[44:05] [TRANSIÇÃO PARA Q&A EXTENSO]
+DURAÇÃO: 44:00 minutos (aproximadamente, apresentação termina aqui, Q&A continua)
+FORMATO: Apresentação técnica de Ryan Clogg sobre scaling de info/coaching business de $0 a $80M+, com foco em funnels e estrutura operacional

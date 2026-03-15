@@ -1,0 +1,389 @@
+Transcrição Completa: 6 Long Form Content Creation
+
+ 
+
+[00:00] So, this is how to sell long form content creation. Let's say you're a copywriter. You have a team of copywriters or flat out you just need to sell this service to one of your existing clients.
+
+ 
+
+[00:12] The perfect cold video pitch can also be used for upsells. So, I'm going to use one of my existing clients. His name is Dan Lockach. And I'm going to show you guys some examples here.
+
+ 
+
+[00:23] So, uh if I was starting the pitch, uh I'd be recording my screen. I'd have Camtasia open or Loom. And here we go.
+
+ 
+
+[00:32] Hey, what's going on Dan? My name's Jeremy. You likely have no idea who I am. Uh, that being said, I'm sitting here on Google right now and I was trying to find a blog or just a long form piece of content.
+
+ 
+
+[00:45] I looked I was looking on your LinkedIn and I couldn't seem to find anything there. It was really weird. You you don't seem to be posting uh all these different video topics you have.
+
+ 
+
+[00:56] For example, I looked on your Facebook page. I even looked on your Instagram. I mean, you're posting four to five times a day, but it doesn't look like you have a copywriter in house that is interpreting these videos.
+
+ 
+
+[01:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Content Repurposing Strategy"
+
+ 
+
+NÚMEROS: 4-5 posts por dia
+
+ 
+
+VISUAL: Demonstração de navegação entre plataformas sociais (Facebook, Instagram, LinkedIn), ausência de conteúdo long-form, comparação visual entre posts curtos vs artigos longos
+
+ 
+
+[01:12] Meaning taking what's said in those videos and turning them into blogs and then turning those blogs around and turning them into LinkedIn content, which to be clear, this is ranked in the search engines nowadays.
+
+ 
+
+[01:25] So when you start producing content on LinkedIn, you're actually increasing your search engine optimization probabilities for getting seen for all the different keywords that you can organically rank for.
+
+ 
+
+[01:37] Uh in addition to that, there's all kinds of cool tools that you can use. Uh and you can just post stuff right inside of LinkedIn.
+
+ 
+
+[01:44] In addition to that, when you have a blog, so let's say on your website, I noticed on your page here, it looks like you got danlock.com, you got high ticket closer.com, you got a bunch of cool stuff out there.
+
+ 
+
+[01:56] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Facebook Instant Articles Integration"
+
+ 
+
+NÚMEROS: Não especificado
+
+ 
+
+VISUAL: Interface do Facebook Instant Articles, demonstração de integração automática entre blog e Facebook, fluxo de distribuição de conteúdo
+
+ 
+
+[01:58] But if you actually took the time or your team took the time, that is to have a blog section on the website, there's this awesome new feature, it's called instant articles by Facebook.
+
+ 
+
+[02:10] So, long story short, as soon as you're posting content on your blog, on your actual Danlock page, that can then with this integration feature from Facebook called instant articles, there's a bunch of cool stuff on this web page here you can check out.
+
+ 
+
+[02:25] It'll automatically share that content over to over to Facebook and it'll it'll just instantly give people more content to scroll through and you can distribute that content.
+
+ 
+
+[02:35] So, you can actually pay just like an engagement campaign with all these videos. I see that you're I clicked on your info and ads tab on your Facebook page here and I noticed, you know, you're spending money to distribute your content.
+
+ 
+
+[02:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Info and Ads Tab Analysis"
+
+ 
+
+NÚMEROS: Não especificado
+
+ 
+
+VISUAL: Visualização da aba "Info and Ads" do Facebook, campanhas publicitárias ativas, ausência de estratégia de long-form copy no LinkedIn
+
+ 
+
+[02:50] But you're not using the power of long form copy on LinkedIn. For example, you could be posting your LinkedIn articles on your Facebook page, and then you could distribute those in addition to your instant articles on Facebook to see which one's going to work better for you in your business.
+
+ 
+
+[03:08] Anyway, long story short, no pun intended, I want to be your guy who does this or I want my team to handle this. And here's how it would look, okay?
+
+ 
+
+[03:18] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Pricing Structure"
+
+ 
+
+NÚMEROS: $5K/mês (hands-on), $7K/mês (consultoria + implementação)
+
+ 
+
+VISUAL: Comparação de dois pacotes de serviço, estrutura de precificação clara, diferenciação entre execução vs consultoria
+
+ 
+
+[03:20] If you pay us to do it, it's 5K a month. Uh, if you want to do this yourself, these are the exact steps of how to do it. Even in the process I just covered, have your team watch this. I'm sure you have a team of copywriters already.
+
+ 
+
+[03:34] And, you know, just to be clear, this is going to drive you guys more leads, going to drive you guys more sales. This is a revenue driven service. This isn't something tedious or or menial that I'm offering here.
+
+ 
+
+[03:46] So, for 5K, if you want us to do it hands-on, I'm fully willing to do that. If you want us to come in and consult, we'll consult and skill transfer and knowledge transfer what we do, build out a strategy with you guys.
+
+ 
+
+[03:58] We'll do that for 7K. So, we'll do it for a little little higher cost, but that's because you're not going to have to pay us long term. So, we prefer to benefit in the shorter term on that from a transaction standpoint.
+
+ 
+
+[04:12] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Facebook Instant Articles Requirements"
+
+ 
+
+NÚMEROS: Mínimo de 10 blogs necessários
+
+ 
+
+VISUAL: Requisitos técnicos do Facebook, interface WordPress, ausência de seção de blog no site atual
+
+ 
+
+[04:14] Anyway, here's how it works. To even use the Facebook instant article feature, you have to have at least 10 blogs on your website. And it doesn't look like you have a blog currently built into this thing.
+
+ 
+
+[04:25] So, it looks like you'd have to integrate on a WordPress theme here, which it looks like you're built on just a simple blogging feature. Uh, and in addition to that, you already got your LinkedIn pages set up.
+
+ 
+
+[04:37] So, it really just comes down to creating the content. Now, the actual process I would use, I would leverage Google Sheets. So, inside of uh I mean Google Docs.
+
+ 
+
+[04:47] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Workflow Process - Google Docs"
+
+ 
+
+NÚMEROS: Não especificado
+
+ 
+
+VISUAL: Interface do Google Docs, sistema de compartilhamento colaborativo, fluxo de trabalho de edição e aprovação de conteúdo
+
+ 
+
+[04:49] So, when you have a regular Gmail account, you can actually just go have a shared doc, which I'm sure you're familiar with. We can share that between the team. So, people can edit it. You can add notes to it.
+
+ 
+
+[05:01] And you already have all the content in the world to be able to repurpose into blog articles and long form content and the whole intent behind that, right? Where are the revenue driven from?
+
+ 
+
+[05:13] Well, at the footer of every blog, you can have a pitch, for example, to your webinar, uh, to your book that you have, even just directly to your course. And I see that you have a few of those.
+
+ 
+
+[05:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Content Library Analysis"
+
+ 
+
+NÚMEROS: Milhares de vídeos disponíveis para repurposing
+
+ 
+
+VISUAL: Biblioteca de conteúdo em vídeo, lições-chave identificadas, potencial de transformação em artigos, ausência de otimização SEO
+
+ 
+
+[05:27] So, I make this video for you because, you know, all these key lessons that you have, they should be written up. You should be ranked in the search engines for these things in addition to getting all these views and all this incredible amount of reach that you're getting here.
+
+ 
+
+[05:43] And you can plug as I described your opt-ins, your courses depending upon which is most applicable for each blog that's distributed.
+
+ 
+
+[05:52] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Step-by-Step Process"
+
+ 
+
+NÚMEROS: 10 blogs iniciais necessários, 2 plataformas de publicação
+
+ 
+
+VISUAL: Fluxo de trabalho completo: vídeo → artigo → aprovação → publicação em WordPress e LinkedIn, sistema de revisão integrado
+
+ 
+
+[05:54] So to be clear, the process step by step, we would come in, take one of these videos, watch it, consume it, turn it into an article, send it to your team or whoever it is that you want to have approved that.
+
+ 
+
+[06:08] Once it's approved or revised, whatever we got to do to get this thing published, we're then going to post it in two different places.
+
+ 
+
+[06:15] To start the process, we need at least 10 blogs on your actual website. So, we'll set up your WordPress for you uh to have a blog feature and function. We'll be publishing there. And in addition to that, we'll be publishing on LinkedIn.
+
+ 
+
+[06:29] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Premium Service Package"
+
+ 
+
+NÚMEROS: $5K/mês vs $7K/mês com distribuição paga
+
+ 
+
+VISUAL: Upgrade de serviço incluindo gestão de tráfego pago, campanhas de engajamento no Facebook, cross-promotion entre plataformas
+
+ 
+
+[06:31] If you'd like, instead of for 5K a month, you can pay us 7K a month to do this hands-on, and we will distribute that content. So, we're actually advertisers as well.
+
+ 
+
+[06:42] And we can take those LinkedIn articles and we can grow your LinkedIn audience just by posting what's been on LinkedIn on your Facebook page and then running an engagement campaign on that which cross-promotes people from one social channel into the other.
+
+ 
+
+[06:58] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "YouTube Growth Metrics"
+
+ 
+
+NÚMEROS: Milhares de novos inscritos por dia no YouTube
+
+ 
+
+VISUAL: Análise de crescimento do canal no YouTube, oportunidade de cross-promotion, estratégia de linking entre plataformas
+
+ 
+
+[07:00] So, this is really cool. I notice on YouTube you're crushing the game and you get thousands of subscribers per day. So, same kind of concept when you post on LinkedIn inside of the article itself you could plug your YouTube.
+
+ 
+
+[07:13] Like, hey, this concept comes from this specific video. Boom. Linked to the video.
+
+ 
+
+[07:19] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Cross-Promotion Ecosystem"
+
+ 
+
+NÚMEROS: Múltiplas plataformas (LinkedIn, Facebook, YouTube, Instagram)
+
+ 
+
+VISUAL: Diagrama de ecossistema de cross-promotion: LinkedIn → Facebook → YouTube → Instagram, múltiplos CTAs em cada artigo (opt-ins, cursos, produtos, canais sociais)
+
+ 
+
+[07:21] Now you have a LinkedIn article that's being posted on Facebook to promote LinkedIn. And in addition to that, on the LinkedIn article, of course, you're plugging optins, you're plugging your courses and your products, and you're plugging YouTube or your other social channels like Instagram.
+
+ 
+
+[07:38] So, this just becomes a giant cross promotion fest. That's where a lot of the leads are generated. You're spreading everybody out across all these social media channels.
+
+ 
+
+[07:48] And in addition to that, you're accumulating leads and sales in real time.
+
+ 
+
+[07:53] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Service Options Summary"
+
+ 
+
+NÚMEROS: Consultoria vs Hands-on
+
+ 
+
+VISUAL: Comparação final de serviços: execução completa para equipes sobrecarregadas vs transferência de conhecimento para equipes com capacidade
+
+ 
+
+[07:55] If you want us to consult, if you want us to do it hands-on, as I described, either way, we're open to help you guys out. And in addition to that, I hope that this video finds you value and that you're able to take action on this stuff.
+
+ 
+
+[08:08] You're most likely, if you're backed up right now, if your team's overworked or if they're at capacity, that's why you'd want us to come in house and do this hands-on.
+
+ 
+
+[08:18] If it's a flatout situation where they just don't know what to do, it's it's a lack of knowhow or a lack of the technical skill. That's where you'd want us to come in and skill transfer, knowledge transfer if they have uh some capacity to be able to do this.
+
+ 
+
+[08:33] So anyway, long story short, my contact information, it's in the description here. Uh I look forward to you making more leads and more sales and hopefully we can be the ones that are hands-on doing that for you.
+
+ 
+
+[08:45] And I'll be talking with you soon. Thanks, Dan. Have a great day. And uh that's that. I'll see you in the next video.
+
+ 
+
+ 
+
+📊 RESUMO EXECUTIVO
+
+ 
+
+NÚMEROS PRINCIPAIS:
+
+4-5 posts por dia nas redes sociais (sem conversão em long-form)
+
+Mínimo de 10 blogs necessários para Facebook Instant Articles
+
+Milhares de inscritos por dia no YouTube
+
+$5K/mês - serviço hands-on de criação de conteúdo
+
+$7K/mês - consultoria com skill transfer
+
+$7K/mês - serviço hands-on + distribuição paga
+
+2 plataformas principais de publicação (WordPress + LinkedIn)
+
+ 
+
+ESTRATÉGIAS E SISTEMAS:
+
+Repurposing de Conteúdo: Transformar vídeos existentes em artigos de blog e posts no LinkedIn
+
+Facebook Instant Articles: Integração automática entre blog WordPress e Facebook
+
+SEO Orgânico: Ranqueamento no Google através de conteúdo no LinkedIn e blogs
+
+Cross-Promotion Ecosystem: LinkedIn → Facebook → YouTube → Instagram
+
+Monetização nos Footers: CTAs para webinars, livros, cursos e opt-ins em cada artigo
+
+Campanhas de Engajamento: Distribuição paga de artigos do LinkedIn no Facebook
+
+Google Docs Workflow: Sistema colaborativo de criação, edição e aprovação de conteúdo
+
+ 
+
+ESTRUTURA:
+
+Fase 1: Setup inicial - Criação de 10 blogs no WordPress
+
+Fase 2: Processo de produção - Vídeo → Transcrição → Artigo → Aprovação → Publicação
+
+Fase 3: Distribuição dual - WordPress (para Instant Articles) + LinkedIn (para SEO)
+
+Fase 4: Cross-promotion - Linking entre todas as plataformas sociais
+
+Fase 5: Amplificação paga (opcional) - Campanhas de engajamento no Facebook
+
+ 
+
+DADOS FINANCEIROS:
+
+Modelo 1: $5K/mês - Execução completa hands-on
+
+Modelo 2: $7K/mês - Consultoria + transferência de conhecimento (pagamento único)
+
+Modelo 3: $7K/mês - Execução completa + gestão de tráfego pago
+
+ROI Proposto: Geração de leads e vendas através de conteúdo otimizado para SEO e distribuído em múltiplas plataformas
+
+ 
+
+DURAÇÃO: ~9 minutos FORMATO: Screen recording de pitch de vendas (demonstração ao vivo de análise de presença digital do cliente)

@@ -1,0 +1,67 @@
+Transcrição Completa: Section 4 - Competitive Analysis
+Conversa
+[00:00] "Welcome to section four. Okay, we just went over the one-page attack and conquer plan. But before we can start filling that out, we have to figure out how do you dominate your competitors."
+[00:14] "So in this section, download the competitive analysis template right now and then come back and once you have that open, we'll dive into the next section."
+[00:24] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Competitive Analysis - In order to dominate, you must know your competitors better than they do"
+NÚMEROS: Top 3 competitors, 2 current competitors + 1 aspirational
+VISUAL: Template de análise competitiva, estrutura SWOT, campos para preenchimento de informações dos concorrentes
+[00:26] "So competitive analysis, in order to dominate, you must know your competitors better than they do. So, this is a SWAT analysis. It's a deep dive."
+[00:36] "So, I want you what what I want you to do here is fill out your competitors top three. And usually how I do this is I look at two who are you currently two or two companies you're constantly competing with and losing market share against."
+[00:52] "That'd be competitor one and competitor two. You'd write their names in here on this template. And then competitor three, this would be an an agency or a company that you're aspirationally you want to be like someday."
+[01:07] "Okay? Because if you're constantly playing the meto game, you're never going to scale, right? So, two competitors you're you're currently losing market share to. And then who is the unicorn or the the who you aspire to be in this third box, right?"
+[01:23] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Value Proposition Template"
+NÚMEROS: Não especificados numericamente
+VISUAL: Template de análise com campos para proposta de valor, habilidade única, SWOT (forças, fraquezas, oportunidades, ameaças)
+[01:25] "In this value proposition, let me let me grab it really quick. This is the document. you should have it downloaded. So, we're going to cover value proposition, right?"
+[01:35] "So, you can get all this typically from their website. You know, what do they uh do and who do they do it for, right? What's their unique ability, strengths, weaknesses, opportunities, threats, really dive into this, right?"
+[01:49] "So, if you're losing market share because it's uh to price and you can't compete there, how do you win? Is it is it speed? Is it through your core values? Is it through your service? Is it through your offering? Really go in and fill this out on the SWAT analysis."
+[02:06] "The other thing you want to do is what other known knowledge do you have? Right? If you've been competing against these um agencies, you may know, man, they've got a really good uh uh you know, digital paid search director, right? And that's the reason they're doing so well."
+[02:23] "That could be an opportunity for you for you to try to poach that talent, right? Is there any specific industry data you can pull? Um, are they additional websites that they're using to pitch or sell that you may not be using?"
+[02:36] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Research Areas: Social Media Analysis"
+NÚMEROS: Followers count, engagement metrics
+VISUAL: Checklist de análise de redes sociais, ícones de plataformas sociais, indicadores de atividade e engajamento
+[02:38] "Um, what are they doing on social? Do they have an active social game? How many followers do they have? Um, how active is it? Are they using video? Are they creating offers? Like really understand what they're doing."
+[02:51] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Glassdoor Analysis - Employee Satisfaction"
+NÚMEROS: Não especificados numericamente
+VISUAL: Logo do Glassdoor, indicadores de satisfação de funcionários, avaliações de clientes
+[02:53] "The other thing I love to look at is glass door, right? Are the are the is the team members happy? Right? What are clients saying? This is an opportunity to grab that and use it against your competitors, right? To go steal talent, to show, you know, unhappy clients to convert them over, right?"
+[03:12] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Google Research Strategy"
+NÚMEROS: Não especificados numericamente
+VISUAL: Logo do Google, ícone de busca, representação de pesquisa abrangente de informações
+[03:14] "And then, um, obviously Google, I mean, you can you can Google anything, right? You can Google how to build a spaceship and you'll literally get the plans on on how to do that. So, anything you want to look up about your competitors, Google will probably provide that for you, right?"
+[03:29] "And again, any other reviews and ratings, you want to look at that. Okay. So, take the time. It's workshop mode. I want you to download this."
+[03:38] "I want you to really, you know, spend, you know, this is a an hour plus exercise at a minimum, right? I mean, you have to immerse yourself in your competitors because how do you become better? How do you become more niche?"
+[03:52] "How do you find your unique ability until you really understand what you want aspirationally that you're looking against and where you're currently losing market share?"
+[04:01] "You want to identify those strengths, those weaknesses, those opportunities. You want to understand what they're doing. You want to see how happy their their staff is, um how happy their clients are, and you want to map all that out because we're going to use this to then frame up our market leader positioning."
+[04:18] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Time Investment Recommendation"
+NÚMEROS: 1+ hora mínimo, até 5 horas se necessário
+VISUAL: Ícone de cronômetro, representação de tempo dedicado, indicador de profundidade de análise
+[04:20] "Download it. Go set a timer. spend an hour plus. This is one of those where if it takes you five hours, that's okay. You want to get this right. And I'll see you in the next section."
+📊 RESUMO EXECUTIVO
+NÚMEROS PRINCIPAIS:
+Top 3 concorrentes para análise
+2 concorrentes atuais (perdendo market share)
+1 concorrente aspiracional (unicórnio)
+1+ hora mínimo de dedicação
+Até 5 horas se necessário para análise completa
+ESTRATÉGIAS E SISTEMAS:
+Análise SWOT completa dos concorrentes
+Pesquisa de proposta de valor
+Análise de presença em redes sociais
+Investigação no Glassdoor (satisfação de funcionários)
+Pesquisa Google abrangente
+Análise de reviews e ratings
+Identificação de talentos para possível recrutamento
+Mapeamento de clientes insatisfeitos para conversão
+ESTRUTURA:
+Template de Análise Competitiva (download obrigatório)
+Framework SWOT (Strengths, Weaknesses, Opportunities, Threats)
+Seções: Proposta de Valor, Habilidade Única, Pontos Fortes/Fracos
+Análise de dados de indústria
+Mapeamento de websites e ferramentas de pitch
+Análise de estratégia de conteúdo (vídeo, ofertas)
+DADOS FINANCEIROS:
+Análise de perda de market share
+Comparação de precificação
+Identificação de vantagens competitivas não-financeiras (velocidade, serviço, valores)
+DURAÇÃO: 04:30 FORMATO: Vídeo educacional / Workshop prático com template

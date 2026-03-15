@@ -1,0 +1,382 @@
+Transcrição Completa: How To Keep Your Emails In The Primary Inbox
+[00:00] All right, cool. So, ladies and gentlemen, welcome to the weekly group call. Uh, this week we've got Brett, inner circle member, who's going to be teaching us how to keep emails out of the spam inbox and keep them in the primary inbox.
+[00:15] So, whether you're landing in promotions, whether you're landing in updates, whether you're landing in spam, this is going to be a specific set of lessons that are going to help you get to the point where once again, you are landing in the primary inbox.
+[00:28] Um, to be clear, I've done deals with Brett where he's doubled email open rates like damn near overnight. Uh, it's incredible. The skill set that he's got as an email marketer, it's very impressive.
+[00:40] And once again, for him to come in here today, spend some time with us and share these lessons is huge. U, just to be clear, Brett does this is like a service. I personally encourage him not to sell because it's a transactional thing.
+[00:53] But regardless, you know, he does this as a service with helping people get the emails out of spam and going into the primary inbox. So, for some reason you are overwhelmed or something and you don't feel like you can do this yourself, hit him up. I'm sure he'll give you a good deal.
+[01:08] U to be clear, without further ado, uh once again, a big thank you for Brett for doing this. We're going to give it over to him and he can take it away. Go ahead, bro.
+[01:17] Cool. Thanks, Jay. What's going on, boys? a lot of people that I don't recognize, which is great just how much this community has grown, a lot of friends that I do see. So, I'm excited to reconnect with everyone.
+[01:28] I've been in this mastermind for two years and I'm in a lot of masterminds and this is by far my favorite one just because of how like the amount of love that that Jay gives you and also the technical skill building. So, thank you for you for fostering such a great community.
+[01:42] So today I'm going to be talking about how to make the most unsexy money you'll ever want, which is getting your emails out of spam and promo into the primary tab.
+[01:52] And that's because a lot of people just don't think emails are relevant still, which is like the stupidest thing I've ever heard. And that's because if you can dial in your email marketing, you'll be able to make so much money for your clients.
+[02:04] So before I go deeper, can everyone see the the the screen where I have the slides up
+[02:10] for me? Sure.
+[02:12] Okay. Awesome.
+[02:14] Yeah. So, the way I'm going to do this is if you have questions on certain parts, just be like, "Hey, I have a question here. Can you break this down?" Because I'm happy to to do that.
+[02:23] And just to be very clear, like a lot of this is also technical and I believe that you can't you can't like grow in something you're not tracking. So, I'm going to show you exactly like how to make sure your foundation is set up the right way the first time.
+[02:36] Cuz it doesn't matter what of the strategies I show you down the road that if you are if your what I'm calling email IDs are not set up appropriately, it's not going to work for you. But we'll go into detail on how to do that.
+[02:49] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Email Marketing Statistics"
+NÚMEROS: 2 bilhões de contas de email registradas, 50%+ dos americanos usam Gmail
+VISUAL: Estatísticas sobre a relevância do email marketing, predominância do Gmail no mercado
+[02:51] So, first and foremost, if anyone ever tells you if your client ever tells you email marketing is dead, it's stupidest thing in the world cuz there is over two billion registered email accounts uh and that over 50% of people in the United States use Gmail.
+[03:06] And so that's why understanding how to use Gmail's algorithm to be successful is what's so key. Now, there are still people that use uh Yahoo and Outlook depending on the demographic that you are going for.
+[03:18] If you tend to be going for someone that's older, they're probably on Yahoo. If you tend to be going over going after more like um corporate, they might have an Outlook account, but Gmail is the predominant one.
+[03:30] And most people are opting in to buy like an info product or or for e-commerce like Gmail is going to be the one you need to play with which means you need to know how to work within their rules. And that's a lot what I'm going to break down.
+[03:43] The strategy still applied to the other platforms but again Gmail is the most important one you need to understand.
+[03:49] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Promotion Tab Problem"
+NÚMEROS: 19.2% de taxa de cliques na aba promoções
+VISUAL: Comparação entre Primary Tab vs Promotions Tab, taxa de engajamento drasticamente menor
+[03:51] So I'm sure that you saw the promotion tab because I heard Jay say that this was been an issue for some people. So, the promotion tab was created a few years ago because Gmail wanted to start separating emails that were promoting things and put them in that tab.
+[04:05] Now, the problem is that tab on average only gets clicked on 19.2% of the time. That's not your open rate. That's how that's how often that tab gets clicked on. Then the person needs to scroll through all the other emails just to find yours.
+[04:21] So, understanding how go from promo to primary is a lot we're going to talk about here. And if you're in spam, I'm also going to show you how to get out of spam.
+[04:29] But usually if you're in spam, it's a lot of technical errors and also poor email habits for a long period of time. It's still fixable, but it's a longer road.
+[04:38] And I have to be very clear with all of this. This is something that you need to it's not just set up one time and forget. It's understanding a skill set because you need to understand why it happened and what to constantly check on it to make sure you are landing in the right inbox later on.
+[04:54] Because when you start simulating where emails are being sent and where they're landing, and what I mean by that is you guys have probably opted into your own email list and have seen your emails in one inbox or another inbox. That's just what your inbox is reacting to that one test.
+[05:09] That's not an overall gauge of what's happening. So, there's certain tools I'm going to show you that can simulate mass sends to certain accounts to see where you're landing.
+[05:18] But with the nice thing is when you understand how to get it out of there, you'll understand what you constantly need to hit on your KPIs each week with your emails to ensure that your open rates stay as high and your clickthrough rates and your sales. And I'm going to break this all down for you.
+[05:33] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Spam Folder Issues"
+NÚMEROS: Não especificado
+VISUAL: Três principais causas de spam: Domain trash, Email IDs não configurados, Poor sending pool punishment
+[05:35] So if let's start with spam. If you are in the spam folder and does anyone if you can drop in the chat who who has noticed a spam problem? I don't know if I can see. Cool. Looks like we got Okay, great. Yeah, we got some spam people.
+[05:51] Don't worry, I was in your exact situation. I'm going to uh tell you how I got out of mine. The first thing you need to look at is is your domain trash? And I'm going to show you how to check that as well as is your email ID set up and have you been punished by your email service provider by being put in a poor sending pool.
+[06:09] So, let's start with the last point about burning your IP. So being in a poor poor sending pool, let's say you all use like high level, active campaign, um HubSpot, doesn't matter, any of the big ones, they group you based upon your sending behavior.
+[06:24] So if you are abiding by poor email habits, they're going to put you with other people that are also doing that. So then from the beginning, you're already at a disadvantage.
+[06:33] If you are a good email sender and you're following the rules, then you're going to be put in a higher sending pool. So, it's so it's overall going to help your open rates go up because you're going to be grouped with other people that do that.
+[06:45] Now, there's workarounds and I'll explain all this where you can get a dedicated IP which will cost you more money, but that means you're not being punished or rewarded by anyone else around you. It's only simply what your email habits are doing.
+[06:58] Now, there are also tactics which I'll show you in a little bit that you can negotiate with your email service provider to increase your sending pool. Think of it like trying to, you know, negotiate your credit score to go up.
+[07:10] You have to show a history though of of of being a good uh email uh sender on their platform and then say, "Hey, look, I've improved since I used to mess up. Can you put me with a higher sending pool?" But again, don't worry. I'll walk you through all that.
+[07:24] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Case Study: Our Email Problem"
+NÚMEROS: 43,000 lista de emails, 20% open rate inicial, 2% click-through rate, queda para 20% open rate, recuperação para 57.7% open rate (pico)
+VISUAL: Gráfico mostrando a jornada de recuperação de deliverability, quase 3x de melhoria
+[07:26] So, um let me just go. We had this same problem ourselves. This how we figured it out. We started out um years ago strictly just a email copyrightiting agency. We had an email list of about 43,000.
+[07:39] We thought we were the absolute shit because we were getting open rates around 20% with a clickthrough rate around 2%. But we started notice that our open rates dropped. Sorry, our open rates are higher than that.
+[07:51] We start notic our open rates dropped as low as 20%. We were able to get them out of spam and promo into the primary tab and they jumped to 57.7% at the peak.
+[08:02] And so we nearly 3xed our ability to mail to our list by figuring out how to get out of the promo tab into the primary tab. And that's what I'm going to break down right now.
+[08:13] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Three Pillars of Email Deliverability"
+NÚMEROS: 3 pilares
+VISUAL: Três colunas mostrando: Email IDs, Engagement, Trigger Testing
+[08:15] So, we're going to start with the three pillars of email deliverability. So, it's your email ids, your engagement, and your trigger testing.
+[08:23] And so, the email ids is the most boring part of this entire process, but it's the most important part.
+[08:29] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Email IDs Explained"
+NÚMEROS: 3 tipos de IDs
+VISUAL: Breakdown técnico de DKIM, DMARC e SPF records com explicações detalhadas
+[08:31] So, you have three email IDs inside your server, which your DKIM, your demark, and your SPF. Here's a breakdown of exactly like what they are, but for clarity, you need to be able to know if they are set up correctly.
+[08:44] Because the reason why you might be in promo and spam is that spammers are currently not setting this up. So, in February 2024, I don't know if you saw the whole Gmail crackdown, Gmail got so strict that if these are not set up perfectly, this could be a huge factor in determining where your emails are landing, which is why I'm about to show you to make sure that you have yours set up correctly.
+[09:06] But this is the first place I would check if you're in promo or spam.
+[09:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Testing Tools"
+NÚMEROS: Não especificado
+VISUAL: Lista de ferramentas gratuitas de teste: MX Toolbox em destaque
+[09:12] So, here's some testing tools. These are all uh free testing tools. This is the first one, MX Toolbox. And I can drop these uh this the slide deck. So you don't have to get the domain right now.
+[09:23] But this I love this tool a lot. The what this does, it gives me a gauge of where my where how healthy my domain is.
+[09:31] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "MX Toolbox Email Health Report"
+NÚMEROS: Exemplo de cliente de joalheria
+VISUAL: Interface do MX Toolbox mostrando relatório de saúde do email com erros em vermelho, avisos em amarelo, e aprovações em verde
+[09:33] So this was a former client of ours that we help scale up on the ecom side. They're a jewelry company. And so what you do is you can take your domain right now. And I'm happy to walk anyone through theirs um whenever they want.
+[09:46] But you go here, you go to email health, you drop it in here, and you click check email health. What it's going to do, it's going to run a report. If you have glaring red, you're in trouble. If you have warnings, you know, things to fix, but this is the first thing to identify.
+[10:02] So, when we took over this account the first time, again, this we worked with them like over a year ago. We they had multiple red errors, which meant their demark, DKIM, and SPF were not set up.
+[10:13] And this is how we knew we had to tackle this first, which immediately got the bump in their open rates. If you have yellow errors, you still need to get these fixed.
+[10:22] Now, you need to go where your website's hosted. It could be like GoDaddy, Squarespace, wherever it is. And you have to go in, you have to make sure that these are set up appropriately.
+[10:32] Now, word of caution, you need to not email for 24 hours as you're authenticating this cuz if you email as you go to fix this and then what happens is it's not actually registered anymore by the email service provider, which means it's seeing as you don't have it in place, which means they're going to view as a spammer.
+[10:50] And if you're sending a lot of emails that day, there's a high likelihood your emails will go in spam and your domain will will tank, which I'll show you what that means specifically in a second.
+[11:00] Does anyone just want to quickly drop their domain? I can just show you like right now where what errors you might have popping up. Cool. Let me see if Awesome. All right. I just saw Andrews pop up. So, I'll do Andrews.
+[11:14] Okay. Chris, I just saw your question. Um, currently moving to high level but haven't assigned our domain yet. So, still a random URL. We're sending automated course access. Um, and are there ways we can increase it?
+[11:26] So, my first question is, so you say we're sending automated course access via email. Do you know if your email IDs are set up? That'd be the first thing I would do. I would look at because if it's not, that could be a reason why you're doing there.
+[11:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Live Domain Analysis - Andrew's Domain"
+NÚMEROS: SPF record: no record found
+VISUAL: Tela do MX Toolbox mostrando análise em tempo real com erro de SPF destacado em vermelho
+[11:42] And then Andrew, I'm gonna go drop yours here. So again, to repeat, Andrew, um, your SPF, there's no record founds. So if you're having a deliverability issue, meaning emails and promo or spam, this could be a factor or this is one of the factors. Why?
+[11:59] And so what you need to do again, which is so clear, you need to go into wherever your website's hosted and fix this, but do not email for 24 hours while doing that because it takes about 24 hours for it to to to really uh register with the with the ESP.
+[12:15] Cool.
+[12:16] What the fuck a SPF record?
+[12:19] Yeah. So it ensures your sending mail server is auh is authorized to originate mail from the email center's domain. Think of it like the easiest way to identify this is like you have an ID you're trying to get into like trying to board a plane.
+[12:33] Like it doesn't matter if you say you are the person that you are. They need to see an ID that matches who you are. Email service is the exact same way.
+[12:42] They need to see that you actually are the person that you are before they'll let their email your email into their inbox because on their end, they don't want bad actors in their inbox.
+[12:52] They want you, the the the person that signed up for Gmail, to view Gmail as a safe place for you to communicate with your friends. But if they let spammers through, you the user of Gmail, can get pissed off and no longer use Gmail and go to a competitor.
+[13:07] That's why it's so important you need to have these three things set up.
+[13:11] Dude, look at Chris. Look at Chris's photo in the chat. He doesn't have a SPF record and he's on two blacklists. What's What's up, black?
+[13:19] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Chris's Domain Analysis"
+NÚMEROS: 2 blacklists
+VISUAL: Análise mostrando SPF não configurado e presença em duas blacklists
+[13:21] Yeah. So, we're going to get to that in a second. So, blacklist means you did some shit to mess up, but you can you can hit them up to get off of it. And I'll show you some other ways you can also get off of it.
+[13:32] So, for context, um Chris, your SPF, like I said, you got to get that fixed. Just go into your DNS record. You'll see like it's very easy to Google like one is my SPF in your DNS record and then go into where your website's hosted to ensure like it's set up appropriately.
+[13:48] But I cannot stress this enough. Do not email for 24 hours as you fix this because otherwise you could fuck up everything. We did that for a client one time. This is before we knew what we were doing and it just caused the biggest shit storm and I will never live through that again. I was like fuck this. I'm done with that.
+[14:07] That was fun.
+[14:09] Yeah. for blacklist stuff. If you go under more info and also you can Google the blacklist, they usually give you instruction on how to get off of it.
+[14:18] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Glockapps Testing Tool"
+NÚMEROS: 90 inboxes simuladas
+VISUAL: Interface da ferramenta Glockapps mostrando simulação de envio para múltiplas caixas de entrada
+[14:20] Um, Google uh, excuse me, Glock app. So, Glock app is another free testing tool. I really like Glock app. It you can also I mean I recommend paying for it too because there's really good uh, data gives you, but essentially what Glock app tells you is more in depth.
+[14:36] It simulates what mailing to about 90 inboxes at a time looks like. and it breaks it down all from different inboxes.
+[14:44] So, actually, let me see if I can find an account that we have set up just to kind of walk you through because this is really good um information.
+[15:02] Where'd it go? This is what happened when I had my computer just crash a second ago. I had to refine all my stuff. But, let me walk you through Glock app.
+[15:11] So, what it does is you're going to go create an account. You're then going to download about uh 90 email accounts from there. These are all not real ones, but they simulate what email emailing them would look like. And you're going to upload it into your email service provider.
+[15:26] You're not sharing. You're sharing if you
+[15:29] Yeah. I'm going to I'm trying to find my address. Yeah. No, you're good. Don't worry. So, I'm just I wanted to uh walk through what one looks like prior.
+[15:39] So, there we go. Probably here. And so what you're going to do is you're going to download um you're going to download these emails. You're going to throw them up into your email service provider just fine here. And I'll show you what one looks like. Pardon me, gentlemen.
+[15:54] And then you're going to simulate and then you're going to send an email to this list. I know this is higher level because I'm not showing you anything, but give me one second.
+[16:03] There we go. Perfect. Okay, then let me pull this back up. Pull this here. Yeah, this is the boring technical part that will save you a shit ton of money and make you a lot of money. So that's why I really want to spend the time getting clear on it.
+[16:19] Okay, can now can you see the slides again?
+[16:22] Yep.
+[16:23] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Glockapps Test Results"
+NÚMEROS: 70-90 contas testadas, 40% inbox (primary), 8.3% promotions, 50.9% spam, 9 blacklists
+VISUAL: Relatório detalhado do Glockapps mostrando distribuição de entrega por provedor (Gmail, Amazon Workflow, G Suite, AOL, Hotmail, Outlook) com percentuais de inbox/promo/spam
+[16:24] Great. So this is a Glock app test. So what what what a test was done after we did it for a client. So again, it's very easy to do. It breaks down.
+[16:34] So this client came to us because they had a big spam problem. Um and we the instructions are very clear how to do it. What it did was it sent to about like 70 to 90 different email accounts that you see here and it simulated where it would land based upon there.
+[16:50] Now it also simulates all different kinds of uh emails you're sending to. So, for example, it says like out of the emails it sent to Amazon Workflow, G Suite, you know, the the big ones.
+[17:01] Again, the ones you need to pay attention to are like Gmail. Gmail uh legacy means an active Gmail account, meaning one that you are actively using pretty much daily. Like that's what your person that opted into your list is using.
+[17:15] Gmail non-interactive is a Gmail account that's dormant that you're not like the person's not really using. But it's good to know where they're landing for both. AOL, Hotmail, and Outlook.
+[17:25] To break this down even more specifically, it simulated the test. And for this client specifically, before we worked with him, he was going to the spam at uh inbox, excuse me, which is the primary tab at 40%, promotion uh 8.3 and spam 50.9%. That's a big problem.
+[17:45] He was at he was also on nine blacklists. So again, we contact we're contacting all these blacklists and we're saying, "Hey, can we get it off?"
+[17:53] We're also he's using HubSpot going to HubSpot and saying hey you know can I get into a higher setting pool if HubS if HubSpot says fuck off then we're going to get a dedicated IP which only costs like $300 a month and then that's going to help because there at least we're not being uh brought down by other bad email senders if we're on our own dedicated IP which means we can fix our own domain reputation and therefore we're not being punished by other people or bad actors if HubSpot does not move us to a higher sending pool.
+[18:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Action Steps from Glockapps"
+NÚMEROS: Máximo de 3 URLs únicos
+VISUAL: Lista de problemas identificados: too many links, DMARC issues, signature links problem
+[18:27] What else I love about it is you go to uh action steps. It gives you some more breakdown of exactly what could be off with it. And this is some of the stuff I'll break down in a second.
+[18:37] But one of the big things is that too many links are a big problem. And so often times you'll see in an email you'll see like in the signature you'll have your you know your your Instagram, your LinkedIn, your Facebook, like your website. That's four links.
+[18:52] The real rule is you won't have no more than three unique URLs. So, if you have more than three links, you know, make sure like um well, don't keep it to three unique URLs, but I say unique URLs because you want to have it go to the same place.
+[19:07] Now, the reason why that works is because the whole point of email is to get the person to click the link or respond to your email to buy some shit
+[19:16] So, if you think about it, why would I have other links to my social media when I it's going to confuse them on what the one call to action I want them to do is? And therefore, I want them to click the link to book a call or consume content, whatever it is.
+[19:30] But we are trained that we need to have all of our other logos on social media. But Gmail is also like if you have all these other links, I feel like you're promoting something or spamming the person. So, I'm going to punish you by putting you in promo or spam.
+[19:44] So, one of the easiest things to increase your deliverability right now is go into your current uh email and look at how many additional links you have in there. If you have any link that's going anywhere else aside from that one call to action you want them to have, remove it.
+[19:59] And that was a big problem that this person had. We also saw their demark had issues, right? That was what we talked about earlier from our from our MX toolbox test.
+[20:08] And then I'm also going to show you some really good ways about uh simulating engagement to help boost up um engagement. But I know I threw a lot of the technical shit at you right there. Anyone have any questions right here?
+[20:22] Uh so, okay. Uh Darren, what's up, buddy? So if your domain is trashed, then you you will need a new domain. Now knowing what's trashed is is like after running some of these tests, especially Glock app.
+[20:35] So if you find you're spamming a ton, then it would make sense for you to think about getting a new domain. But you have to warm up that new domain. So throw it through a warm-up service. I'll show you a list of the ones I love in a second.
+[20:48] And then after about like 30 to 45 days of consistent warm-up, then you can start migrating your new leads over to that domain. You can just set up as a subdomain.
+[20:58] and then from there you'll be able to start mailing from a different one. But it all depends how trash your domain is. So it's not like a hard rule of like, hey, you got to get off of that domain.
+[21:09] Um, anyone else have any technical questions about this part that we're at now? And I know this is like the this is the boring technical piece, but again, having your foundation in place is what will make sure all the other stuff that I'm going to show you is going to work.
+[21:23] Did that guy get on nine blacklist from like do do you know why he got on nine blacklist or is it more of just a you don't know why but he was on nine blacklist situation?
+[21:33] Uh after talking to him it's cuz he hasn't didn't get his deliverability check for a long time and he was sending a shit ton of emails out and doing bad practices. So he just got punished over time.
+[21:44] And like a blacklist is essentially the the ESPs themselves like like Gmail, Yahoo, AOL. Those are the blacklist. So yeah, there there's different servers out there that will put you on a blacklist.
+[21:56] But not all blacklist are treated equal. Meaning some of them are like fine. Like it doesn't matter. But that's why it's it's always wise though because most of them just allow you to be like, "Hey, can you get me off of it?"
+[22:08] You can literally just like on their website they'll show you how to get off a blacklist, like how to get off this specific blacklist. So um and it helps. I mean, this is just like this is the easy shit that's punishing you down the road.
+[22:21] So, like, take the few minutes, contact them like you would contact, you know, Facebook if you have any questions about your ad account or whatever it is. It's just the same same thing, but think about in regards of email terms.
+[22:33] Um, post question.
+[22:35] Yes. Um, you said while you're changing this, don't send emails. Does that include for instance I use high level tons of automated emails for appointment reminders and all that stuff. Do you want us to like turn off every workflow and just stop everything?
+[22:49] If you want to be the most ultra ultra safe, yes, I'm speaking from my experience of there was there was just it was like this happened 18 months ago with like this is before we really got like really understood this shit
+[23:02] We told them not to send emails. Someone on their team didn't listen. They ended up sending emails and just tanked the entire domain and it was like a very big problem. Ended up costing them like a lot of money to fix.
+[23:14] So we side on Uber caution which is usually why we'll do it like on a weekend. I don't know when all your like if you can find a day where you have the least amount of emails going out I would recommend doing it there. You just need 24 hours.
+[23:27] Um and the nice thing is you just need to do it one time and then you'll be good.
+[23:32] Sounds good. Thank you.
+[23:34] It is annoying but yeah it is just what it is.
+[23:37] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Google Postmasters Tool"
+NÚMEROS: 0.5% spam rate máximo permitido (novo em fev 2024), 4% limite crítico
+VISUAL: Interface do Google Postmasters mostrando métricas de domain reputation e spam rate
+[23:39] Um, Google Postmasters, has anyone here, do they have a Google Postmasters account set up, you can drop, say yes or no, or if you have no idea what this is.
+[23:49] Um, but Google Postmasters, it's completely free. And this registers your emails for for Gmail. Oh, dope. Okay, this shit I love this shit
+[24:00] So, this is completely free. Set it up today. It's very easy. Just go to the website. You have to put in your URL. You have to put in a txt file. It's very simple. It's going might take a few days to populate, but what it does is it shows you data that is so relevant to where you're landing.
+[24:17] So, your domain reputation is like what's gold here for you. So, if your domain reputation, um, let's see this. If your domain reputation is bad here, we'll start spam. Let's see if it loads. We'll start your spam rate.
+[24:33] If your spam rate is above, there's a new rule that came in February or 2024. If your spam rate averages, we need Sorry, give me one second. You want to keep your spam rate below uh 0.5%. Which you'll be able to see across the board.
+[24:51] But here, sorry. Oh, there it is. So, again, we don't work on this account anymore. Someone else does.
+[24:57] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "High Spam Rate Example"
+NÚMEROS: 10% spam rate (CRÍTICO), limite de 4% média, 0.5% recomendado
+VISUAL: Gráfico do Postmasters mostrando spam rate perigosamente alto em vermelho
+[24:59] This is really, really bad, which causes him to have uh uh his emails going to spam. Gmail cracked down in February saying your your spam rate cannot be above 4% on average. So some days it's okay, but like you want to keep it like like below the threshold.
+[25:17] So this is user reported spam rate. What does that mean? Let's say I'm on your list. I think you're doing something that I don't like. I'm going to go in there and I'm going to click unsubscribe. I'm sorry. I'm going to click report as spam versus unsubscribe.
+[25:32] So in this six email a day strategy that you guys are doing right now, I'm going to show you some things that you can be like, "Hey, if you don't want to be here, just reply remove or here's the unsubscribe button right here."
+[25:44] Which is why if you notice some of the emails you are receiving now have you noticed probably there's a blue unsubscribe at the top of that email that was automatically added in by Gmail because they were trying to solve this problem because they don't want users to be pissed off.
+[25:59] So you got to keep your user reported spam rate as low as humanly possible. So when y'all are hammering make sure to think about in your mind that getting someone to opt out of your list is almost just as good as someone buying from you.
+[26:14] I know it's I know it's a stretch. The idea is you don't want anyone on your list that does not want to be there. You only want people on your list that want to be there.
+[26:23] So that's why monitoring this like he's fucked from going this high because he has 10% spam rate which is causing his emails go to spam.
+[26:32] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Domain Reputation Levels"
+NÚMEROS: Não especificado
+VISUAL: Escala de reputação: High (ideal), Medium (aceitável), Low (problema), Bad (crítico/spammer)
+[26:34] The domain reputation. Now this is another big indicator. You want your domain reputation to be at high or medium at the worst. Low or bad means you're viewed as a spammer for Gmail.
+[26:47] So again, this is your technical tests with MX Toolbox, uh, Postmasters, and Glock app that you can use to monitor what level you're at now. And you'll know if you're doing better because you'll see your your Postmaster score increase or decrease if if you're not doing as well.
+[27:04] And now with some of the stuff I'm about to show you now, you check this. You'll check your performance of your emails. And so, for example, if we see our domain reputation go up high, now you'll see a correlation. Your open rates and clicks and ideally your sales will go up.
+[27:20] You see your open rates drop, it's probably because your domain reputation dropped and you had a high user reported spam rate.
+[27:27] Okay. Um, where did Hey, what's the what's the time frame for that point4% uh spam rate average from Google? Is it like 30 days, 90 days a year? Do you know?
+[27:39] It's about 30 days. So, the whole idea is that like Yeah, you want you want to make sure that again that's why uh getting someone to opt out of your list is like super key if they don't want to be there.
+[27:52] And I'll show you something in another way which we do to protect. So, there's a strategy that I'll break down in a second. But what we actually do is we have all of our main people, meaning the ones that are most active, on one domain, and then we put everyone that hasn't opened an email from a long time, on a different domain.
+[28:11] And therefore, I actually reduce my risk of having a high user port spam rate because therefore, I'm moving people that are no longer active and don't want to be there from a different domain, but it's it it looks like the same domain.
+[28:25] It could let's say my domain was brett.com. This could be like brettemail.com. The person's not going to know the difference. And yet you're still sending the same emails, but you're doing it on a different domain, which I'll walk you through in a second. It helps protect the health of your main domain.
+[28:42] Okay, we saw some shit pop up. Okay, cool. Dope.
+[28:46] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Dedicated IP Solution"
+NÚMEROS: $300/mês custo aproximado
+VISUAL: Comparação entre Shared IP Pool (vulnerável a outros remetentes) vs Dedicated IP (controle total da reputação)
+[28:48] All right, now we can get into the fun stuff. So, last thing I'll talk about is a dedicated IP. This is something to explore. If you found after through your tests that your emails or your domain is in poor shape and your emails are going to spam, you can either if you use HubSpot, you can ask them.
+[29:06] I know Active Campaign has their own or you can do Send Grid. It's going to cost you some extra money, but what this will do is this will put you in more of control of your own IP reputation versus you being grouped into other people that are bad senders.
+[29:21] Because if you're a bad sender, your ESP, your email service provider is treating you as a bad sender and they're punishing you for that. So you can pay to be on your own dedicated IP because when you become a good Apple, they're going to put you in a higher setting pool.
+[29:36] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Email Warm-up Services"
+NÚMEROS: Não especificado
+VISUAL: Lista de ferramentas: Snowio (destaque), Instantly.AI, outras opções de warm-up
+[29:38] Okay. One of the first things we do with a client as soon as we take them on is we like we add more warm-up. So Snowio is one I love. Instantly.AI, there's a ton out there that you know, but I constantly have a warm-up going all the time.
+[29:53] And I just uh uh make sure that the reply is the person whoever is managing the email account, let's say it's not me, is just going to a different tab so no one's confused that it's like a real or fake person, right?
+[30:05] But the idea is that why this is good is because just like you're doing cold emails, the whole idea of doing a warm-up is because you're getting replies back and replies back means that Gmail thinks you're actually like a real account and you're not going to spam.
+[30:20] The same thing happens on your inbound list. So that's why I always have an email uh email warm-up series running.
+[30:27] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Engagement: The Most Important Factor"
+NÚMEROS: Não especificado
+VISUAL: Conceito central: Email como plataforma social, engajamento = replies > clicks
+[30:29] All right. The first and most important thing you need to master when it comes to your emails is your engagement. Think of your emails like Gmail as a social media platform.
+[30:39] Just like Instagram or Tik Tok, the more engagement you get, the higher likelihood you're going to land in the main inbox, which why it's imperative that you get as many replies as humanly possible as fast as possible.
+[30:53] So, I'm going to show you something specific for the hammering strategy that we're all running now. But one of my favorite ones is the seven word email. Do you still need help with that? Because you'll get people saying yes, no, whatever it is.
+[31:08] But think in your mind for your industry, because I know we're in a bunch of different industries. What is an easy yes or no or open-ended question, you know, will get a lot of replies back and sprinkle those in to the emails you send out.
+[31:21] So, let's say you're sending out broadcast emails and you're sending three emails a day, sorry, three emails a week. that make sure at least one of them is a reply one in your automation which I'm about to show you now for like the hammering strategy.
+[31:35] You got to get replies as early and as often as possible because the fact that y'all are sending so many emails so fast in that strategy. It's imperative you get as many replies from the beginning as humanly impossible.
+[31:47] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Instant Email Template"
+NÚMEROS: 5 minutos após opt-in
+VISUAL: Template de email completo: Subject line "Hey [name], did you get this?", corpo do email focado em reply, ethical bribe strategy
+[31:49] So that's why I love the instant email. It's something that uh I have morphed for my clients and feel free to swipe it and steal it. But within 5 minutes of someone entering my list, I'm sending them the instant email, which subject line is like, "Hey, name, did you get this?"
+[32:05] And this was for one of our clients as a supplement uh mastermind. And it's very simple like, "Hey, I have one small favor to ask. Can you hit reply real quick and let me know that you received the email out?"
+[32:18] Now, in your case, like like why this works is because this is we want them to reply, right? We want that reply more than anything else. And then here you can kind of customize it to let's say if you wanted them to answer you something specific.
+[32:31] But we have like if you want tell me your number one roadblock with your supplement business. We read every answer. Why this is good for us because when someone replies to this now I have the saleserson just follow up with that person right? We already know that their issue is X with their business. It's great to start an engaging conversation.
+[32:50] Um and then I'm very clear on why I do this. It just takes a few seconds to do now. And frankly it also helps with email deliverability so you'll never miss my best info.
+[33:00] I'm very direct on why I'm doing this. Like, hey, the emails spam filters is the highest it's ever been. I need your help to make sure you get my emails because you opted into my emails. So, I want to make sure you get my information. Sounds like a fair trade.
+[33:16] Now, I like to also add the ethical bribe. And now, I know this all varies based on people's industries, but the ethical reply bribe is you can say reply back and I'll give you X. Could be a training. It could be like, Nick, I know you have a bunch of ecom stores.
+[33:32] So, it could be like, you know, discount, however you want to phrase, or a bonus bundle, whatever it is. We did that a ton with ecom stores. We we used to manage on on this specific side.
+[33:42] But just think about in your industry, what you could give away as a really good bonus that can get the person reply because again, the success of your hammer strategy is going to come down to getting engagement as and as fast and humanly as possible.
+[33:57] And engagement, which we're going to show you uh in a second, is clicks or replies, but replies way more to Gmail than clicks. Because Gmail's primary tab was created to view it as a platform where people communicate with their friends.
+[34:12] They want people to use the primary tab to email their friends just like you would text your friend. Therefore, they're only letting messages through that feel like it's a conversation. They feel like the person's actually communicating with someone to get somewhere versus like buy my shit buy my shit where a lot of marketers fuck up.
+[34:30] So, this is really fun for you to think through on how to gauge and uh uh generate more replies.
+[34:37] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Cleanup Email Strategy"
+NÚMEROS: Email #6 na sequência de hammering sugerido
+VISUAL: Template completo de cleanup email: "Are you still interested?", spring cleaning concept, reply YES strategy
+[34:39] Now, I like to send the cleanup email. So, the cleanup email, especially in the hammer strategy, this again we were talking about earlier about getting people to opt out if they don't want to be here.
+[34:51] So, this was for an ecom uh technically was a Photoshop business. I guess it was like info product ecom store combination. But you guys can imply implement this as like the six email and the hammer strategy as an example like after that like really intense automation.
+[35:07] And the subject line is like are you still interested in hearing from us? and we have hey name you know it's time for a little spring cleaning here at the company we're starting uh with our subscriber list this is about streamlining our email list about making sure you receive content that you want our team is committed to crafting emails that both inspire and ignite your creativity if you're keen to continue this adventure with us here's a sneak peek of what's in store and we just talk about like if you're going to stay on the list here's what to expect simply reply back yes if you want to stay if you don't want to stay if I don't if I don't hear from you I'm going to assume you don't want to be here and I'll gradually start removing you off the list, no hard feelings.
+[35:51] And then again, I remind them just reply yes if you want to remain on our list. Why is this good? Because the people that are replying, I know that they're engaged. I know they want to be there. And again, I pass them off to the sales team.
+[36:04] If it's an ecom store, it's just very easy. Just like send them a link to to the store to buy more. But again, I'm generating replies. I mean, I'm sure you can see the theme here. What's going to get you out of spam after fixing your uh your email IDs is getting as many and out of promo is getting as many replies as fast and humanly as possible.
+[36:24] Any question about these two things before I move on to the next one? Because I just want to be mindful of time.
+[36:31] Cool. Looks like we are good.
+[36:33] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "First 24 Hours Critical"
+NÚMEROS: Primeiras 24 horas após opt-in
+VISUAL: Importância das primeiras horas, foco em replies e clicks imediatos
+[36:35] All right. So, like I said um a second ago, the first 24 hours is critical to your engagement for Gmail. And so, you need to get uh replies and clicks as much as possible.
+[36:47] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "High-Click Engagement Email Example"
+NÚMEROS: Não especificado
+VISUAL: Exemplo de joalheria: "Is your jewelry waterproof?", estrutura de email com link para página de conteúdo + CTA de venda
+[36:49] So if you have um one of the things I love doing this again was for an ecom store that we were working with is again this works for any other business too is a highclick engagement email.
+[37:00] So, if you have really good content, this one is talking about jewelry specifically, and the subject line is like, "Is your jewelry waterproof?" And we know that our people really cared about that.
+[37:12] And so, we wrote an email. It's talking about like how to like here's how to actually test if your if your jewelry is waterproof. And it was a link to a page. And on the page, we had the the content around if if your email is sorry, if your jewelry is waterproof. And underneath, we had like like the link for them to buy it.
+[37:31] So think about through whatever the top objections your person's having before buying from you, whether it's coaching, SAS, doesn't matter what it is. And then write a write an email that's like a high we call click engagement email, which is like teasing them like, "Hey, do you have this question? Here's what happens.
+[37:49] Uh if you don't get this question solved, like like this could be a big problem. Here's the answer to your question. Click here." And then they go to the page. They get the answer to their question. Make sure you actually answer their question. That's the most critical part.
+[38:03] And then underneath you can have like click a link to book a call or whatever your call to action is depending on what your business is. Um and it works really well because again the second most important thing is clicks. So we just talked about replies is the number one thing. Click is the second thing.
+[38:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Trigger Actions & Testing"
+NÚMEROS: Não especificado
+VISUAL: Gmail lê emails literalmente, palavras gatilho que causam filtros de spam/promo
+[38:22] Now we're moving on to uh trigger actions. So Gmail reads your email literally. And so if you are going to promo and spam, it's because they're thinking you're either spamming or promoting things. So therefore, you can do things to work around it.
+[38:37] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Common Trigger Words"
+NÚMEROS: Não especificado
+VISUAL: Lista de palavras gatilho: free, buy now, sale, act now, discount, offer, investment
+[38:39] So common trigger words that are causing you to be in promo and spam could be like free, buy now, sale, act now, discount, offer, investment, and the fix to get creative with your testing.
+[38:52] Now, these are not hard and fast rules. They all vary based upon your behavior. But again, what I just showed you, those previous two things about replies and clicks, will outweigh anything I'm going to show you on the testing side.
+[39:05] So, if you can figure out ways to get the most replies and clicks, you can say whatever you want in your emails, basically. But that's why you want to figure out the right way to get the person engaged because Gmail wants you to have a back and forth conversation with the person. That's how you stay in the primary tab.
+[39:23] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Image Optimization"
+NÚMEROS: Não especificado
+VISUAL: Ferramenta TinyPNG/TinyJPEG, problema de imagens muito pesadas, compressão sem perda visual
+[39:25] So, one of the first things I do when I do look at a client's account is seeing their kind of automations they have in place right now. And so one of the big things is images. If you have images that are too large, it's actually too heavy.
+[39:38] I'm not talking like large on the screen. I'm talking about like um it's just too heavy for for Gmail to send. So what you want to do is there's a great website, it's completely free called Tiny PNG. It compresses the image.
+[39:52] It doesn't actually change what it looks like inside the email, but it helps reduce it the send for Gmail and it makes it uh Gmail um have a higher likelihood of you landing in the primary tab because actually cost Gmail more money to send an email has a lot of images in it.
+[40:09] So, you can, yes, you can still use GIFs cuz I knew that was a question I had when I first heard this. But you just need to compress the GIF. And again, it's not going to shrink it. It's not going to look smaller on the page. It's just going to make it easier to send based on the size of the image.
+[40:25] And so, on the website's tiny PNG, tiny tiny.jpeg, excuse me. There's PNG and JPEG. Both are the same or different websites, but same feature.
+[40:35] We just talked about this. the um your your amount of links you have in the email. So always think through what link in my email is not relevance, right?
+[40:45] Do I just have like just different links to my social media to my website? Like things that are not help me with the one call to action I need from the person which is whatever that is in that scenario. So just think through that and then um this is a good way of like like I said like opting into your own list to see where your emails are landing.
+[41:04] But if you constantly using the Glock app method, you're going to be able to see what's going on.
+[41:09] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Advanced Strategy: Domain Splitting"
+NÚMEROS: 30 dias de inatividade = threshold, 31-90 dias = subdomain
+VISUAL: Estratégia de dois domínios: Main domain (ativos) vs Subdomain (inativos), proteção de reputação
+[41:11] Um, now here's some of my favorite advanced shit that we roll out to clients. So, they have the um uh the fundamentals in place. I make sure that I depending on how aggressive I want to be, I don't like emailing people that haven't opened an email from me in 30 days.
+[41:28] And what I mean by that is that I will put my most active people on one domain and then I'll spin up another domain for like 31day openers to like 90day openers if I want or even more let's say uh depending on how large my list is and I'll spin up a subdomain very similar name as that one and I will warm it up and then I will only email those people that have not opened past 30 days on this other domain.
+[41:54] Why does this work? The person receiving the email has no idea that it's different. They also really don't care that it's different because you're sending the exact same emails.
+[42:04] But why is this good for you? Because if you mail inactive people, Gmail is like, "This person's not engaging with you. They're not opening your emails. I'm going to punish you and make sure you actually don't go through. You'll be in promo or spam because again, this person doesn't want to hear from you."
+[42:21] Gmail's job is to protect their users, not protect you. So therefore, if you're only mailing people that that care to open your emails and reply to your emails and click on your emails from one domain, your open rates will go up.
+[42:35] And now you can still mail everyone else from a different domain because in reality it doesn't really matter what happens with that domain because these people if they open it phenomenal. You'll just move them to the main domain.
+[42:47] If they don't open it, you didn't lose anything because they weren't opening your emails anyways. Does that make sense? I just want to make sure that's clear because it's a little bit more advanced on the technical side and how to set up on the on the domains, but this is very powerful if you do it the right way.
+[43:04] Cool. I mean, it doesn't make sense at any point down the road, shoot me a message. I'm always happy to walk you through it.
+[43:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Case Study: Trading Company"
+NÚMEROS: $9,800 programa de coaching, 8.53% open rate (mínimo) → 25.15%, 20-25% média → 40% média, 200% aumento em click rate, $100k+ em nova receita
+VISUAL: Gráfico de recuperação dramática, antes e depois da implementação das estratégias
+[43:12] Before I jump real quick in the Q&A, I just want to show you an example of someone who had the exact same problem. So, this we work with this um trading company. They had $9,800 coaching program. Open rates are low as 20 25%. They dropped as low as 8.53%.
+[43:29] We ended up implementing literally everything that I just broke down for you. And they end going from about 20% to 40% as their average open rate. and their click rate jumped up by 200%.
+[43:42] And their lowest performing email went from 8.5% to 25.15% which added over 100k in new revenue for them. And also we engra engage so many former dead buyers who were not emailing in the past, who are not opening an email in the past because of that advanced domain split strategy I just showed you.
+[44:03] And now we have a pool of people that we just email constantly with more aggressive offers. Just be like, "Hey, you haven't emailed you haven't opened an email in 31 days. you probably don't know who I am anyways or you forgot like why you're on this list. So, we're just really aggressive with them and anyone that opens up here either they'll buy from that list and they get moved to my main domain or they'll open and I'll just move them to my main domain in a re-engagement sequence of like welcome back to my world.
+[44:31] But I get to test super aggressive offers which actually great for upcoming Black Friday on this list first knowing that it doesn't matter if I get nothing from it because I don't lose anything from it because these people aren't opening an email from me anyways.
+[44:45] And then I get to move anyone that does open to my main domain which is super powerful.
+[44:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Case Study: E-commerce Store"
+NÚMEROS: 12,000 lista, 10.89% open rate → 43.34%, 1,300 opens → 5,200 opens por email, 0.46% CTR → 2.18% CTR, $25k/mês → $86k/mês receita
+VISUAL: Transformação completa de métricas, crescimento de 3-4x em todas as áreas
+[44:52] We did the same thing here too with the ecom store. Um, they only had a smallest of 12,000. Their open rates were in spam, dropped as low as 10.89%, clickthrough rate.46, you know, now their open rates from 10.89 to 43.34.
+[45:09] And to be more specific, before they had about 1,300 opens per email. Now they're as high as 5,200 opens per email. And this resulted in their clickthrough rate of 47 to now jumping 2.18 and their average revenue from 25k to 86k a month.
+[45:28] So, it's like when you understand are your email IDs set up the right way and then are you getting a lot of replies and clicks and then are you doing like like the right like mailing your most engaged and reacting you're non-engaged on different domain.
+[45:42] This allows for you to have big jumps without increasing you know a lot of lot of just from people already on the list pre-existing people.
+[45:51] So, I saw some questions. Okay. Uh, Axel, are the two emails from the same IP pool with the same email? Are you talking about um if you spin up a subdomain? If you say yes, then yes, it is.
+[46:05] Which is why um and answer your question, it won't have that big of an impact on um on on the other one because the whole idea here is you're getting really good engagement from your first one.
+[46:17] And because you're getting a lot of really good engagement from your first one, it's not going to impact the second one. Because when you mail uh people that are only the most engaged first, what ends up happening is that you get more people to open it and Gmail cares about your open your your amount of people on your list to open ratio.
+[46:37] And so they're seeing more people opening it and the higher percent of open openers on your list increases and engagement that outweighs the aggressiveness you'll be on the other one.
+[46:48] Now, you can be super savvy and put your aggressive people if you have the money on a on a different domain different IP pool and you can have your main list on on a on your dedicated IP pool and then you're completely fine. But that's if you have more money and you want to be aggressive.
+[47:06] Any other question? I want to be mindful of everyone's time on this Saturday midday.
+[47:11] Feel free to unmute yourself and ask away as well if you got anything.
+[47:15] I have a super technical question.
+[47:17] Yes. Um, so I noticed that my demarc were set up, but there's no quarantine and so that came up as a warning. what do you recommend as a as a policy?
+[47:29] Uh so go into your DNS record and then uh you will be able to see based upon where you're hosting. It's easy a quick Google search about like which one you need to set up to fix a quarantine. And the same rule though, wait that 24 hours.
+[47:44] But the nice thing is you can fix that and whatever else is going off in the same 24 hours. You don't need to wait an additional 24 hours to do it.
+[47:52] Got it. And then for the SPF record, I found an SPF tool that'll generate the record, but it's asking for two different things, an IPv4 and an IPv6 uh host name. Would those be my domain or Google? Because I have like Google stuff set up, Google Workspace for my domain and emails.
+[48:11] You should in your wherever you're hosting domain. It should allow you to have two options for your SPF, but you want the main one that's that's connected to your domain. That's the most important one because like let's say I'm on your list and I'm an Outlook person. I don't give a fuck
+[48:28] Meaning like the email service doesn't give a fuck if if uh it's a Gmail one versus Outlook one. It needs to make sure your domain is registered.
+[48:37] Cool. That's a smart.
+[48:39] Good question. Go ahead.
+[48:41] Question for you, Brett. I have one SPF um error. So when my team goes and fixes that, we need to stop sending emails for 24 hours, right, before it's registered.
+[48:52] Yeah, that's a super conservative route. I need to be very clear. Like if you send a little bit of emails, like you know, under 50, you'll like you'll be okay. But again, I just want to be super conservative because like the shit that happened in the past.
+[49:06] Yeah. And for all the yellow uh problems, do we also need to resolve that or is that fine? It's only red.
+[49:13] If you can do the yellows in the same day you fix the red, I would do that.
+[49:17] Okay, got it.
+[49:18] Yeah, those are warning.
+[49:20] It will help. It's like it's like, you know, getting a few extra points of extra credit to increase your score. You know what I'm saying? Like it's not going to it will help overall because it'll compound.
+[49:31] Got it. Thank you very much.
+[49:33] Yeah. And you want to monitor your yellows because if your yellows turn to reds, obviously it's something to be aware of.
+[49:39] I also want to highlight as everyone if anyone else has any questions um Q4 is coming up and I remember last Q4 Nick did a phenomenal uh presentation which helped like me make a lot of money for my clients.
+[49:52] Email email spam filters at the all-time high. And so that's why y'all figuring out replies and clicks are the most important thing because if you're just hyperaggressive without engagement, you're fucked
+[50:04] Q4 was the hardest time to get emails in the primary tab. But if you do everything we just outlined, your email ids, you have the warm-up going, and you're getting really good at replies, engagement, then it'll be easier for you to get through and implement all these other strategies that you're doing as well.
+[50:22] But again, that's what's so so key here. Replies, engagement. Engagement means clicks makes a ton of sense.
+[50:30] Anybody else got anything for Brett? Final call for questions.
+[50:35] No.
+[50:36] All right, cool. Well, Brett, thank you so much for being here with us today. This is incredibly helpful. Um, to be clear, I hope everybody else appreciates it as well. Do me a favor, drop in the chat, just a big thank you for Brett. Just express some appreciation for him real quick.
+[50:51] Big thanks. That shit was crazy. I didn't uh I didn't even know you could be on nine blacklists. I thought there was just one blacklist.
+[51:00] Yeah, that's sick.
+[51:02] All right. Um, final call once again. Anybody got any last questions for Brett before we go?
+[51:08] No.
+[51:09] And I'm in the Telegram group, so just tag me, Brett Kaufman. Always happy to answer any questions y'all have.
+[51:15] All right, sweet. All right, cool. Thanks again, Brett. All right, talk soon, everybody.
+[51:20] Bye.
+📊 RESUMO EXECUTIVO
+NÚMEROS PRINCIPAIS:
+2 bilhões de contas de email registradas globalmente
+50%+ dos americanos usam Gmail
+19.2% taxa de cliques na aba Promotions
+0.5% spam rate máximo recomendado (novo em fev 2024)
+4% spam rate = limite crítico
+Case Study 1: 8.53% → 40% open rate (média), 200% aumento CTR, $100k+ nova receita
+Case Study 2: 10.89% → 43.34% open rate, 1,300 → 5,200 opens/email, $25k → $86k/mês
+30 dias = threshold de inatividade para split de domínio
+$300/mês custo aproximado de Dedicated IP
+24 horas = período de pausa obrigatório ao configurar Email IDs
+30-45 dias = período de warm-up para novo domínio
+Máximo de 3 URLs únicos por email
+ESTRATÉGIAS E SISTEMAS:
+Três Pilares de Deliverability: Email IDs, Engagement, Trigger Testing
+Email IDs: DKIM, DMARC, SPF (configuração obrigatória)
+Ferramentas de Teste: MX Toolbox, Glockapps (90 inboxes), Google Postmasters
+Warm-up Services: Snowio, Instantly.AI (manter sempre ativo)
+The Instant Email: Enviar em 5 minutos após opt-in para gerar reply imediato
+Seven Word Email: "Do you still need help with that?"
+Cleanup Email: Email #6 na sequência de hammering
+High-Click Engagement Email: Responder objeções com conteúdo + CTA
+Domain Splitting Strategy: Main domain (ativos) vs Subdomain (31+ dias inativos)
+Image Optimization: TinyPNG/TinyJPEG para compressão
+Link Management: Máximo 3 URLs únicos, remover links de social media de assinaturas
+ESTRUTURA:
+Gmail Algorithm: Prioriza conversação (replies > clicks)
+Primary Tab Philosophy: Plataforma social, não comercial
+Sending Pool System: Grupos baseados em comportamento de envio
+IP Reputation: Shared vs Dedicated IP
+Domain Reputation Levels: High (ideal), Medium (ok), Low (problema), Bad (spammer)
+Engagement Hierarchy: Replies (mais importante) → Clicks → Opens
+24-Hour Critical Window: Primeiras 24h após opt-in determinam reputação
+Q4 Warning: Filtros de spam no nível mais alto do ano
+DADOS FINANCEIROS:
+Dedicated IP: ~$300/mês
+ROI Case Study 1: $100k+ receita adicional
+ROI Case Study 2: $25k → $86k/mês (244% aumento)
+Warm-up services: Geralmente gratuitos ou baixo custo
+Testing tools: MX Toolbox (free), Glockapps (free + paid options)
+DURAÇÃO: 51:20 FORMATO: Masterclass técnica de email deliverability com demonstrações ao vivo e análises de casos reais

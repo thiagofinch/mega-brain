@@ -1,0 +1,1278 @@
+Transcrição Completa: 18 Remarketing retargeting Mastery 8 23 25
+[00:00]
+"Alright, cool. Welcome to this week's weekly group call. We're going over retargeting mastery today."
+[00:07]
+"So, this has been a very common question over these last couple weeks from several of you guys for some reason. And just to be clear, I'm going to go through obviously what we do from a retargeting perspective."
+[00:19]
+"But I'm also going to make sure you guys understand like how this shit works nowadays because retargeting happens by default without even having to do anything."
+[00:29]
+"And I don't know if a lot of you guys are just totally oblivious to that or if you have no idea of that or if you're trying to expand into more like specific contextual opportunities to remarket to people in different circumstances."
+[00:42]
+"In some of your accounts, give or take what platform you're advertising on, you don't even have the ability to retarget anymore because your targeting options that you upload are essentially just suggestion based."
+[00:55]
+"So moral of the story, we're going to go through all the best practices just first of all how the platforms work since clearly some of you are negligible to that."
+[01:05]
+"And then in addition to that, we're also going to be going through the ways that you can contextually remarket given specific appropriate circumstances to do so."
+[01:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Retargeting Happens By Default"
+NÚMEROS: Frequency 1.0 (baseline sem retargeting)
+VISUAL: Conceito principal destacado, ênfase em automação de retargeting, comparação frequency vs retargeting ativo
+[01:17]
+"So first of all, very important to start with this. Retargeting happens by default. Okay? Like in a cold campaign, meaning something that you are setting up for literally just cold targeting."
+[01:30]
+"Whether it's as broad as possible, whether it's like lookalike audiences, whether it's even just like interest stacks, which again are really just broad targeting nowadays because it's really just suggestion based."
+[01:42]
+"The moral of the story is essentially the same across the board. In all these scenarios, the reason that you see your frequency climb is because retargeting is happening."
+[01:52]
+"Your frequency would literally always stay at a 1.0 if retargeting never actually occurred."
+[02:00]
+"So, it's very important to note that when you load up a campaign and you follow all of the recent best practices that we've talked about inside of this group relative to the Meta Andromeda update."
+[02:12] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Meta Andromeda Update Requirements"
+NÚMEROS: 15 mínimo de criativos, 25-30 criativos recomendados por ad set
+VISUAL: Lista de requirements: creative diversification, quantidade substancial de criativos, estrutura de ad sets
+[02:14]
+"The need for creative diversification, the need to upload a pretty substantial quantity of creatives in order to truly have the lowest cost possible nowadays."
+[02:24]
+"And again, you see your frequency start to climb. The reason that's happening is because ads are being served to people who are probable to convert."
+[02:33]
+"So, if somebody even just does something as simple as looks at an ad for a longer duration of time than somebody else does, they're very probable to get served that same ad again."
+[02:44]
+"And vice versa for every other ad that you have uploaded in that specific creative."
+[02:49]
+"And it's also very important to note like this is why you don't want to shut off the underperforming creatives within a specific campaign or ad set because you're inhibiting the total quantity of creatives that are probable to act as a retargeting asset."
+[03:05]
+"So, as an example, if I look at the Andromeda best practices that we talked about most recently and I reflect on how many creatives that were required to update, I mean, at a minimum, we're uploading like 15 nowadays."
+[03:18] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Creative Volume Strategy"
+NÚMEROS: 15 mínimo, 25-30 típico por ad set
+VISUAL: Escala progressiva de volume de criativos, ícones de vídeos e imagens únicos, estrutura de diversificação
+[03:20]
+"In most instances, we're uploading like 25 to 30 per ad set. And these are unique creatives. These are videos that are all different from one another. These are images that are all different from one another."
+[03:32]
+"And by default, just to be clear again, what is happening by default is that when somebody remains unconverted, they are very probable to get targeted with other creatives or the same creative within that existing campaign."
+[03:47]
+"So, if you don't want to have to go out and set up a retargeting campaign, you don't need to. It's very important to note like you literally don't need to. Retargeting is happening by default."
+[04:00]
+"The only specific reasons in which we'll go through from this point forward in the call that you would set up a remarketing campaign are for very specific contextual reasons."
+[04:11]
+"It's not like how it was, you know, 10 years ago or eight years ago when okay, hey, somebody just hit my website. Like let me put them into an audience now and like remarket them with specific objection video."
+[04:23]
+"You know, it's like no, you don't have to do that. You don't have to do that. All you have to do is just essentially set up a regular campaign and retargeting just happens by default nowadays."
+[04:33]
+"So, the alternative to that, of course, is looking at all the contextual opportunities that are available to you to remarket to somebody and making creatives that are specific to that individual."
+[04:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Account Limitations - Advantage Audiences"
+NÚMEROS: 3-4 step process para true remarketing
+VISUAL: Diagrama de ad set com custom audience section, toggle advantage audiences no topo direito, checkbox de controle no bottom left
+[04:47]
+"Now the first thing is the account limitations. Okay, so different accounts have different limitations nowadays where you don't even necessarily have the opportunity to remarket."
+[05:00]
+"So, if you go on to the ad set level of a campaign and you create a custom audience of some kind, might be a website audience as an example, a video view audience, whatever it is you want."
+[05:11]
+"And you go to put that inside of the custom audience section, and you still see in the top right of that ad set where you're entering the audience, that advantage audiences or advantage plus shows that it's turned on."
+[05:24]
+"Generally, it shows it with a little green toggle in the top right. You're still not do like that's not remarketing. That's broad targeting."
+[05:33]
+"Your custom audience in that example is just a suggestion. It's not actually going to limit the audience to that specific group of people."
+[05:41] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Technical Setup Diagram"
+NÚMEROS: 180 days (exemplo de website audience)
+VISUAL: Desenho de ad set structure: custom audience box no centro, toggle advantage no top right (com estrela), botão "control audience" no bottom left, checkbox para uncheck
+[05:43]
+"Usually, there's like a three or four-step process where you have to go as far as, and let me draw this for you so you can understand what I'm talking about just to be clear."
+[05:52]
+"Inside of the ad set itself, you have that little custom audiences section. And when you enter in like whatever like let's just say again it's a website audience for 180 days."
+[06:04]
+"And you've officially selected that. If up here in the top right you see the advantage creative thing and like a little like star. This is broad target. That's what it is by default. It's just broad target."
+[06:18]
+"Now in the bottom left. Usually down here somewhere there's a little thing that says like control audience targeting or like control or like something about settings or like sometimes it says like further limit the reach of your ads or something like that."
+[06:34]
+"Something in the bottom left give or take the specific account like what verbiage is used. There'll be a little button that you can press and when you press that button you'll then get a popup that shows up."
+[06:47]
+"And that popup that shows up and this is again this is all based like literally right now of how these accounts work will then essentially say like something along the lines like yes I want to further limit the reach of my ads instead of using the advantage audience shit."
+[07:03]
+"And when that happens okay what you then have to go do right below this custom audience box here there'll be a little check box that shows up and on that check box you want to uncheck it."
+[07:16]
+"And that officially enables you to actually remarket."
+[07:20]
+"So, just to be extremely clear, if you don't have this little toggle to uncheck that box, then by default, you are doing broad targeting. And remarketing is happening by default within your campaigns."
+[07:33]
+"And you want to treat your main campaigns, you want to load them up with enough creative assets to have whatever you would otherwise put in a remarketing campaign right there inside of your main campaign that's meant for cold audiences."
+[07:46]
+"Because like I said, it will cycle through. That's why your frequency goes up. That's why your frequency goes up. Very simple to understand."
+[07:56] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "OG Remarketing Campaign Setup"
+NÚMEROS: 1 ad por ad set, 3 segundos exclusion threshold, 7-10 ad sets típico
+VISUAL: Estrutura de campanha vertical: campaign level no topo, múltiplos ad sets abaixo (numbered 1-10), cada um com single ad, setas indicando exclusions
+[07:58]
+"Now, there are a few things that we could do in this age where this stupid shit happens. There are still a few things that we can do."
+[08:07]
+"Number one, we have the opportunity in a campaign. So let's use the example that we have what we're just going to call our remarketing campaign. This is like a OG setup right here. It works tremendously well."
+[08:20]
+"However many total remarketing ads you would have, you would set up with one ad per ad set. Kind of like the hammer them campaign in terms of how I encourage you guys to set up the hammer them campaign."
+[08:31]
+"You have one video per ad set and then you have a 3-second exclusion on that video. That way once people officially watch that video, they get cycled through to the other videos that are available to get targeted by."
+[08:44]
+"That's essentially the setup of like a good remarketing campaign that's going to cycle people through a whole bunch of different direct response creators."
+[08:52] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Audience Targeting Structure"
+NÚMEROS: 180 days (max website audience duration)
+VISUAL: Diagrama de inclusões vs exclusões: unconverted web traffic (included), converted web traffic (excluded), additional exclusions: 3sec video viewers per ad set
+[08:54]
+"So, let's use the example that I have 10 total remarketing ads that I want to make sure I load up and have potential reach on."
+[09:02]
+"So, I'm going to have my remarketing campaign is what I'm going to name it. I'm going to then just have my total of seven ad sets. We're going to take it up to 10. Nice."
+[09:14]
+"Now, obviously, just like the hammer them campaign in terms of what I want to have targeted here, I might have unconverted web traffic, with an exclusion of converted web traffic."
+[09:26]
+"Like the people who like booked a call or opted into something etc. And very important to note I can load up far more than just web traffic."
+[09:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Remarketing Audience Types"
+NÚMEROS: Não especificado
+VISUAL: Lista expandida de audience types: video viewers (ad videos), video viewers (organic content), specific video thresholds, page messagers, post savers, social interactions (FB/IG/TikTok/YouTube)
+[09:37]
+"A lot of the times in terms of remarketing audiences, we can also load up like our video viewers from ad videos, our video viewers from organic content, specific thresholds of video viewers from specific videos."
+[09:49]
+"You can also, of course, have people who messaged pages if you're running DM ads, people who saved posts. That typically shows higher intent."
+[09:58]
+"In addition to that, we can do all of the social interaction on both Facebook, Instagram, whatever other potential traffic channel we're using that allows us to do that, like TikTok and YouTube or other examples of that."
+[10:11]
+"But in this example, let's just say I'm trying to remarket to my unconverted web traffic. And let's also use the example that that's for the last 180 days, which is the max length of a web traffic audience."
+[10:24]
+"And again, I'm just excluding my converted web traffic here."
+[10:28]
+"Now, in this example, again, super simple, guys, just the same thing that we would normally do. We would just have one ad. And that's what we would repeat all the way down."
+[10:39]
+"And that one ad, this would be different inside of every single ad set. So it'd be one direct response ad per ad set, one direct response ad in ad set two, one direct response ad in ad set three and they're all different. Etc. all the way down."
+[10:56]
+"Now the other exclusion that then would be set up but this would be specific to each ad set is I am also excluding the specific 3-second video threshold of the ad within that ad set."
+[11:09]
+"This works tremendously well if you want to ensure just like the hammer them campaign that you can have a high frequency of remarketing direct response creatives getting thrown in front of a person."
+[11:20]
+"And here's the other cool part about this. I want to be really clear when I say this. If you have the account that allows you to make sure you can uncheck that box so you can actually do remarketing, then this setup's phenomenal for really getting like a diverse range of creatives in front of a person that is left unconverted."
+[11:38]
+"Now, in terms of what creatives, by the way, just real quick, in terms of that setup, I just want to make sure that there's no technical questions on that before I continue."
+[11:47]
+"Do me a favor, drop a one in the chat if you guys understand what I just said in terms of the technical setup."
+[12:15]
+"Okay, cool. Sounds good. All right, cool. We'll continue on then."
+[12:19] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Remarketing Creative Types"
+NÚMEROS: Não especificado
+VISUAL: Lista categorizada: Objection Handlers, Features, Product/Service Outcomes, Testimonials, Expectations, Classic Direct Response
+[12:21]
+"So, when it comes to like the types of creatives that you want to load into this, it's not complicated. It's just a classic set of objection handlers."
+[12:30]
+"We also want to highlight like features, product outcomes, product or service outcomes to be clear, excuse me, product or service outcomes."
+[12:40]
+"We can also of course load up a fuckload of testimonials into this. We can have any kind of essentially just hammer them type content but in the form of a direct response ad like expectations type videos."
+[12:54]
+"Nothing too crazy. And then just classic direct response works really well here too. Just like the same things that you would otherwise throw into your main campaigns."
+[13:04]
+"You can choose to intentionally set up in this structure. That way, once somebody sees one of those ads, unlike the standard setup that you might have in a normal direct response campaign optimized for cold traffic, you're not controlling what ad they're probable to see."
+[13:20]
+"And that's why one ad gets so much of the reach. Here in this type of setup for a remarketing campaign specifically, I can ensure that once they see one specific ad, they're not going to see it again."
+[13:32] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Technical Pro Tip - File Naming"
+NÚMEROS: 3 segundos (video view threshold)
+VISUAL: Processo workflow: publish campaign → files appear in audiences → create 3sec exclusions → naming schema example (Ad 1, Ad 2, Ad 3...)
+[13:34]
+"Here's the thing though, very important to note this. You need to publish the campaign without the exclusion first. Once it's published, these ad videos will be available in the audiences section of the ads manager to then create your exclusion audiences."
+[13:50]
+"There's also a great pro technical tip on this which is very important to understand. Whatever the naming schema is of the file name that you upload into the ads manager is the naming schema that you will see inside of the audiences section when you go to create that video audience."
+[14:07]
+"So very important technical note here. If you are going to create this type of setup, just name your files with something that helps you reference which video is which."
+[14:17]
+"Like you could literally name each file like ad one, ad two, ad three, ad four, ad five. And then you could create a corresponding remarketing campaign where ad set one has ad one, ad set two has ad two, ad set three has ad three."
+[14:31]
+"That way you have a very easy way to create the 3-second video view audiences that you're going to go exclude from each one of these ad sets inside of the remarketing campaign."
+[14:41]
+"You understand what I'm saying there? Again, drop do me a favor, drop a one in the chat if you understand what I'm saying here."
+[15:02]
+"Okay. So, just to clarify what you just said, the ad set needs to be published in order to fire up the next audience's ad set."
+[15:10]
+"So, Vince, just create the whole campaign, publish it while it's in review. You'll then have the opportunity to go to the audiences section to create the video view exclusions because then those ad videos will show up inside of the videos that you can select in the audiences tab."
+[15:25]
+"Yes. Cool. Okay. Very good."
+[15:30]
+"I'm not seeing a lot of ones. I saw like three or four ones. Are you guys a bunch of duds today? What's going on? You understand what I'm saying?"
+[15:38]
+"Are you guys dying out or what? What's happening here? Is this too technical for y'all? Y'all getting glazed over here or what?"
+[15:47]
+"Okay, cool. All right, so long story short, when you set up this classic remarketing campaign and you look at just again from a perspective of like, well, why was somebody left unconverted?"
+[15:58] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Remarketing = Sales Conversation Without Back & Forth"
+NÚMEROS: Não especificado
+VISUAL: Comparação visual: sales call (bidirectional arrows, feedback loop) vs remarketing (unidirectional, guessing game)
+[16:00]
+"Really simple to understand. All remarketing really is is a sales conversation without the back and forth."
+[16:07]
+"So, in real life or on a call, I get the opportunity to have the back and forth with the counterpart. That's it. In remarketing, I do not have the opportunity to get your feedback on what I'm saying."
+[16:20]
+"Like I can't say something to you and then look at your face or like see your body language or like hear what your response is to what I just articulated."
+[16:29]
+"And so as a result of that, I have to successfully guess what is probable to be holding you back."
+[16:36]
+"And as a result of that, what I end up having to do is I have to create a lot of remarketing content and I have to cycle it in front of people one at a time until I get that response."
+[16:47]
+"Because and again, it's very inefficient to a degree. The real life version of sales is rather efficient comparatively because again I get the opportunity to just deal with exactly what you're talking to me about and then I can give you an appropriate response."
+[17:02]
+"In remarketing, well, there's no real way for me to know like what specifically held you back from converting when you went on my page and like failed to actually convert."
+[17:12]
+"So, I just have to throw a bunch of shit at you, and I have to make sure that I'm excluding that thing that you just saw once you watched 3 seconds of it from ever reaching you again because it technically failed to convert you."
+[17:24]
+"And then I have to throw the next thing in front of you. And a lot of people what they do is they really underwhelm the total quantity of like unique remarketing creatives that they have."
+[17:36] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Most Common Remarketing Creative Types"
+NÚMEROS: Não especificado
+VISUAL: Lista hierárquica prioritizada: Objection Handlers (topo), Features, Outcomes, Testimonials, Expectations, Classic DR
+[17:38]
+"These ones are all the most common ones that I would encourage you to take note and focus on. But here's the thing. There's also this whole other side of it which can be a little bit better."
+[17:49] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Advanced Remarketing Creative Types"
+NÚMEROS: Não especificado
+VISUAL: Lista expandida: Team Intros, Facility Tours, Character Development, Why Content, Backstory
+[17:51]
+"Here's some examples. So, team intros. So, as an example, if I'm going to work with a business that requires, like, let's say it's some kind of service-based business where I'm going to sign up for something that you do."
+[18:04]
+"And there's a very low probability I'm going to be working with you directly, like let's say you're going to put me with a CSM as an example."
+[18:11]
+"A great remarketing that you might not ever think is going to hold people back from buying is being able to talk to them about who the people are."
+[18:20]
+"You have to upsell the team. You have to essentially hard sell the fact that these people on your team are awesome, phenomenal people, too. Impressive people."
+[18:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Agency Problem Example"
+NÚMEROS: Não especificado
+VISUAL: Fluxo de problema: impressive founder → expectation set → handoff to "Joe in marketing" → churn
+[18:32]
+"It's kind of like the big thing that holds a lot of people back from working with marketing agencies. They see a lot of people that are impressive. They want to work with those people directly."
+[18:42]
+"They go to sign up for that person's agency and they get handed off to Joe in marketing that fucking sucks and is highly unimpressive comparatively to what they wanted and they end up churning."
+[18:53]
+"Very common thing. Team intro remarketing ads can do phenomenal as an example of creative types."
+[19:01] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Character Development Strategy"
+NÚMEROS: Não especificado
+VISUAL: Conceito de storytelling: backstory → motivation → why → connection emocional
+[19:03]
+"Also, you guys have heard me talk about this before inside of organic strategy, which is character development. I know this one might sound a little silly at first, but believe it or not, this one fucking super hard as an example of a niche remarketing ad that we've seen have a lot of effectiveness over the years."
+[19:21]
+"This is essentially like when I say character development, a great version of this is the story of the person that is talking to them inside of the ad videos."
+[19:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Case Study: Cody Sanchez"
+NÚMEROS: Late September (challenge funnel timing)
+VISUAL: Timeline: Goldman Sachs → Wall Street insight → Main Street Millionaire mission → current funnels (VSSL, webinar, challenge, in-person)
+[19:32]
+"So, we do this with Cody a lot as an example. So, with Cody Sanchez, her backstory, a lot of people don't know this because they just get retargeted by her ads all the time for buying a business or sometimes nowadays scaling a business as well."
+[19:46]
+"Her backstory is she used to work at Goldman Sachs. She was in investment banking on Wall Street."
+[19:53]
+"And as a result of working there, she saw from the inside how biased it was towards essentially rich people trying to get a fuckload richer."
+[20:03]
+"And her like as an example, her challenge funnel coming up here in the late September time frame is called Main Street Millionaire."
+[20:11]
+"A big part of her backstory is this belief that like while she was spending time at Goldman Sachs, she grew a lot of disgust for the fact that like regular people weren't being involved in the opportunity to get rich."
+[20:24]
+"And she also saw that a lot of what was actually getting people rich wasn't just equities, it was business ownership and there was an entire division that she was like somehow a part of that essentially was kind of like a private equity division of Goldman Sachs that was responsible for like buying these businesses of small business owners and like running them the fuck up."
+[20:45]
+"And she'd watch these small business owners get super rich as a result of the PE companies coming in and buying them out."
+[20:52]
+"Moral of the story is she grew through that disgust a large drive to go out and help Main Street instead of Wall Street become rich."
+[21:02]
+"And that backstory resonates with the people that are considering buying from her. But again, a lot of people don't know that as a result of all the ads on the top end of things."
+[21:13]
+"Like she has like I don't know at this point I think four or five different things like a VSSL funnel, a webinar, we've been doing weekly webinars this month. She has a challenge funnel and we have a handful of other like random stuff like typically in-person ads as an example that we bring in."
+[21:29]
+"And here's the thing, long story short, with the character development, that becomes a very strong very again to the right type of person who actually doesn't understand who she is or why she does what she does."
+[21:43]
+"It's like the why content. The why content works really well."
+[21:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Case Study: Hyperbaric Chambers"
+NÚMEROS: $1.5M+ (July revenue), Fort Lauderdale (Messi location)
+VISUAL: Success metrics, celebrity client example (Messi), product application example
+[21:50]
+"And we've seen this work really well for even something as far as like hyperbaric chambers as an example. Like one of my buddies, his name's Tom, he has a hyperbaric chamber company."
+[22:00]
+"He cracked a little over 1.5 mil in the month of July. He did extremely well. And he saw people, as an example, responding to his lead forms like Messi."
+[22:10]
+"Messi's team reached out and bought a hyperbaric chamber for his house up in Fort Lauderdale here in Florida."
+[22:17]
+"And listen to this, the why content like, well, you can sell hyperbaric chambers, and you could talk about the features of them. You could talk about the outcomes of them."
+[22:27]
+"You could talk about like the testimonials of people who used them, the expectations of how to use it. You could just obviously do classic direct response. You could even do like objection handlers like does it come with white glove delivery, things like that."
+[22:41] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Why Content Strategy"
+NÚMEROS: Não especificado
+VISUAL: Diferenciação: Features/Outcomes/Testimonials vs Why Content (razões, justificativas, motivações múltiplas)
+[22:43]
+"The why content is a little different from any of that. The why content is a very powerful form of simply put just a bunch of reasons. A bunch of reasons that people justify the usage of the product."
+[22:58]
+"The why content, as I mentioned with Cody, can also be more of like that character development, background, story stuff, but it's individualistic, give or take, whether it's a product or service."
+[23:09]
+"And there's not generally just one why. Usually, there's like a whole set of whys."
+[23:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Personal Why Content Example"
+NÚMEROS: $5,000 (cirurgia do cachorro)
+VISUAL: História emocional: vet visit → crying woman → $5K surgery → immediate payment → dog saved
+[23:17]
+"Like, as an example, if you look at my brand, I have get richer content that I could use. And there's so many different examples of why content for like why getting richer matters."
+[23:27]
+"I'll talk about things like I had my fiance, she went to the vet one time for our wiener dogs for just like a little routine checkup on one of them. I think they needed like shots or something like their annual shots."
+[23:39]
+"And as soon as she walks in, there's just this lady in there just crying her ass off. And long story short, like my fiance right away is like, 'What's going on?'"
+[23:48]
+"This girl was saying that her dog needed like a $5,000 surgery. And the girl didn't have the money. And my fiance right away was just like, 'I'll pay for it. Don't worry.'"
+[23:58]
+"And as an example of that, it's like she didn't have to think twice about it. She has permission to spend up to a certain amount of money on our cards without any questions or problems from me."
+[24:08]
+"And she literally saved that dog's life. That dog would have died if my fiance didn't walk in at that exact moment and help her out."
+[24:17]
+"And I want to be really clear when I say this. That's like one thing out of dozens of different individual reasons that I think people need to get a lot rich."
+[24:27]
+"And with remarketing ads, that type of content resonates with people a lot."
+[24:33]
+"So anyway, the moral of the story is when you look at the remarketing ads itself, that's the direct response side of it. When you think of like what specific videos you need to be creating, and obviously it doesn't just stop at videos."
+[24:46]
+"Images can work extremely well, too. And depending on what you're marketing for, you can have countdowns through your remarketing ads."
+[24:54] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Countdown-Based Remarketing Strategy"
+NÚMEROS: $47 (early bird), $97 (VIP), $77 extended early bird, $149 VIP extended, $30K+ daily spend
+VISUAL: Timeline de pricing tiers, estrutura de scarcity, daily countdown campaigns, múltiplas audience layers
+[24:56]
+"So, we have a challenge funnel right now as an example that we're currently promoting for Cody. And as you guys know, for anybody who's read the challenge funnel SOP, you know that for a good chunk of time, we do the early bird pricing."
+[25:10]
+"And currently the early bird pricing is $47. And there's also a $97 VIP. And then what we do after that, we call it extended early bird."
+[25:20]
+"And once we get to the point where we have like a few days left of each one of these, we start doing what we call countdown-based remarketing."
+[25:29]
+"And we'll create a bunch of images. And these are all images. None of these are videos. None of them I'm about to say is videos at all. 100% of them what I'm about to say are image ads."
+[25:41]
+"And these image ads are really simple. Each one of them is pretty much the same. It's like early bird ends in X days and then we put whatever the price is or we put like you know some other random stuff."
+[25:54]
+"This part specifically can be like the variable part, but we're like early bird ends in like 3 days, early bird ends in two days."
+[26:02]
+"And like on a daily basis, I'm essentially just hammering the fuck out of the unconverted traffic. And I'm also hammering people who haven't even clicked to the page."
+[26:12]
+"So there's a few different audience types that I'll use for this. So I'll have the website audiences. I will also have ad traffic."
+[26:20]
+"And the ad traffic specifically. This is still broad. I will not necessarily put a specific audience into this version of the ad set."
+[26:29]
+"Like I'll have a few different ad sets for it. I'll have my website audiences. I'll have my social interaction. I'll have people who interacted and watched any of the challenge funnel ads up to that point."
+[26:40]
+"I'll have like essentially like a warm audience version of this audience created in an ad set. But then I have this whole secondary ad set which is just still cold audiences that I'll target with this exact same thing and they both do really well."
+[26:54]
+"This is genuine scarcity. This is essentially like the scarcity based hook is the simple way to articulate it. And this is when you have something that's like real scarcity."
+[27:05]
+"Something that's an actual countdown that's going to go away."
+[27:09] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Real Scarcity Example - Mozi"
+NÚMEROS: 3 days (challenge duration), 404 page (cart close)
+VISUAL: Processo: 3-day challenge → countdown emails → cart close → 404 page → conditioning for future
+[27:11]
+"So, we just saw as an example where Mozi do this where he put a 404 page on the checkout for his cart and mainly through emails. It seemed like I didn't really see a lot of remarketing ads for this."
+[27:23]
+"I may have just not been targeted by it to be fair to him, but I did see it, I'm sure all of you saw it as well, a tremendous amount of times through email specific where he's like, 'Hey, we got, you know, the cart's going to close after this live stream ends.'"
+[27:36]
+"And he did a challenge funnel, you know, he did a three-day challenge funnel essentially. And long story short, hey, cart ends on this day, cart ends on this day, cart ends on this day."
+[27:46]
+"And there it was essentially this like countdown based scarcity. And then when the cart actually closed, it's like bam, you know, it was officially something you couldn't buy after that."
+[27:56]
+"That was great. That was real scarcity. He's conditioning people for the following time he does it to respond at a much higher rate for anybody who didn't take action because they know that he's not actually lying about it."
+[28:09]
+"And it's the same thing here. Yes, we do have the early bird pricing that will end and then extended early bird is still more expensive."
+[28:17]
+"So, as an example, it might be like $77 and like $149 for the regular and the VIP. So, it's still going to be more costly. It's not like the cart closes in this example."
+[28:28]
+"And we'll swap this out. I'll usually have upwards of like 10 variations of this per day. And that's because I'm at a pretty high level of spend. I'm in this case at like 30k a day plus and just absolutely ripping."
+[28:42] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Meta Andromeda Creative Volume Requirements"
+NÚMEROS: 10 variations diárias, $30K+ daily spend
+VISUAL: Escala de spend vs creative volume, aplicação universal independente de budget
+[28:44]
+"The interesting thing about Meta Andromeda, by the way, with how it's working nowadays, it doesn't necessarily make a lot of sense, even if you're spending a lot less, to have a lower quantity of creatives because Andromeda is essentially requiring you, regardless of your spend to still have a large quantity of creatives to throw in there."
+[29:03]
+"So, something very important to consider with that. Again, can't stress this enough. This everything that we're essentially talking about here with a remarketing campaign is an auxiliary."
+[29:14]
+"You don't have to do it. This is not something that's a necessity. This is not something that you need to do. Remarketing is happening by default within your campaigns."
+[29:24]
+"Even in your cold campaigns, your broad campaigns, your lookalike campaigns, your intro campaigns, remarketing is happening by default."
+[29:32] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "When Intentional Remarketing Makes Sense"
+NÚMEROS: Não especificado
+VISUAL: Decisão framework: remarketing default (sempre ativo) vs intentional remarketing (apenas para product/solution-aware unconverted audiences com creative específico)
+[29:34]
+"If you want to set up an intentional remarketing campaign, the only reason that I genuinely justify it being worth it is because I have a different set of creative that I think is better for people who are already product or solution-aware that I am failing to convert with my main direct response creatives."
+[29:53]
+"Do you understand that? It's very important. And I want to be clear when I say this market awareness when we look at like product-aware specifically or we look at the solution-aware demographic that exists."
+[30:07]
+"And we isolate both of those into just an unconverted but aware audience that can create the opportunity for what we're discussing up here. That can create the response from this type of creative."
+[30:20]
+"This type of creative means nothing to anybody that is not product aware of the challenge funnel in that example. You understand?"
+[30:28]
+"I have to already have people aware for this type of creative to typically convert."
+[30:34]
+"At a high level of spend though per day, why do I still get the opportunity to do something like broad targeting? Because I have a high level of daily spend and because my ads are probable to reach people even if it's a cold audience that are most probable to convert."
+[30:51]
+"And due to the level of spend that I'm at have a very high probability to reach people by default who are essentially a remarketing audience."
+[31:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Platform Philosophy - Small Business Focus"
+NÚMEROS: Não especificado
+VISUAL: Conceito: Facebook/Google targeting small businesses (majority revenue source) → automatic remarketing solution → simplification for non-savvy users
+[31:02]
+"They make a majority of their money from small businesses who are not in any way, shape, or form savvy to the level that you are right now."
+[31:11]
+"And so what they do by default is they're like, 'Look, let's just do remarketing for people without them having to set up all this technical shit.' And that's why this already happens by default."
+[31:22]
+"So if you play into that, you negate the need to do all this shit that we're sitting here talking about."
+[31:28]
+"The only reason, just to be clear, that you would do this is you have some specific direct response ads that make no sense for somebody to see until they've already become product or solution aware and remain unconverted."
+[31:42]
+"That's the only time it makes sense to invest into creatives like this and to set up a campaign and put spend towards that."
+[31:49]
+"And it also only makes sense when you have a sizable enough audience in order to do so because again by default your direct response ads are already doing this. You understand?"
+[32:00]
+"To be clear, I just want to give an opportunity for anybody to ask questions prior to us continuing on. I do have a whole another section of this I'd like to go through."
+[32:10]
+"Feel free to unmute yourself if you guys got anything or just drop a question in the chat if you have something."
+[32:23]
+"Go ahead."
+[32:25]
+"Yeah. Oh, Jeremy with Andromeda, is it ever smart to just like put some of this stuff in like the front-end campaign and not not as a retargeting?"
+[32:36]
+"Yeah, great question. You absolutely can. Here's the thing. You know how when you have a campaign, you go and you look on the ad level and you see that like one specific ad is getting, you know, tens of thousands of people reached."
+[32:49]
+"And like all the other ads are like a couple hundred people. Maybe most like a low couple thousand people. And you're thinking to yourself, 'Oh, should I shut off these ones that are getting barely any reach?'"
+[33:00]
+"Those ones I love to leave on because I consider those the creatives that are reaching people that would not have converted on whatever the main dominant creative is."
+[33:10]
+"Now, I want to be really fair when I say this. You can, especially with the Andromeda best practices factored in, load it up with as many creatives as you can."
+[33:19]
+"We're not really seeing like a limitation. There used to be a limitation. There used to be like it might not make sense to load up more than, you know, a hundred creatives inside of an ad set if you're spending a lot of fucking money."
+[33:31]
+"But nowadays it's encouraged literally by the platform to upload as many as you can. So, absolutely."
+[33:38]
+"And due to the fact that it's already doing retargeting by default, it plays into that exact logic. The platform is very savvy that pairs an ad with the person."
+[33:49]
+"And that specific creative that it's pairing with that person is intended to be the creative that's determined to be the one that gets them to convert at the highest rate compared to all the other creatives it could have distributed to that individual."
+[34:03]
+"So, by that logic and knowing that it also does retargeting by default, yes, it makes a ton of sense to put those creatives inside of a main campaign."
+[34:12]
+"And you might actually see a really interesting result from that, which is that one of these otherwise meant to be a remarketing asset becomes the dominant highest reach direct response ad within a cold campaign as an example."
+[34:26]
+"We've seen that a lot nowadays. Does that make sense?"
+[34:30]
+"Yeah."
+[34:32]
+"There's certain things I want to be fair in saying this that businesses specifically will determine they don't want to have seen until somebody gets to a certain point within the sales process."
+[34:43]
+"And that makes sense with specific creatives, but I mean, look, dude, we're talking about direct response ads here. We're talking about ads that are meant to get people to convert."
+[34:53]
+"There's not a lot of creatives that don't make sense to put inside of a fucking friend-facing cold audience campaign when you're talking in the context of just standard direct response ads. Does that make sense?"
+[35:05]
+"Yeah. And then if it's like in a learning phase, is that because there's too many or you're just not spending enough?"
+[35:13]
+"Usually it's because you're not spending enough. It's just you got to spend through that in order to get to the other side of it faster."
+[35:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "When NOT to Put Remarketing Ads Front-End"
+NÚMEROS: Não especificado
+VISUAL: Exemplo de contexto: discount offers (apenas para unconverted), webinar-specific offers (apenas post-webinar), scarcity-based offers (apenas para aware audiences)
+[35:22]
+"I'll give you a specific like example so you can understand a little better when it might not make sense. So, let's use the example that you're doing a classic somebody went to the page, they didn't convert, and now I want to remarket them with a discount offer, right?"
+[35:36]
+"You don't want that on the front end when people could buy without the discount and you're going to make more money per sale, right?"
+[35:43]
+"If I get people, as an example, that go to a webinar, remain unconverted, and I remarket to those people specifically with the context of they went to the webinar, didn't convert, and now I want to offer them an opportunity to buy at a discounted rate within a certain time frame."
+[35:59]
+"Of course, that makes no sense to put on the front end. It makes total sense to put towards that specific demographic."
+[36:06]
+"If you're going to do remarketing ads like that that leverage context and like scarcity based, you got to be in a specific audience to get this kind of thing. That's where it makes total sense to obviously isolate it if your account allows you to do that through the creative toggle."
+[36:22]
+"Does that make sense? Excuse me, through the audience, the audience toggle. Does that make sense?"
+[36:27]
+"Yeah. Thanks."
+[36:29]
+"Cool. No problem."
+[36:32]
+"Anybody else have questions on what we discussed so far? There's two more things I want to make really clear to you guys before we conclude on this."
+[36:42]
+"Okay, cool. So, let's continue on."
+[36:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "If This Then That Remarketing Scenarios"
+NÚMEROS: 100 minimum matched people, 150-200 upload recomendado
+VISUAL: Framework lógico: conditional triggers → contextual responses → specific audience actions → tailored remarketing
+[36:47]
+"So, one form of retargeting which I just kind of peppered in there is what we call if this then that remarketing scenarios."
+[36:55]
+"Now, this leverages, as we discussed earlier, context of specific situations and there's a few of these I'll give you examples of."
+[37:03]
+"So, as you guys know, when we look at like the hammer them campaign specifically with remarketing, that is an if this then that remarketing campaign, just so we're all on the same page of what this means."
+[37:15]
+"If somebody booked a call, then we're going to hammer the fuck out of them with content. If somebody opted into a webinar and the webinar hasn't happened yet, then we're going to hit them with a fuckload of content. You understand?"
+[37:28]
+"So, it's like we can do that same thing with direct response."
+[37:32]
+"So, just as I just described with Daniel, if they opt into a webinar and the webinar happened and they didn't book a call, then I'm going to hit them with some direct response ads that are specific to the fact they went to the webinar and didn't convert."
+[37:47] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Webinar Remarketing Scenarios"
+NÚMEROS: Não especificado
+VISUAL: Decision tree: opted in → showed/no-show → booked/didn't book → multiple remarketing paths (replay, discount, objection handling, clipped sections)
+[37:49]
+"Now, I could do this in a bunch of different ways. I could literally say in the creatives like, 'Hey, you know, you recently opted into my webinar.'"
+[37:57]
+"And I could go deep on this to a whole bunch of different contextual scenarios, just to be clear. If somebody specifically opted into the webinar and didn't show up, I view that as leverage."
+[38:08]
+"I could call that out in a set of creatives and I could remarket to that person with a different funnel variation that might be more preferential for them."
+[38:16]
+"I could remarket to them just to go watch the replay. I could remarket to the people who showed up and watched but didn't convert with an opportunity to handle more risk reversals that they might not have seen from the webinar."
+[38:29]
+"Or I could clip specific sections of the webinar and I could add it into the direct response ads. I could get that person as a call out to go watch the replay or to book a call and get some of their additional questions answered."
+[38:42]
+"Or as I mentioned to Daniel, I could just offer a discount. Hey, book your call now and buy within this time frame and we'll offer you a discount on what we talked about on the webinar."
+[38:52]
+"You see, that makes no sense to do in any other context. And obviously, we want to make sure that we do not have that advantage audience toggle turned on for that."
+[39:02]
+"We have to make sure that we're only doing it for that specific audience. You also obviously have to make sure just like any other remarketing campaign that you ever run, you have to have the minimum of about 100 people that it matched to successfully."
+[39:16]
+"So realistically, you're going to need to upload about 150 to potentially 200 people. Very important to note."
+[39:23]
+"So long story short, can't stress this enough, the if this then that remarketing scenarios can be very useful. Give or take the context of them."
+[39:33]
+"I do that a lot with webinars when we have a client that has a lot of willingness to film. The good news about these ads, by the way, they're usually harder to fatigue because they have much smaller audiences that they go after."
+[39:46]
+"And generally for these audiences, we do time-based audiences for them. So, it can be dynamically updated for something that's more evergreen like a call funnel as an example."
+[39:56]
+"But for like a specific webinar, usually we'll upload the people from that specific webinar into those different buckets like opted in, didn't show, showed, didn't buy, you know, showed, didn't book, and then we could remarket to people with different things."
+[40:12] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Contextual Landing Pages Required"
+NÚMEROS: Não especificado
+VISUAL: Matching system: contextual ad → contextual landing page → contextual offer → congruency throughout
+[40:14]
+"And sometimes, this is very important you understand this, you need to have landing pages, and funnels in general that are contextual as well to these different situations that you're going to remarket to people."
+[40:27]
+"I can't tell somebody, 'Hey, go book right now and we'll give you a discount.' and then drive them to a page that has like a webinar replay on it and no context to the fact that we're going to give them a discount if they book through that specific scheduler. You understand?"
+[40:42]
+"And so that therefore increases the need to duplicate out that funnel and just make like a minor change to it. You know, you can add like a sub headline to it."
+[40:51]
+"You could obviously change the scheduler within that and make it contextual to, you know, whatever it is that you're talking about within the ads."
+[41:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Pocket Audiences Definition"
+NÚMEROS: Low thousands monthly spend typical, 20,000+ webinar registrants (large example), 10-20x ROAS typical, $2-3K spend to run laps
+VISUAL: Conceito: small highly-targeted audiences, high ROAS but low volume, stacking strategy for scale
+[41:02]
+"I just want to be really clear when I say this. These are generally what we call pocket audiences. And so when you look at pocket audiences, they are really just made up of the if this then that scenarios. Does that make sense?"
+[41:17]
+"That's all they are. And when you do that, they require you in most instances to have like something that's contextual. Both the ads, the landing page, the funnel, the emails for it, whatever."
+[41:28]
+"It takes extra effort to do this. It takes a lot of extra effort. It takes the additional creatives. It takes the additional pages and it's generally not needed."
+[41:39]
+"This is something that makes sense to do when the bucket for the pocket audience is large."
+[41:45]
+"I want to be fair in saying that, you know, once you get above the threshold where the audience is big enough to do the remarketing, you could technically justify that it's worth it because there's like a certain amount of dollars that come from these campaigns that are typically high ROAS."
+[42:01]
+"That's the whole point of these is usually they're high ROAS, but the downside is that they're low spend."
+[42:08]
+"So like although yeah you might get like a 10x or a 20x off these campaigns like you know they're not going to be able to spend a lot of money."
+[42:17]
+"Like at most they're typically going to spend like low thousands of dollars a month if that for most of you they might spend if they're a smaller audience like low hundreds of dollars."
+[42:28]
+"And so therefore you're still collecting an extra you know a couple thousand bucks or an extra low tens of thousands when the audiences are large."
+[42:37]
+"Like I'll give you an example we have a client typically get about 20,000 webinar registrants on like an every other week or every week basis give or take the frequency in which they're doing them."
+[42:50]
+"And so from that perspective, if I have that if this then that scenario set up to remarket to people who didn't show up and tell them to go watch the replay, I'm going to get more calls and I'm going to get that 10 to 20x ROAS off that campaign from those booked calls."
+[43:06]
+"And because there's, you know, upwards of, let's say, 15,000 people that might not show up, right? Or maybe there's like 12,000 people that might not show up, give or take the campaign and the total size of the audience."
+[43:18]
+"Makes a lot of sense to do that in that example because it's a large enough audience where we're going to pull tens of thousands of dollars off that. We might even crack a little over 100K off that."
+[43:28]
+"We're not going to have to spend a lot of money. We're going to have to spend like maybe $2 to $3,000 to run laps around those people a few times on frequency."
+[43:37]
+"And the smaller the audience, right? Let's use the example I only have a couple hundred people or maybe even I just meet the minimum threshold. I'm only going to get the opportunity to spend like tens of dollars a day to do the same thing and fucking run circles around those people and I might get an extra couple thousand bucks off that."
+[43:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Pocket Audience Stacking Strategy"
+NÚMEROS: $50K + $100K + $50K = $200K extra (20% towards extra $1M/month)
+VISUAL: Modelo de soma: múltiplos pocket audiences empilhados → revenue incremental significativo → chunk method application
+[43:57]
+"So if you care about that and these pocket audiences become something that I don't want you to just think like you need to take advantage of one of these."
+[44:06]
+"Ideally the logic of justifying the effort to exploit pocket audiences. It usually comes from being able to say, 'Okay, if I could chip an extra 50k off this, you know, an extra 100k off this, you know, and an extra 50k off that, well, that's an extra 200 grand.'"
+[44:22]
+"You know, that could get you 20% of the way there to an extra mil a month. You know what I mean?"
+[44:28]
+"In comparison, if my pocket audience is too small or if I only have one small pocket audience, I typically don't view that as worth the effort because it's only going to chip an extra couple thousand bucks in most instances."
+[44:40]
+"You know, maybe at most like couple sales. So, it doesn't become worth the risk or I should say, excuse me, not the risk, doesn't become worth the effort. You get what I mean?"
+[44:50]
+"You have to have a lot of free time on your hands to do this or just a lot of creative willingness to do it. See how it works first and you'll see what I'm saying."
+[45:00]
+"This is not like a random set of statistics I'm sitting here articulating to you. This is like very consistent across the board when we exploit these kinds of opportunities."
+[45:10]
+"So, at a larger scale makes a lot of sense because we're talking a low couple hundred grand in some instances or at least high tens of thousands of dollars that can sometimes justify, you know, a week's worth of ad spend or, you know, two weeks worth of ad spend, give or take the account."
+[45:27]
+"Anybody else have questions on this? Want to make sure I get everything answered for you guys. Any other specific scenarios you guys want me to go through?"
+[45:35]
+"Anything particular you feel like I left out? I want to make sure that you guys get your questions answered on this. Feel free to unmute yourself, drop a question in the chat, whatever you prefer."
+[45:50]
+"Anybody?"
+[45:53]
+"Just quick question."
+[45:55]
+"Yeah, go ahead. What do you got?"
+[45:57]
+"So, if for me, with a B2B audience of let's say medtech CEOs, if they have like a really high level of awareness for me on let's say platforms like LinkedIn, what's the kind of retargeting content that you would essentially use on places like Meta?"
+[46:15]
+"Do you have the like on LinkedIn, do you still have the ability to export those emails and like upload it as a remarketing list or are you able to capture that remarketing in a different way?"
+[46:27]
+"Yeah, we've captured them like either through webinars or let's say they, you know, they've booked meetings with me in the past or they downloaded. So, we have the emails."
+[46:37]
+"Okay, cool. Yeah, that makes a lot of sense. There's that's an example of a pocket audience. You would essentially remarket them with content. You could also remarket them with direct response ads."
+[46:48]
+"It's just another way to keep yourself in front of the unconverted traffic. All of what I talked about up here applies. You could just run straight up standard direct response to go and book calls to whatever you've got."
+[47:00]
+"You could also exploit all the common remarketing angles like objection handlers, features, you know, service outcomes, testimonials, expectations, things like that."
+[47:10]
+"But mainly content, just classic direct response would work great in that scenario."
+[47:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Case Study: Tom's Cold Email + Remarketing Strategy"
+NÚMEROS: Não especificado
+VISUAL: Processo: cold email with video pitches → upload email list → "Hammer Them Light" (content remarketing sem frequency goal) → increased response rate → familiarity bias
+[47:17]
+"We saw this week as an example of this inside of the group chat. Tom was saying that he's cold emailing people and he's doing video pitches and he'll take the list of people that he's actively pitching."
+[47:30]
+"And he'll run what he called hammer them light on them which is essentially just doing a content remarketing campaign without the frequency goal."
+[47:38]
+"So, a content cycle bin and he's just keeping content in front of people. And then when people are getting pitched and they're seeing him in the in their inbox, he said he got a lot higher response rate that people verbally brought that up a lot on sales calls they'd get on with him."
+[47:54]
+"It helped with the familiarity bias when people were able to connect the dots. And he could go as far as using context to literally say in some of those ads, not all of them, but some of them like, 'Hey, you know, I've been emailing you. Let me show you an example of some of the strategies that are working for people like you.'"
+[48:10]
+"And then just show some testimonials, but he can intro with that little bit of context and that can help a lot to connect the dots there."
+[48:18]
+"If people actually know your face and they have a lot of familiarity with you and like it's not a false assumption, it's like a real assumption that you've made, then you don't have the need to have that context."
+[48:30]
+"You could just simply keep content in front of them and just do standard remarketing to some page to book a call. Does that make sense?"
+[48:38]
+"Yep, that makes sense."
+[48:40]
+"Yeah, cool."
+[48:42]
+"Thanks, Jeremy."
+[48:43]
+"Yeah, that's a great pocket audience example for sure. Yeah, anybody that you're actively like pushing through the sales process, whether it's at the very beginning of the sales process or whether it's at the very end."
+[48:56]
+"I'm obviously a huge fan of content remarketing. I tried not to talk too much on that today more so just to emphasize the direct response side of this since we already have a tremendous amount of remarketing content strategies."
+[49:09]
+"But yeah, from a direct response perspective, obviously it still makes sense to just throw for low dollars per day some opportunities to book a call or watch a webinar replay or something like that, consume content, those kind of things."
+[49:24]
+"Nick says, 'Having a lot of leads coming in very cold and not product aware was planning on running organic content style engagement campaign and remarketing engagers with direct response plus objection handling vids. What would be the best way to structure?'"
+[49:38]
+"Nick, can you unmute yourself?"
+[49:41]
+"Yeah, what's up?"
+[49:43]
+"Yes. So, to be clear, what direct response strategy are you running here that's bringing in cold leads?"
+[49:51]
+"Right now, it's basically just direct response campaign and hammer them, but I was going to add the additional, I guess, organic style content and then just re-engage those people with the direct response after they've engaged with the organic content."
+[50:07]
+"And what does cold mean?"
+[50:10]
+"They come in just not really knowing exactly what we offer. This is primarily for DM ads and the people just don't really seem to know what the point of DMing is and what the product is even."
+[50:24]
+"Okay. And do you view that as a fault of your ads that you are using to drive people into the DMs?"
+[50:32]
+"Yeah, it could very well be the direct response ads. I just didn't know if it would be better to prioritize adding more context to those direct response ads or if I should nurture them beforehand with just the engagement ads then retarget the people that show more intent."
+[50:48]
+"Yeah. And so the right answer is all of it, right? You'd want to fix the direct response side of things to make people more product aware going into it."
+[50:57]
+"And let me be clear when I say this, Nick, are you implying that people are just showing up to your DMs with no idea why they're in your DMs in some cases?"
+[51:08]
+"Yeah."
+[51:10]
+"So, you're telling me you get literal retards that somehow navigate their way from the timeline through an ad into your DMs and have no idea why they're there."
+[51:20]
+"I mean, they know why they're there, but they don't know what we are trying to accomplish, I guess, like what we offer."
+[51:28]
+"Okay, perfect. And to be clear, how do you start these conversations?"
+[51:33]
+"We're messing around with our DM script, but right now, I mean, we ask them a series of questions and then we're sending them more informational content in the DMs to kind of make up for their lack of knowledge."
+[51:45]
+"But I feel like that should be handled before the DM so they know what they're planning on getting because half the time we'll send them some more educational content in the DMs and it's like, oh, that's not even something I'm really interested in."
+[51:58]
+"Right. So, is your goal to... That's called qualifying, by the way, which happens all the time in sales, which is not a bad thing. That's a function of sales and is a necessity to do either way."
+[52:10]
+"But to be clear, you're saying that you want to negate that happening at all. And you would rather just have every single DM come through already saying, 'I'm already aware of what you do and I know that I want it.' That's your goal."
+[52:24]
+"I mean, I'm not sure if that's possible to achieve. I'm just saying like the people that our conversions in the DMs are very low and I believe that's due to lack of product awareness when people originally come into our DMs."
+[52:38]
+"So be clear, what's the ROAS on this campaign?"
+[52:42]
+"It was three or 4x and it's been on a steady decline week after week."
+[52:47]
+"And do you have human beings in the center like setters?"
+[52:51]
+"We had AI previously but we switched away from that a couple months ago. Now we have humans and it's been performing better for us."
+[52:59]
+"So when you had humans the ROAS improved."
+[53:02]
+"Correct."
+[53:03]
+"Have you scaled the quantity of people that are in the DMs?"
+[53:07]
+"Yes, we have."
+[53:09]
+"Is that when you saw the correlation to your ROAS declining?"
+[53:13]
+"Not necessarily. No. We've had the same amount of people for a month or so now and then Yeah. I don't think it has to do with that now. It only has to do with people not being product aware."
+[53:26]
+"I'm not entirely sure, but I would say product aware, but also just very cold to begin with. Like when they get in, the response rates are very low as well, which could be due to the script, but I believe the quality of the leads coming in is also not the best."
+[53:43]
+"Are you on your computer?"
+[53:45]
+"No, I'm not right now."
+[53:47]
+"Okay, great. You know, plenty of you guys gaslight yourselves so much. It's actually comical to see how much you guys lie to yourself about things."
+[53:57] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Gaslighting Example - Compliance Issue"
+NÚMEROS: Late August, 20K/month by September 30th (exemplo de claim não-compliant)
+VISUAL: Caso real: 10 minutos de negação → landing page reveal → income claim explícito → proof de não-compliance
+[53:59]
+"As an example, I was just on a call. I don't remember who it was a couple days ago. First 10 minutes of the call, the guy's trying to convince me that, you know, oh, his ad account keeps going down. His ads getting disapproved."
+[54:11]
+"And I'm like, well, you're clearly not compliant. And like for 10 minutes in a row, he's just telling me how compliant he is."
+[54:18]
+"And I'm like, okay, open up your page. Let's take a look. And on the landing page, literally the very first thing, I'm not exaggerating. This is like word for word what it said."
+[54:28]
+"It was, 'If you're reading this in late August, I can get you to 20K a month by September 30th.'"
+[54:36]
+"And I was like, 'Yeah, you're a fucking idiot.' You know, like, you have no idea what you're talking about. You're just gaslighting the fuck out of yourself saying that you're compliant."
+[54:46]
+"And in reality, look at your page. This is the most non-compliant thing on earth, dude. Like, you can't say that. You're fucking moron."
+[54:55]
+"Like, what are you saying? Why are you wasting so much time trying to convince me you're compliant when you're not?"
+[55:02]
+"And like, it happens in so many shapes and form. You guys have truly showed me how much as entrepreneurs, we gaslight ourselves in order to convince ourselves that the higher effort thing that's very clear that needs done doesn't need done."
+[55:18]
+"It's like a way of lying to yourself in order to maintain a lower baseline of energy being expensed."
+[55:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "DM Ads Problem Diagnosis Framework"
+NÚMEROS: Não especificado
+VISUAL: Lista de possíveis problemas: ad/DM incongruency, setters parecem bots/idiots, mensagens sem appeal, jump direto para pitch, low IQ communication
+[55:27]
+"So, long story short, Nick, without actually seeing the DMs and how potentially fucked your setters are being with people, like when you say there's low responses, let me give you a bunch of examples for what could be the case here to be clear."
+[55:42]
+"Number one, the ads might say one thing and then as soon as they get into the DMs, a completely different thing is said. There could be a huge incongruency."
+[55:52]
+"Your setters could look like literal retards that are trying to talk to smart people and smart people get turned off when they talk to retards. You know, it's like they don't want to talk to low IQ people and your setters might come off like actual idiots."
+[56:06]
+"Your message might look like an automated bot. Your message might have literally no appeal to respond to."
+[56:13]
+"Your back and forth communication with people might immediately jump into something that has absolutely nothing to do with what people want to talk about first."
+[56:21]
+"You're running a strategy that requires you to go back and forth with a person a few times. So, obviously, the conversation needs to be good."
+[56:29]
+"I got to keep it real in saying like I have no idea whether people not being product aware is the problem or not and I'm not going to be conclusive about that with you because I lack a lot of context."
+[56:41]
+"But I will say this if you genuinely believe and you're not gaslighting yourself and you've actually looked at all the conversations and as a smart person you've reflected on you would actually respond to your own DMs and you would actually talk to your own setters."
+[56:57]
+"And you've trained them well and you've gone through the process of like actually doing good on the things that are necessary to do good on and now you've come to the conclusion that okay I'm going to spend extra money on a remarketing campaign to make people more product aware because that's truly the problem then great."
+[57:15]
+"You know lean into it and try to test it and see if it makes sense to do but I'll tell you this typically the DM ads like anything else whether it's a call funnel whether it's a webinar again DM ads even low ticket to high ticket."
+[57:29] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Hammer Them Strategy Purpose"
+NÚMEROS: 55% → 68% show rate, 50% → 59% cash collected, 40% close rate maintained, 40% PIFFs average, $350K cash collected, 3.5-4x ROAS
+VISUAL: Success metrics comparison (before/after), key action triggers (DM, webinar opt-in, call booking), rapid awareness intensification goal
+[57:31]
+"The hammer them strategy is remarketing to people who are in a place where they just took a key action like again DMing you, opting into a webinar, booking a call."
+[57:42]
+"And your goal is to rapidly intensify their awareness to a level where they are much more probable to convert in a much shorter duration of time. And when done properly, it works really well."
+[57:54]
+"Like as an example, literally just this morning, Joseph in our group, he says, 'Hey, Jeremy, hope you're well. Here's a quick update. Since the last time we spoke, since we applied the hammer them strategy, show up rate went from 55% to 68%. Insane.'"
+[58:10]
+"'Cash collected went from 50 to 59%. Close rate remained almost the same. We're averaging a 40% close rate. PIFFs are 40% on average.'"
+[58:20]
+"And then he just goes on to say some other stuff like we hired two setters and two closers like you told us to do. We scaled to 350K cash collected and we had a ROAS a 3.5 to four."
+[58:31]
+"So it's like again when the hammer them strategy is done properly it works phenomenal when the hammer them strategy or to be fair and really clear with you any of the backend selling systems are done ineffectively you can't."
+[58:46] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Confirmation Page Video Test Result"
+NÚMEROS: 19 breakout videos, 2% lift inicial (negligible), +14% lift com urgency video
+VISUAL: Teste A/B: 19 videos standard → low impact → urgency video added → significant lift, lesson: urgency > information alone
+[58:48]
+"It's like as I told you guys this with the J account I put 19 different breakout videos onto my confirmation page and I saw essentially like a 2% lift in show rate. I saw an extremely negligible result."
+[59:03]
+"I didn't conclude, oh well, my fucking confirmation page videos were done proper. I don't gaslight myself. I just said, well, that didn't work. What's missing?"
+[59:13]
+"And that's when I added the urgency video, which is what we talked about on last week's weekly group call. And that urgency video got an additional 14% lift in our show rate."
+[59:24]
+"We saw a lift in the overall play rate on those other 19 videos as well. So it's like it's almost like people didn't give a fuck about the other 19 videos until there was an urgency based reason to give a fuck about consuming that information, right?"
+[59:39]
+"So the information alone didn't make the difference. In that case, the urgency made the difference."
+[59:46]
+"So it's like to be fair, you know, yeah, sure, like product awareness might be the one thing that makes people more responsive to your DMs, but it's like dude, there's a lot more like super obvious things that if I were you, I'd be paying attention to."
+[01:00:02] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Thinking Like a Doctor - Revenue Impact Framework"
+NÚMEROS: Não especificado
+VISUAL: Framework de decisão: list possible causes → analyze symptoms/data → prioritize by revenue impact → efficiency consideration → highest probability action first
+[01:00:04]
+"Like in terms of you got to remember this, I talk about this in this most recent week one master internet marketing class which would be great for you to go watch if you missed that."
+[01:00:15]
+"We're in the middle of the fifth cohort right now while I sit here and talk to you about this and we just did week one this last Tuesday and in that class I redid the whole class from the ground up."
+[01:00:26]
+"I had emphasized I was like listen when you are considering like what to do in order to improve things and you're looking for what to do to get the revenue to come out of the other side you're thinking like a doctor you're thinking in bets."
+[01:00:42]
+"Your goal is to just make a list of things that could be the case and your goal is to then like reflect on the symptoms the data like the narrative in front of us."
+[01:00:52]
+"And then try to look at that list again of the things that it could be and we want to prioritize it based on revenue impact."
+[01:01:00]
+"Again, we want to prioritize it based on the thing that is the most probable, the highest impact revenue-driven thing we could do in that moment. That's also in most cases the most efficient to do."
+[01:01:13]
+"So in this case, it's like without having to spend additional dollars on a remarketing campaign. Without having to make significant change to like, okay, product awareness is what's holding people back and making them cold."
+[01:01:27]
+"Realistically, the easiest thing to do is to look at the actual conversation and say, 'What's missing here?'"
+[01:01:34]
+"And when you say, 'Oh, we're starting to give people information.' It's like, 'Well, how is the information given to a person?'"
+[01:01:41]
+"I could give you a random video right now. You're not going to watch it. I have to frame it in a specific way."
+[01:01:47]
+"Like, if I said, 'Hey, Nick, based on what you're talking about, I think this video in particular would be best for you to go and consume right now.' There's a much higher probability you go and consume it."
+[01:01:58]
+"You see, I can't stress this enough. If I were you, I would put attention into the actual conversations that are happening. I would use what I call the selfish benchmark."
+[01:02:09] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Selfish Benchmark Test"
+NÚMEROS: Não especificado
+VISUAL: Self-test question: "Would YOU actually talk to you?" → honest self-assessment → low tolerance threshold awareness → bar analogy (snap judgments)
+[01:02:11]
+"Which is if you read your own conversations, would you actually talk to you? Probably not."
+[01:02:18]
+"I guarantee you if you go look at those conversations, a bunch of fucking duds that are going back and forth with people and those people are in a state where they have a low threshold of tolerance."
+[01:02:28]
+"Kind of like if you go to a bar and you go to talk to random chicks, it's like the threshold of rejection is so easy to cross over because they don't give a fuck about you."
+[01:02:38]
+"You're just a random dude. They don't give a fuck what kind of car you drive, how rich you are, you know, what you got going on, how valuable you are. They don't care about any of that."
+[01:02:48]
+"It's really just an immediate judgment based on a whole lot of things that are like a snap-second decision of judgment. And it's the same thing in the DM ads."
+[01:02:58]
+"If you're assuming that people are going to come through from an ad and just already deeply give a fuck about, oh, I want to go buy Nick's stuff. Like, dude, they're never going to come in like that."
+[01:03:10]
+"Just so you understand, they're never ever ever going to come in like that. They are going to come in in a state where they are rapidly judging you based on the immediate first impressions they have."
+[01:03:23]
+"Yes, content can help. Yes, adjusting your direct response messaging can help. Absolutely. Having a better conversation can help."
+[01:03:32]
+"But I can't stress this enough. You have to snap out of the mental frame that people are just randomly going to show up and be ready to fucking buy right off the rip."
+[01:03:42]
+"If you drop that mental frame and you look at it more from a perspective of, okay, the selfish barometer, would I actually be responsive to this?"
+[01:03:51]
+"I bet there's so much that immediately is going to come top of mind for you to rapidly fix. Does that make sense to you, Nick?"
+[01:03:58]
+"Yeah, it makes perfect sense."
+[01:04:01]
+"And then to be clear, if you ultimately conclude, okay, I truly believe that the people are not converting as a result of the lack of product awareness and now I want to justify spending additional dollars that's going to eat into my ROAS short term in order to make them more product aware."
+[01:04:18]
+"Nothing wrong with that at all. Just make sure you're certain about it. What you've articulated to me doesn't make me certain that that's the solution. Does that make sense to you?"
+[01:04:27]
+"Yeah, that makes sense."
+[01:04:29]
+"If I were you, since you're already spending on the hammer them, I would look at the frequency of the hammer them and the speed in which I reach them. You understand?"
+[01:04:38]
+"Because if I'm getting somebody in a DM campaign, there's obviously going to be an immediate response from the setters. How fast is a response from them?"
+[01:04:47]
+"I mean, within a minute or so."
+[01:04:50]
+"Okay. And again, like what effectiveness of the hammer them campaign are you looking to have if the setters are going to communicate to somebody within a literal minute? Like how does the hammer them campaign even..."
+[01:05:02]
+"Yeah, I guess they're getting hit before the hammer them even has a chance to do anything."
+[01:05:07]
+"That's exactly right. And so from that perspective, it's like, well, I mean, technically, to be clear, if we keep the person in conversation, the hammer them increases in effectiveness because it takes time and scrolling in the news feed for the person to see the hammer them content, doesn't it?"
+[01:05:25]
+"So, it's like when you look at what and again, keep in mind the backend selling systems are four things for a reason."
+[01:05:32] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "4 Backend Selling Systems"
+NÚMEROS: 4 sistemas principais
+VISUAL: Lista hierárquica: 1) Confirmation Page Best Practices, 2) Hammer Them Campaign, 3) Value Dense Emails, 4) Setter/Closer Best Practices (primeiro contato no caso de DM ads)
+[01:05:34]
+"Confirmation page best practices, the hammer them campaign, value dense emails, and in this case, you're missing one of the four key things, which is what you technically need to improve most because it's what is happening with the interaction right away."
+[01:05:49]
+"It's what the setters do. So, the setters get the opportunity in this case to be the first back-end selling system that happens."
+[01:05:57]
+"And you're saying, 'Hey, these guys are tailoring information for somebody.' Okay, even think about it in the context of this remarketing conversation."
+[01:06:05]
+"How is remarketing going to help you if the person is immediately in communication within a minute of being responsive to a DM?"
+[01:06:13]
+"It's clear that the DM conversation is what actually needs fixed in that example. The DM conversation itself is where the attention needs to go."
+[01:06:22]
+"That is specifically where the setter best practices. I don't know if you saw that recent SOP. Did you see that? The setters best practices."
+[01:06:30]
+"I did not see that now."
+[01:06:32] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Required Training Resources"
+NÚMEROS: 2 weekly group calls mencionados
+VISUAL: Lista de recursos: Setter SOP (no Master SOP List), Weekly Group Call: "SDR Best Practices", Weekly Group Call: "What Your Salespeople Should Do Before a Call"
+[01:06:34]
+"Perfect. Let me grab it for you real quick so you have it. But the setter SOP works really well for the DM ads. You can use it in all contexts whether it's for a call funnel, whether it's for webinars, you know, etc."
+[01:06:47]
+"I just threw it into the chat there if you want to grab it. You can obviously find this inside of the master SOP list as well. In addition to that, you can easily search for it in the chat."
+[01:06:57]
+"There's also two calls. Nick, did you watch the two weekly group calls? One of them is called SDR best practices and one of them says what your salespeople should do before a call. Have you watched either one of those?"
+[01:07:09]
+"Don't think I have now."
+[01:07:11]
+"Okay. Again, you need to watch those. You got to keep in mind I want to be clear when I say this, right?"
+[01:07:18]
+"I'm glad you're here and I'm obviously glad you're with us live and you're able to consume this right now and I fully understand how much stuff there is to consume out there."
+[01:07:28]
+"But what you're doing here in this group, this is very important to understand. Every piece of information that I give to you to consume is a revenue-driven piece of information."
+[01:07:39]
+"There's a big difference between you fucking off and scrolling on TikTok and watching a video like this."
+[01:07:45]
+"There's a big difference in going and reading some random book versus reading one of the SOPs that we have because every single thing that I put out for you is intended to help you make back the entire investment for the year of this group within that one singular video."
+[01:08:01]
+"And we see that time and time again. So, you're a little bit behind on training, simply put. And that's obviously putting you at a financial disadvantage right now with your DM ads. Can you see that?"
+[01:08:14]
+"Yeah, for sure."
+[01:08:16]
+"Keep your consumption high. And remember, again, very pleased to have you here today. Very, very happy to help you with this problem because this is a clear problem for you."
+[01:08:26]
+"But listen to this, don't be so conclusive that it's something that is not even going to have effectiveness because they're fucking talking to somebody in real time within a minute."
+[01:08:37]
+"And the effectiveness of remarketing happens, you know, for sure, not within a minute. At least a day's got to pass, right?"
+[01:08:45]
+"And do people even respond to you after a day of not talking to you anymore? How often does that happen?"
+[01:08:51]
+"Yeah, probably not very often."
+[01:08:53]
+"Right? And so again, where does that mean you should direct your attention in that example? Where is the most obvious place in that example you should put your attention?"
+[01:09:03]
+"DMs."
+[01:09:04]
+"Okay. And you see how your brain let it wander elsewhere?"
+[01:09:08]
+"Yeah, 100%."
+[01:09:10]
+"Train around that and try to negate like just do exactly what we just did. Just say, 'Okay, what like how long does it take a minute? Do they talk to you the next day? No.'"
+[01:09:21]
+"'Do they even like leave the DMs? It's like you don't really want them to, you know, but like they probably will. So maybe a little bit of content gets in front of them, but like not much.'"
+[01:09:31]
+"'Where does that mean we can deliver the content most effectively then? Right there in the fucking DM.'"
+[01:09:37]
+"So it's like then we want to look at the conversations. Like I said, I implied this towards the beginning of your question, which is you probably got a fucked conversation happening right now. This is turning people off, thus the low response rate."
+[01:09:51]
+"Use the selfish barometer. And just based on how extensive this answer is, I would also encourage that you follow up in the group chat and try to give some try to get some feedback from other people here."
+[01:10:03]
+"And say, 'What do you guys think about this DM conversation?' And again, dude, we'd all love to see it at this point because it's going to prove the point that we're talking about here. You understand?"
+[01:10:14]
+"Got it. Yeah. Thank you."
+[01:10:16]
+"Okay. No problem."
+[01:10:19]
+"Sorry for such a long explanation to everybody. What other questions do you guys have on this to be clear?"
+[01:10:26]
+"And by the way, can you guys throw one in the chat if that made sense for you for why remarketing in that context would not make sense to do?"
+[01:10:34]
+"You guys picking that up there for why that would not make sense in that example. It's like that's just an added cost and it's too far away from like the real time what actually would need to happen there, which would just be the adjustment to the DM itself."
+[01:10:50]
+"Okay, cool. All right. Anybody else got questions? Feel free to unmute yourself, ask away if you got something, anybody."
+[01:11:02] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Remarketing Summary - Key Takeaways"
+NÚMEROS: 20 ads exemplo, 20 ad sets, 3 segundos exclusion, 10 variations diárias (countdown ads)
+VISUAL: Recap completo: remarketing happens by default → intentional setup structure → creative types → contextual scenarios → pocket audiences
+[01:11:04]
+"All right, cool. So, just to wrap it up, the big thing with remarketing is it already happens by default. You don't even have to intentionally set up a remarketing campaign."
+[01:11:15]
+"You can load up your original direct response campaign with remarketing assets if you want to. Just make sure they're not contextual remarketing assets."
+[01:11:24]
+"The contextual remarketing assets are like, 'Okay, if somebody opted into the webinar, I don't want an ad in my fucking webinar campaign that tells people like, Hey, you just went and watched my webinar. Go watch the replay.' That doesn't make any sense."
+[01:11:37]
+"That's a contextual remarketing audience. If you want to have an extremely aggressive remarketing campaign, you would set it up like this."
+[01:11:45]
+"You'd have the campaign, however many total remarketing ads you'd have, you'd have that many ad sets. So let's say you have 20 ads that you want to run. You'd have 20 individual ad sets targeting the same exact thing, whoever you want to reach with that remarketing campaign."
+[01:12:01]
+"Your exclusions would be the people who already converted. And in each ad set, you would exclude the 3-second video viewer of whatever ad is within that ad set."
+[01:12:12]
+"You'd have one ad per ad set. Each ad would be unique to that ad set. You publish the campaign first."
+[01:12:20]
+"That allows you to then go to the audiences section to see the specific video that you just published in the ads manager, create the 3-second video view audience, and then go set up the exclusions within that campaign that you just published."
+[01:12:34]
+"This is an awesome remarketing audience if you're going to set it up because it will rapidly cycle through a bunch of individual creatives assuming that the person watches to the 3-second threshold to then get excluded by it."
+[01:12:47]
+"This is the hammer them setup just with direct response ads. Hammer them and direct response, they go hand in hand. Hammer them is content, but you can set up a hammer them campaign with direct response ads instead of content."
+[01:13:01]
+"Same exact setup, just with direct response outcomes instead of content consumption."
+[01:13:07]
+"Remember, in terms of the specific types of direct response remarketing ads that are best, objection handlers, features, benefits, product, service outcomes, testimonials, expectations, just standard classic direct response can work well, too."
+[01:13:23]
+"Not even anything that acknowledges that they're in the remarketing process. Just cycling through a bunch of your already existing direct response ads and getting some serious use out of them. You can load it up that way, too."
+[01:13:35]
+"You can get a little more advanced. You could do team intros, demonstrate your facility and like how high quality your business is and your standards."
+[01:13:44]
+"You could obviously do character development, like the backstory on why you do what you do. The why content is really helpful."
+[01:13:52]
+"Keep in mind, all remarketing is is just essentially a sales conversation without the back and forth. So, you've got to successfully guess what's missing that remained to keep the person unconverted."
+[01:14:04]
+"Obviously, there'll never be an instance where we convert 100% of people. That's just not going to happen, you know?"
+[01:14:11]
+"So just like sales in real life, you know, we only close at whatever close rate we have because the other percentage of people, it just didn't make sense to do the deal, give or take the circumstances."
+[01:14:23]
+"You can also do when I say like context-based remarketing, I gave the example of a challenge funnel where we have an early bird window that ends."
+[01:14:32]
+"We then have an extended early bird window that ends and then we have the actual like challenge start date."
+[01:14:39]
+"During those days where we're getting closer to those things ending, we're going to do image ads that can quickly articulate some scarcity based urgency. Hey, this ends on this day. This ends in this many days."
+[01:14:52]
+"Those kind of like countdown based ads. And we're going to do essentially daily campaigns that change in that example."
+[01:15:00]
+"In addition to that, really important you understand this. There's so many different examples for like what we call pocket audience remarketing campaigns, which are just thinking with if this, then that scenarios."
+[01:15:14]
+"Like Tom did. If I'm pitching people through email and video pitches, then I'm going to remarket them with content, direct response ads to like go watch a webinar replay or to go book a call through ads, too. Why not?"
+[01:15:28]
+"Or like Daniel's example, like, okay, so if I have somebody that just opted into a webinar, why not pitch them on going and buying something or going and watching a remarketing replay?"
+[01:15:39]
+"Or in this example as well having a discount for not buying after a certain duration of time. Those campaigns, they do really well, too."
+[01:15:48]
+"The moral of the story is these are typically very high ROAS campaigns, but they're very low spend. So, they're advantageous if you stack them. They're advantageous if you stack them."
+[01:16:00]
+"That way, it becomes like a sizable enough amount of revenue to justify the effort of these types of campaigns."
+[01:16:08]
+"Typically by themselves, unless the audience sizes are large enough, it's not that easy to justify the effort relative to the fact that it's going to be a very low spend campaign with technically a very high rise, but a very low overall amount of dollars collected."
+[01:16:24]
+"So, I'm a big fan of pocket audience stacking. I want to think of a handful of pocket audiences and I want to exploit them."
+[01:16:32]
+"They're very great. It's a great method of the chunk method to be clear. Like rather than having one funnel that contributes all the revenue to the growth, you have that plus, you know, in this case a handful of pocket audiences that you're exploiting in real time to chunk some additional revenue on top of whatever you're doing."
+[01:16:51]
+"Now, big fan of remarketing with content, of course, I can't stress enough. I just tried to stay away from, you know, content remarketing on this call given I talk about it extensively all the time."
+[01:17:02]
+"I tried to center this call more so around direct response remarketing, but I do just want to pepper in. I am a huge fan, huge advocate. I pioneered these strategies."
+[01:17:13]
+"Content remarketing strategies is highly effective for putting content in front of people that can also help influence the sales process, but a little more indirectly since they don't have buttons to click through and convert on something."
+[01:17:26]
+"So, peppering in a lot of what you guys have learned from me from the content campaigns alongside of direct response remarketing campaigns. Again, a lot of effectiveness there."
+[01:17:37]
+"Okay, cool. Anything else? Anybody got anything else? Follow-up questions."
+[01:17:44]
+"Yep. Hey, Jeremy. Appreciate the presentation here. When we talk about remarketing, usually we send people to, you know, the VSSL funnel for it."
+[01:17:54]
+"I set up a remarketing campaign the other day, sending people to just a website with case studies and then it's click a button to work with us and there's like 30 YouTube videos on there and whatnot."
+[01:18:05]
+"Nice. When we're doing some of the remarketing, do you like to send them back to a similar page or do you like to put them through like a circuitous kind of route to other like other ways to expose them?"
+[01:18:17]
+"Say this is for someone who video views saw direct response ads but hasn't booked a call yet."
+[01:18:24]
+"Are you asking specifically whether that page example that you're using is the best thing to do there or what specifically are you asking?"
+[01:18:33]
+"Yeah, with the page example, what do you what do you..."
+[01:18:37]
+"And you could do a few. You could find out, Charles. It'd be a simple split test. You drive traffic back to the VSSL page that you already created."
+[01:18:46]
+"Drive traffic to another VSSL page with a different headline or a different VSSL on it to see if it gets it to convert."
+[01:18:54]
+"And in this example, your context is they went to the page and they didn't convert. Right."
+[01:19:00]
+"This is basically everyone who's seen a direct response ad whether they went to the page or not. I have like testimonial remarketing videos I have running."
+[01:19:10]
+"Understood. So, in that example, it make total sense since you're not just doing the web audience to still drive traffic back to the original direct response page, which is still happening within the original campaign you've already set up."
+[01:19:24]
+"Just to be clear, but you could take it a step further to your point, do a completely different funnel page that you're driving the traffic to to see if that works better."
+[01:19:34]
+"I would do a handful of pages in that example. It make no sense not to. It give you an opportunity."
+[01:19:41]
+"As I mentioned, remember, all remarketing is is just sales conversations without the back and forth. So, if somebody's unconverted because they want to see a fuckload of case studies, the way you're doing it now would have effectiveness."
+[01:19:55]
+"If somebody's unconverted because they saw an ad and they just never fucking clicked, it'd make a lot of sense to just drive them back to the original page."
+[01:20:03]
+"If somebody already clicked to the page and they didn't convert and maybe they're also not going to convert on your case study page, it makes sense to just throw another VSSL in front of them that has different talking points, you know, different frame."
+[01:20:18]
+"That's all remarketing is. It's just an opportunity to try to overcome these things that we don't know are holding people back. We're just kind of guessing. Does that make sense?"
+[01:20:28]
+"That does. I will test the different remarketing entry points. Appreciate it."
+[01:20:33]
+"No problem."
+[01:20:35]
+"Okay, cool. Brendan has a question. He says, 'Where are these recordings saved?'"
+[01:20:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "How to Access Recordings"
+NÚMEROS: 2019-presente (histórico completo disponível)
+VISUAL: Tutorial navigation: Inner Circle library → Weekly Group Call Library page → Telegram chat (click name → search "group call recording" OR click Videos tab) → web portal (Jeremy AI with voice/video/memory)
+[01:20:42]
+"Sure, Brendan. Let's go through that real quick. So, first of all, when you join into the inner circle, you get access to a big library. And this library comes with all kinds of content."
+[01:20:54]
+"To be clear, I'm an admin, so I have literally all the content. You might not see nearly as many pages, just to be clear."
+[01:21:02]
+"The moral of the story is somewhere in here on one of these pages for you is going to be the weekly inner circle group call library, which looks like this."
+[01:21:11]
+"We also have our inner circle mastermind talks library. There's also a handful of other modules that aren't labeled specifically for the inner circle, but are just isolated to you."
+[01:21:21]
+"This is also where you have the web portal version of Jeremy AI which gives you the ability to do like voice video and memory based chat."
+[01:21:30]
+"But to be clear, as soon as these get done, we upload them straight into here. And so you'll see as an example, in this case, this is last week's weekly group call since we're in the middle of filming this one right now."
+[01:21:43]
+"You got links to everything that we discuss inside of these. In addition to that, we upload the raw recording right inside of the Telegram group as well."
+[01:21:53]
+"So, if you actually go inside of the Telegram chat, you can click the name here at the top and if you type in group call recording, as an example, you can see literally every weekly group call we've ever done."
+[01:22:07]
+"As an example, including the one from last week, you also have the function to click the name at the top, whether it's on mobile or on desktop like you see me here now."
+[01:22:17]
+"You can click on this videos tab and anything that you see here that is essentially longer than just a couple seconds."
+[01:22:25]
+"As you can see, this would be as an example the one that we just talked about there from last week."
+[01:22:32]
+"I just clicked on the group name at the top clicked videos and there's an extensive amount. I mean, literally the entire group's history from 2019 through today is inside of this chat."
+[01:22:43]
+"And therefore every weekly group call is also in there as well. So, you have many places that you can access the information."
+[01:22:51]
+"We upload it into Telegram so you guys have the ability to download those videos, transcribe it if you prefer, and throw it into an LLM."
+[01:22:59]
+"We also just give you the ability to consume it right there in Telegram afterwards, so you don't have to go inside of the course library."
+[01:23:07]
+"All right, cool. Other questions."
+[01:23:11]
+"Sweet. All right. Well, yeah, go out there and run some pocket audience remarketing campaigns, huh?"
+[01:23:18]
+"And just I want to be clear, don't just do one. Try to stack up a few because that's where it becomes more worth it from my experience. That's where it becomes worth the squeeze. You know what I mean?"
+[01:23:30]
+"All right, cool. Good talking with you guys. Get richer."
+📊 RESUMO EXECUTIVO
+NÚMEROS PRINCIPAIS:
+15 mínimo de criativos por ad set (Meta Andromeda)
+25-30 criativos típicos por ad set
+180 dias máximo para website audiences
+3 segundos threshold para video view exclusions
+100 mínimo de pessoas matched para remarketing audiences
+150-200 pessoas recomendadas para upload
+$47 early bird pricing (exemplo Challenge Funnel)
+$97 VIP early bird
+$77 extended early bird
+$149 VIP extended
+$30K+ daily spend (exemplo high-scale)
+10 variations diárias de countdown ads
+20,000 webinar registrants (exemplo large pocket audience)
+10-20x ROAS típico em pocket audiences
+$2-3K spend para run laps em pocket audiences
+3-4x ROAS (exemplo DM ads Nick)
+55% → 68% show rate improvement (Joseph case study)
+50% → 59% cash collected improvement
+40% close rate mantido
+40% PIFFs average
+$350K cash collected (Joseph scaled result)
+3.5-4x ROAS (Joseph final)
+$1.5M+ revenue Julho (Tom hyperbaric chambers)
+2% lift negligível (19 confirmation page videos)
++14% lift adicional (urgency video)
+$5,000 cirurgia cachorro (why content example)
+ESTRATÉGIAS E SISTEMAS:
+Remarketing Automático (Default)
+Retargeting happens by default em todas campanhas
+Frequency climb indica remarketing ativo
+Plataformas servem ads para pessoas "probable to convert"
+Não necessário setup manual de remarketing campaign
+Meta Andromeda Requirements
+Creative diversification obrigatória
+Volume substancial de criativos necessário
+Não desligar underperforming creatives (são retargeting assets)
+Plataforma encoraja upload máximo de criativos
+Account Limitations - Advantage Audiences
+Processo 3-4 steps para true remarketing
+Custom audience = suggestion se Advantage+ toggle ON
+Necessário uncheck box no bottom left
+Botão "control audience targeting" ou "further limit reach"
+OG Remarketing Campaign Setup
+1 ad por ad set (como Hammer Them)
+3-second exclusion em cada video
+Cycle through multiple direct response creators
+Publish primeiro, depois criar exclusions
+Audience Types para Remarketing
+Unconverted web traffic (180 days max)
+Exclusão: converted web traffic
+Video viewers (ad videos)
+Video viewers (organic content)
+Specific video thresholds
+Page messagers (DM ads)
+Post savers (high intent)
+Social interactions (FB/IG/TikTok/YouTube)
+File Naming Pro Tip
+Nome do arquivo = nome no audiences section
+Usar schema: Ad 1, Ad 2, Ad 3, etc.
+Facilita criação de 3sec exclusions
+Correspondência direta ad set/ad/exclusion
+Remarketing = Sales Without Back & Forth
+Guessing game do que segura conversão
+Não há feedback em tempo real
+Necessário cycle múltiplos criativos
+Inefficient comparado a sales calls
+Creative Types Principais
+Objection Handlers
+Features
+Product/Service Outcomes
+Testimonials
+Expectations
+Classic Direct Response
+Advanced Creative Types
+Team Intros (upsell da equipe)
+Facility Tours (demonstrar qualidade)
+Character Development (backstory)
+Why Content (múltiplas razões)
+Backstory narratives
+Countdown-Based Remarketing
+Image ads diários
+Scarcity real (early bird windows)
+Daily campaigns com countdown
+Multiple audience layers (web + cold)
+Genuine scarcity conditioning
+If This Then That Scenarios
+Contextual remarketing situations
+Webinar: opted/didn't show/showed/didn't convert
+Different remarketing paths por scenario
+Requires contextual landing pages
+Pocket Audiences Strategy
+High ROAS but low spend
+Stacking múltiplos pockets = worth it
+Large audiences justify effort
+Small audiences = low hundreds spend
+Backend Selling Systems (4 componentes)
+Confirmation Page Best Practices
+Hammer Them Campaign
+Value Dense Emails
+Setter/Closer Best Practices
+Selfish Benchmark Test
+"Would YOU talk to you?"
+Self-assessment honesto
+Low tolerance threshold awareness
+Snap judgment reality
+Thinking Like a Doctor Framework
+List possible causes
+Analyze symptoms/data
+Prioritize by revenue impact
+Efficiency consideration
+Highest probability action first
+ESTRUTURA:
+Campaign Structure:
+Remarketing Campaign
+├── Ad Set 1 (unconverted web 180d)
+│   ├── Include: unconverted web traffic
+│   ├── Exclude: converted web traffic
+│   ├── Exclude: 3sec video viewer Ad 1
+│   └── Ad 1 (unique direct response)
+├── Ad Set 2
+│   ├── Include: unconverted web traffic
+│   ├── Exclude: converted web traffic
+│   ├── Exclude: 3sec video viewer Ad 2
+│   └── Ad 2 (unique direct response)
+└── Ad Set 3-10 (repeat structure)
+When Intentional Remarketing Makes Sense:
+Product/solution-aware audiences
+Remain unconverted com main DR ads
+Different creative set específico
+Sizable enough audience (100+ matched)
+Platform Philosophy:
+Facebook/Google target small businesses
+Automatic remarketing solution
+Simplification for non-savvy users
+Play into default = negate manual setup
+Content vs Direct Response:
+Content: indirect influence, no buttons
+Direct Response: conversion-focused, CTAs
+Both trabalham juntos
+Remarketing with content = highly effective
+Pocket Audience Stacking Math:
+Pocket 1: $50K extra
+Pocket 2: $100K extra
+Pocket 3: $50K extra
+Total: $200K (20% towards extra $1M/month)
+Webinar Remarketing Decision Tree:
+Opted In
+├── Showed Up
+│   ├── Booked → Hammer Them
+│   └── Didn't Book → Discount/Replay/Objection Handling
+└── Didn't Show
+   └── Replay Remarketing
+DM Ads Problem Diagnosis:
+Ad/DM incongruency
+Setters parecem bots/idiots
+Mensagens sem appeal
+Jump direto para pitch
+Low IQ communication
+Response dentro de 1 minuto (remarketing ineffective)
+Case Studies:
+Cody Sanchez: Goldman Sachs → Wall Street bias → Main Street Millionaire mission
+Tom Hyperbaric: $1.5M July, Messi client, why content strategy
+Joseph Backend Systems: 55%→68% show, 50%→59% cash, $350K scaled
+Jeremy Confirmation Page: 19 videos = 2% lift, urgency video = +14% lift
+DADOS FINANCEIROS:
+Typical Pocket Audience Spend: Low thousands/month
+Small Pocket Audiences: Low hundreds/month
+Large Pocket Audiences (20K+ people): $2-3K spend, tens of thousands revenue, potentially $100K+
+High-Scale Daily Spend: $30K+ (countdown remarketing example)
+ROI Pocket Audiences: 10-20x ROAS typical
+Challenge Funnel Pricing Tiers:
+Early Bird: $47 regular, $97 VIP
+Extended Early Bird: $77 regular, $149 VIP
+DM Ads Performance (Nick): 3-4x ROAS, declining weekly
+Backend Systems Impact (Joseph):
+Show Rate: 55% → 68% (+13%)
+Cash Collected: 50% → 59% (+9%)
+Close Rate: 40% maintained
+PIFFs: 40% average
+Scaled to: $350K cash collected
+ROAS: 3.5-4x
+Hyperbaric Chambers (Tom): $1.5M revenue (July)
+Confirmation Page Testing:
+19 videos: +2% lift (negligible)
+Urgency video: +14% additional lift
+DURAÇÃO: 1:23:30 FORMATO: Weekly Group Call / Masterclass

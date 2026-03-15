@@ -1,0 +1,927 @@
+Transcrição Completa: 4 Offer Creation Best Practices - Front End Drop Sells Cross Sells Backend 11 29 25
+[00:00]
+Okay, então uma coisa que surgiu de forma bastante consistente esta semana foram perguntas sobre ofertas. E eu percebi que não fizemos um treinamento sobre isso há um tempo tremendo. E há todos os tipos de melhores práticas que podemos revisar juntos para garantir que você esteja bem equipado para maximizar sua oferta atual.
+[00:20]
+Em algumas instâncias, tudo o que é preciso é um simples aumento, uma adição, uma mudança, como trocar uma coisa por outra, e de repente, você quebra uma taxa de show muito maior, taxa de fechamento muito maior apenas com base no apelo do que você está realmente vendendo.
+[00:35]
+Em outras instâncias, esta é a lógica perfeita para quando você precisa de um downsell, um cross-sell, algum tipo de upsell de backend, e obviamente há muitas melhores práticas aqui se você está apenas considerando uma nova oferta em geral.
+[00:50]
+Então vamos começar com as melhores práticas de ofertas em geral. Okay. Então vamos ser muito diretos sobre como especificamente uma oferta funciona no nível mais simples possível.
+[01:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Como Ofertas Funcionam - Nível Fundamental"
+NÚMEROS: Não especificado
+VISUAL: Conceito de consciência fundamental sobre ofertas, foco em resultados desejados
+[01:10]
+Okay. O nível mais simples de consciência fundamental sobre ofertas é realmente simples de entender. Tudo se resume a apelar para aqueles resultados desejados que a pessoa tem.
+[01:22]
+Okay. Uma das minhas lições favoritas que acho que já aprendi do Sr. Big Dog Russell Brunson antigamente foi quando ele fazia seu stack de oferta. Okay, o que ele fazia era dizer tipo, "Oh, vem com isso. Vem com isso. Vem com isso. Vem com isso."
+[01:40]
+E para o olho destreinado parece tipo merda aleatória. Okay. Quando na realidade cada uma dessas coisas, não importa o que seja, essencialmente se relaciona diretamente novamente a um resultado desejado, algo que as pessoas ativamente querem e/ou algum tipo de objeção que elas teriam de outra forma.
+[02:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Oferta Supera Objeções"
+NÚMEROS: Não especificado
+VISUAL: Conceito de que a oferta em si pode superar objeções, não apenas criar objeções, múltiplas perspectivas de enquadramento
+[02:05]
+Então, muitas pessoas não consideram realmente que a oferta em si pode superar objeções. A oferta pode obviamente criar objeções. A oferta quando você a enquadra de todas essas diferentes maneiras que vamos sentar aqui e falar sobre se torna muito mais clara e óbvia como um grande ponto de contenção que criaria fricção.
+[02:25]
+Então a primeira coisa que temos que fazer quando consideramos o que estamos ativamente vendendo é você idealmente começa aqui neste lado da caixa. Okay, o que a maioria das pessoas realmente ferra quando estão criando ofertas é que elas apenas pensam em tipo aqui está alguma merda aleatória que eu quero incluir com isso.
+[02:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Começar com Resultados Desejados"
+NÚMEROS: Não especificado
+VISUAL: Diagrama de caixa mostrando fluxo de pensamento, começando do lado dos resultados desejados ao invés de recursos aleatórios
+[02:50]
+Okay, o que você realmente quer fazer é você quer pensar nisso, deixe-me usar o inner circle como exemplo. Okay, então uma das coisas que vocês obviamente querem é eficiência. Okay, eficiência no consumo e a intenção real aqui é a velocidade para o resultado.
+[03:10]
+Okay. E então dessa perspectiva, se eu sei que isso é algo que vocês ativamente querem, é tipo apenas pense nisso em termos daquela única coisa. Okay, aquela única coisa, quantos pontos de oferta diferentes ela tecnicamente desbloqueia para eu incluir.
+[03:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Exemplo: Eficiência e Velocidade para Resultado"
+NÚMEROS: Não especificado
+VISUAL: Múltiplos pontos de oferta desbloqueados por um único resultado desejado, estrutura hierárquica
+[03:30]
+Okay, deixe-me dar um monte de exemplos só para sermos extremamente claros. Primeiro de tudo, um dos mais óbvios é acesso ao Jeremy real. Okay, porque eu quando você fala comigo, como tenho certeza que você experimentou muitas vezes, sou excessivamente direto.
+[03:45]
+Posso ir direto ao ponto com você, posso tirá-lo do seu próprio caminho. Posso te dizer aquela única coisa que vai fazer toda a diferença. Posso fazer isso via DM. Posso fazer isso via ligação com você em nossas conversas um-a-um. Posso fazer isso em lugares como este.
+[04:00]
+Okay? Como acesso ao Jeremy é uma das melhores coisas possíveis que posso incluir. Mas também quero ser muito claro. Nem todo mundo usa esse mecanismo específico para obter esse resultado porque há mais de uma coisa que incluo obviamente para chegar ao ponto onde você pode obter esse resultado.
+[04:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Jeremy Real vs Jeremy AI"
+NÚMEROS: 50 anúncios, 2.000 mensagens por mês
+VISUAL: Comparação entre acesso ao Jeremy real (resposta em horas) vs Jeremy AI (resposta instantânea), múltiplos canais de comunicação
+[04:25]
+Comparativamente, Jeremy AI é excessivamente eficaz em comunicar como o Jeremy real em algumas instâncias. E não sei sobre a experiência de vocês, mais articulado do que o que o Jeremy real poderia ser com você comparado ao Jeremy AI.
+[04:40]
+Jeremy AI quando se trata de eficiência e consumo e velocidade para resultado, mensagens instantâneas. Okay, você pode fazer ligações telefônicas com ele através da versão do portal do curso. Você pode fazer videochamadas com ele através da versão do portal do curso.
+[04:55]
+Vi recentemente como um exemplo engraçado, um dos nossos membros do inner circle, Omar, ele tem Jeremy AI em forma de vídeo literalmente em uma chamada ao vivo sentado em uma TV com um microfone conectado a ela em seu escritório e sua equipe pode a qualquer momento apenas fisicamente caminhar até a TV e começar a falar com Jeremy AI.
+[05:15]
+E obter feedback em tempo real sobre o que quer que estejam fazendo, o que quer que estejam pensando, o que quer que precisem. É como obviamente o Jeremy real não estaria disponível para isso.
+[05:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Stack Completo do Inner Circle"
+NÚMEROS: 11 componentes totais, 4 masterminds por ano
+VISUAL: Lista completa: chamadas 1-on-1, DMs, Jeremy AI, chamadas semanais de grupo, vault de mastermind, biblioteca de cursos, biblioteca de SOPs, chat de grupo ativo, 40+ membros fazendo $1M/mês
+[05:30]
+E novamente, da perspectiva de eficiência e velocidade para resultado, como isso é uma maneira de olhar para isso. Okay, acesso ao Jeremy real e acesso ao Jeremy AI. Mas novamente, vocês todos sabem que vai muito além disso.
+[05:45]
+Okay, pense nisso assim. Temos nossas chamadas semanais de grupo. Temos nossa biblioteca de cursos. Temos todos os nossos SOPs. Okay, temos todas essas diferentes variáveis de consumo.
+[06:00]
+Okay, então quero que você entenda em termos de um resultado, a eficiência no consumo, a velocidade para resultado. Okay, imediatamente como uma das variáveis número um que você quer como resultado dita praticamente tudo que está dentro do meu stack de oferta.
+[06:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Múltiplas Razões de Compra"
+NÚMEROS: Não especificado
+VISUAL: Conceito de que pessoas compram por múltiplas razões, necessidade de considerar objeções também
+[06:20]
+Agora, geralmente há múltiplas razões pelas quais alguém quer comprar. Okay? E você tem que pensar nessas coisas também. Deixe-me dar um exemplo da perspectiva de tratamento de objeções.
+[06:30]
+Okay? Agora, uma objeção comum que às vezes vemos é comprei outros masterminds é o que eles dirão. E eles eram uma merda.
+[06:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Objeção: 'Comprei Outros Masterminds Ruins'"
+NÚMEROS: 1 de 8 componentes
+VISUAL: Estratégia de resposta: não é só um mastermind, é um de 8 componentes, cerimônias de troféus de $1M e $5M/mês
+[06:45]
+Okay, então obviamente, como tenho certeza que vocês estão todos cientes, há um monte de burros por aí que absolutamente são uma merda com suas ofertas e eles não levam suas empresas a sério, muito menos suas empresas de educação.
+[07:00]
+Para muitos desses caras, é apenas fluxo de caixa. Não vou fazer sinalização de virtude. Eu absolutamente amo todo o dinheiro de vocês. Obrigado pessoal por me pagarem. Eu aprecio vocês.
+[07:10]
+Mas para ser muito direto com você, eu levo essa merda a sério, como tenho certeza que vocês podem todos entender e se relacionar. Eu não trato isso como uma peça secundária, okay? Minha empresa de educação é algo que eu ativamente presto atenção.
+[07:25]
+Está em primeiro plano para mim e eu me importo profundamente com seus resultados. No entanto, isso não vai superar essa objeção. Isso é apenas um ponto de conversa.
+[07:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Oferta Supera Objeção - Não Palavras"
+NÚMEROS: Não especificado
+VISUAL: Conceito chave: incorporar elementos na oferta que superem objeções automaticamente, sem precisar de pontos de conversa
+[07:40]
+O que você tem que aprender a fazer é você tem que aprender a incorporar coisas em sua oferta que superem a objeção para você sem ter que usar pontos de conversa. Okay? Realmente deixe isso penetrar.
+[08:00]
+Então, quando alguém nos diz isso, "Bem, comprei outros masterminds e eles eram uma merda." Nós apenas dizemos, "Do que você está falando? Você acha que isso é apenas um mastermind?" Isso é tipo uma de oito coisas que incluímos para você.
+[08:15]
+É apenas algo. Quero dizer, honestamente, tipo os masterminds neste ponto são apenas cerimônias de troféus de um milhão de dólares e 5 milhões de dólares por mês. Eles não são realmente tipo um quero dizer, para ser justo, tipo, sim, eu acho que se isso é realmente tudo que você quer dessa coisa toda, claro, ainda é incrível.
+[08:35]
+Mas quero dizer, é apenas uma de oito coisas que temos para você. Tipo, você entende o outro valor que vem com tudo isso, certo?
+[08:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Compartimentalização Mental do Cliente"
+NÚMEROS: 4 masterminds por ano vs 365 dias de participação ativa
+VISUAL: Demonstração de como o cérebro humano compartimentaliza dados, mastermind como apenas um componente vs programa completo anual
+[08:50]
+E então vamos através dos outros pontos de oferta e nos certificamos de que eles entendam tipo escute há apenas quatro masterminds por ano. Quando você quer entrar neste grupo e obter um resultado significativo, a última coisa que encorajaríamos é que você apenas prestasse atenção quatro vezes por ano.
+[09:10]
+Queremos que você ativamente preste atenção todos os dias do ano. Queremos que você ativamente tipo participe e consuma e aplique o que aprende.
+[09:20]
+E então geralmente o que isso faz é o cérebro humano neste exemplo com esta objeção específica, ele compartimentaliza dados. Então quando eles apenas dizem, "Oh, bem, você tem um componente de mastermind para esta oferta."
+[09:35]
+E então o cérebro deles naturalmente para sua própria eficiência compartimentaliza em, "Oh, bem, isso apenas é outra oferta de mastermind, certo?" Como vocês me dizem como pessoas que estão experimentando agora, isso parece que é apenas uma oferta de mastermind?
+[09:50]
+Você sabe, tipo realmente pense sobre isso, certo? E então dessa perspectiva como uma objeção, é realmente fácil de superar porque então tudo que fazemos é apenas apontar para a oferta e apenas dizemos, "Do que diabos você está falando? Você não entende todas as outras coisas que vêm com isso? Tipo, deixe-me mostrar para você."
+[10:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Exemplos de Objeções Superadas pela Oferta"
+NÚMEROS: 40+ pessoas fazendo $1M/mês, 200+ mensagens no chat do grupo
+VISUAL: Lista de objeções: "só ajuda do Jeremy não é suficiente" → resposta: chat de grupo ultra ativo com 40+ membros de $1M/mês
+[10:15]
+Certo. E é a mesma coisa para praticamente qualquer coisa que eles possam inventar. Tipo como exemplo, se eles apenas disserem, "Oh, bem, eu não sei. Tipo eu eu não acho que eu tipo preciso disso. Uh eu não sei, só a ajuda do Jeremy sozinha. Eu não sei se isso vai vai fazer isso para mim."
+[10:35]
+E então dizemos, temos um dos chats de grupo e comunidades mais ativos que acho que você já vai experimentar. Tipo às vezes eu fico para trás tipo acima de 200 mensagens no meu próprio chat de grupo de quão ativo ele é.
+[10:50]
+Você pode entrar lá e pode perguntar. Há mais de 40 pessoas agora que fazem um milhão de dólares por mês que estão ativamente dentro do chat de grupo. Você pode apenas marcar essas pessoas e fazer perguntas a elas.
+[11:05]
+Há muitas pessoas que não chegam nem perto desses números de receita que são excessivamente valiosas por direito próprio. Tipo você está comprando uma rede, sabe?
+[11:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Princípio Fundamental de Criação de Ofertas"
+NÚMEROS: Não especificado
+VISUAL: Dois pilares principais: 1) Resultados desejados que pessoas querem, 2) Objeções que as impedem de chegar lá
+[11:20]
+Você entende? É como cada objeção única que alguém tem, na maioria das vezes as pessoas falham tentando apenas superar a objeção com palavras quando sua oferta deveria ser o que tenta superar a objeção é o ponto que estou tentando fazer.
+[11:35]
+Então, duas coisas aqui. Você pega os resultados desejados que as pessoas querem. Você pega os resultados que elas têm, e isso deveria ser o que ajuda você a idealizar sobre o que você especificamente precisa colocar dentro do seu stack de oferta para torná-lo inegável que vai levar a pessoa aos resultados desejados que ela quer.
+[12:00]
+E as coisas que estão em sua mente impedindo-a de chegar lá são algumas daquelas coisas auxiliares que você inclui com isso de outra forma. Chave importante.
+[12:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Checkpoint de Compreensão"
+NÚMEROS: Não especificado
+VISUAL: Pausa para perguntas, garantir que todos entendam os fundamentos antes de continuar
+[12:15]
+Agora, uma vez que você chega ao ponto onde tem um stack de oferta sólido, okay, a propósito, rápido, só quero ter certeza de que vocês entendem tudo que acabei de dizer, porque é honestamente assim tão simples.
+[12:30]
+Não precisa ir muito além disso. É é realmente assim tão fácil em termos de apenas criar o que realmente vem com a oferta. Alguém tem alguma pergunta sobre isso antes de continuarmos?
+[12:45]
+Sinta-se livre para desmutar-se e perguntar ou deixar uma pergunta no chat se tiver. Quero ter certeza, como eu disse, de chegar às suas perguntas antes de seguirmos em frente.
+[13:00] [Kadisha faz pergunta sobre objeção de "queimado por outras ofertas"]
+[13:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Caso: Tech Jobs - Objeção de Queimados Anteriormente"
+NÚMEROS: Necessário diploma de bacharel para maior probabilidade
+VISUAL: Análise de qualificação do cliente, fatores que afetam probabilidade de sucesso
+[13:20]
+Sim, ótima pergunta. Então para ser claro no seu caso você está ajudando pessoas a conseguir empregos em tecnologia e isso significaria que elas já compraram algum outro curso ou algum outro tipo serviço ou trabalharam com um headhunter ou algo assim.
+[13:40]
+Eu presumo para tipo tentar conseguir um desses empregos e elas apenas tipo falharam em conseguir o emprego. Eu presumo. Porque tudo é tipo comercializado da mesma forma. Entendido.
+[13:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Reversão de Risco como Solução"
+NÚMEROS: Não especificado
+VISUAL: Conceito de reversão de risco na oferta, algo que mitiga o medo de ser queimado novamente
+[14:00]
+E então dessa perspectiva, pense nisso assim. Se a oferta em si parece extremamente similar ao que todo mundo tem e não há nada atualmente no seu stack, você também precisa pensar em termos do que nós quero dizer, só quero ser muito direto tipo às vezes isso pode ser tão simples quanto uma reversão de risco.
+[14:20]
+Então o que você faz atualmente para reversões de risco? Então alguém te dá dinheiro. Há há algo que você faz para ajudá-los se não funcionar? Tipo qual é qual é a situação se o negócio apenas fica uma merda?
+[14:35] [Kadisha explica sua política atual: trabalhar até conseguir emprego, depois ir para comunidade gratuita]
+[14:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Teste de Reversão de Risco - Feedback do Grupo"
+NÚMEROS: 1 = soa bom, 2 = soa como merda
+VISUAL: Votação instantânea do grupo sobre efetividade da reversão de risco proposta, todos votam 2
+[15:00]
+E então, eu quero que você entenda o contexto do que você perguntou. Quando eu digo tipo, "Ei, você precisa de uma reversão de risco." Esse é um exemplo de uma reversão de risco. Não é necessariamente tipo algo que está incluído na oferta.
+[15:15]
+Tipo não tem que ser apenas como uma garantia em preto e branco. Pode ser. Absolutamente pode ser. Mas sua maneira atual de oferecer uma garantia honestamente tipo soa como merda.
+[15:30]
+Tipo quando você diz e novamente me faça um favor todo mundo no chat rápido. Apenas dê à Kadisha algum feedback. Seja honesto. Não minta para ela. Não minta para mim também e faça você sentir que tem que responder de uma maneira particular.
+[15:45]
+Vou apenas refrescá-los rapidamente e então quero que todos respondam no chat. Okay. Então Kadisha, desmute-se. Quero que você diga qual é sua versão atual de uma reversão de risco.
+[16:00] [Kadisha explica: ajudar até conseguir emprego, depois comunidade gratuita Discord + acesso vitalício ao curso]
+[16:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Votação: Efetividade da Reversão de Risco"
+NÚMEROS: 100% votaram 2 (soa como merda)
+VISUAL: Resultado unânime: todos no grupo concordam que a reversão de risco atual não supera a objeção
+[16:20]
+Okay. Então, coloque um um no chat se isso soa bem e tipo supera a objeção de fui ferrado por outras pessoas ou coloque um dois no chat se isso soa como merda e não superaria essa objeção.
+[16:35]
+Okay. E então, Kadisha, olhe no chat. São apenas dois. Okay. Novamente, uns no chat se isso soa bem e superaria a objeção de fui ferrado antes. Dois no chat se isso soa como merda e não funcionaria.
+[16:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Exemplo: Caso Roy - Inner Circle"
+NÚMEROS: $6K/mês, $12K reembolsado, 3 semanas no programa, 200 mensagens de atraso no chat
+VISUAL: Estudo de caso completo: membro que não treinava, foi avisado, fez pergunta básica, foi reembolsado e removido do programa
+[17:00]
+Okay. E então, isso é o que quero dizer, Kadisha. Agora, comparativamente, e novamente, pessoal, por favor não mintam para mim, okay? E com o exemplo que forneci com Roy, eu não tinha uma garantia. Eu não tinha uma política de reembolso.
+[17:15]
+Eu não disse tipo isso é o que vamos fazer na instância que isso acontece. Eu apenas imediatamente começo a dar um exemplo. Okay? E obviamente, todos vocês converteram, então eu presumiria que isso funcionou com vocês na instância.
+[17:30]
+Então, você tinha essa objeção. Mas novamente, tipo pense nisso por comparação direta. Okay? Reversões de risco não têm que ser tão preto e branco.
+[17:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "História Completa de Roy"
+NÚMEROS: $6K/mês, 2 cobranças, $12K reembolsado, 3 semanas no programa, marketer Jerome muito ativo, Roy zero consumo
+VISUAL: Timeline: Semana 1-3 (sem treinamento) → Aviso → Pergunta básica sobre pixel → Cancelamento + Reembolso completo + Transferência para Master Internet Marketing
+[17:50]
+Roy tinha se juntado e ele era um dono de agência e ele pagou por ele e seu profissional de marketing para fazer parte do grupo. O nome do profissional de marketing dele era Jerome. Okay. Agora Jerome é extremamente ativo.
+[18:05]
+Jerome imediatamente é tipo consumindo pra caramba informação. Ativamente aplicando a informação tipo você sabe fazendo fazendo um ótimo trabalho em realmente tipo fazer coisas.
+[18:20]
+Quando olhei para Roy e olho para todos vocês a propósito só caso estejam curiosos. Eu entro no meu portal Kajabi e olho para cada uma das pessoas com quem estou sentado aqui falando e tento ver tipo o que elas treinaram ativamente.
+[18:35]
+Posso ver consumo de SOP. Posso ver obviamente tudo relacionado ao consumo da biblioteca do curso até o vídeo individual e o limite que você consumiu. Então posso dizer se você tem treinado ou não sempre que falo com você e preciso verificar novamente.
+[18:50]
+E Roy não estava treinando porra nenhuma. Tipo Roy não fez nada. E Roy cerca de não sei 3 semanas de fazer parte do inner circle tipo então sua segunda cobrança ainda nem tinha acontecido ainda.
+[19:05]
+Me procura e diz que queria demitir Jerome, seu profissional de marketing, que tinha consumido tudo. E eu fiquei tipo, por quê? E ele tipo, oh, estivemos rodando anúncios por tipo, você sabe, duas semanas e tipo não está funcionando ainda.
+[19:20]
+E imediatamente, eu pude dizer. Eu fiquei tipo, Roy é um idiota. Tipo Roy não tem ideia em termos do que ele realmente precisa fazer relacionado à publicidade, tipo você sabe, antes de eu abandoná-lo e perder fé nele.
+[19:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Intervenção com Roy"
+NÚMEROS: 2 dias após reframing, $6K/mês, pergunta sobre pixel
+VISUAL: Tentativa de reenquadrar expectativas, advertência sobre falta de treinamento, ultimato dado, pergunta básica final levou à perda de crença
+[19:40]
+Tipo, deixe-me tentar reenquadrá-lo. Então, eu me certifico de definir tipo uma expectativa realmente adequada de como a publicidade funciona e então ele pode, você sabe, ajustar seu ponto de vista e tipo realmente chegar ao ponto onde ele faz algum dinheiro com anúncios pagos.
+[19:55]
+Longa história curta, dois dias se passam e ele acaba me procurando e apenas dizendo tipo, "Ei, você pode remover Jerome do chat?" Tipo, eu o demiti. E novamente, eu ligo para ele e fico tipo, "Tudo bem, só para você entender o que isso significa, tipo eu travei eu olhei sua biblioteca, cara."
+[20:15]
+Tipo, você não treina porra nenhuma. Tipo, você não fez login nada. Tipo, se você quer continuar sendo parte disso, eu preciso acreditar em você agora, mano. E honestamente, eu não acredito.
+[20:30]
+Se você não começar a treinar agressivamente, tipo você vai me fazer parecer merda. E eu me importo profundamente em não parecer merda. Eu me importo profundamente com minha reputação e a longevidade desta oferta e os resultados das pessoas que fazem parte dela.
+[20:45]
+Então, é melhor você entrar lá e começar a treinar pra caramba porque você vai apenas ser enterrado com, ele estava pagando na época, 6K por mês. Eu tipo você vai apenas ser enterrado com cobranças de 6K por mês e você não vai ter ROI positivo.
+[21:00]
+E novamente, você vai ficar bravo e eu vou ficar bravo. Então, eu preciso que você se comprometa tipo você entende completamente o que precisa fazer. E ele tipo, porra sim.
+[21:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Resolução do Caso Roy"
+NÚMEROS: 1 semana depois, 2ª cobrança ocorreu, $12K total reembolsado, $5K deveria ter mantido
+VISUAL: Pergunta final: "pixel vai no website?" → Perda total de crença → Cancelamento no Stripe → Reembolso completo → Movido para Master Internet Marketing → Perda financeira intencional para proteger reputação
+[21:20]
+E cerca de uma semana se passou. Para ser claro, uma segunda cobrança para ele aconteceu. Roy então me fez a pergunta mais básica que me fez perder toda a crença nele.
+[21:35]
+Okay? E quero ser muito claro quando digo isso é obviamente okay. Vocês podem se sentir confortáveis me fazendo quaisquer perguntas a qualquer momento. Apenas lembrem do contexto dessa situação do Roy.
+[21:50]
+Então Roy me perguntou a pergunta mais básica. Ele diz, "Ei, um pixel pertence em um website?" E eu fiquei tipo, "Oh sim, você está cozido, amigo."
+[22:05]
+Então, eu entrei no eu entrei na porra do Stripe, cancelei essas transações para ele, porra reembolsei sua bunda, dei 12K de volta para ele, o chutei do programa, o deixei dentro do grupo de master internet marketing.
+[22:20]
+Dessa forma, ele pode conseguir o treinamento que precisava. Então, eu tecnicamente perdi dinheiro, você sabe? Eu eu deveria ter pelo menos mantido 5K disso.
+[22:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Roy Como Ferramenta de Vendas"
+NÚMEROS: $12K reembolsado, sem garantia formal, sem política de reembolso
+VISUAL: Uso do caso Roy no processo de vendas: demonstração de crença genuína, vetting bidirecional, proteção de reputação acima de dinheiro
+[22:40]
+E no meu processo de vendas, nós ativamente usamos Roy como exemplo. Então, nós não temos tipo uma garantia. Nós não temos uma política de reembolso. Tipo, nós não temos nada que diga, você sabe, você tem garantia tipo essa quantidade de receita ou essa quantidade de sucesso.
+[22:55]
+O que nós temos é crença genuína nas pessoas com quem trabalhamos. Nós vamos examinar você tanto quanto você está nos examinando. Nós vamos manter crença em você ou se não mantivermos, nós vamos te chutar pra fora e vamos provavelmente te reembolsar.
+[23:10]
+Porque novamente, nós nos importamos profundamente com nossa reputação e a longevidade de nossa oferta.
+[23:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Lição: Reversão de Risco Não Precisa Ser Garantia"
+NÚMEROS: Não especificado
+VISUAL: Comparação: garantia formal vs demonstração de integridade através de exemplos reais, crença genuína como reversão de risco
+[23:25]
+Agora, deixe-me ser claro quando digo isso, Kadisha, só para você entender o contexto do que você perguntou. Quando eu digo tipo, "Ei, você precisa de uma reversão de risco." Esse é um exemplo de uma reversão de risco.
+[23:40]
+Não é necessariamente tipo algo que está incluído na oferta. Tipo não tem que ser apenas como uma garantia em preto e branco. Pode ser. Absolutamente pode ser.
+[23:55]
+Mas sua maneira atual de oferecer uma garantia honestamente tipo soa como merda. Tipo quando você diz e novamente todo mundo no chat, feedback. Seja honesto.
+[24:10] [Grupo vota unanimemente que a garantia atual de Kadisha não funciona]
+[24:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Aplicação: Kadisha Precisa Vender Apenas Para Quem Acredita"
+NÚMEROS: Diploma de bacharel = fator crítico, Nebraska remoto sem diploma = antiético vender
+VISUAL: Critérios de qualificação: educação, localização, disposição para relocar, trabalho remoto vs presencial, probabilidade de sucesso
+[24:30]
+Agora pense nisso. Como você reenquadraria sua oferta front-end é nós ajudamos pessoas que estão presas entre 30 e 50k em algum tipo de emprego que elas têm transição para se tornar um analista de dados sendo pago uma média de cerca de 85k.
+[24:50]
+Na maioria das vezes você consegue fazer isso em grandes mercados, mas você também pode fazer isso dentro de, você sabe, uma posição remota. Fazemos isso através de uma oferta que temos chamada, como você chama?
+[25:05]
+Data Career Launch Program. E isso é isso é o que você diz em termos da oferta tipo você você apenas nomeia. Okay, você diz o quando está articulando um resultado front-end e uma oferta front-end, você articula como resultados e então você diz nós fazemos isso através de nome da ponte.
+[25:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Como Articular Oferta Front-End"
+NÚMEROS: $30K-$50K → $85K
+VISUAL: Fórmula: "Ajudamos [pessoa em situação X] a [resultado Y] através de [nome da oferta]" - PARE AÍ, não liste o stack ainda
+[25:30]
+Okay? Ninguém se importa com todas aquelas coisas individuais até o muito muito muito muito final do processo de vendas. Você entende isso?
+[25:45]
+Okay. Agora, só para ser claro, e isso é realmente importante que vocês entendam essa próxima parte, okay? É aqui que a maioria das pessoas realmente ferram nas chamadas de vendas, okay?
+[26:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "ERRO CRÍTICO em Chamadas de Vendas"
+NÚMEROS: Não especificado
+VISUAL: Erro comum: listar todo o stack quando perguntam "como funciona?", Correto: dizer resultado + nome da oferta, deixar eles perguntarem próxima questão (geralmente preço)
+[26:05]
+Em termos de conseguir sua taxa de fechamento muito mais alta do que está agora, você quando chega ao ponto onde alguém tipo, "É, então o que o que é tipo? Como funciona?"
+[26:20]
+Você senta lá e começa a dizer, "Oh, sim, vem com masterminds. Vem com isso. Vem com aquilo. Vem." Eles não se importam com isso. Okay.
+[26:35]
+Você diz, "É, ótima pergunta." Então nós ajudamos pessoas a fazer e nós chamamos de branco e então deixa eles fazerem a próxima pergunta tipo quanto custa? Custa isso porque novamente o que eles estão comprando é o resultado.
+[26:50]
+Eles não estão comprando o stack. Eles têm que acreditar no stack no último passo. Okay? Essa é a chave.
+[27:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Pessoas Compram Resultados, Não Features"
+NÚMEROS: Não especificado
+VISUAL: Hierarquia de vendas: Resultado (topo) → Preço → Crença no Stack (último), não começar com stack
+[27:10]
+Uma vez que você faz isso, uma vez que você percebe isso, você sai dessa coisa toda de listar um monte de merda. Okay, agora vamos apenas fazer a transição para esta próxima parte, que é o downsell.
+[27:25]
+Okay, downsells são realmente simples. Se você chega ao ponto onde o que quer que custe é demais, financiamento não é uma possibilidade, o dinheiro simplesmente não está lá, você obviamente quer liquidar esse gasto para poder justificar o custo que levou para colocar essa pessoa no telefone.
+[27:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Downsell: Versão Reduzida"
+NÚMEROS: Inner Circle $60K/ano ou $5K/mês → Master Internet Marketing $5K uma vez
+VISUAL: Estrutura de downsell: versão simplificada da oferta principal, liquidar custo de aquisição, ainda entregar valor
+[27:50]
+Você precisa de algo que seja uma versão reduzida disso. Okay. Então, no meu mundo, só para colocar em perspectiva no contexto do que tenho dado como exemplo com a oferta Jeremy's Inner Circle.
+[28:05]
+O half circle custa 60K por ano, 5K por mês. Jeremy's inner circle completo custa 10K por mês. Atualmente, o downsell é apenas 5K uma vez. É master internet marketing.
+[28:20]
+Quando eu faço downsell de master internet marketing, acredite ou não, a objeção número um que recebemos é bem, eu quero e eles nomeiam alguma coisa específica do stack de oferta no Jeremy's inner circle.
+[28:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Chave do Downsell: Versões Diluídas"
+NÚMEROS: 2.000 mensagens/mês no Jeremy AI, acesso ao chat de grupo
+VISUAL: Conceito: incluir versões reduzidas dos componentes desejados no downsell, exemplo Jeremy AI no chat de grupo vs portal completo
+[28:40]
+E então, aqui está a aqui está a consideração muito importante que você tem que fazer. Você pode ter versões reduzidas do que está em sua oferta principal que as pessoas querem em seu downsell? Este aqui fica suculento.
+[28:55]
+Okay, preste muita atenção nisso. Você está pronto? Então, eu acredito que as pessoas ainda conseguem acesso ao Jeremy no master internet marketing, meu downsell de 5K, porque elas conseguem.
+[29:10]
+Elas podem mandar uma mensagem no chat de grupo e me marcar. Eu respondo lá. Claro, eu olho esse chat por último depois de falar com todos vocês primeiro, mas é tipo elas ainda conseguem acesso ao Jeremy lá.
+[29:25]
+Então se alguém diz algo quando estamos no meio de fazer downsell para elas ou estamos tipo olha você simplesmente não está qualificado para Jeremy's inner circle agora tipo você não ganha o suficiente ou você sabe o custo é demais.
+[29:40]
+Tipo cara vá para o programa master internet marketing é incrível 7 semanas de aulas extremamente aprofundadas é um preço transacional de 5k não há componente recorrente é muito mais fácil quando se trata de custo é incrível.
+[29:55]
+Tipo conseguimos resultados tremendos para pessoas através desse programa também e se eles disserem algo tipo sim mas cara eu realmente quero você sabe eu realmente quero acesso ao Jeremy do que você está falando você ainda consegue acesso ao Jeremy AI.
+[30:10]
+Você só tem que mandar mensagem no chat de grupo. Você tem 2.000 mensagens por mês que pode usar dentro da versão do portal do curso. E além disso, você ainda pode mandar uma mensagem para Jeremy dentro do chat de grupo e fazer qualquer pergunta que tenha. Apenas marque-o.
+[30:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Exemplo: Downsell de Hands-On Deal"
+NÚMEROS: $25K/mês + 10% profit share + $50K ad spend = $75K risco em 30 dias
+VISUAL: Comparação: fazer você mesmo (inner circle) vs hands-on (agência), breakdown de custos e riscos, argumento de que inner circle é mais envolvimento
+[30:30]
+E então eles geralmente dizem algo tipo, "Oh, eu não percebi isso." Você sabe, e é tipo novamente, é uma versão reduzida da tipo versão concentrada que vem na coisa de maior ticket.
+[30:45]
+E é a mesma coisa quando alguém quer tipo um negócio hands-on, mas nós não queremos fazer o negócio hands-on. Alguém tipo, "Bem, eu preferiria que Jeremy fizesse." Muito fácil de reduzir e ser tipo, "Quero dizer, você tem certeza?"
+[31:00]
+Tipo, só para você entender, eles custam 25K por mês para nós entrarmos como agência de marketing e pegamos 10% de profit share na sua receita líquida. Além disso, tipicamente temos pessoas arriscando tipo 50k de gasto com anúncios nos primeiros 30 dias.
+[31:15]
+Você tem um risco de caixa de $75.000 nos primeiros 30 dias de fazer um negócio. E só para ser claro, posso sentar aqui e te mostrar um monte de resultados incríveis que ajudamos pessoas a gerar através do Jeremy's inner circle.
+[31:30]
+De jeito nenhum precisamos entrar e fazer isso nós mesmos. Tipo, podemos conseguir um profissional de marketing para você se precisar. Temos milhares de pessoas que treinamos nisso.
+[31:45]
+Além disso, você provavelmente já tem alguém em sua equipe que podemos colocar lá se não for você. Além disso, você precisa saber essas coisas. É muito eficiente. Você não está nos pagando para fazer mais coisas.
+[32:00]
+Acredite ou não, nós geralmente realmente trabalhamos menos quando fazemos um negócio hands-on. Apenas custa muito mais porque estamos fazendo para você ao invés. Não é realmente mais envolvimento. Tecnicamente, há menos.
+[32:15]
+Nós nem fazemos chamadas semanais com nossos clientes. Nós apenas mandamos mensagens para eles e coisas em tempo real. Tipo, você tem certeza que é isso que quer?
+[32:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Princípio do Downsell Suculento"
+NÚMEROS: Não especificado
+VISUAL: Fórmula: pegar o que cliente diz que quer + dar versão diluída através do downsell, fazer parecer que ainda estão conseguindo o que querem por menos
+[32:35]
+Você sabe, é tipo, novamente, aqui está meu ponto, okay? Você tem que ter tipo pequenas versões reduzidas e e pegar o que quer que as pessoas aleguem que querem e dar a elas tipo uma versão diluída disso através do downsell.
+[32:50]
+Essa é a chave para um downsell realmente suculento.
+[33:00] [Exemplos no chat: Omar compartilha sua jornada, Kadisha pergunta sobre software de AI]
+[33:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Ferramenta: Deli AI"
+NÚMEROS: $25K/ano plano Immortal
+VISUAL: Recomendação de plataforma para criar AI personalizada, plano done-for-you, custo-benefício para longevidade
+[33:20]
+Para ser claro, Jeremy AI é construído em uma ferramenta chamada Deli. Pagamos à Deli 25K por ano por um plano que eles têm chamado opção immortal.
+[33:35]
+A opção immortal é essencialmente a versão deles de uma oferta done for you. Você não tem que pagar 25K por ano. Nós obviamente queríamos apenas porque não queríamos construir toda essa merda.
+[33:50]
+Eles construíram uma quantidade tremenda de merda para ser claro. Eu senti que valia muito a pena. Na verdade parece extremamente barato relativo ao que fez por nós.
+[34:05]
+E então além disso, nós temos um sim nós realmente ele disse um nome tão bom para esse plano. É é um ótimo nome para esse plano.
+[34:20]
+Você sabe, no meu no meu plano de dissolução para minha empresa, Deus me livre que eu morra ou fique incapacitado, nós realmente temos esse custo embutido em continuar pagando por isso com tipo seguro de vida, benefício por morte.
+[34:35]
+Nossa trust é tipo designada para continuar pagando por isso. Dessa forma nunca vai embora. De qualquer forma, longa história curta, o o ponto que estou tentando fazer é muito custo-efetivo. É uma coisa muito boa com certeza.
+[34:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Cross-Sell: O Que É"
+NÚMEROS: Não especificado
+VISUAL: Definição: comprar algo ADICIONAL ao produto principal no mesmo momento, exemplo hambúrguer + batata + shake
+[34:55]
+Okay. De qualquer forma, vamos olhar para a ideia de um cross-sell agora. Okay. Então, um cross-sell é essencialmente a ideia de que alguém vai comprar algo além do que quer que estejam comprando como a coisa principal.
+[35:10]
+Okay? Então, escute isso. Às vezes teremos pessoas que dirão, "Eu realmente quero fazer um negócio hands-on." Mas diremos a elas, diremos, "Não faz nenhum sentido. Você tem muita merda que precisa construir, e há uma lacuna de conhecimento clara para onde você está agora."
+[35:30]
+Vamos fazer um plano de transição. Vamos te colocar no inner circle por alguns meses. Vamos ver se você ainda tem o desejo no final desses poucos meses para transicionar para um negócio hands-on e faremos um faremos um tipo de plano de transição.
+[35:45]
+Faremos um plano ponte. Vá para isso primeiro e então chegaremos ao ponto onde te transicionamos para um negócio hands-on se fizer sentido.
+[36:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Exemplo: Brian Mark - Plano de Transição"
+NÚMEROS: Preso em $780K/mês → $1.6M CAD ($1.3M USD)
+VISUAL: Caso de sucesso: Inner Circle primeiro → construir fundação → transição para hands-on → resultados explosivos
+[36:05]
+Temos pessoas com quem fazemos isso ocasionalmente tipo Brian Mark é um ótimo exemplo que estava apenas postando sobre quebrar 1.6 milhões de shekels canadenses ontem à noite o que acho que é tipo 1.3 USD.
+[36:20]
+Ele estava preso em 780K por mês por muito tempo. Seu objetivo era fazer exatamente isso. Ele queria fazer um negócio hands-on. Havia muita coisa que sentimos que ele precisava fazer primeiro.
+[36:35]
+Fizemos ele entrar no inner circle e fazer essas coisas primeiro e então o transicionamos para um negócio hands-on e agora ele está absolutamente arrasando.
+[36:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Cross-Sell Pode Ser Plano de Transição"
+NÚMEROS: Não especificado
+VISUAL: Dois tipos de cross-sell: 1) Plano de transição/bridge, 2) Complementos simples (batatas + shake com hambúrguer)
+[36:55]
+Meu ponto é cross-selling pode parecer isso onde é tipo um plano de transição. Cross-selling também pode apenas parecer, ei, você pegou um hambúrguer, você quer algumas batatas e um shake, também.
+[37:10]
+É realmente simples. A maioria das pessoas perde muito dinheiro porque não entendem que você pode complementar as coisas que já está vendendo para pessoas tendo uma oferta separada que só faz sentido em cenários específicos para adicionar.
+[37:25]
+Nem todo mundo quer as calorias de batatas em um shake. Okay? Algumas pessoas não querem essa tentação. Algumas pessoas veem isso como dinheiro desperdiçado.
+[37:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Caso: Empresa de Móveis e Almofadas Grátis"
+NÚMEROS: Não especificado
+VISUAL: Estudo de caso: clientes reclamando de almofadas grátis, querendo desconto ao invés, reclamando de cores - lição: não force complementos, ofereça como opção
+[37:45]
+Tipo o exemplo do estudo de caso de móveis, pessoas estavam ficando pissed que ganharam uma almofada grátis. Deveria ter sido apenas uma pergunta simples para que aquela empresa também pudesse economizar um monte de dinheiro em almofadas que de outra forma deram.
+[38:00]
+Eles poderiam ter apenas perguntado, "Ei, você quer uma almofada? Vamos jogar uma de graça se você quiser." E então se alguém dissesse tipo, "Não, eu não quero." Você sabe, é o que é.
+[38:15]
+Eles poderiam ter feito cross-sell da mobília, tipo as almofadas e cobertores. Tipo, pense em quão fácil isso seria.
+[38:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Exemplo Pessoal: Móveis de Varanda de Jeremy"
+NÚMEROS: $6.000 em móveis, $1.000 em almofadas/cobertores = 16%+ adicional
+VISUAL: Compra: 2 daybeds, sofá seccional, 2 cadeiras, sofá extra = $6K, cross-sell perdido: $1K em almofadas/cobertores que Jeremy comprou separadamente
+[38:35]
+Alguém entra, eles compram um sofá. Eu entrei recentemente e peguei alguns móveis novos para varanda e é uma B. Vocês verão quando vierem ao mastermind em janeiro no dia 18 quando formos ao penthouse.
+[38:50]
+Tenho dois daybeds e peguei essa grande seccional lá na varanda agora. E peguei essas duas cadeiras incrivelmente confortáveis.
+[39:05]
+E eu pergunto ao cara de quem estou comprando, eu digo, "Isso vem com alguma almofada?" Ele diz, "Não." Eu vou, "Você tem almofadas?" Ele diz, "Não." Eu disse, "Você tem cobertores?" Ele diz, "Não."
+[39:20]
+Ele perdeu. Eu não vocês acham no chat? Quanto vocês acham que gastei em almofadas e cobertores para minha mobília de varanda? Vejam o que vocês acham de mim. Coloquem um número no chat.
+[39:35]
+5K, Peter, você está viajando. Isso é insano. Não, não 5K em almofadas e cobertores. Provavelmente gastei cerca de mil dólares. Okay.
+[39:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Análise do Cross-Sell Perdido"
+NÚMEROS: $6.000 móveis + $1.000 almofadas/cobertores = 16%+ receita adicional
+VISUAL: Cálculo de oportunidade perdida: 6 itens vendidos por $6K, cross-sell de $1K seria 16%+ adicional, percentual significativo de lucro adicional
+[39:55]
+Então longa história curta, $1.000 eles poderiam ter conseguido por cima. E adivinha? Adivinha quanto o sofá custou, pessoal? Tipo o eu comprei novamente, então comprei um sofá seccional. Comprei duas cadeiras. Comprei dois daybeds.
+[40:10]
+E então também enquanto estava lá, sentei nesse sofá realmente confortável que eles tinham, e substituí aquele sofá na minha tipo área de penthouse nos fundos com um sofá novo.
+[40:25]
+Comprei seis coisas. Deu cerca de $6.000. Talvez um pouco mais que isso na verdade. Na verdade não lembro o preço, mas eles poderiam ter adicionado outros $1.000. Pense nisso no contexto de que se tudo aquilo custou apenas tipo seis mil, outros mil dólares é tipo uma porcentagem bem boa de dinheiro adicional para vender almofadas e cobertores.
+[40:45]
+Eles não têm que jogar dentro. Eles poderiam ter facilmente feito cross-sell para mim. Ou, como o exemplo vai, eu te disse que acabei de comprar alguns móveis de varanda. Essa era minha única intenção.
+[41:00]
+O cross-sell que realmente aconteceu naquele exemplo foi eu sentei nesse sofá realmente confortável que eu tinha zero intenção de substituir um sofá na minha casa. Sentei naquele sofá e fiquei tipo, "Não, compre isso agora."
+[41:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Exemplo: Adam e John Madson - Perda de Peso"
+NÚMEROS: $10-12K oferta base, $30K cross-sell (diferença de $18-20K), ~50% de taxa de aceitação
+VISUAL: Oferta base: treino + dieta + accountability, Cross-sell: injetáveis + análise de sangue, metade dos clientes compra o cross-sell
+[41:20]
+E aqui está meu ponto, okay? Cross-selling significa que há algo que é tipo super óbvio. Então, vou usar Adam como exemplo no contexto de seu concorrente John Madson.
+[41:35]
+Então, Adam, com John como um ótimo exemplo, a oferta principal deles naquele ponto de preço de 12K, tipo aquele 10 12k, seja lá qual for, ajudando homens a perder peso, é essencialmente apenas um programa de treinamento.
+[41:50]
+É tão fácil quanto isso. O programa de treinamento é um coach, tipo um coach semanal que te dá um plano de dieta e também te ensina coisas em tipo accountability, planos de treino e dieta.
+[42:05]
+Okay. Bem, eles têm uma oferta de $30.000 que adiciona uma rotina injetável e análise de trabalho de sangue a isso, também. Okay. 30K, uma diferença de 20 mais mil. Ou se é 12K e $18.000 de diferença apenas por uma rotina injetável e análise de trabalho de sangue, isso é insano.
+[42:25]
+Perguntei ao vendedor, eu disse, "Apenas qual qual é a taxa de aceitação nisso? Quantas pessoas compram os $30.000?" Eles disseram cerca de metade. É cerca de metade que compra esse cross-sell.
+[42:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Lição: Cross-Sell Óbvio Deixado na Mesa"
+NÚMEROS: 50% taxa de aceitação, $18-20K adicional por cliente
+VISUAL: Timeline: cross-sell lançado recentemente este ano, injetáveis existem há muito tempo, milhões perdidos por não ter antes, gap de preço não importa se é óbvio
+[42:45]
+Eles só saíram com o cross-sell, a propósito, no período mais recente de tempo. Tipo dentro deste ano, eles saíram com o Cross-sell. Pense em quanto dinheiro eles perderam por não ter isso antes.
+[43:00]
+Injetáveis não saíram este ano. Eles estão por aí há muito tempo. A limitação deles olhando para seu negócio e não percebendo quanto dinheiro poderiam ter feito por algo que é extremamente óbvio.
+[43:15]
+Vocês alguma vez foram comprar um carro e eles fazem upsell de algo tipo uma garantia estendida ou tipo um pacote de pneus ou você sabe algum tipo de tipo serviço de limpeza ou tipo trocas de óleo ou algo assim por um certo período de tempo a uma taxa com desconto.
+[43:35]
+Algum de vocês já foi a tipo um Jiffy Lube ou alguma merda assim quando eram pobres e estavam trocando seu óleo e eles fazem upsell de tipo filtros de ar ou tipo limpadores de para-brisa ou alguma merda.
+[43:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Cross-Sells Universais"
+NÚMEROS: Não especificado
+VISUAL: Exemplos: concessionárias (garantia, pneus, manutenção), fast food (batatas, shake), Jiffy Lube (filtros, limpadores) - alta taxa de aceitação em todos
+[43:55]
+Novamente, a taxa de aceitação nessas coisas é alta. Sim, Devin diz, "Eu sempre compro a proteção de aro." Jogada inteligente, Devin. Espero que não seja você rachando aqueles aros. Espero que sejam algumas damas.
+[44:10]
+Mas de qualquer forma, longa história curta, aqui está meu ponto, okay? E não posso enfatizar isso o suficiente. Geralmente, há alguma merda extremamente óbvia.
+[44:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Exercício: Identifique Seu Cross-Sell Óbvio"
+NÚMEROS: 30 segundos para pensar
+VISUAL: Desafio ao grupo: o que é extremamente óbvio que pessoas claramente querem de você que não estão conseguindo? Tempo para reflexão e resposta no chat
+[44:30]
+Tipo, pessoal, novamente, imaginem ir e comprar um hambúrguer e eles literalmente apenas não oferecem uma batata e shake. Muitas pessoas ficariam extremamente confusas com isso. Elas ficariam tipo, "Espera, você não tem batatas? Você não tem milkshakes? Tipo, do que você está falando?"
+[44:50]
+Você vê o que estou dizendo? Imagine pegar apenas pizza de queijo e eles tipo, "É, desculpe. Não fazemos upsell de coberturas. Não temos nenhuma cobertura." É tipo, "O quê?" Você sabe, é assim que muitas pessoas olham para você agora.
+[45:05]
+Elas tipo, há algo super óbvio. Tire um momento. Apenas tire 30 segundos e tente pensar intencionalmente sobre isso por um momento. O que é extremamente óbvio que as pessoas claramente quereriam de você que você provavelmente até ouve sobre que elas não estão conseguindo?
+[45:25]
+Agora coloque no chat quando chegar a isso. 15 segundos. 10, 5, 4, 3, 2, 1.
+[45:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Respostas do Grupo - Cross-Sells Óbvios"
+NÚMEROS: 50 anúncios, 1 vídeo/dia = 50 dias, 1-2 semanas típico
+VISUAL: Nick: edição de anúncios (problema universal no Inner Circle), Peter: vendedor ou ajuda com contratação de vendedores, Zach: suporte para primeiro negócio wholesale
+[45:45]
+Nick diz edição dos anúncios. Concordo totalmente, Nick. Edição é insana. Você sabe, vou te dizer isso. Vi isso no inner circle. Nem sei a quantidade de vezes que vocês vêm até mim e me dizem a merda mais audaciosa sobre quanto tempo leva para seus editores editarem anúncios.
+[46:05]
+Eu bateria pra caramba na minha equipe se eles levassem quase tanto tempo quanto cada um de vocês leva para editar vídeos de anúncios. Minha equipe, se eu dou 50 anúncios para eles e eles não me dão no dia seguinte, estou ficando apoplético.
+[46:20]
+Okay, alguns de vocês me dizem que leva tipo uma semana ou duas semanas. Tive um cara me dizer que que eles estavam fazendo um vídeo por dia, o que matematicamente significaria que levaria 50 dias para conseguir 50 anúncios feitos.
+[46:35]
+É tipo eu posso ver uma oportunidade clara de fazer upsell para vocês de alguma merda aleatória tipo essa. Não vou para ser claro, mas novamente é tipo eu posso ver.
+[46:50]
+Nick, você pode claramente ver no sentido de uma agência. Peter diz um vendedor para fechar para eles ou ajudá-los a contratar vendedores. Sim, Peter. Exatamente.
+[47:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Cross-Sell Também Supera Objeções"
+NÚMEROS: Não especificado
+VISUAL: Duplo benefício: 1) Mais receita através de % bruta da venda, 2) Previne perda de negócios por objeção não resolvida
+[47:10]
+Agora, Peter, também pense nisso. Isso claramente seria uma objeção, também. Isso impediria um negócio de ocorrer na instância em que você não resolve para isso. Você perderia negócios se não oferecer esse cross-sell.
+[47:25]
+E também é uma maneira para você ser capaz de facilmente fazer mais dinheiro e tecnicamente conseguir uma porcentagem bruta da venda, não é?
+[47:40]
+E então muitas dessas coisas quando vocês chegam a essas ideias, vocês querem quantificar quanto elas realmente valem para ver se vale a pena fazer ou não. É jogo fácil fazer algum dinheiro a mais.
+[47:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Exemplo: Zach - Wholesale Real Estate"
+NÚMEROS: Não especificado
+VISUAL: Cross-sell identificado: mais suporte para primeiro negócio wholesale, detalhamento: marketing e operações vs apenas treinamento de vendas
+[48:00]
+Zach diz mais suporte para fazer seu primeiro negócio wholesale. Sim. E Zach, articule isso muito além do que você acabou de fazer, certo? Tipo o que isso realmente significa? Mais suporte para fazer seu primeiro negócio wholesale.
+[48:15]
+Seria isso vendas? Seria isso tipo um call center? Seria isso tipo o que isso realmente significa? Seria isso ajuda com marketing e mala direta? Tipo você entende o que estou dizendo?
+[48:30] [Zach clarifica: marketing e operações vs treinamento básico de vendas]
+[48:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Cross-Sell vs Backend"
+NÚMEROS: Não especificado
+VISUAL: Alguns cross-sells também funcionam como backend, opção de vender agora OU deixar cliente tentar e vender depois
+[48:50]
+Agora, e e no seu caso, naquele exemplo que você acabou de fornecer, eu também consideraria isso como um potencial backend. Tipo você poderia fazer cross-sell no front end, mas você pode ver, a propósito, que algumas dessas coisas fazem sentido como backends, também.
+[49:05]
+Tipo naquele exemplo, você poderia dizer à pessoa, você poderia ser tipo, "A propósito, se você quer tornar isso muito mais fácil, podemos fazer isso agora. E se você não quer fazer agora, experimente por um pouco, e você sempre pode vir até nós mais tarde, e podemos vender para você em um momento posterior."
+[49:25]
+Você entende o que estou dizendo? Sim.
+[49:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Exemplo: Simone - Software de Prep para Certificação"
+NÚMEROS: Não especificado
+VISUAL: Cross-sell: ferramentas adicionais de software para estudar, testes práticos ilimitados replicando certificações reais vs comprar separadamente
+[49:35]
+Simone diz, "Software de prep para certificação." Simone, novamente, não tenho certeza de que isso está articulado o suficiente. Você quer desmutar-se e e tentar explicar isso um pouco mais então posso ter certeza com certeza de que que é a ideia em sua forma mais completa.
+[49:50] [Simone explica: ferramentas de software técnico adicional para estudar para certificações]
+[50:05]
+Sim, Jeremy. Então, eu estava eu estava pensando então para muitos treinamentos técnicos ou pessoas tentando conseguir certificações ou empregos técnicos. Há muitos diferentes softwares de prep técnico tipo Pocket Prep e coisas assim.
+[50:20]
+Há muitas ferramentas diferentes que você pode usar para estudar. Então, eu estava pensando talvez ferramentas de software adicionais para as pessoas serem capazes de estudar. Já estou construindo isso.
+[50:35]
+Entendi. Sim. Okay. Concordo. Isso faz sentido. Software de prep para certificação. Então, essencialmente tipo tipo um tipo pré-teste e uma maneira E se você fosse capaz de essencialmente tipo replicar as certificações e apenas dar a elas uma oportunidade de praticar todas as perguntas antes de realmente fazer a certificação em si, certo?
+[50:55]
+Sim. Exatamente. Essa é essa é minha ideia. Então dessa forma eles podem fazer ilimitado ao invés de ter que sair e comprar outra coisa.
+[51:05]
+Sim, faz muito sentido. Concordo completamente com isso. Acho que é uma ótima ideia.
+[51:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Não Complique Cross-Sells"
+NÚMEROS: Não especificado
+VISUAL: Mensagem simples: todo mundo complica demais, cross-sells são óbvios, muitos também podem ser backends
+[51:20]
+Todo mundo complica demais essa merda. Sim, Nick. Sim. De qualquer forma, longa história curta, pessoal, tipo espero que entendam a ideia de cross sales e espero que também possam ver tipo muitos desses cross sales também poderiam ser oportunidades para backend.
+[51:40]
+No entanto, no contexto de uma cross sale, apenas lembrem é tão simples quanto isso, certo?
+[51:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Exemplo Real: Kadisha Comprando Master Internet Marketing"
+NÚMEROS: $5K Master Internet Marketing, $1K preço de staff
+VISUAL: Caso real de ontem: membro do Inner Circle tentando comprar MIM para gerente de marketing, oferta de preço especial de staff
+[51:55]
+É tipo vou dar um exemplo literal novamente apenas de volta ao exemplo do Jeremy's inner circle. Então, Kadisha, vou usar você como exemplo porque seu vídeo está ligado e eu também literalmente tive um exemplo de você ontem à noite.
+[52:10]
+Você tentou ontem à noite comprar Master Internet Marketing por 5K. Por que você tentou fazer isso? Você já está no inner circle.
+[52:20]
+Eu estava tentando comprar para meu gerente de marketing.
+[52:30]
+E Leo já entrou em contato com você sobre o que podemos fazer por você ao invés? Sim. Ele não voltou para mim ainda com.
+[52:40]
+O que ele disse para você? Ele disse, "Estou tentando conseguir um tipo negócio para para comprar para tipo sua equipe."
+[52:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Staff Pricing como Cross-Sell"
+NÚMEROS: $5K → $1K por membro de staff, $6K Half Circle → $10K Full Inner Circle → +$1K staff = $11K AOV em 30 dias
+VISUAL: Estrutura de preços: membros existentes podem adicionar staff por $1K vs $5K completo, exemplo de progressão de AOV de Kadisha
+[52:55]
+Sim. Então, longa história curta, tipo temos o que chamamos apenas de preço de staff onde se alguém tipo Kadisha que já é membro do inner circle e já nos paga, quer adicionar alguém à biblioteca de treinamento, uma parte de nossa equipe.
+[53:10]
+Tipo nunca cobraríamos dela o preço completo de cinco mil, apreciamos sua disposição para comprar isso, Kadisha. Obrigado. Mas vendemos por mil dólares. Apenas vendemos por $1.000.
+[53:25]
+Então, qualquer membro de staff que você queira adicionar, mil dólares uma vez, vamos adicioná-los.
+[53:35]
+Então, moral da história é é tipo, pense sobre isso. Agora pegamos Kadisha que foi do half circle para o Jeremy's full inner circle dentro de um dia. E então agora a pegamos do Jeremy's full inner circle para apenas mil dólares extras.
+[53:50]
+Então isso a leva a um AOV de $11.000 dentro dos primeiros mil dentro dos primeiros 30 dias de fazer um negócio conosco apenas baseado na oportunidade de ajudá-la mais. Isso é uma cross sale.
+[54:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Cross-Sell Durante o Processo de Vendas"
+NÚMEROS: $1K por pessoa de staff adicional
+VISUAL: Pergunta simples durante vendas: "Você tem mais alguém que quer adicionar à biblioteca de treinamento? Alguma equipe?" - cross-sell fácil e útil
+[54:10]
+Tecnicamente, aquela foi backend porque já tinham sido alguns dias. Mas novamente, meu ponto é é tipo quando estamos no meio de fazer a venda, também podemos apenas fazer a pergunta simples, que é uma pergunta útil para fazer para o benefício deles, também.
+[54:25]
+Você tem mais alguém que quer adicionar à biblioteca de treinamento? Alguma equipe? E então se a resposta é sim, quantas pessoas? Quem são eles? O que pode ser mais apropriado para eles?
+[54:40]
+Tipo como exemplo, se vocês alguma vez tiverem vendedores, nunca vamos cobrar de vocês para adicioná-los à biblioteca de treinamento de vendas. Temos um curso inteiro de treinamento de vendas. Vocês podem apenas nos mandar o email deles. Vamos adicioná-los.
+[54:55]
+Se vocês querem acesso a tipo todo o programa master internet marketing tipo Kadisha está dizendo mande uma mensagem mil dólares. Então novamente meu ponto é é tipo isso é um cross-sell fácil. Você quer treinar mais pessoas do que apenas você mesmo?
+[55:10]
+Você entende? Okay.
+[55:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Backend: Ofertas Após a Primeira Compra"
+NÚMEROS: Não especificado
+VISUAL: Transição para backend, definição: ofertas feitas DEPOIS que alguém já comprou e obteve resultado, ou próximo resultado lógico
+[55:25]
+E então obviamente fazemos a transição para backend. Então ofertas backend quero ser realmente direto quando digo isso. Elas podem parecer tremendas dependendo de como você faz.
+[55:40]
+Primeiro de tudo quero apontar o fato de que recurring high ticket na minha opinião é a melhor forma de um backend. Dá a você uma oportunidade de continuamente ajudar pessoas.
+[55:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Recurring High Ticket = Melhor Backend"
+NÚMEROS: 30 dias ciclo de cobrança
+VISUAL: Promessa: resultados perpétuos dentro do ciclo de cobrança, meta de dar resultados a cada 30 dias antes da próxima cobrança
+[56:00]
+Você apenas tem que ter a oportunidade de conseguir resultados perpétuos para as pessoas com quem está trabalhando. Os resultados perpétuos devem idealmente estar dentro do ciclo de cobrança.
+[56:15]
+Então, minha meta com vocês, como exemplo, para todos que sentam aqui e pagam 30 dias que não pagaram antecipadamente anualmente. Minha meta é conseguir resultados para vocês a cada 30 dias antes de me pagarem dinheiro novamente.
+[56:30]
+Okay? Essa é minha promessa consistente numa base mês a mês manter conseguindo resultados para vocês. Novamente, obviamente isso mantém vocês sendo parte do grupo, mantém vocês nos pagando dinheiro. É nosso negócio. Vocês entendem?
+[56:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Backend Também Pode Ser Próximo Resultado Lógico"
+NÚMEROS: $2-3K High Ticket Closer → $25K evento anual
+VISUAL: Definição alternativa: depois que alguém compra e consegue resultado, fazer upsell para a próxima coisa lógica que faz sentido
+[56:55]
+Backend também pode significar que depois que alguém compra algo e conseguiu o resultado do que quer que seja que você faz upsell para a coisa que faz sentido em seguida.
+[57:10]
+Então, vamos voltar àquele exemplo do Dan Lock com seu programa high ticket closer. Tipo eu disse, ele vendeu para pessoas regulares. Essas eram apenas, você sabe, Joes trabalhadores. Eles queriam se tornar um high ticket closer.
+[57:25]
+Eles gastaram tipo, acho que era 2.000 ou $3.000 naquele programa high ticket closer. Ele vendeu tipo 15.000 pessoas para aquela merda. Estava arrasando. Okay, arrasando.
+[57:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Caso Dan Lock: HTC Program Backend"
+NÚMEROS: $2-3K programa inicial, 15.000 alunos, evento anual em Vancouver, $25K upsell, $5M em poucas horas
+VISUAL: Funil completo: programa básico → alunos conseguem empregos de closer → evento anual → upsell de $25K → pessoas pulando mesas para comprar
+[57:45]
+Agora, depois que as pessoas passaram pelo programa de sete semanas, elas sairiam por aí e começariam o processo de fazer exatamente o que o programa prometeu, tornando-se um high ticket closer.
+[58:00]
+Elas começariam a conseguir empregos de fechamento. Elas começariam a literalmente apenas vender. Elas teriam essas posições remotas. E novamente, isso é tudo antes isso é tipo normalizado ao grau que é hoje.
+[58:15]
+Na verdade era bastante novo naquela época, por mais surpreendente que isso soe, mesmo que fosse, você sabe, não há tanto tempo. Mas de qualquer forma, ele então teria um evento anual.
+[58:30]
+O evento anual era em Vancouver, Canadá. Ele tinha um upsell de $25.000 neste evento. Nunca vou esquecer o primeiro evento. Foi inacreditável.
+[58:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Quem Vai ao Evento?"
+NÚMEROS: Não especificado
+VISUAL: Pergunta retórica: quem é mais provável de aparecer? Pessoas que conseguiram resultados ou pessoas que não conseguiram? Evento em si é backend upsell
+[58:50]
+Quem vocês acham que é mais provável de aparecer no evento? As pessoas que conseguiram os resultados do programa inicial ou as pessoas que não conseguiram os resultados do programa inicial?
+[59:05]
+Quem vocês acham que é mais provável de aparecer no evento? O evento, a propósito, em si também é um back-end upsell. Então, apenas vir ao evento logo de cara é uma oferta back-end naquele exemplo.
+[59:20]
+Naquele evento, as pessoas que estavam lá eram algumas das estudantes de mais alta calibração que ele tinha. Essas eram algumas das pessoas que eram mais envolvidas, mais entusiasmadas, conseguiram os melhores resultados.
+[59:35]
+Eu vi essas pessoas literalmente pularem sobre mesas para chegar aos fundos da sala para comprar o upsell de $25.000. Eu vi Dan fazer tipo $5 milhões em tipo algumas horas apenas desse backend upsell com este evento e esta oferta de $25.000.
+[59:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Gap de Preço é Uma Ilusão"
+NÚMEROS: $2-3K → $25K (Dan Lock), $5K → $60K/ano (Jeremy)
+VISUAL: Conceito chave: não se preocupe com grandes saltos de preço, o gap de preço é uma ilusão mental que te segura
+[60:00]
+Ele pegou alguém de uma compra de $2 a $3.000 e numa base anual ordenharia outros tipo 5 milhões de sua demográfica apenas tendo uma compra de 25k.
+[60:15]
+Muitas pessoas acham que é audacioso ter um salto tão alto. Eu tenho um salto ainda maior. Novamente, pessoal, temos pessoas que vão daquilo tipo pegue Omar no chat.
+[60:30]
+Omar estava dizendo que ele comprou algo de nós. Disse algum eu nem sei do que ele está falando. Curso de branding de mídia social. Eu eu nem sabia que tenho isso.
+[60:45]
+Ele comprou alguma merda tipo essa e aqui está ele no inner circle conosco. Omar faz parte deste grupo há muito tempo. Para ser claro, aqui está meu ponto.
+[61:00]
+Minha oferta de menor ticket é cinco mil. A coisa mais próxima a ela custa 60k por ano. Okay. O que quero que se desconectem é a ideia de que há um gap de preço grande o suficiente onde não faz sentido.
+[61:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Exemplos Universais de Grandes Gaps de Preço"
+NÚMEROS: Lamborghini Huracan $200K → modelos especializados $5M, Aventador $200-400K, Revuelto $400-700K
+VISUAL: Marcas de luxo: Lamborghini, Ferrari, marcas de bolsas - todas têm amplas faixas de preço, empresas que perdem receita são as que não têm ofertas audaciosas
+[61:20]
+Quero que percebam que o gap de preço é uma ilusão. É uma ilusão que os segura. Okay? Há uma quantidade incrível de exemplos que você poderia olhar através de praticamente todas as grandes marcas.
+[61:35]
+Okay? Vou usar alguns exemplos muito óbvios. O Lamborghini Huracan é tipo um carro de $200.000. Carro muito confiável, mas é um Lamborghini de nível de entrada.
+[61:50]
+Lamborghini também faz carros que custam literalmente tipo $5 milhões para as versões especializadas de certos carros que eles têm. Eles têm carros de dois a três milhões. Eles têm carros tipo o SVJ, que você pode considerar entrar mais naquela faixa de preço mais alta devido à sua limitação.
+[62:10]
+Mas aqueles estão em qualquer lugar de tipo 600 a um milhão de dólares. Você pode conseguir um Aventador por 200 a 400. Você pode conseguir um Revuelto por uma quantidade inacreditável, tipo 400 a 700.
+[62:25]
+O preço deles está por todo lado. Ferrari faz a mesma coisa. Todas as empresas que vendem bolsas fazem exatamente a mesma merda. Há uma faixa tão ampla de preços.
+[62:40]
+E as e as empresas que perdem a receita são as empresas que apenas não têm as ofertas audaciosas em primeiro lugar.
+[62:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Backend Ideal: Mais Envolvimento, Mais Velocidade, Maior Resultado"
+NÚMEROS: Exemplo Kadisha: $85K primeiro emprego → $120-150K segundo emprego → $400K eventual
+VISUAL: Estrutura de backend audacioso: mais envolvimento pessoal, resultado mais rápido, nível de resultado mais alto possível
+[63:00]
+Eu encorajaria que todos vocês tenham alguma versão de uma oferta back-end onde ela é precificada de uma maneira que tem o máximo envolvimento de você, a maior velocidade para resultado, e o resultado de nível mais alto que você pode ajudar alguém a produzir.
+[63:20]
+Tipo como exemplo, novamente, vou usar Kadisha porque tenho escolhido ela aqui nesta chamada inteira. Tipo Kadisha, a pessoa média ganha 85K. Você pode dar a alguém um emprego um emprego que pagaria a eles acima de 400K?
+[63:40]
+400k? Não não para o primeiro emprego. Quem você poderia conseguir um emprego de $400.000 para?
+[63:55]
+Okay. Eu diria eu posso conseguir eu ajudei pessoas a conseguir 200k até o segundo emprego oferta.
+[64:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Trabalhando Através do Backend em Tempo Real - Kadisha"
+NÚMEROS: $85K primeiro emprego → $120-150K segundo emprego (dependendo) → $200K ajudou alguém → 3 anos para quantias audaciosas
+VISUAL: Processo de descoberta ao vivo: primeiro emprego $85K, segundo emprego pode ser $120-150K, quanto tempo para grandes quantias? 3 anos
+[64:15]
+Então pense sobre isso, certo? Então, veja, assista assista como ela trabalha através disso em tempo real para que vocês possam todos entender como trabalhar através disso, também. Okay.
+[64:30]
+Então, agora, Kadisha, o primeiro emprego paga 85k em média que você ajuda alguém a conseguir. É isso que você está implicando, correto? Sim.
+[64:45]
+E quando você pensa sobre isso no contexto de conseguir alguém um emprego de 400k, soa audacioso porque você está pensando sobre isso no contexto de vender para eles primeiro.
+[65:00]
+Esta é uma oferta back-end. Isso seria depois que eles já compraram de você, significando que você já conseguiu um emprego para eles por 85K. Okay?
+[65:15]
+Agora, você está falando de dinheiro de segundo emprego. Qual é a quantidade média que alguém poderia fazer depois que já conseguiu um desses empregos?
+[65:30]
+Oh sim, eles podem conseguir tipo 120 algum. Sim, 150 dependendo.
+[65:45]
+Em que ponto eles podem fazer uma quantidade audaciosa de dinheiro? Diria dentro de tipo três anos. Quero dizer.
+[66:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Descoberta: Base de Clientes Existente"
+NÚMEROS: 2 clientes ajudados diretamente ($70K → $150K), "muitos" empregos totais conseguidos
+VISUAL: Realização: tem base de clientes que já conseguiram primeiro emprego, podem ser vendidos para segundo emprego melhor
+[66:05]
+Okay. Quantas pessoas você trabalhou com que chegaram ao ponto onde elas estão tão longe assim?
+[66:20]
+Ajudei alguém ir de 70 para 150. Então essa é uma. E então ajudei alguém pelo menos duas. Quero dizer que tipo diretamente, você sabe, que eu fiz.
+[66:35]
+Você você acha que faria sentido ter uma oferta onde depois que alguém já conseguiu seu primeiro emprego, você as ajuda a conseguir um segundo emprego com pagamento mais alto?
+[66:50]
+Sim. Você tem uma oferta para isso agora? Não. Não.
+[67:05]
+Por que não? Eu acho teria realmente pensar sobre isso.
+[67:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Revelação: Backend Óbvio de Kadisha"
+NÚMEROS: "Muitos" clientes ajudados a conseguir empregos
+VISUAL: Momento de realização: base de clientes completa que poderia comprar oferta de segundo emprego, criminalmente antiético não oferecer
+[67:25]
+Você vê quão óbvio isso é? Sim. Sim. Quantas pessoas você ajudou a conseguir um emprego?
+[67:40]
+Oh, muitas. Quero dizer, é demais para contar.
+[67:55]
+Então, e pense sobre isso. Essa é uma base de clientes de pessoas que tenho certeza que você pode se relacionar, teriam mais do que disposição suficiente para conseguir um emprego ainda melhor depois que conseguiram seu primeiro emprego.
+[68:10]
+Porque essa possibilidade, parece, só desbloqueia depois que elas conseguiram seu primeiro emprego e o mantiveram por uma certa quantidade de tempo, certo?
+[68:25]
+Sim. Quão criminalmente antiético é não ajudar aquela pessoa a fazer ainda mais dinheiro e ter algum tipo de oferta back-end?
+[68:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Oportunidade de Backend de Kadisha"
+NÚMEROS: Poderia igualar receita atual, sequência de email automatizada após conseguir emprego
+VISUAL: Sistema completo: backend para base existente, sequência de lembrete para vendedores, emails automáticos após X tempo, setup de chamadas de vendas
+[68:45]
+Faz tanto sentido para você ter uma oferta back-end. Você poderia provavelmente igualar o que você faz agora em algum tipo de oferta back-end para a base de clientes existente que você tem.
+[69:00]
+E você além disso poderia ter uma sequência de lembrete inteira internamente para seus vendedores que fecham essas pessoas. Você poderia ter uma sequência de email inteira que sai com depois de uma certa quantidade de tempo, uma vez que você conseguiu um emprego para eles passa que uma sequência dispara.
+[69:20]
+Que começa a dizer a essa pessoa, a propósito, você trabalhou neste emprego por esta quantidade de tempo. É uma oportunidade agora para você conseguir um emprego com pagamento ainda mais alto. Adoraríamos a oportunidade de falar com você sobre isso.
+[69:35]
+Você pode preparar um conjunto inteiro de chamadas de vendas apenas baseado naquela lógica de que acabamos de falar ali. Você entende?
+[69:50]
+Sim.
+[70:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Exemplo: Andrew - Transição para Hands-On"
+NÚMEROS: 6-8 meses no Inner Circle, +$100K extra vs quando entrou, $780K/mês preso → agora arrasando
+VISUAL: Caso: membro lento no Inner Circle, Jeremy identifica potencial, oferece transição para hands-on no momento certo, resultados dramáticos
+[70:05]
+Temos pessoas com quem trabalhamos no inner circle onde passaremos por um período de tempo com elas onde tipo Andrew é um bom exemplo disso. Andrew eu usei como exemplo com vocês muitas vezes.
+[70:20]
+Andrew é a oferta de casa de vida sóbria no nicho de info de imóveis. E Andrew no inner circle honestamente realmente me irritou. Ele ia tão devagar com tudo que eu precisava que ele fizesse.
+[70:35]
+E eu sou tipo Barry Bonds em esteroides de pico. Sou tipo Kobe Bryant em seu auge. Sou tipo Dwayne Wade e LeBron passando alley oops um para o outro em cada jogada com negócios de info de imóveis.
+[70:50]
+É tipo o negócio mais fácil na história de negócios para nós no espaço de info apenas crescer aquela pessoa dramaticamente. Okay. Mesma coisa com qualquer tipo de produto ecom de high ticket que é baseado em lead gen.
+[71:05]
+E Andrew estava no inner circle por um bom eu não sei tipo seis oito meses vamos dizer. E eu o procurei e fiquei tipo, "Ei, tipo você sabe, você progrediu ao ponto onde você fez tipo, não sei, 100K extra comparado ao que você estava quando primeiro entrou."
+[71:25]
+Mas eu absolutamente desprezo o quão devagar você está indo e sei com certeza que você poderia fazer muito mais se você apenas me deixasse entrar e tipo fazer um negócio.
+[71:40]
+Você sabe, muito raramente, para ser claro, eu vou procurar qualquer um de vocês e dizer, "Quero transicioná-lo para um negócio hands-on." Mas com Andrew, eu fiz isso porque novamente, sei quanto mais dinheiro o cara pode fazer.
+[71:55]
+E foi exatamente o que fizemos. Nós o procuramos no momento apropriado para transicioná-lo para uma oferta de nível mais alto que tínhamos.
+[72:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Lição Universal: Próximo Resultado Óbvio"
+NÚMEROS: Não especificado
+VISUAL: Princípio: após conseguir resultado da oferta atual, há outro resultado que você pode ajudá-los a alcançar, não ajudar = perder muito dinheiro
+[72:15]
+Quero que vocês entendam a mesma coisa. Tão óbvio quanto foi no exemplo de Kadisha, há provavelmente algo extremamente óbvio dentro do que vocês estão fazendo agora com o qual vocês estão falhando em pensar.
+[72:30]
+Uma vez que alguém consegue o resultado do que vocês consideram atualmente sua oferta high ticket, há outro resultado com o qual você pode ajudá-los em seguida.
+[72:45]
+E não ajudá-los com esse próximo resultado está perdendo muito dinheiro para você.
+[73:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Recapitulação: Criação de Ofertas"
+NÚMEROS: 4 variáveis principais
+VISUAL: Resumo completo: Front end, Downsells, Cross-sells, Backend - cada um requer pensamento diferente, baseado em resultados desejados + tratamento de objeções
+[73:05]
+Okay? E então de uma perspectiva de criação de ofertas, aqui está todo o ponto do que estou tentando sentar aqui e articular para vocês. Vocês podem ver como têm que pensar completamente diferente no contexto dessas quatro variáveis.
+[73:20]
+Front end, downsells, cross-sells, backend. Vocês podem obviamente entender também da perspectiva de apenas ideação em geral.
+[73:35]
+Os stacks de oferta não têm nada a ver com o que quer que esteja no stack. Tem a ver com os resultados desejados, os resultados desejados, e tratamento de objeções.
+[73:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Conclusão e Aplicação"
+NÚMEROS: Não especificado
+VISUAL: Mensagem final: aplicar estas lições torna difícil não fazer bom dinheiro, este é o pensamento necessário, como funciona
+[73:55]
+Okay? Quando vocês aplicam essas lições, é realmente difícil ferrar fazer um bom pedaço de dinheiro. Okay, isso é com o que vocês precisam estar pensando. É assim que essa merda funciona.
+[74:10]
+Desmutem-se e façam perguntas se tiverem alguma. Deixem no chat se tiverem alguma. Vamos encerrar essa merda.
+[74:25]
+Indo uma vez. Indo duas vezes. Tudo bem. Então, vocês estão todos prontos para agir sobre isso.
+[74:40] [Devon faz pergunta sobre backend de perda de peso]
+[74:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Exemplo Devon: Perda de Peso Backend"
+NÚMEROS: 50-25 libras → 15-10 libras → corpo de praia/biquíni
+VISUAL: Progressão: primeiro objetivo (perder peso) → segundo objetivo (ficar definido/praia), diferentes programas, diferentes rotinas, diferentes resultados
+[75:00]
+Poderia conseguir feedback sobre uma ideia em torno disso? Sim, vá em frente. O que você tem?
+[75:15]
+Então por exemplo, nós trabalhamos com mulheres de 40, 50, você sabe, e tipicamente as ajudamos a perder, elas vão de precisar perder tipo 50 a 25 libras e elas chegarão tipo àquela, você sabe, precisar perder 15 a 10 libras de faixa.
+[75:35]
+Então com aquele próximo upsell, seria tipo, "Tudo bem, então você tipo perdeu as, você sabe, 50 libras, você se sente muito bem, mas agora tipo você realmente quer ser capaz de sair na praia tipo usar um biquíni, tipo aquele nível em um programa mais aprofundado."
+[75:55]
+Absolutamente. Há algum tipo cara como exemplo perfeito. É tipo estou passando por uma jornada de perda de peso agora. Estou abaixo 14 libras de gordura em seis semanas.
+[76:10]
+Estou acima três libras de músculo e tenho que manter real. Tipo eu eu realmente não tenho intenção de fazer nada além de apenas perder um monte de gordura agora.
+[76:25]
+Você sabe, acho legal que estou ganhando músculo ao mesmo tempo. Tipo estou levantando peso e tudo, mas apenas para ser bastante direto, tipo eu não eu não quero eu nem estou pensando sobre tipo, oh, eu deveria tipo deixar meus ombros maiores?
+[76:40]
+Você sabe, eu deveria tipo arredondar meu peito mais. Ou eu deveria tipo pensar em abdominais. Estou literalmente apenas pensando em termos de perda de gordura.
+[76:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Exemplo Pessoal de Jeremy: Perda de Peso"
+NÚMEROS: -14 libras de gordura, +3 libras de músculo em 6 semanas
+VISUAL: Demonstração ao vivo: atualmente focado APENAS em perda de gordura, não pensando em definição/músculos ainda, mas ISSO MUDARÁ = backend natural
+[77:00]
+Então dessa dessa perspectiva, se essa é a intenção pela qual eu compraria um programa tipo o seu e para seu ponto, tipo esse é o resultado que tecnicamente comprei.
+[77:15]
+Uma vez que eu tipo novamente, é muito claro que isso vai acontecer comigo especificamente, é por isso que uso como exemplo. Uma vez que chego ao ponto onde aquela perda de gordura está lá e estou no tipo peso alvo que estou tentando alcançar, o que vem a seguir?
+[77:35]
+Obviamente cinzelar e ficar suculento, você sabe, e isso é um isso é um programa totalmente diferente. Essa é uma rotina totalmente diferente que meu treinador e eu vamos desenvolver. Esse é um conjunto totalmente diferente de resultados é conjunto totalmente diferente de melhores práticas.
+[77:55]
+É uma oferta totalmente diferente. Então, sim, absolutamente. Qualquer que seja o resultado principal na oferta principal, se há uma tipo linha de chegada muito óbvia para aquilo e então além daquilo ainda há mais resultados que podem ser alcançados mas eles são diferentes backend.
+[78:15]
+Sim, isso faz sentido porque o que o que você acabou de dizer é você nem está pensando sobre ficar super rasgado agora. Você apenas, você sabe, você quer se sentir realmente bem. Então.
+[78:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Validação: Ofertas Diferentes = Backends Diferentes"
+NÚMEROS: Não especificado
+VISUAL: Confirmação: perda de peso vs ficar definido = completamente diferentes, mesma lógica de Kadisha (primeiro emprego vs segundo emprego melhor)
+[78:35]
+Não estou pensando nisso nada, mano. Não estou pensando sobre o quão definidas minhas costas estão. Não estou pensando eu vou dizer tenho panturrilhas suculentas e bonitas, você sabe, mas isso é apenas por ser pesado por muito tempo.
+[78:50]
+Mas vou te dizer que isso é isso é sobre a única coisa que atualmente admiro. Todo o resto eu tipo eu eu não me importo em ir tipo assim e ver tipo bíceps loucos.
+[79:05]
+Eu eu não eu não olho para meu antebraço e digo tipo, "Caramba, tipo onde está minha onde está aquela veia gigante de mangueira?" Você sabe?
+[79:20]
+Eu literalmente apenas penso tipo, "Tudo bem, ótimo. Balança está descendo. Estou retendo músculo. Estou perdendo mais gordura." É tipo literalmente tudo que penso.
+[79:35]
+Mas novamente, vou pensar sobre algo completamente diferente quando perder mais da minha gordura? Absolutamente. Então, sim, para seu ponto, eles são eles são ofertas completamente diferentes naquele exemplo.
+[79:50]
+Legal. Faz sentido. Obrigado.
+[80:00]
+Sim. E novamente, é o mesmo exemplo do que estamos falando com Kadisha ali, apenas para tipo elaborar mais sobre isso, que é é extremamente óbvio que depois que ela consegue um emprego para alguém.
+[80:15]
+Se há uma oportunidade para aquela pessoa conseguir um emprego ainda melhor depois que já tem um, por que diabos ela não venderia isso para eles?
+[80:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Ética de Não Oferecer Backend"
+NÚMEROS: Não especificado
+VISUAL: Perspectiva moral: escolher não ajudar alguém a conseguir resultado ainda melhor quando você poderia = antiético, também = perder muito dinheiro
+[80:35]
+Você sabe, simplesmente não faz sentido não fazer. É E novamente, eu eu olho para isso mais como tipo tipo de coisa de ética onde fico tipo, "Então, você está me dizendo que poderia ter ajudado alguém a conseguir um resultado ainda melhor e tipo você apenas escolheu não fazer por alguma razão?"
+[80:55]
+Tipo, como diabos isso faz algum sentido? Você sabe, e obviamente ajuda vocês. Vocês têm que entender tipo eu acredito profundamente no poder do dinheiro.
+[81:10]
+Todos vocês precisam acumular muito mais recursos do que têm agora. Para que possam verdadeiramente sair por aí e ajudar o mundo de uma maneira muito maior e mais impactante do que fazem atualmente e ajudar a si mesmos a viver uma vida legal no processo.
+[81:25]
+Vocês estão perdendo muito dinheiro por não pensar dessa maneira.
+[81:40]
+Sim, faz sentido.
+[81:50]
+Sim. Okay, legal. Algo mais? Alguém mais comentários, ideias, perguntas?
+[82:00] [Devin compartilha perspectiva sobre "cada solução cria um problema"]
+[82:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Filosofia de Devin: Cada Solução Cria Novo Problema"
+NÚMEROS: The Biggest Loser - todos voltaram a ~500 libras
+VISUAL: Ciclo: perder peso → problema = manter peso, fazer dinheiro na loja → problema = construir loja, ter loja → problema = produtos
+[82:20]
+Eu eu não sei se ele pode já ter dito isso, mas minha namorada estava falando comigo, mas algo que você sabe, a maneira que eu enquadro também é tipo cada solução que temos apenas cria um problema.
+[82:35]
+E você sabe, apenas para voltar ao exemplo de perda de peso, é tipo o problema então o problema então se torna manter o peso. Você sabe, tipo a maioria das pessoas que perdem um monte de peso, elas tipo se você olha para The Biggest Loser ou algo assim.
+[82:55]
+Há um documentário sobre isso e sobre como cada um deles faz nós apenas voltamos para tipo 500 libras e coisas assim. Então, é bem louco.
+[83:10]
+Mas tipo para mim, você sabe, nós alguém decide, okay, vou começar a fazer dinheiro na loja agora. E é tipo, bem, qual é o novo problema? Eu tenho que construir uma loja. Bom. Venda toda aquela merda.
+[83:25]
+Oh, agora preciso de produtos agora que tenho uma loja. Tudo bem, legal. Produtos done for you. Você sabe.
+[83:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Validação: Problemas Contínuos = Oportunidade Backend"
+NÚMEROS: 1-2 instâncias em 6 anos de pessoas dizendo "fiz o suficiente"
+VISUAL: Realidade: sempre há mais problemas após soluções, quantidade ilimitada de ações geradoras de receita, raramente alguém realmente para
+[83:45]
+Faz muito sentido. E esse é um bom exemplo. Novamente, se usamos o inner circle, é tipo isso é realmente importante. Vocês entendem isso, okay?
+[84:00]
+A continuação é algo que é realmente importante de entender. Tipo eu não tento intencionalmente criar novos problemas para vocês. Eu tento resolver os problemas que vocês ativamente têm.
+[84:15]
+Mas também digo às pessoas diretamente, fico tipo, há uma quantidade ilimitada de ações geradoras de receita que poderíamos tomar. Vocês vão fazer um esforço concentrado em um conjunto específico de problemas.
+[84:30]
+E do outro lado disso está a próxima coisa em que vocês precisam prestar atenção para fazer muito mais dinheiro.
+[84:45]
+E houve, sem exagero, acho que uma a duas instâncias ao longo dos seis, sim, seis anos agora que tenho executado isso onde vi alguém dizer tipo, "Tudo bem, fiz o suficiente."
+[85:00]
+Ou tipo em algumas instâncias, alguém saiu. E então eles apenas tipo se foram por um pouco depois disso.
+[85:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Não Deixe Pessoas com Mais Problemas"
+NÚMEROS: Não especificado
+VISUAL: Ética: não apenas resolver um problema se você sabe que há problema maior vindo, oportunidade para empresa + genuinamente ajudar cliente
+[85:20]
+O ponto que estou tentando fazer é tipo geralmente há mais problemas do outro lado de soluções. Para o ponto de Devon que ele estava apenas fazendo e vocês querem entender tipo vocês não querem apenas deixar pessoas com mais problemas, você sabe?
+[85:40]
+É tanto uma oportunidade para sua empresa gerar mais receita, mas também é uma oportunidade para você ajudar essas pessoas de uma maneira que, você sabe, realmente vai movê-las para frente.
+[85:55]
+Não apenas deixe alguém no pequeno bolso de, você sabe, resolver uma coisa se você sabe que há uma coisa maior no backend que elas estão prestes a enfrentar.
+[86:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Analogia: Treinamento Básico de Espada vs Dragão"
+NÚMEROS: Não especificado
+VISUAL: Metáfora: treinar alguém em combate básico de espada, depois dragão aparece e eles não sabem lutar contra dragão = antiético = vão morrer
+[86:15]
+Imaginem tipo treinar alguém de uma maneira básica em luta de espada e então eles tipo, "Okay, legal." E então de repente um dragão aparece e eles não têm ideia de como lutar contra um dragão.
+[86:30]
+Você sabe, é novamente tipo limítrofe antiético porque eles vão morrer se enfrentarem um dragão e eles só sabem tipo combate básico. Você entende o que quero dizer?
+[86:45]
+Levem pessoas à extensão total de seu potencial.
+[87:00]
+Tudo bem, legal. Outras perguntas, comentários, feedback.
+[87:10]
+Tudo bem, ótima ótima chamada todos. Obrigado por estarem aqui. Espero ótima Black Friday. Estamos no meio de esmagar Cyber Monday, também. Vamos ficar mais ricos. Falo em breve.
+📊 RESUMO EXECUTIVO
+NÚMEROS PRINCIPAIS:
+Inner Circle: $60K/ano (Half) ou $5K-10K/mês (Full)
+Master Internet Marketing: $5K one-time (downsell)
+Staff Pricing: $1K por membro adicional
+Hands-On Deal: $25K/mês + 10% profit share + $50K ad spend inicial
+Kadisha: $30-50K → $85K (primeiro emprego) → $120-150K+ (segundo emprego)
+Dan Lock HTC: $2-3K programa → $25K evento backend → $5M em poucas horas
+John Madson: $10-12K base → $30K cross-sell (50% taxa de aceitação)
+Jeremy Móveis: $6K compra → $1K cross-sell perdido (16%+ adicional)
+Jeremy AI: $25K/ano plano Deli Immortal, 2.000 mensagens/mês
+Jeremy perda de peso: -14 lbs gordura, +3 lbs músculo em 6 semanas
+Inner Circle: 40+ membros fazendo $1M+/mês, 200+ mensagens atraso no chat
+Roy: $6K/mês, $12K reembolsado após 3 semanas
+Brian Mark: preso $780K/mês → $1.6M CAD
+11 componentes no Inner Circle stack
+4 masterminds/ano vs 365 dias participação ativa
+ESTRATÉGIAS E SISTEMAS:
+Criação de Ofertas:
+Começar com resultados desejados (não features aleatórias)
+Cada ponto de oferta deve relacionar a resultado desejado OU superar objeção
+Oferta supera objeções automaticamente (não apenas palavras)
+Compartimentalização mental do cliente (mastermind = tudo vs 1 de 8 componentes)
+Componentes ocultos: coisas que cliente precisa mas não sabe que quer ainda
+Articulação de Front-End:
+Fórmula: "Ajudamos [situação] a [resultado] através de [nome da oferta]" - PARE AÍ
+Não listar stack até final absoluto do processo de vendas
+Cliente compra RESULTADO, não features
+Acreditar no stack = último passo
+Downsell:
+Versão reduzida da oferta principal
+Incluir versões diluídas de componentes desejados
+Liquidar custo de aquisição
+Exemplo: Jeremy AI no chat vs portal completo
+Cross-Sell:
+Complementos óbvios (hambúrguer + batatas + shake)
+Planos de transição/bridge
+Perguntar durante processo de vendas
+Não forçar (caso almofadas grátis)
+Alta taxa de aceitação quando óbvio
+Backend:
+Recurring high ticket = melhor forma
+Resultados perpétuos dentro do ciclo de cobrança
+Próximo resultado lógico após primeiro
+Gap de preço é ilusão mental
+Base de clientes existente = oportunidade
+Sequências automatizadas de email
+Cada solução cria novo problema
+Reversão de Risco:
+Não precisa ser garantia formal
+Pode ser demonstração de integridade através de exemplos (caso Roy)
+Crença genuína + vetting bidirecional
+Proteção de reputação acima de dinheiro
+ESTRUTURA:
+4 Tipos de Ofertas:
+Front-End: Máximo apelo, resultados desejados claros, articular como resultado + nome
+Downsell: Versão reduzida, componentes diluídos, liquidar CAC
+Cross-Sell: Complementos óbvios, planos de transição, perguntar durante vendas
+Backend: Recurring ideal, próximo resultado lógico, base existente
+Hierarquia de Vendas:
+Resultado (topo - o que cliente quer)
+Preço (segunda pergunta natural)
+Crença no Stack (último passo)
+Princípios de Pricing:
+Gap de preço não importa se valor é óbvio
+Exemplos: Lamborghini $200K-$5M, Inner Circle $5K-$120K/ano
+Empresas que perdem receita = não têm ofertas audaciosas
+DADOS FINANCEIROS:
+AOV de Kadisha: $6K → $10K → $11K em 30 dias (Half → Full → Staff)
+Cross-sell John Madson: 50% aceitação em $18-20K adicional
+Dan Lock backend: $2-3K → $25K = $5M em poucas horas
+Jeremy móveis: $1K cross-sell = 16%+ receita adicional
+Roy: $12K reembolsado intencionalmente para proteger reputação
+DURAÇÃO: ~87 minutos FORMATO: Treinamento ao vivo com Q&A, exemplos de casos reais, exercícios interativos com grupo

@@ -1,0 +1,797 @@
+Transcrição Completa: Growing Your Business with LinkedIn - Omar Khateeb
+[00:00]
+"Thanks guys. All right. Fantastic. Well, thanks to be here and big thank you to Jeremy and Marina for hosting me. It was very, very kind of them. Um, I'm really excited to share. This is the first time I've done this talk."
+[00:15]
+"Um, and I'm very excited to share with you guys. Many of you I've gotten to know over the time. And so, if you have any questions now or even after, please like, let me know. Uh, other thing is that if you look me up on Instagram, Omar Mati is my handle. Take pictures of me. My wife loves seeing pictures of me and videos of me talking."
+[00:35]
+"So, as for the agenda, we're going to talk about why LinkedIn. Jeremy said he's like, you know, you may not need to talk about this too much. I do want to touch on this because I want to give you a much deeper thought about it."
+[00:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Agenda: Why LinkedIn, LinkedIn Growth Features, B2B Outbound Strategies, Whales and Deal Velocity, Q&A"
+NÚMEROS: Não especificados
+VISUAL: Lista estruturada de tópicos da apresentação, layout simples e direto
+[01:00]
+"We're going to go into LinkedIn growth features, B2B outbound strategies, and then getting into whales and accelerating deal velocity, and then we're going to get to Q&A. I'm going to go through this really quickly. There's going to be two slides that you guys are going to take notes on."
+[01:15]
+"So, just for context, just so you understand like how I do deals and everything. My company helps medtech companies grow sales and accelerate technology adoption using social media. I work in a very conservative, highly regulated environment."
+[01:30]
+"So, when I was talking about using social media to sell back in 2015, people thought I was crazy. They still think I'm a little bit crazy, except it actually works now. This side of my business I started just last year."
+[01:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Course Results"
+NÚMEROS: $250K em receita do curso no último ano
+VISUAL: Apresentação de resultados financeiros, demonstração de validação do método
+[01:50]
+"So, you know, for last year, I started a course. The course did about 250K last year. Okay. I'm going to use another example, which is Chris, who's been doing this a little bit longer. He started his company in 2020."
+[02:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Chris - Success Case"
+NÚMEROS: $40 milhões em receita, empresa iniciada em 2020
+VISUAL: Case study de sucesso, timeline de crescimento, ênfase em resultados inbound via LinkedIn
+[02:10]
+"And again, 40 million in revenue, all inbound, all LinkedIn. Okay. The flywheel for my company is this podcast and live show called The State of Medtech. If you want to check it out, please do. Subscribe and give it five stars."
+[02:25] 📊 SLIDE DETECTADO - AÇÃO NECESSÁRIA ───────────────────────────── TEXTO: "TAKE NOTES - Free Resources"
+NÚMEROS: 2-3 horas de implementação necessárias
+VISUAL: Destaque visual chamativo, indicação de informação crítica, layout de "call to action"
+[02:30]
+"Now, here are the two things you need to take notes on. You ready? Okay, number one, everything you need to know about LinkedIn to set up your profile to actually optimize the living hell out of it and make it persuasive so you make money. Go to my minicourse."
+[02:45]
+"So upgrademylinkedin.com, use the code omar's friend. O M A R S F R I E N D. You get it for free. Sit down on your ass and spend two to three hours and do it. Okay, that's all you got to do. It's everything you need to know."
+[03:05] 📊 SLIDE DETECTADO - AÇÃO NECESSÁRIA #2 ───────────────────────────── TEXTO: "Omni Creator - Content Creation Tool"
+NÚMEROS: $20/mês após trial, 30-60 dias grátis com código
+VISUAL: Apresentação de ferramenta SaaS, comparação com Buffer/Hootsuite, destaque para comunidade de engajamento
+[03:10]
+"Next one. I started a SaaS company earlier this year with a co-founder of mine. I'm not the technical guy. So, when you get started, okay, if any of you have used Buffer or Hootsuite or any of that stuff, omnicreator.com, that's O M N I C R E A T O R dot com."
+[03:30]
+"Okay, it's a tool for content creation. There's also community. When you guys start posting and everything, this actually will drive engagement because there's creators in here who will automatically go and engage with your stuff. Use the code omnipost and you get that for free for about I think 30 or 60 days. After that, it's 20 bucks a month."
+[03:55]
+"We talk about a lot of products here, right? And we recommend stuff like books and everything. So, if I told you like I'm talking to you, you should go buy this one thing. Are you going to go buy it? Like let's say I tell you, you know, you should buy these shoes. You're just gonna go buy them."
+[04:15]
+"Okay, that's true. I have really good influence. But most of us, before we buy anything, we're going to do what? We're going to look it up. Okay. If we don't Google it, what are we going to do? We're going to go look it up on Amazon."
+[04:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Amazon Lint Roller Example - $9 Decision"
+NÚMEROS: $9 (preço do produto)
+VISUAL: Screenshot de página de produto Amazon, múltiplas fotos, vídeos de clientes, ratings e reviews, exemplo de persuasão para decisão de baixo valor
+[04:35]
+"So, let me give you an idea of like a $9 decision I had to make a few days ago. I wear a lot of black. If you haven't noticed, I look good in black. Okay. Before I met my wife, I used to wear a lot of colors, right? kind of like those birds from Papua New Guinea."
+[04:55]
+"There's all these lint rollers on Amazon. There's a ton of them. Okay, I ended up getting this one. Okay, for a $9 decision, here's if you want to study persuasion, which if you don't study persuasion, you can't be in this group anymore. You have to study persuasion if you're part of Jeremy's group."
+[05:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Persuasion Elements on Amazon"
+NÚMEROS: Não especificados numericamente
+VISUAL: Múltiplas fotos de produto, vídeos de usuários, ratings, reviews detalhadas, elementos de prova social, layout otimizado para conversão
+[05:20]
+"So, on this page, you have ratings, right? You have multiple pictures, you have videos. If I want to get a little bit more insight, scroll down. There's people putting videos how they use it. There's all these things there depending on who I am to influence me to make a $9 decision."
+[05:40]
+"Why am I showing you this? How what does this have to do with LinkedIn? The human brain has not evolved for thousands of years. It's not going to evolve. It was never evolved to differentiate between digital and physical life."
+[06:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Digital vs Physical Reality - Brain Cannot Differentiate"
+NÚMEROS: Não especificados
+VISUAL: Comparação visual entre mundo digital e físico, conceito de comportamento consistente entre ambos ambientes
+[06:05]
+"Keep in mind I said physical life, not real life. This is the physical world. That's the digital world. It's the same thing, right? This is why people on social media have certain behaviors that translate into the physical world."
+[06:20]
+"And also consumer versus B2B decisions. This is the one thing I started talking about in my industry a long time ago and people didn't believe me that the people who would go to the hospital. So again, these med device companies are trying to sell to surgeons, hospital administrators."
+[06:40]
+"My industry thinks that these people wake up and put on a white coat or suit. They go to work and they become a different person. It's the same person. It's all the same thing. Meaning that the brain puts us all together. There's no differentiation."
+[07:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Omar's LinkedIn Profile - Persuasion Example"
+NÚMEROS: Não especificados
+VISUAL: Screenshot de perfil LinkedIn otimizado, múltiplos elementos persuasivos, foto profissional, banner customizado, headline impactante
+[07:05]
+"So, when it comes to doing business, whether I'm trying to get a meeting with somebody, get somebody on my podcast, whatever it is, they're going to look me up and they're going to fall on this page, which every single thing about this page is designed to persuade you before you even meet me."
+[07:25]
+"whether you are a sales rep, the CEO of a Fortune 500 company, or the chairman of a VC. Okay? And again, go to that upgrademylinkedin.com and use that code and you'll learn everything."
+[07:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Why LinkedIn? Microsoft Acquisition"
+NÚMEROS: $26.2 bilhões (aquisição LinkedIn), 2015 (ano), $22 bilhões (WhatsApp), $13 bilhões (NASA em 2013)
+VISUAL: Comparação de valores de aquisições, timeline, ênfase no investimento massivo da Microsoft
+[07:45]
+"So, why LinkedIn? Okay. First of all, does anybody know who owns LinkedIn? Microsoft. Perfect. Thank you. Microsoft acquired LinkedIn back in 2015 for $26.2 billion."
+[08:00]
+"To put that in perspective, that is their second largest acquisition behind Activision. The third acquisition is about $6 billion less than this. To put this into context, WhatsApp was purchased by Facebook for $22 billion. And in 2013, $13 billion buys you NASA."
+[08:20]
+"So that's a lot of money. And if you don't know anything about Bill Gates, Steve Ballmer, who is Bill Gates Microsoft CEO at one point, said the two most competitive people in the world he's ever met, Michael Jordan, Bill Gates."
+[08:40]
+"So they didn't acquire this for fun. This is a lot of money. Microsoft is trying to be the number one place in the cloud for all professional services, right? So collaboration, teams, all these things. And LinkedIn is their number one social platform for everything professional."
+[09:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "YouTube Acquisition Comparison"
+NÚMEROS: $1.6 bilhões (aquisição YouTube), receita a cada 2 semanas atualmente
+VISUAL: Comparação histórica YouTube vs LinkedIn, ênfase na oportunidade ainda não explorada, timeline de crescimento
+[09:05]
+"Let me give you a glimpse into the future. 10 years ago. No, maybe 15 years ago now. There was this really interesting company that got acquired and I remember thinking like, oh, it's like the home movie website. Okay, cool. Never thought anything about it, right?"
+[09:25]
+"How many of you wish you just threw up cat videos on a page. I didn't get into YouTube like until I don't know 2013, 2014. It was already too late, right? 1.6 billion, that is like the best buy of history because YouTube makes 1.6 billion just like every two weeks, right?"
+[09:45]
+"I don't know if LinkedIn's going to become a YouTube, but it's going to be something. It already is extremely valuable, but it's still early. That's the best part. Okay."
+[10:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "LinkedIn Trust Rankings"
+NÚMEROS: #1 em confiança entre plataformas sociais
+VISUAL: Ranking comparativo de plataformas sociais, métricas de segurança, legitimidade e experiência positiva do usuário
+[10:05]
+"Now, the other reason why is it such a valuable platform. If you look at all the social platforms, LinkedIn for many years ranks number one when it comes to trust. It's safe, it's secure, it's legit."
+[10:20]
+"The other thing is when people go on LinkedIn, their experience no matter by large factor is positive. You leave with a lot of positive encouragement, good information, all these things. They also don't have any issues with fake accounts and troll accounts, which is a big deal."
+[10:40]
+"LinkedIn, if you look when you use Omni Creator, that software, you'll see that your follower count go up and all of a sudden on a month it'll go down. Like mine, I think last month dropped by like three or 400. Why? LinkedIn actively goes and deactivates dead accounts and accounts that look fake."
+[11:00]
+"versus on Twitter and Facebook. They don't give a shit right? And Jeremy pointed this out a long time ago, especially with Instagram, is that Facebook has no reason. They're incentivized not to delete those accounts because they're a publicly traded company."
+[11:20]
+"Microsoft is publicly traded, but LinkedIn is not, right? So, their thing is that we have to make this as legitimate as possible. Including, if you look back here on my profile, see that little check mark right there? They make me verify myself with my government ID. That's how serious they take this."
+[11:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "High-Value LinkedIn Users Examples"
+NÚMEROS: $50-70 milhões em budget de marketing (Susan Hopkins), $3 bilhões sob gestão (Sofinnova)
+VISUAL: Screenshots de perfis de executivos C-level, VCs, chairmen de empresas bilionárias, demonstração de alcance de decision-makers
+[11:45]
+"So, of course, there's a lot of people getting on LinkedIn like Snoop Dogg is already on LinkedIn, you know, Beckham, but then there's these people and most people when they think of LinkedIn, they think of this, right?"
+[12:00]
+"But this lady, Susan Hopkins, which we'll talk about in a moment, this lady probably has somewhere between 50 to 70 million in budget under her for marketing. Okay? Think about it like that."
+[12:15]
+"This guy, Antoine Papaick, been on my show twice. He's become a good friend. This guy is a chairman and managing partner of Sofinnova. I wish these people used other platforms, right? Like Twitter and everything. They have them, but don't really use them."
+[12:35]
+"When VCs or venture capital started back in the 70s, there were three firms. Sequoia, Kleiner Perkins, and then these guys. They have $3 billion under management. So, I want you to think about LinkedIn not just in terms of what can you sell, what kind of partnerships and people can you meet who can open up doors for you."
+[13:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "LinkedIn Google Ranking Power"
+NÚMEROS: Quase 1 milhão de buscas no perfil
+VISUAL: Screenshot de resultados Google, posicionamento #1 ou #2, comparação de presença digital
+[13:05]
+"LinkedIn also ranks very high on Google. So, when you search my name, I pop right up immediately. And I have, you know, a lot of almost a million searches, not as much as Jeremy, who by the way doesn't do anything on LinkedIn. His LinkedIn shows up number two."
+[13:25]
+"So imagine when you meet an investor, you meet somebody and they try and look you up. This is going to pop up. What you don't want is sketchy things like this. This guy is the chair of cardiothoracic surgery at Presbyterian. It's a huge hospital. That just doesn't look good."
+[13:45]
+"So when somebody's going to you're going to make an impression on somebody in the physical world, you want the digital version of yourself to be so persuasive that they'll take a meeting with you. I send messages one time to people. They'll take meetings with me whether they're the CEO or not."
+[14:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "LinkedIn Growth Features - 4 Key Actions"
+NÚMEROS: 4 ações principais
+VISUAL: Lista numerada com destaque visual, framework de crescimento, layout de checklist
+[14:10]
+"Now, LinkedIn growth features for your profile and company. Okay. Very, very important. Again, I built my entire business on LinkedIn. Same with Chris. Okay. Four things to do to grow. Just remember this persuasive profile."
+[14:25]
+"So, again, go through that mini course I gave you for free. Two, create a real company page. What does that mean? I don't want to go on your profile and see that little gray box where it's not attached to company. go and actually create a company page just like on Facebook."
+[14:45]
+"You create a company page on Facebook. Same on LinkedIn so you can attach it so it looks legit."
+[14:55]
+"Do you post the same content on your personal profile as you do the business? Great question. Um yes, yes and no. The thing about the company profile you have to keep in mind is that I post content on there."
+[15:10]
+"A lot of times I'll reshare things. The company my company Kativ and Co State of Medtech is LinkedIn's customer. meaning no matter what the content is, no matter how good it is, they want me to pay them for more people to see that."
+[15:30]
+"But me as Omar, I'm LinkedIn's product. So when I post the same thing, I get so much more reach, so much more engagement. And LinkedIn encourages that because their algorithm is taking my content to figure out, hey, Omar knows his network better than we do."
+[15:50]
+"So this piece of content, oh, a bunch of people liked it from his network. Let's take that and go on an algorithmic journey and test it in front of multiple audiences to figure out what keeps them on. So they're constantly using my stuff to test. Make sense?"
+[16:10]
+"Small tactic you can do is that if you have a viral post on your personal LinkedIn profile, you can take a screenshot of that, promote it on your company page just as a picture and put a link to your profile so that way they go and engage with it."
+[16:30]
+"Post thought leadership content. So again, not IG flex post. There's nothing wrong every now and then put a flex post. That's perfectly fine. But there's some people from the inner circle that I've seen go on LinkedIn and they replicate exactly what they're doing on IG."
+[16:50]
+"Look on IG. Most of that shit is to impress like 18 to 25 year old boys for anybody who's under the age of 25. No offense, right? On LinkedIn, not only does it not impress people, it can work against you."
+[17:10]
+"because the first thing people are going to think is like, you know, why are they posting this and everything, people are looking for substance on LinkedIn. So, every now and then, like, sure, I posted a photo, I think, with Jeremy or one of you guys like in front of the cars like a few months ago."
+[17:30]
+"but a huge amount of my content has gained a lot of trust and respect in my audience. So, when they see that, they're like, 'Oh, that's awesome.' Right? And the last thing is comment on post. I hate to say this, it's such a stupid cliche thing to say, okay, is social media. You're supposed to be social."
+[17:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Chris's Content Strategy Examples"
+NÚMEROS: 2-3 minutos (duração dos vídeos)
+VISUAL: Screenshots de posts longos do Chris, vídeos de podcast com gráficos, comprimento extenso de caption, demonstração de conteúdo substancial
+[17:55]
+"So for example, if there's two people you should follow on LinkedIn and just copy us, replicate me and Chris. This is these are Chris posts, okay, from his podcast. These are like two three minute long videos. Some of them he put graphics on them."
+[18:15]
+"but he'll take the post, you know, transcribe it and look at that look at the length of that post. I have to take two screenshots. This is in-depth content. It's not surface level shit. Okay?"
+[18:30]
+"Each one of these posts, if you think about the great ad copywriters, I think Ogilvy said that each of your ad has to stand on its own, right? So, it's the same thing with these posts. There's some people CMO, COO, this is going to be the only post they see of him."
+[18:50]
+"And look at how persuasive that is. Like this, when you see this, you say, 'This guy knows what he's talking about.' Also, the thing that Chris does, I like to do it, too, is go and comment on company pages, but also other people's posts, right?"
+[19:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Long-Form Comments Strategy"
+NÚMEROS: Não especificados
+VISUAL: Exemplos de comentários extensos em posts, demonstração de thought leadership, tagline e foto visível, estratégia de visibilidade
+[19:15]
+"with long form comments to demonstrate your ability to thought lead. One key tip is if you tag the person, you have a long in-depth commenter, his tagline, what he does and his photo, right? Relevance."
+[19:30]
+"You know, the thing about the human brain is that whatever we see most often, we assign more importance to, right? Plus key tactic. I told this to Chris today and I'm going to share it with you guys."
+[19:45]
+"If you see a Fortune 500 company with a promo ad, leave a thought leadership or an engaging comment on there and you just you have this company paying, you know, hundreds of thousands of dollars to promote you because you're the number one comment there, right?"
+[20:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "LinkedIn Live Event Feature"
+NÚMEROS: Não especificados
+VISUAL: Screenshot da funcionalidade de eventos ao vivo, interface de convite em massa, captura de emails pessoais
+[20:10]
+"LinkedIn has a live event/livestream feature. It's like a webinar feature. It's amazing. You can mass invite people in your network like all of them. Just select all of them and invite them. And when they accept, okay, you get their name, their job, their company, and personal email."
+[20:30]
+"Guess what you can do with that personal email? You make a lookalike audience and use that on LinkedIn ads or Facebook ads or anything else, right? The best thing about LinkedIn, it's the ad platform isn't great, but it is the most accurate because everybody like Facebook still thinks I worked at this job two, three years ago."
+[20:50]
+"LinkedIn, it's the most up-to-date for behaviors and targeting."
+[21:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "LinkedIn Newsletter Feature"
+NÚMEROS: 12,000 seguidores iniciais, 4,000 inscritos na primeira hora, 12,000 inscritos atualmente
+VISUAL: Interface do newsletter LinkedIn, demonstração de crescimento de inscritos, notificações automáticas
+[21:05]
+"Last thing is LinkedIn newsletter. You can start a newsletter on your personal profile. It mass invites everybody. If you have questions about this, I'll tell you more later. I don't want to spend too much time on this."
+[21:20]
+"In the first hour of being live, my newsletter, which at the time I had, I think 12,000 followers, 4,000 subscribers within the first hour, right now it's 12,000. The best part about this newsletter, very hard to unsubscribe from it."
+[21:40]
+"Not only does it notify everybody on their LinkedIn, it gets sent directly to their primary inbox. the whole thing. I don't get open rates or anything like that, but all I care about is that the content is distributed. Okay."
+[22:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "B2B Outbound Sequence with Dripify"
+NÚMEROS: 2 variáveis testadas
+VISUAL: Diagrama de sequência de outbound, plataforma Dripify, fluxo de mensagens e follow-up
+[22:05]
+"Now, let's talk about a LinkedIn B2B sequence. This is an outbound sequence. Many of you guys know how to do this, but I'll just, you know, highlight this here in terms of what I did recently. One is I used a platform called Dripify. Okay, very simple setup."
+[22:25]
+"Target audience. I have two messages I test. Just test two variables. They have to reply for information and then they get a video from me and then we book a meeting. Okay."
+[22:40]
+"very important you put thought into your audience. Do not do a mass thing like don't do you know like 10,000 people a thousand it's too broad. Okay you can use sales navigator and you can use things like annual revenue company headcount everything."
+[23:00]
+"if you don't use sales navigator. Sales navigator is a sales tool on LinkedIn. Use things like crunchbase. Do you guys know what crunchbase is? Crunchbase to show how much because here's the thing you want to know that the company you're trying to get in contact with has money."
+[23:20]
+"The dumbest thing I see people do in B2B selling is they go and they do like a mass invite. They get all these meetings and they're meetings with nobody's companies that barely raised any money. So, you want to try and pick your shots ahead of time and be very specific about where you're going to spend your time. Okay?"
+[23:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Conference Targeting Strategy - Door Kicker Approach"
+NÚMEROS: Não especificados
+VISUAL: Floor plan de conferência, layout de expositores, comparação de tamanhos de booth, correlação com budget das empresas
+[23:50]
+"I like to use conferences. So, when a conference is coming up, it's great because it's an event with a date. It's very easy to personalize and make relevant. And then I use what's called a door kicker strategy that I learned from Jeremy."
+[24:10]
+"So when you go to a conference page, look up any conference coming up like CES, whatever. Look at what's called the exhibitor floor plan. This is a great way, and this isn't don't use this rule all the time. The bigger the space, the more money the company has."
+[24:30]
+"Not always applicable because for example, Medtronic doesn't have a huge base. They're about $110-$150 billion company. Globus is like a $20 billion company, but they got a bigger space. But for the most part, it gives you a good idea as to okay, here are the companies I can target and here's how I can do it."
+[24:55]
+"Question. Oh, I'll search the conference and what you can do is whatever the conference is like this is North American spine. I'll put NAS 2023 exhibitor prospectus. The exhibitor prospectus comes up or you put floor plan and it'll just, you know, you Google search it and they'll have the floor plan for you."
+[25:20]
+"Especially if it's a big conference. smaller medium-size conferences, they don't have it, but you can still just look up the sponsors and see like whoever the platinum sponsors are, like they got money, you know."
+[25:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Door Kicker Strategy - Low Ticket Entry"
+NÚMEROS: $1,000-$5,000 (faixa de cartão de crédito), $5,000-$10,000 (aprovação necessária), $10,000+ (deal longo)
+VISUAL: Comparação de faixas de budget B2B, níveis de aprovação necessários, estratégia de entrada e expansão
+[25:40]
+"Door kicker strategy. Offer a lower ticket item to get into a whale account. The offer should be like an absolute no-brainer. I hate low ticket things. But if this gets you in as an approved vendor, do it because a lot of these companies, there's a whole process to become an approved vendor."
+[26:00]
+"So, when it comes to B2B budgets, it's going to vary. But from startups to enterprise, this is more or less how it works. $1,000 to $5,000 credit card, no problem. You know, no like, you know, a manager can do this."
+[26:20]
+"$5,000 to $10,000. Sometimes there's approval needed. For example, if I'm a director or a manager, maybe I got to get approval from my VP. If it's a VP, maybe they got to get approval from their CEO or something."
+[26:35]
+"$10,000 and above, it's a long deal. There's nothing wrong with doing those deals, but I'm telling you, if it's a company that's not publicly traded and they got like less than 500 employees, the CFO is going to be involved, the CEO, it's just too many things."
+[26:55]
+"You want to get in as quickly as possible and get them paying you and then land and expand. So, for me, I have an offer where it's a credit thing that usually companies have to spend 10 to $20,000 if not more. I'm offering it for like 3 to 5K, right?"
+[27:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Outbound Sequence Timeline"
+NÚMEROS: 2-3 dias entre mensagens
+VISUAL: Timeline de sequência de mensagens, view de perfil + like de post inicial, 3 mensagens espaçadas, captura de email pessoal
+[27:20]
+"Here's a sequence that I do. First thing I have my thing do, go and view their profile and like one of their posts immediately because then that's going to get a notification. They have awareness. I've done something where there's a little dopamine hit."
+[27:40]
+"Right after that to get message one, I wait 2 to 3 days. Message two 2 to 3 days. Message 3 2 to 3 days. And after that I tell the sequence to end and get their email and again which is a personal email address."
+[28:00]
+"The reason why the personal email address is good is that if I go to their business account I'm competing with so many things in there. Personal email address really easy and they'll transfer me over to their larger email account. Okay."
+[28:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Message #1 - Interest Hook"
+NÚMEROS: Não especificados
+VISUAL: Exemplo de primeira mensagem, oferta de "digital CME credit", estratégia de curiosidade, call to action para resposta
+[28:25]
+"First one is something that's going to get them their interest. I'm not going to read this whole thing, but essentially I say, 'Hey, I have this really interesting thing.' And I give it a different name. So, it's usually a CME credit. I say, 'I have a digital CME credit.' Something that's novel and different, right?"
+[28:45]
+"I tell them why it's important. Like, look, your sales can do product demos with this. It'll get traffic to the booth, etc. And then I say, you know, I can send you a short video on how it works. Do you want me to send it here or do you want me to email it to you? And if so, what's the best email?"
+[29:05]
+"The reason why you want this versus just sending the video, you want them to reply back, right? very important to get them to reply back because then you know where you should focus on that's telling you that there's an interest versus if I just send the video and I get all these views I mean some people might just look at it because they're curious right."
+[29:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Message #2 - Detailed Process Graphic"
+NÚMEROS: Não especificados
+VISUAL: Gráfico de processo detalhado, estratégia visual impressionante, elementos de curiosidade (text/email CME, follow-up analysis)
+[29:35]
+"next thing if they don't respond to that I'll send another message but I want to show something more detailed again think thought leadership how can I impress them before the meeting so I'll send them this graphic where I was like hey this is the actual process and strategy of what we'll do I'd love to walk you through it okay."
+[29:55]
+"and I put things in here where they're going to say well how the hell does he do that like for example, text an email with a CME like, okay, how's he do that? Right? Or this, follow-up, or analysis, like, what does that mean? Right? Something that's going to impress them, something that's going to say like, yeah, I kind of want to know how he does that."
+[30:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Reply Rate Comparison: 1st vs 2nd Degree Connections"
+NÚMEROS: 17% e 25% reply rate (conexões de primeiro grau), taxas menores para segundo grau
+VISUAL: Comparação lado a lado de resultados, demonstração da importância de conexões diretas, dados de duas conferências diferentes
+[30:25]
+"Now, here's a big insight that I got when I did this. On the right hand side, these are people who are my second degree connections, meaning that like we have a mutual connection, but I'm not directly connected with them. Over here is my first degree."
+[30:45]
+"The point that you need to get away from the slide is that people who are connected with you directly who have at least seen some content, they're more likely to reply. I mean, again, it's not it's not surprising to see that."
+[31:00]
+"In terms of the reply rates, these are two different conferences, 17 and 25% reply rate with first connections, which is good. So, the point is connect with all these people. Let them start seeing your content."
+[31:20]
+"So, when you do send something outbound, they've seen some stuff from you and they're like, 'Oh, yeah.' Like, versus connecting and immediately trying to sell, right? And then in terms of qualified deals, like the way it works is they reply, they it gets sent, there's a reply, and then I get them to qualify deal."
+[31:40]
+"Qualified deal for me is they say, 'Yes, I'm interested.' And in the video, I tell them how much it costs. I don't want to get a meeting and then in the meeting like, 'Oh, we don't have a budget.' If they're booking a meeting with me, they know how much it costs, right?"
+[32:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Deal Management & Pipeline Velocity Optimization"
+NÚMEROS: Não especificados
+VISUAL: Framework de gestão de deals, conceito de aceleração de pipeline, múltiplas estratégias de otimização
+[32:05]
+"And the last part, and we're going to get right into Q&A. Deal management and optimizing pipeline velocity. This is extremely important. whether you do B2B deals or regular deals. A lot of people do dumb shit when it comes to managing deals. That drives me nuts. Okay."
+[32:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Teleflex Case Study - One Deal into Multiple"
+NÚMEROS: $9 bilhões (market cap Teleflex), $687 milhões (receita divisão 1), $322 milhões (receita divisão 2)
+VISUAL: Estrutura corporativa da Teleflex, múltiplas divisões, demonstração de expansão de deal único em múltiplos
+[32:30]
+"First thing, learn how to turn one deal into multiple deals. Okay. What does that mean? Perfect example. And we might don't take a photo of this guys and post it. This is an active deal. So, Teleflex is a company that's got a $9 billion market cap."
+[32:50]
+"I turned one deal into two, okay? Where I I messaged with one person's division and then talked to them and I got introduced to another division. So, there's two deals now. One division does $687 million in revenue. The other one does $322 million in revenue."
+[33:10]
+"Why did I want those ones? This is something that I'm I've criticized myself about. I'm getting better about. I want to push you guys to do better. Sharpen your business swords. Buy this book. Warren Buffett accounting, learn how to read cash flow, balance sheet, an income statement, everything."
+[33:30]
+"because I went ahead of time because they're publicly traded and read these statements. So, I understood, oh, you know what? These divisions are the ones that are making money. This one's a dogshit one and I'm not going to go after because maybe they have money, but if I talk to the VP of marketing, they're like, oh, we're going to do this thing."
+[33:50]
+"Maybe the CEO is like, yeah, this this guy's doing a shit job. They haven't made us any money. No, we're not going to do that. Versus these other ones, they're making money. So, when they say, hey, we want to work with this company. we're going to allocate this much spend. It's like, yeah, sure. Go for it. Right."
+[34:10]
+"The more if the information is there, go get it so you know where to spend your time."
+[34:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Mapping Influence Beyond C-Suite"
+NÚMEROS: Não especificados
+VISUAL: Diagrama organizacional expandido, múltiplos níveis de influência, conexões entre marketing, vendas e C-suite
+[34:25]
+"Next thing, map your influence out beyond the C-suite. Buying decisions are more complicated. 10 years ago, even for ecom, it used to be that you can find one traction channel, put all your money there, and be done. Buyer journey is different."
+[34:45]
+"To buy a $10 product, you have to have different areas that you influence somebody, right? Same thing with B2B. Most people think of it like this. I'm going to go after the CEO and the VP of marketing, for example. Terrible idea. Dogshit right?"
+[35:05]
+"Next level beyond that, it's like, well, the VP of marketing has some people that report to them. I'll target those people, you know, influence them. That's a little bit better. The better idea is like, okay, if I'm selling them something that has to do with driving product adoption, making more money."
+[35:25]
+"I should find every way possible to engage, influence, and learn from the marketing organization. make sure the CEO is seeing my stuff and also the sales organization because I have no idea internally like it could be that this sales rep is like third tier down."
+[35:45]
+"but within the organization they've won presence club they have influence and the CEO loves them because they're like oh this this person's like a mini version of me and that person says you know I think we should work with Kativ and co right you have no idea where that influence is going to come from."
+[36:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "James Bond Level Intelligence Gathering"
+NÚMEROS: 14 pessoas (reunião Teleflex)
+VISUAL: Conceito de inteligência pré-meeting, estratégia de preparação intensiva, múltiplos pontos de contato
+[36:10]
+"which leads me to my last point become a James Bond level intelligence agent read persuade equation, learn how intelligent agents work, and like think of it like this is this is do or die."
+[36:25]
+"So, I'm not going to leave anything up to chance. So, guess what I did as soon as I got the Teleflex deal on my calendar. I messaged one of their guys who I've been connecting with him, you know, and I haven't talked to him before."
+[36:45]
+"I sent him a message on LinkedIn said, 'Hey, Omar, you know, I have this meeting coming up on Monday. I was like, you know, I really would like to work with you guys, but do you mind if I talk to you ahead of time? I just want to I want to make sure I understand things and I do the best job. Here's my cell phone. Here's my email.'"
+[37:05]
+"I sent it to him on LinkedIn. I sent it to him in email and I sent it to him in his other email. And just yesterday, thank God it happened cuz I wanted to show this. He texts me. He's like, 'Hey man, thanks for reaching out. Definitely like call me on Monday and I'll tell you.'"
+[37:25]
+"And guess what? When I talk to him on Monday, I'm going to get every bit of information I can get so I understand what do I got to do to win this deal. I'm not walking in cold."
+[37:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Turn Multiple Meetings into One"
+NÚMEROS: 14 pessoas na reunião
+VISUAL: Conceito de condensação de meetings, aceleração de deal velocity, eliminação de reuniões desnecessárias
+[37:45]
+"And finally, last thing, turn many meetings into one. The people who suck at B2B sales, have all these meetings because no one's going to criticize you for having activity, right? When I was running organizations, I used to look at sales, I'm like, you you've been meeting with this company multiple times."
+[38:05]
+"Turn three meetings into one. And the idea is that's how you accelerate deal velocity in a pipeline. Instead of having the intro meeting, then the presentation meeting, negotiation, do all that in one meeting and then do everything else through email."
+[38:25]
+"So, like Monday, I got 14 people showing up. I have 14 meetings showing up. 14 people showing up to this one meeting, right? So, I know exactly who I need to influence."
+[38:40]
+"And everybody there, like it could be a marketing associate who has no power, but who gets it. Their ability to persuade their VP to work with me is going to be better than me on my best day, right? You know, I have no more ego about this."
+[39:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Everything is Negotiable - Payment Terms Example"
+NÚMEROS: Net 75 dias (termo padrão), Net 30 dias (termo negociado)
+VISUAL: Screenshot de email de negociação, comparação de termos de pagamento, demonstração de flexibilidade de grandes empresas
+[39:05]
+"Very last thing and we'll get to Q&A. Once you're into these in into these companies, they're going to try and leverage you. Especially it's a huge company. Do not settle on their terms. Everything in Middle East I'm Middle Eastern. We have this saying everything is negotiable. Okay."
+[39:25]
+"Here is a big pharma company that I worked with. I got approved as a vendor with a low ticket item just to get in. Just to get in. This is like a month-long process. Okay. Big pharma will like audit the hell out of you."
+[39:45]
+"But here, this is their controller saying, 'Hey, you know, welcome. You got to set this up and everything.' Um, standard payment term is net 75. Net 75, meaning I'm gonna get paid in 75 days. That's insane."
+[40:00]
+"So, what do I do? Put your ego away. I send him this thing. I was like, 'Hey, you know, so and so, wow, that's the longest I've ever heard. That's kind of hard on a small business like mine. Can we can we be more fair and do net 30?"
+[40:20]
+"you know, I want to work with you guys, you know, but if you can't be flexible, I'll still work with you guys, you know, so that way I I took the pressure. I didn't say like, I'm not going to work with you. I say, look, this would be more fair to my business."
+[40:35]
+"And guess what? They say, 'Yeah, absolutely. We're going to we'll amend that contract. We'll scratch it. We'll do it 30, right?' So, everything is negotiable."
+[40:50]
+"All right. So, who has the first question? I got to format these things when I take them out of Canva."
+[SESSÃO DE Q&A INICIA]
+[41:00]
+"Yes. Great talk. Really good. First question I want to ask a lot is when you do the live has to be live or can be recorded?"
+[41:10]
+"It can be recorded. the if you guys look up my LinkedIn the one I just did which was like wildly attended. It was like almost 300 people. Um that was that was recorded and I use Streamyard."
+[41:25]
+"Any suggestions on like length like 25 minutes, 30 minutes, an hour? Just test man. Like it's just like what Frank Kern said um when it comes to long copy it's like man who the hell's going to read this stuff it's like the people that buy."
+[41:45]
+"So like when I do when I did that live stream we had 50 people half of which were the ICP I was wanting and by the time it finished which was an hour and a half later there were still like 45 people on you know so you just you just you never know."
+[42:05]
+"Last question is you talked about how Chris will transcribe his short form obviously and put that. Does it matter if it's in the same in the post with the video or is he trying to separate them so we can have more volume?"
+[42:20]
+"No, it's Yeah. So his I mean I would always test it but like what he does which I like is that he has the video but then also takes exactly what's in the video and puts in the post."
+[42:35]
+"And think of it like this from the algorithm standpoint. When somebody stops to read that thing, right? There's this algorithm journey where maybe they watch the video and then they go look at the post and click see more. Maybe they click see more and they go back to."
+[42:55]
+"So there's all this engagement on that video and LinkedIn doesn't know why. So they say, 'Let's just serve this up to more people.'"
+[43:05]
+"Brett, do you have a rule how many people you're engaging with a day, like commenting on the post? 10 people?"
+[43:15]
+"you know, it's probably good if you get if you have a system for that. and I need to get more systemized for that. But for me at this point, like I have a little over 30,000 followers. And so I just get on and I just look for the content."
+[43:35]
+"But again, like if there's somebody who I really, for example, if there's somebody I want to do business with, I really want to get on my show, I try and make sure that I look for their posts or I just go to their notifications and turn it on and try and engage with it."
+[43:55]
+"And I try and do that for a week or two before I reach out. Even if they know they're like, 'Oh, this guy engaged with my stuff just to talk.' there's still that like reciprocity is so strong, you know."
+[44:15]
+"It's more of a general business question because I never I haven't worked with big businesses. Big business refer to the whole net 30 net 75 thing. Um from your perspective, why is it a thing?"
+[44:30]
+"Why do they do that? I mean, you have a business, too. Wouldn't you prefer to pay somebody later than versus right away? And think of it like this. Nike when Nike when you buy something from Nike okay they have like a return within 30 days."
+[44:50]
+"when you're a big business you've optimized so well that once you have money come in you can make a profit on that money even if it means that you they refund you back so for these businesses it's all about cash on hand."
+[45:10]
+"GE for example I just found out about this recently they'll do it like net 120 at the end of the quarter so if I do business with them at the beginning of the quarter, right? And I bill at the beginning of the quarter. Their billing cycle starts at the end of the quarter, then net 120."
+[45:30]
+"So, it's really important. And sometimes there's some businesses where you're doing so much volume, you have such good contracts, it's you you'll put up with that. But me personally, like that's not how I do business. And I try I don't allow people to do business like that with me."
+[45:50]
+"I just have to commend you on two things that I would have not ever thought about before. Number one, the the convention center like looking at the exhibitors. That's huge. That's really really wise."
+[46:05]
+"Thank you. the P&Ls of each department and everything that is something I would have never thought about just being most of us work with small businesses. So that's that's awesome."
+[46:20]
+"Yeah. And here's what I would say even if you continue working with small business and I'm criticizing myself here. My friend who runs a venture-backed company asked me some questions I couldn't answer and he's like dude how are you going to grow this business if you don't know what levers to pull?"
+[46:40]
+"And he always calls me he's like are you sharpening your sword? And so that's what got me to read that book Warren Buffett Accounting. And it is interesting because then you start to see how these big businesses run things right including what do they invest in sales and everything."
+[47:00]
+"The other thing I would say is that when it comes to because a lot of you live in big cities when it comes to these kind of conferences. So this conference is happening in LA. I'm going to it's driving distance from me."
+[47:20]
+"So a lot of these people they said hey like our budget is already committed or like we can't do it and everything. And I'm like hey no worries I'm so I'm not hard. I'm like totally understand. Let me know what your booth number is. let me come by and visit."
+[47:40]
+"So, I'm going to go by in person, visit. I'm going to try and sell them right there at the same time. It's like, hey, are you sure you don't want to do this? I was like, I can just do it right now, right? And if anything, it's just good to do sometimes it's good to do business in person."
+[48:00]
+"Let people see you, shake your hand, and everything. So, I really encourage find ways to go and attend these conferences. And by the way, don't ever pay for a badge. Like, you know, sneak in or like, you know, message somebody."
+[48:20]
+"Message somebody from one of the companies and say, 'Hey, like I'm going to come in on this day. Do you mind if somebody runs a badge out to me just to get into the hall and just stay in the hall the whole time? Cuz like these these conferences are massive."
+[48:40]
+"Nick, for guys like you know some of us who are marketers and you know might have a lot of us work with small businesses, right? I've had conversations with people that work in like VC things and then they work with like big businesses. They ask what I do. I explain what I do marketing."
+[49:00]
+"These businesses need marketing, but they have this thing where it's like, oh, they want to like bring people in-house and they want to work with bigger businesses. How do you like how do you recommend someone like me even like even think about potentially going after a bigger company?"
+[49:20]
+"Yeah. So, for one, like sometimes like I personally love working with startups cuz even when I get a contract with a larger company, dude, they move slow, man. I want to work with somebody who's like, 'Yeah, let's do this next week.' Right?"
+[49:40]
+"And so, I would even recommend like a company that's raised a series A or B even. A lot of times, you know, depending on the industry, they think of it like what you just said, which is like, hey, we hired marketers to come in and do this. Why are we getting an agency? So, it just depends."
+[50:00]
+"But again, like look at Chris is a great example. There are people I know like there's somebody I know at Johnson and Johnson who I told him I was like, 'You should work with Formline Labs who wants to do it now.' mainly because he just knows by working with Chris, he's going to get better, right?"
+[50:20]
+"So, a lot of times like on LinkedIn, you should post like case studies, results, and do this thing where you're like teaching people how to do what you do for free cuz eventually if you have budget, it's like I don't want to do this. Like, I would love to work with Nick Mullen, you know."
+[50:40]
+"and then like work side by side with him, you know, and plus here's another idea, guys. You should connect with the family offices on LinkedIn, private equity people, VCs because somebody might like you like not just in terms of your business."
+[51:00]
+"I post about my family. I post values, character stuff. You'll see in my minicourse. So people know who I am as a person and those people want to do business with me and sometimes they'll come and say, 'Hey, we have this we're raising a fund and we're going to have this many portfolio companies. Maybe you can be the agency of choice, right?'"
+[51:20]
+"And now like dude, that's great. And now think about the case study. It's like, hey, we worked with this company when they raised our seed fund and four years later they've raised $100 million, right?"
+[51:35]
+"Do you think that there are companies that will absolutely never work with marketing agency or contractor that's a marketer or someone like that? Hire someone in house?"
+[51:50]
+"Oh, no, no, no. No, no. Anytime, especially when the companies get larger, their biggest thing is just like, we'll hire somebody to do it. I always make fun of people who work at Google because I'm like, 'Do you guys even know what to do?' Because they just hire people to do it for them, you know?"
+[52:10]
+"Yeah. No, dude. There's always everyone's going to be different. But like the other thing is like when you start, everybody looks at these like sexy businesses like like B2B tech SaaS and like the ghoul's world. Bro, there are old industries like why do you think I came back to my industry? There's a lot of money in it."
+[52:30]
+"Here's a great piece of advice. Patrick McDavid has had some really good advice which I took it to heart. He said, you know, find an old outdated industry and come to it and bring a new level of energy, enthusiasm."
+[52:50]
+"If you watch with that piece of advice I gave you, if you watch what I'm doing on LinkedIn, I'm bringing all this excitement and energy to my industry, people love that. A lot of these people, they work rough jobs and so for them to work with like a young charismatic marketer like you, they would love nothing more than that."
+[53:10]
+"Okay, quick follow. You've I think from what I've learned, from what I've downloaded from you, like you cemented yourself in this space, so is Chris. like in the corner. I'm working in a space where there's a lot of shit marketers."
+[53:30]
+"Do you think it's worth even though I'm gaining some steam, you know, here? Do you think it's worth me going and cementing like you just said older maybe older space or there's people that you know are a little bit outdating with like outdating stuff worth going over there and cementing try?"
+[53:50]
+"just try it and like experiment and and you know like pick an industry that you feel like you would know like financial services, banking, construction or something and go and try and find company and then like if it goes well with that company turn around and say let me get a case study but also say hey like are there other people in your industry that maybe are not direct competitors that you would introduce me to?"
+[54:15]
+"You'd be surprised how many people want to help. All right, Brett."
+[54:20]
+"In your course, you go over how to find your people? Uh, no, no, I don't. But you guys just hit me up. I'll show you how to do it. I love I love this group, so I'm always happy to help."
+[54:35]
+"So, I'm assuming similar to the Chris situation, the way you structure your offer, there's no room for like share or whatever. So, how are you maximizing LTV for your client?"
+[54:50]
+"That's a great question. So, I'm still Chris asked me a great question today, which is like, 'Hey, dude, like when are you gonna get out of the figuring the shit out phase?' I'm like, 'It's a great question.' So, I'm still figuring it out."
+[55:10]
+"Um, in terms of maximizing my LTV, what the way I see it, like, let's look at Teleflex for example. I'm getting in with a very simple thing that's transactional. They buy once or they can buy multiple times from me."
+[55:30]
+"And the thing that I'm selling, that $3 to $5,000 thing, it's the most high leveraged thing I have in the sense that it takes me less than a minute to create it. And so once I'm in, it's a very low yield thing. I'm making a link for them."
+[55:50]
+"but then I can educate them and use things to kind of demonstrate my knowledge base and I say, 'Hey, you know, I know you guys are doing webinars and you're doing like why don't you do that with me?' In which case, that's like a $15 to $20,000 engagement, right?"
+[56:10]
+"And there's other ways to upsell them, right? And I think in terms of lifetime value, the way I see it is like how many ways can I help this person not just solve a problem but in these businesses like for example a marketing manager I'm thinking and I tell them this."
+[56:30]
+"I'm like look when you work with me I want to know like what are your wishes for the company? What are your wishes for yourself? Cuz now I know what's important to that person. I say hey look like I'll help you learn these things. I'll help you like you know because if you do XYZ this will put you in a great position to elevate your career into these kind of moves."
+[56:50]
+"Then when you do that, dude, people move around. They'll take you with you. And that's the best part of that I like about B2B is that these people move around. So like for example, I had somebody switch companies recently. Dude, that was a very easy vendor approval process."
+[57:10]
+"Cuz they're like, 'Yeah, I've worked with Omar before and we're going to work with him now.' You know, one of my mentors who's CEO that actually kept me afloat last year when I was building my course. I did like 30 or 40k just consulting here and there with him."
+[57:30]
+"He's going to a new company and he's like, 'Hey man, like can you help me with this company?' I'm like, 'Yeah, happy to.' Right. Very, very easy."
+[57:45]
+"So, it sounds like you're not completely clear on your offer stack. Yeah, I'm figuring out and part of this also is like I will ask questions to get to kind of gauge things."
+[58:00]
+"Like for example, like this guy I'm going to talk to on Monday, I'm going to ask him like, 'What do you guys usually spend on things?' Like, 'Do you have an agency? What do you spend with them? What do they do for you?' I'm going to get as much information as possible."
+[58:20]
+"And again, I have zero I hold back. I don't hold back on this. So, I'll even tell people like, 'Hey, can you send me that company's deck? Can you send me their contracts?' You know, so that way I understand like what they're selling and what they're buying."
+[58:40]
+"And again, for me, it's almost like one part of my business, I'm building it so I can grow revenue, everything. the other side which is the podcast and media it's like funding the growth of those things so you should I mean if you guys like this talk tell Jeremy and I'm happy to do another talk next quarter."
+[59:00]
+"um and I might have like a better answer by that time. You mentioned the door is that also kind of flexible depending on whose door you're trying to get down?"
+[59:15]
+"oh totally so like for example like the people who are in the spine conference that door kicker I'm offering for like $5,200. The other ones, the cardiac one, I'm doing it for like $3,200 cuz I'm just trying to test price."
+[59:35]
+"And again, for that, it requires very little work on my end. Like it's literally a minute of work. So, I'm not going to get like greedy. I'm just trying to think like what's the number that people are like, 'Yep, do it.'"
+[59:50]
+"Because now, like that pharma company, I priced it perfectly. I priced it for like a thousand bucks. The lady did it like that day. And now that you know I did that little link for her, I followed up with her. I'm like, 'Hey, you know, do you have more events?' She's like, 'Yeah, we got like four more.'"
+[60:10]
+"And I was like, 'Great.' And I said, 'Hey, by the way, like, you know, I'm a small again, I'm a small business, you know, if you could help me in any way, I'd really appreciate it. Are there peers of yours or somebody else in the division?'"
+[60:30]
+"She sends an email immediately that day to a completely different division. This is a big pharma company. And the first sentence she says, she's like, 'Hey, this is Omar. By the way, you should use him. He's already an approved vendor.'"
+[60:45]
+"So some of these big businesses, it's a headache to get a vendor approved. It's a long process. So if somebody's already approved, it's like, 'Oh, I'll just use that.' You know?"
+[61:00]
+"You're like, you said door kicker. It's like offer, right? Yes. It's again, you're kicking the door and you can do this with whale accounts."
+[61:10]
+"So are you delivering on that yourself? Do you have a team member delivering upon that or like maybe is it like is it a service that you're delivering on?"
+[61:25]
+"It could be a service, it could be a product. For this, like I'm delivering it myself because again, part of what I'm selling is me, right? So, like if it's this credit, I go and, you know, I create the link. It just takes me two seconds and I send it to them."
+[61:45]
+"and that this link is for doctors to get continuing education credits. There's a report generated on my side, which is unheard of in the industry. So then I'll take that report and I'll interpret it and I'll go back a month later after their event is like, 'Hey, this is the report. Like here's some interesting findings and everything."
+[62:05]
+"like, have you guys considered doing this kind of webinar or this kind of strategy?' And that's where I kind of upsell them because they like I'm already it's almost like I'm getting paid just to get in and demonstrate my value versus what most people do is they do that for free in these random meetings trying to sell like a huge ticket item, which could work, right?"
+[62:30]
+"It could work. But like for example, my business is not at the stage that Chris's business is, right? So I need other tactics to get into these companies and land and expand."
+[62:45]
+"Smart type of client. Exactly. Exactly. And again, like one of the things I mean Chris is a big believer in it. same with me if you heard it in his talk is like I'm also trying to think like my time to value with my customers and what am I doing that's not only getting them results but like making the people making those decisions look really good."
+[63:10]
+"cuz if it's forget about publicly traded companies but even if smaller if it's a smaller company like a 100 person company but it's public or they're not those people have to report to a board so I want them to do something a lot of my stuff is radical for this industry so I want them to look really good to the board."
+[63:30]
+"So they're like, man, like the board knows my name because Omar Khateeb, like I'm going to do more stuff with him. See what I mean?"
+[63:45]
+"Sam. So I work at a management firm institutions. Facebook. Do you think LinkedIn ads could be something that we can test or what's your experience like you're trying to get investors, right?"
+[64:05]
+"Yeah. Yeah. So, I absolutely think so. LinkedIn ads, you got you got to have like balls of steel for them. The reason why is that it's very easy to spend a lot of money on there. But think about this."
+[64:25]
+"the ad strategies that no longer work on Facebook, they work on LinkedIn because a lot of these people, they're almost like new to social media. Some of them I'm making a huge assumption here, but a lot of there's people I know my age who have no social media, but they have LinkedIn, right?"
+[64:45]
+"So, absolutely, man. And the best thing about LinkedIn is that you could target you can tell them investor or VC or target these people in these groups, right? And what I would recommend is I mean I like King Keto strategy is really good, you know."
+[65:05]
+"because again what you're competing with on LinkedIn is all these terrible outdated strategies that B2B companies do like they're trying to do a lead gen to get a meeting. Dude, do a lead gen with some value adding book ebook or something, right?"
+[65:25]
+"And get those do a do a live webinar. If you guys do like live webinars, educating people as to what to do with your money, every week, every month, there's people with new money. Company got acquired, company went public, you know, your minimum investment is how much?"
+[65:45]
+"About a million bucks. About a million. Yeah, man. So, like all your all your people are on LinkedIn and so there's a lot of lot of CEOs."
+[66:00]
+"And what's interesting and actually I'm you know, maybe maybe I have somebody from your firm come on my show for that. There's a lot of people who don't have the education as to like if you got a lot of money, what do you do with it? Like how do you figure out an equity deal and stuff?"
+[66:20]
+"Like people who have been in my industry for a while and they're like, 'Yeah, actually like I don't know. I usually just go with what's standard with the company, you know."
+[66:35]
+"but with those live webinars you're doing, you're sending you're paying the platform to send outbound messages?"
+[66:45]
+"even better. I don't pay anything for those. So, what I do is I can I build my audience when I send invites out. There you can scroll and just select all and it'll just select everybody and sends them the invite, right? Then I can use Dripify and do outbound messages like that way."
+[67:10]
+"Um but the other side is that sometimes I'll have a speaker. So like the one that I just did this week, I didn't invite anybody to. The speaker just posted a couple times and people are like, 'Oh my god, he's speaking.' They just accepted his invite."
+[67:30]
+"you know, so a lot of times what I'll do is like somebody who has 5,000, let's just say, let's say there's an investor that has like, you know, 2,000, you know, people in their network, not a lot. A lot of times I'll get on Zoom with them or I'll send them a video and say, 'Hey, you know, looking forward to having on this webinar."
+[67:50]
+"Here's what you do. Click this invite button, scroll down until it's stopped and hit select all and invite everybody.' And now I just got this person's like, you know, like email list, right? Because they invited people who are not in my network but are in theirs."
+[68:10]
+"and I get all these personal emails and that's how I mean I'm the number one show in the industry mainly just from this tactic like that's what got me started earlier on."
+[68:25]
+"Is there a risk of losing your account with using third party invite tools?"
+[68:35]
+"Oh, that's a great question. So very very important. So LinkedIn is very big on this. There was a Russian company that was amazing called Link Helper and they I don't think they exist anymore. LinkedIn, if you use a plugin, you know, sometimes you can get away with it because it's a Microsoft company, so like you can get away with a lot of stuff."
+[68:55]
+"Use a plugin, you're at risk where they might, you know, not ban your account, but like, you know, give it give it a suspension. If it's not a plugin, like dripify is not a plugin. Omni Creator, which is my software, not a plugin. It's totally okay."
+[69:15]
+"One thing, Sammy, remind me if you guys use Sales Navigator. Sales Navigator has great tools, more targeting tools and everything. Do not work within there. LinkedIn wants you to work within Sales Navigator because few years ago, Sales Navigator was 30 bucks a month. It's 90 bucks a month now."
+[69:35]
+"because when you have all your leads on there, they got you by the balls, right? But if you use Sales Navigator and always make sure like, hey, I'm going to directly connect with this person. So, their first connection in my network, you own that. Okay, make sense?"
+[69:55]
+"a app on LinkedIn. No, no, no. It's a separate company, right? Yeah. Yeah. You can when you go through the LinkedIn developer rules like they allow companies to make different verify."
+[70:15]
+"Yeah. Yeah. It's a very well-known one. Very well-known one. let me go to George and then Ray. George. Um you don't need it, but I encourage it. I believe that when you have a premium account, they do give you better reach. They give you better insights."
+[70:35]
+"and like it's kind of like it's like having a Twitter blue check. Do you need a Twitter blue check? No. But it's kind of better that you have one. This is my personal opinion."
+[70:50]
+"Ray, do you use like Apollo? Apollo's good. Just curious like how you incorporate that."
+[71:00]
+"Yeah. So this is my thing is just like think of it like this is that the more the more this can be automated the more the easier it is to ignore. And so like when my B2B outbound strategy it is automated my video that I sent I don't say their company name."
+[71:20]
+"like hey you know I noticed you're going to NAS or whatever but then at the same time if you really want somebody's business you're like this is an important one I have a list where I'm like I'm not sending any automated I'm sending them personal message or I'm sending them like within LinkedIn you can click the video button and send them a video right."
+[71:40]
+"so like you know and this is why I made this mistake when you do these automations do not do it for like thousands of people because what you want to do is when you pull that audience list you want to go through and be like oh like I don't want my automated message going to the CEO of this hundred billion dollar company."
+[72:00]
+"cuz when I actually reach out to myself like they're just going to ignore it you know so you want to be careful about those things and I think you get more with patience than with force there's some things that you want to go hard with other things you just got to be patient with you know."
+[72:20]
+"my recommendation to everybody do not do any because that's the easy part a monkey can get on and get dripify and start doing these automated things. Do the hard thing which is get on go through my course, build your profile and start putting out content."
+[72:40]
+"And after I really mean this after like two months of putting out content like two to three times a week commenting and everything, people know your face, your name, and everything, then do that outbound thing because now they're going to be like, 'Yeah, this person's legit. They have a legit business. I've seen their stuff before.' You know, it makes it a lot easier."
+[73:00]
+"Nick, biggest difference from Instagram reels YouTube shorts content versus LinkedIn video content. What would you say the biggest difference and what it should be about?"
+[73:15]
+"great question. So, LinkedIn's going through a transformation right now that some people do not like, but this is just it is what it is, which is a lot of my YouTube shorts and Instagram shorts, they also go on LinkedIn because I'm talking about something with business or personal development or something."
+[73:35]
+"And a lot of people on LinkedIn, keep in mind, there's a lot of people who do not use anything else except for LinkedIn. So, they like it. I'll be honest, okay, at least once a month, one because I like sharing that with this network. I mean, they help me build my business, but also because it works."
+[73:55]
+"I'll post something with me and my kid or my family, like just, you know, on a weekend saying like, 'Hey, you know, it really important to like spend some time with your family, something like that.' The algorithm goes absolutely bonkers with that kind of things."
+[74:15]
+"And then the following week, if I have a big show coming up or a product, guess what? That algorithm is going to be like, 'Man, his last post killed. let me put this new piece of content in front of a little bit more people."
+[74:35]
+"because always that algorithm the way it works which by the way the way the reason why I know this is because their engineering team publishes what the algorithm does and what they're testing on their engineering blog. I actually go and read it."
+[74:55]
+"So they're always taking the pieces of content and testing it. There's also hashtags on LinkedIn that have huge followings. So great thing is that for example you can if you go look up medical sales medical device medtech and everything no matter what I dominate the living hell out of those because all my posts I use those hashtags."
+[75:15]
+"So if somebody's not following me I'm going to pop up on their screen because they follow this hashtag, right? And keep in mind on LinkedIn, it's very easy to be seen because once you have a network, LinkedIn's going to let you know, Nick, when you're connected with me, that like not just when I post content, but if I commented on something, if I liked something, right?"
+[75:35]
+"Connect with each other. If your first connections Exactly. your post is like starting to get traction, I get a lot of those notifications. People are commenting on Exactly."
+[75:50]
+"So, thanks for bringing that up. That's the other amazing thing about LinkedIn in terms of half-life very short half-life for content on Twitter, Instagram, everything. LinkedIn I've had posts like it's this is the why it has huge untapped attention."
+[76:10]
+"All of social media is to make sure you get attention and if you do a good job doing that channeling it to something, right? I've had posts that are like six or nine months old and then all of a sudden I get notifications because somebody came across it, engaged with it, their network finds out about it and then they're starting to engage with it again. Like a 9-month old post."
+[76:35]
+"That's wild as hell you know? So, I have like a digital version of myself that's working 24/7 on there because people are liking your shit. Yeah. Yeah. And they're discovering it through the hashtags, through something, you know."
+[76:55]
+"Do I need to be like connecting with people all the time instead of just trying to get videos to reach people? Because I posted like a decent amount. People have like seen that I've been posting recently more and more and more. A lot of it is like business style stuff like sales team stuff, marketing video strategies, etc."
+[77:15]
+"I posted stuff on LinkedIn and like I might get two people to even see it and I'm like, you know, I'm like, 'Okay, is there something that I'm doing wrong?'"
+[77:30]
+"Yeah. Yeah. So, it's just time. I mean, look, I mean, selfish plug, if you use Omni Creator, that'll get you engagement because those are all creators and they'll automatically engage and it's mainly tech data and med. We're growing it."
+[77:50]
+"Um, the other side of it is just like using hashtag helps commenting like look simple hack, dude, between me and Chris. I mean, we got some major major people following us. Go and engage with some of our stuff and we'll comment back. Like, look, you guys are all in our circle. I will reply back to any comment that you send me."
+[78:15]
+"And if I don't it's mainly because I didn't see it just message me and be like, 'Hey dude, I left a question or a comment on this post. Can you reply back?' I'll be happy to, you know, but it again it's the reason why most people give up on LinkedIn is because they give it like a little bit of effort, you know, like two, three weeks, four weeks and it's like it's hard, right?"
+[78:40]
+"But in some ways it's like it's like a paradox. LinkedIn is almost like the easiest platform to grow on and at the same time it's hard like okay on Instagram I got like a bunch of like some schmuck can come out and do some stupid viral video and get like more engagement than me on LinkedIn it's a high barrier of entry you know what I mean."
+[79:05]
+"has to be good right. yeah but like you dude you'll be surprised like there's a lot of like dogs on LinkedIn in terms of content I'm like let me give you a perfect example there's so many times where somebody like took like a boomer Facebook video."
+[79:25]
+"of like, you know, it's like I was walking down the street and then like, you know, I helped this I helped this dog who was blind and without arms and legs and I went to my job interview, the CEO was the dog and everybody's like, 'Oh my god.' Like that shit actually works, you know?"
+[79:45]
+"So like I would just like test like if you see something on Twitter or LinkedIn or Instagram like dude steal content, steal content, reuse it. I've seen people put like the corniest like just a picture with like text."
+[80:00]
+"Yes. Exactly. Yeah. Yeah. It's like way up and win the day and it has like 2,000 people giving a shit about this. Yes. Exactly."
+[80:15]
+"I'll tell you why. Because there are people who are like, you know, in their 50s who are like, you know, hard job, you know, they're dealing with family, all these like that's me. That's me. you know, so it's wild, man."
+[80:35]
+"Like there's so and what I honestly encourage do things that are hard. So like everybody writes text, video is hard, okay? But there's still a lot of people that write video. Do like for me, I have a really high barrier of entry for what I do because I've like I write in-depth articles. I do a podcast. I do live streams. I do all these things. So it's like a very diverse mix of content pieces."
+[81:00]
+"Create a really good piece of content. a lot of effort. Like let's say you write a long and it and it dies, right? And you post that and you currently have no one seeing your shit. It's like okay, should I just cuz like should I post short form content?"
+[81:20]
+"No, no, just like just like anything else, man. It's just like test it again. like on Omni Creator, you can save videos and content there and if something you felt like was good, just not repost it, just rewrite it and just look and be like, you know, maybe the hook wasn't good enough."
+[81:40]
+"Maybe I should put an emoji, maybe I should bold things, maybe I should have a different line, you know, just like anything. And remember, no matter like how good your stuff is on LinkedIn, the platform was only going to let like maybe one or two percent of your network see it, right? You can definitely get more. So there's a lot of content that's damn good of mine. I reuse it. You know."
+[82:05]
+"think of it like this. The really good analogy I heard is that if you go see like if you go see Drake, right? You would be pretty pissed off if he did not play like God's Plan or Hotline Bling, right? It's the same thing on LinkedIn."
+[82:25]
+"It's just like there's people who there's certain videos and topics they love. No matter how many times I've talked about or I'm like, 'All right, here we go. I'm going to talk about like the death of medical sales or this thing.' And then everybody is like, 'Yeah, I love that.' You know."
+[82:45]
+"do you think I need to dumb down some of my videos? Maybe. No. Boomer. No. No. And Nick, let me I'll take like I would just put out content, you know, be patient with it and don't get caught up with the numbers."
+[83:05]
+"Like look, there's some articles I wrote that I like this one this one I wrote about Amazon's acquisition of One Medical. Bro, I busted my ass on that. That was like an analyst level article. very few people read it and liked it. But you know who did? Some like really powerful people in my industry."
+[83:30]
+"So I don't give a shit that like 10, 15, 20 people like it. Sometimes with your stuff, you may not see somebody liking it, but I know for example, and this is where the light bulb went off for me many years ago. There are VCs, private equity people on LinkedIn."
+[83:50]
+"And I met some of them at this conference I went to last week where they do not like or comment on anything cuz they know that people see that but they still consume the content. So when I go somewhere like somebody in private equity last week."
+[84:10]
+"they're working out of like a family office in like butt fuck Egypt like Nebraska or something and they're like, 'Oh you know like I actually I follow you. I really like your stuff.' And I'm like, 'Seriously?' And I was like I asked him, I was like, 'Do you like liked anything?' Cuz I never I don't recognize you."
+[84:30]
+"They're like, 'No, like I kind of like, you know, stay back on that, but like yeah, no, I consume all your stuff.' And I'm like, 'Damn.' Like you It's surprising. Yeah. So just test, man."
+[84:45]
+"I see on Instagram, too. Some people like my shit They don't even follow me. Yeah. It's weird. Yeah. Same here. Same here. It's just different. Yeah. search by name."
+[85:00]
+"I would write this down. This is like one of my mantras when it for a lot of things is just like think like a scientist like look at your stuff be objective about it you know look at the metrics and everything at the same time act like an artist."
+[85:20]
+"like do things where you're like you know this this failed multiple times. I should post it dude I'm going to post that you know what a picture yourself. I'm not going to lie I'm going to post that this week it will blow up."
+[85:40]
+"but yeah but a lot of times you got to like what we do in sales marketing is part of his art and sometimes you just have to put out art and not care if a lot of people like it. A lot of times when I make content, I try and think of like one person I know is really going to like it."
+[86:00]
+"And key hack here, sometimes I'll put out things like for I'll follow a CEO and there let's say they write about leadership or some topic. I'll go and write a post about that topic pretty much validating their point of view and I don't tag them, right?"
+[86:20]
+"Sometimes I'll tag them in a comment, you know, like, hey, you know, wonder what you think. A lot of times I'll send it to them and I'll say, hey, I'm, you know, your content inspire me. I wrote this post. No pressure. it would mean a lot if you can comment on my post with your thoughts because there's a lot of people in my network who I want to hear from you."
+[86:45]
+"So, think about that. I just created this imaginary thing where all these people are waiting for this person to make a comment and share their thoughts. Like, it's unbelievable how easy that works. I've had like really powerful people do that."
+[87:00]
+"DM people in my network say hey like I thought about you while I was making this video. Yes. And do not automate this. Yeah. Yeah. No."
+[87:15]
+"How important do you think cuz like on Instagram, YouTube shorts, whatever. I have a video short form like vertical video on I'm just talking I'm just dropping a bomb or something like that short caption how to on LinkedIn. Do you think it's important to have a long descriptive caption?"
+[87:35]
+"No, no, no. It just depends. By the way, you brought up something I want to comment cuz I was listening to some conversations last night. Here's something you guys This is like a for those of you who don't know, I'm married and I'm a dad. So, this is a very dad thing for me to say, but I had to learn I had to learn this the hard way."
+[88:00]
+"I'd rather you guys learn from my mistakes that people are not stupid, especially these big companies. They will look into you. And what you don't want to do is to think like, oh, if I make this post or I tweet this thing about this, you know, this political issue or red pill stuff or this and that everything."
+[88:25]
+"Yeah, it'll get a lot of engagement. You should always ask yourself, how the hell is this making me money? a lot of there's a lot of stuff that I'm very like passionate about and I'll tweet it or post it and I'm like is that gonna is that is that going to make me money."
+[88:45]
+"and then I think of like if the head of Stryker or J&J saw this like are they going to do business with me and the answer is I'm like no they're going to they might not like that and I made a post that bit me in the ass which it was 100% correct I'll tell the group here."
+[89:05]
+"it was a meme at the end of Pride month right because you know all these corporations they don't give a shit about people so at the end Pride Month, I put this meme where it's like like corporations on what is it like July 1st or like the day after Pride Month ends is like it's like all right back to normal like we love women, you know, like stuff like that."
+[89:30]
+"And a VP that I know who's a good friend and I would have never known this had he not text me. He's like, 'Hey man, like this me and it's a meme channel. It's not even my account. It's a meme channel, but people know I own it.' He's like, 'I got a message from one of the people in my group, you know, who's gay, who sent me a message into like, hey, is this the guy who's doing our training and sent me that?'"
+[90:00]
+"And I felt, dude, and again, it wasn't bad, but I felt one, I felt terrible cuz I made this person like feel shitty, right? That's number one. But number two, like that could have cost me my business. And keep in mind like that kind of thing. I deleted that. That was one of the only ones I deleted. This stuff can go around, right?"
+[90:25]
+"And so a lot of these people, especially if it's a publicly traded company, you better believe they're looking into that. So I'm not saying go back like a year or two and delete things. Don't worry about that. But just right now with a lot of stuff on your Instagram, on Twitter, if you go follow me on any channel, here's all you're going to see. Self-development. I read books. I love my family. I love my country. That's it."
+[90:55]
+"And I make mistakes all the time, but just really keep that in mind, right? Like you guys can make these posts on Instagram and a bunch of, you know, tweens are going to be engaged and everything. Those people aren't going to be the ones writing you checks. It's like, you know, older people."
+[91:15]
+"the tweens will be at some point do the Gary Vee thing. Like they'll be at some point like they'll have their own budgets, but just be positive, man. And I'm partly like talking to myself on this, you know? Any other question? I don't mind. I'm loving it. Nick, you can ask me a question, too, cuz Jeremy hasn't told me to stop yet."
+[91:40]
+"One more. Okay. This is This reminds me of that meme, you know, where the It's like the Renaissance period where those guys are like on the balcony. All peasants. Yeah. Yeah. Look at all the peasant. Yeah. Chase."
+[92:00]
+"Yeah. Real quick, you know, with the nature of things being more valuable post and putting more effort in there, are you able to schedule or batch out? How are you doing with your internal ops to be able to push out this high level content, you know, on repetition?"
+[92:20]
+"Yeah. Yeah, that's a great question. So, part of the reason why I started that SaaS company. Um, what I try and do is I block out time on Friday, right? You know, to record my solo pod, to make the content and everything. I've hired a guy where again, does is the creative perfect the way I want every time? No. But it gets done and I pay him to also post for me, right?"
+[92:50]
+"And so a lot of times like you need just like data you need you know to answer Nick's question from you need volume to make decisions about what to do and even with the volume there's a lot of times where I'm like this is an outlier I think this can actually do better."
+[93:10]
+"and so what I would say is like batch content and when you get into a habit like I would you know I don't need to do it now but for you guys I would block time once a week to make content and schedule it on LinkedIn. use that software I told you guys to do that. And if you want book time with me, I could show you more."
+[93:35]
+"Um, and the other thing is put a five or 10 minute time block on your calendar every day to say get on LinkedIn and scroll and just go and engage and leave comments and everything, you know, and just think of it like this. You're not doing this for present day Chase, for example, or present day George."
+[93:55]
+"You're doing this for future Chase, future George, where you might be wanting to do an exit. You might have a shitload of cash and you want to do you want to jump in on some investments. Who in your LinkedIn network has been silently engaging and watching you that you've never done business with, but now you want to do business with."
+[94:20]
+"There's people who've been following me for years that I never thought that I want to do business with or need like all those VCs like I'm not raising money now. real easy for me to get them on my show, you know, talk to them even talk to them about like, hey, you know, I can't write big check sizes, but like do you mind if I like, you know, write a check into like one of your portfolio companies or something, right?"
+[94:45]
+"Like they're open to have that conversation. So, you just it's like that network. You don't know what it's going to do for you. Like you never know. It's really unbelievable."
+[95:00]
+"All right, guys. Give it up for Omar. All right. Thanks, guys."
+📊 RESUMO EXECUTIVO
+NÚMEROS PRINCIPAIS:
+$250K em receita de curso em 1 ano (Omar)
+$40 milhões em receita (Chris, empresa iniciada em 2020)
+$26.2 bilhões (aquisição LinkedIn pela Microsoft em 2015)
+$22 bilhões (aquisição WhatsApp)
+$13 bilhões (valor da NASA em 2013)
+$1.6 bilhões (receita YouTube a cada 2 semanas)
+$50-70 milhões (budget de marketing de executivos no LinkedIn)
+$3 bilhões (ativos sob gestão de VCs no LinkedIn)
+Quase 1 milhão de buscas no perfil
+30,000+ seguidores no LinkedIn
+12,000 inscritos no newsletter LinkedIn
+4,000 inscritos na primeira hora do newsletter
+17-25% taxa de resposta em outbound (conexões de 1º grau)
+$1,000-$5,000 (faixa de cartão de crédito B2B)
+$5,000-$10,000 (requer aprovação gerencial)
+$10,000+ (deal longo, múltiplas aprovações)
+$3,000-$5,200 (range de oferta door kicker)
+$15,000-$20,000 (upsell de webinars)
+Net 75 dias (termo de pagamento padrão big pharma)
+Net 30 dias (termo negociado)
+$687 milhões (receita divisão 1 Teleflex)
+$322 milhões (receita divisão 2 Teleflex)
+$9 bilhões (market cap Teleflex)
+14 pessoas (reunião estratégica)
+300 pessoas (participantes live stream)
+45 pessoas (permaneceram após 1.5h de live)
+ESTRATÉGIAS E SISTEMAS:
+Crescimento LinkedIn:
+Profile persuasivo otimizado (upgrademylinkedin.com)
+Company page real e profissional
+Conteúdo thought leadership (não IG flex)
+Comentários ativos em posts
+Newsletter LinkedIn (mass invite automático)
+Live events/webinars (captura emails pessoais)
+Uso estratégico de hashtags relevantes
+Omni Creator para agendamento e engajamento
+B2B Outbound Sequence:
+Plataforma Dripify para automação
+View profile + like post inicial (dopamine hit)
+Mensagem 1: Oferta curiosa com call to action
+Espera 2-3 dias entre mensagens
+Mensagem 2: Gráfico detalhado de processo
+Mensagem 3: Follow-up
+Captura de email pessoal
+Priorizar conexões de 1º grau
+Door Kicker Strategy:
+Oferta low-ticket ($3-5K) para entrada
+Aprovação como vendor aprovado
+Land and expand com upsells
+Targeting via conferências e floor plans
+Foco em empresas com funding verificado (Crunchbase)
+Deal Management:
+Transformar 1 deal em múltiplos deals
+Ler financial statements públicos
+Mapear influência além do C-suite
+Intelligence gathering pré-meeting (James Bond level)
+Condensar múltiplos meetings em um
+Negociar termos de pagamento
+Content Strategy:
+Batch content semanal (sextas)
+5-10 min diários para engagement
+Mix de formatos (vídeo, artigo, podcast, live)
+Reutilizar conteúdo que performou
+Pensar em 1 pessoa específica ao criar
+Validar pontos de vista de executives
+Evitar conteúdo político/controverso
+ESTRUTURA:
+Modelo de Negócio Omar:
+Kativ & Co (consultoria medtech)
+The State of Medtech (podcast/live show)
+Omni Creator (SaaS - $20/mês)
+Mini-curso LinkedIn gratuito
+Serviços: CME credits, webinars, marketing
+Flywheel de Crescimento:
+Podcast/media atrai audiência
+LinkedIn distribui conteúdo
+Newsletter mantém engajamento
+Outbound converte em clients
+Clients viram case studies
+Case studies atraem mais audiência
+Hierarquia de Influência B2B:
+CEO/C-Suite (topo)
+VPs e Directors (meio)
+Managers e Associates (base)
+Sales reps com influência interna
+Todos os departamentos relevantes
+Aprovação de Vendors:
+Processo de 1 mês (big pharma)
+Auditoria completa
+Uma vez aprovado = fácil expansão
+Referências internas aceleram
+DADOS FINANCEIROS:
+Pricing Tiers:
+Door kicker: $3,000-$5,200
+Webinar upsell: $15,000-$20,000
+Curso online: $250K/ano de receita
+B2B Budget Levels:
+Até $5K: Decisão de manager/cartão
+$5K-$10K: Aprovação VP necessária
+$10K+: CFO/CEO envolvidos, ciclo longo
+ROI LinkedIn:
+Investimento: Tempo + $20/mês (Omni Creator)
+Retorno: Deals de $10K-$40M
+Half-life conteúdo: 6-9 meses (vs dias em outras plataformas)
+Payment Terms:
+Padrão big pharma: Net 75
+Negociado: Net 30
+GE: Net 120 (fim do quarter)
+Market Size:
+LinkedIn: 1B+ usuários profissionais
+Medtech: Empresas de $110B-$150B
+VC/PE: Firms com $3B+ sob gestão
+DURAÇÃO: ~95 minutos FORMATO: Apresentação ao vivo + Q&A extensivo

@@ -1,0 +1,397 @@
+Transcrição Completa: 22 Ad Scaling Decision Framework When to Scale vs When to Pause 7 26 25
+[00:00] Tudo bem, sejam bem-vindos. Esta semana na chamada em grupo, vamos passar pelo framework de decisão de escalonamento de anúncios, quando escalar versus quando pausar. Vamos abordar algumas das perguntas mais comuns que tenho visto vocês terem nas últimas semanas. E achei que este tópico seria extremamente útil. Parece que este assunto tem surgido com muita frequência.
+[00:30] Algumas das coisas que vamos cobrir hoje: número um, vamos passar por um processo passo a passo de quando e como processar o escalonamento e algumas opções de escalonamento e o que você pode fazer quando está escalando. Vamos passar por algumas das métricas-chave que você precisa prestar atenção ao escalar ou quando está pensando em escalar versus quando pausar.
+[01:00] Vamos abordar quando pausar versus quando enfrentar aumentos temporários de custos. Isso vai te dar insights sobre se você apenas precisa aguentar e manter as bolas na mesa ou se faz sentido tirá-las temporariamente. Além disso, vamos passar pelas melhores práticas de escalonamento, que já falamos em vários outros vídeos, mas vamos falar sobre isso novamente aqui em profundidade.
+[01:30] E então, além disso, também vamos falar um pouco sobre identificar performance ruim e tentar avaliar se é temporário ou se é algo mais sistemático que você precisa abordar, e algumas maneiras de abordar isso. Vou apontá-los para alguns recursos para isso no final. Então sim, sem mais delongas, vamos começar.
+[02:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "KPIs e Triggers para Escalonamento"
+NÚMEROS: Não especificados neste momento
+VISUAL: Apresentação de conceitos fundamentais sobre indicadores-chave de performance, estrutura de decisão baseada em dados
+[02:05] Primeiro de tudo, quando se trata de escalonamento, você normalmente tem que ter algum KPI ou uma combinação de KPIs que indiquem a você que é hora de escalar. E é aqui que muitas pessoas realmente erram. Elas simplesmente não têm sinais, certo? Tem que haver um gatilho, sabe, algo que quando as circunstâncias se apresentam de uma maneira específica, você faz uma conclusão onde você diz: "Tudo bem, é hora de escalar."
+[02:35] Obviamente, o maior KPI que eu normalmente uso como exemplo disso é o ROAS - retorno sobre gastos com anúncios, retorno sobre dólares em anúncios. Uma estatística que Josh Troy usa como um grande exemplo é dólares coletados por chamada agendada. E sabe, ele fala muito sobre isso em profundidade ao longo de suas palestras de mastermind.
+[03:00] Simplesmente, ele vai pegar o total de dólares que foram coletados, dividir pelo total de chamadas que foram feitas. Isso resulta em uma certa quantidade de dólares que foram coletados por chamada. Se você está rodando qualquer tipo de funil de chamada ou funil de webinar que agenda chamadas, ou realmente qualquer coisa que agenda chamadas, você pode então olhar qual é o seu custo por chamada agendada contra o total de dólares coletados por chamada agendada.
+[03:30] E isso também pode essencialmente ser outra maneira de determinar ROAS. Ele gosta de chegar a essa estatística. Eu novamente, se você prefere isso, se você prefere ROAS, esses são exemplos de gatilhos, certo? Esses são exemplos de KPIs que você pode olhar e confiantemente dizer: esta é X estatística e agora vou escalar.
+[04:00] Muitas pessoas não fizeram as contas no negócio delas e então elas não estão necessariamente convencidas se são tão lucrativas quanto precisam ser, ou às vezes o viés de comparação se apresenta e isso também pode inibir o escalonamento.
+[04:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Exemplo: Viés de Comparação"
+NÚMEROS: $400K/mês, 20-40% margem líquida, 80% margem
+VISUAL: Comparação entre métricas de negócios diferentes, demonstração de como comparações inválidas impedem crescimento
+[04:25] Como exemplo, vi alguém no inner circle recentemente, eles estavam em torno de 400 mil por mês. Tinham, acho que era entre 20 e 40% de margem líquida no dinheiro deles, e sabe, o ROAS deles era ótimo, mas novamente, eles estavam tendo uma margem líquida no negócio de cerca de 20 a 40%.
+[04:50] E então, sabe, eles olharam para os negócios de outras pessoas e disseram: "Oh, bem, muitos desses outros caras estão tendo margens de centenas de porcento." E eu disse: "Do que você está falando? Você está falando sobre ROAS contra margens líquidas da receita que você produz. Essas são duas estatísticas totalmente diferentes. Não faz sentido. Esse viés de comparação é inválido."
+[05:20] E novamente, isso impediu aquele cara de escalar por bons dois meses. E eu, sabe, ele disse: "Bem, vejo alguns negócios." E então quando ele finalmente percebeu como essa visão era errada, ele disse: "Ok, bem, vejo alguns negócios que estão no meu nicho similar que têm margem líquida de 80%, sabe, e eu só tenho margem de 20 a 40%."
+[05:45] E novamente, o ponto que estou tentando fazer é que o viés de comparação foi o que estava impedindo o escalonamento. Obviamente, se você tivesse continuado escalando e mantido margens líquidas de 20 a 40%, isso ainda é incrível porque quando você escala, o total que você tem de margem líquida, se permanecer 20 a 40%, continua ficando maior, sabe.
+[06:15] Simplesmente, muitas das complicações que ocorrem na sua mente - e esse é o lugar onde elas ocorrem, só para apontar isso - é realmente porque você simplesmente não tem gatilhos que sinalizam para você que é hora de escalar. Você não tem KPIs sobre os quais está claro em que faixa eles precisam estar para determinar quando você escala.
+[06:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "ROAS Mínimo e Matemática do Negócio"
+NÚMEROS: 2:1 ROAS, pode ser break-even ou prejuízo
+VISUAL: Demonstração de como produtos físicos têm margens mais finas, necessidade de ROAS maior que 2:1 para lucrar
+[06:45] E além disso, você simplesmente não faz nenhuma matemática para determinar qual ROAS você precisa estar para determinar se pode escalar ou não. Então, há certos negócios como exemplo, muitos deles são negócios físicos que têm algum tipo de produto, certo? Algum tipo de produto físico que vendem. Então eles não apenas têm gastos com anúncios, sabe, não apenas todas as despesas do negócio, eles também têm custo de mercadorias vendidas.
+[07:15] E eles normalmente operam com margens mais finas como resultado. E então, se você já rodou anúncios para qualquer tipo de produto físico, você está bem ciente de que, sabe, mesmo se você está em uma margem de 2:1 às vezes no seu ROAS, sabe, significando que você está transformando um dólar em $2, isso na verdade ainda pode ser break-even ou em algumas instâncias pode até te fazer perder dinheiro.
+[07:45] E então novamente, o ROAS nesse exemplo não pode ser apenas 2:1. Precisa ser muito maior que isso para determinar escalonamento. Então você tem que ter o que chamamos de ROAS mínimo. E esse ROAS mínimo é realmente apenas baseado em matemática para determinar a viabilidade de quanto dinheiro você precisa estar tendo de margem líquida para determinar que você pode lucrar. A maioria das pessoas simplesmente não faz matemática. Não posso enfatizar isso o suficiente. Isso é realmente o que determina o escalonamento.
+[08:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Otimizando para Lucro vs Crescimento"
+NÚMEROS: $1.7M/mês, 20% lucro, objetivo 40% lucro, $500K gastos com anúncios
+VISUAL: Comparação entre otimização para lucro versus otimização para crescimento/escala, trade-offs entre as duas estratégias
+[08:25] A outra coisa realmente importante de determinar quando você está escalando é se você está otimizando. E essa é realmente importante de entender. Às vezes as pessoas estão otimizando para lucro e então em outras instâncias você está otimizando para crescimento, também conhecido como escala.
+[08:45] Um grande exemplo disso: tivemos um negócio em que somos consultores neste acordo específico. Eles chegaram a cerca de 1.7 milhões por mês. Muito bom. E em outros meses eles estavam na faixa de 1.4 a 1.7, sendo 1.7 o mais alto. E eles olharam suas margens de lucro. Suas margens de lucro eram apenas cerca de 20%.
+[09:15] E eles trouxeram um CFO e o CFO e o dono do negócio disseram: "Queremos estar em 40%." Agora, a maior despesa neste negócio particular era gastos com anúncios. Eles estavam gastando cerca de meio milhão de dólares por mês em dólares de anúncios no Facebook, Google, um pouco no TikTok. Muito comum.
+[09:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Análise Financeira Detalhada"
+NÚMEROS:
+$1.5M receita bruta
+3:1 ROAS
+$500K gastos com anúncios
+$600K lucro desejado (40%)
+$300K comissões (20%)
+$200K folha de pagamento/outros
+VISUAL: Breakdown completo de receitas e despesas, demonstração matemática de como lucro de 40% impacta capacidade de escalar
+[09:45] E quando você olha para otimizar para lucro naquele exemplo de precisar ir de 20% para 40%, uma das primeiras coisas que você olha são as maiores despesas do negócio. Neste caso, gastos com anúncios. E então, sabe, eles determinaram: ok, se gastássemos apenas 400 mil em vez de 500 mil, e sabe, se tivéssemos um custo de aquisição que fosse este, sabe, e se você voltar para essa estatística a partir daí para o que todo o resto precisa parecer.
+[10:15] Relativo ao custo de aquisição, você pode então determinar quais taxas de comparecimento precisam ser, quais taxas de fechamento precisam ser, quais AOVs precisam ser, qual obviamente o custo por chamada agendada precisa ser. E todas essas métricas ficaram muito mais apertadas e o ROAS mínimo, que é super razoável para ser claro, foi definido em cerca de 3.5:1 ROAS. Esse era o cenário ideal que eles precisavam atingir para ter a lucratividade de 4:1, essencialmente tendo margem líquida de 40%.
+[10:50] História curta, então simplesmente o negócio estava em cerca de dois, alguns meses como três de ROAS, mas estava crescendo todo mês. Então no início deste relacionamento, esses caras estavam em cerca de, não sei, talvez 300 mil por mês, em algum lugar nessa faixa. E levou apenas um ano. Levou apenas um ano para chegar à faixa de um milhão por mês e depois ir além disso.
+[11:20] Mas logo naquele 1.4 a 1.7 milhões por mês, como eu disse, eles queriam mudar. Eles queriam mudar. Ok, vamos começar a otimizar em torno dessa margem de lucro de 40% que queremos. E a ilusão é que você pode fazer ambos. Essa é a ilusão porque quando você olha para ROAS e vamos usar o exemplo: você tem um ROAS de 3:1.
+[11:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Matemática do Escalonamento"
+NÚMEROS:
+$500K gastos → $1.5M receita (3:1 ROAS)
+Cenário 40% lucro: $600K lucro
+Cenário 20% lucro: $300K lucro
+Diferença: $200K para reinvestir
+VISUAL: Comparação lado a lado mostrando como otimizar para lucro vs crescimento afeta capacidade de reinvestimento
+[11:55] Para crescer, você tem que sacrificar um pouco desse ROAS para o crescimento. Então, como exemplo, vamos apenas dizer que é exatamente esse cenário. Estamos gastando 500 mil por mês em gastos com anúncios e estamos transformando isso em, vamos manter uniforme aqui e dizer cerca de 1.5 milhões por mês em receita, receita bruta. E novamente, vamos usar o exemplo. Esse é nosso ROAS de 3:1.
+[12:25] Agora a moral da história é: se eu quero embolsar 40%, isso obviamente tira um pouco desse ROAS. Então se eu olho para os 1.5 milhões e fazemos matemática básica, 1.5 milhões, você pega 40% disso. Então são $600,000. Então, se eles quisessem lucrar 40%, logo de cara daqueles 1.5, temos $600,000 que se foram.
+[12:55] E então, além disso, lembre-se, bem, também tivemos os gastos com anúncios. Então também temos que deduzir 500 mil. Agora, novamente, isso é apenas lucro e isso é apenas gastos com anúncios aqui. Isso imediatamente se foi. Então só temos 400 mil restantes neste ponto.
+[13:15] Mas olhe isso. Daqueles 1.5 que eles geraram, eles pagam à equipe de vendas 20%. E então há 300 mil ali que vão para comissões. Agora eles ficaram. Eles têm 100 mil. Bem, adivinha? Este negócio específico, eles também têm coaches na equipe e têm custos de software e têm outra folha de pagamento.
+[13:40] Então toda a outra folha de pagamento e todas as outras despesas do negócio neste caso particular equivaleram a cerca de $200,000. E vamos rotular isso como folha de pagamento/outros. Então agora você pode ver que tecnicamente estamos negativos em 100 mil, e então isso tem que ser tirado desses 40% de lucro que eles queriam aqui. Então agora tecnicamente eles estão um pouco abaixo dos 40%. Eles só conseguiram 500 mil.
+[14:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Custo de Crescimento"
+NÚMEROS:
+Cenário reinvestindo: $700K gastos → $2.1M receita
+20% de $2.1M = $420K lucro
+vs $300K embolsando 40%
+VISUAL: Demonstração de como reinvestir lucros para crescimento resulta em lucros maiores no mês seguinte
+[14:15] Mas aqui está a coisa que estou tentando enfatizar. Eles neste exemplo não têm mais dinheiro sobrando para usar para escalar os dólares de anúncios no mês seguinte para fazer mais dinheiro. Você entende? Então é como nesse exemplo, o que vamos fazer? Sabe, como vamos fazer mais dinheiro?
+[14:40] Então há algumas coisas importantes de notar, certo? E quero deixar isso muito claro. Escalonamento pode acontecer de algumas maneiras diferentes. Número um, apenas gastar mais dinheiro. Então se você vai gastar mais dinheiro, você tem que ter o que é chamado de custo de crescimento considerado.
+[15:00] Então neste exemplo que forneci aqui, este negócio específico, eles otimizaram para o lucro. E porque eles queriam 40% de lucro, bem, olhe a diferença. Se eles não tivessem ido com 40% e tivessem ficado nos 20% em que estavam, aqueles 600 mil seriam apenas cerca de 300 mil.
+[15:20] E nesse exemplo, em vez de estar negativo em 100 mil, eles ainda teriam 200 mil sobrando que poderiam ir para gastos com anúncios que poderiam ser reinvestidos nos dólares de anúncios. Você vê, mas em vez disso, eles só queriam embolsar.
+[15:40] Agora, aqui está a coisa. Novamente, é tudo apenas matemática, pessoal. Então nesse exemplo, se eu gasto $700,000 no mês seguinte em vez de 500,000, a pergunta se torna: os 20% ficam maiores? Então se eu tinha um ROAS de 3:1, novamente, em vez de fazer 1.5 milhões, eu faria 2.1 milhões se fizesse um simples 3x em $700,000.
+[16:10] E 20% disso é $420,000. Você vê? Então nesse exemplo, se eles tivessem apenas reinvestido 200 mil, em vez de embolsar, então em vez de otimizar para lucro, eles otimizaram para crescimento. No mês seguinte, em vez de embolsar 300,000, eles teriam embolsado 420,000, certo? E o negócio teria mantido seu crescimento.
+[16:40] Mas novamente, você tem que tirar o custo de crescimento do ROAS. Você vê? E então uma das coisas mais importantes a fazer novamente quando você apenas olha para um framework de decisão para escalar, a fundação dele é matemática. A fundação dele é matemática.
+[17:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Escalonamento Através de Melhorias de Estatísticas"
+NÚMEROS: Metade do custo por chamada = dobro de chamadas = dobro de receita
+VISUAL: Demonstração de como melhorar métricas pode escalar negócio sem aumentar gastos
+[17:05] Agora deixe-me ser claro quando digo isso. Este negócio de assumir um risco de $500,000 por mês em gastos com anúncios, um risco de $300,000 por mês em folha de pagamento com comissões, um risco de $200,000 por mês em folha de pagamento regular de funcionários para não-comissões - esse é um grande risco.
+[17:30] E se eles não consideram esse risco valendo apenas embolsar $300,000, então sim, eles poderiam otimizar em torno de lucro e embolsar mais dinheiro todo mês, mas o negócio é menos provável de crescer. Você vê, agora isso é uma coisa muito importante de entender.
+[17:50] Escalonamento não tem que apenas girar em torno de gastar mais dinheiro. Escalonamento também pode ser apenas melhorar nossas estatísticas. Então podemos gastar obviamente a mesma quantia exata de dinheiro. E se eu conseguir metade do custo por chamada que consegui no mês anterior, tenho o dobro da quantidade de chamadas.
+[18:15] Assumindo que meus fechadores podem atender todas as chamadas, tenho o dobro da quantidade de conversas que ocorreram. Tive o dobro da quantidade de pessoas que compareceram. Deveria logicamente ter o dobro da quantidade de pessoas que fecharam, e também deveria logicamente ter o dobro da quantidade de receita. Jogo muito simples, muito importante de entender.
+[18:40] Agora, dessa perspectiva, certo, posso tecnicamente otimizar em torno de embolsar tanto quanto eu quiser e otimizar em torno de lucro, e não tenho que apenas focar em gastar mais dinheiro novamente. Posso apenas melhorar as estatísticas. E é aqui que normalmente olhamos para coisas como nosso framework de análise de gargalos.
+[19:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Dois Caminhos de Decisão"
+NÚMEROS: Caminho 1 vs Caminho 2
+VISUAL: Bifurcação de decisão mostrando paralisia de análise quando não há gatilhos claros de decisão
+[19:05] E é por isso que isso é tão importante de entender. É também onde muitas pessoas realmente ficam presas. Então quando você olha como a vida funciona enquanto você está trilhando um caminho e você se aproxima de dois caminhos específicos que você poderia tomar - você tem caminho um e você tem caminho dois.
+[19:25] A coisa importante a notar é que se você fica preso em algum lugar nesta faixa e apenas fica entre essas duas decisões, você normalmente não toma nenhuma das duas. E isso também acontece com muitos negócios. Quando você olha apenas para frameworks de decisão de escalonamento, você tem que lembrar que está tudo na sua mente. Está tudo no seu cérebro.
+[19:50] E quando seu cérebro não tem um conjunto claro de gatilhos de decisão para usar, como falamos no início desta conversa, você tem que ter KPIs. Você tem que ter gatilhos. Você tem que ter sinais que te dizem quando fazer o quê. E então até que esses sejam definidos, você provavelmente não vai tomar nenhum tipo de decisão. Você não vai avançar de jeito nenhum.
+[20:15] E é aí que seu negócio acaba ficando estagnado por tanto tempo. Porque vamos ser realistas. Quando você escolhe o caminho um e digamos que você quer gastar mais dinheiro, você quer otimizar em torno do custo de crescimento. Tirar um pouco de dólares do seu ROAS toda vez e jogar para mais dinheiro no mês seguinte sendo gasto para fazer mais dinheiro.
+[20:40] Isso em si requer todo um conjunto de tomada de decisão. É muito esforço até certo ponto, dependendo de quanta pressão você sente fazendo isso. E não posso enfatizar isso o suficiente, pessoal. Esta é a coisa mais fácil de entender sobre o caminho número um. Tudo que você tem que fazer é apenas se convencer de que esse é o caminho que você quer seguir.
+[21:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Caminho 1: Gastar Mais vs Caminho 2: Melhorar Stats"
+NÚMEROS: Não especificados
+VISUAL: Comparação entre duas estratégias de escalonamento, recursos necessários para cada caminho
+[21:10] Se você quer melhorar as estatísticas em vez disso como seu mecanismo para escalar, novamente, requer sua atenção total. Requer que você esteja totalmente envolvido nisso para fazer funcionar. Porque novamente, é um conjunto totalmente diferente de matemática. É um conjunto totalmente diferente de problemas. É um conjunto totalmente diferente de ações a tomar.
+[21:35] Agora, quero ser justo ao dizer que esta é meio que a parte legal sobre negócios. Sabe, uma vez que você tem dinheiro suficiente, você pode tecnicamente atravessar ambos os caminhos ao mesmo tempo porque você poderia apenas enviar uma equipe por um caminho e uma equipe por outro.
+[21:55] Mas dependendo de quem você é enquanto está sentado aqui assistindo isso, quero dizer, alguns de vocês simplesmente não têm esse tipo de dinheiro agora para poder pagar pessoas para descer ambos os caminhos de uma vez. E é você que tem que escolher qual caminho seguir.
+[22:15] Outras pessoas sentadas aqui ouvindo esta chamada, vocês já têm um monte de dinheiro. Vocês já acumularam muitos recursos e entendem completamente o que estou dizendo. É como toda pessoa que já comandou um exército e teve guerras das quais foram generais, a ilusão é que todas essas pessoas estão apenas seguindo essas pessoas cegamente.
+[22:40] É como, não, eles estão todos sendo pagos. Todos os soldados no campo estão sendo pagos dinheiro, e os que fazem coisas mais especializadas são pagos mais dinheiro. Então quando os generais querem atacar duas cidades ao mesmo tempo, se eles têm recursos suficientes para fazer isso, eles apenas pagam mais soldados, pagam mais especialistas para ir realizar duas coisas de uma vez.
+[23:05] Se você não tem dinheiro suficiente, então você não tem a oportunidade de fazer isso. Você só pode atacar e conquistar uma coisa de cada vez. Então novamente, este é um desses exemplos de como processar a tomada de decisão quando você está escalando. Esses dois são realmente os maiores.
+[23:25] Novamente, você apenas gasta mais dinheiro se algo já está perpetuamente funcionando, o que às vezes é o caminho mais fácil de tomar, ou você vai com o caminho de melhorar as estatísticas. Agora, quero ser justo ao dizer, como eu disse, você pode fazer ambos. Você absolutamente pode fazer ambos. Muito importante de entender, você absolutamente pode.
+[23:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "KPIs Principais para Monitorar"
+NÚMEROS: Não especificados inicialmente
+VISUAL: Lista de métricas importantes: ROAS, custo por chamada, taxa de fechamento, etc.
+[23:55] Agora, quando você escolhe o caminho dois ou quando você escolhe o caminho um, como continuo mencionando, há apenas um monte de KPIs. Há apenas um monte de estatísticas específicas que você precisa estar ciente. Vá em frente e coloque no chat, quais KPIs específicos você acha que são mais importantes? O que especificamente você presta atenção quando está processando se deve escalar ou não?
+[24:20] Vamos ver o que você tem. Jogue no chat. Adoraria ver suas respostas. Sim, Ben diz ROAS. Sim. E então este é o benchmark líder para a maioria de vocês. Retorno em dinheiro em 30 dias, custo por chamada, taxa de fechamento por chamada. Sim.
+[24:45] E então aqui está a coisa. Deixe-me ser claro, certo? Alguns de vocês complicam demais essa merda. É como a resposta fácil é apenas, oh sim, é ROAS. Mas não é assim que a maioria de vocês se comporta. Olhe o que Devon tem feito. Devon é um exemplo perfeito. Devon está surtando o tempo todo com anúncios.
+[25:10] É como ele olha para o breakdown individual do anúncio e é como: "Oh meu deus, todos os meus anúncios não estão tendo retorno." Sabe, como: "Oh meu deus, todos os meus anúncios não estão tendo distribuição." Esse é um exemplo de algo que vai acionar o cérebro dele para impedir escalonamento.
+[25:30] É como ele não vai ter a clareza que precisa porque está pensando mesmo que seja hiper lucrativo, bem, apenas um anúncio está tendo distribuição. Vê? Então isso imediatamente adiciona uma segunda camada de complexidade. Então o que você tem que fazer é essencialmente ter tomada de decisão em camadas.
+[26:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Sistema de Camadas de KPIs"
+NÚMEROS: Camada 1, Camada 2, Camada 3
+VISUAL: Hierarquia de métricas em três níveis de importância, com Camada 1 sendo decisiva
+[26:05] Camadas são muito importantes de entender quando você está considerando o que é de importância e o que não é. Então obviamente camada um. Sim, concordo completamente. ROAS. Sabe, com respeito às estatísticas de Josh Troy, dólares coletados por chamada agendada, essa é definitivamente outra. Custo por chamada agendada, também quero ser claro.
+[26:30] Há outras, há outras estatísticas que podem flutuar entre camadas, mas deixe-me dar um exemplo de algumas outras. Obviamente temos a taxa de cliques no link. Temos coisas como CPMs, temos nossos optins, temos nossas taxas de aplicação, sabe, temos nossa taxa de agendamento, temos nossa taxa de comparecimento, temos AOV, sabe, temos taxa de fechamento.
+[27:00] Há muito material. Tenho certeza de que há obviamente mais do que isso. Dependendo do modelo que você roda, pode haver mais algumas estatísticas que poderíamos olhar. Sim, custo por resultados definitivamente outra. A principal coisa que muitas pessoas fazem é que em vez de ter essas separadas, elas vão apenas colocar todas em uma camada.
+[27:25] E então isso adiciona tremenda complexidade ao processo de tomada de decisão porque agora você está pegando variáveis da camada um, que podem ser o KPI de tomada de decisão, e você está colocando tudo em um nível especificamente com um monte de subestatísticas que sim, podem parecer uma merda, mas quando seu ROAS está em um nível particular ou quando seus dólares coletados por chamada estão em um nível particular, não significam porra nenhuma.
+[28:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Camada 3: Métricas Secundárias"
+NÚMEROS: Taxa de reprodução de VSL, taxas de abertura de email
+VISUAL: Exemplos de métricas de terceiro nível: compliance de setters/closers, estatísticas de CRM, métricas detalhadas de funil
+[28:05] Então é como, por exemplo, estatísticas da camada três, deixe-me mover isso um pouco para baixo para termos uma configuração um pouco mais limpa. Estatísticas da camada três podem ser como taxa de reprodução nos VSLs ou sabe, isso poderia ser até coisas como taxas de abertura de email.
+[28:25] Poderíamos ter compliance de setter/closer, como eles estão enviando os ativos pré-chamada, os vídeos de selfie, coisas assim. Poderíamos ter como compliance de CRM como exemplo. Sabe, temos um monte de outras estatísticas de anúncios. Não vou listar todas, mas há um monte, sabe.
+[28:50] Novamente, há um monte de outras estatísticas de funil, assim como quanto tempo as pessoas passam na página. Pense em ir ao Google Analytics e apenas olhar para cada estatística aleatória que está disponível para você. Novamente, meu ponto é que quando você olha para isso, você tem que ter o que chama de KPIs norte.
+[29:15] Esses são os KPIs que finalmente guiam toda decisão que você toma. E se o KPI principal está em um nível específico, mas as estatísticas da camada 2 ou camada três estão em qualquer nível que possa ser intolerável para você, a camada 1 sempre sobrepõe a camada dois. Isso faz sentido para todos?
+[29:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Exemplo de Decisão: 3.5 ROAS com Stats Ruins"
+NÚMEROS:
+3.5 ROAS
+1.7 ROAS mínimo para break-even
+Taxa de clique: ruim
+CPM: $200
+VISUAL: Cenário de decisão mostrando ROAS excelente mas métricas secundárias ruins
+[29:45] Coloque um no chat se você está entendendo o que estou falando. Isso é muito importante você entender essa parte porque é nisso que a maioria das pessoas realmente erra. Então vou dar um ótimo exemplo. Vamos listar. Digamos que tenho um ROAS de 3.5.
+[30:10] E fizemos as contas e meu ROAS mínimo para ser lucrativo e tecnicamente break-even é tipo 1.7. Então estou bem acima daquele limite mínimo que preciso para ser lucrativo e estou embolsando dólares e também sou capaz de sacrificar alguns daqueles dólares de ROAS que estou gerando para o custo de crescimento.
+[30:35] Agora, neste exemplo, digamos que tenho uma taxa de clique no link absolutamente horrível. E digamos também que meus CPMs são tipo $200. E nem vou passar por todas as outras estatísticas. Digamos apenas que quando você olha para todas as outras estatísticas, você as aceita. Elas não aparecem como uma pilha fumegante de merda para você.
+[31:00] Apenas essas duas estatísticas, você olha para elas e diz: "Bem, essas são definitivamente bem ruins." Ok, mas você está em um ROAS de 3.5. Você escala? Coloque no chat. Coloque sim, você continuaria a escalar ou coloque não, você não escalaria.
+[31:20] E vejo um monte de sins imediatamente. Devon diz "publicidade Chad". Sim. Agora, aqui está a coisa. Isso é realmente importante vocês entenderem isso. A resposta real que a maioria de vocês teria na vida real é não, porque eu oriento vocês e vejo como vocês tomam decisões e vocês não fazem isso de fato.
+[31:45] O que vocês fazem em vez disso é aproveitar o viés de comparação e dizem: "Bem, sim, mas as estatísticas de anúncio do Jeremy naquela nova conta Andrew Lamb são todas tipo 2.35 e ele tem um custo por chamada agendada de $55. Meu custo por chamada agendada é tipo $247 agora."
+[32:10] Sabe, eu poderia melhorar isso muito. Não vou escalar até melhorar. Você entende? É como, então novamente, o que você realmente faria é a pergunta. O que você realmente faria? Porque é aqui que a maioria de vocês erra.
+[32:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Analogia da NBA"
+NÚMEROS: LeBron James: 40 pontos por jogo em média
+VISUAL: Comparação com estar na NBA jogando contra LeBron no auge - você ainda está na NBA e deve continuar escalando
+[32:35] Você está em um grupo onde há, cara, imagine que você está na NBA e você consegue ocasionalmente jogar contra LeBron James quando ele estava no Miami Heat com Dwayne Wade no seu auge absoluto. Você ainda está na NBA. Você ainda é um grande jogador, mas você está se comparando com alguém que está no seu auge literal que vai ser indiscutivelmente o melhor jogador a existir na história da NBA.
+[33:05] E você está pensando consigo mesmo: sim, quero dizer, sabe, eu não deveria tentar escalar agora, sabe, porque as estatísticas do LeBron ali, tipo ele está colocando 40 por jogo em média, sabe. É como, QUEM SE IMPORTA, sabe? Você ainda escala e gasta mais dinheiro para fazer mais dinheiro nesse exemplo. Você entende? É aqui que a maioria das pessoas realmente erra.
+[33:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Cenário 2: ROAS Caiu para 2.7"
+NÚMEROS:
+ROAS anterior: 3.5
+ROAS atual: 2.7
+ROAS mínimo: 1.7
+Período: 1 semana
+VISUAL: Cenário de decisão com queda de ROAS mas ainda acima do mínimo
+[33:40] Ou vamos usar o exemplo disso. Mesmas estatísticas aqui. Mesmas estatísticas, mas neste cenário aqui, seu ROAS apenas caiu para um ROAS de 2.7. Coloque no chat. Sim, você escala. Não, você não escala. Novamente, seu ROAS mínimo para ser lucrativo neste exemplo, tecnicamente break-even, é 1.7.
+[34:05] Você continua escalando? Você pausa? Que decisão você escolhe tomar? Coloque escalar, coloque pausar, coloque gastar menos. Qual decisão você especificamente tomaria? O que você vai fazer? Seu ROAS apenas caiu de 3.5 para 2.7. E vamos usar o exemplo, o período de tempo é ao longo de uma semana.
+[34:30] Então uma semana inteira passou, seu ROAS caiu em 0.8. O que você vai fazer? O que você vai fazer? Coloque no chat. Você vai escalar? Você vai pausar? Você vai puxar gastos de volta? O que você vai fazer? Você vê? E então a moral da história é que essas são as decisões que você enfrenta em tempo real.
+[35:00] E para ser claro, é como a maioria de vocês não percebe, e isso é uma coisa realmente importante: ROAS é dinâmico. ROAS não é um número estático. Então aqui está a coisa. Quando você olha para o que eu originalmente te disse para fazer, eu disse que você tem que ter um KPI definido antes do tempo.
+[35:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Regras Se-Então (If-This-Then-That)"
+NÚMEROS: Taxa de fechamento: 50%, oferta: $10,000
+VISUAL: Framework de decisão automatizada: definir regras antes das situações acontecerem
+[35:30] Se for acima de X, eu faço X. Isso faz sentido? Então você pega um KPI da camada um que você define ser um KPI da camada 1. Você pode escolher, cara. Você define o KPI da camada 1. E então você diz se isso, então aquilo, mas você faz isso antes da situação se apresentar.
+[35:55] Dessa forma, quando a situação se apresenta, você já sabe o que fazer e não complica. Você apenas faz. Então novamente, a pergunta se torna: você tem alguma regra se isso então aquilo? Vou dar uma ótima porque você pode fazer isso para todo tipo de coisa. Não tem que ser apenas ROAS.
+[36:20] Digamos que tenho uma taxa de fechamento de 50% em uma oferta de $10,000. Na minha cabeça vai: se minha taxa de fechamento estiver acima de 50%, então vou aumentar meus preços porque minha taxa de fechamento não deveria ser 50%. Vou fazer mais dinheiro.
+[36:45] E se minha taxa de fechamento permanecer em 50% depois que eu aumentar meus preços, vou aumentar novamente. E vou fazer as contas também. Novamente, não posso enfatizar isso o suficiente. Cada coisa que sentamos aqui e falamos, especialmente quando se trata de escalonamento, é apenas um jogo de matemática.
+[37:10] E é apenas a outra metade de toda a lógica de escalonamento. É apenas um monte de regras se isso então aquilo. E a maioria de vocês, em tempo real, não tem regras se isso então aquilo. Vocês estão apenas adivinhando. Vocês estão apenas atirando para esquerda e direita. Vocês não têm complexo para processar.
+[37:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Análise de Gargalos (Bottleneck Analysis)"
+NÚMEROS: Não especificados
+VISUAL: Framework para identificar qual KPI específico precisa ser atacado quando performance cai
+[37:40] E então tudo que vocês fazem em vez disso quando uma situação específica e aleatória surge onde seu número cai, é tudo que vocês pensam consigo mesmos. Vocês apenas pensam: "Oh meu deus, meu número caiu. É melhor eu parar de escalar." Sabe, e então vocês acabam em uma posição onde meses passam e vocês não melhoraram nada de verdade.
+[38:05] Vocês não fizeram mais dinheiro. Vocês não fizeram nada. Em vez disso, vocês apenas agiram irracionalmente e por medo como uma galinha com a cabeça cortada, correndo apenas pensando que a merda está ficando maluca. É como, não, cara. É um jogo bem simples.
+[38:25] Agora aqui está a outra coisa. Então lembre-se: se isso, então aquilo. Como exemplo disso, se o KPI X cair, então eu faço X. Vamos usar este exemplo. Se meu ROAS cair e eu quero melhorá-lo dramaticamente, se um KPI chave cair, então eu faço uma análise de gargalos.
+[38:50] Então neste exemplo, se um dos meus KPIs da camada 1 cair, então eu faço uma análise de gargalos. E através da análise de gargalos, vou expor quais KPIs específicos caíram. E então vou ser capaz de determinar qual KPI preciso atacar para fazer o ROAS subir novamente. Você vê?
+[39:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "O Que Faz ROAS Subir/Descer?"
+NÚMEROS: Não especificados
+VISUAL: Conceito de que ROAS é composto por todas as estatísticas do processo de vendas e marketing
+[39:20] Aqui está a coisa. Vá em frente e responda esta pergunta. Não é uma pergunta retórica. Coloque sua resposta no chat. O que faz o ROAS subir e o que faz o ROAS descer? Não é um número mágico. Não é uma pegadinha. O que faz o ROAS subir e o que faz o ROAS descer são as estatísticas que compõem o ROAS.
+[39:45] As estatísticas que compõem o ROAS são todos os passos no meu processo de publicidade e vendas. E então por que a resposta é sempre fazer uma análise de gargalos quando meu ROAS cai? Porque nesse ponto eu posso então expor qual KPI específico foi contraído e posso atacá-lo e abri-lo novamente e fazer meu ROAS subir de novo.
+[40:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Escalonamento é Como Whack-a-Mole"
+NÚMEROS: Não especificados
+VISUAL: Analogia do jogo arcade onde toupeiras aparecem e você precisa acertá-las de volta
+[40:15] Isso é realmente importante como uma regra. Escalonamento é como jogar whack-a-mole. Todo mundo sabe o que é whack-a-mole? Todo mundo sabe? Sim. Coloque um no chat se você sabe o que é whack-a-mole. Coloque dois se não sabe. Sei que temos um monte de pessoas de todo o mundo e não sei se vocês do mundo todo jogam whack-a-mole.
+[40:40] Para todos aqueles que podem não entender, vamos dar uma olhada rápida. Whack-a-mole é um jogo bem simples. Parece com isso aqui. Você tem um pequeno martelo na mão. Pequenas toupeiras saem dos buracos e seu trabalho é apenas acertá-las de volta no buraco. Jogo bem simples.
+[41:05] Quero ser justo ao dizer que às vezes escalonamento de fato parece com isso onde nenhuma das toupeiras está fora e você não tem que fazer nada e tudo que você tem que fazer é apenas gastar mais dinheiro. Mas muitas das vezes quando vamos escalar, não é assim. E há muitas toupeiras que estão aparecendo e nosso trabalho é pegar o martelo e acertá-las de volta para onde pertencem.
+[41:35] Agora, em vez disso, o que a maioria das pessoas faz é quando seu ROAS cai, elas apenas ficam sentadas e dizem alguma merda idiota tipo: "Vou apenas esperar que volte a subir." Do que você está falando? Você vai esperar que volte. O quê? O que você quer dizer que vai esperar que volte a subir? Esperança não é uma estratégia.
+[42:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Identificando Qual 'Toupeira' Atacar"
+NÚMEROS: Não especificados
+VISUAL: Processo de usar análise de gargalos para identificar qual problema específico resolver
+[42:05] Esperança não é uma estratégia. Não é. Quando ROAS cai, é porque algumas estatísticas específicas no nosso processo de marketing e vendas foram para a merda. E pode não ser apenas uma estatística, podem ser múltiplas estatísticas. E então quando uma coisa específica vai para a merda, meu trabalho é jogar whack-a-mole e ir acertar aquela toupeira de volta para onde pertence.
+[42:30] E então eu revelo qual toupeira está especificamente aparecendo fazendo uma análise de gargalos e determinando qual estatística específica preciso colocar uma quantidade agressiva de atenção para resolver. Agora obviamente cada KPI tem um conjunto diferente de coisas que podemos precisar fazer por ele.
+[42:55] Certo, como exemplo, uma das toupeiras mais comuns que aparece e que vocês me ouvem falar o tempo todo é fadiga de anúncios. Às vezes nossos anúncios apenas rodaram por muito tempo e apenas precisamos lançar alguns anúncios novos no lugar deles para puxar nossos custos de volta para baixo.
+[43:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Priorizando Eficiência"
+NÚMEROS: Taxa de clique: 0.4, dobrar para 0.8 = metade do custo
+VISUAL: Framework de atacar problemas mais fáceis primeiro antes de envolver cliente em mudanças maiores
+[43:20] Outras vezes não é fadiga de anúncios e você apenas tem um problema de performance. Seus anúncios podem apenas ser ruins. Sua página pode apenas ser ruim. E novamente, posso revelar se esse é o caso ou não atacando as coisas mais simples primeiro que se relacionam e potencialmente resolvem para aquele KPI.
+[43:45] Então deixe-me dar um exemplo novamente de um framework de decisão simples para usar ao escalar. Eu sempre priorizo eficiência. Sempre vou fazer a coisa mais fácil primeiro. Trabalho com pessoas ricas ocupadas para viver. Não posso apenas ligar para elas e dizer: "Ei, acho que é o VSL que é ruim. Precisamos fazer um novo."
+[44:10] Preciso fazer todas as outras coisas no meu controle primeiro que são mais fáceis de fazer antes de envolver o cliente para fazer coisas mais difíceis. Você entende? Então como exemplo disso, às vezes a coisa mais fácil de fazer é apenas relançar com alguns criativos frescos que temos no gelo.
+[44:35] E às vezes, a maioria das vezes isso funciona. E quando não funciona, eu apenas tenho um framework se isso então aquilo para pensar. Então como exemplo, se estou tentando influenciar meu custo por chamada, e vamos usar o exemplo que meu custo por chamada subiu, e eu faço uma análise de gargalos e revelo que tenho uma taxa de clique no link bem baixa nos anúncios e minha taxa de aplicação também está um pouco baixa.
+[45:05] Bem, nesse caso, talvez o mais simples dos dois seja atacar as perguntas da aplicação primeiro. Mas alguns negócios não querem fazer isso porque estão convencidos de que a quantidade de perguntas que têm e as perguntas na aplicação, elas precisam estar lá. Faz uma grande diferença para a capacidade de vender pessoas e a intenção dos leads.
+[45:30] Então eles não querem tocar nisso ainda. Sabe, novamente, a coisa mais simples de fazer naquele exemplo, vamos atacar se há dois gargalos, atacar o mais fácil. Porque tudo que tenho que fazer é apenas abrir um deles para o dobro do nível que está. Se tenho uma taxa de clique de 0.4 e dobro para 0.8, o dobro de pessoas vai para a página, o dobro de pessoas agenda chamadas.
+[46:00] Agora tenho metade do custo por chamada. Agora tenho o dobro da quantidade de receita que apenas saiu disso. Você entende? Simplesmente eu tenho que ter um framework de decisão pelo qual penso. E tenho que lembrar que ROAS não é um número estático. ROAS é um número dinâmico.
+[46:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Velocidade de Resolução de Problemas"
+NÚMEROS: Não especificados
+VISUAL: Conceito de que velocidade de resolver problemas = velocidade de escalar
+[46:30] ROAS pode continuar se mantendo e continuar subindo relativo à minha capacidade de resolver problemas rapidamente. Muito importante. Quanto mais certos problemas se arrastam, mais devagar você escala, certo? Não é difícil, não é ciência de foguetes de jeito nenhum. Jogo muito fácil. Quanto mais rápido eu resolvo problemas, mais rápido eu consigo escalar.
+[47:00] Sabe, apenas esta semana, acho que foi ontem, não lembro com quem eu estava falando, mas era um de vocês. E eu estava dizendo, sabe, acabei de conseguir esta propriedade comercial para nós. E sabe, ontem eu tive que mover tipo três chamadas para mais tarde no dia porque um viciado em crack veio e cortou minha linha de água em algum momento nos últimos vários meses enquanto a propriedade estava vaga.
+[47:30] Eles provavelmente estavam tentando pegar algum cobre, mas era feito de tubo de PVC. Então eles não conseguiram dinheiro com isso, tenho certeza. Mas de qualquer forma, tentei ligar a água ontem na propriedade e não havia água, então levou cerca de 3 horas para descobrir que um viciado em crack tinha cortado o tubo.
+[47:55] Mas independentemente, aqui está o que quero que você entenda. Pergunta simples para você. Esse problema ainda estaria lá daqui a um mês se eu não colocasse tempo nisso até daqui a um mês? Vou fazer a pergunta novamente para que você entenda. Eu escolhi lidar com o problema ontem. Eu escolhi encontrar o problema ontem. Eu escolhi pagar pessoas para resolver o problema ontem.
+[48:25] Se eu não tivesse feito isso ontem para fechar esse ciclo, eu ainda teria aquele problema daqui a um mês para lidar se eu escolhesse fazer isso daqui a um mês em vez disso? E então a pergunta se torna uma pergunta realmente simples. Eu quero lidar com os problemas agora ou quero lidar com os problemas depois?
+[48:50] Porque o problema ainda vai estar prevalente agora ou depois. É apenas relativo a quão rápido eu quero resolvê-lo para chegar ao outro lado do problema. Agora, só quero colocar algumas coisas em perspectiva com aquele mesmo exemplo que forneci com o viciado em crack cortando minha linha de água.
+[49:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Problemas de Alto Impacto vs Baixo Impacto"
+NÚMEROS: Taxa de reprodução: 15% → 30%
+VISUAL: Demonstração de que nem todos os problemas têm igual impacto no custo por chamada
+[49:20] Há todo tipo de coisa que não posso fazer sem água na propriedade. Nem posso enviar minhas faxineiras lá para limpar sem água. Nem tenho certeza, não sei isso porque não sou técnico de HVAC. Mas as unidades de AC não precisam de água? Tenho o cara do AC indo lá na terça-feira. Ele poderia ligar o AC se não tivesse água? Não sei.
+[49:45] Ninguém poderia usar nenhum dos banheiros na propriedade sem água. Há um monte de problemas que existem se eu não resolver aquele problema rapidamente. E todos aqueles outros problemas, eles existem porque eu não resolvi o problema principal. E então a outra coisa realmente importante de entender fora da velocidade que precisamos para resolver problemas é que temos que resolver os grandes problemas.
+[50:15] Para o que chamamos de problemas de alto impacto. Então deixe-me dar um exemplo específico. Isso é por que camadamos alguns desses KPIs assim. Vou dar um ótimo. Vamos usar o exemplo que determinei que quero baixar meu custo por chamada agendada. Dessa forma posso aumentar meu ROAS, mas escolho atacar um KPI da camada três para fazer isso.
+[50:45] Digamos que minha taxa de reprodução no meu vídeo é baixa. Então tenho um funil de aplicação VSL neste caso. Digamos que minha taxa de reprodução é tipo 15%. Significando que apenas 15% das pessoas que chegam à página pressionam play no vídeo. E eu escolho atacar isso especificamente. E digamos que eu dobro para 30%.
+[51:10] Responda esta pergunta. Isso reduz meu custo por chamada pela metade se eu dobrar a taxa de reprodução? Sim ou não? Novamente, coloque suas respostas no chat. Se eu dobrar a taxa de reprodução no VSL de 15 para 30%, isso me dá metade do custo por chamada? Isso reduz meu custo por chamada pela metade? Sim ou não?
+[51:35] Correto. Vocês todos estão inundando o chat com não. E vocês estão certos. Então como exemplo, isso é um problema de alto impacto para resolver? Esse é um KPI de alto impacto? Você vê, agora nesse exemplo, digamos que minha taxa de clique no link era tipo 1%. Digamos que minha taxa de aplicação, significando a quantidade de pessoas que chegam à minha página e aplicam, é 1.5%.
+[52:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Priorizando KPIs de Alto Impacto"
+NÚMEROS: Taxa de clique: 1%, Taxa de aplicação: 1.5% vs Taxa de reprodução: 15%
+VISUAL: Comparação mostrando que atacar KPIs de camada 2 tem mais impacto que camada 3
+[52:10] Bem, novamente, eu escolhi atacar a taxa de reprodução quando aquelas outras duas estatísticas de impacto mais alto estavam lá para eu atacar em vez disso. Você vê, muito importante de notar. Este é um exemplo de como pode ficar um pouco complexo, mas realmente não é. Você apenas tem que simplificar. Você apenas tem que quebrar de maneiras realmente simples.
+[52:35] Qual camada é aquele KPI específico que estou escolhendo abordar? Qual camada é? É um problema de camada 1 onde é apenas realmente a estatística que é composta por um monte de outras subestatísticas. Problemas de camada dois são estatísticas de impacto mais alto para focar com certeza, mas novamente, eles também são tecnicamente compostos de algumas estatísticas de camada três.
+[53:00] Então aqui está a coisa, certo? Às vezes eu tenho que resolver problemas de KPI de camada três para fazer impacto em um KPI de camada 2. Mas novamente, todas as coisas na camada 2 também podem ser resolvidas apenas atacando as coisas na camada dois, sabe.
+[53:20] E então quando você se pergunta tipo o que eu resolvo primeiro, sabe, o que especificamente eu tento fazer quando estou tentando escalar e melhorar? Eu quero ir para os KPIs de impacto mais alto primeiro. Eu quero ir para as toupeiras que me dão mais pontos quando eu as acerto de volta para baixo. Você entende?
+[53:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Analogia Chuck-E-Cheese"
+NÚMEROS: Toupeira arco-íris = 5x pontos
+VISUAL: História de jogar dois jogos de whack-a-mole simultaneamente, priorizando a toupeira de alto valor
+[53:50] Eu lembro quando criança indo ao Chuck-E-Cheese. E então não sei para nosso pessoal internacional se vocês têm Chuck-E-Cheese ou não, vocês foram abençoados com a oportunidade de jogar lá. Mas vou dizer isso, Chuck-E-Cheese era muito divertido e tinha aquele jogo de whack-a-mole lá.
+[54:15] Mas a parte legal sobre o Chuck-E-Cheese para o específico que eu ia, eles tinham duas máquinas de whack-a-mole bem ao lado uma da outra. E então você poderia essencialmente jogar este jogo ao mesmo tempo com duas máquinas diferentes, um martelo na sua mão esquerda e direita. Eu era muito bom nisso. Eu poderia acertar toupeiras em ambas e ainda conseguir uma pontuação bem alta.
+[54:40] Mas aqui estava a estratégia. Uma dessas toupeiras em particular das cinco, era tipo uma toupeira arco-íris. E quando aquela aparecia e você a acertava de volta, ela descia mais rápido. Tipo ela subia rápido e descia bem rápido. E então se você conseguisse a oportunidade de acertá-la de volta no buraco, você conseguia mais pontos do que acertar uma toupeira regular.
+[55:05] E obviamente jogando dois jogos ao mesmo tempo, isso me daria mais pontos de qualquer forma coletivamente. Mas aqui está a coisa, aquela pequena toupeira arco-íris, era um desafio. Sabe, você tinha que ter um tempo de reação realmente rápido para ser capaz de acertar aquela toupeira de volta. Mas quando ela se apresentava, se houvesse duas ou três outras toupeiras que apareciam ao mesmo tempo, obviamente vou pela toupeira arco-íris.
+[55:30] Vou pela que tem tipo 5x os pontos. E então eu ia me exibir para todas as criancinhas no Chuck-E-Cheese. Conseguir mais tickets do que elas. Conseguir alguns prêmios melhores. Você me entende? Agora a moral da história é que haverá instâncias onde há apenas uma toupeira que aparece.
+[55:55] E isso é tudo que você realmente precisa focar nesse exemplo claramente. Mas o que realmente acontece, e isso é a maioria das vezes que isso ocorre, você terá muitas toupeiras que aparecem ao mesmo tempo. E como resultado disso, você vai ter muito mais problemas para focar de uma vez.
+[56:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Framework Se-Então Completo"
+NÚMEROS: Não especificados
+VISUAL: Sistema completo de regras de decisão: qual toupeira atacar, quando escalar, quando pausar
+[56:20] E então você tem que delinear quais problemas são dignos de focar e quais não são. Você vê? Então de qualquer forma, moral da história, muito importante de entender. Eu tenho que ter um framework se isso então aquilo. Então como exemplo disso, se a toupeira arco-íris aparecer, toda atenção vai para a toupeira arco-íris para conseguir mais pontos.
+[56:45] Se eu tenho apenas um problema para resolver, então estou resolvendo aquele único problema. Se eu não sei qual problema resolver, estou fazendo uma análise de gargalos. Se meu ROAS está acima desta quantidade que determinei matematicamente que estou ok para estar, se está qualquer coisa acima disso, estou escalando.
+[57:10] Vê, é apenas um monte de cenários se isso então aquilo que você simplesmente não tem definido ainda. Você entende o que estou dizendo? Coloque um no chat se você entende o que estou dizendo. Sinta-se livre para desmutar-se e fazer uma pergunta se tiver alguma, ou você pode colocar uma pergunta no chat se preferir. Gostaria de abordar quaisquer perguntas que você possa ter não resolvidas antes de continuarmos.
+[57:40] Alguém? Ok, muito bom. Então novamente, apenas para enfatizar isso, sabe, quando parar versus quando empurrar para cima é realmente apenas um sinal. É assim que estou pensando nisso. Estou pensando comigo mesmo: eu gosto do que está acontecendo na conta? Eu não gosto do que está acontecendo na conta?
+[58:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Sinais para a Plataforma"
+NÚMEROS: Não especificados
+VISUAL: Conceito de comunicação com IA da plataforma através de ações de escalonamento/redução
+[58:10] Se eu gosto do que está acontecendo na conta, vou escalar. Se eu não gosto do que está acontecendo na conta, não vou escalar. E potencialmente até vou puxar de volta se quero sinalizar para ela que não gosto do que está acontecendo, e ela significando que a plataforma está especificamente influenciando o que não gosto que está acontecendo.
+[58:35] Deixe-me ser claro quando digo isso. Se eu não gosto do que está acontecendo mas não é culpa da plataforma, não vou puni-la escalando para baixo. É minha culpa. Certo? Pode haver algo em particular que está acontecendo na página. Certo? Se é culpa da plataforma, deixe-me ser claro sobre algumas coisas que são culpa da plataforma.
+[59:00] Os tipos de qualidade de pessoas que você consegue, a taxa de cliques, os CPMs, essas variáveis especificamente que são da plataforma, dentro do controle deles, problemas, dentro do controle deles, variáveis. Essas são as coisas que vou usar quando estou escolhendo sinalizar. Muito importante você entender isso. Muito, muito importante.
+[59:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Três Estratégias de Escalonamento"
+NÚMEROS:
+Custo por X
+10-30% por dia
+Surfing
+VISUAL: Três métodos principais de escalar gastos com anúncios, cada um com riscos e benefícios diferentes
+[59:35] Tudo bem. Temos vídeos inteiros onde falamos sobre diferentes planos matemáticos de escalonamento. Estão todos dentro da biblioteca de chamadas em grupo semanais. Vamos muito em profundidade nesses diferentes tópicos, mas sabe, vou tirar um momento e vou falar sobre esses agora apenas para clareza para todos.
+[1:00:00] Então normalmente fazemos três coisas diferentes. Temos a estratégia de custo por X. Além disso, temos o clássico 10 a 30% por dia. E então além disso, temos a estratégia de surfing. Salve para o Sr. Tim Bird por me ensinar isso no passado. E deixe-me passar por todos esses rapidinho com vocês, só para que entendam.
+[1:00:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Estratégia Custo por X"
+NÚMEROS:
+$500/dia inicial
+$100 custo por resultado
+5 resultados/dia
+Adicionar 10 resultados = +$1,000
+Novo orçamento: $1,500/dia
+VISUAL: Matemática de escalar baseado em custo por resultado multiplicado por novos resultados desejados
+[1:00:30] Vamos começar com a estratégia de custo por X. Então vamos usar o exemplo que estou gastando $500 por dia em gastos com anúncios. E vamos apenas usar o exemplo que é em uma campanha específica ou um conjunto de anúncios específico, o que for. Tudo bem de qualquer jeito.
+[1:00:50] E tenho um custo por resultado de 100 dólares. Então isso significa por dia estou atualmente conseguindo cinco resultados, que poderiam ser o que você quiser. Custo por compra, custo por chamada, o que for. Agora com a estratégia de custo por X, estou pegando o custo do que leva para gerar um resultado e estou multiplicando pela quantidade de novos resultados que quero abrir espaço.
+[1:01:20] Então como exemplo, digamos que quero 10 novas pessoas para converter amanhã e atualmente tenho um custo por resultado de $100. Isso significaria que preciso adicionar ao orçamento um extra de $100 por dia. Então tenho meu orçamento existente de $500 por dia. Preciso adicionar espaço para 10 mais resultados. E meu custo por resultado atual é 100 dólares.
+[1:01:45] Então novamente, isso significa que tenho $1,000 por dia que preciso adicionar. Isso significa que meu novo orçamento diário amanhã é 1,500 por dia. Agora há um monte de perguntas técnicas para responder em relação a isso. Deixe-me apenas responder todas elas.
+[1:02:05] Você faz isso na campanha existente ou no conjunto de anúncios existente? Sim, você absolutamente pode. Com certeza pode. Aqui está a coisa. Há uma responsabilidade para a estratégia de custo por X. E é a mesma coisa com surfing. Vamos falar sobre isso aqui em breve, mas moral da história é que a responsabilidade é essencialmente a mesma.
+[1:02:30] Se eu jogar tanto orçamento diário na campanha, sou muito provável de ver um aumento no meu custo por resultado temporariamente ou potencialmente permanentemente. E se isso ocorrer, isso não é bom. O que vou fazer a partir daí é vou relançar a campanha no orçamento diário mais alto e vou ver se consigo o mesmo custo por resultado que consegui antes.
+[1:02:55] A estratégia de custo por X e a estratégia de surfing da qual vamos falar aqui em breve é destinada a escalar rapidamente. Elas são estratégias de escalonamento rápido. Elas não são para os fracos. Elas não são para ir devagar. Elas são para ir muito rápido.
+[1:03:15] Quero ser justo ao dizer que se o mercado está lá para você vender, a estratégia de custo por X vai funcionar notavelmente bem. A desvantagem dela é que tem uma das responsabilidades mais altas de causar problemas com seu custo por resultado no curto prazo.
+[1:03:35] Então você tem que aguentar o custo por resultado mais alto e então esperar que decline novamente, ou você vai aumentar seu custo por resultado e ele vai apenas ficar lá. Agora novamente, se aumenta e apenas fica lá, posso precisar esperar tipo 48 a 72 horas para descobrir isso.
+[1:03:55] E se esse for o caso, vou apenas relançar a campanha, mantê-la no orçamento mais alto, e idealmente vejo a um custo por resultado mais baixo do que estava na campanha inflada em que estava rodando anteriormente. Se novamente, se eu relançar a campanha e ela permanecer mais alta, então vou sinalizar que não gosto disso. Vou puxar os gastos de volta para baixo.
+[1:04:20] Muito importante distinção a fazer ali. Para ser claro, bem simples. Você pode fazer isso tão agressivamente quanto quiser. A responsabilidade da estratégia de custo por X é que quanto mais agressivo você faz, maior a probabilidade é que você gire as rodas no custo por resultado. Muito importante distinção a fazer ali.
+[1:04:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Estratégia Surfing"
+NÚMEROS:
+Início: $500/dia
+3AM: +10% = $550
+4AM: +30% = $715
+6AM: +30% = $929.50
+Continuar até fim do dia
+VISUAL: Escalonamento múltiplo durante o dia, opção de resetar à meia-noite ou continuar
+[1:04:50] Então vamos usar o exemplo que eu queria mais resultados em um dia, certo? E tenho que ir de $500 por dia para 10,500 por dia. Isso não faz muito sentido. Nesse exemplo, eu realmente encorajaria que você vá com a estratégia de surfing, sobre a qual vou falar agora.
+[1:05:10] Então a estratégia de surfing foi originada pelo meu amigo Tim Bird, grande anunciante, conheço Tim há acho que quase uma década agora. Moral da história é que é bem similar, mas você tem a oportunidade de escalar múltiplas vezes por dia.
+[1:05:30] Então vamos usar o exemplo que novamente eu começo com $500 por dia em gastos com anúncios. E eu quero escalar agressivamente. Eu quero fazer escalonamento rápido. Então aqui está a coisa. Você pode surfar de muitas maneiras. A maneira que Tim Bird originalmente ensinou é que você pode escalar com essencialmente tipo uma certa porcentagem múltiplas vezes por dia.
+[1:05:55] E então qualquer que fosse o orçamento inicial à meia-noite, no final daquele dia à meia-noite, você vai puxá-lo de volta para o que quer que fosse à meia-noite, seu ponto de partida, e você faz tudo de novo no dia seguinte.
+[1:06:15] Eu faço surfing um pouco diferente, mas vou ensinar vocês ambos para que tenham ambos. Então novamente, a maneira de Tim Bird de fazer, ele vai escalar em qualquer lugar de, sabe, aqueles 10 a 30%. Mas ele vai apenas fazer, simplesmente, ele vai apenas fazer múltiplas vezes por dia.
+[1:06:35] E isso é muito estável. Eu quero apontar isso. É muito bom. Então como exemplo, se eu começo, digamos que é meia-noite. Eu lanço a campanha em $500 por dia. Estou surtando, sabe, estou bebendo um monte de Red Bulls e cafés. Estou em Zins e estou tipo: "Tudo bem, vou ficar acordado a noite toda. Vamos acompanhar essa coisa até meia-noite do dia seguinte."
+[1:07:00] Digamos que são 3 da manhã. Estou conseguindo um bom custo por resultado. Faço o primeiro aumento de 10%, sabe, agora estou em 550 por dia. E estamos às 3 da manhã agora. Aqui estamos à meia-noite. História curta, espero mais uma hora. Tudo está parecendo bom. Vou escalar 30% agora.
+[1:07:25] E deixe-me apenas fazer as contas em tempo real para termos os números reais. 550 vezes 0.3 é 165 mais 550 é 715. Então agora são 4 da manhã e minha campanha foi de 500 por dia para 715 por dia às 4 da manhã. Digamos que meu custo por resultado se manteve.
+[1:07:50] Digamos que eu quero escalar mais 30%, eu esperei mais uma hora, mas neste caso esperei 2 horas. 715, vamos escalar 30%. São 214.50. Então 1750 e os 214.50 são 929.50. Então vou escalar 30%, são 6 da manhã, agora estou em 929.50 por dia.
+[1:08:15] E novamente, meu custo por resultado ainda está se mantendo bem. O ponto sendo, sabe, vamos usar o exemplo, trabalhamos nosso caminho todo até tipo 8 da noite. Sabe, fizemos toda essa merda tipo múltiplas vezes e agora estamos acima de tipo $4,000 por dia, sabe, em algum lugar nessa faixa.
+[1:08:35] E novamente, meu custo por resultado ainda está se mantendo bem. Sabe, avançamos todo o caminho até 11:59 PM. E sabe, trabalhei meu caminho todo até tipo $6,241 por dia. E novamente, meu custo por resultado está se mantendo bem.
+[1:08:55] A lógica do que Tim ensina na estratégia de surfing original é que assim que meia-noite acontece novamente, você pegaria isso e puxaria de volta para o orçamento diário original que você tinha com que começou aquele dia e então você apenas surfaria novamente no dia seguinte. E então essa é essencialmente a lógica.
+[1:09:20] E ele também ensina isso, a propósito, onde você pode apenas fazer muitas das regras automatizadas e você pode essencialmente apenas automatizar toda essa tomada de decisão. Então você pode escolher quando escalar o quê. Sabe, você pode às vezes escalar múltiplas vezes em uma hora. Você poderia escalar a cada hora. Você poderia escalar a cada poucas horas.
+[1:09:45] É realmente tudo contingente em onde seu custo por resultado está e se você gosta do que está acontecendo. Se você gosta do que está acontecendo, e tipicamente em termos da faixa de data nisso, você está olhando para a faixa de data de hoje na maioria das instâncias, certo?
+[1:10:05] E é assim que você está conclusivamente determinando com que frequência você escala, se você gosta do que está acontecendo ou não. É realmente tudo isso. É bem simples. Muito importante de notar, você geralmente não gasta todo o seu orçamento diário definido. É claro, você tipicamente vai gastar muito menos que isso. Mas sim, funciona muito bem. É uma ótima estratégia.
+[1:10:30] Agora minha versão de surfing é praticamente a mesma coisa exceto que eu apenas não faço essa parte. Então eu apenas não puxo de volta para o que estava no começo do dia. Eu apenas vou para o próximo dia terminando onde quer que estivesse no dia anterior.
+[1:10:50] E então minha versão de surfing, eu diria que é muito mais agressiva até certo ponto porque novamente não estou tentando puxar os gastos de volta para o que estava no dia anterior. Estou tentando levar isso para o dia seguinte. Estou tentando fazer a onda ainda maior. Então moral da história é que essa é a única distinção entre a de Tim e a minha é que eu apenas não puxo de volta. É só isso.
+[1:11:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Estratégia Clássica 10-30%"
+NÚMEROS: 10-30% aumento por dia
+VISUAL: Método mais conservador e menos arriscado de escalonamento
+[1:11:20] Então de qualquer forma, moral da história além disso, nós apenas temos a estratégia clássica de 10 a 30% por dia. E essa é realmente fácil. Tipicamente, qualquer que seja seu custo por dia, desculpe, qualquer que sejam seus gastos com anúncios para começar o dia, se as coisas estão indo bem e você gosta do custo por resultado sobre qualquer faixa de data que você está olhando, você apenas escala em qualquer lugar de 10 a 30% por dia e você apenas faz uma vez por dia.
+[1:11:50] Às vezes você nem faz todo dia. Às vezes você fará tipo a cada poucos dias. Em termos de risco, os 10 a 30% é a versão menos arriscada de escalonamento. Eu honestamente diria que surfing é na verdade uma estratégia de menor risco do que a estratégia de custo por X.
+[1:12:10] A estratégia de custo por X é de longe a mais agressiva. É também a mais arriscada no sentido de que pode girar seu custo por resultado. Mas sim, quero dizer, funciona muito bem quando funciona. Então também é a mais rápida para escalar relativo ao fato de que, sabe, não tenho que sentar lá o dia todo e surfar ou não tenho que configurar todas as regras automatizadas para surfar.
+[1:12:35] Eu posso apenas deixar rolar com a estratégia de custo por custo por X. Então de qualquer forma, moral da história, essas são tipicamente as maneiras que escalamos. E as coisas que escolhemos fazer e o que determina nós escolhendo gastar mais dinheiro ou não é tudo que já falamos até este ponto.
+[1:12:55] Muito importante distinção. KPIs chave estando na faixa, custo por resultado, ROAS, sabe, as estatísticas de camada 1 versus camada 2 todas estando boas. É tudo que se resume. É um jogo bem simples.
+[1:13:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "ROAS é Dinâmico, Não Estático"
+NÚMEROS: Não especificados
+VISUAL: Conceito de que ROAS tem uma faixa, não um número fixo, alguns dias são ruins
+[1:13:20] Então de qualquer forma, moral da história, vou fechar com isso. A coisa mais importante de entender é, sabe, quando falamos sobre ROAS não sendo um número estático, sabe, é um número dinâmico. Tem uma faixa. É muito importante apontar que como resultado dele ter uma faixa, temos que respeitar que alguns dias são apenas dias ruins.
+[1:13:45] Sabe, distinção muito importante. Alguns dias apenas são ruins. É tudo, sabe, isso é tudo que acontece às vezes. E se você olha para as coisas numa base dia-a-dia, isso pode realmente te jogar fora de sintonia em termos de como você vai pensar e o que você vai escolher fazer. E sabe, isso pode realmente te ferrar.
+[1:14:10] Mas você também tem que respeitar o fato de que quando você está gastando muito dinheiro, às vezes você tem que tomar decisões todo dia. Outras vezes apenas faz sentido sentar e esperar. E esse é outro daqueles cenários se isso então aquilo.
+[1:14:30] Então para mim como exemplo, minha regra pessoalmente é que se a performance está ruim naquele dia, não vou fazer nada. Vou esperar até o dia seguinte para ser mais conclusivo sobre o que vamos escolher fazer. Preciso de um pouco mais de dados porque sei que dias ruins acontecem.
+[1:14:50] Agora se eu tenho uma sequência de dias ruins, volta para a lógica de sinais. Vou determinar se é minha culpa ou culpa da plataforma. E isso é o que vai me fazer escolher o que fazer a seguir em termos do que vou sinalizar para a plataforma de anúncios. Isso vai determinar se eu puxo de volta, pauso, coisas assim.
+[1:15:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Regra de Dias Ruins"
+NÚMEROS: 1 dia ruim = esperar, 2+ dias ruins = agir
+VISUAL: Framework de quando reagir vs quando esperar baseado em duração da performance ruim
+[1:15:20] Então de qualquer forma, moral da história, muito simples de entender. Se é performance ruim por um dia literal, não quero usar as palavras não me importo, mas não vou fazer nada em um dia porque haverá dias ruins. Se eu tenho múltiplos dias ruins seguidos, significando mais de dois, é aí que vou ser mais conclusivo sobre tenho que fazer algo sobre isso. Deixe-me entrar em ação aqui e acertar a toupeira.
+[1:15:50] Ok, legal. Espero que isso ajude vocês com, sabe, ter um framework claro para tomar algumas decisões de escalonamento com confiança sem, sabe, ter que se questionar ou cometer quaisquer tipos de erros custosos.
+[1:16:10] Eu realmente tentei aqui quebrar o que eu acho que é todo componente do que eu uso quando estou escalando e potencialmente puxando coisas de volta e crescendo uma conta rapidamente. Eu só quero enfatizar em termos de um resumo, você realmente tem que fazer as contas.
+[1:16:30] E quando digo fazer as contas, você tem que ficar claro sobre quais KPIs específicos precisam estar em qual nível porque eles todos se influenciam, sabe, e haverá mais de um problema de cada vez. E você tem que camadas esses KPIs. Não posso enfatizar o suficiente o quanto isso também ajuda.
+[1:16:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Erro Comum: Não Camadas KPIs"
+NÚMEROS: Não especificados
+VISUAL: Demonstração do erro de tratar todos KPIs igualmente em vez de priorizá-los em camadas
+[1:16:55] Essa é uma das grandes áreas onde eu acho, do que vi de reconhecimento de padrões, acho que vocês cometem mais erros. Acho que a coisa mais comum que posso ver entre vocês como um grupo coletivo é que vocês simplesmente não camadas os KPIs em diferentes níveis de impacto.
+[1:17:15] E então você vai apenas ter todos esses em um plano. E como resultado disso, tipo quando um deles cai, mas você ainda está bem acima do que você de outra forma gostaria de estar para ROAS, você ainda para de escalar de qualquer jeito porque você surta porque algum outro KPI cai, sabe.
+[1:17:35] Então de qualquer forma, moral da história, fique claro nos seus KPIs. Fique claro em camadas os diferentes KPIs e, sabe, acompanhe com quaisquer perguntas que você possa ter sobre isso. Alguém quer fechar com alguma pergunta que tenha para obter clareza sobre qualquer coisa que falamos aqui hoje antes de irmos?
+[1:17:55] Você pode se desmutar ou também pode colocar quaisquer perguntas no chat. Feliz em responder. Chris, sua pergunta foi respondida? Legal. Ok, ótimo. Tudo bem, pessoal. Agradeço vocês estarem aqui como sempre. Falo em breve.
+📊 RESUMO EXECUTIVO
+NÚMEROS PRINCIPAIS:
+Exemplo de negócio: $400K/mês com 20-40% margem líquida
+Caso de estudo: $1.7M/mês, objetivo 40% lucro
+Gastos com anúncios exemplo: $500K/mês
+Comissões: 20% da receita ($300K)
+Folha de pagamento/outros: $200K
+ROAS mínimo exemplo: 1.7:1 para break-even
+ROAS ideal exemplo: 3.5:1
+CPM exemplo problemático: $200
+Custo por chamada exemplo: $100-$331
+Taxa de clique exemplo: 0.4% → 0.8% = metade do custo
+Taxa de fechamento exemplo: 50% em oferta $10K
+Calendário exemplo: 60 chamadas/dia
+Gasto diário exemplo: $6K → $12K durante problema
+ESTRATÉGIAS E SISTEMAS:
+Framework de Decisão de Escalonamento:
+Definir KPIs e gatilhos antes das situações
+Sistema "Se-Então" (If-This-Then-That)
+Camadas de KPIs (1, 2, 3)
+Análise de Gargalos para identificar problemas
+Três Métodos de Escalonamento:
+Custo por X: Multiplicar custo por resultado × novos resultados desejados (mais agressivo)
+10-30% por dia: Método conservador, escalar uma vez por dia (menos arriscado)
+Surfing (Tim Bird): Escalar múltiplas vezes por dia, resetar à meia-noite ou continuar
+Otimização:
+Para Lucro: Maximizar margem, limita crescimento
+Para Crescimento: Reinvestir lucros, aceitar margem menor temporariamente
+Custo de Crescimento: Deve ser fatorado no ROAS
+Sistema de Sinais:
+Recompensar plataforma quando performa bem (escalar)
+Punir plataforma quando performa mal (reduzir/pausar)
+Só punir se for culpa da plataforma (CPM, qualidade leads, CTR)
+Não punir se for problema interno (página, VSL, processo)
+ESTRUTURA:
+Camada 1 KPIs (Decisivos):
+ROAS
+Dólares coletados por chamada agendada
+Custo por chamada agendada
+Camada 2 KPIs (Alto Impacto):
+Taxa de clique no link (CTR)
+CPMs
+Taxa de optin
+Taxa de aplicação
+Taxa de agendamento
+Taxa de comparecimento
+AOV (Average Order Value)
+Taxa de fechamento
+Camada 3 KPIs (Impacto Secundário):
+Taxa de reprodução de VSL
+Taxa de abertura de email
+Compliance setter/closer
+Compliance CRM
+Tempo na página
+Estatísticas detalhadas de funil
+Analogia Whack-a-Mole:
+Escalonamento = acertar toupeiras que aparecem
+Priorizar "toupeira arco-íris" (problemas de alto impacto)
+Fazer análise de gargalos para identificar qual "toupeira" atacar
+Velocidade de resolver problemas = velocidade de escalar
+DADOS FINANCEIROS:
+Cenário Otimização para Lucro (40%):
+$1.5M receita → $600K lucro desejado
+Após todas despesas: $500K lucro real (33%)
+$0 sobrando para reinvestir
+Cenário Otimização para Crescimento (20%):
+$1.5M receita → $300K lucro
+$200K disponível para reinvestir
+Próximo mês: $700K gastos → $2.1M receita → $420K lucro
+Regras de Decisão:
+1 dia ruim = esperar, não agir
+2+ dias ruins = investigar e agir
+ROAS acima do mínimo = continuar escalando
+ROAS abaixo do mínimo mas tendendo up = avaliar situação
+Problema de pixel/tracking = pode levar 2-4 semanas para resolver
+DURAÇÃO: 1:18:00 FORMATO: Chamada de grupo educacional / Masterclass sobre escalonamento de anúncios

@@ -1,0 +1,327 @@
+Transcrição Completa: The Venus Fly Trap 2.0 Explainer
+[00:00] My original content ad strategy is the Venus fly trap. I came out with it a little over 11 years ago now when I worked for Mr. Grant Cardone and I was his first digital marketer.
+[00:12] Grant was an absolute content machine and Grant originally hired me to be his email marketing specialist. That was my first title there before I became a full-time digital marketer three months into the job.
+[00:24] And uh being an email marketer and you know using just marketing automation every day I was very used to this concept of if this then that logic okay which is just the logic of marketing automation if this happens then that happens if this doesn't happen then that happens instead.
+[00:42] And um you know I'd never worked in a business like Grant's where a guy was just filming every fucking day of the week like damn near half the day because the guy was just filming shit.
+[00:54] And I remember I was in the back end of the ads manager at the time on uh Facebook and I clicked on the audiences section and I saw that video views were available to remarket and and right away for me the idea clicked.
+[01:09] You know, one of the richest guys I had met in my life. He came out with the MLS system and he also came out with the magnetic strip on the back of credit and debit cards. And his name is Ron.
+[01:20] And uh Ron is fucking filthy rich, you know, old as hell but filthy fucking rich. And Ron, when you ask him, Ron, like, what made you come up with these ideas? He just says, you know, I took one thing over here that was working really well, and I took one thing over here that was working really well, and I just I just combined them together.
+[01:38] He's like, that's all I do. It's all that that's all my secret is. And man, those ideas just fucking banged together for me. If this then that logic and the fact that I could remarket video viewers, the idea to me was very simple and very clear.
+[01:54] And that's where the Venus fly trap 1.0 originated, which was I'm going to create a sequence of videos where if the person watches this threshold of content in video one, then they'll get to see video two.
+[02:07] And if they watch this threshold of video two, then we're going to let them watch video three. And if they watch this threshold of video three, then we're going to fucking hammer them with direct response marketing. Okay?
+[02:18] And again, dude, I originated that shit 11 years ago. It's been printing for us. We don't use it all the time. We use it when a market doesn't have awareness about whatever it is that we're going to pitch people on.
+[02:31] That was originally what I kind of pigeon holed the Venus Fly Trap for and where its use case was best best fit, you know.
+[02:38] And the thing is with the Venus Fly Trap 1.0, although yes, the Venus Fly Trap 2.0 will still follow a three-step sequence, the Venus Fly Trap 1.0 was really intended to be highly strategic with short form content preferably.
+[02:54] Um the content in the 1.0 was intended to establish like specific biases and get a person to think a particular way by the time they saw the direct response. And again very effective still today very effective for its specific use cases.
+[03:10] And I got nothing against the 1.0. I just recently had a lot of feedback coming from sales teams where people would consistently say, "What kills the sale is the lead showing up for education."
+[03:23] And I just tried to throw everything that I could at solving that specific problem because the pattern of that specific issue showing up again and again and again was so prevalent. It just felt like we needed to solve this problem.
+[03:37] So, I came out with the long-form version of the hammer them. We amplified the short form effectiveness of the hammer them strategy, added a fuckload of long form content to it. That that helps solved a lot of the problem to be fair.
+[03:52] But I don't when I when I go to solve something, I like to throw everything I can at it. You know, that way I increase the speed in which I solve that specific issue.
+[04:02] So, introducing the Venus Flight Trap 2.0. Okay, let me walk you through what it is, how it works, and when we use it, why we use it, how we split tested against what we're currently doing, and just make sure you understand it thoroughly.
+[04:17] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Venus Fly Trap 2.0 - Three Step Sequence"
+NÚMEROS: 3 passos, Step 1, Step 2, Step 3, Step 4 (Direct Response)
+VISUAL: Diagrama mostrando fluxo sequencial com 4 caixas conectadas por setas, representando os 3 passos de conteúdo seguidos pelo passo de resposta direta
+[04:20] So, the Venus Fly Trap 2.0 is still a three-step sequence, okay? And we're just going to label it as step one, step two, step three, and then we have our fourth and final step, which is technically the direct response. Okay, step one, two, and three are all content.
+[04:37] However, with the 1.0, it's ideally one piece of content and it's ideally a short form piece of content. The Venus Fly Trap 2.0 is a long form strategy. Okay? It's a long form strategy rather than a short form strategy.
+[04:52] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "5 Videos Per Step"
+NÚMEROS: 5 vídeos por etapa, 15 vídeos long-form no total
+VISUAL: Três colunas representando Step 1, 2 e 3, cada uma contendo 5 ícones de vídeo, totalizando 15 vídeos
+[04:54] And rather than one video per step, we want to have five long form videos per step. So, right away, the requirements of the Venus Fly Trap 2.0, know you got to have 15 long form videos. Okay?
+[05:09] I want to be very direct when I say this. These long form videos have to be extremely dense on the value that they have. They cannot be YouTube optimized videos where you have intros that are all fluffy and full of shit.
+[05:24] They can't have call to actions throughout them or you're just pitching random stuff. You have to optim There's none of that like, hey, like, comment, and subscribe, share the video. None of that shit okay? It's value density.
+[05:37] I talked about this when I was explaining the long form hammer them video. If you didn't get a chance to watch that yet, allow me to reiterate. You need to have a wow, this is profound kind of moment every about 45 seconds max inside of these long form videos.
+[05:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Value Density Formula"
+NÚMEROS: 45 segundos, 10 minutos, 12-15 momentos impactantes
+VISUAL: Timeline visual mostrando intervalos de 45 segundos ao longo de 10 minutos, com ícones de estrela marcando "wow moments"
+[05:58] So, as an example, if I had a 10-minute video that I wanted to use as one of my five videos for each one of these three steps, I would have a piece of value, like a great piece of value, every 45 seconds on average.
+[06:14] So, I would end up having between like 12 and 15 different banger moments throughout each one of these long form pieces of content.
+[06:23] Now, in terms of which pieces of long-form content you want to use per step, because you're picking five long form videos per step, it varies. I want to be very fair in saying I'm not necessarily biased towards saying like, oh, it should be these types of videos for step one and then these types of videos for step two and these types of videos for step three.
+[06:45] They're all very similar. I mean, you could you could damn near mix any one of the 15 videos that you have for any particular step in whatever order you'd like.
+[06:55] Some of you already have a strong organic presence and you've already figured out like what what pieces of content are typically your indoctrination like your introductory content where people first become aware of you and like enter into your ecosystem effortlessly.
+[07:11] And then you also know the videos towards the tail end of your sales process that have a lot of effectiveness at getting people to the point where they officially take the action and feel like you can help them finally.
+[07:23] If you already know that, that is a great thing to know because you can follow that exact same sequence of what happens on your organic side and replicate it with the Venus Fly Trap 2.0 so you can incorporate it, have consistency with it from a paid advertising perspective.
+[07:39] So whether you have that or not, I don't want to make it sound too advanced. I've taken clients that already have that mapped out and just modeled it out with the order we put the videos in for the Venus Fly Trap 2.0.
+[07:51] I've also taken clients who have a fuckload of very valuable content and we've just randomly ordered it. Uh we haven't necessarily thoroughly put a lot of intentional thought into like here's what these first five videos should be and here's what the next five and here's what the next five should be.
+[08:07] So I want to be fair and saying like it's okay to technically have you know whatever order you see best. Um but if you already know you know make sure you model that simply put. Okay.
+[08:18] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "25% Threshold Rule"
+NÚMEROS: 25% de visualização como gatilho
+VISUAL: Barra de progresso mostrando 25% preenchido, com seta apontando para o próximo passo
+[08:20] So you have a total of five videos that you are going to have for each one of these steps. Okay? And we don't care which one of the five videos that they watch. All we care about is that they've consumed a 25% threshold of these videos. That's all we care about.
+[08:38] As soon as they watch 25% of any one of the videos, that is when we allow them to go over to step number two. Okay?
+[08:47] So, as soon as they watch 25% of any one of these singular videos, we will happily allow them to go to step number two or the subsequent step. Okay?
+[08:57] So they get targeted by up to these five different videos and then again soon as they watch 25% of the following step they get to go to the following step after that.
+[09:07] So I'll break this down tactically for how you're going to set it up and all that fun stuff but I just want to make it clear that this is the threshold that we are attempting to target and go after most. Okay.
+[09:18] And that final step, by the way, as soon as they've watched 25% of video one, they get to go and watch any one of the particular videos in step number two.
+[09:28] Out of those five different videos, as soon as they watch 25% of any one of those step two videos, we push them on to step number three.
+[09:36] And then again, they get to watch whichever one of the five videos in step number three, they actually consume 25% of. And as soon as they do consume 25% of it, amazing. They'll then flow to our direct response step.
+[09:50] And our direct response step, this is where we have our conversion mechanism placed. This is where we're telling people like, "Hey, go take this action, you know, go opt in for this webinar. Go book a sales call."
+[10:03] Um, I want to be very directed and saying I originally and almost exclusively deployed the Venus Fly Trap 2.0 on call funnels. That's what I was most intensely trying to solve for because through webinars like we can run direct response towards totally cold audiences and with a webinar we can indoctrinate them.
+[10:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Webinar Statistics"
+NÚMEROS: 1/3 dos participantes, 2-3 webinars assistidos antes de comprar
+VISUAL: Gráfico de pizza mostrando 33% destacado, ícones de webinar repetidos 2-3 vezes
+[10:27] But even with webinars we were seeing on some of our clients like one and this is a non-exaggerated statistic one-third of the people who would show up to a webinar would have already watched one of the other webinars they would show up to an average of two to three webinars, one-third of the entire registrant list would have already watched one to two other webinars prior.
+[10:50] Meaning on average, one-third of the total audience that was buying was seeing two to three webinars on average before they would buy.
+[10:59] Just to give you some perspective on how important indoctrination is, remember this is the quote. This is what we have to remember. This is why we're doing this. Okay?
+[11:09] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Josh Troy Quote - Wires from Strangers"
+NÚMEROS: N/A
+VISUAL: Citação destacada em fonte grande: "What kills the sales call is the person showing up for education"
+[11:11] This is this is a quote from my buddy Josh Troy from Wires from Strangers. One of my best and favorite sales managers that we work with. Josh said, "What kills the sales call is the person showing up for education." That's what we want to solve around. Okay?
+[11:27] That's when when and why we deploy the Venus Fly Trap 2.0 because even with webinars, one-third of the demographic who ends up buying will have watched two to three fucking webinars on average before they actually pull the trigger and buy.
+[11:42] You see, that's crazy. And that's a webinar. That's like a 90 minute to three-hour presentation. That's education and indoctrination. Okay? It's the content that's selling people nowadays.
+[11:55] Uh there'll be some nuances that we talk about after I explain all of the tactics and little caveats of the strategy that I want to make clear for you on how we split test it against standard direct response.
+[12:07] Some other again technical information that we need to go through on setting it up and all that fun stuff. But for now, I just want you to understand, we want to push people through 25% of three different long form videos prior to showing them the direct response as a test to be able to see if it creates a warmer lead just like organic does.
+[12:29] And for us, what we've seen time and time again, it fucking crushes it. Especially when you combine the Venus fly trap with okay so after they take the action right so after they opt in after they book the call that's where we're going to run the hammer them.
+[12:46] Okay and with the hammer them we incorporate both short form long form and then in addition to that ideally we have a sales team that's adapted to modern selling strategies that's going to also help to aid the sales process and that's typically when we get the conversion event to occur.
+[13:04] So this could be like okay the webinar happens the sales call happens whatever and then obviously from there we want to see that a sale happens and that's when the that's when the cash gets collected you feel me.
+[13:16] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Campaign Setup - Step 1"
+NÚMEROS: Campaign 1, 5 ad sets, 5 vídeos
+VISUAL: Estrutura hierárquica mostrando 1 campanha dividida em 5 ad sets, cada um contendo 1 vídeo
+[13:18] So okay I digress point I'm trying to make the five videos okay and the way that you tactically set this up let me just go down here to a fresh page for us so you're going to have a campaign set up okay this is campaign one you could technically call this is typically my naming schema to be clear like I'll name it campaign in step one and then I'll put like Venus fly trap. That's really it. Okay.
+[13:44] Now, in that campaign, I'm optimizing it for engagement. Okay. So, engagement and then uh what I'm going to do is for my targeting within this. Okay.
+[13:56] So, for my ad set, I technically have five ad sets and each one contains one video. Okay. And that's why I have five. I want to make sure that I get equal distribution on these five videos because I want to make sure that they see them because as soon as they see one, that's when that's when we move them to phase two. Okay?
+[14:17] And that's what's important to understand. Now, inside each one of these is just one singular video. Okay? So, we'll just have video one, video two, video three, video four, and video five. Okay.
+[14:30] Now, in terms of the ad sets themselves, so my targeting is typically set up with whatever I would normally target for my cold audiences or whatever audience I want to force through the fly trap.
+[14:44] So generally, and this is important to understand, this is a cold audience strategy. Okay? It's a cold audience strategy through and through.
+[14:53] You can run your warm audiences through it if you find that your warm audiences are cold. Like we have some people that do shout out campaigns, as an example, and they just get a bunch of dog shit through that as a result.
+[15:07] Not to sit here and like make the people who do shout outs sound bad. It's a very cost-effective strategy that can produce great revenue, but it can also destroy the quality of your audience with a bunch of like really cold and unfamiliar and unaware leads.
+[15:23] So anyway, that can happen to be fair to the shout out people from many different instances, you know. Uh anyway, I digress.
+[15:30] Point I'm trying to make is you can do it through warm audiences like your Facebook interaction, your Instagram interaction, your page views, 365-day video viewers, you know, like you you can do it with all kinds of shit to be clear.
+[15:45] Uh website visitors, your entire lists, you know, that's that's what I consider warm audiences to be clear. Cold audiences are like interest stacks, lookalike audiences, broad targeting.
+[15:56] Okay, I when I set up cold audiences am doing interest stacks and lookalikes, especially with the Venus fly trap. Like I want to make sure I get a proper audience to become targeted.
+[16:08] I'm not doing like advantage audience targeting. I'm not doing advantage audience detailed targeting. Like I'm switching to original audience options and I'm building out an interest stack and I'm unchecking that little box that says reach people beyond this selected audience.
+[16:26] I'm making sure that like it actually biases towards the people I want to target. And u it's important to understand like I I I believe in my capacity to target the right people and most of the accounts we work on especially when you're talking about the Venus fly trap you're optimizing around engagement. Okay.
+[16:45] So this is very important to understand like when I run direct response I'm optimizing around a direct response standard event like schedule purchase complete registration submit application even lead.
+[16:59] So, I'm going to get in front of a higher quality demographic who are actually probable to take those actions. When I optimize a campaign around engagement, here's the issue. I'm going to get in front of a bunch of people who are probable to just engage and not probable to schedule, purchase, opt in, whatever it is I'm optimizing for at the direct response step.
+[17:23] That's why I like to force a specific audience type that it's going to go after so I can at least influence that. Okay? And this is important to understand. there's a lot more people that it's going to go after because I'm optimizing for engagement.
+[17:38] And that's fine because even when I get to the direct response step, it's still only going to bias towards the people who are probable to take the action. It's not going to target everybody that makes it to step four.
+[17:51] It's going to target the people who made it to step four and are probable to take the action that I'm optimizing my direct response step for. You see what I mean?
+[18:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Audience Creation Strategy"
+NÚMEROS: 25% visualização, 10 segundos, 15 audiências totais (2 por vídeo), 365 dias
+VISUAL: Diagrama mostrando criação de 2 tipos de audiências customizadas por vídeo: uma para 25% e outra para 10 segundos
+[18:02] So, okay. So long story short, my targeting in step one, okay, in campaign one is cold targeting. Okay, now here's the thing, and this this is actually very important to understand. I'm creating 25% video view audiences for each one of these individual videos.
+[18:21] So, in total, you're going to have 15 different 25% video view audiences per video. Okay? So, I'm going to have a total, just to be clear, of one exclusion audience is what it's going to end up being used for.
+[18:36] And then, to be fair, at the same time, in step number two of these campaigns, it becomes what we target. Okay?
+[18:43] So, I'm creating an audience. Just let me summarize that. That might have been a little confused. I'm trying to create simply I'm going to audiences. I'm pressing create an audience. I'm pressing video. I'm selecting 25% and I'm picking that one video. That's it. Okay.
+[19:01] And I'm pressing create. And I'm doing it for a 365-day window. Okay. Then from there, that's it. I'm going to go and I'm going to create a second audience for the second video, etc. through the 15 different videos that I've got for each of my three steps.
+[19:19] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "10-Second Rule"
+NÚMEROS: 10 segundos, 1.8 segundos (atenção média), 5x mais atenção
+VISUAL: Comparação visual entre 1.8s (atenção média) vs 10s (threshold), mostrando que 10s = 5x mais engajamento
+[19:21] I am also, and this is this is a very important caveat that I love about this shit okay? As soon as somebody watches 10 seconds of one of these videos, the average attention attention span per post is 1.8 seconds per post on average when it comes across the news feed. Okay?
+[19:39] So, five times the amount of attention is 10 seconds. So, I'm also going to create a 10-second video view audience. Okay? per video.
+[19:49] So, I'm going to go to the audiences section. I'm going to press create audience. I'm then going to make sure I select video views. I'm going to select 10 seconds this time instead of 25%. I'm going to select that one video. I'm going to do it for 365 days. And I'm going to create it. Okay.
+[20:07] So, I end up with two total audiences that are selected per video. A 25% view through threshold and a 10-second view through threshold. Okay.
+[20:18] Now in a tactical way. And by the way, just to be clear, in the SOP, there's like little screenshots and stuff of me walking through setting it up on my computer for what it looks like.
+[20:28] So, if you struggle at all with this, just make sure you go and you actually look at the Venus Fly Trap 2.0 SOP because it walks through tactically how to set it all up. I'm just trying to explain it to you here. So, there's some video to help support you.
+[20:41] So, okay, long story short, back to the campaign setup, right? So, I got a campaign. I got five ad sets within that campaign. And within each ad set is just one video. Okay, for one of my five videos in total that I have per step.
+[20:57] My ad set is going to include on step one, it's going to include my targeting for whoever I want to have my direct response ads eventually serve to. I'm going to I'm going to do nothing different as if I was just targeting direct response ads.
+[21:12] I'm targeting cold audiences, warm audiences, whatever. Okay? And then from there, I'm excluding people who watched 10 seconds of the video within that ad set. Okay?
+[21:24] So ad set one will have video one within it. It'll target the cold audiences in this example, and it will exclude the people who saw 10 seconds of that video.
+[21:35] That way, if and when somebody watches 10 seconds of any one of these five videos, they won't see it again and they'll get served one of the other four or one of the other three depending on how many 10 seconds they get out of each one of these five videos. Okay?
+[21:51] And this is kind of like a I don't know, kind of like a self-selection process. If somebody watches 10 seconds of it, but they don't watch to 25% of it, I don't want them to see that again because here's what happens.
+[22:04] That algorithm will just serve that same video to that person over and over and over again. I originally when I created this I had it refined in a way where I had a 3 second video view exclusion rather than 10 seconds.
+[22:19] But what I found is is like these videos were sometimes upwards of like an hour or two hours long that it was okay if they didn't get, you know, 10 seconds into the video and would get targeted by the video a few times over because again, it's a long form video.
+[22:35] It's like they need to watch it when it's the right time to watch it, you know, or they need to save it or send it to themselves, which is pretty rare. I'd rather have the algorithm serve it back up to them again.
+[22:46] But as soon as they watch 10 seconds, that's five times the amount of attention they give a regular post. You see what I mean? So from that perspective, as soon as they watch 10 seconds, I don't want them to see that shit again.
+[22:58] And if they watch more than 25% of it, great. They'll never see any one of these other five anyway, they're going to get moved on to step two. Okay? You see what I mean?
+[23:08] So, okay, just to reiterate because we're talking about some technical stuff. We're in the fucking weeds right now. All right. Ad set two will have the same cold targeting and the exclusion will be 10 seconds of video two.
+[23:22] So, if they watch 10 seconds of video two, they'll never see it again. Ad set three will have the same cold targeting and it will have an exclusion of people who watched 10 seconds of video three, etc. for video 4, etc. for video five. Okay?
+[23:37] And that's step one of my process. I've got my exclusion audiences set up and I've got my capture buckets. That way, once somebody watches 25%, we start using that in campaign two.
+[23:49] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Campaign 2 Setup - Step 2 Venus Fly Trap"
+NÚMEROS: Campaign 2, 5 ad sets, vídeos 6-10, 15 segundos (maximize through plays)
+VISUAL: Estrutura similar ao Campaign 1, mas com targeting baseado em 25% de vídeos 1-5, otimização para maximize through plays
+[23:51] So campaign two is where we move on. By the way, just in terms of where we're at right now, we're officially here. Okay. So when somebody officially watches campaign number two, so we're going to name it campaign step two-Venus fly trap. Okay.
+[24:08] We're going to optimize it for engagement on the ad set level. By the way, just to be clear, we are selecting maximized through plays. Okay, so we're going on the campaign level, engagement on the ad set level there at the very top.
+[24:24] Again, this is all referenced inside of the the SOP just in case you need a literal visual of it. We're going to select video views, and we're going to then select that little dropdown box, and we're going to select maximize through plays.
+[24:37] Okay, that means we're optimizing around a 15-second video view threshold. Okay, now we have again five ad sets. So we have ad set one, ad set two, ad set three, ad set four, and ad set five. Okay?
+[24:53] And in each one of these, just like before, we technically, and I'm going to name this a little different, okay? because these are different videos and I don't want you to confuse them and think they're the same videos from step one.
+[25:06] So, we have video six, video seven, video 8, video 9, and video 10. Okay? Because again, we're in step two now. And we're going to do the same exact thing we did for step one.
+[25:18] We're going to go into the audiences section. We're going to create an audience. We're going to select video views. And we're going to create two audiences per video. We're going to create a 25% with that one video being watched. Audience 365 days. Press create.
+[25:34] We're going to create a second video view audience for that same video for 10 seconds watched. That way we can do the same thing we just talked about before. Okay.
+[25:44] Now for this one, our targeting changes. So since we're on step two now, our targeting becomes people who watched 25% of any video one through five from our first campaign.
+[25:58] So here's how this looks, right? Ad set one, right? Let me just start from the very top. As a matter of fact, we'll have campaign number two. We'll select engagement. Okay, we'll then go to our ad set. We'll have five total ad sets, but right now we're talking about ad set one.
+[26:17] Okay, at the very top of that ad set, we're going to make sure we select video views where they're going to scroll down just a titty and we're going to select maximize video views. Okay, then we're going to scroll down to our targeting.
+[26:31] We're going to make sure that we have no advantage audiences turned on. We're going to make sure we have none of that advantage detailed targeting shit turned on. We're going to press that little button that says use or I should say it says switch to original audiences options. We select that. Okay.
+[26:48] And right there where it says custom audiences, we're going to press that button and we're going to make sure we select five individual 25% video view audiences from our first five videos.
+[27:00] So we'll have video one 25% viewed, video two 25% viewed, three, four and five, etc. Okay. So we have five total audiences that are being targeted in these ad sets in campaign 2.
+[27:15] We are excluding the 10 seconds of whatever videos within that ad set. So we would have again the five and these are the same five we'll have for all five of these ad sets. Okay, we'll have 25% viewed of any one of those first five videos.
+[27:32] So, we have five total audiences again that we're targeting. And we'll have one exclusion audience. The exclusion audience will be the people who watch 10 seconds of the video within that ad set. That's it. Okay?
+[27:45] And we do the same thing for those five those five ad sets. See what I'm saying? So, okay, just to be clear again, all this is referenced inside of the SOP with some visuals of what the ads manager looks like when you're setting this up if you want to make sure that you read them.
+[28:02] Okay, just in case you you've you've fallen off and you're not following along any further.
+[28:07] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Campaign 3 Setup - Step 3 Venus Fly Trap"
+NÚMEROS: Campaign 3, 5 ad sets, vídeos 11-15
+VISUAL: Terceira estrutura de campanha, targeting baseado em 25% de vídeos 6-10, mesmo padrão de exclusão de 10s
+[28:09] Okay, here's campaign three. So, we're setting up campaign three. I should say campaign step three dash Venus fly trap. Okay. And now just to reference again we are officially at this step of our process. Okay.
+[28:24] So we come down here campaign step three Venus fly trap. We got the same exact thing. Okay. We are optimizing it for engagement. We've got our five ad sets that we're going to have within that except rather than video 6 through 10, we have video 11, 12, 13, 14, and 15. Okay?
+[28:44] And then the targeting on this one is the same. It's people who watched 25% of any video for videos 6 through 10. See, simple enough, right? Nothing crazy here. Easy and effective. Okay.
+[28:57] So just to reiterate, we create campaign three, step three of the Venus fly trip. Engagement is what we select on the campaign level. Going to go to the ad set. Okay, ad set one is going to have five different audiences.
+[29:12] Those five different audiences that are being targeted are going to be the people who watched 25% of video 6 or 25% of video 7 or 25% of video 8, 9 or 10. Okay?
+[29:25] And then the one exclusion within that are the people who watched 10 seconds of the video within that ad set. In this case, video number 11. And we do that same thing for the other five. Okay.
+[29:37] You also got to make sure that you go to your audiences section and that you create your next 10 audiences for these five videos. Remember, two audiences per video. We have our 25% view threshold per video. And we have our 10-second view threshold.
+[29:54] 365-day audiences that we're creating for videos 11 through excuse me that we're creating for videos 11 through 15. Simple enough, right? Okay.
+[30:05] So now we have gotten at this point three different campaigns set up. Let me talk through some nuances real quick before we talk about the direct response. Okay, some of those nuances include budget.
+[30:18] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Budget Distribution Strategy"
+NÚMEROS: Step 1 = maior budget, Step 2 = menor, Step 3 = ainda menor, Direct Response = menor de todos
+VISUAL: Gráfico descendente mostrando diminuição progressiva de budget através dos 4 passos, representando funil de volume
+[30:20] Now here's the thing. The budget is going to decline per step because less people will technically make it to the subsequent steps. So for step one, you're going to have the most budget, okay? Because technically the most people are going to navigate through it.
+[30:37] And then step two, you'll have slightly less. Step three, you'll have slightly less. And by the time you get to your direct response, that'll technically, believe it or not, be one of the smallest budgets that you have because there'll be fewer and fewer people that make it to each of the subsequent steps.
+[30:54] So, I treat this when it comes to ad spend like it's a webinar campaign. That's how I mentally frame it. What I mean by that is in a webinar campaign, like I'll give you an example.
+[31:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Webinar Campaign Example"
+NÚMEROS: $80,000 budget, 400 chamadas qualificadas, $200 custo por chamada qualificada
+VISUAL: Cálculo visual mostrando $80,000 ÷ 400 calls = $200/call, representando ROI de webinar
+[31:07] We have a client when they run a test, they're spending like upwards of $80,000 on a webinar. Okay? And when they spend that $80,000, what they're doing is they're optimizing around what they want to happen in the webinar itself.
+[31:22] But technically, it all starts by them optimizing for a lead or for a complete registration. Okay? But what they actually want are the calls and the sales that come as a result of those calls.
+[31:34] All of our clients are typically advertising something high ticket. It's usually some type of high ticket product or service. So, when a client spends $80,000 in a test budget on a webinar, we obviously want to get the best cost per lead that we can.
+[31:50] We want to get as many people to show up to the webinar that we can. But ultimately, what we're actually optimizing for and doing the math around is how many high ticket sales calls do we get that are qualified from the webinar or how many sales do we get and what was our cost per sale.
+[32:08] So, we take that $80,000 in this example and let's use just some hypothetical math. Let's say that we had 400 costs or I should say 400 people that were qualified calls.
+[32:21] If we pull out our handy dandy calculators here, what we'll find is if I spent $80,000 and I had 400 qualified calls, I just divide that by 400. I had a cost per qualified call of $200 as a result of spending that $80,000.
+[32:38] And like the math of a webinar, we're fronting cash. You know, we typically will advertise a webinar upwards of 14 days out from the webinar date. Okay?
+[32:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Burn Window vs Earning Window"
+NÚMEROS: 14 dias de burn, conversões após webinar
+VISUAL: Timeline mostrando 14 dias de gasto (vermelho) seguido por período de conversão/receita (verde)
+[32:50] So, we'll advertise something for a full two weeks in advance of the time where we have the potential to start making money. So, we're burning money for about that 14-day window.
+[33:01] And then all of a sudden when the webinar happens and they make that call to action, hey, go book your call. You know, here's all the details of the offer. You know, you want to buy from us, go book your call. We get the flood of calls that comes in.
+[33:14] Obviously, all the spend from the webinar just goes to zero. And then bam, we just start seeing conversions that roll in as a result of that. And ideally, and obviously, it's far greater than whatever we spent for the two weeks leading up to that event. Okay.
+[33:28] The logic here is is that there's a burn window and an earning window. Okay? So, when you very first turn the Venus fly trap on and you're getting people to go through the steps, you're in the burn window, you know.
+[33:42] And in terms of how you mentally comprehend the spend, you want to comprehend it like you're combining the spend of all the campaigns into whatever the cost per result is. Okay?
+[33:53] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "30-Day Test Budget Breakdown"
+NÚMEROS: Step 1: $30,000, Step 2: $15,000, Step 3: $10,000, Step 4: $5,000, TOTAL: $60,000
+VISUAL: Gráfico de barras mostrando distribuição de $60k total através dos 4 passos ao longo de 30 dias
+[33:55] So, as an example, and just to give you some math of what we literally did when we tested this over a 30-day duration, okay, so for the time frame, we're going to call it 30 days.
+[34:05] On step one, we spent about $30,000 when we initially tested this campaign to get as many people as we could to watch 25% of any one of those particular first five videos.
+[34:17] And then after we spent a little bit less on the subsequent step, we spent about 15,000 on step number two. Okay, so just right there, we're at $45,000.
+[34:28] On step number three, we spent about 10K. Now we're at about $55,000. And on step four, believe it or not, we're actually get we're actually able to get away with about five grand.
+[34:39] Now in total here, right, you got about $60,000 in spend. 15 here, 30 here, and then again, you add that other 30 to it, you had about 60 grand in total.
+[34:51] Now, here's the thing. That 60 grand that was spent in this example over that duration of 30 days resulted in far more revenue than the 60 grand spent.
+[35:02] But it mo it moves through phases just like a webinar does. At first, it just looks like you're burning a fuckload of money on content distribution and you're not really getting anything through the direct response because the buckets got to fill up.
+[35:17] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Adventure Time Water Tank Analogy"
+NÚMEROS: 3 divisores/paredes, 5 vídeos vs 1 vídeo
+VISUAL: Diagrama de tanque de água inclinado com 3 divisores ajustáveis, água fluindo da esquerda para direita, representando o fluxo através dos 3 passos
+[35:19] This is one thing I I uh actually learned when I was a young kid at a place called Adventure Time in Akron, Ohio. Adventure Time had this water tank and it had water flowing in one side of it and it was kind of tilted.
+[35:32] Picture like a fish tank in your mind, but tilted like this. Okay? And water was just pumping through one side and there was an exit on the other side.
+[35:41] And in this like fish tank structure, there was this uh this set of dividers. Okay. And again, water's just absolutely pumping through here and then it exits out the other side eventually. All right.
+[35:54] And there were these divider walls that you could drop down. And coincidentally, there was about three of them. And essentially, you know, as a young kid in Adventure Time, the logic they were trying to teach you was is if this first cavity fills up and the wall is down, that is when the water flows into bucket number two here.
+[36:15] And then as a result of bucket number two filling up, if this wall is down, that's what then makes it fill up bucket number three. Okay?
+[36:23] And here's the cool part, like you could as much as you wanted to essentially lift up these walls. So each one of these walls that you saw here in the middle, as a kid, you were able to lift up.
+[36:35] Now, here's the thing. That's why we do five videos rather than just one. That's one way I revamped the Venus fly trap and called it the 2.0 was because in Venus Fly Trap 1.0, the logic here was pretty simple.
+[36:48] It's like, well, with one video, that wall could technically be all the way down. And therefore that video and that in that hypothetical, you know, metaphor and analogy I'm trying to give you here, if that first video doesn't perform that well, you know, if it just doesn't have a high view through rate to whatever threshold you're optimizing around for them to see video two, well, that kind of sucks, you know.
+[37:12] Because then your wall is down and it's going to take a lot more water to fill up that section of the tank before it starts to trickle into tank number two. You see what I mean?
+[37:23] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "5 Videos = Lifted Walls Strategy"
+NÚMEROS: 5 vídeos por passo, múltiplas opções de conteúdo
+VISUAL: Comparação visual: paredes baixas (1 vídeo/difícil fluxo) vs paredes levantadas (5 vídeos/fluxo fácil)
+[37:25] Versus in the Venus Fly Trap 2.0. It's like, well, I have five different videos they could technically consume. And with those five different videos, this is very important to understand. It increases the probability that my walls are going to be lifted up so water flows through it easier.
+[37:42] So, when you're a kid and you're playing at Adventure Time and you get that water to flow through again, if you just lifted all the walls, right? Like all the walls were up here.
+[37:52] Well, obviously the water just fucking hits the bottom, flows through, kind of accumulates a little bit down here, and then just flows out the other side. takes a lot less water to go from one side of the tank to the other versus if you have a bunch of dog shit videos in this example or just one video for that matter, your walls are going to be down. Okay?
+[38:14] And then to be clear, when the wall is down, what ends up happening is just to be clear again, the water has to fill up here before it trinkles down here and then exits out the other side. You see what I mean?
+[38:26] So, with the five videos, we're trying to give a diverse enough range of content for the person to essentially have the power of choice. They're not going to be able to literally just see five videos and pick which one they want to watch.
+[38:40] They're going to get targeted at random with one of those five videos that the algorithm deems the person probable to watch at least 15 seconds of because that's what we optimize the campaigns and the ad sets for.
+[38:53] And if and when the person watches 10 seconds of one of those, but they don't watch 25% of it, they'll never see that video again, and they'll see one of the other four.
+[39:03] All right, sorry for that abrupt cut, by the way. We had a mic die yesterday, so here we are. Okay, to continue on.
+[39:11] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "25% Threshold Retention Logic"
+NÚMEROS: 25% view threshold, maior retenção após este ponto
+VISUAL: Gráfico de retenção mostrando quedas acentuadas até 25%, depois estabilização e melhor retenção
+[39:13] Long story short, the Venus Fly Trap 2.0 is intended to retarget from that 25% threshold because here's what generally happens. When somebody gets to the point where they've watched 25% of the video, the probability of them consuming the remaining part of that video is dramatically higher.
+[39:32] The biggest drop off in content consumption, especially content consumption that remarkets people where it has that little sponsored tag under the name, that content has a steep drop off from that initial impression.
+[39:45] A big drop off to the 3-second view through threshold. A big drop off from 3 seconds to 15 seconds. But generally from 15 to 25% it at least slows down a little bit in terms of the drop off percentage or I should say the drop off rate.
+[40:01] But by the time you get to that 25% threshold, you could retain a good chunk of that audience for the remainder of the video. And that's the most important thing to understand for why we go after the 25%. Okay.
+[40:15] So I'll cover some final nuances here with this strategy so you really understand it. And again, you can go out and you can execute it.
+[40:23] Let me just reiterate, inside of the Venus Fly Trap 2.0 SOP, you'll find all of the technicals in terms of ad manager setup and all the instructions for that beyond what I've reiterated to you here in this video.
+[40:36] Um, also just quick apology. I forgot to record my fucking iPad screen yesterday. That's why it's a little bit um I don't know what you call it. Not like a video of me drawing it, you know, but they kind of like piece that shit together.
+[40:49] Either way, all that is also in terms of my notes in the SOP, so you can walk through that, too. Uh, okay.
+[40:56] Beyond that, there's a few key things that I really want to make sure you understand. Everybody always ask me like, "Oh, what's the minimum amount of money I could spend on this particular ad strategy in order to test it out?"
+[41:09] I don't have like a minimum threshold that I think with like I'm not out there trying to think, okay, could I throw like 10k between these four steps and see some effectiveness? I just always financially model everything out. Okay.
+[41:23] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Financial Modeling Approach"
+NÚMEROS: Modelo financeiro incluído no SOP, cálculos para call funnels e VSSL
+VISUAL: Planilha/modelo financeiro mostrando inputs de budget e outputs de ROI esperado
+[41:25] And one thing that you'll see inside of the Venus Fly Trap 2.0 SOP is a financial model for the Venus Fly Trap 2.0. So, you can plug in what you're thinking about spending uh across the entirety of all four of these campaigns.
+[41:39] Um with some statistics that are factored in for what types of funnels you can put it in front of. Again, I mainly built the financial model to be geared towards call funnels and the VSSL.
+[41:50] Because that's the main thing I was trying to solve with the Venus fly trap 2.0 was the VSSL problem of leads showing up still not framed and taking that precious time away from our salespeople.
+[42:03] Instead of treating it as a sales call, they treat it as an education call. We don't want that. So, we're trying to solve around that specific issue when we execute this strategy.
+[42:14] Um, again, I don't think with minimums. I just think with, well, what do I have to spend in order to see the financial return that I want to have come out the other side?
+[42:24] So, don't guess, okay? Don't fucking hit me up and say, "Hey, Jeremy, like, what's the literal lowest I can spend on this?" I don't fucking know.
+[42:33] Go into the financial model and plug in the data yourself and see what can you specifically get away with spending and still get the dollar value in a conservative way that you want to have come out the other side. That's the real answer to this situation. Okay?
+[42:49] That's what you actually need to look at. Me, when it comes to testing, I have not tested the Venus Fly Trap 2.0 with less than a $60,000 budget over a 30-day duration of time.
+[43:02] I haven't spent less than that because I'm treating it like a webinar. You know, that's the frame that I'm trying to walk away with here is I am going into it treating it like this is what I'm going to burn for the month on this thing.
+[43:16] There's going to be a few days at the beginning that look like shit because the buckets are filling up like we talked about and then and only then will I start seeing some consistency in the direct response.
+[43:28] The more time that goes on, I may need to adjust the budgets up so I get more people to flow through the other side. I may need to swap out some of the five pieces of content if their if their drop off rate of people going from an impression to 25% is dramatically lower than my better performing pieces of content.
+[43:48] Um, that's how I'm thinking with this whole thing. Okay, some other little caveats.
+[43:53] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Content Source Strategy"
+NÚMEROS: 45 segundos = 1 momento "aha"
+VISUAL: Lista de fontes de conteúdo: YouTube, biblioteca de cursos, podcasts, palestras
+[43:55] I'm generally going to YouTube for these clients that we do this with and I'm pulling their long form content from there. You have to make content that has a high value density. Okay?
+[44:06] If you don't have that type of content and you cannot edit it out of your current content, you must make the necessary adjustments in order to get the strategy to work.
+[44:16] If you do not see a significant difference in the quality of lead that shows up to your sales calls or you just don't see enough leads, there's two different ways to look at that problem.
+[44:27] You're either just not getting enough people through to the direct response step to actually see the quantity of calls that you want to have coming through the other side or two again if you have a framing issue with the leads that are coming through your content just probably sucks ass and you're going to have to adjust the content make it a lot better than what it currently is. Okay.
+[44:48] Value dense content. I don't want to sound pretentious but I am an incredible example. If you go to my YouTube channel and you look at my videos and you picture them edited in a way where you cut out the intro, you cut out the parts where I pitch things like the inner circle in the middle of the videos.
+[45:06] You cut out the parts where I'm like, "Hey, welcome back if you're a subscriber." You know, you cut out all that shit. You cut out the outros and it's just every 45 seconds an aha moment.
+[45:18] Oh, wow. That was impressive. Uh, that guy knows what the fuck he's talking about and this guy feels like my guy. Okay. If they're not getting that kind of perspective from the content, then again, you got a problem and you're likely going to have to refilm it.
+[45:34] The people that I do this strategy with, they already got extremely valued dense content. Okay? Keep in mind, I'm testing on some of the world's largest and most successful personal brands that have like extreme libraries of content.
+[45:49] I did get a question from a consulting client that I was teaching this strategy to recently, which was, "Can I pull content from my course library?" Abso-fucking-lutely you can.
+[46:00] If that content fits the bill for being high value dense content, then sure, you can pull it from wherever you'd like. Can you pull it from podcasts? Absolutely. Can you pull it from speaking gigs? Absolutely. You know, can you just pull it from standard YouTube videos? All the better. Yes.
+[46:17] I just want to be clear when I say this. You just got to get people to watch three different videos to a 25% threshold. And as a result of them watching it, they get that mental impression of look, regardless of how many other options there are for this specific offer. This is my guy.
+[46:36] Like, this is the person I want to buy from because they've presented to me through their content that they know about my problems intimately. They can solve my problems. They're currently solving my problems.
+[46:49] And even better, they've even gotten a little bit of a result with whatever your content teaches and talks about. Like they've they've tried something, which is why I reference my YouTube as an example.
+[47:01] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Real Success Story"
+NÚMEROS: $200,000 de receita gerada ANTES de gastar com programa pago
+VISUAL: Testemunho de Jerome e parceiro, timeline mostrando: conteúdo gratuito → $200k gerados → investimento em programa
+[47:03] We just had two guys join our inner circle this last two days and uh it was Jerome and uh his business partner and excuse me Jerome's business partner for forgetting your name in the moment. You're new to me so you know I'm not not too familiar yet. Don't take it as disrespect please.
+[47:21] Moral of the story is these two guys they had made upwards of like $200,000 if I remember correctly from something I talked about on YouTube before they had ever spent money with me.
+[47:34] Think about that. That's how fucking awesome my YouTube content is. I put people on so much game, they make monumental amounts of revenue and then they use that money, the house money is what we call it, to come and spend money on my paid programs.
+[47:50] You don't you don't think they concluded to the this is my guy mentality? I bet they fucking love I bet they binged watch so much of my content, especially after getting results with whatever they chose to do to get that result for free. You see what I mean?
+[48:07] So, put some put some like actually valuable stuff together in this content, okay? It should be good. And then and and the reason I reference this for like my clients already have libraries of thick thick amounts of content.
+[48:22] You might not, you know, like you might be listening to me right now and just thinking, fuck I'm going to have to go film a bunch of stuff. And if that's the case, all I got to tell you is it's worth it if you do it the right way. That's all I got for you, okay?
+[48:36] It's worth it in the instance that you do have to film this kind of stuff. Spend the time, spend the money, you know, make it worth it. And uh just realize like it does make a substantial difference to the framing process if you execute this successfully.
+[48:52] So hope this video helps you. If you have anything in particular that you need as like follow-up questions that you have and you want them answered, hit me up. You know, I'm obviously here to help you and make you more money.
+[49:04] And uh I love this strategy so much. Keep in mind, this strategy is close to my heart, man. This is my very first content ad strategy I ever created over a decade ago.
+[49:15] Revamped in the 2.0 know, and serving an incredible function in today's day and age in the uh in the sales and marketing space in terms of the impact it has.
+[49:26] So, I'm super pumped to revitalize this thing and uh and revive it. It's um again, it's incredible, but you got to do it the right way.
+[49:35] If you don't do it the right way, I mean, you're just going to add so much friction to the front end of your process. You know, you're barely you're going to get like a little trickle effect to come out the other side.
+[49:46] Please remember the water tank example, okay? That's so important because it is in its finest form like what you have to be focused on. You know, you got to control the quantity of people that go through these four steps and make sure that you're making the necessary like slight tweaks and adjustments to budget content type so they flow through the other side at a high rate.
+[50:08] That's the key to this whole thing to get it to work. Otherwise, it's just enormous friction and it adds a lot to your cost per result that you're optimizing the whole thing for in the first place around.
+[50:20] So, anyway, talk soon. See you in another video.
+📊 RESUMO EXECUTIVO
+NÚMEROS PRINCIPAIS:
+Estratégia criada há 11+ anos trabalhando com Grant Cardone
+15 vídeos long-form totais (5 por passo)
+25% threshold de visualização para avançar
+10 segundos = 5x mais atenção que média de 1.8s
+45 segundos = intervalo ideal para momentos "wow"
+10 minutos de vídeo = 12-15 momentos impactantes
+1/3 dos compradores assistem 2-3 webinars antes de comprar
+Exemplo de budget teste: $60,000 total em 30 dias
+Step 1: $30,000
+Step 2: $15,000
+Step 3: $10,000
+Direct Response: $5,000
+Exemplo webinar: $80,000 → 400 calls = $200/call qualificada
+Caso real: $200,000 gerados com conteúdo gratuito antes de comprar programa
+14 dias de "burn window" típico em webinars
+365 dias de janela para audiências customizadas
+ESTRATÉGIAS E SISTEMAS:
+Venus Fly Trap 1.0: Short-form, 1 vídeo por passo, estratégico para criar vieses específicos
+Venus Fly Trap 2.0: Long-form, 5 vídeos por passo, foco em densidade de valor
+Lógica "If This Then That": Automação baseada em thresholds de visualização
+Hammer Them Strategy: Combinação short + long form após conversão
+Exclusão de 10 segundos: Evita re-targeting do mesmo vídeo após engajamento inicial
+Maximize Through Plays: Otimização para 15s de visualização
+Targeting Original Audiences: Desabilitar advantage audiences para controle preciso
+Analogia do Tanque de Água: 5 vídeos = paredes levantadas = fluxo mais fácil
+Burn vs Earning Window: Período inicial de gasto seguido por conversões
+Modelo Financeiro: Calculadora incluída no SOP para projeções
+ESTRUTURA:
+3 Passos de Conteúdo + 1 Direct Response
+Campaign 1 (Step 1): Engagement, 5 ad sets, cold targeting, vídeos 1-5
+Campaign 2 (Step 2): Engagement + Maximize Through Plays, targeting 25% viewers do Step 1, vídeos 6-10
+Campaign 3 (Step 3): Engagement + Maximize Through Plays, targeting 25% viewers do Step 2, vídeos 11-15
+Campaign 4 (Direct Response): Conversion optimization, targeting 25% viewers do Step 3
+Audiências por vídeo: 2 tipos (25% + 10s) × 15 vídeos = 30 audiências totais
+Exclusões: 10s view de cada vídeo específico por ad set
+Budget decrescente: Mais no topo do funil, menos no fundo
+DADOS FINANCEIROS:
+Budget mínimo testado: $60,000/30 dias
+ROI positivo após período de "burn"
+Cost per qualified call calculado dividindo spend total por calls
+Modelo financeiro disponível no SOP para call funnels e VSSL
+Investimento vale a pena se conteúdo de alta densidade for criado
+Retorno excede investimento quando executado corretamente
+Conteúdo gratuito pode gerar receita substancial (ex: $200k) antes de venda
+DURAÇÃO: 50:29 FORMATO: Explicação técnica de estratégia de ads com demonstração visual

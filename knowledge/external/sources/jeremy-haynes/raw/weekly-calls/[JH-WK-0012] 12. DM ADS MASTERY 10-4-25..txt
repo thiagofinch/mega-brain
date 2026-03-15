@@ -1,0 +1,2327 @@
+Transcrição Completa: 12 DM Ads Mastery 10 4 25
+
+ 
+
+ 
+
+[00:00]So, came up a whole bunch of times this week. Uh, we'll jump into it as a result. DM ad best practices. Without further ado, let's dive in. Huh.
+
+ 
+
+[00:10]So, I want to make a few things extremely clear. When you look at DM ads, there's a few places that you can technically originate somebody into the DMs. And we're going to go through those here today so you guys all are all on the same page specifically about what and where and how these people interact relative to where they originate from.
+
+ 
+
+[00:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Organic Post Strategy"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Diagrama mostrando post orgânico com CTA "comment word", seta apontando para sequência MiniChat ou resposta padrão
+
+ 
+
+[00:35]So long and the short is um let's get started with typically the most common one. So most commonly people will do one of two things. They'll have their organic and their organic will say like comment, you know, whatever word and then usually that trips a mini chat sequence to start.
+
+ 
+
+[00:52]And sometimes it's a sequence to be clear. Sometimes it's just like a standard response. It's not always the same relative to um you know how you set it up. So like to be clear, could be a sequence or it could just be a standard like mini chat response.
+
+ 
+
+[01:08]I want to be fair and saying both are technically set up like a sequence, but for all like the marketers that are here right now, just sitting here, sequence obviously would mean like multiple things happening in a row. A response is technically still set up through a sequence, but you know, obviously in the responses case, you wouldn't have any follow-up messages that are sent.
+
+ 
+
+[01:28] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Organic Reach Variables"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Gráfico mostrando correlação entre viralidade do conteúdo e volume de comentários
+
+ 
+
+[01:32]Um, usually on the organic side of things, depending on how viral your content goes, obviously wildly influences and dictates like who you reach and how many people you're going to get to comment that word.
+
+ 
+
+[01:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Friction vs Intent Spectrum"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Espectro comparativo mostrando "Comment Word" (baixo atrito, menor intenção) vs "Message Me Word" (alto atrito, maior intenção), com setas indicando clicks adicionais necessários
+
+ 
+
+[01:50]Um, in some instances on the organic side of things, people instead of saying comment the word X will say instead of again the word comment, they'll say message me the word X. Now, I think that if you look at this, by default, you're going to have a lapse of judgment in understanding like why you do one over the other.
+
+ 
+
+[02:08]So, look at it like the friction versus intent spectrum. Okay, we've talked about this many times over and I'll just keep it super light in regards to how it plays into DM ads. If I told somebody to comment the word and they see a specific post, literally all they have to do is just press into the comment section and comment that said word, right?
+
+ 
+
+[02:28]That's technically lower intent comparatively to the handful of additional clicks that somebody would otherwise have to do if they click to the profile, press the message button, and then literally type whatever the word is having to remember it. Okay?
+
+ 
+
+[02:42]So, I want to be really direct when I say this. This typically brings in higher intent when you look at it from that perspective. Okay? you will in most instances be defaulting to this specific section where you're telling people to comment something. But if you do get low intent in doing so, which is very common, you could just switch to saying, "Message me the word X."
+
+ 
+
+[03:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Organic to Paid Transition"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Fluxograma mostrando progressão: Organic Start (free, MiniChat setup) → Paid Ads (scaling phase)
+
+ 
+
+[03:08]Now, most people who start with DMs, that's generally where they begin. And the reason that they begin there is is it's free. Obviously, there's no real cost to it besides the cost of Minihat and getting everything set up, which is not that tough.
+
+ 
+
+[03:22]So from that same perspective, okay, usually once you get some content going organically, you'll then say, I want to roll this over to paid ads. Sometimes you'll just start by saying, I want to start with paid ads and I want to get people into my DMs. But again, most of the time it starts with you being on the organic side.
+
+ 
+
+[03:38] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Jeremy Moser Case Studies"
+
+ 
+
+NÚMEROS: $200K+ per month (typical), $1M+ per month (outliers), $5M per month (Jordan & Jacob trophy winner)
+
+ 
+
+VISUAL: Gráfico de barras mostrando progressão de resultados, destaque para Inner Circle members e trophy winners
+
+ 
+
+[03:42]Um, there are a few people uh that I want to point out, mainly mainly just one really, and it's Jeremy Moser. So, if you are going to do anything on the organic side of things, uh, pretty much every Jeremy Moser deal that he does gets to at least a couple hundred grand a month with this strategy.
+
+ 
+
+[03:58]He has some outliers, of course, that crack million dollars a month with literally essentially just this approach. Um, one of the inner circle members that he actively works with, uh, one of our $5 million a month trophy winners, uh, Jordan and Jacob specifically.
+
+ 
+
+[04:12]They obvious advertise from from Jordan's profile for their offers. So, you know, Jordan's a great example of seeing like a Jeremy Moser deal in action.
+
+ 
+
+[04:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Inner Circle Resource: Mastermind Talks Library"
+
+ 
+
+NÚMEROS: Q3 2025 (most recent), multiple previous talks available
+
+ 
+
+VISUAL: Interface de biblioteca digital com destaque para talk de Jeremy Moser Q3 2025, ícones de vídeos anteriores
+
+ 
+
+[04:25]If you go into our uh mastermind vault, our mastermind talks library, there's a Jeremy Moser talk from the most recent mastermind at the time of recording this. It was our Q3 2025 mastermind.
+
+ 
+
+[04:38]Um, and Jeremy spoke to us several times over at masterminds in the past, by the way, on his strategy as it relates to the organic side of DMs. And I can't stress it enough, like arguably there's nobody possibly you could learn better from than Jeremy Moser on the organic side of things when it comes to DMs.
+
+ 
+
+[04:55]They do all of it. Like the content curation, telling the client what to shoot. Like they do these tweet style carousels that tell people to comment x of a word. Um they flood in some instances on their bigger deals literally thousands and thousands of people DMing whatever the specific words are.
+
+ 
+
+[05:12]So keep in mind as an inner circle resource mastermind talks library Q3 2025 is Jeremy Moser's current most recent talk and then there's several at least I want to say at least one in the past beyond that one maybe even maybe even a third so keep that in mind check those out okay anyway um let me be extremely clear once you get to the point where you're like all right I want to do this via paid advertising there's a few ways to do it.
+
+ 
+
+[05:38] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Paid DM Strategy Options"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Diagrama bifurcado mostrando duas rotas: "Automated Way" (MiniChat puro) vs "Combo Way" (MiniChat + Setters)
+
+ 
+
+[05:40]There is the automated way and then there is the kind of combo way which also includes setters. Um, here's the thing. Most people when they employ setters, they're hiring like third world retards that run their sales teams and they have a bad time in doing so.
+
+ 
+
+[05:58] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Common Revenue Ceiling: Traditional DM Ads"
+
+ 
+
+NÚMEROS: $100K-$300K per month (typical ceiling)
+
+ 
+
+VISUAL: Gráfico mostrando plateau de receita com linha vermelha marcando teto de $100K-$300K, ícones de limitações
+
+ 
+
+[06:02]Um, a lot of people when they leverage a really shitty setter team have extreme limitations on the revenue that they could ever achieve with this specific strategy. Okay, so let me be really clear when I say this. In almost all instances that I've seen with DM ads, people get stuck around the 100 to 300K a month mark with this strategy.
+
+ 
+
+[06:22]Okay? It taxs on 100 to 300K a month regularly if you do it the traditional way I'm about to articulate to you. Okay? And that's really it. It starts to have all kinds of issues and they mainly relate to two things.
+
+ 
+
+[06:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Two Primary Limitation Factors"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Dois ícones principais: 1) Gráfico de custo ascendente (Cost per DM inflation) 2) Equipe de pessoas com níveis de qualidade variados (Setter team quality issues)
+
+ 
+
+[06:38]They relate to an inability to keep the cost per DM within a particular range and they also range from issues that source from the setter team. Okay. In most instances, especially depending on where you're hiring your setters from, you're going to notice like a wide discrepancy in talent between them.
+
+ 
+
+[06:58]And naturally, most business owners are extremely lazy because they have so many things to do. It's like not like they're technically lazy, but like when it comes to keeping the wrong people on, they're very lazy because hiring is, you know, a very time-sensitive thing.
+
+ 
+
+[07:12]It takes a lot of effort and time and sometimes even resources to get the right people in the game. So, what ends up happening is you'll hire on like a team of setters. It might be like, you know, one to three people usually in most instances for that 100 to 300k a month range.
+
+ 
+
+[07:28] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Setter Team Performance Distribution"
+
+ 
+
+NÚMEROS: 1-3 setters (typical team size for $100K-$300K/month)
+
+ 
+
+VISUAL: Gráfico mostrando distribuição de performance: 1-2 setters bons (verde), 1-2 setters ruins (vermelho), impacto nas médias gerais
+
+ 
+
+[07:32]And as a result of that, like one one of them, maybe if you're lucky, two of them will be like great. Okay? And then there'll be this one in particular or two in particular that just suck and their averages are a lot lower. Okay?
+
+ 
+
+[07:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Primary KPI: DM to Call Conversion Rate"
+
+ 
+
+NÚMEROS:
+
+Below Average: 10-15%
+
+Average: 20-30%
+
+Above Average: 30%+
+
+ 
+
+VISUAL: Gráfico de barras comparativo mostrando três faixas de performance com código de cores (vermelho, amarelo, verde), setas indicando impacto no cost per scheduled call
+
+ 
+
+[07:48]And the main KPI that you're obviously wanting to track for when you look at all this is very simple. It's how many people go from DMs to calls. Okay. That total percentage is what you are attempting to track.
+
+ 
+
+[08:00]And in most instances, like the worst teams will have somewhere between like a 10 and 15% rate of people going from DMs to a call. Uh obviously average teams are going to be somewhere between like 20 and sometimes upwards of 30% can even still be considered average.
+
+ 
+
+[08:18]Um to be clear, anything above that, you know, that's phenomenal and you've got yourself a really dialedin team there. if you've got any statistics that are above that. Okay.
+
+ 
+
+[08:28]Now, moral of the story, obviously, these percentages here are going to wildly dictate your cost per scheduled call. And if you go with the route that I'm about to articulate, it's also really like manual to track everything. And you're going to be very reliant on the people.
+
+ 
+
+[08:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Strategy Preference Hierarchy"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Pirâmide invertida mostrando "Preferred Strategy" (topo, verde) vs "Most Common Strategy" (base, amarelo), seta apontando para próxima seção
+
+ 
+
+[08:48]Um, there is a strategy at the end here that I'll talk about that I personally think is the best DM strategy that just to be rather direct, we prefer to optimize for every day of the week comparatively to this next approach I'm going to talk about. But nonetheless, this next approach is the most common. So, I'll respectfully talk about it nonetheless.
+
+ 
+
+[09:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Strategy #2: Traditional Paid DM Ads - Campaign Optimization Options"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Interface do Facebook Ads Manager mostrando duas opções de otimização de campanha: "Lead" e "Engagement", ambas direcionando para mensagem
+
+ 
+
+[09:12]So, the most common one is via paid ads. Okay? And what most people will do is they'll run one of two things. Okay? That you can optimize a campaign for a handful of different objectives. So on the campaign level, you can either optimize around lead, you can also optimize around engagement.
+
+ 
+
+[09:30]And essentially what you're doing in both of these scenarios is you are essentially optimizing for the message. Okay?
+
+ 
+
+[09:38] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Ad Display: Send Message CTA"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Mockup de anúncio no feed do Instagram mostrando botão "Send Message", versão reel com botão na parte inferior, ambos destacados
+
+ 
+
+[09:40]So in this scenario, the ad itself when somebody sees it come across their news feed, this little button right here will say send message. Okay? where if they see it in the form of like a reel where it has your little page, there'll be a button down here at the bottom. And again, that button right there says send message. Okay?
+
+ 
+
+[09:58]Now, when you do this specific approach, it's very important to note that you're taking people right into the DM, right? They're not commenting anything like the organic strategy. You're not technically replicating the organic strategy.
+
+ 
+
+[10:12]Uh, but more so than anything else, you are literally getting people to press a button based on the campaign type that you've optimized and selected for. And again, just to be really clear, that's how you're driving people into the message.
+
+ 
+
+[10:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Problem: Results Column Optimization"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Dashboard do Facebook Ads mostrando coluna "Results" destacada, setas circulares indicando feedback loop, ícone de aviso sobre falta de pixel conditioning
+
+ 
+
+[10:28]U, I can't stress enough this specific approach, what I don't like about it is when you look in the ads dashboard where you start looking at things, um, you have like, you know, the total amount you've spent, but more importantly, you have that results column there.
+
+ 
+
+[10:45]the results column, whoever reports into that is who the ads go after next. Okay? And what I don't like about this specific strategy with DMNS is you don't get to leverage pixel conditioning. Whoever messages goes into that results column there. Okay?
+
+ 
+
+[11:02]And as a result of that, if you start getting a bunch of the wrong people to come in, you're going to get a lot more of the wrong people to come in. Okay? And worse than that, like technically what you're optimizing around is literally somebody who's just probable to send a message to the page. Okay.
+
+ 
+
+[11:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Low Intent Problem with Message Optimization"
+
+ 
+
+NÚMEROS: Referência às taxas de conversão: 10-15% (below average), 20-30% (average)
+
+ 
+
+VISUAL: Gráfico mostrando correlação entre otimização por mensagem e taxas de conversão baixas, ícone de pessoa enviando mensagem sem intenção de compra
+
+ 
+
+[11:23]I also want to be really clear in saying like I I spoke up here about KPIs. Okay. When you look at like this below average range of taking a DM and managing to get it to a call, when you optimize a campaign around this type of engagement objective or lead objective where you're getting somebody to press the button that says send message, you also by default typically have a much higher probability to fall into the below average or if you're lucky average range of how many people will go from a DM to a call purely based on what you're optimizing for.
+
+ 
+
+[11:58]Because you got to remember who and what you're optimizing for, that's going to dictate who the algorithm goes after next and who it goes after. Period. So, if I'm optimizing around sending a message, I'm that's all I'm probable to get. I'm just probable to get people who send a message. Okay? Which really isn't that good if you think about it. Okay?
+
+ 
+
+[12:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Scaling Problem: Cost Per DM Inflation"
+
+ 
+
+NÚMEROS: $100K-$300K per month (ceiling range)
+
+ 
+
+VISUAL: Gráfico mostrando curva de custo por DM aumentando à medida que o gasto diário aumenta, linha vermelha indicando ponto de ineficiência
+
+ 
+
+[12:25]A lot of people who run DM ads that get stuck in that like 100k a month to 300k a month range, this is the strategy that they run, okay? And what they start to experience as time passes is the same trend like every single time. They will start to see an inflated cost per DM as they scale up, right?
+
+ 
+
+[12:45]And there's there's limits to this, okay? Obviously, give or take the industry that you're in, you can have a a much higher level of spend and still have the same cost per DM. But what you typically see, and again, this is what I see most commonly, is as soon as you actually start to try to push the campaign up in terms of the cost and the spend that you get out per day, you just start to kind of spin the wheels a little bit, right?
+
+ 
+
+[13:08]And usually people will have a higher hit rate with closers compared to setters. So like when it does come to scaling, they'll have limited capacity to hire on more setters. Like there's all kinds of things and reasons that like this type of campaign structure can go wrong.
+
+ 
+
+[13:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Strategy #2 Summary: Traditional DM Ads"
+
+ 
+
+NÚMEROS: $100K-$300K per month (reliable range)
+
+ 
+
+VISUAL: Checklist com prós e contras: ✓ Reliable revenue (verde), ✗ Limited scaling (vermelho), ✗ Cost inflation (vermelho), ✗ Quality issues (vermelho)
+
+ 
+
+[13:28]Um I just want to be clear and saying I'm not trying to demonize this completely cuz again it attacks on 100 to 300k a month quite regularly. It's it's very probable to do that. Okay, if you do it right and like obviously you got everything dialed in. It's probable to do that.
+
+ 
+
+[13:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Strategy #3: The Preferred Approach (NEW)"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Badge "PREFERRED" em destaque, ícone de inovação, referência a Abraham case study da semana
+
+ 
+
+[13:48]So here's what I like by comparison. Okay. So Abraham in the group chat just this week was saying, you know, hey, like Jeremy got on a one-on-one call with me cuz Abram's run DM ads traditionally this way for a long time if I remember correctly. And I told him, I was like, I don't I don't like to run them that way. Okay. How I like to run them is is the third approach. Okay?
+
+ 
+
+[14:08]And the third approach is I I actually to be clear, I'm not trying to sound like I got like, you know, top tier and I'm the only one talking about stuff, but I've seriously never heard anybody talk about this. Okay, so remember I am a big fan of taking what organically works the best and replicating it via paid ads.
+
+ 
+
+[14:28]Okay, that's what I do with pretty much every content ad strategy I've ever come up with. I'm just trying to replicate an organic sales process via paid ads. Okay, and when I look at the third approach and why I think it works the best, here's what we do.
+
+ 
+
+[14:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Strategy #3: Campaign Setup - Campaign Level"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Interface de configuração mostrando seleção de "Lead" como objetivo de campanha, destacado em verde
+
+ 
+
+[14:48]Okay, we take the campaign itself and we optimize it around the lead objective. Okay, and then on the adset level, okay, we select the pixel. Okay, and then more importantly, we select a standard event that we're optimizing for.
+
+ 
+
+[15:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Strategy #3: Adset Level - Schedule Event Selection"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Interface mostrando seleção de pixel e standard event "Schedule", destaque em amarelo, ícone de calendário
+
+ 
+
+[15:08]Now, that standard event, I like it to be schedule. Okay, I like it to be scheduled because what am I optimizing for? Like what's the whole point of me running DM ads, right? It's not to get a bunch of people messaging me. I don't give a about that. I give a about people getting on a call. Okay, that's what I want. I want people to get on a call.
+
+ 
+
+[15:30]So, what we'll do is is we'll again on the adset level, we'll select the pixel. The standard event we'll select is schedule. Okay? And this is essentially a standard direct response campaign that we're setting up. Okay?
+
+ 
+
+[15:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Strategy #3: Ad Level - The Creative Twist"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Split screen mostrando: Esquerda - setup tradicional de call funnel, Direita - creative dizendo "Comment Word", seta conectando ambos
+
+ 
+
+[15:48]But here's the thing. on the ad level. There's a bunch of creative ways that you can do this on the ad level. So, like keep in mind, technically when you set up any type of, you know, just standard direct response campaign, the little button that you're going to have here is going to take somebody to a landing page, right? And in this case, more specifically, it's going to be a call funnel like normal. Okay?
+
+ 
+
+[16:10]But because we're doing it from the intent of well this is technically a DM campaign. Okay. Instead of setting it up where all of our assets like our video, our headline, and our body copy are set up for direct response. Instead, we're going to center those around telling people to comment a particular word. Okay?
+
+ 
+
+[16:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "MiniChat Integration: Comment Trigger"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Fluxograma mostrando: Ad (Comment Word) → MiniChat Trigger → DM Sequence → Lead Magnet + Call Funnel Link
+
+ 
+
+[16:33]In order to get them into the DM. And then with Mini Chat, with Minihat specifically, we're going to trigger based on that specific comment that we had on the ad level, we're going to do the same thing that we would organically have that trip mini chat DMing that with something that we told them we're trying to solicit them to comment a word to receive. Okay?
+
+ 
+
+[16:55]So, it's set up like a standard callfunnel direct response campaign. Okay? But when you get to the ad level of the campaign, it's like your videos would essentially be what you did here on the organic side of things.
+
+ 
+
+[17:08]And if you've never done anything on the organic side of things to get people to comment stuff again, like we got Jeremy Moser here right now. Jeremy, maybe you want to unmute yourself and like chime in on this. I was giving you some props here at the beginning of all this.
+
+ 
+
+[17:22]I was saying like, look, not everybody starts with the organic side. Like you know, most people will just kind of kick to paid. But for those who do start organic, I was saying go study Jeremy and like any one of his clients you can get.
+
+ 
+
+[17:35]But moral of the story, like Jeremy, in terms of best practices that you've seen on the organic side of things, I know you love the carousels specifically, when you look at the creative side of things and you're telling people to comment a specific word. You have any pro tips you want to hand down to these guys that they could roll over on the paid ad side of things. I want to give you an opportunity. I think I think you're like the DM king. You know
+
+ 
+
+[17:58] [JEREMY MOSER FALANDO]what what I would say is like it's two things and this is honestly a bit more of a recent shift that we've observed. We used to have this thing where for every single client we would do like you know December like webinar replay like whatever. I think I spoke about it at the last inner circle.
+
+ 
+
+[18:18] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Jeremy Moser Pro Tip: Specific Value Over Generic"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Comparação visual: Generic Giveaway (baixo engajamento, ícone triste) vs Specific Value Asset (alto engajamento, ícone feliz), exemplo de calculadora para Airbnb
+
+ 
+
+[18:22] [JEREMY MOSER FALANDO]But really like the one thing that it is is like you want people to generally feel like it's like specific value. So like to give you an example if let's say you run retargeting ads for like a Airbnb offer, right? And you make it you make the whole ad around like find properties that pay you 2K a month, whatever it might be.
+
+ 
+
+[18:42]You want to you want to give something away that's very specific to that like a you know a a calculator or something that actually incentivizes them to take action and like progress in in the journey from like going from a no noob and nobody to like an actual pro like sort of like making money because what we found is like if you give something generic away the take rate and consumption rate on that is really low.
+
+ 
+
+[19:08]Whereas on you know specific and like perceived highv value assets people really like engage with that a lot more and as a result of it like the consumption and like responsiveness in the DMs becomes a lot higher.
+
+ 
+
+[19:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Angle Variation Strategy"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Múltiplos frames de anúncios com diferentes ângulos/ofertas, setas mostrando rotação de abordagens para evitar fadiga
+
+ 
+
+[19:25] [JEREMY MOSER FALANDO]I think that was honestly the biggest thing and it's like playing around a bit with angles. You know, we used to we we kind of fell into this trap of just saying, "Oh, if you want to learn how to start XY Z business or like get into XY Z opportunity, comment this keyword." Whereas now we're trying to like play the wraps around a bit and like in in framing the offer in different ways just because we've just seen that that's how you kind of get around people, you know, kind of losing interest.
+
+ 
+
+[19:52]Yeah, perfect. Thank you for that, Jeremy. So, long story short, when we go and we set this up, right, again, we're setting it up as a lead standard event, excuse me, we're setting it up on the campaign level, optimize as a campaign objective for lead.
+
+ 
+
+[20:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Strategy #3 Setup Recap"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Três níveis hierárquicos: Campaign (Lead), Adset (Pixel + Schedule), Ad (Comment CTA + Call Funnel URL)
+
+ 
+
+[20:12]On the adset level, we're selecting the pixel. We're selecting our standard event of schedule because again, we're going to run traffic essentially to a callunnel. And on the ad level, this is very important to understand, okay?
+
+ 
+
+[20:28]on the ad level, the URL technically still drives to the callunnel because you got to remember like some people are going to click through just like any other callfunnel ad and they're not going to comment whatever word you're telling them to comment. Okay?
+
+ 
+
+[20:45]And so you're still technically going to get the benefit of like just running a standard callunnel when you set it up this way, which I think is cool. But what we're attempting to do with this in our creative is tell people to comment a word to get XYZ of a thing that relates to our high ticket thing.
+
+ 
+
+[21:02] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Low Ticket to High Ticket Logic"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Diagrama mostrando produto high ticket (grande) sendo quebrado em componentes menores (low ticket), setas indicando extração de outcomes específicos
+
+ 
+
+[21:05]So Jeremy put it in great words, but just to reiterate it from the perspective that we usually tell our clients. We'll we'll follow essentially all the low ticket to high ticket best practices that we teach you guys inside of our weekly inner circle group called library.
+
+ 
+
+[21:20]There'd be two great videos to watch on that if you still haven't watched them. first of all literally called low ticket to high ticket mastery and then the other one's on the most recent bookfunnel mastery. Both of these are in the weekly inner circle group called library. Um, of course you can also talk to AI Jeremy extensively on those.
+
+ 
+
+[21:38]Here's the moral of the story. The logic of a great low ticket product is that it breaks off something from the high ticket thing that people really want. Okay.
+
+ 
+
+[21:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Example: Inner Circle Breakdown"
+
+ 
+
+NÚMEROS: 4 partes do back-end selling system, 70 páginas (SOP)
+
+ 
+
+VISUAL: Diagrama mostrando Inner Circle (centro) com ramificações: Backend Selling Systems, Confirmation Page, Email Sequences, SDR Practices, Hammer Them Strategy (destacado)
+
+ 
+
+[21:52]So, as a great example of this, if I if we look at what the inner circle technically is and like all the outcomes that it helps people with, it's like I could take Will, hang on, just chill the out and listen to the call and it'll all make sense towards the tail end. Okay? We're in the thick of it right now.
+
+ 
+
+[22:08]So, long story short, back to the point I'm attempting to make. When you look at your high ticket thing, okay? And in this case, let's look at what the inner circle is and all of what it comes with, okay? And we take this big thing and like the big thing is really just a bunch of outcomes, right?
+
+ 
+
+[22:25]There's just so many individual outcomes that the big thing comes with, right? All I'm doing when I do anything low ticket is I'm breaking it off. I'm just breaking something specific off.
+
+ 
+
+[22:35]So, as an example of that, like we have the back-end selling systems that we could technically break off and put not all of them, but I could put like one of them, right? I could put like confirmation page best practices or I could talk about value dense email sequences, right?
+
+ 
+
+[22:52]Or I could talk about something specific with show rate best practices as it relates to the SDR best practices we talked about with like what your setter should do prior to calls, right? I could talk about things like every different type of funnel under the sun could technically be a different branch in this entire system. Okay?
+
+ 
+
+[23:10]And essentially like any low ticket to high ticket product, very important to note, all I'm doing is is saying, "Hey, if you have this specific problem, I've got this specific solution for you. You know, do XYZ and I'll give it to you." Okay.
+
+ 
+
+[23:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Creative Structure for Strategy #3"
+
+ 
+
+NÚMEROS: 4-part backend selling system, 70-page SOP
+
+ 
+
+VISUAL: Layout de anúncio mostrando Video (problema + solução), Headline (Comment Hammer), Body Copy (explicação do sistema), todos alinhados para DM trigger
+
+ 
+
+[23:28]So, our creative in this specific ad that's technically optimized for a call funnel, okay, is more so centric around pitching something that we're going to give away in a DM and we're trying to give that to them in the DM by telling them to comment a specific word on that ad. Okay, so watch this.
+
+ 
+
+[23:48]So in this example where I have my creative, my headline, my video and my body copy would be centric around whatever I want people to comment XYZ of a word to get. So I'm going to make up an ad real quick. Okay, if I would say, "So your show rate absolutely sucks. It's in the gutter and your sales people are blaming your marketer and your marketer's blaming your sales people.
+
+ 
+
+[24:12]Here's what you actually need to do. You need to implement this four-part back-end selling system. The four-part back-end selling system comes with confirmation page best practices. It's a whole bunch of stuff your setters need to do or your closers prior to the actual call occurring. You could do this for webinars, too. By the way, we also want you to do these things called value dense email sequences. And we have this hammer them ad strategy SOP.
+
+ 
+
+[24:38]Now, what I want you to do is I want you to comment the word hammer. And if you comment the word hammer, I'm going to send you this 70page SOP on how you can implement one of the four, the most important one, the hammer them campaign into your current paid advertising process.
+
+ 
+
+[24:58]You can do this organically, too. This is just a specific thing that you're going to put some money behind to remarket people who just booked a call or who just opt into a webinar. You're going to blitz them with content. That way, you dramatically increase the frame that they come through with. and increase the odds that they show up.
+
+ 
+
+[25:18]Again, if you want this SOP, comment the word hammer and I'm going to shoot it over to you via the DMs right now. Okay. Now, just to be extremely clear, my video would say that. My headline would say something about like comment hammer to get the SOP.
+
+ 
+
+[25:35]And my body copy would also be written like I'm trying to get people to understand how the back-end selling systems work and like what the hammer them strategy specifically is. And again to comment the word hammer to get the SOP.
+
+ 
+
+[25:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The URL Still Goes to Call Funnel"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Seta grande apontando de botão do anúncio para landing page de call funnel, nota destacada "Not DM optimization!"
+
+ 
+
+[25:52]My page that I am driving the traffic to is just my standard callfunnel page. Okay? Because again, the intent of this direct response ad is not to get people to press the button and go book a call the traditional way. Okay?
+
+ 
+
+[26:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Key Difference: Results Column Population"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Comparação lado a lado: Strategy #2 (messagers hit results) vs Strategy #3 (scheduled calls hit results), destacando vantagem de pixel conditioning
+
+ 
+
+[26:12]But here's the reason that we set it up as a direct response campaign instead of setting it up as a campaign optimized for message. Okay? Because remember the people who hit that results column, those people specifically, I don't get to choose who the hits the pixel. It's whoever hits the page, like whoever messages is who goes back and hits that results column and that's who I'm going to get more of.
+
+ 
+
+[26:35]Versus when I run a campaign optimized for schedule, listen to how this works. Okay, so when the person comments in that specific case, hammer minihat is hooked up to say, okay, on any post or ad when the word hammer is commented, send this specific DM, right?
+
+ 
+
+[26:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Flow: Comment → DM → Call Funnel → Schedule Event"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Fluxograma detalhado mostrando jornada completa: Ad Comment → MiniChat → SOP Delivery → Conversation → Call Funnel Link → Application → Qualified Schedule → Results Column
+
+ 
+
+[27:00]And like any other DM campaign, as soon as they comment that word, my mini chat bot is immediately going to send them over the hammer them SOP. Okay? And we could do this in many ways, by the way, in the DMs itself. We'll talk about that here in a moment for like what you should actually do when people DM you.
+
+ 
+
+[27:18]For now, I just want you to understand what people are actually doing here. Okay? So, moral of the story, someone comments the word hammer. Our mini chat sequence then sends them over a message. Okay?
+
+ 
+
+[27:30]and when, not if, but when they start the process of opting in for the hammer them SOP or my setters start to communicate with them and try to get them to book a call, okay, we're going to send them to a funnel, right, that we optimized our campaign for, okay?
+
+ 
+
+[27:48]Because when they book a call using the link that was in our ad and they schedule, okay, guess what reports back to the results column? The scheduled call that originated from a DM. Okay, so then what starts to happen is, and this is really important to understand this, like just a traditional call funnel from here, okay?
+
+ 
+
+[28:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Application Qualification Filter"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Funil mostrando filtragem: DM Leads → Application → Qualified (verde, prossegue) vs Unqualified (vermelho, bloqueado), apenas qualificados atingem pixel
+
+ 
+
+[28:15]We have our application in place and our application vets out people who are donkeys, right? We don't let those people schedule and hit that pixel. We only let the like the right people hit that standard event. Okay?
+
+ 
+
+[28:30]And so as a result of that, the people who come in through a DM from my direct response campaign optimized technically for a call funnel, right? But they're coming through DM because remember all the ads are technically telling people comment this specific word. Okay?
+
+ 
+
+[28:48]And and again, when they're in the DMs, I'm sending them to the call funnel that I optimize the campaign around anyway. And so when they book that call, they go through the application, the right people book, those people get sent back to the results column.
+
+ 
+
+[29:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Advantage: Qualified Leads Hit Results Column"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Círculo virtuoso mostrando: Qualified Leads → Results Column → Better Targeting → More Qualified Leads, versus círculo vicioso da Strategy #2
+
+ 
+
+[29:08]So technically, I'm running a DM campaign, but I'm not doing it in any way, shape, or form the traditional way. I'm running it like a call funnel. That way, the right people go back and hit that column. That way, the right people have a higher probability to see my ads on an ongoing basis as my campaign continues to run. You understand?
+
+ 
+
+[29:30]Put a one in the chat if you understand what I'm saying. put a question if you've got a question. I want to make sure you understand this technical setup before we continue. I want to make sure you guys get it.
+
+ 
+
+[29:42]Will is your question answered? Unmute yourself. Your question's not answered.
+
+ 
+
+[29:48] [WILL FALANDO]Okay. So, for the the actual landing page itself, are you doing
+
+ 
+
+[29:52]Stop saying magnet. Standard callunnel. I've said it like 14 times. Callunnel. Standard call.
+
+ 
+
+[29:58] [WILL FALANDO]They click on the link even though we're trying to get them to comment. It's going to go to your normal callunnel.
+
+ 
+
+[30:05]That's exactly what I said. Correct.
+
+ 
+
+[30:08] [WILL FALANDO]Okay. All right. And then to be clear, when they comment the word, what happens? You tell me based on whatever
+
+ 
+
+[30:15]minihat.
+
+ 
+
+[30:17] [WILL FALANDO]Correct. And what's Minihat going to send them?
+
+ 
+
+[30:20]It's going to send them back to the call.
+
+ 
+
+[30:22]Correct.
+
+ 
+
+[30:23]I know people are dumb. Okay. Yeah.
+
+ 
+
+[30:28]We'll we'll talk about what happens in the actual DM itself now to be clear, but like technically you're going to send them the lead magnet itself that like they commented for, you know, but you're going to push them to the call funnel once they're in the DM like any other traditional DM campaign you'd otherwise run.
+
+ 
+
+[30:45]But again, do you understand the technical setup now for why we optimize the campaign around a call funnel, but what we're really doing in the creative itself? You understand that part?
+
+ 
+
+[30:55] [WILL FALANDO]Yeah, I understand that part.
+
+ 
+
+[30:58]Okay, very good. Okay, so just to be clear, I saw a bunch of ones in the chat. I just want to give anybody else an opportunity. Feel free to unmute yourself and ask any questions to get clarity on this for like the technical setup. Okay.
+
+ 
+
+[31:12] [EZRA FALANDO]Yeah, I had a tech question.
+
+ 
+
+[31:15]Go ahead.
+
+ 
+
+[31:17] [EZRA FALANDO]Um, so would you optimize the campaign for the same standard event used in the regular book of call funnel or you creating a unique standard event that goes only through people who went through this funnel using the same one for both?
+
+ 
+
+[31:32] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Standard Event Selection: Same vs Unique"
+
+ 
+
+NÚMEROS: 7 dias (click conversion window)
+
+ 
+
+VISUAL: Duas opções lado a lado: Schedule Event (existente, condicionado) vs Custom Conversion (novo, específico para DM), prós e contras de cada
+
+ 
+
+[31:35]Now that's a fair question, Ezra. You can technically do either. You can set it up to where it's like a custom conversion linked to schedule if you want to. We will traditionally just still optimize it around schedule because these are still people who technically, believe it or not, should actually be a little higher intent than a traditional callfunnel lead because they're taking an additional step and commenting something and going back and forth in a DM and then they're getting the opportunity to book the call after.
+
+ 
+
+[32:05]Um, we still optimize it around schedule traditionally because I want to be fair and saying again, the link technically leads people to go schedule a call. So, we still want the right types of people, assuming we've conditioned that standard event properly to be reached.
+
+ 
+
+[32:22]That's another big part of why we're trying to use schedule here. We we're assuming in this case that even if this is the first campaign you've ever run to be fair, like you're just starting your conditioning, that's one thing. But if you're like in motion, like you already have a call funnel, right?
+
+ 
+
+[32:38]And you already have people that are hitting that schedule standard event that are the right people. So, if you optimize around schedule, like right away, you're probable to reach more of the right people who are also probable to schedule. Does that make sense to you?
+
+ 
+
+[32:52] [EZRA FALANDO]Yep.
+
+ 
+
+[32:55]So, we we like to use the traditional schedule event, but I want to be very fair in saying like you're not wrong in asking could you use something else instead that's more unique just to this. That'd be totally fine as well.
+
+ 
+
+[33:08]And arguably, you could do both. That way you have a secondary standard event that you can optimize a future campaign for following the logic of cyclic campaigns. Does that make sense to you?
+
+ 
+
+[33:18] [EZRA FALANDO]Yep, that all makes sense. Thanks.
+
+ 
+
+[33:22]Okay, very good. Okay, so moral of the story, now that you understand the actual technical setup, let's use this same example and just continue on with assuming I'm going to give people the hammer them SOP. Okay, so once somebody actually DMs me the word hammer, okay, I'm not going to send them to the callunnel page right away.
+
+ 
+
+[33:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "What Happens in the DM: Two Approaches"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Bifurcação mostrando dois caminhos: Path 1 (Opener → Response → Capture Info) vs Path 2 (Opener → Opt-in Link → Landing Page)
+
+ 
+
+[33:50]I I have to send them the actual hammer them SOP. Otherwise, the conversation is going to have a huge drop off from there. Okay, I got to send people what they actually commented for. So, here's how you can do this. Okay, and this is very important you understand this because there are again like several different ways you could technically execute this and arguably none of them are really right or wrong.
+
+ 
+
+[34:12]You know, there's a few that technically will work a little better from what I've seen. However, just to be direct, all these technically work for what we're about to talk about. Okay.
+
+ 
+
+[34:22]So, when somebody is officially in the DM, right, and they've commented that word, you and like your mini chatbot are going to open the conversation. Okay?
+
+ 
+
+[34:32] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "DM Opener Options"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Duas caixas de mensagem: 1) "Response Required" (pergunta que solicita resposta) 2) "Direct Link" (link direto para opt-in)
+
+ 
+
+[34:35]So, your your opener, and this is really important you understand this, typically the first message needs to have a response to it, but you can also just send people like a link to opt into as an example. So this is where I say like you can really start to like have a bunch of different branches. Okay.
+
+ 
+
+[34:52]So as an example of this, the mini chat can have an opener that then leads to a response. Okay? Or based on that comment triggering your mini chatbot, you can send some kind of like optin link to get the lead magnet that you're technically giving them. Okay?
+
+ 
+
+[35:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Path 2: Opt-in Link Flow"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Fluxograma: Comment → DM (link) → Opt-in Page (name/email/phone) → Thank You Page → Call Funnel CTA
+
+ 
+
+[35:15]and a there's several different ways that you can functionally route people depending on which one of these two paths you take. Okay, so let me be rather directed in saying this. If you use this route here, the second one where you're going to try to get people to opt into something, um, very important to note how this one in particular looks. Okay, so again, they comment the word hammer on the ad itself. Okay, so they commented that and now we're in their DMs. Okay.
+
+ 
+
+[35:42]So now Minihat sends them over a message and that Minihat message that comes from your specific profile is like uh hey you know here here it is uh go opt in like go get it. Okay. And this is usually a link to an opt-in page. Okay.
+
+ 
+
+[35:58]Now this when you look at this specifically this link to the opt-in page obviously from here you're taking them somewhere. Okay. So this is a traditional optin like think name, email, phone, you know, whatever you want to capture. Okay.
+
+ 
+
+[36:15]Now very important to note like any good lead magnet funnel obviously we don't want it to stop there. We want to tell people on the next page to do something like book a call. Okay? And this is where our standard call funnel can come in. And so we can push them here like this. No issues with that at all if you choose to take that route. Okay.
+
+ 
+
+[36:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Path 2 Pros: Multiple Communication Channels"
+
+ 
+
+NÚMEROS: 3 canais (DM, Email, Phone)
+
+ 
+
+VISUAL: Três ícones conectados: Instagram DM + Email + Phone, destacando vantagem de múltiplos pontos de contato
+
+ 
+
+[36:40]Now, here's the here's kind of the pros and cons of that. pro. It's like you're going to capture their info on this step here. Okay. Now, you're only getting name, email, and phone, but keep in mind like the whole point of a DM strategy is technically you've got a team of setters that are highly probable to be like in communication with these people anyway.
+
+ 
+
+[37:00]And so now you got technically two places you can be in communication with them. You've got the actual message itself where you can go back and forth with them with some rules in place. But in addition to that, now you got their name, email, and phone number. You can also communicate with them in two other places at the same time, their email and their phone.
+
+ 
+
+[37:20]And so you've captured additional data and you've given your setters multiple places to carry on the conversation. I like this route because of the rules that are inside of the DMs. Okay?
+
+ 
+
+[37:32] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Instagram DM Rules & Limitations"
+
+ 
+
+NÚMEROS: 1 mensagem em 24 horas (limite após não-resposta)
+
+ 
+
+VISUAL: Relógio de 24 horas com ícone de bloqueio, mostrando janela de follow-up limitada, aviso de restrições
+
+ 
+
+[37:35]There's a lot of rules. Like as an example, you can't just sit there and harass people in perpetuity without them responding. There's the one in 24hour rule. Okay? or technically if they don't respond to whatever that last message was, you don't get the opportunity to message message them again more than once within a 24-hour period of time and then you don't get the opportunity to talk to and be on them. Okay?
+
+ 
+
+[38:00]So, we don't we don't like to be limited to just the DMs is the main point I'm trying to make extremely clear with you right now because of that. We find that to be a huge limitation. Okay.
+
+ 
+
+[38:12] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Path 1: Response-Based Flow"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Conversa em DM mostrando pergunta do bot → resposta do lead → captura de email/phone através da conversa → entrega do lead magnet
+
+ 
+
+[38:15]Now, let me be clear on this as well. If I do this route, this first one here, okay, I'm getting somebody to comment the word again. Let's say the word is hammer. All right, and then my message to them instead of just immediately sending the hammer them PDF as an example. I'm not going to do that.
+
+ 
+
+[38:35]What I'm instead going to do is I'm going to try to solicit response. Okay? So, I'm going to try to say something that's going to lead them to be like, "Yeah, I want it." Like as an example, this opener could be as simple as would you prefer I send the PDF of the hammer them strategy here or would you prefer I send it via email, right?
+
+ 
+
+[38:55]And as an example, like whether they just respond and say, here's fine, or whether they say, I'd prefer you email it, right? Or I could say I could even go beyond that. I could just imply I don't want to send it to them via DM at all. I could say, hey, would you prefer I text you the PDF or would you prefer I email you the PDF? Right?
+
+ 
+
+[39:15]Right? And if they say text is fine or if they say email is fine, I'm then obviously going to ask, "Cool, what email?" Or, "Cool, what phone number do you want me to text it to?" Right?
+
+ 
+
+[39:28]And what I'm doing there is I'm technically doing the same thing of my opt-in funnel that I would otherwise have. And I'm soliciting additional places to be able to communicate with them. I'm getting an email or I'm getting a phone number in addition to just the DMs.
+
+ 
+
+[39:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Why Multiple Channels Matter: Risk Mitigation"
+
+ 
+
+NÚMEROS: $100K-$300K (typical ceiling when IG-dependent)
+
+ 
+
+VISUAL: Ícone de Instagram com X vermelho, representando account takedown, setas apontando para email/phone como backup channels
+
+ 
+
+[39:50]I can't stress enough, this is so important you understand this, okay? A huge reason that people are limited around the 100 to 300K mark with DM ads is their Instagram goes down from either somebody paying to take it down or just compliance issues in some instances that get it taken down. Okay.
+
+ 
+
+[40:10]Now, although yes, this is extremely common for some reason, I don't like that and I want to mitigate against that and I want to have another place beyond just DMs that I can talk to people. I'm trying to hedge against that.
+
+ 
+
+[40:25]But more so than anything else, and I can't stress this part enough, it's not just that, right? It's just the fact that having more than one place to talk to somebody, especially when there's a rule in place where I can't follow up more than once if they didn't respond and then that's it, right? I I don't want that. It's like I want to be able to follow up whenever the I want, right?
+
+ 
+
+[40:48]And from that perspective, I got to get out of the DMs. So, both of these flows technically lead to the same thing, right? Me giving them what they technically opted in for. And then from there, I'm going to attempt to have a conversation that leads them to booking a call. Okay?
+
+ 
+
+[41:05]Really important you understand this. Okay? So, once we actually give them the thing, here's what happens next. We have to give people the link that we used in the ads.
+
+ 
+
+[41:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Critical Link: Same URL from Ad"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Seta conectando URL do anúncio original ao link enviado no DM, destacando que é o MESMO link para tracking adequado
+
+ 
+
+[41:18]So, this link right here, this one in particular that we optimized our direct response campaign for, we're taking that link and we're giving it to people in the DMs to book their call when we get to that point in the conversation. Okay.
+
+ 
+
+[41:32]Now, here's the very important thing to note. If you follow the best practices of low ticket to high ticket, okay, and you truly pick something that like actually relates to everything else you want or that that person would want as outcomes, there's a really high probability that they'll want to at least look at the callunnel link that you're going to send them to, right?
+
+ 
+
+[41:52]Obviously, we're never going to get 100% of people to go and book a call. But here's what we will do, okay?
+
+ 
+
+[42:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Layup Question After Delivery"
+
+ 
+
+NÚMEROS: 4-part system (referência ao exemplo)
+
+ 
+
+VISUAL: Conversa em DM mostrando entrega do lead magnet → confirmação de recebimento → pergunta estratégica sobre outras 3 partes do sistema
+
+ 
+
+[42:02]We're going to get people who when we get in that conversation and we're like, um, hey, now that you've got the hammer them SOP, are you interested in the other parts of the backend selling system, too, right?
+
+ 
+
+[42:15]Cuz you got to keep in mind in my ad that I theoretically came up with, I said, "Look, your show rate sucks. People are showing up poorly framed, if they do show up at all, right? You have a big show rate issue. Your sales people are blaming the marketers. the marketers are blaming the salespeople. You just got this this this lack of accountability and everybody's pointing their fingers.
+
+ 
+
+[42:38]And again, you know how much more money would come from having a great show rate. So, what we want you to learn is the back-end selling systems. And there's four of them. There's the confirmation page best practices, the value dense email sequences, there's the setter best practices, and then more importantly, there's the hammer them strategy.
+
+ 
+
+[42:58]And the hammer them strategy makes such a huge difference. If you want, I'll send you the 70page SOP on how to execute the hammer them campaign. Just comment the word hammer. Right? Again, comment the word hammer on this ad right now. Just comment the word hammer or if you want, shoot me a DM with the word hammer and I'll get you this SOP right here that's going to help you with this issue. Right?
+
+ 
+
+[43:22]Again, then they DM right now. Now, we're in the DMs. Let's say I follow path one, okay? And I say, "Hey, do you prefer that I text this to you or do you prefer that I email this to you?" Oh, text is cool. All right, great. What's your cell? I'll shoot it over to you right now. Here's my cell. Okay, great.
+
+ 
+
+[43:42]just texted it over to you. Can you confirm you got it? Want to make sure you received it. Yeah, got it. Okay, great. Are you interested in the other three parts of the four-part back-end selling system, too?
+
+ 
+
+[43:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Layup Response Strategy"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Mensagem destacada mostrando pergunta fácil de responder "yes", seta apontando para próximo passo (envio do call funnel link)
+
+ 
+
+[44:00]Give them a layup to respond to after they've gotten what they wanted out of this. So, after they've got whatever it is that they came for, the very next message needs to be a layup response. Okay?
+
+ 
+
+[44:12]It needs to be something where they say, "Yes, I want more of this. I want all the other that you can give me." It should be like, "Hey, by the way, wanting to know if you're interested in, you know, all this other that I can help you with." Okay?
+
+ 
+
+[44:28]And if they say yes, you say, "Great. Check out the details here. link to this specific funnel right here, the call funnel that you drove the traffic to in the first place. Okay, very important you understand what I'm saying right now.
+
+ 
+
+[44:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Call Funnel VSSL Options"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Duas opções de VSSL: 1) Generic (standard pitch) 2) Contextualized (relacionado ao lead magnet específico), ambas válidas
+
+ 
+
+[44:48]Okay, this is like literally the most important part. When the person gets that link, okay, it's just a standard callunnel link. It's like your VSSL needs to ideally be a VSSL that like complements what you're talking about, okay?
+
+ 
+
+[45:05]So you I want to be very clear when I say this. You can run a standard VSSL here without issue, okay? But you can also run a VSSL here that's like a little bit contextual towards whatever the they just opted in for and like explaining all the other that you can help them with. Okay?
+
+ 
+
+[45:25]So you can do that without issue. And just to be clear, you can also on that specific button that you had them press in the first place on the ad if they landed and went to that place, you can have that VSSL be customized. It makes sense in that context because again all the ad creatives said comment the word hammer.
+
+ 
+
+[45:45]So if they click on the page and it's just like some random VSSL that has nothing to do with what you just made an ad about. Obviously there'll be some inongruency there but it's like you can make that VSSL like a little bit of a custom contextualized VSSL to whatever you're actually talking about on the ad level you want people to comment for. You feel me?
+
+ 
+
+[46:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Mission Accomplished: Link Sent"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Checkmark grande, representando sucesso ao enviar call funnel link, nota sobre não precisar de resposta adicional
+
+ 
+
+[46:08]So, long story short, okay, just to be rather direct, once you send them the callfunnel URL, we don't give a if we get the opportunity to continue the conversation or not, or that's the last message that they responded to because we we got what we wanted. We got the opportunity to send them the callunnel link and have a high probability to get them to click through, right?
+
+ 
+
+[46:30]And then when they book the call, okay, assuming they're qualified, that person reports back into the results column. Okay, so technically you took somebody from a direct response ad optimized for a callunnel and routed them by telling them comment X to get them into the DMs.
+
+ 
+
+[46:48]Once they're in the DMs, you route them back to the callfunnel link that you originally put in the ad itself. And that's what triggers the schedule standard event to fire off. And that's what gets your campaign to have a higher probability to go after people who are probable to DM and book a call instead of just DM you and then have a low DM to call booking rate. Okay.
+
+ 
+
+[47:12] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Strategy #2 vs Strategy #3: Liability Comparison"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Balança mostrando Strategy #2 (muitas desvantagens, vermelho) vs Strategy #3 (muitas vantagens, verde), diferença dramática
+
+ 
+
+[47:15]The liabilities of the second strategy we talked about are extreme comparatively to how awesome the third strategy I've talked about is. I love the third strategy more so than anything else when it comes to DM ads.
+
+ 
+
+[47:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Abraham Case Study: Strategy #3 Results"
+
+ 
+
+NÚMEROS: $500K+ per month (September results)
+
+ 
+
+VISUAL: Gráfico de receita mostrando crescimento até $500K+, destaque para implementação da Strategy #3
+
+ 
+
+[47:32]This specific strategy, like you guys saw Abraham in the chat just this week when he was yapping about this for what he accomplished in the month of September. He got to like half a million plus a month off this strategy. Okay?
+
+ 
+
+[47:48]and it was a really simple thing for him to do. Okay, this strategy typically has a lot higher number that people are able to push to compared to like the 100 to 300k a month limitations that come from this approach here. Okay, so Jeremy put something in the chat which I want to point out.
+
+ 
+
+[48:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Instagram Account Takedown Reality"
+
+ 
+
+NÚMEROS: $2K-$5K (custo para derrubar conta), 90 dias (duração de restrições típicas)
+
+ 
+
+VISUAL: Chat screenshot mostrando discussão sobre frequency de takedowns, ícones de dinheiro representando custo de ataques
+
+ 
+
+[48:08]Somebody had asked Max asked the question, "Someone else paying to take it down. Is that a frequent thing?" And Jeremy said, "Very." And then Max was shocked by that. He said, "What the fuck?"
+
+ 
+
+[48:22]And then long story short, Jeremy then said, "Cuz Max is German, good luck when the German liberals are on to you." And then Max says, "How do you protect themselves against that? Like your client would be too crazy if it was that easy to take down a 5mmon operation."
+
+ 
+
+[48:38]And Jeremy says, "Our biggest success in preventing people from getting client accounts taken down is to shut the up about how much money you're making from DME/IG content." Right?
+
+ 
+
+[48:52]But this is very important to note. Like I can't stress enough, you can just pay off some Indians nowadays on the internet just to nuke somebody's Instagram. Instagram feels like the place where there's the highest probability out of anywhere right now from what I've seen to be interfered with.
+
+ 
+
+[49:10]It's like Instagram pages specifically are like one of the worst places to build your business. They are the most instable. Just trust me on this when I say you guys specifically share intimate situations with me all the time on a one-on-one level.
+
+ 
+
+[49:28]And this specific issue is like one of the number one issues that nukes a business overnight from what I've seen. It's like a recurring theme over a many year period of time. If you build your entire business on the back of Instagram, you're going to have a volatile time. Okay?
+
+ 
+
+[49:45]It's just not a stable place to build your business from what from what I've seen. That's why honestly I try to stay away from telling you guys like, "Oh, run." Although what I've talked about is really cool, right? And it does really good. I still don't like to do it.
+
+ 
+
+[50:02]Like I like to run paid ads that don't rely on the DM because it's like two grand or like five grand if you got a bad plug, you know, that just take down somebody's ability to DM. Like messaging restrictions, you know? They'll take you down for like 90 days at a time, by the way.
+
+ 
+
+[50:20]And then you got to be plugged up to like then pay to undo that. You know, it's just a big of essentially like a black market, you know? It's uh it's like a third world country just like corrupt corrupt. That's all it is. Just a big corrupt over there on Instagram DMs. This is a big liability of all this.
+
+ 
+
+[50:40] [AMELIO FALANDO]Alio says, "Does Metattrack the schedule back to the ad even though it comes from the DMs because they didn't click on the link in the ad itself?"
+
+ 
+
+[50:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Conversion Attribution: 1-Day View, 7-Day Click Window"
+
+ 
+
+NÚMEROS: 1 dia (view), 7 dias (click conversion window)
+
+ 
+
+VISUAL: Timeline mostrando janela de atribuição: ad impression → 7 dias → conversion ainda atribuída, mesmo se link veio do DM
+
+ 
+
+[50:52]Now, Amelio, listen to this, okay? because the link itself is the same link that you used in the ads and they technically saw the ad itself, right? Even if they didn't click the actual button in the ad. This is really important to understand.
+
+ 
+
+[51:08]There's what's called a one-day view, 7-day click conversion window. So, the illusion is is that if somebody doesn't click on the link in an ad, it doesn't count as a click, but it does.
+
+ 
+
+[51:22]So, if somebody clicks the ad and later converts on that link, it still counts as a click conversion. So, you got seven days to get them to book, right? If you get them within that 7-day window, it counts as a conversion, which is which is really important to understand. So, it's great for that. Okay.
+
+ 
+
+[51:40]Does anybody have any questions on this? Anything y'all want to contribute? Uh any anything to follow up to be clear?
+
+ 
+
+[51:48] [TREY FALANDO]I have a couple of questions if that's cool.
+
+ 
+
+[51:52]Yeah, go ahead.
+
+ 
+
+[51:55] [TREY FALANDO]Okay. So, um I'm just thinking through this at like more of a technical level. So, we run a lot of DMs and whenever we send over or whenever we book calls to the DMs, we primarily just like send the calendar link. We don't have like a like a page or whatever that gets picked. I mean, a lot of it's just organic.
+
+ 
+
+[52:15]So, a couple of questions based off off of that. Could we based on the score of the application send back and I'm thinking through this we should be able to if a lead scores high enough to where they're qualified tag that lead in minihat using the minihat ID with as long as the conditions are met meaning that they scored high enough and then send that data back to um the API for Facebook. Am I thinking through that
+
+ 
+
+[52:42]through the conversion API you technically should. You just got to make sure that you obviously have the identifiers like first, last, email, phone, like you know, the more data you can send back through the conversion API, the better. But yes.
+
+ 
+
+[52:55] [TREY FALANDO]Okay, cool.
+
+ 
+
+[52:58] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Conversion API vs Browser Pixel"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Comparação mostrando Conversion API (preferido, mais preciso) vs Browser Pixel (tradicional), setas indicando melhor performance com CAPI
+
+ 
+
+[53:00]That's also important to note that's one thing that Abraham pointed out this week when he was talking in the chat about this approach that we that we did on a onetoone level is instead of just doing the funnel itself, like excuse me, the the browser pixel, he's mainly leveraging the conversion API, right, to send back the data.
+
+ 
+
+[53:18]So yes, standard best practices of pixel conditioning apply to this which uh right now currently yes the conversion API is typically the better place to send data back rather than the browser event itself in most instances.
+
+ 
+
+[53:32] [TREY FALANDO]Okay, cool. I know Minihat has uh they have like Instagram's unique identifier which is like how Facebook identifies that lead. So I know you can pull that from Minihat and send it back to Facebook. I was just seeing if there was like anything that I was missing.
+
+ 
+
+[53:48]Would there also be any harm in sending like qualified leads that come from organic content back to the pixel through the conversion API? Because if we're booking leads that come from paid ads in the DMs,
+
+ 
+
+[54:02]yeah, it's like a common misconception is is that you'd wait to set up pixel conditioning until you have some paid ads running when in reality an organic business has a strong benefit of sending back good data to specific standard events. they'll inevitably optimize paid campaigns for that's that's absolutely a best practice.
+
+ 
+
+[54:22] [TREY FALANDO]Oh, sick. Okay, cool. Thanks a ton.
+
+ 
+
+[54:25]Yes.
+
+ 
+
+[54:28] [JOHN FALANDO - via chat read aloud]Um, John in the chat says, "Our best performing funnel is to send people to a low ticket community and getting them to book a call after seven days. Since our call funnel the bed, would you recommend running DM ads direct to a low ticket community or do a lead magnet first then push them to low ticket?"
+
+ 
+
+[54:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Low Ticket Community Funnel Considerations"
+
+ 
+
+NÚMEROS: 7 dias (tempo até call booking), 50 eventos (learning phase exit threshold)
+
+ 
+
+VISUAL: Funil alternativo mostrando DM → Low Ticket Purchase → Call Booking (7 dias depois), nota sobre friction vs volume de dados
+
+ 
+
+[54:52]So, John, you could do a low ticket. It just adds a level of friction to getting more people to book a call. So one very important thing to point out that we're seeing right now across the board is that exiting learning phase is like wildly improving the performance of campaigns.
+
+ 
+
+[55:10]Whereas to be quite direct like historically it really hasn't meant much at all. But like right now while we sit here and talk if you exit the learning phase like you'll see a pretty dramatic improvement in the performance of those campaigns.
+
+ 
+
+[55:25]So, long story short, if you send back like a limited quantity of data, because I'm assuming you'd follow the setup of like optimizing around schedule, right? But you could also optimize around the low ticket purchase to your point and still follow the logic of this campaign, right?
+
+ 
+
+[55:42]So, instead of optimizing around schedule, you'd you'd optimize around purchase. Instead of instead of selecting lead as your campaign objective, you'd you'd obviously select sales. And you would do literally everything we just talked about. You would just select a different standard event that you're optimizing for.
+
+ 
+
+[56:02]Um, so you could test both, but whatever gets the most data back to it is going to exit the learning phase the fastest. And I will I will stress, even though I haven't had to do this in the past, I will stress exiting the learning phase will make a pretty dramatic difference to your campaign's performance from what we're seeing right now while we sit here and talk about this.
+
+ 
+
+[56:25] [TREY FALANDO]And then one last question because I have uh like basically in my bio I just said DM me to find out how. I do get a good bit of DMs that people just DM me training and but what I do is I just respond to them manually and say, "How many deals are you doing?"
+
+ 
+
+[56:42]If they're doing like less than a deal a month, I send them to school. If they're sending more, I send them to a book a call. And we closed a good bit from the book a call from that strategy. Although our our you saw our paid ads book a call funnel sucked, right? Um
+
+ 
+
+[56:58]would you recommend setting up a DM strategy where you where you funnel them off? So it's like you're not qualified, go uh direct to school. If you are qualified, go direct to book a call.
+
+ 
+
+[57:12] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Automated Qualification Routing in MiniChat"
+
+ 
+
+NÚMEROS: <1 deal/month → School, >1 deal/month → Call booking
+
+ 
+
+VISUAL: Fluxograma de decisão automatizado no MiniChat: pergunta de qualificação → botões de seleção → roteamento automático baseado em resposta
+
+ 
+
+[57:15]Yeah. Hell yeah. And and by the way, that would be automated in mini chat, too. So like when they comment that word or when they message you that word, like the first thing to respond back would be that question you asked like, "How many deals do you do in a month?"
+
+ 
+
+[57:30]And it'd be like the option to select two things and whichever one they click would again just functionally route them to one versus the other. So yeah, absolutely. Still do that.
+
+ 
+
+[57:42] [TREY FALANDO]Cool. Appreciate it.
+
+ 
+
+[57:45]Nice.
+
+ 
+
+[57:48] [JEREMY MOSER - via chat read aloud]Um, Jeremy says, "How far have you seen this strategy scaled to, Jeremy?" Yeah. So, long story short, Jeremy, I've seen it scale up to like mid to high couple hundred grand a month.
+
+ 
+
+[58:02] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Strategy #2 Scaling Ceiling Reality"
+
+ 
+
+NÚMEROS: $200K-$300K+ (typical maximum), limitações por takedowns ou compliance
+
+ 
+
+VISUAL: Gráfico mostrando crescimento até $200K-$300K e então plateau/problemas, ícones de restrições e takedowns
+
+ 
+
+[58:05]And usually after that, it has some level of limitation, mainly from other people taking down the Instagram account or from them having some level of restriction inside of the Instagram uh DMs themselves.
+
+ 
+
+[58:18]It's either from people paying to take these people down or to be fair, some of them are just truly non-compliant in like what they do in the DMs and that can cause issues for them.
+
+ 
+
+[58:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Strategy #3 Scaling Potential"
+
+ 
+
+NÚMEROS: $300K-$700K+ (typical range with Strategy #3)
+
+ 
+
+VISUAL: Gráfico comparativo mostrando Strategy #2 ceiling vs Strategy #3 higher ceiling, destacando vantagens de automação
+
+ 
+
+[58:32]Uh, can't stress enough though, the secondary strategy that we talked about that always typically has, and again, I'm not trying to say that like nobody here can scale beyond 100 to 300K a month with that like traditional optimize around sending a message option. That's just what we've seen so much. It genuinely feels like a real ceiling.
+
+ 
+
+[58:52]This at the least typically scales to like the low the high-end range of that previous one. Like we typically see people hit somewhere between like three and like 700ish with this specific approach.
+
+ 
+
+[59:08]A lot of the times it becomes limited um depending on how they execute it, right? If it stays automated through minihat, that's great. But the thing is like a lot of people that we work with, they have like real people that they have in there that they prefer to use instead of mini.
+
+ 
+
+[59:25]And it's always when they have real people involved, it it has the limitations on it. So, if you can stick more so to Minihat compared to having the real people in here that are going to be the ones responding back, um, you should have a better time, right? You should have a better time.
+
+ 
+
+[59:42]And then to your same point, Jeremy, if you're just kind of quiet about the overall level of results you're producing through this, you should also have a better time.
+
+ 
+
+[59:52] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Strategy #3 Stealth Advantage"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Ícone de "invisível" ou "stealth mode", Facebook Ad Library mostrando call funnel (não DM campaign), proteção contra competitive attacks
+
+ 
+
+[59:55]And it's also very interesting. It's kind of like a stealth strategy because this is the one play that I've seen that doesn't really reveal that you're running through the DMs, right? Everything else like very evident that you're running DMs. But if somebody would look this up in the Facebook ad library, like all the links click the landing pages.
+
+ 
+
+[1:00:12]So, you're actually less probable to have the violent effect of somebody paying to take down your DMs.
+
+ 
+
+[1:00:20]Interesting.
+
+ 
+
+[1:00:22] [GABE FALANDO]Uh, one one quick question on this, Jay. Um, in regards to what Trey said, if you feed back the if you feed back through the conversion API, would that be one of the possibilities where you can go back to optimizing for like the DM as the campaign objective versus like, you know, the traditional call funnel or no?
+
+ 
+
+[1:00:42]Well, I want to be clear in what you're saying, right? So, when somebody messages the page and you and you have the optimization selected of send message, right? Whoever sends the message is who hits.
+
+ 
+
+[1:00:55]Okay.
+
+ 
+
+[1:00:58]Okay.
+
+ 
+
+[1:01:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Lead Forms Evolution Parallel"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Timeline mostrando evolução: Lead Forms sem lógica → Conditional Logic → Conversion Optimization (CAPI), paralelo com evolução esperada de DM campaigns
+
+ 
+
+[1:01:02]So, I want to be clear in saying like there are there are a few accounts and I can't talk about this like it happens in every account because it's not rolled out in everybody's account. There are some accounts right now that when you use this specific objective type of optimizing around literally getting people to send a message kind of like how lead forms, do you remember when lead forms rolled out the ability to optimize around people that actually converted instead of just optimizing around somebody who filled out the lead form? Do you remember when that rolled out all the way? Okay.
+
+ 
+
+[1:01:35]Well, anyway, long story short, like with lead forms historically, you know, it's kind of the same thing. Like it was pretty shitty when it first rolled out cuz like there was no conditional logic and anybody who fill out the form would hit the results column and that sucked ass, right?
+
+ 
+
+[1:01:52]And then when they rolled out conditional logic, I was like, "Oh, thank the Lord." And they gave you the opportunity to just deny the wrong people from filling out the form entirely, which denied those people from hitting the results column. That dramatically improved the results of lead forms. Okay.
+
+ 
+
+[1:02:10]In addition to that, they also then rolled out on the adset level of a lead form campaign the ability to optimize around people who actually converted. That would fire back from the CRM, which is literally the conversion API.
+
+ 
+
+[1:02:25]Now, when that rolled out, most people didn't have enough volume of people converting to actually exploit that. But for the people that we've been able to work with that do have the volume to exploit that, holy is it even more awesome than just the conditional logic alone because then the only people that are hitting the results column are a delayed firing event of people who converted that were marked that way in the CRM and hooked up the CRM through the conversion API to the ads manager. Again, awesome.
+
+ 
+
+[1:02:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Send Message Campaign: Lead Center Beta Feature"
+
+ 
+
+NÚMEROS: Não especificados (rollout limitado)
+
+ 
+
+VISUAL: Interface do Lead Center dentro do Facebook Business Suite, opções para marcar leads como "Qualified" ou "Unqualified", status de beta testing
+
+ 
+
+[1:03:00]Now, with this send message campaign, they're currently doing the same thing, but it's not in every it's not in every account yet. And hopefully as time passes, you know, this specific part of this training becomes uh redundant and like they do actually have it rolled out everywhere. So I hope that's inevitably the case, but for right now it's not.
+
+ 
+
+[1:03:20]So on this specific objective type, some accounts currently give you the ability to essentially mark somebody in what they call the lead center. So people who DM'd you, you can mark them as qualified or unqualified in this lead center that they've set up inside of the Facebook business suite. if you're familiar with that.
+
+ 
+
+[1:03:40]Um, long story short, those people specifically have a huge advantage over running DM ads in in strategy number two. Okay? And strategy number two where you optimize the campaign around send message.
+
+ 
+
+[1:03:55]Again, imagine only being able to send the people back to the results column who are actually good DMs, right? Or who did things like booked a call or bought your low ticket thing or whatever the you actually wanted to do. If you marked those people and you were able to send those people back, strategy number two would be infinitely easier and it could act as a cyclic campaign where you get the opportunity to exploit both strategies.
+
+ 
+
+[1:04:20]But for now, and again, unfortunately for now, most people who have in their account, they only have the ability to run a send message objective and they don't have the ability to send back like who's actually good and bad out of those leads. So, everybody just sends back comparatively.
+
+ 
+
+[1:04:38]But I will say obviously Facebook's aware of that issue. For them to be like in the middle of beta testing or maybe alpha testing that specific feature I just talked about to be able to mark one DM over the other as qualified. They obviously know they have a problem, right?
+
+ 
+
+[1:04:55]And there's a very high probability that they will roll that out to everybody. I don't know when. Nobody knows when. Um but clearly it's in motion, right? We just don't know their priorities and like when they're probable to roll it out.
+
+ 
+
+[1:05:10]So soon enough ideally we won't have to do this rather like complex setup. I've articulated and you'll be able to just do a much simpler approach comparatively that's more direct. Does that make sense?
+
+ 
+
+[1:05:22] [GABE FALANDO]Makes complete sense. Thanks. Yeah, that's interesting to to be fair.
+
+ 
+
+[1:05:28]Yeah, I'm really hopeful that they roll it out sooner than later because um
+
+ 
+
+[1:05:35]yeah, this this this third approach is really cool to be clear, but again, it's like more like it doesn't make any sense that we have to do it this way, you know? It just doesn't. But at the same time, it does because it works way better. But it's like we only have to do this because this doesn't have the right functionality. You know what I mean?
+
+ 
+
+[1:05:52]Yeah.
+
+ 
+
+[1:05:55]Okay, cool. Um, any more questions from anybody?
+
+ 
+
+[1:06:00] [GABE - via chat read aloud]Uh, Gabe says, uh, you said the more you stick to minihat, the better the results. So, when, if true, would you use humans to get better results?
+
+ 
+
+[1:06:12] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Human Setters: The Cleanup Role"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Fluxograma mostrando MiniChat sequence (automação) → Setters (cleanup para não-respondentes), zona de responsabilidade clara
+
+ 
+
+[1:06:15]Yeah, Gabe. So, you still want people to like go look at the DMs after the mini chat sequence has stopped because usually there's an opportunity to continue the conversation from that point and kind of do like a cleanup. Okay.
+
+ 
+
+[1:06:30]But the issue is is like all right, you're going to incentivize your setters on a on like getting a call, right? You're going to typically pay them on a cost per booked call basis. That's going to be their incentive.
+
+ 
+
+[1:06:42]And and at the same time, like not all of them respect the rules of the DMs. meaning compliance. And in addition to that, when it comes to compliance, like the literal messaging rules of if they don't respond within 24 hours of your last message, you get one time to follow up and like that's it, then you're cooked, you know?
+
+ 
+
+[1:07:02]So setters will typically like exploit that rule and then you get messaging restrictions as a result. Um, but anyway, long story short, as long as you teach them the rules and maintain compliance standards, having setters in there to act as more of like a cleaner to go back for the people who didn't schedule, it's really easy for those people to follow up and just be like, hey, what's holding you back from talking with us further on this?
+
+ 
+
+[1:07:30]Did you manage to read the SOP? Like, how'd you like it? You know, kind of pepper in a few different questions in the same message to try to solicit response at a high rate. That way, you can continue the conversation. You know what I mean? Um, does that make sense, Gabe? Do you have any follow-ups on that?
+
+ 
+
+[1:07:48] [GABE FALANDO]No. Perfect. Thank you.
+
+ 
+
+[1:07:52]Okay, cool.
+
+ 
+
+[1:07:55] [FAITH - via chat read aloud]Uh, Faith says, "I have a question. Why not set up the campaign with objective engagement instead of lead, then conversion location, website schedule, same as you're doing, and then for the button you use, send Instagram message instead of the VSSL funnel?" Like, why not send them direct to the DMs instead of telling them to comment?
+
+ 
+
+[1:08:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Audience Overlap: Campaign Objective Impact"
+
+ 
+
+NÚMEROS: 100 milhões (exemplo de tamanho de audiência)
+
+ 
+
+VISUAL: Diagrama de Venn mostrando overlap mínimo entre "Engagement + Message" vs "Lead + Schedule", destacando alcance de audiências diferentes
+
+ 
+
+[1:08:20]Yeah, Faith, you can test that, too. Like, we've definitely done that. We just found that this specific approach that I've talked about for strategy three typically gets more people to schedule a call. Um, and since it's optimized technically around a direct response campaign with lead and the schedule as the standard event, it goes after a completely different subset of people compared to the types of people. It literally just reaches when you optimize around the way you articulate it.
+
+ 
+
+[1:08:48]So, if I optimize around campaign around engagement, I I just want to reiterate this lesson. Maybe maybe you guys haven't seen this, but I'll reiterate it nonetheless. Um, when you select any specific standard event, right?
+
+ 
+
+[1:09:02]Let's use the example you have 100 million people in a given audience that you're targeting, right? You'll never reach 100 million people literally ever. The only people that you're probable to reach are the ones that are within the specific standard event that you're optimizing the campaign for.
+
+ 
+
+[1:09:20]Now, you couple that as well with the campaign objective. So if I couple the objective with in your example engagement as like my primary campaign objective and then on the adset level I optimize it around people who are going to send a message right they actually reach a totally different subset of people.
+
+ 
+
+[1:09:40]So over here let's say I select engagement and I also select the Instagram message option right when you look at like a ven diagram the total crossover like there's there's actually a very low probability that there's a lot of like total crossover there between those two audiences like because again they're completely different campaign objectives. One is optimized around lead and one is optimized around engagement.
+
+ 
+
+[1:10:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Higher Overlap Example: Lead Campaigns"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Diagrama de Venn mostrando overlap MAIOR entre "Lead + Schedule" vs "Lead + Submit Application", ambos sob mesmo objetivo de campanha
+
+ 
+
+[1:10:08]That's why there's so little crossover comparatively like let me use a different example. Let's say that we select a campaign optimized for lead and on the standard event level we select schedule and then in a secondary campaign we select lead and then we select submit application. Right?
+
+ 
+
+[1:10:28]In that example, it's like there's a much higher probability for there to be like a dramatic amount of crossover there because they're both under the same campaign objective type. But in addition to that, they're technically like very similar standard events, right?
+
+ 
+
+[1:10:42]they're still going to reach a different subset of people. But very important to note um let me be clear this is this is why we follow this logic of what's called cyclic campaigns right
+
+ 
+
+[1:10:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Cyclic Campaigns: Scaling Strategy"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Múltiplos círculos representando diferentes campanhas (Organic, Strategy #2, Strategy #3, Faith's suggestion), setas conectando todas como estratégia de escalonamento
+
+ 
+
+[1:11:00]and so Faith to your question right you guys are a perfect example of this like your literal organization is limited in the exact range I said most people who run DM ads are limited to okay look at it like this you'd want to run more than just the single way that you're optimizing for now because That's the logic of cyclic campaigns. Cyclic campaigns is a scaling strategy. Okay?
+
+ 
+
+[1:11:22]So rather than just running around one thing, we want to optimize a campaign around this. We'd want to do that second approach, too. We'd want to do that third approach you articulated, right? We'd want to do it organically, too, because we reach a different subset of people by doing so.
+
+ 
+
+[1:11:38]And we give ourselves more campaigns to scale with. And in addition to that, we just give ourselves more opportunity to make more money and be deleveraged from having one campaign producing all the results.
+
+ 
+
+[1:11:52]So again, I say the way that I articulated it solely because it typically produces more revenue for people. Uh but you're not wrong in how you articulated yourself. Um it just be more of an approach you would likely do second or third, you know.
+
+ 
+
+[1:12:08]But to be fair, remember I don't want to be right. I just want to make money. So if you run that approach and you get a better result with it than the way I articulated, then you know, me. run it your way. Okay.
+
+ 
+
+[1:12:22]Um, other questions? Anybody's got anything? Maybe maybe somebody has something else they want to contribute, you know, any any anything you guys have here that makes sense.
+
+ 
+
+[1:12:35]Cool. Any further questions? Want to make sure you guys walk away with certainty on how to execute. This should be pretty straightforward, but uh I know it's rather technical to be fair, so I at the same time it could be confusing.
+
+ 
+
+[1:12:50]Will, are you good? Did all this make sense after after the training concluded?
+
+ 
+
+[1:12:55] [WILL FALANDO]Yep, I'm good.
+
+ 
+
+[1:12:58]Okay, cool. Perfect.
+
+ 
+
+[1:13:02] [TREY FALANDO]Hey, I might have one last question. So, you covered this in beginning. Just I'll watch the replay, but do you have anything that you've seen on DM ads that is like a like from an ad creative perspective? That's like a best practice.
+
+ 
+
+[1:13:18] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Ad Creative Best Practices for Strategy #3"
+
+ 
+
+NÚMEROS: <1 minuto (duração ideal)
+
+ 
+
+VISUAL: Exemplos de formatos: 1) Talking head jump-cut com legendas 2) B-roll com texto overlay 3) Carousels estilo tweet (Jeremy Moser style)
+
+ 
+
+[1:13:22]Yeah, good question. I actually did not cover that. No. So, when it comes to the creatives, we just typically run standard like under one minute uh jump cut caption type videos. They're pretty just standard when it comes to the direct response.
+
+ 
+
+[1:13:38]Um, I want to be fair and saying and and this is why I gave you a bit of a shout out here at the beginning. I told everybody I'm like, "Guys, go watch Jeremy Moser's mastermind talks in the training library that we have because I'm sure that you'd cover more on that same front since you have such success on the organic side with that strategy."
+
+ 
+
+[1:13:58]Um, but to be fair, I pointed out one example of yours, which was the carousel format where it looks like they're like tweets. Um, I was telling people that, you know, hey, go look up like Jordan Lee as an example of one of Jeremy's clients that you can see this actively on. And, you know, you'll see exactly what I'm talking about in terms of the format.
+
+ 
+
+[1:14:18]Um, still though, like we typically run uh standard like, you know, under one minute talking head kind of direct response oriented ads that just tell people to comment a specific word.
+
+ 
+
+[1:14:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "B-Roll + Text Overlay Format"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Mockup de vídeo com B-roll de iPhone, texto sobreposto estilo Instagram Story, sequência em carousel
+
+ 
+
+[1:14:32]There is one other format, by the way, just on that same line of questioning that does work really well. So, we'll take what looks like B-roll content that was shot on an iPhone, like nothing too crazy, and we'll just put text over top of it, like telling people essentially a very simple version of what would otherwise be said in a talking head direct response ad.
+
+ 
+
+[1:14:55]So, it's typically the text like it looks literally you'd format it on your Instagram uh like you're posting a story like you would like type the text on that, save it, you know, and you could do a set of carousels that way. That also
+
+ 
+
+[1:15:10] [TREY FALANDO]Oh, so you actually run multiple you'd actually run multiple pictures and kind of run a bit like a sequence with it.
+
+ 
+
+[1:15:18]Yeah. Yeah, that's exactly right. Correct. So, that can be done with B-roll behind it. That could be done with images behind it. That could be done by making it look like tweets like you're like you're very known for in my opinion.
+
+ 
+
+[1:15:32]Um, and then again, you could just do standard like talking head, direct response, uh, as well. We we find honestly all of them have give or take the niche. I want to be fair and saying give or take the niche. Some of them do work better than others, give or take the niche.
+
+ 
+
+[1:15:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Creative Format by Market Segment"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Segmentação: B2C (B-roll + text overlay, estilo story) vs B2B/High Ticket (talking head, jump cuts, profissional)
+
+ 
+
+[1:15:52]As an example, the one that I was just talking about where it's like B-roll behind it and like just text that kind of literally looks like an Insta story would, that works really well for certain niches that are more in the BTOC niche, right?
+
+ 
+
+[1:16:08]Whereas more of the B2B, like the higher ticket stuff, we typically find that works better to do just talking head like jump cut style, you know, like captions, those types of ads typically work better for the more uh for the richer demographics.
+
+ 
+
+[1:16:25] [TREY FALANDO]Awesome.
+
+ 
+
+[1:16:28]Yeah.
+
+ 
+
+[1:16:30] [TREY FALANDO]Thank you so much.
+
+ 
+
+[1:16:32]Yeah, no problem. All right, cool. Anybody else got anything on this? Questions, comments, contributions, anything?
+
+ 
+
+[1:16:42]All right, sweet.
+
+ 
+
+[1:16:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Upcoming Mastermind Event"
+
+ 
+
+NÚMEROS: 11-12 (datas), Day 1 (sábado, conteúdo), Day 2 (domingo, networking)
+
+ 
+
+VISUAL: Calendário destacando weekend de 11-12, dois locais (office + penthouse), ícones de apresentação e networking
+
+ 
+
+[1:16:48]Keep in mind we got our mastermind here this next weekend. Uh the 11th and 12th we'll be here on the first day. We'll be at the penthouse on the second day. We got all the details including addresses, speakers.
+
+ 
+
+[1:17:02]Uh you know, ideally you RSVP with me so I can get a rough idea on food that we need to order. Uh we're going to have a great time. It's going to be awesome.
+
+ 
+
+[1:17:12]Keep in mind, try to Uber over here rather than driving. Only drive over here if you've got some kind of car that's worth parking in the lot. Uh no Corvettes don't count. And don't you dare try to drive a Tesla into the lot.
+
+ 
+
+[1:17:28]Um, long story short, if you again want to participate in the FlexFest, feel free to drive your vehicle. You're welcome to park in the lot. If not, there's street parking nearby.
+
+ 
+
+[1:17:40]Uh, but again, I'd encourage you Uber rather than uh, you know, driving over here if you're just going to park on the street. I don't think it makes much sense.
+
+ 
+
+[1:17:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Event Logistics"
+
+ 
+
+NÚMEROS: 4 minutos (distância entre office e penthouse)
+
+ 
+
+VISUAL: Mapa mostrando proximidade entre dois locais, ícones de Uber, informações de estacionamento
+
+ 
+
+[1:17:52]The office itself, like this facility that we're doing our event at on day one, is 4 minutes down the road from the uh, the penthouse. So, long story short, we're really close by to that. We're at the penthouse all day on Sunday.
+
+ 
+
+[1:18:08]Keep in mind, Saturday's the content day. Sunday is the day that we do everything for just networking and we just hang out literally all day. Be an awesome two days. Looking forward to seeing everybody who's coming out.
+
+ 
+
+[1:18:22]Um you got any questions, of course, shoot me a DM, but make sure you look at that pin message at the top of the Telegram chat that has all the details there. Um hotel recommendations, closest commercial airports, executive airports, etc.
+
+ 
+
+[1:18:38]And uh yep, looking forward to seeing everybody. If you guys got further questions on this, per usual, shoot me a message. Talk soon, everybody. Bye.
+
+ 
+
+ 
+
+📊 RESUMO EXECUTIVO
+
+ 
+
+NÚMEROS PRINCIPAIS:
+
+$100K-$300K/mês: Teto típico da Strategy #2 (otimização por mensagem tradicional)
+
+$500K+/mês: Resultado de Abraham com Strategy #3 (setembro)
+
+$300K-$700K/mês: Range típico de scaling com Strategy #3
+
+$5M/mês: Trophy winner (Jordan & Jacob) usando método Jeremy Moser
+
+10-15%: Taxa de conversão DM→Call (below average)
+
+20-30%: Taxa de conversão DM→Call (average)
+
+30%+: Taxa de conversão DM→Call (above average)
+
+$2K-$5K: Custo para derrubar conta Instagram via black market
+
+90 dias: Duração típica de restrições de mensagem
+
+1 mensagem em 24h: Limite de follow-up sem resposta
+
+7 dias: Janela de conversão por click
+
+1 dia: Janela de conversão por view
+
+4 minutos: Distância entre office e penthouse (mastermind event)
+
+11-12: Datas do próximo mastermind (weekend)
+
+ 
+
+ESTRATÉGIAS E SISTEMAS:
+
+ 
+
+Strategy #1: Organic DM Approach
+
+Post orgânico com CTA "comment word"
+
+Trigger MiniChat sequence ou resposta padrão
+
+Alternativa: "Message me word" para maior intenção
+
+Spectrum: Friction vs Intent
+
+Recurso: Jeremy Moser talks (Mastermind Library Q3 2025)
+
+Best practice: Specific value assets vs generic giveaways
+
+Formato preferido: Tweet-style carousels
+
+ 
+
+Strategy #2: Traditional Paid DM Ads (NÃO RECOMENDADA)
+
+Campaign objective: Lead ou Engagement
+
+Otimização: Send Message
+
+Botão do anúncio: "Send Message"
+
+PROBLEMAS:
+
+Sem pixel conditioning adequado
+
+Todos que enviam mensagem vão para Results Column
+
+Otimiza para "probable to message" (baixa intenção)
+
+Cost per DM inflation ao escalar
+
+Teto de $100K-$300K/mês
+
+Alta dependência de setter teams ruins
+
+Vulnerável a takedowns e restrições
+
+ 
+
+Strategy #3: Preferred Approach (RECOMENDADA)
+
+Campaign Level: Lead objective
+
+Adset Level: Pixel + Schedule standard event
+
+Ad Level: Creative diz "comment word" MAS URL vai para call funnel
+
+Fluxo:
+
+Usuário comenta palavra no anúncio
+
+MiniChat envia lead magnet
+
+Setter/bot captura email/phone
+
+Envia call funnel link (mesmo do anúncio)
+
+Application filtra leads qualificados
+
+Schedule event dispara para Results Column
+
+VANTAGENS:
+
+Pixel conditioning com leads qualificados
+
+Otimiza para pessoas prováveis de agendar call
+
+Maior taxa DM→Call
+
+Stealth (não parece DM campaign no Ad Library)
+
+Escalável até $300K-$700K+
+
+Múltiplos canais de comunicação
+
+ 
+
+DM Flow Options:
+
+ 
+
+Path 1: Response-Based
+
+Opener solicita resposta
+
+Pergunta: "Text ou email?"
+
+Captura phone/email na conversa
+
+Entrega lead magnet
+
+Layup question sobre high ticket
+
+Envia call funnel link
+
+ 
+
+Path 2: Opt-in Link
+
+Opener envia link direto
+
+Landing page captura name/email/phone
+
+Thank you page com call funnel CTA
+
+Menos conversação, mais direto
+
+ 
+
+Backend Systems (Exemplo usado):
+
+4-part Backend Selling System
+
+Confirmation page best practices
+
+Value dense email sequences
+
+Setter/SDR best practices
+
+Hammer Them Strategy (70-page SOP)
+
+ 
+
+Cyclic Campaigns Strategy:
+
+Múltiplas campanhas simultâneas
+
+Diferentes objetivos alcançam diferentes audiências
+
+Organic + Strategy #2 + Strategy #3
+
+Deleveraging de single campaign dependency
+
+ 
+
+ESTRUTURA:
+
+ 
+
+MiniChat Setup:
+
+Trigger baseado em comment keyword
+
+Automated sequences vs manual responses
+
+Qualification routing (ex: deals/month)
+
+Compliance com regras de 24h
+
+Integration com Conversion API
+
+ 
+
+Setter Team Structure:
+
+Cost per booked call incentive
+
+Cleanup role após MiniChat sequence
+
+Compliance training essencial
+
+Multiple question follow-ups
+
+Performance tracking: DM→Call %
+
+ 
+
+Application Funnel:
+
+Filtra "donkeys" antes de schedule
+
+Apenas qualificados disparam pixel
+
+Protege Results Column quality
+
+Standard call funnel structure
+
+ 
+
+Creative Formats:
+
+Under 1 minute duration
+
+Talking head + jump cuts + captions (B2B/high ticket)
+
+B-roll + text overlay (B2C)
+
+Instagram Story style formatting
+
+Tweet-style carousels (Jeremy Moser)
+
+Carousel sequences
+
+ 
+
+DADOS FINANCEIROS:
+
+Strategy #2 ceiling: $100K-$300K/mês
+
+Strategy #3 range: $300K-$700K+/mês
+
+Abraham September result: $500K+/mês
+
+Jeremy Moser typical deals: $200K+/mês
+
+Jeremy Moser outliers: $1M+/mês
+
+Jordan & Jacob (Inner Circle): $5M/mês
+
+Account takedown cost: $2K-$5K
+
+Message restriction duration: 90 dias
+
+ 
+
+Risk Factors:
+
+Instagram instability (#1 business killer)
+
+Competitor-paid takedowns (common)
+
+Compliance violations
+
+Messaging restrictions
+
+Account shutdowns
+
+Black market attack economy
+
+ 
+
+Conversion API Benefits:
+
+Better than browser pixel (current state)
+
+Organic data valuable for conditioning
+
+MiniChat Instagram ID integration
+
+Qualified lead filtering
+
+Learning phase exit acceleration
+
+ 
+
+Lead Center Beta Feature:
+
+Available in some accounts only
+
+Mark DMs as qualified/unqualified
+
+Similar to Lead Form evolution
+
+Will improve Strategy #2 when fully rolled out
+
+Currently in alpha/beta testing
+
+ 
+
+Low Ticket Integration:
+
+Can optimize for Purchase instead of Schedule
+
+Adds friction but valid approach
+
+Helps exit learning phase faster
+
+7-day nurture to call booking
+
+Community funnel alternative
+
+ 
+
+ 
+
+DURAÇÃO: 1h 18min 42sFORMATO: Training call / Masterclass ao vivo com Q&A interativo

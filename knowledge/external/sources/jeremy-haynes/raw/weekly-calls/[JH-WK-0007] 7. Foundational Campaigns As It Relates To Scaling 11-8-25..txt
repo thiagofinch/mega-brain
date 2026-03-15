@@ -1,0 +1,440 @@
+Transcrição Completa: 7 Foundational Campaigns As It Relates To Scaling 11 8 25
+[00:00] Okay. So, in this most recent like I don't know twoish weeks, um it's come up a few times. I think this one specifically was prompted by Jacob um foundational campaigns. So, somewhere in one of the many scaling videos we have on like how to spend a fuckload more money sooner and scale the hell out of your campaigns, we talked inside of one of those lessons about this concept called foundational campaigns.
+[00:30] Now, to be very very direct with you, it deserves its own lesson. Um, it comes up rather frequently. And so, I'm going to make sure that we like break out that specific lesson from that class and teach it to you guys here today because it seems to be happening to you more frequently as a result of Andromeda existing.
+[00:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Oil Field Analogy - Messaging Pockets"
+NÚMEROS: Não especificados inicialmente
+VISUAL: Analogia visual de campo de petróleo com múltiplos poços, representando diferentes bolsões de audiência. Bolsões de tamanhos variados (pequenos, médios, grandes) sob o solo texano.
+[01:00] So, most recently, I've been comparing some of the messaging pockets to having an oil field in Texas. Okay? So, let's use the example. You go out, you buy some land, and you got yourself a little oil field. Now, underneath this oil field, there's little pockets, okay? There's big pockets, little pockets, medium pockets, and these pockets represent little groups of people that respond to certain messaging combinations that you're going to hit them with.
+[01:30] You could technically say messaging and funnel combinations, but for simplicity sake, let's say that it's messaging. Okay? And again, these are all full of a whole bunch of oil, okay? And each one of these little oil pockets obviously is worth a whole lot more money when it's larger, and it's worth a whole lot less money when it's smaller.
+[02:00] If you deploy resources on your oil field and you crack a small pocket, you're going to run out of oil pretty quick. But if you don't actually know how much oil is in a given pocket and all of a sudden you start running out and you project onto that pocket that there should be a fuckload more oil in it when there's realistically just not, you're going to have a bad time and you're going to be really confused and you're going to be a terrible oilman.
+[02:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Well Deployment Economics"
+NÚMEROS: $10 million (custo médio por poço)
+VISUAL: Representação de poço de petróleo com equipamento de perfuração, mostrando custos de implantação, aquisição de terra, equipe necessária. Comparação visual entre investimento inicial e extração.
+[02:35] Okay? So, here's how this shit works. You're going to go out there and spend a little bit of money to set up a well. Okay? And with that well that you drill into the ground and spend, you know, the average well costs about $10 million to deploy, okay? And it takes a whole crew. It obviously takes the acquisition of the land. Simply put, it takes a fuckload of resources to be able to get to the point where you even drill into the ground.
+[03:00] Okay? And like advertising, it can take a lot of time and effort to just get to the point where you feel confident on a specific message, on a specific way of converting people, aka a funnel, that you're then going to spend money on through paid advertising and put out there into the marketplace and see how long you can drill for and extract some money from.
+[03:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Extraction Rate Reality"
+NÚMEROS: Taxa de extração constante independente do tamanho do bolsão
+VISUAL: Dois poços lado a lado - um pequeno e um grande. Ambos extraem na mesma velocidade, mas o grande tem muito mais longevidade. Representação visual da diferença de volume total vs. taxa de extração.
+[03:35] Okay? Now, like oil fields, as soon as you actually drill down and start the extraction, money starts to flow. Okay? And again, even in a tiny pocket, your well extracts oil at the same rate from a small pocket that it would extract from a larger pocket. The difference being the larger pocket has a fuckload more oil in it to extract and therefore there's a lot more longevity in it.
+[04:00] Technically, you could also set up more than one well to drill into the exact same pocket to extract from it more, right? And we consider that as an example, horizontal funnel scaling. But we'll talk about that as we continue on in this call.
+[04:20] The moral of the story is as time passes, what unfortunately starts to occur is you run out of oil in the pocket. And then as a result of that, you obviously start running low on money and you're no longer making money from it. Technically, you actually start losing money as a result of drilling in a pocket that no longer has oil.
+[04:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Common Scaling Problem Scenario"
+NÚMEROS: Custos crescentes, lucratividade decrescente
+VISUAL: Gráfico mostrando linha ascendente de custos cruzando linha descendente de lucros. Ponto de ruptura destacado onde campanha se torna não lucrativa.
+[04:50] And when you sustain this, here's what ends up happening. you come and you shoot me a message and you're like, "Jeremy, this pocket audience that I've been milking for whatever period of time it's been and however much you've spent on it is no longer printing. It's starting to actually rise in cost. It's starting to hurt me financially and I'm starting to actually lose money on it. It's becoming unprofitable to continue to drill into this little pocket audience."
+[05:20] And I tell you, well, one of two things. Number one, your ads could have fatigued. Maybe you just got to relaunch and try some different messaging to that same pocket. Or two, maybe you just ran out of people in that specific audience type and you need to find a different messaging combination to test to try to get a different group of people to start to convert.
+[05:45] And most of you, when I say that, you seem confused. You act like this specific pocket right here should just continue printing forever. You almost don't understand that there's a finite amount of people that are going to be responsive to a specific messaging combination at a given time and instead you project onto it that it's infinite and going to print literally forever.
+[06:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Oil vs Water: Non-Renewable vs Renewable Resources"
+NÚMEROS: 180 dias, 365 dias (períodos de audiência)
+VISUAL: Comparação lado a lado entre campo de petróleo (não renovável) e aquífero com nascente (renovável). Setas mostrando extração sem reposição vs. extração com reposição contínua.
+[06:15] Okay? Now, let me be clear when I say this. If we took this same analogy because here's what we all understand about oil. You've been taught this since elementary school when you were learning about nonrenewable resources. Once you drill all the oil out of these pockets, somebody put in the chat and answer it for me. Does the pocket fill back up?
+[06:40] If I extract all the oil from a given pocket, does it replenish itself once I've extracted all the oil? Again, it's a non-renewable resource. That's your context clue. You tell me in the chat. Yes, it replenishes. No, it does not replenish.
+[06:55] Okay. Nope. Yeah, exactly. Peace out. No more oil coming from that pocket.
+[07:00] Now, there is one difference that I'd like for you to consider. Okay, let's use the example that instead of oil, we found ourselves an aquifer. Okay, now for those who don't understand what an aquifer is, it's just a pocket of water. It's like a little cave in a sense that contains water.
+[07:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Aquifer + Spring System"
+NÚMEROS: Taxa de reposição vs. taxa de extração
+VISUAL: Diagrama de aquífero subterrâneo com nascente alimentando continuamente. Gêiser explodindo da superfície mostrando pressão excessiva. Representação de equilíbrio entre entrada e saída de água.
+[07:25] Now, for all those who don't know, you can also have what's called a spring. Okay? Sometimes springs can come from an aquifer, but in addition to that, springs can also be fed into aquafers to replenish an aquifer as you extract water from it.
+[07:45] So, let me be clear when I say this. You ever seen a geyser? One of those little things that shoots a fuckload of water out of the ground. Why does that happen? It's because there is an aquafer under the ground that has so much water in it. And there's also more water trying to come into the aquifer, likely from a spring feeding it, that the pressure builds up so substantially it busts through the Earth's crust and a geyser exists as a result.
+[08:15] Okay? Sometimes it can also come from ther thermodynamics to be fair and just, you know, heat. But regardless, this isn't a science lesson. Bear with me in my analogy.
+[08:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Finite vs Renewable Audience Pockets"
+NÚMEROS: Taxa de extração = Taxa de reposição (ponto de equilíbrio)
+VISUAL: Dois cenários lado a lado: Campo de petróleo (finito, esgotável) vs. Aquífero (renovável, sustentável). Indicadores visuais de quando parar vs. quando manter extração.
+[08:30] Okay? Here's my point. You have to understand this, okay? Oil, when we go and drill down into a specific pocket audience of people, there's a finite amount of people in those pockets if it's like an oil field. Okay? Meaning, if I run out of people in that specific well and there's no more people to extract, if I try to overcome it with ad fatigue, if I try to relaunch different messaging to the same exact pocket, I'm not going to get more people out of it.
+[09:00] I'm just going to continue losing money because there's no more oil to extract. And the more resources I deploy on trying to extract from a pocket that doesn't have oil, the more money I lose, okay, with water comparatively, okay, and these little aquifers, if I manage to drill a little well, okay, into an aquafer to start the process of water extraction, and it also has a little spring that is actively feeding more water into the aquifer.
+[09:30] I can extract water from that well consistently. I can also scale the amount of water that I'm able to extract from that specific aquifer. And as long as that spring replenishes the aquifer at the rate that I am extracting, I'll be able to perpetually spend money into that pocket. I actually won't run out of people because it replenishes itself.
+[09:50] Okay? And in some instances, if I scale too much into a given pocket audience, I'm going to scale beyond the replenishing rate. And what happens is the aquifer will start to run dry. Okay? It has to replenish at the same rate that I am extracting.
+[10:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Russell Brunson Case Study: Personal Brand Market Creation"
+NÚMEROS: 2017-2018, múltiplos milhões em vendas de info produtos
+VISUAL: Timeline mostrando criação de mercado por Russell Brunson. Ícones de marcas pessoais sendo criadas. ClickFunnels plaques, Dan Henry pizza boy story, eventos criando nova oferta de personal brands.
+[10:15] Okay? So, let me start putting this into some context that you'll all understand. Okay? in the personal branding space as an example in 2017 2018 Mr. Russell Brunson took on the initiative of creating new personal brands and in that specific year I continued to pitch more and more and more personal brands who sold info products and we consistently closed more and more and more of them.
+[10:45] I remember Leo came to me at one point and he said, you know, I feel like we've pitched everybody there is to pitch. And I was like, go back and pitch him again. And so that's what we did. We kind of ran out of people at that point because we pitched more than what was being added into the audience.
+[11:05] But thankfully, and unbeknownst to me at the time, Mr. Russell Brunson was out there doing the Lord's work and replenishing my aquifer, creating new personal brands. He went out there in the world and was advocating like a for selling info products and becoming one of these people.
+[11:25] He was putting, as an example, guys like Dan Henry on display, telling the pizza boy story about how he went from a pizza boy to an info product guy making a couple million bucks. He was telling stories of guys selling courses on hot dog stands and obviously he inceptualized the ClickFunnels event.
+[11:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Market Replenishment Effect"
+NÚMEROS: 2018, 2019, crescimento ano após ano de personal brands
+VISUAL: Funil de entrada contínua de novos personal brands alimentando o aquífero de prospects. Russell Brunson como "nascente" criando novo mercado continuamente.
+[11:50] started giving out plaques for people that were making money with ClickFunnels, a majority of which were personal brands selling info products. And each year that went on, 2018, 2019, more and more and more personal brands continued to fill into the aquafer that Leo and I were extracting from.
+[12:10] We never ran out of people because there was somebody out there, the spring, replenishing the aquafer, aka Mr. Russell Brunson actively adding more people into the group of people that we were trying to sell into.
+[12:25] But for a while there, there wasn't a Russell Brunson. For a while there, as we continued to pitch more and more and more personal brands, we continued to have less and less people that we could convert cuz nobody was creating them.
+[12:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Sales Training Market Example"
+NÚMEROS: $42 million/ano (Jeremy Miner), $100 million/ano (outras empresas de sales training)
+VISUAL: Comparação de mercados: Sales training (aquífero infinito) vs. nichos específicos (campos de petróleo finitos). Ícones de vendedores sendo constantemente criados por empresas globalmente.
+[12:45] So, here's the thing. A lot of you benefit from markets that are being replenished and you're just not aware of it because you're naive to this lesson. As an example, if I sell sales training, very rarely do I ever have to take on the responsibility of creating more salespeople.
+[13:05] Sales one of the number one demographic professions of work on Earth. There's infinite businesses is what it's going to feel like that are creating new salespeople for you to sell sales training to. You're likely never going to scale to a point where you'd have to create new salespeople.
+[13:25] As an example, Jeremy Miner sat down at dinner with him. He's doing $42 million a year selling sales training. He doesn't teach people how to become salespeople. He teaches sales people how to become great salespeople. He benefits from the aquafer effect that's sp that's fed by a spring.
+[13:45] And he makes $42 million a year because of it and scaling. By the way, there's businesses in the sales training space that do $100 million a year that don't have to sell becoming a salesperson. They can just sell to existing salespeople because there'll always be more of them because again, people join sales jobs all the time.
+[14:05] They don't have to take responsibility for creating a market. Some of you do. Some of you sell to such a specific niche and you're more in the oil fields rather than in the aquafers and you don't realize that you have a finite pocket of people that you can extract from.
+[14:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Campaign Launch to Scale Cycle"
+NÚMEROS: Budget de teste inicial → scaling → manutenção
+VISUAL: Fluxograma circular mostrando: Lançamento → Teste → Funciona → Scaling → Duas rotas: (1) Lucro continua = Continue scaling, (2) Custos sobem = Pull back spend.
+[14:30] So just to be clear, some of you simply put, you launch a campaign, okay? You got your campaign, you launch it at a test budget, it starts to work. you start to make a little bit of money. Okay? Then naturally, you're like, "Sit, I'm gonna start scaling this thing."
+[14:50] So scaling means you spend more on a day-by-day basis or if you're doing something organically, as an example, it means that you're amplifying your actions now. Okay? So, you start the extraction process at a faster rate than what you previously did at a test budget. as a result of the process of scaling.
+[15:10] Okay, you ideally have one or two things occur. Okay, and they're completely different paths. Path one, profit continues, no end in sight. Okay? And so you continue scaling and you just repeat that loop. Path number two, cost rises. Okay, profit diminishes. Profit starts to go down.
+[15:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Cost Rise Response Protocol"
+NÚMEROS: Não especificados
+VISUAL: Árvore de decisão: Custos sobem → Pull back spend → Custos caem? SIM = Maintenance Mode (Foundational Campaign) / NÃO = Ad Fatigue (Relaunch com novos criativos).
+[15:35] Okay, now in this example, this is very important to understand this. This is a cyclic process where profit continues. You go back to scaling and spending more money and as a result, profit continues and you continue to scale. And ideally, you can do that perpetually.
+[15:55] Okay? When costs start to rise and profits diminish, the way I want you to start reframing when that occurs, I want you to start thinking to yourself, I'm extracting more than what there is going into this pocket. Okay? the replenishing rate of that pocket is slower than the pace that you're extracting people from that pocket.
+[16:20] Okay? I don't want you to treat it like it's just instantly an oil field and you've just run out of people in that demographic. Okay? I want you to first when you try to scale something and your costs start to rise. Okay? There's a few things you could do and let me explain them for what you would specifically do step by step.
+[16:40] Okay. The first thing you could do is just pull back spend. And what you're trying to do here, trying to see if costs drop. Okay? And if costs drop back down, that's good. That means that you lowered your extraction rate and your costs went down as a result.
+[17:00] That represents that that pocket audience that exists, you were extracting too fast from it. Now you found the pocket. You found the sweet spot. You found the extraction sweet spot. You found how much you can spend per day and maintain a specific cost and a specific amount of people coming from that set of messaging with that specific funnel.
+[17:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Foundational Campaign Definition"
+NÚMEROS: Não especificados
+VISUAL: Campanha convertida para modo de manutenção. Ícone de "set and forget". Pilha de múltiplas campanhas foundational construindo receita base. Não tentar escalar = apenas manter performance.
+[17:30] Okay? And you want to ideally perpetuate it if you pull back and you see cost drop. Okay? So simply put, if you pull back and you see the cost drop, what you do is you go into maintenance mode. Okay, maintenance mode is really simple to understand. This is officially where we have a campaign that becomes converted to a foundational campaign.
+[17:50] Okay, so let me just introduce you to this concept at this point. Okay, a foundational campaign is something that we simply maintain the performance of. Okay, our goal is to maintain it. Our goal is not to scale it because if we scaled it as we've already proven, we'd extract more than what exists. We'd extract more than the rate that it's replenishing.
+[18:15] All we would do is spin the wheels. we would just increase our costs if we tried to extract more from it. And so what we instead do is we just throw it in a pile of other foundational campaigns. Okay? Not every campaign has to scale to the moon in perpetuity forever.
+[18:35] Not every campaign can because sometimes you're in a tiny little pocket. Sometimes you are in a small pocket of people. Okay? sometimes that and this is how it works with Andromeda especially factored in Andromeda can take the tiniest little niche messaging and find that tiny little niche pocket that it's perfect for.
+[18:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Andromeda's Micro-Pocket Discovery"
+NÚMEROS: Não especificados
+VISUAL: Andromeda identificando bolsões minúsculos de audiência com mensagens ultra-nicho. Bom custo por resultado ≠ escalabilidade infinita. Representação de teto de escala inevitável.
+[19:00] And again, just because it's getting a good cost per result doesn't mean it can be scaled infinitely. You might be able to ride that out at whatever spend it's at, maybe a little more than that, but it's eventually going to reach a point, no matter how big the pocket is, where you hit a ceiling and it can no longer be scaled.
+[19:20] But that doesn't mean you got to shut it off. It doesn't mean you got to demonize it. It means you got to convert it to a foundational campaign. It means that you've got to switch from scaling to maintaining it. It means that you've then got to go and try to find a new pocket of people to exploit while that foundational campaign sits there and just continues to extract.
+[19:45] You just leave that well running. You don't try to crank it up to pull more out of the ground. You just don't touch it. You just make sure it continues to pull what it pulls out of the ground. You let it sit there, do its thing while you go focus on drilling new wells, okay? finding new pockets that you can exploit with either new messaging or new funnels.
+[20:10] You understand? Put a one in the chat if you understand what I'm saying so far. This is imperative that you understand this Unreal how many people try to project onto campaigns that they can scale in perpetuity for ever.
+[20:30] Unmute yourself if you have a question on what I'm saying so far. I want to make sure everything that I'm saying is clear before I continue on. Anybody?
+[20:40] Participante: Okay.
+[20:42] Participante (Ash): How do you know that? Um, so like it's a really useful concept and it's I think how do you know when you've genuinely hit that point where it can't scale? Because often you could gaslight yourself and say, "Well, it's because your creative is not good enough. It's because your ad copy isn't good enough." And that's what I've done in the past.
+[21:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Scaling Ceiling Detection Logic"
+NÚMEROS: Não especificados
+VISUAL: Fluxograma de decisão simples: Launch → Test Budget → Works → Scale → Custos sobem? → Pull back spend → Custos caem? SIM = Teto encontrado (Maintenance Mode) / NÃO = Ad Fatigue (Relaunch).
+[21:10] Jeremy: Nope. So go back to this. You launch a campaign. It's at a test budget initially. It's working. It's making money. You start the process of scaling. If it allows you to continue scaling and the profit continues, you continue scaling it. As soon as your costs start to rise and profit diminishes, you pull the spend back down to where it was before that most recent scale attempt.
+[21:35] If the costs drop, congratulations. You found a ceiling and you switch it to maintenance mode. Did you notice how I didn't say anything else that you just said?
+[21:45] Ash: Clarifying that.
+[21:48] Jeremy: See, now this is the common misconception of advertisers. Y'all try to complicate and throw infinite other variables at it. Oh well, maybe the earthquake underneath the ground like lowered my pocket audience. You know, it's like who gives a about all those other variables.
+[22:05] Okay, if your costs start to rise after you've scaled it to a certain point, pull back the spend and see if the costs drop. Okay, now let me be clear. If you pull back the spend and the costs don't drop, treat it like it's ad fatigue. And that's an example where I would attempt to relaunch those creatives with some freshies and see if I can pull more people out of the ground.
+[22:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "If-Then Logic for Scaling Problems"
+NÚMEROS: Não especificados
+VISUAL: Três cenários em boxes: (1) Custos sobem + Pull back = Custos caem = TETO ENCONTRADO, (2) Custos sobem + Pull back = Custos continuam = AD FATIGUE, (3) Relaunch falha = CAMPO DE PETRÓLEO (esgotado).
+[22:35] Does that make sense to you, Ash? It's like a if this then that set of logic. So again, if my costs rise and I pull back my spend a little bit and they go back to what they were, I found the ceiling. Okay? Money. Money. If I do that, okay, if I pull back the spend and my costs are still rising, ad fatigue.
+[22:55] Relaunch that pull out those fatigued creatives, put new ones in place, see if our costs go back down afterwards. If they don't go back down, treat it like an oil field. You likely ran out of people in that pocket at a given time. You understand?
+[23:10] Ash: Okay. Very good.
+[23:15] Jeremy: Okay, Jamie, you had unmuted yourself. What's your question?
+[23:18] Jamie: Yeah, I guess it was similar to Ash. So um slightly different because we don't run ads but we recently had an issue with deliverability which you pointed out was kind of a fatigue in the message but it was also you know a deliverability issue. So you mentioned you know treat it like an oil field if your costs rise and you know there are no more people to go with scaling and so you're saying just bring it back to that foundational campaign so it stabilizes and you don't push it beyond that.
+[23:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Foundational Campaign Goal"
+NÚMEROS: Múltiplas campanhas foundational = base de receita estável
+VISUAL: Pirâmide de campanhas foundational empilhadas. Cada camada representa uma campanha em modo de manutenção. Base sólida para crescimento adicional.
+[23:55] Jeremy: That's correct because here's the goal. Here's the goal with foundational campaigns. Okay. So let me let me just make this cycle extremely clear. Okay? So when we go launch something, we launch it with a test budget. Ideally, it starts to work or obviously we've got to optimize it until it works.
+[24:15] Once it works and we're making money from it, we're like, "All right, sick. Let's scale this up." If we try to scale it and it works, we're just going to perpetuate that. If we try to scale it and our costs rise and our profit diminishes, okay, and we get less results as we attempt to push into it further, pull back the spend or in your case, Jamie, pull back the effort a bit.
+[24:40] meaning like lower the quantity of emails that you may be sending out per day in that example with that type of messaging and see if you get the result you were getting prior to that last scale attempt. If you do, amazing. Then you got a foundational campaign that you throw into the foundational campaign pile.
+[25:00] It is a great thing to have many many many foundational campaigns. Okay, let me tell you how this works. Okay, you see businesses that hit big money. Like let's use the example in our group's context of the guys that do 5 million plus a month.
+[25:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "$5M+/Month Business Foundation"
+NÚMEROS: $5 million+/mês
+VISUAL: Múltiplas campanhas foundational como base. Raramente uma única campanha escalada infinitamente. Pilha de muitas campanhas construindo receita total. Representação visual de diversificação.
+[25:25] Okay, what is their foundation? Their foundation is a fuckload of foundational campaigns. Very rarely, literally, if ever, is it just one campaign that they've scaled perpetually to a point where they hit 5 million a month. In this example, what happens is is it's just a fuckload of campaigns that they build themselves up to these heightened levels of revenue through time.
+[25:50] Okay? And and let me put it in even more specific context than that. It's like you figured out YouTube, right? And you start to perpetuate that action, but there's not too much you can do to amplify it beyond additional video input or specific videos that might get a little more reach than others.
+[26:10] And so you start perpetuating that action, but again, it reaches a ceiling of scaling where nothing really makes sense to amplify it besides perpetuating the behavior. You throw it into the pile of you repeat forever.
+[26:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Multi-Channel Foundational Stack"
+NÚMEROS: Não especificados
+VISUAL: Pilha de canais: YouTube (base) + Instagram + Twitter + LinkedIn + SEO + Paid Ads. Cada canal atinge teto, vai para manutenção, próximo canal é adicionado. Crescimento composto.
+[26:30] You then pay your Instagram guy and your Twitter guy and your LinkedIn guy, your SEO guy, and you start to try to amplify the messaging that you found to work on YouTube. And as a result of that, those things start to work as well. Those can be amplified to a degree, right? You try to scale those, too.
+[26:50] Maybe you start to try to get additional eyeballs on it through engagement campaigns or shoutouts or just networking or other podcasts, right? You start trying to get yourself more known, get more attention to these places that you're posting this stuff.
+[27:05] Again, there becomes a point where you're like, I just can't do more than what I'm doing now. Let me just maintain that current level of effort and throw it into the pile of I repeat. Then you're like, "All right, let's get into paid ads. Let's start running some paid ads."
+[27:25] And you do this process of, "Let's launch some campaigns, try a specific funnel, optimize it till it works. Now it works. Let's scale into it." And bam, you hit another ceiling. The logic that most people use in that context is they're just like, "It stopped working. like, let me just kill it.
+[27:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Spike vs Consistent Revenue Patterns"
+NÚMEROS: Não especificados
+VISUAL: Dois gráficos comparativos: (1) Revenue com picos e vales dramáticos = mata campanhas no teto, (2) Revenue com crescimento consistente ascendente = converte campanhas em foundational ao atingir teto.
+[27:50] What's better to do is be like, okay, I got another foundational campaign. It hit a ceiling. Throw it into the pile of I maintain and just try to continue getting performance from. And then when that happens, you go and you repeat the process again. Let me try to get a new campaign with a different set of messaging. Let me try a different funnel that I could convert with the same messaging. Right?
+[28:15] And you can try those two different variables and you repeat that exact same cyclic process where your goal is to hit the ceiling and then pull it back a little bit into maintenance mode and throw it in your pile.
+[28:30] Most guys who have a lot of money that they make on a consistent month in and monthout basis. They're just standing on a giant pile of a bunch of foundational actions that they repeat and maintain the performance of. And that's why they're able to get consistent performance month in and month out.
+[28:50] The guys who have like huge spikes comp comparatively that look like this, right? Those kind of people, they find a specific action that could have been turned into a foundational campaign and when it hits those ceilings, they just kill it and then they go seek something else.
+[29:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Test Windows vs Compounding Momentum"
+NÚMEROS: Não especificados
+VISUAL: Dois padrões de comportamento: (1) Mata campanhas no teto = janelas de teste constantes, inconsistência, (2) Mantém campanhas no teto = momentum composto, crescimento consistente.
+[29:15] This becomes the test windows for them until they get another foundational campaign. These people fail to turn actions that hit a scaling ceiling into a maintained action that's no longer attempted to be scaled.
+[29:30] The people who experience consistent performance that looks more like this. They're finding actions as they go, scaling those actions as they go, hitting ceilings with those actions as they go. And as soon as they hit those ceilings, they just maintain them instead of trying to scale them.
+[29:50] And then they take their attention and put it onto the next thing that they can start testing, optimizing, attempting to scale, to throw into the foundational campaign pile to stand on top of to build additional compounding momentum.
+[30:10] Put a one in the chat if you're feeling me right now. You got to understand this You got to understand it, okay? It's not a option. This has to be something that you get.
+[30:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Practical Paid Advertising Context"
+NÚMEROS: $2,777/dia budget inicial
+VISUAL: Exemplo prático de campanha: Test budget → Otimização → Funciona → Tentativa de scaling. Múltiplas estratégias de scaling mostradas (agressivo vs. conservador).
+[30:30] Okay? So, just to put it into very practical context, okay, in the context of paid advertising specifically. Okay, when I launch a campaign, I'm going to obviously launch it at a test budget. Okay, once I go through the optimization process, ideally it just works, right?
+[30:50] But once I go through the optimization process and get it to work and it's making me money, I'm obviously going to attempt to scale it. Okay? And I want to be really technical when I say this just to answer all the little questions that could otherwise come up.
+[31:05] There's many different ways to attempt to scale something. Sometimes you might have tried to scale it too aggressively and it makes sense to pull it back, but it doesn't make sense to just be like, there's no more scale potential here. Let me just turn it into a foundational campaign.
+[31:25] Sometimes it makes sense where you scaled it too aggressively. You pull it back and you try to scale it differently. So again, just to be extremely technical, u the other day I had a campaign. It was at a $2,77, excuse me, it was this $2,777 a day in daily budget.
+[31:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Aggressive Scaling Example"
+NÚMEROS: $2,777/dia → $4,077/dia (scaling agressivo, >30%)
+VISUAL: Exemplo de scaling agressivo que funcionou. Custo por resultado mantido. Contraste com regra de 10-30% conservadora. Cost per X strategy mencionada.
+[31:50] Okay. The client and the sales team were like, "Hey, we need a fuckload more calls." I was like, "Sure, let's give it a shot." I scaled it to $4,077 a day. Okay. The cost per result maintained itself just fine. That's a very aggressive way to scale in that example.
+[32:10] Okay, that's not following the 10 to 30% rule. In this particular case, this was obviously far exceeding 10 to 30%. This was what we call the cost per X strategy, which again, if you don't know what that is, to be clear, we have entire videos dedicated to scaling tactics, scaling strategies in the weekly inner circle group call library.
+[32:30] You can also ask Jeremy AI on this if you'd like. You can also shoot me a DM. I'm not going to turn this into a tactical scaling class, just to be clear. I want to keep it focused on the foundational campaign concept.
+[32:45] But anyway, my point is, let's use the example that I attempted to scale like this and it failed. Okay, what I would do is I would just go from that 4,770 a day back down to where I was previously and then I would attempt to scale it up differently before I just said there's no more scale potential here.
+[33:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Multiple Scaling Approach Strategy"
+NÚMEROS: $4,077 → $2,777 → 10-30% incremental scaling
+VISUAL: Árvore de decisão: Scaling agressivo falha → Retornar ao baseline → Tentar scaling conservador (10-30%) → Se falhar = Foundational Campaign. Múltiplas tentativas antes de declarar teto.
+[33:10] You understand? So, I attempted to scale aggressively first in this context. In this context, it actually worked. In this hypothetical example, I'm now telling you, let's say it didn't work. Okay? I would go from that 477 a day back to the 2770. And I would try to see if it pulled my cost back down again.
+[33:30] Presumably, it will. And when it pulls my cost back down, then I'm just going to try to scale it up differently. I'm going to try to scale up with, let's use the example, the 10 to 30% a day or maybe 10 to 30% every few days. Okay?
+[33:50] And now if that doesn't work, I know that I've hit a ceiling and that's when I would convert it to a foundational campaign. Now that campaign is going to consistently spend $2,777 a day. I know that I'm not going to be able to scale past that. We're going to let that campaign sit there and do its thing.
+[34:10] And now I'm going to go take attention and I'm going to put it on to the next campaign. And I'm going to test to repeat the cycle of launching something, seeing if it can work, and starting the process of scaling it once I get it to work again.
+[34:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Foundational Campaign Maintenance Protocol"
+NÚMEROS: $2,777/dia (mantido consistentemente)
+VISUAL: Campanha em modo "set and forget". Monitoramento apenas para ad fatigue. Relaunch com criativos frescos se necessário. Atenção movida para próxima campanha. Poço deixado rodando sozinho.
+[34:35] That campaign that's at 2777 bucks a day, it's just going to sit there. It's going to sit there. We're going to maintain it. If the ads fatigue, we'll relaunch it with some freshies. We'll try to get that performance coming from it again. And again, we'll just maintain it.
+[34:55] Okay? When I hit a pocket that I've officially concluded is now a foundational campaign, I need to go drill another well somewhere else. Okay, I've got to go extract elsewhere. And in technicality, what that means is I'm going to launch a new campaign with a few different variables in mind.
+[35:15] Okay, I'm going to ideally launch something with completely different messaging or I'm going to launch with the same messaging but a different funnel as a test. Why do I say that? Okay, let me be very direct with you so we're all on the same page.
+[35:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Current Campaign Structure Template"
+NÚMEROS: 3 adsets (Broad, Lookalike Stack, Interest Stack), 25-30 ads individuais, 5 headlines, 5 body copy
+VISUAL: Estrutura de campanha cold: 3 adsets com mesmos ads. Warm campaign: 1 adset (warm audience stack). Total 25-30 ads com 5 headlines e 5 body copy idênticos em todos.
+[35:35] When we look at my current campaign structure, I generally launch a cold campaign that has three adsets in it. One's broad, one's a lookalike stack, and one's an interest stack. They generally all have the same exact ads in them. Okay? We'd use individual ads. It's 25 to 30 of these ads. They have the same five headlines. They have the same five pieces of body copy.
+[36:00] I then duplicate that campaign out. I have my warm campaign. My warm campaign's got one ad set. It's just a warm audience stack for technical reasons. I'll explain this to you here. Warm audience stack is just vite visitors for 180 days. Social interaction on Facebook and Instagram for 365 days.
+[36:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Warm Audience Stack Components"
+NÚMEROS: 180 dias (site visitors), 365 dias (social interactions, video viewers)
+VISUAL: Componentes do warm stack: Website visitors 180 dias, Social interactions FB/IG 365 dias, Video viewers (threshold variável) 365 dias, Customer lists, Email lists. Todos em um único adset.
+[36:25] video viewers above whatever threshold you want to pick for 365 days, customer lists, email lists, things like this. Okay? And again, they have the same exact same exact 25 to 30 ads, same five headlines, same five piece of body copy.
+[36:45] Okay? So when I tell you that when I go to drill again, okay, when I go to drill again, the two variables that I'm testing more than any other variables is a new set of messaging or a new conversion mechanism, aka a new funnel.
+[37:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Primary Testing Variables Priority"
+NÚMEROS: Não especificados
+VISUAL: Hierarquia de variáveis para testar: (1) Nova mensagem (mais comum), (2) Novo funil (menos comum). Audiência e placement menos relevantes em Meta devido a broad targeting. Escala de peso: vídeos/imagens > copy.
+[37:10] I'm not. Why am I Why am I not telling you to try a new audience? Well, because I already have pretty much every audience type that I'd test here. All audiences are pretty much broad targeting nowadays. Very rarely is there a different audience type.
+[37:30] I want to be fair to platforms like Google Adwords as an example. Like if I launched a campaign and I only did like branded search, it's like, yeah, there's a fuckload of other possibilities. Obviously, I could test another audience type in that context.
+[37:50] If I launched on Google Adwords and I was only targeting like YouTube as an example and I didn't do search campaigns at all, I could not only do a new audience, I could technically do a new placement, right?
+[38:05] And so contextually, these two things, they definitely have their place. I'm not trying to say like never do these two things, okay? But just contextually now, if you're on if you're on meta specifically and you're looking at what to test next, because pretty much all targeting is cold broad targeting nowadays, it makes sense to just do a new set of messaging or a new funnel.
+[38:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Andromeda Ad Distribution Pattern"
+NÚMEROS: 1-3 ads recebem toda distribuição de 25-30 ads
+VISUAL: 25-30 ads lançados → Andromeda seleciona 1-3 ads → Mesmos 1-3 ads em todos os 4 adsets. Representação de como Andromeda encontra bolsões específicos de mensagem e os pareiam com pessoas.
+[38:35] Here's what's very interesting. When we look at this setup here, if I go to the ad level of this specific setup and I look, I always tell you guys one to three ads typically get all the distribution out of these 25 to 30. And even more interestingly than that, generally it's the same one to three ads across all four of these different adets.
+[39:00] So, the good news is pretty much one to three little pockets of messaging got all the reach. Remember how Rendromeda works? Okay, Andromeda finds a specific set of messaging aka a specific pocket and it pairs that message with that person.
+[39:20] Okay? And that person is these little pockets. Some of those pockets are big, some of those pockets are small. The bigger the pocket, the more scale potential we got. Smaller the pocket, the less scale.
+[39:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Oil Field vs Aquifer Campaign Longevity"
+NÚMEROS: Não especificados
+VISUAL: Dois destinos para foundational campaigns: (1) Campo de petróleo = esgota e morre eventualmente, (2) Aquífero com nascente = mantém-se indefinidamente se não extrair além da taxa de reposição.
+[39:40] If it's an oil, if it's an oil field, the pocket runs dry eventually and our campaign will die. That means our fan our foundational campaign won't be able to get maintained. It's just going to die because we run out of people to convert.
+[40:00] If it's more like an aquifer and it replenishes, which a majority of the time it will be an aquifer, not an oil field, a majority of the time you will have a spring replenishing that audience type. You just can't extract more from it than what its replenishing rate is.
+[40:20] You understand? Some super advanced I'm sitting here telling you guys about right now. Don't act Ask a question if you got a question. You have to wrap your head around this. You have to be able to understand this.
+[40:35] Participante: Yeah, Jeremy, you said new messaging. I'm assuming, and maybe I'm wrong, that's five new headlines and five new body copy when you say new messaging.
+[40:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Messaging Change Weight Distribution"
+NÚMEROS: Não especificados
+VISUAL: Balança desigual: Vídeos/Imagens (peso maior) vs. Copy (peso menor). Prioridade em mudar criativos visuais, copy geralmente permanece universal. Copy específico para vídeo = exceção.
+[40:55] Jeremy: Great question. Um, to be clear, in terms of in terms of Have you ever seen one of those little scales that's like this? It's got like the little plate on it, you know? generally generally when you look at it for like what to test uh it's not very even. It's more it's more like this where the thing that has the least weight is copy changes. The thing that has the most weight are the videos or the images.
+[41:20] So generally we'll keep the copy the same. It's the videos or images specifically that will change when we're doing messaging tests. You understand? Now, I want to be fair in saying like if you've written copy in a way obviously where it's paired with your videos or images for a specific line of messaging that you've used, like yeah, you'd update the copy too to be fair.
+[41:45] But in most instances, like we write copy in a way, I'm projecting on to you that you write copy in a way where it's kind of like universal to all the different messaging you have in your videos rather than like super specific to be paired with a specific video. You know what I mean?
+[42:05] Um, so in that context, like I wouldn't change any if if you did write copy specific to a video or image combination like obviously you'd update it too. Okay, other questions on this just before we continue on. Okay, we'll continue on there.
+[42:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "New Well Drilling Decision Tree"
+NÚMEROS: Não especificados
+VISUAL: Duas rotas principais ao atingir teto: (1) Nova mensagem (preferencial, mais eficiente), (2) Novo funil (secundário, mais trabalhoso). Fatores de decisão baseados em histórico de testes.
+[42:30] So, okay, moral of the story, back to what I was saying. When I need to drill again, there's mainly two variables I'm going to test. It's messaging or a new funnel. Okay, so let me be really clear, really clear for which one I'd choose in some different situations.
+[42:50] Okay, let's use the example that for a whatever period of time, I've tested an ungodly amount of different messaging and I finally found a specific messaging combination that's bringing in the right people. And I've historically like struggled to find quote unquote the right people.
+[43:10] and I really like this type of person that I'm bringing in. So, I want to keep the same general messaging. In that example, it make a lot more sense to test a different funnel because I'd want to keep the same messaging on the front end. I would just want to try a different way of converting them. Naturally, that makes sense.
+[43:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Funnel Type Unlocks New Pockets"
+NÚMEROS: Não especificados
+VISUAL: Mesma mensagem → Diferentes tipos de funil desbloqueiam diferentes bolsões de preferência de conversão. Call funnel vs. Webinar vs. Challenge vs. Low-ticket-to-high-ticket. Cada funil atrai perfil de conversão diferente.
+[43:35] If I'm only converting people through a callunnel, there's only a finite amount of people with a given set of messaging that are probable to convert on a different funnel type. If I tried to introduce a webinar to that same demographic, like I'm going to unlock a whole new pocket of that type of person who prefers to convert through webinars than a callunnel.
+[43:55] If I introduced like low ticket to high ticket, again, if I did a challenge funnel, again, it's the same lesson. That same type of person exists, but they're not going to convert through whatever funnel you might be running now. So therefore, in that context, you can still run the same messaging, but a new funnel would make sense because you're going to unlock a new pocket of that type of person who just preverse to convert differently.
+[44:20] You get what I'm saying? Now, let's use the example that I've already found like a few different things I could say that have worked, right? So, I got confidence that I can go out there and I can try saying different things and still get the right types of people to come through. And I don't really want to do a new funnel. New messaging would make the most sense there.
+[44:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Messaging vs Funnel Testing Efficiency"
+NÚMEROS: Não especificados
+VISUAL: Comparação de eficiência: Nova mensagem = novos scripts, filmar rapidamente, testar mais rápido. Novo funil = construção completa, processo de teste extensivo, mais recursos, mais tempo.
+[44:50] And new messaging is typically a little more efficient in my opinion than new funnels. I believe that new messaging is preferably like the first test to try as a new variable comparatively to a new funnel. Just easier to say, hey, here's a new set of scripts. Like go film this in comparison to, hey, let's launch a completely different funnel.
+[45:15] And like have to go through the testing pro. I feel like the testing process of a funnel is far more extensive to get it to profitability comparatively to just testing some new ad ideas, you know. So, from an efficiency perspective, we typically will bias towards just new messaging and our ad creatives first.
+[45:35] And and just to be even more technically specific with you, when I literally say new messaging, I just mean changing the things that you say in your videos to appeal to a different demographic of ideal buyers that you want to sell to.
+[45:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Customer Profile Messaging Framework"
+NÚMEROS: Não especificados
+VISUAL: Framework de perfil de cliente: Problemas, Circunstâncias, Outcomes (resultados desejados). Referência a aula anterior sobre messaging e SOP "Mastering Messaging". Diferentes perfis = diferentes ângulos.
+[45:55] If you go back to last week's lesson specifically on this whole concept of messaging lessons or you refer to our new mastering messaging SOP, we talked about customer profiles. All I'm technically saying is you would just think of a different customer profile and talk to their problem, circumstances, and outcomes. That's all I'm trying to say.
+[46:15] You would just speak to a different type of customer profile if you adapt your messaging. You could also attempt to talk to the same demographic but from a different angle of saying the same thing. So, I'll give you guys a great example.
+[46:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Same Object, Different Perspectives Analogy"
+NÚMEROS: 693 (número no objeto), RNET 4 (texto no objeto)
+VISUAL: Objeto físico mostrado de dois lados completamente diferentes. Lado A: números, display de clima, Celsius, porcentagem com gota de chuva, barras verde/amarelo/vermelho, texto "RNET 4", parafusos, plástico. Lado B: completamente diferente, invisível do Lado A.
+[46:35] Okay, look at this. You see this If you tried to be descriptive about what it is right now, what would you say it is? You don't have to type it, but genuinely bear with me. Try to do this exercise real quick. What would you describe you see when you look at whatever the you think you're looking at right here?
+[47:00] How would you talk about this object? Would you even call it an object? What do you think it is? Okay. And again, throw a few labels at it. Like, is it made of? What's it made of? What's that writing say? What's behind that? Are those batteries? Is it chip? Like, what is this? Would you call this a thing to hang on the wall, you know?
+[47:20] Okay, now watch this. Now, if I described it, it'd be a completely different thing. Okay. If I described it while you're looking at this side, I'd be like, "Yeah, it has the number 693 on it right now. It looks like it's telling the weather in Celsius. It looks like there's some percentage with a little raindrop next to it. And there's like a green, yellow, and red bar. And it says RNET 4 on the bottom of it. It has screws. It looks like it might be made of plastic."
+[47:50] But if I'm describing that while you're looking at this side, you're going to be like, "What the are you talking about?" And if you describe what you see over here while I see this, I'm going to be like, "What the are you talking about?" And we both see the same exact object completely differently than each other.
+[48:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Multiple Perspectives on Same Target"
+NÚMEROS: Não especificados
+VISUAL: Conceito visual de descrever o mesmo objeto de ângulos completamente diferentes. Mesmo alvo, múltiplas perspectivas válidas. Aplicação ao marketing: mesmo avatar, múltiplos ângulos de mensagem.
+[48:15] Okay? Most of the time with messaging, you found a way to describe the same thing, but from a very specific way of describing it. Okay? There is a completely different way to describe the same exact object to articulate the same exact object with a completely different view on the same thing.
+[48:35] I can appeal to the same thing by articulating it completely differently because there's more than one way to appeal and talk about the same thing. You understand the point of what I'm attempting to make to you.
+[48:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Adam's Dad Weight Loss Example - Multiple Angles"
+NÚMEROS: Não especificados
+VISUAL: Exemplo de John Madson/Adam: Pai com filhos e negócio. Múltiplos ângulos possíveis: (1) Ocupado demais para treinar, (2) Fatigado ao brincar com filhos, (3) Falta de tempo, (4) Relacionamento com esposa. Mesmo avatar, perspectivas diferentes.
+[48:55] So it's like if I feel like I'm just going to make up a random example because I'm looking at Adam right now. Adam specifically helps men lose weight. But the way he articulates himself is like John Madson, you know, he helps people that are in very specific circumstances lose weight. And he appeals to like the pain of their current circumstances.
+[49:20] A lot of the specific like messaging types that he's used, his objects have been like parents, specifically a dad with kids, uh, decent job or something that's paying him good money, like a business. And he might appeal to the fact that, hey, you're super busy. You're not making time to work out.
+[49:40] you go home and you're very tired and fatigued when you sit down with your children and they want to play and they're all energized but you're fatigued and exhausted and you know that's like one example of how he could describe a dad with kids with a business okay but the dad with the kid and businesses okay can also be described from completely different perspectives
+[50:05] I could talk about his wife I could talk about how he lacks time you know I could talk about so many different things about the dad with a kid and a business Okay. And that'd be the example of changing the messaging.
+[50:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Messaging Exhaustion → Avatar Change"
+NÚMEROS: Não especificados
+VISUAL: Processo sequencial: (1) Explorar todos ângulos do avatar atual, (2) Criar múltiplas foundational campaigns desse avatar, (3) Esgotar perspectivas, (4) Mudar para avatar completamente diferente. Eficiência: esgotar avatar antes de trocar.
+[50:25] I could also just appeal to a completely different demographic. Okay. So, if I've historically talked to that demographic and I've really tried to exploit like every messaging angle that there is to exploit and I feel like I've got a lot of foundational campaigns specific to that demographic, change the avatar. Go to a different person type.
+[50:45] Okay. The more efficient thing to do, in my opinion, is to describe what you've been great at describing from multiple perspectives first. Okay? If you've sold really well to a specific demographic, try to continue to sell to that demographic, just sell to them differently by choosing different different messaging variables, problems, circumstances, and outcomes.
+[51:10] Okay? Once I've milked the out of that then I'm going to a completely different avatar and I'm selling to somebody else. This becomes a foundational campaign. This becomes the next thing I test and try to spend time and effort and resources to drill into. You understand?
+[51:30] Again, one's in the chat if you understand what I'm saying. Unmute yourself if you got questions. Okay. Very good.
+[51:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Foundational Campaign Summary"
+NÚMEROS: Não especificados
+VISUAL: Resumo visual do conceito completo: Campanha atinge teto → Pull back → Tenta escalar diferente → Atinge mesmo teto → Modo de manutenção = Foundational Campaign. Deixar rodar, monitorar fatigue, não tentar escalar mais.
+[51:45] Okay. So, principally, here's the summary of what I'm trying to tell you. Okay. A foundational campaign is not hard to understand. Just to summarize it in the easiest way of saying it, you hit a ceiling with a campaign. you pulled it back. You maybe tried to scale it again differently. You hit that same ceiling. You pulled it back. You're like, "All right, I just got to maintain this now."
+[52:10] It literally means that you just leave it at where it is. You don't try to spend more on it. You just monitor it for ad fatigue. You just let it sit there in the account and continue to turn out more results like a well in an oil field or a well with an aquifer. Okay? You're just extracting at that point. You're not trying to spend more or extract more from it. you're just maintaining it.
+[52:35] You then go launch a new campaign. You can duplicate the same campaign and you'd go and change the variables like the variables we talked about messaging, a difference in funnel or a difference in audience type or a difference in placement depending on the ad channel.
+[52:55] Okay, I generally start with a difference in messaging. I try to describe the same thing from a completely different way first with the same funnel in mind. That's generally more efficient. Okay, if I try to do that and I'm failing, I might try a difference in the funnel.
+[53:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Horizontal Funnel Scaling - Mark Jennison Case Study"
+NÚMEROS: Múltiplos anos de colaboração, custos por call consistentes (~$10 diferença)
+VISUAL: Case study de Mark Jennison (married businessmen cutting alcohol). Descoberta acidental: múltiplas campanhas com mesma mensagem, URLs diferentes, performance similar. Base para horizontal scaling.
+[53:20] Okay, there's several specifics that I want to point out here that you can leverage. We've talked about what's called horizontal funnel scaling. Okay, I'll tell this story since Mark recently joined back into the group chat specifically.
+[53:35] So, we had a client, Mark Jennison. Made a lot of money with Mark over the years. Mark's business was helping married businessmen with kids cut out alcohol. Okay? And he had some crazy stories of men struggling with this problem. And we made a lot of money with Mark over the years. We've helped a lot of men overcome this specific issue.
+[54:00] Mark's really good at digging into pain. Okay? Very good at taking men to the pit and relating to their circumstances, their problems, and their desires, their outcomes. We found through technically a mistake that here's where the mistake originated.
+[54:20] I lived in a beach house in co could walk in my backyard. I was on the beach. So you can imagine I was on the beach a lot off. It was also co. We launched it. We had way one call funnel. There's a headline of VSSL and an application.
+[54:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "A/B Test Accident Discovery"
+NÚMEROS: ~$10 diferença em cost per call entre testes
+VISUAL: Teste A vs. Teste B: mesma página, mesma headline, mesmo VSSL, mesma application. ÚNICA diferença: seção de testimonials adicionada. Campanhas duplicadas, apenas URL mudou. Descoberta acidental após 1 mês.
+[54:45] And at one point we were like let's split test against this and see if we could get a better cost per call by just split testing our funnel. So, we just duplicated the funnel. We had the same exact page, headline, VSSL, application. We just added a section to it. The additional section we added was testimonials. Just like a brick of testimonials on the page.
+[55:10] Okay. To test that, I went into the ads manager. I duplicated the campaign and I didn't change anything other than the URL. I just changed the URL to the new B test. So, now at that point, I had two campaigns running. I had my A test, I'd have my B test. Nothing different at all besides the URL they were pushing traffic to.
+[55:30] Back to my point, I was at the beach off. I was supposed to turn off one split test or another. About a month went by and I didn't turn off one split test or another. I remember going back into the account at one point when Mark was asking about the results of the test and I was like, "Oh I never turned one off. I never declared a winner."
+[55:55] Uh, honestly don't even know if I've checked. Let me go look. and we looked the A test and the B test were like a $10 difference in cost per call if that give or take the day they might have been even closer contributed to our goal though which was get more calls in a specific KPI range.
+[56:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Horizontal Funnel Scaling Discovery"
+NÚMEROS: 7 variações eventualmente criadas, cada ~$10 diferença em CPL
+VISUAL: Evolução de 2 campanhas → 3 campanhas → 7 campanhas. Cada uma: mesma mensagem, mesmas audiências, variações mínimas no funil (testimonials, VSSL diferente, etc.). Todas performando similarmente, somando mais calls.
+[56:20] Okay, it was the same messaging. It's the same funnel. It just had a difference of an additional section just some testimonials. So then we were like that was a good Let's up again. Let's do it a third time.
+[56:35] So, we duplicated that funnel and we changed the VSSL on it. So, we just had Mark film a new VSSL. So, is the original test headline, a different VSSL and the application. And then we went back to the campaign. We duplicated the campaign out again. Same audiences, same messaging, just the only difference on the campaign level was a new URL.
+[56:55] URL number three at this point, our C test. It did the same thing. Same exact cost per call range. couple dollars away from the original. It got more calls per day. It allowed us to have another campaign we could scale with. It was the same messaging, technically the same funnel type, just a difference in the type of like what variable on the funnel, like a different VSSL or like a testimonial section or just the original version.
+[57:20] We ended up doing this seven times over. Okay? And we called it horizontal funnel scaling. as an example of a way that you can take a foundational campaign and try again and get something else that can be scaled.
+[57:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Horizontal Ad Scaling vs Horizontal Funnel Scaling"
+NÚMEROS: Não especificados
+VISUAL: Comparação lado a lado: Horizontal Funnel Scaling = mesmas audiências, mesmos ads, FUNIL diferente. Horizontal Ad Scaling = mesmas audiências, mesmo funil, ADS diferentes. Ambos extraindo do mesmo aquífero com múltiplos poços.
+[57:40] Sometimes you could just do horizontal funnel scaling. In other instances, when you have that campaign that's hit the ceiling and it's now a foundational campaign, you go to duplicate it. Let's use example, you want to change the messaging on the ad level, right?
+[58:00] So, you duplicate your campaign. Now, you get a second campaign. You're not going to change your audiences at all. You're not going to change the URL at all. you're just going to go to the ad level and just change the videos you're running with. Okay?
+[58:20] You can change the copy, too, if you want to. You might update your funnel to reflect whatever new messaging you have, but you might not even need to do that. You might just need to literally change what you're saying in the ads, launch some new ads, and then all of a sudden, that's a new variation of horizontal funnel scaling.
+[58:40] But instead of horizontal funnel scaling, it's horizontal ad scaling. You understand? So now you got a second campaign with a difference in the ads that are running in it, but it's the same audience and the same funnel. With horizontal funnel scaling, you have the same audience, the same ads, but the difference is the funnel type. You understand?
+[59:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Primary Action Priority After Hitting Ceiling"
+NÚMEROS: Não especificados
+VISUAL: Ordem de prioridade ao atingir teto: (1ª opção) Horizontal Funnel Scaling, (2ª opção) Horizontal Ad Scaling. Mantém maior parte do que funciona, muda apenas uma variável. Alta probabilidade de sucesso.
+[59:05] So when you hit the ceiling with horizontal uh excuse me, when you hit the ceiling and you've officially converted a campaign into a foundational campaign, consider those two actions as primary actions. Horizontal funnel scaling or horizontal ad scaling.
+[59:25] just try those when you're attempting to create that next campaign. That way, you're only taking like a small degree of new action and you and you maintain a majority of what's working in the original campaign. Okay? If you do that, there's a high probability to work. It's a high probability to be the best action you could take in that example when you're looking to create a new campaign that could be scaled.
+[59:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "When to Introduce Completely New Funnel Type"
+NÚMEROS: Não especificados
+VISUAL: Cenário de esgotamento: múltiplas foundational campaigns do mesmo aquífero, horizontal scaling não funciona mais = aquífero esgotado. ENTÃO introduzir tipo de funil completamente diferente: Call funnel → Webinar, Challenge, Low-ticket-to-high-ticket.
+[59:55] Very important to note that when you do that enough times, treat it like there's a big old aquifer under the ground that you're just drilling multiple wells into, but you're technically still extracting from the same aquifer. If you actually run dry on that specific aquifer or all of those become foundational campaigns and the next one doesn't do anything beneficial, that's where you might want to try a completely different funnel type.
+[1:00:20] That'd be where it may be beneficial to be like, "All right, this callunnel. We've milked the out of it and we've got our foundational campaigns that are just going to ride out in the background. Let's try webinar now. Let's try challenge funnels. Let's try low ticket to high ticket." That's a great time to introduce that. Do you understand what I'm saying to you?
+[1:00:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Efficiency Perspective on Funnel Testing"
+NÚMEROS: Maior tempo, mais recursos, mais dinheiro para novo tipo de funil
+VISUAL: Comparação de esforço: Horizontal scaling (rápido, eficiente, alta probabilidade) vs. Novo tipo de funil (longo período, mais testes, mais recursos, mais dinheiro, maior esforço). Novo funil = último recurso após esgotar horizontal scaling.
+[1:00:50] Okay, it's it's from an efficiency perspective that I give you this advice. If you go try to launch a new funnel first, that's typically a harder thing to do comparatively to just horizontal funnel scaling or horizontal ad scaling. Horizontal ad scaling and horizontal funnel scaling also have a higher probability to work in an immediate time frame.
+[1:01:15] A new funnel, as you know, I'm sure, takes a longer period of time to dial in, more testing, more resources to get it to work. It's more effort overall, and literally more money. Sometimes, obviously, you can launch something new and it just rips right away. I want to be fair in saying that, but technically, there's a higher probability you're going to have to do more testing and dialing in and spend more resources on a completely new funnel type.
+[1:01:40] And again, by new funnel type, I mean like you're running a callunnel, you introduce a webinar. You're running a webinar, you introduce callunnel. It's a different set of problems that you have to optimize around. So therefore, it takes more effort.
+[1:02:00] Okay, cool. I don't necessarily have anything else to talk about on this. Does anybody have any questions they want clarified or anybody want to add anything to this set of lessons? Feel free to unmute yourself and throw it out there if you got anything.
+[1:02:20] All right. Very good. Um, I don't know how to say this other than um, it's a rather technical lesson, but it's a very important lesson nonetheless. And if you showed up late and you didn't understand everything I've said, this is one of those things I definitely encourage you rewatch and truly master.
+[1:02:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Critical Importance Warning"
+NÚMEROS: Não especificados
+VISUAL: Alerta de importância máxima. "Code Red" lesson. Comportamento central ao escalar. Instrução para rever até compreensão completa. Não subestimar este conceito.
+[1:02:50] this is not something that you want to take lightly. This is like a core behavior when we're scaling that we think with and I think it's extremely valuable for you to understand in its entirety. So if you don't feel like you actually fully grasp what I've said, please let me know. Ask questions, rewatch the lesson until you fully get it. Okay?
+[1:03:10] This is like critical level code red lesson that I want to make sure you understand. Okay.
+[1:03:20] Participante: Sure, man. Go ahead, Minnie.
+[1:03:25] Minnie: I have one question. So, let's say we have a campaign right now and one specific ad in that campaign is pulling in amazing results, like great prospects. Then, in order to want to essentially continue to get results from that one sort of messaging, we just need to diversify from a different perspective. If it fatigues,
+[1:03:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Ad Fatigue Response Strategy"
+NÚMEROS: Não especificados
+VISUAL: Estratégia de resposta ao fatigue: (1) Mudar perspectiva sutilmente (imagem → vídeo, ângulo diferente), (2) Esgotar variações sutis, (3) Se bolsão esgotou = foundational campaign, (4) Tentar algo completamente novo.
+[1:03:55] Jeremy: yeah, you could do all the things that we've talked about. You could try different You could try a difference in how you present the messaging. Like as an example, maybe it's been an image ad. Maybe you tried it in a video ad. Uh maybe you've tried to articulate it from one specific perspective. Try to articulate it from a different perspective. Describe the same object differently.
+[1:04:20] Um in other instances, again, you may have just run out of the pocket of people that are probable to respond to that specific perspective and messaging no matter how many different angles you try to. It's better to exhaust and attempt to like change subtly the perspective before abandoning it or turning it into a foundational campaign and trying something completely new. But you know, try those subtle variations first.
+[1:04:45] Minnie: Understood.
+[1:04:47] Jeremy: And then convert it to a foundational campaign and try something new.
+[1:04:52] Minnie: Thank you.
+[1:04:55] Jeremy: Okay. Very good. Anybody else?
+[1:05:00] Cool. Great lesson. Follow up with questions. Talk soon.
+📊 RESUMO EXECUTIVO
+NÚMEROS PRINCIPAIS:
+$10 milhões: custo médio de implantação de poço de petróleo
+$42 milhões/ano: receita de Jeremy Miner com sales training
+$100 milhões/ano: empresas de sales training de grande porte
+$2,777/dia: budget inicial de campanha no exemplo prático
+$4,077/dia: tentativa de scaling agressivo (47% de aumento)
+~$10 diferença: variação de custo por call entre testes A/B/C no caso Mark Jennison
+7 variações: número de campanhas horizontais criadas no caso Mark Jennison
+2017-2018: período de crescimento do mercado de personal brands
+180 dias: período de site visitors no warm stack
+365 dias: período de social interactions e video viewers no warm stack
+25-30 ads: quantidade de anúncios individuais por campanha
+5 headlines: quantidade padrão de títulos
+5 body copy: quantidade padrão de textos
+1-3 ads: quantidade típica que recebe toda a distribuição do Andromeda
+3 adsets: estrutura cold (Broad, Lookalike Stack, Interest Stack)
+1 adset: estrutura warm
+10-30%: regra conservadora de scaling incremental
+$5 milhões+/mês: receita dos casos de sucesso mencionados
+ESTRATÉGIAS E SISTEMAS:
+Analogia do Campo de Petróleo vs Aquífero
+Bolsões de mensagem = pockets de audiência
+Extração = spending/scaling
+Campos de petróleo = audiências finitas (não renováveis)
+Aquíferos com nascente = audiências que se repõem
+Taxa de extração deve igualar taxa de reposição
+Foundational Campaigns (Conceito Central)
+Campanhas que atingiram teto de scaling
+Modo de manutenção (não mais tentativa de escala)
+Monitoramento apenas para ad fatigue
+Pilha de múltiplas foundational campaigns = receita base consistente
+Não matar campanhas que atingem teto, mantê-las rodando
+Protocolo de Resposta ao Aumento de Custos
+Custos sobem → Pull back spend
+Se custos caem = Teto encontrado → Maintenance Mode
+Se custos não caem = Ad Fatigue → Relaunch com criativos frescos
+Se relaunch falha = Campo de petróleo esgotado
+Horizontal Funnel Scaling (Mark Jennison Case)
+Duplicar campanha mantendo mensagem e audiências
+Mudar apenas URL/funil minimamente
+Adicionar seção de testimonials
+Trocar VSSL
+Criar 7 variações com performance similar
+Horizontal Ad Scaling
+Mesmas audiências, mesmo funil
+Apenas ads diferentes
+Trocar vídeos/imagens (peso maior que copy)
+Copy geralmente permanece universal
+Estrutura de Campanha Padrão
+Cold Campaign: 3 adsets (Broad, Lookalike Stack, Interest Stack)
+Warm Campaign: 1 adset (warm audience stack)
+25-30 ads individuais
+5 headlines, 5 body copy
+Mesmos ads em todos adsets
+Warm Audience Stack Components
+Site visitors 180 dias
+Social interactions FB/IG 365 dias
+Video viewers 365 dias
+Customer lists
+Email lists
+Prioridade de Testes ao Atingir Teto
+1ª prioridade: Horizontal Ad Scaling
+2ª prioridade: Horizontal Funnel Scaling
+3ª prioridade: Nova mensagem (mais eficiente)
+4ª prioridade: Novo tipo de funil (mais trabalhoso)
+Última opção: Nova audiência (menos relevante em Meta)
+Messaging Testing Strategy
+Vídeos/imagens > copy (peso na balança)
+Descrever mesmo objeto de perspectivas diferentes
+Explorar todos ângulos do avatar atual primeiro
+Mudar avatar apenas após esgotar perspectivas
+Customer Profile Framework
+Problemas
+Circunstâncias
+Outcomes (resultados desejados)
+ESTRUTURA:
+Ciclo de Lançamento para Foundational Campaign
+Launch → Test Budget → Optimize → Works → Scale
+Path 1: Profit continues → Continue scaling (loop)
+Path 2: Costs rise → Pull back → Costs drop? → Maintenance Mode
+Path 2b: Costs don't drop → Ad Fatigue → Relaunch
+Path 2c: Relaunch fails → Oil field (esgotado)
+Market Replenishment Examples
+Russell Brunson criando mercado de personal brands (2017-2019)
+Sales training: mercado infinito (não precisa criar salespeople)
+Nichos específicos: campos de petróleo finitos
+Scaling Strategies Mencionadas
+10-30% incremental scaling
+Cost per X strategy (agressivo)
+Múltiplas tentativas antes de declarar teto
+Multi-Channel Foundation Building
+YouTube → Instagram → Twitter → LinkedIn → SEO → Paid Ads
+Cada canal atinge teto → manutenção → próximo canal
+Pilha composta de ações mantidas
+Revenue Pattern Comparison
+Spikes dramáticos = mata campanhas no teto
+Crescimento consistente = mantém campanhas no teto
+Foundational campaigns = base para $5M+/mês
+DADOS FINANCEIROS:
+Custo de implantação de poço: $10 milhões
+Jeremy Miner sales training: $42 milhões/ano
+Empresas top sales training: $100 milhões/ano
+Exemplo de budget: $2,777/dia → $4,077/dia
+Cost per call Mark Jennison: ~$10 de variação entre testes
+Businesses $5M+/mês: pilha de foundational campaigns
+ROI: não especificado numericamente, mas ênfase em manter profitable campaigns rodando
+Margens: não especificadas
+DURAÇÃO: ~1:05:00 FORMATO: Aula técnica ao vivo com Q&A, uso de analogias visuais, case studies práticos, apresentação de slides conceituais

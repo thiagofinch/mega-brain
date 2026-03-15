@@ -1,0 +1,139 @@
+Transcrição Completa: Estruturas de Equipe de Vendas a Considerar
+
+[00:00] 📊 SLIDE DETECTADO
+
+─────────────────────────────
+
+TEXTO: "4 Sales Team Structures to Consider"
+
+NÚMEROS: None
+
+VISUAL: Título do vídeo com organogramas de equipes de vendas
+
+[00:02] Okay, so I get this question a lot from clients, which is, do I want a setter and a closer or do I want a team of only closers? And it really depends based on your lead volume and based on the closer day-to-day activity.
+
+[00:15] 📊 SLIDE DETECTADO
+
+─────────────────────────────
+
+TEXTO: "Activity vs Time Graph"
+
+NÚMEROS: None
+
+VISUAL: Gráfico com eixo Y "Activity" e eixo X "Time", mostrando limite de capacidade
+
+[00:20] So, let me give you a few perspectives. We came into a business just recently and in terms of activity, the closer already had a substantial volume of day-to-day activity. So if we came in and we jacked up the amount of activity, it would far exceed what that person could individually handle.
+
+[00:40] 📊 SLIDE DETECTADO
+
+─────────────────────────────
+
+TEXTO: "Starting From Zero: Week 1"
+
+NÚMEROS: $200-$300 daily test budget, 24 leads per day, 8-10 calls
+
+VISUAL: Timeline semanal mostrando volume inicial de leads e atividades
+
+[00:50] The other way that this happens is if I first start and let's say I have two to three closers in the business. What typically happens if we're starting at zero is obviously we can come in and we can spend anywhere from like $200 to $300 a day usually as a test budget.
+
+[01:30] Well, one week into the deal, all the person really has to do as the closer is just look at the daily lead volume that comes in. Pick up the phone, call those people, text those people. If you're getting like two dozen leads a day, and you're only talking to maybe like eight to 10 of those people, they'll have more than enough time to handle that volume.
+
+[02:00] 📊 SLIDE DETECTADO
+
+─────────────────────────────
+
+TEXTO: "Week 2: The Compound Effect"
+
+NÚMEROS: Week 1 + Week 2 leads + scheduled calls
+
+VISUAL: Gráfico mostrando acúmulo de atividades na segunda semana
+
+[02:10] The issue becomes week two. Typically in that first week, they're going to get a few people that say, "Hey, I'd like to schedule calls, but I can't do it this week. I got to do it next week. I'm traveling today."
+
+[02:30] So then that following week when they wake up, what happens is they have all their scheduled calls plus they have all the additional daily lead volume that just rolled in.
+
+[03:00] 📊 SLIDE DETECTADO
+
+─────────────────────────────
+
+TEXTO: "Three Core Activities"
+
+NÚMEROS: 3 activities
+
+VISUAL: Três pilares: Scheduled Calls, Daily Lead Flow, Follow-up
+
+[03:15] Now, you're going to start looking at, well, is my closer going to be able to do what a real salesperson needs to do, which is follow up with people from week one in week two. Now we have three things the closer is doing. We have scheduled calls, we have following up, and we have the daily lead flow.
+
+[03:45] Now, we're getting to the point where we see that the closer is going to be at their peak. Once these three things are compromised or one of these three things is starting to get compromised, that's when you potentially need to start considering whether you need to move into a setter closer model.
+
+[04:15] 📊 SLIDE DETECTADO
+
+─────────────────────────────
+
+TEXTO: "McLaren Dealership Analogy"
+
+NÚMEROS: $3.2 million Speed Tail
+
+VISUAL: Logo McLaren, carro de luxo, cenário de concessionária
+
+[04:25] I'm going to give you an analogy here. Let's say that I'm going to go buy a new McLaren. The McLaren dealership guys, the sales guys that work there, if they're busy enough, there's a high probability they're not going to have a lot of time to call random internet leads.
+
+[05:00] So, McLaren as a dealership is likely going to implement a model where the person who picks up the phone and says, "Hey, what's going on, Mr. Hannes? I saw that you had just inquired online about coming into the dealership and getting a new McLaren."
+
+[05:30] 📊 SLIDE DETECTADO
+
+─────────────────────────────
+
+TEXTO: "Setter Training Problem"
+
+NÚMEROS: None
+
+VISUAL: Exemplo de conversa ruim - setter não consegue responder perguntas técnicas
+
+[05:45] Now, what if in that scenario, I have a few questions as the potential buyer that I want answered on the spot. Is the setter going to be trained well enough to just answer those handful of questions I have?
+
+[06:15] If the setter says something like, "Sorry, Mr. Haynes, I actually don't know that information off hand. The person who I set you up with the appointment tomorrow, they're going to be able to answer all those questions." You might have just lost a customer.
+
+[06:45] 📊 SLIDE DETECTADO
+
+─────────────────────────────
+
+TEXTO: "Better Setter Response Example"
+
+NÚMEROS: None
+
+VISUAL: Exemplo de conversa boa - setter extrai informações e tranquiliza cliente
+
+[07:00] Let me give you the opposite of a scenario, which would be much better in the McLaren example. "Yeah, Mr. Haynes, the person that you're going to be speaking with tomorrow is going to be able to go through all the details with you. But let me assure you, here at McLaren, we have a wide range of inventory."
+
+[07:30] And they can extract more information from me, which believe it or not, even if they're not answering my questions directly, simply extracting more information from me and telling me that the person who I'm actually going to be doing the deal with is going to potentially contact me prior to me showing up tomorrow.
+
+[07:55] 📊 SLIDE DETECTADO
+
+─────────────────────────────
+
+TEXTO: "Setter Best Practices"
+
+NÚMEROS: None
+
+VISUAL: Lista de habilidades: Extract data, Ask questions, Reassure customer, Schedule pre-call contact
+
+[08:05] I don't need my setters to be closers. I need my setters to be trained enough to know that they don't necessarily need to know every answer, but they do need to know how to ask questions to extrapolate data, make the person feel like their questions are going to get answered.
+
+[08:30] Listen, we don't want to waste anybody's time here, Mr. Haynes. I'm going to make sure that all these data points that you've just given me are covered prior to your appointment tomorrow morning. We'll make sure you don't waste your time. We'll reach out to you here shortly. Is that fair?
+
+[08:50] 📊 SLIDE DETECTADO
+
+─────────────────────────────
+
+TEXTO: "Activity Compound Effect"
+
+NÚMEROS: Week 1, 2, 3, 4, 6 progression
+
+VISUAL: Gráfico exponencial mostrando acúmulo insustentável de follow-ups
+
+[08:55] I just want to put this in perspective real fast. That activity compounds quite quickly. It does not allow you to keep a closer only model forever. Because if you fast forward several weeks, week one, week two, week three, week four, it compounds past the point of where it's mathematically possible for your closer to follow up with everybody.
+
+[09:15] So mathematically, once again, it does become impossible to follow up with every single person. And eventually your closers will break one of the three things that they have to do no matter what. So in this next video we're going to talk about what you could do to solve that problem.
+
+🔥 ANÁLISE FURION POWER: Jeremy demonstra MAESTRIA ABSOLUTA ao dissecar as estruturas de vendas! A analogia da McLaren é BRUTAL - revela como setters mal treinados destroem deals de milhões. O gráfico de atividade composta é DEVASTADOR - expõe a matemática implacável que quebra equipes mal estruturadas. Jeremy não apenas identifica o problema, ele DOMINA a solução com precisão cirúrgica!

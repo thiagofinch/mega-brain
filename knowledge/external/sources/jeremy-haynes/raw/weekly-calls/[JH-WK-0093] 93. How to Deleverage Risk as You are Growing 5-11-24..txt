@@ -1,0 +1,209 @@
+Transcrição Completa: How to Deleverage Risk as You are Growing
+[00:00] Bang. All right. So, there was a few different things this week that prompted me to help you guys understand how to delever your risk as you continue to scale up and get richer.
+[00:12] Um, I'm going to give you a few of these examples, but I'm going to start with a simple story. It's 2019 I'm dating this girl who had flew in from London named Anastasia.
+[00:23] And Anastasia, you know, didn't have her financial life uh together as well as it should have been is a nice way to say it. And she had asked me like, I'm banned on PayPal, okay?
+[00:35] I made $90,000 in a day on PayPal. Some of it was through friends and family, so PayPal just banned me and kept my money. This is important caveat of the story.
+[00:47] Anastasia asks me, "Hey, I have money in PayPal. can I send it to you and can you take it out in cash so I have it while I'm here in the US?" And I was like, "Yeah, but I don't have PayPal."
+[01:00] So, here's what she did. Okay. She sends the PayPal money to my video guy/marketing helper, Jay, who some of you may have met. Jay then sends that money to my bank account and then simply put, I take that money from that just got into me and I go to the ATM and I just take out cash.
+[01:19] I don't think anything's wrong with this. However, remember Anastasia is from London. Okay? And in the banking world, the banks don't know that I'm dating Anastasia.
+[01:30] So, they just see money route from a girl in London to a guy in Washington here in the United States to me all within like 3 minutes and then they see me take out the cash.
+[01:42] Now, I wake up the next day to the most unpleasant surprise I'd ever gotten from the banking industry here in the United States. I woke up to my six different bank accounts negative $888,000 just all negative 888888.
+[01:59] And I'm like, what in the fuck world? Did I get hacked? Did I get robbed? Is my identity stolen? Like, what in the fuck is this?
+[02:08] So, I call Bank of America and I get the most menacing explanation you could possibly receive in such a dire circumstance. Your money evaporates. Okay. Literally gone.
+[02:19] And then I call Bank of America. I'm like, "What in the fuck world is happening?" And they in a very menacing way, "Sir, I can't give you any answers. You're under investigation."
+[02:30] And I'm like, "Oh my god." like what did I do? What the fuck did I do? And you know anyway, so regardless of that answer, I immediately spring into action.
+[02:41] You know, I got I think like maybe $30ish thousand in Stripe payouts that's about to get routed to that set account. So, I immediately head over to, out of all places, Wells Fargo, set up a business bank account, come back home with my business account information, enter it into Stripe before the payout gets routed anywhere.
+[03:03] And you know, I'm essentially working with like the next day after I wake up, like $30,000, you know, that's my new all the money I had.
+[03:12] I call Bank of America again the next day and I'm like, "Guys, what the like seriously like what the fuck is going on?" you know, and I tell him, I'm like, "Does it have anything to do with this girl that I'm dating here? Like, who wired money here, and then that money got wired to me, then I took it out as cash?"
+[03:30] And they seemed very interested in the fact that I was bringing that up. So, I just explained, you know, I was like, "Yeah, I'm dating this girl." And they were like, "Okay, so you know this girl." I was like, "She's literally in my house right now, you know, she's sleeping here."
+[03:45] And uh anyway, moral of the story, that day in particular in 2019 woke me up to the fact that I got to spread the money around, you know? Can't just have it all in one place. What a scary situation to say the least, huh?
+[04:01] And uh moral of the story remains the same. I ended up obviously getting the money back, but it was an important lesson of risk, okay? and how even just something as secure as your bank can one day from, you know, something that you don't view as an issue, uh, get your accounts negative $888,000.
+[04:22] Okay. So, this leads to some things that I noticed this week that I just wanted to cover here with a few different examples of things that I think that you all should be taking seriously.
+[04:33] So, one of you guys uh not on this call right now messaged me yesterday and said, you know, hey, I just got all my I just got told by AMEX that like I am not compliant and they shut down all my AMEXs.
+[04:47] You know, now this particular person doesn't have the largest bank balance currently. And this absolutely stunts the growth of this individual immediately because all of their business credit was centered around AMEX.
+[05:00] Okay, that is a tough situation to wake up to where you're ready and willing to take risks to turn money into more money, but all of a sudden get rugged by AMEX and you don't have business credit anymore and you're only left with whatever other little cards that you have and the bank balances that you've got.
+[05:18] Which obviously for most of us who are used to credit cards drastically changes the cash flow and how you operate as a business.
+[05:26] So, moral of the story, something as simple as only having credit lines with AMEX is a huge risk. And you've got to have other places, banking institutions or credit companies that have open credit lines with your business that you can tap into and leverage at any given time.
+[05:43] It can't just be AMEX. You have to have like some Chase business cards peppered in there. You have to have just some basic business credit lines. You have to have enough business credit cards opened up at a given time that you have, let's say, tens of thousands of dollars at least spread between them that you can leverage and tap into when needed.
+[06:05] Totally cool, to be clear, to use AMEX as your main place where you spend all your money. I got no issues with that. I do that myself. I have like eight AMEX cards.
+[06:15] But I also have like three dozen different other business credit cards. God forbid AMEX wants to fuck me like they did to one of you yesterday.
+[06:24] Okay. And guess what? That happened because AMEX reached out to this individual and said, "Hey, we want to just audit what's going on in your business, send us over all your financial statements from your bank."
+[06:36] And after that, they concluded that this guy was non-compliant. Just shut his accounts down. you know, uh, I at one point was spending upwards of like $300,000 a month on AMEX.
+[06:48] And simply put, one day they did the same thing to me. They limited my two top cards to 40K a month each, one card to 15K, uh, and one two personal cards they left unlimited with like that no limit they do.
+[07:04] But moral of the story remains the same. I went from having, you know, unlimited ability to spend money to chopped down to like 95K essentially that I could spend in a given month, which, you know, obviously isn't nearly as detrimental as just getting rugged by them completely with no ability to spend.
+[07:22] But I digress. My point remains the same. I already had other credit lines opened up and I could use that wasn't going to fuck me on the other, you know, $250,000 of spend that I was already putting up on a month-over-month basis in this example via credit.
+[07:38] So, banks, okay, just like I gave you the example, how many of you right now have one central bank account that you keep all your money in? Terrible play.
+[07:49] Okay. Uh, great online banking institution. I'd encourage that you consider company called Mercury. Uh, they're really good. Obviously, go with a few big banks.
+[07:59] Here in the United States, we have the FDIC insurance which ensures up to $250,000 per account. If any of you at any given time have more than $250,000 in a given account, that is stupid. You should not do that.
+[08:15] You should spread that money around to other banking institutions. You should also understand how FDIC insurance works. Is it per account that you have with the bank or is it just that bank only insures up to 250k for all of your accounts collectively?
+[08:30] This is why you want to start spreading your money around. you know, have a Bank of America account, have a Chase account, have a Wells Fargo account, have some credit union accounts, you know, have a Mercury account, spread money around so you have active accounts that you're actually using at different banking institutions for different purposes, okay?
+[08:49] Make use of them. Keep them active. Don't just open them and not fund them, you know? Actually use them. That way, you have some activity there.
+[08:58] Because like I said, god forbid you date a random girl from London and she sends some money to one of your friends via PayPal and then that money goes to you and then you get banned from that bank.
+[09:10] Okay, god forbid that happens to you. But the point is it could and it could happen for all kinds of different reasons.
+[09:17] Okay, to be clear, I get a random call yesterday. The call is a scammer. They leave a voicemail on my phone and the voicemail sounds rather menacing but totally fake.
+[09:28] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: [Voicemail de scammer sendo reproduzido]
+NÚMEROS: 1-888-947-XXXX
+VISUAL: Reprodução de áudio de voicemail fraudulento sobre processo judicial e investigação preliminar
+[09:30] "Notify you that we're attempting to serve you in order to appear in court regarding a preliminary investigation against your social and your active assets in order to change the status of the lawsuit. Call our firm at 1888 9473..."
+[09:45] Some bullshit about, oh, we're going to we're in the middle of trying to serve you, you know, like you got a lawsuit pending against you, you know, call us back to change the status of the lawsuit. Total frivolous bullshit.
+[09:57] But the point is, if you get a call like this and it's real, you know, or somebody walks up to you and hands you some paperwork and serves you a lawsuit, let's look at your asset protection right now and how your current entities are set up.
+[10:11] Okay? Do you have a trust structure? Do you have what's called a spendthrift trust? Do you have a trust here in the United States? Do you have offshore trusts? How are your assets held?
+[10:23] You know, as an example, if somebody just sues the shit out of me right now, they're not getting shit. Not getting a thing cuz there's nothing that I own that can be taken away from me.
+[10:34] If a judge orders my trust, hey, you got to give us the money. that trust's going to tell him to get fucked because they don't follow the jurisdiction of the United States where my trust is set up.
+[10:45] You know, my point is, how are your assets protected? Okay? And I'm not just saying you need to go around fucking people to get sued and avoid them taking anything from you.
+[10:56] I'm saying, guys, what if, like Tom just said, he has an Airbnb. What if somebody slips at Tom's Airbnb and Tom has an opportunity to do what's called piercing the corporate veil where that LLC that that Airbnb might be in, hopefully he has it set up that way, has some type of banking records that show that Tom's dibble dabbling in that bank account for personal usage.
+[11:20] Now, they do what's called piercing the corporate veil. And that entity, let's say Tom doesn't have business insurance on his Airbnb for the god-forsaken instance where somebody sues him and the insurance company would cover it instead of him. They're coming after Tom now.
+[11:37] They're coming straight for Tom right off the rip. Tom's personal home, okay, is now up for grabs. Tom's cars that he owns, Tom's bank accounts that he owns, anything Tom's got as an asset, purses he's bought his girl, jewelry he's bought his girl, cuz they're married, all are open up to all of a sudden creditors who are going to come in there and rob him dependent upon how it's set up and structured.
+[12:02] Okay? When it comes to deleveraging risk, I just want to be very clear, there's many, many, many, many ways to delever risk.
+[12:10] The first topic I'm talking about here is very important to understand multiple bank accounts. Understanding the concept. Put in the chat right now. Yes or no. Do you know what piercing the corporate veil means?
+[12:23] Yes, you do know. No, you do not know. Put it in the chat. Right. Tampa Nick says no. It's like guys. Yes. Good. No. No. No. Yes. No.
+[12:35] So guys, just to be clear, like these are things that you got to know. These aren't like passive things that you get the opportunity to kind of dibble dabble and hear about and then not actually research and figure the fuck out.
+[12:47] Everybody who says no, you need to Google and watch some YouTube videos after this what piercing the corporate veil means specific to the business entities that you have set up.
+[12:58] Just like I gave the example in Tom's case, just the one example of if you have your business bank account and you've ever used it for anything that can be considered personal usage, a lawyer then sees that, solicits those documents in court, you're fucked.
+[13:14] That's an example of piercing the corporate veil. That then means simply put that your business entity won't protect you anymore from personal liability.
+[13:24] It means that you then open yourself up to personal liability and your personal assets are open to forfeiture or to creditors to take away from you to pay for whatever liability you've opened yourself up to in the business entity that's being sued.
+[13:40] It essentially means you've created a nice friendly little bridge for a creditor to come and cross over and fuck you personally instead of just being able to fuck your business entity.
+[13:51] So to be clear, deleveraging risk, right? How many of you put yes or no in the chat real quick? How many of you have business liability insurance? Put a yes if you do. Put a no if you do not. Do you have business liability insurance?
+[14:07] As an example of this, while we get our answers here in the chat, if you are giving financial advice to companies as an agency or a consulting company or an education company, anybody who says, "Okay, well, hey, this guy gave me advice and it didn't work." They can sue you.
+[14:24] Okay, they can sue you and if they do and you don't have business liability insurance and they win or you have to settle because you don't want to go through the trial process, what happens? What do you think happens? Who pays that? You do. Your business does.
+[14:40] If you have business liability insurance, it literally protects you against lawsuits up to the dollar value that you pay to insure. You can insure as an example like a million dollars in losses for like $1,200 to $2,000 a year.
+[14:57] So like a thousand to like maybe at most like $3,000 a year depending on the business that you operate get you insured up to a million dollars.
+[15:06] So like Mason, you go out there as somebody who said no. You give some advice to somebody like that new whale client that you just talked about in Australia who's got a lot more money than you. They're legally savvy.
+[15:19] You give them some dumbass advice or even just some advice that they didn't follow to be clear. that's good advice and it loses them money and they choose to sue you over those losses.
+[15:30] Like, dude, you're paying that out of pocket. You know, you're paying that settlement out of pocket or you're paying the actual trial. This is the amount you owe loss out of pocket versus if you just had business insurance, you paid like two grand a year, okay?
+[15:45] Up to a million dollars is about two grand a year typically. You just pay two grand a year. You just add it to the expenses. 100% write off and then god forbid somebody sues you for some bullshit reason. You're covered for up to a million dollars.
+[16:00] Does that make sense, dude? It's sweet. Obviously, for those who have been in here long enough, like Tom, I've been bringing this up for years. Tom says he says he's had it since 2021. Good way to take action, Tom.
+[16:13] Point is, business liability insurance is another way to delever risk. Okay, we talked about it with the bank accounts. We talked about it with our payment processors.
+[16:23] Okay. How many of us right now just have one payment processor? Put in the chat how many payment processors you currently have access to where you could process payments today. How many payment processors do you have access to?
+[16:37] 3, 1, 3, 2, 3, two. Good. 2, three. This is good. Good to see that you guys are on top of it.
+[16:46] When it comes to a payment processor perspective, obviously you shouldn't just have Stripe, okay? shouldn't just have one payment processor. I'm sure many of you have heard horror stories about Stripe and you think to yourself, well, it could be me and it seems like most of you here, congratulations, have taken action to avoid such liability of getting fucked by Stripe one day.
+[17:07] Okay, good. Uh, as many payment processors as you can get. I encourage about three personally. I think everybody here who has at least three, you're doing things right.
+[17:17] Um, and to be fair, just like I talked about the bank accounts, make sure you use them, okay? Occasionally run a transaction through them.
+[17:25] That way, God forbid, well, your main one goes down and you all of a sudden just migrate to that new one. It's a high probability that that one that you're not using that you have on backup on ICE, it's just all of a sudden gonna throw a reserve on your account when you kick up the activity out of nowhere.
+[17:42] You know, you need to kind of same logic, delever risk by moving money between all the different payment processors. Don't just solely focus on one.
+[17:51] Good way to good way to ensure that you uh if and when have to move your main payment processor into a backup one that you don't get fucked.
+[18:00] Okay, to be clear, let's talk about home redundancies as an example of deleveraging risk. Okay, so as most of you know, I have a dedicated fiber optic line ran to the main compound over there that we do our masterminds at.
+[18:15] But what most of you don't see at that same property is the $10,000 generator in the back that, god forbid, the power goes down, kicks on immediately.
+[18:25] That keeps my internet up, that keeps my power on, that maintains my ability to continue doing what I do, which is work from home and making money on the internet.
+[18:35] Okay, right now your storm comes along, you got a big thing that you got to launch or something happens and your power goes out. Are you fucked? Yes or no? Put it in the chat. Are you staying online or are you fucked?
+[18:48] Yes, if you're fucked. No, if you're not fucked. Okay, bunch of yeses there.
+[18:54] It's like just simple home redundancies, guys. Like, as an example, your current internet provider has an outage today. Do you have backup internet?
+[19:04] You know, every house I have, I have three internet services. Okay, to be clear, Starlink is an incredible backup internet provider.
+[19:13] Obviously, whatever main internet services that you have available to you, ideally you get more than one. So, like here at this new house, I have AT&T as the main 5 gigabyte fiber optic line ran to the house.
+[19:26] But in addition to that, I signed up for Xfinity, otherwise known as Comcast. And I also have a backup Starlink device here.
+[19:34] You can fuck me twice, but you can't fuck me three times to my internet services. Okay? I'm staying online.
+[19:42] Um, to be clear, I do not have my backup generator at this property yet. I've ordered one, but it takes until early June to come to the house and be installed.
+[19:52] So, I could technically get fucked there for about a month. However, I have two homes in the same exact city. So, if this house goes down in the next month, it doesn't matter to me. I'm just driving 40 minutes down the road going to my other house.
+[20:06] You see, point is, I'm not losing money, okay? I'm not You're not fucking me. You're not coming at me like that.
+[20:14] Uh this goes as far as passports. Okay. How many of you have one citizenship and that's it?
+[20:21] You know the uh opportunity and I to be fair like I did not do this intentionally. This is just an additional benefit through marriage uh Argentinian citizenship and also believe it or not Italian citizenship.
+[20:35] So moral of the story I got South America and I got Europe. I got a EU passport coming my way here pretty soon. Um, in addition obviously to my United States citizenship.
+[20:47] Um, without doing it through marriage. To be clear, there's plenty of ways to buy a citizenship or just moving to a country for a sustained duration of time, establishing residency, obviously going through normal multi-year processes to get your citizenship without having to buy one.
+[21:04] But regardless, these are great opportunities just like what Jonas was saying, dude. He's getting absolutely hammerfucked over there from taxes in Norway.
+[21:14] Think about Canadians right Now, I talked to a potential client the other day on a sales call. This guy was telling me he's moving to Malta from Canada.
+[21:24] He's like, "Yeah, me and my billionaire friend. We have daughters that go to the same private school. He's moving to Malta. I figured it was a good opportunity, too. They just raised capital gains here to 66%. They can get fucked. We're leaving."
+[21:39] It's like, he doesn't give a fuck. You know why? Because he's got a citizenship in Malta. He says, "I don't give a fuck to be Canadian." He just leaves.
+[21:48] Okay. My point being there are many many many many things like that doesn't really matter until it matters does it like I don't need to be Italian or I don't need to be Argentinian until it matters right who knows if and when it will matter but guess who's not going to get fucked when it does matter me.
+[22:08] Okay. Point is, I also want you to consider when it comes to the obvious things like as an example, we've talked about this one for years. You're an advertiser, right? You got your main ad account.
+[22:20] Uh we just had an inner circle member the other day hit me up, a newer one that said, "Hey, my pixel just got blacklisted."
+[22:28] So, he wakes up one day and all of a sudden data is no longer attributing to his pixel. He has to start a brand new ad account in a different business manager.
+[22:37] And thankfully that new pixel he created in that new backup ad account works and is not banned and he doesn't have to change pages or anything like that. He just had to create a new ad account and a new pixel.
+[22:49] The unfortunate thing though is all of the data from years and years and years and millions of dollars in ad spend is now vaporized and he has to start completely over again with pixel conditioning.
+[23:01] The quality of lead that he had coming into the business as soon as that happened dropped overnight. Fucked the business.
+[23:09] Just having something as simple as a backup business manager with a backup set of ad accounts with a backup pixel on the page at all time that you're running traffic to makes a ton of sense to delever risk, does it not?
+[23:23] Okay, how many of you just have one computer in your house right now that if your computer just all of a sudden gets zapped by a lightning bolt and gets fried, you're fucked and you got to run down the road to Best Buy real quick.
+[23:36] Just little redundancies is my point. Okay, redundancies simply put means if one thing gets fucked we're still not fucked because we got backups on backups on backups for all ways that we could get fucked.
+[23:50] Okay, payment processors, banks, credit lines, citizenships, opportunities to delever risk in ad accounts.
+[23:58] We've talked about this before with avoiding being a one-legged stool, right? Andrew here made damn near all of his money on his Instagram account for how long, Andrew? How long did you make all your money on Instagram?
+[24:11] "Uh, for about like eight, nine months?"
+[24:14] Eight, nine months in a row. And what did you do the entire eight, nine months? milk the shit out of Instagram or delever risk and try to figure something else out at the same time.
+[24:24] "I didn't uh delever risk, that's for sure."
+[24:27] Yeah. And to be clear, I just want to be very very direct on this. Okay. Some of the most successful people on earth, they encourage the opposite of diversification. They encourage going all in and I, to be fair, am generally in the same boat.
+[24:43] But we can still do that in a relatively safe way. Andrew over here could still milk the shit out of Instagram while it's hot, but at the same time, he could take a little bit of his attention and put it into other things that could potentially delever the risk of making all the money on Instagram at once.
+[25:02] Instead, he wakes up one day to some bullshit on planet Earth paying to take his Instagram account down. What's that do to his revenue?
+[25:11] You know, all of a sudden when does it become a priority to delever risk and diversify away from Instagram? You know, is that the appropriate time to diversify away from it? It's a force. It's like forcing his hand.
+[25:24] You know, it's just simply put, it's not the healthiest mindset to operate in when it comes to I'm just going to try to make money in these other places, too, at the exact same time. It forces him to do those things.
+[25:36] So, this is an opportunity. Simply put, it's a wakeup call for you. Just do a risk audit. That's all I want you to do. A simple risk audit. Where do you have too much risk right now?
+[25:48] Okay. Things that you just generally don't think about and what could you do about it now before you get fucked.
+[25:55] Like I said, if I get a real phone call from somebody one day that's like, "Hey, we're suing you. You know, like we're going to freeze your personal assets." I don't feel anything in my chest.
+[26:06] You know, nothing comes up cuz I have that protected. If you got that kind of phone call, how would you feel? You know, would you be fucked?
+[26:14] You know, if Nick's driving down the road in his Corvette and he has it in his personal name and he slams into somebody on accident that pulls in front of him and they die and the family members of that individual choose to sue Nick.
+[26:29] Okay. What happens to Nick? Have you deleveraged that risk? you even thought about that kind of risk.
+[26:37] You know, if you get sued, do you have business insurance? If your bank account goes down, do you have more than one bank account? If your credit cards, if AMEX calls you and says, "Hey, man, you're non-compliant. We're cutting your cards. Get fucked. Do you have more credit lines available?"
+[26:53] Just little things, okay? Little things. Just try to do a risk audit today. Just take a little bit of passive action towards it.
+[27:01] That's the best part about when you do it now instead of when you have to do it. Okay? It's way better, in Andrew's case, as an example, to start running ads while Instagram is already working like a charm.
+[27:14] Okay? It's way better to do it then than it is to do it when he has to do it when Instagram no longer works anymore.
+[27:21] Okay? It's way better to try to get more credit lines before AMEX tells you you can't use them anymore.
+[27:28] Okay. My point being, can you guys think of anything else that you'd consider a high risk that we could all consider uh something we need to diversify away from here? Anything you guys collectively want to contribute to this? Any ideas or something you may have done?
+[27:44] Anything you guys want to add? questions on this. You understand the importance of it. Yeah. Right.
+[27:51] Hopefully, you don't understand the importance to a hard lesson like I had to when I woke up with negative $888,000. You That one hurt. That's like a kick to the chest.
+[28:03] Getting funded when it's not needed to build relationship with banks. Yeah, it's a big one for sure. True.
+[28:10] Yeah. So look, point is guys, you want to make sure that you practice what a lot of very very successful people on Earth have always talked about and encouraged, which is look, go all in on stuff that works, okay?
+[28:23] But just make sure at the same time that you have something else that you can immediately pivot to and maximize to the same level of what your main thing is currently doing. God forbid the main thing goes down.
+[28:36] That's all it comes down to. If I have to switch banks right now, the bank I switch to is not going to fuck me because I already have some activity in there. If I have to move all my activity in there, they're cool with that.
+[28:48] You know, credit lines, cool with that. Ad accounts, cool with that. Okay. Liability protection, we're good.
+[28:55] Just little things. They help you sleep better at night. And then, like I said, the best thing to have occur is, think about it like this, right?
+[29:03] You're in a car. You're on the coast of Italy. Your car on a narrow little road has another car coming right at you. And you instinctively swerve off the edge of a cliff right into the water. Car starts to drown with you inside of it.
+[29:18] When is the best time to have one of those little hammers that breaks a window? You know, is that the best time when you're sinking in the ocean to go on Amazon and buy the little hammer?
+[29:29] You know, no. Obviously fucking not. But for some godforsaken reason, that's how some of you think when it comes to the things that you actively make a fuckload of money doing, you find yourself drowning in a car and you, you know, at that point start to try to delever the risk.
+[29:45] I assure you it's way more comforting in that situation to already have the little hammer right there and just break the window and swim up.
+[29:53] Right? Do you really want to think about that though when you're on the coast of Italy driving in your little car? Do you want to think about the hammer at all? No. But how often did you have to think about it? You just had to think about it one time. That's it.
+[30:07] You just had to put a little bit of thought into it. buy the hammer once and just make sure it's in the car. That's it. Right? You don't have to think about it otherwise.
+[30:16] That's the same thing here. We're not trying to freak out, you know, throw our mojo off or some shit like that. We're just trying to delever risk.
+[30:24] All it takes is a little tiny bit of intentional thought like buying the hammer. It might take hours of attention to to successfully delever a monumental fuck where you'd otherwise be fucked in the instance that like I said, you went flying off the cliff and didn't have the hammer.
+[30:40] All right, cool. Hope this makes sense. It's um good lesson, you know, after what I saw this week from a few of you guys.
+[30:48] Like I said, one of you guys ad account went down. You you make millions of dollars in a year. literally more than a million a month and you didn't have a backup ad account. Didn't have a backup pixel, you know, and you probably didn't think you needed it until all of a sudden you need it, you know.
+[31:06] And then the other one of you had a monumental amount of money you were able to spend on AMEX. Didn't have any backup credit solutions. You get rugged by AMEX and you don't have huge bank balance at the exact moment and now you are fucked until you get more credit lines opened up.
+[31:23] Which even then you don't just get to max out right away. that could take a full week and a week of downtime can really make or break a lot of revenue for you and the momentum of the business.
+[31:34] So, just like I said, take a moment to think of these things. Take action on it. Don't just let this be a topic that makes you feel good. Go out and take some kind of action this week.
+[31:45] Even if it's just one or two things, delever some risk in your business and life. It'll feel a lot better when you do. All right, cool. Talk soon, everybody. Bye.
+📊 RESUMO EXECUTIVO
+NÚMEROS PRINCIPAIS:
+$888,000 - Valor negativo em 6 contas bancárias após investigação
+$90,000 - Ganho em 1 dia no PayPal (caso Anastasia)
+$30,000 - Dinheiro recuperado via Stripe após bloqueio
+$300,000/mês - Gastos em AMEX antes da limitação
+95K/mês - Limite após restrição AMEX (40K + 40K + 15K)
+$250,000 - Limite FDIC por conta bancária
+$10,000 - Custo do gerador de backup
+$1,200-$3,000/ano - Custo seguro responsabilidade civil ($1M cobertura)
+66% - Taxa de ganhos de capital no Canadá (mencionada)
+8 cartões AMEX + 36 outros cartões de crédito empresariais
+3 serviços de internet por propriedade
+3 processadores de pagamento (recomendado)
+2 casas na mesma cidade (redundância)
+3 cidadanias (EUA, Argentina, Itália/EU)
+ESTRATÉGIAS E SISTEMAS:
+Diversificação de contas bancárias (mínimo 3-4 instituições)
+Múltiplas linhas de crédito (não apenas AMEX)
+Múltiplos processadores de pagamento (Stripe + 2 backups)
+Estrutura de proteção de ativos via trusts offshore
+Seguro de responsabilidade civil empresarial
+Redundâncias residenciais (internet, energia, localização)
+Backup de contas publicitárias (Business Manager + pixels)
+Múltiplas cidadanias/passaportes
+Uso ativo de todas as contas (manter histórico)
+Auditoria de risco regular
+ESTRUTURA:
+Separação LLC/trust para proteção patrimonial
+Evitar "piercing the corporate veil" (não misturar pessoal/empresarial)
+Estrutura de trust spendthrift
+Trusts offshore fora da jurisdição dos EUA
+Múltiplas entidades para diferentes ativos
+FDIC insurance por conta ($250K limite)
+DADOS FINANCEIROS:
+Custo seguro: $2,000/ano para $1M cobertura
+Gerador backup: $10,000
+Mercury Bank recomendado (online)
+Starlink como internet backup
+AT&T 5GB fibra óptica (principal)
+Xfinity/Comcast (backup)
+LIÇÕES PRINCIPAIS:
+"Want the deal but don't need the deal" aplicado a recursos
+Agir ANTES da crise, não durante
+Analogia do martelo no carro: compre uma vez, esqueça
+Ir all-in MAS com backups prontos
+Caso Andrew: Instagram como única fonte = risco extremo
+Caso Tom: Airbnb sem seguro = vulnerabilidade pessoal
+Caso real: Pixel blacklisted = perda de anos de dados
+DURAÇÃO: ~31:45 minutos FORMATO: Palestra/Masterclass em grupo com interação via chat

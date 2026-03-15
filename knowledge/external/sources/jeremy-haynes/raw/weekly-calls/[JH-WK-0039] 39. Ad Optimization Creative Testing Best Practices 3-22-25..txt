@@ -1,0 +1,1346 @@
+Transcrição Completa: Ad Optimization Creative Testing Best Practices
+[00:00]
+"All right, everybody. Welcome in. So, today we're going to be going through some ad optimization and creative testing best practices. This has come up quite frequently over these last several weeks. So, I wanted to make sure that we dedicated a weekly group call to it."
+[00:15]
+"The last two weeks of weekly group calls have obviously been occupied by the FTC training and then the Amber operation call. So, we've put this one off for a bit, but here we are."
+[00:25]
+"So, first of all, let me get started by saying this. A lot of you guys, you guys are what Chad advertisers call nerds. Okay? The way that most of you advertise is so awful."
+[00:38]
+"Like, you focus on the absolute dumbest shit. And I'm going to completely reform your mental state today to advertise like a Chad. Okay?"
+[00:48]
+"It's very important that you follow these instructions because they will be highly beneficial to you and enable you to actually scale for the first time in your life."
+[01:00]
+"Most of the time and most advertisers out there, they get extremely caught up in all of the statistics and data that's available to you. And what they end up doing is split testing their way into poverty or a stagnant level of growth."
+[01:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Devon's Campaign Results"
+NÚMEROS: $130 CPM, 0.5% CTR, 7x ROAS
+VISUAL: Exemplo de campanha com métricas aparentemente ruins mas ROAS excelente, contraste entre estatísticas individuais vs resultado final
+[01:18]
+"A perfect example of this is we have one of our inner circle members right now. His name's Devin. Devon's ads are absolutely amazing. I get absolutely slaughtered by these ads every single time I log on to one of these platforms."
+[01:32]
+"Devon's total result so far is about a 7x ROAS. Okay, but here's the thing. Let me read you some statistics real quick from Devon's campaign. He has a $130 CPM. He has a 0.5% click-through rate, link click-through rate, but again, he's at a 7x ROAS."
+[01:52]
+"Somebody tell me if that's good or bad. Put in the chat. Good or bad."
+[01:58]
+"Well, most of the nerds that are out there that advertise are like, 'Oh, dude, I got $130 CPM.' Like, I can't scale that. It's like, what the, you know, he has 7x ROAS. Like, who cares you have $130 CPM? It could be $500 if you're printing seven to one. It's a good CPM."
+[02:18]
+"He has a 0.5% link click-through rate. That's awful. But does it matter when you have a 7x ROAS? Right. What actually matters in that example to do when you have a 7x ROAS? Somebody tell me."
+[02:32]
+"Yeah. Scale. You scale that shit. You don't just sit on it. You scale it."
+[02:38] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Nerd vs Chad Advertiser Mindset"
+NÚMEROS: Benchmarks estáticos vs ROAS dinâmico
+VISUAL: Comparação visual entre advertiser "nerd" focado em métricas individuais vs "Chad" focado em ROAS e escala, ícones de cérebro vs músculos
+[02:40]
+"But I will tell you with as much honesty as I possibly can. There are many of you, okay, sitting on this very call that have had those exact same circumstances present themselves in varying degrees with varying statistics."
+[02:55]
+"And because you have a benchmark in your head about what a statistic can be, you do not scale extremely profitable or even profitable campaigns. You instead split test your way to poverty."
+[03:08]
+"You got to understand, you ever heard that quote, 'Strike while the iron's hot.' You guys remember that? That was a blacksmith quote from way back in the day that carried all the way through into the year you and I are alive, pressing buttons and clicking keys on our keyboards."
+[03:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Strike While The Iron's Hot"
+NÚMEROS: N/A
+VISUAL: Metáfora visual de blacksmith forjando metal quente, paralelo com timing de escala em advertising, ícone de martelo vs botão de escala
+[03:28]
+"Strike while the iron is hot simply means back in the day when you're crafting a sword or some piece of metal. You obviously turned it beat red to be able to use it and transmorph it into whatever kind of tool you wanted to craft it into."
+[03:43]
+"If you didn't strike it, okay, while it was literally hot, you would fail to obviously do anything with the sword. It's the same thing with advertising when it comes to scaling."
+[03:54]
+"When we have a set of statistics in front of us that we have profitability with, okay, we want to consider that to be the time frame to start aggressively scaling."
+[04:05]
+"So when you hear me use the word chadvertise, okay, chadvertising is very simple. It means we want to get the statistics to a point where we are profitable and then we want to focus on scaling."
+[04:18]
+"And while we're scaling, we want to fix shit and improve shit. But more importantly than anything else, we want to scale."
+[04:27]
+"That's the number one reason all of you are here is to be able to make an aggressive amount of additional cash above and beyond what you currently make now. Right? How do we get there? Right? What's the simplest one-word answer for how we get there?"
+[04:42]
+"Scale. Okay? Scale."
+[04:46]
+"So, without further ado, let me jump into this. Share my screen. I just want to preface it with that. Okay? Because if you look at what I'm about to talk about from a nerd point of view, you'll get lost in the sauce and you won't actually get the takeaways that I'm attempting to make here with you right now."
+[05:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Chadvertising Mindset"
+NÚMEROS: N/A
+VISUAL: Definição visual de "Chad advertising" - foco constante em escala, não em métricas isoladas, postura de confiança vs análise paralisante
+[05:08]
+"So, for starters, like I said, we want to constantly be in the mindset of Chadvertising. Okay? We are Chads. We are not nerds. We are Chads."
+[05:18]
+"When we advertise, we are constantly focused on scale. Okay? That is what matters is scaling. Scaling is where we make more money."
+[05:28]
+"Obviously, when we launch some shit if it's not working as good as what we want it to, we ideally want to get it more profitable, but in the meantime, we want to scale."
+[05:38]
+"Timothy, unmute yourself. Tell me your ROAS."
+[05:42]
+"Two."
+[05:43]
+"Timothy's at a two to one ROAS right now. That means that Timothy is turning a dollar into $2. Okay, Timothy, tell me your CPMs."
+[05:52]
+"I don't even know them, honestly. It's like 40 bucks maybe."
+[05:56]
+"Good advertising. Who cares about the statistic when it's 2 to 1? You're printing money."
+[06:02]
+"If it's a statistic that matters, it's something that we've considered a bottleneck. Do you have any bottlenecks that you've identified, Timothy?"
+[06:10]
+"Yeah, we basically just need more closers and then ramp up the closers faster so their close rate stays in KPI. That's the biggest bottleneck."
+[06:18]
+"And so in your advertising and sales statistics, CPMs, link click-through rate, application rate, show rate, close rate, AOV, things like this. Are any of those bottlenecked currently and deemed by you or your advertising staff as something that needs improved?"
+[06:35]
+"No."
+[06:36]
+"Fantastic. So, what's that mean?"
+[06:39]
+"Spend more money and bring on more closers."
+[06:42]
+"That's right. Now, listen, explain to everybody that you make money not just on the front end, but you also make money every month in perpetuity off the people you're able to retain. Is that correct?"
+[06:53]
+"Correct. Yeah."
+[06:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Front End vs Back End Revenue Model"
+NÚMEROS: 2x ROAS front-end, $80K spend = $160K revenue, continuidade mensal
+VISUAL: Diagrama de fluxo de receita: inicial 2x + receita recorrente mensal, setas mostrando crescimento perpétuo
+[06:57]
+"So what Timothy's doing here in this first example is he's turning a dollar into $2 within the first 30 days. Is that correct?"
+[07:05]
+"Correct. Yep."
+[07:06]
+"And so every month that is beyond that, you technically accumulate additional cash, right?"
+[07:12]
+"Yep. Yeah. From continues to grow."
+[07:15]
+"Yeah. Exactly. Exactly."
+[07:17]
+"So moral of the story, hey, listen, we're going to get to it. Jesus. Okay. Long story short, we're focused on scaling."
+[07:26]
+"You see what I mean? Scaling in this example because guess what, Timothy? Tell the people the amount you spend currently."
+[07:33]
+"Uh we're on pace to spend 80k this month."
+[07:37]
+"So 80K equals 160K in this example, right?"
+[07:41]
+"Correct."
+[07:42]
+"Okay. So that means that there's a net difference here, technically a gross difference of $80,000, right?"
+[07:49]
+"Yep."
+[07:50]
+"Now, how much cooler would it be if Timothy spent 500K and made a million dollars, right? How much cooler could that be? That would be a difference of a total of about $420K in that example. That'd make you a lot happier, right?"
+[08:05]
+"Yeah, most definitely."
+[08:07]
+"All right, real quick in the chat. How many of you have had a 2 to 1 ROAS before and you haven't scaled it because you decided to nerd out, try to grow the ROAS first instead of just scaling the shit up."
+[08:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Front End + Back End Focus"
+NÚMEROS: 30-day ROAS vs lifetime value, múltiplos pontos de receita
+VISUAL: Balança equilibrada mostrando importância igual de front-end e back-end, múltiplos fluxos de receita convergindo
+[08:23]
+"Okay, we don't want to do that. We want to scale. Why? Because in this example, it's a perfect initial representation of a very key lesson."
+[08:33]
+"We have two things that we can focus on when we are advertising: front end and the back end."
+[08:40]
+"Timothy in this case is profitable on the front end two to one, but every additional month that goes by, he continues to print more money on the back end."
+[08:50]
+"So, initially, and this is a big lesson, this is why I talk about it first. Okay, all of the statistics that can consistently fluctuate against you. Does everybody agree that advertising stats and like sales stats like show rate, close rate, AOV and things like this, does everybody here agree that they can obviously fluctuate and rarely if ever are they just consistent and static?"
+[09:15]
+"So if we know going into the game of advertising that all the statistics that are either in our favor or fuck us can fluctuate. Does that mean that my attention should surely be on the front end? No. It means my attention should equally be on the back end. You see what I mean?"
+[09:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Cody Sanchez Challenge Funnel Case Study"
+NÚMEROS: $292K spend, 1.9x front-end ROAS, $3.4M back-end cash collected, $10K price point, 12% upsell to $35K, ~300 buyers
+VISUAL: Breakdown financeiro completo: investimento inicial → resultado front-end → explosão back-end, funil de upsell com percentuais
+[09:38]
+"Let me give you a good example. So just recently we had the Cody Sanchez challenge funnel, right? And in that challenge we were a total of 1.9x front-end ROAS."
+[09:50]
+"However, in many different challenges before, we've gone into the challenge losing money. I don't generally set the expectation you'll be profitable going into a challenge. It's not that it's not possible. It's just not as probable from what we've seen."
+[10:05]
+"However, in this case, we spent about $292,000 and we got that 1.9x ROAS. Okay, pretty good. However, we don't give a fuck about that. We don't give a fuck about that. What do we care about in this example? What we care about is obviously the backend."
+[10:25]
+"The backend had a $10,000 price point and on that average AOV, we cash collected $3.4 million on just the back end."
+[10:35]
+"What's that do to my total ROAS in that example? If I spent $292K and between the front end and backend essentially grossed about $4 million. It grows my ROAS tremendously."
+[10:50]
+"Now, in addition to that, that right there that I just described is what we're going to call the 30-day ROAS. Okay? Because guess what? The quantity of people out of these 10k buyers that eventually, and this is very important to understand, upsell to the $35,000 price point will be about 12%."
+[11:10]
+"And there was a little over 300 people that purchased at the 10k price. Okay, so that means I'm going to get about 30-ish people that are going to also spend $35,000."
+[11:22]
+"And surprisingly, it doesn't take that long for them to spend it. Takes about three months on average for that about 12% number to come to fruition and get those people to upsell."
+[11:33]
+"So that's just free and clear money right there. Again, my initial point I'm trying to make is, and let me make this extremely clear, like I've had clients, one of my favorite ones to point out is a guy named Mark Jennison."
+[11:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Mark Jennison Back-End Focus Strategy"
+NÚMEROS: Massive ROAS através de back-end optimization
+VISUAL: Comparação de advertiser focado apenas em front-end vs advertiser com forte back-end, gráfico de receita total explodindo
+[11:50]
+"Mark Jennison would do a huge ROAS on a very consistent basis because he wasn't exclusively focused on front end. He was equally as focused on the back end."
+[12:02]
+"So, we have a client, they're constantly focused on their cost of acquisition on the front end, which is good. That's by no means a bad thing to focus on. I don't want to demonize that by any means, okay?"
+[12:15]
+"However, they rarely, if ever, focus on the back end. So, what ends up happening is they end up kind of forcing themselves into limiting what they can do on the front end because they have no backend at all."
+[12:28]
+"So although yes it might seem like it's not exactly an ad optimization or like creative testing best practice, I just want to start this whole call by making sure you understand clearly ROAS is not only impacted by front-end statistics."
+[12:43]
+"It is equally as impactful to focus on backend as it is to focus on front end."
+[12:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Low Ticket to High Ticket Ascension Model"
+NÚMEROS: Dan Martell account - $1.6M/month, front-end liquidation strategy
+VISUAL: Funil de ascensão: produto barato → setters → closers → high ticket, objetivo de liquidação vs lucro front-end
+[12:52]
+"It's like a classic low ticket to high ticket ascension model like what I've demonstrated in this challenge. Or as another example, it's like on the Dan Martell account we have, they do about 1.6 mil a month."
+[13:05]
+"And almost all of it comes from people being sold something cheap and then the setters contacting those people, putting them onto the closers calendars and upselling them on the high ticket thing, right?"
+[13:18]
+"The whole goal of the advertising process in that example is literally just to try to liquidate the ad spend. It's not even a goal to try to be profitable on the front end."
+[13:28]
+"We obviously want to. We have a deep desire to be profitable on the front end, but if we're not, we know that we make all the money on the back end."
+[13:37]
+"So, in some of those examples, I could be under a one ROAS on the front end, but when I factor in backend, I'm like 12 to one ROAS. You see what I'm saying?"
+[13:48]
+"So again, just to start off, ad optimization and just focusing on all this in general goes well beyond just the advertising statistics at hand."
+[13:58] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "High CPMs - What Do They Mean?"
+NÚMEROS: $100-$200 CPM benchmarks mencionados por participantes
+VISUAL: Pergunta provocativa sobre CPMs altos, audiência respondendo com números estáticos, preparação para desconstruir mindset
+[14:00]
+"But let me let me just go through some of the tactical things that we could do as well. So from an ad optimization perspective, let's just start off at the top and we'll kind of work our way down with the statistics here for the flow of our remaining part of the call here."
+[14:15]
+"What do high CPMs equal? somebody unmute themselves and tell me what does when an ad platform gives you a high CPM, what are they trying to tell you? What are they trying to communicate?"
+[14:27]
+"Well, it would usually mean like either you're serving a like your ads are being served to a market that costs more to reach or your ads are just shit and they don't want to serve your ads."
+[14:38]
+"Yeah, that's right. Great mindset. So, to be clear, what determines a high CPM? Go ahead and put in the chat. Put in the chat real quick. What is a high CPM to you? Put a dollar amount that you consider to be a high CPM."
+[14:53]
+"Let's see some numbers. Dollar figure in the chat. What's a high CPM? $100. $100. $200. $200. $100."
+[15:03]
+"Okay, so back to my opening statement. So Devin, as an example, is at $130 CPM. He's at a seven to 1 ROAS. Every single one of you that said what a high CPM was, you put a $100 plus. Is that a high CPM if he's at a seven to 1 ROAS?"
+[15:22]
+"No. It's not. Okay. So, high CPMs there is no static answer. Okay. There's no static answer. Every person who put an exact dollar figure is wrong."
+[15:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "No Static Answers in Advertising"
+NÚMEROS: CPMs relativos ao ROAS, não absolutos
+VISUAL: X grande sobre números estáticos, seta apontando para ROAS como única métrica definitiva, conceito de dinamismo vs estático
+[15:38]
+"There is no static answer for what a high CPM is. The correct answer is what is the ROAS, Jeremy, that's what I expect you to say."
+[15:48]
+"When you get asked a question about what is considered high or low for a statistic in the process, what should the first question actually be that you respond with? What is the ROAS?"
+[16:00]
+"So to be clear, if my ROAS is dog shit and I have according to you guys a $100 to $200 CPM, then yeah, right away we could consider that we have high CPMs."
+[16:12]
+"But again, CPMs and any other statistic we talk about are not static answers. Okay, they're dynamic answers relative to the performance of the campaign."
+[16:24] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Law Breaking Analogy"
+NÚMEROS: 94 mph em zona de 55 mph mencionado
+VISUAL: Metáfora visual de quebrar leis vs quebrar "regras" de advertising, conceito de conseguir escapar = não há consequência real
+[16:26]
+"Remember that as an example, it's like if I go out there in the world and I'm consistently breaking laws, okay? I can break as many laws as I want to break if I don't get caught breaking those laws."
+[16:38]
+"Certain laws have statutes of limitations for how long you can get punished after breaking said law. It's like, as a good example of this, almost every time I get into one of my vehicles, I speed."
+[16:50]
+"I consistently break speeding laws. Okay, by the way, this is all hypothetical and not admission of guilt. Okay, long story short, I digress."
+[17:00]
+"The point I'm trying to make is very simple. If I don't get caught, okay, I did not break the law because technically a law is broken when I get punished. That's really when I break the law."
+[17:12]
+"I could break traditional static answers for what's considered good or bad in advertising, but if I slip by with a phenomenal ROAS, did I actually break that law? Did I actually need to consider that standard static answer to be true? No. No, I don't."
+[17:30]
+"One time I got a ticket for going 94 miles an hour in a 55 mph zone. I beat the ticket. Does that mean the government gave me permission to speed?"
+[17:40]
+"Devon right now is getting a seven to one ROAS with $130 CPM. Does that mean that the platform gave him permission to get fucked on CPMs and still perform 7 to 1?"
+[17:52]
+"You see like there is no static answer. Chad advertising represents that there is no static answer for all this. What triumphs everything else is ROAS. You guys get what I'm saying? Put a one in the chat if you're picking up what I'm putting down. ROAS trumps everything."
+[18:12] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Platform Communication Through Statistics"
+NÚMEROS: N/A
+VISUAL: Plataformas de ad não podem ligar para você, então comunicam através de performance e estatísticas, ícones de telefone com X, gráficos falando
+[18:15]
+"To be fair though, let's get clear on some logic. Okay. When we're thinking with like this ad optimization and creative best practices, we obviously have to factor the platform into the equation."
+[18:28]
+"One thing that I like to consider is, okay, from an efficiency perspective, the ad platforms don't have the bandwidth to be able to pick up the phone and call you and tell you what you're doing right or wrong. They represent that to you with the performance of your campaigns and the statistics."
+[18:45]
+"So, like Timothy had pointed out, if you do have high CPMs and a poor ROAS, then yes, you can consider that to be you're getting punished for some reason."
+[18:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Google Adwords Personal Injury Lawyer Example"
+NÚMEROS: $200-$500 por clique, custo extremo mas ROAS justifica
+VISUAL: Exemplo de nicho ultra-competitivo, custos astronômicos mas lucros proporcionais, balança custo vs retorno
+[18:58]
+"You could, and this is very important to understand, there is context here. Okay? If I run Google Adwords campaigns to personal injury lawyers, does anybody want to take a guess of a cost per click for a personal injury lawyer search term that has qualified people?"
+[19:15]
+"A cost per click. Okay, not a CPM, a cost per click to my website. Somebody guess 150,000, 100 plus, 50, 40."
+[19:28]
+"Average cost per click, give or take the specific search term, can be upwards of $200 to $500 per click."
+[19:38]
+"So all the nerds that have static answers for what statistics should be, is that expensive? Go ahead and put in the chat, is that expensive? Yes or no?"
+[19:50]
+"What's the ROAS? Yeah, now you're getting it. You see, now you're getting it."
+[19:56]
+"So, long story short, when we look at that, okay, and we are like, how and why are people paying that much cost per click? Well, the answer becomes obvious. There obviously is a huge ROAS on that cost per click."
+[20:12]
+"And on top of that, for a cost per click to even get that high, that means the competition is extreme. Okay? You see what I'm saying?"
+[20:22]
+"Versus if you for your $5,000 offer or whatever you're charging, if you had a $500 cost per click for you relative to you, okay, and your ROAS, yeah, sure, that might be considered expensive."
+[20:38] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Click-Through Rate Analysis"
+NÚMEROS: 0.5% CTR de Devon, 2% benchmark para "bom" CTR
+VISUAL: Comparação CTR ruim com ROAS excelente, benchmark de 2%+ como "fenomenal" em conversion campaigns
+[20:40]
+"Let's look at click-through rate. So, click-through rate, like again, what's a good click-through rate? Devin, unmute yourself. Tell the people your click-through rate."
+[20:50]
+"It's like 0.5. It's terrible."
+[20:53]
+"What's your ROAS?"
+[20:55]
+"7x right now."
+[20:57]
+"Okay. Is Devon's 0.5% click-through rate bad? Oh, he's at a seven to 1 ROAS. That's arguably pretty good. You see what I mean?"
+[21:08]
+"But it's like I will also subscribe to the belief that like a good link clickthrough rate is 2%. Right? Anything above 2% it's phenomenal on a conversion campaign to be clear."
+[21:20]
+"Anything below that like yeah there's room for performance improvement. But again at a 7x ROAS I'm scaling the fuck out of that thing. I'm not even gonna touch it. I'm doing nothing other than putting more money in, getting more money out."
+[21:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "If/Then Scenarios for Optimization"
+NÚMEROS: 7x ROAS example maintained
+VISUAL: Árvore de decisão: se CPMs altos + CTR baixo + ROAS alto = ESCALAR, oportunidade de teste apenas quando fadiga ocorre
+[21:38]
+"Now here's the thing. Let me be clear when I say this. I'm going to give you some like if this then that scenarios."
+[21:45]
+"So, if my CPMs are high and if my link clickthrough rate is low and if my ROAS is high, I'm focused on scaling."
+[21:55]
+"When my ads fatigue, I'm going to take that opportunity to launch some new tests to try to lower my CPMs and improve my link clickthrough rate."
+[22:05]
+"Am I going to try to improve my link clickthrough rate or my CPMs in the meantime? Somebody answer yes or no."
+[22:12]
+"Again, I have high CPMs. I have a low link click-through rate. I'm at a 7x ROAS and to be clear I'm considering changing something. It's like do I change anything?"
+[22:24]
+"Oh dude, we gas it. Okay, we're gassing it up."
+[22:28] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Ad Fatigue - The One Constant"
+NÚMEROS: N/A
+VISUAL: Conceito de fadiga inevitável, comparado a impostos e morte, única constante garantida em advertising
+[22:30]
+"And as we scale, okay, what are we inevitably going to always run into as we scale? What happens no matter what in advertising to a campaign? What is the one constant of advertising that we know is inevitable? It's like taxes or death."
+[22:48]
+"Ad fatigue. Okay. So when this is very important to understand when ad fatigue presents itself those are my opportunity to test."
+[23:00]
+"You understand why? Well, it's like I got to swap out the creatives anyway. In order to overcome ad fatigue, I have to relaunch the campaign. I have to pull out all the images and videos and I have to put in new ones."
+[23:15]
+"So guess what? You know when that happens that's my opportunity to test."
+[23:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "When To Test - The 3 Opportunities"
+NÚMEROS: 3 momentos específicos para teste
+VISUAL: Lista numerada: 1) Ad fatigue occurs, 2) ROAS is bad, 3) Start of testing (new campaign), cada um com ícone representativo
+[23:22]
+"This is very important to understand this right here. What I just described this is what matters a lot is like when is the opportunity to test? when does that opportunity technically exist?"
+[23:35]
+"Ask yourself the conditions of when opportunities to test are. Okay, so as we just talked about, number one, when ad fatigue occurs. Number two, when ROAS is bad."
+[23:48]
+"And then number three and this is also important to stand at the start of testing. So, if I launch a new campaign to like a new funnel, a new offer, whatever it is, okay?"
+[24:00]
+"If I just launch something new, I subscribe personally to anywhere from like a 3-day to sometimes upwards of a 10-day test window before I make any changes to something."
+[24:12] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "3-10 Day Test Window"
+NÚMEROS: 3-10 dias, variável baseado em contexto
+VISUAL: Linha do tempo de teste, janela flexível de decisão, não estática
+[24:14]
+"It's a variable answer to be clear. There's not really a lot of static answers you're going to receive out of this. 3 days to 10 days, like I'll give you a great example, right?"
+[24:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Brand New Client Case Study"
+NÚMEROS: $500/day spend, 3 dias = $1,500, 0 qualified leads inicialmente, $70K liquid capital requirement
+VISUAL: Caso detalhado: novo cliente, nova oferta, novo funil, novos ads, performance inicial ruim mas sinais de vida após ajuste
+[24:28]
+"I had a campaign that we launched for a client. Brand new client, brand new offer, brand new funnel, okay? Brand new ads, everything was brand new."
+[24:38]
+"In the first three days of the campaign at $500 a day in spend, I got nothing but dog shit leads. Okay, I only had unqualified people."
+[24:50]
+"My CPMs weren't bad. My link click-through rate wasn't that bad. My even my conversion rate on the page wasn't that bad. It was just a bunch of dog shit leads."
+[25:02]
+"However, in 3 days, I'd spent $1,500 and I didn't get a single good lead. So, that means that my cost per qualified call was infinite because I hadn't gotten one yet."
+[25:15]
+"Now, to be clear, I looked at what was off and I determined it was the messaging. So, I went back to the client and I told him, I'm like, 'Hey, man. I need you to refilm all this shit.'"
+[25:28]
+"I need you to start every single ad with you've got $70,000 liquid or access to $70,000 in working capital. And then I would have him say the rest of the ad hook."
+[25:40]
+"Every single ad out of 20 that he filmed started off with that exact same thing. I relaunched my campaigns with those new creatives on day four."
+[25:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Second Test Results"
+NÚMEROS: $200-$280 cost per call range primeiros 3 dias, depois caiu para $95-$105 estável
+VISUAL: Gráfico de tendência: custo alto inicial → queda progressiva → estabilização baixa, linha do tempo de 10 dias
+[25:52]
+"I then again I waited a minimum of three days. Now, within that three days, I had about a $200ish dollar cost per call. It ranged, give or take the day, from like 200 all the way up to like 280."
+[26:08]
+"It was just bouncing in the 200s for that first 72 hours. Okay, there is no ROAS yet because there's only been like a handful of calls that came in, but I got some signs of life now."
+[26:20]
+"This is really important to understand. I saw that there was a good like set of leading indicators. Okay, my leading indicators were good. I liked what I was seeing on that second test."
+[26:32]
+"So, instead of just cutting it off because it had a higher cost per call than what I wanted, I'm going to let it ride. I decided to extend the test window from 3 days to 10 days. Give it an additional 7 days to breathe a little bit."
+[26:48]
+"The reason I chose to do that for that specific instance was I wanted to see if my cost per call could drop as the pixel got more qualified people back to it."
+[27:00]
+"Over the course of that 10 days, my cost per call went from about 200 to 280 all the way down to where it bottomed out at. It bottomed out at about $95 cost per call."
+[27:15]
+"It's been stable there literally ever since. The highest cost per call I get now is about $105."
+[27:22]
+"So, I took it from a $80 range from 200 to 280 all the way down to 95 to 105. But it took 10 days."
+[27:32] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Signs of Life - Leading Indicators"
+NÚMEROS: 10 dias, $5K spend total, <50 calls, $10K produto, 0 vendas ainda
+VISUAL: Checklist de sinais de vida: stats trending bem, feedback de vendedores positivo, lead quality melhorando, custo caindo
+[27:35]
+"Now, here's the other cool part. Within that 10 days, okay, outside of my cost per call dropping. So, let me give you some very clear expectations here, okay, for some signs of life."
+[27:48]
+"Signs of life are like leading indicators. So first of all like stats trending in the direction you want. Okay, salesperson feedback."
+[28:00]
+"This was the other thing that came up that was a good sign of life on this specific account. The salespeople had nothing but awesome things to say."
+[28:10]
+"And by the way, this was ice cold traffic. This was not warm audiences. This was not there wasn't a hammer them strategy. This is just straight up direct response to a call funnel with ice cold traffic."
+[28:25]
+"The salespeople are saying nothing but really good things, though. The sales people are saying, 'Dude, this audience is super sophisticated. They're financially qualified. They're asking all the right questions.'"
+[28:38]
+"And within that 10 days, I still didn't see a lick of ROAS yet. I didn't see a single sale. Okay, 10 times 500, I'm at about $5k in spend at this point. I have a $10,000 product."
+[28:55]
+"But I didn't get that many calls yet. You know, I had under 50 still. But does that mean that campaigns need to get cut off?"
+[29:05]
+"Somebody tell me based on what I just described, should I cut that campaign off or should I let it ride? No ROAS yet. The statistics are good. I'm getting good signs of life. My cost per call trended down and then technically bottomed out. I'm getting good salesperson feedback."
+[29:25]
+"What do I do, Daniel? The sales cycle's unknown. It's a brand new offer. Nobody knows the sales cycle yet. We're in uncharted waters here. We're in a forest with a bunch of fog. We have no idea where we are. Who knows? Do I let it ride?"
+[29:42]
+"Yeah. So, listen. Sometimes you got to put your balls on the table and keep your balls on the table. Okay? You can't just pull them off prematurely. You got to be willing to keep them there for a little bit longer than you're comfortable doing."
+[30:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Balls on the Table Philosophy"
+NÚMEROS: N/A
+VISUAL: Metáfora de risco: manter compromisso com teste mesmo sem ROAS imediato quando sinais de vida são fortes
+[30:02]
+"It's where a lot of you fuck up and you revert back to being a nerd instead of a chadvertiser. Okay? Chad advertising in this particular case would tell us to let it ride. Why?"
+[30:15]
+"Because we see great signs of life. Okay, that is always how we judge a campaign before we see the ROAS. We judge it on the signs of life, okay?"
+[30:28]
+"The statistics trending well, salesperson feedback, okay? Lead quality. You see what I'm saying? And it's relative to every single individual conversion funnel you choose to run, right?"
+[30:40]
+"If it's a webinar, it's like cost per lead is probably going to be my biggest indication, right? If I use like a challenge funnel and I'm getting people to pay for it or like low ticket to high ticket or something like that."
+[30:52]
+"Again, ideally, I'm just seeing some good statistics at the beginning."
+[31:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Campaign Life Cycle - Birth to Death"
+NÚMEROS: N/A
+VISUAL: Analogia com ciclo de vida humano: nascimento → crescimento → maturidade → morte, paralelo completo com campaigns
+[31:02]
+"But how does a campaign typically start? Okay, ask yourself this question. There's a start and there's a finish. Every campaign dies. It is inevitable. What kills a campaign?"
+[31:15]
+"Fatigue. In most instances, that's the number one causation of death to a campaign."
+[31:22]
+"But I ask you a simple question. Have you ever actually reflected on how a campaign starts versus ends and how it does in the middle? The life cycle of a campaign, right?"
+[31:35]
+"Like you know how life cycles work. You can reflect on it for human beings. We start off having some babies, okay? We obviously have a kid. We have a little child. Think about the life cycle of a human being."
+[31:50]
+"Why is a campaign any different? Why wouldn't you reflect on how a campaign is birthed into existence and how it eventually dies and what it consistently trends at along the way?"
+[32:05]
+"All everybody on this call is different. Yet obviously there's extreme similarities in every one of us. You all have individual lives, but yet all our lives trend relatively the same."
+[32:18]
+"We fuck and piss ourselves and are helpless when we're a baby trying to learn things. We go to school, right? Some of us play sports, some of us don't. Some of us go to college, some of us don't. We all enter the workforce. We eventually retire. We hang out, we vacation, right?"
+[32:35]
+"The places you go, the things you do, the careers you pick, the people you know, it's all relatively the same when you look at it, right?"
+[32:45]
+"Campaigns are the same. There are commonalities amongst every campaign that exists. And how they start, how they perform in the middle, and how they finish is also all relatively the same. It's a pattern."
+[33:00]
+"Even though they might have different conversion mechanisms that are attached to them, different audiences, different creatives, they're unique, but they're all the same in how they are throughout their life cycle. Does that make sense?"
+[33:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Genetic Outlier Campaigns"
+NÚMEROS: N/A
+VISUAL: Comparação de campanha "geneticamente superior" que performa imediatamente vs campanha normal, criança jacked vs criança normal
+[33:18]
+"Ask yourself this. just like a baby. Is a campaign probable to just perform exceptionally well right out the gate, right? When you launch a campaign, is is it just probable to rip right away?"
+[33:32]
+"I mean, it can, right? Have you ever seen a photo of like an extremely jacked toddler? You guys ever seen a photo like that? You know what I'm talking about?"
+[33:42]
+"I've seen kids with genetics that are in preschool that look like physically superior beings. Like, you can already tell that that kid has a dramatically higher probability."
+[33:55]
+"Have you ever seen that video of that little Russian girl out in the forest just beating the shit out of a tree and like she's literally chopping down the tree with her hands while she sits there and punches it? You ever seen that?"
+[34:08]
+"It's like, dude, that girl's genetically superior. Okay, some campaigns they do actually have a probability to perform really well at the beginning."
+[34:18]
+"Does that mean every campaign is going to perform really well at the beginning? Right? If you just looked at the super exceptional genetic outliers of human beings that can like do really good math when they're like in preschool and you compared your kid to it, you'd call your kid a fuck up you know?"
+[34:35]
+"Some of you do that with campaigns. like you've had an occasional campaign or you've heard of an occasional campaign just ripping right out the gate and then you act like that's the standard that's going to happen in every campaign you ever launch. Is that the case?"
+[34:52]
+"What's more probable to occur in that example? What's the reality of the situation?"
+[35:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Campaign Performance Reality Check"
+NÚMEROS: 3 dias primeira tentativa = falhou, 3-10 dias segunda tentativa = sucesso, 15 dias para primeira venda, 18 dias total
+VISUAL: Timeline realista: falha inicial rápida → ajuste → teste estendido → primeiros resultados, não expectativa de sucesso instantâneo
+[35:02]
+"It's like what I just gave you as an example for the campaign for the client I launched. Like the first the first days of that campaign, I could judge in three days that it was going nowhere. That thing needed put down."
+[35:18]
+"I had to take it out back behind the barn and put it to bed. All right? That campaign did not deserve to exist any longer. All right? Three days. I'm judging that thing."
+[35:30]
+"However, for the new campaign I launched with the new creatives, the first three days really weren't all that great either. I just started to see signs of life."
+[35:42]
+"And then it took 10 days for it to trend to the point that I needed it to. It took 15 days, just an extra five days to see the first two sales come from it."
+[35:55]
+"At that point, I was about seven grand invested on the campaigns, including the failed one. and I officially had two sales at 12K a piece."
+[36:08]
+"So I'm at a little over a 2 to 1 ROAS at that point within 15 days on the new campaign, which would put me at 18 days total if you include the failed campaign."
+[36:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Campaign Life Cycle Stages"
+NÚMEROS: Baixa probabilidade ROAS início, alta probabilidade meio, morte no final
+VISUAL: Gráfico de curva: início baixo (teste) → meio alto (escala) → fim (fadiga), probabilidade de ROAS mapeada
+[36:25]
+"Here's my point. Campaigns have life cycles as everything does. Okay, they perform kind of like shit at the beginning and you have a really low probability for ROAS."
+[36:38]
+"Think about it like this. This is as simple as it needs to be for the first and again your sales cycle needs to be factored in whether it's a new offer, an old offer, whether it's you know a new sales team, a new sales team member that's getting those calls or an old sales team member that's already a veteran and really good."
+[36:58]
+"ROAS probability is at its lowest at the beginning. Okay, it's at its lowest at the beginning, especially if you have more than like a 7 to 14 day sales cycle."
+[37:12]
+"Answer this question. If there's a low probability for ROAS at the beginning of a campaign, what do we judge it on? What do we judge it on in the beginning?"
+[37:22]
+"Somebody unmute yourself. Tell me how we judge a campaign in the beginning."
+[37:28]
+"Ben in the chat says, 'Signs of life.' Griffin says, 'Lead quality.' Yeah, signs of life."
+[37:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Predefined Signs of Life"
+NÚMEROS: N/A
+VISUAL: Checklist obrigatório antes de lançar: definir sinais de vida, janela de teste, budget de risco, não "raw dog" sem plano
+[37:38]
+"So let me ask you this. It's a very simple question. When you launch a campaign, do you define what the signs of life are going to be? Or do you just raw dog it and let whatever kind of emotional reactive thoughts come into your head determine what you do or do not do with that campaign?"
+[37:58]
+"Most of you have no plan. Okay? You have no awareness of what the signs of life are when you launch whatever campaign it is. So, you just do all kinds of random ass shit. You just shut it off. You turn it. You just It's like you guys are freaking the fuck out all the time when you do things."
+[38:18]
+"You know, you start spending a little bit of money. Take your balls off the table right away."
+[38:25]
+"You have to define in a low probability for ROAS window what the signs of life for that campaign are going to be that you judge it on. That way you can determine confidently if you let it ride, scale it back or shut it off. Does that make sense?"
+[38:42] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Ad Optimization Foundation"
+NÚMEROS: N/A
+VISUAL: Fundação de otimização: awareness de sinais de vida + janela de teste + budget predeterminado = decisões confiantes vs reativas
+[38:45]
+"So remember from an ad optimization perspective, okay, when we get into a campaign, if I have no awareness at all on what the signs of life of that initial campaign are, I'm exclusively judging it on randomness."
+[39:00]
+"Like I'm just essentially taking projected statistics that I have in my head that are benchmarks for each specific indicator I'm going to look at."
+[39:12]
+"Like if I just have a static answer like most of you did for CPMs. If I have a static answer for click-through rate, okay, and if I if I just don't look at other things, if I don't know what the signs of life are, I'm extremely probable to be reactive and just prematurely shut it off."
+[39:30]
+"I need to also have a testing time frame. Okay, so I have to have a test window. The test window is to be predefined. It is a predefined window for how long you are going to leave your balls on the table before you pull them off."
+[39:48]
+"Pretty simple. It's a predetermined risk. I am going into the test of a campaign saying I'm willing to gamble this to see if it's good or not. Does that make sense?"
+[40:00]
+"Drop a one in the chat if it's making sense."
+[40:05]
+"Yeah, good. I'm going to pause real quick. Does anybody have questions on what I'm saying right now?"
+[40:12]
+"Yeah, Jeremy, I got one. When it comes to those those predefined signs of life, I showed up 15 minutes late, so if I missed it, just let me know. What what are those typically that you're looking for? Those predefined signs of life. And I'm sure it depends on the funnel, but like a call funnel."
+[40:30]
+"What do the words say at the top of the screen there underneath the signs of life column?"
+[40:35]
+"Yeah, the stats are I guess my question is more so the stats trending. Well, are there specific stats trending that we're looking for? Like cost per call, I'm assuming."
+[40:45]
+"Exactly. We're looking for statistics and feedback."
+[40:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Signs of Life by Funnel Type"
+NÚMEROS: N/A
+VISUAL: Diferentes sinais por tipo de funil: call funnel = custo + qualificação + feedback sales team; webinar = cost per lead; etc.
+[40:52]
+"And lead quality. It depends on the funnel, right? If I'm running a call funnel, it's like I want to see that I'm getting qualified people. I want to see that I have good costs or I want to just see that my stats are trending down as I as my test progresses, you know?"
+[41:10]
+"I want to see that I'm getting good feedback from the sales team. I just I want to gauge the signs of life for that campaign and whether it looks like it's going to do well or not. Okay? And I got to predetermine what those are going to be. It's relative to every campaign."
+[41:28] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Recent Webinar Campaign Example"
+NÚMEROS: $130K budget, $11 cost per lead histórico, $14 inicial (alto), $13 começou vs $8-$11 normal, finish projetado $20
+VISUAL: Caso de webinar com tema mudado, opt-in rate baixo causando CPL alto, projeção de piora, necessidade de ajuste rápido
+[41:30]
+"Like as an example, on this most recent webinar I did, we had $130,000 budget for a client. Historically, every month we've ran that webinar, we get an average of about, okay, an $11 cost per lead at the beginning of the campaign."
+[41:48]
+"This particular campaign I launched this month with that $130,000 budget, my cost per lead immediately was $14."
+[42:00]
+"on all the historical performance of these webinar campaigns, we usually start around like as low as eight, maybe as high as 10 to 11. So, right away, me starting off at 13, what's that indicate to me just right off the bat?"
+[42:18]
+"I have historical data from that account in this case that I can factor in that indicates to me that that's a high cost per lead."
+[42:28]
+"This particular client for this webinar that we're referring to, they changed the theme of the webinar. So, right away I'm like, 'All right, well, what is making my cost per lead higher? Is it a higher CPM, a lower link click-through rate, a lower optin, or something else?'"
+[42:48]
+"And it was actually a lower opt-in rate. The lower opt-in rate of the page was actually driving up my cost per lead right off the bat."
+[43:00]
+"I could also immediately project onto the campaign that I was going to have a really bad time with where my cost per lead was probable to finish. Usually my cost per lead finishes off and this is kind of unfortunate at around like a $12 cost per lead."
+[43:18]
+"But keep in mind I started that webinar campaign at 13. I right away I was like, 'Dude, I'm probable to finish off at like 20 at this current pace.'"
+[43:30]
+"So I had to go back to the financial model immediately and assess what I was going to do. I had to start assessing because I was on a timetable for that specific campaign."
+[43:42] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Timetables and Test Windows"
+NÚMEROS: N/A
+VISUAL: Diferença entre campanhas com deadline (webinar) vs sem deadline (call funnel), impacto na velocidade de decisão e janela de teste
+[43:45]
+"Some campaigns have timetables like a webinar campaign. There's obviously a date of the webinar coming up. It's a hard date. I got to work around that with speed. That alone can determine a tighter test window."
+[44:00]
+"That can cut down the amount of time that I'm willing to tolerate something to be on a shorter cycle. Okay. In addition to that, it's going to determine how fast I judge it."
+[44:12]
+"Moral of the story is on some campaigns like a call funnel as an example. Yeah, like you might deterministically want to make a certain number off of that campaign, but at least there's no hard date."
+[44:25]
+"So you can be a little more loose with the timetables that you're going to test to accumulate a little bit more data. And also it typically is more expensive to get a cost per call obviously compared to a webinar lead. Does it make sense?"
+[44:40]
+"Other questions so far. We got a lot more to cover, so ask your questions if you got anything. If not, we're moving on."
+[44:50]
+"All right, great. Axel has a question. How do you make sure ROAS doesn't go lower as you 5x the spend? Because usually it does. Great question, Axel. We'll talk about that."
+[45:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Campaign Life Cycle - Middle Phase"
+NÚMEROS: N/A
+VISUAL: Curva de performance: início baixo → meio ALTO (máxima probabilidade ROAS) → fim declínio, zona de escala identificada
+[45:08]
+"So moral of the story. So in the middle of a campaign, right, my probability for ROAS increases dramatically like throughout a majority of the campaign all the way until the finish. This is where my ROAS has the most potential. Simple enough, right?"
+[45:28]
+"I want to make sure that after my test window has passed that as data accumulates I see what I want to see which is either a few things."
+[45:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Bottoming Out Concept"
+NÚMEROS: $200-$280 range → $95 estável, $130 = sinal de fadiga
+VISUAL: Conceito de "bottoming out" - estatística estabiliza em número consistente, inflação indica fadiga começando
+[45:42]
+"Number one a bottoming out of the stat. So as I talked about in that call funnel I went from 200 to 280 all the way down to 95. It didn't go lower it didn't go higher. That's called bottoming out."
+[45:58]
+"It's really important. I want to emphasize this. It's really important to determine the bottomed out number because that's how I can gauge ad fatigue."
+[46:10]
+"If I know that I have a $95 cost per call and all of a sudden after a few days I see it inflate to $130, although yes, I might still be profitable. The $130 cost per call in that example when when it has averaged and bottomed out at 95 indicates I'm probable to be dealing with ad fatigue. You see?"
+[46:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Data Analysis Windows"
+NÚMEROS: 1 dia (check only), 3 dias (decisões às vezes), 7 dias (confirmação forte), mês completo (conclusão final)
+VISUAL: Três janelas de análise em camadas: diária superficial, 3-dias tático, 7-dias estratégico, month-to-date definitivo
+[46:38]
+"While my ROAS has the most potential during that like early on middle phase to the end phase of the life cycle of a campaign, my statistics, okay, give or take the day, I might see daily fluctuations. So I have to have a average window that I judge."
+[46:58]
+"My average judgment window has to be predetermined as well. Okay, although yes, here's typically three windows I like to look through. Okay, number one, seven days, three days, and daily."
+[47:15]
+"I don't ever really do anything based on the daily. I just check it. The 3-day shows me an average for a tighter time frame. I will sometimes make decisions based on the 3-day trend of data."
+[47:30]
+"As an example, let's say a campaign's been running all of March up to this point, from the 1st to the 22nd, the day that we filmed this right now. I'll go from the 1st to the 3rd, the 3rd to the 6th, 7th to the 10th, etc."
+[47:48]
+"I'll look at like little three-day trends. I'll try to find patterns in the data. I'll also look at 7-day trends. So, I'll see what the first week performance was like, the second week performance, the third week."
+[48:05]
+"I'll see if there's fluctuations between them. I will also look at month-to-date. Month-to-date is one of my favorite views to look at data through."
+[48:18]
+"So, I'm just going to reiterate that one day I do not do anything with, but I'll check it. Okay? 3 days typically give me a strong indication of where I'm trending. Seven days gives me an even stronger confirmation bias of how I'm trending."
+[48:38]
+"And the full month to date helps me broaden the time frame to ultimately conclude to what I need to do next."
+[48:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Campaign Death and Rebirth Cycle"
+NÚMEROS: N/A
+VISUAL: Ciclo de morte: ad fatigue → pull old creatives → insert new → publish → kill old campaign → repeat, processo circular contínuo
+[48:50]
+"Here's the thing. At the finish of a campaign, it can die from all kinds of reasons, but again, the main reason is typically ad fatigue."
+[49:00]
+"And all we have to do, we just again, we have to relaunch the campaign, pull out all the images and videos, put new images and videos in place, and publish it. Once approved, we're killing the dead campaign."
+[49:18]
+"We're letting a new one ride, and we're repeating this cycle all over again."
+[49:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Campaign Performance Graph"
+NÚMEROS: N/A
+VISUAL: Gráfico visual detalhado: início (pequeno) = baixa probabilidade → meio (GRANDE) = alta probabilidade + escala → fim (pequeno) = plateau e morte
+[49:28]
+"It's also important to note that generally during the middle of the campaign, this is when I have the most scaling potential. Okay, this is when I can really let it rip."
+[49:40]
+"A campaign's performance on a graph will typically look like this. Okay, this specific window would represent the beginning. This specific window would represent the middle and this specific window would represent the finish."
+[50:00]
+"Again, this tiny little window here is when I am the least probable to have result potential. It's just starting off. It's my test window. Lowest probability for ROAS."
+[50:15]
+"This big window is when I should be seeing ROAS, when I should be scaling until I get to that eventual plateau. Once I get to the eventual plateau, the inevitable is upon me. I will experience death soon in that campaign and I must be prepared."
+[50:35]
+"I have to get my ads created. I have to have my surplus of images and videos ready to redeploy."
+[50:42] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Scaling at Plateau = Death"
+NÚMEROS: N/A
+VISUAL: Warning visual: escalar no plateau = rodar rodas = custo mais alto sem mais resultados = necessidade de relaunch
+[50:45]
+"If I scale it or I attempt to scale it at the plateau, I will spin the wheels. Okay, I will not experience more results. I will only experience a higher cost per result."
+[51:00]
+"Therefore, I need to relaunch my campaign and I need to repeat this cycle again. This cycle of time is not a static period of time."
+[51:12] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Campaign Lifespan Variables"
+NÚMEROS: $35K-$50K/day = 5-7 dias fadiga, $1K-$5K/day = 3-9 semanas fadiga
+VISUAL: Comparação de lifespan: alto budget = vida curta (inseto) vs baixo budget = vida longa, budget determina velocidade de fadiga
+[51:15]
+"on a campaign that I've recently spent about $35,000 to $50,000 a day on. I was fatiguing in about 5 to seven days."
+[51:28]
+"The life cycle of that campaign was that of a small insect. It would die rapidly."
+[51:35]
+"However, if I have a campaign that's at like $1,000 to $5,000 a day, that could last for three to nine weeks before it fatigues."
+[51:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "External Variables - Inflationary Events"
+NÚMEROS: Fevereiro início, St. Patrick's Day, Spring Break mencionados
+VISUAL: Calendário de eventos que causam inflação: Super Bowl, Valentine's Day, President's Day, St. Patrick's, Spring Break = fadiga acelerada
+[51:50]
+"There are also variables that determine what I need to do beyond my control. Who here experienced a little bit of inflation through the first part of February or potentially leading up to St. Patrick's Day with spring break?"
+[52:08]
+"Who here experienced inflation? Meaning whatever the normal performance of your campaign was, it went well above that due to events out of your control like the Super Bowl, Valentine's Day, President's Day, and most recently St. Patrick's Day, and Spring Break."
+[52:28]
+"Those events have heightened levels of spend from advertisers. Although my campaigns might have historically fatigued, let's say an average of five to nine weeks, during inflationary events, they will fatigue rapidly."
+[52:45]
+"And I have to be prepared to overcome the fatigue far sooner."
+[52:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Everything is Dynamic"
+NÚMEROS: N/A
+VISUAL: Conceito central: TUDO é dinâmico em advertising, não estático, única constante = mudança, preparação para todos cenários
+[52:52]
+"Remember, I want you to ingrain this word into your head for how you behave as an advertiser. We have to consider that everything is dynamic."
+[53:05]
+"There is no real static answer for almost anything in advertising. Okay, it is all a dynamic number. There's a dynamic amount of time. Every single thing that we face changes."
+[53:20]
+"Change is one of the only constants in advertising that exists. So although yes it might feel better to obviously have some consistency and predictability that is rarely the case in advertising. We must be prepared for all scenarios."
+[53:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Life Cycle Understanding = Problem Prevention"
+NÚMEROS: N/A
+VISUAL: Mapa de problemas comuns: lançar e entrar em pânico sem ROAS, tentar iterar quando deveria escalar, fazer coisa errada no momento errado
+[53:42]
+"So to be clear this is very important to understand the life cycle of a campaign is not a static answer. It is a dynamic answer. Okay. I have to be equipped for when to do what and how to behave at the different stages of a campaign."
+[54:00]
+"Most of your problems that you bring to me relate to this lack of understanding. You will launch a campaign and be freaking the fuck out that it doesn't have ROAS right away."
+[54:15]
+"Meanwhile, you have the lowest probability for ROAS when you launch a campaign. I will ask you what are the signs of life you're looking for? What's your predetermined test window? What's your gambling budget for it? How much are you willing to risk? You have none of these answers. That's why you freak out."
+[54:35]
+"Some of you get to the point where you've gotten a campaign rolling and you need to start the scaling process, but you don't. You instead try to iterate and test while a campaign needs to be stable and scaled."
+[54:50]
+"You do the wrong thing at the wrong time, you get the wrong result. You do the right thing at the right time, get the right result."
+[55:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "McLaren 750S Tunnel Story"
+NÚMEROS: 130 mph, 90+ mph, velocidades extremas
+VISUAL: Analogia de dirigir rápido: não frear na curva = sucesso, frear na curva = quase desastre, timing correto de ações crítico
+[55:02]
+"Recently, I've been driving my new 750S Spider through this tunnel that takes you from this bridge that goes to South Beach to the port of Miami. It's the only tunnel I've got access to and it's sweet. It's like a movie."
+[55:20]
+"Every time I go in there, I rip the car up, this is a hypothetical story and not real to 130 miles an hour. Okay, I'm absolutely punching it when I go through that thing. And there's two different turns in the tunnel."
+[55:38]
+"Recently, one of my friends who's rich that has a great car, too, went to the tunnel with me and he decided to break during the turn while he was going like 90 something miles an hour."
+[55:52]
+"For those of you who don't drive cars fast, one of the number one rules of cars is when you're driving fast around a turn, you do not break. It can cause catastrophic failure."
+[56:08]
+"It changes everything when you break around a turn. You're just supposed to let off the gas if you want to slow down a little bit around a turn. You can't break. Too many things can go wrong. And they almost did for him."
+[56:25]
+"He almost ran his car straight into a wall because he's dumb and he didn't understand what to do and when."
+[56:35]
+"You do the wrong thing at the wrong time, you get the wrong result. Okay, I come around the turn absolutely flying. I hold that shit for dear life and I get a great outcome."
+[56:50]
+"My car rewards me with a nice crackle pop and a loud bang as I downshift into the straightaway and punch it. Okay. Euphoria flowing through me. It's amazing."
+[57:05]
+"I get the right result at the right time because I did the right thing in the right moment. You see, advertising is the same."
+[57:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Life Cycle Awareness Required"
+NÚMEROS: N/A
+VISUAL: Problema de falta de awareness: entrar em pânico no final sem reconhecer que é hora de "funeral" da campanha, attachment excessivo
+[57:18]
+"You have to consider the life cycle at the end of a campaign. Some of you are like, 'Dude, my campaign's not performing.' Like, you just start freaking the fuck out for no reason because you're oblivious to the time frame that you're in."
+[57:35]
+"You're just like, 'Oh, dude, my shit's not performing anymore. Like, what the fuck do I do?' It's like, dog, you give it a funeral, you kill it, okay? Take it out back behind the barn, put it to bed."
+[57:50]
+"But it's like, oh, dude, this campaign's done so well for me. Yeah, who cares, dog? You're too attached to things."
+[58:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "ATTACHMENT - The Killer"
+NÚMEROS: N/A
+VISUAL: Conceito crítico: attachment a campanhas = morte de performance, lobster vs inseto lifespan, attachment previne letting go
+[58:02]
+"This is one of the most critical things for you to understand about the death of a campaign. This fucks you more than almost anything else. Attachment."
+[58:15]
+"If we know that a campaign can have the life cycle of an insect or it can have the life cycle of a lobster, for all those who don't know, lobsters can theoretically live forever."
+[58:28]
+"To be clear, think about this. If I get attached to it, but I know that it's going to die, I'm not going to be willing to let it go when it has to be put down."
+[58:42]
+"And again, you're just going to ride it into the ground. Your ROAS is going to get fucked."
+[58:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Fired Advertiser Case Study"
+NÚMEROS: N/A
+VISUAL: Caso real: advertiser demitido por attachment excessivo, nunca superou fadiga corretamente, manteve creatives velhos em novas campanhas
+[58:52]
+"I have an advertiser on an account that we've been a consultant on. The guy just got fired. He just got let go. Why? It's a pretty simple reason."
+[59:05]
+"The guy was far too attached to campaigns that are underperforming and he would never actually overcome ad fatigue the way that he needs to."
+[59:18]
+"Instead, he would stay attached to creatives and try to keep them in every future campaign he'd relaunch with. and he would never get the performance that he should have gotten because he was attached."
+[59:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Detachment Mastery"
+NÚMEROS: N/A
+VISUAL: Conceito de mastery: desapego total = peak results, recriar não reusar, ads devem ser NOVOS sempre
+[59:38]
+"You have to have detachment mastery to truly have peak advertising results. If you love a specific ad that you've created, recreate it. Do not attempt to run the same one again. It has to be new."
+[59:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Social Media Content Philosophy"
+NÚMEROS: N/A
+VISUAL: Pergunta provocativa: você já viu o MESMO conteúdo ao logar em plataforma? Não = plataformas odeiam repetição
+[60:00]
+"We've talked about this before. I'll give it to you again here. Now, if you log on to Facebook, Instagram, Tik Tok, LinkedIn, YouTube, tell me a singular time that you've seen the same piece of content."
+[60:15]
+"When you log onto the platform and start scrolling, tell me a single time that you've seen the same exact video, the same exact image upon logging in."
+[60:28]
+"What would your experience be like if that was the case? If every time you logged on it was the exact same shit would you go back? Would you use the platforms as much as you do? No."
+[60:42]
+"What does that indicate the platforms want from us as advertisers? Then they want new creatives."
+[60:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Why Ad Fatigue Exists"
+NÚMEROS: N/A
+VISUAL: Razão fundamental: plataformas odeiam ads repetidos, não podem ligar para você, então punem estatisticamente até você entender
+[60:52]
+"Why does ad fatigue occur so often? It is one of the longest-running commonalities of advertising because they hate when an ad that you are attached to continues to run and they can't pick up the phone and call you."
+[61:10]
+"So, they punish you statistically until you finally get it instead. And then magically once you detach from those old creatives, you relaunch the campaign with new ones. The cost per result goes right back down to what it was pre-fatigue and you start ripping great results again."
+[61:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Sin of Attachment"
+NÚMEROS: N/A
+VISUAL: Attachment = pecado mortal de advertising, previne euphoria de chadvertising, punição consistente por práticas de attachment
+[61:32]
+"Those who practice attachment as advertisers get punished consistently. They never experience the euphoria of chadvertising because they practice the sin of attachment. You understand?"
+[61:48]
+"Drop a one in the chat if you understand that."
+[61:52]
+"Oh yeah, dude. I got such great creatives. I just keep running them forever. Fuck you. You have to vary them. They have to change. They must change. You must do new things."
+[62:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "How to Make It New"
+NÚMEROS: N/A
+VISUAL: Táticas de variação: mudar camiseta, local, adicionar chapéu/óculos, mudar B-roll, remover B-roll, dizer mesmas palavras mas fazer NOVO
+[62:10]
+"You can reiterate and make new what has historically worked with subtle variations. Change the t-shirt. Change the location and say the same words. Change wear a hat, wear glasses, you know, just do the exact same thing, but make it new."
+[62:30]
+"Add B-roll to it. Change the B-roll in it. Remove the B-roll. Okay? Make it new."
+[62:38]
+"You can attach yourself to what works, but it still must be new in the eyes of the platform to overcome the fatigue."
+[62:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Self-Awareness in Campaign Cycle"
+NÚMEROS: N/A
+VISUAL: Problema raiz: falta de awareness de onde está no ciclo + falta de plano = pânico e decisões ruins
+[62:50]
+"So when you guys again, you freak out because you don't recognize with self-awareness where you're at in the cycle of a campaign and you don't have a plan relative to where you're at within the campaign. You see what I mean?"
+[63:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Creative Testing Best Practices"
+NÚMEROS: N/A
+VISUAL: Início de seção tática sobre creative testing, transição de filosofia para prática
+[63:10]
+"So let's go through some best practices from a creative standpoint. Okay. So, creative testing is another incredible benefit but also a sin depending on how you approach it."
+[63:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Surplus Philosophy"
+NÚMEROS: N/A
+VISUAL: Erro comum: criar e testar imediatamente tudo = ridículo, correto = criar surplus e manter banco de recursos
+[63:28]
+"One of the number one things I see is people creating stuff and then thinking they need to immediately test all of it. Absolutely silly. A ridiculous belief. You guys are freaks who do that."
+[63:45]
+"You don't want to do that. I want to continue creating new ads and then have them in like a surplus."
+[63:55]
+"You guys got to understand the accumulation of resources is sometimes a greater benefactor to you compared to deploying the resources."
+[64:08]
+"I want to put the players into the game, but I also still need a bench of players for when one of my current players out there in the field gets injured. I got to have a deep roster."
+[64:22]
+"Otherwise, when one of my people on the field gets injured, what's going to happen then?"
+[64:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Budget Determines Testing Variables"
+NÚMEROS: $1,000 ou menos = 3-5 imagens/vídeos, 2-3 headlines, 2-3 body copy
+VISUAL: Tabela de budget vs variáveis: baixo budget = poucas variáveis, regra fundamental de testing
+[64:32]
+"So, here's the thing. budget determines the testing variables. Okay? So, let me give you an answer. If I'm at about $1,000 or less, I'm going to do about three to five images or videos."
+[64:48]
+"I'm going to do about two to three headlines and I'm going to do about two to three different pieces of body copy, otherwise known as primary text."
+[65:00]
+"Why doesn't matter whether it's dynamic ads or static ads? Why determine this amount of variables to be the most appropriate?"
+[65:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Algorithm Overwhelm Problem"
+NÚMEROS: N/A
+VISUAL: Problema: muito pouco budget + muitas variáveis = algoritmo não consegue gastar efetivamente para determinar o que funciona
+[65:12]
+"Very simple. I need to make sure that I do not overwhelm the algorithm and the platform with too many variables. Otherwise, it will not be able to spend through them effectively to determine what actually works."
+[65:30]
+"If I have too little budget and too many variables, I will have a bad time. Yes. This is per campaign, Timothy. Yes."
+[65:42]
+"If I have too little budget and too many variables, the platform will not be able to efficiently spend through them to determine which set of variables or combination of variables is the best."
+[66:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "CBO Campaign Mistake Example"
+NÚMEROS: 10 adsets diferentes, 5 ads cada, $500/dia budget = desastre
+VISUAL: Exemplo de erro clássico: CBO com muitos adsets + muitos ads + budget baixo = distribuição desigual e reclamações
+[66:02]
+"Give you a great example of this. Sometimes you'll launch like a CBO campaign, right? And let's say you put 10 different adsets in there with different audiences and on top of that you put like five different ads in there for every individual campaign and adset, okay?"
+[66:22]
+"but you have like a $500 a day budget and then you're gonna sit there and whine and complain when all of a sudden only one adset gets all the reach and you barely got any reach."
+[66:35]
+"Like you spent like dollars on the other adsets and some of your ads aren't getting any reach and you're going to be a little whiny boy and you're going to be like, 'Oh, dude, it's not getting any reach. Like CBO sucks.'"
+[66:50]
+"No, you suck and you're oblivious to the platform's rules and how it works. You can't blame a trillion dollar company when you're talking to me from an apartment or a home."
+[67:08]
+"You must also have some serious budget to make hard conclusions that it's truly their fault. Almost everything is your fault when it fails to do what you'd otherwise expect it to do."
+[67:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "High Budget Variable Example"
+NÚMEROS: $10K/day budget = 5 adsets, max variáveis (10 vídeos, 5 headlines, 5 body copy) = 200+ combinações possíveis
+VISUAL: Contraste: alto budget permite máximo de variáveis com distribuição relativamente igual inicial
+[67:28]
+"If I go launch a campaign that has like a $10,000 a day budget, okay, and I have five adsets within it and I'm using dynamic creative within it or static ads and I load it up with the maximum amount of variables, 10 videos, five headlines, five different pieces of body copy."
+[67:50]
+"Yeah, that's over 200 different combinations of ads that can be made with those variables. At a 10K budget, I will see a relatively equal distribution amongst all of those adsets initially before it starts to bias towards one or the other."
+[68:12]
+"I will see a relatively equal distribution of my advertising creatives until I start to see a heavy bias towards one specific combination that's worked the best."
+[68:28] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Platform's Helpful Bias"
+NÚMEROS: N/A
+VISUAL: Plataforma tentando AJUDAR: com muitas variáveis + pouco budget, imediatamente direciona para combinação mais provável de funcionar
+[68:30]
+"So, if I launch a campaign with too many variables and too little budget, I'm not going to have equal distribution. I'm going to have a heavily biased distribution because the platform's not even going to try to waste your budget."
+[68:48]
+"It's just going to conclude. It almost does like a scan of like, all right, this specific ad set and this specific ad variables that this advertiser has given us is what we determined to be the most probable to work."
+[69:08]
+"We're not even going to try to distribute the other budget because it dramatically lowers the probability of this advertiser getting a result."
+[69:20]
+"we're just going to immediately bias towards one specific outcome and lean into that to try to get this advertiser what they're optimizing for."
+[69:32]
+"And then you get pissed at the platform and in reality they made that decision to try to help you because you don't understand how to advertise. You see what I mean?"
+[69:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Trillion Dollar Company Wants You to Win"
+NÚMEROS: N/A
+VISUAL: Conceito fundamental: plataforma QUER seu sucesso para você continuar gastando, decisões são para AJUDAR
+[69:48]
+"So it's like remember the trillion dollar company, they want to help you win, okay? They want you to make money so you continue to give it more budget."
+[70:00]
+"This is very important to understand. When I spend enough, I can load it up with more variables. But if I load it up with too many variables, the easiest way to tell is upon launching the campaign, it immediately bias towards one thing over the other. And I did not get relatively equal reach."
+[70:20]
+"Does that make sense to everybody?"
+[70:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Q&A - Timothy's Questions"
+NÚMEROS: $250/day starting budgets mencionado, múltiplas campanhas
+VISUAL: Perguntas sobre budget inicial e account simplification best practices
+[70:28]
+"We got some questions in the chat I'd like to answer. Timothy says, 'How do you determine what the starting budget should be for a campaign? I'm doing 250 a day for starting budgets currently, but I have tons of campaigns.'"
+[70:45]
+"Yeah. So, to be clear, I like to first of all practice account simplification best practices. I'm going to try to have as few campaigns as possible for all of the different funnels that we're running."
+[71:00]
+"I'm going to try to condense them because that's a best practice of the platforms that they prefer. That way, I can concentrate my budget to test more variables within that campaign."
+[71:15]
+"In addition to that, when I'm starting off a campaign, I'm just determining what my test budget's going to be and what I'm willing to risk, aka what I'm willing to lose."
+[71:28]
+"So, if that's $250 a day, that's totally fine. That just means I'm going to include less variables on the creative testing side of things. That's all that means. That's okay. I could start off with a $100 a day budget."
+[71:45]
+"Again, I'm just going to have far less variables that I'm going to test with. You see, remember this, okay? The bigger the budget, the more I can test. The lower the budget, the less I can test."
+[72:00]
+"I have to concentrate my budget. And the platform's going to do this anyway. That's the whole point of what I just told you is even if you load it up with a bunch of variables."
+[72:12]
+"It's going to tell you to get fucked and it's going to bias your budget towards a concentrated thing that it deems most probable to convert for you."
+[72:25]
+"So, you might as well do that anyway if you have a lower budget. Reduce the variables with a smaller budget. That's all I mean."
+[72:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Q&A - James's 200 Variations Question"
+NÚMEROS: 10 imagens/vídeos × 5 headlines × 5 body copy = 250 combinações totais
+VISUAL: Problema matemático de combinações: múltiplos de variáveis criando centenas de possibilidades únicas
+[72:38]
+"James's question, he says,'Explain how you can efficiently record content in one setting that will get you 200 variations. Is that for an example? You say 12 hooks, two to three bodies, two to three CTAs.'"
+[72:55]
+"So, James, the 200 variables is determined by that common math problem you did back in school, back in grade school."
+[73:08]
+"So the variable max I can have 10 images or videos combination or I can have five headlines and I can have five pieces of body copy."
+[73:22]
+"So long story short when I say this is that problem in grade school maybe you remember it. It was okay. You got three pairs of shoes, got two pairs of pants, you got five t-shirts and a hat. How many combination of outfits do you have with that quantity of clothing material?"
+[73:42]
+"So in this case, this specific set of 200 combinations is the 10 different images or videos times the five different headlines times the five different pieces of body copy, which actually equates to about 250 total individual variations that can be created out of those individual variables."
+[74:05]
+"And again, the platform when you load it up with these specific assets, these variables here, images, videos, headlines, and body copy, it will combine them in different combinations to have up to 250 different individual variations in this case. Okay, that's all that math problem is."
+[74:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Brandon Carter Filming Efficiency Example"
+NÚMEROS: 5 tank tops, 10 locações diferentes, 3-4 horas = dezenas de vídeos
+VISUAL: Sistema eficiente: mesma fala + múltiplas locações + múltiplas roupas + múltiplos hooks = volume massivo de content
+[74:28]
+"Now, moral of the story, it's also very important to point out for your question specifically, if you're in one specific location, right, and you're filming ads, most of the time, like here's probably the most efficient person I've surprisingly ever filmed with is my buddy Brandon Carter."
+[74:48]
+"So, Brandon would come over at the time to the farmhouse and he would bring with him a small suitcase or bag. He would have about five different tank tops in it because that was Brandon's preferred outfit."
+[75:05]
+"We had a total of about 10 different places we could film at the farm mansion. We had the pool in the backyard with a few different angles. We had this like little tiki hut thing in the back. We had the cars in the front. We had the house in the front."
+[75:25]
+"You know, we had a few different angles, simply put, that we could shoot. So what we would generally do is we would shoot the same ad in all those different locations in one shirt and then he would go back and shoot the same ad in a different shirt in the same location"
+[75:45]
+"and then the same ad in the same locations with another different shirt, you know, and then we'd go back and we would film as an example while he's wearing the same clothes. We would film like two or three different hooks, you know, per location."
+[76:05]
+"So it's like we would have a total out of that in about a 3 to four hour window of filming of dozens of videos that were filmed, you know, just through a combination of saying the same things in different locations, saying different things in the same locations"
+[76:25]
+"and then saying the same things in the same locations and different locations in different outfits. That's the moral of the story."
+[76:35]
+"You just want to bring different clothes with you and have a place that has different locations and just have a few ad scripts. You just kind of go through them one at a time. up to you for how you flow through it."
+[76:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Copy/Headline Impact Question"
+NÚMEROS: N/A
+VISUAL: Hierarquia de atenção: 1) vídeo/imagem PRIMEIRO, 2) headline SEGUNDO, 3) body copy TERCEIRO
+[76:52]
+"How much does the copy/headline affect their performance? Yeah. So, generally when you have an ad, what you must consider is where people look first."
+[77:08]
+"Usually how it works is people will pay attention to the video or the image first. They will then pay attention to the headline second and they will pay attention to the body copy third. So in combination it looks like that."
+[77:28]
+"So headlines matter, body copy matters, but when it comes to overcoming ad fatigue, swapping out headlines and body copy is meaningless. It does absolutely fuck all for overcoming ad fatigue."
+[77:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "What Actually Overcomes Fatigue"
+NÚMEROS: Anos rodando mesmo copy mencionado
+VISUAL: Verdade fundamental: apenas trocar imagens/vídeos supera fadiga, headlines e body copy são secundários
+[77:48]
+"Swapping in new images or videos is always what overcomes ad fatigue. We have accounts that we've ran the same copy on for without exaggeration years. We just consistently swap in and out new images and videos."
+[78:08]
+"Again, I am happy to be clear to continue testing new body copy and new headlines. I'm not trying to make it sound like I'm not I'm just trying to emphasize my point for the weight that images and videos hold in the process."
+[78:28] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Targeting and Machine Learning Variables"
+NÚMEROS: N/A
+VISUAL: Lista completa de fatores que impactam targeting: vídeo/imagem, headline, body copy, lead form, landing page, vídeos na página, evento otimizado
+[78:30]
+"How much do headlines and body copy affect targeting and machine learning? So there are several variables that impact targeting and it goes well beyond just the body copy and the headlines. It's everything."
+[78:48]
+"So what's said in the video or the image, the headline, the body copy, the lead form, the landing page, the videos on the landing pages, all of that is very strong in terms of the bias for who it targets."
+[79:08]
+"Combined with the standard event that you are optimizing the campaigns for, that matters a whole lot. It is all factored in."
+[79:20]
+"That's why as an example, broad targeting is not as bad as what people make it out to be. You can have a lot of confidence that broad targeting can work well for you if you're passing back the right data through pixel conditioning."
+[79:38]
+"And in addition to that, if you are ensuring that you are being articulate towards who your target demographic is and the outcomes they want inside of all of the messaging throughout the entirety of your advertising process."
+[79:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Creative Surplus - Your War Chest"
+NÚMEROS: N/A
+VISUAL: Conceito de "war chest": recursos abundantes esperando na lateral, não posição reativa de ter que filmar novo
+[79:58]
+"So back to the point, creative testing, I always want to have a surplus. Okay. The greatest like your war chest that helps keep you alive is a creative surplus."
+[80:15]
+"I want abundant resources just sitting on the sideline. Okay. I do not want to be in a position where I have to go and reactively film new stuff. That is the worst position to be in."
+[80:30]
+"Ad fatigue only gets worse once it happens. It does not get better. Okay? It gets worse."
+[80:40]
+"So, moral of the story is I have to have just a giant surplus of additional creatives just sitting there. That way, when fatigue occurs, I can swap them in."
+[80:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Immediate Deployment Sin"
+NÚMEROS: N/A
+VISUAL: Erro comum visualizado: criar → imediatamente deployar = errado, criar → manter surplus → deployar quando necessário = correto
+[80:58]
+"The sin that I consistently see from advertisers is they just feel like as soon as they create something, they need to immediately deploy it. That's dumb. Makes no sense."
+[81:15]
+"It is better to create stuff so you remain ahead by just having it sit there on the sideline after it's created."
+[81:28]
+"Again, if I have campaigns that are performing well, the best time for me to test new creatives is when my current campaigns that are performing well and scaling fatigue."
+[81:45]
+"I don't need to launch a new campaign just for testing. Okay? I don't need another campaign targeting the exact same people, driving traffic to the exact same link that my campaigns that are scaling are going to just for testing random creatives. I do not need to do that."
+[82:08]
+"That creates audience overlap and artificially inflates my cost per result for both my scaling campaign and my test campaign."
+[82:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "What to Actually Test"
+NÚMEROS: N/A
+VISUAL: Foco correto de testes: outros funnels ou outras audiences, não creative testing em campanha duplicada
+[82:25]
+"What I want to test are other funnels or other audiences. Okay, I am testing creatives within one main campaign."
+[82:38]
+"If something works, great. Make a new version of it. And when ad fatigue occurs, pull out all of the previous images and videos. Put in the new version of what's previously worked and your new tests that are radically different from what worked."
+[82:58]
+"I do not need to artificially inflate my own costs and compete with myself with just creative testing. Okay? That is not an intended outcome of creative testing. Does that make sense to everybody?"
+[83:15]
+"It's like remember if something's not working, I'm going to relaunch the campaign anyway and I can put in new creatives. If something is working, I am scaling it."
+[83:30]
+"And when it stops, or I should say starts to give me indications that it's going to stop working, I'm relaunching it. And that's when I'm testing new stuff again."
+[83:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Tests Are For Audiences and Funnels"
+NÚMEROS: N/A
+VISUAL: Clarificação: testes standalone = audiences e funnels, não creative testing que compete consigo mesmo
+[83:48]
+"My tests are for audience testing and funnel testing. Okay. And even then, rarely am I going to have a standalone campaign just testing a bunch of different audiences."
+[84:05]
+"In most instances, I'm going to wait until my current campaigns fatigues and then I'm going to relaunch it with some new creative testing and some audience testing if I want to do that, too."
+[84:20]
+"it's okay to do audience testing and creative testing, but ideally, okay, and this is very important you understand this. This is a very good pro tip."
+[84:32] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "URL Duplication Pro Tip"
+NÚMEROS: N/A
+VISUAL: Hack avançado: duplicar funnel com URL diferente = plataforma pensa que é diferente = sem audience overlap
+[84:35]
+"Ideally, you duplicate the current funnel you have. You don't have to make a single change to it besides the URL. change the URL so it looks unique in the eyes of the platform that you're driving the traffic on and it will not create audience overlap for you."
+[84:58]
+"Because in the eyes of the platform, it does not understand what the fuck you're doing when you duplicate a campaign with the exact same audiences, the exact same place you're driving the traffic to."
+[85:15]
+"It's like, what the fuck is this guy doing? It has no idea why you're doing that. It doesn't make sense to it."
+[85:25]
+"If you're going to do that though, just do it with a different URL and then it thinks that that's a different URL. It thinks it's a different page even though it's the exact same content."
+[85:40]
+"And ideally, just to take it a step further than that, you do that in a backup ad account. That way, you condition that backup ad account and you further reduce the probability of any audience overlap occurring."
+[85:58]
+"There's a lot of best practices that occur for when you consider what can happen in the same account versus what opens up for you to be capable of doing without much negative consequence by just putting it into a different ad account. Does that make sense?"
+[86:18] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Q&A - Timothy's Audience Testing Question"
+NÚMEROS: 3 tipos de cold audiences mencionados
+VISUAL: Estrutura de audience testing: broad, lookalikes, giant interest stack - os 3 tipos principais
+[86:20]
+"Timothy here says, 'How much audience testing are you doing nowadays as opposed to just running broad?'"
+[86:30]
+"Yeah, I actually prefer to still do interest stacks. lookalikes are definitely doing well and then we'll also split test broad."
+[86:45]
+"So, our three different audiences that will typically run within a campaign, especially a scaled campaign, are if I'm doing cold, to be clear, let me be extremely direct on. If I'm doing cold targeting, okay, I want to test cold targeting."
+[87:05]
+"I'll do three different adsets. Broad lookalikes and a giant interest stack of who I think it's probable to do well with. So, the three different cold audience adsets that I would run and I would separate them."
+[87:25]
+"In addition to that, I would have a warm audience campaign, typically with just one ad set with all my warm audiences stacked together within that one ad set."
+[87:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Back to Axel's Scaling Question"
+NÚMEROS: 5x spend scaling mencionado
+VISUAL: Retorno à pergunta sobre manter ROAS ao escalar 5x, resposta baseada em tudo já articulado sobre life cycle
+[87:42]
+"So, long story short, let's go back to some of the questions that relate to, as an example, like what Axel had asked earlier. Axel had specifically asked, 'How do you make sure ROAS doesn't go lower as you 5x the spend?'"
+[88:00]
+"Well, that answer should be very prevalent to you now based on everything I've articulated within the life cycle of a campaign."
+[88:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Campaign Speed Visualization"
+NÚMEROS: $200-$1000/day exemplos, 2 meses vs 3 semanas timelines
+VISUAL: Desenho de curva de campanha: velocidade lenta = tempo longo, velocidade rápida (scaling) = tempo curto, gas pedal = budget
+[88:12]
+"Let me just make it really simple, right? I'm going to visualize it for you. So, it helps a little bit with retention."
+[88:22]
+"So, remember, if I visualize what a campaign does, I'm going to literally draw it at the speed in which we're going to go."
+[88:35]
+"So the first part of a campaign where it's probable to have the most resistance, the least probability for ROAS and then at the middle of the campaign, that's when we have the highest probability for performance and scale potential. And then at the end it can die."
+[88:55]
+"If I start it off, let's say like $1,000 a day or 200 a day or 500 a day, whatever it is, it's going to go slow. Okay? And then after I get through this window here, I'm like, 'All right, this is working really well. I'm going to scale.'"
+[89:15]
+"If I scale the fuck out of it really quick, I end up finishing the campaign really quick. Okay, if I maintain the same budget the entire time, I go at the same speed."
+[89:30]
+"if I speed up the budget as I scale, I speed up the process of going through the life cycle of a campaign. Okay, that's all I do."
+[89:45]
+"I just if I'm going to drive to a restaurant and I drive there at the same mile per hour the entire time, okay, versus obviously if I have stoplights along the way or I have the opportunity to just let it rip."
+[90:00]
+"All right, I'm getting there faster or I'm getting there slower relative to my speed. What determines speed in a campaign? What is the equivalent of a gas pedal in a campaign?"
+[90:15]
+"Somebody say it in the chat. What's the equivalent of us of a gas pedal? Spend and budget. That's exactly right."
+[90:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Budget as Gas Pedal"
+NÚMEROS: $500/day início → $10K/day fim possível, 2 meses ou 3 semanas variável
+VISUAL: Metáfora completa: budget = gas pedal, aumentar budget = acelerar através do life cycle
+[90:28]
+"So, when I increase the budget to scale, okay, here's the thing. It's like this right here, as an example, might start off at like 500 a day and then this entire cycle of time right here, this window when I'm scaling up like I might be able to end the campaign at like $10,000 a day."
+[90:50]
+"And this entire window right here, this might end up being like two months. Okay? In other instances, it's like it might end up being like three weeks."
+[91:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Audience Size Determines Campaign Distance"
+NÚMEROS: Chris e Chad = 12K audience, $200/day = frequency 5 em 2 semanas; Real estate = $50K/day por mês possível
+VISUAL: Comparação extrema: audience pequeno = fadiga rápida vs audience massivo = campanha longa, addressable market crítico
+[91:08]
+"One thing that also determines the distance that a campaign can go for, okay, the length of time that a campaign's probable to run for before we hit that plateau and then that decline, okay, is audience size and the quantity of people that are in market for what we are currently the advertising for and optimizing for."
+[91:32]
+"If I have a tight small audience, okay, I'll give you a good example. There's two inner circle members, Chris and Chad. Chris and Chad have a target audience of about 12,000 people on Facebook and Instagram."
+[91:50]
+"They could spend $200 a day and be at a frequency of like five on the campaign within two weeks. How long is a campaign probable to spend before it hits a plateau and an eventual fatigue for them?"
+[92:08]
+"Comparatively, if I run to cold audiences and let's say like as an example, I always love the real estate info product offers as a great example of this because there's so many people on earth that actively believe that real estate creates millionaires."
+[92:30]
+"So many people that have that thought in their head and there's also so many people that both are in it already and want to get in it that you could spend $50,000 a day."
+[92:45]
+"And no exaggeration, that campaign might have life for a month before it dies. If Chris and Chad with an audience of 12,000 people spent $50,000 a day, it would fatigue within the day."
+[93:05]
+"So the distance a campaign can go before I start to experience ROAS is determined by audience size and addressable market. Okay. Comparatively bigger audiences mean greater lengths of time."
+[93:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Maintaining ROAS While Scaling - Summary"
+NÚMEROS: N/A
+VISUAL: Lista completa de fatores: self-awareness no ciclo, creative surplus pronto, identificar fadiga cedo, superar rapidamente
+[93:28]
+"So again I have to ensure like how do I ensure that I have a great ROAS as I scale self-awareness on where I'm at in the advertising cycle."
+[93:42]
+"a creative surplus sitting there ready to test with for when ad fatigue occurs. Being able to identify that ad fatigue is about to occur or is occurring and overcoming it that determines whether ROAS maintains itself as I scale."
+[94:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Beyond Advertising - People Variables"
+NÚMEROS: N/A
+VISUAL: Fatores além de ads: show rate, close rate, AOV, morale de sales team, lead quality, separação marketing vs people
+[94:02]
+"In addition to that, there's some things outside of our control as advertisers in different campaigns. Let's say I'm running traffic to a sales team and the show rate all of a sudden tanks or the close rate tanks or the AOV tanks. That'll affect my ROAS as well."
+[94:22]
+"So there's marketing knobs and then there's people. Okay, I've got to maintain the statistics as I scale as well. I don't want to be negligent to that. I want to make sure you're very aware of that."
+[94:38]
+"I have to maintain statistics as I scale. If the statistics flux against me, my ROAS will flux against me. And sometimes that is beyond the life cycle of a campaign. And it doesn't have anything to do with fatigue."
+[94:58]
+"It has to do with your close rates the bed because your sales people have got low morale all of a sudden because all of a sudden lead quality change, you know, because all of a sudden blah blah blah. You see what I mean? You got to keep all that in mind, too."
+[95:18] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Q&A - Daniel's $500 Campaign Structure"
+NÚMEROS: $500 budget example
+VISUAL: Pergunta sobre estruturar campanha de $500, referência a training existente
+[95:20]
+"Daniel has a question in the chat. If launching a new campaign for $500, how would you structure that? Audiences and variables."
+[95:32]
+"Yeah, we have infinite training on that, Daniel. I'm not going through that here. There's plenty of training I can refer you to. Go ahead and follow up that in the chat after and we'll direct you on training."
+[95:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Chadvertising Summary - ROAS is Holy Grail"
+NÚMEROS: N/A
+VISUAL: Resumo final: ROAS = stat supremo, bottlenecks só importam quando ROAS ruim, foco em escala sempre
+[95:50]
+"So moral of the story when it comes to creative testing and ad optimization. Okay, I want to make this really clear just to reiterate. We are attempting to chadvertise."
+[96:08]
+"Chad advertising for us means that the holy grail, okay, the ultimate stat, okay, is ROAS that determines what we do more than anything else."
+[96:22]
+"From there, we can look at the sub-stats and try to identify bottlenecks. Okay? So, when things are not working, we're trying to find the choke point."
+[96:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Bottleneck Categories"
+NÚMEROS: N/A
+VISUAL: Lista exaustiva de possíveis bottlenecks: CPMs, CTR, conversion rate, watch rate BSL, application drop-off, show rate, close rate, AOV, etc.
+[96:38]
+"choke points could be CPMs, link click-through rates, conversion rates on the page, on the funnel, things like sub-stats even of that like watch rates on BSLs, application drop off rates, you know, things like this."
+[96:58]
+"If it's call funnels or webinars or challenge funnels, you know, show rates, close rates. If we have two call closes, we have the second call booking rate, the second call show rate. We have things like AOV and each one of these have sub-stats that can make up that individual stat."
+[97:20]
+"But again these statistics that are in the bottleneck category, when do they count? When do they matter? They matter when ROAS is not where we want it to be."
+[97:35]
+"as I mentioned, there is no static answer for any one of these particular statistics. There's good benchmarks to be aware of, but again, all of these statistics are dynamic."
+[97:50]
+"We use Devon as an example for saying, okay, you have a 7 to 1 ROAS, but your CPMs are high and your link clickthrough rate is 0.5%. Does it matter? No. Because again, ROAS trumps everything in that example."
+[98:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The TL;DR - Too Long Didn't Read"
+NÚMEROS: N/A
+VISUAL: Resumo ultra-simplificado: funciona + bom ROAS = ESCALA; não funciona + ROAS ruim = identifica bottleneck e corrige
+[98:12]
+"if I'm scaling and one of my campaigns or my main campaign, my ROAS starts to drop, what am I going to do? I'm going to go through and I'm going to identify the bottleneck."
+[98:28]
+"the ultimate thing to consider the summary like the too long didn't read version of all this is, okay, if it's working and you got good ROAS, scale it."
+[98:42]
+"If it's not working and your ROAS is not where you want it to be, look at where the bottleneck is and actively pay attention to it more than anything else. Overcome the bottleneck. That's the moral of the story."
+[98:58]
+"Does that make sense to everybody? Very good. Questions? Feel free to unmute yourself, drop them into the chat. Let's get these things answered and let's wrap it up. What do you guys got?"
+[99:15]
+"When do you start considering split testing? Uh, I'm appalled at that question. I must have done an absolutely terrible job during this presentation for you to ask that question."
+[99:30]
+"I am split testing literally the entire time as I just described. Maybe I just need to say it in more simple English. Uh, let me reiterate it assuming that it's my fault that you asked that question."
+[99:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Always Split Testing"
+NÚMEROS: N/A
+VISUAL: Clarificação: split testing SEMPRE acontecendo - audiences, creatives, funnels, não há momento de "começar"
+[99:50]
+"So I am split testing the audiences. I am split testing the creatives. as I mentioned at multiple points during this I am at most instances as I'm scaling also split testing funnels."
+[100:10]
+"I am split testing quite literally the entire time. There is not an instance where I am using a single creative or a single audience."
+[100:25]
+"again the entire time I am essentially split testing. Okay. follow-up questions on that. Other questions? Anything?"
+[100:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Announcements"
+NÚMEROS: Q2 Mastermind - Abril 12-13, UFC fight Abril 12, AI Jeremy fase 2 início da semana
+VISUAL: Updates sobre eventos e lançamentos: mastermind, UFC opcional, AI Jeremy voice/video calls
+[100:42]
+"Um, just a quick side note and an update. Two quick things. First of all, Q2 mastermind April 12th and 13th coming in hot."
+[100:55]
+"Just also want to reiterate, I'm not going to go to this, but still it's pretty cool for you guys to go to if you'd like. literally right across the street on April 12th, uh, Saturday after we get done networking. You can go watch the UFC fight over at the Heat Arena if you prefer to do that."
+[101:18]
+"Two, we have AI Jeremy, which I believe we will be able to roll out here at the beginning of this coming week fully for phase two."
+[101:30]
+"Phase two of AI Jeremy will be voice and video calls. Right now, you obviously all have access the ability to DM it on Telegram and ask questions to it in the group chat."
+[101:45]
+"A lot of you have given incredible feedback for how you've used it and exploited it to your benefit so far."
+[101:55]
+"You will be able to do voice and video calls with it here in this early week. Everything's ready to go. We just got to get the emails for everybody added in to be like whitelisted as inner circle members."
+[102:12]
+"You guys are the only people who have unlimited usage to it for message, voice, and video. Everybody else will have pretty excessive limits comparatively in like pay per minute usage."
+[102:30]
+"So, just to be clear, we'll roll out a whole video for that, like a big update, make sure that we tell you guys everything associated with that."
+[102:42]
+"really excited to see all the use cases for it. Gotten great feedback from everybody who's used it so far. If you haven't tried it yet, I would really consider you do. It's been very, very helpful for those that have."
+[103:00]
+"Again, just real quick before we head out, any follow-up questions?"
+[103:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Q&A - Gabe's Funnel Change Question"
+NÚMEROS: N/A
+VISUAL: Pergunta sobre quando mudar mecanismo de conversão (VSSL curto vs longo vs challenge) vs otimizar percentuais pequenos
+[103:10]
+"Gabe says, 'I don't believe I articulated it well. That's on me. I meant to avoid split testing help. Where is it better to change lead conversion mechanism versus slight percentage increases?'"
+[103:28]
+"Gabe, can you just unmute yourself and ask you a question?"
+[103:35]
+"Yeah, sure. So basically I'm asking when when is it a better time to consider changing like let's say you're going from like a VSSL funnel to let's say potentially a challenge or like just completely testing like a different VSSL like altogether"
+[103:55]
+"like going from like short form VSSL to like a long form VSSL versus just saying hey if we just double the optins in the if we just double the percentage of optins that are coming from the current VSSL like that's more of a worthwhile test"
+[104:15]
+"even know it's a split test versus just let's just test a totally new VSSL and just keep the optin the same."
+[104:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Bottleneck-Based Decision Making"
+NÚMEROS: N/A
+VISUAL: Framework de decisão: identificar bottleneck → atacar o que é mais fácil de dobrar ou reduzir pela metade
+[104:28]
+"Great question. Thank you for unmuting yourself. Long story short, it's all based on where the bottleneck is in the process in that instance."
+[104:42]
+"So, just to be a little more articulate, if I'm driving traffic to a VSSL, short form or long form, and I'm getting good feedback from the sales team that like leads are coming through well framed and like, you know, people the sales team's liking lead quality."
+[105:02]
+"But maybe I have too high of a cost per result. My attention likely won't go to the video in that case. You know, my attention would likely go to, as an example, again, just wherever the bottleneck is."
+[105:20]
+"If my link click-through rate is low and I want to drive down my cost, I could double that statistic if it's the easiest to double. You're trying to play the doubles game with bottlenecks or technically the reduction in half game, depending on the statistic."
+[105:42]
+"If I have a really shitty link click-through rate, I could obviously pay a lot of attention to that if that's what's easiest to double and it would obviously reduce my cost in head."
+[105:58]
+"If my like application rate on the page is dog shit and that's easiest to double, you know, maybe by changing a question or removing a question or just reframing how people are going through the application."
+[106:15]
+"The point being, it's like whatever's easiest to double or easiest to reduce in half, that's where I'm going to put my attention. It's not again it's not a very static answer. It's wherever needs the attention to get the outcome that we're looking for. That's the moral of the story. Does that make sense?"
+[106:38] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Call Funnel Unqualified Leads Example"
+NÚMEROS: $70K liquid capital requirement adicionado
+VISUAL: Caso específico: leads não qualificados = problema nos ADS não no vídeo, solução = mudar messaging em ads
+[106:40]
+"So like when I was getting the the unqualified people in the call funnel example for that new client I articulated to you guys. I didn't look at it like oh my video sucks and that's why I'm getting unqualified people."
+[107:00]
+"I looked at it like my ads are attracting unqualified people so I'm going to change the messaging in the ads and that's going to give me the outcome I'm looking for in this case."
+[107:15]
+"So again, I just restarted every single ad with if you have this amount of money or access to this amount of money then and then then we said what we normally say in the other ads."
+[107:32]
+"Makes sense."
+[107:35]
+"Yep. Thank you."
+[107:38]
+"Okay, cool. Any other questions before we go, guys?"
+[107:45]
+"Sweet. Thanks for joining in. Hope this was helpful. If you guys have follow-up questions, feel free to tag me and ask. You can also obviously tag and ask AI Jeremy."
+[108:00]
+"He'll be trained on this by tomorrow morning if he's not already from other training material we've already uploaded into him. If by the way missing Sorry. Go ahead. Who who said that?"
+[108:18]
+"Me."
+[108:20]
+"What's up?"
+[108:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Final Q&A - Budget and Adset Structure"
+NÚMEROS: $1,000 ou menos, cold audiences, interesse histórico funcionou
+VISUAL: Pergunta sobre número de adsets com budget baixo, resposta: menos variáveis = melhor
+[108:24]
+"So when you were doing the maths for $1,000 or less for the campaign, it was three to five images or videos, two to five headlines, two to three body copy, but how many adsets usually if it's less than $1,000?"
+[108:42]
+"As few as I can have. Yeah, as few as I can have. Remember like the fewer variables the better at smaller budgets."
+[108:55]
+"So, are you doing warm audiences in that example or cold audiences?"
+[109:00]
+"Cold audiences."
+[109:02]
+"Have you had any history in the account of a particular cold audience type working best?"
+[109:10]
+"for a different offer? Yes. But kind of similar, but for this one, it's like a completely new offer."
+[109:20]
+"So, there's three different types of cold audiences. There's interest stack targeting which also includes demographic and behavior traits. Lookalike audiences or broad. Okay. Have you had any singular performance with one of those three that have been better than the others in the past?"
+[109:42]
+"Interest."
+[109:44]
+"Yeah. Great. So, I'd likely start with that. I would start with a cold campaign, a singular ad set with just a big old interest stack in it."
+[110:00]
+"And then I would do my creative testing that we talked about there with two to three different images or or videos, two to three different headlines, two to three different pieces of body copy. Smaller the variables, the higher the probability of performance."
+[110:20]
+"Would it still be valid to have like two, three different adsets that have slightly different interest stacks?"
+[110:30]
+"Absolutely not. That's dumb. Put them all inside of one giant adset. Makes no sense to separate them out."
+[110:42] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Interest Stacking Strategy"
+NÚMEROS: N/A
+VISUAL: Estratégia correta: todos os interesses em 1 adset gigante vs separar em múltiplos adsets (errado), evitar overlap
+[110:45]
+"there's likely excessive overlap between all of them in that example. Well, the only real reason that most advertisers do that is they're attempting to determine like which of all the interests they have are the ones that are going to be the ones getting the results."
+[111:05]
+"When in reality, if you put them all within one specific ad set and you just do a big old stack of them, you're just combining everybody that's probable to convert anyway into a bigger audience."
+[111:20]
+"So you're giving yourself more scale potential and you're giving yourself a bigger audience of people initially that are probable to convert all out of one ad set which is better in comparison to splitting them off. Does that make sense?"
+[111:38]
+"So for example, yeah, it makes sense. So for example, I could take the the Jeremy Well stack that is posted for example, add all kinds of trading interest to it on top of it."
+[111:55]
+"And just run that."
+[111:58]
+"Yep."
+[112:00]
+"Exactly. That that's exactly right. Correct. And that's a lot smarter. Like I said, it's an account simplification best practice that you're following when you do that."
+[112:15]
+"You're increasing your probability of performance from that ad set rather than decreasing it by increasing the size. Does that make sense?"
+[112:28]
+"Makes sense. And also, you would just have the on the ad level one ad with all of the creatives as dynamic. Correct."
+[112:40]
+"I would I would personally do dynamic creative. However, it's okay if you do static ads. just don't create too many individual static variations, you know, kind of keep it simpler."
+[112:58] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Dynamic vs Static Ads - Current Glitch"
+NÚMEROS: 3 meses de glitch mencionado
+VISUAL: Problema técnico atual: dynamic virando flexible, soluções: export CSV, custom column, ou reverter para static
+[113:00]
+"The thing that I've been facing with dynamic for now because I've just gone back to running ads myself that occupied my media buyer. So, it's like how do you like at the result level when you're trying to see results, it doesn't tell you exactly which one got me the result. For example,"
+[113:22]
+"there's a glitch right now across the campaigns where it's like they're switching from dynamic to flexible ads. And that glitch has been around now for about three months. There's been a few ways to resolve it, but it doesn't always work to be clear."
+[113:42]
+"Way number one is to export the data. So like there's a little button in the top right to export to a CSV or Excel sheet that can show it."
+[113:55]
+"Two, if you create a custom column, the custom column can literally be as simple as pulling any other statistic that's not from a standard default column. That's gotten it to show"
+[114:12]
+"or in some instances if it still doesn't show, then just revert back to static creative. It's fine either way. Again, I don't care if you do dynamic creative or not. just been a great best practice for us historically. But we also typically run at higher budgets."
+[114:32]
+"So if you're a smaller budget, it's still good to control the spend for like where it goes. And if and if like I said, if you run at 500 a day and you do dynamic ads and you can't see what's working and what's not, then again, if your account doesn't resolve with those other two solutions I just proposed, then switch back to static is cool."
+[114:58]
+"All right. Thanks. Makes sense."
+[115:02]
+"Cool. Sweet. Other questions? Anybody?"
+[115:10]
+"All right, sweet. All right, cool. Appreciate it. Edward, by the way, your advertiser was trying to join into the group in the call. We didn't know he was your advertiser, so we denied him from both, but we'll let him in now. I'm sorry."
+[115:28]
+"All right, cool. Talk soon, everybody. Bye."
+📊 RESUMO EXECUTIVO
+NÚMEROS PRINCIPAIS:
+Devon's Campaign: $130 CPM, 0.5% CTR, 7x ROAS
+Timothy's Campaign: 2x ROAS front-end, $80K/mês spend = $160K revenue, continuidade mensal perpétua
+Cody Sanchez Challenge: $292K spend, 1.9x front-end ROAS, $3.4M back-end cash, $10K produto, 12% upsell para $35K (~300 compradores)
+Dan Martell Account: $1.6M/mês, modelo liquidação front-end
+Google Adwords Personal Injury: $200-$500 por CLIQUE
+Campaign Lifespan: $35K-$50K/dia = 5-7 dias fadiga; $1K-$5K/dia = 3-9 semanas
+Chris & Chad Audience: 12K pessoas apenas
+Budget Testing Variables: ≤$1K = 3-5 imagens/vídeos, 2-3 headlines, 2-3 body copy
+Dynamic Creative Math: 10 vídeos × 5 headlines × 5 body copy = 250 combinações
+Brandon Carter Filming: 5 camisetas, 10 locações, 3-4 horas = dezenas de vídeos
+ESTRATÉGIAS E SISTEMAS:
+Chadvertising Philosophy:
+ROAS é a métrica suprema que supera todas as outras
+Não existem respostas estáticas em advertising - tudo é dinâmico
+Foco constante em ESCALA, não em otimização prematura
+"Strike while the iron's hot" - escalar quando lucrativo
+Front-End vs Back-End:
+Atenção igual necessária em ambos
+30-day ROAS vs lifetime value
+Modelo de ascensão low ticket → high ticket
+Backend pode transformar sub-1x ROAS em 12x ROAS total
+Campaign Life Cycle:
+Início: Baixíssima probabilidade ROAS, julgar por "signs of life"
+Meio: Máxima probabilidade ROAS, momento de escala agressiva
+Fim: Plateau e morte inevitável (ad fatigue)
+Signs of Life (Leading Indicators):
+Stats trending na direção correta
+Feedback positivo de sales team
+Lead quality melhorando
+Custo por resultado caindo/estabilizando ("bottoming out")
+Test Windows:
+3-10 dias para novas campanhas (variável por contexto)
+Budget de teste = quanto você está disposto a PERDER
+Timetables apertam janela (webinars vs call funnels)
+Data Analysis Windows:
+Diário: apenas check, nunca decisões
+3 dias: indicação de tendência, decisões ocasionais
+7 dias: confirmação forte de tendência
+Month-to-date: visão favorita para conclusões finais
+Creative Testing:
+Manter SURPLUS massivo sempre
+Nunca testar imediatamente após criar
+Testar apenas quando: 1) Ad fatigue, 2) ROAS ruim, 3) Início de campanha
+Budget determina quantidade de variáveis
+Baixo budget = MENOS variáveis (plataforma vai concentrar de qualquer forma)
+Detachment Mastery:
+Nunca se apegar a campanhas ou creatives
+Recriar, não reusar
+Plataformas odeiam repetição
+Fadiga = oportunidade de teste
+Overcoming Ad Fatigue:
+Trocar APENAS imagens/vídeos (headlines e body copy são secundários)
+Fazer "novo": mudar roupa, local, adicionar/remover B-roll, usar chapéu/óculos
+Mesmas palavras em contexto visual diferente = novo para plataforma
+Audience Testing Structure:
+3 adsets cold: Broad, Lookalikes, Giant Interest Stack
+1 adset warm: todos warm audiences juntos
+NUNCA separar interesses similares (causa overlap)
+Stack TUDO em um adset gigante
+Scaling Strategy:
+Budget = gas pedal (determina velocidade através do life cycle)
+Audience size determina "distância" possível
+Addressable market crítico para longevidade
+Inflationary events (Super Bowl, Valentine's, etc.) aceleram fadiga
+ESTRUTURA:
+Bottleneck Identification:
+CPMs, CTR, Conversion Rate, Watch Rate, Application Rate, Show Rate, Close Rate, AOV
+Atacar o que é mais fácil de DOBRAR ou REDUZIR PELA METADE
+Bottlenecks só importam quando ROAS está ruim
+Account Simplification:
+Menos campanhas = melhor
+Concentrar budget para testar mais variáveis
+URL duplication hack: mesmo funnel, URL diferente = sem overlap
+Backup ad accounts para testes sem interferência
+The Doubles Game:
+Identificar stat mais fácil de dobrar
+Ou mais fácil de reduzir pela metade
+Depende do bottleneck específico
+TL;DR (Too Long Didn't Read):
+Funciona + bom ROAS = ESCALA
+Não funciona + ROAS ruim = identifica bottleneck → corrige
+DADOS FINANCEIROS:
+Exemplo scaling: $80K → $500K spend = diferença de $420K lucro (2x ROAS mantido)
+Mark Jennison: massive ROAS via back-end focus
+Real estate offers: $50K/dia sustentável por mês em cold traffic
+Personal injury lawyers: $200-$500 CPC justificável por ROAS
+Challenge model: investimento $292K → retorno $4M+ (30 dias + upsells)
+DURAÇÃO: ~115 minutos
+FORMATO: Weekly group call / masterclass sobre ad optimization e creative testing

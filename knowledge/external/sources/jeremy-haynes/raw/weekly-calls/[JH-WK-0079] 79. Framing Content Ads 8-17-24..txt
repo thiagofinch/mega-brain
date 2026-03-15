@@ -1,0 +1,522 @@
+Transcrição Completa: 79 Framing Content Ads 8 17 24
+[00:00] All right, sweet. Welcome into this week's group call. Um, to be clear, this week's topic is uh something I think carries over from what you guys appreciated on our most recent group call that we didn't necessarily dive into fully, and that is examples of the content distribution campaigns, um, categorical examples, like literal examples.
+[00:20] I'm going to go through with one of my clients that we've recently been doing this for and I'm going to specifically show you guys um to be clear after I show each one of these, I'm going to show uh 20 24 25 total examples uh one by one, answer any questions you guys have on them.
+[00:38] Um if we still have time towards the end, uh we can cherry pick one of you guys. you know, you can share your Instagram as an example and we could look and see if you've got anything that fits the bill or, you know, maybe just cherrypick one of your guys' businesses and uh, you know, go through some ideas that you guys might be able to execute on.
+[00:56] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Content Distribution Strategy - Webinar Targeting"
+NÚMEROS: 72 horas, 10-15,000 registrantes, $80,000 investimento mensal
+VISUAL: Estrutura de funil de webinar, linha do tempo de 72 horas destacada, fluxo de registrantes para webinar para follow-up
+[01:12] Okay, so first of all, uh, just a reminder on why we do this. Okay. So, number one, this particular content sequence that I'm talking about here is targeting on a monthly basis a list of webinar registrants over a 72-hour duration of time from the webinar start date to two days after the webinar.
+[01:32] Um, to be clear, allow me to explain this literally and then I'll explain like, you know, how we do this same thing for other funnel types as well, just so you guys can understand like where we're doing it first and then we'll go through the content.
+[01:44] So, number one, this particular client, um, she does a monthly webinar right in the middle of the month, typically on like the 13th or the 15th. Um, to be clear, that monthly webinar brings in about 10 to 15,000 total registrants. Um, I spend on the paid ad side about $80,000 monthly on generating those webinar registrants.
+[02:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Hammer Them Strategy / Mini Tornado"
+NÚMEROS: 10-15,000 registrantes, $80,000 ad spend mensal, 72 horas de targeting
+VISUAL: Conceito de "martelo" visual, tornado de conteúdo cercando o cliente, janela de 72 horas destacada
+[02:15] To be clear, the logic of this specific campaign I would consider under the hammer them strategy. Okay, some people are also referring to this now as a mini tornado. Uh, whatever you want to call it.
+[02:26] Okay, I export the list of webinar registrants the day of the webinar. I dynamically have it updating from the CRM. Meaning most CRM will have this functionality to be clear, but like in the marketing automation, if you have a function like Active Campaign or HubSpot or, you know, one of the other CRM that does this, you want to take the registrance as they come in and upload them dynamically to a customer list.
+[02:50] That way, it's adding them in real time as they continue to come in the day of. Um to be clear, after I get that webinar registrant list uploaded and you know it's successfully populated and ready to go, we load it up into a campaign that is optimized for engagement.
+[03:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Campaign Setup - Video Views Optimization"
+NÚMEROS: 24 ad sets, 24 vídeos, 15 segundos, 3 segundos, 365 dias
+VISUAL: Estrutura de campaign com múltiplos ad sets, ícone de visualização de vídeo, exclusões de audiência representadas
+[03:12] On the ad set level, I have the ad sets optimized for video views and maximized throughplay views, which mean which means that we're optimizing for 15-second video views ideally.
+[03:24] Um, to be clear, each ad set contains one piece of content and all the adsets are the exact same in terms of the targeting. The only difference is is each adset has the exclusion of a 3-second video view audience for the video within that particular ad set.
+[03:42] So, long story short, in this particular case, we've got 24 total adsets. Therefore, we've got 24 total videos. And once again, the only variance between these adsets is on the adset level, we are excluding the video that is within that adset. 3 second video of you audience for a 365-day duration.
+[04:04] To be clear, placement wise, if you are not cross-posting your reels to Facebook, then this placement is exclusive to Instagram. If you are cross-posting your reels to Facebook, then you can also run the Facebook placement.
+[04:18] Does anybody have questions on that so far before I go through the technicals of the content?
+[04:22] All right, cool. Let's go through these.
+[04:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "4 Content Types Framework"
+NÚMEROS: 4 categorias principais
+VISUAL: Quatro pilares de conteúdo: Framing, Objection Handling, Get to Know You, Belief Management - representados como colunas ou quadrantes
+[04:26] So remember content, I ideally want to select about four different types of content. Okay? Framing, objection handling, get to know you content, and belief management.
+[04:36] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Client Profile: Cody Sanchez"
+NÚMEROS: $10,000 oferta de curso
+VISUAL: Perfil da cliente, ex-Goldman Sachs, especialista em aquisição de negócios, ícones de empresas pequenas
+[04:38] Okay, so each one of these pieces of content, let me just go through the client real quick. Client's name, Cody Sanchez. This girl teaches people how to buy businesses. She dropped out of Goldman Sachs. She had a job at Goldman Sachs. She quit, started buying buying small businesses originally.
+[04:54] She encourages people to buy businesses because she thinks it's a faster route in comparison to building a business. She has a lot of propaganda around that specific ideology that we can cherrypick from.
+[05:06] Some of the biggest objections of this particular client on sales calls are, "Well, I already have a great job, you know, like I already live a comfortable life. Things are going well for me. I'm not in a lot of pain, you know, so I'm not really driven to make the decision."
+[05:22] Now, sometimes it's money. She had a $10,000 offer that we're selling on the webinar and on on uh sales calls. To be clear, all this content that we're about to go through helps with the framing with a potential objection that could come up on a sales call with having comfort to spend $10,000 on a course in a community.
+[05:42] In addition to that, giving them confidence to buy a business, giving them the right ways to think about buying a business. And then in addition to that, we have some indirect examples that we'll go through as well, such as uh transition content.
+[05:56] We refer to it as transition content. That simply means giving people the confidence to make the jump into something new. When you sell an opportunity, that's pretty critical.
+[06:08] Okay. So, to be clear, uh let me see the best way to show you guys this. I ideally can get it with uh sound for us. We'll go to her Instagram. We'll watch them there.
+[06:20] Okay. So, first of all, this is also a good example, I guess. We post everything on reals. So, we'll go through these and uh see what we got.
+[06:28] 📊 CONTEÚDO DE VÍDEO 1 ───────────────────────────── TEXTO: "Goat Lady Business Story"
+NÚMEROS: $100,000 por ano vendendo cabras
+VISUAL: Mulher em van, cabras, transição de assistente pessoal para empresária de cabras, conceito de blue collar
+[06:30] [Vídeo mostrando]: "What do you do for a living to drive this van? I'm a crazy goat lady. You sell goats? Yes, as pets. How much do you make selling goats? About 100,000 a year. What did you used to do for a living? I was a personal assistant."
+[06:48] "How much money would I have to give you for you to go back to taking care of executives instead of goats? No amount. No amount."
+[06:56] "What advice do you have for young people about work? When you're really young and depending on your parenting, your what your parents did. If you're forced to get out and make a living, sometimes you don't get the choice to do what you're passionate about. But if you can, you should do what you're passionate about, then it doesn't feel like work."
+[07:16] "Blue Collar Nation bringing dignity back to hard work that can still make a lot of money without crypto schemes and get rich quick nonsense."
+[07:24] Great piece of content right there. Put in the chat real quick, how many of you think you can make $100,000 a year selling goats. It's an older lady in a in a van selling goats to be clear, making 100K.
+[07:36] That'd be an example of a good piece of content simply because it shows somebody who made a transition from helping executives. She might have been a consultant or like some kind of a corporate job. And once again, she transitioned into like a basic bluecollar business.
+[07:52] Ideally, we could demonstrate in addition to what she talked about some of like the differences between her old job and that new job. that new job having more time freedom as an example or just like more control over her schedule or her just having like more fun as she kind of highlighted there.
+[08:08] Uh I know it's a silly piece of content, but regardless it's it's definitely be an effective piece of content.
+[08:14] 📊 CONTEÚDO DE VÍDEO 2 ───────────────────────────── TEXTO: "Entrepreneurship Reality Check"
+NÚMEROS: Nenhum específico
+VISUAL: Cody falando sobre dificuldades, negócios com problemas de caixa, funcionário-chave saindo, múltiplos desafios simultâneos
+[08:16] [Vídeo mostrando]: "If you choose entrepreneurship, you did not ask for easy. Anybody who told you this is going to be easy live, but you did ask for it to be worth it. And I do think that this game of entrepreneurship is worth it."
+[08:32] "I had a rough week where one of my businesses is super cash trapped. Another business thinks they can do a huge deal. They can't. they're not going to be able to get the deal done. I have another business that has with a key employee leaving and all that is happening this week"
+[08:48] "and there's this wild thing about entrepreneurship where I think that the universe kind of asks you sometimes if you want a thing you tell it and then the universe goes and it just kind of kicks you a few times while you're down and you have to while you're getting kicked go no I'm sure I'm sure I still want it"
+[09:08] "and so I bring this up because while I stand on stage with a big portfolio and all these companies if you think that I'm not getting kicked in the proverbial daily you're out of your mind. And so while this week may be awful, it doesn't mean that it's not going to open up for something pretty incredible. If you chose entrepreneurship, you..."
+[09:28] Great. Another great piece of content there. This one specifically deals with the framing around, look, this isn't going to be easy, right?
+[09:36] Ask yourself this for whatever service you're selling. Do you want people to buy it and just expect like an easy transition to whatever result or outcome that they want? if they have to put in work themselves.
+[09:48] Like let's say you're selling a course as an example or like let's say you're selling agency services where the client has to do some work as well or you know whatever it is that you're selling.
+[09:58] To be clear, being able to frame people ahead of time that you know there's there's going to be hard times like it's going to be times where you really got to push through and you still got to prevail, but it's going to be worth it. Makes a ton of sense to put as a framing piece of content in front of somebody during the buying cycle.
+[10:16] That way they come through with more realistic expectations.
+[10:20] 📊 CONTEÚDO REJEITADO ───────────────────────────── TEXTO: "God and Religion Content"
+NÚMEROS: Nenhum
+VISUAL: Cody discutindo religião e Deus
+[10:22] [Vídeo começando sobre Deus] I would use that one because I really wouldn't want to step on the belief of God. Uh, long story short, politics and religion especially, I try to steer clear from because it can really create like a polarizing...
+[10:38] I'll give you a great example like when the Trump assassination happened or I should say the attempted assassination. Uh, she she posted a bunch of stuff like you know about about that and no exaggeration I think she lost like it was like 80,000 or like 100,000 followers.
+[10:54] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Polarizing Content Warning"
+NÚMEROS: 80,000-100,000 seguidores perdidos
+VISUAL: Tópicos polarizantes listados: política, religião, Trump, símbolos de divisão, espectro de reações
+[10:56] So you you want to make sure you understand like the polarizing spectrum that exists uh you want to try to steer clear of the things that when somebody hears just immediately snaps them into a perspective of like okay I like that or like I hate that.
+[11:12] Uh because that can once again get somebody to immediately just like disassociate with you completely and immediately go into the bucket of like no I don't fuck with this person anymore because they say that does that make sense?
+[11:24] Like as an example, like I could be like carnivore or vegan, you know, and and that's not incredibly like instant polarizing, but if I was like if I pulled down my shirt and I had like a Trump tattoo right here, you know what I mean? Can you see how immediately that's like highly different?
+[11:40] You have like a reactive thought to it, you know? Or if I had like a fucking Kamala tattoo on my on my fucking forearm, you know what I mean?
+[11:48] uh even if I just express that I have like a radical belief about like dude some people as an example like they they hear that somebody's a particular religion you know and they just think a whole bunch of like specific thoughts immediately we want to try to steer clear of those
+[12:04] not necessarily in the attempt to like I I want to be clear when I say this uh the belief that you likely internalize of you know I don't give a fuck what other people think like that's great as a self-preservation belief
+[12:18] however when it comes comes to like content distribution and what we're attempting to do with the content. We absolutely want to give a fuck what the other person thinks, you know? That's the whole point of it.
+[12:30] We're trying to persuade and and manipulate how they think to positively benefit them increasing their odds of buying from us or spending more money with us faster. You see what I'm saying?
+[12:42] So, we we do give a fuck about what people think when it comes to content distribution. Okay?
+[12:48] 📊 CONTEÚDO DE VÍDEO 3 ───────────────────────────── TEXTO: "Fear and Courage"
+NÚMEROS: Nenhum específico
+VISUAL: Cody discutindo medo, coragem, analogia de levantamento de peso, crescimento pessoal
+[12:50] [Vídeo mostrando]: "Everyone has fear. There's not a person that doesn't have fear. Courage and bravery. Even in the face of fear, I choose to do the thing because it's hard. I choose to do the thing because it's better for somebody else."
+[13:06] "And the byproduct of getting through that to make it super simple, I'm trying to like PR on a lift. Yeah, I'm fearful I'm not going to be able to lift it, but I lift it. The byproduct is I'm stronger after."
+[13:20] "I know that's like a super oversimplication of it. But in the human condition, if I'm fearful to do this act, this hard thing, the selfless thing, this thing that is that that might hurt me, that is suffering. But on the other side of it is a better version of me, cool. I'm down for it. I'm here for that. Everyone has fear."
+[13:42] Yeah. I hope you guys understand how obvious that one is. Uh to be clear, that's an example of an indirect piece of content that that's going to come up like that type of thought's going to come up in the buying cycle.
+[13:54] You know, like I said, we're trying to transition people into buying businesses. like it's a there's a relative, you know, perceptually large financial risk to that. There's the time risk. Uh, you know, there's the emotional draw that comes from that type of risk.
+[14:10] Uh, people, especially as they age, take less big risks because they have a lot more responsibilities. Um, to be clear, all that's going to come up in the buying cycle.
+[14:20] Just ask yourself this. Does that video successfully plant the idea or help the person frame an opportunity as worth doing even if fear is present? That's what we're attempting to do with that piece of content when we use it.
+[14:34] 📊 CONTEÚDO DE VÍDEO 4 ───────────────────────────── TEXTO: "Baby Boomer Business Opportunity"
+NÚMEROS: $84 trilhões, 18 milhões de negócios, 25 anos
+VISUAL: Números massivos, transferência de riqueza, gráficos de oportunidade, baby boomers se aposentando
+[14:36] [Vídeo mostrando]: "$84 trillion, that is how much money is going to transfer from boomers to us, are about to retire. Why would they just pass on the family business? Well, their millennial kids don't want them."
+[14:52] "So, we're going to have 18 million businesses over the next 25 years that unless they find new owners, those bad boys are going to zero, totally disappear."
+[15:04] "But we're starting to see four problems playing out. The first one is a lot of the businesses are a mess. They can clean it up. The second is the owners have no clue how to list the business or find the right buyer. The third is they want too much money. And the final one is the buyers have no idea how to find and buy the good boomer businesses."
+[15:24] "That's a lot of problems. So, what's the solution? I think we're building it. Comment early to be the first to hear about it."
+[15:32] So, this is a classic central framing belief that we like to plant for the opportunity. Uh, essentially when somebody thinks, okay, I got to buy a business. Like, there's a lot of people out there who don't even think that there's enough businesses that you could even buy.
+[15:48] Like, when you ask yourself a question as an example, because most of you, I'm sure, haven't bought businesses. Like, put in the chat real quick. How many businesses at one time do you think are available to purchase?
+[16:02] Like take a moment once again, put in the chat at any given time. How many businesses do you think are available to purchase just in the US?
+[16:12] Whatever you think to be clear, not I'm not even naming a specific location. Just wherever you would want to buy a business, I think that'd be appropriate. How many businesses do you guys think are available to purchase at a given time?
+[16:24] Tom Elliot, where you at? Ash, what's your answers? Put it in the chat.
+[16:30] So, Drew says probably millions. Gabe says around 700K. Adam says 500K. Ash says 500K. Tom, you got an answer? Elliot, you got an answer? Tom says not that many.
+[16:44] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Audience Belief Variance"
+NÚMEROS: Respostas: milhões, 700K, 500K, "não muitos"
+VISUAL: Gráfico mostrando variância nas crenças da audiência sobre disponibilidade de negócios
+[16:46] Yeah. So, as an example, like look at the variance in your guys' answers. So, for somebody like Tom that says not that many, when I can get a few videos in front of Tom as an example that specifically talk about the fact that all these baby boomers have big businesses
+[17:02] like what's the what's the belief about baby boomers? Like, think about this real quick. Like what's the propaganda already in your head about baby boomers?
+[17:12] Like I think a lot of stuff about like lead poisoning and you know that they're pretty like selfish people. But another thing I think is like dude these people have a fuckload of wealth.
+[17:24] Like I have seen a lot of propaganda about the fact that baby boomers have like had one of the greatest generational opportunities in the history of like life to get wealthy.
+[17:36] Um, I've heard and seen like graphs, you know, that demonstrate the amount of wealth that baby boomers have versus like all the other generations collectively are like, you know, a fourth of it.
+[17:48] Uh, you know, my point is is like there's already some thoughts in my head about how boomers have a lot of money. So, if I get the opportunity to also connect the dots that like, oh shit yeah, like they run businesses and they're all going to die sooner, just want to retire
+[18:04] like, yeah, they're going to want to sell their businesses for a lump sum or something or like how like it just plants the belief and the idea that there are likely more businesses than what you'd consider available to purchase at a given time. And it also sells you on like why.
+[18:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Power of WHY"
+NÚMEROS: 2017, Las Vegas, Mandalay Bay
+VISUAL: Importância do "porquê" na narrativa, exemplo de tiroteio em Vegas, loops abertos vs fechados
+[18:24] Like, it's very important. Humans require a why. I'll give you a great example. Does anybody remember in 2017 uh there was a crazy shooting that happened in Las Vegas in the Mandalay Bay Hotel there was a shooter on like I think it was like the 60s something floor.
+[18:42] Uh he had like dude like infinite guns. He had like hundreds of guns and he there was a country concert and he just literally open fired on this concert and I remember one night I was sitting in in Los Angeles and dude I like saw these videos coming out of this fucking happening in real time
+[19:00] and I was like holy shit like why is this guy doing this? There was never a why that got released. So whenever there's not a why, there's like a rampid amount of conspiracies that start to come out because humans have to fill the void for why something happens.
+[19:18] Without a why, there's not a lot of conviction that can occur because it's like an open loop. We have to close the loop for people with a why.
+[19:28] So when we tell them in this case like look, we want to teach you how to buy businesses. Well, there's a lot of open loops that happen immediately in terms of like why, you know?
+[19:40] So, one of the big whys is well, in terms of opportunities, like all these boomers are going to retire. They need somebody to come in and run their businesses like they want to sell. They have the reason to sell.
+[19:54] Now, to be clear, there's other beliefs that hopefully we can see in this content here today where she talks about seller financing as an example where she where she says, "Look, you don't even have to come out of pocket a lot of money."
+[20:08] "You know, believe it or not, like a lot of these people, they're going to be willing to let you run the business for like a very little down payment, maybe nothing, and profit share with you because simply put, they don't want to do it themselves anymore, but they don't want to give up the cash flow because now they want to retire."
+[20:26] You know, that's an incredible why to tie into the baby boomer logic that we just planted as a belief.
+[20:34] So, a lot of people sometimes think in content that you need to have like a fully well-rounded immediate answer for people. It's okay to piece that content out in a few different pieces of content.
+[20:46] So like in the baby boomer one, I'm just introducing like the opportunity in a sense. In the seller financing, I need to tie back into the baby boomer logic of like, well, they want to retire, but they don't want to give up the cash flow.
+[21:00] They don't just want to live off a lump sum forever, you know? They need money, too, to survive, you know? So anyway, that's another great piece of content. Let's see what this one is.
+[21:12] 📊 CONTEÚDO DE VÍDEO 5 ───────────────────────────── TEXTO: "Passion vs Profits"
+NÚMEROS: Nenhum específico
+VISUAL: Discussão sobre seguir paixão vs ROI, analogia de academia, dor de curto prazo vs ganho de longo prazo
+[21:14] [Vídeo mostrando]: "What are your thoughts on doing work that you love and doing work that you enjoy? I think we were sold a bag of lies when people told us to follow our passion and it will lead to profits."
+[21:28] "Are you chasing shortterm joy and not realizing that short-term joy leads to long-term pain? And I think most of us have been sold falsities lately. We've got so much hustle culture back in the day that we like reacted against it and now we think that we can go around float around do whatever we want. We don't have any repercussions."
+[21:48] "I am saying if you get to choose between something that is hard but has a high ROI on the thing you care about a high potential for what you really care about in life do it even if it hurts. Nobody likes going to the gym to start but then you actually end up loving the game."
+[22:06] Yeah, tremendous piece of content. Tremendous. To be clear in terms of the indirect framing like she's going to tell people in some of these videos that we'll see here soon.
+[22:18] uh look, you need to buy like a rehab business or you need to buy like a like a plumbing business or an HVAC business or like you know, she's really big into bluecollar businesses specifically and what she refers to as boring businesses.
+[22:34] So, as an example, if you saw a piece of content, whether it came before or after that tells you, hey, I need you to go buy an AC company, an HVAC company, like you're probably thinking to yourself, oh, I'm not going to have a lot of joy doing that.
+[22:50] Like, I'm not going to have a lot of fun doing that. Like, that doesn't sound like I'm going to be passionate about it. And like that specific piece of content and telling people like that's bullshit to think that you need to be having fun, you know, while you're making a fuckload of money.
+[23:06] Like you you get the money and then you go have fun after. You know, that type of belief management is without without exaggerating. That's an incredible example of an objection that might not be spoken but will hold somebody back.
+[23:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Subconscious Objections"
+NÚMEROS: Nenhum
+VISUAL: Objeções faladas vs não faladas, iceberg com objeções visíveis acima da água e subconscientes abaixo
+[23:24] You know, think about this very importantly, okay? Put a lot of emphasis on this for yourself. You hear objections like, "Oh, I don't have the money." Or like, "I need to talk to somebody." Like just the classic little objections.
+[23:38] What you don't hear are the things that the person might not even be self-aware of that hold them back on the subconscious level. Like that'd be a great example of that.
+[23:50] Do you think on a sales call that we would hear, "Yeah, well, I don't really want to buy a fucking AC company. I don't think that's going to be a lot of fun." Like that's likely something somebody's not necessarily going to be super self-aware of.
+[24:04] They might voice that objection as I don't really know if this is for me. they they genuinely might not have the conscious awareness to consider why they don't want to do it.
+[24:16] When we plant that kind of belief and we just make them that's all that's all planting beliefs is guys is just introducing the thought so they can think with it. Okay?
+[24:28] People don't know what they don't know. We can't expect them to have like thoughts about things. Not everybody takes time to critically think about each thing that's going to hold them back or make them do something.
+[24:42] When we introduce thoughts at the time that a decision arises, we now know that there's thoughts in that person's head that we planted that they might used to think with. Do you get the importance of it?
+[24:56] 📊 PERGUNTA DA AUDIÊNCIA ───────────────────────────── TEXTO: "Timing Question - Before or After Direct Response"
+NÚMEROS: 2 meses, 72 horas
+VISUAL: Timeline de funil, framing antes vs depois de ads diretos
+[24:58] [Pergunta do participante]: "in this particular in this particular funnel, are you framing them before you hit them with direct ads like the harvester or are you doing it like the uh after they've seen the direct response ad?"
+[25:12] No. So in this case, this is this is uh they've seen direct response ads and registered for a webinar and then we are we hammered them.
+[25:24] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Campaign Frequency Statistics"
+NÚMEROS: Frequência 11, 72 horas, 24 peças de conteúdo
+VISUAL: Dashboard do Facebook Ads mostrando frequência 11.2 em 3 dias, múltiplos ad sets
+[25:26] To be clear, if you actually check the uh the frequency statistics on this particular campaign that we're referring to, uh we have a frequency of 11 within uh 72 hours. See down here?
+[25:40] So within three days from the day of the webinar to two days after the webinar, we managed to hit people 11 times out of 24 pieces of content.
+[25:52] [Pergunta]: "Question. If you're doing a DM or you're doing uh ad to DM for setter, then sales call. Generally what I do is I put like a 30-day cycle of anybody that's DM'd me in the last 30 days. Would that be a pretty good idea? because that's what I've kind of been doing as like a content cycle bin."
+[26:12] Well, so it depends. So, in this case, you know, one of the questions that nobody's asked yet is, "Well, Jeremy, why 72 hours? Like, why did you only do that 72 hours?"
+[26:24] And I did that 72 hours because that's when people have the highest probability to make a decision. So, to be clear, I want the highest concentration of content. Meaning in terms of the frequency, I want the frequency to be the absolute highest at key decision-making moments in my buying cycle.
+[26:44] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "72-Hour Decision Window"
+NÚMEROS: 72 horas, 4 decisões-chave
+VISUAL: Timeline mostrando: registro webinar → assistir webinar → agendar call → comparecer call, tudo em 72h
+[26:46] So this in this case, showing up to the webinar and then during the webinar and then booking a call and then showing up to that call. Those all happen typically within 72 hours from the day of the webinar to two days after the webinar. Those four key decisions all happen right then and there. So I'm hammering people during that window.
+[27:08] Now, I still have content running towards these people just like you do over a broader duration of time such as a 14 or 30 day cycle. I like to select a rolling amount of time for whatever the average sales cycle is of a lead.
+[27:24] So, in your in your case, as an example, if it takes somebody who DMs uh three weeks on average to end up purchasing, and that's like your historical sales cycle time frame, that's where I would want my highest frequency to occur is over an entire 3-week duration.
+[27:42] if on average and this and this varies depending on the business uh like we had Adrian on the call here today who represents James uh in James' business a majority of their leads like it seemed like 90% plus were buying within a week.
+[27:58] So their their rolling window for when that audience of people who are booking a call should be dynamically updating and then dropping those people out is essentially a week. That's when they should seek their highest frequency. Does that make sense?
+[28:14] Yeah, makes 100% sense. Um, quick question. So, obviously when you're doing a webinar, it's super easy to retract that person because obviously it has a pixel on the website, right?
+[28:26] If you're doing a D, if you're doing a setter to DM, obviously, and then the sales call, obviously we get their information. Is there any way to put them in a 72-hour cycle just from getting their information from a sales call?
+[28:40] Uh, yeah. To be clear, you have the conversion API to leverage and the pixel and you just update a dynamic customer list. What what CRM do you use?
+[28:50] Um, I use Go High Level.
+[28:52] Yeah. So, I'm not I'm actually not sure if GoHigh Level has this or not. I'm pretty sure they would. They're pretty robust CRM nowadays. Um, just go into the marketing automation feature and see when you build out a marketing automation sequence if you have a specific function for updating and removing from a Facebook audience within the actual workflow itself.
+[29:14] If you don't, you can always use Zapier. Zapier has that function as well.
+[29:20] Okay. I might have had to set up a call with you then to set that up because I have no freaking clue.
+[29:26] Okay. Yeah. All good. Okay. Cool. So, let's go back to checking out more content.
+[29:32] [Pergunta]: "Jeremy, I have another question. How do you So, that kind of psychology that you uncover where they're like they may say, "Oh, I'm not really interested or not know it's for me." But really, the underlying psychology is them actually not knowing how complex or easy the business is. How do you usually flush those out? Like what has been your method? Is it talking to the salespeople or just..."
+[29:58] Well, so the sales people the sales I absolutely will talk to the sales people to be clear, but they'll give me like very very direct objections.
+[30:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Objection Evolution with Content"
+NÚMEROS: Nenhum específico
+VISUAL: Objeções básicas evoluindo para objeções sofisticadas, setas mostrando progressão
+[30:10] They'll give me like well, you know, like the most recent objections on on Cody's end have been uh and and by the way, it's also important to just note as a caveat real quick while I'm explaining this.
+[30:24] When you do content the right way, the objections will become more sophisticated that the sales people tell you about. So when you initially talk to the salespeople and then you deploy content, make sure you go back to the salespeople regularly and ask them if the objections have changed because they will if you do the content thing right. Okay.
+[30:44] To be clear, the most recent objections have been, well, I'm not in a lot of pain. Like I don't really need to do this. You know, this is like a want, which doesn't make it as high priority to spend 10k if it's a want versus a need.
+[31:00] If there's not enough desire there, which in these people's cases, we're we're getting a lot of like very welloff W2 like contractor type people who are, you know, financially in a great position in life, you know, stable, you know, potential families or even if they're single, like they're just in a great spot in life.
+[31:20] They as an example like we had somebody who work at one of the big tech companies the other day like dude they get free food every meal they get like infinite health benefits you know they have uh stock options they have like multi6figure salaries
+[31:36] and like they also work with some of the smartest people in their field um how do you convince that person to quit their job and like start a business on the side you know and buy a business it's like that's an example of some of the potential objections that have come up and that's the feedback I'll get from the sales team. Right?
+[31:56] So to be clear, I'll then take that and I'll relay that directly to Cody and I'll say, "Okay, so hey, like this is an example of the objections we're getting. Like here's some content ideas we should do relative to that set of objections."
+[32:12] But in addition to that, I'll also try to think through, like I said, some of the things that are unspoken, which is, well, why why does that type of person have a desire in the first place to even get on a sales call?
+[32:26] Well, obviously they fucking know deep down inside of them that they want to do it. So, like I'll tell Cody, as an example, to make a piece of content like this where I say, "Okay, Cody, I want you to make a piece of content that says like you got to listen to that little fucking internal whisper that like pulls you directions, you know, and tells you like the things that you know you really want and need."
+[32:48] And like sometimes you just got to ignore like how good your life is and like take some fucking risks anyway, you know? Because at the end of the day, like if you find yourself just there's like signs, you know, like if you like show up to a sales call or you book a sales call, you come to one of my webinars about buying businesses, like what does that show about yourself?
+[33:10] Yeah, things might be great for you, but like at the end of the day, there's clearly something inside of you that knows that's not going to be what gets you to where you actually want to be in life.
+[33:22] And that's why you're in that that's why you're in any way, shape, or form showing any kind of inkling remote interest in what I have is because you know that at the end of the day, this is what's actually going to get you where you want to go, not what you're currently doing, regardless of how well off you think you are. You know, that piece of content would fucking bang.
+[33:42] You know, I actually wrote that down for her to shoot the other day. So, long story short, it's like I'm talking to the sales people, but I'm also trying to, like I said, I'm trying to dig a little deeper than that and just think to myself like what um what are they not saying that's going on? You know what I mean?
+[34:00] Let's uh let's watch let's watch a few more here. Um, okay.
+[34:06] 📊 CONTEÚDO REJEITADO ───────────────────────────── TEXTO: "Skill Set Exercise"
+NÚMEROS: Nenhum
+VISUAL: Exercício de escrever habilidades, call to action para tag
+[34:08] [Vídeo mostrando]: "If you want to find how you can make your millions with your skill set that nobody else in the world can replicate except you, here's what I would do. I would write on this side skills on this side. Right. Anybody's listening to this, try it. Tag Stephen and I in your story."
+[34:26] No, I hate that piece of content. Uh I don't want like curiosity pieces of content. I want like I want the full That's what content's for. Content's for like the full belief, you know, like the full picture. I don't want whatever that was where they got to like do that. I I want I want the actual thing to be said.
+[34:46] 📊 CONTEÚDO DE VÍDEO 6 ───────────────────────────── TEXTO: "Why Restaurants Fail"
+NÚMEROS: $800,000 média de venda de pequenos negócios, $198,000 média de restaurantes, 60% falham no primeiro ano, 80% falham em 4 anos, 3-5% margens, 22.7 anos, $95,000-$2 milhões custo de construção
+VISUAL: Estatísticas de falência, comparação de margens, competição (oceano vermelho), complexidades operacionais listadas
+[34:48] [Vídeo mostrando]: "Ain't for me. They're incredible restaurant groups and people who make millions doing it. You know, you got Nou, Fox Restaurant, Concepts, Mafukco, etc. But the truth is restaurants are incredibly complex as a business."
+[35:04] "The average small business in the US sells for around $800,000. The average restaurant goes for $198,000. Why? Because 60% fail in the first year and 80% fail after four."
+[35:20] "Second is margins. On average, restaurants can expect net margins of 3 to 5%. You're in trouble if you make a few mistakes. A few people don't show up, food goes sideways, you're out of business."
+[35:36] "Third, competition. This is what's called a red ocean market. A red ocean is where you have so much competition, you can't throw a rock without hitting another. Eating at every restaurant in New York City, for example, it would take you 22.7 years."
+[35:54] "The fourth reason I don't like them is procurement, forecasting demand, storage, waste, staff, managing off peak hours, pricing, calculating gross profit of each food item. Let's take just spoilage. You not only have to buy up inventory intelligently, but you have to hope that you are so good at guessing if the fickle crowds will eat your 3-day old shrimp before they go bad."
+[36:18] "They're really expensive restaurants to build out cost anywhere from 95,000 to 2 million. And then you got to deal with all of your employees in the back doing dirty deeds. I don't care if you're a foodie or your buds tell you that you should sell that perfect cheeseburger that you make."
+[36:34] "Don't do it unless they're giving you the startup cash. Restaurants are for humans that simply cannot exist without running one in my opinion. So go eat there. Go frequent them. But, you know, don't do deals before you leave."
+[36:50] Yeah. I I love this piece of content. There's many reasons why. Number one, this is an example of a business that people will come to her saying like, "Hey, I want to buy a restaurant." You know, and she like, as you can see, I mean, she thinks that's bullshit like buying a buying a restaurant's dumb. And she expressed a lot of reasons why.
+[37:10] However, outside of that very direct like don't buy a restaurant that uh that lesson, she's also giving you so much information about it. What does that do to an individual who's considering buying a business?
+[37:24] [Resposta do participante]: "It it frames them as someone who trusts in Kodi to give them the idea of what business is best to buy."
+[37:32] That's true. But in addition to that, what it does is in this case it makes them feel very competent about buying businesses because they now like okay so if somebody says like why I shouldn't buy a restaurant like I like I talked about a moment ago, we are trying to give people thoughts to think with. Okay.
+[37:52] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Confidence Through Information"
+NÚMEROS: Nenhum específico
+VISUAL: Pessoa com poucos fatos vs pessoa com muitos fatos, comparação Jordan Peterson/Ben Shapiro, superioridade através de dados
+[37:54] So when you load them up with a bunch of information like this, they genuinely feel more confident because they have more to think with.
+[38:04] Have you ever have you ever seen one of those videos? It's usually some kind of like political video with like Jordan Peterson arguing with somebody who has a different belief where it's like I believe this and the other person's like, well, I believe this.
+[38:20] And it's pretty interesting when you see this happen, but you'll see like the person like Jordan Peterson or like a Ben Shapiro type person, they'll be like loaded with facts. Like they'll have so many fucking facts. And like if the other person has like one fact or like two facts, like what does it look like? Well, it looks like the other person's dumb.
+[38:40] like it it literally just exposes in that type of content that like one party's almost superior in a way or right solely because they know more about whatever the counterparty is arguing against.
+[38:54] So when somebody doesn't have a lot of data to work with that's like inferiority complex. It makes you feel less confident versus when you have more data about something it makes you feel more certain and more confident about what decisions you're going to make.
+[39:10] So, in that piece of content, first of all, it tells people like, "Don't buy a fucking restaurant." Okay? Two, it says, "Okay, well, here's here's an example of what not to buy, okay, which makes you feel more confident about buying businesses."
+[39:26] Three, it gives you a fuckload of information outside of just restaurants. gives you a bunch of examples of like what you'd have to think with if you bought one, which could also correlate to other businesses that the person could now say, "Well, that's dumb, too, because I'd have to do similar things like I would with a restaurant."
+[39:44] So, it's like it increases the certainty levels of an individual when it comes to the buying cycle of like, "Okay, I'm ready to buy businesses." Dude, we have to have the person in a mental state of like, I feel confident to do this shit
+[39:58] If they don't have just that type of data like five times over, think about the probability difference of them being willing to buy an entire $10,000 program about buying businesses with that lack of certainty would be a lack of sales. You see, great truly great video.
+[40:16] 📊 CONTEÚDO DE VÍDEO 7 ───────────────────────────── TEXTO: "3 Businesses Never to Buy"
+NÚMEROS: 3 tipos de negócios
+VISUAL: Lista de negócios problemáticos: combo businesses, dry cleaners (remediação), construction companies
+[40:18] [Vídeo mostrando]: "What are three businesses I would ever buy? I would never do a combo business, which is like coffee shop, restaurants, convenience store. Why? because they try to turn a small business into a VC style business and they have way too many costs and not enough profit when they mesh them all together."
+[40:38] "Second business I would never buy dry cleaners. Dry cleaning businesses are extremely dirty. They use this one word called remediation which basically means that a lot of times the real estate has actually become toxic because of what they use on the materials."
+[40:56] "Also construction companies the reason why they're really complicated. You have to have a custom project for every project that you do. Labor is really important. You have a lot of liability for construction. As a small business, that's just a tough road to hoe. So unless I was going to be a top tier performer doing $100 million plus, I'd probably stay out of the construction industry."
+[41:18] this fucking awesome two for the exact same reasons just without as much data, less data because she worked in three.
+[41:26] So, to be clear, I would take I would take this video right here and I would tell Cody, "Let's break it out into three videos just like that last one that we watched." Like, give me a full video about why dry cleaning is fucking Give me a full video about why construction companies are fucking
+[41:44] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Comment Analysis - Statements vs Questions"
+NÚMEROS: Nenhum específico
+VISUAL: Comparação de comentários: vídeo de restaurante (declarações/justificativas) vs vídeo de 3 negócios (perguntas)
+[41:46] And also, just take a moment here. Look at some of these comments. Okay? All these comments, notice how many questions there are.
+[41:56] So to be clear, all these all these questions relate to like, well, what about a beauty salon? Okay. Well, you don't you don't buy a construction business, you build them. You know, like all these three businesses, coffee shop, restaurants, convenience store, individually, a good to go business. What about coffee shops and car wash?
+[42:16] So, you see like sometimes you make a piece of content, you can get a lot more pieces of content out of it. Because this is an example where like let me let me give you an example on this uh on this restaurant one.
+[42:30] Do you see how there's less questions? Like this is a this is obviously a really really long developed thought that this person this person had like a reaction to it. They they probably own a restaurant themselves and they were like, "Well, let me justify. It's a justification. This is an attack on the belief."
+[42:50] This video was so well produced in terms of how well it countered to run a restaurant that you either once again, you either are like, "Fuck yeah, never buying a restaurant." Or you run a restaurant and you got to defend yourself. You know, so okay, statement long justification statement statement statement statement statement, you see
+[43:12] versus versus this one. This one creates a lot of questions. Question question statement question. You see?
+[43:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Polarizing Content Success Metric"
+NÚMEROS: Nenhum
+VISUAL: Duas cercas com pessoas de cada lado (vendido vs não vendido), perguntas = não finalizado, declarações = crença adotada
+[43:24] So when your content produces statements, okay, like justifications on one side of the fence or the other, you know you did a tremendous job at selling whatever you did in that content. It was a polarizing piece of content that made people pick one side of the fence or the other.
+[43:42] This piece of content is not bad by comparison. It creates additional questions though. So, when you create this piece of content, the reason I say I would have her create additional breakout pieces of content talking about each one of these individually with more of that restaurant depth that we just saw.
+[44:00] I would do that so it's more of a polarizing. You're on one side of the fence or the other. Ideally, the pieces of content you create get people on one side of the fence or the other. That's the ideal scenario.
+[44:14] when they create additional questions, it's not bad, but it means what what does having more questions mean? It means they're not sold. You see, we want people when we put content out to be sold. Okay?
+[44:28] When people have questions on what we're talking about, it means that it's not fully developed yet in their head, and that's why they're asking additional questions to finalize the loop and make it something they can inherit as a belief and as a thought to think with. Okay?
+[44:44] When people say a statement, they've inherited what we've talked to them about. When they ask questions, it's not finished yet. Okay?
+[44:54] Think of it like this. When somebody has a question and you're explaining something, they don't hear anything after the question comes up that's unanswered. Does that make sense?
+[45:04] Yeah. Okay, we'll continue on.
+[45:08] [Pergunta]: "Um Jeremy, one thing. So basically like the minute they book the call the web the webinar the webinar is happening within what 24 hours and then so in those first 24 hours they're already being hit with content before the webinar. They're being hit with a high concentration of content up to 48 hours after the webinar as well. Correct."
+[45:30] Yeah. And then um the se there's a separate campaign that starts after those 72 hours that spends less per video um over a broader period of time, say 30 days.
+[45:42] Yeah, the frequency is just lower on that on that other campaign in comparison. Um it's still has a frequency over 30 days of about 10 to 15, but it's just spread out. Whereas once again, the concentrated campaign has a frequency of 11.2 in a duration of 72 hours comparatively.
+[46:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Multi-Campaign Strategy"
+NÚMEROS: 72h campaign: frequência 11.2, 30-day campaign: frequência 10-15
+VISUAL: Duas campanhas paralelas, intensidade alta vs baixa, janelas de tempo diferentes
+[46:02] Yeah. So, if I were to duplicate, if I were to replicate a similar strategy or try to explain it in a sales pitch, I would say we'll duplicate that campaign and start another 30-day cycle and spend a bit less per day to hit a lower frequency.
+[46:18] Yeah. Yeah. And the the intention of it once again is to capture those people like outside of the key decision-making window with additional propaganda to, you know, keep them keep them in the right frame, you know, plant the right...
+[46:34] targeting purely the people who fit your your standard event who who fit within your...
+[46:42] Yeah, you you can define it however you want. Like my my broader 30-day I have a few 30-day campaigns in that particular case. I have the 30-day campaign targeting everybody who's booked a call and hasn't bought yet.
+[46:58] I have a 30-day campaign targeting people who are just like all the social interaction, you know, like which is a much much broader and bigger audience in her case. Um, you know, and then like I said, I have like a few of like the 72-hour examples for like, okay, somebody officially booked a call, like we'll hammer them with specific 72-hour content as well as an example or in that case for the book a call thing, it might be a week.
+[47:24] Sounds good. Yep.
+[47:26] [Pergunta]: "This might seem like a stupid question. Um, obviously the frequency basically just means that they've been hit 11 times, right? on average in that 7..."
+[47:38] In this case, it means 11 different pieces of content because I have that exclusion per video set up. So, as soon as you see one video, you'll never see it again. You'll immediately target it with one of the other 24.
+[47:52] So, basically 11 individual unique pieces of content that they saw.
+[47:58] Cool. So, and basically in a 72-hour window, I should have set up an exclusion and obviously that way I know they've seen, you know, that many pieces of content per frequency.
+[48:10] Yeah, that's correct. That's correct.
+[48:14] [Pergunta]: "How do you define a through play in your in your..."
+[48:18] 15-second video view.
+[48:20] Got it. Got it. So the the frequency as Drew was saying the 11 only because of the exclusion represents the number of videos they've watched more than 15 seconds of
+[48:32] at least 15 seconds.
+[48:34] Right. Because the the the statistic of the frequency is given for the whole campaign, right? Not for one specific adset. Is that why?
+[48:44] Correct. Yeah. the frequency the frequency on an individual level. You do not look at the frequency of the individual videos because like I said the frequency should not be greater than one
+[48:58] assuming once again I mean technically if somebody sees it and they did not watch 3 seconds of it they could see it again but that's okay. You'll see like there's not a single frequency here out of 24 pieces of content above two because once again after the average person watches at 3 seconds they get moved out of that to a different video.
+[49:18] You want to judge these based on these bottom statistics here. The bottom statistics are specifically what represent the collective amount of videos they consumed from your entire campaign. Or you can also just look at it on the campaign level to be clear.
+[49:34] Got it?
+[49:36] Okay, cool. Okay, let's watch some more.
+[49:40] 📊 CONTEÚDO REJEITADO ───────────────────────────── TEXTO: "Coal Miner Story"
+NÚMEROS: Nenhum
+VISUAL: História de mineiro de carvão, exploração, metáfora
+[49:42] [Vídeo sobre mineiro de carvão] Yeah, I wouldn't use that one.
+[49:50] Let me watch it from the top.
+[49:52] [Vídeo mostrando]: "And one of the miners said something so profound I can't stop thinking about it. I asked him why he did this work. It's hard. It's scary. And he said, "Go stand over in that new shaft where they just cross punched coal out." So I did. He said, "Where you are standing now, no man has ever stood before. Some explorers go to the stars, some go underground. Both are explorers." Beautifully true."
+[50:18] not a bad piece of content, but I wouldn't use it. I don't see a lot of effectiveness for how that could accomplish what I'm attempting to uh to achieve with my my outcomes.
+[50:30] 📊 CONTEÚDO REJEITADO ───────────────────────────── TEXTO: "Political Content"
+NÚMEROS: Nenhum
+VISUAL: Conteúdo político controverso
+[50:32] [Vídeo político começando] "They want you to shut up, pay your taxes, give them all regulatory oversight and power, not question anything they do."
+[50:42] I don't think that one would get approved to be fair. Uh probably wouldn't run it either way.
+[50:48] 📊 CONTEÚDO DE VÍDEO 8 ───────────────────────────── TEXTO: "WARN Act - Layoff Warning System"
+NÚMEROS: 100 funcionários, 60 dias de aviso
+VISUAL: Site do governo, lista de demissões, proteção de trabalhadores
+[50:50] [Vídeo mostrando]: "If you're scared about getting laid off, this one thing can tell you if you're going to get laid off even before your boss knows or tells you. It's a government website that's called warm notices. It's short for worker adjustment and retraining notification act"
+[51:08] "which is a US labor law that protects employees by requiring most employers with over a 100 employees to provide a 60 calendar day heads up of planned closings and mass layoffs."
+[51:22] "Although most people don't know about it, it's actually as simple as just googling warm act plus your state and you'll find a government website that will show you a full list of places employees are getting laid off. Go and do this right now if you're at a big company so you're not taken by surprise."
+[51:40] "then you can go and proactively change to a new job or have a chat with your boss or the company about it"
+[51:48] now to be clear although that might seem random we actually get a lot of buyers from big companies like that with that are like I said employees that have more than I'm sorry there are companies that have more than 100 employees
+[52:04] so although random right and it just to the regular person looks like she's just kind of like being helpful dude that piece of content is fucking tremendous because there is at any given time you know thousands thousands to tens of thousands of people that are going to be laid off that are potential buyers of ours
+[52:24] that have just been waiting for like a reason, you know, like something some kind of pain as I mentioned or some kind of like forced opportunity for transition to occur.
+[52:36] And dude, imagine like you're considering buying a business, right? You see that piece of content, you go to that website, like you look it up and you're like, "Oh, fuck." Like I actually do have a warning.
+[52:50] or even or even better, you don't necessarily see that there's a warning for your business, but you just see how often other big companies that are like yours that you work at or maybe even yours are laying people off. You know, it gives you this perspective of like job insecurity, which makes you more prone and probable to transition. Does that make sense?
+[53:12] So, if you're selling a business opportunity to this specific demographic that we're selling to, dude, that piece of content is fucking awesome. Okay,
+[53:22] 📊 CONTEÚDO DE VÍDEO 9 ───────────────────────────── TEXTO: "Joshua Weissman - Content to Cookbook Success"
+NÚMEROS: 9 milhões de inscritos, centenas de milhares de cópias vendidas
+VISUAL: YouTuber de culinária, vídeos virais, série, cookbook, superou grandes nomes (Martha Stewart, Bobby Flay, Gordon Ramsay)
+[53:24] [Vídeo mostrando]: "I came across this YouTuber. Crazy. He did these viral videos that went so viral that it got him 9 million subscribers. The most brilliant part, Joshua Wisman turns it into a series. Smart. But what's even smarter is he turned it into a cookbook that then sold hundreds of thousands of copies."
+[53:46] "And the most interesting part about him to me is he outsold the biggest names like Marco Stewart, right? And Bobby Fle or Ramsey. Actually, all genres, just to be clarifying. I find this the sound and story strategy. It's brilliant. Totally replicable."
+[54:04] "You make videos, a ton of them. Then you find one of them that's super viral. Then you add an ASMR. And finally, you make it simple like this."
+[54:18] Yeah, dude. I love this one, too.
+[54:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Cause & Effect Content Strategy"
+NÚMEROS: Nenhum específico
+VISUAL: Pessoas com empregos tradicionais olhando para baixo para criadores de conteúdo, mas criadores tendo mais sucesso financeiro
+[54:24] So, like people with legitimate jobs, uh, like picture like an engineer or like a developer, like you know, whatever the fuck you do, and you're considering transitioning to buying a business.
+[54:38] I I I say this all the time. If you can find an example of what people who are your ideal demographic think is like like they're better than or above, you know, and that person's doing far better than them financially or in life in general. That is a huge motivator for change for an individual who has like the traditional path.
+[54:58] So keep in mind like we're we're essentially selling people on buying a business. A lot of these people come from traditional paths where they're like I say like a software engineer, an architect, a developer, a regular engineer, whatever. All kinds of crazy shit
+[55:14] My point being is like those individuals look down on content creators. Like they think there's in they think there's no security to it, you know? They think there's no there's no health benefits, there's no free food, yada yada.
+[55:28] So they like look down on it and they they also just view it as an untraditional path. So they don't view it as something that u is like better than them. They view it as like worse than them.
+[55:42] And when they hear that that type of individual is doing financially and just in life better than them, it makes them question everything about what they've done. You know, like as an example, like the classic, well, I didn't go to college. Like look how much better I'm doing than the people who went to college.
+[56:00] Look at all you guys. Like did you guys go to college? You know, I'm sure some of you did to be fair, but you know, a lot of you probably didn't. It's like my point being when you have that kind of story go out there of like, yeah, you know, I didn't go to school.
+[56:16] And you're selling to people who did go to school and took the traditional path, that type of content makes them think like, holy shit dude. Like, if that guy can do it, like, I'm I'm way better than that guy. I'm smarter than that guy. I went to school, you know, that guy didn't. Like, are you kidding me?
+[56:34] Uh, just because you didn't go to college doesn't make them think like you're smarter than them because you're making more money. It actually makes them think, "Dude, I'm smarter than that person who's doing better than me. So, if they can do it, and I think they're dumber than me, I could crush them." Does that make sense?
+[56:52] That's that that's what we call a piece of content that doesn't directly say that, but that's what they think is a result of saying that. Does that make sense, dude? Baller piece of content. That's what I call a cause and effect piece of content. You get what I'm saying?
+[57:08] Like I constantly think this as an example about Logan Paul. I think Logan Paul is a fucking I think I'm like, "Oh my god." And we're from the same place. So I constantly look at Logan Paul and I think to myself, dude, if his ass can do it, you know what I mean?
+[57:26] Like there's no way there's no way I can't get infinitely richer if Logan Paul is still today richer than me. You know what I mean? That's an example of what I'm talking about is you want to give people examples of something like that if if once again that's what you're selling to.
+[57:44] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Cause & Effect Example - Dentistry"
+NÚMEROS: $50,000 smile makeover, $100,000
+VISUAL: Antes e depois extremo (meth mouth vs smile perfeito), pessoa com problema menor vendo resultado maior
+[57:46] Like I said, the premise of this piece of content just so you can relate it to anything that you want to do is cause and effect. Okay?
+[57:56] So like as an example with uh with Ash, like he sells to dentists and he's, you know, probable to start selling to cosmetic dentists as well who like do makeover smiles.
+[58:08] Imagine somebody has like super fucked up teeth, like teeth that are like not even forward. They're like completely sideways. They're like missing a tooth. And there's like a piece of before content and after content.
+[58:22] The person with like a slightly fucked up smile. And I just mean like it's a little little yellow. You know what I mean? And there's like one tiny little crooked tooth. Nothing noticeable. They barely see it themselves. They notice it because they look at their smile in the mirror every day.
+[58:38] It's like the person who has the barely fucked up smile sees the guy with like meth mouth who comes from the before and after. They think to themselves, "Dude, holy shit if that guy can do that smile to that guy, like what can they do to me? Like, I'm in a way better condition. My shit's probably going to be like,"
+[58:58] and if the guy, imagine this, right? On top of that, imagine if the guy with the meth mouth that gets the beautiful smile makeover says, "Yeah, I had barely any recovery time. This was actually a fucking breeze. It took like no time at all. I was actually shocked at how fast it was, you know?
+[59:16] Then once again, the person with like the barely fucked up smiles thinks to themselves, "Oh my god, if that guy's saying that, like, dude, this shit's probably going to take like an hour." You know what I mean?
+[59:28] Like there's a lot of assumptions that come from cause and effect content that benefit your buying cycle when done successfully. Does that make sense, everybody?
+[59:40] Okay.
+[59:42] [Pergunta]: "What? Sorry. What would be an example of cause and effect content there?"
+[59:48] I just You're gonna have to watch your recording on that.
+[59:52] Yeah. Okay.
+[59:54] Yeah, okay, so to be clear, let's go through some more.
+[60:00] 📊 CONTEÚDO DE VÍDEO 10 ───────────────────────────── TEXTO: "College Education ROI Reality"
+NÚMEROS: Nenhum específico
+VISUAL: Gráfico mostrando crescimento astronômico do custo da educação superior vs estagnação dos retornos, dívida estudantil recorde
+[60:02] [Vídeo mostrando]: "I think we were lied to as a generation. We were told, "Hey, just get good grades, get into a good college, don't worry about student loans. You'll make it up over time, then go get a good job and you're going to be okay." And it was a fucking lie."
+[60:20] "What you see here, fancy words, but the diminishing financial return of higher education. So we've had astronomical growth in the cost of higher education and flatlining growth in the uh return of higher education."
+[60:36] "The truth of the matter is is that we should have looked at the numbers and the numbers say that we are making other people rich namely institutions and their investors and we are by no means better off as a generation from having the highest level of student debt of all time and the highest level of education of all time."
+[60:56] "And increasingly, higher education does not now always lead to a higher income, which is what they say college will help you do. And so, if you want to go to college just to have fun, that's awesome. But realize that college doesn't seem to actually increase your earnings potential over time."
+[61:14] Okay. So, as I mentioned before, like she sells to a demographic that's typically gone to college and has like some type of professional job. So that's a piece of content that you're going to see as like a recurring, you know, hit it from different angles piece of content where that's the reality of the situation.
+[61:32] Like people who went to school, they're not more financially well off and and they live that reality. So it's not necessarily a piece of content that's like a shock. It's more so like something that somebody sees who's working a job and they say to themselves like, "Fuck, dude. Yeah, that's right."
+[61:50] You know, like I I'm really not doing much better than everybody else. And at the same time, they also think in terms of group think. They think to themselves, damn, like everybody else is going through it, too.
+[62:04] And then to be clear, there's one additional thought that comes kind of as a question to that. Can anybody guess what that question would be?
+[62:14] You're in college, you went, you got out, you got a job, you're not as well paid as what you ever thought you'd be. You then realize nobody else is is getting well paid after they went to college. It's kind of a situation that everybody else is in. What's the question that gets prompted in your head after you after you conclude to that?
+[62:34] [Resposta]: "Like how do I like what do I need to do to change it? Change my situation."
+[62:40] Like what do I do then? Like what the fuck do I do? Right? Isn't that kind of what comes up?
+[62:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Self-Generated Questions = Higher Action Probability"
+NÚMEROS: Nenhum
+VISUAL: Pessoa pensando por si mesma vs sendo informada, seta mostrando maior probabilidade de ação
+[62:50] Think about how fucking great that is as a question to prompt somebody with. You know what's that make them probable to do? Well, when I come in and I tell you, hey, you got to buy a fucking business, dude. That's the fucking solution. You see?
+[63:06] So, it's like I in that piece of content, I don't need, remember, I don't need to do a well-rounded piece of content where everything gets answered. Okay? I ideally can just prompt people to think particular ways that creates the thought.
+[63:22] Remember what I just said, okay? There's some advanced shit If I can prompt you to think with a question that you naturally think just like what Gabe did. Okay, I didn't tell Gabe what the question was. I asked Gabe what the question was and he concluded to exactly what I wanted it to be.
+[63:40] Okay, what's that mean? What's the power of when somebody thinks it themselves rather than me telling you that that's how you have to think?
+[63:50] [Resposta]: "You could intersect their thought."
+[63:54] Dude, I get the opportunity. It's It's like you thought it, Gabe, not me.
+[64:00] Yep.
+[64:02] I didn't give you that question to think within that content. That just came up in your head.
+[64:08] [Resposta]: "It increases the probability that the person's likely to take action on that thought as a result of them thinking it themselves."
+[64:16] You reach mastery fucking status of a propagandist. Okay? If you can successfully prompt people to ask questions like that that lead to an increased probability of them buying. Okay?
+[64:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Dentist Example - What's a Smile Worth?"
+NÚMEROS: $50,000 smile makeover, $35,000
+VISUAL: ROI de um sorriso, confiança aumentada, mais vendas fechadas, humor melhorado
+[64:32] Like I'll use that dentist example from Ash again, right? If I can get a fucking dentist just to prompt a question of like what's what is a smile what is a better smile worth?
+[64:46] Like if if if Ash has an example says to a dentist like, "Okay, you're gonna charge people $50,000 to do a smile makeover." Like what's the person who has to justify $50,000? Like what's the ROI on that? Right?
+[65:02] If there was a piece of content that a dentist could come out with that was like just a few examples, you know, without directly saying what's a smile worth? Just kind of saying like, you know, we had a client that came in, they spent $35,000. They kind of thought it was ridiculous at first
+[65:20] and they ended up going out and closing a lot more deals. they came back and they kept saying like their confidence went through the roof and you know they just they just felt better every day like it's like they had a increase in morale and mood
+[65:36] and I mean I don't know you know like what what do you what do you think a smile's worth you know and it's it comes off like a silly question but when you prompt that in the mind of the person who's about to potentially spend 50k
+[65:52] it's like how much more probable does it become that they spend 50k you know all of a sudden 50k doesn't sound that ridiculous when I tell you I Dude, I could I could fucking without you taking ecstasy every day. I could increase your mood. I could increase your morale.
+[66:08] I could get it so you could close more deals. I could make you feel like a better person. Just is that worth 50K? You know what I mean? Like, think about that. You see what I'm saying?
+[66:22] It's like those kind of thoughts when once again naturally coming out of after watching a piece of content that like dude when they see that fucking direct response ad or they're like on the sales call or they're at the fucking dentist doing a consultation, you know, dude, those things I'm telling you, they're thinking with them when they're sitting in the chair, you know what I mean?
+[66:42] Okay, cool. All right. Well, listen, I uh I could go on and on and on. It's just like my favorite thing on on earth to do in terms of like propaganda and content. But I hope you guys get the idea.
+[66:56] Uh the point being um not every piece of content as we saw has to be used. You know what I mean? It's like some of them are just like personal things that she's going to share anyway. Other stuff is just tremendously well executed.
+[67:10] Um obviously Cody's a client of mine to be clear. So, you know, if you want like a literal example, just go to her Instagram and just scroll back as far as you want. And uh you'll see just a fuckload of examples like that.
+[67:24] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Content Creation Framework Summary"
+NÚMEROS: 4 tipos de conteúdo
+VISUAL: Framework completo: quem é o comprador, o que os persuade, redução de tempo de compra, aumento de confiança
+[67:26] And uh remember, you you you have to tie in a few different things here to be able to like, you know, work work all this together, which is you always want to think with once again like who's your buyer, okay? You're making content that persuades the buyer. That's it.
+[67:44] Like you're not making content for whatever else you think. It's just like what's going to persuade the the person who's like on the fence that I want to sell to, you know, what's going to make them buy in less time. You know, what's going to make them more confident when it comes time to buy?
+[68:00] What's going to make them less confident when it comes time to buy? What's going to make them like what's what's some good thoughts that I want to give this person to think with when it comes to considering buying at all? you know, like these these questions alone when you're just centering everything around the buyer.
+[68:18] And like I said, these can be answered in direct and indirect ways. Uh this I mean, there's nothing better. Like it's just silly not to do these things. It's so cost-effective. It makes so much more money.
+[68:32] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Indirect Causation Warning"
+NÚMEROS: $175,500 pagamento, 3 vídeos, 80,000-100,000 seguidores
+VISUAL: Correlação indireta, sem atribuição direta possível, mas resultados óbvios
+[68:34] But I want to be clear when I say this. It's an indirect causation. Okay? As an example, like you guys saw me post in the inner circle chat that I had that prop firm pay me $175,500. Okay? and they had me do three different videos.
+[68:54] Okay, Shawn, the guy who introduced me to the opportunity at the same time got requested to make three videos. However, Shawn is anonymous. Shawn requests that his name doesn't get posted in the leaderboard of people who get paid the most. Shawn does not post in their Facebook group. Okay?
+[69:12] I I am a positive propaganda machine for that company. I go in their Facebook group and I fucking spite spectics into the ground. I fucking argue with people. I tell them they're fucking Like I make posts saying, "Look, I just got approved for this. I just got approved for this."
+[69:30] So the other day I make a post and I say, "Hey, like I finally made it to the fourth month where I have uncapped earning potential. I requested 1755 and they requested I make three videos." I'm not skeptical at all. You guys would probably be tweaking out. I'm chilling. I'm going to do what they ask. I trust them. I'll keep y'all updated, but like it'll be fine.
+[69:52] You know, and obviously I get a bunch of people in the comments that are like, "Hey, congratulations." I get a bunch of other people that are like, "Oh, you're fucked." Like, you know, who the fuck makes you film videos before you get paid what you earn? You know, and I'm going back and forth with those motherfuckers
+[70:08] And I'm like, "No, dude." Like they're trying to prevent scammers. Like this makes perfect sense. $175,500 in a month. Like yeah, it makes I'm going to help them whenever I can when they request it from me.
+[70:24] Now, to be clear, when I submit my first three videos last Friday, I get an immediate response like within two hours. That's like, "Hey, Jeremy, sorry, bro. These won't work. You didn't show the executions tab with the timestamps in the name. Uh, I'm sorry." you know, but like you're gonna have to refilm them again.
+[70:44] And I was like, fuck you. Like that sucks. But it is what it is. Like I'm like, all right, I'll do it. No problem.
+[70:52] Shawn didn't get a response once. Sean still hasn't heard from these people. Okay.
+[70:58] I then go in on Monday, Tuesday, Wednesday of this week. I filmed three videos. I send them on Wednesday. I get a response again within two, three hours that's like, "All right, cool, man. These ones work. We'll review them and we'll get back to you."
+[71:14] I woke up on Thursday to that email that hit at midnight that said, "Hey, congratulations. You're paid." You know, like everything's approved. And and I hit up Sean. I'm like, "Yo, look at this. Like, I already got approved." I'm like, "Have you heard from him yet?" Sean goes, "No, I haven't heard from them at all. Like, I haven't heard anything."
+[71:34] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Propaganda Effectiveness - Prop Firm Case Study"
+NÚMEROS: $175,500, resposta em 2-3 horas vs sem resposta
+VISUAL: Comparação: Jeremy (propaganda ativa) vs Shawn (anônimo), resultados drasticamente diferentes
+[71:36] Okay, here's my point. I knew that if I went into that group where all the people who are responsible for my fucking payouts, from the executives to the managers to the payout support team to the random customer service reps, I know I'll have visibility
+[71:54] and I know that I can press these people to successfully demonstrate like, dude, I'm one of the only people, if not the only person that literally stands up for this company and says You can trust these motherfuckers dude.
+[72:08] Like, yeah, they're slow because they operate at a scale that's bigger than every other fucking company existing combined. Like, if you're skeptical, you're fucking is pretty much what I say, you know? Like, trust the process, shut the fuck up, do what they ask, follow the rules, you know?
+[72:26] Like, I am like the greatest propaganda machine for this organization. And as a result of that, they respond to me quickly, they pay me on time. Like, they do everything that they need to do on time.
+[72:40] Sean has done this way longer than me. way longer than me and he's gotten paid several hundred thousand to even in his own words a million a month from this company. Why are they ignoring him? You know, why aren't they responding to him quickly?
+[72:58] You know, it's because propaganda works. Okay? Propaganda always works. In any situation, propaganda is effective.
+[73:08] My point being with that story, I'm producing propaganda for that organization to their group of customers directly saying and encouraging spend more money. Trust the process. I blew 1300 of those eval accounts. Who gives a fuck Look how profitable I am now. Spend more money.
+[73:28] Like yo, I'm sharing fucking I'm telling the skeptics to get fucked And my point is, not a single time, not a single time did any of the people who work for the company say or acknowledge it.
+[73:42] But once again, when it comes down to it, behind the scenes, do you think they saw it? And that's why I got those responses.
+[73:52] I say all this to tell you I cannot correlate directly my propaganda to them responding to me fast and approving me fast. I can't correlate those two directly, can I? Is there any cor is there any connection there that you guys can prove for why I get the response fast and Sean doesn't any connection?
+[74:12] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Content Causation Reality"
+NÚMEROS: $170,000 diferença diária de lucro, menos registrantes, mesmas ofertas
+VISUAL: Impossibilidade de correlação direta, mas diferença óbvia e mensurável nos resultados
+[74:14] It's going to be the same thing with your propaganda content machines. You will never be able to point your finger at it and say well I'll give you an example like I have I'm not going to be able to share these statistics just because these are Cody's company statistics to be clear
+[74:30] but I I will share this. Okay. So, without sharing like the whole Excel sheet, okay, I'll read a few things off to you.
+[74:40] So, the previous two webinars have had a $170,000 difference in total profit per day on average in comparison to every other 1 2 3 4 5 6 7 8 9. Out of the past 10 webinars that they've done, the most recent two I have come in and been responsible for. And I've done the propaganda machine on both of those. Okay.
+[75:04] The most recent two webinars have had a $170,000 daily lifts in profits. I have actually gotten less people to re to register overall in comparison to the historical webinars. Why?
+[75:20] There's no difference in content. There's no difference in what's talked about in the webinar. There's no difference in the opt-in page. There's technically a slight difference down in total registrance.
+[75:34] Why has there been 170,000 lift in the total quantity of revenue per day that comes from the webinar? Well, I can't definitively say it's the content, but it sure looks like it is. Huh?
+[75:50] That's what I'm talking about. You'll never be able to definitively say this is a result of that fucking content. Okay? That's what I'm trying to tell you with the example of the prop firm. That's what I'm trying to tell you the example of the $170,000 daily lifts.
+[76:08] But my point being that is the effect of content. I know that. You'll know that. You'll see it if you don't do it. Okay? But to be clear, you'll never be able to have a direct correlation.
+[76:22] So that's the most important part of the whole content machine. You'll never be able to set the expectation that it's a trackable difference, but you'll see a substantial difference right after you do it. Does that make sense?
+[76:36] Yes.
+[76:38] [Pergunta]: "So, when you come to sell it, let's say you're selling mid-market and the person isn't creating content, they're just running ads. Would you sell it as, hey, I'm going to help you for the first two months build out a content machine where we target those biases and I'm going to charge you for building out that content machine before we run the ads for you because it's it's the most annoying thing when you're waiting for a client to record the piece of content you want and they've got constraints."
+[77:04] That's up to you for how you do it. I mean, I always work with people who are already filming content. I don't uh I mean they always need to film more to be clear, but my clients do what I say. It's a perfect client trade of ours. I don't work with people who don't do what I tell them to do.
+[77:22] Yeah, fair enough.
+[77:24] Okay, cool. Anybody else have questions? Any comments? Anything you guys want to contribute to what we talked about here today?
+[77:32] Uh Tom says that view exclusion is the plug. Never did that in my retargeting in my webinars. took action on my campaign right now. Genius.
+[77:44] Cool, Tom. That should work great. Other questions, comments, anything?
+[77:50] All right. Sweet. Talk soon, fellas. Hope hope you like this today.
+[77:56] Yeah. Great stuff, man. Cheers.
+[78:00] All right. What?
+📊 RESUMO EXECUTIVO
+NÚMEROS PRINCIPAIS:
+10-15,000 registrantes de webinar mensalmente
+$80,000 investimento mensal em ads para webinar
+72 horas de janela de targeting intensivo
+24 ad sets com 24 vídeos únicos
+Frequência 11.2 em 72 horas (11 vídeos únicos vistos)
+Frequência 10-15 em campanha de 30 dias
+Otimização para 15 segundos de visualização
+Exclusão de 3 segundos de visualização por 365 dias
+$10,000 oferta de curso/comunidade
+$175,500 pagamento de prop firm
+$170,000 diferença diária de lucro nos últimos 2 webinars
+$84 trilhões em transferência de riqueza de baby boomers
+18 milhões de negócios disponíveis em 25 anos
+$800,000 valor médio de pequeno negócio
+$198,000 valor médio de restaurante
+60% de restaurantes falham no primeiro ano
+80% falham em 4 anos
+3-5% margens líquidas em restaurantes
+22.7 anos para comer em todos restaurantes de NYC
+$95,000-$2 milhões custo de construção de restaurante
+$100,000/ano vendendo cabras
+$50,000 smile makeover
+$35,000 exemplo de cliente dental
+9 milhões de inscritos YouTube (Joshua Weissman)
+Centenas de milhares de cookbooks vendidos
+100+ funcionários (WARN Act requirement)
+60 dias de aviso de demissão (WARN Act)
+80,000-100,000 seguidores perdidos por conteúdo político
+2017 Las Vegas shooting (exemplo de "why")
+ESTRATÉGIAS E SISTEMAS:
+Hammer Them Strategy / Mini Tornado: Concentração máxima de conteúdo em janela de decisão chave
+72-Hour Intensive Window: Do dia do webinar até 2 dias depois
+4 Key Decisions: Registro → Assistir webinar → Agendar call → Comparecer call
+4 Content Types Framework: Framing, Objection Handling, Get to Know You, Belief Management
+Dynamic Customer Lists: Atualização em tempo real via CRM
+Video View Optimization: Maximized throughplay views (15 segundos)
+3-Second Exclusion Rule: Após 3 segundos de visualização, nunca mais ver aquele vídeo
+24 Ad Set Structure: Um vídeo por ad set, targeting idêntico, exclusão única
+Multi-Campaign Approach: 72h intensivo + 30 dias mais amplo
+Frequency Targeting: Alta concentração em momentos-chave de decisão
+Rolling Window Strategy: Baseado no ciclo de vendas médio
+Conversion API + Pixel: Rastreamento e atualização de audiências
+Marketing Automation: Zapier ou CRM nativo para atualização dinâmica
+Placement Strategy: Instagram exclusivo ou cross-posting com Facebook
+Content Breakout Strategy: Dividir vídeos gerais em específicos detalhados
+Cause & Effect Content: Prompting auto-gerado de perguntas e conclusões
+Polarizing Content Goal: Forçar escolha de lado da cerca (vendido ou não)
+Subconscious Objection Handling: Abordar objeções não faladas
+Transition Content: Dar confiança para grandes mudanças
+Why Provision: Sempre fornecer razões e contexto
+Thought Provision: Dar às pessoas pensamentos para pensar com
+Indirect Framing: Plantar crenças sem vender diretamente
+Propaganda Machine: Defesa ativa e visível da marca/produto
+ESTRUTURA:
+Client Profile: Cody Sanchez - Ex-Goldman Sachs, ensina compra de negócios
+Target Demographic: Profissionais bem-pagos (tech, engenharia, etc.), pessoas com empregos estáveis, graduados universitários, salários de 6 figuras
+Main Objections: "Já tenho um bom emprego", "Não estou sentindo dor", "Não sei se é para mim", "Não vou me divertir"
+Content Posting: Tudo em Reels (Instagram/Facebook)
+Content Selection Process: Conversar com sales team, identificar objeções diretas, pensar em objeções indiretas/subconscientes
+Objection Evolution: Objeções ficam mais sofisticadas com bom conteúdo
+Avoid Polarizing Topics: Política, religião, tópicos instantaneamente divisivos
+CRM Requirements: Active Campaign, HubSpot, Go High Level (com marketing automation)
+Comment Analysis: Statements = crença adotada, Questions = não finalizado
+Content Distribution Timeline: Registrantes veem ads diretos → Registram webinar → 72h de hammer → 30 dias de manutenção
+DADOS FINANCEIROS:
+$80,000/mês em ad spend para webinar
+$10,000 oferta de produto
+$170,000 aumento diário de lucro (últimos 2 webinars)
+$175,500 pagamento único de prop firm
+ROI indireto mas substancial
+Sem atribuição direta possível
+Causação indireta óbvia nos resultados
+Lift significativo em conversão e revenue
+Redução no tempo de ciclo de vendas
+Aumento na confiança do comprador
+Menos registrantes mas mais lucro (qualidade > quantidade)
+DURAÇÃO: ~78 minutos FORMATO: Group coaching call / Screen share / Live Instagram content review

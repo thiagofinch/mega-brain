@@ -1,0 +1,303 @@
+Transcrição Completa: 6 Implementing AI Setters - Zac Taverner
+[00:00] "Awesome. Thank you, Jeremy. So, yeah, this is um how to get appointments um as well as low ticket sales. So, if anybody has low ticket sales, um this can actually automate the entire process uh via text message, emails, Instagram, DMs, all that fun stuff."
+[00:20] "So, uh by the end of this presentation, you'll know how to implement an AI setter into your business or your clients to skyrocket appointments and sales."
+[00:30] "Um, first, who am I? I'll get through this quickly for you guys. Um, essentially I started marketing agency when I was at Cal. Um, played as a D1 athlete rugby."
+[00:42] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Who Am I? - Background & Credentials"
+NÚMEROS: D1 athlete, 2 national championships, 70+ team members, 15s and 7s rugby formats
+VISUAL: Foto do apresentador em scooter atravessando ponte de Berkeley para SF, imagens de jogos de rugby, logo "High Performance Ads", fotos com Brandon e Kaylin Puland
+[00:45] "Um, and that was actually when I started my marketing agency up on the top middle side. I was riding around my scooter from Berkeley to SF across the bridge to try and get clients here and there."
+[00:55] "And um, that was when I started a high performance ads. worked um with a few names inside of here like Brandon, Kaylin Puland um where we help with AI, ads and automation."
+[01:08] "Um so two reasons why I started on the number one team in the nation um out of 70 other team members. This was while playing at Cal. We won two national championships um in both 15s and sevens."
+[01:22] "So just to be clear that means 15 people are on the field 80 minute run time and then sevens is 14 minutes long and only seven people on one side of the team 14 in total."
+[01:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Two Reasons for Success: Speed & Execution"
+NÚMEROS: #1 team in nation, 70 team members, 2 championships, 80 minutes (15s), 14 minutes (7s)
+VISUAL: Layout dividido em duas colunas com ícones de velocidade e execução, troféus de campeonato, comparação visual entre formatos 15s e 7s
+[01:38] "Um so number one is speed. So I was one of the fastest people out there. Um and execution. So every single time I got the ball it would either be scoring or executing the play going at the next step."
+[01:52] "So the faster you implement this into your business and your clients, you'll be miles ahead of the competition. Like we're at the forefront of AI and implementing it into different businesses."
+[02:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "AI Market Impact - Forbes & Goldman Sachs Data"
+NÚMEROS: 300 million jobs impacted, 800,000 jobs replaced (IBM), $400 million annual savings, $50,000 average salary, Next 5 years timeline
+VISUAL: Logos Forbes e Goldman Sachs, gráfico crescente de adoção de IA, ícones de pessoas sendo substituídas, calculadora mostrando economia de custos
+[02:07] "Um Forbes, Goldman Sachs, um fastest growing mass adoption of AI will impact 300 million jobs and I believe that was within the next five years."
+[02:18] "Um, IBM plans to replace 800,000 jobs with AI. So, just for some quick math for you guys, that is roughly 400 million that they'll be saving on an annual basis if they paid $50,000 in salary. So, I just made it uh little bit conservative for you guys."
+[02:38] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Critical Sales Statistics"
+NÚMEROS: 92% don't follow up after 4th touch, 80% of sales happen between 5th-12th touch, 78% buy from first responder
+VISUAL: Três gráficos de barras mostrando percentuais em cores contrastantes (vermelho para negativo, verde para positivo), ícones de follow-up e velocidade de resposta
+[02:40] "Okay, so let's go ahead dive in. 92% of sales reps don't follow up after the fourth touch. 80% of sales happen between the fifth and 12th touch. 78% of customers buy from the business that responds first."
+[02:58] "Okay. So, can your business handle an additional thousand leads in the next 30 minutes and ensure they're followed up five plus times? Any of you guys?"
+[03:08] "No, woo sender doesn't work."
+[03:11] "Uh, are you using AI right now?"
+[03:13] "Yeah. How's it going? Good."
+[03:16] "Yeah. Cool. Is there anybody else using AI right now for appointments or sales? You. Cool. Awesome."
+[03:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Two Ways to Handle Leads"
+NÚMEROS: 1 vs 2 (Humans vs AI Setters)
+VISUAL: Layout comparativo dividido ao meio, lado esquerdo com ícone humano, lado direito com ícone de robô/IA, versus no centro
+[03:28] "So, there's two ways to handle the leads. Number one, humans. And two, AI setters. There's a little graphic for you guys."
+[03:37] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Humans - Limitations"
+NÚMEROS: 1-8 conversations simultaneously, 3 minutes to 3 hours response time
+VISUAL: Lista com ícones vermelhos/negativos: relógio para speed to lead, gráfico inconsistente, cifrão alto, gráfico descendente de conversão, erros de texto, pessoa com múltiplas conversas limitadas
+[03:40] "So, let's take a look at humans. So, speed to lead notoriously, depending on how busy they are, whether it's night or day, it's going to take some time for them to get um anywhere to actually reach out to the lead or call them depending on what time it is."
+[03:55] "And then inconsistent response time. So, it might be 3 minutes or it might be three hours just depending on the business and the size of them."
+[04:03] "high overhead costs, um poor conversion rate, spelling and grammar errors, and then managing one to eight conversations at a time."
+[04:13] "So, as humans, we're limited to the amount of conversations that we can actually have across different platforms. And the AI setter solves that."
+[04:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "AI Setters - Advantages"
+NÚMEROS: 1-2 minute response time, unlimited conversations, fraction of a penny cost, 5 messages before detection
+VISUAL: Lista com ícones verdes/positivos: relógio rápido, piloto automático, FAQ personalizado, cifrão baixo, checkmark para gramática, símbolo infinito para conversas ilimitadas
+[04:25] "So, let's go ahead take a look at them. So, it's a 1 to two minute response time. Now, you can actually edit the amount of time that you want between those response times."
+[04:35] "So to make it look more human, you can put a delay in of 1 to 2 minutes. So that way it's not instantaneous response and by message number five, they're like, 'Is this an AI or is it a bot?'"
+[04:47] "Um, you can kind of change that to make it look more humanistic, right?"
+[04:52] "Um, sales and appointments on autopilot custom FAQ. So, as you deploy this into your business and your clients, you can adjust the FAQ to where, let's say, for example, somebody asked a question that you previously did not have in the FAQ."
+[05:08] "You can go in update it with the way that you want your business to respond to that question. And then now the next conversations of somebody who asked that question, maybe they asked it in a different way, the AI will actually be able to respond instantaneously to that response the correct way."
+[05:24] "Sometimes it does lie and make up stuff. So you want to make sure those FAQs are uh are put in place correctly."
+[05:31] "Um low operational costs. So this is like fraction of a penny to operate. Um when you compare that with setters you know that's going to be very expensive comparison uh but it's on a per message basis."
+[05:44] "So new message comes in AI puts in an output and then it responds on the channel that uh the customer responded to."
+[05:53] "So errorfree grammar and spelling this is good and bad. It's uh great because your clients aren't worried about somebody overseas spelling something wrong."
+[06:04] "Um, and then on top of that, you can make the AI have some errors and emojis in it just for a more human conversational aspect of it."
+[06:13] "Um, but that way you don't look bad when uh your clients see your messages back and forth."
+[06:19] "And then it can handle unlimited amount of conversations. So whether you get a,000 leads or 10,000 leads in the next hour, it can handle every single one of them within the first five minutes."
+[06:31] "and then follow up with them throughout the first day, first hour, four hours later, one week, etc., whatever your follow-up cadence is, and then respond when that person is ready to actually have the conversation, right?"
+[06:44] "So, sometimes, you know, it's 1:00 a.m., 2 a.m., they're back at their phone and on Instagram DMs. You want to respond to them when they're ready to have that conversation."
+[06:53] "And remember, 78% of customers purchase from the business that reach out the first. Right?"
+[07:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Case Study #1: High Ticket Coaching"
+NÚMEROS: 44.9% more booked appointments, 85 more booked calls, 30 days period
+VISUAL: Gráfico de barras comparativo antes/depois, ícone de calendário com checkmarks, setas ascendentes em verde, destaque para percentual de melhoria
+[07:02] "So, here's a case study. High ticket coaching. Um, utilizing this, we had 44.9% more booked appointments, which led to 85 more booked calls in 30 days."
+[07:15] "Um, the setters and the sales reps were lazy and they weren't getting to the leads fast enough. And so, we implemented this and saw a 44% increase in booked appointments."
+[07:27] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Case Study #2: Low Ticket Sales - Think and Grow Rich Movie"
+NÚMEROS: 4-8 low ticket sales daily, $37 price point, UTM tracking: ?eel=AI
+VISUAL: Capa do filme Think and Grow Rich, gráfico de vendas diárias, dashboard Hyros mostrando tracking, ícone de dinheiro com setas
+[07:30] "Case study two, um, low ticket sales support. Um, you guys heard of Think and Grow Rich? Yeah. Everybody here?"
+[07:38] "So, we're actually advertising the movie for Think and Grow Rich and it's generating 4 to8 low ticket sales every single day."
+[07:46] "We can actually track that on Hyro. So, question mark eel equals AI. Um, so it's actually sourced into the traffic and we can track how much the sale or the AI is making on our behalf."
+[08:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Conversation Example - Think and Grow Rich"
+NÚMEROS: 1 minute response time, $37 purchase, 350 characters max recommendation
+VISUAL: Screenshot de conversa real com timestamps, mensagens em bolhas de chat (azul e cinza), destaque para velocidade de resposta, link de compra visível
+[08:03] "And here's a example of that. So, just to read this for you guys. U Judy, I saw you interested in Think and Grow Rich movie. Do you have any questions or do you want the link to buy the movie?"
+[08:16] "And she responded, oh, one minute later. So, just checking it out. Thanks. Love Bob. And I may yet I may yet a buy a copy to watch. Love the material. Uh I worked with Bob's former students now."
+[08:30] "And then the AI responded within that first minute. Right now, it's a little bit long, but it's great to hear. Think you grow rich movie features exclusive footage from Bob Procttor, right?"
+[08:42] "It actually took what she said in the previous message and put it in the first side of it, as well as other successful individuals like Grant Cardone, Barbara um Lewis House."
+[08:53] "The movie uncovers 13 timeless secrets of Think You Grow Rich movie. You can purchase the movie for $37 and then it goes into would you like the purchase link?"
+[09:03] "She got the purchase link and then purchased the movie right after that. And I guarantee this person would not have purchased if we didn't get back that fast to her and sent her the link again to get her to purchase. Right."
+[09:16] "Um and so that's the power of it. And then here, like that's a hell of long text. So, what we go back and do is we actually edit the FAQ to where um we limit the amount of characters that can be sent to uh 350 characters is typically what what we found is the best."
+[09:34] "So then that way it's just not some long block of text. Sometimes it does, but um that one specifically we want to make it more conversational based than like it's an AI bot, right?"
+[09:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Case Study #3: AI Trading Bot - Blue Edge Financial"
+NÚMEROS: $3,500 ticket price, 3 weeks implementation, 2,067 leads, 415 replies (20%), 222 apps (53%), 53 booked appointments (23%), 8 sales (15%), $28K additional revenue
+VISUAL: Funil de conversão detalhado com percentuais em cada etapa, cifrões destacando revenue, gráficos de barras para cada métrica, cores progressivas do topo ao fundo
+[09:48] "Case number three um AI trading bot. So this one we installed about three weeks ago and um the ticket price is about 3500. So it's high ticket um sales."
+[10:03] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Conversation Flow Example - Trading Bot"
+NÚMEROS: 3-4 qualifying questions, passive income goal mentioned
+VISUAL: Screenshot de conversa sequencial mostrando perguntas qualificadoras, respostas do lead, progressão natural da conversa, destaque para personalização baseada em respostas anteriores
+[10:06] "So lead comes in. Hey, this is Ashley with Blue Edge Financial. Sorry you expressed interest in passing prop firm challenges with our AI with our trading AI. Mind if I ask a couple quick questions?"
+[10:20] "Okay. Do you have any experience in trading or prop firms? And then it said it's new to me. Got it. This is the AI."
+[10:28] "What's the main goal you are looking to accomplish with trading? They said, I want to make passive income on the side."
+[10:35] "AI says, understood. What would you say is holding you back from achieving your goal of making passive income through trading? So, it actually pulls out their desire and puts it into the next message."
+[10:48] "And then, I'm not that experienced. Okay, got it. if you're open to a quick demo, I can show you how our AI trading, you know, goes into the thing. How would you like that?"
+[10:59] "And then it goes through and actually books that appointment and that person became a sale, right? So, it's the AI reaching out to the leads, conversing with them, and then ultimately booking that appointment right afterwards."
+[11:12] "And this was actually from text to an application. So, it sent a link, they filled out the application, booked the appointment, and then went to the next step."
+[11:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "3-Week Results Breakdown"
+NÚMEROS: 2,067 total leads, 415 replies (20% response rate), 222 applications submitted (53% conversion), 53 booked appointments (23% app-to-call), 8 sales (15% close rate), $3,500 per sale = $28,000 total revenue
+VISUAL: Funil completo com números absolutos e percentuais, cálculo financeiro destacado no final, gráfico de conversão em cascata, cores verde para sucesso
+[11:25] "So, in three weeks, um 2,67 leads, um 415 replied, so that's a 20% response rate. Um 222 apps submitted. That's a 53% conversion rate."
+[11:40] "Um so, mind you, this is the 53% is from the AI, but it's also from the follow-up emails and text messages that they get. So, that's a little bit bloated there, but still a 53% conversion rate for people that go through that. I would take that all day."
+[11:56] "U 53 booked appointments from there. So that's a 23% conversion rate from app to call and then eight sales. So 15% closing rate at 3500 is 28K in additional revenue with AI."
+[12:13] "Okay, any questions? Cool."
+[12:16] "Were the emails sent also by the same AI tool?"
+[12:20] "Um the AI the follow-up automation is all automated. So it's your normal follow-up sequences. Um you're just making it conversational. So then that way when they respond the AI can take over from there."
+[12:33] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Technical Setup - OpenAI API Key"
+NÚMEROS: Step 1 of setup
+VISUAL: Screenshot do site OpenAI com URL destacada (platform.openai.com/signup), setas indicando caminho: top right > picture > view API keys, botão "Create Secret Key" destacado
+[12:35] "Okay. So technical setup. So you're going to set up your open API key. Um this is the link if you guys want to take a picture of that. Uh platform openai.com/signup. I'll give you guys slides as well so you can see it afterwards."
+[12:52] "All right. So what you'll do is go up to the top right hand side, click on your picture, go to view API keys. This is the only thing you have to do in that open API."
+[13:03] "You're going to grab your API key, create a new one, which would just be AI setter, create that secret key, copy that API, and that's the only thing you have to do there."
+[13:15] "Put in your billing information, and then you'll take that API, and I'll show you how to set that up in uh the next couple steps."
+[13:23] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "AI Setter Overview - 5 Workflows"
+NÚMEROS: 5 distinct workflows
+VISUAL: Diagrama de fluxo com 5 caixas conectadas: 1) Activation 2) Response from Prospects 3) AI Response 4) Re-engagement 5) Stop AI, setas conectando cada etapa, cores diferentes para cada workflow
+[13:26] "U so AI setter overview. So, we got five different uh workflows here. So, essentially, you got your activation. So, we're going to activate the AI."
+[13:37] "Um, we're going to get responses from prospects. Um, the AI is going to respond and then we have a re-engagement for people who don't respond right away."
+[13:47] "We want to follow up with them, re-engage them, and then get them to convert whether it's into appointments or sales and then ultimately stop the AI."
+[13:56] "So, when a booked appointment happens, it roundrobins to the next sales rep and uh they'll be able to take over the conversation from there."
+[14:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Workflow #1: Activation"
+NÚMEROS: Step-by-step process flow
+VISUAL: Fluxograma detalhado mostrando: new lead > add tag > check email > conditional split (tem email/não tem email) > create fake email if needed > tag "email incorrect" > activate bot, caixas conectadas com setas lógicas
+[14:08] "So, here is the workflow for the first one. If you guys want to take a picture again, I'll send you the slides afterwards."
+[14:14] "Uh, but essentially, new lead comes in, adds a tag. Um, this checks for an email. So, when you guys are having Instagram DMs, Facebook Messenger set up, um, Zapier actually has to track that contact."
+[14:29] "And the only way we can do that is actually through having an email attached to it. Um, and so what we do is if they don't have an email attached when they come in on Instagram, we create a fake one for them, tag it, um, and then we tag that the email is incorrect."
+[14:46] "So then that way it can actually converse on DMs. Then at the end of the Instagram DM, we get their phone number before booking the link, sending the link, etc."
+[14:57] "Um, so then that way that contact is still tied to the booked appointments, to the application, etc. Okay, so that's the activation of the bot."
+[15:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Workflow #2: Any Replies"
+NÚMEROS: Conditional checks for bot status
+VISUAL: Fluxograma mostrando: incoming message > check tags (Instagram DM + bot active, SMS + bot active) > conditional filter > save lead response > empty AI response field > send to Zapier, destaque para verificações condicionais
+[15:11] "Um, any replies. So now you guys can't see this at the very top, but um, this is like Instagram DM plus bot, SMS plus bot is active."
+[15:21] "So we want to make sure that we're only conversing with leads that h are activated with the AI, right? So, if somebody comes in and let's say it's a friend or somebody who already previously closed, we want to make sure that the bot is not interacting with them to try to close them on anything."
+[15:38] "So, that's what this is for right here to make sure that doesn't happen. Um, and then right here on the on the bottom left hand side, so this saves the lead response and then empties the AI set a response and then it sends over to Zapier the prompt the response and then um, yeah, and then we'll get the AI set a response in the next workflow."
+[16:03] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Workflow #3: AI Response"
+NÚMEROS: 1 minute wait time
+VISUAL: Fluxograma detalhando: Zapier return > conditional check (bot active?) > wait 1 minute > channel detection > split into SMS/Instagram/Facebook/Email paths, destaque para delay humanizado
+[16:06] "So right here, the AI response. So over on Zapier, I'll show you how to set that up here in a second. Uh but it's going to come back through. It's going to have a conditional um if then statement."
+[16:18] "So if the bot is active, continue. If it's not active, don't continue. And then um and you can add more to this. So like if you want uh tags of like previous buyers and things like that to not go into the AI ever, you can just add that at the top."
+[16:34] "Um, and then it's going to wait one minute. So that waiting period is so it's not like instantaneous. They don't think it's a bot at up at 2 am responding to them right in one second."
+[16:46] "Um, so that's what the wait period is. And as you can see at the very bottom, it checks for the channel and then it goes into whichever channel it should be in. So that's um, SMS, Instagram, Facebook DMs as well as email."
+[17:02] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Workflow #4: Re-engagement"
+NÚMEROS: Q1, Q2, Q3 question sequence, 4 hours follow-up delay
+VISUAL: Fluxograma complexo mostrando múltiplos paths de perguntas qualificadoras, loops de follow-up baseados em tempo, tags para cada estágio de pergunta, setas de progressão entre Q1>Q2>Q3
+[17:05] "So this is the re-engagement workflow. So typically with high ticket buyers, they ask a series of questions. Um after those questions are asked, they then set the appointment."
+[17:17] "So as you can see, well you probably can't see, but at the top it has a Q1, Q3 or Q2, Q3, etc. And that's just going through the series of questions before they get to the booking link or ask for the booking appointment."
+[17:32] "And um what this does is it follows up on each question. So we we customize this to where you know if you ask what industry they're in, then it will follow up and be like, 'Hey, just wanted to check back in um and curious of what industry you're in four hours later.'"
+[17:50] "Then the bot will still take over, go to the next question, and then it will um take that lead out of the first Q1, then send them into the second workflow and continue that process."
+[18:04] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Workflow #5: Stop AI"
+NÚMEROS: Trigger points for stopping bot
+VISUAL: Fluxograma mostrando: appointment booked (in CRM or Calendly) > webhook trigger > stop AI via custom field > remove bot tags > handoff to sales rep, ícones de calendário e pessoa assumindo conversa
+[18:07] "All righty. And then this is the stop workflow. So, anytime a booked appointment happens in the CRM or outside the CRM if you're using Calendarly, then you pull it back in um stop the AI with a custom field and then purchases booking bot."
+[18:26] "So, we've used a few different softwares um don't necessarily want to name them but who claim that they have like a booking bot and things like that that work very well."
+[18:36] "We tried to implement it for one of our clients who's getting about a thousand leads a day. We it failed from the conversation all the way to the booked appointments and made us look terrible."
+[18:48] "So we found this the way that we set this up is actually outperforming like those types of softwares that have an API connection because they don't break as much."
+[18:59] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "GoHighLevel Booking Bot Integration"
+NÚMEROS: Timeout mechanism included
+VISUAL: Fluxograma mostrando integração com GHL booking bot, timeout detection, reativação de AI após timeout, loop de rebooking via texto, conexão entre sistemas
+[19:02] "So from here um it goes to the gohigh level booking bot and then once it times out it asks the question and reactivates the bot."
+[19:11] "So then that way it can go back through any questions that they might have and then rebook them through the booking bot. So it's all via text."
+[19:20] "When you're getting where are you getting these sourcing these leads from? Is it because I see you're communicating with Facebook Messenger few other DMs and stuff like that. So where are the leads coming from?"
+[19:32] "Yeah. So, typically it's going to be through ads. Um, or if they have a strong organic following, then it's like, oh, text me the word scale and then the bot can take over from there. Um get their information and then convert them into whether it's an appointment or a sale."
+[19:49] "And if you're running ads and getting their contact information, are you able to contact them with the AI through DMs or is that"
+[19:56] "No, no, that's going to be through text then text and email. Yeah."
+[20:00] "Yeah. It's only going to be for like inbound messages for IGDMs, Facebook Messenger. So that's that's the only way to do it."
+[20:08] "Yeah. So if you if you like retask your setters to do outbound instead of inbound, like they can do outbound, focus on outbound. Anything inbound, the AI setter can take over."
+[20:21] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Custom Fields Setup"
+NÚMEROS: 4 primary custom fields
+VISUAL: Lista de campos customizados com ícones: Contact Response, AI Setter Status (On/Off toggle), AI Setter Response, AI Setter Reply Channel, exemplos de valores para cada campo
+[20:24] "All right. So these are this is like a list of the custom fields. Um but essentially it's contact response um AI setter status. So that's off and on."
+[20:35] "And then uh AI set a response, AI setter reply channel. So all of those ones are used inside the zap uh which we'll go over right now."
+[20:46] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "How Zapier Integration Works"
+NÚMEROS: 3-step process
+VISUAL: Diagrama de 3 etapas conectadas: 1) Webhook catch from GHL 2) ChatGPT conversation processing 3) Update contact in GHL, setas bidirecionais, logos Zapier/GHL/ChatGPT
+[20:49] "And then um so how it works is on that other workflow that I showed you where it sends the web hook into Zap um which is going to be on the response. So customer responds that sends over to Zapier."
+[21:03] "it catches the web hook and then it goes through chat GBT. So conversation and chat GBT uh you want to use this specific um zap because it will remember the entire conversation and be able to follow up with them."
+[21:17] "If you use like OpenAI or a couple other ones, it won't remember the conversation. Um so you want to make sure it's chat GBT and then this is just go high level. So you just add update the contact on the other side."
+[21:31] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "ChatGPT Conversation Setup in Zapier"
+NÚMEROS: 5 key fields to configure
+VISUAL: Screenshot do Zapier mostrando campos de configuração: User Message, Username, Assistant Name, Assistant Instructions, Model (GPT-3.5), Memory Key, cada campo com exemplo preenchido e explicação
+[21:35] "So the conversation in chat GBT, this is actually how you set it up on the inside. So user message is going to be the contacts message u that gets pulled over from go high level."
+[21:47] "Uh username is just going to be the contact name that will be pulled out from the web hook. Um assistant name, so that would be like Ashley, whatever you want to call your your bot, Charlie, etc."
+[22:00] "Um, the assistant instructions is going to be your prompt, which we'll go over in a second, but that'll include like the instructions about the AI, and then your FAQ as well, and then your model."
+[22:13] "So, right now, uh, ChatGpt 3.5 is what we're using just because it's it's faster, it's quicker."
+[22:21] "um once we get GPT4 out which just got released but it's not um it's not like you can you have a limit to the amount of APIs that you can call from it so it's not going to be it's not going to work for high volume at the moment"
+[22:35] "but here in the next three six months it'll uh outperform 3.5 and be able to you know we'll just improve it from there essentially"
+[22:44] "and then the memory key so the contact ID that gets pulled out from go high level um is going to be how it remembers who that contact is."
+[22:54] "And you can do that memory key based off of their phone number, based off of their email. Um if you're using like another platform like um HubSpot, Alaware, those types of platforms."
+[23:06] "Yeah, Nick. user is the is user one of the staff members on this team"
+[23:11] "not how they have it set up user is more of the prospect in this case I don't know why they have it that way but"
+[23:17] "it's just a different syntax"
+[23:19] "correct yeah this isn't go high level this is chatbt so they just named it differently"
+[23:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "GoHighLevel Update Contact Setup"
+NÚMEROS: Field formatting requirements
+VISUAL: Screenshot mostrando campos de atualização: Full Name, Phone Number, Email formatados, Tag "Response" sendo adicionado, campo "Marked as Lead: True", AI Setter Response sendo populado
+[23:27] "yeah so this one is go high So this one you just format the full name, phone number, email for whichever one comes through."
+[23:36] "You add in this tag which is going to be response uh marked as lead true and then the sale uh the AI set a response is going to be right here and that's going to get pulled in from that previous task that was that was in there."
+[23:52] "Okay. So the AI is controlled with something called prompts. Yeah. So"
+[23:59] "if I can wait till the end, but I was going to ask a questions. Um obviously if you have like a setup where you've got multiple sub accounts, you need a second firm because each lead connector API is different. Is there a way to centralize it so that the bot is able to learn from all of the different sub account or is each bot?"
+[24:19] "So you you utilizing the API it technically doesn't learn so it's not able to learn. Um, but like with chatbt4 once that comes out like it'll be able to handle any complex thing that you want. Um,"
+[24:34] "just kind of just got to do"
+[24:36] "Yes. Yeah. You'll still have to do that because Zapier does the API"
+[24:40] "and then it does it per thing."
+[24:42] "Yeah. Yeah."
+[24:44] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "AI Prompts - Easy Setup"
+NÚMEROS: Not specified
+VISUAL: Ícone de documento com texto, destaque para simplicidade, exemplo de prompt começando a aparecer
+[24:46] "So the AI is controlled with something called prompts. So it's super easy to set up. Um, all what you do is, um, this is an example of the prompt."
+[24:58] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Prompt Example - Trading Bot"
+NÚMEROS: 5 sequential questions
+VISUAL: Documento de prompt mostrando: Goal statement no topo, 5 perguntas numeradas (1-5), FAQ section no final, formatação clara com bullets e números
+[25:01] "Um, I don't want to read all of it, but essentially your goal is to interact with potential clients, understand their trading aspirations, abide by the key rules, and then sequentially ask each question with the aim of scheduling a consultation."
+[25:18] "Okay, these are the five questions. One, two, three, four, five. So, those are the five questions that we ask before actually getting them to a um application."
+[25:29] "And then the FAQ is at the very bottom. So every single business will have their own set of FAQ which will just be like, you know, what's your pricing, here's the answer, um all those generic questions that get asked all the time um that need a response."
+[25:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Core Rules Section"
+NÚMEROS: 340 characters max, 5th grade reading level, multiple behavioral rules
+VISUAL: Lista detalhada de regras com bullets: ask one question at a time, booking URL location, character limit, assume yes strategy, personalization requirements, disqualification criteria, formatação em lista clara
+[25:48] "And the second part of that is going to be core rules. So this is what the AI needs to follow um every single time."
+[25:55] "So ask each question one at a time before setting the call. Here's the booking URL. So this was um because we had an application they went here instead."
+[26:06] "Uh response must be under 340 characters. Assume yes as the first answer. Um explain how you can assist them and then guide them towards booking a call."
+[26:17] "Use fifth grade level conversation. Uh personalize your responses based off the information they provide. Um if a prospect asks a question, answer it and then proceed with the qualifying questions."
+[26:30] "Um and then these just go through more directions of what we're telling the AI to do. Um, and then it says, 'Do not book calls with prospects who don't have money or funds to invest.'"
+[26:42] "So, it can dynamically change what it's saying to the prospect based off of what they give you. So, for example, if you wanted to disqualify a lead and send them to a low ticket thing instead of getting them on a um call,"
+[26:57] "you can actually do that inside of the core rules by saying, you know, if they say one of these things, disqualify them. Um, and you can also pull that out from like a lead form or anything else like that."
+[27:09] "What are some examples of things that they can say that you would tell"
+[27:13] "if they say they have no money?"
+[27:15] "Um, yeah. So, that would be like um like if they're in a certain state that you don't um service,"
+[27:23] "then that would be a disqualification. If um like"
+[27:27] "I guess the question the reason I'm ask is that like from my when I was doing calls and I had sales calls there are certain cues that like if we mention the price or something and the prospect kind of like winces or like makes the space like it's probably like that they can't afford it's hard to come up with that nuance on AI. So I'm just wondering"
+[27:46] "Yeah. So your case would probably be employee size or uh something something along those lines to where you can like get their financials but also get the response from them."
+[28:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "TCPA Compliance - SMS Timing"
+NÚMEROS: 8:00 AM - 9:00 PM sending window, contact timezone based
+VISUAL: Relógio mostrando janela de horário permitido (8am-9pm), ícone de fusos horários, workflow separado para SMS vs outras plataformas, destaque vermelho para restrições legais
+[28:03] "All righty. And then TCPA on spam or SMS. Uh so this is when you set up the workflow. Um like this is starting to get a really big thing on SMS."
+[28:14] "So you want to make sure you're only messaging between 8 and 900 p.m. every single day. U along with the AI. So, you don't want the AI messaging somebody at, you know, 2 a.m. going back and forth with them."
+[28:27] "Um, and so how we set this up is we actually separate the SMS from the other platforms, put it into its own workflow, turn this on because it's there's actually a setting at the top. It's it's based off of the contact time zone."
+[28:42] "Um, and so that way you're making sure that you're not messaging them outside of those hours. But on Instagram, Facebook Messenger, all of that, it's free game, so you can just message them 247."
+[28:55] "Okay. Um, question and answers."
+📊 RESUMO EXECUTIVO
+NÚMEROS PRINCIPAIS:
+92% dos vendedores não fazem follow-up após o 4º toque
+80% das vendas acontecem entre o 5º e 12º toque
+78% dos clientes compram de quem responde primeiro
+300 milhões de empregos serão impactados por IA (próximos 5 anos)
+IBM planeja substituir 800.000 empregos com IA
+Economia estimada de $400 milhões anuais (IBM)
+CASE STUDY #1 - HIGH TICKET COACHING:
+44.9% mais agendamentos
+85 calls adicionais em 30 dias
+CASE STUDY #2 - THINK AND GROW RICH:
+4-8 vendas low ticket diárias
+Ticket: $37
+Tracking: UTM ?eel=AI via Hyros
+CASE STUDY #3 - AI TRADING BOT (BLUE EDGE FINANCIAL):
+Período: 3 semanas
+2,067 leads totais
+415 respostas (20% taxa de resposta)
+222 aplicações (53% conversão)
+53 agendamentos (23% app-to-call)
+8 vendas (15% taxa de fechamento)
+Ticket: $3,500
+Revenue adicional: $28,000
+ESTRATÉGIAS E SISTEMAS:
+VANTAGENS AI vs HUMANOS:
+Tempo de resposta: 1-2 minutos (AI) vs 3 minutos-3 horas (humanos)
+Conversas simultâneas: Ilimitadas (AI) vs 1-8 (humanos)
+Custo operacional: Fração de centavo (AI) vs alto (humanos)
+Disponibilidade: 24/7 em múltiplos canais
+Gramática: Zero erros (configurável para parecer humano)
+5 WORKFLOWS PRINCIPAIS:
+Activation: New lead > Check email > Create fake if needed > Tag > Activate bot
+Any Replies: Filter active bots > Save response > Send to Zapier
+AI Response: Return from Zapier > Wait 1 min > Detect channel > Send message
+Re-engagement: Q1/Q2/Q3 sequence > 4-hour follow-ups > Progress through questions
+Stop AI: Appointment booked > Stop bot > Handoff to sales rep
+INTEGRAÇÃO TÉCNICA:
+OpenAI API (platform.openai.com/signup)
+ChatGPT 3.5 (atual) / GPT-4 (futuro)
+Zapier para conectar GHL + ChatGPT
+GoHighLevel para CRM e booking
+Canais: SMS, Instagram DM, Facebook Messenger, Email
+CUSTOM FIELDS:
+Contact Response
+AI Setter Status (On/Off)
+AI Setter Response
+AI Setter Reply Channel
+ESTRUTURA DE PROMPTS:
+Goal statement
+5 perguntas qualificadoras sequenciais
+FAQ customizado por negócio
+Core Rules (340 caracteres max, 5th grade level, disqualification criteria)
+COMPLIANCE TCPA:
+SMS: 8:00 AM - 9:00 PM (timezone do contato)
+Instagram/Facebook: 24/7 sem restrições
+Workflow separado para SMS
+DADOS FINANCEIROS:
+Custo operacional: Fração de centavo por mensagem
+Case #3: $28K revenue adicional em 3 semanas
+ROI: Substitui múltiplos setters ($50K+ salário anual cada)
+Case #2: Vendas diárias recorrentes ($37 × 4-8 = $148-296/dia)
+MELHORIAS FUTURAS:
+GPT-4: Maior capacidade de API (3-6 meses)
+Melhor handling de conversas complexas
+Aprendizado entre sub-contas (limitado atualmente)
+DURAÇÃO: ~29 minutos FORMATO: Apresentação técnica/tutorial com cases práticos

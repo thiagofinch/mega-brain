@@ -1,0 +1,671 @@
+Transcrição Completa: 45 Modern Show Rate Best Practices - Build Trust Rapidly
+[00:00] All right, everybody's recorded. All right, sweet. What's going on everybody? Welcome in uh weekly inner circle group call. This has been coming up a lot frequently and I wanted to go through some of the best practices.
+[00:15] Obviously, as a group, we've been talking about some overall best practices as is to ensure that you are getting people to show up well framed, answering people's questions prior to calls.
+[00:28] And the one thing that I've noticed that we haven't really like just dug deep into on a call like this are the best practices for helping people do their due diligence.
+[00:40] Um, I want to call these like there's a few different areas where these come into play, right? We're going to be talking about confirmation pages as soon as somebody takes an action like opting in for a webinar, booking a call, even something as simple as filling out a hydra form.
+[00:58] And in addition to that, uh, we're going to be talking about some ways that you can leverage the strategies like the hammer them strategy, both short form and long form, the email marketing component of the hammer them strategy, and just work in some of these best practices.
+[01:15] Um, I'm going to give you a lot of practical examples inside of this specific class today, and just make sure that you all walk away with things that we're doing right now in real time uh, in some of your businesses, in some of our businesses, clients businesses that are just working really well.
+[01:32] And also I'm going to go through some examples of people who are not doing it and some of the results they're experiencing from having what we're going to call outdated practices comparatively.
+[01:45] So, uh without further ado, let's go ahead and dive in. So, first things first, um let me just explain like a concept of of what the problem is and what we're trying to essentially solve around.
+[02:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Modern Due Diligence Best Practices"
+NÚMEROS: Não especificados neste momento
+VISUAL: Título principal em destaque, fundo escuro, texto em branco, layout limpo e profissional
+[02:05] Okay, so first things first, when you look at what we're gonna what we're going to call these like modern Due diligence. Uh, hold on. Let me try to spell. Due diligence best practices.
+[02:18] We have um we have a problem, you know, and the problem's pretty simple. when somebody opts in for something nowadays when whether it's a book a call funnel, whether it's a webinar, whether it's a challenge funnel, like people are more sophisticated than they've been in the past.
+[02:35] And what we're noticing is it's not just like industry specific anymore. Just people in general have been screwed over by so many other businesses that just as a consumer in general their sophistication has increased.
+[02:50] Historically how things have been is it's niche specific sophistication. Okay. So to be clear what I mean is is like let's let's use one of these niches that recently shit imploded like the automation niche.
+[03:08] Okay? Like for everybody who doesn't know the automation niche, it's those done for you stores that people were selling where they're like done for you Amazon stores, done for you whatever shit store.
+[03:22] And at first, like the promise of that niche was you're going to give us tens of thousands of dollars and we're going to give you passive income. You'll be ROI positive within two years and you know you're profitable from there. We'll do all the work. We need you because we can't have more than one store in our name, you know.
+[03:42] And then people just started throwing money at these businesses from around like you could safely say like 2019 for the earliest of these first movers all the way through about the end of 2023.
+[03:55] There's still some to be fair that exist, but they're like I mean they're they're horrendous, you know, like they're definitely going to go under.
+[04:03] Anyway, I digress. These businesses conservatively ripped out about $100 million from the marketplace, okay? And they just fucking vaporized it. They just vaporized the money. Okay? it no longer exists.
+[04:20] So to be clear, that's isolated to people having a desire for passive income getting fucked and then now the next things that they ever go to buy, they're going to be so much more aware as a consumer of how things can actually go.
+[04:35] Those businesses offered guarantees. Those businesses offered guarantees in contracts, okay? And most of them, to be fair, were conditional guarantees, but nonetheless, they were a guarantee.
+[04:48] You guys tell me this in the chat, okay? If a business goes bankrupt and they offer a guarantee, do you get your money back as a consumer in that example or is your money lit on fire and gone forever?
+[05:02] Okay, again, the question is really simple. Put in the chat your answer. If a business offers a guarantee like, "Hey, I'll do XYZ for you, and if I don't, I'll give you your money back." But then they declare bankruptcy, do you get your money back as a consumer in that example?
+[05:20] Yeah. The answer, just like Haron says, fucking no. Okay. Fucking no. You don't your money gets vaporized and it's gone forever.
+[05:30] Okay? So all of the people think about it like this, right? We talked about this in this group many times over when it comes to our impact as business people in the world, the ripple effect.
+[05:42] Okay? Well, now think of that related to this event. So conservatively, tens of thousands of people got burnt on losing tens of thousands of dollars each, some of them more.
+[05:55] They didn't get a fucking dollar back in in most instances. and they were offered guarantees and they got fucking burnt. And almost every single one of these businesses declared bankruptcy.
+[06:08] Almost every single one of these businesses is in dozens and dozens of lawsuits, okay? If not hundreds. And to be clear, what's happening to the consumer in real time while that happens, their sophistication is increased dramatically, like through the fucking roof.
+[06:25] And then what they do is is they tell their friends and then their friends tell their friends you know and those are called hand-me-down beliefs.
+[06:33] So then what starts to occur is is like the average consumer that is associated to those people and the people who are associated to them and the people who are associated to them and obviously we have the internet.
+[06:45] So there's also just people who go and post about these things and openly talk about these things and then bam, like wildfire, an entire portion of the consumer demographic that's willing to spend tens of thousands of dollars is all of a sudden a master of due diligence.
+[07:02] They'll never fucking do a deal again without doing excessive levels of due diligence. They will then think, what will they think about all guarantees from that point onward?
+[07:12] What What do you guys think? Do you think they'll ever believe a guarantee again in their life? Like absolutely fucking not. Like they don't they they're never going to listen to you again. You know, they're never going to be like, "Oh, you offer a guarantee like that makes it safe." Right?
+[07:28] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Outdated Practice: Guarantees"
+NÚMEROS: Não especificados
+VISUAL: Palavra "Guarantee" em destaque, possivelmente com um X ou sinal de alerta, indicando que esta prática está desatualizada
+[07:32] So think about that. Like what I'm trying to essentially open up this conversation with here today is very simple. Like as an example of something that we could consider like outdated would be a and I always misspell this word by the way, so excuse me. is a guarantee.
+[07:50] Like is is is is a guarantee real anymore? Like do guarantees actually have meaning? Do they have effectiveness? If you used a guarantee, would it actually get the person to convert?
+[08:02] As an example, because a lot of people still heavily rely on that where they say, "Hey, if we can't get you this result, like don't worry, we'll give you your money back."
+[08:12] Okay, but again, from the perspective of do they actually believe it, right? That's essentially what we want to understand in this entire talk today. Okay? Do they actually believe you?
+[08:25] Cuz if the answer is no, we don't want to do it. Okay? That's what this all comes down to when it comes to these like modern due diligence best practices. We are trying to solve around the problem of do they actually believe you?
+[08:40] If you are using things that they can consider full of bullshit bullshit practices, then we're doing it wrong.
+[08:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Generic Confirmation Video"
+NÚMEROS: Não especificados
+VISUAL: Exemplo de vídeo genérico de confirmação, possivelmente mostrando um frame de vídeo com alguém falando de forma superficial
+[08:50] Okay, I'll give you another example like the generic uh confirmation video. So, you opt into something, you know, you get that you get that uh that video that's on the follow-up page, you know, whatever it is, webinar, call funnel, doesn't matter.
+[09:05] And right there on the thank you page, you have that little video, okay? And most of these videos are just utter trash where they're like, "Hey, what's going on? My name's Jeremy. Super excited you just booked a call with us. You know, hey, make sure you show up. Uh, you just booked your call. We're going to help you a lot."
+[09:25] Um, you you lock it in your calendar. Make sure you book it in your calendar, okay? And, uh, we're going to send you some emails and stuff. Just pay attention to your inbox. Really excited to help you, okay? Goodbye.
+[09:38] It's like people don't give a shit about that type of video, you know? They don't care at all about that kind of stuff. What they care about are things that are actually going to aid them relative to their current sophistication levels.
+[09:53] Okay, this is what matters the most when you are actively going through these things. So, I'll give you an example.
+[10:00] So, I was I was talking to Joe and Joe's a new inner circle member and long story short, you know, he was mentioning he had a show rate and real quick before I do this, Joe, can you just can you just tell me real quick? Are you okay with me with show showing you as an example here?
+[10:18] Joe: Yeah. Yeah, absolutely. Let's Let's do it.
+[10:20] Jeremy: Okay, great. What was it? Diet versus disease.
+[10:23] Joe: Yeah. Mhm.
+[10:25] Jeremy: Okay. So, first of all, Joe was mentioning like, "Hey, I have a show rate issue, right?" And I'm like, "Okay, well, what are you doing to address it?"
+[10:35] And again, like Joe's doing the things that we would consider like the old school practices and there is nothing that's currently being deployed that's like a modern best practice.
+[10:45] So, if you just were a consumer right now, Joe, go ahead and unmute yourself and tell the group what what's your business does? Like, what's what's the offer? What are people what's the promise of it? You know, what are people trying to get as a result?
+[11:00] Joe: Yeah. So, we're helping people with chronic long-term digestive issues to solve the issue and be able to eat freely again and not worry about, you know, having bathroom accidents and things, which is is quite common actually in older adults.
+[11:18] Jeremy: So Joe's working with 60 plus males and females, right Joe?
+[11:22] Joe: Yeah. Yeah. About, you know, 90% of them are females. They're just more likely to look for help.
+[11:28] Jeremy: And how many people have you successfully helped through the entirety of your business so far?
+[11:33] Joe: 5,000. 5 and a half thousand.
+[11:36] Jeremy: How many people have had a great result out of those 5,000?
+[11:40] Joe: Uh, we're like 90 90% or so.
+[11:43] Jeremy: Got it. So, if I do a deal with you, I have a 9 out of 10 90 plus% chance of getting the result that I'm paying to get. What about the other 10%.
+[11:55] Joe: Well, we have an action-based guarantee. So, if they they show up to everything, they implement what we say and they've, you know, done everything diligently and they don't get the the result in the time we specify, then we work with them without extra charge until they do.
+[12:12] Jeremy: How much time did I waste if I do everything that you said to do and it doesn't work?
+[12:18] Joe: Well, the program is four months.
+[12:20] Jeremy: So, I have to commit four months of my life when I'm already 60 years old and I have a 10% chance of it not working.
+[12:28] Joe: Yep.
+[12:29] Jeremy: Do you ever frame it like that?
+[12:31] Joe: No.
+[12:32] Jeremy: Why not?
+[12:33] Joe: I haven't I haven't addressed uh the I haven't addressed the the chances of it not working.
+[12:40] Jeremy: And what do you think people care about?
+[12:42] Joe: If it'll work or not.
+[12:44] Jeremy: Yeah. So, to be clear, most of the time, and here's here's the main issue that we have when we talk about like these best practices. Okay. Most people only talk about if it works, about if it did work.
+[13:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Modern Best Practice: Talk About Both Upside AND Downside"
+NÚMEROS: 90% success rate, 10% failure rate, 4 months commitment
+VISUAL: Comparação visual entre falar apenas do sucesso vs. falar de ambos os resultados possíveis, layout dividido mostrando transparência
+[13:05] Okay? Whereas a current best practices is both if it did and if it did not. Okay? Because to be clear, like that's the reality of the situation.
+[13:18] Like when we go into a deal as a marketing agency, we straight up tell people as real as it gets in a sales call. We try to tell people as transparently as we possibly can.
+[13:30] So, we have people spend an average of $50,000 in ad spend in their first 30 days with us. We cost $15,000. And in some instances, they're also paying out like another 15 to 20 to a sales agency that they're also going to bring on.
+[13:48] And we have to be extremely transparent about the risks of that. We have to openly let them know like first of all, we're new to their business. The other people they might be bringing in are new to their business. That alone dramatically increases the probability of failure.
+[14:05] What we're going to have that business do is be hyper aware of the risks and we're not going to sugarcoat it at all.
+[14:12] Like we just onboarded a new client literally a month ago, okay? They just finished their 30 days and they're happy as shit. Well, let me tell you about how the first two weeks went.
+[14:25] A week into the deal, we had a call funnel running. We spent about two grand. I only got four unqualified people through the funnel. And immediately I was like, I got to get this guy to film a whole bunch of new ads.
+[14:40] Every single ad that I had to get the guy to refilm took him another like four days. I started off every ad from that point forward with if you have $70,000 in liquid capital or access to 70k in capital, pay attention because I was only getting brokies before.
+[15:00] So, we're we're almost 14 days into the deal and I just now get new ads from the guy and we relaunch the call funnel again and now I start getting qualified people.
+[15:12] So, the first like two weeks of the deal like the deal went literally nowhere. He's probably shitting himself thinking, "Oh my god, like this is going to fail." Okay.
+[15:23] Also, in the second two weeks, I had the guy do a webinar because I told him, I was like, "I got to get something else in motion to be able to dramatically increase the probability we're going to make money in this first 30 days.
+[15:38] I'm going to spend 15k out of that 50 on a webinar. I want you to promote it organically, too. Let's get on a call. let's build a little deck together and let's start the process of getting a webinar promoted.
+[15:52] We did that. The webinar literally was about 4 days ago and he got about 42 qualified scheduled calls, people with good credit scores, people with 70k uh and thankfully the guy off of the total of about a 65k initial investment already produced a little under 300k in revenue.
+[16:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Real Case Study: Transparent Journey"
+NÚMEROS: $50,000 ad spend, $15,000 agency fee, $2,000 initial spend, 4 unqualified leads, $70,000 capital requirement, 14 days struggle, 42 qualified calls, $65,000 total investment, $300,000 revenue
+VISUAL: Timeline visual mostrando a jornada de 30 dias, com altos e baixos claramente marcados, números em destaque
+[16:20] Okay, that's an example of like a scary deal for the first two weeks though. It's like I can give another example of a client, one of the inner circle members, Jeremy Mosa, referred him to me.
+[16:35] There were these two guys, one was named Alex and one was named Gaddam. Alex and Gdam wanted to go and promote this thing they had called like merchant automation.
+[16:48] Thankfully, it wasn't an automation business. It was a offer to essentially sell uh transaction terminals like a credit card terminal to a business and then make a percentage of the total sales.
+[17:02] And long story short, they were doing a million a month organically through Jeremy doing shoutouts on Instagram and they wanted to introduce paid ads.
+[17:12] So we start the process of doing paid ads. Their show rate was 35%. They had a two call close. Their cost per book call for a qualified call was in the high 200s.
+[17:25] We're like a month into the deal. They get break even on the initial spend on us and on the ad spend. And they actually pulled ahead profitable by about 10k going into the second 30 days.
+[17:40] I told him, I was like, "We're going to have to spend a lot more money with these current statistics while we improve things in order to get to the point where we're actually making some money." Do you guys agree to that? They agreed.
+[17:55] We get six days into the deal for the second 30 days, and they tell me they want to pull back spend while we improve the show rate.
+[18:05] I respond to that message instantly, firing them by asking for their wire information. I kicked them back the 30K for the 15 for the first month and 15 for the second month that they had paid, and we walked from the deal.
+[18:20] It's like to be clear, when I talk about that stuff in a sales call, I don't just want to talk about the people that we've taken on as a client and made $2.3 million for in the first 30 days.
+[18:33] I don't just want to talk about the deals where we've done a million dollars a month within 60 days or 90 days because that skews the perception dramatically that that's the only like they don't believe me that that's the only thing that could happen because it's not the only thing that could happen.
+[18:50] There's downside to every decision, okay? And they need to know what the downside is in a transparent way and they need to hear it from you. Otherwise, they go and look it up themselves.
+[19:03] Okay? I was talking to Cameron who sells a Forex trading service. And it's not just Forex to be fair to him. He does a trading bot that also also can be paired with pretty much anything like an index, an indicy, just traditional stock, commodities, and forex.
+[19:22] Okay? And it's not like one of those stupid fucking bots that everybody was selling where people would just put money into the bot and like never see it again and it just gets vaporized, you know, even though they claim it's making money.
+[19:35] No, in reality, like Cameron's bot, you actually own the bot. He doesn't even get a rev share from it. You own the bot. You just pay an upfront fee and you own the bot. You can customize it however you want. He has a whole bunch of scripts. Cameron actually does really fucking good.
+[19:52] Here's the thing though, Cameron's industry. Okay, what do you guys think about Forex bots? When I say that right there, just again put a good or bad in the chat. What do you think about Forex bots?
+[20:05] When I just say those fucking words, okay, regardless of Cameron's niche, regardless of how good Cameron is, regardless of the differentiation variables that I just talked about, what do you just immediately think of a Forex bot when you hear it right away?
+[20:22] Okay, bad, bad, scam, awful, bad, bad. You know, it's like again, that's the usual feedback that people think when they hear that niche.
+[20:33] Okay, so what do people do when they go look up Cameron? like by default going into it, do you think they're like, "Oh, this is going to work so well. I'm really excited." No.
+[20:45] It's like they go into it skeptical as fuck. They go, if they're even willing to book a call, they're thinking to themselves, "I got to go look up how hard this guy could fuck me."
+[20:55] Okay. Now, to be clear, if you don't help them do their due diligence on you, they go look you up anyway and do due diligence and just interpret things however they're left to interpret it on their own.
+[21:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Joe's Trust Pilot - Diet vs Disease"
+NÚMEROS: 547 reviews, 91% five-star, 5% four-star, 4.8 out of 5 rating, 5,000 customers served, 90% success rate
+VISUAL: Screenshot do Trust Pilot mostrando as estrelas de avaliação, porcentagens de reviews positivos vs negativos, layout da plataforma de reviews
+[21:15] So, in this case, this is Joe's trust pilot. Okay, if we look at Joe's Joe's trust pilot here, just look at this. This is pretty much exactly what Joe said. He said 90% of the 5,000 people that have done a deal with him have had success.
+[21:32] Okay? And that reflects accurately here. When you look at the Trust Pilot reviews, there's 91% that are positive five-star reviews, right? Okay. Look at his fucking little stars at the top. There's 547 reviews here. He's rated excellent. It's a 4.8 out of five.
+[21:50] Okay. Does that Does that mean Joe's business is great? I mean, arguably, yeah. Like Joe probably does a fucking awesome job.
+[22:00] But think about this in your own behavior. Like I remember when I was talk, I bring up Cameron as an example because when I was talking to Cameron, I said said, "Cameron, like with your trading bot, when you go buy stuff and you look at reviews, what do you look at?"
+[22:18] And he immediately says, "Oh, I just immediately go to the one-star reviews." Cuz again, like an outdated best practice is just talking about upside.
+[22:28] It's like people are also aware that you can fucking spoof reviews, you know? So, like, do they legitimately believe in this case that Joe has 547 reviews and 91% of them are five stars and 5% of them are four stars?
+[22:45] Like, do people actually believe that? some of them. Yeah. Joe, what's your show rate?
+[22:52] Joe: Uh about 45 50%.
+[22:55] Jeremy: So 45 to 50% of people believe Joe, you know, 45 to 50% of people are either just not doing their research and/or they they're the people who bias towards the Oh, yeah. No, all the all this guy's stuff is great, you know, but the other 50 to 55%.
+[23:15] They think, okay, well, let's just look at some of Joe's one-star reviews, you know.
+[23:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "One-Star Review Example #1"
+NÚMEROS: $100 per week cost mentioned
+VISUAL: Screenshot de review negativo no Trust Pilot, texto em destaque mostrando reclamação sobre preço
+[23:23] Hopes dashed. I was willing to pay a reasonable amount for information and support, but $100 a week indefinitely seems excessive. The complimentary Zoom call that you are pumped for an extensive health history for is just a hard sell for their program.
+[23:42] If you have that kind of money, more power to you. So, it's like, as an example, right, then Joe comes in here and he addresses this, but it's like, do you even think they fucking read Joe's response?
+[23:55] Maybe, you know, but what they're really looking at here is is they're just like, they're doing research. They're like, "Okay, so this is $100 a week indefinitely." That's probably what they pull from then.
+[24:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "One-Star Review Example #2"
+NÚMEROS: Não especificados
+VISUAL: Outro screenshot de review negativo, foco em reclamação sobre ser uma "sales call"
+[24:10] All right. Don't waste your time with the free dot dot dot. Okay. Don't waste your time with the free phone call. It's just a salesperson.
+[24:18] So Joe, tell me if I'm wrong. Your whole pitch of why you want people to get on a call with you is what do you call it? A complimentary what with who?
+[24:28] Joe: We call it a nutrition assessment call with an adviser from the team.
+[24:33] Jeremy: And do you in any way, shape, or form disclose it's a sales call?
+[24:37] Joe: I don't mention the word sales.
+[24:40] Jeremy: Do you tell people that you're going to try to sell them something or that you're going to help them further or offer them something that can be like ongoing paid support or do you just call it that nutritionist whatever call?
+[24:52] Joe: Oh, you know, absolutely. We call nutrition assessment call to see um you know, if they'd be a fit for our program, we can explore the different options we have.
+[25:03] Jeremy: Bang. Did this person pick that up? probably not. It's like, are people that are coming through your funnel sometimes fucking boomers? Yes.
+[25:15] It's like this person here, look, keep in mind, he's talking to people that are 60 plus. Not to just sit here and like drag the people who are 60 plus, but boomers are some of the most entitled people on planet Earth, okay?
+[25:30] And they're also not the most uh I don't know, sharp, right? Like you lose a lot of your mental edge the older that you get in some instances. Not to say that they're total retards or anything like there's a lot of really smart people that are above that age, for sure.
+[25:48] But again, it's like Joe obviously has a probability with 5,000 plus customers. Imagine the amount of sales calls that Joe's had to do. You're going to get a person like this here and there that says something like this.
+[26:02] Is this one really that bad? No, it's it's really not. Right. And again, when somebody's doing research, is this one really that bad? Like, no, not at all. These things aren't that bad.
+[26:15] It's like you're not really dealing with scathing reviews here, you You're dealing with somebody saying like a $100 is expensive, 400 bucks a month. And here you're just dealing with somebody who's saying it's a sales call, right?
+[26:28] But keep in mind, we don't want Joe's sales call to be undermined. Joe, who do you have doing the sales calls?
+[26:35] Joe: Uh sales team.
+[26:37] Jeremy: Right? And are these people just salespeople or are they like legit? Like tell me they're uh what'd you call them the other day on our call? You said they they were uh like dieticians or something like that. like they they had gone to university.
+[26:52] Joe: Well, the the sales team are not dietitians. Sales team are are sales people.
+[26:58] Jeremy: Okay. Got it. All right. Cool. So, moral of the story, this is real. This is okay. But again, not that bad. Okay.
+[27:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "One-Star Review Example #3"
+NÚMEROS: $700 USD per month minimum spend
+VISUAL: Review comparando preço com alternativas locais mais baratas, mencionando Medicare
+[27:10] Minimum spend $700 ISD a month. For those who may be unaware, it's expensive. Minimum spend 700 USD per month. I can see a local Australian dietician with a master's degree in specialist training in medical nutrition as well as a mane university food map diet for much much less than that subsidized by Medicare.
+[27:35] This seems to be the American approach to healthcare and I'm seeing it a lot on YouTube in various modalities. Uh so long story short, this person is essentially bitching that they can get it cheaper somewhere else.
+[27:48] Again, really not that bad, right? Kind of a dick so far for these three people who have left one-star reviews. It's like none of these people. Have you noticed something yet by the way? Have any of these people actually bought Joe's problem? Joe's program, right?
+[28:05] So, what's the validity of leaving a fucking review when they didn't even buy the program? Think about that. Is that fair? Right?
+[28:15] Would an average person if they were made aware like, "Hey, the by the way, these three people didn't even buy our offer. You know, they've never actually had any experiences with our product."
+[28:28] And the people who when you go read our five-star reviews or even our four-star reviews who have actually purchased our program, those are the people who have actually gone through it.
+[28:40] So far, two out of three people are just complaining that it was too expensive for them and one out of three people was complaining it was a sales call, which we openly disclose obviously.
+[28:52] You see what I mean? Like just framing alone, right? And we'll talk about this here in a minute, but the point I'm trying to make is like framing alone can help interpret these in a proper way.
+[29:05] When we just leave somebody on their own, do you think they're going to do the level of research that you and I are digging into right now and trying to reframe it? Or do you think that they just read it and are like, "Yeah, fuck that." You know, like I'm not I'm not doing this now. It's not worth not worth my time.
+[29:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "One-Star Review Example #4 - 'SCAM'"
+NÚMEROS: Não especificados diretamente
+VISUAL: Review mais agressivo chamando de scam, alegações sobre equipe de vendas, endereço postal
+[29:28] Okay. Scam. I believe this. Nothing more than a modern-day scam. Everyone is Joe Leech. The people you are speaking to online or on the phone are just salespeople, not Joe Leech himself, even though they identifying themselves as such.
+[29:45] Joe, is that true? Do your sales people try to act like they're you?
+[29:50] Joe: No. I mean, this the the salesperson is usually on Zoom or something, but you might mean like in the the lead generation process, like messaging the page or something like that. We never say it's me, but we don't say it's not me.
+[30:08] Jeremy: Yeah. Okay. So, again, fuck. They use the benevolent angle of wanting to help people when in fact it's just to get into your wallet. If you Google their address, it's a UPS store that they rent a postal box with.
+[30:23] This is not their personal business address. This is nothing more than a beyond belief priced high dollar sales scheme. They sell you on the same D. So again, did this person buy? No. Okay.
+[30:38] Is any of this actually something that is legitimate? Like no, dude. It's just a boomer like wave their hand in the air LIKE IT'S NOT REAL. HE HAS A YOU HE HAS A FUCKING POSTAL BOX, you know? See what I mean?
+[30:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "One-Star Review Example #5"
+NÚMEROS: Review from 2021
+VISUAL: Review sobre produto low-ticket antigo, menção de reembolso
+[30:58] Okay. Useless fluff. I was excited to buy when I should have read that it attempts rather than explains the differences. I expected in-depth info that would help me balance my gene mutation.
+[31:12] Joe: This is about a low ticket product 2021. So, it's like I don't know. We don't sell that anymore.
+[31:18] Jeremy: Okay. Well, either way, I mean, somebody left a one-star review about it and you're going to have to explain it inside of a confirmation video or you're going to have to explain it period. You know what I mean? So,
+[31:30] Joe: It does say there we refunded them and stuff. She updated it. So, but yeah, but yeah, I should be addressing these things.
+[31:38] Jeremy: Yeah. So, my point is is like you guys see this shit like these people don't even buy, you know? They just bitch about the sales call and the fact it's a little expensive.
+[31:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Reddit Thread - Diet vs Disease"
+NÚMEROS: Não especificados inicialmente
+VISUAL: Screenshot da thread do Reddit, mostrando título e primeiros comentários
+[31:52] Let's go back and let's look at what else is okay. Diet versus disease reviews. Okay, the next thing that we got is this Reddit thread.
+[32:02] Joe: Reddit is the the problem on it.
+[32:05] Jeremy: Okay, so long story short, we got this Reddit thread here. Okay, so moral of the story, if we go through the Reddit thread, has anyone use this diet specialist diet versus disease founded by Joe Leech. Was it effective? yada yada.
+[32:22] Okay, so let's start going through it. So, first of all, the food map elimination and reintroduction diet is one of the few evidence-based diets that's likely to help with IBS symptoms. So, that person essentially says, "Yes, it's good.
+[32:38] I did diet versus disease and it was a ripoff. I would not recommend." Okay, so this our first person that actually purchased something right here that claims that they say it's a ripoff.
+[32:52] Okay, so here we go. Was it a ripoff? Just curious. Um, I just completed the phone screening and I'm still skeptical. $5,000 for four months. So, this person then didn't buy.
+[33:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Reddit Comment Analysis"
+NÚMEROS: $5,000 for 4 months, $312.50 per session calculation
+VISUAL: Breakdown de comentário do Reddit mostrando cálculo de custo por sessão, comparação com alternativas
+[33:10] Um, and then this not Teddy Roosevelt person. Okay, here we go. $5,000 for four months, assuming about one session per week. Comes out to 31250 per session.
+[33:25] Can you find a dietitian that's less expensive? Yes. Takes four to six weeks to try out a new diet. They don't do anything different. Okay.
+[33:35] So, long story short, this person who bought essentially saying, "I could have gotten it cheaper somewhere else." That's the moral of the story. Are they upset with the result they got? No. Are they upset that again, the program didn't work? No.
+[33:52] What are they upset about here? Put in the chat what this person's upset about. What are they bitching about right now? This person claims they bought the program, right? What are we seeing them complain about?
+[34:08] That's just money. That's it. Just money, right? That's technically easy to address because again, it's just money. Okay?
+[34:18] And you got to remember, I want to be clear when I say this. I mentioned this to Joe on a sales call and I'm sorry, not a sales on one of our inner circle calls.
+[34:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Boomer Money Perception Problem"
+NÚMEROS: 60+ years old demographic, 1955 birth year, 1970s gold standard end, $40,000 houses then vs $400,000-$700,000 now
+VISUAL: Comparação visual de valor do dólar ao longo do tempo, poder de compra de boomers vs hoje
+[34:33] Okay, think back to when you were a kid. You go to a gas station and you were going to buy like a soda or like a piece of candy or something like that. What did it cost? Put in the chat like what did a drink cost if you would walk into a gas station when you were like fucking under 10 years old, right?
+[34:52] You're there to buy like a candy bar or something. Like what did that shit cost? Dude, I remember being able to buy like a literal like bar of candy for like a quarter or like 50 cents.
+[35:05] I remember being able to buy like a full soda for like under a dollar. Like a full bottle of soda, you know? I remember being able to buy like a jerky stick for like 10 cents. You know what I mean?
+[35:18] And then now if I fast forward to age 30, you know what I mean? Like 20 plus odd years later, those same things like I don't even think you could I don't even to be fair, I don't buy candy, you know? I'm not like a little kid anymore, but long story short, it's like candy's not a fucking quarter anymore.
+[35:38] You know what I mean? Candies like a couple dollars, you know? Like same thing with sodas. Like sure, you can get a soda for a dollar, but it's like a lot of a lot of sodas are far more expensive than what they historically have been. Cost rise.
+[35:53] Okay, boomers, right? If you're in your 60s, let's just flash back real quick. 60 years old, we're 20, 25 right now. If you would flash back 60 plus years to when these people were little, okay, keep in mind they're like 60 plus.
+[36:12] Are are all the people who you sell to Joe in the 60s or are some of them older than that?
+[36:18] Joe: Oh yeah, even 80 plus is not uncommon.
+[36:22] Jeremy: Okay, so long story short, if we take 2025, okay, and we deduct 70 years from it, that's 1955 that these people were born.
+[36:35] For everybody who doesn't know or doesn't remember, we were on the gold standard here in the United States until the early 1970s, as were most countries. We then detached the dollar from being backed by gold and it became a highly inflationary thing.
+[36:52] Okay, dollars lost dramatic amounts of value after the 70s. So, as an example, if somebody was 70 years old that Joe's selling to and they could think back to when they were a kid and a house cost literally tens of thousands of dollars and today those same houses in a normal place cost like 4 to 500 grand.
+[37:15] Okay? There's videos that you can watch on YouTube of old people being shown houses and just being asked the simple question, "How much do you think this is?" And they'll be like, "Oh, that's 40 grand." And then they're like, "No, that's $700,000." And then the old person's like, "What?" You know what I mean?
+[37:35] It's like, my point being, they're attached to what dollars were worth versus what dollars are worth today. It's really hard for people to like update their perspective.
+[37:48] Like I get this in the advertising space all the time where I've been talking to a guy who's been advertising since like 2012 and he's like, "Dude, my costs have like 4xed since then."
+[38:00] And I'm like, "Well, yeah, no shit dude. These are publicly traded companies that want to make more money every year. Like ad costs get expensive literally like more expensive every year, you know? Like you got to adjust your business model.
+[38:15] The market's not going to go back down. Like we're we're literally only going up and to the right. It only gets more inflationary from here, you know?
+[38:25] But again, so an old person, is $5,000 really a lot of money? It's like, well, respectfully, you know, yeah, to money, it's, you know, worth money, so I guess.
+[38:38] But to to an old person, five grand, what do you guys think five grand to an old person is really worth to them mentally? Like, just remember, how far does five grand go to an old person who thinks they could buy a house for like 40 grand that today is worth like 400 to $700,000?
+[38:58] You see what I'm saying? You see what Joe's dealing with in this example? So, it's like, think about this, right? If Joe leaves that unaddressed when we talk about framing material and like modern best practices, right?
+[39:15] Old people are doing research and they find this and they're like, "Yeah, dude. 5,000 that's extreme." They perceptually view that like they're spending like $30,000. You see what I mean? It's extreme to them.
+[39:30] But anyway, that's still something that can be addressed. Okay. All right. Here we go. Here's another person that didn't buy. This person did buy and they say it's a game changer for them.
+[39:45] This person says they signed up in 2020 out of desperation. It was the best decision they've ever made and that was three days ago. Joe, did you send off the Reddit thread to your customers to get people to start talking?
+[40:00] Joe: Yeah, we we've started the process now.
+[40:03] Jeremy: Yeah. Good. I was going to say that one's a much better uh uh Reddit comment comparatively to how it was just days ago when I talked to you. So, good job on taking action on that.
+[40:15] Okay, here's my point though, right? Now that we're starting to get some positive propaganda in this thread, which is awesome. Really, the only thing that's unaddressed here is the fact that somebody says, "I did it. It was a ripoff."
+[40:30] And by the way, did you notice what I had to do to view that comment where they explain further? You see that right there? What do I have to click? Do I even see the explanation where they just say it was $5,000 and it was too expensive?
+[40:48] Or do I just simply see I did it and it was a ripoff? Yeah.
+[40:52] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Reddit UX Problem - Hidden Context"
+NÚMEROS: "+4 more replies" button
+VISUAL: Screenshot mostrando o pequeno botão "+4 more replies" que esconde contexto importante, destaque visual do problema de UX
+[40:55] How much willingness is there for somebody to actually do their research on this? Like, sure, they might press that button, but do they know to press that tiny little button right there that says plus four more replies?
+[41:10] These people are like 60 plus, guys. Think about your fucking grandparents real quick. How many of them are texting you shit? And like, how many of them actively know how to use their cell phone properly?
+[41:23] You know, like my grandfather, I was telling Joe the other day, my grandfather's like just learning how to use this shit. You know, like he's just now texting me stuff. He's just now like learning how to use an iPhone properly.
+[41:38] And even then, like properly is pretty far off obviously from how we all use it. You know, just finally learning how to text is my point.
+[41:48] Do you think that an old person would know they got to press that tiny tiny little button right there that says plus four more replies?
+[41:55] Joe: No.
+[41:57] Jeremy: Yeah, probably not. All they see is is I did it and it was a ripoff. I don't recommend it. Right.
+[42:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Modern Best Practice: Confirmation Page Videos Must Address Due Diligence"
+NÚMEROS: Não especificados
+VISUAL: Título em destaque, lista de elementos que devem ser incluídos em vídeos de confirmação modernos
+[42:08] Okay. So my point is we have to have when we talk about modern best practices, we have to have confirmation page videos that help people do due diligence. Okay?
+[42:20] And this is important to understand in terms of how this all flows. Okay? When I say we have to have confirmation page videos that help people do due diligence, remember this point here.
+[42:33] We cannot talk about exclusively what works. We have to also talk about if it does not work. Okay.
+[42:42] So Joe, what looks to be the most common complaint about your offer right now is cost. Do you agree?
+[42:50] Joe: Yeah, it it's definitely the cost.
+[42:53] Jeremy: I didn't see anything else where people said, "Oh, it's a ripoff because it didn't work." Based on my due diligence that I just did, I only saw that it was a cost-based objection. Right.
+[43:08] Well, okay. So, there's a few things you could do for that, obviously. Number one is we could just disclose the fucking price before people book calls. That alone can mitigate that type of person. Okay.
+[43:23] Number two, and this is also important to note, we can just help people on the confirmation page video do their due diligence there. So, they're not just reading all this random shit and interpreting it on their own, right?
+[43:38] It's like we want to be able to go in and actually address stuff that exists so it's framed properly. Okay, that's the most important thing that we have to understand.
+[43:50] We have to address the things in our confirmation page videos that are fucking us.
+[43:58] One of the inner circle members who was having a big issue, his um it was uh it was Jordan and Jacob. and Jordan and Jacob. I remember their show rate used to be like in the 70s. They have $24,000 off. Okay.
+[44:18] Boys out there in Dubai correlated to the exact time frame that their show rate started to drop. It was like a mystery at first. It was like, "Oh, dude, our show rates going down. Like, we don't know what it is. We don't know what it is."
+[44:33] And eventually, we just looked up the company name and the word Reddit. Bam. Scathing Reddit page. And again, it was the same exact thing. It was most people just talking about cost.
+[44:48] It wasn't like people were sitting there like, "Oh, I did this guy's thing and it fucking hosed me, you know?" No, it was like, "Oh, this shit's expensive." Right?
+[45:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Confirmation Video Script Example - Joe's Business"
+NÚMEROS: 5,132 customers, 91% success rate, 9% failure rate
+VISUAL: Script detalhado de como fazer um vídeo de confirmação transparente, abordando objeções proativamente
+[45:03] So, here's my point. We have to make videos right on the fucking confirmation page that aid people in doing their due diligence. And we don't just want to talk about the good stuff. We want to talk about the bad stuff, too. And we want to frame the bad stuff.
+[45:20] Okay? We want to frame the bad stuff. So, I'm going to give you an example here. Okay, I'm going to act like I'm Joe.
+[45:28] So, I would be like, "Hey guys, thank you so much for booking your call with Diet versus Diet versus Disease. My name's Joe Leech. Uh, I want to help you in this video. Do some due diligence on us and just help you understand like what you're about to go through when you commit to this process.
+[45:48] Um, some expectations and I also want to just help you do your research." So, first things first, you're probably wondering like, "Have we actually helped people?" Uh, yeah. Yeah, we've helped a lot of people.
+[46:03] As a matter of fact, we've had over 5,000. And by the way, I want to be able to show stuff that like proves what I'm saying. Joe, do you have like a number in a payment processor that says like a total number of transactions that's like above 5,000 as an example?
+[46:20] Joe: Oh, yeah, definitely. Yeah. Stripe like shows the customer number or something.
+[46:25] Jeremy: So, I'd want to be like, okay, so we've helped over 5,132 people, as you can see right here, taken from my Stripe payment processor. That means we've had this many people give us money.
+[46:40] And I just want to be as extremely transparent here and show you our success rate, our failure rate, what we do when somebody fails. And I just want to help you here make a decision that's going to either benefit you or help you to just say this isn't for me.
+[46:58] So, let's get started. First of all, out of 5,132 people that have committed to going through the process of diet versus disease, we have a 91% success rate currently.
+[47:15] That means that 9.1 out of 10 people who choose to give us money achieve the result that they're after. Okay? And the results that they're after are X, Y, and Z. Okay? These are the most common things that we help people with that people are giving us money for in the first place.
+[47:35] Now, let's just talk real quick about the other 9%. Okay? If we go and this is where I would share my screen and I would literally look up diet versus disease reviews and I would go to the trust pilot on a screen share in the video from this point forward.
+[47:55] And I'd be like look if we look up the most common thing that people say about us when it comes to why the 9% had a bad experience with us and almost all instances it's cost right and let me give you some examples of that.
+[48:12] Like here on Trustpilot, we have 497 positive reviews. Okay? And as you'll see, we're rated at a 4.8 stars, but if you're like most people, you won't actually go read our five-star reviews of all the people who have actually transacted with us.
+[48:32] Uh, chosen to do business with us, and had a great result, and shared their experiences because maybe you don't trust those. You'll be like most people, and just go click to our one-star reviews and see how bad it could be if you chose to take this risk.
+[48:50] So, let's go through a few of those one stars, right? The first four people right here, you can see they say something like this, like this, and like this, and like this. And coincidentally, all four just relate to cost, right?
+[49:08] And we're sympathetic. I mean, most of the people that we do business with are over 60 years old. We have 60 year olds, 70 year olds, 80 year olds that are doing deals with us.
+[49:22] And at the end of the day, you come from a time where the dollar was worth so much more than it is today. And perceptually, one of the most interesting things that we find is that people like yourself, you have a view of how much more dollars are worth than how we view them being worth today.
+[49:42] We respect your money. We appreciate your money, and we try to price our offer in a way where we're competitive, but can also give you a world-class service. Okay?
+[49:55] At the end of the day, like we're not subsidized by insurance companies. People come out of pocket when they pay us for what they do. But let me give you some facts, okay?
+[50:08] Back when you were in your 20s and 30s, you could buy a house for $40,000. That today has inflated to a $400 to $700,000 average cost. Your dollars when you were younger were backed by gold. Our dollars today are printed in the trillions by the year. It's a different day and age.
+[50:30] And ultimately the costs of living have inflated to a point where the world-class dieticians that we hired, the world-class nutritionists that we hired that are all university graduates from some of the top schools on earth.
+[50:45] As I'm sure you've heard in the news, student loans are burdening people my age. And my staff is no different. These people have the costs of their homes, food, vehicles, families to support, and their university debt.
+[51:02] And I'm not sitting here trying to guilt trip you and act like we're overcharging you. By no means. We actually charge an extremely reasonable amount.
+[51:12] But sometimes we get people like these guys on Trust Pilot that, if you noticed, they didn't even do business with us. They didn't even do a deal with us. And as a matter of fact, they just left a one-star review.
+[51:28] You know, versus if you go look at the five star reviews or even the four-star reviews or the three star reviews. These people actually transacted with us and they share their real experience.
+[51:42] Crazy as it is, there's actually nobody in the one-star section that even transacted with us. And by the way, there's one person who purchased a lower ticket product from us uh about four years ago at the time I'm making this video. Four years ago in 2021.
+[52:00] And as you'll see here, they had a bad experience and we refunded them because we do right by our customers. When somebody does have a bad experience, we refund. Let me talk to you a little bit about our action-based guarantee.
+[52:15] Right? Here's the details of that and how it works and what we do to make sure that we do right by you as a customer when you transact with us. Okay.
+[52:25] Some of the other things you can find out about us out there are these Reddit reviews. So, Reddit is a great place to go find what regular people are talking about and in a way that I can't manipulate, right?
+[52:40] So, if you look up diet versus disease and you look up the word Reddit, you'll find two different threads. There's one person here who says that it was a ripoff. And if you look at this tiny little button right here that says look at more replies, you'll see that the same user who said it was a ripoff was just complaining about the price.
+[53:02] Coincidentally, they didn't even talk about the fact that they had any good or bad experience with the offer itself. They just claimed that they could have gotten what we sell for cheaper somewhere else.
+[53:15] Here's the thing. People who actually do deals with us, they love our business and they get great results. And like I said, 91 91% of the time, nine times out of 10, right, you're getting great odds. You have great odds for success and great results.
+[53:35] If I told you you could go to a casino and you could do the little roulette wheel and bet on black nine times in a row or 10 times in a row, would you take that bet every single time?
+[53:48] You know, would you gamble on the fact that you have a 9% probability of losing and a 91% probability of winning? I'm sure you would.
+[53:58] And here we're not talking about something as simple as winning in a single game of roulette. We're talking about your life and your quality of life from overcoming the symptoms of gut related health issues.
+[54:12] I want you to reflect with me real quick on how much we help people and the fact that nine times out of 10 we do so in almost a miraculous way. Right?
+[54:25] The people who we help are so grateful for what we do and we're so grateful for the opportunity to be able to help them. In the process that you're about to go through, I'm going to send you many emails over these coming days.
+[54:40] And there's also several videos below this one that you're watching right now that answer some of the key questions that people have when they go through our sales process. Okay?
+[54:52] And that's exactly what this is. This is a sales process. This is an opportunity for you to ask us questions and for us to ask you questions and make sure that it's a good fit for both parties to go into business together.
+[55:08] And if it does end up being a good fit, we're so excited for the opportunity to help. But I want to make sure that I help you do your research. I want to make sure I give you as many facts, information, resources, guides, and material to aid you in your journey of making this decision confidently to either be in or be out.
+[55:30] Okay, my name's Joe Leech. I'm with Diet Versus Disease and I'm so excited to help you for the opportunity to potentially change your gut health forever. Okay, I'll see you on your call coming up with one of our specialists. All right, talk soon.
+[55:48] It's like that's a fucking banger of a video right there. You get what I mean? And I'm trying to show facts.
+[55:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Additional Proof Point - Dispute Rate"
+NÚMEROS: 0.7% dispute rate, 5,132 transactions, 99.3% satisfaction implied
+VISUAL: Stripe dashboard screenshot mostrando dispute rate baixíssimo, comparação com eficácia do Purell (99.99%)
+[56:00] It's like I could also pepper things in there like we've talked about at our mastermind of like Joe mentioned he was using Stripe. Joe, what's your dispute rate of overall lifetime transactions? What's the percentage?
+[56:15] Joe: 0.75 I think. 0.7.
+[56:18] Jeremy: So again, like I could easily work that into the video. I could be like, "Hey guys, by the way, I just want to be extremely transparent with you. Out of those 5,132 people that have in the lifetime of my payment processor transacted with us, I have a 0.07% or a.7% dispute rate. Okay?
+[56:40] You ever use Purel? Purel has a 99.99% chance of getting rid of the germs. And you use Purel confidently to get rid of those germs when you want them to get rid. You want to get rid of germs, you use Purel. Right?
+[56:58] If I told you you had a 99.3% chance of getting the result that you want just based on my dispute rate of loan, would you take that risk?
+[57:10] It's like, look, it's right here. This is a non-manipulated statistic. This is my payment processor Stripe dashboard. Watch. I'll refresh the page right now and scroll right back down to this section so you can see I didn't mess with anything.
+[57:28] That means that.7% of people who have ever done business with us have chosen to dispute the transaction. That means 99.3% of the time people have had a great relationship with us and chosen to let us obviously keep their money. What does that show about our business? Right?
+[57:50] It's like that's an example of due diligence. Like that's a modern best practice. Okay? That's a way to be radically transparent, which is what people genuinely want to know.
+[58:05] Like in my sales process, as an example, for Master Internet Marketing, we tell people, we're like, "Look, we've had a little over 500 people that have chosen to purchase this program for $5,000." Okay?
+[58:20] Had about 500. The exact number fluctuates by the day. Hopefully, you'll be the 521st. Okay? But to be clear, out of those 500 people, we've had one guy. His name was Ryan.
+[58:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Ryan Story - Radical Transparency Example"
+NÚMEROS: 500+ customers, 1 dispute, $5,000 program cost
+VISUAL: Narrativa completa de um caso de disputa, mostrando transparência extrema e como lidar com exceções
+[58:38] Ryan was a younger guy. He was moving out of his house. Okay? And Ryan, due to the fact he was moving out of his house, needed some money. And Ryan decided to dispute the transaction with us for Master Internet Marketing.
+[58:55] And we were super confused by it. Ryan was extremely active in the community chat. I even looked up Ryan inside of our course and I saw that he consumed without exaggeration literally the entirety of the course.
+[59:12] The hundreds of videos that come along with it, every single live class that's 3 to 5 hours long. And again, he was extremely active in the community. It was shocking when Ryan did this.
+[59:28] First thing I did was just try to call Ryan a few times throughout the day to try to understand what occurred and what we did wrong. I couldn't get a hold of them.
+[59:40] Generally, when somebody does something like that, it means that they did something wrong, not us. And I wanted to understand why. Like, what happened? Maybe if we did do something wrong, I wanted to be able to fix it, rectify it.
+[59:55] Well, I couldn't get a hold of Ryan. And look, Ryan hired me as a mentor. I care about Ryan. So, what I did is I looked on white pages.com, which is just a public directory of information, and I looked up Ryan's information.
+[1:00:12] And I can see relatives of Ryan's. I saw his father. I called his father's cell phone, and I get a hold of Ryan's dad, and I explained to his dad. I'm like, "Listen, I'm really concerned. Like, this guy hired me to be his mentor and he disputed a transaction with us today.
+[1:00:32] And he consumed literally the entirety of the material. He was really active in our community. It seemed like he was loving it. Out of nowhere, he disputed it. I I just can't get a hold of the guy. I'm trying to understand what's going on. Is he okay? Like, did something happen?"
+[1:00:50] And Ryan's dad explains to me that he was moving out. He was moving out from Tampa and he was moving on his own. And uh Ryan's dad calls Ryan. Ryan answers and he three-ways the call with me.
+[1:01:08] So now I finally get a hold of Ryan and I'm like, "Ryan, what happened?" And Ryan just almost breaks down on the call, man. You know how when somebody's about to cry, they kind of sound a little choked up and their voice gets a little shaky?
+[1:01:25] This is like a fucking 20-year-old kid, man. Probably dealing with something that brought him some shame. And he starts to explain that he just didn't have enough money and he needed money and he was one of the most recent transactions that he could think of calling.
+[1:01:45] And he did it with many others, not just us. He did it with many others, too. He called his bank and he acted like his card had gotten compromised and he charged back as many transactions as they would allow him to to get the money that he needed to move out.
+[1:02:05] Well, Ryan's dad ended up making it right, but he wired us money. So, if you look in my payment processor here, you'll see Ryan as a dispute. Ryan wasn't unhappy. Ryan needed money. And unfortunately, he used the Bank of Jeremy for that.
+[1:02:25] But you'll notice out of the other 520 transactions, there's not a single person who's disputed otherwise. There's not even a single person we've had to refund.
+[1:02:38] Okay, that's an example of fucking due diligence. You see what I mean? That's an example of like a modern practice that actually works that people want to know.
+[1:02:50] Because do you know how many other fucking different businesses are out there that they've been absolutely hosed by? And again, like I said, sophistication is no longer niche specific. Okay?
+[1:03:05] Sophistication has bled out to all of their other consumer behavior at this point. Okay, look at Joe's business. He's dealing with fucking 60 to 80 year olds. That's 60 to 80 years of getting fucked by businesses.
+[1:03:22] You don't think that they're going to do research on Joe and just read one? All it takes is that one line. I bought this. It was a ripoff. How fast do you think that person's gonna abandon the buying process just from reading that single line?
+[1:03:40] Well, apparently 50 to 55% of the time that's all it takes for them to fucking bail. But if Joe had a proper framing video, as you all need nowadays, okay, that legitimately discloses the risks of doing business with you, okay?
+[1:04:00] And goes through it and helps frame the potentially bad things there are about you that people can read about that if left unaddressed by you are interpreted however they're going to interpret it. I'd rather be involved in the framing process there. Wouldn't you? You see what I mean?
+[1:04:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Show Rate Tank Case Study - Jordan & Jacob"
+NÚMEROS: 70% show rate dropped to ~45%, $24,000 offer, February 2023 Reddit thread appearance
+VISUAL: Gráfico mostrando queda de show rate correlacionada com aparecimento de thread do Reddit
+[1:04:25] So again, if we have a show rate issue, okay, most and this is the this is what I brought up Jacob and Jordan for. Like when their show rate tanked to about where Joe's is now.
+[1:04:40] If if you looked up the exact time when they specifically had their show rate tank, it was the exact fucking month that a Reddit thread came out about them just talking about their sales process. Again, not even buyers, just people bitching about the price.
+[1:05:00] Okay, so one of the most common things I hear from you guys when I tell you guys, like, say the fucking price to people. You guys tell me things like, "Oh no, I'll get less calls." Like, "Oh, no."
+[1:05:15] Okay, well, great. Well, say the price and then like tell people why it costs that much. Like, frame it. You know what I mean? Because they're learning the price from fucking Reddit threads if they don't learn it from you. You know what I mean?
+[1:05:33] Like, tell people, frame it. Framing simply means I'm controlling how you view the information that you're going to see. Okay? You get what I'm saying?
+[1:05:48] That's all it comes down to is I want to successfully get involved with controlling how you look at the information available about my business. That's all it is. That's it. That's the whole point.
+[1:06:02] You do that in confirmation pages. Okay. Like one recent person that's been doing a great job at this has been Devon. Okay. Devin here in the inner circle. He's a new person. Devon, what's your show rate right now?
+[1:06:18] Devon: Uh about 85%.
+[1:06:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Devon's Confirmation Page Example"
+NÚMEROS: 85% show rate
+VISUAL: Screenshot da página de confirmação de Devon mostrando vídeo bem estruturado, seção massiva de depoimentos, screenshots, FAQ com vídeos curtos
+[1:06:22] Jeremy: 85%. Okay. If we look up Devon online, you think we're gonna find a fucking thing bad about the guy? Probably not. But like, here's his confirmation page.
+[1:06:38] Okay, so first of all, he's got a pretty well-built video. He's got a giant testimonial section. Okay, there's people that are both known and people that are unknown.
+[1:06:52] And then in addition to that, he's got some screenshots that are easier to read, a giant testimonial from a very well-known podcaster, and then this section here, which is like the FAQ section that answers the most common questions that people will have in the sales process. Okay?
+[1:07:12] It's a great example of a due diligence page. You see what I mean? That's legitimately helpful. Not just testimonials, okay? But a very good section with a bunch of short videos.
+[1:07:28] Look, a minute 50, 3 minutes, 2 minutes, 1 minute, 5 minutes, 2 minutes, 2 minutes, 45 seconds. And the and again, when you look at the questions, right?
+[1:07:42] What podcast can you get me booked on? How do I know you'll get me on big podcasts? How do I know that you'll get me on the right podcast for me? How will I be able to get an ROI?
+[1:07:55] What makes you different from the other people who can do this shit? Can I just try this out and get on one or two podcast first? Do you have a guarantee? How many podcasts will you get me on?
+[1:08:10] I'm sure that those are the actual questions that people would have going through Devon's sales process. Okay. And just based on the fact Devon has an 85% show rate, I'm sure that if another question came up that's left unaddressed at this pace, he'd probably add it to that page, too. Okay?
+[1:08:30] And if Devon started to have a show rate issue, the very first thing that you would want to do is look yourself up online with the word Reddit behind it. Okay?
+[1:08:42] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Reddit = #1 Cause of Show Rate Issues"
+NÚMEROS: Não especificados
+VISUAL: Ênfase visual em Reddit como principal plataforma de due diligence, maior que Trust Pilot ou qualquer outra
+[1:08:45] That's the number one causation of what's fucking businesses nowadays on show rates. show rates to webinars, show rates to everything.
+[1:08:55] I have a client just recently. Let me show you a few of these. So, they were saying, "Hey, we have a show rate issue to our webinars. We're getting like 15% of people that are showing up." And I'm like, "Okay, are there any Reddit threads?"
+[1:09:12] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Airbnb Arbitrage Client - Multiple Reddit Threads"
+NÚMEROS: 15% webinar show rate, 4 Reddit threads found
+VISUAL: Screenshots de múltiplas threads do Reddit sobre o cliente, mostrando reclamações não endereçadas
+[1:09:15] Okay, are there any Reddit threads? There's not just one, not just two, not just three, but four Reddit threads, okay, about this company. This is an Airbnb arbitrage business.
+[1:09:30] So, it's like this one in particular is just saying it's a scam. There's no money back guarantee. It does not cost $10,000 to start. They're not your friends. They're a salesman.
+[1:09:45] Okay, so long story short, this person bought. It's left completely unaddressed and it just says this is a scam and they didn't paste it on like ripoffreport.com or Trustpilot. They just go to fucking Reddit and they just post it.
+[1:10:02] And look, look, here's the issue, right? It's left completely unaddressed. So again, it's like if this case exists for your business, that's where you have to do the confirmation page video.
+[1:10:18] That's where you have to like make an email that addresses this kind of shit. That's where you have to send this to your customers and say, "Hey, can you guys go like reply to this and share your experience about our offer?"
+[1:10:35] And again, then we look at the next one. Okay. Does anybody have experience purchasing from Blake or Preston? Okay. So, long story short, not a buyer. Not a buyer. Not a buyer for Blake, not the buyer. Okay.
+[1:10:52] So, I followed Preston's content for a while. He's really solid. His team knows their stuff. Uh, yeah, you could find deals on your own, but it's more costly making rookie mistakes. Okay, so that's a good one.
+[1:11:08] Okay, so again, nothing really bad on this one, right? That's totally fine to just leave sitting there. But again, you could send it to your customer.
+[1:11:18] All right. I had a Zoom call with someone who works from Preston. I wanted to know if I signed up. Like, is it worth almost $12,000? That seems pretty crazy to me. Okay.
+[1:11:32] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Reddit Thread Analysis - Preston's Business"
+NÚMEROS: $12,000 price point, $15,000 paid, $10,000-$15,000 capital needed, $9,800 course, $3,000 coaching
+VISUAL: Análise de múltiplos comentários do Reddit, alguns positivos, alguns com objeções de preço
+[1:11:35] So, here we go. I signed up. I paid 15K. And I'd recommend only doing this if you have 10 to 15K set aside for the Airbnbs. I'm not saying it's a scam, but you need more than 10K.
+[1:11:52] So, it's like again, that's not really that bad again, but I'd rather have some framing influence on that, right? So, it's like, all right, do you believe it's worth its weight?
+[1:12:05] Again, we have to press here to be able to read all this shit. This guy who posted said, "Hard to say right now. It's only been 2 to 3 weeks." Okay, so again, nothing really bad, right?
+[1:12:20] But I want to be involved in these conversations. Like I want my customers to be involved in these conversations. Okay.
+[1:12:28] Hey there. These prices can shock you. I've interacted with Preston's team. Yes, it's pricey, but these guys know their stuff. All right. Great defense.
+[1:12:40] I just attended one of his courses. Not sure if the program I I did not feel pressured to join. This person's also just asking for advice. And again, nobody's responded to it yet. I'd love to have a customer, a set of customers go respond to that. You see?
+[1:12:58] So, it's like, dude, this one's big. You know what I mean? I just signed up for the course last month. I paid $9,800. Course has good content. I'm feeling much more confident.
+[1:13:12] Here's the biggest problem for me. I wish I could cancel the coaching program, which I paid over $3,000 for. Simply put, the coaching hasn't been helpful for them.
+[1:13:25] You see, so like this person said the 9,800 is good, but the 3,000 is not good. So anyway, my point is is like, dude, that's four fucking Reddit threads. One of three doesn't really need addressed so far, okay?
+[1:13:42] But again, I want to be involved in these. I want my customers to get involved cuz guess what? Again, just to be extremely clear, Reddit is like the number one thing right now that is fucking show rates or helping show rates.
+[1:14:00] Okay, it goes to show that that is where people are currently going to do their research more than anything else. That is like literally the number one place.
+[1:14:12] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "WHERE TO CREATE CUSTOMER THREADS"
+NÚMEROS: 3-4 threads recommended, quarterly distribution strategy
+VISUAL: Lista clara mostrando Reddit como plataforma #1, estratégia de múltiplas threads ao longo do ano
+[1:14:15] Okay, so let me talk about the flip side of this. Let's go back to this sheet here and continue to go through some of our best practices because if it's not clear and evidence yet, let me just write it down in big fucking letters for you in terms of a modern best practice, okay?
+[1:14:35] Is Trust Pilot where people are going, right? Well, they're going there, but they're only going there to look at one pest one star reviews. Where are they actually going? Reddit. Okay.
+[1:14:50] Where do I want to create a thread for my customers to go and talk about my business? Reddit. Okay. Do I want to just create one thread? Do I want to create two threads?
+[1:15:05] You know, it's like, no, I want to create like three to four threads, okay? And I want people to go I want to like leak them out.
+[1:15:18] So, as an example, let's say it's 2025 right now, okay? We're in February. I could do thread number one in February and March. And then for all the people who are from April, May, and June, I do thread number two to them.
+[1:15:38] And I tell them to go and like populate that thread with their experiences. And then when I get to July, August, and September, I have thread number three that I then start to tell everybody. Hey, can you go and like share your experiences here?
+[1:15:55] And then I have thread number four, which I'll finish off the year with, and I'll say like, hey, can you guys go share your experiences here?
+[1:16:05] Because again, it's like, yeah, dude, pepper in Trust Pilot, but are people actually fucking using Trust Pilot to read your five-star reviews? No, no, they're not. Okay, they're reading Reddit.
+[1:16:20] It's clear as day they're reading Reddit. That's the one thing I want to make so clear. Okay, the confirmation page video. This matters a lot. And it's not just the main video. It's all those subsequent due diligence videos.
+[1:16:38] Okay, I want to talk about downside and upside, not just one or the other. And I want to milk the living shit out of how hard Reddit ranks.
+[1:16:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Modern Buyer Sophistication Reality"
+NÚMEROS: Não especificados
+VISUAL: Conceito de sofisticação do comprador moderno, desconfiança de reviews manipulados, preferência por fontes "não-manipuláveis"
+[1:16:53] And the fact, remember what I talked about, sophistication. Okay, that's the main thing I'm trying to sit here and emphasize to you. Buyer sophistication has leeched into all industries and niches.
+[1:17:08] What these people think now is all your reviews on your site are fucking fake. Okay? They've seen videos now of fake AI influencers.
+[1:17:20] I talked to a lady the other day. She was uh so my fiance's friends with this like older lady who used to do her photos and stuff and anyway, long story short, she was near that neighborhood the other day and she stopped at this lady's house. This lady's like high 60s.
+[1:17:40] This lady's telling my fiance, she goes, "I saw a video from Trump saying that if I bought $5,000 of these gold eagle coins, I could take them to Bank of America and they give me $5 million."
+[1:17:58] My fiance's like, "What? What'd you say?" And she goes, "Yeah, I saw a video of Trump like saying like, "Oh, my accredited investors are backing this and like, "Don't worry, you can just buy these $5,000 in gold eagle coins and we'll give you $5 million if you go to Bank of America. It's like the Trump Make America Great Again initiative."
+[1:18:22] Do you think that lady learned the hard way about AI videos? How vocal do you think a lady like that's going to be about that? You think she going to tell all her friends? You think she going to make a Facebook post about it?
+[1:18:38] She going to scream a high heavens about that and then she going to tell all the other older people. Do you do you guys think they're going to think that? Dude, you guys you guys might be being duped right now. This might be AI Jeremy. How do you know it's me? How do you know?
+[1:18:58] How will you know? What about five? You guys know there's like some stuff you can pick out about AI videos, but what about in like three years from now when they're just exactly like me right now? What are you going to do then? How are you going to know?
+[1:19:15] You going to ask me like hold up a spoon in real time? What if I could get AI Jeremy to do that? You know, it's like again, sophistication leeches across everything.
+[1:19:28] You're not just going to do that for like info products. You're going to do that for literally everything is my point. It's just going to be a behavior that you look at for everything. Okay, that's my point. That's what they're doing, too. Okay.
+[1:19:45] So, they don't believe Trustpilot anymore. They think it could be de manipulated. They don't believe your fucking cherry-picked testimonials that you put in front of them in presentations. They help, but they don't believe them that much.
+[1:20:02] What do they believe right now? Everybody type it in the fucking chat. What do they believe right now? Clear as day. Where are they going to learn and listen and read about real people's experiences with you? Where do they go right now?
+[1:20:20] Reddit. That's fucking right. Where will they go tomorrow? We don't fucking know, but we'll go there, too, and we'll manipulate it in our benefit as well. Right now, it's Reddit. Okay?
+[1:20:35] So, at the time I make this fucking video, it's Reddit. See what I'm saying? So, that's where we go. That's where we pay attention to. That's what we want to influence.
+[1:20:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Joe's Show Rate Correlation"
+NÚMEROS: 60-70% show rate before 2023, 45-50% after, February 2023 Reddit thread, started tanking early 2024
+VISUAL: Timeline correlacionando aparecimento de thread do Reddit com queda dramática de show rate
+[1:20:52] Cuz guess what? All the all the videos, all the emails, all right? All the things, it's like they go to fucking Reddit. That's where they go to decide I'm showing up for Joe's call or not.
+[1:21:08] Because Joe, what was your show rate? What was your show rate before the Reddit thread?
+[1:21:15] Joe: Yeah, show rate must have been high 60s or 70%, you know, before 2023.
+[1:21:22] Jeremy: When did the Reddit thread come out, Joe?
+[1:21:25] Joe: Yeah, around sometime in 2023. I think it was a year ago.
+[1:21:32] Jeremy: Exactly. It was in February of 2023. When did your show rate start to tank?
+[1:21:38] Joe: Yeah, start of 20 24.
+[1:21:42] Jeremy: So it's like boom, dude. Just starts to get nuked starts to as that Reddit thread ranks, Joe's show rate tanks.
+[1:21:52] There's a good run. The point I'm trying to make is very simple. Okay, modern best practices, confirmation page videos, when there's shitty stuff about us that immediately address it.
+[1:22:08] Because if you do one of those stupid fucking videos, hey, just make sure you show up for your call. Really excited to talk with you, you know. Thank you so much. We'll talk to you soon. Okay, make sure you show up. Put it in your calendar. Goodbye.
+[1:22:25] It's like that do fucking all. Does fucking off for you. You immediately say, "I'm going to help you do your due diligence. Let's walk through some stuff to help you make this decision confidently one way or the other. Let's get into it."
+[1:22:42] And I immediately start talking about the upside and downsides transparently. Boom. Now I'm fucking in the ballpark of getting the person to make a highly legitimate, educated decision that they feel confident about and they believe me.
+[1:23:00] That's the most important part. They believe me. You see what I'm saying? Okay, cool. All right. I don't really have anything else on this. Does anybody have any questions or anything you'd like to add? Any best practices working for you?
+[1:23:18] Participant: I have a question, Jeremy. Uh when do you like let's say you started a new offer? Um, do you start a Reddit thread before the offer launches? It's like kind of like predictive.
+[1:23:35] Jeremy: This is the thing, right? It's like there's nothing really out there about people when something first launches. And if there is, that'll also probably raise a red flag. You know, I'll give you a good one.
+[1:23:50] Like, if you guys go after this and you look you look up Jeremy Haynes Reddit, it's actually really interesting. I saw one the other day. It was in a digital it was in like the digital marketing Reddit thread.
+[1:24:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Jeremy Haynes Reddit Example"
+NÚMEROS: Não especificados
+VISUAL: Screenshot de thread do Reddit onde Jeremy é mencionado positivamente em meio a críticas de outros marketers
+[1:24:10] And there was uh like is there any the Reddit thread like whatever you fucking call it what the original poster was asking was is there anybody legitimate in the fucking digital marketing world to learn from.
+[1:24:28] And it's like just a bunch of people just saying like fucking no like all these people suck and then there's a guy who comes in and asks what about Jeremy Haynes like I like his stuff he seems legitimate.
+[1:24:45] And then there's like five people people that I didn't even influence, by the way, that go in there and are like, "Oh, dude, Jeremy's the shit. Like, Jeremy's really good." I really love learning from Jeremy. Like, that's probably one of the only legitimate guys.
+[1:25:02] And I'm not joking. I was like probably one of the only positive testaments in that entire thread. And I didn't even influence it. You see?
+[1:25:15] So, my point is, yeah, here we go. Let's click on it here. Let's try to find Harlon shared it in the chat. Let's look. Okay. Are all the digital marketing influencers on social media completely full of shit.
+[1:25:32] And it's like influencers are all BS, you know? Exactly. It's a griff. Yes, it's a scam. I got Joel Kaplan's course. It was fucking shit. It's all for free on YouTube, you know.
+[1:25:48] And all right, let's just do a command F tier. And how do I find how do I find my name? Haron, do you know where I am in this?
+[1:26:00] Harlon: If I remember correctly, I think it was pretty far down. Yeah, it's one from seven months ago, mate. Here, I just hit command F and search Jeremy.
+[1:26:15] Jeremy: Yeah, I did that, too. I didn't see it.
+[1:26:18] Harlon: Weird. I got it here.
+[1:26:20] Jeremy: Oh, maybe it's Maybe it's under this view more comments thing.
+[1:26:25] Harlon: Okay, here. Yeah, there's a guy called C. Yeah. Yeah, certain.
+[1:26:32] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Reddit Comment About Jeremy"
+NÚMEROS: $5,000 course price mentioned
+VISUAL: Screenshot de comentários positivos sobre Jeremy em thread do Reddit criticando outros marketers
+[1:26:35] Jeremy: I definitely agree on this subject. They're BS and trying to get rich off regurgitated information. But there's one guy I really like and would consider buying his course. He actually runs a very successful agency and pretty knowledgeable.
+[1:26:52] His name is Jeremy Haynes, Jeremy on Instagram. I'd really like your guys feedback if you checked him out. Uh, okay. Did you buy his course? I have not. It's $5,000. I haven't started running my agency yet.
+[1:27:08] Uh, I probably will purchase it to be honest because it not only grants you access to the course, but you get Jeremy as a mentor as well. Yes, we are in similar situations.
+[1:27:22] Uh, I just closed my agency. I'm going to open blah blah blah. Let me know if you end up buying. We'll do. Jeremy Haynes drops gold for real. If you do high ticket, he is the guy.
+[1:27:38] 5K is not just a course. He's talking about the inner circle now. Uh, his course is only offering the DMM. His course only offering is some DMM course which is cheaper.
+[1:27:52] He says if you don't have 5K to join the mastermind and coaching, it's not a proper business owner. Uh, okay. Pretty much don't buy. Correct and agreed.
+[1:28:05] I'm glad I've got a decent filter on who's good and who's not in this space. Jeremy Spits actual real knowledge. You see what I'm saying?
+[1:28:18] Like in a thread throw full of people just getting like, "Fuck this guy. Fucking that guy. Fucking that dude." You know, it's like I get mentioned and they're like, "That guy's the shit." You see what I mean?
+[1:28:35] That's the kind of stuff that again like even though it's pretty far down, like dude, that stuff gets brought up, you know? That stuff gets brought up to guys like Leo on sales calls where they're like, "You seem to be the only legitimate person that's in this whole space."
+[1:28:52] See, so again, that's my point is like Reddit is where they're going. Okay. Uh anyway, Gelani, long story short, I don't know if you'd want to bring it up at the beginning.
+[1:29:08] I'm not sure if I'm not sure if that's the right thing to do because that could also create like an illegitimate, you know, like, oh man, this guy's manipulating it, you know?
+[1:29:22] Um I'll give you a good example of this. Like you guys know how I've been harping for years on like sending from iPhones instead of instead of fucking ass CRM numbers where I'm like, hey, don't send from the green text, send from iPhones.
+[1:29:40] And then now there's like I think at least five or six different like send from blue with a CRM phone services. Well, that's now going to get fucked.
+[1:29:52] Like now the whole selfie video thing is going to be the best possible thing to do on iPhones and you're going to have to do it otherwise they're going to know that you're just texting them from one of those fake fucking blue text phone numbers, you know.
+[1:30:08] And then that's going to get played out as a place to communicate with people. So it's like again sophistication always increases.
+[1:30:18] So, if we start to manipulate the Reddit thing, the Reddit thread thing like you said, Galani, like before the offer actually gotten buyers, I don't know if that'd be a positive thing. I think it'd actually be the negative thing and it would backfire.
+[1:30:35] Gelani: Let's say that I have a group of like 20 beta testers or something, they all got good experiences.
+[1:30:42] Jeremy: Yeah, that'd be great. But again, they have to like, you know, when you share it and you tell people to go and talk about it, it can't look manipulated. Like, it has to be like, "Hey guys, like, can you guys just share some feedback on this Reddit thread?
+[1:31:00] Like we're using this as our review platform. If you don't mind just giving us some thoughts about what you experienced all this, you know, be transparent. Like we don't want to influence it one way or the other. Just share your feedback.
+[1:31:18] You know, that'd be how you'd want to do it. That way they're not going there, you know, you don't want to tell them what to say. Like that's that'd be you don't want to make it seem forced because that's the thing with Reddit.
+[1:31:35] Like it's they're like very well-written like real responses. You know what I mean? Like that's how they have to be. They can't be forced. You get what I mean?
+[1:31:48] Gelani: Yep. I got it. Thanks.
+[1:31:50] Jeremy: Okay. Other questions or comments on this? Anything you guys want to share or add? Again, questions.
+[1:32:00] Participant: Jeremy, I just um I Googled is Jeremy Haynes a scam. This is not necessarily a question, but just something you should probably know.
+[1:32:15] Um the way it kind of appears when you just see the Reddit is like if I'm just skimming this, it basically just says like, "Is Jeremy Hans a scam? Influencers are all BS." Yes.
+[1:32:32] Unless they really like click into it, they're probably just going to be like, "The dude's a scam." And then when you scroll down, are you familiar? Do you see Have you seen a ripoff report?
+[1:32:48] Jeremy: Yeah. Share, share your screen, by the way. Are you on a computer?
+[1:32:52] Participant: Uh, no, but I can jump on one real quick.
+[1:32:55] Jeremy: Here, tell me what to search. I'll search it on mine so I can share.
+[1:33:00] Participant: Yeah. Yeah. Search up is Jeremy Haynes a scam.
+[1:33:05] Jeremy: Bam. I'm sorry. somehow is Jimmy skin. Yep.
+[1:33:12] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Google Search Problem - Misleading Snippet"
+NÚMEROS: Não especificados
+VISUAL: Screenshot da busca do Google mostrando como snippet pode ser enganoso, aparência de "scam" sem contexto
+[1:33:15] Participant: So, the first Reddit thread and then if you scroll down a little bit. There we go. Look. So, look at the look at the Twitter one. If I'm like 60 years old or something, I'm just going to be like, "What? Jeremy Haynes went to prison in 2015?" That's my tweet.
+[1:33:35] Jeremy: Yeah, I know. It's just crazy how it pops up in Google.
+[1:33:40] Participant: Yeah. So, I guess like the only way to really frame people.
+[1:33:45] Jeremy: That actually is pretty fair the way that you the way that you just framed it there, you know. Yeah, that's what I does make it look like I went to prison. I should delete that tweet.
+[1:34:00] Yeah, I was talking about this art guy, you know. I talked about that at the mastermind, too. I mean, I just thirst that up. I was like, "Dang, does Jeremy have a pass we don't know about?"
+[1:34:15] And what what did you say about the other one? There was something else you said some ripoff report.
+[1:34:22] Participant: Yeah. Yeah. I think it's down might be below. It's not coming up for you. It came up for me. I can uh I can drop the link in here. I'll send it in the in the Telegram.
+[1:34:38] Jeremy: Is vagina skin care a scam? Glad I'm associated with that. That's very good.
+[1:34:48] All right. I'm sending this in the uh the Telegram.
+[1:34:52] Yeah, let's not give that some uh some link clicks. Delete.
+[1:35:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Ripoff Report Example"
+NÚMEROS: 56 reviews mentioned, 35 obtained in 3 days, 50 from Facebook
+VISUAL: Screenshot de ripoff report sobre Megalodon Marketing, alegações de concorrente
+[1:35:05] Okay, here we go. So Jeremy Haynes internet uh profit and prosper. Where do you read this though? Okay. Jeremy Haynes is selling snake oil.
+[1:35:20] I currently run a digital marketing agency in Michigan. Had previous clients megalodon marketing tell me he went to this guy who was requesting all kinds of money and gave them no results.
+[1:35:38] We love our clients and we do whatever it takes. So I go to contact me marketing to discuss where they left off. So a sales team where I can pick up continue product.
+[1:35:52] But then all I see is 56 reviews. 35 of them he obtained in three days. 50 of them are Facebook accounts with no actual review from simply being on his Facebook page. I don't see the reviews.
+[1:36:10] So, long story short, someone here's saying something about Facebook reviews and I don't know. I don't same thing like when it comes to framing, this would be important to understand.
+[1:36:25] We would want to make sure that we address the fact that like we don't even fucking use Facebook for our uh for our company page. Like if we look up Facebook and Megalodon Marketing.
+[1:36:42] So we have a page here. Let's see if I can look at it. Yeah, we don't even have a fucking reviews tab. 90. Here we go. Reviews.
+[1:36:58] Participant: Is it all the crypto BS? Is just like crypto scams?
+[1:37:05] Jeremy: I mean, it looks like it, right? I had that on my. These aren't even for us.
+[1:37:15] Participant: Yeah, that's wild.
+[1:37:18] Jeremy: And then these ones look real. Yeah. Then this maybe this is what the guy's talking about. There's a bunch on November on the same day. Those look like they're from my staff. Ryan, Jared, Cindy.
+[1:37:35] Yeah. Anyway, long story short, same thing. I'd just be all the framing stuff that we already talked about. You know, we would just address literally all this stuff inside of a confirmation page video just like we discussed.
+[1:37:52] And then all clear this looks like a competing agency owner that's just trying to talk shit about me.
+[1:38:00] Participant: Yeah, it's wild. Would you um would you like because right now there's no Reddit thread. If you Google my company, it's some other digital marketing agency pops up and it's like somebody on glass door that said the owner sucked.
+[1:38:20] And so people don't read. they just think that, you know, it's it's me that's the scam. Would you go out of like should I have my employees basically start a Reddit thread and get like the clients to comment if there's nothing now?
+[1:38:40] Like if there's nothing negative, would you get ahead of it and start putting positive stuff out there?
+[1:38:48] Jeremy: Well, here's the thing. Yeah, I would because again, like when you want to be proactive about Reddit, I think it's better to be sooner than later on it when it comes.
+[1:39:02] The thing with Reddit though is you can't really manipulate it. You have to either buy an aged Reddit account or you have to actually like use Reddit for a little bit before you can create a thread or your staff can create a thread.
+[1:39:20] So, it can't it can't just be like you pop in there and just immediately get to start talking. I don't know the exact criteria of what it takes to like make a post, but I'm pretty sure it's a certain amount of uh like comments and interaction on other people's posts to eventually enable you to post.
+[1:39:42] So, I don't know. You either wait for something to kind of organically pop up or you get into the position where you start talking to people uh and asking them to post something or you just create your own Reddit account, use it for a little bit and then get to the point where you uh you know make a post.
+[1:40:05] Dude, I'm going to delete that art dealer tweet literally right now.
+[1:40:10] Participant: Yeah, that SEO on Google was playing you.
+[1:40:15] Jeremy: Yeah, that's violent. I don't like that. Anyway, thanks for pointing that out.
+[1:40:22] Participant: Of course, brother. Happy to help.
+[1:40:25] Jeremy: Anything else?
+[1:40:28] Harlon: Yeah, just um one thing. So, like I've been helping a few people in the inner circle and a few coaches already remove their Reddit threads.
+[1:40:42] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "SEO Strategy for Reddit Thread Management"
+NÚMEROS: 3-6 months timeline, 300-400k monthly revenue mentioned for case study
+VISUAL: Planilha mostrando análise de keywords, volume de busca, ranking de threads do Reddit
+[1:40:45] Um one of the one of the things I'd um recommend that you do is go on Google keyword planner or Semrush. Can I show you my screen for a second?
+[1:41:00] Jeremy: Yeah, sure. You're good.
+[1:41:03] Harlon: Um so, what you can do is um so these guys are doing these are coaching offer. These guys aren't in the inner circle. Can you see my correct screen? The one where it says MOA Reddit links analysis.
+[1:41:22] Jeremy: Yeah.
+[1:41:25] Harlon: Yeah. So like um these guys doing like 300 400k a month. And you can basically uh pull a keyword search on Google keyword planner or Seamrush and see the volume next to each uh keyword.
+[1:41:42] So you can see in the USA like men of action price Reddit has no searches but Michael Sartine 260 um Michael Sartine 2900 and you can see which uh you can use Seamrush or you can scour the internet manually and get a list of all the Reddit threads that are appearing and then where they rank according to the platforms.
+[1:42:08] You can use I search from or Seamrush. So we've been doing the same analysis for a few people in the inner circle as well and we're having conversations with them.
+[1:42:22] Obviously, you can hire an SEO agency to remove specific Reddit threads where you attack those specific Reddit threads. You can get them off the first page of Google in literally 3 to 6 months.
+[1:42:40] And then the other thing I would really encourage you do, which we're doing with a few other inner circle members, is just like start building positive brand SER. Okay?
+[1:42:52] So, what that means is you don't have to go on entrepreneur.com and get a backlink. That would cost you thousands. But you can get these back links or guest posts off reputable sources where you have articles that occupy the first page of Google even before Reddit threads start to appear.
+[1:43:15] And you can make sure that your own website or other mini websites rank on the first page of Google by just doing SEO on them. So that when people type in your name and Reddit and your name and scam, you've already have some positive brand SER before the Reddit threads or the negative ones start appearing.
+[1:43:38] And that will make it a lot more difficult for those Reddit threads to influence the the discourse about you when they suddenly appear, you know, unbeknownst to you. Makes sense.
+[1:43:55] Jeremy: Yeah, smart. Cool. Thank you for that. I deleted the tweet. Thank you for pointing that out. Does anybody else have anything?
+[1:44:08] Participant: Has anyone done like um had one of their clients create like a YouTube review? Because I know that's something else that pops up a lot in SEO when you Google somebody.
+[1:44:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "YouTube Reviews Strategy"
+NÚMEROS: Não especificados
+VISUAL: Discussão sobre vídeos do YouTube como prova social, diferença entre postar no próprio canal vs cliente postar
+[1:44:25] Jeremy: Yeah, YouTube's great. Um but here's the thing. It's like they have to post it. If you post it on your channel, it's good. Like there's nothing wrong with that, per se. Like that's what I do right now as an example because it's really hard to get somebody to post it onto their channel.
+[1:44:48] But u there there'll be occasional people who will make content with their experience with you and you can incentivize that. Like you can literally tell somebody like, "Hey, have you made a video about your experience with us?
+[1:45:05] Like we'll give you a discount on the offer or like you know, we'll do XYZ for you for you creating like a documented experience with us and then sharing it on your own channel.
+[1:45:22] Um, that's also awesome, simply put, when you can get other people to post about it instead of all the information coming from you. That's a big part of like modern due diligence best practices is is is also why I think the Reddit threads are working so well.
+[1:45:42] It's information that doesn't come from you about you. That's that's what they're looking for. Does that make sense?
+[1:45:52] Participant: 100%.
+[1:45:55] Jeremy: Yeah. Cool.
+[1:45:58] Harlon: Jeremy, I totally agree with that. If you look at Nick Theo and if you look at you and Davies in the inner circle, they both created YouTube videos about their course.
+[1:46:12] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Nick Theo Scam Video Example"
+NÚMEROS: Não especificados
+VISUAL: Exemplo de vídeo no YouTube endereçando proativamente objeções de "scam", ranking para keywords negativas
+[1:46:15] And Nick Theo created one about Nick Theo's scam. When you when you search on Google Nick Theo scam, he ranks first now. And I think that came from your talk in in um in in January about the trust flywheel.
+[1:46:35] But it's actually it's cool because when you watch Nick's video, which I do, I subscribe. You see how he goes through each part and it's great that and like literally debunks a lot of shit whilst also ranking for that keyword at the top.
+[1:46:55] Jeremy: Yeah. Fucking you. Yeah, perfect. That's a good example of that, too. We love doing that. Um, besides the prison one that we just looked at where I was talking about the art dealer, if you do look up Jeremy Haynes scam, most of the stuff there is from me like literally saying something with the word scam in it and like for framing material for that exact purpose.
+[1:47:22] All right, cool. Anything else? Other comments, questions?
+[1:47:28] Participant: I have a question. Um, so I made on my thank you page, I pulled together like every piece of information and it's like a 45 minute video.
+[1:47:42] So I have like a lot of education that I need these there we're selling SEO and Google ads to home care agencies. So I need to like frame them like why that's the best way to get clients ahead of the call, but also like I want to do the trust assets ahead of time.
+[1:48:02] So, how would you would you do the trust assets before you do the educational? Like,
+[1:48:10] Jeremy: You got to do breakout videos. You got to do a bunch of little breakout videos that make it more digestible because first of all, on the longer video, you need to make sure that you add the little title things so people can scrub through it to specifically what they want.
+[1:48:30] But you should also just have a bunch of breakout videos on the page just like what we saw with Devon where they were labeled clearly with what the specific question or topic is because people are going to want to cherry-pick what they're going to want to consume about specifically what they care about giving answers for. Does that make sense?
+[1:48:52] Participant: Yeah. Okay.
+[1:48:55] Jeremy: Yeah. The the illusion is is like they need to go through the full 45 minutes, right? The the what they're actually going to do is just scrub scrub through it for the specific things that they want to learn about and know. And if that's hard, they're not going to consume it at all.
+[1:49:15] Participant: Okay. So, doing like a shorter kind of the exact framework you just went through today on the call for Joe as like the main thank you page video, then breakouts like Devon's for the specific questions.
+[1:49:32] Jeremy: That's exactly right. Yep.
+[1:49:35] Participant: Cool. Yeah. Modern confirmation video, all the breakout questions, fuckload of testimonials.
+[1:49:45] Jeremy: Sweet. Thank you.
+[1:49:48] Cool. Okay. Sweet. Anything else?
+[1:49:52] All right. Let's go make some money and help people. Talk soon, everybody.
+📊 RESUMO EXECUTIVO
+NÚMEROS PRINCIPAIS:
+$100 milhões perdidos no nicho de automation stores (2019-2023)
+5,132 clientes atendidos (caso Joe)
+91% taxa de sucesso
+9% taxa de falha
+0.7% taxa de disputa no Stripe (99.3% satisfação)
+547 reviews no Trust Pilot (4.8/5 estrelas)
+45-50% show rate atual (Joe)
+60-70% show rate antes de Reddit thread (Joe)
+85% show rate (Devon - exemplo positivo)
+15% show rate em webinar (cliente Airbnb arbitrage)
+$5,000 preço do programa (Joe)
+$100/semana custo mencionado em reviews
+$700 USD/mês mínimo mencionado
+$50,000 gasto médio em ads (primeiro mês)
+$15,000 custo da agência
+$65,000 investimento total → $300,000 revenue (caso de sucesso)
+$24,000 oferta (Jordan & Jacob)
+500+ clientes Master Internet Marketing
+1 disputa em 500+ transações
+60-80 anos idade média clientes (Joe)
+4 Reddit threads encontradas (cliente Airbnb)
+3-4 threads recomendadas por ano
+3-6 meses para remover threads do Google (SEO)
+ESTRATÉGIAS E SISTEMAS:
+Confirmation Page Video Moderno:
+Ajudar ativamente na due diligence
+Falar sobre UPSIDE e DOWNSIDE
+Endereçar objeções proativamente
+Mostrar provas não-manipuláveis (Stripe dashboard, etc.)
+Screen share de reviews negativas e positivas
+Framing de críticas antes que cliente as encontre
+Reddit Strategy:
+Reddit = plataforma #1 de due diligence atual
+Criar 3-4 threads ao longo do ano
+Distribuir clientes por trimestre em threads diferentes
+Pedir feedback genuíno (não forçar)
+Monitorar threads existentes
+Engajar clientes satisfeitos para responder
+Framing de Objeções:
+Preço: contextualizar inflação, valor do dólar ao longo do tempo
+Garantias: explicar que não protegem contra falência
+Reviews negativas: mostrar que maioria não comprou
+Dispute rate como métrica de satisfação
+Comparar com produtos do dia-a-dia (Purell 99.99%)
+Trust Building Assets:
+Vídeos breakout para FAQ (1-5 minutos cada)
+Seção massiva de testimonials
+Screenshots de resultados
+Transparência sobre falhas e como são tratadas
+Histórias detalhadas (exemplo Ryan)
+SEO Defense:
+Google Keyword Planner / Semrush para monitorar
+Criar brand SERP positivo antes de threads negativas
+Guest posts em sites reputáveis
+Vídeos YouTube endereçando "scam" keywords
+Remover threads negativas (3-6 meses via SEO agency)
+ESTRUTURA:
+Confirmation pages com múltiplas camadas
+Vídeo principal de due diligence (transparente)
+Breakout videos para perguntas específicas
+FAQ visual com timestamps
+Testimonials de clientes conhecidos e desconhecidos
+Email sequence de hammer strategy
+Follow-up estruturado
+PROBLEMAS IDENTIFICADOS:
+Sophistication do consumidor aumentou (cross-industry)
+Garantias perderam credibilidade (falências)
+Trust Pilot visto como manipulável
+Vídeos genéricos de confirmação são inúteis
+Reddit threads não endereçadas matam show rate
+Boomers têm percepção distorcida de valor ($)
+AI deepfakes aumentando desconfiança geral
+Reviews de 1 estrela têm peso desproporcional
+Contexto escondido em UI do Reddit (+4 replies button)
+Google snippets podem ser enganosos
+DADOS FINANCEIROS:
+Automation niche: ~$100M perdidos (2019-2023)
+Caso sucesso recente: $65K invest → $300K revenue (30 dias)
+Merchant automation: $1M/mês orgânico antes de ads
+Show rate 70% → 45% = perda significativa de revenue
+Cost per qualified call: high $200s
+Master Internet Marketing: $5,000/pessoa x 500+ = $2.5M+
+DURAÇÃO: 1h 49min 52seg FORMATO: Group coaching call / Masterclass ao vivo

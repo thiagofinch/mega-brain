@@ -1,0 +1,359 @@
+Transcrição Completa: 52 Email Marketing Show Rate Best Practices 1 31 25
+[00:00] Então, recentemente, no chat em grupo, alguns de vocês estavam compartilhando suas sequências de e-mail pré-lançamento. E, quer dizer, podemos afirmar com segurança que a maioria deles era horrível.
+[00:08] Então, decidi fazer este vídeo para garantir que vocês não sejam doutrinados por uma sequência horrível de e-mails antes de qualquer evento, webinar ou qualquer outra coisa. É preciso implementar as melhores práticas.
+[00:20] Hum, só para deixar claro, como exemplo do que estou falando com vocês hoje no chat do Telegram, um dos membros do nosso círculo íntimo, o Jesse, estava compartilhando a sequência de e-mails que ele enviava antes de tudo.
+[00:32] E você pode ver isso literalmente aqui como um exemplo. Então, o primeiro e-mail é apenas a confirmação padrão com o convite e os detalhes da reunião, sobre os quais falaremos em breve, juntamente com outras boas práticas que você pode adotar além da simples notificação de calendário enviada aos participantes.
+[00:48] É no segundo e-mail que as coisas realmente começam a piorar neste exemplo específico.
+[00:53] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Urgent - Please Read Before Strategy Session"
+NÚMEROS: Email #2
+VISUAL: Captura de tela de email com assunto em destaque, formato de texto simples, estrutura de confirmação repetida
+[00:55] Então, ok, primeiro de tudo, assunto: urgente. Por favor, leia antes da sessão de estratégia. Até que não está ruim, para ser justo. Isso é bom.
+[01:03] É o corpo do texto. Parabéns por dar os próximos passos para se tornar um trader financiado, confiante e consistente. Sua sessão de estratégia está agendada para as seguintes horas: Aqui está o link do Zoom.
+[01:17] Aliás, só para constar, como você já enviou um e-mail de confirmação, a pessoa vai escanear esse e-mail, pensar que é apenas mais um e-mail de confirmação e, então, fechá-lo sem permissão.
+[01:28] Certo, isso é muito importante para entendermos o comportamento humano. Assim que param de ler o e-mail de fato, começam a escaneá-lo para ver se há algo ali que realmente precisam fazer.
+[01:38] Principalmente com um assunto como esse, urgente, por favor, leia antes da sua reunião de estratégia. Não. Novamente, assim que alguém escaneia o código de barras, pensa: "Ah, isso é só mais um e-mail de confirmação de chamada." Eles estão fora.
+[01:51] Tipo, existe uma grande probabilidade de eles não irem mais longe. Certo, mas vamos continuar caso alguém o faça.
+[01:57] Antes da chamada, certifique-se de concluir sua tarefa para garantir que você aproveite ao máximo nossa sessão. Você pode clicar aqui para acessar a tarefa de casa.
+[02:06] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Who Liked Homework in School?"
+NÚMEROS: 31 de 130 pessoas votaram, 100% disseram "Que se dane o dever de casa"
+VISUAL: Resultado de enquete no Telegram, resposta negativa massiva sobre homework, visualização de rejeição coletiva
+[02:08] Então, no grupo de bate-papo do círculo íntimo, fiz uma pergunta simples em formato de pesquisa, e vocês podem ver que 31 de 130 pessoas votaram a favor de mandar a lição de casa para o inferno.
+[02:18] A pergunta era: quem aqui gostava de fazer a lição de casa na escola e tinha uma associação mental positiva com a palavra?
+[02:25] Mais uma vez, 100% de vocês disseram: "Que se dane o dever de casa." Porque não consigo pensar em uma única pessoa que não seja nerd, ok, que gostasse de fazer a lição de casa.
+[02:35] É a mesma coisa. Aliás, não sei em que parte do chat isso aconteceu. Conversamos bastante nesse chat naquele dia em particular, mas aí o Jesse chegou ao ponto de perguntar: "Ei, que tipo de palavras você acha que eu deveria usar no lugar?"
+[02:48] E ele disse: "E se eu pedir para eles fazerem um teste antes da ligação para ver se eles absorveram todo o material prévio?" E então ele também usou a palavra auditoria.
+[02:58] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Palavras Proibidas em Sequências de Email"
+NÚMEROS: 3 palavras críticas
+VISUAL: Lista destacada de palavras negativas: Homework (Tarefa de Casa), Test (Teste), Audit (Auditoria) - todas marcadas como ruins
+[03:00] Sabe, essas são coisas que, novamente, como palavras em uma sequência de e-mails preliminares, especialmente no segundo e-mail, você deve garantir que não está usando palavras desse tipo.
+[03:10] Essas são palavras muito egoístas, unilaterais, que carregam conotações extremamente negativas. Tarefa de casa, teste, auditoria, essas palavras simplesmente não são adequadas para usar.
+[03:22] Então, sem me alongar muito, o que Jesse está tentando fazer aqui é levar alguém a consumir algum tipo de informação de doutrinação que aumente a probabilidade de, quando essa pessoa comparecer à reunião com sua equipe de vendas, ela estar mais preparada, mais bem informada e com maior probabilidade de fechar o negócio, o que é uma ótima intenção.
+[03:42] Essa é, sem dúvida, uma prática recomendada e um bom material de doutrinação. Veja bem, além das coisas que ele precisava fazer para melhorar isso, havia muita repetição da palavra "lição de casa" ao longo do texto e, além disso, havia apenas cerca de quatro e-mails.
+[03:57] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Espectro de Interesse do Lead"
+NÚMEROS: 4 estágios de interesse
+VISUAL: Linha progressiva mostrando evolução: Curiosidade → Interesse Moderado → Muito Interessado → Convencido/Vendido
+[03:59] Portanto, o que você precisa entender depois que alguém agenda uma chamada é o espectro de interesses. OK? E Jesse está pensando nisso da maneira correta, ao considerar que alguém precisa passar por uma fase de doutrinação antes de realmente chegar ao ponto de ser vendido.
+[04:14] OK. As pessoas geralmente começam curiosas, depois passam a ter um interesse moderado, em seguida ficam muito interessadas e, a partir daí, acabam convencidas.
+[04:23] A maioria das pessoas, ao iniciar um processo de vendas, demonstra um nível de curiosidade que oscila entre o interesse geral e o interesse superficial.
+[04:32] Na maioria dos casos, são poucas as situações, ou pelo menos serão raras, em que as pessoas demonstrarão grande interesse ou concretizarão a compra.
+[04:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Tráfego Orgânico vs Tráfego Pago"
+NÚMEROS: Diferença de qualificação significativa
+VISUAL: Comparação entre leads orgânicos (alta qualificação, já aquecidos) vs leads de anúncios pagos (baixa qualificação inicial, precisam de doutrinação)
+[04:42] A maioria das pessoas, e esse é o ponto principal, obviamente todas essas marcas orgânicas, e a Jesse's é uma marca orgânica muito forte. Portanto, aquilo a que ele está acostumado a ver e a vivenciar é muito diferente, em comparação com as respostas que ele receberá dos anúncios pagos.
+[04:57] As pessoas que chegam até elas por meio de seus esforços de publicidade orgânica, ou melhor, de seus esforços de marketing orgânico, geralmente chegam muito interessadas.
+[05:06] Na maioria dos casos, eles estarão interessados, mas também podem aparecer com o produto já vendido. Sem dúvida, Jesse vai atrair pessoas para suas ligações que dirão coisas como: "Ah, eu já consumi, sabe, uma certa quantidade de conteúdo do seu canal do YouTube. Maratonei vários dos seus vídeos curtos, seus Reels, seus TikToks, etc."
+[05:25] E, mais uma vez, eles aparecerão praticamente prontos para comprar, porque consumiram uma grande quantidade de material de doutrinação.
+[05:32] Então, voltando à lógica de uma sequência pré-palestra ou pré-seminário, ou depois que alguém preenche um formulário de contato, o que você vai fazer com essa pessoa?
+[05:42] Em primeiro lugar, o e-mail inicial é crucial para entendermos quando pensamos nisso sob essa perspectiva: eles vão presumir que entrarão em contato por curiosidade ou interesse geral.
+[05:52] E lembrem-se, o objetivo é aumentar o nível de interesse deles gradualmente. E o resultado ideal é que consigamos que eles realmente apareçam vendidos. Esse é o cenário ideal.
+[06:03] É aí que conseguimos negócios fáceis e é aí que temos uma alta probabilidade de receber um ótimo feedback de nossas equipes de vendas e, obviamente, sermos extremamente positivos em relação à Rorowass.
+[06:14] Temos ciclos de vendas mais longos que ocorrem quando as pessoas aparecem sem conhecimento prévio, sem terem consumido o material, e sempre haverá esse tipo de pessoa, para deixar claro.
+[06:24] Sempre haverá alguém que passará pelo seu processo de vendas. Eles não dão a mínima para consumir nenhum material anterior a tudo. Eles não consideram que valha a pena investir tempo nisso.
+[06:34] Eles vão tratar seu vendedor como se fosse uma ligação educativa. OK? E isso é assunto para um vídeo à parte, onde falaremos sobre as melhores práticas para vender para esse tipo de pessoa, em vez de tratá-la como não qualificada, como a maioria das pessoas faz.
+[06:47] Voltando ao assunto. OK? Então, sequências de e-mails, sequências de mensagens de texto. Vamos analisar algumas das melhores práticas.
+[06:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Email #1 - Estrutura de Confirmação"
+NÚMEROS: Primeiro email da sequência
+VISUAL: Template mostrando confirmação + FAQ + documento de recursos, estrutura combinada em um único email
+[06:57] OK. Em primeiro lugar, o primeiro e-mail deve ser exatamente como o de Jesse. Deveria ser um e-mail de confirmação, mas além da confirmação, deveria incluir também um e-mail com perguntas frequentes (FAQ) sobre os recursos disponíveis.
+[07:10] Ok, essa é uma dica super profissional. Este é o documento que você deseja que seja criado. Este documento, semelhante a uma seção de perguntas frequentes ou recurso, é essencialmente um documento de uma a, às vezes, duas páginas, que contém pequenas explicações, talvez de uma ou duas frases, sobre o recurso específico ali presente, cujo link direciona o usuário para o respectivo recurso.
+[07:34] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Gamma.app - Nova Ferramenta de Apresentação"
+NÚMEROS: Ferramenta recomendada pelo time
+VISUAL: Interface do Gamma mostrando apresentações com design automático por IA, layout moderno, visualização mobile e desktop
+[07:36] Então, eu poderia dar como exemplo um novo aplicativo excelente que o grupo tem usado recentemente, chamado Gamma. Acho que o nome do aplicativo é gamma.app.
+[07:45] É um software que o Daniel nos apresentou, o Daniel Fazio, o mago dos e-mails frios. Nós lhe demos um troféu por ter faturado um milhão de dólares em um mês.
+[07:55] E como equipe, ele disse: "Olha, uma das coisas que adoramos é usar essa ferramenta gama." Essa foi uma dica profissional que ele deu especificamente para o seu VSSL, e que ele disse usar com muita frequência.
+[08:07] Então, enquanto estou aqui tentando encontrar essa mensagem específica dele, o ponto que estou tentando destacar é muito simples. Neste documento de recursos, você deve apresentar diversas maneiras criativas pelas quais as pessoas podem interagir.
+[08:19] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Exemplo Gamma - Jerome (Inner Circle Member)"
+NÚMEROS: Múltiplos VSSLs transformados
+VISUAL: Apresentação Gamma com informações formatadas, tabelas de preços, design responsivo, comparação mobile vs desktop
+[08:21] Aqui está um exemplo, enviado por Jerome, um membro do círculo íntimo, de como essa ferramenta gama funciona. Primeiramente, basicamente, pegar informações e apresentá-las em um novo meio é a melhor maneira de articulá-las.
+[08:34] Eu poderia pegar todo esse texto, esses mesmos VSSLs, e colocá-los em uma página de destino. E não há nada de errado nisso.
+[08:41] Mas vou dizer o seguinte: o motivo pelo qual gostamos muito desta nova página Gamma é, em primeiro lugar, que ela utiliza IA para tornar o design e tudo o que você vê muito mais fácil de criar funcionalmente, mas também é uma ótima maneira de consumir informações.
+[08:56] A visualização no celular é um pouco diferente da que vemos agora em um tablet. Bem, no celular, por exemplo, esta seção aqui fica comprimida e você precisa rolar para a direita para ver as outras tabelas de preços, mas está bom.
+[09:08] E esse é o meu ponto: é um bom novo meio para articular informações.
+[09:12] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Exemplo Gamma - Daniel Fazio VSSL"
+NÚMEROS: Índice clicável, navegação facilitada
+VISUAL: VSSL com índice interativo, seções organizadas, design limpo, carregamento rápido, estrutura profissional
+[09:14] Aqui está outro exemplo enviado por Daniel. E lembre-se do motivo pelo qual estou mostrando isso no seu documento de perguntas frequentes.
+[09:21] Você pode dizer, por exemplo, algo como: aqui está uma lista de recursos que você pode consultar antes da sua ligação ou antes do webinar para ajudar com XYZ.
+[09:31] Seja qual for a solução que a pessoa esteja tentando adquirir ou qualquer que seja o cenário do problema que ela esteja tentando resolver, você quer ter certeza de que existe um documento de referência para que ela possa obter o resultado XYZ mais rapidamente, entende?
+[09:43] Então, enfim, o documento gama do Daniel, ele usa isso para o VSSL dele, tipo, ele literalmente só analisa o documento gama. Mas eu gosto muito do dele porque tem um índice que permite navegar facilmente clicando em tudo. Eu simplesmente adoro isso. Adorei o design. Carrega sem problemas. Parece bom.
+[10:00] Eu realmente acredito que, quando essa ferramenta Gamma permitir a adição de domínios personalizados ao domínio gamma.app, haverá uma quantidade enorme de anunciantes, pessoas como eu, que estou entusiasmado com a oportunidade de poder direcionar tráfego para esse tipo de plataforma.
+[10:15] Mas, no momento, como você pode ver, quase todos os links são do gamma.app. Então, sabe, ainda estamos no início do processo de utilização desta ferramenta, mas mesmo assim, é uma ótima ferramenta para se ter à disposição.
+[10:26] Resumindo, podemos ter alguns documentos gama que apresentem informações de forma criativa. Muitas dessas informações, e quero ser bem direto ao dizer isso, são de um tipo específico: você vai querer que as pessoas consumam o conteúdo, mas é a forma como você o apresenta que realmente fará com que elas o consumam.
+[10:43] OK? Se você encarar a situação como a de Jesse, com coisas como lição de casa, provas, auditoria, ninguém vai se importar em fazer nada disso porque todas essas palavras têm uma conotação negativa.
+[10:54] Se eu disser, por exemplo, que existe um resultado que alguém obtém como consequência do consumo, certo? E essa parte, seja lá o que for, é algo genuinamente valioso ou responde a uma pergunta real que eles têm.
+[11:06] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Trust Flywheel (Volante de Confiança)"
+NÚMEROS: 8 elementos-chave de confiança
+VISUAL: Modelo circular mostrando 8 componentes: Objeções Reais, Depoimentos, Investimento de Tempo, Riscos Positivos/Negativos, Escassez Real, Segurança, Números, Grande Narrativa
+[11:08] OK? E discutimos isso na reunião de mentoria. Eu fiz uma apresentação sobre isso para começar o dia do nosso encontro de mentoria do primeiro trimestre de 2025.
+[11:17] Se você quiser assistir à palestra completa, há uma ótima gravação disponível. E é o volante de confiança. OK?
+[11:24] E o modelo de confiança em cadeia faz um trabalho incrível ao articular oito coisas-chave com as quais as pessoas normalmente se importam de verdade antes de se envolverem com essas diferentes coisas.
+[11:34] Como exemplo, falamos sobre objeções reais. Então, se eu tivesse um negócio de cursos, como o Jesse tem, por exemplo, quão benéfico seria compartilhar depoimentos, avaliações do Trustpilot, vídeos de diferentes pessoas?
+[11:47] Claro, sim, eles assistem a essas coisas e levam isso em consideração, mas há uma diferença, certo? Quero que você considere o espectro.
+[11:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Espectro de Impacto de Recursos"
+NÚMEROS: 3 níveis de impacto
+VISUAL: Escala mostrando Baixo Impacto (reviews de texto) → Médio Impacto (vídeos de depoimento) → Alto Impacto (transparência de métricas reais)
+[11:57] Quero que vocês considerem que existem recursos de baixo, médio e alto impacto, assim como materiais prévios, como materiais para webinars ou para depois do preenchimento de formulários de leads, que queremos disponibilizar novamente para as pessoas e que têm baixo, médio e alto impacto.
+[12:12] Baixo impacto é como avaliações do Trustpilot. São baseados em texto. Eles simplesmente dizem o primeiro nome e a inicial do sobrenome da pessoa em quase todos os casos. Podem ser reais.
+[12:23] Eu gosto sempre de usar isso como exemplo. Assim como a maioria das pessoas que usam avaliações do Trustpilot ou do Google como plataforma, você imaginaria que quem as lê procuraria todas as avaliações de quatro e cinco estrelas que você possui.
+[12:35] Mas, na realidade, o que eles fazem é usar essas plataformas para analisar as avaliações de uma e duas estrelas e tentar descobrir se a pessoa tem algum problema mental ou se tinha um motivo legítimo para dar uma avaliação de uma ou duas estrelas.
+[12:49] É exatamente para isso que servem essas plataformas de avaliação.
+[12:53] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Vídeo Explicando Reviews Negativas - Alto Impacto"
+NÚMEROS: Foco nas 1-2 reviews ruins de 100 reviews totais
+VISUAL: Conceito de vídeo mostrando Trustpilot/Google Reviews com destaque para reviews negativas e explicação do proprietário
+[12:55] Por exemplo, se você utiliza plataformas como o Trustpilot ou o Google Reviews, um recurso incrível que você adicionaria a esta lista seria um vídeo explicativo, começando com um link para o Trustpilot e depois explicando as suas avaliações mais negativas.
+[13:09] As pessoas querem saber por que não fazer negócios com você quase mais do que por que fazer negócios com você.
+[13:16] Eles estão procurando duas coisas. Eles estão procurando motivos para confiar em você e estão procurando motivos para não confiar em você.
+[13:23] Então, lembre-se: é muito mais eficiente para uma pessoa, quando há, digamos, cem avaliações e duas ruins, simplesmente olhar para essas duas ruins e ver, bem, por que será que essas pessoas tinham problemas mentais?
+[13:36] Tipo, eles tinham alguma queixa legítima contra essa empresa? E o que a empresa fez a respeito? Entende o que eu quero dizer?
+[13:42] É isso que as pessoas realmente querem saber quando você fecha um negócio com alguém.
+[13:46] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Exemplo: Transparência Stripe - Alto Impacto"
+NÚMEROS: 4.315 clientes únicos desde 2017, Taxa de chargeback: 0.54% (14-15 pessoas), Taxa de reembolso: 0.51%, 99.46% de satisfação
+VISUAL: Dashboard do Stripe mostrando métricas reais de transações, chargebacks e reembolsos, demonstração de transparência total
+[13:48] Uma objeção real, novamente, quando falo sobre um negócio baseado em cursos, e alguns de vocês aceitaram a proposta, obtiveram ótimos resultados e perceberam o impacto do que estou prestes a dizer.
+[13:58] Então, vamos usar o exemplo de que você usa o Stripe, o WOP, o Fan Basis ou, sei lá, qualquer processador de pagamentos que você esteja usando hoje em dia.
+[14:06] O simples fato de ter uma conta no Stripe já demonstra o quão em conformidade você está, mostrando que ainda não teve sua conta bloqueada pelo Stripe.
+[14:14] Para deixar claro, é um ótimo exemplo, mas estou me desviando do assunto. Na minha empresa, já realizamos um pouco mais de 4.300 transações.
+[14:22] Na época em que participei do grupo de mentoria, nossa empresa de educação tinha cerca de 4.315 clientes únicos desde 2017. Tínhamos uma taxa de contestação de 0,54%, o que, se não me engano, significa que 15 ou 14 pessoas contestaram transações.
+[14:40] E quando você analisa as transações que eles contestaram, sempre se tratava de transações de baixo valor. Em toda a história da minha empresa de educação, ninguém jamais contestou uma transação de valor mais alto.
+[14:51] Por exemplo, em um dos nossos cursos de 5 km, há pagamentos exclusivos para membros do círculo interno, sabe, coisas assim.
+[14:58] O que eu estou tentando dizer é o seguinte: cara, imagina um vídeo simples que tenha tipo um minuto ou dois minutos de duração. E no documento de recursos, diz: "Aqui está um vídeo que mostra minha conta do Stripe para nossa empresa de educação, apresentando de forma transparente nossa taxa de contestações e nossa taxa de reembolso."
+[15:16] Cara, esse vídeo vai receber tantos cliques de todo mundo que passa pela sua lista de e-mails.
+[15:21] Isso é um exemplo de algo que demonstra minha taxa de reembolso, que é de 0,51% em 4315 transações. Viu? Isso sim é uma boa demonstração de força.
+[15:32] Esse é um depoimento real, sabe? Porque isso mostra exatamente quais são as métricas e estatísticas reais da nossa empresa de educação, certo?
+[15:40] Qual é a opinião sobre esse programa em termos de satisfação? Bem, mostra 99 o quê? 46% de todas as pessoas que já fizeram negócios conosco em nossa empresa de educação ficaram satisfeitas.
+[15:52] Aliás, se você analisar as transações contestadas, verá que são de piratas de merda. São todos da Índia, compram nossas porcarias baratas, depois pegam o dinheiro de volta e pirateiam na internet.
+[16:04] Literalmente, teve um cara que era um pobre coitado, estava no meio de se mudar da casa dos pais e nos usou como uma espécie de conta bancária para recuperar o dinheiro e poder se mudar para outro lugar.
+[16:14] Ok, então é tipo, cara, esse tipo de vídeo tem muito mais profundidade. Tem um impacto muito maior na escala de impacto, desde baixo impacto a médio impacto e alto impacto. Essa seria uma ação de grande impacto. Entende o que eu quero dizer?
+[16:27] Então, discutimos isso em detalhes com esse conceito de volante de confiança. Só para deixar claro, você tem objeções reais, coisas que as pessoas realmente se importam em ouvir da sua empresa.
+[16:37] Exatamente como no exemplo que lhe dei. Temos que investir tempo. Temos riscos positivos e negativos, escassez real, segurança, números e a grande narrativa.
+[16:46] O vídeo completo sobre isso está disponível para visualização na nossa biblioteca exclusiva para membros do círculo interno. E isso se referia especificamente ao primeiro trimestre de 2025.
+[16:55] E essa foi minha palestra de abertura, caso você queira assistir à programação completa de uma hora. Acho que era um vídeo de uma hora e meia sobre isso.
+[17:02] Mas estou me desviando do assunto. O que estou tentando dizer é muito simples. Ok, você está numa posição em que está tentando fazer com que alguém compareça a uma chamada, que tenha interesse genuíno em participar e que já esteja pré-convencido, e está tentando aumentar o interesse dessa pessoa para que ela chegue a um estado de alto interesse ou potencialmente convencida.
+[17:23] O documento de perguntas frequentes e recursos é uma ótima maneira de apresentar informações. Conversamos sobre a capacidade dos especialistas em tecnologia de pegar informações desse tipo e apresentá-las de forma criativa para aumentar o consumo desse conjunto de informações.
+[17:37] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Exemplo: POPs da Agência como Recurso"
+NÚMEROS: 4 POPs mencionados: Hammer Them, Venus Fly Trap 2.0, Venus Fly Trap Original, Tornado
+VISUAL: Documentos de Procedimentos Operacionais Padrão apresentados em vídeo + versão escrita resumida (apenas estratégia, sem táticas)
+[17:39] Existem outras coisas, como, por exemplo, usar a minha empresa como exemplo. Quando eu tiver minha inscrição na agência e conseguirmos alguém que seja realmente qualificado, tudo bem?
+[17:48] Aliás, recebemos muitas pessoas que nos fazem pesquisas de clientes ocultos. Acionamos manualmente quando essa automação específica é disparada porque, obviamente, não queremos que um bando de hackers de funil roube nossas informações.
+[18:00] Portanto, só o utilizamos com pessoas que são realmente qualificadas através da candidatura que recebemos. E, novamente, disparamos manualmente.
+[18:07] Algumas das primeiras coisas que enviamos para as pessoas são nossos Procedimentos Operacionais Padrão (POPs), assim como Daniel fez em seu VSSL dentro de seu documentário sobre raios gama, onde ele está basicamente filmando um vídeo, estando de um lado e o documentário sobre raios gama do outro.
+[18:21] É mais ou menos como o que você vê aqui, onde tudo que eu escrevo ou mostro no meu iPad fica aqui em cima.
+[18:27] O que estou tentando dizer é simples. Estou coletando informações como nossos Procedimentos Operacionais Padrão (POP), incluindo o POP para "Martelá-los", o POP para "Armadilha de Vênus 2.0", o POP original para "Armadilha de Vênus" e o POP para "Tornado".
+[18:40] Bem, estou analisando esses tipos de documentos em vídeo e também tenho o que chamamos de versão resumida desses documentos.
+[18:47] Então, todo o Procedimento Operacional Padrão (POP), incluindo tudo o que vocês têm acesso aqui dentro deste grupo, é obviamente compartilhado com pessoas que já nos doaram dinheiro.
+[18:56] Mas quando digo que temos versões resumidas deste documento, quero dizer que removemos todas as táticas de como executá-lo e falamos apenas da estratégia e do que ela representa por escrito.
+[19:07] E esse é um exemplo de algo que enviamos às pessoas antes de nossas ligações com elas. Dessa forma, eles podem revisar o conteúdo, se atualizar e chegar a um consenso.
+[19:16] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Múltiplos Meios de Consumo"
+NÚMEROS: 3 tipos de consumidores
+VISUAL: Diagrama mostrando: 1) Assistem vídeos, 2) Leem documentos, 3) Preferem DM/perguntas diretas - todos os três devem ser atendidos
+[19:18] Agora repare no que eu disse, ok? E isso é muito importante de entender. Utilizamos múltiplos meios de consumo. OK?
+[19:26] Há muitas pessoas que não assistirão ao vídeo em que eu analiso o documento, mas há muitas pessoas que analisarão o documento em si.
+[19:33] Então, elaboramos um documento simples que aborda a estratégia. Essa é mais uma dica profissional, por exemplo.
+[19:39] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Público Geral vs Classe Alta - Diferenças"
+NÚMEROS: 2 demografias distintas
+VISUAL: Comparação lado a lado: Público Geral (muito tempo livre, baixo risco, querem MUITA informação) vs Classe Alta (pouco tempo, alto risco, querem eficiência máxima)
+[19:41] Quando você vende para o público em geral, eles percebem que têm muito tempo livre, em resumo, e também que assumem muito poucos riscos.
+[19:49] Portanto, é preciso mimar esse grupo demográfico específico com uma quantidade enorme de informações. Em geral, quanto mais tempo eles passarem com você, melhor eles serão.
+[19:58] Já em uma população de classe alta, é praticamente o oposto. O objetivo é, ok, no menor tempo possível, como posso convencer essa pessoa de que sou a pessoa certa para ela e que ela pode tomar uma decisão de compra adequada comigo com alta confiança e credibilidade.
+[20:14] Portanto, o objetivo é criar o máximo de recursos possível, como esses meios de consumo que lhes dão uma oportunidade da maneira que desejarem.
+[20:22] Assim como alguns de vocês preferem assistir a vídeos, outros preferem ler documentos. Alguns de vocês não vão ler um único documento ou assistir a um único vídeo e simplesmente vão me mandar mensagens diretas tentando extrair informações dessa forma.
+[20:34] Temos o prazer de atender aos três. Entende o que eu quero dizer?
+[20:38] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Email #2 - One Liner Message"
+NÚMEROS: Email #2 da sequência
+VISUAL: Template de email minimalista: "Hey [Name], any questions before the call? - Jeremy Haynes. Sent from my iPhone"
+[20:40] Então, me escute. E este é, na verdade, um ótimo exemplo de como redigir esses e-mails. OK.
+[20:46] Então, uma coisa que adoramos fazer especificamente para o segundo e-mail é o que chamamos de "mensagem de uma linha". OK.
+[20:53] Então, o e-mail é escrito assim: "Olá, [nome]" e fazemos parecer que foi enviado de um iPhone. Então a gente diz "ei, [nome]" e não fazemos nenhuma quebra de linha nem nada.
+[21:02] É como se disséssemos: "Alguma pergunta?" antes da ligação? E aí a gente simplesmente colocou um traço do Jeremy Haynes.
+[21:08] E então fazemos a quebra de linha e... o cheiro do meu iPhone. Este aparelho esmaga muito bem.
+[21:14] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Case Study: Grant Cardone Email Blast"
+NÚMEROS: 400 mil pessoas na lista, dezenas de milhares de respostas
+VISUAL: Resultado massivo de um email simples one-liner enviado para lista inteira, caos operacional resultante
+[21:16] Lembro-me de quando trabalhei com Grant Cardone, há muito tempo atrás. Eu fui o primeiro profissional de marketing digital desse cara.
+[21:23] Cara, eu irritei a empresa inteira, mas todo mundo da equipe de vendas ficou super empolgado quando eu fiz isso.
+[21:29] Naquela época, tínhamos uma lista de e-mails com cerca de 400 mil e poucas pessoas. E acabei de enviar este e-mail para toda a lista.
+[21:37] Basicamente era isso aqui, mas eu disse: "Ei, [nome], você ainda tem interesse na Universidade Cardone?" Jeremy Haynes.
+[21:44] Então, enviei a mensagem pelo meu iPhone, mas em vez de Jeremy Hayes, apareceu Dash Grant Cardone.
+[21:50] E cara, eu compartilhei isso com umas 400 mil pessoas. E foi uma loucura total. Recebemos dezenas, não estou exagerando, dezenas de milhares de respostas a este e-mail.
+[22:01] E o problema era que, em primeiro lugar, eu não contei a ninguém que estava fazendo isso. Isso foi apenas um teste. E eu não esperava, de forma alguma, que o resultado fosse o que foi.
+[22:11] E as respostas que estávamos recebendo eram sinais de compra, sabe, tipo, "Ah, sim, estou interessado".
+[22:17] E, cara, as reações das pessoas eram bem variadas, desde coisas como: "Ah, sim. Estou muito interessado. Tenho uma equipe de pessoas XYZ que estou tentando treinar. Sim, estou interessado para mim. Sim, não, estou dando uma olhada. Sim, gostaria de uma demonstração."
+[22:32] Houve todo tipo de reação, desde coisas obviamente negativas até gestos obscenos, como "não, vai se [ __ ]", sabe, e coisas do gênero.
+[22:40] E nós tivemos que, literalmente, interromper as operações naquele dia. A diretora de operações ficou [ __ ] da vida comigo por ter feito isso.
+[22:48] E, bem, tivemos que recorrer a pessoas como contadores, o corretor de imóveis e toda a equipe criativa, basicamente qualquer pessoa que conseguíssemos.
+[22:56] Havia o pessoal do departamento de expedição. Todos acessavam um único e-mail onde todas as respostas chegavam e nós as organizávamos em lotes por página.
+[23:04] Então, você receberia páginas de 1 a 10 e depois de 20 a 50, etc. E você lia as respostas e as repassava para diferentes vendedores, sabe, e recebia muitas respostas.
+[23:14] Mas é exatamente essa a intenção, não é? Estamos onde... lembra do que eu acabei de dizer, certo?
+[23:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "3 Tipos de Mecanismos de Consumo"
+NÚMEROS: 3 categorias
+VISUAL: 1) Consumo por escrito, 2) Consumo por vídeo, 3) Consumo por perguntas diretas/DM - pessoas que cortam o ruído
+[23:22] Três tipos diferentes de mecanismos de consumo. Por escrito, em vídeo, e depois eles só querem te fazer perguntas e cortar o ruído.
+[23:30] Eles nunca vão consumir um vídeo. Eles nunca vão consumir material escrito. Tipo, eles nem vão ler seus e-mails, [ __ ].
+[23:37] Mas quando um e-mail como este chega antes da ligação, ele solicita uma resposta e realmente aumenta a taxa de resposta drasticamente, atingindo aquele tipo de pessoa que não vai se submeter a nenhum processo de doutrinação.
+[23:49] Mas quando suas perguntas são respondidas, e este é o ponto crucial a entender sobre esse tipo de pessoa, elas consomem informações quando sentem que são personalizadas para elas e que se destacam em meio ao ruído.
+[24:01] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Exemplo: Amomar (Inner Circle) - Consumo Personalizado"
+NÚMEROS: Sessão de 4 horas mencionada
+VISUAL: Exemplo de membro que nunca assistiu treinamentos gerais, mas consumiu conteúdo quando foi direcionado especificamente para sua necessidade
+[24:03] Por exemplo, hoje mesmo tive um contato com um cara do círculo íntimo, o Amomar, lá em Dubai, e o Amomar me disse: "Ei, estou preparando este anúncio agora mesmo." Como você faria isso? Tipo, você faria só uma imagem estática?
+[24:15] E de cara eu penso: "Bom, o Amomar claramente nunca assistiu a um único vídeo de treinamento meu sobre como analisar vídeos de anúncios e o que fazer no gerenciador de anúncios."
+[24:24] É evidente que ele nunca assistiu às principais videoaulas de marketing digital. E no fim das contas, aquela ligação é um exemplo em que a informação foi transmitida em uma ligação de 4 horas, sabe? Portanto, não o culpo.
+[24:36] Então, de qualquer forma, eu digo a eles: "Não, eu gosto de fazer uma otimização de orçamento de campanha, com um a três conjuntos de anúncios para esses tipos de público se forem frios, sabe, um conjunto de anúncios se forem quentes com essa estrutura, e então gosto de usar criativos dinâmicos em cada um deles."
+[24:52] E para deixar claro, ele respondeu algo como: "Ah, eu nunca fiz criação dinâmica, sabe, o que eu preciso fazer?"
+[24:58] E eu pensei: "Certo, vá para a terceira semana do curso avançado de marketing digital, pule para 1 hora e 30 minutos e assista a partir daí."
+[25:07] Agora, Amomar vai passar pelo treinamento e assistirá a essa seção específica porque ela aborda algo que eu, em conversa individual, disse a ele que precisava consumir. Você vê?
+[25:17] Então, é como aquele tipo de pessoa que, geralmente, simplesmente não consome nada. E eles aparecem para irritar seus vendedores mais do que qualquer outra pessoa, porque chegam e parecem frios, mas não são.
+[25:28] Eles estão tratando a ligação como uma chamada educativa em vez de uma chamada de vendas.
+[25:33] Então, seus vendedores ficam todos putos da vida e agem como se não fossem qualificados, mas não são. Eles simplesmente detestam conversar com esse tipo de pessoa porque o ciclo de vendas é mais longo.
+[25:42] Eles comparecem à chamada para fins educativos, e não para fins de vendas, sabe, blá blá blá.
+[25:48] Mas antes disso, certo, no segundo e-mail, se eu conseguir enviar rápido, ei, ei [Nome], alguma pergunta que você tenha antes da ligação? Jeremy Haynes enviou do meu iPhone.
+[25:58] Eles responderão com a pergunta que realmente têm. Eles vão te dizer algo como: "Sim, estou procurando por algo assim."
+[26:04] E se você tiver algum tipo de recurso que possa indicar à pessoa, é isso que você deve enviar para ela. OK.
+[26:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Case Study: Cody Sanchez - Evento de 3 Dias"
+NÚMEROS: AOV ~$103, CPP ~$60, 100+ compradores/dia, meta 1000/dia, gasto aumentado de $5k/dia para $25k/dia (meta $75k/dia)
+VISUAL: Métricas de campanha de evento pago, escala de tráfego, volume de compradores
+[26:12] Em um dos meus contratos atuais com o Cody Sanchez, temos um evento pago de três dias que estamos realizando. E no evento pago de três dias, é uma compra de cerca de 400 dólares, com um aumento de preço de mais de 200 dólares.
+[26:25] Sabe, é tipo, algo em torno de algumas centenas de AOV. Acho que estamos com cerca de 103 ou algo parecido no nosso AOV agora.
+[26:33] O custo por compra é de cerca de 60 dólares e estamos recebendo algumas centenas de compradores por dia, e aumentamos o gasto de cerca de 5 mil dólares por dia para 25 mil dólares por dia. OK.
+[26:44] Resumindo, é como se houvesse uma enxurrada de compradores. Às vezes, recebemos centenas de compradores por dia, e em alguns dias, nossa meta é chegar a pouco mais de mil.
+[26:54] O ideal seria ter mil compradores por dia, mas precisamos aumentar esse número para cerca de 75 mil por dia.
+[27:00] Enfim, sem me alongar muito, o que estou tentando dizer é que começamos a receber muitos feedbacks à medida que o volume de clientes aumentava e a expectativa para o evento de três dias também crescia.
+[27:11] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Feedback Loop - Pergunta Comum Identificada"
+NÚMEROS: 7-12% taxa de infecção diária dessa pergunta
+VISUAL: Pergunta recorrente: "Qual a diferença entre evento de 3 dias vs masterclasses mensais vs YouTube vs livro?"
+[27:13] E muitas das sequências de e-mails pré-chamada eram, sabe, um tanto genéricas quando foram criadas inicialmente, tipo, "Ei, parabéns, você conseguiu seu ingresso", ou "Aqui estão alguns vídeos aleatórios do YouTube que selecionamos para você assistir".
+[27:26] E uma das coisas mais interessantes que a equipe que monitorava essa caixa de entrada mencionava era que eles recebiam essa pergunta com bastante frequência: qual a diferença entre esse evento de três dias e as masterclasses mensais que vocês costumam fazer? OK.
+[27:39] E aqui está a parte mais louca. Essa é uma estatística muito interessante. Todo mês fazemos essa masterclass, que na verdade é um webinar de 90 minutos para vender o produto de 10 mil dólares e incentivar as pessoas a agendarem uma ligação.
+[27:52] O que estava acontecendo era que as pessoas que já haviam sido expostas ao Cody apresentavam uma taxa muito alta de infecção, para deixar claro.
+[28:00] Tipo, e não estou exagerando quando digo isso, era algo entre sete e doze por cento por dia de pessoas que mandavam mensagens depois da compra dizendo coisas como: "Ei, qual a diferença entre isso e o livro? Qual a diferença entre esse curso de 3 dias e a masterclass? Qual a diferença entre esse curso de 3 dias e o canal do Cody no YouTube?"
+[28:20] Sabe, e havia todo tipo de coisa com a qual eles ficavam comparando.
+[28:24] Então, para mim foi simples. Eu pensei: "Bem, com base no feedback que estamos recebendo, precisamos que o Cody grave um vídeo e depois transforme esse vídeo em um material escrito, explicando as diferenças, e devemos incluir isso como uma de nossas prioridades iniciais."
+[28:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Regra de Ouro da Agência"
+NÚMEROS: 1 pessoa = 1000 pessoas pensando o mesmo
+VISUAL: Princípio fundamental: Se uma pessoa diz algo, mil pessoas pensam o mesmo - use isso para criar conteúdo preventivo
+[28:42] Ok, isso acontece o tempo todo, só que em menor escala. Temos uma regra de ouro na agência: se uma pessoa diz algo, provavelmente há mil pessoas que pensam da mesma forma.
+[28:52] Certo, então se tivermos um vendedor que nos dê um feedback bom e articulado, e não algum feedback estúpido do tipo: "Ah, as pessoas vêm sem conhecer o vendedor."
+[29:01] É tipo, bem, seja mais articulado. Tipo, o que isso significa? Sabe, será que eles estão se comunicando e dizendo coisas que não estão sendo levadas adiante na ligação, coisas que você preferiria que fossem?
+[29:11] E o que são essas coisas? E quando você conversa com sua equipe de vendas, e às vezes é melhor nem conversar com sua equipe de vendas, é melhor apenas ouvir as gravações das ligações deles porque você vai perceber.
+[29:22] Assim como nas perguntas que estão sendo feitas, você verá oportunidades super óbvias de pensar: "Nossa, eu poderia simplesmente fazer um vídeo, transformar isso em um texto escrito e enviar os dois, adicionar ao meu documento de perguntas frequentes, criar um e-mail específico sobre o assunto, sabe? E assim eu consigo minimizar esse problema."
+[29:41] E o objetivo principal, para ficar claro, é ouvir as gravações das chamadas, ouvir o que as pessoas que participam dos seus webinars querem ouvir antes de comparecerem e qual a probabilidade de comprarem.
+[29:53] Você ouve as pessoas enquanto elas preenchem seus formulários de contato e, em seguida, elas iniciam conversas com você e fazem perguntas específicas sobre o que estão procurando.
+[30:02] E tudo o que vocês precisam fazer, pessoal, é se virar e transformar isso na sequência pré-doutrinação. É isso.
+[30:09] Não é nenhum segredo mirabolante ou truque mirabolante que você precisa fazer aqui. Você só precisa ouvir as pessoas.
+[30:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Trust Flywheel - Quando Não Tem Feedback"
+NÚMEROS: Referência ao treinamento Q1 2025
+VISUAL: Uso do Trust Flywheel para fazer suposições educadas quando ainda não há feedback de clientes
+[30:17] E quando você começa com isso e ainda não tem esse feedback, você tem que adivinhar. E é aí que eu me refiro ao volante de confiança.
+[30:24] É como se eu não recebesse perguntas do tipo: "Ei, qual é a taxa de disputas e reembolsos da sua empresa de educação?", mas eu dou um palpite bem fundamentado e digo: "Aposto que se eu fosse transparente e mostrasse essa estatística em um pequeno vídeo, muita gente confiaria em mim, porque eu mostraria de forma transparente a realidade do que eles realmente procuram quando vão ler depoimentos: quantas pessoas nós ajudamos e quantas pessoas nós prejudicamos."
+[30:49] Veja bem, é exatamente isso que eles procuram quando vão ler depoimentos. Eles não vão simplesmente assistir a um monte de vídeos aleatórios de pessoas que você selecionou a dedo para mostrar a eles.
+[30:58] Tipo, não, cara. Eles querem saber qual a porcentagem de pessoas que você ajudou e qual a porcentagem de pessoas que você prejudicou seriamente. OK? É isso que eles estão procurando. Então, é isso que lhes damos.
+[31:09] Veja, esse é um exemplo de como se faz uma suposição. OK? E, mais uma vez, não deixe de assistir ao vídeo sobre o ciclo virtuoso da confiança se quiser uma explicação detalhada de todas as oito coisas que fizemos no mastermind. É muito útil.
+[31:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Estrutura de Emails #3+"
+NÚMEROS: A partir do email #3
+VISUAL: Emails específicos baseados em tópicos do FAQ e documento de recursos, abordando perguntas de sales calls e Q&A de webinars
+[31:24] Então, ok, e-mails, e isso é muito importante entender, ok, não existe apenas um padrão estático, tipo, ah, é isso que você faz para o terceiro e-mail até quantos e-mails você quiser fazer.
+[31:35] Por exemplo, os e-mails a partir do terceiro devem ser específicos para os assuntos abordados nas perguntas frequentes e no documento de recursos.
+[31:43] A partir daqui, tudo o que você precisa fazer é identificar os assuntos que surgem nas ligações de vendas e tentar abordá-los preventivamente, antes mesmo da ligação começar.
+[31:52] Você pega as perguntas que surgem na sessão de perguntas e respostas do webinar, quando as pessoas ainda passaram por todo aquele material introdutório que você acabou de apresentar e ainda têm dúvidas.
+[32:01] Pegue essas perguntas, transforme-as em e-mails pré-aula, pré-webinar ou em uma sequência de e-mails pós-evento, ok?
+[32:09] É só isso que você faz, e você cria explicações detalhadas sobre esses assuntos, abordando-os de forma clara e objetiva, sem rodeios. OK?
+[32:17] E você também transforma esses vídeos em formato escrito nos e-mails. É como dizer: "Não obrigue as pessoas a assistirem ao vídeo". Pegue o que foi dito no vídeo e transforme em um e-mail [ __ ]. OK?
+[32:28] Principalmente com ferramentas como Chatbt, Claude, Perplexity e Deepseek. Existem inúmeras maneiras de usar esse material para transformá-lo em uma sequência de e-mails bem escrita. Não é difícil. OK.
+[32:40] O que estou tentando dizer é que você precisa pegar os elementos que surgem no seu processo de vendas e transformá-los em sequências prévias.
+[32:48] E o resultado disso é que você verá uma melhora no que acontece nas ligações de vendas. E você possivelmente precisará atualizar o listen novamente. OK?
+[32:57] O que está acontecendo nas chamadas agora? O que está impedindo as pessoas de participarem dos webinars? Sobre o que as pessoas ainda estão fazendo perguntas?
+[33:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Indicador de Sucesso - Mudança nas Perguntas"
+NÚMEROS: Mudança qualitativa nas perguntas
+VISUAL: Progressão: Perguntas básicas → Perguntas sofisticadas → Alto interesse → Convencidos/Vendidos
+[33:07] E a pergunta deve mudar se você fizer isso corretamente. Essa é a coisa mais importante à qual se deve prestar atenção.
+[33:13] Se essa sequência de doutrinação prévia estiver realmente atingindo as pessoas, ou se essa sequência de doutrinação pré-webinar, ou qualquer que seja o propósito para o qual você a esteja utilizando, estiver realmente atingindo as pessoas, as perguntas mudarão.
+[33:25] E eventualmente, e esta é a melhor parte, eventualmente, em vez de as perguntas mudarem para apenas limitá-las a pessoas muito interessadas, você chegará a um ponto em que elas aparecerão muito convencidas, ou pelo menos começará a ver uma porcentagem de pessoas que aparecem convencidas, muito maior do que a que você vê atualmente.
+[33:43] Esse é o objetivo. O primeiro objetivo, para que fique claro, é observar um avanço naquilo que as pessoas estão perguntando.
+[33:50] É assim que você sabe que sua sequência de doutrinação prévia, ou qualquer outra, está realmente surtindo efeito e funcionando bem: você percebe uma diferença na conversa.
+[33:59] E quando você perceber uma diferença na conversa, se as perguntas parecerem mais sofisticadas, talvez seja necessário voltar atrás e treinar sua equipe de vendas sobre os novos assuntos que surgirem.
+[34:09] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Probabilidade de Sucesso na Primeira Iteração"
+NÚMEROS: 50/50 chance
+VISUAL: Divisão 50%: Primeira versão funciona perfeitamente vs Precisa de 1-3 ciclos adicionais de iteração
+[34:11] É importante ressaltar, de forma geral, e isso é muito importante, que, segundo nossa experiência, a probabilidade é de 50/50.
+[34:18] Em 50% dos casos, essa primeira versão, se feita corretamente, leva as pessoas a um ponto em que elas demonstram grande interesse e se tornam convencidas a comprar o produto.
+[34:28] E na outra metade das vezes, isso avança a conversa e pode haver mais um a três ciclos de iteração desse mesmo processo que acabamos de mencionar, pelos quais é preciso passar antes que eles finalmente cheguem àquele patamar de alto interesse ou de compra.
+[34:43] É um verdadeiro 50/50. Na verdade, não há uma resposta definitiva. Depende do que você vende e, obviamente, da quantidade de informações que você fornece nas sequências prévias.
+[34:53] Obviamente, isso também depende da taxa de consumo de todos que estão passando por essas situações.
+[34:58] Isso vai determinar se você vai despertar o interesse de alguém ou se a compra será concretizada antes do prazo.
+[35:04] Mas, idealmente, você está nos 50% do lado em que, assim que faz isso uma vez, funciona e você não precisa voltar e fazer de novo.
+[35:12] Não se frustre, porém, caso a conversa esteja avançada, mas ainda haja perguntas sem resposta, o que exigirá que você volte atrás e reformule tudo.
+[35:21] Hum, só uma pequena ressalva, ok? Se você se encontrar na situação em que precisa fazer várias iterações, a questão passa a ser: devo adicionar mais e-mails?
+[35:31] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Split Emails - Técnica Avançada"
+NÚMEROS: 2 tópicos por email
+VISUAL: Estrutura de email dividido: Linha introdutória → Tópico 1 → Linha divisória → Tópico 2, evitando alongamento da sequência
+[35:33] E eu começo a fazer essas coisas. Eu os chamo de e-mails divididos. OK.
+[35:38] Então, se originalmente eu tiver, por exemplo, a partir do terceiro e-mail, um tópico específico sobre o qual estou falando, em vez de apenas um tópico com um vídeo e um texto explicativo, eu dividirei o e-mail e falarei sobre a mesma coisa no início, mas na parte inferior do e-mail, criarei quase como dois e-mails em um.
+[35:57] Assim, não preciso alongar os e-mails. Preciso falar sobre os dois assuntos.
+[36:02] Agora, uma pequena nuance importante ao usar e-mails divididos é a linha de introdução. Certifique-se de dizer, neste e-mail, "Vamos falar sobre isso primeiro e sobre isso em seguida", e só então entre no assunto principal, em vez de começar direto com o conteúdo.
+[36:17] Isso porque as pessoas tendem a escanear os e-mails em vez de se dedicarem a ler o texto completo.
+[36:22] Então, novamente, se a partir do terceiro e-mail você se encontrar no grupo de 50% que precisa revisar o conteúdo e adicionar perguntas e respostas, vídeos, recursos etc., tudo bem, não há problema.
+[36:34] Mas comece a usar e-mails divididos. Primeira metade aqui. A segunda parte aborda a segunda questão.
+[36:41] Linha introdutória. Este e-mail trata do seguinte. Este é o primeiro assunto que abordaremos. Este é o segundo assunto que abordaremos.
+[36:49] E aí, literalmente, quando eu digo que é um e-mail dividido, adicione uma dessas linhas divisórias. Certo, essa é a chave.
+[36:56] Essa é uma dica super profissional para tudo isso. Assim não fica parecendo apenas um bloco de texto enorme.
+[37:02] Nada fará com que alguém feche um e-mail e o marque como spam mais rápido do que um longo bloco de texto prolixo. OK.
+[37:09] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Text Message Body Style"
+NÚMEROS: 1-2 linhas por sentença
+VISUAL: Formato de escrita: 1-2 linhas → quebra de linha → 1-2 linhas → quebra de linha, imitando mensagens de texto
+[37:11] Certifique-se de fazer isso, isso, nós chamamos de estilo corporal, mensagens de texto no corpo, ok, para o estilo que queremos usar.
+[37:19] Escrever mensagens no corpo do texto é muito simples. É como uma ou duas linhas, quebra de linha. Uma ou duas linhas por frase, com quebra de linha. Uma ou duas linhas por frase, com quebra de linha.
+[37:30] Idealmente, é assim que todos esses e-mails deveriam ser escritos. Ok, legal.
+[37:35] Se vocês tiverem mais alguma dúvida sobre isso, fiquem à vontade para entrar em contato e me avisar.
+[37:39] Novamente, muitos de vocês compartilharam suas sequências de e-mails prévias e seus processos de doutrinação, e, ao analisarmos tudo, percebemos que havia muito espaço para melhorias.
+[37:49] Pegue tudo o que discutimos neste vídeo, crie os recursos e depois compartilhe novamente suas sequências de doutrinação para que possamos analisá-las e avaliá-las juntos.
+[37:58] Certo, a gente se fala em breve.
+📊 RESUMO EXECUTIVO
+NÚMEROS PRINCIPAIS:
+Lista de email: 400.000+ pessoas (caso Grant Cardone)
+Dezenas de milhares de respostas ao email one-liner
+Taxa de infecção: 7-12% por dia (perguntas sobre diferenças)
+Empresa de educação: 4.315 clientes únicos desde 2017
+Taxa de chargeback: 0,54% (14-15 pessoas)
+Taxa de reembolso: 0,51%
+Taxa de satisfação: 99,46%
+Caso Cody Sanchez: AOV ~$103, CPP ~$60
+Volume: 100+ compradores/dia, meta 1.000/dia
+Gasto: aumentado de $5k/dia para $25k/dia (meta $75k/dia)
+Probabilidade de sucesso primeira iteração: 50/50
+31 de 130 pessoas (100%) rejeitaram "homework"
+ESTRATÉGIAS E SISTEMAS:
+Espectro de Interesse: Curiosidade → Interesse Moderado → Muito Interessado → Convencido/Vendido
+Email #1: Confirmação + FAQ + Documento de Recursos
+Email #2: One-liner message ("Hey [Nome], alguma pergunta antes da call? - Enviado do iPhone")
+Emails #3+: Específicos baseados em tópicos de FAQ e recursos
+Split Emails: 2 tópicos por email com linha introdutória e divisória
+Text Message Body Style: 1-2 linhas por sentença com quebras de linha
+Trust Flywheel: 8 elementos (Objeções Reais, Depoimentos, Investimento Tempo, Riscos +/-, Escassez Real, Segurança, Números, Grande Narrativa)
+Múltiplos meios de consumo: Vídeo + Escrito + DM/Perguntas diretas
+Regra de Ouro: 1 pessoa dizendo algo = 1.000 pessoas pensando o mesmo
+Feedback Loop: Ouvir gravações de calls → Identificar perguntas → Criar conteúdo preventivo
+3 tipos de consumidores: Assistem vídeos, Leem documentos, Preferem perguntas diretas
+ESTRUTURA:
+Gamma.app: Ferramenta de apresentação com IA para criar VSSLs
+POPs (Procedimentos Operacionais Padrão): Hammer Them, Venus Fly Trap 2.0, Venus Fly Trap Original, Tornado
+Versões resumidas: Estratégia sem táticas para prospects
+Documento FAQ + Recursos: 1-2 páginas com explicações curtas e links
+Espectro de Impacto: Baixo (Trustpilot texto) → Médio (Vídeos depoimento) → Alto (Transparência Stripe)
+Público Geral vs Classe Alta: Muito tempo/baixo risco vs Pouco tempo/alto risco
+DADOS FINANCEIROS:
+Caso Grant Cardone: Lista 400k+ pessoas
+Caso Cody Sanchez: Evento $400 (com upsell $200+), AOV $103, CPP $60, gasto $25k/dia (meta $75k/dia)
+Produto $10k mencionado (masterclass mensal)
+Curso $5k mencionado (Inner Circle)
+Taxa satisfação 99,46% (empresa educação)
+PALAVRAS PROIBIDAS EM SEQUÊNCIAS:
+Homework (Tarefa de Casa)
+Test (Teste)
+Audit (Auditoria)
+INDICADORES DE SUCESSO:
+Mudança qualitativa nas perguntas dos prospects
+Perguntas mais sofisticadas
+Aumento de pessoas chegando "convencidas/vendidas"
+50% chance de sucesso na primeira iteração (1-3 ciclos adicionais se necessário)
+DURAÇÃO: ~38 minutos FORMATO: Vídeo educacional / Masterclass sobre Email Marketing para Show Rate

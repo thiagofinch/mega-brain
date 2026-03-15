@@ -1,0 +1,647 @@
+Transcrição Completa: 60 Direct Response Ad Mastery 1 4 25
+[00:00] All right, sweet. So, welcome in everybody. Today we're going to be doing some direct response advertising mastery. Uh, this has been a common question that's got brought up these last I'd say like good couple weeks in a row now.
+[00:15] Yeah, without further ado, we are going to begin. Um, to be clear, we got some great wins in the chat. Uh, good job to everybody sharing. We got first call from a done for you funnel. Hit 1 million a month. Congratulations, Adrian.
+[00:30] Um, signing new deals. started a cadence of 2x weekly videos on YouTube. Yeah, smart gripping a good good play. Uh just joined this week. Welcome into the inner circle, man. Appreciate you being here with us.
+[00:45] Um see, closed new locations, added 10K a month Thursday. Badass. Best month last yet in December. Cool. All right. Good wins. Sweet.
+[01:00] So yeah, without further ado, guys, uh we're going to dive in. There's a lot of shit that we got to talk about with this specific class. So yeah, let's do it.
+[01:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Direct Response Advertising"
+NÚMEROS: Não especificados
+VISUAL: Título principal da apresentação, fundo escuro com texto destacado
+[01:20] Um, for starters, we are going to be covering everything to do with direct response today inside of this specific class. Um, ideally, we talk more so about all the call to action ads. And that's really all direct response is.
+[01:35] So, whenever you guys go out there and you make the ads that actually tell people to do stuff where you drive them over to a conversion mechanism, that's specifically what I'm talking about when I mention direct response. It's the ads that say go do xyz. Okay.
+[01:50] And generally these are video ads. Uh the reason that we like video ads more than anything else is they typically get off first of all a little bit more reach than image ads.
+[02:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Video Ads vs Image Ads"
+NÚMEROS: Não especificados
+VISUAL: Comparação visual entre vídeos e imagens, conceito de alcance e consumo
+[02:10] Image ads are easier to consume, but they're also easier to ignore and they're more rapidly uh the best way to kind of look at direct response is like images are easy to ignore, videos are easier to consume.
+[02:25] So, we typically defer to having videos rather than images. Um, keep in mind I'm a big proponent of what's referred to as dynamic advertising.
+[02:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Dynamic Advertising Structure"
+NÚMEROS: 10 imagens/vídeos, 5 headlines, 5 body copy
+VISUAL: Estrutura de anúncios dinâmicos com múltiplas variações de criativos, headlines e textos
+[02:45] So, dynamic ads, you can have up to 10 different images and or videos. You can have up to five headline variations. And you can have up to five different pieces of body copy.
+[03:00] Okay, body copy on Facebook specifically is referred to as uh primary text by the way when you go into the ads manager and you see that.
+[03:15] So I generally like to max these out if I am at at least 500 a day or more. If I am less than 500 a day, then generally I do about half of that where I'll do like as an example four to five different images or videos, mainly videos.
+[03:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Budget-Based Creative Strategy"
+NÚMEROS: $500/dia = máximo de variações, <$500/dia = metade das variações
+VISUAL: Escala de investimento diário correlacionada com quantidade de criativos testados
+[03:35] Uh probably two to three different headlines and maybe like two to three different pieces of body copy. Big big difference there is I don't want to load it up with too many variables.
+[03:50] Um, I also want you guys to ensure modern advertising requires you to think with efficiency for the platform to combine these different assets and different combinations to get the conversions.
+[04:05] So, when I create a campaign, I'm selecting what we consistently refer to as a standard event. Okay? And when you hear this word, all this means is the what this is like what I'm optimizing for.
+[04:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Standard Events"
+NÚMEROS: Não especificados
+VISUAL: Exemplos de eventos: Schedule, Complete Registration, conceito de otimização por objetivo
+[04:25] Okay. So, when you hear me say things like schedule, uh, complete registration, these are all examples of standard events. Okay? And it's important to note each standard event typically reaches a different subset of people out of everybody that we're targeting.
+[04:40] But anyway, I don't want to get too far away from my point here. What I'm trying to say is is like the old school way of advertising is that when you go to make that direct response ad, like the copy that you use for your primary text, your video that you make, and your headline that you make, you're typically going to make it for that ad only.
+[05:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Old School vs Modern Marketing"
+NÚMEROS: Não especificados
+VISUAL: Comparação entre método tradicional (ads estáticos únicos) vs método moderno (assets intercambiáveis)
+[05:05] Okay? Meaning, you're going to come up with some specific combination that you think belongs together and only belongs together. Whereas what I do and what I consider like a modern marketing technique is you want to consider all of these same variables interchangeable with each other.
+[05:20] That way when you go to actually create the direct response, you're not just making a single ad. You're making up to 10 different images or videos, five different headlines, and five different pieces of body copy that can all interchange with one another.
+[05:35] Okay, this is a very key point that I want to make sure is really emphasized. When we use dynamic ads, we are essentially prioritizing the quantity of higher standard events at a lower cost effective rate per event compared to telling Facebook or any ad channel for that matter, I demand you force spend onto this specific combination of creative.
+[05:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Trust The Platform"
+NÚMEROS: 52,000 data points per user
+VISUAL: Conceito de confiança no algoritmo, quantidade massiva de dados por usuário
+[06:00] Okay. The underlying principle to direct response advertising before we even start with all the specific tactics is you have to trust the platform. Okay. On average, I talk about this frequently as an example, Facebook alone has 52,000 data points per user.
+[06:15] Okay, do me a favor. Somebody unmute themselves and tell me in good conscious, truthful, high conviction that you know 52,000 things about yourself. Anybody here tell me you know 52,000 things about yourself right now?
+[06:30] Okay, you fucking don't. I bet you can't name like 500 things about yourself if you were really tasked with doing it. You know, you'd have to try super hard. 52,000 things that by the way dynamically update.
+[06:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Real-Time Data Sharing"
+NÚMEROS: 52,000 pontos de dados atualizados dinamicamente
+VISUAL: Conceito de compartilhamento de dados entre plataformas (Telegram, Instagram, YouTube, Facebook)
+[06:50] Okay, so as an example, just last night I messaged a new person on Telegram and guess who all of a sudden is at the top of my Instagram stories that I follow that I've never seen as the first person I could sit there and watch. It was that person I just messaged on Telegram.
+[07:05] I remember a couple days ago before that I was on YouTube and I clicked on a random guy that I hadn't watched before and I go on I go on Facebook and like four posts into scrolling. The guy that I just watched on YouTube is now randomly getting served to me in my Facebook news feed and vice versa.
+[07:20] All of these companies, okay, and this is critical to understand, every big company shares data with each other. Okay, now this is really important to understand so you can really grasp like why you need to make ads interchangeable instead of just making static ads.
+[07:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Data Sharing Examples"
+NÚMEROS: 2017 e antes - targeting por active income, net worth, liquid assets
+VISUAL: Exemplos históricos de targeting avançado, compartilhamento de dados bancários com ad platforms
+[07:40] Okay, static ads are old school shit. So banks as an example and this was back when it was transparent. You used to be able to in like 2017 and before literally target people by active income, net worth, and liquid assets.
+[07:55] Okay. How the fuck do you think ad platforms got that data? Somebody unmute yourself. Tell me how do you think ad channels got that data?
+[08:10] Insurance companies. No, banks. The banks literally have contracts to share your information about your financial details to the ad channels.
+[08:25] Okay, these are trillion dollar companies, trillion dollar organizations, okay? These aren't like little small fry organizations. They do shit you couldn't even fucking dream of if you were like an evil villain, okay?
+[08:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Backdoor Data Deals"
+NÚMEROS: Frações de centavo por transação de dados
+VISUAL: Conceito de acordos entre plataformas trilionárias para compartilhamento de dados em tempo real
+[08:45] They listen to each other. Like Telegram as an example, every single thing we individually share shared with every single ad channel in real time. Every single ad channel, every single social platform all have little backdoor deals for like fractions of a fraction of a penny where they just share that detail over to each other.
+[09:00] And again, it's a giant like interchangeable backdoor set of deals where people are getting paid to essentially sell and share data with each other. Okay. So, when I say these 52,000 data points are dynamically updating in real time, I'm not fucking around. I mean down to the literal second.
+[09:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Optimize Creative For Each Person"
+NÚMEROS: 52,000 data points por usuário
+VISUAL: Toggle de otimização no Facebook Ads, conceito de personalização automática de criativos
+[09:20] Okay, these ad channels know more than you could possibly fathom about the users that you are considering to target. Okay, so back to my point on the ad level of campaigns, there's these little options now. And when you turn on dynamic ads, there's this little toggle that comes up that says optimize creative for each person.
+[09:35] Okay, so let's just go back to the 52,000 data points that it has per user. Okay, this is where we're starting to get into some tactics of director spots. Okay. So, first of all, the two most common ways that I can create any one of these three variables, okay, these three variables meaning an image or a video, headlines, and body copy. The two main ways that I can create these are long or short.
+[09:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Long vs Short Creative Strategy"
+NÚMEROS: Metade longo, metade curto
+VISUAL: Estratégia de variação: vídeos 2min vs 30seg, body copy longo vs 3 frases, headlines longos vs curtos
+[10:00] Simple as that. To start, I can make an ad video that's two minutes long. I can make an ad video that's 30 seconds long. I can write a piece of body copy that's like fucking several paragraphs long. I can write body copy that's literally three sentences long, a single sentence long and a link.
+[10:15] I can write headlines that are extremely short, like a couple words max. I can write headlines that are optimized for desktop only and that will not be legible and will get cut off on a mobile device.
+[10:30] Okay. So, the very first thing I want to think with, as simple as this sounds, is I want to go into creating my variables here with half of them being long and half of them being short because we're going to always flick that toggle that says optimize creative for each person.
+[10:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Platform Optimization Strategy"
+NÚMEROS: 52,000 data points dinâmicos
+VISUAL: Conceito de dar munição ao algoritmo para combinar assets na melhor combinação possível
+[10:50] Okay? Because we are going to give the ad platform who has 52,000 revolving dynamic updating and real time data points on the users that we're targeting. The ammo it needs to combine those different creative assets in whatever combination it deems fit to get the best cost per result for whatever we're optimizing for.
+[11:05] Drop a one in the chat if that makes sense. Drop a two in the chat or just unmute yourself if you have a question on what I just said so far before we continue. Again, ones in the chat if that makes sense. Unmute yourself if you got questions on any of that so far.
+[11:20] Okay, cool. Good. Okay, now let's kind of take a step back real quick and let's just talk about hooks.
+[11:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Ad Flow Structure"
+NÚMEROS: 3 componentes principais
+VISUAL: Fluxo linear: Hook → Reasons → Call to Action
+[11:40] Okay, so the flow the flow of an actual direct response ad. So like actually let's let's let's flip this around. So the ad flow is usually this simple. It's usually a hook, a set of reasons, and then a call to action. Okay, that's generally it.
+[11:55] In some instances, you can vary from this, but in almost all instances, this is your flow. It starts off with a hook, a set of reasons, and then a call to action.
+[12:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Hook Categories"
+NÚMEROS: Múltiplas categorias listadas
+VISUAL: Lista de tipos de hooks: Pain, Moving Towards, Moving Away, Motives (Financial), Emotional Drivers (Happiness, Anger, Rage, Insecurity, Safety, Lust)
+[12:15] Okay, so let's go through these categories and kind of break down what you can do for each one of these. Okay. So, for starters, for hooks, we've got pain, we've got moving towards, and moving away. We'll separate them out.
+[12:30] We've got motives. These could be as an example like financial motives. These could be uh I mean to be fair like there's a lot of individual categories that we can list motives under, but I mean pain can technically be a motive. Desire can technically be a motive.
+[12:45] You've got all the human emotions to leverage. So emotional drivers, these are some of my favorite ones, by the way. I have an entire advanced class on uh emotional manipulators inside of the course library that you guys all have access to if you want to hear me go like in super depth about each individual emotional manipulator.
+[13:00] But as an example of a few of them, like you could literally just technically list any specific emotional state like happiness, anger, uh anger also pairs with rage really well. Um, you could to you could technically put like insecurity under here.
+[13:15] Um, you know, things like this. I mean, technically you could also put like safety in here as an example. There's a whole bunch of individual things. You technically put lust like sex drivers in here. There's plenty of individual emotional drivers that you can sit there and leverage like again and again and again and again.
+[13:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Hook Purpose - Context"
+NÚMEROS: 52,000 data points por usuário
+VISUAL: Conceito de fishhook (anzol), relatabilidade, contexto em tempo real
+[13:35] Okay. Now, my point is without listing literally every single hook under the sun here, this is just a few examples that come top of mind. Hooks are generally just where we start off, okay? And we always want to be thinking with a specific like what what like literally think of a fish hook, okay? What are we casting out there that can initially get somebody to be responsive?
+[13:50] Okay? Now, I don't just want you to think on like a surface level like that. The reason I bring up all of this here where I'm talking about, you know, trusting the platform, 52,000 data points, all the big companies sharing data with each other, like you get the opportunity to leverage that shit if you're smart and you understand how the platforms work.
+[14:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Real-Time Context Example - Memecoin"
+NÚMEROS: 2-3 meses atrás, Bitcoin run, alt season
+VISUAL: Exemplo de transação de criptomoeda compartilhada em tempo real com ad platforms
+[14:10] Okay, remember what I said in real time. Anything that they do off of the platform or on the platform is tracked and updated on their profiles. And then if there's an ad that specifically speaks to like the things they do, okay, they can also have a hook for the things they do. We have to speak directly to these things.
+[14:25] I'll give you an example, okay? for something like literally super recent that I've seen a few smart people leverage just like two three months ago cryptocurrency going off the fucking chain, okay, and getting wildly popular again, okay? and everybody starts putting a little bit of attention into it here and there and you start to see people specifically once the Bitcoin run kind of caps out.
+[14:40] You know, they call it alt season where everybody starts to participate in all the meme coins this specific goaround and people are actively transacting on platforms like just name an exchange, right? Like Coinbase, Binance, all the fucking infinite ones there are.
+[14:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Data Sharing Question"
+NÚMEROS: 52,000 data points, transações em tempo real
+VISUAL: Pergunta ao público: compra de memecoin é compartilhada com ad channel? 1 = sim, 2 = não
+[15:00] Okay, ask yourself a simple question. If they have 52,000 data points on average per user and banks and social platforms share their transactional details and updating information in real time with each other to get ad profiles as accurate as possible. Do you think that somebody buying a memecoin is in real time shared to the ad channel as a transaction that somebody just made?
+[15:15] Put a one in the chat if you agree. Put a two in the chat if you disagree. And you do not think that it's shared. One, if you think it's shared. Two, if you think it is not shared. Do you think that if somebody goes and buys a memecoin that it's shared to the ad channel in real time?
+[15:30] One if you agree, two if you disagree. Put it in the chat. I'll wait for your answers. Bunch of ones so far. Yeah. Good. And listen, for the most part, pretty much you're all right.
+[15:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Contextual Hook Example"
+NÚMEROS: Não especificados
+VISUAL: Exemplo de hook invasivo: "Man, I can't believe you're still out here buying meme coins, banking your entire net worth on that..."
+[15:50] Okay. So, if I made an ad that specifically said just as simple as it is, okay, like my opening hook was something along the lines of, "Man, I can't believe you're still out here buying meme coins, banking your entire net worth on the fact that that's going to be what makes the financial change in your life. That's what you're riding on."
+[16:05] You know, how contextual is that to the person who literally just bought a memecoin as an example of an opening hook? Just real quick, whatever the fuck I pitch after that, if my ad literally starts with something highly invasive that they literally just did that would contextually be relevant that the platform they bought it on is going to share with the ad channel anyway.
+[16:20] And I literally started off my ad hook with, I can't believe you just bought another memecoin. You're still out here banking your entire net worth on what? Pepecoin, Fartcoin, like that's what you're thinking you're going to get rich from.
+[16:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Hooks = Context + Relatability"
+NÚMEROS: Não especificados
+VISUAL: Conceito central: hooks precisam de contexto em tempo real, não coisas antigas ou de semanas atrás
+[16:40] It's like, okay, again, if I start off an ad, and this is the main thing I want you guys to understand. The whole point of hooks is all hooks come down to context. Okay? We want relatability. We want to feel like we are in real time talking to them.
+[16:55] Okay? We want real time context. We do not want something that feels like it's something they used to do. We do not want something that feels like it's old. We don't even want something that necessarily feels like it was a week or two ago.
+[17:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Platform Behavior - TikTok Example"
+NÚMEROS: 2+ minutos de vídeo, 24 horas para revelar motivo
+VISUAL: Exemplo de Asian market food haul, algoritmo servindo conteúdo similar imediatamente após
+[17:15] The this is what is different about real life right now, okay? On social platforms, they're constantly serving things like you're you're you have a a couple trillion dollar companies that you can either play into what they provide us the opportunity to do as advertisers, or you can just be old school, outdated, and essentially just driving and inflating your costs up because you're not leveraging what's available to you from these channels.
+[17:30] They serve things to people that they are in real time right now interested in. Reflect with me real quick. You're on TikTok, okay? You're scrolling through the news feed. You see like I saw this guy the other day. His whole set of videos was about going to this Asian market and just buying random foods, air frying them, and then raiding them.
+[17:45] And it was fucking comical. It was hilarious. He got something called Sea Squirt uh and a bunch of other random shit I've never heard of and he just tries it out. I watched the full like two something minute video. What do you think the videos are that I see next in my for you page?
+[18:00] Okay. The next video was probably a TikTok shop post, an ad or or somebody on live. But then the literal video right after that from a guy I've never seen before all of a sudden gets served to me again with another Asian market haul where he is demonstrating another set of nasty shit that he bought from the Asian market that he's going to air fry and try next.
+[18:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Real-Time Algorithm Response"
+NÚMEROS: 24 horas, múltiplas plataformas (YouTube, Instagram, Facebook, TikTok)
+VISUAL: Conceito de feed sendo carregado instantaneamente com conteúdo similar ao consumido
+[18:20] Okay, that's how fast TikTok as an ad platform, as an example, says, "Oh, this guy's now interested in Asian market food halls. Let's make sure we fucking load up his newsfeed for the next couple scrolls with more of that content.
+[18:35] Okay. How many of you have seen that exact thing happen on other channels like Facebook, Instagram, YouTube, TikTok, any platform you can sit there and scroll on and watch videos. If I go on YouTube during the during my lunchtime and I watch an episode of Shark Tank, what videos get suggested to me to watch next?
+[18:50] some fucking rap videos from the early 2000s. No, I get served with more Shark Tank videos right after that. Why? Because we are real time contextual in modern-day advertising on these modern-day social media platforms. We are as real time as it gets.
+[19:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Instagram Feed Analysis"
+NÚMEROS: $30,000 em arte, 3 dias de interações recentes
+VISUAL: Demonstração ao vivo do feed: carros, casas, iates, relógios, pessoas com quem interage recentemente
+[19:10] Okay, so hear me out. If I on my Instagram feed, as an example, let me show you some examples so you could see what I'm talking about in real time. If I'm in my news feed, okay, and I'm just sitting there scrolling and all I all I buy specifically, I should say all I follow on Instagram is first of all, cars, houses, yachts, watches.
+[19:25] Okay. So, cars, yachts, watches, watches, Brandon Carter, because I tag Brandon. I go to Brandon's house and I talk to Brandon all the time. Watches, cars, cars. Okay, look. Boom. First ad.
+[19:40] Okay. Now, this has literally nothing to do with any of those specific things, does it? There's been no cars. There's been no watches. There's been no yachts. As a matter of fact, all this guy's specifically talking about is random interests that I have that relate to marketing.
+[19:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Feed Content Pattern"
+NÚMEROS: $30,000 em arte, 3 wiener dogs, Atlanta scammer
+VISUAL: Padrão consistente: carros, relógios, casas, iates, pessoas com quem interage, arte, cachorros
+[20:00] Okay, so let's continue. Again, cars. In this case, we have art. I have bought about $30,000 of art. We have inner circle member Jordan here. Cars. Inner circle me. Oh, I'm sorry. This Jeremy Miner. I just went to dinner with Jeremy the other day.
+[20:15] So, notice this, too. It's like the other things I'm being served are people that I'm talking to in real time. Okay? People that I'm like literally in the most recent three days have like seen and been with in real time.
+[20:30] Houses, cars, watches, cars, cars. Uh client Cody Sanchez. Cars. Uh this is James. Congratulations to James, by the way, and his team for hitting a million dollars a month last month. Inner circle member James and a client.
+[20:45] Uh cars. Cars. I have three wiener dogs. Cars. Cars. Uh, again, Jeremy Miner. Just went to dinner with him. Watches. Um, this guy stole my Louis Vuitton profile and merged it with his so he can get the Louis Vuitton shoes. His name's also Jeremy Haynes. I had a call with him and told him to never fucking do that again with any other store. He lives in Atlanta. He's an Atlanta scammer.
+[21:00] Anyway, watches, uh, James, cars, you see what I mean? So, it's like the platform serve me stuff that I give a fuck about in real time, okay?
+[21:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Explore Feed Analysis"
+NÚMEROS: Não especificados
+VISUAL: Explore feed mostrando mesmo padrão: wiener dogs, carros, relógios, iates, conteúdo de amigos
+[21:20] Cuz literally that's all anything that I ever look at is on Instagram is the people that I talk to, okay? You guys that I follow on on on uh these platforms. And like if you look at my explore feed, I didn't I never looked at the explore feed on desktop, but here you go.
+[21:35] Wiener dogs, cars, copycat, copy and paste personal brand, watches, cars. Uh my buddy Ryan sends me stupid shit videos sometimes. So honestly, I assume that that's something like that. watches, watches, yachts, cars, wiener dogs, yachts, watches, cars, wiener dogs, watches, cars, watches, watches, cars, watch. You see what I mean? It's like it's all the same.
+[21:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Platform-Specific Behavior"
+NÚMEROS: Não especificados
+VISUAL: Comportamento diferente por plataforma: TikTok = entretenimento/educação, YouTube = diferente, Facebook = buy/sell groups
+[21:55] Okay. Now, on TikTok, my behavior is radically different. On TikTok, I watch like more like entertainment kind of videos and and in some instances, educational videos as well. My TikTok feed radically different. I use the platforms completely separately.
+[22:10] Vice versa for YouTube, vice versa for Facebook. Facebook. I only get served with content from like buy and sell groups because that's generally where I do a lot of my buying and selling for things. Mainly just buying. I should probably start doing more selling. Anyway, I digress.
+[22:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Tai Lopez 2017-2018 Strategy"
+NÚMEROS: $10+ milhões/mês, 2017-2018, 5 carros, $85k/mês casa em Beverly Hills
+VISUAL: 3 ambientes principais: carros (pressure washer), casa em Redford Beverly Hills, conceito de integração com feed
+[22:30] Now, here's the thing that I really want to emphasize. Okay. So, when you guys think back to Tai Lopez 2017, 2018, Tai Lopez, and you think with what specifically was Tai Lopez doing best in 2017 and 2018 when he's making 10 plus million dollars a month with his coaching program for the SMMA, well, Tai was constantly using three main environments, okay, that related most to people like me.
+[22:45] Okay. He was, first of all, he had five cars. If you guys remember these videos, Ty would stand in front of the cars and just like spray them with the uh there was like that I don't know what it was. Uh uh what do you call that thing? Pressure washer. It was like a pressure washer with soap attached to it. He would just spray all the supercars in the front yard. That was one of his most constant themes for an environment of ads.
+[23:00] Okay. He had the house. He had that he had that house that was about 85 gs a month in Beverly Hills there on Redford and he would just again when you're looking at houses all day when you're looking at cars all day Tai could talk about anything else but because in the environment he's leveraging things that people are are getting served to.
+[23:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Ad Integration vs Foreign Ads"
+NÚMEROS: Não especificados
+VISUAL: Comparação entre ad do Tai Lopez (integrado com feed de carros/casas/relógios) vs ad do Sabry Subri (deslocado, fora de contexto)
+[23:20] You saw my feed there. Okay. How integrated would a Tai Lopez ad about something to do with making money where he's wearing a nice watch, has his cars there and or his house. How integrated would that be and relatable would that be to me in real time getting served an ad like that versus think about that Sabry Subri ad that we watched. How foreign and benign and out of place did that ad look comparatively to the rest of my entire feed.
+[23:35] Okay, we have to understand that what we are creating as ads ideally besides what we say like environmentally fits in to the news feed that people we are targeting are actively consuming. Okay, we want to make sure that it doesn't look too foreign. That's one of the biggest things that makes direct response ads fail.
+[23:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Facebook Ad Library"
+NÚMEROS: $10 milhões/mês (Tai Lopez)
+VISUAL: Interface do Facebook Ad Library, busca por Tai Lopez, múltiplos ads ativos simultaneamente
+[23:55] So, when you go to the Facebook ad library, which surprisingly some of you guys don't know about, by the way, but I digress. I mean, for the most part, you guys know about it. You just go to Google Facebook ad library, come here, select all ads in the location of the country you want to target, and then you can type in whatever you want. In this case, I'll type in Tai Lopez. We'll click on his page, and it'll bring up all the ads that Tai Lopez is running and that in some instances that he's also historically run.
+[24:10] By the way, guys like Tai are great to look at because again, Tai doing $10 million a month. Okay, think about this. This is very important to understand. Look how many different ads Tai actively tests at one time. Just sit here and and and and look real fast.
+[24:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Tai Lopez Ad Environments"
+NÚMEROS: 20 car garage
+VISUAL: Múltiplos ambientes: casa (vertical), casa (landscape), garagem, diferentes ângulos da mesma casa
+[24:30] Okay. Now, look at all the environments. So, this one is in the house. It's a vertical video. This one is a W is a landscape video in the house. Different angle of the house coming up from the garage. This house has a 20 car garage. I'm put
+[24:45] Why would Tai waste the initial hook on saying this right here? Coming up from the garage. This house has a 20 car garage. Coming up from the garage. This house has a 20 car garage. Somebody unmute yourself and based on the logic I just articulated to you, tell me why would Tai in the first seconds of his ad talk about something like just coming up from the garage. This house has a 20 car garage. Why would he say that? Somebody unmute yourself. Tell me why.
+[25:00] Resonate with you probably young people that fucking like cars and aspire to be like that.
+[25:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Hook Strategy Analysis"
+NÚMEROS: 20 car garage, 10 anos atrás
+VISUAL: Análise de múltiplos motivos para o hook: ressonância com interesse em carros, frase icônica de 10 anos atrás criando afinidade
+[25:20] Yeah, that's right. Anybody else have an angle? He's using the same phrase that he used in in his OG ad like 10 years ago and everyone still knows that ad from 10 years ago. So, it creates affinity which is emotional manipulator. Yeah, that's fair too. Anybody else?
+[25:35] Yeah. I mean, look, those are both great angles, but on top of that, like what's Tai doing? Tai's immediate, like again, guys, car car, watch, car, house, yacht. Tai Lopez ad just walking out of my uh my 20 car garage here. You know, this house has a 20 car garage.
+[25:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Novice vs Advanced Hook Strategy"
+NÚMEROS: $100,000/ano exemplo
+VISUAL: Comparação entre hooks novatos (calling out direto: "você faz X/ano") vs hooks avançados (características, identidade, interesses)
+[25:55] You know, it's like again, most of pe most people think that the initial hook is to like the the most novice people ever immediately start ads with something like you make uh this much or uh you're you're doing this or like this this is who you are. It's like it's better to just immediately relate to like some type of characteristic identity layer or some type of just raw broad interest that the people you're trying to talk to relate to most.
+[26:10] Like there was a guy the other day that's in this group that's running ads for somebody right now. I think it's Barab's client where Bar gobs client's doing something about job stacking. And at the beginning of every single ad, the guy says the same fucking Hey, if you if you work a job and you make more than $100,000 a year, it's like people are fucking scrolling right past that shit.
+[26:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Better Hook Example"
+NÚMEROS: $100,000/ano
+VISUAL: Comparação de hooks: "Hey, you make $100k/year" (ruim) vs "Man, you're still in that job and not getting paid nearly what you want" (bom)
+[26:30] In comparison, imagine somebody said, "Man, you're still in that job and not getting paid nearly what you want to make." It's like, dude, that's much more relatable right away. I don't necessarily need to say, "Hey, you make $100,000 a year and you're working a job." It's like, those are those are way too surface level. They come off to the human mind as like a red flag.
+[26:45] you know, they create a barrier immediately. It's much better to dig into the circumstance. Like, you got to describe the circumstances of an individual. You know, these are generally far better ways to start an ad comparatively, but we'll get into that more here shortly.
+[27:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Tai Lopez Ad Analysis"
+NÚMEROS: 12 different opening hooks
+VISUAL: Vídeo do Tai em Beverly Hills, living room, múltiplos hooks para o mesmo pitch
+[27:05] I'm back in Beverly Hills. They're right here in my living room of my house. I'm back here in Beverly Hills, right in the living room of my house. Can't just grow business off referrals. You can't just grow a business off posting to Instagram and hoping for organic content.
+[27:20] See, like, why doesn't Tai Lopez, a guy who made $10 million a month, start off his ads with, "Hey, so you're an agency owner and you're still only getting referrals. Business off referrals. You can't just grow business off posting to Instagram and hoping for organic content, running paid ads,
+[27:35] and you're an entrepreneur. What are you doing? video ads. If you're not running run ads, run ads, run ads. If you're a business owner, your income, I can bet one thing, it's going to stop growing if you don't learn to run ads. Let me show you why some people call me the king of paid marketing.
+[27:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Pattern Interrupt"
+NÚMEROS: 12 different hooks identificados
+VISUAL: Mudança de ângulo de câmera, transição de uma view para outra, técnica de pattern interrupt
+[27:55] That's a little pattern interrupt right there. Switch from one view to another view. I'm back in the living room in Beverly Hills and I'm going to show you how spend money on ads and marketing. It's crazy that a lot of business owners, I need a statue here. I just moved back into Beverly Hills. Savannah, you want to stand there 247? You can have a live human. You have to run paid ads. It's a total myth that you can just grow a business through referrals or
+[28:10] one, two, three, four, five, six, seven, eight, nine, 10, 11, 12. These are 12 different opening hooks, okay? That all pitch the exact same thing. Some of them are attention getters, some of them are circumstantial, some of them are interest related, some of them are pain related, some of them are calling out the and again this is really just a lot of pain stuff to be fair.
+[28:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Hook Variety Analysis"
+NÚMEROS: 12 hooks para o mesmo produto
+VISUAL: Tipos de hooks identificados: attention getters, circumstantial, interest-related, pain-related, mindset-focused
+[28:30] Some of them are just calling out the pain or the circumstances or the conditions or again like the mindset. This is another great way to open a hook is by speaking directly to what the person's thinking about a particular thing and what way they're thinking about it. Every single one of these are are pitching the exact same thing.
+[28:45] A statue here that business owners don't if you're a business owner. Listen, it's crazy that business owners don't run paid ads. Savannah's over here editing a video. Video ads. If you're not running video ads and paid ads, you have to run paid ads. It's a total myth that you can if you're a business owner. Listen, it's crazy that business owners don't run paid ads. Run ads. Run ads. Run ads. If you're a business owner, your income, I can bet one thing, it's going to stop growing.
+[29:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Vertical vs Landscape Strategy"
+NÚMEROS: Não especificados
+VISUAL: Mesmo vídeo com diferentes legendas, vertical vs landscape, múltiplas variações do mesmo conteúdo
+[29:05] Same video, different captions. Let me show you why some people call me the king of paid marketing. Vertical versus landscape. Run ads. Run ads. Vertical versus landscape. You have to run paid ads. It's a total same thing, vertical versus landscape.
+[29:20] So, just an example what I'm talking about, right? Let's get back to all the meat and potatoes here rather than just going into a bunch of examples. So, again, the point I'm trying to emphasize is when you start off with hooks, okay, first of all, one of the best examples, by the way, is just go into the Facebook ad library and look up people who make an absolute metric fuckload of money from paid ads like Tai Lopez and see how many different hooks.
+[29:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Long vs Short Strategy Reminder"
+NÚMEROS: Não especificados
+VISUAL: Landscape vs Vertical como outro exemplo de variação, múltiplos hooks, ângulos, formas de atrair resposta
+[29:40] Okay, remember I was talking about long versus short. Another example of this is pretty simple. It's landscape versus vertical. Okay, we don't necessarily just do one of these. We ideally do all of these, you know, and we start off our ads with all kinds of different hooks, all kinds of different angles, all kinds of different ways to get people to come in and be responsive to what it is that we sell and what we have to offer.
+[29:55] Okay? So, when I create any kind of ad idea document, this is what I do. Okay? So, first of all, this is for a guy named J. J has an offer for something called co-living.
+[30:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Co-Living Offer Example"
+NÚMEROS: $2-4K/mês cash flow, $70,000 investimento mínimo
+VISUAL: Documento de ideias de ads, conceito de co-living: alugar quartos ao invés de casa inteira, "housing club", shared amenities
+[30:15] Co-living is where you take a house and instead of renting the house, you rent rooms. Instead of giving people a lease, you call it a housing club and you call the things that like are living rooms and kitchens shared amenities. It nets on average like 2 to 4K a month. It's really good cash flow.
+[30:30] These are the documents that I type up and send to clients for what I want them to say inside of ads. Okay. Now, in this case, this is all really big, by the way, because he literally used it kind of like a teleprompter. And I want to be fair and saying a lot of the times when I type ad ideas, I'm not typing it in a way where I want them to say things like word for word.
+[30:45] I'm giving them opportunities to kind of have some wiggle room in how they specifically articulate it. But in this case, like client pretty much said it word for word. So, okay. So, the opening hook in this one, looking to amplify your real estate income without adding new properties.
+[31:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Hook Analysis - Real Estate Co-Living"
+NÚMEROS: $70,000 mínimo de investimento
+VISUAL: Lista de 10+ hooks diferentes para o mesmo offer, análise de cada hook (pain, moving away, financial motives, emotional drivers)
+[31:05] Okay. If we go back to this dock, there's a lot of pain associated with adding a fuckload of new properties. It's complicated. Um, again, it can kind of be like the moving away hook. It gives opportunities for financial motives. There's some emotional drivers in there, but honestly, I mean, not much. And then things they do. They do real estate.
+[31:20] Okay? Like, I'm speaking directly to the person. I don't have to start off the ad by saying, "Do you already do real estate?" And you're looking to add new real estate income without adding new properties to your portfolio. It's like, I don't have to say that because the person I'm talking to here obviously already does real estate.
+[31:35] So, looking to amplify your real estate income without adding new properties. And I'm specifically focusing on the hooks here for these ads initially before I get into the meat and potatoes of the whole thing. Okay. Want to provide affordable housing solutions while boosting your returns?
+[31:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Multiple Hook Examples"
+NÚMEROS: 10+ different hooks listados
+VISUAL: Lista completa de hooks: "Looking to amplify...", "Want to provide affordable housing...", "Ever thought about multiplying...", "Tired of unpredictability...", etc.
+[31:55] Ever thought about multiplying your rental income from a single property? Tired of the unpredictability of short-term rentals? Let me introduce you to co-living as a real estate investment. Uh, this one's kind of worked in here real quick. Hold on. There you go.
+[32:10] Think managing multiple tenants is complicated? Seeking higher returns in your real estate investments? Can you make a positive impact while earning more? Is your current investment strategy delivering the returns you want? curious about how co-living transformed my investment success.
+[32:25] So these are opening hooks for a very simple real estate offer. Okay? And the point I'm trying to make is simple. Like all I'm doing here without having to call out, by the way, let me just give you some further details. The person who needs to buy this offer has to invest $70,000 minimum in order to get into the offer.
+[32:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Pixel Conditioning Philosophy"
+NÚMEROS: $70,000 mínimo, $10K+ produtos da Cody Sanchez, $35,000 novo offer
+VISUAL: Conceito de não deixar pessoas não qualificadas reportarem ao pixel, evitar call-outs diretos tipo "se você faz $100k"
+[32:45] Like that's how much cash they need. They can do it through hard money lenders. They can do it through literally just having the cash. uh this company can technically provide them hard money lenders if they need it. We don't need to say all that right away because as an advertiser, it's also important to note like I talk to you guys about pixel conditioning all the fucking time.
+[33:00] Okay? I will not let unqualified people report back to my pixel. Okay? I never will. So therefore, I don't have to do all that shit that sometimes I see you guys doing where you're like, "Hey, if you make $100,000," it's like what we talked about in the message mastery video the other day.
+[33:15] I never ever will do call outs like that because that's typically an indication that your pixel is getting trash, unqualified turds that report back to it. I don't let those people hit my pixel. So I don't speak to those people. I speak to a general demographic.
+[33:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Sophisticated Hook Targeting"
+NÚMEROS: $1,300/mês (média School), $50-60K/mês (top students)
+VISUAL: Análise detalhada de cada hook falando indiretamente com demografia qualificada sem call-outs óbvios
+[33:35] Let me let me just talk specifically on that. When you look at each one of these, looking to amplify your real estate income without adding new properties. The person I'm speaking to there is already doing real estate, already making income from real estate, already has properties, and I'm telling them, hey, do you want to amplify your real estate income without adding new properties?
+[33:50] Okay, I'm speaking to that person already, but in a more sophisticated, indirect way. Okay, here. want to provide affordable housing solutions while boosting your returns. So, it's like, okay, people who are in real estate, here's the real reason they want to provide affordable housing.
+[34:05] They generally don't actually give a fuck to have low-income tenants because low-income tenants are typically associated with low cash flow. The real reason that almost everybody in real estate does anything in affordable housing is for tax deductions.
+[34:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Tax Deduction Hook Analysis"
+NÚMEROS: Não especificados
+VISUAL: Explicação do hook de affordable housing = falar de tax deductions sem ser óbvio, boosting returns = alto cash flow + benefícios fiscais
+[34:25] Okay, so this hook essentially speaks to the person who wants tax deductions but might not be doing affordable housing projects yet because they're afraid it's going to fuck their returns. So in this hook, I'm specifically saying, "Hey, do you want tax deductions while also being able to make a fuckload of cash?"
+[34:40] Okay, that's what I'm really saying to the person who's already in real estate here by saying, "Hey, do you want to provide affordable housing solutions while boosting your returns?" You get what I mean? I don't have to sound like Scrooge McDuck there and call all of that out in the beginning.
+[34:55] Again, I'm speaking to the demographic I actually want to talk to. Ever thought about multiplying your rental income from a single property? I'm not talking to somebody who's not in real estate already. I'm not convincing somebody to fucking dish out $70,000.
+[35:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "In-Market vs Needs Convinced Demographics"
+NÚMEROS: 3-4% in-market, restante needs convinced
+VISUAL: Pirâmide/funil mostrando in-market (topo pequeno) vs needs convinced (maior), conceito de Chad Holmes Stadium Selling
+[35:15] The people who already in real estate already dish out $70,000. There are a higher probability to be an in-market demographic, okay? Which we'll talk about here shortly. But to be clear, I'm speaking to the person that I want that is financially qualified that's going to relate, okay? They're going to contextually to relate to what I'm communicating here.
+[35:30] Okay, let's continue on. So, again, just to kind of go further into this, I've talked about this many times, but I'll reiterate it again here. This is from Chad Holmes stadium selling book if you guys want to read into it further, but it's pretty much as simple as this. At any given time, you down here pitching to people have about 3 to 4% of your total addressable market that's considered an in-market demographic.
+[35:45] Okay, in market demographics are who you want to ideally be communicating with the most in my ads here. Does it sound like I am trying to convince somebody to get into real estate or does it sound like I'm talking to somebody already in real estate to do it slightly differently? Who am I talking to?
+[36:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Demographic Comparison"
+NÚMEROS: 3-4% in-market (mais fácil converter, menor custo)
+VISUAL: In-market (querem comprar agora, identificam-se como compradores) vs Needs Convinced (ainda precisam ser convencidos, mais caro converter)
+[36:05] This demographic are the people that need convinced. To be fair, these people are still technically buyers, but they're going to cost me more to convert. Okay? A needs-convinced demographic. These ads that you see here would be like, "Hey, do you want to get into real estate with one of the most profitable ways to do so?"
+[36:20] Like, that'd be a hook for an in-market demographic. I don't want to communicate. I'm sorry. That'd be a hook for the needs convinced demographic. I don't want to communicate to the needs convinced demographic first. I always always always want to be communicating to the in-market demographic.
+[36:35] Okay? Generally, your in-market demographic is the highest ROAS. It's the least costly to convert. Okay? And they're the most probable to buy. Like these are the people who just by default will have very high show rates to your calls, very high show rates to your webinars, very high and frequent response rates to your DM ads.
+[36:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Executive Assistant Example"
+NÚMEROS: 1 = precisa agora, 2 = pode ser convencido
+VISUAL: Enquete ao vivo demonstrando muito mais 2s (needs convinced) do que 1s (in-market), provando que custa mais converter os 2s
+[36:55] You know, like they wants to buy what you've got. They identify as buyers, okay? They want it right now versus a needs convinced demographic. Like I'll give you guys a perfect example. Throw a one in the chat if you're convinced that right now you need to hire an executive assistant.
+[37:10] throw a two in the chat if you know you could be convinced you need one but you're not necessarily like hard-pressed that you need one but like you know you'd be open to it if you heard the right reasons again one if you're like dude I need a fucking executive assistant like yesterday two in the instance that you're like h you know I think I can hear you out on why I might need one
+[37:25] now look you see what I'm saying literally just look in the chat real quick okay one one two Two, two, two. One, two, two. You see how many more twos there are than ones? It's like, it's going to cost me more to convert the twos. It's going to cost me less to just fucking clean up the ones and sell them a service that has an executive assistant available to them immediately.
+[37:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Hook Comparison - Executive Assistant"
+NÚMEROS: Não especificados
+VISUAL: Hook para in-market: "Need EA like yesterday?" vs Hook para needs convinced: "On the fence about needing an EA? Let me give you reasons..."
+[37:45] You see what I mean? If my ads just said, "Hey, need an executive assistant like yesterday?" And then boom, I'm going to immediately transition to how my executive assistant services the best. I'm going to fucking clean house.
+[38:00] Versus if I say, are you kind of on the fence about needing an executive assistant? Let me give you some reasons it might be a good time to hire one. You know, it's like that's speaking to the twos. Okay, you only speak to the needs convinced demographic when you have tapped out. You have hit the ceiling of the in-market demographic comparatively.
+[38:15] Okay? You always talk to the in-market demographic first. At a later stage, you talked to the needs convinced demographic. So, let me give you a good example of the differences. J's ad that we just saw, that's the launch of his offer. I'm launching his ads this month.
+[38:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Launch Strategy"
+NÚMEROS: 100% in-market no lançamento
+VISUAL: Estratégia clara: sempre falar com in-market primeiro no lançamento, nunca começar com needs convinced
+[38:35] I'm never going to go towards a demographic that I need to talk to that is in the needs convinced demographic when I'm launching an offer. I'm 100% of the time I'm going to talk to the in-market demographic.
+[38:50] Now, okay, in this case, this is Cody Sanchez. So, Cody Sanchez teaches people how to buy businesses. Okay. Now, Cody has a million plus dollars a month that she already generates organically and we've already got her to a million plus dollars a month from her paid ads.
+[39:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Scaling Ceiling Concept"
+NÚMEROS: $1M+/mês orgânico, $1M+/mês paid ads
+VISUAL: Gráfico mostrando ceiling/plateau, ROAS mais alto abaixo do ceiling, ROAS diminui dramaticamente acima do ceiling
+[39:10] Okay, we've start to seen we we've start to witness ceilings. So you'll typically at a certain point in any campaign hit a wall where it just kind of plateaus and there's just sure I mean to be fair technically there's still money up here but it's less money and it becomes more expensive far more expensive to try to scale into that.
+[39:25] Here is like this is where you have your highest ROAS. Okay. Is operating below this ceiling right here. Okay. Whereas above that ceiling, it's like this is where ROAS starts to go down dramatically. If I continue to scale into that campaign, our goal, like we've talked about on the video where we go through the spending $10,000 a day, we've talked about this concept called foundational campaigns.
+[39:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Foundational Campaigns Strategy"
+NÚMEROS: Não especificados
+VISUAL: Conceito de lançar novas campanhas com diferentes conversion mechanisms, diferentes hooks para evitar escalar acima do ceiling
+[39:45] Okay, foundational campaigns are where you essentially are launching new campaigns with different conversion mechanisms, different hooks. Just to reiterate this briefly, in most instances, you have your majority hook. This is what converts the most people.
+[40:00] So for Cody, as an example, her majority hook is there's x amount of baby boomers that are retiring. They're going to just literally shut down their businesses if nobody comes along and continues running them. They're also looking to retire.
+[40:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Cody Sanchez Majority Hook"
+NÚMEROS: X baby boomers aposentando
+VISUAL: Hook principal: baby boomers aposentando, seller financing, creative financing, leverage com boomers para assumir negócios
+[40:20] You have a lot of leverage right now with boomers to come in and work strategic seller financing and creative financing deals to continue running their businesses, take over the cash flow, give them a minority so they can retire off of that income and sustain a little bit of active income through retirement.
+[40:35] and you're essentially going to get a free business that you just get to take over because of how many boomers are retiring. That's a majority hook that she found worked extremely well. Do me a favor, drop a one in the chat if you've seen that hook from Cody Sanchez. Drop a two in the chat if you have not.
+[40:50] Nice. Little bit more than half of you guys now. About half. Okay. Majority hook is what lands the most. Then you have the second hook. Okay. Second hooks are still effective. A second hook would be rather than starting a business, let me tell you why you should buy a business instead. That hook crushes but not nearly as much as the all these boomers are retiring hook.
+[41:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Hook Hierarchy"
+NÚMEROS: Majority Hook > Second Hook > Minority Hooks
+VISUAL: Hierarquia de hooks por performance: Majority (mais conversões) → Second (ainda efetivo) → Minority (menor quantidade de resposta)
+[41:10] Okay? And then we go into some minority hooks. Okay? Minority hooks are these like little smaller ones. Like minority hooks could be like individual reasons. Like as an example, she'll tell a story of a business owner who, you know, like, okay, hey, you go to your local coffee shop every single day and you spend money with them and you're really skilled as a marketer.
+[41:25] Let me tell you how you could likely get equity in that business by helping them with marketing and scale it up and essentially earn your way in to becoming a business owner with them all from just having specific skills that can leverage you into the deal.
+[41:40] Again, a smaller quantity of people are responsive to that comparatively to the quantity of people that are responsive to the boomer hook. The boomer hook is number one. In this case, we have that hook of creative financing, seller financing. Then we have the hook of like earn your way in there with skills, you know, and then we just get into like some smaller and smaller hooks that resonate less and less and less when you specifically.
+[41:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Conversion Mechanisms"
+NÚMEROS: 2 principais, múltiplos popups
+VISUAL: Live Webinars, VSSL Call Funnels como principais, Popups como webinars menores focados em tópicos específicos
+[42:00] So in this case like let me give you a perspective real quick before I wrap up the point here and then we'll continue on. We also have our conversion mechanisms. Okay. So for Cody as an example we do two main conversion mechanisms. We do live webinars. We do VSSL call funnels.
+[42:15] Okay. And in addition to that we do these little things. We call them popups. They're essentially just smaller live webinars that are like very topic based live webinars. These are typically attached to like the two broader hooks. Okay. Same thing with VSSLs. The popups, these are much more geared towards minority hooks comparatively.
+[42:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Foundational Campaign Structure"
+NÚMEROS: 3 webinar campaigns, 3 VSSL campaigns por hooks diferentes
+VISUAL: Estrutura completa: Webinar Hook 1, Webinar Hook 2, Webinar Minority Hooks + VSSL Hook 1, VSSL Hook 2, VSSL Hook 3 = campanhas fundamentais que imprimem dinheiro
+[42:35] Okay. So anyway, the point I'm trying to make foundational campaigns. Okay. So, as an example here, usually you're going to end up having like, okay, this is a webinar campaign with hook number one. This is a webinar campaign with hook number two. This is a webinar campaign with my minority hooks.
+[42:50] Okay, then I just leave those in a pile and I sustain their performance. Okay, from here it's like, okay, well, this is hook number one, but for the VSSL. This is hook number two, but for the VSSL. This is hook number three for the VSSL.
+[43:05] Okay, all of these are going to be my foundational campaigns that just sit there and print money. Okay? And again, they're all having maximized ROAS because we're not scaling them above the ceiling.
+[43:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "When to Target Needs Convinced"
+NÚMEROS: Todos in-market hooks esgotados, todos in-market conversion mechanisms esgotados
+VISUAL: Momento de transição: quando esgotar completamente in-market, então criar needs convinced hooks e conversion mechanisms separados
+[43:25] Now, just to wrap up my point I'm trying to make, when you look at these ads, okay, these ads are specific to a needs-convinced demographic. Why? Because I've run out of ways to further milk my in-market customers. I've used all of my in-market customer hooks.
+[43:40] Okay, now I have to do the same thing again but for my needs convinced hooks. Okay, there's two different ways to think. I have my in-market hooks. I have my in-market conversion mechanisms. I have my needs convinced hooks. I have my needs convinced conversion mechanisms. They are completely different to think with.
+[43:55] Okay? And the reason I bring this up, this dictates who and how we develop hooks for. Okay? So, when we go back and we look at like Tai Lopez's ads and we just sit there and we try to consider like, okay, well, why the fuck is he saying this random stuff?
+[44:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Tai Lopez Hook Analysis Question"
+NÚMEROS: 20 car garage, 5 = in-market, 6 = needs convinced
+VISUAL: Enquete: "I just got out of my garage. This house has a 20 car garage" - para qual demographic?
+[44:15] Like, why would he start an ad with I just got out of my garage. This house has a 20 car garage. Who is that hook for? Is that for an in-market demographic or a needs-convinced demographic? Which one do you guys think? If it's for an in-market demographic, put a five in the chat. If it's for a needs convinced demographic, put a six in the chat.
+[44:30] If you think the hook of just got out of my garage, this house has a 20 car garage. Again, put a five if it's for an in-market demographic. Put a six if it's for a needs convinced demographic. But you guys are lighting it up with sixes. That's good to see. 100% it's needs convinced.
+[44:45] Somebody unmute yourself. Tell me why it's a needs convinced. Griffin, you put a six. Unmute yourself and tell us why you think it's a needs convinced demographic.
+[45:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Griffin's Analysis"
+NÚMEROS: 6 anos atrás (here in my garage ad)
+VISUAL: Análise: tópico muito mais amplo (carros) vs hooks específicos (você precisa rodar ads) = needs convinced vs in-market
+[45:05] It's a much broader topic versus all his other hooks were like you need to run ads. This one was like cars, which is similar to his uh here in my garage ad from six years ago, which was the broadest ad he's ever run in history. Right. Okay, Edward, unmute yourself.
+[45:20] Tell me why Tai Lopez, when he starts off his ads that say, "Do you need to run ads?" Like, "You're a business owner. You're not running ads." Who does that talk to specifically?
+[45:35] Talking to a business owner that's not sure what they what they need to do for their next step. Simplify it down. In market, needs convinced. Needs convinced. Why do you think it's needs convinced? Because they're not sure whether or not they need to make the next move.
+[45:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Hook Flexibility Analysis"
+NÚMEROS: Não especificados
+VISUAL: Mesmo hook pode ir para ambos demographics dependendo do follow-up: in-market se falar "você já tentou e falhou", needs convinced se falar "deixe-me te dizer por que faz sentido"
+[45:55] Now listen to this, right? Okay. If technically, to be fair, that hook could lean either way. So I don't technically agree or disagree with you. It could technically lean either way. It it really depend on what he follows it up with, right?
+[46:10] Like he could follow it up with something like, "Well, you need to be running ads and you've tried before and you failed. Like, I know it's top of mind for you. Like you're trying to hire advertisers right now. Like you're trying to get started with this." that would then take it more towards the okay well they're in market and they're actively trying to do something about it
+[46:25] versus if he starts it off with saying business owners you need to be running ads let me tell you why it makes sense to do it if you haven't already done it yet you know and that would then lean it towards the needs convince demographic comparatively
+[46:40] so again like what he follows up with there would definitely dictate which one it leans towards but again that could technically go either way right and guess what it probably does go both ways he probably leans towards in market on a few of those hooks and he probably leans towards needs convinced on using the exact same hook but with different body f with different like you know reasons essentially that follow.
+[46:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Demographics Comparison"
+NÚMEROS: $5 bilhões vs menor capital
+VISUAL: In-market faz mais dinheiro e é mais fácil converter, mas Tai tem infinitamente mais dinheiro para aguentar períodos ruins
+[47:00] So, okay, my point being, which demographic makes the most money? Which one is the easiest to convert? Generally, it's the in-market demographic. But when you're Tai Lopez, okay, yes, if you got a new offer, you could tap into the in-market demographic straight away, but you quite rapidly you move out of it and then you have to start leveraging the needs convince demographic.
+[47:15] I just want you guys to really understand when you come up with direct response ads, I'm not harping on this for for any other reason than just is it it's the most common mistake that loses people money and inflates costs and artificially lowers your returns is you speak to needs convinced demographics and you're not actively thinking with who is my in-market demographic?
+[47:30] What are the hooks that resonate with those people most? You always start with the in-market demographic. You do not want to be communicating towards needs convinced demographics until just like the Cody example I'm articulating to you where you've maxed out the needs. You've maxed out the in-market demographic.
+[47:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Ad Fatigue Strategy - Tai vs Others"
+NÚMEROS: Black Friday até Natal e pós-Natal, $90,000+/mês em impostos, 50 pontos de perda vs milhares
+VISUAL: Comparação de holding power: Tai aguenta flutuações longas com capital massivo vs maioria precisa tratar como ad fatigue
+[47:50] You've you've hit them with as many conversion mechanisms as you can. You've figured out the hooks. You've milked those hooks. You've reached a scale, by the way, that then kind of forces you to start communicating to the needs convinced crowd. And it still makes sense to convince to the need. It still makes sense to communicate to that needs convinced crowd because again, I can still make money off of them. It's just got to be a less lesser ROAS. That's all. You get what I mean?
+[48:05] Okay. Now, here's the other creative thing that we can do. And this is also very important to understand. There's generally more than just one type of in-market customer. Okay, let's use J's co-living real estate investment as an example.
+[48:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Multiple In-Market Demographics"
+NÚMEROS: $90,000+/mês tax bill, centenas de milhares para investir
+VISUAL: 3 tipos de in-market para real estate: 1) Já investidores, 2) Alta carga tributária querendo redução, 3) Veem lifestyle do real estate e querem entrar
+[48:25] Are the people that are already in real estate the only in-market crowd that I could sell to? Think about that real quick. are the only people that are probable to convert on an offer to start a real estate investment opportunity. The people that are already in real estate. Is that really the only in-market demographic I have to tap into there?
+[48:40] No. I have plenty of others, right? There's people right now that have a huge tax burden. Somebody guess my fucking monthly tax bill right now. I spend damn near 90,000 plus dollars every month on taxes. You think that I don't want to throw at least a couple hundred grand at real estate to lower my fucking tax burden?
+[48:55] I would I would jump. I would go so fast at that opportunity. And again, I'm in market, but I don't technically identify as a real estate investor. There's people right now that they look at guys like Tom Cruz, the section 8 guy, as an example, and they see his lifestyle and all that, and they're like, you know, again, they're not technically doing real estate already, but they see what real estate can do for somebody, and they already have the thoughts in their head.
+[49:10] Real estate can create millionaires. Real estate can create wealth. That person's in market for sure. They don't necessarily need convinced. They're just looking for the right opportunity. You see what I mean?
+[49:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Three In-Market Variations"
+NÚMEROS: 3 variações de in-market hooks
+VISUAL: 1) Real estate investors, 2) Alta carga tributária, 3) Vendidos no real estate procurando melhor tipo (STR, LTR, flips, land, commercial, section 8, co-living)
+[49:30] So my point being, take that circle of hooks that I talked about for in-market demographics. I could technically in that example alone for that offer have three different variations of in-market hooks for real estate investors, for people with a tax burden that know that real estate can get it down, and people who already are sold that real estate makes sense and are looking for which offer type makes the most sense for them.
+[49:45] Are they looking for short-term rentals, long-term rentals, flips, land, commercial, section 8, or co-living? You see what I mean? I want to be very aware of my in-market demographic. Okay? And I want to make sure that I exploit it to its fullest before I ever communicate beyond it.
+[50:00] Okay? And I want to make sure, long story short, when I'm thinking with what my hooks are going to be, that that's the demographic I'm thinking with most. Does that make sense to everybody?
+[50:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Hook Creation Simplicity"
+NÚMEROS: Uncle Sam, tax bill
+VISUAL: Demonstração de como é fácil criar hooks quando você pensa no in-market demographic específico
+[50:20] Okay. So, we always think with the in-market demographic. We always think with the in-market demographic. And that's what makes our hooks easy. That's the main point I'm trying to emphasize here by by drilling this. Okay? That's what makes coming up with this shit so simple.
+[50:35] It's it's it's a no-brainer when I'm when I'm considering like, all right, hook, reasons, call to action, is it not? Like, if I'm just thinking, all right, the person that has the tax burden that wants to lower their tax bill through real estate. If I just think with that person, like you guys probably don't even have real estate offers.
+[50:50] Just think about how easy it is to come with a come up with a hook for like any one of these. Look, I know you're unhappy every time you stroke a check to Uncle Sam. Real estate can lower your tax burden. I can't imagine the look on your face every time you wire Uncle Sam money instead of getting your net worth increased, cash flow, and tax deductions from real estate instead.
+[51:05] I can't believe you haven't taken the time yet to lower your tax bill by becoming a real estate professional. Let me show you some reasons why co-living makes the most sense to get your tax bill. See what I mean? It's like I can just look at any one of these. You pay Uncle SAM HOW MUCH EVERY MONTH? You know, real estate can reduce that, right?
+[51:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Live Offer Analysis - 7-9 Figure Event"
+NÚMEROS: 7-9 figures, 3 dias, Scottsdale
+VISUAL: Offer breakdown: evento de 3 dias para entrepreneurs 7-9 figures, introdução a clientes/parceiros, feedback de experts
+[51:25] Okay, let's think with anyone. Somebody just unmute yourself. Tell me about your offer. Um, can you hear me? Yeah. So, the offers for a three-day event in Scottsdale for seven to nine figure entrepreneurs to come and then get introduced to potential clients, referral partners, and get feedback from experts that have solved their problem that they're struggling with, their biggest bottleneck in their business.
+[51:40] We didn't describe anything about the person at all. Oh, I thought you were asking about the offer. person is a is a entrepreneur that's a business owner that's doing at least seven figures. So they're already making money. So they're looking for ways to scale and this is uh getting them to come to an events where they can get that feedback that clients and referral partners
+[51:55] who who speaks at the event. Uh we bring in certain experts based around the help that they need. So different nine figure founders whether it's uh for different bottlenecks that they're facing in their business. Are there people there of a specific like are they hippies? Are they regular entrepreneurs? Are they like cold plunge entrepreneurs? Are they like
+[52:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Event Demographic Analysis"
+NÚMEROS: 7-9 figures
+VISUAL: Análise de demografia: founders em digital marketing, real estate, conscious/aware (scaling business, health, wealth, relationships)
+[52:15] they're uh founders in digital marketing, real estate? Um this was for that offer we were showing you where they're more um conscious aware. So they want help in scaling their business, their health, their wealth, and their relationships.
+[52:30] Rip a few hooks for me real quick that you think are in market demographics based on what you see on the screen. Um, I need to think that through. I'm not quite sure off the top of my head. You have to answer it off the top of your head. Rip a few right now.
+[52:45] So, if you're uh if if you're working if what got you to the revenue may last Oh, shit This is Yeah, this is
+[53:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Hook Framework for Events"
+NÚMEROS: Dezenas de milhares para contratar experts individualmente
+VISUAL: Framework de hook: pessoa quer ir a evento, quer networking, quer resolver problemas através de outras pessoas, destino pode ou não importar
+[53:05] so I mean, think of the person think of the person who's in market. So, again, really just really just consider this, right? An in-market customer would be somebody who is looking for an event that they want to go to just based on what you described as an example. They want to network with other people. They probably think with
+[53:20] other people can help solve my problems. Okay. That's why I want to go to an event. Maybe the event is at a destination. I don't know where it is. I don't think you said where it is, but you know, maybe they want to go. I don't think people really give a fuck to go to Scottsdale. So you probably don't want to as a destination, you know, but either way, um, long story short, it's like, okay, so somebody who wants to go to an event and somebody who wants to go and network and somebody who wants to, you know, that's the way they want to essentially solve the problems that they've got right now.
+[53:35] That's how they want to learn to solve it. Pick a hook, communicate to the person. They want to do it. They want to go to the event. Rip one off right now. Um, if you're looking to 5x your business in 2025, the easiest way I used is to be in a room full of people.
+[53:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Hook Correction"
+NÚMEROS: Não especificados
+VISUAL: Correção: não rearticular para eles, falar DIRETAMENTE com eles como se em conversa real
+[53:55] You you you say don't like reiterate things to them. Literally just talk to them. just be like, "You're looking for a great event to go to that has awesome people that are going to be able to help solve your problems, scale your business, put you in front of experts that would cost you tens of thousands of dollars to hire individually all in one great place or there's great food, great location, great networking. Let me tell you about whatever the name of the event is."
+[54:10] You know, it's like speak to the person. Try it again. Um, I'm sorry I'm drawing blank, but that was helpful. All right, so All right, cool. Anybody got anything else?
+[54:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Digital Products Hook Analysis"
+NÚMEROS: 2K/dia spend, 3x ROAS, $10K+ inventory Amazon FBA
+VISUAL: Offer: PDF business, digital products, in-market = pessoas fazendo physical products/drop shipping com problemas (delays, refunds, custos)
+[54:30] Yeah, I'm curious about um we're talking about like pixel protection, right? And one of the main ways I've been able to bring in some uh qualified leads is through the lead form. I shared that they were doing SMS verification now on some of the lead forms. I think you just have to have like enough spend or the account has to be seasoned so much.
+[54:45] But um is that sufficient quote unquote brokate to kind of protect the pixel or is it not sufficient? What are your thoughts? Brokie bait brokie bait's a conditional logic based question that routes the wrong people to a page that is not pixelled or if you're using a lead form as an example soon as they answer the question a particular way it denies them the ability to report back to the results column on Facebook by literally just kicking them out of the form
+[55:00] it's a conditional logic based financial qualifier question in most instances do you think the accredited investor question is sufficient and saying hey we genally we use are you an accredited investor for raising capital and then we also use the do you have this amount minimum because there's always a minimum that they want people to invest.
+[55:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Brokie Bait Questions"
+NÚMEROS: $50,000 ou menos = kickout, $75K-$900K range
+VISUAL: Estrutura de perguntas: accredited investor? + minimum amount? + range question com conditional logic
+[55:20] And then when we ask when we ask like what their range is, it's more like a range question. So like do you have this amount to invest? Uh and then the range is like again 50,000 or less. They're kicked out of the form, you know, 75,000 150 all the way up to the 900 in their case for the Lux Locker clients.
+[55:35] Okay. Okay. And back to the creative question real quick is you mentioned hey you know getting them on video it's one of the best ways we still leverage a lot of static and videos that are I guess not so because a lot of times they won't don't want to get on video is it still sufficient or should I insist like you got to get on camera this ain't going to work
+[55:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Video vs Image Ads Policy"
+NÚMEROS: Não especificados
+VISUAL: Política clara: video ads sempre mais efetivos, não aceitar clientes que só querem images
+[55:55] how successful are you at raising capital through what you're doing now not successful enough yeah then I would encourage you do what makes more money then I mean I I I just don't take on clients that only want to do images. We always like if if they're if they're the wrong deal, we just don't even take them on because we know how much more effective video ads are comparatively to images.
+[56:10] Heard that. Appreciate you, Jeremy. Thanks. Yeah, no problem. Cool. Other questions?
+[56:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Dynamic Creative Testing Budget"
+NÚMEROS: $300-500/dia teste, $100/dia mínimo
+VISUAL: Budget recommendations: $300-500/dia ideal para testes, $100/dia como mínimo absoluto se budget limitado
+[56:30] When you're testing on Dynamic Creative, do you still do a small testing budget of like a $100 or do you raise it up since there's so many variables going into it? Generally, we run a test budget of like three to 500 a day and Okay. I I just want to be fair and saying like respective to your budget. Like, yeah, dude, $100 a day would be the minimum we'd run it at.
+[56:45] I I'd still have to run it at 100 bucks a day if uh the client was like limited on budget or if it was just like a fringe test or something like that. Yeah, I'm okay with that. Other questions?
+[57:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Ad Refresh Strategy - Cody vs Tai"
+NÚMEROS: 3-4 semanas (Cody), meses (Tai)
+VISUAL: Comparação: Cody refresh a cada 3-4 semanas vs Tai roda por meses, diferença em click-through rate strategy e belief em ad fatigue
+[57:05] Hey man. Um, you know how you said that Cody's um refreshing her ads sort of every single uh week and and not every generally every like three to four weeks. Yeah. And then whereas Tai's been able to sort of run ads for you know months. Is that often just offer related or is it just or is it more down to the quality of the ad?
+[57:20] Uh a few things. So Tai's ads, he he really strives for a really high click-through rate. And Tai will run something a little longer than what it generally should be run. Um, I press Tai many times on like allowing me to refresh ad creatives far more frequently than what we otherwise do or just telling them to do it.
+[57:35] And he'll milk something a little longer. He doesn't necessarily believe in the frequency of ad fatigue like happening as often as it actually does. He he'll generally convince himself that ads have like fluctuations in performance and he'd rather endure through the flux as if it's going to come back down.
+[57:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Ad Fatigue Philosophy"
+NÚMEROS: Black Friday até pós-Christmas, 50 points vs milhares de points
+VISUAL: Filosofia de Tai: aguentar flutuações vs trocar imediatamente, analogia com trading (loss de 50 pontos vs milhares)
+[57:55] So sometimes he'll run ads that again like should have been swapped. There's a higher probability that an ad after it's had that result volume drop and cost per result. Uh again like having fatigue and not crossing back the other way. That's why we always treat it like it's ad fatigue rather than just waiting for it to come back.
+[58:10] But uh to be fair, I mean that was a you know that example specifically like right before Black Friday through Christmas and then after Christmas. I mean right now is when he would be seeing the cross come back into his favor. So I mean to give Tai credit obviously because he makes fucking infinitely more money than me. He's not wrong in that example.
+[58:25] He just has a lot more money than us to endure through it. It's kind of like trading as an example, Ash. Like sometimes I'm in the middle of a trade and I can only endure like a 50 point loss before I have to cut it and just take the loss versus a guy who has like fucking $5 billion can hold that loss like thousands of points down and literally will not close it until it swings back in his direction.
+[58:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Capital Advantage"
+NÚMEROS: $5 bilhões vs capital menor, 50 pontos vs milhares, $90K/mês em impostos
+VISUAL: Vantagem de capital massivo: Tai pode segurar períodos ruins indefinidamente, maioria deve tratar como ad fatigue para maximizar cost per result
+[58:45] So it's not like I'm wrong. It's just I have less money and I can't hold the trade as long as what that other person could in comparison. So Tai has again infinitely more money than all of us. So he can hold through those periods of times longer than what almost everybody on this call could in comparison.
+[59:00] So everybody on this call is better to treat it like it's ad fatigue to maximize your cost per result rather than just enduring through that window. Got it. Cheers. Yeah. Other questions? anybody? Okay, cool.
+[59:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "AI Tools Recommendation"
+NÚMEROS: Não especificados
+VISUAL: Recomendação para usar ChatGPT, Claude para criar ad copy, prompting para hooks/reasons/CTAs, software em desenvolvimento pelo time
+[59:20] Um, yeah, I just want to be very fair and saying you could also leverage chat GPT cla to take everything that we just talked about and plug like your offer details into it. Uh, we have AI developers on staff now just like we did with the hammer them strategy the other day. Shout out to Galani for creating that software for us.
+[59:35] Uh, I'll try to create something for us that can help you guys like spin up some direct response ad copy. If you don't just know how to go into like chat GBT or Claude and kind of prompt it to do what we just talked about to help you with ideiation, I'd really encourage you to do that.
+[59:50] I mean, I myself go in and do that quite frequently now where I'm like interacting with these LLMs and like developing hooks and developing the reasons in the middle and like that's rather than just typing. I find I find like you just sitting there looking at a blank piece of paper can be quite intimidating for anybody no matter how good you are.
+[60:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Learning Resources"
+NÚMEROS: Década de experiência, ano amplifica com mais pessoas em maior escala
+VISUAL: Recursos: Facebook Ad Library, ad spy tools, practice, não reinventar a roda, estudar quem gasta mais que você faz em um ano
+[60:10] Um it's good nowadays especially to leverage all these softwares that are available to us to just make this all easier. So, don't feel intimidated by it, you know. Um, go and interact with these different AIs and prompt them to help you create hooks, reasons, and call to actions that, you know, will work for your specific niche.
+[60:25] Look up competitors, you know, like try to make it easy for yourself. Don't copy stuff to the tea, you know, but like again, there's plenty of inspiration out there from people that are already spending what you make in a year on ad spent, you know?
+[60:40] So, don't uh don't feel like you need to like go at it alone or reinvent the wheel. and try to practice too. Like one thing I love with my education company here is like I can ask any one of you what your offer is and I could just start fucking ripping off ideas for like what you should be saying.
+[60:55] And I've gotten really good at that over the years because I have an education company and an agency and clients and like we do this stuff all the time. So, if you can't just like, you know, go go go as fast as what you see somebody like me do, just understand I've had a decade of experience doing it.
+[61:10] And that amplifies every year as we continue to help more people at larger scales. So, you know, practice it. Just, you know, don't feel like you need to be perfect. Um, leverage softwares that you've got to make it easier. Go look at the Facebook ad libraries and ad spy tools to find things that make it easier as well.
+[61:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Final Key Reminder"
+NÚMEROS: 3-4% in-market demographic
+VISUAL: Reforço final: in-market demographic é a coisa #1 mais importante, facilita tudo o resto
+[61:30] And, um, yeah, go out there and make some ads. And always test. Don't feel stuck on one thing. And out of all the lessons that we talked about, I really want to reiterate, I think that the in-market demographic is like the number one thing to think with above damn near all else to make all the other things that we talked about easier, too. Does that make sense?
+[61:45] Do me a favor, drop a one in the chat if you found today's call valuable. And unmute yourself if you have other questions before we go. I appreciate you guys being here. I hope this was helpful for you. Uh, excuse me for the rather long class. You know, this is a broad topic and I want to make sure that we covered a lot.
+[62:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Q&A - Digital Products Environment"
+NÚMEROS: 3x ROAS, $2K/dia
+VISUAL: Discussão sobre ambiente para ads de digital products, setup de trabalho vs rental cars/casas, pixel conditioning vs apresentação
+[62:05] Hey Jeremy, I just had a quick call regarding this digital product thing. So, obviously talking about looking the part and sounding the part. So, I have this like weird thing I'm thinking, right? So, I don't want to go after like broke drop shippers that have just like maybe started the first store like two weeks ago, right?
+[62:20] So that's kind of who want to deter and the general look of a drop shipping guru will be someone in front of like a rental or whatever it may be. How would you say for me like what would you recommend in terms of looking about?
+[62:35] Yeah. So your your work environment will probably be a great place for you to shoot these ads from especially since you're talking about selling digital products. It's like a good example you like look at the environment I'm in right now. This is where I work. It's my desk. This is where I make my internet money from.
+[62:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Environment Status Indicators"
+NÚMEROS: Não especificados
+VISUAL: Comparação de setups: Jeremy, Edward, outros membros - ambiente indica status financeiro sem exageros
+[62:55] Does it look like where a poor person would work? No. You know what I mean? It's like this would be a great environment to shoot to relate to other people that make good money. Look at Edward's setup. Edward makes a fuckload more money than you. You look at the difference in his setup, my setup, your setup, other people's setups.
+[63:10] It's like just your setup, you know, can indicate status and financial where you're at, you know, in the latter of things. The point I'm trying to make is really simple. You want to be in a position where, you know, the environment is not like overdone, but you you pick something that resonates with, you know, people that are at or above the level or like a little bit below the level that you want to speak to most um or aspire to that level.
+[63:25] You know, that's the other way to look at it. The uh the other main thing is is just disqualifiers through the funnel. You don't you don't have to worry about broke people coming through the funnel if you just actively deter them hitting the pixel at all.
+[63:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Pixel Conditioning Strategy"
+NÚMEROS: 3x ROAS atual
+VISUAL: Brokie questions no funnel, routing para página sem pixel, application questions video, pixel conditioning no YouTube
+[63:45] You know, remember pixel conditioning is a big part of who your ads go after next. So, if you find yourself constantly getting brokies through the funnel, it's because you're constantly allowing them to go back to the pixel. You need to add brokate questions into what you do.
+[64:00] Go and look at the uh there's a weekly group call we did on application questions. And in that video specifically, I talk about brokate and adding a question to we we talked about this in the pixel conditioning video on YouTube as well.
+[64:15] Um, just a simple opt-in form can have a question with it that routes people to a confirmation page that does not send that person back based on how they answered the question. You know, I think that has more to do with the pixel than it does in most instances with like how you present yourself in ads and things like that. Does that does that make sense?
+[64:30] Yeah. Yeah, that makes sense. Yeah. So, I've got the second part set up. I've got that type form set. But yeah, very you like you're already doing a 3x right now, you know, like I'm not necessarily like too concerned you're doing the wrong thing, you know, Sean, you're doing all right.
+[64:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Realistic Presentation Advice"
+NÚMEROS: Não especificados
+VISUAL: Conselho: parecer pessoa normal, não exagerar, não ficar na frente de Lambos, filmar em escritório normal
+[64:50] Uh yeah, I would just keep that up. I mean, keep in mind, dude, like people trying drop shipping aren't like balling out of fucking control, you know? It's like they're just pretty usual people, you know? Don't you just look like a normal guy, you'll probably be fine, you know?
+[65:05] Don't overdo it, you know? Don't go stand in front of Lambos or something, you know what I mean? Just film some smads in an office. All right, so All right, cool. Anybody got anything else?
+[65:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Q&A - Lead Forms & Pixel Protection"
+NÚMEROS: $2K/dia, 3x ROAS, $10K+ inventory, $50K-$900K range
+VISUAL: Discussão sobre lead forms com SMS verification, accredited investor question, brokie bait conditional logic
+[65:25] Yeah, I'm curious about um we're talking about like pixel protection, right? And one of the main ways I've been able to bring in some uh qualified leads is through the lead form. I shared that they were doing SMS verification now on some of the lead forms.
+[65:40] I think you just have to have like enough spend or the account has to be seasoned so much. But um is that sufficient quote unquote brokate to kind of protect the pixel or is it not sufficient? What are your thoughts?
+[65:55] Brokie bait brokie bait's a conditional logic based question that routes the wrong people to a page that is not pixelled or if you're using a lead form as an example soon as they answer the question a particular way it denies them the ability to report back to the results column on Facebook by literally just kicking them out of the form
+[66:10] it's a conditional logic based financial qualifier question in most instances do you think the accredited investor question is sufficient and saying hey we genally we use are you an accredited investor for raising capital and then we also use the do you have this amount minimum because there's always a minimum that they want people to invest.
+[66:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Brokie Bait Question Structure"
+NÚMEROS: $50K ou menos = kickout, $75K-$900K investment range
+VISUAL: Estrutura completa: Accredited investor? + Minimum amount? + Range question ($50K ou menos kickout)
+[66:30] And then when we ask when we ask like what their range is, it's more like a range question. So like do you have this amount to invest? Uh and then the range is like again 50,000 or less. They're kicked out of the form, you know, 75,000 150 all the way up to the 900 in their case for the Lux Locker clients.
+[66:45] Okay. Okay. And back to the creative question real quick is you mentioned hey you know getting them on video it's one of the best ways we still leverage a lot of static and videos that are I guess not so because a lot of times they won't don't want to get on video is it still sufficient or should I insist like you got to get on camera this ain't going to work
+[67:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Video Ads Non-Negotiable Policy"
+NÚMEROS: Não especificados
+VISUAL: Política firme: video ads sempre mais efetivos, não aceitar clientes que recusam video, priorizar o que faz mais dinheiro
+[67:05] how successful are you at raising capital through what you're doing now not successful enough yeah then I would encourage you do what makes more money then I mean I I I just don't take on clients that only want to do images.
+[67:20] We always like if if they're if they're the wrong deal, we just don't even take them on because we know how much more effective video ads are comparatively to images. Heard that. Appreciate you, Jeremy. Thanks. Yeah, no problem. Cool. Other questions?
+[67:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Dynamic Creative Testing Budget"
+NÚMEROS: $300-500/dia ideal, $100/dia mínimo absoluto
+VISUAL: Budget recommendations baseado em variáveis, $100/dia só se budget muito limitado ou teste marginal
+[67:40] When you're testing on Dynamic Creative, do you still do a small testing budget of like a $100 or do you raise it up since there's so many variables going into it? Generally, we run a test budget of like three to 500 a day and Okay.
+[67:55] I I just want to be fair and saying like respective to your budget. Like, yeah, dude, $100 a day would be the minimum we'd run it at. I I'd still have to run it at 100 bucks a day if uh the client was like limited on budget or if it was just like a fringe test or something like that. Yeah, I'm okay with that. Other questions?
+[68:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Ad Refresh Frequency - Cody vs Tai"
+NÚMEROS: 3-4 semanas vs meses, Black Friday até pós-Christmas
+VISUAL: Análise comparativa: Cody refresh frequente vs Tai segura mais tempo, estratégia de click-through rate, belief em ad fatigue
+[68:15] Hey man. Um, you know how you said that Cody's um refreshing her ads sort of every single uh week and and not every generally every like three to four weeks. Yeah. And then whereas Tai's been able to sort of run ads for you know months. Is that often just offer related or is it just or is it more down to the quality of the ad?
+[68:30] Uh a few things. So Tai's ads, he he really strives for a really high click-through rate. And Tai will run something a little longer than what it generally should be run. Um, I press Tai many times on like allowing me to refresh ad creatives far more frequently than what we otherwise do or just telling them to do it.
+[68:45] And he'll milk something a little longer. He doesn't necessarily believe in the frequency of ad fatigue like happening as often as it actually does. He he'll generally convince himself that ads have like fluctuations in performance and he'd rather endure through the flux as if it's going to come back down.
+[69:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Ad Fatigue vs Performance Fluctuation"
+NÚMEROS: 50 pontos loss vs milhares de pontos, $5 bilhões capital
+VISUAL: Filosofia: tratar como ad fatigue (maioria) vs segurar flutuações (quem tem capital massivo como Tai)
+[69:05] So sometimes he'll run ads that again like should have been swapped. There's a higher probability that an ad after it's had that result volume drop and cost per result. Uh again like having fatigue and not crossing back the other way. That's why we always treat it like it's ad fatigue rather than just waiting for it to come back.
+[69:20] But uh to be fair, I mean that was a you know that example specifically like right before Black Friday through Christmas and then after Christmas. I mean right now is when he would be seeing the cross come back into his favor.
+[69:35] So I mean to give Tai credit obviously because he makes fucking infinitely more money than me. He's not wrong in that example. He just has a lot more money than us to endure through it.
+[69:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Trading Analogy - Capital Advantage"
+NÚMEROS: 50 points vs milhares de points, $5 bilhões vs capital menor
+VISUAL: Analogia com trading: menos capital = cortar loss em 50 pontos, bilhões de capital = segurar milhares de pontos até reverter
+[69:55] It's kind of like trading as an example, Ash. Like sometimes I'm in the middle of a trade and I can only endure like a 50 point loss before I have to cut it and just take the loss versus a guy who has like fucking $5 billion can hold that loss like thousands of points down and literally will not close it until it swings back in his direction.
+[70:10] So it's not like I'm wrong. It's just I have less money and I can't hold the trade as long as what that other person could in comparison. So Tai has again infinitely more money than all of us. So he can hold through those periods of times longer than what almost everybody on this call could in comparison.
+[70:25] So everybody on this call is better to treat it like it's ad fatigue to maximize your cost per result rather than just enduring through that window. Got it. Cheers. Yeah. Other questions? anybody? Okay, cool.
+[70:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "AI Tools & Resources Final Recommendation"
+NÚMEROS: Década de experiência, amplifica anualmente
+VISUAL: Ferramentas: ChatGPT, Claude, AI software em desenvolvimento, Facebook Ad Library, ad spy tools, prática constante
+[70:45] Um, yeah, I just want to be very fair and saying you could also leverage chat GPT cla to take everything that we just talked about and plug like your offer details into it. Uh, we have AI developers on staff now just like we did with the hammer them strategy the other day. Shout out to Galani for creating that software for us.
+[71:00] Uh, I'll try to create something for us that can help you guys like spin up some direct response ad copy. If you don't just know how to go into like chat GBT or Claude and kind of prompt it to do what we just talked about to help you with ideiation, I'd really encourage you to do that.
+[71:15] I mean, I myself go in and do that quite frequently now where I'm like interacting with these LLMs and like developing hooks and developing the reasons in the middle and like that's rather than just typing.
+[71:30] I find I find like you just sitting there looking at a blank piece of paper can be quite intimidating for anybody no matter how good you are. Um it's good nowadays especially to leverage all these softwares that are available to us to just make this all easier.
+[71:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Don't Reinvent The Wheel"
+NÚMEROS: Décadas de experiência, gastos maiores que receita anual
+VISUAL: Estratégia de aprendizado: estudar quem gasta mais que você faz, Facebook Ad Library, competitors, não copiar exatamente mas inspirar-se
+[71:50] So, don't feel intimidated by it, you know. Um, go and interact with these different AIs and prompt them to help you create hooks, reasons, and call to actions that, you know, will work for your specific niche. Look up competitors, you know, like try to make it easy for yourself.
+[72:05] Don't copy stuff to the tea, you know, but like again, there's plenty of inspiration out there from people that are already spending what you make in a year on ad spent, you know? So, don't uh don't feel like you need to like go at it alone or reinvent the wheel.
+[72:20] and try to practice too. Like one thing I love with my education company here is like I can ask any one of you what your offer is and I could just start fucking ripping off ideas for like what you should be saying. And I've gotten really good at that over the years because I have an education company and an agency and clients and like we do this stuff all the time.
+[72:35] So, if you can't just like, you know, go go go as fast as what you see somebody like me do, just understand I've had a decade of experience doing it. And that amplifies every year as we continue to help more people at larger scales.
+[72:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Practice & Iteration Philosophy"
+NÚMEROS: 10+ anos de experiência
+VISUAL: Mentalidade: praticar, não ser perfeito, usar softwares disponíveis, testar sempre, não ficar preso em uma coisa
+[72:55] So, you know, practice it. Just, you know, don't feel like you need to be perfect. Um, leverage softwares that you've got to make it easier. Go look at the Facebook ad libraries and ad spy tools to find things that make it easier as well.
+[73:10] And, um, yeah, go out there and make some ads. And always test. Don't feel stuck on one thing. And out of all the lessons that we talked about, I really want to reiterate, I think that the in-market demographic is like the number one thing to think with above damn near all else to make all the other things that we talked about easier, too.
+[73:25] Does that make sense? Do me a favor, drop a one in the chat if you found today's call valuable. And unmute yourself if you have other questions before we go.
+[73:40] I appreciate you guys being here. I hope this was helpful for you. Uh, excuse me for the rather long class. You know, this is a broad topic and I want to make sure that we covered a lot. All right. Sweet. Let's go get some lunch. Talk soon, boys.
+📊 RESUMO EXECUTIVO
+NÚMEROS PRINCIPAIS:
+52,000 data points por usuário no Facebook
+$500/dia = máximo de variações dinâmicas
+<$500/dia = metade das variações
+10 imagens/vídeos + 5 headlines + 5 body copy (dynamic ads)
+3-4% do mercado = in-market demographic
+$10M+/mês (Tai Lopez receita)
+$1M+/mês (Cody Sanchez orgânico + paid)
+$90,000+/mês em impostos (exemplo pessoal)
+$70,000 investimento mínimo (co-living example)
+$2-4K/mês cash flow (co-living)
+$30,000 em arte (exemplo pessoal)
+$35,000 novo offer (Cody Sanchez)
+$10K+ produtos mínimo (Cody Sanchez)
+$1,300/mês média School users
+$50-60K/mês top School students
+$2K/dia spend, 3x ROAS (digital products example)
+$50K-$900K investment range (Lux Locker)
+$300-500/dia budget ideal para testes
+$100/dia mínimo absoluto para testes
+$61.13 cost per qualified call (exemplo)
+2017-2018 (era Tai Lopez SMMA)
+$85K/mês casa Beverly Hills (Tai Lopez)
+20 car garage (Tai Lopez)
+3 dias evento (7-9 figure entrepreneurs)
+7-9 figures (target do evento)
+12 different opening hooks (análise Tai Lopez)
+25% impressions chegam a 3 segundos
+24 horas para plataformas compartilharem dados
+2-3 meses atrás (exemplo memecoin)
+3-4 semanas (refresh ads Cody)
+Meses (Tai aguenta ads mais tempo)
+10+ anos experiência (Jeremy)
+5 carros (Tai Lopez setup)
+3 wiener dogs (exemplo pessoal)
+$5 bilhões capital (analogia trading)
+50 pontos vs milhares de pontos (trading loss)
+ESTRATÉGIAS E SISTEMAS:
+Dynamic Advertising: Usar até 10 vídeos/imagens, 5 headlines, 5 body copy intercambiáveis
+Long vs Short: Metade dos criativos longos, metade curtos
+Trust The Platform: 52,000 data points por usuário, deixar algoritmo otimizar
+Optimize Creative For Each Person: Toggle sempre ativado
+Ad Flow: Hook → Reasons → Call to Action
+Hook Categories: Pain, Moving Towards/Away, Motives, Emotional Drivers
+Hooks = Context: Real-time, relatable, não antigo
+In-Market First: Sempre começar com in-market demographic (3-4%)
+Needs Convinced Later: Só após esgotar in-market
+Pixel Conditioning: Brokie bait questions com conditional logic
+Video Over Images: Sempre priorizar video ads
+Landscape vs Vertical: Testar ambos formatos
+Foundational Campaigns: Múltiplas campanhas (webinar/VSSL) com diferentes hooks
+Majority → Second → Minority Hooks: Hierarquia de performance
+Multiple In-Market Types: Identificar 3+ tipos de in-market para mesmo offer
+Environment Matters: Ambiente do ad deve integrar com feed do target
+Facebook Ad Library: Estudar competitors que gastam milhões
+Ad Refresh Strategy: Tratar como ad fatigue se não tem capital massivo
+Scaling Ceiling: Operar abaixo do ceiling para maximizar ROAS
+AI Prompting: Usar ChatGPT/Claude para criar hooks/reasons/CTAs
+ESTRUTURA:
+Direct Response Ads: Call-to-action ads que direcionam para conversion mechanism
+Standard Events: Schedule, Complete Registration, etc (objetivos de otimização)
+Dynamic Ads Structure: 10 vídeos/imagens + 5 headlines + 5 body copy
+Ad Flow: Hook → Reasons (Story) → Call to Action
+Demographics: In-Market (3-4%) vs Needs Convinced
+Conversion Mechanisms: Live Webinars, VSSL Call Funnels, Popups
+Hook Hierarchy: Majority Hook → Second Hook → Minority Hooks
+Campaign Structure: Foundational campaigns por hook + conversion mechanism
+Testing Budget: $300-500/dia ideal, $100/dia mínimo
+Creative Variations: Long vs Short, Landscape vs Vertical
+Pixel Protection: Brokie bait conditional logic questions
+Data Sharing: Banks, social platforms, exchanges compartilham tudo em real-time
+Platform Behavior: TikTok, Instagram, Facebook, YouTube servem conteúdo contextual imediato
+Ad Library Research: Estudar Tai Lopez, Cody Sanchez, Lux Locker, etc
+Retention Analysis: Impressions → 3seg → 15seg → 50% do vídeo
+Launch Strategy: 100% in-market no lançamento, needs convinced depois
+Offer Examples: Co-living ($70K min), Cody Sanchez (buy businesses), Digital Products, Capital Raise, Events
+Environment Integration: Carros, casas, iates, relógios, escritório profissional
+Rich People Ads: Direto, sem cortes rápidos, chalkboard/education visual, profissional
+General Public Ads: Cortes rápidos, TikTok style, mais dinâmico
+AI Tools: ChatGPT, Claude, software em desenvolvimento (Galani)
+Learning Resources: Facebook Ad Library, Ad Spy Tools, Weekly Group Calls, YouTube videos
+DADOS FINANCEIROS:
+Tai Lopez: $10M+/mês (2017-2018 SMMA program)
+Cody Sanchez: $1M+/mês orgânico + $1M+/mês paid ads
+Co-Living: $2-4K/mês cash flow, $70K investimento mínimo
+Cody Offers: $10K+ mínimo, $35K novo offer
+School Users: $1,300/mês média, $50-60K/mês top students
+Digital Products Case: $2K/dia spend, 3x ROAS
+Lux Locker: $50K-$900K investment range, accredited investors
+Testing Budgets: $300-500/dia ideal, $100/dia mínimo absoluto
+Cost Per Result: $61.13 qualified call (exemplo Cody)
+Tai Lopez House: $85K/mês Beverly Hills
+Personal Tax: $90K+/mês
+Art Investment: $30K (exemplo pessoal)
+Trading Analogy: 50 pontos loss vs $5B capital holding milhares de pontos
+Ad Spend Examples: Pessoas gastando mais que receita anual de outros
+ROAS Strategy: Maximizar abaixo do scaling ceiling
+Event Target: 7-9 figure entrepreneurs, 3 dias Scottsdale
+Ad Refresh: 3-4 semanas (Cody) vs meses (Tai com capital massivo)
+Real Estate Leverage: Tax deductions, cash flow, net worth increase
+Platform Data: 52,000 data points × real-time updates × backdoor deals
+Retention Metrics: 25% a 3seg, 46% retém até 50% do vídeo
+In-Market Priority: 3-4% do total addressable market
+Experience Value: 10+ anos amplificando anualmente
+DURAÇÃO: 73 minutos 40 segundos FORMATO: Masterclass ao vivo com Q&A, screen sharing, exemplos práticos, análise de ads reais

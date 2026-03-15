@@ -1,0 +1,292 @@
+Transcrição Completa: 94 Hammer Them Strategy 5 4 24
+[00:00] "Cool. So, just to be clear, uh last week I introduced a new content advertising strategy, essentially the Forester 2.0, but we call it something different. Just for reference, we call it the uh the tornado."
+[00:15] "Very fitting given its effect. We've already seen some of the inner circle members go out, take action on it, and start to get results with it, which is great."
+[00:23] "Of course, um to be clear, at the mastermind during my second talk on Sunday, which is officially uploaded in the group if you want to go watch it, I introduced a second ad strategy that I had not had a name for yet."
+[00:36] "Last week, our boy Tampa Nick recommended a name, the content ambush. I felt it was more fitting with the visual I'm going to pair with it to call Drop the Hammer, otherwise known as the Hammer Them campaign."
+[00:51] "This is a very aggressive short-term content advertising strategy specifically for when you are using salespeople to close deals and the salespeople are struggling to close organic leads and paid leads at the same rate."
+[01:08] "When you have a sales team that is bitching and whining about how the paid leads coming in are cold or not warm enough or simply put their statistics of how well they're doing closing them are wildly different than the organic statistics and you're getting that kind of feedback."
+[01:26] "The hammer them campaign otherwise known as the drop the hammer campaign. This strategy in particular is for you."
+[01:34] "Um, to be clear, I originated this strategy out of pain, frustration, and rage of trying to solve the salesperson issue over the past two years."
+[01:45] "And I remember at the mastermind, I specifically talked about the fact that sales people just consistently give this feedback. I tried to attack it with sales training. I tried to attack it by implementing the right types of sales processes, meaning like daily morning meetings, a certain amount of video trainings they need to watch before they can even get on calls, roleplaying, making the sales managers and the sales leaders more properly trained."
+[02:10] "Uh, writing up an untold amount of SOPs specific to salespeople and only seeing marginal effects in doing so in the direction that I wanted to do, I would be substantially richer."
+[02:23] "I'd probably have a second mansion if I didn't fuck as many deals as I did these past two years from salespeople losing me and the organizations we've worked with money."
+[02:35] "Okay. So, I originated this strategy to try to go the opposite direction. The opposite direction meaning rather than attacking the salespeople, I just decided to give in to what they said."
+[02:48] "I decided to act like every sales team we ever worked with moving forward is the worst sales team they could possibly be. And it's my job as the marketer. The mindset that I chose to inherit instead to originate the strategy was it's my job as the marketer to make the salesperson's job as easy as possible."
+[03:10] "And I'm just going to act like they don't need to do sales training. And that everything should be as similar to organic leads as I can possibly get it."
+[03:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "72-Hour Lead Delay Strategy"
+NÚMEROS: 72 horas de delay
+VISUAL: Timeline mostrando separação entre lead originando e primeiro contato do vendedor, bloqueio de 72 horas destacado em vermelho
+[03:22] "And so what I did is I started off by disabling a salesperson from being able to talk to a lead for a 72-hour period of time from the lead originating. This is where the entire strategy starts."
+[03:35] "To be clear, whatever scheduling tool you are using, whether it be calendarly, schedule once, go high level, or anything else for that matter, you immediately want to start by taking those scheduled calls that come in."
+[03:48] "Or as an example, if you're using the hydra ad strategy where you're using lead forms or instant forms, or even if you just have whatever leads that are coming in that you're going to have talk to your salespeople, you want to immediately separate the lead coming in from when the salesperson gets to talk to them by a 72-hour duration of time."
+[04:10] "That's where I started for my test window. So, to be clear once again, I do not want somebody to have the ability to book today, tomorrow, or the next day. I want them to book a full 72 hours from today."
+[04:24] "If a hydra lead comes in, an instant form lead, a lead form lead, I do not want that salesperson to know that that lead exists for 72 hours from right now."
+[04:35] "I in any way, shape, or form, no matter where that lead originates from, do not want the salesperson to touch them or know they exist. I don't want them to go into the pipeline. I don't want them to see them. I literally want them to think the lead is not in existence yet."
+[04:50] "I know the lead exists. I do not want the salesperson to know and I want that window to be ideally 72 hours. Just real quick, does anybody have questions on that so far and why I'm saying that?"
+[05:02] "Are you delaying that like in Zapier for example like before they like no CRM touch, no no notifications, nothing. The delay of like 72 hours."
+[05:12] "Great technical question. No, I am allowing them to go into the CRM because I want to hammer them in every way I can in between the time they originate and the salesperson knowing they exist."
+[05:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "CRM Setup - Marketing vs Sales Pipeline"
+NÚMEROS: 72 horas de separação
+VISUAL: Diagrama mostrando CRM dividido em duas áreas: área de marketing automation (ativa imediatamente) e pipeline de vendas (delay de 72h), setas indicando fluxo de leads
+[05:27] "So to be clear, they will go into the CRM where I am doing my email marketing automation. They will get put into the retargeting buckets to get slammed with content for that duration at 72 hours, but I am not populating them into the deal pipeline within the CRM where the salespeople will typically operate exclusively."
+[05:48] "Does that make sense? Yeah. And when you do that, are you just doing that via a delay in Zapier, for example, or something similar to that?"
+[05:56] "I'll give you a I'll give you a technical setup I have in HubSpot and uh Active Campaign. So, to be clear, as soon as the lead originates, let's say the call gets booked or let's say the um uh whatchamacall comes in or Yeah, exactly. Whatever the fuck filled out, there is no there's no Zapier delay."
+[06:18] "Immediately, I'll add them into the CRM. The CRM is where I will have the delay set up in the marketing automation sequence itself."
+[06:28] "So the marketing automation sequence, you know how you can time when what happens in your if this then that logic. Sure. Yeah. The if this then that logic will add them to the appropriate list as an example in active campaign or tag them properly in whatever CRM you're using."
+[06:47] "However, it just will not originate a deal in the closer pipeline yet. That is what will be delayed for the 72-hour duration of time from when they originated."
+[06:58] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "72-Hour Content Bombardment"
+NÚMEROS: 72 horas de conteúdo intensivo
+VISUAL: Ícones de email, SMS, retargeting de anúncios convergindo para um lead central, múltiplas setas indicando bombardeio de conteúdo educacional
+[07:00] "In the 72-hour duration of time in that marketing automation setup within the CRM. Once again, the Zapier part of it is handling integrating that lead right away. We are emailing them aggressively just like we otherwise would prior to a call."
+[07:16] "Um, we are doing the same things via email when it comes to like educating the lead. Uh reminding them of their upcoming call and just trying to push as much education-based training content as we can to them via email, via an occasional text, and more importantly than anything else, the content sequence that we're going to run in front of them."
+[07:38] "Um, to be clear, after like a literal 72 hours has passed, that is when we're going to take that lead via the marketing automation and we're going to populate that lead as a deal into the pipeline stage, as an example, an active campaign or close or pipe drive or fuck whatever CRM they're using."
+[07:57] "Um, and to be fair, if they are not using the same CRM where the marketing automation is happening at the marketing automation stage where 72 hours passes, we'll have a tag that gets applied that triggers a zap to then add them into whatever that external CRM is that the sales people use exclusively."
+[08:16] "Like close as an example or pipe drive is another example. Does that make sense? Yeah. Okay, cool. Other questions on just the 72-hour delay part of it so far or or once again why we're doing it? Okay, cool."
+[08:31] "Have you seen Have you seen any cons to doing the the delay at all or or no?"
+[08:37] "Yeah, great question. So, a big part of me from like a sales perspective has always been told you need to have the lead communicated with as fast as possible for the highest probability of the individual to close."
+[08:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Emergency Exit: 'I'm Ready to Buy' Button"
+NÚMEROS: 2 textos enviados durante 72h (dia 1 e meio do dia 2)
+VISUAL: Botão vermelho de emergência com texto "I'm Ready to Buy", setas mostrando disponibilidade imediata de agendamento, bypass do sistema de 72h
+[08:52] "So to be very clear, the way that I've worked around that issue is, as I mentioned at the mastermind, specifically in the email marketing automation and an occasional text, we have a link at the bottom of those emails that just says, 'I'm ready to buy.'"
+[09:08] "And if they press that link, it takes them to a schedule that has immediate availability with the closers. That way, there's still a possibility for that person to um to be clear, like get closed ASAP, rather than waiting the full 72 hours in the instance, that they are actually ready to buy."
+[09:28] "We'll put that at the bottom of every single email and we'll send a text to be clear twice within the 72 hours with that ability on day one and then halfway through day two."
+[09:40] "Um to be clear, uh it's important to note when that person presses that button as well outside of just taking them to the scheduler via the marketing automation will also then populate the deal into the deal stage in the pipeline."
+[09:54] "So the salesperson has that lead assigned to them and can contact them ASAP. Those are the outs that we've given to the lead in the instance that they come through and they're already ready to buy."
+[10:06] "For a majority of the leads, to be clear, there's no other cons that I've seen. This has been nothing but pros. The feedback that we get from the sales team is pretty tremendous in terms of the differences."
+[10:18] "Um, you know, that's really the only con once again is I just assume I'm missing some people that would otherwise be ready to buy that maybe didn't press that button of I'm ready to buy."
+[10:28] "Cool. Okay. Any other questions on this so far? All right, sweet."
+[10:34] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Audience Targeting Setup"
+NÚMEROS: 72 horas de janela (extensível para 2 semanas ou 1 mês se necessário)
+VISUAL: Múltiplos círculos representando diferentes plataformas (Facebook, Instagram, TikTok, LinkedIn), audiências customizadas baseadas em página de confirmação, interações com vídeo, engajamento com página
+[10:36] "So, to be clear, back to my point, what we're going to do when the lead is originated is we're just going to we're going to delay the ability for the salesperson to know they exist for 72 hours. That's it. We're going to delay it for a 72-hour period of time."
+[10:51] "To be clear on a technical level here, what we're then doing on any channel that we have the ability to do it, for me specifically, Facebook, Instagram, Tik Tok, uh we have one client in which we also try to do this on LinkedIn, we create an audience that is people who have hit the call confirmation page or if it's a Hydra campaign, people who have filled out the lead form within that 72-hour duration of time."
+[11:16] "And to be clear, sometimes you have to widen the audience a bit further outside of these specifics that I'm giving you, just because you don't have enough people to only target the 72-hour window. So sometimes you might have to go, as an example, like two weeks or even a month of this specific set of audience targeting that I'm talking about."
+[11:35] "Um, to be clear, the call confirmation page specific via the pixel. Um to be clear as well, the people who have interacted or watched a threshold of the ad video for the call funnel itself, we can also use that as a widening up option."
+[11:51] "Um in addition to that, we have our Facebook and Instagram page interaction that we can add in here as well to widen the audience a bit for a 72-hour period of time and then continue extending it out."
+[12:02] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Daily Budget Recommendations"
+NÚMEROS: $10-30/dia, custo por engagement: $0.01-0.07, acima de $0.05 = reduzir budget 10-30%
+VISUAL: Gráfico de budget diário com zona verde ($10-20), zona amarela ($20-30), indicadores de custo por engagement, setas mostrando ajustes de budget
+[12:04] "You will notice that you don't need a wide budget here. Doesn't have to be a big budget to be able to target this specific audience. I'll give you a great example, Nick. What are you spending per day right now to get that three or four frequency that you have on that specific hammer them campaign we're talking about?"
+[12:22] "Um, a fuck I can't remember which um I'm spending for clicks. Where the fuck is the per I think it's 10 bucks a day."
+[12:32] "Yeah. And that's exactly where it should be. I I get up to about 20 to $30 a day like tops when I want to just simply spin the frequency up."
+[12:42] "Your cost to be clear in terms of how these campaigns are technically set up. You're either doing an engagement campaign and then you're also duplicating it to do a video view campaign optimized for throughplay."
+[12:55] "Uh whichever option you do, remember on broader content campaigns, you could typically see a cost per engagement or even a cost per throughplay for about a penny or sometimes as low as like a tenth of a penny or even a hundredth of a penny."
+[13:10] "You're not going to see that on this specific campaign setup. It's typically going to be a few pennies. Sometimes it'll be upwards of like three to even seven cents."
+[13:20] "To be fair, you can typically pull it down just a little bit if you see it get above 5 cents from my experience so far with this. If it gets above 5 cents, I'll try to reduce the budget by about 10 to 20%. Um, sometimes upwards of 30%."
+[13:35] "And if my frequency doesn't drop, then I know I was technically overspending. By overspending, I mean you might have like a $30 a day budget and it could actually be like a $20 day budget and it still reaches the same quantity of people per day. You were just technically overspending."
+[13:52] "I have a question about that real quick. Good. Um, so I when I'm doing this, I actually opened it up to 30 days because of the quantity of people. Yeah."
+[14:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Extended Sales Cycle Adjustment"
+NÚMEROS: 30 dias de ciclo de vendas, budget inicial $5/dia aumentado para $10/dia
+VISUAL: Timeline estendida mostrando ciclo de vendas de 30 dias, ajuste de budget para manter frequência, gráfico de performance
+[14:07] "Um, and also like this one account like they have at least a 30-day sales cycle. So I justified like doing that. Um, and like we were not get like the full budget wasn't spending and I guess that makes sense. So I upped it to 10 bucks. I think it was like five bucks before and uh like would you not recommend doing that to try to get more to get to hammer them even more just because the cost will go up more or like how would you justify"
+[14:35] "If you increase the budget and you see that your frequency is climbing. I personally view that as a good thing, not a bad thing because remember I'm trying to establish familiarity bias like what would otherwise happen organically over potentially weeks or even months within 72 hours essentially."
+[14:54] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Content Selection Strategy - Hammer Them vs Tornado"
+NÚMEROS: Não especificados numericamente
+VISUAL: Comparação lado a lado: Tornado (todo conteúdo disponível, amplo) vs Hammer Them (conteúdo curado estrategicamente, focado), ícones de funil de vendas
+[14:56] "So I'm trying to do just to be clear to go back to like the technical uh aspects of this campaign setup. I'm trying to load this fuck up with as many like framing pieces of content."
+[15:10] "I'm I'm a little more strategic than what I am in the tornado ad strategy that I talked about last week. The tornado ad strategy. I'll pick like every fuck piece of content the page has ever posted versus this specific hammer them strategy."
+[15:25] "What I attempt to do is be very particular about the pieces of content that I select where they very high probability of successfully establishing familiarity bias, authority bias, and a perspective of these people are credible, know what the fuck they're talking about, and like are are good at what they do."
+[15:46] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Strategic Content Types"
+NÚMEROS: Não especificados numericamente
+VISUAL: Grid de tipos de conteúdo: depoimentos, palestras em palcos, talking heads, podcasts, estudos de caso, unboxing videos, walkthroughs de processo, estudos universitários
+[15:48] "So as an example of that it's like testimonials, speaking content like literally on stages or things like this talking head content would be another version of this podcast content um case study videos uh for like as an example e-commerce brands that we consult on this."
+[16:08] "We will ensure that they do like unboxing videos or like how the product is technically set up and making it look easy. Uh if it's a service business, we'll do like a walkthrough of the process to generating results. Um to be clear, literally anything that establishes credibility."
+[16:26] "Like as an example, James on the call has a literal study from a university. That'd be an incredible video to break down like three or four ways into like short, medium, and long form with articulating how the study worked."
+[16:40] "Uh they with like B-roll content. They could do it with like a talking head content. they could do it with like literally just fuck dude wearing a lab coat going through the study, you know."
+[16:50] "Um there's a lot of different ways that could be presented, but moral of the story, I'm a little more strategic about what I specifically want to get in front of them with that 72 hours."
+[17:01] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Content Volume Strategy"
+NÚMEROS: 30-100 peças de conteúdo
+VISUAL: Múltiplos quadrados representando peças de conteúdo (30-100), algoritmo no centro distribuindo conteúdo para leads, setas indicando distribuição inteligente
+[17:03] "And the more the marrier. Like if I can put like 30 to 100 pieces of content in there, and I allow Facebook, Instagram, Tik Tok, the algorithm gods to essentially determine what pieces of content are going to get in front of the individual. I'm happy to allow that to occur."
+[17:21] "I've set it up technically in two different ways as a test just to see which one works better. I'm not technically sold on one versus the other. So, for now, you know, I always share with you guys like in real time. So, I just want to make it clear on this as a caveat."
+[17:36] "I'm not sold on one technical setup or the other for what I'm about to articulate. I'm not uh at a point where I've gotten enough data to determine which one's better than the other. But allow me to explain the two ways I've set it up."
+[17:49] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Setup #1: Individual Ad Sets (ABO)"
+NÚMEROS: 100 peças de conteúdo = 100 ad sets, $5 mínimo por ad set = $500/dia total, exclusão após 10 segundos de visualização, 365 dias de janela de exclusão
+VISUAL: Estrutura de campanha mostrando 1 campanha > 100 ad sets individuais > 1 conteúdo por ad set, ícones de exclusão automática, budget distribuído
+[17:51] "So, as an example of how I set it up, I'll have a campaign. I'll have adset budget optimization and I'll have that warm audience that I talked about that I've selected one per ad set meaning I'll put one specific piece of content per ad set and I'll create an a video view audience per ads set to exclude that video once it's watched for at least 10 seconds."
+[18:16] "So to be clear, if I have a 100 pieces of content, I'm going to have a a campaign. I'm gonna have a hundred individual ad sets all targeting the exact same audience with one unique piece of content in it per ad set."
+[18:31] "I will have that specific piece of content in it on the adset level excluded once somebody watches 10 seconds of that specific video. I do a 365-day audience for the video exclusion with the 10 seconds because to be honest with you once again I'm not sure the threshold like I'm not going to do a 72-hour fuck exclusion window for that."
+[18:52] "There might not be enough people. I want to make sure I get as much people as I can into the exclusion bucket so it actually excludes them. So I do a full 365 days."
+[19:02] "This then in this technical setup ensures that once one of the videos is watched for the 10 seconds that they'll immediately get hit with one of the other 99 pieces of content in this example."
+[19:14] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Setup #2: Single Ad Set (CBO)"
+NÚMEROS: $10-30/dia budget total, 100 peças de conteúdo em 1 ad set, 50/50 distribuição igual vs bias para short-form
+VISUAL: Estrutura simplificada: 1 campanha CBO > 1 ad set > 100 conteúdos dentro, gráfico mostrando distribuição de alcance entre conteúdos
+[19:16] "The other way that I've set it up, once again, this is where I say I don't have enough data to assume which one's better than the other. I personally like setup number one before I articulate setup number two."
+[19:28] "Setup number two is I'll do a I'll do a CBO campaign. So campaign set up with CBO. I'll have one ad set within it targeting those options that I talked about at the beginning of the call, the 72-hour audiences. Expand it out a bit if necessary. And then I'll put all 100 pieces of content within that particular ad set."
+[19:50] "Now, the two different times that I've set up setup number two, it's been it's been a 50-50 split for how it disseminates the content. In in one instance, it pretty much equally disseminates the content. So, I'm assuming that people are seeing different pieces of content as that 72 hours passes, but I can't ensure it like I can in setup number one."
+[20:12] "In setup number two, the other 50% of the time, what happens is I get like the shorter form content out of all the longer form content seems to be what actually gets distributed and it's biased towards like one or two different videos as an example."
+[20:27] "And I've got to cut those videos off to try to allow some of the longer form stuff to ride. So, it's very uh you know different than setup number one."
+[20:36] "I if I put a bet on it, just to be clear, I'd imagine that for the hammer them campaign, I'm going to consistently bias towards setup number one just to ensure that once somebody watches a specific piece of content, they get excluded."
+[20:50] "And I'm also going to ensure that I am going to to actually get reach on those 100 plus videos, whether they're long form or short form."
+[21:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Setup #1 Downside"
+NÚMEROS: 100 conteúdos x $5 mínimo = $500/dia de budget mínimo
+VISUAL: Calculadora mostrando multiplicação de conteúdos por budget mínimo, gráfico de barras comparando $500/dia vs orçamentos menores
+[21:02] "There is one downside though to setup number one, which is why I've also deferred to using setup number two, which is we can only have a $5 minimum budget."
+[21:12] "So, as an example, if I have if I have a 100 pieces of content times $5, I'm technically setting up a $500 campaign per day when I have a 100 piece of content at a minimum of $5 per day. So, I have the highest probability to overspend there."
+[21:29] "And it's also a much bigger daily budget than what it's ideally be. I picked that setup on a client that has a very high volume of calls and $500 a day was not considered a lot in comparison to what we were spending on literally everything else."
+[21:44] "In setup number two, I picked that specific way because I didn't want to spend $500 per day in in relation to the total daily spend on every other campaign. That would have been a lot. So, I didn't want to have that same setup in setup number one. I wanted it to be more cost-effective."
+[22:03] "And when I did the CBO campaign, the way that I articulated it to you, I was able to get the budget down to, as an example, $10 to $30 a day for the entirety of the campaign."
+[22:14] "I just had to be more I had to be more of like a moderator in a sense to ensure that the content, as I mentioned, that was like short form and long form mixed together. The short form stuff is naturally going to be what rises to the top and gets the most reach."
+[22:30] "So, I simply put, I just had to like kind of manually flick stuff on and off more frequently in setup number two than I did in setup number one."
+[22:39] "I'm still exploring options to find like much smaller daily budget cost effective ways without having to increase the total daily spend as an example like the $500 a day with 500 I mean a 100 different individual piece of content at five bucks a day. So, open to ideas on that."
+[22:57] "But moral of the story, setup number one seems to be what to do at scale. Setup number two seems to be what you need to do when you're at a lower lower daily budget."
+[23:08] "Maybe we can uh maybe we can test duping out the ones that are not getting enough spend into a new CBO campaign and just doing some fuck like that."
+[23:17] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Setup #3: Content Length Segmentation"
+NÚMEROS: 3 campanhas CBO separadas, $10/dia cada = $30/dia total, segmentação: 0-2min (short), 10-20min (medium), 1h+ (long)
+VISUAL: Três caixas separadas representando campanhas por duração de conteúdo, cada uma com $10 de budget, ícones de relógio indicando durações
+[23:19] "One thing one thing that I set up literally yesterday for for a client was I split the long form, short form, and like medium content into their own CBO campaigns. I was still able to do a $30 uh total daily spend on them just with $10 on short form, $10 on the medium form, and $10 on the long form."
+[23:40] "It just took a little longer to set up than what I'd wanted to because I literally had to go to each piece of content and be like, 'Okay, this one's like two minutes or less. That goes in the short form bucket. This one's like fuck 10 to 20 minutes. This one goes in the mid form bucket. This one's fuck an hour long. This goes in the long bucket.'"
+[24:00] "And I've only had a day worth of running that specific setup, but that does seem to be the best technical setup for it when you're at a smaller daily budget than what I articulated in the first setup there."
+[24:12] "For the long form pieces of content, are you biasing towards doing video view campaign versus engagement because of the fact"
+[24:20] "Yeah, great question. I technically defer to setting up both rather than one or the other. If I can only set up one or the other, then I'm happy to do uh video views optimized for through play over engagement."
+[24:35] "Correct. Yeah. Because I don't really care about like the actual engagement part of it. Like I I want them to watch the video. That's my intention is to like literally get them to watch it to increase the probability they come through framed for the salespeople the right way."
+[24:52] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Cost Per ThruPlay Benchmarks"
+NÚMEROS: $0.03-0.07 por thruplay, long-form no limite superior de $0.07, mesmo budget de 30 dias = $0.06/thruplay
+VISUAL: Gráfico de barras mostrando custos por thruplay, zona verde ($0.03-0.05), zona amarela ($0.05-0.07), comparação entre formatos de conteúdo
+[24:54] "All right. If you're doing the if you're doing the video view campaign, what do you what would you tolerate for the cost per through play? Because that same camp that same account the cost per through play on the same like max time frame is 6 cents per cost per through play."
+[25:12] "I was going to say I'm getting about three to seven cents on my cost per through play on that setup that I just talked about with the three different buckets of short, mid, and long form. Long form being the higher end of the seven cents."
+[25:25] "Got it. Okay, Jeremy, if your sales cycle was longer than like let's say the seven days because we don't really do a one call close, would you have the retargeting window longer?"
+[25:37] "Yes, absolutely. That's a that's a very very very good technical question. That's also another justification to widen the audience rather than just doing the 72 hours from the time they booked to literally whatever amount of time the sales cycle is."
+[25:52] "Got it. Cool. Okay. Any other technical questions on this? This is essentially it. So, if anybody has anything that they want to add to it or, you know, ask, feel free. All right. Cool."
+[26:06] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Tornado vs Hammer Them - When to Use Each"
+NÚMEROS: Tornado: centenas de dólares/dia mínimo, múltiplos objetivos; Hammer Them: $10-30/dia, foco em pipeline ativo
+VISUAL: Comparação lado a lado em tabela: Tornado (amplo, múltiplos funis, budget alto, todo conteúdo) vs Hammer Them (específico, leads ativos, budget baixo, conteúdo curado)
+[26:08] "So to be clear once again, let me talk you through real quick when one campaign over the other is most appropriate to set up. So when it comes to the tornado, the tornado ad strategy that I referred to last week is very cost effective when you have multiple direct response objectives running at once that you want to influence the statistics for in a very positive way."
+[26:31] "If I want a a higher show rate, lower cost per call, lower webinar cost per lead, higher show rate to my webinars, like higher close rates to webinars, call funnels. Um, the tornado is a very effective way to do that."
+[26:47] "And it's also a very scaled ad strategy. You can pull the budget down to a lower level. You can also run it at thousands of dollars a day and it's very successful no matter what, whether it's small or big."
+[27:00] "Um, it is a very I think the best word honestly is just aggressive campaign. Um, it just fuck swarms people with content. And you could also set it up in the same technical way that I talked about in the first setup with the hammer them campaign."
+[27:16] "The important thing to note about the tornado is I I defer to telling people it should be at least a couple hundred dollars a day that you put towards it just given its size and its potential especially dependent upon the amount of people that you have and those warm audiences that you're trying to warm up."
+[27:34] "Um it's a broader campaign though to be fair. It's not as niche specific to a specific person that's within your sales cycle versus the drop the hammer campaign, the hammer them strategy."
+[27:47] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Hammer Them Campaign Focus"
+NÚMEROS: Leads ativos no ciclo de vendas, webinar registrants, call bookings
+VISUAL: Funil de vendas com destaque para etapa ativa, ícones de webinar e calls, setas apontando para leads quentes sendo bombardeados com conteúdo estratégico
+[27:49] "This particular campaign is very very specific to people that are ideally actively within your sales cycle. So, as an example, if they're registering for a webinar or if they're showing up for a call, we ideally are targeting that demographic more than anybody else."
+[28:07] "That way we are seeing in real time the people that are a part of our sales strategies and our sales processes actively are coming through more framed like they otherwise would organically. Okay, that's what I'm attempting to replicate with the hammer them strategy."
+[28:24] "Okay. And the hammer them strategy can be a much more like small daily budget campaign that has big outcomes on your sales process when executed successfully."
+[28:36] "But it also requires a more specific type of content to be selected rather than our tornado strategy. We're picking every and all pieces of content. We're trying to get every piece of content that we ever see fit to get in front of somebody to get in front of somebody."
+[28:52] "Whereas with the hammer them strategy, what we're attempting to do is a little more specific. Once again, once again, it's kind of like the Venus fly trap in that regard. We're attempting to be like curate, you know, a select type of content that influences people relative to the fact they're actively in our sales cycle."
+[29:12] "So, we should be a little more strategic about the content in that example. Requires a little less daily budget and the feedback in particular for whether it's successful or not comes from salespeople saying, 'Hey, these people are coming through a lot warmer.'"
+[29:28] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Success Metrics"
+NÚMEROS: Aumento em: show rate, close rate, redução no ciclo de vendas
+VISUAL: Gráfico de barras mostrando antes vs depois: show rates aumentando, close rates melhorando, ciclo de vendas encurtando, feedback positivo de vendedores
+[29:30] "You should see the differences in your show rate, your close rates. You might even see a little bit of a difference in u your your sales cycle shortening a bit. I've seen that effect so far as well, but very very different strategies in that regard."
+[29:46] "So, be particular about when you pick which one. Um, I also just want to note as a caveat, I technically on two different accounts right now run both at the same time."
+[29:57] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Combined Strategy: Tornado + Hammer Them"
+NÚMEROS: 2 estratégias simultâneas
+VISUAL: Diagrama mostrando Tornado (amplo, constante) + Hammer Them (específico, pipeline ativo) trabalhando juntos, efeito multiplicador indicado
+[29:59] "So, I'll have the tornado strategy that's just fuck hammering people with content all the time. And at the same time, once somebody enters into the direct response part of the pipeline, I will then curate the pieces of content that go in front of them in an attempt to once again get the effect of uh those particular pieces of content influencing the sales process better."
+[30:22] "Um I think that in combination these strategies are powerful together rather than just picking one or the other. However, uh both isolated and running on their own have also proven very successful with the initial use cases for these. So, they don't have to be run together by any means."
+[30:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Drug Metaphor: Crack vs Heroin vs Speedball"
+NÚMEROS: Não especificados numericamente
+VISUAL: Metáfora visual humorística comparando estratégias isoladas vs combinadas, efeito amplificado quando usadas juntas
+[30:42] "But, um I I would imagine the best way to articulate it in a metaphor would be there's a lot of people who love crack cocaine and there's a lot of people who love heroin and there's some fuck wild people out there who mix both. You know, those are the crazy ones."
+[30:58] "Moral of the story is I'm trying to mix both and I get a wilder effect than what each one would do individually on its own, which are respectively very powerful."
+[31:08] "Moral of the story is you can't go wrong with doing one or the other, but if you do choose to do both, I personally see that as the best fit. Um I think that's a little more powerful of a strategy in it in itself to do both together."
+[31:22] "Okay, cool. Any questions on this? All right, cool."
+[31:28] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Documentation Coming Soon"
+NÚMEROS: 7 dias para SOPs detalhados
+VISUAL: Calendário mostrando timeline de uma semana, ícones de documentação e SOPs sendo preparados
+[31:30] "Um, to be clear, I will spend some time this coming week typing uh detailed SOPs on both of these and I will distribute those likely towards the end of this coming week."
+[31:41] "Um, so to be clear, apologize, I don't have any documentation on it, but I tried to give you guys this kind of stuff as real time as it gets to like me doing it and seeing great things working."
+[31:52] "So, moral of the story, I'll have uh more documentation on this in the coming seven days and I'll distribute that to you guys once it's done."
+[32:00] "Um, yeah, if you guys don't got anything else, then we're good to go. Great talking with you guys. Enjoy your weekends. Thanks, Jeremy. Bye."
+📊 RESUMO EXECUTIVO
+NÚMEROS PRINCIPAIS:
+72 horas: janela de delay entre lead e contato do vendedor
+$10-30/dia: budget recomendado para Hammer Them campaign
+$0.03-0.07: custo por thruplay (long-form no limite superior)
+$0.05: threshold para reduzir budget em 10-30%
+30-100 peças de conteúdo: volume recomendado
+10 segundos: threshold de visualização para exclusão
+365 dias: janela de exclusão de vídeos visualizados
+2 textos: enviados durante 72h (dia 1 e meio do dia 2)
+Setup #1: 100 conteúdos x $5 = $500/dia mínimo
+Setup #2: $10-30/dia total com CBO
+Setup #3: 3 campanhas x $10 = $30/dia (por duração)
+30 dias: extensão de janela para ciclos de vendas longos
+50/50: split de distribuição igual vs bias em Setup #2
+Centenas de dólares/dia: budget mínimo recomendado para Tornado
+2 anos: tempo de frustração com salespeople que originou estratégia
+ESTRATÉGIAS E SISTEMAS:
+Hammer Them Campaign:
+Delay de 72h entre lead originar e vendedor saber da existência
+Leads vão para CRM imediatamente mas não para pipeline de vendas
+Bombardeio de conteúdo via email, SMS e retargeting durante 72h
+Botão "I'm Ready to Buy" como escape para buyers prontos
+Audiências: call confirmation page, lead forms, video watchers, page interactions
+3 setups técnicos diferentes testados
+Setup #1 (ABO - Alto Budget):
+1 campanha com múltiplos ad sets
+1 peça de conteúdo por ad set
+Exclusão automática após 10 segundos
+Melhor controle de distribuição
+Desvantagem: $500/dia mínimo com 100 conteúdos
+Setup #2 (CBO - Baixo Budget):
+1 campanha CBO com 1 ad set
+Todos os conteúdos no mesmo ad set
+Budget $10-30/dia
+Requer moderação manual
+Bias natural para short-form
+Setup #3 (CBO Segmentado):
+3 campanhas CBO separadas por duração
+Short (0-2min), Medium (10-20min), Long (1h+)
+$10/dia por campanha = $30 total
+Melhor performance em budget baixo
+Tornado Strategy:
+Campanha ampla de conteúdo constante
+Todo tipo de conteúdo disponível
+Múltiplos objetivos de direct response
+Budget mínimo: centenas de dólares/dia
+Melhora show rates, cost per call, webinar metrics
+Automação de Marketing:
+Marketing automation no CRM com delay de 72h
+Emails educacionais agressivos
+Textos ocasionais com link "I'm Ready to Buy"
+Tags e listas ativadas imediatamente
+Deal pipeline populado apenas após 72h
+Zapier para integração entre CRMs
+ESTRUTURA:
+Fluxo de Leads:
+Lead origina (call booking/form fill)
+Entra no CRM imediatamente
+Não vai para pipeline de vendas
+72h de bombardeio de conteúdo
+Após 72h: popula no pipeline para vendedores
+Escape: botão "I'm Ready to Buy" bypassa processo
+Tipos de Conteúdo Estratégico:
+Depoimentos/testimonials
+Speaking content (palcos, apresentações)
+Talking head videos
+Podcasts
+Case studies
+Unboxing videos (e-commerce)
+Process walkthroughs (serviços)
+Estudos universitários
+Demonstrações de produto
+Conteúdo educacional
+Otimização de Campanha:
+Engagement campaigns
+Video view campaigns (thruplay)
+Exclusão baseada em 10s de visualização
+Ajuste de budget baseado em frequência
+Segmentação por duração de conteúdo
+Moderação manual de short vs long-form
+Filosofia de Vendas:
+Assumir que sales team é o pior possível
+Job do marketer: facilitar ao máximo para vendedor
+Replicar warmth de leads orgânicos em paid
+Familiarity bias acelerado (semanas/meses em 72h)
+Authority bias através de conteúdo curado
+Credibilidade estabelecida antes do contato
+DADOS FINANCEIROS:
+Investimento diário Hammer Them: $10-30
+Investimento diário Tornado: $200-1000+
+Setup #1 alto volume: $500/dia
+Setup #3 segmentado: $30/dia
+CPE/CPT normal: $0.01-0.001
+CPE/CPT Hammer Them: $0.03-0.07
+Threshold de otimização: $0.05
+Redução de budget: 10-30% quando acima de $0.05
+ROI: Melhoria em show rates, close rates, ciclo de vendas
+Perda estimada: "segunda mansão" em 2 anos por problemas com salespeople
+DURAÇÃO: 32:00 minutos FORMATO: Treinamento ao vivo / Mastermind call com Q&A interativo

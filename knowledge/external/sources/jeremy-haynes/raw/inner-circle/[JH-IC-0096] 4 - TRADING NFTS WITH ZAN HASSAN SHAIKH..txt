@@ -1,0 +1,1621 @@
+Transcrição Completa: 4 - Trading NFTs with Zan Hassan Shaikh
+
+ 
+
+ 
+
+[00:00] "Awesome. Thank you so much, Jeremy. Everyone awake?" "Yeah." "All right. Awesome. Awesome. I'm wearing a hoodie because Jeremy likes to sleep and live in negative 50° weather. Yeah. It's I don't know how you do it, man."
+
+ 
+
+[00:15] "Um today in the morning when I went to go shower, I I I go, you know, I'm like, man, I froze my ass off all all night. I get to the shower, I'm like, this is going to be my saving grace. I turn the shower on. I'm waiting, you know, 1 minute, 2 minute, 3 minute. I touch the water. I'm like, 'Ah, shit. Still cold, man.' Five minutes later, I'm sitting butt ass naked. I'm like, 'Damn, Leo.' Leo and and who? Or not Leo. I think Jay, you're in the room next to me, right?" "Oh, it's you? Yeah. I'm like, 'Dude, this guy's probably going to need to use the bathroom at some point.' I I just sent it. But thank you for the cold shower, Jeremy."
+
+ 
+
+[00:50] "Um Uh yeah, dude. Crazy journey. Um, honestly, I'm not a I'm not a full-time day trader. Like, I didn't just run away from my businesses. I know I post a lot about trading online. Um, but honestly, like I only do this like an hour or two hours a day. Um, business is still my main focus. It should always be your main focus."
+
+ 
+
+[01:10] "And really, you guys should learn how to put together what Jeremy's taught us. If you go out and and go to the marketplace, you'll realize that our skill set is easily one of the highest level skill sets in the market. I mean, if you can go and work two hours, you know, in a month on a client and make them 2.5 million a month, um, you guys got to know that's a really serious, heavy skill set."
+
+ 
+
+[01:35] "Um, even with what Ron and Cody have done, you guys have inspired me a lot with our own operations and the way that we, um, develop and build partnerships and things like that. And so, please, like, you know, trading sick. I even tell Jason, Jason's a client of mine. He wants to go and and stop his business and just trade full-time. I'm like, 'Dude, that's awesome, but like, dude, just systemize your business and make it so that it can either run or just exit it, you know, instead of just stopping. I think that's a really bad idea because you can make a lot of money in trading."
+
+ 
+
+[02:05] "You can um honestly, I'm going to tell you some stories about people who are making even more money than me. Um, and it's it's an incredible skill set to learn in your 20s, 30s. Um, as you're developing um obviously, you know, the older you are, you just have to make more time because obviously you might have kids and things like that. Um but uh it is a truly a very very valuable skill set."
+
+ 
+
+[02:30] "So first things first, first rule for you guys is please please please for the love of God don't run away from your businesses when this starts working for you because trust me when you go make you know 10 grand in 30 seconds. Uh you're just going to be like damn I didn't have to get a sales call. I didn't have to um we good? All right. Uh I didn't have to get on a sales call. I didn't have to get the work done. I didn't have to do whatever. I just pressed a couple buttons and the money's in my bank account."
+
+ 
+
+[03:00] "So, um, we'll walk through really a the, uh, the technical process. I've I've really flushed it out to be like an 80 to 90% success rate. I've also coded it out into an algorithm, um, that's really easy to use and and honestly, it's just completely changed the way that I trade. Um, and then I'll teach you some psychological things. Again, if you guys learn this stuff, you're just going to compound your wealth like crazy."
+
+ 
+
+[03:25] "Again, plebs, like Jeremy says, you know, they're wanting 20% 10% a year. You know, I I showed you a bunch of screenshots on Friday. I had three, four different trades over 80% each. So, when you know how to leverage the markets and you know how to actually have a process and a plan and a strategy and you know how to manage your emotions, this can be something that's very successful for you."
+
+ 
+
+[03:50] "Uh, and then lastly, I'm just going to shout out John. I know he's not here, but um really going through the bulletproof uh program has really helped me just calm myself down, calm my nerves, calm my emotions. Um a lot of us have gone through you know difficult experiences in life and whether you ignore it or not or believe this or not that those memories and past data is being stored in your brain and whether you like it or not you're operating from those experiences."
+
+ 
+
+[04:20] "So let's say money was really tight for you at one point you know at at first when you start trading you might start fucking up a lot because you just can't let the risk play out. And so a lot of things that I'll walk you through today like risk management, position sizing, how to have a proper strategy, how to have an entry uh and an exit planned out, those things matter a lot."
+
+ 
+
+[04:45] "And if you can't em manage your emotions, guys, I could give you the best fucking strategy on earth, which I think this is one of them. And you'll still blow your account. You'll still lose all the money because you're not primed psychologically. So if you do feel like you have emotional or, you know, uh mental challenges around this kind of stuff, go through the program. I think he's he's only charging like five grand or something, you know, and it's it's so worth it the amount of money that you'll make from cleansing out your mind."
+
+ 
+
+[05:15] "But anyways, without further ado, um you guys like uh crypto, I guess, more. Jeremy told me you guys like crypto more than more than the option stuff and the stock stuff. So, instead of uh showing you tickers of of the stock market, I I personally like options more because I believe that it's options are technically 100x leverage, so I can make a lot more money with a lot less risk. Um but let's talk about some cryptos. Are there any like micro cryptos or like cryptocurrencies that you guys are trading? You guys can shout them out."
+
+ 
+
+[05:45] "Luna." "What was it?" "Luna." "Okay, Luna. I like Luna. Anything else?" "Okay, byes. Harmony." "I think Harmony's one, right?" "Madic. Polygon." "All right. Anything else, guys?"
+
+ 
+
+[06:05] "All right. So, first things first, I will say crypto trading cryptocurrencies is a little different than trading the markets because almost every single crypto project is not real, right? It's it's like basically an idea. It's a plan. It's a white paper. It's a it's a road map. And so, people are investing in that road map because I tell everyone this nowadays is like the cryptocurrency boom right now or the bubble um is really just like the dot bubble in in the late 90s, right?"
+
+ 
+
+[06:35] "It's just this is a crazy technology that will change the world. It will change the way that we operate. Eventually, everything will be web 3, which means when I go to log into a a social media platform that is on the crypto uh platform. Um, I'm not going to log in with a username and password. I'm just going to plug my wallet in. Right. So, I'm sure Are you guys all familiar with like MetaMask and things like that, right? Okay, cool."
+
+ 
+
+[07:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "CTLST - Catalyst Framework"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Framework apresentado com as letras C-T-L-S-T destacadas, estrutura de processo de análise de trading
+
+ 
+
+[07:05] "So, um, and you guys can see this the notes, right? Right here. Or should I make this bigger? Okay, so let me just Okay. And I I'll just make this really wide. All right. Um, so I'm going to make this really simple and really actionable for you guys because truly at the end of this uh training and then I'll leave like 10 10 minutes uh for questions and Hust will come up and talk about crypto and NFTts."
+
+ 
+
+[07:30] "Um really really you should be able to just take trades and make money. Be calm and know that the strategy and process works. So, we'll go over Luna, Byte, one, Madic, um, and any other currencies that you guys like to trade. And then this process that I've developed, um, called catalyst, CTLST, um, is really just a very foolproof framework to understand why you're entering a trade, why you're actually putting your capital in."
+
+ 
+
+[08:00] "Because the reason why people can make so much money in trading or investing is because you're not leveraging your time or energy or skills anymore, which are all things that have caps upon them. Um, you can only work so many hours in a day. you can only have so many people run through your system until you grow the system. You can only serve so many clients until you need to grow your client base or charge more or whatever it is."
+
+ 
+
+[08:25] "Whereas in investing and trading, you're literally just leveraging your money. Um, and that's the highest level level of leverage you can have when it comes to making money. Even if you listen to Elon Musk talk or Jeff Bezos talk or Warren Buffett talk, what do they always talk about? They talk about capital allocation, right? That is the greatest skill set on earth because if you know how to allocate capital effectively, you know where to put your money to grow it."
+
+ 
+
+[08:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "C - CATALYST"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Primeira letra do framework destacada, explicação de catalisadores de mercado
+
+ 
+
+[09:00] "So first things first, C stands for catalyst. Okay, this is actually the biggest mover in any instrument whether it's a stock, crypto, whatever it is, is catalyst. And there's a reason why. Okay, so in the crypto world, it has a lot to do with uh things like gas fees, things like being able to uh have enough nodes on a network, things like how many transactions per second can you do, the speed of the network, um and then the applications of how the the blockchain works."
+
+ 
+
+[09:30] "So for example, why is Bitcoin valuable? Actually, if you look into it, if some of you crypto geeks, Bitcoin is not the best network to actually transact billions of transactions on every single day. It wouldn't work for for me to go buy a freaking coffee at Starbucks, it would take 45 minutes for the transaction to actually go through. That's why technologies like ETH and Salana and things like that are being built because it's faster."
+
+ 
+
+[10:00] "Okay, so Catalyst is the one of those things where it's like when you hear um about uh you know these Salana NFTs blowing up. Well, that's a that's a trigger for you to know, okay, maybe Salana is a good buy because there's an entire network of developers building technology on top of Salana. Okay, so these are the kind of things."
+
+ 
+
+[10:25] "For example, Bitcoin recently dropped down to like 41K or something like that. A lot of people are freaking out thinking the the bull market's over, which it could be. I mean, whatever, you know, it is what it is. I don't control the markets. I'll teach you about how I what my philosophy with trading the markets is. But the biggest reason is because the Fed this week um and those guys were too fucking to even put it out in a physical statement."
+
+ 
+
+[10:50] "They didn't even get up on the on the TV to say it. They released a paper statement that we had to read. Uh which is basically they're saying that because of inflation, they might start the tapering process and raise interest rates earlier than expected. And so that's why the market started tanking. That's why crypto started tanking because what does that mean?"
+
+ 
+
+[11:15] "When the uh when interest rates go up, people want to move their money out of growth and they want to put it into dividends. They want to put it into bonds because that means the yield on their money is going to be higher. Okay? So, that's what's happening. People are moving their money out of things that grow and they're going to put it into things that can produce them a return on their money, right?"
+
+ 
+
+[11:40] "Because a lot of if you look at any of the biggest players um in terms of wealth, they actually make the majority of their money through loaning, right? Because they want, you know, that's a very safe way to grow your money, right? it's limited risk and it's also, you know, you get things like collateral. So that's the first thing, catalyst. What's the news? What's going on? What's happening in the world?"
+
+ 
+
+[12:05] "If you see um, you know, a massive government go and take Bitcoin or start allowing cryptocurrency to be allowed um, in their government as a form of legal tender, guess what? The entire crypto market's going to go up. So understand that catalyst is the number one thing in the markets that move markets. Go ahead."
+
+ 
+
+[12:25] "You describe anything that..." "Yeah. So much. I mean, uh, in terms of, uh, you know, um, I would say the best free source is Twitter. Um, I I, you know, I I talk about them a lot, but, I would follow, if you're really into crypto, follow Becker. Jeremy dropped a really great video recently or dropped a link to one of Becker's videos on getting 10 to 100x gains on micro cap uh, crypto games."
+
+ 
+
+[12:55] "Hust's going to talk a lot more about that because he's he's obsessed with that. Yeah. Um, so gaming crypto and the reason why gaming crypto is is really going to be explosive in the short term is because all the other crypto technologies that are out there right now, they're not instantly applicable today, but gaming crypto is because there's literally already billions of dollars in the gaming world and they're already in the metaverse."
+
+ 
+
+[13:25] "You know, they're just using a remote control to play in the meta, right? Um but that you know it's if you look at the growth rates it's growing at a rate where things like esports things like um massive tournaments uh between gamers I'm telling you in 10 years uh the top esports gamers are going to get paid way more than actual athletes. It's just how it is because that's the way the world is going."
+
+ 
+
+[13:50] "So that's the first thing. Catalyst Twitter uh and then I I uh am subscribed to like benzinga benzinga pro that's for more like stocks. I'm a big options trader because again I get 100x leverage and I can make money going up and I can make money going down. Um so that's just why I like it a lot more. Um and also I just think that there is a lot more regulation in the market than there is in the crypto world."
+
+ 
+
+[14:20] "Um because you can get rugged really hard if you're playing with really micro cap cryptos like you're basically you know you're gambling at that point because you know the micro cap the market cap's so small and then you get in and it blows up and and then you get out. Some other ones that me and Hust really like Hust you want to read me out? We have sin, uh, FTM. Are there any ones that we really like that were in our that you would say that?"
+
+ 
+
+[14:45] "Sin, FTM, byes." "Yeah, we have bytes up there." "Those those are the ones." "Okay, cool. Um, we'll walk you through. We'll walk you specifically through the process that we're looking at in terms of um, you know, picking these plays for like a longer term hold. And I'm going to show you technically on the chart when to enter and when to exit."
+
+ 
+
+[15:10] "So, first thing again, catalyst, catalyst, catalyst. Okay, if there isn't a reason why you wouldn't like if if you can logically can't think, oh, okay, why would this go up or go down based on the news and what's going on in the world, you're just playing a game where there's more risk. Okay."
+
+ 
+
+[15:30] "And another another thing that I really want to mention in terms of trading is that the reason why you can make so much money is because you are taking on risk. And all of our businesses, especially digital marketing services, we're not used to going negative on anything, right? Like it's, yo, I'll do this thing for you. Pay me 30 grand. All right, I'm gonna go work and I'm gonna go do do what I I just sold you on."
+
+ 
+
+[15:55] "And really, all it took was your energy and time to go get that deal done and then make money. This is different. It's very different in regards to um how you make money because you're actually leveraging your capital and you're assessing risk because there is at the end of the day, I'll tell you a way to have a really high hit rate, but you can lose money. That's just that's the reality."
+
+ 
+
+[16:20] "But at the same time, at least you're not leveraging your time to make money with this, right? So that's why focus on your businesses. Don't ever stop building your businesses. Don't ever I'm never going to stop building income. I'm never going to stop building uh my active income up. That's a stupid That's a fool's game, right? However, I am going to always try and leverage my money to make more money just like the richest people in the world have done."
+
+ 
+
+[16:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "T - TREND (Moving Averages)"
+
+ 
+
+NÚMEROS: 50 WMA, 100 WMA, 200 WMA
+
+ 
+
+VISUAL: Três linhas de média móvel destacadas em diferentes cores, gráfico mostrando tendências de mercado
+
+ 
+
+[16:50] "So, that's the first thing. Catalyst C. Next is trend. Okay, this is why people you ever see those Wall Street fucking they're always like, 'Buy the dip, buy the dip, buy the dip.' Why do they say buy the dip? Well, it's because we're in an uptrend. We're on on a massive uptrend on literally everything."
+
+ 
+
+[17:15] "And that's why um you know recently what I've been telling people inside of my inner circle is that you know I I think uh it's a good time to honestly be cash. Um like it's okay to make trades, individual trades, but uh I've I've reduced my equity portfolio significantly because we're just at all-time highs. The market's at all-time highs ever, right?"
+
+ 
+
+[17:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "SPX Chart - S&P 500"
+
+ 
+
+NÚMEROS: $376 (March 2021), $468 (current), 50 WMA, 100 WMA, 200 WMA
+
+ 
+
+VISUAL: Gráfico de velas do S&P 500 com três linhas de média móvel destacadas, mostrando tendência de alta clara com bounces nas médias móveis
+
+ 
+
+[17:45] "Uh there's billionaires like Chamath Palipataya, if you guys follow him, who's literally saying, 'Dude, like the market's at all-time highs. if if you aren't going to, you know, change your risk tolerance because we're at all-time highs, I don't know what I can do for you. However, the reason why they say buy the dip is this is uh the spy, right? Uh actually, this is the SPX. So, this is a 10x leverage on the SPY. As you can tell, I like leverage."
+
+ 
+
+[18:15] "Uh but this is SPY, right? Uh the S&P 500. And as you can tell, I don't know if you guys you guys can see this, right? Is this an uptrend or a downtrend?" "Uptrend." "Okay. And so when I identified that this is an uptrend, the reason why they say buy the dip is basically uh this red line is what we call a 50 uh WMA weighted moving average. I'll write that down in the notes for you and I'll upload the notes to the Telegram."
+
+ 
+
+[18:45] "This is known as the 100 WMA weighted moving average and this is known as the 200 WMA. And literally, if you don't want to do not fucking else besides invest in the stock market or invest in any cryptocurrency, we could put up Bitcoin as well. um if you buy at these levels like historically, you will almost always make money, right? I mean, it's very clear, right?"
+
+ 
+
+[19:15] "Let's go back all the way to March of 20 2021. All right, SPI dipped down to a price of 376, okay, on March uh 5th, okay, of 2021. You tell me guys, if you bought here, would you have made money?" "Yeah." "Okay, so that's the simplest freaking strategy on earth. If you don't want to do anything else besides put your money in something that isn't burning value, like in your bank account, you can literally put it into the S&P 500 every time it touches one of these lines, okay? And you will make money."
+
+ 
+
+[19:50] "Um, even right now is actually a decent buying opportunity. We might dip a little lower down to this 100, maybe the 200, but right now it looks like we hit all-time highs. We're going to cool off. It's going to come back down and then you can buy again. Um, so let me just put that down. So that's the second thing is trend. And you can analyze trend using moving averages."
+
+ 
+
+[20:15] "Uh again, a moving average is just like what you learned in arithmetic in in middle school or high school. It's just a line plotting the data of the last 50 uh price candles. Okay? So, if the last 50 times of price went from like $50 to $100, it's a line that's just plotting that data. Okay? And that's how you can establish trend very easily."
+
+ 
+
+[20:40] "If you fucking are, you know, going and buying um puts or buying short on an uptrend when it's clearly going to bounce on off an uptrend, I mean, you deserve to lose your money, right? It's very very simple. Don't go short in an uptrend and don't go up in a downtrend. Um we'll pull up BTC real quick and you you'll see. I mean, this actually no matter what you do, and I what I'm assuming is because you guys are all busy building your businesses and you probably don't have time to day trade."
+
+ 
+
+[21:10] "Um probably going to be swing trading or more longer term investing. Literally the only thing you fucking need to know is that I'm gonna buy off a moving average and you will almost always make money. Like I know people they've got they literally all they do is they just buy when SPY is down and hits that moving average and they've got like 20 million in, you know, spy and that's that. I mean, you know, they're happy. That's what works for them. What works for you is going to be what works for you. I'm just going to show you what actually makes sense."
+
+ 
+
+[21:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "BTC/USD Chart - Bitcoin"
+
+ 
+
+NÚMEROS: $69K (resistance), $29.5K (support), $27.5K (weekly support)
+
+ 
+
+VISUAL: Gráfico de Bitcoin com médias móveis, níveis de suporte e resistência claramente marcados, tendência de longo prazo vs curto prazo
+
+ 
+
+[21:45] "So again, we can go over to BTCUSD. Okay. And again, if you take a look, obviously, Bitcoin is kind of like in a range right now where we don't really know where it's going. But if you really look at it in the short term, Bitcoin's in a downtrend on the daily. Right now, if we go to look at the weekly chart, I'm going to go over click here. Put in one week. By the way, I'm using Trading View. But if we look at one week, are we still in a downtrend? No."
+
+ 
+
+[22:15] "So, people freaking out. Everybody's freaking out about, you know, Bitcoin going to dump. Now, again, I don't know. I'm not a whale. I'll actually explain to you in a second, but what actually moves markets and things like that, but to me right now, Bitcoin is going to be a good buying opportunity all the way down to 27.5K just will like on a weekly basis. Anybody who bought at these levels made money. If you bought Bitcoin at 28K, would you be up right now?" "Yes."
+
+ 
+
+[22:45] "You would. So, it's it's that simple, right? that off these bounces, you're probably going to want to buy, right? When uh you know, there's so many people people say and great investors say buy be greedy when others are fearful fearful and be uh fearful when others are greedy. And the same thing, right? When there's blood in the water, one of my uh closest friends, he literally thousand%ed his net worth over 2021."
+
+ 
+
+[23:15] "And he literally said, he said, 'Zan, my the biggest thing that I know is when there's blood in the water, I'm going to be a shark.' Right? when there's blood in the water, when everybody's freaking out, selling, you know, selling their stock and things like that, you should be buying. And that's why even I remember when COVID happened and we were all I mean I was shitting bricks when CO happened to be honest. And Jeremy was like, 'Fuck yeah.' Like like we're going through a recession because here's the thing is those are the opportunities to have general generational buying opportunities."
+
+ 
+
+[23:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "SPY March 2020 - COVID Crash"
+
+ 
+
+NÚMEROS: $237 (March 2020 low), $468 (current), 100% gain in 2 years
+
+ 
+
+VISUAL: Gráfico mostrando queda dramática em março 2020 e recuperação subsequente, destacando oportunidade de compra geracional
+
+ 
+
+[23:55] "If we go back to spy um and we go back down here, guys, this was the general generational buying opportunity. If you guys just took everything you had and dumped it into the market into even spy back in uh what what is this March, you know, March 2020, guys, you would have gotten spy at 237. It's at 468. You would have 100%ed your money in like 2 years. Just think about that."
+
+ 
+
+[24:25] "You know, people literally nobody gets to have that unless you can understand how trends work, how the actual markets work. It's truly very simple, right? you just buy off a line and then you make money. So, um really make sure guys that uh you know you understand the trend and again that happens through moving averages."
+
+ 
+
+[24:50] "The moving averages that I've talked to you so far that work on longer time frames. So, the one day and the one week are the 50 weighted moving average, the 100 weighted moving average, and the 200 weighted moving average. WMA it's super easy to add to a chart. Right now, I'm using Trading View. And I I really say guys, you don't need to be a fucking technical analyst. You don't need to be a chartist, but if you want to make money, you got to know these things."
+
+ 
+
+[25:20] "You got to know where am I buying? Because look, look how simple the market is. You buy low and you sell high. It's not fucking rocket science. There are guys way dumber than you that are way richer than you because they understand how to buy low and sell high. So, buy at a time when it makes sense. So, you should really never be buying unless you're buying off a bounce of a moving average."
+
+ 
+
+[25:45] "Really like don't buy when when mother when Bitcoin goes back to 60k don't fucking buy. You should be buying now or when it's bouncing off the 200. If you're buying at 60k you're if you understand your risk is much higher. Your ability to lose money is much higher."
+
+ 
+
+[26:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "L - LEVELS (Support & Resistance)"
+
+ 
+
+NÚMEROS: $69K (Bitcoin resistance), $29.5K (Bitcoin support), $35K (entry example)
+
+ 
+
+VISUAL: Conceito de suporte e resistência explicado visualmente, níveis chave marcados em gráfico
+
+ 
+
+[26:10] "So that's the next thing catalyst. Okay. Uh and then trend after trend is levels. Okay. Now all levels are are they're basically areas of support and resistance. Okay. So let's go over to BTC. Um, and you guys will see this real quick. Let's just go to BDCUSD. Um, so clearly, right, and right now I just have my levels mapped out. Clearly this 69K level is a resistance. It's a key resistance."
+
+ 
+
+[26:40] "Okay, all that means is very simple is supports are levels where buyers, institutional buyers, people with actual money, not us, okay, billionaires, they're going, 'Oh, this is a good time to buy.' Okay? And resistance is where they're saying, 'Hey, this is where I'm going to sell because I want to lock in my profit.'"
+
+ 
+
+[27:05] "Because one of the biggest things that I think a lot of people who have money and try to deploy money get screwed up with is they make a ton of money, but they don't pull their profits. And that's another really stupid thing to do is you're making a ton of money and then you're like, 'Oh, I'm just going to let it ride and then it comes back down on you and then you sell at the wrong time.' Right? That's one of the worst things you can do. Understand where your support and resistance levels are."
+
+ 
+
+[27:35] "Again, it's super easy to tell on a chart. Like for example, right over here where we had a bounce on spy on July 2021. You guys can see that, right? Is this a support or a resistance? It's okay. No wrong answers." "Support." "Yeah. Yeah, you're right. Support, right? That's where buyers are. Buyers are sitting, right? And so basically the 29.5K level for Bitcoin on the week on the weekly, which is a big deal. That's a very strong level for BTC."
+
+ 
+
+[28:05] "So when if BTC comes back down there, should you be probably buying?" "Yeah." "Right. And when Bitcoin goes back to 69K and your grandma's like, 'Yo, I want to buy some Bitcoin.' Should you be buying?" "Absolutely fucking not. You should be selling."
+
+ 
+
+[28:25] "Okay. And so like these are the few pieces of knowledge that if you know and truly just internalize this stuff, it's very easy. Like the technical analysis is super easy. I the last part I'll go over before uh I I hand over the computer to Husten is that it's really psychology that you got to handle. and you handle your psychology. Jeremy always talks about this is having a datadriven perspective. So this is the data right in front of you. Okay? You don't buy at a top, you sell at a top. Okay? And when you're coming off of a bounce, that's when you buy."
+
+ 
+
+[29:00] "Uh and again, I'm just using these terms because in the crypto world, can't really short too well unless you use an exchange. Um so I know most of you guys are just buying for the value to go up. So I'll just use those terms for now. So um that's level, support and resistance. Okay."
+
+ 
+
+[29:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "S - SIGNAL (Entry Triggers)"
+
+ 
+
+NÚMEROS: $35K-40K (Bitcoin entry example), 30-40K profit in weeks
+
+ 
+
+VISUAL: Sinal de compra destacado em gráfico, bounce de suporte como trigger de entrada
+
+ 
+
+[29:25] "The next thing is signal. All right. Um, a signal is basically like a buying trigger. Okay? And I'll show you guys an algorithm that I coded out. It's pretty simple. I'll walk you through the theory of of how it works. Um, is a signal is a trigger for when you should buy. The the greatest thing I did in my trading that made me very very profitable and very consistent, 80 to 90% of my trades are green, is because I never buy or sell unless there's a signal in the market to tell me to do so."
+
+ 
+
+[30:00] "I'm not just fucking going, 'Oh, I'm gonna like buy this, buy that.' that I actually don't even I mean you guys can DCA if you want but if you know what you're doing honestly DCAing is a pretty rudimentary strategy. Um you want to have a signal. Okay, so I'll show you what a signal is like. Um one of the one of the best signals that you have is a bounce off a key support. Right?"
+
+ 
+
+[30:25] "So this signal right here where this candle bounced off this level, that's a signal for me that buyers stepped in. They're now in control. And guess what guys? If I bought Bitcoin at 35K when this bounced, which I actually did, um, think about what happened, right? I actually remember this week and I bought Bitcoin at like 35 to 40K and I ended up making like I bought a couple bitcoins and, you know, I made like within a few weeks I was up, you know, 30 grand, 40 grand, right?"
+
+ 
+
+[31:00] "So, that's what can happen if you understand what the signals in the market are. And I'm going to walk you through how to actually um run this strategy on different time frames. But this is very important for you to realize that you should only really enter a trade if there is a signal in the marketplace. And again, I think a lot of you will be you won't be day trading. You'll be like trading on a weekly basis or a monthly basis where you're just allocating capital."
+
+ 
+
+[31:30] "Look at the chart. Literally pop the chart open. Take a look. Look, is it ripping to the sky? Well, that's probably you missed your opportunity, right? You should have bought that when it was down in the ground, right? Like we'll take a look at Luna. I think Luna might be cooling off, but I don't really know if Luna's the best buy right now because it's been sending it, right?"
+
+ 
+
+[31:55] "Um, if you're, this is the simplest thing I can say to you guys. If you're buying when other people are super happy about their gains, you're buying their bags, right? Like, you're not buying at a good time. They already made their money. They're elated and euphoric because they made their money. And when you're buying off them, you're literally giving the money they make when they sell is from you."
+
+ 
+
+[32:20] "And that's the biggest thing that you guys got to realize is if you don't play this right, you're going to lose all your money. You're going to be very sad and you're going to think investing is a hoax and a scam. If you do it right, you're going to be like, 'Holy shit now I understand why there's 20 year olds with hedge funds making 10 million a day.' And I fuck you not, there are 20-year-olds that are making over 10 million a day trading the markets."
+
+ 
+
+[32:45] "Cuz at the end of the day, there's no barrier to entry to this, right? It's just understanding how to allocate my capital. So, that's the signal. That was the best thing that ever I ever did."
+
+ 
+
+[33:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "T - TAPE / Order Flow"
+
+ 
+
+NÚMEROS: Não especificados (necessário dezenas de milhões para mover mercado)
+
+ 
+
+VISUAL: Conceito de fluxo de ordens, volume institucional, level 2 data
+
+ 
+
+[33:05] "Now, the last thing is a little bit more complicated. Um, if you guys want to learn more, I'll I'll put my information at the end. You guys can message me. Um, but basically this is called tape, okay? Or what we call order flow. And all this is is seeing the money that's flowing into the market. Okay? So basically what you got to realize is what moves markets. You do not move a market. I don't move a market."
+
+ 
+
+[33:35] "For you to move any of these markets that's above a few hundred million market cap, for you to move any market, even a dollar, you're going to have to invest tens of millions of dollars into that equity. Believe me, I think only uh was it Brian Hess? Is that is that his name? Maybe he's got the money to move a market a few dollars. You know what I'm saying? We do not have that."
+
+ 
+
+[34:00] "So, you got to look at the market more as like a wave as as an ocean and you're a surfer. Okay? You want to surf the wave, get in when when the time is right, when the wave is building, you want to get on, you want to ride that wave, and then get off when the wave's over, right? And obviously, if any of you have tried to surf or anything before, if you try to catch the wave when it's already moving, you're going to get fucking clobbered, right?"
+
+ 
+
+[34:30] "So, it's the same thing. So, tape and order flow is just understanding. Um, you can see these on on different platforms like if you use Binance or if you use FTX or any of the different platforms that you trade on, you'll actually see something called level two. Um, and you'll also see the live orders. Basically, you want to watch those orders to see if people are uh buying and selling at a high volume. And you want to see if big money is coming into the market."
+
+ 
+
+[35:00] "Again, this is something that I don't I I think you're going to have to learn on your own because it's not something I can teach you just by showing you. It's something that it's like a language you have to learn because you're watching money flow in and out of a market. Um, but these these pieces right here are more than enough to help you understand how to properly enter and exit um a uh a security, okay? Whether it's a crypto, stock, whatever it is."
+
+ 
+
+[35:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "9/21 EMA Cross Strategy"
+
+ 
+
+NÚMEROS: 9 EMA, 21 EMA, 85-90% success rate, 1-5K/day currently, 100-500K/day (friend's results)
+
+ 
+
+VISUAL: Código de algoritmo mostrado, setas verdes e vermelhas indicando sinais de compra/venda, crossovers destacados
+
+ 
+
+[35:35] "Um, all right. The last thing I'm going to teach you guys uh is basically a strategy that I have that has gone really really really well. Um it's I'm honestly so grateful because I think this is the thing that if you guys can apply and implement you will almost almost never lose money. Almost like this is like a 85 to 90% uh success rate. I've back tested it and I've also coded it out."
+
+ 
+
+[36:05] "Um this is actually the code that I had u we have a few pieces of code but like this is the code that we coded out for it. Um and uh this is it right here. So, if you can tell, there's like these green streaks and red streaks. And obviously, guys, if you had bought on this arrow right here, all right, would you have made money?" "Yeah."
+
+ 
+
+[36:30] "Okay, so basically all this strategy is is known as a 921 EMA crossover strategy. Okay, it's a very simple yet very effective strategy. Uh, and I'm going to write that down for you or right over here. It's a 9 EMA and 21 EMA cross strategy. Why does this work? Why is this logically make a lot of sense? Because the 9 EMA is just an exponential moving average that is plotting data of the last nine candles of price. So, it's just creating an average line. Okay? Same thing with the 21."
+
+ 
+
+[37:00] "Now, guys, if a if the recent price action is more than a longer time frame of price action, what does that tell you? If you can get this logically, you're going to be able to make money." "Buyers." "Exactly. And what does that mean? What does that mean? Are we is there buyers buying and pushing the price up or are there sellers pushing the price down?" "Buyers."
+
+ 
+
+[37:25] "There you go. Now, if the nine crosses under the 21, there you go, sellers. Right. So, I'm telling you this cross strategy like there's like I mean hopefully that's my goal by the end of the year. I want to be doing 100k a day. We'll see if it pans out. Right now, I'm around 1 to 5k a day pretty consistently. Um I have a friend who literally this is his only strategy. Um, and I'll show you how to actually verify that it's a right entry because you could get faked out and I have a way of verifying it."
+
+ 
+
+[38:00] "Uh, but he literally makes 100 to 500K a day. And this guy's like he got out of jail 3 years ago. You know what I'm saying? Like he's he was a fucking criminal. You know him. So, and that's the thing like you guys got to realize you will make a shitload of money and of active income and actually having a lot of active income makes you a better trader psychologically because it's you don't have to live off this money."
+
+ 
+
+[38:30] "But this can compound your wealth like crazy. Like absolute crazy. I literally have a friend who was like he was poorer than me a year ago, didn't build any business, didn't do anything. He just was a really good investor and now he's like 2xed my net worth, right, in a year. So that's the kind of growth you can have if you know what you're doing and you learn this stuff properly. That's why it's so that's why I'm fucking obsessed. Like I'm trying to be fucking rich as fuck right? So I need to understand this stuff because capital allocation is one of the greatest skills out there."
+
+ 
+
+[39:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Death Cross vs Golden Cross"
+
+ 
+
+NÚMEROS: 50-day MA, 200-day MA
+
+ 
+
+VISUAL: Explicação visual de death cross (50 cruzando abaixo de 200) vs golden cross (50 cruzando acima de 200), sinais macro de mercado
+
+ 
+
+[39:10] "So those crosses, by the way, they're extremely important because you guys may have heard like depth props, golden cross, right? that comes from the very like heavily weighted moving averages basically crossing right so it's the 50 and the 200 in that case very long-term strategy is playing those death crosses and those golden crosses 50 and 200 those are important levels right"
+
+ 
+
+[39:35] "So I'm just trying to change this to the 1 hour I don't know what's going on" "Is the same explaining that breaking it down" "Yeah absolutely yeah I mean All that is is is a golden cross is the nine crossing over the 21. A death cross is known as the nine crossing under the 21 or on a long time frame. It's the 50. So the 50-day waiting move moving average, right? And then the 200 day. So it's a long time frame, right?"
+
+ 
+
+[40:05] "And so like that's showing us on a very macro scale like what's going to happen next, right? If if the 50 just like Zam was saying, if the 50 and the 200 cross to the upside, right? That means that we're starting to enter a bullish pattern, right? Same thing when you hear like I remember a couple months ago when BTC was entering a mini bare market. Everyone's like ah death cross, death cross, death cross. I don't know if you guys heard that. That was because the 200 was crossing under the 50."
+
+ 
+
+[40:35] "Okay, so guys, this is like a was moving up crossing a down 200. 200 is above the 50. And the 50 crosses the 200, right? It means that it to go hard." "Yeah. Now it's about to go hard because we're 200 in the short term. It's going hard." "Yeah. Logical. Like honestly, I'm telling you, trading be trading also made me a really good gamer because I'm just pressing buttons now."
+
+ 
+
+[41:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "TTM Squeeze Indicator"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Indicador TTM Squeeze mostrado na parte inferior do gráfico, barras azuis claras (bullish) vs vermelhas (bearish), conceito de momentum
+
+ 
+
+[41:05] "Um but basically, this strategy is it really works on any time frame. Um, and it'll help you time your entries and exits. I This is the only returns. So, basically, it's just a 921 cross either to the upside or the downside, and you just verify it with a tool called the TTM squeeze. Again, these indicators are on Trading View, and I'll send these notes over to you as well."
+
+ 
+
+[41:30] "Basically, this TTM squeeze is a uh momentum indicator. So, all it's showing you is if there's bullish or bearish momentum in the market. Bullish means it's going up, bearish means it's going down. So, for example, we had a uh 921 EMA cross here. Here we got a green signal. Okay. And it started going up."
+
+ 
+
+[41:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "LUNA Chart - 9/21 EMA Cross + TTM Squeeze"
+
+ 
+
+NÚMEROS: $42 (entry), $78 (high), $76, $70 (exit), $53 (later price)
+
+ 
+
+VISUAL: Gráfico de LUNA mostrando cross de 9/21 EMA sincronizado com TTM Squeeze azul claro, demonstração prática da estratégia
+
+ 
+
+[42:00] "Now, the only reason I would take this trade and maybe not some of these other signals is because if you can take a look down here, this is known as a TTM squeeze. And it's as simple as this. Okay? If I get a signal, a 921 cross. I I can um you know, I'll show you guys how to set this up uh later today or something if you guys want. Um, but basically if I get a cross, a 921 cross, which means the price is going to the upside and this TTM squeeze is light blue. So it's showing me bulls are stepping in. I'm entering."
+
+ 
+
+[42:35] "And guess what? If I had entered this trade, this is Luna. So you want to trade it, right? This is at $42. This we we saw highs of 78 and then came back down to 76 and then finally we crossed back under at $70 and then the price started coming down to 53. Okay, so you should have exited at 70 if you wanted to actually lock in your profits."
+
+ 
+
+[43:00] "Now, if you want to be long-term, you know, you could just buy off this 200. Buy buy, right? And you know, eventually you'll make your money. What's up next?" "So, in this case is the same logic as the 50 crossing." "Yes." "Up past. So, like the nine is the the nine trend line, so to speak, is passing the 21 like this." "Yes. That's the way to think about it is like if you have a short-term trend, okay, and a long-term trend, and right now we're following the long-term trend, right?"
+
+ 
+
+[43:35] "We're under the under the 21, let's say, because the 21's the longer term relative to the nine in this case. If we have a 9-day average now, coming up out of nowhere, right, and picking up steam, that means that in the short term, we're getting extremely aggressive with buying, right? And so, that trend is most likely going to continue, right? So, you're just catching an uptrend."
+
+ 
+
+[44:00] "Yeah. And you're catching it. You're catching the move because you can't move markets, bro. Whether you like it or not, the market, like a billionaire, like whoever's I'm telling you, bro, there's somebody out there who definitely owns more than 5% of circulating Luna. If he dumps, we're all fucked. Anybody who's doing Luna is going to they're going to lose half their value in a day or something, right? So, go ahead."
+
+ 
+
+[44:25] "Yeah." "Perfect. Yeah. So, that's the thing, right? is like when you're when you're um trading you or investing, you need to realize unless you're Warren Buffett or you're making big money moves, okay, or somebody like that, you're actually just a surfer. You need to surf the market. You need to know how to get in and get out because it's not just about getting in, right? Because if you get in and then the price moves against you, what was the point? You lost money. What's up?"
+
+ 
+
+[44:55] "So like yeah just to just to double like verify this like a 9 EMA finally crossover is like give you an idea like where it's trending and then you're using the TTM squeeze to tell you like to to buy or sell." "Exactly this exact signal to make an action." "It's it's together, right? We're using two signals together. So the thing is is that the 921 can get faked out. Like for example all over here it's getting chopped out. Why?"
+
+ 
+
+[45:25] "Well, if I verify it with the TTM squeeze, the TTM squeeze actually what it shows is why it's called a squeeze is when buyers and sellers are fighting. Price is coiling up and we call that a squeeze. When a squeeze releases, it's either going to release to the upside or the downside, which is where you see these really big blue or really big red, right?" "Exactly. That means momentum is moving, right? People are piling on."
+
+ 
+
+[45:50] "They either want to get in or get out because you got to think of psychology. investors, they they dealing with fear of missing out, greed, worry, stress, concern. Some some people have made money and they don't know when to sell. Some people haven't made money and they're holding to finally make their money back. So, you got to understand how people are piling into the market. Markets will coil up and then eventually someone will push the wall over and then people will start piling in because they see the market's moving."
+
+ 
+
+[46:20] "What was that? And with this trade use operator or anything like this, is this something like you can it's easy for you to plug in. So you get these like green and red like that's my code. Um yeah. So the biggest thing like I'm happy to give this to you guys, but I do like I would definitely want to just make sure you guys know what you're doing because even if I give you this, you'll lose money if you don't know what you're doing."
+
+ 
+
+[46:50] "Um cuz I've seen it. You know what I'm saying? I've known this shit forever and I've lost money before. So, um, I can definitely give it to you guys, no problem. Just see me after. I'll plug it into your into your Trading View. Like, this is a free software. Trading View is just a website. Um, but the algorithm I can give it to you. Just I just need to make sure you know what you're doing because I don't want to be the reason you blew your account. Any other questions before I wrap up and then hustling can go?"
+
+ 
+
+[47:20] "I'll trade anywhere between uh right now I'm keeping my size at 25 grand um in my account and then I'll grow that account and then pull the money out. Only reason why I haven't scaled up is because unfortunately when you scale up and if you're not prep prepared for it, your psychology will will make you fuck up."
+
+ 
+
+[47:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Trading Psychology - Scale Management"
+
+ 
+
+NÚMEROS: $25K (current size), $50K (failed attempt), $30K (loss), 17-day green streak, 1-5K/day profit
+
+ 
+
+VISUAL: Conceito de gerenciamento psicológico ao escalar posições, importância de acostumar com tamanho antes de aumentar
+
+ 
+
+[47:50] "For example, I had a 17-day green streak where I made 1 to 5k a day for 17 days straight and I was working maybe 2 minutes a day to do that. And then um I made a fuckload of money and I was like, 'Yo, I'm I'm a legend, right?' And I entered a position into with $50,000. And because it's a lot more money than I'm used to playing with, I blew it. You know, I I the setup was proper, etc. But I just didn't have my emotions in check."
+
+ 
+
+[48:25] "So I I entered with $50,000. By the end of the day, I'd lost 30 grand. Um yeah, I mean, it is what it is. I made it back by now. I made it well over back. But that's the issue with trading is you basically need to become used to the size. Otherwise, you will become your own worst enemy next." "Yeah. Deal against you."
+
+ 
+
+[48:50] "What do you think? What What is your personal plan to expand your ability to trade with 100K? Basically, dude, um just continuing to gain conviction in my trades. But I think I'm at a point where I'll be able to scale up pretty fast. Um you just got to get consistent first. Like all of you that are starting out, if you want to like trade in a shorter time frame, just trade with a thousand bucks, you know, like just play around."
+
+ 
+
+[49:20] "You'll probably blow like four or five accounts, right? But once you get it, it'll be routine. It'll be like like clockwork. So when you say below four or five accounts, does that mean that like when you're option trading, you're getting margin call and you just bail on that account and create another one?" "No, I don't I don't trade with margin. Um I just trade with cash. Uh but the account like I mean I've blown at least a few accounts. Basically all that means is the account goes to zero."
+
+ 
+
+[49:50] "I've I've I've traded and then I I was wrong about my trades or I didn't handle my psychology properly and I lost the money. But at this stage I finally come to a point where after enough research trade like trading back testing and all that this strategy the 921 if you just follow it unemotionally you follow that this this TTM squeeze is verifying that bulls are in the market and there's buying momentum you're almost never going to lose."
+
+ 
+
+[50:20] "The only way you could lose is if you fuck out, right? Is if you're in the trade and then like it dips down a little bit and you're like, 'Oh, okay. Cut, cut.' Right? Or if you make a ton of money and for example, you just, you know, let's say you're over here at 70 70 bucks on Luna. You bought at 30 or 40. You doubled your money, but now you're being pigheaded about it and you get a signal that it's bearish momentum now. And then you sell down here at 52."
+
+ 
+
+[50:50] "So, okay, you didn't lose your initial principle, but you lost a bunch and then it started running again, right? So, you just got to understand where you're entering and where you're exiting, right? Buy low, sell high. Are you attempting to time the market for the top to sell or you're like just okay let's say I have 100% I've gained uh 50% gain I'm going to sell half of what I have in that position let the other half ride so my principles pull out"
+
+ 
+
+[51:20] "Exactly. Yeah. And that's that's a lot where risk management and things like that come into play. If you guys want to learn more I'm very happy to we I'm running a live class kind of like internet master internet marketing in in February so we can talk about that and see if that's something a fit. But basically, um, I'm not attempting to time the market at all. I'm just waiting for signals in the market that tell me to buy or sell. It's that simple."
+
+ 
+
+[51:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Options Trading - Quick Profits"
+
+ 
+
+NÚMEROS: 20% gains in seconds, 10K position = 2K profit, leave $500 as runner potentially = 3K
+
+ 
+
+VISUAL: Estratégia de take profit rápido em options, conceito de "runners" - deixar pequena posição para ganhos maiores
+
+ 
+
+[51:55] "Now, like I don't 20% in like literally seconds. So, the whole point is you get in with, let's say, you get in with 10K, right? You make your 20%, now you're up 2K. Now, you take everything off, but leave 500 bucks in the trade. Let that 500 run for the rest of the day. That 500 could turn into 3K. You call those runners, right?"
+
+ 
+
+[52:20] "So, it's not really about timing it. rather they're just trying to get in with size, make some cash, and then just leave a little bit as profit and let it run." "Yeah. Cuz we you you can't time the market unless you have unless you have $30 billion. You can't time the market because you can't dump the market hard enough for it to be timed. Um it's impossible. You the only thing I can do is I know what the signals are in the market, when to enter, and when to sell. We'll take a few more questions then Hust can go."
+
+ 
+
+[52:50] "How are you getting 20% without using..." "Just wait one second. Huh?" "Options. Options move extremely quickly. Do not use margin. Do not use leverage. The easiest way to margin is what is like correlated with options." "Yeah. So, you can buy options. Options are basically 100x leverage plays because we need to switch my mic."
+
+ 
+
+[53:20] "Margin is when you're when you're using other people's money." "Yeah. When you're literally borrowing money." "Yeah. You're like borrowing money. So like half your position is isn't your money." "Yes."
+
+ 
+
+[53:35] "Got a quick question on just time allocation. So like know you're saying that you have a limited amount of time and you're looking for the market. You just sit down." "Uh no. So I just basically that's why I built my algorithm. Um it just alerts me. So now I don't even I don't even look at the charts until it clicks me and then when I get an alert on my on my uh trading view. It just says, 'Yo, we have an alert on Amazon or whatever.' I'll check if the TTM squeeze is showing bullish momentum. I enter it all."
+
+ 
+
+[54:05] "What's your intraday? intraday, the 921 works in the 4 hour, the one day, whatever it is. You know, it's just it's just a more active trading strategy. But that's how you build more wealth because at the end of the day, if you know how to do it, instead of getting a 2x on Bitcoin when it's going up and down and you're just holding throughout the whole thing, imagine if you enter on the right time, exit at the top or exit when the momentum's died out and then wait and then buy again, right? That's how you get a 4x return instead of two."
+
+ 
+
+[54:40] "Yeah, capital G." "You can make a GK." "Yeah, you can make a you can really especially with options. I really do think if you guys want to like you really want to pursue this just text me um or like message me in the telegram or whatever and uh I'll like we'll talk. I just unless you want to like dedicate learning and really just like figuring this stuff out, just play on the 4 hour on the one day and just buy off a moving average and you'll that's like a way better way to store your money than a bank account because it's always going to grow."
+
+ 
+
+[55:15] "Um but if you want to be like actively like yo bro I just made like 30k today whatever right and you want to be actively like making money every day and you got to learn and like I can't teach you all this in an hour but um it'll take eight weeks which is how long the class is. So, it'll take like weeks and weeks. But same thing with internet marketing, right? Like Jeremy's not going to teach me how we made $2.5 million in a month in an hour. No way. Right. The only reason that we're here is because we're opening our minds and we want to see what we can do."
+
+ 
+
+[55:50] "Yeah. I'm doing a eightweek class. Literally, it's a it's a carbon copy of the way Jeremy structured master internet marketing because I really love the way he taught that. Um, and it's just what I've learned in trading."
+
+ 
+
+[56:05] "Last question. You mentioned mention consistency and you try to get consistency when somebody starting you talk about 85% hit on strategy and stuff like that like what I understand is like so if the strategy is applied should be a similar success rate is there the only way you fuck up with the strategy bro is your emotion like cuz you're risking your money that you work hard for that you know like bro I lost 30k in a day bro like I lost enough money where I could have bought a SVJ you know what I'm saying sure I made it back."
+
+ 
+
+[56:40] "But like you your your brain like kind of just gets fucked up about it. You're like, 'Dude, I could have just bought a Lambo, you know, when in reality it's like you got to realize that, you know, it's just the the cost of the risk to a get the reward, right?' So honestly, man, if you're a robot and you just click buy, if you get the neural link, you'll be good. But emotions will fuck you up." "But yeah, the strategy is is practically foolproof."
+
+ 
+
+[57:10] "And there's paper trading as well that you can kind of practice on. And the reason why like I like paper trading, but the thing is you'll always execute better. It's like shooting around in basketball in practice. You hit everything, you get in the game, you start missing, right?"
+
+ 
+
+[57:30] "Cool. So, what I'm going to go over is I'm going to go over basically my top guys. Wait one second, guys. You guys can talk later. We literally have over 400 grand in NFTts and we're making 100 grand in passive income from that. If you want to learn how to do it, then listen. Otherwise, just go go talk outside."
+
+ 
+
+[58:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Husten's NFT & Crypto Presentation Intro"
+
+ 
+
+NÚMEROS: $400K+ in NFTs, $100K passive income
+
+ 
+
+VISUAL: Transição para apresentação de Husten sobre NFTs e crypto, destaque para valores investidos e retornos passivos
+
+ 
+
+[58:05] "So, uh, firstly, thank you, Zan. Um, you know, I just wanted to say real quick, I was going to make a slideshow like Jeremy put each, you know, lesson on a on a picture of my face, but I just don't have enough pictures of myself. So, that's why I didn't do that. But, um, you know, I'm I'm just going to be going over my my top 10 lessons that I could come up with just trading about seven figures between Xan Xan and I's cash over the past year, uh, in crypto and NFTTS."
+
+ 
+
+[58:35] "And I I was going to go really really deep. You know, I've made the most money in the past six months just 10xing on NFTTS because, you know, it's it's very low risk when you can mint, which is basically you're the one creating that NFT, right? When you go on OpenC, somebody put it there. And so when you mint the NFT, you're essentially the person who who created it and then got it on OpenC, right?"
+
+ 
+
+[59:05] "And so you're able to mint NFTts for 0.01 ETH, 0.05 ETH, right? And the second they get on the secondary market, they're at least two to 5xing. You wait a couple days, they 10x 20x, right? Because see all these NFTs, they're 1 E, two E, three ETH. They all started at less than 0.1 E mostly, right?"
+
+ 
+
+[59:30] "And so that's how I've been making the most money. It is very time inensive. I've been spending at least four hours a day every single day just keeping up with everything because it's a very very fastmoving space. So after talking to everyone yesterday, I was like, 'Okay, uh, fuck nobody's going to have time for this.' So I I really wanted to come up with my top 10 lessons which really I mean if you follow these lessons we will all be at least worth 10 mil in the next 5 years."
+
+ 
+
+[01:00:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Lesson #1: Business, Passive Income & Cash Flow First"
+
+ 
+
+NÚMEROS: 10K-20K+ monthly minimum recommended
+
+ 
+
+VISUAL: Prioridade #1 destacada - negócios e renda ativa antes de trading/investing
+
+ 
+
+[01:00:05] "Um because you know again we Bitcoin works in cycles. There's bull markets there's bare markets. The most money's made in the bare markets right and so those times are coming up and we can prepare accordingly for them. So the first lesson is going to be your business passive income and cash flow. We will talk a little bit about NFTTS later on uh towards the end and I have found some strategies to really limit my time."
+
+ 
+
+[01:00:35] "For example, I have a 16-year-old brother. I have him do all the little tasks for me to actually get into those NFTts. That's what was taking all the time. First, I have to do the due diligence. Then I actually have to take, you know, invite 10 people, level up in the Discord, you know, that's how you get um the whitelist. Whitel list allows you to mint the NFT for dumb cheap."
+
+ 
+
+[01:01:00] "Actually, yesterday I was pissed. I was telling Xan last night, I missed a drop yesterday. It dropped for 0.2 ETH and they're all worth one ETH right now and I could have minted three and I missed it. I was on the white list, right? So I prepped for it but I missed it because I wasn't, you know, on my computer. Um, so it it is an extremely good strategy. It just takes time. So that's why I'm really going to focus on these high leverage, you know, lessons that I've learned."
+
+ 
+
+[01:01:30] "So number one, like Zan started with as well, I mean the first thing is your business, right? makes no sense to do any of this if you're not scaling your business because truth be told, the best traders operate in full abundance. Okay? And the reason why is because investing in trading is an emotional game, right? And so you won't be willing to take risks or you'll take the wrong risks if you don't have cash consistently coming in."
+
+ 
+
+[01:02:00] "So the first thing is setting yourself up with passive income, cash flowing businesses. You know, we've been extremely blessed and honestly, it's great to have people like this in the circle where Ron and Cody, what you guys do is an amazing business model, right? You guys come in, you partner up with someone with a amazing delivery system. Now, you can come and you blow up their business."
+
+ 
+
+[01:02:25] "Zan and I have been doing something very similar in the automation space and we can also get, you know, cheaper automations so we can we can earn more passive income. So, that's number one, right? You want to be making at least 10K a month, you know, 20K a month plus. You want to be pushing that number. The more cash you have, the more you can fuck around, you know?"
+
+ 
+
+[01:02:50] "Like I I I take all all the cash that I probably would have spent if I was in college and had the money on Louis Vee, you know, the Cardier bracelet like Brandon Carter had. I would have bought all that shit. But instead, I'd rather just, you know, try to become a 100 millionaire before I turn 30, right? And the reason why I can do that is to take very, very big fucking risks, right?"
+
+ 
+
+[01:03:15] "Another thing, you want to just get a little bit involved, okay? Because if you don't get involved now, you're going to miss the next run. Okay? I lost all my money in 2017 and 2016. I had about 1015K that I saved up from jobs, graduation, XYZ. I lost it all, right? I was depressed for a very long time. I had zero cash going into college. Couldn't join a frat or anything. No cash, right?"
+
+ 
+
+[01:03:45] "But I was able to get in this cycle because I have a buddy who was bringing it to my attention in the bare market very heavily, but I was already an investor. I was already a believer. So, I got into Bitcoin. My average cost throughout the entire bull cycle is $18,000 because I was buying 10K and under. Same thing with ETH. my average cost is a,000 because I was buying $500 and under."
+
+ 
+
+[01:04:15] "So, you exposing yourself to this now is going to allow you to actually execute in the future. That's why it's extremely important to just get involved a little bit, right? And that's why I spend so much time because sure, I mean, it's it's not healthy. Uh, and I I really plan to take breaks now, but um I just want to learn about this space."
+
+ 
+
+[01:04:40] "Like Zan said, this is the fucking future, bro. This is web 3. It's literally being built right under us. Web two is Google, Microsoft, Facebook. That's Web two. Web 3 is being built right now. So you want to learn about it. You want to be the people who were looking, okay, why did these projects work? Why didn't they work?"
+
+ 
+
+[01:05:05] "You know, a lot like Zan said, this is a bubble right now because for example, Polka Dot, you know, and even Salana, he was talking about Salana, the NFTs. Salana doesn't fucking work, guys. I tried minting NFTs on Salana last week and the servers crashed. You know, people lost their Salana. People didn't get the mint. That's why everything's on ETH because it actually works, but it's expensive, right?"
+
+ 
+
+[01:05:35] "So there there's things that we can learn just by being in the space. You know, I have a dream and I intend I don't want to I intend to build a a crypto project. And I would I would I would heavily suggest the same for people like Jeremy and and Cody and Ron, whoever has the means, right, to start thinking, you know, what can I do in the crypto space you in one way or another because it is inevitable."
+
+ 
+
+[01:06:05] "Um and even, you know, we we paid Alex Becker $25,000 to go to his mastermind and he was talking all about SAS, right? And so he even recommended he was like, 'Hey, if I had cash, I would do SAS, right? And if I was to do it again, I would probably do a bigger SAS, you know, that cost even more.' But now, if you look at what he's doing, he's he's only in crypto, right?"
+
+ 
+
+[01:06:35] "And so like the smartest people, you see Mark Cuban in seconds of learning with of NFTs. You can go listen to his interviews. Within seconds of learning about NFTTS, he went and he spent hundreds of hours learning about it, dedicating teams so that he could actually innovate it, right? Same thing with um Kevin Olirri, right? I don't really like the guy, but he started off with a 3% allocation in his size in in 2020, upped it to 10 in 2021. Now he's saying he's upping it to to 20 20% of his fucking portfolio in in crypto. It's a big deal, right?"
+
+ 
+
+[01:07:10] "So that's why I'm so involved in this space because it's inevitable and the early we get into it, the more you'll be able to reap the benefits tomorrow. You know, I always used to look at everyone, I'm like, damn, how are they so successful overnight? You know, Becker built one of the top three NFT projects in the world right now almost overnight. It happened very fucking quickly."
+
+ 
+
+[01:07:35] "But I realized it's the years and years and years of preparation that lead to that one moment where you're able to actually make that lump sum, right? Where you're able to take everything you've learned, connect the dots, and then apply it and and really deliver true true value."
+
+ 
+
+[01:08:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Lesson #2: Connections & Education"
+
+ 
+
+NÚMEROS: 6-figure investment mentioned, 100K minimum investment in private deal
+
+ 
+
+VISUAL: Importância de conexões no espaço crypto, educação contínua via Twitter e Discord
+
+ 
+
+[01:08:05] "Um, and so again, like the number one thing is going to be just leveling up your businesses. You can't do any of this without leveling up your businesses. And honestly, if you start a crypto project or something like that, it is a business at the end of the day. So the things we learn are extremely extremely extremely um effective, you know, from Jeremy and we need to be applying them at at every single point of our life."
+
+ 
+
+[01:08:30] "Number two is going to be connections and educating. Okay. And I will say this, kind of like Brian Hess, he mentioned yesterday, oh, I I I met my partner by luck, right? And I met my number one crypto connection through luck. You know, he was my my roommate in college older brother, okay? Okay. And all he does is he crypto full-time."
+
+ 
+
+[01:09:00] "And so I encourage you guys to go make connections with people who they're full-time in crypto, right? They make insane amounts of returns in crypto, right? Like 100 type of 100% of their net worth in crypto type fucking right? And the reason why is because these people have insider knowledge, okay? And crypto is so early right now that a lot of it operates on insider knowledge. I mean, if you know something before everybody else, you're going to get fucking blessed, okay?"
+
+ 
+
+[01:09:35] "And that same thing with with my buddy. I mean, he literally asked me for a six-figure amount from me and Xan, and he wouldn't tell me the project name, okay? He wouldn't tell me the project name, but it's performing better than everything else I fucking have right now." "Yo, listen. I'm not fucking You're the one who told me to buy Bitcoin under 10K. He begged me when I did. I'm very happy I did."
+
+ 
+
+[01:10:00] "Um, he goes, 'Bro, you're going to give me as much money as you can. I need a minimum of 100K. I'm not going to tell you what the product is. I'm not going to tell you anything about it.' Cuz he can't. Minimum 510. He can't. These guys these guys can't because it's it's very private. Very very private. These are projects, you know, for example, you you hear about preipo, right? You're getting in before the market gets in. Same thing in crypto. People are launching projects all the time. It's called preido. Okay?"
+
+ 
+
+[01:10:40] "And so if you're getting into those types of opportunities, which you can only get with fucking connections. You can only get that stuff with connections or putting hundreds of thousands of dollars in things called launchpads. Okay? Launchpads is like working with a preipo firm, right? You since you own the launchpad, you can get into the IDO allocations, right?"
+
+ 
+
+[01:11:05] "So, I I would say the biggest thing, and it happened to me by luck, but you guys can go find it, right? Is is make connections, find people who are full-time, 100% in crypto, who've made insane gains because he's literally thousandxed his net worth in the past year." "Follow the people that we follow on Twitter. We follow all the like deep deep deep guys in crypto and follow Becker. All the people Becker follows on Twitter. all along like you'll be in."
+
+ 
+
+[01:11:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Education Resources"
+
+ 
+
+NÚMEROS: 5x current, targeting 10x minimum on private deal, 1000x net worth increase mentioned
+
+ 
+
+VISUAL: Lista de recursos educacionais - Twitter, YouTube channels, Discord groups
+
+ 
+
+[01:11:45] "Yeah. I talked to my buddy the other day and I was like, 'Bro, okay, don't tell me the project, but just tell me how it's going. You know, I'm getting fucking scared.' Um, and he was like, 'Yeah, bro. We're at about 5x right now and we're looking for at least a 10x, you know, he's going to outperform me. I spend 4 hours a day. I will not 10x my entire portfolio. It's it's hard, right?"
+
+ 
+
+[01:12:15] "But since he has those connections, he can do things like that routinely, routinely, routinely. This has been his life for the past decade, you know. He's been through multiple bull cycles, you know. So, imagine the ne connections he's made. Second is educating. All the information about crypto is on Twitter and Discord. If you want high level, you go on Twitter. If you want the nitty-gritty gritty, you go in Discords. Okay. Paid Discords are probably where the real alpha is. Okay. And the secrets in crypto, they call them alpha, so I'm going to call it alpha."
+
+ 
+
+[01:12:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Twitter Accounts to Follow"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Recomendação para seguir conta de Husten no Twitter para encontrar outras contas relevantes
+
+ 
+
+[01:12:55] "Um, yes. Yes. So, for Twitter accounts, I didn't want to list them all. Literally just go on my Twitter and just follow all the accounts you want to follow. Um my my at is my first name Husten last name Shake but with two H's at the end. Um follow all the accounts I follow because literally my entire feed is literally just stocks and crypto mostly crypto."
+
+ 
+
+[01:13:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "YouTube Channels (Watch on 2x Speed)"
+
+ 
+
+NÚMEROS: Avalanche: $30 → $140 (sold at $120), current $80-90
+
+ 
+
+VISUAL: Lista de canais do YouTube recomendados: Leo Trades, ZSS Becker, CryptoBanter, Hustleedia
+
+ 
+
+[01:13:25] "Um and so you know that's that's where I would start for the high level. You know that's where you can get an idea of what sentiment's at, what people are doing or the big guys buying or the big guys selling. Second is the YouTube channels to keep up with. I always watch on 2x. I never watch anything on 1x, right? And so I'm I'm more fundamental of a trader and an investor than Xan. Xan's the technical, right? And that's why it kind of works because if I need to get into a play, I'll be like, 'Yo, Xan, you read this chart for me and and we'll get in.'"
+
+ 
+
+[01:14:00] "Um, but I I like to be very fundamental, so I keep up with Leo Trades and ZSS Becker. That's Alex Becker and Leo Trades. These guys are wizards. They they're literally pioneering the crypto space to a to a very heavy degree. Um, and they're very honest and forthright about what they actually do as well. So, following them can make you a lot of money."
+
+ 
+
+[01:14:25] "You know, for example, IO was talking about Avalanche very early, 30 bucks. I got in very heavily in Avalanche, went up to 140, sold half my position and at around 120. Um, and now I hold the other half, right? It's like 8090. But these guys are very good. They're very honest. Next is CryptoBanter and Hustleedia. Okay. And actually, one of the best alpha groups I'm in is Hustleedia. It's a $100 a month Discord. Okay."
+
+ 
+
+[01:15:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Hustleedia Discord - $100/Month"
+
+ 
+
+NÚMEROS: $100/month subscription, NBA YC: 0.015 ETH mint → 1+ ETH, $700 → $10K+
+
+ 
+
+VISUAL: Screenshot de Discord mostrando canal NFT Alpha com discussões ativas e recomendações
+
+ 
+
+[01:15:05] "Um they drop routinely. There's people who are in these Discords. They're full-time. You know, these guys all they do is crypto. Okay. And so they will go and they'll and I'll show you guys this as well. You want to make it bigger? Yeah. I'm just Sorry about that. Put this in the telegram as well. Yeah. I'll put Why don't you just scroll down? Can you guys see this now or No. Yeah. Let's make it a little bit bigger. There you go."
+
+ 
+
+[01:15:40] "Okay. It's game changer. Awesome. Thank you, Zen. So, Hustleedia and I'll show you guys. I'll just literally show you guys right now so that you guys can get a little bit of a peek, right? What does this look like? Okay, so first of all, this is my Discord, right? There's a lot going on. Um, yeah, a lot going on. But, okay, this is Hustleedia private group. Okay, there's a VIP lounge. I pay 100 bucks a month for this."
+
+ 
+
+[01:16:10] "If I go in NFT alpha, okay, and I just read this, okay, and my next step is hiring a VA and just having them synthesize all this information for me and all the different discords that I tell them to um and just give me daily updates because that's, you know, I I want to lower the amount of time I spend in this. Um, but if you just go in this, I mean, you will literally see these guys are giving out alpha every single second. I mean, what are the what are the NFT products that are coming out? You know, is it a rugpull? What's the merit? What are they doing? Go ahead, Jen."
+
+ 
+
+[01:16:45] "What do you tell the VA to give you?" "Well, I'm I'm going to set this up, but basically all I'm going to do is I'm going to tell them the chats to look at. I'm going to have him log into my Discord, look at the chats, and then give me lists of just the highlights, right? Um because a lot of this is shit as well. I mean, they're just going to be talking so he can synthesize it for me and then come back to me."
+
+ 
+
+[01:17:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "NBA YC NFT Case Study"
+
+ 
+
+NÚMEROS: 0.015 ETH mint price, 5,000 supply, 1,000 left when purchased, current value 1+ ETH, 10 minted = $700 → $10K+, need 5 to play = only 1,000 teams possible
+
+ 
+
+VISUAL: OpenSea screenshot mostrando NBA YC NFTs, preços e características do projeto
+
+ 
+
+[01:17:20] "But basically, like I was in this group, somebody mentioned NBA, okay, it's this project, okay? And it's obviously going off the hype of Board Ape, right? So there there's hype there. And they also have some pretty strong fundamentals. This thing minted for 0.015. You guys see it just went up, right? But it minted for 0.015. I got 10 of these fucking right? Turns 700 bucks into over 10K. Free money, you know? And just from going in a Discord, reading through, picking it, putting 700 bucks in. And again, I don't care about $700 if I'm making 20K a month, right? I don't care about that. Go ahead, J."
+
+ 
+
+[01:18:00] "How how much time did it take you to do this? this project specifically probably 30 minutes. I went on I looked at the Discord. Everyone was talking about it. They were blowing up about it. And then I went on, it was a public mint. I got it and there was like 5,000 supply and when I got it, there was like a thousand left. So I was like, 'Okay, this came out a couple hours ago, almost sold out. If it's going to sell out in the public mint, when it goes on, the second I mint it, it shows up on OpenC.' Okay. So if I'm the first one to mint it on the secondary market, it's going to be worth something."
+
+ 
+
+[01:18:40] "It's a You sold the 10." "I sold I only have two left. So, I just I just took out as I went, you know. Um, and I'm going to leave one forever. I'll probably sell one actually today and then I'll I'll leave one for a very long time. And that's how you can get 100x in NFTs. NFTs right now are the best place to get a 10 to 100x because shitcoins, there's so many of them. It's very hard. Becker always talks about micro caps, micro caps. Very hard. I'll I'll share a tip about that as well."
+
+ 
+
+[01:19:15] "But do you have signals or like uh like like I guess what are your variables that you're looking at to know when to uh sell off an NFT?" "Well, so I I have rules and I'm going to go through that, but the second I make my money back, right, I'm taking half off the table. Okay. The second I make my money back because I want every single trade to be risk-free, right? So that's the first step. After you do that, you're in a pretty good position. Now you can ride it all. You can cut some as you go."
+
+ 
+
+[01:19:50] "Uh specifically this one, like what is this? like it's art." "It's art, but they also have utility. So, basically, it's called NBA YC. Okay, there's 5,000 items, which is pretty good. It's pretty scarce. And then in order to play, it's a game. It's going to be a game. In order to play the game, you need to own five of these. Okay, five. So, there's 5,000. You need to own five to play. So, there's only going to be a thousand teams, right? So, I was like, okay, if five to play on a team, let me buy 10, you know?"
+
+ 
+
+[01:20:25] "Um, and so they also they're they're coming out with some partnerships and things like that. And you know, I'm going to go through this as well, but you can vet a project very easily. You go into the Discord of the project and you start asking questions, start ripping them. You know, just like Jeremy said about the ecom stores he buys, right? He gets on there, he starts asking them questions, right? That's how you tell if they're real or fake."
+
+ 
+
+[01:20:50] "So, you hop in the Discord, you you set a alert for the AMA, which is like a live Q&A, right? You get on, you start fucking them, fucking testing them, see if they're they're legit, right? If they're being private, hiding things. Not a project I want to be a part of. sketchy." "What kind of questions would you ask?"
+
+ 
+
+[01:21:15] "Questions that I'll ask is like, okay, what type of partnerships? What's the vision? What's the utility? And then you'll really just grill them on those things, you know. Um, you'll see other people do it as well. I mean, that's the whole point of the AMAs is like you literally go on there, you'll be able to hear, you know, you can you can tell sometimes a real from a fake. Also, why don't we why don't we just get through the because lunch is coming up and I know Jeremy's got some other things."
+
+ 
+
+[01:21:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "All-In Podcast - Must Watch"
+
+ 
+
+NÚMEROS: 4 billionaires, watch at 1.5x speed
+
+ 
+
+VISUAL: Recomendação do podcast All-In com 4 bilionários, único conteúdo que não assiste em 2x
+
+ 
+
+[01:21:50] "I'll fly through these. Yeah, let's go through the rest of the lessons and then you guys All right, cool. Lastly, All-In podcast. Every single one of you guys should be watching this. Four billionaires, they hop on every single week. They shoot the shit okay? Every single one of you guys should be watching this. This is the only one I don't watch in 2x. I have to watch it in 1.5 cuz they drop so much fucking knowledge."
+
+ 
+
+[01:22:20] "You know, like Zan was talking about Chamat literally says, 'The reason why I invested in Salana is because I saw all the developer activity move from Ethereum to Salana.' So if you see the developers move, that's where all the money is going to move because the more activity on the chain, the more value there is in that in that ecosystem. Okay? So all-in podcast, it's uh life-changing. You get smarter every single time you watch it. Okay."
+
+ 
+
+[01:22:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Lesson #3: Don't Be a Maxi - Adapt & Be Open-Minded"
+
+ 
+
+NÚMEROS: Hundreds of thousands made from NFTs, 1 ETH mint → 15 ETH
+
+ 
+
+VISUAL: Alerta contra maximalismo (Bitcoin, Ethereum), importância de mente aberta
+
+ 
+
+[01:22:55] "Next, don't be a fucking maxi. Adapt and be open-minded. Don't be a Bitcoin maxi, Ethereum maxi. Maxi means maximalist. Like you live and die that coin. Never do that. It's literally the dumbest fucking shit I've seen in crypto. And it makes you miss on opportunity after opportunity after opportunity. Be open-minded. This is a fast new evolving space. You know, maxis will miss everything due to ignorance."
+
+ 
+
+[01:23:25] "I see on Twitter people fucking on NFTTS. You know, those guys are idiots. I've made hundreds of thousands of dollars off NFTs recently, right? I also minted another NFT for one ETH and it's now worth about 15 ETH, right? So, it's stupid money. And I would have missed it if I was only on the Bitcoin train or Ethereum train, which I could have been, right? But I I I choose to be open-minded."
+
+ 
+
+[01:23:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Lesson #4: Prep for Next Cycle - 4 Year Cycles"
+
+ 
+
+NÚMEROS: 365 days from peak = best buy opportunity, 1-3 months left in current cycle, 20K-40K BTC target in next cycle
+
+ 
+
+VISUAL: Conceito de ciclos de 4 anos do Bitcoin, preparação para bear market
+
+ 
+
+[01:24:00] "Next, prep for the next cycle. Fouryear cycles. Okay, best buy opportunities are historically 365 days from the cycle peak. Okay, I want you guys to all just take one second, okay? Think about how much money you're going to put in your pocket over the next four years. Okay, the actual income, just think about it, right? What are you going to make this year? How much you going to put in your pocket, right? Over the next four years, how much you going to put in your pocket, right?"
+
+ 
+
+[01:24:35] "I'm willing to bet it's a very reasonable number for a lot of you guys, right? Don't worry about all this hype during this bull market, especially if you're new. Okay? The reason why I share all this is because, you know, this opportunity is not going away. Okay? I'm not telling you, hey, go ape in, you know, fucking 100k into Bitcoin and Ethereum right now. That's not the smart thing to do, right? Instead, prep for the next cycle."
+
+ 
+
+[01:25:05] "You guys always, you know, everyone here is planning to be on in business for the next 10 years. If you plan to be in business for the next 10 years, you should be worth 10 mil by the end of the next cycle. There's no doubt about it. You guys are hearing about it right now, right? Bitcoin was at 10K. It went to 60K and that was the literally the least risky investment you could have got into right at the start of the bull market in the bare market."
+
+ 
+
+[01:25:35] "So best buys are historically 365 days from the peak where we're at right now. There's really a couple scenarios, okay? Right. Either we're already in a bare market, okay? Or because everybody believes I guess this is like the um the belief system out there is that the bull market is lengthening. Okay? If it is lengthening, we have about 1 to 3 months left. Okay?"
+
+ 
+
+[01:26:05] "If you're buying now and you're not looking at the prices basically every week, you're not going to be able to sell in the right time. Okay? Or maybe you'll make 2 3x and it won't be enough for you to sell because it's a very risky asset class. Right? So instead, again, prepare for the bull market. Put some cash uh bare market. Put some cash in your pocket. Be like, 'Hey, this is my Bitcoin fund. This is my crypto fund.'"
+
+ 
+
+[01:26:30] "You put more time into this and more time option." "Zen option trades. I this is what yeah when me divided our skill sets because we divide and conquer because I know when Xan masters trading I'll literally sit right next to him and when he enters a position I enter and we both make money you know so I'm I'm focusing on this I just throw him all my free cash just throws we were yeah we were day trading together for a while and then I was like you know what he's more focused on that I like crypto more anyway it's just divide and conquer Ron"
+
+ 
+
+[01:27:05] "Why do you say one to three months I say one to three months because I mean it cycles are about four years on average okay and and they're saying that they're lengthening, right? Okay. So, last bull market ended in December/January of 2018 2017 2018. Four years from that logically is December to January of 2021 2022. If they're lengthening, right, it buys us anywhere between 1 to 6 months, right?"
+
+ 
+
+[01:27:40] "Like there there's not more than six months left in my opinion. Good job, Matt. Because of the traffic and popularity of it now and everything changed with three coming up, it makes me wonder if it's going to last. the crash that it had before. There's so many." "So, here's the thing, right? I I have those same thought processes. What if Bitcoin's matured to a point where it doesn't have these crazy fucking cycles? I'll tell you right now, that's a top signal. That's what people used to say at the last top."
+
+ 
+
+[01:28:15] "They want to believe that it's not going to fucking crash. Is it going to crash? Hell yeah, it's fucking going to crash. XRP doesn't have fucking It's worth hundred billion dollars, right? All they have is headsp space, you know? All they have is literally supporters. Cardano doesn't do fucking Salana still doesn't work, bro. I literally tried to mint an NFT on Salana. It doesn't work. Okay. And that's why honestly, like Xan was saying, that was a catalyst. I saw that. I didn't mint it. I sold 20% of my Salana that same day."
+
+ 
+
+[01:28:50] "So, you it went down. Wrap up real quick and we'll just do questions for like 10 minutes and then lunch is basically now, right?" "Yeah, absolutely. All right. So, we'll just wrap up and then we'll Yeah, let's let's run through these. Okay."
+
+ 
+
+[01:29:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Lesson #5: Most Money Made in Bear Market"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Ênfase em preparação de cash e mindset para bear market
+
+ 
+
+[01:29:10] "Most money is made in the bare market. Prepare your your cash and your mindset accordingly. Don't FOMO in. Okay. Prepare your cash accordingly. Okay."
+
+ 
+
+[01:29:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Lesson #6: Take Initial Out - Play with House Money"
+
+ 
+
+NÚMEROS: Top 25 crypto: sell initial at 50% up, High risk/NFTs/micro caps: sell initial at 2x
+
+ 
+
+VISUAL: Estratégia de risk management: recuperar investimento inicial e deixar lucro correr
+
+ 
+
+[01:29:25] "Number six, take initial out. Play with house money. You can't lose. Mitigate your risk. Okay. Investing is all about mitigating risk. Um, this is my rule of thumb. If it's a top 25 crypto, once I'm up 50%, I sell my initial. Okay? Because these things move way too slow. Okay? If it's something like high risk NFTts, micro caps, I sell when I 2x. Okay? Sell my initial. Let the rest ride and then it's your job to deter micro cap."
+
+ 
+
+[01:30:00] "Micro cap. at 2x and they 2x pretty routinely. Yeah, they they move quick. For example, we recently bought Synapse. It 2x on us in two weeks. In two weeks, it doubled. We pulled our our principle out and we're now letting the rest ride. So, it's a free position. Make sense? Same thing with FTM, right? We got in, it doubled. We pulled out our initial principle so we can utilize that capital for something else. Now, it's a free position. That money is free to us. Whether it goes all the way to the moon or it dies, it is what it is. Free."
+
+ 
+
+[01:30:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Lesson #7: High-Level Indicators"
+
+ 
+
+NÚMEROS: 20-week SMA, 21-week EMA (Bull Market Support Band)
+
+ 
+
+VISUAL: Bull Market Support Band destacado como melhor indicador de curto prazo
+
+ 
+
+[01:30:45] "Okay. And now, next, the most highle indicators. Okay. Again, you guys are high level people. Well, you guys need to focus on your fucking businesses. Like, we we really need to all be making at least 100K a month, you know, like at least in our pockets, right? So, this is that's the most important thing. How can we stay high level and still be, you know, um efficient in these markets, right?"
+
+ 
+
+[01:31:15] "Two things. Number one, for the short term, the bull market support band, and number two, the rainbow chart. Okay, rainbow chart is really, really simple. Well, we'll start with the bull market support band. It's the 20week SMA and the 21-week EMA. Okay, so this has been back tested. This is probably the best indicator and just one, you know, short-term indicator that you could look at."
+
+ 
+
+[01:31:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Bull Market Support Band Chart"
+
+ 
+
+NÚMEROS: 20-week SMA, 21-week EMA, $30K loss mentioned from buying below band
+
+ 
+
+VISUAL: Gráfico mostrando Bull Market Support Band, área segura acima da banda vs perigosa abaixo
+
+ 
+
+[01:31:50] "Okay, if we're over the the bull market support band and we hold it, we're most likely risk. Okay, and this is what I was going to talk about with those micro caps. If you're buying micro caps, never buy when we're under the support band. Buy when Bitcoin is over the support band and holds that support band. Okay. The reason why is because micro caps, they move after Bitcoin. Bitcoin moves first. Micro caps move after."
+
+ 
+
+[01:32:20] "So, you will have a few days to get into these things in a very risk uh averse scenario. Okay? So, you want to be watching this bull market support band if you want those crazy degenerate 10x gains, right? Like Alex Becker always talks about, do not fucking buy down here because I lost 30K by doing that. Okay? Only buy when it reverses, okay? And it holds. Is this Trading View?"
+
+ 
+
+[01:32:50] "Yeah. Yes. This is Trading View. Just search up bull market support band. It'll come up. Yeah. And all you got to do to do that, hustle, why don't you just You don't even need to add it. This is literally like someone already made it. They added it. You can use Google, right?"
+
+ 
+
+[01:33:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Bitcoin Rainbow Chart (Logarithmic Scale)"
+
+ 
+
+NÚMEROS: $20K-40K projected low in next cycle
+
+ 
+
+VISUAL: Gráfico logarítmico do Bitcoin com faixas coloridas indicando zonas de acumulação, venda, etc.
+
+ 
+
+[01:33:15] "So, this is for short-term if you're getting into those little speculative fucking coins. Okay. Next is the Bitcoin price, the rainbow chart. Okay. This puts Bitcoin on a logarithmic scale. Okay. And this is a really, really good chart because you're going to see it breaks down what you should be doing. Okay? And if you look, there's always opportunities where we go into accumulation. Okay, we're going into accumulation right now. You guys see that?"
+
+ 
+
+[01:33:50] "So, right now, is it a bad time to buy? No, not really. You hold 5 years, you will not lose money. You know what I mean? You will you will make really really good money either way because this is an accumulation phase on exponential range. Okay? Realistically, you want to be buying as close to the bottom of these these as you can. And will it come back to these levels? Yes. Okay."
+
+ 
+
+[01:34:20] "People will tell you, 'Oh, the bull market's going away.' The only thing that's going away is maybe we won't see a 90% drop. We'll see a 70% drop, 60% drop. We're still going to drop. We're still going to drop. It's inevitable. Um, so yeah, you want to be buying when it's low. And it looks like we're probably going to hit a low of around 20K in the next cycle. 20 to 40K. Uh, maybe a little bit more depending on how aggressive the cycle gets. Okay. So, is it a bad time to buy? Not terrible. If you get to around 30K, I would definitely be layering in buys where all the action happens."
+
+ 
+
+[01:35:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Lesson #8: Where Action Happens"
+
+ 
+
+NÚMEROS: Não especificados
+
+ 
+
+VISUAL: Twitter (high-level) vs Discord (nitty-gritty), paid Discords para alpha real
+
+ 
+
+[01:35:05] "We talked about this. Twitter for high level Discord for nitty-gritty. Um, you guys have to be active if you want to get into these Discords. These guys don't make it easy. Um, I I always just come in and I'll DM the guy who owns the Discord on on Discord or on Twitter. I'll be like, 'Yo, I'm I'm you know, I'll just kind of help myself up, hype myself up and be like, 'Yo, I run online businesses. I do all this shit I make a lot of money in crypto. Let me in.' And they'll usually let me in."
+
+ 
+
+[01:35:40] "So, you got to reach out, right? And just like kind of tell them that you're fucking legit and they'll let you in because they want highlevel communities. These are the best ones I'm a part of. Hustleedia made me multiple 10xs on NFTs. Alpha Gems, this one's uh kind of hard to get into, but the guy who runs it, his name is Saf Z, SAFz on Twitter. And we'll send you these notes, too, guys. Like, I know you guys are are right now, but it is dropping in."
+
+ 
+
+[01:36:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Lesson #9: Neotokyo - Premium Mastermind"
+
+ 
+
+NÚMEROS: $150K+ spent in last month to join, $200/day passive income from holding, 1,000 projects tracked (1 per member), 10 year passive income plan
+
+ 
+
+VISUAL: Neotokyo como mastermind exclusivo criado por Alex Becker, acesso a multi-millionaires
+
+ 
+
+[01:36:15] "Next is Neotokyo. Xan and I just literally spent in the last month off of all of our NFT gains, um, over 150K on getting into Neotokyo. Neotokyo is is made by Alex Becker and it's literally a super fucking mastermind. I'll tell you guys, you know, I'll share some things as well when I can um from inside this group. They try to be like an Illuminati and hide everything."
+
+ 
+
+[01:36:50] "But um what what like for example, what this mastermind does is if I go on my Discord, I have people DMing me that are multi multi-millionaires, right? And they're full-time in crypto, right? Like they've built SAS companies, they're like Becker, they run gaming VC companies, all this type of shit And it like you'll literally see I'm talking to all these guys, you know, like these these the these these guys are, you know, if you put 200k in NFT, you're probably a baller to some degree, you know."
+
+ 
+
+[01:37:25] "Um, so I paid for that. I told Zan, you know, he kept on saying, 'Yo, let's join another mastermind.' He was like, 'Let's reup on TNF,' which I think we're going to do anyway. But I was like, 'Okay, let's why not why not pay for this mastermind?' Because this is a mastermind as well, and nobody has access to this type of information. The stuff that's going inside go going on inside Neotokyo is second to none."
+
+ 
+
+[01:37:55] "I mean these guys literally talk about the craziest shit They have over they have they have basically like a thousand projects that one member of the one one one one each person has is in charge of one project and you update the project in a Google sheet every single day. And again, you know, being a part of these mastermind groups, I'm going to be able to get crazy 10 x's, 50x's, 100 x's."
+
+ 
+
+[01:38:25] "They also give you free whitelist spots, and that's another reason I joined. I don't want to be wasting time. They give you free whitelist spots in in different projects. So, for example, I missed a white list yesterday that I got, but it minted for two. It's already worth one ETH, and they drop passive income to all the holders. Okay. Um, Neotokyo, we also make about $200 a day passively right now just by holding it."
+
+ 
+
+[01:38:55] "Yeah. So, basically, I'm just going to like point you out, Ron, Cody, Jeremy, and anybody else who's just making like an absolute fuckload of money right now monthly just by buying the answer. You're not going to be you're not Yeah. And the other thing is I think I it will be pretty bare market resistant because it's literally a Bitcoin mine. It's literally a Bitcoin mine."
+
+ 
+
+[01:39:25] "And the reason is is because Becker they say this inside. They don't tell anybody this and nobody really knows this because I was on Twitter trying to find this shit out but I couldn't find it. Nobody tells it. Um they're going to give passive income for the next 10 years. Okay? So it's only going to be 10 years that they're giving passive income. Okay? And you can actually increase the amount of passive income that you get by burning bytes. So if you burn about 10 ETH in bytes, you can increase your yield by one bite per day. Okay."
+
+ 
+
+[01:40:00] "The bite price right now is about $90. Yeah. Yeah. So right now, like literally me and Hust made $200 today just by having the the NFT or Yeah. Neo Tokyo. And the thing is is not just about it's about the mastermind. Yeah. Like like what I really and and that's the craziest thing, right? Is like the the reason why we joined Neotokyo is because we want to fucking build, you know?"
+
+ 
+
+[01:40:35] "Like I the B in billionaire is for builder, right? Like I personally think the M and millionaire is for middleman. I could be wrong, but you feel more like a middleman when you're helping people increase rev or XYZ. You're you're more of a middleman, right? When when you're fucking building real value, that's when you're a billionaire. Um and so that's why we joined Neotokyo. It's a mastermind. I I think all of you guys are so fucking smart."
+
+ 
+
+[01:41:05] "If you guys find a little pocket, right? Let's say you're really interested in sports. Go look at sports. Go learn about crypto. See how you can bridge the two, right? You like you like gaming, go look at gaming, go look at crypto, go bridge the two. Sales, go find sales. go find you can literally innovate so much in crypto because it's so fucking early. Okay, so that's that's that's another piece."
+
+ 
+
+[01:41:35] "Also, like you realize like literally, you know, Jeremy's client, the guy who just made 2.5 million a month, of course, he's got the money and the cash flow to do this now. Dude, he just fucking around and made $150 million market cap coin, which is actually not that hard. And you got to realize that all these coins, all these projects, 99% of them are shit They're not going to not going to be here in 5 years. But there's when you have a good plan, when you have a road map, people are willing to fund you."
+
+ 
+
+[01:42:10] "It's mostly roadmap and marketing. And we have the fucking marketing. So like there should be no reason why we can't do it too. My clients just pretty much everything because of this like 48 million off. Yeah. And there you go. There you go. Like I've literally we I've lost a lot of money, but if I was to tally it all up, I probably made more money from from just like investing in this type of stuff than I have in my business, even though our business does extremely well, you know?"
+
+ 
+
+[01:42:45] "And that's that's the multiplying cash part is like, you know, you literally get to take the done that shit if we didn't if we weren't making hundreds of thousands a month. And trust me, I have the same dream car as Alex, and I probably could have like been close to getting it, but I was like, 'Fuck it. I don't need it right now.' You know what I mean? Like, yeah, literally, yeah, you you could buy it, but I don't need it right now. You know, I have a 2013 BMW. It's still nice. It's still sexy. You know, not touchscreen, but it's LED, right? So, I'll take it."
+
+ 
+
+[01:43:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Lesson #10: Shitcoins Strategy"
+
+ 
+
+NÚMEROS: 90% drops common when Bitcoin dumps
+
+ 
+
+VISUAL: Regra: só comprar shitcoins quando BTC está acima e mantendo Bull Market Support Band
+
+ 
+
+[01:43:25] "Um, and then lastly, shitcoins. Buy once BTC fully reverses. Do not buy a shitcoin if BTC is under that support band. Buy it when it holds that support band because that's how you're going to mitigate your risk. These shitcoins follow Bitcoin and when Bitcoin dumps, these things go like literally down 90%. Um, so yeah, that's that's everything."
+
+ 
+
+[01:43:55] "And obviously I know we got to wrap up here, but I mean you guys have gone so fucking far down this rabbit hole. Is there a way do you guys put out this information regular basis? Is there a way that we can use you guys as resources?" "Yes, I'm looking to start a YouTube channel and a Twitter pretty soon. So that's what I I'm I'm looking to just do that a lot of that."
+
+ 
+
+[01:44:20] "And and honestly like guys, like nothing we've done is is impossible. Like you guys are all we're we're all peers here. You know what I'm saying? like you don't know anything more than I do. You know what I'm saying? And I don't know anything more than you do. At the end of the day, we're all at the same level. This is just just what you're doing to educate yourself, right?"
+
+ 
+
+[01:44:45] "Like instead of going and watching Netflix when you go to bed, why don't you just put on a a YouTube video from Becker or Elio Trades or whatever. Cuz at the end of the day, I'm telling you, like this moment in time, this window is that same window that you know when Jeff Bezos was working, he was making a million dollars a year as a hedge fun manager. He saw the growth of the internet and he was like, 'Holy shit I got to do something.' All he did when he started was build a fucking ecom site for books."
+
+ 
+
+[01:45:20] "We're literally 1999 web 2 right now. Literally, like we're literally going to pop and then there's going to be a whole new wave of companies that come up the next time, you know? So, like we're we're at that point in time. Um, you know, there's there's so much value in just being around this stuff because like I'm telling you, it's not going away. So, in 10 years when opportunities present themselves to you guys, like, yeah, like this makes sense or this doesn't, you know, because you just been around it. That's what you get uh from experience."
+
+ 
+
+[01:45:55] "So I I completely agree. You know, I I completely cut out Netflix um because I can't watch all that shit propaganda. Every single thing is propaganda. The last 10 years I've literally watched it myself. I mean, you know, I don't have anything against that stuff per se. I just don't like it fucking in my face, you know, pushed in my face. So, like Zan said, we literally, you know, um if you like drugs, right, you know, just roll up a blunt, sit down for the last two hours of your night and just watch literally crypto videos and make it make it fun. Make it fun."
+
+ 
+
+[01:46:30] "Yeah. Literally. Um because this stuff, just being around it, it will be so valuable to you. I'm not saying go put all your money in this shit right now. it's probably not the best time to be, you know, deploying tons of fresh capital in this stuff um because we're near the end of the bull market, right? But prepare for the next one because if you guys do, at least a million dollars is guaranteed in your name, you know. Go ahead. Any other questions and we'll wrap up?"
+
+ 
+
+[01:47:05] "You said um a little bit like 30 minutes ago that the best time to kind of dump cash or to whatever is 365 days after the market market peak. Yes. You're saying you're saying 365 days. Um if you um potentially Yeah. I mean, we're going to know. We're going to know if Bitcoin doesn't recover in the next six months. We're going to know that we're we're bare market, you know."
+
+ 
+
+[01:47:40] "So, at that point, we can go back. We can take the top and we can see 365 days. That's when we want to be layering again. And just look, guys, this is the last peak. A year after, we're down here. This is the last peak. A year later, we're down here. You know, so it's inevitable. You know, will we crash as much? Maybe not, right? But we will crash. Go ahead, Jeremy."
+
+ 
+
+[01:48:10] "Huh? No. I mean, me and Z were talking about this last night. I was like, 'Fuck it. Should we just take Medafyl?' Cuz my crypto buddy who does all that shit he's on Medafanyl all the time. Um, no. Yeah, we don't. We honestly all one thing I think that I'll say the biggest thing for me is literally like I I've just become over the past couple years like pretty spiritual and like you know I just pray to God a lot and I feel like a lot of my my strength and my like drive and even my ideas everything like that if I go pray I come up with an idea I'm like oh shit I found this NFT I'm like oh shit like I don't know"
+
+ 
+
+[01:48:55] "One thing I've noticed like honestly our businesses and everything just started doing a lot better when we just totally stopped drinking and like going out Like I haven't been to a club in like 3 4 years. Like we don't we don't go out, we don't party, we don't drink, which I feel like just keeps us sharp. Literally the only thing we do is we do smoke weed. Not at night. So, and I swear we need it because like like we would be so fucked like you know like all the time just like you know you need you need or something."
+
+ 
+
+[01:49:30] "I had to. Yeah. But um you you have to um what's it called? Like I I need that to like calm me down at the end of the night. Otherwise, I can't even sleep. Like my girlfriend tells me she thinks I'm on outer all the time. Okay. What's your What's your take on going out sober? I I don't go out anymore. Like I I tried going out sober. It's just when I go out sober, I'm like, 'Wow, these people are so fucking gross. I don't want to be here.' You know what I mean?"
+
+ 
+
+[01:50:05] "Like I see like 50-year-old guys pulling up on the girl I want and I'm like, 'Okay, I got to go.' Like it's terrible. That's just cuz like I I think there's value to socializing and stuff like that. Yeah. Um especially when you can do it sober. It's like Yeah, dude. It's just whatever works for you, you know? Like we just feel like uh we we had a fun time in college. Yeah. I had a degenerate time in college."
+
+ 
+
+[01:50:35] "If you didn't get that, you didn't go to college. Like do it, you know? Do whatever makes sense for you. My buddy who literally 2x or two he's 2x my net worth now in less than a year and he's in the crypto space. He goes out and hits the casino. He parties. He had a great old time, you know. He'll go to the strip club and fucking like, you know, but that's what works for him, you know."
+
+ 
+
+[01:51:00] "And that shows you the power of the bull market, bro. He started with 20K and just friends who are literally billionaires in crypto, right? But he has really really good friends. He started with 20K, right? And actually his buddy gave him 20K. He invested in his company, right? But it was really just like him giving him some money. And he turned 20K into multi-millions. Yeah. Yeah. He he he literally went from being broke like living in our basement for a little to like now he's richer than me and Zan combined probably."
+
+ 
+
+[01:51:40] "Our network's you know a few million. We can make moves. We can you know if I lose 30 grand in a you know in a day I'll be sad but it's not like I'm on the street whatever. You know it is what it is. But uh you know he'll like now we we do like the whole like split NFTs and shit like that or you know whatever. We told him about him backer. We put in you know four ETH. He turns around and he put 12. Yeah. Just shows now he's got like 50 worth of bites and he's just throwing money around because that's what the power of this market can do is it's just this is the it's like investing in Amazon, right? Or it's investing in Facebook. It's like this is, you know, this is a very unique time in our lives where it's like, holy shit it's actually happening."
+
+ 
+
+[01:52:25] "And just be around it. Just be around it. Like Zan said, I think, you know, Amazon went from 116 bucks to six bucks in 99. Still around today, right? So like just be around it. That way you'll be able to take advantage when somebody comes to you and says, 'Yo, buy Bitcoin.' You won't be like, 'Ah, fuck that.' You know, like you got to you just got to be around it and eventually it will pay you back."
+
+ 
+
+[01:52:55] "And then the last thing is just in terms of people to follow. Like for example, like the reason why I've like stuck with Jeremy for the last 6 years is cuz he's just the real deal. Like I know he's about the work, he's about the money, he knows this skill, he's been able to generate a shitload of money. So I'm going to keep following and repeating successful actions. Right?"
+
+ 
+
+[01:53:20] "So, one of the people in this space that I really think has just done a phenomenal job, whether you like him or not, because honestly I don't I don't think he's like he doesn't really care to be a people person to be honest, but truly like one of the one of the smartest guys I met in the space has been Becker. Um, and it's just cuz he's obsessed, you know? So, learn watch like whether you like him or not, I don't give a fuck Watch his YouTube videos and follow him and try and be a part of his world because he's gonna be a billionaire. It's written on his face."
+
+ 
+
+[01:53:55] "He told me in September to go join Discords and do all this shit And honestly, if I joined at that time, I would be a lot richer than I am now. Right. Like I I dismissed a lot of what he said until like Neotokyo and that type of stuff came out, but he proved it. In fact, he's had plays where he put 20K and turned it into 4 million. Yeah. He's probably the most entertaining channel. Yeah. Agreed. Agreed. He has the most going to be a billionaire. So, um, any other questions, guys, before we wrap up?"
+
+ 
+
+[01:54:30] "Yeah, he he will be a billionaire for sure. Just a simple one. What's the logic behind you make the most money in a bare market? Because that's when you want to like historically if you look at it and even these guys will say it themselves. It's like you know the you big YouTube guys like the best fucking buys are in the bare market because you get Bitcoin at 10K, you can average up the whole way. Your average cost is still going to be 18K by the end of it, right? Like you're just getting in so low, right?"
+
+ 
+
+[01:55:05] "Where I was I was being told you remember Alex Garza? Yeah, I do. Dude, Alex Alex Garza was literally telling me buy Luna in the bare market. This shit was under a dollar. You know what I mean? Will I do it next time? Fucking yeah. But was I ready enough this time? No. You know, so it's like just be ready and just be around because like those opportunities will come. I know Zach was telling me yesterday, I was telling him about ETH at 1,200 and you know then now it's four 4K, right? Um but less less now. Yeah. Lust. Yeah."
+
+ 
+
+ 
+
+📊 RESUMO EXECUTIVO
+
+ 
+
+NÚMEROS PRINCIPAIS:
+
+Trading Performance: 80-90% success rate com estratégia CTLST
+
+Retornos Diários: 1-5K/dia consistentemente (Zan), objetivo de 100K/dia
+
+Amigo: 100-500K/dia usando apenas estratégia 9/21 EMA
+
+17-day Green Streak: 1-5K/day profit
+
+Perda Única: $30K em um dia por questões psicológicas ao escalar para $50K
+
+Tamanho Atual de Conta: $25K (Zan)
+
+NFTs: $400K+ investidos, $100K+ em renda passiva
+
+Neotokyo: $150K+ investido no último mês, $200/day passive income
+
+NBA YC NFT: $700 (10 NFTs @ 0.015 ETH) → $10K+ (vendidos em ~1 ETH cada)
+
+Outro NFT: 1 ETH mint → 15 ETH valor atual
+
+Avalanche Trade: Entrada $30 → Saída $120 (pico $140)
+
+Bitcoin: Average cost $18K (comprando abaixo de $10K)
+
+Ethereum: Average cost $1,000 (comprando abaixo de $500)
+
+Amigo que 1000x: $20K → Multi-millions em 2021
+
+Synapse/FTM: 2x em 2 semanas
+
+Client Success: $2.5M/month revenue para cliente
+
+SPY Example: $237 (March 2020) → $468 (atual) = 100% gain em 2 anos
+
+Alex Becker Mastermind: $25K investment
+
+Hustleedia Discord: $100/month
+
+Bull Market Timeline: 1-3 meses restantes (máximo 6 meses)
+
+Next Cycle Target: Bitcoin $20K-40K
+
+365 Days Rule: Melhor compra 365 dias após pico do ciclo
+
+ 
+
+ESTRATÉGIAS E SISTEMAS:
+
+ 
+
+CTLST Framework:
+
+C - Catalyst: Notícias, eventos, desenvolvimentos (Fed, regulações, adoção governamental)
+
+T - Trend: Moving averages (50 WMA, 100 WMA, 200 WMA) para identificar uptrend/downtrend
+
+L - Levels: Support & Resistance (comprar suporte, vender resistência)
+
+S - Signal: Triggers de entrada (bounce de suporte, 9/21 EMA cross)
+
+T - Tape: Order flow/volume institucional (Level 2 data)
+
+ 
+
+9/21 EMA Cross Strategy:
+
+9 EMA cruzando acima de 21 EMA = sinal de compra
+
+9 EMA cruzando abaixo de 21 EMA = sinal de venda
+
+Verificar com TTM Squeeze (light blue = bullish momentum, red = bearish)
+
+85-90% success rate quando seguido sem emoção
+
+Funciona em qualquer timeframe (4h, 1d, 1w)
+
+ 
+
+Risk Management:
+
+Top 25 cryptos: vender inicial em 50% de lucro
+
+High risk/NFTs/micro caps: vender inicial em 2x
+
+Deixar resto como "house money" (free position)
+
+Nunca usar margin, apenas cash
+
+Começar com $1K para aprender
+
+Esperar consistência antes de escalar
+
+Acostumar psicologicamente com tamanho antes de aumentar
+
+ 
+
+NFT Strategy:
+
+Mint NFTs (0.01-0.05 ETH) antes de irem para secondary market
+
+Típico: 2-5x imediato, 10-20x em dias
+
+Usar Discords pagos para alpha (Hustleedia $100/month)
+
+Whitelist = mint preço baixo
+
+Vet projects via Discord AMAs
+
+Contratar VA para sintetizar informação de múltiplos Discords
+
+Vender metade quando recuperar investimento inicial
+
+ 
+
+Macro Strategy:
+
+Bull Market Support Band (20-week SMA + 21-week EMA)
+
+Nunca comprar micro caps quando BTC está abaixo da banda
+
+Esperar BTC reverter e segurar banda antes de comprar shitcoins
+
+Rainbow Chart para visão de longo prazo
+
+Preparar cash para bear market (365 dias após pico)
+
+Maior dinheiro é feito comprando no bear market
+
+ 
+
+ESTRUTURA:
+
+ 
+
+10 Lições Principais (Husten):
+
+Business/Passive Income primeiro (mínimo 10-20K/month)
+
+Connections & Education (full-time crypto people, insider knowledge)
+
+Don't be a Maxi (mente aberta, não Bitcoin/ETH maximalist)
+
+Prep for Next Cycle (4-year cycles, comprar 365 dias após pico)
+
+Most Money in Bear Market (preparar cash e mindset)
+
+Take Initial Out (play with house money, mitigar risco)
+
+High-Level Indicators (Bull Market Support Band, Rainbow Chart)
+
+Where Action Happens (Twitter = high-level, Discord = nitty-gritty)
+
+Premium Masterminds (Neotokyo, Alpha Gems)
+
+Shitcoins Strategy (só comprar quando BTC acima support band)
+
+ 
+
+Recursos de Educação:
+
+Twitter: Seguir Husten, Becker, pessoas que eles seguem
+
+YouTube: Leo Trades, ZSS Becker, CryptoBanter, Hustleedia (assistir 2x)
+
+Podcast: All-In (4 billionaires, assistir 1.5x)
+
+Discord: Hustleedia ($100/month), Neotokyo ($150K+ entry), Alpha Gems
+
+News: Benzinga Pro (para stocks)
+
+Platform: Trading View (grátis, adicionar indicadores)
+
+ 
+
+Ciclos de Mercado:
+
+4 anos de ciclo historicamente
+
+Bull markets possivelmente "lengthening"
+
+Último pico: Dec 2017/Jan 2018
+
+4 anos = Dec 2021/Jan 2022
+
+Extensão = 1-6 meses adicionais
+
+Bear market drops: 60-90% típico
+
+Acumulação em bear market = maiores retornos
+
+ 
+
+DADOS FINANCEIROS:
+
+ 
+
+Retornos Documentados:
+
+Options: 20%+ em segundos possível
+
+100x leverage em options
+
+Crypto: 10-100x em micro caps (timing correto)
+
+NFTs: 10-100x mais consistente que shitcoins
+
+Bitcoin: $10K → $60K (6x em bull run)
+
+ETH: $500 → $4K+ (8x+)
+
+Luna: $42 → $78 (85%+ gain)
+
+Passive Income: $200/day de Neotokyo NFTs
+
+Friend: $20K → Multi-millions (50-100x+ em 1 ano)
+
+Another Friend: $20K → 4M em single trade
+
+ 
+
+Custos:
+
+Bulletproof Program: ~$5K
+
+8-Week Trading Class: TBD (similar a Jeremy's IMM)
+
+Hustleedia Discord: $100/month
+
+Neotokyo Entry: $150K+ (NFT purchase)
+
+Alex Becker Mastermind: $25K
+
+Trading View: Free (basic)
+
+ 
+
+Risk/Reward:
+
+High active income = better psychology = better trading
+
+Não viver do trading money
+
+Focus em business primeiro
+
+Trading para compound wealth, não substituir income
+
+Pode perder tudo se não gerenciar emoções
+
+Paper trading não replica pressão psicológica real
+
+Esperar 4-5 contas "blown" antes de consistência
+
+ 
+
+Web 3 Opportunity:
+
+Comparável a dot-com bubble late 90s
+
+Gaming crypto = aplicação imediata
+
+Esports > Athletes em 10 anos
+
+99% dos projetos não sobreviverão
+
+Early movers terão vantagem massiva
+
+Roadmap + Marketing = funding
+
+Criar próprio crypto project = potencial billionaire path
+
+ 
+
+ 
+
+DURAÇÃO: ~1h 55minFORMATO: Masterclass/Workshop - Trading & Crypto Education

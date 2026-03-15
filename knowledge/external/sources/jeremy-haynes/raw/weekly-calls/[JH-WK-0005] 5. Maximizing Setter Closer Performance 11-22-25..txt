@@ -1,0 +1,483 @@
+Transcrição Completa: Maximizing Setter Closer Performance
+[00:00] Okay. So, one of my favorite things to talk about, and this was a request from, I believe, Jacob here in the inner circle, is how to maximize closer and setter performance. There are so many different angles to attack this specific problem or challenge or opportunity from, depending on how you want to look at it. So, without further ado, let's jump into it.
+[00:25] So there's really two perspectives that you can look at improving performance of these specific reps. Okay? There's the marketer side and then there's the sales management side. Okay? And they are quite different when you consider one frame over another.
+[00:42] Terrible marketers what they do is they just blame the sales team when their performance is poor. And then what sales management that's bad does is they'll blame the marketing when their sales team's performance is poor. Both are wrong in that example.
+[01:00] What you have to do is you have to technically point the finger at the other party. So there's some level of accountability in the team. But more importantly than anything else, you have to point the finger at yourself and see what you can specifically do to improve relative to your role within the organization.
+[01:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Back-End Selling Systems"
+NÚMEROS: 2021, 5 sistemas, 30% de aumento em show rate, 17% lift médio
+VISUAL: Lista numerada de 5 sistemas de vendas back-end, estrutura visual organizada mostrando cada sistema como componente essencial
+[01:35] So first of all it was back in 2021 there was a lot of rage inside of me towards terrible sales teams that we were working with and we would get so many qualified scheduled calls or so many inbound leads to come in that setters could reach out to and they just wouldn't do anything and they would just sit around and bitch and whine.
+[02:00] So again, I grew a lot of rage and resentment towards these individuals and again that's wrong. What I have to do is I have to make sure that I point the finger at me and that's where a lot of our back-end selling systems originated is from that worldview.
+[02:18] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "5 Back-End Selling Systems"
+NÚMEROS: 5 sistemas principais
+VISUAL: Lista vertical mostrando: 1) Hammer Them Strategy, 2) Confirmation Page, 3) Value Dense Email Sequences, 4) Setter Pre-Call Best Practices, 5) AI Manipulation Mastery
+[02:30] Just most importantly, I just want to highlight this without turning this entire call into a back-end selling systems call. This is one of the first things that obviously helps maximize their performance. Okay, all five of these: doing the hammer them strategy, having a proper confirmation page that's built out, making sure that you have value dense email sequences in place.
+[02:55] On the sales side of things, we have one of the back-end selling systems, which is the setter pre-call best practices. And then we have the fifth technically on the marketing side back-end selling system, the AI manipulation mastery.
+[03:10] Okay, all the back-end selling systems are truly mandatory at this point in the game for you to implement into your funnels to really maximize the closers and setters performance because what it does is it tees up an incredibly qualified well-framed lead if the consumption's there.
+[03:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Impact of Back-End Selling Systems"
+NÚMEROS: 30% aumento em show rate, 17% lift médio com um sistema
+VISUAL: Gráfico de barras comparativo mostrando melhorias incrementais, seta ascendente indicando crescimento de performance
+[03:45] Sometimes what I notice is especially with newer people like they'll like cherry-pick like one or two of the systems. I want to be really clear like in all fairness, technically I've seen myself from many of you, one back-end selling system is more than enough in some instances to create like 30% jumps in show rate. The average improvement with one back-end selling system is generally about a 17% lift in show rate.
+[04:15] Now, I want to be clear like we don't know which specific preferred consumption mechanism your demographic and lead type has. That's why we do all five.
+[04:30] As an example, like right on the page itself after they book or after they opt into a webinar or after they buy that low ticket thing or after they DM you, whatever it is, the confirmation page with breakout videos, an urgency video that encourages action. If the consumption's there, sometimes that's all you need.
+[04:50] In other instances, your demographic just doesn't watch videos. And so therefore, the value dense email sequences make far more sense to play into assuming you have dialed-in email deliverability and are seeing like a 40 to 60% open rate on average.
+[05:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Email Deliverability Requirements"
+NÚMEROS: 40-60% taxa de abertura
+VISUAL: Medidor de performance mostrando zona ideal de abertura de emails, indicador visual de saúde de deliverability
+[05:20] That means the consumption's there in the email and that same set of messaging from breakout videos should be right there. Same with the urgency should be right there inside of the emails.
+[05:35] And again, if your email deliverability isn't there and your open rates aren't there, who gives a shit? Hammer them in the news feed. They can't ignore that. You can control that. Sure, there's a cost to it, but again, you can put content right back to where they clearly were paying attention to in the first place because that's where they originated.
+[06:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Educator Role"
+NÚMEROS: N/A
+VISUAL: Diagrama mostrando a função de educador como ponte entre leads e closers, ícones representando personalização e curadoria de conteúdo
+[06:15] Now, I want to be also very direct in saying one thing that generally happens that is omitted by sales teams specifically is the need for what's called the education role. Okay, we've talked about this extensively. We have a specific training video on this in the weekly green call library.
+[06:40] But the educator role, okay, the educator role is when you have a specific type of lead, generally richer, okay, that just doesn't consume any of these other back-end selling systems. And what they prefer is when they have tailored resources for their circumstances.
+[07:00] And generally, that's where the setter best practices come in. Okay. When you look at setters and what their technical role is, most people view a setter's job as a very selfish function. They limit the idea of what a setter is to you need to call these leads and make sure they're qualified before they talk to one of my blessed closers. That's bullshit.
+[07:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Expanded Setter Functions"
+NÚMEROS: N/A
+VISUAL: Diagrama circular mostrando múltiplas funções do setter: qualificação, roteamento, fechamento, down-sell, educação - todas interconectadas
+[07:35] Okay, that makes no sense. That's an extreme limitation to what a setter can technically do. Okay, I believe that yes, setters should have the ability to obviously vet people out, you know, deter the wrong people from going onto a closer calendar, route certain people to certain tiers of closers.
+[08:00] Like maybe your top closers, they get the highest quality leads or the people that are the hardest to close technically that are the most financially qualified. Then you have like lower tier closers that maybe are newer.
+[08:15] I also believe setters should be capable of closing people. I believe setters themselves should be capable of like doing a sales call if the person's technically unqualified to drop sell them.
+[08:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Categorized List of Resources"
+NÚMEROS: N/A
+VISUAL: Estrutura de Google Doc organizada em categorias, ícones de documentos e pastas, sistema de organização visual hierárquico
+[08:40] But one of the most important functions when you look at just maximizing the performance of the sales team in general is the educator role which again should be the setter. The educator role is very simple. You need to give your closers and your setters a categorized list of resources.
+[09:00] This really just is sales assets and trust assets. Okay, so just to be clear as an example of this, remember one of you guys most recently sent me a doc where you guys were doing a capital raise for a real estate syndicate deal and you put together a big old Google doc that was categorized by all these different resources.
+[09:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Real Estate Syndicate Doc Example - Categories"
+NÚMEROS: N/A
+VISUAL: Lista de categorias organizadas: Press Releases, City/Area Press, Founder Videos (team intro, background checks, portfolio), Deal Breakdown (summary + detailed version)
+[09:35] There was a press category about all these local press releases about the project. There was an entire category of press that sold the area and the city in which this specific property was going to be in. There was an entire section dedicated to videos made by the founder, which were things like introducing the team, going through background checks of the team, going through the portfolio of properties that they've already done successful deals with other investors.
+[10:05] There was a breakdown of the specific deal itself. There was a summary version and then there was a longer version. Those are all incredible examples of sales assets that were put into one well organized Google doc with links to each one of them clearly labeled.
+[10:25] The setters would send that out to the leads prior to that person getting on a call. What they would also do is they would talk to the lead and they would say, "Hey, what's going on Odell? Appreciate you being interested in this deal here. Very curious, what specifically do you want to know that would hold you back from doing this or that would make this deal a no-brainer?"
+[10:50] And then usually Odell in that example would answer with something very specific. He'd be like, "Yeah, I care about the you know, send me over a financial model for like what it looks like, you know, how what what do I get for how much I invest, right? Like how long is the horizon for return? Is it a cash flow deal? Is it more of a I'm investing and it's a lockup and I don't get out for what period of time."
+[11:15] There's like little nuance questions that everybody has. Okay. And I believe the real function of the setter is to play that educator role to ask that simple question to get that data and then to take the categorized list that you've created full of all these resources, trust assets and sales assets and kind of pick and choose between them all.
+[11:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Content Finder Bot Analogy"
+NÚMEROS: 19 vídeos no exemplo
+VISUAL: Comparação visual entre Content Finder Bot e função de educador, interface de busca inteligente, sistema de indexação
+[11:50] Right? It's like if I have 19 videos on a confirmation page as an example that are all breakout videos and then some of them let's say are testimonials and one of them's an urgency video, right? It's like some people just get overwhelmed by that. What they'd prefer to know is which one's going to answer my specific question.
+[12:15] Think about how you guys behave when you go into the course library here in Jeremy's inner circle. You just go in there and just fucking raw dog some random videos. It's like, no, you have a very specific thing that you probably give a shit about that you go in there searching for.
+[12:35] And I bet at this point most of you probably don't even have curiosity and go in there and search. I bet you use the content finder bot. If you think about it, the content finder bot is essentially the educator role that I'm telling you you need to have in a setter.
+[12:55] You need to have something or somebody that can have a question to ask to it that goes through an index of all the potential resources, sales assets, and trust assets and hands it off to that lead. That's the moral of the story.
+[13:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Creating Individual Resource Pages"
+NÚMEROS: 20 vídeos = 10 minutos de trabalho
+VISUAL: Screenshot de funnel builder, processo de duplicação de páginas, estrutura simples: headline + vídeo featured + recursos adicionais
+[13:25] Now, obviously, just to be clear, if you don't have a list of these types of resources, right? If you don't have like these sales assets and trust assets, let me just be clear on how that can look. You can take each breakout video. This is super easy to do, by the way. Super easy. What I'm saying is not complicated at all.
+[13:50] You know how easy it is with a tool like ClickFunnels or GoHighLevel or whatever fucking funnel builder you're using nowadays to have a page that just has like a headline, a featured video, and then like a bunch of other resources underneath that you can just press duplicate and then change that main video and then duplicate and then change that main video and then duplicate and then change that main video.
+[14:20] It's like we're talking about something that without exaggeration, guys, if you had like 20 videos and you needed 20 individual pages to host each one of those videos, it's like a 10-minute action to knock out.
+[14:35] It's a bunch of copy and pasting of a fucking video URL from Wistia into the video player on ClickFunnels or GoHighLevel's Builder. And then maybe you change a headline on the page to say what that specific video talks about.
+[14:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Categorized Testimonials Strategy"
+NÚMEROS: 90%+ taxa de sucesso (exemplo James)
+VISUAL: Categorias de depoimentos organizadas por profissão: Médicos/Cirurgiões, Advogados, Vendedores, Donos de Agência - matching personalizado
+[15:00] You then have a list of a fuckload of links you could put into a Google doc that are categorized that you hand off to your sales team so they have a bunch of stuff that they could send out. Let me give you another example. Okay, this goes the same thing when it comes to testimonials.
+[15:20] Okay, most people undermine how testimonials can really work. Some of you may have experienced this in our own sales process. We have a guy, he's here in the group with us. His name's James. And James helps people stop drinking alcohol. He had a 90 plus percent success rate proven by a university study that was done on his program.
+[15:45] He had a guy come through recently in his application. The answer to the question was, "I need to cut out alcohol because the other day I was on an operating table working on a patient during surgery while I was drunk and I cut a major artery."
+[16:05] As a result, the staff around me, like my team, realized that I was under the influence. I got kicked out of the room. Now that threatens my lavish lifestyle, and I'll likely lose my medical license and ability to practice.
+[16:25] As fucked up as that application answer is, listen to this. What types of testimonials make the most sense to send to a guy like that? Somebody who works in sales? Somebody who's like an agency owner? No, dude. The testimonials that are best to send that guy are a bunch of other doctors and surgeons.
+[16:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Testimonial Matching Example"
+NÚMEROS: N/A
+VISUAL: Diagrama de matching: Cirurgião → Depoimentos de Médicos/Cirurgiões | Advogado → Depoimentos de Advogados | Sistema de categorização inteligente
+[17:00] And James has a lot of doctors and surgeons. He also gets a lot of lawyers that come through the funnel. Lawyers fucking love alcohol. They drink like a fish. They have a whole category of testimonials just for lawyers. And if you come through and you're a lawyer, guess what kind of testimonials they're going to send you? Going to send you fucking lawyer testimonials.
+[17:25] Okay? A lot of you guys sitting here like, you're not a little fucking small fry anymore. You got so many testimonials and so many different types of situations. Even if you think you help one specific type of person, you can categorize testimonials based on circumstances somebody was in.
+[17:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Revenue Stage Testimonial Matching"
+NÚMEROS: $100-300K/mês, $800K/mês → $2M/mês
+VISUAL: Escala de faturamento mostrando matching apropriado de depoimentos por estágio de receita, progressão visual de crescimento
+[17:55] Like as an example, if we get one of you that comes into the group that's at the lowest end of the spectrum of like a 100 to 300k a month, we'll send you people who were in 100 to 300k a month range and made a fuckload more money. Why am I going to send you the testimonial of the guy who came in that was at like 800 a month and then got to like 2 mil? That doesn't make much sense for you. It doesn't resonate as well.
+[18:20] You get what I'm saying? So when I talk about like this categorization of resources, sales assets, trust assets, and testimonials, you can start to realize like how much more power there is in that. Do you understand?
+[18:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Failure to Leverage Application Data"
+NÚMEROS: N/A
+VISUAL: Ícone de alerta, formulário de aplicação não utilizado, gap entre dados coletados e uso pelos vendedores
+[18:50] Okay, here's one of the other really interesting things that happens on the sales management side of things, which is the failure to leverage application data. Okay, one thing that happens frequently inside of call funnels or even webinars where you have somebody fill out an application.
+[19:10] Wherever somebody fills out an application, you need to ask your salespeople if they actually use that data or not. Do they even know where it is? They even know how to access the answers. You know, surprisingly, a lot of the times the answer is no. They have no fucking clue.
+[19:30] They just see somebody who showed up on their calendar and they just show up like raw dogging the call just asking questions to the person that they already could have had data for if they looked at the app.
+[19:45] I can't stress this enough. Just yesterday I was on a call with one of you guys and you were asking me like, "Hey, do these." You had your sales management on the call and you were like, "Hey, do these application questions look good, Jeremy. Like what do you think?"
+[20:05] And I'm like, "Bro, ask your fucking sales management. Like they're sitting right here. Ask them if they think these questions are actually useful and something they're going to be able to do something with."
+[20:20] The sales management read the questions and they were like, "Yeah, no, we wouldn't use any of these." And I told them, I'm like, "Have your sales management come up with the questions."
+[20:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "AI-Powered Application Review Zap"
+NÚMEROS: N/A
+VISUAL: Fluxograma de automação: Typeform (trigger) → OpenAI (review data) → OpenAI (create text) → OpenAI (create custom email)
+[20:45] Like, sales team, what questions do you actually give a shit about getting answers to that would help you getting somebody closed or figuring out what you need to do with the lead? And like magic, all the questions became very evident.
+[21:05] Okay. In addition to that, when it comes to the actual leveraging of application data, you can go much further than that nowadays with AI. You can create a zap that says, okay, Typeform is the trigger or whatever your application is. Let's use the example. It's Typeform in this scenario.
+[21:30] Okay, so I'll write it out for you so you can see it visually. This would be the zap setup. Okay, so Typeform is the trigger and the trigger just being like a new application was filled out and then you could use whatever your preferred LLM is, right? Let's use the example that it's OpenAI in this case and like one of ChatGPT's models.
+[21:55] Okay. And you could do a simple review data. Okay. And then with that data that it reviews, you can then do the same thing. The next step would be like okay the OpenAI next step is with that data it reviewed create a text.
+[22:15] You can also then have it if you want to same thing it would be an OpenAI call with the zap. You can have it create a custom email from CEO or salesperson.
+[22:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "AI-Generated Personalized Text Example"
+NÚMEROS: Call: November 21st, 12:30 PM EST
+VISUAL: Exemplo real de texto personalizado, destacando elementos customizados baseados em dados da aplicação, estrutura de mensagem empática
+[22:40] Okay. Now watch this. Okay. Most people just have a generic text-based or a generic email that they just send out by default. Like a classic email sequence, right? A classic text sequence that you like that you created. And there's nothing wrong with that. We do that in every single deal no matter what. I'm not trying to say not to do that. We do that, too.
+[23:10] But what we do in addition to that, okay, is we have AI write a text that goes to the person based on their application data. Okay, so I'll give you an example. I'll read one to you. This was a text that was sent out for that company that cuts out alcohol. His name's James. Here's their text that went to somebody.
+[23:35] Okay, their company is called Alcohol-Free Lifestyle, AFL for short. So, the lead's name is James. Says, "Hi, James. This is Nathan with AFL." That's the salesperson.
+[23:50] "I've reviewed your survey and saw you mentioned wanting to reconnect with your children and concerns about your marriage. On Friday's call, I'll show you how we help executives rebuild what matters most. Your application made me think of a video for you. Stories from fathers who saved their marriages and became better dads. Link to the fucking video. Watch before our call on November 21st at 12:30 p.m. EST. See you then."
+[24:25] How fucking banging is that? Okay, it's like your salespeople. Here's the thing with sales teams. I could sit here and tell you until I'm blue in the face. Send selfie videos. Have your sales team review the application data. Have your sales team manually send those fucking texts.
+[24:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Compliance Problem"
+NÚMEROS: N/A
+VISUAL: Ciclo de não-compliance: Treinamento → Execução inicial → Abandono → Frustração do gestor → Re-treinamento, seta circular mostrando repetição
+[24:55] But do you know what they'll do for like a couple days and then stop doing days later? They'll do it and then they'll fucking stop and then you'll get all pissed off as the sales management and you'll be like, "Why the fuck aren't you guys doing this?"
+[25:15] Okay? And then you'll have to go back and perpetually resolve the same problem, which is very frustrating. Okay? We live in a world where AI, I ideally hope to God, is going to replace sales teams so we don't have to have this non-compliance shit that they constantly put us through.
+[25:35] We want them to do these things regularly. And the best salespeople, they do that already. Okay? But we don't have to have compliance with it anymore because we can have AI do it for us.
+[25:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "AI Automation Options"
+NÚMEROS: N/A
+VISUAL: Opções de automação listadas: Twilio, SendBlue, outras plataformas de blue texting, ícones de ferramentas
+[26:00] Okay? We can have AI at the very least write up that text and then send it to the sales rep to manually send from an iPhone just to copy and paste. We can have that text sent through a tool like Twilio as an example, right? We can do all this autonomously. We can have that, by the way, autonomously sent through a tool like SendBlue, as an example, or one of the blue texting platforms. We can automate all that shit.
+[26:30] Okay, here's the point I'm attempting to make to you. That exact text does exponentially better at getting a response, getting consumption to occur, rather than just one of those fucking "Hey, you have your call coming up on November 21st at 12:30 p.m. EST. Shoot me a text and confirm you're going to show up."
+[26:55] You understand the differences there?
+[27:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "AI as Sales Manager"
+NÚMEROS: N/A
+VISUAL: Fluxograma: Transcrições diárias → Upload para Manis/Utari → Análise com prompts de gestão → Insights acionáveis
+[27:10] So, when it comes to maximizing the performance of these sales teams, it's like leverage AI. Okay. Leverage AI. In addition to that, what I just talked about there, let's continue on with more things that they can do. Okay. So, we believe that AI should be the sales manager. Now, okay.
+[27:35] What we do is we take transcripts of every single call. Okay? All calls. And ideally what you do, okay, just to be really clear on like the technical setup of this at the end of every day there should be a very simple function that you have autonomously set up which is all the calls for the day get transcribed either by a VA or by some kind of zap you create.
+[28:05] Okay? And all those transcripts get uploaded into a tool of your choice. We like using Manis. We're dialing in Utari to be capable of releasing finally. We have about 40 alpha testers in there right now. Pretty soon I'm going to say start using Utari instead of Manis and we'll get you guys all hooked up.
+[28:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Daily Transcript Analysis Process"
+NÚMEROS: 40 alpha testers em Utari
+VISUAL: Processo end-of-day: Coleta de calls → Transcrição (VA ou Zap) → Upload Manis/Utari → Separação Setters/Closers
+[28:40] Moral of the story is you take all those transcripts at the end of every day. Okay? You dump them all into Manis every single sales call and you can separate out the setter calls. Okay?
+[28:55] And you prompt it to with sales management prompts. You say, "You are the sales manager of my organization." Your goal is to find what could have been trained on today that would have helped more calls get closed.
+[29:15] If it's the setter prompt that could have had more calls passed off to the closers that were well-framed and qualified properly, what was missing that held back deals from being closed? What would you compliment? And who would you compliment on doing something extremely well?
+[29:35] What's missing that I as the sales manager need to train these people on? What resources or data could have been sent to these leads prior that would have helped them be better framed on the calls? What pattern do you recognize in consistent questions that come up?
+[29:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "AI Sales Management Analysis Output"
+NÚMEROS: N/A
+VISUAL: Relatório estruturado mostrando: Training gaps, Recursos faltantes, Padrões de perguntas, Elogios/Feedback positivo, Ações corretivas
+[30:05] That way you can ideate around potential things you could implement in the backend selling systems. And every single day at the end of the day, you're going to get an actual proper sales management analysis of what happened on that fucking day, okay?
+[30:25] And you're going to see what the setters could have done better and you're going to see what the closers could have done better. And then what you're going to do, okay, is as the actual sales manager, you are going to then use that data to train your fucking people, okay?
+[30:45] Because here's the number one thing that typically holds back sales managers from actually being good. The sales managers don't listen to all the calls cuz it's damn near impossible at scale to do so.
+[31:00] It's like literally mathematically impossible for them with their human brain to sit down and listen to every single thing intently and actually do that analysis. Okay. Now, we don't need the sales management to do that. We need the sales management to just have more efficiency with that kind of function.
+[31:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Gelani's Automation Service"
+NÚMEROS: $2,000 para Content Finder Bot, $25,000 para Utari
+VISUAL: Referência a serviços de automação AI disponíveis, exemplos de projetos e custos
+[31:30] Stamar says in the chat, Gelani created an automated workflow to do this for the closers. For all those who don't know, Gelani's here in the inner circle with us. I hired Gelani for things like the content finder bot and an unbelievable amount of other random AI stuff.
+[31:50] He's created like our hammer them software to help with ideation and a bunch of stuff. He's also creating literally right now Utari as an example in terms of how good of an AI dev he is. If you guys ever need like some random shit like this automated for you and you don't want to set it up yourself, like you know, I honestly tell you he's pretty cost-effective, too.
+[32:15] I paid him like two grand as an example to do the content finder bot. I paid him 25k to dupe out Utari in its entirety, you know, with duping out Manis' agent AI mode.
+[32:30] So, anyway, here's the point I'm trying to make. All this is really fucking cheap to do and it's really easy and it gives you so much fucking leverage compared to just raw dogging sales management and trying to act like a human being can effectively do all this stuff.
+[32:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Data Utilization for Marketing"
+NÚMEROS: N/A
+VISUAL: Ciclo de feedback: Análise de calls → Insights de messaging → Melhoria de back-end systems → Mais conversões
+[33:00] Okay, so by the way, here's the other good news. When you have this data right here that comes from these analyses, you can take that data and you could use it on the marketing side. Okay, that gives you messaging leverage. It obviously gives you improvement for the back-end selling systems and everything that you can do with that.
+[33:25] Okay, it's the data that you need that you're currently missing to improve things and iterate on them faster so you can get the necessary data to people. Okay, it's very simple to execute. It's very simple to do.
+[33:40] And from what we've seen from people who actually do this shit they see exponentially more results in terms of close rates, second call booking rates, booking rates in general from setters going to closers.
+[34:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Exporting Text Conversations for Analysis"
+NÚMEROS: N/A
+VISUAL: Ícones de plataformas: iMessage, WhatsApp, Instagram DMs - todas com capacidade de exportação
+[34:10] There's another thing that you can do besides the actual transcripts of the call when it comes to AI sales management, which is exporting all of the text conversations as well. Okay. So, when you look at iMessage, most people don't know this. You can export every single text from iMessage.
+[34:30] How do I know? I do it all the time because I fucking uploaded into Deli for Jeremy AI. Okay? You can export every message they send from WhatsApp. You can export every fucking DM that's ever been sent from Instagram.
+[34:50] So, if somebody, as an example, is doing a DM funnel, you can take all of the DMs that you've accumulated and all those conversations that you're having with people and you could do the same exact thing I'm sitting here telling you, but with DMs instead of call transcripts.
+[35:10] Okay? And just to be clear, your human being sales manager does not have the literal capacity to execute that successfully. It's impossible for them. Okay? Unless they're taking like 30 milligram Adderall day in and day out and just tweaking, they're not fucking doing that. Okay? Don't project that on to them that they are.
+[35:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Secret Shopping Your Sales Process"
+NÚMEROS: $50-100 para teste
+VISUAL: Ícone de telefone burner, persona alternativa, processo de teste incógnito com exemplos práticos
+[35:45] So here's my point. Okay? When you look at just what I talked about with like leveraging the application data and then you in addition to that fucking leverage AI for sales management and for call analysis and for DM analysis and for setter text analysis and all this shit.
+[36:10] There's another key component of this which is human. Okay, which is secret shop your sales teams. Okay, all of you need to learn what drug dealers have taught us. Okay, you need to go buy burner phones. You go get some burner phones. You can get them on Amazon with little prepaid SIM cards with phone and text functions.
+[36:35] You need to spin up an alt personality. Okay, come up with a name. Make a simple Gmail account for it. Okay, go through your own process and secret shop your own process. Okay, do things like no-show and see what happens.
+[36:55] Okay, just look and see if your own systems that we're sitting here talking about that you may have set up are actually working or not. Okay, guess what? Get onto a fucking call. I think literally none of you live in isolation. I don't think there's a single one of you that doesn't have a random person that you could be like, "Hey, do you mind just acting like you're a buyer for me real quick and just taking this call?"
+[37:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Secret Shopping Methods"
+NÚMEROS: $100 para participante, apps de voice changer no Zoom
+VISUAL: Opções de teste: contratar pessoa externa, usar voice changer, login com email alternativo, processo de auditoria incógnita
+[37:30] And like sit there and listen to the fucking call. Like you can go down the road and give somebody like 50 bucks, okay? I've done this shit. I'll literally walk down the road here at the office and I'll be like, "Hey, I don't want these people know my voice and I'm just trying to secret shop my sales team. Do you mind if I give you a hundred bucks real quick? Can you just take this call and act like you're going to potentially buy it? I just want to listen to what happens."
+[38:00] And they're like, "Yeah, no problem. It's a hundred bucks. It's cheap as fuck." Okay, the feedback is insane. Okay, there's also voice changers. So, if you use Zoom and you show up as that person, just make sure you're logged in with that alt email account. That way, it shows up with the alt name.
+[38:20] And there's apps. You can use Zoom apps for voice changing function. So, you can do it yourself if you don't want to have other random people take the calls, okay? And just secret shop your own fucking sales process. There's so much leverage in that. You understand?
+[38:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Culture: The Real Problem"
+NÚMEROS: N/A
+VISUAL: Definição de cultura destacada: "Conjunto compartilhado de crenças e padrões entre indivíduos que trabalham juntos"
+[38:50] Okay. So, just to be very direct with you and this is really important you understand this at this point. Most of your problems with maximizing the performance of setters and closers really all comes down to the culture of the organization.
+[39:10] Okay? And I want to be very direct when I say this. Like when I was younger and dumber, when people would use words like culture, I was like, "Ah, here we go. They're talking about some stupid shit that means nothing."
+[39:25] It's like, "No, culture is just a shared set of beliefs and a shared standard amongst individuals who work together." Okay? Your job as the leader is to come in and remind people consistently of why you're selling people on what they're selling.
+[39:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Beyond the Transaction - Real Impact"
+NÚMEROS: N/A
+VISUAL: Exemplos de impacto real: Cirurgião salvando carreira, Executivo reconectando com família, Felicidade através de golf carts
+[39:55] Okay? Your job as the leader is to make them feel like as an example guys imagine the example where the guy helps people cut out alcohol and the surgeon comes through the funnel and says I cut a guy open today and he almost died and I lost my medical license.
+[40:15] Like my whole life's in limbo because I was drunk at the operating table. It's like imagine not selling that guy and then imagine the sales management not being like are you fucking kidding me?
+[40:30] Like there's a guy who helps people with surgery who could save his career by cutting out alcohol and you're telling me that you failed to close that fucking guy.
+[40:45] It's like you have to be able to understand what's actually happening day in and day out. Even if you just do something like help people with making more money. It's like it's not just that. It's like the ripple effect goes well beyond whatever the fuck you're selling when you sell whatever it is that you sell.
+[41:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Golf Cart Example - Selling Happiness"
+NÚMEROS: N/A
+VISUAL: Paul's golf cart business, conceito de vender qualidade de vida vs produto físico, liberdade e felicidade como verdadeira oferta
+[41:20] When you do whatever it is you do, like as an example, Paul in the group sells golf carts. It's like that's a rather leisurely thing, right? It's like, no, dude. You know how awesome it is to own golf carts? It's fun as fuck to ride around in a community. You got kids, maybe you don't have kids. Who cares?
+[41:40] You know how fucking sick it is just to ride around a neighborhood in a golf cart? It's like a liberating wealth feeling, you know? It's like he's not just selling a fucking golf cart. He's selling a higher quality of life, which how does that affect people positively? Goes well beyond just the simple transaction of a golf cart.
+[42:05] He's making people happier. He's literally selling happiness. He's selling like what feels like freedom. You ever ridden in a car with the doors off? You know, I bet those UPS and FedEx guys feel great when they're riding around with those fucking doors wide open. It's a phenomenon that's not to be ignored.
+[42:25] My point is, whatever you're selling generally goes well beyond whatever the perception of what you're selling is, okay? Your job is to remind your sales team of that.
+[42:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Grant Cardone's Sales Team Culture"
+NÚMEROS: 9:00 AM meeting diário, 9:30-10:00 role play, 150-200 cold calls, bottom 10% fired mensalmente
+VISUAL: Timeline diário estruturado, telas de leaderboard ao vivo, pilhas grossas de leads para ligar
+[42:50] Here's the thing, though. Most of you are barely involved in your sales teams. Okay, I always reference my time when I worked at Mr. Grant Cardone's office. Okay, I got recruited when I was 19 years old to work at Grant's first digital marketer this dude had.
+[43:15] And my original job was work with the sales team to help him master Infusionsoft, which is now known as Keap. To be clear, didn't have a fucking clue in the world how that system worked and how that CRM worked. They just cold called businesses every day and just tried to close them on sales training and they were doing great.
+[43:40] Okay, when I came in there, I was amazed with the things that this sales team managed to accomplish. Amazed. Here's how their routine looked. Okay, every day, no matter what, 9:00 a.m. on the dot, they had a sales management meeting and a collective team meeting at the same time.
+[44:05] Okay. Every single individual department was to share what was going on in their department and the status update. There'd be some testimonials that were shared in front of everybody to keep morale high and let everybody know what I just said, reminding people what they're actually doing to help others.
+[44:30] And in addition to that, there were a little bit of collective training. Like they would read something from Grant's book or like watch a random video from Cardone University. And then right after that team meeting broke, the sales team would go and role play.
+[44:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Daily Sales Team Structure at Cardone"
+NÚMEROS: 9:00 AM team meeting, 9:30-10:00 AM role play pods, 7-8 AM start até 5-8 PM fim
+VISUAL: Estrutura de pods de role play, distribuição física de leads impressos, TV screens com leaderboard ao vivo
+[45:00] Okay? And for the first 30 minutes, generally the meeting would end around 9:30. Between 9:30 and 10, they would break up into little pods and they would all do roleplaying with each other. Okay? And then after they got done roleplaying, they would go and they'd hit the phones.
+[45:20] They'd start they'd take every single—orders that thick in terms of the amount that were printed out. Sales manager would walk around. Jared, he'd go hand them around to everybody, hand out some leads for people to call. If you didn't get any, who fucking cares? Cold call 150 to 200 businesses and close some fucking deals.
+[45:45] They had a TV up in one of the corners. And eventually, they multiplied that into screens everywhere that had a literal live sales board on it with how much money was closed in that particular day. How much money was closed up to that point in the month.
+[46:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Bottom 10% Termination Policy"
+NÚMEROS: Bottom 10% fired mensalmente
+VISUAL: Leaderboard com zona de perigo destacada, cultura de performance ou eliminação, mentalidade de abundância
+[46:10] God forbid you were in the bottom 10% of that list. They would fire the bottom 10% every month. Okay? So, you were fighting for your life not to be in the bottom 10%. These motherfuckers would work from like 7 to 8:00 a.m. until like 5 to 8:00 p.m. give or take who we're talking about. Some of them longer than that.
+[46:35] They had a culture of we are going to fucking close some deals and call a fuckload of businesses today and follow up like a motherfucker. Grant would come in there randomly and he would just listen to people's calls. Sometimes take the phone from him and close the call, right? And then teach somebody something, give criticism on something.
+[47:00] The sales management would walk around that room all day and just listen, give perspective. They also had another sub-sales manager below that. He'd do the same thing, help people, give them what they need.
+[47:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Sales Team as Priority #1"
+NÚMEROS: N/A
+VISUAL: Acesso direto ao marketer, acesso direto ao Grant, recursos sob demanda, equipe de suporte completa
+[47:20] They all had contact with me, the marketer, and they'd ask me like, "Hey, could you create an email that does this?" Or, "Hey, could you go and get this kind of resource?" Or "Hey, could you get Grant to film XYZ to help us do this?"
+[47:40] They had access to Grant directly to ask the same shit. "Hey, Grant, we need this, we need that." The sales management was prior—the sales team was priority number one. Get the sales team whatever the fuck they needed to perform.
+[48:00] Okay. Now, I just ask you a simple question. When you reflect on your performance and your sales team specifically and how you operate with them, how does it compare and stack up to that? You probably do fucking all, okay? You probably do next to nothing for your sales team.
+[48:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Your Current Sales Management Reality Check"
+NÚMEROS: N/A
+VISUAL: Comparação visual: Gestão ativa vs passiva, autonomia excessiva, postura reativa vs proativa
+[48:30] You probably just let them be autonomous to a degree. Maybe you're reactive and you wait for them to come to you and ask you for stuff. You know, there's people in this very group, they book one-on-one calls with me and they rarely ever message me.
+[48:50] And I make sure to reiterate to those people every time they fucking do that. I'm like, "Bro, why don't you message me in between these calls?" And then I'm not joking. This is a common thing that people will say. They say, "I don't want to bug you." "You pay me to bug me."
+[49:10] What do you think your sales team thinks? Right? If you pay me to bug me, do you think your sales team thinks they're bugging you? You pay them. Right? It's like you got to have a culture where there's a lot of openness, where they can come to you and ask you questions whenever they want.
+[49:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Creating Accessible Feedback Channels"
+NÚMEROS: Once per week submission
+VISUAL: Canais de comunicação: Slack, email dedicado, formulário estruturado para feedback e necessidades
+[49:40] They can bug you and like maybe you create like a streamlined easy place where they don't have to face you like a Slack channel or a fucking email and it just says like what were you missing today that could have helped you close more deals and you ask that like once a week or you just give a place where they can submit that kind of data.
+[50:05] You know my point being is like you have to have a place where your closers feel like they're prioritized, your setters feel taken care of, you know they feel like they're a priority but they're not like prima donnas, they're not princesses. You're not trying to give them princess treatment, okay? Not giving them princess treatment.
+[50:25] This is all a culture centric around performance, okay? I'm trying to get you what you need so you don't fall in the bottom 10% and get fired. That's the culture impression. You get what I'm saying? And then they would fire everybody in that bottom 10% every month. They lived in abundance over there. They didn't give a shit.
+[50:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Scarcity Mindset About Hiring Salespeople"
+NÚMEROS: N/A
+VISUAL: Mito vs realidade, recursos abundantes de recrutamento listados: redes sociais, empresas de placement, grupo inner circle
+[51:00] Most of you guys, it's actually comical when you guys tell me things like, "Oh, I'm having a hard time getting a salesperson." What the fuck are you talking about? What kind of world you live in? You know how easy it is to get salespeople?
+[51:20] You have so many resources, so much training, so much network connection nowadays with social media, so many places you can post for jobs. So many companies dedicated to sales placement. There's so many people in this very group that sells sales training that have closers that need jobs, that have setters that need jobs.
+[51:45] The people who say that kind of shit I then go and I always look, did this person even post about this? No, they never fucking do. They just live in this world in their mind of scarcity where they don't even try to recruit.
+[52:05] My point is Grant would happily fire the bottom 10% because he'd have a fuckload more salespeople that he could immediately call upon to come in that he could throw into the water.
+[52:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Baby Swimming Analogy"
+NÚMEROS: N/A
+VISUAL: Metáfora de bebê nadando, confiança no sistema e nas pessoas, cultura forte permite entrada rápida
+[52:25] You ever seen a baby get thrown into the water and watch it swim? I've never seen a video of a baby getting thrown in the water and drowning. Thankfully, hopefully that wouldn't hit the news feed anyway, but my point is usually they swim quite well.
+[52:45] Okay? You got to have more belief in the people that you're going to throw into that type of culture. And when your culture and your training is good and your systems are good, they have a high probability to come in and close straight away anyway.
+[53:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Rep Activation Time Measurement"
+NÚMEROS: 14 dias (exemplo citado no chat)
+VISUAL: Timeline de ativação, janela de incerteza, investimento até retorno, métrica crítica para escala
+[53:10] Okay? Some of you take so fucking long to activate a closer. Okay? And this is a critical thing. You have to measure your activation of a new rep. What this means is how long does it take to get them successful in their job?
+[53:30] Put in the chat, how long does it take you right now to bring a new closer or a new setter in and get them to the point where you're satisfied with their performance. 14 days. 14 days. Who else? I would assume that means most of you have no fucking idea, do you?
+[53:55] So, it's like you have to know these things cuz that's how much time it takes to hire somebody. Risk cash on filling their calendar and giving them leads for you to get the money back. That time frame dictates the uncertainty window.
+[54:15] If you can collapse that time frame, you can increase the certainty you have to make a bet on the new reps you hire to fill their calendars up. Otherwise, you're going to operate in scarcity. You're going to feel fearful about filling their calendars and giving them opportunity because they may fuck you.
+[54:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Marketing vs Sales Management Realization"
+NÚMEROS: N/A
+VISUAL: Paralelo entre aprender marketing e aprender sales management, ciclo de agências ruins → contratar interno → perceber que você é o problema
+[54:50] Okay? You know, I always use this analogy with marketers where I'm like, "All right, there's a lot of businesses. I'm sure a lot of you experienced this where you've worked with an unbound amount of agencies that have all fucked you."
+[55:10] Okay? You've then tried to hire people in house and you realized they sucked, too. And then you had the realization finally that it's you that sucked at marketing and you needed to finally invest into yourself to figure out how this shit actually works.
+[55:30] Because you recognized, well, if I know how it works, I'd be able to hold the agencies I work with accountable to do the right things. I'd be able to hire an in-house staff member and actually train them and have them do the right things. Right?
+[55:50] It's like, and with that realization, okay, what you recognize is that you were the problem that held back the potential of that role and the performance of that role. It's the same thing with the sales reps, okay?
+[56:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Your Broken Sales Management System"
+NÚMEROS: N/A
+VISUAL: Lista de falhas: cultura ruim, sem recursos, sem treinamento, apenas calls para assistir, vetting process fraco
+[56:15] Your sales management is so fucking cooked and how your sales culture is is so fucked. You have no resources, you have no training, you just give people like some calls to go through and watch, you know, and then you just kind of throw them out there into the field. You have a poor vetting process.
+[56:40] Like you don't realize like how much money is in this department, okay? Like you technically can recognize that you could make more if you actually figured this shit out, but you never actually put the necessary time and attention into figuring it out.
+[57:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Real Client Example: $300-350K/Month"
+NÚMEROS: $300-350K/mês atual, 3:1 ROAS conservador, $20K/semana por rep ($10K/deal x 2 deals), $80K/mês por rep, 8 reps = $600K adicional
+VISUAL: Modelo financeiro conservador, cálculo de escala com stats ruins, projeção para $1M/mês
+[57:10] You know, just yesterday I was on a call with one of you. You're at like, I don't know, 300-350 a month, I think is what you said, and you were doing all the closing. You and your business partner were doing all the calls.
+[57:30] And you tried to sit there and tell me like, "Oh yeah, my offer is like so complex. It's like specialized knowledge and you know it's really hard to hire reps that could close deals on our company's behalf cuz like you know it's a really sophisticated sale."
+[57:50] And I was like all right let's just be really conservative. Okay, let's just throw some stats into a financial model and let's be really conservative. Like if their stats were fucking shit, the fucking stats still produced a 3 to 1 ROAS.
+[58:10] And the fucking stats would only close like two deals a week, which would have been 20k cash collected because they cash collected on average 10k per deal. Out of those stats of doing a 3 to 1 ROAS with the most fucking sales stats ever and making an extra 20k a week, that'd be 80k a month.
+[58:35] So per rep, that sucks. They would get an extra 80k a month. Okay. And then therefore, I concluded at the level they were at 300 to 350 a month, I was like, if you needed an extra 600k a month to get close to that million a month, you'd need an extra eight reps. You need an extra 7 to eight reps. The number was 7.5.
+[59:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Months of Inaction"
+NÚMEROS: Meses de narrativa sem ação
+VISUAL: Timeline de procrastinação, mesma desculpa repetida, oportunidade perdida de escala
+[59:05] And if each rep brought $80,000 and you needed eight reps altogether to get that extra money, like you can't scale beyond where you're at now unless you jack up your pricing. And to be fair to that person, there was also an opportunity to increase their pricing. No doubt.
+[59:25] Okay. And the thing is they could technically do both. You know what they were doing instead? Nothing. They didn't do a damn fucking thing. That narrative dragged on for months. For months that narrative dragged on.
+[59:45] Okay. It's like some of you just sit with the same fucking problems and you just tolerate them for such a long duration of time because you don't recognize how much more fucking money there is. You must get richer.
+[01:00:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Stop Making Excuses"
+NÚMEROS: N/A
+VISUAL: Comparação Grant Cardone vs você, todas as ferramentas já disponíveis: zaps, AI, recursos indexados, treinamento
+[01:00:10] Okay? You can't just sit around and listen to this kind of shit and be like, "Oh yeah, but that's Grant Cardone. He's been a sales trainer for like fucking three decades." Who gives a shit? You can do the same thing.
+[01:00:25] You can go and implement this zap to do the application review and create custom text. You can go create the index of all your resources and add it to the ability to have the AI send it in those texts to send it in those emails. You could have a nice proper sales team if you actually fucking tried and recognized how much more money was on the other side of this specific problem.
+[01:00:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Sales vs Marketing Priority"
+NÚMEROS: N/A
+VISUAL: Balança mostrando sales como gargalo principal após marketing estar funcionando, "marketing knobs" vs processo de ramping de pessoas
+[01:01:00] Okay? Literally, this is in almost all instances the number one thing that holds back businesses. Sure, the marketing side does too. Okay. Absolutely. Sometimes you just need more qualified calls in a cost-effective way. Sometimes, yeah, you got to launch a new funnel. Sometimes you might need a new offer. Like, I respect all that. I'm not negating that.
+[01:01:25] But I'm saying when you get that rolling, it's all sales. It's all sales. Like the marketing stuff. One of my buddies, his name's Josh Troy. He's here in the inner circle with us. He runs a company called Wires from Strangers. He manages a fuckload of salespeople.
+[01:01:45] Just to be clear, he calls the marketing stuff, he calls it marketing knobs. He's like, "Jeremy, if you need more calls for us, like you can just fucking go into the ads manager and press like five buttons. You know, if I need the ability to scale, I have to get people involved. It's a far longer multi-week process to ramp up."
+[01:02:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Certainty Through Systems"
+NÚMEROS: N/A
+VISUAL: Sistema comprovado, processo replicável, confiança para recrutar continuamente, "plug a monkey in and get deals out"
+[01:02:15] Okay, now here's my point. Imagine how much more certainty you'd have to recruit consistently if you had a proper system that was proven out that you were certain that you could plug somebody into and have a high probability of having that conservative set of stats play out every time.
+[01:02:40] The biggest thing you got to do is you got to kick out of scarcity with the sales team management. And you have to kick into this place of you've got a dialed in fucking system that you know with certainty you could plug a fucking monkey into and get deals out the other side. Okay? It's not tough. It's not tough.
+[01:03:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Reframing as Core Leadership Function"
+NÚMEROS: N/A
+VISUAL: Papel do líder: reframe mental, fornecer recursos, criar expectativa positiva de treinamento, manter motivação
+[01:03:10] So again, here's my point with why I'm saying all this. When it comes to maximizing the performance of people, it comes down to exactly what I'm doing with you right now: reframing the mind. Okay? Giving them resources, giving them data, making resources categorized, easy to consume, easy to use, easy to go through.
+[01:03:35] Making training something that they look forward to rather than something that's discouraging and disheartening and demoralizing, right? Like, think about this, guys. Some of you have gone through some fucked up shit in this group where you experience some kind of contraction and you talk to me. I help you rebound out of it. I get you back in the right fucking frame and then you start to go up again.
+[01:04:00] Okay? It's like that's your job with your fucking sales team. Okay? This is such a high revenue-driven department that you've got and yet most of you omit it or hand it off to somebody else. Be involved with that shit.
+[01:04:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Selfie Video Example"
+NÚMEROS: 2 semanas até pararem
+VISUAL: Ciclo de implementação → sucesso → abandono → queda de show rate, necessidade de reforço constante
+[01:04:25] Okay? Most of you can also recognize that as time has passed when you hand off great lessons for your sales team to implement and use, they stop doing it eventually. I've had sales teams where I tell them like, "Hey, send a selfie video. It'll get the show rate up."
+[01:04:45] They send the selfie videos. They send back messages that are like, "Dude, this is fucking awesome. This is working really well." And then those motherfuckers will stop sending the texts like two weeks later. And then the show rate goes back down and I'm like, "What are you doing?" Like, "Why'd you stop sending the text?"
+[01:05:10] You know? And again, my point is, guys, it's like the people, it's not a one-and-done thing. Like respectfully to you, a lot of the stuff that you'll train on here, I've made multiple variations of consumables. I've made it in ways where I've studied retention rates of information when studying and learning.
+[01:05:35] So I increase the retention. So you don't have to go back and educate yourself on the same stuff again and again and again. Okay? But for some reason, sales teams, it's the number one area in an organization that requires like retraining.
+[01:05:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Retraining Reality"
+NÚMEROS: N/A
+VISUAL: Ciclo correto: Repetição de lições comprovadas → Habitualização → Nova lição → Repetição novamente, estrutura cíclica vs linear
+[01:06:00] Okay? And so there's also one key thing and I'll leave you with this. Okay? Most people when it comes to sales management think that they have to constantly train on new stuff. That's an illusion. You actually need to retrain on the proven stuff to make sure that they habitualize the proven stuff.
+[01:06:25] And once it's habitualized, you can go on to a new thing, but then you still need to go back and retrain on the habitualized stuff every so often. The illusion of sales management is that it's like a perpetual like new set of things that you're going to constantly teach them. It's not.
+[01:06:45] It's repetition of the same lessons that are proven again and again and again and again and then like occasionally some new stuff and then just a repetition of the same things again and again and again and then occasionally a new thing and then repetitions of the same stuff again and again and again. That's how you manage sales people. You understand?
+[01:07:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Sales Team Structure Needs"
+NÚMEROS: N/A
+VISUAL: Pilares fundamentais: Estrutura, Consistência, Exposição repetida às mesmas lições, Domínio antes de avançar
+[01:07:15] Sales people need structure. Sales people need consistency and exposure to the same lessons. Okay? And only when they've mastered and actually habitualize those lessons do they unlock the advanced training.
+[01:07:35] One specific mastermind talk that Josh Troy did, he had talked about with his sales management structure that he has a sales training library that the person has to go through first and demonstrate that they implemented before they unlock the advanced training. Same kind of logic here.
+[01:07:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Sales Training Module Available"
+NÚMEROS: N/A
+VISUAL: Biblioteca de treinamento de vendas completa, acesso disponível mediante request, construída com "pure rage"
+[01:08:00] Okay, most of you, by the way, you don't even have a fucking library of sales training for your sales team to go through. Just to put it in perspective for how fucked your current sales management is.
+[01:08:15] So again, just to be clear and very direct, there's a lot that I could sit here and drill down on when it comes to like the marketing side of things, but that's essentially everything we always regularly talk about like mastering messaging, implementing all the back-end selling systems, all this autonomy when it comes to how AI can leverage application data into text and email based follow-up.
+[01:08:45] You know, all that's really easy to drill down on and there's so much training on it. Okay. Again, what's generally ignored is all the sales management here inside of what we have available for you.
+[01:09:00] There is an entire sales training module in your training libraries that I built out of pure rage and it is amazing. It's very dense and it is awesome. I absolutely encourage you to go through it if you are unaware of it and haven't used it yet.
+[01:09:20] Your sales team can go through it. Happily email me. Okay, send me in Telegram the emails of the people that you want added into that sales training module. I'll add them in. I'll happily add them in. But more importantly, you go through the fucking sales training module, too, so you know what you're doing and can actually get great performance out of the reps that you have within your organization.
+[01:09:50] Okay, unmute yourself. Ask any questions. Throw any questions into the chat if you guys got something. Let's wrap this thing up. What do you guys got? Anybody have anything they want to add? Any comments? Anything that works well in your organizations I didn't cover that you want to contribute that'd be helpful and appreciated as well if you have it.
+[01:10:15] [Q&A SESSION BEGINS]
+[01:10:20] Jeremy I got a bit of a it's kind of tangential to what you were saying but it was kind of like an epiphany moment for me for the customer success side of things and so you know you said basically make training fun like reframe training is fun for the sales guys right and it I guess is stupid.
+[01:10:40] Probably pretty obvious question, but it seems like it would make sense to kind of try to replicate that across the team like even for coaches and stuff or coaching students and really make that something they look forward to.
+[01:10:55] Yeah. Yeah, of course. Absolutely.
+[01:11:00] Yeah, that's fucking... Yeah, I really like that. That's it. Nice and simple. Thanks, bro.
+[01:11:10] Cool. Thanks, man. Again, any questions, feel free to unmute yourself. Drop them in the chat. Again, if you guys have anything you want to contribute that works well inside of your sales management, feel free to unmute and fire away, too.
+[01:11:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Sales Coach vs Sales Manager Question"
+NÚMEROS: N/A
+VISUAL: Estrutura organizacional híbrida, ex-closer como coach part-time, dilema de responsabilidades
+[01:11:35] Me actually.
+[01:11:40] Yeah. Go ahead. What do you got?
+[01:11:45] Yeah. So, I currently don't have a sales manager per se, but I do have sort of like a sales coach, which who was my best closer and then left to close for another offer.
+[01:12:00] Okay.
+[01:12:05] And I'm stuck sort of in this weird position where I'm not sure how much I can ask of him because he's not the sales manager, but he's sort of like a sales coach that also hires. So, have you ever seen a business have success with sort of this intermediate position, not being specifically a sales manager, but sort of like a sales lead?
+[01:12:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Abundance vs Scarcity Analogies"
+NÚMEROS: N/A
+VISUAL: Múltiplas analogias visuais: relacionamento/side piece, carro compartilhado quebrado, todas ilustrando falta de opções
+[01:12:35] Okay, let's use the example that you're trying to find a wife that you can have kids with. You've been in a long-term relationship. You end up breaking up. The girl's still willing to bang you on the side. She kind of turns into a side piece.
+[01:12:55] You work all day. You therefore don't necessarily pursue new potential relationships and you think to yourself like this is a new set of normal circumstances for you. The reality of that situation is a pretty easy answer. Like you just need to go start dating again. You need to increase your options. The more options you have, the better off you are.
+[01:13:20] Okay? The less options you have, the more fucked up your circumstances are comparatively. Okay, it's very simple. It's like no matter what context you put it in, it's the same thing in life.
+[01:13:35] If I have a fucked up car, right, that my buddy drives too, okay, and that car clearly needs fixed, but at the end of the day, like we don't technically have too much money to be able to go and get a new car, and that's why we share this fucked up beater in the first place.
+[01:13:55] It's like the actual answer is you need more money to be able to just go both get your own cars, right? It's like saying things like, "Oh, well that person uses the car on certain dates in time, which limits me on being able to go drive places on those dates in time."
+[01:14:15] It's like, again, the fucked up circumstances come from the lack of abundance. Okay? They come from lack of additional money to go and just get a new car. It's like you're thinking in the context window of your current circumstances.
+[01:14:35] When you say that out loud, I'm thinking in the context of abundance where I'm like, why the fuck is this dude tolerating those weird circumstances? He just needs more options, right?
+[01:14:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Abundance Solution"
+NÚMEROS: N/A
+VISUAL: Solução clara: Mais sales managers, mais trainers, diversificação de risco, múltiplas opções
+[01:14:55] So, it's like, bro, go get yourself more sales managers. Go get yourself more sales trainers. Like, you're the sales manager in the meantime because it's an incredibly revenue-driven function in your business unless you have it.
+[01:15:15] Now, if the other guy's working and you're getting, you know, good results and like you're scaling, that's great, you know, but at the end of the day, like if it's a liability where the person's not going to be able to scale or like they could just pull out at any time if something else starts paying them more money, you have to diversify against that risk. You get what I mean?
+[01:15:40] Yeah, absolutely. Thanks.
+[01:15:45] Act in abundance. Okay. Act in abundance. The same thing with almost everybody has some kind of like limitation. You just are limited and thinking with the lack of options. Okay. As soon as you get more options, the answer immediately changes. So pursue the additional options is the simple answer there.
+[01:16:10] Okay. All right. Anybody else? Going once, going twice.
+[01:16:20] All right. Very good. Pleasure to talk with you all. Enjoy your Black Friday and Cyber Mondays. Have a great Thanksgiving. If you're celebrating, just get fucking richer. Okay, talk soon. Thank you.
+📊 RESUMO EXECUTIVO
+NÚMEROS PRINCIPAIS:
+30% aumento em show rate com um back-end selling system
+17% lift médio com implementação de um sistema
+40-60% taxa de abertura ideal para emails
+90%+ taxa de sucesso (exemplo James - Alcohol-Free Lifestyle)
+3:1 ROAS conservador no exemplo de escala
+$10K cash collected por deal (exemplo)
+2 deals por semana = $20K/semana
+$80K/mês por rep (stats conservadores)
+8 reps necessários para adicionar $600K/mês
+$300-350K/mês → $1M/mês com escala adequada
+14 dias tempo de ativação de rep (exemplo citado)
+10 minutos para criar 20 páginas de recursos
+150-200 cold calls diários (Cardone)
+Bottom 10% fired mensalmente (Cardone)
+9:00 AM meeting diário
+9:30-10:00 AM role play
+7-8 AM início até 5-8 PM término (jornada Cardone)
+$2,000 custo Content Finder Bot
+$25,000 custo desenvolvimento Utari
+$50-100 para secret shopping
+40 alpha testers em Utari
+19 vídeos breakout (exemplo)
+ESTRATÉGIAS E SISTEMAS:
+Back-End Selling Systems (5 principais):
+Hammer Them Strategy
+Confirmation Page com breakout videos
+Value Dense Email Sequences
+Setter Pre-Call Best Practices
+AI Manipulation Mastery
+Função de Educador:
+Categorized list of resources (sales assets + trust assets)
+Matching personalizado de conteúdo
+Curadoria baseada em necessidades específicas
+Content Finder Bot como modelo
+AI Sales Management:
+Transcrições diárias de calls
+Upload para Manis/Utari
+Prompts de análise de gestão
+Identificação de gaps de treinamento
+Análise de padrões de perguntas
+Exportação e análise de DMs/texts
+Application Data Leverage:
+Zap: Typeform → OpenAI → Custom text → Custom email
+Personalização baseada em dados da aplicação
+Textos específicos por circunstância
+Automação via Twilio/SendBlue
+Categorização de Testimonials:
+Por profissão (médicos, advogados, vendedores)
+Por estágio de receita
+Por circunstâncias específicas
+Matching inteligente lead-to-testimonial
+Secret Shopping:
+Burner phones
+Alt personalities
+Voice changers no Zoom
+Contratar terceiros ($50-100)
+Testar no-shows
+Validar sistemas implementados
+ESTRUTURA:
+Cultura de Vendas (Modelo Cardone):
+9:00 AM team meeting diário
+Status updates departamentais
+Compartilhamento de testimonials
+Treinamento coletivo
+9:30-10:00 AM role play em pods
+150-200 cold calls diários
+Live leaderboard em TVs
+Bottom 10% fired mensalmente
+Sales team como prioridade #1
+Acesso direto ao CEO/Founder
+Acesso direto ao marketer
+Recursos sob demanda
+Educador Role Structure:
+Google Doc categorizado
+Sales assets organizados
+Trust assets indexados
+Links claramente rotulados
+Páginas individuais por recurso
+10 minutos para setup de 20 recursos
+Retraining Philosophy:
+Repetição > Novidade
+Habitualização antes de avançar
+Exposição consistente às mesmas lições
+Estrutura e consistência
+Advanced training após domínio
+Sales training library obrigatória
+Rep Activation Metrics:
+Tempo até primeira venda
+Janela de incerteza
+Investimento até ROI
+KPI crítico para escala
+Feedback Channels:
+Slack dedicado
+Email estruturado
+"What were you missing today?"
+Submission semanal
+Acesso aberto sem medo de "bug"
+DADOS FINANCEIROS:
+Exemplo Real de Escala:
+Status atual: $300-350K/mês
+Stats conservadores: 3:1 ROAS
+2 deals/semana por rep
+$10K por deal cash collected
+$20K/semana = $80K/mês por rep
+8 reps necessários para scale
+Adicional: $640K/mês ($80K x 8)
+Meta: ~$1M/mês total
+Oportunidade adicional: aumento de pricing
+Custos de Implementação:
+Content Finder Bot: $2,000
+Utari development: $25,000
+Secret shopping: $50-100 por teste
+Setup de páginas: ~10 minutos (essencialmente free)
+Zaps de automação: custo nominal
+Burner phones: baixo custo Amazon
+ROI de Back-End Systems:
+17% lift médio em show rate
+Até 30% jump com um sistema
+5 sistemas = cobertura total de demographics
+Consumo garantido em pelo menos um canal
+DURAÇÃO: ~76 minutos FORMATO: Masterclass / Training Call ao vivo com Q&A

@@ -1,0 +1,488 @@
+Transcrição Completa: 31 AI Agent Mastery Hosted By Jelani 5 17 25
+[00:00] Jeremy: Alright. So, occasionally for one of our weekly inner circle group calls, we have one of our members that, you know, because keep in mind like you guys are all awesome and you're great at whatever it is that you specifically do and that you have mastery level experience with and uh we are more than happy to at any point put any one of you guys in front of each other and, you know, demonstrate to the group something valuable that can help make us all richer.
+[00:30] So, today we have one of our longtime members, Galani. Um, Gelani has, you know, full-fledged dove into all of this AI stuff and gotten extremely good at it. Um, he's not just one of those guys that like, you know, makes content about it and like, you know, tries to leech off of a growing trend. Uh, he truly has a passion for it and this is like a full-time thing for him.
+[01:00] You know, he's dedicated his entire life and business to this and he's done it for years. Uh, a lot longer than the trend itself, uh, you know, kind of taken off. So Gelani's got, you know, a good edge in that in that sense. He also runs a few pages that you guys can check out on social media, uh, Best of AI Daily.
+[01:30] And long story short, Gelani is phenomenal. He's done two talks now at our masterminds and given us a lot of insight, valuable expertise on AI. Um, he's talked at length with us before about, you know, all kinds of things. The most recent talk he did was on lovable.dev and bolt.new and like you know some of these I almost like prompt to build softwares I guess is what you could call them.
+[02:00] Today we're going to be going deep on AI agents. This is ideally an AI agent mastery lesson here. Uh and keep in mind Gelani is you know both highly technical and able to talk at a high level too. So it kind of alternates between the two. He'll explain just conceptually for those that are unaware like what it is, how it works and you know give examples of that.
+[02:30] But more importantly for for those that are already like pretty balls deep in the game too. Um he'll show some examples uh that might come off complex to those that are beginners on how he's using this, how it functionally works. And again, I just want to be really clear. Gelani's really good at both being able to articulate simple things and highly complex things at a high level and like in a very technical way, too.
+[03:00] So I've had Gelani build um a few AI softwares. He is one of our and he has he has two supporting people that have helped us with some of the softwares. Um Ted and Sean. Sean's his name, right Jani? Am I?
+Gelani: Yes, we have Ted and Sean which also helped on some of our um like larger AI software buildouts that we've done with with Gelani.
+[03:30] Jeremy: But Gelani for the most part is one of our AI developers that like we have as a contractor on staff too that we use. So yeah. Anyway, long story short, without further ado, a big thank you and uh an exciting conversation ahead with again longtime inner circle member Galani. Gelani, go ahead and take it away. Thank you.
+[04:00] Gelani: Thank you. Cool. So, like Jeremy said, today's going to be a bit different than how Jeremy normally operates. I'm going to break down how I think about AI agents and how you can use them. Today, I'm not going to go super super technical just because it will take a long time to really just grasp all the things that you could potentially do, but my goal is to get you at least thinking about it and just start asking questions.
+[04:30] So, I'm going to do like a slide presentation, then I'm going to do a live build out with you guys, and then we'll do FAQ. So, I'm going to share my screen and um cool. Can everyone see this? And uh I'm not going to present it just I'm just going to scroll down.
+[04:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Continuation from Previous Talk - Knowledge to Tools"
+NÚMEROS: Não especificados
+VISUAL: Slide de introdução mostrando conexão com apresentação anterior sobre transformação de conhecimento em ferramentas AI
+[05:00] So basically real quick. So this is a continuation from the talk that I did that Jeremy mentioned. And on that talk I talked a lot about how you can turn your knowledge and your internal SOP information into tools. So you can go and check that presentation out if you're new or you weren't at that mastermind. You can watch that.
+[05:30] But just for those who weren't there or you need a reminder, basically you want to take all your information that you have internally. You turn that knowledge into prompts and then you turn those prompts into AI tools that you own. The most um the most relevant use case was taking Jeremy's SOPs, the hammer them strategy, and then turning that into an AI tool that you guys can all use.
+[06:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Internal Knowledge → Prompts → AI Tools"
+NÚMEROS: Não especificados
+VISUAL: Fluxograma mostrando transformação de SOPs, recursos, frameworks e exemplos em ferramentas AI proprietárias
+[06:15] And then there's other tools as well that you know you can use as well that we're building out. So when I say like take your internal knowledge, I mean like SOPs, resources, frameworks, examples, and then you turn them into tools. And you do that using tools like replet, bolt, or lovable.
+[06:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Tool Building Platforms: Replit, Bolt.new, Lovable.dev"
+NÚMEROS: Não especificados
+VISUAL: Demonstração de interfaces de plataformas no-code para construção de ferramentas AI através de linguagem natural
+[07:00] So if you're not familiar with what these are, so I'll just quickly show you. Um, if you go to, for example, bolt new, um, it's basically like chatgpt where you can just ask it to build any type of tool that you want. Um, or if you go to lovable.dev, it's it's very similar where you could build any tool as well and just like kind of you just chat with it and say hey like I want to build this tool.
+[07:30] Um I've been playing around with Replet a lot. So the purpose of these tools in my opinion is to uh just to create internal tools that you use that make your lives just way better. And you could also another thing in the presentation that I talked about is turning these tools into profit centers.
+[08:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Tools → Profit Centers"
+NÚMEROS: Não especificados
+VISUAL: Conceito de transformar ferramentas internas em produtos vendáveis para clientes
+[08:15] So you build out these tools for yourselves, you test it, you like it, it works, and then you flip it and sell it to your clients or customers or you include it in your offer. So these different tools like Replet, Lovable, Bolt, they all allow you to like build these really awesome things just by using natural language.
+[08:45] But in my presentation, um I did not talk about the agent side. So, I mentioned it and I kind of said like, hey, like the next frontier of all this AI stuff is going to be AI agents and it's going to be something that everyone and every business needs to be paying attention to because it's going to make your lives so much easier.
+[09:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "AI Agents: The Next Frontier"
+NÚMEROS: Não especificados
+VISUAL: Destaque sobre importância estratégica de AI agents para negócios, ênfase em automação e eficiência
+[09:30] Um, so that's my goal today is just to kind of give you a a rundown of like what you can potentially do today and what um using no code. So like this is going to be no code. There's agents that you can build with code that, you know, can get really nerdy and stuff, but I'm going to be using no code today and just showing you.
+[10:00] So, wording here, it's going to get a little nerdy. I'm not going to, like I said, I'm not going to be too uh too complex or like too in the weeds of this, but just enough so that you can get your your gears turning. So, real quick, does anyone know the difference between AI agents and regular automations? I'm curious if anyone wants to unmike and just say it real quick.
+[10:30] Jesse: Yeah, they got the agentic uh aspect to them. So basically they should kind of like think for themselves and use the tools and and use an LLM on how to how to use the tools and and kind of acquire like different memories and stuff.
+[10:45] Gelani: Yeah, that's beautiful. That's right.
+[11:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "AI Agents vs Regular Automations"
+NÚMEROS: Não especificados
+VISUAL: Comparação visual entre automação linear (if-then) e agentes AI com raciocínio não-linear
+[11:15] So the main difference is like I'm sure like everyone here knows about make zap year and even go high level has like automation that you can do but the difference is agents like Jesse said is it uses more reasoning to like it picks what tools to use. It's not sequential. So regular automation and tools are like more linear like if then statements but like in for example which is what we're going to be talking about today mainly is more uh it uses reasoning.
+[11:45] So like it can pick and choose what tools it needs to use to get to whatever thing that you're trying to do. So it's not necessarily linear. It just goes in order based off what it what tools it has access to and what it needs to do to get to the outcome.
+[12:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Agent Process: Trigger → AI Agent → Tools → Outcome"
+NÚMEROS: Não especificados
+VISUAL: Diagrama de fluxo não-linear mostrando trigger node, AI agent com acesso a OpenAI/Claude, database e múltiplas ferramentas
+[12:30] So typically the process of building an agent in a nonlinear way is you have some type of trigger node and I'll I'll I'll explain what that means, but basically you have something that starts it. So it could be a message, it can be an air table change, it could be a new type form or calendarly that comes in, it could um be a telegram message.
+[13:00] Typically how I how I start my agents and I'm going to show you guys a real example of like simple agents and then like something that's really complex, but typically I start my agents through web hooks. Um, and if you're not familiar with web hook, it's basically like an action that happens and you send data into it.
+[13:30] So for example, if you were in go high level and someone filled out a type form and go high level, you can actually add a web hook, send that type form information into that web hook and then pass that information into another application or software and then use that in that software.
+[14:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "TOP Framework: Tasks, Operations, People"
+NÚMEROS: Não especificados
+VISUAL: Framework de três pilares para identificar oportunidades de automação com AI agents
+[14:15] Um so then after that there's some other action. So um it'll visually looks like this. You have a trigger. You might have an AI agent here that is has access to open AI or has access to quad or any other AI model. It may have access to a database and then it may have access to multiple tools or just a singular tool and the agent is again in a non nonlinear way um building out whatever it needs to build out to get to the outcome that you are trying to do.
+[14:45] So depending on your outcome, the agent is going to help get you there. Now the way I think about this is uh what I call the top framework. So when you're thinking about what what agents can help your business or like help you, you want to be thinking about what task operations or people can be can be replaced with AI agents.
+[15:15] This is just a really easy way to remember this. So, as you're like as you're doing your day-to-day, always tell people to have like some type of running list of actions or processes or things that you do that you potentially could replace with AI or an AI agent or even an automation because sometimes you have to uh you have to choose if you want an AI agent to do the thing or you just want like a regular automation.
+[15:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Example: Simple 3-Step Email Agent"
+NÚMEROS: 3 steps
+VISUAL: Fluxograma simples mostrando webhook → AI agent com regras → envio de email automatizado
+[16:00] So, when you're building these out, sometimes an agent is not the best choice for whatever you're trying to do. Maybe you need something more linear. Um, so you kind of have to pick and choose depending on your action, which I'll talk more about. But this is just a good way to think about like, okay, what task, what operations, what people can be replaced by agents.
+[16:30] And by task, um, here's an example of an agent. So this is a very, very simple agent that, um, I built. So for my business, I run a a website called bestofi.com. And essentially, it's just a um a directory of different AI tools and news and stuff like that. So basically people can come to us they post their tool or product on our website and it gets published right.
+[17:00] So for me I needed an agent to when a tool gets published on our end I needed to just basically send an email so I have some rules in here and we'll I'll show you what this looks like but basically I have like prompts in this agent that is has information about like how I want it to respond and things like things like that and then it sends an email.
+[17:30] So as that web hook which was I talking about earlier. So like when they click publish it sends information into here. The agent gets that information and then it formulates the response and then sends the email. Um so like this is just an example of a very very simple agent that does a task for me.
+[18:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Complex Multi-Step Content Agent"
+NÚMEROS: Multi-step process
+VISUAL: Diagrama complexo mostrando múltiplos agentes interconectados para criação automatizada de conteúdo: transcrição → database → geração de conteúdo → sistema de aprovação
+[18:15] Like I would have to do this manually. This is just you can do this in zap year right like this is nothing too special but this is a very simplistic way of thinking about an AI agent. Now there's also operation on the operation side. So this is a very complex agent. And I'm going to show you like what like how far you can take it.
+[18:45] Like remember this is like a very simple like three-step agent, but then you could have buildouts that look like that have multi-step parts to it. So for example, um for this agent, it's taking information or content that I find on the internet or I find from YouTube and it's basically transcribing it and then sending it into a database.
+[19:15] And then from that database it's doing um it's basically creating content for me. So like all of this is running pretty much automatically and I just have approval system that I built out but like this is an an example of like something that can be more complex and this is a multi-part agent that is like doing all this stuff for me.
+[19:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Excalidraw Planning Example"
+NÚMEROS: Não especificados
+VISUAL: Ferramenta de diagrama visual mostrando planejamento pré-construção de agent workflow com múltiplos pontos de decisão e aprovação
+[20:00] And the matter like right now you do have to build it out manually like we will get to a point where you don't have to um build it out manually. I think probably in the next like 12 months we'll have the ability to have agents build all this stuff out. Um, but my point is like you can get as complex or you can get as like simple as you want depending on your outcome.
+[20:30] And it's really important to think about that. It's like, okay, what am I actually uh trying to solve for, right? Like what am I actually doing here? But this is an example of an operation where I have it so it's doing all of this stuff automatically for me and I just have to click a button that says I like this or I don't like this.
+[21:00] And it runs every single day for me where it's literally creating content on my behalf and my in my way of writing and all that and I don't really have to do much like I said besides approve or dis disapprove. Um, and the thing that I um I tell people as well is like the the way to think about this is always building stuff out before you actually build it out.
+[21:30] So I use this tool called Excaladraw and it's basically a diagram, but like I basically just map out before I build out an agent or an automation or anything really. I just map out like how I think it should work. And these are all assumptions like as you build out your agent or automation. um this is not necessarily going to be the end result, but it is going to be a good place of like reference and like a baseline of like what you want to happen.
+[22:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Content Workflow Diagram"
+NÚMEROS: Daily automation
+VISUAL: Fluxograma detalhado mostrando: briefing diário → Telegram → seleção de tipo de conteúdo (AI tip/news) → extração de insights → formatação baseada em database → aprovação → publicação em Telegram/LinkedIn/X
+[22:15] So like that agent process that I just showed you like it all started here where I just was thinking about okay what do I want every single day I want to get a a brief a briefing essentially that will get a content type that send it to Telegram. I'm able to select it if it's an AI tip or an AI news and then I can choose between if between that and then I can you know get some unique ideas that is extracted from the transcription.
+[22:45] And then I um will be able to send that to Telegram decline or approve it. It formats it based off a particular format that's stored in a database. So, I have like tons of examples that I can pick and choose from. Basically, that the agent's able to um pick and choose based off what it thinks the best format would be for that piece of content.
+[23:15] It send it to me. I approve it and then it sends to Telegram and then it sends to LinkedIn and X. So, like this is just an example of like how complex you can get it. But the point is like you want to make sure that you're building it out and thinking about it um like how what do you want to happen essentially?
+[23:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Jeremy AI: RAG System Example"
+NÚMEROS: Não especificados
+VISUAL: Exemplo de AI agent usando Retrieval Augmented Generation para buscar informações em database de vídeos, transcrições e mensagens do Telegram
+[24:00] And I think when you do this, actually I don't think I know when you do this, it makes it so much easier to build it out when you get into programs like in and like I said, I'll show you um just like something simple that you can build out. But the point is if you do that beforehand, you'll you'll have a better chance of building something that works reliably and consistently because you just don't want to build something to build something and it doesn't work half the time.
+[24:30] Um so that's operation and then there's people. So obviously everyone here is familiar with Jeremy AI. Jeremy AI is an AI agent. Like Jeremy AI has tons and tons of data that's stored in a database and it's using a rag system which is um retrieval augmented generation system essentially that is a like has the ability to precisely find information that is tailored to your query.
+[25:00] So when someone asks a question, it's using rag to go find all like it's basically going and uh surfacing all of the data in the database from all the videos, all the transcriptions, all the telegram messages, all that stuff and then formulating a response using AI. So that in itself is an AI agent.
+[25:30] There's all different types of AI agents um that you can potentially build and Germany AI is one of them and it's using Rag behind the scenes to do what it does. Um, obviously there's other things that are happening in between to get to that final response, but that's like the gist of it.
+[26:00] Like you can replace people like Jeremy has kind of replaced himself in some instances um where he has Jeremy AI answering questions for you guys and you can build some similar things. Now to be clear, Jeremy AI has a ton of ton of infrastructural things that I honestly don't even know because again to be clear, I did not build German AI.
+[26:30] Um, there was a company called Deli that built German AI. I kind of told Jeremy, "Hey, go check this out." And we kind of did some behind the-scenes research on the company itself. And then Jeremy was like, I'm willing to test this. Let's do it. So, um, and they have a ton a ton of funding to be clear.
+[27:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Case Study: Agency Adding $2.1M with AI Agents"
+NÚMEROS: $2.1 million, 6 months, 80% automation
+VISUAL: Post de mídia social destacando resultados financeiros massivos através de automação de 80% das tarefas usando AI agents
+[27:15] So, they have like all the infrastructure to build this out. Um, so it just made more sense for them to do it. But my point is that this is a way to kind of build out a people person or replace a people person role and have AI do what Jeremy does. um pretty well. Um and yeah, so anyway, um today what I wanted to just show you is this.
+[27:45] I saw this uh post and um it was kind of interesting. He said, "AI agents have allowed us to add $2.1 million in cash collected to our agency in the last 6 months. If you're not using AI agents to automate 80% of tasks in your business, you're not you're going to be behind. You're already way behind, blah, blah, blah." Right?
+[28:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Agency Onboarding Agent Workflow"
+NÚMEROS: 10-15 VSLs, 50-100 ads
+VISUAL: Fluxograma completo mostrando: onboarding call → transcription → market research agent → VSSL agent → landing page agent → upsell/downsell email/ad agent → 50-100 ads gerados
+[28:30] But I thought it was interesting how he built out his agent. He just kind of talked about the process. So he has some type of onboarding call that gets transcribed and sent into a market research agent. The market research agent does research on the target audience, core outcomes, limitations, emotions, consequences of not achieving the desired outcomes, excuses, objections, vision of the future and so on.
+[29:00] And then the market research agent sends the completed doc to our VSSL agent that perfectly and um instantly executes 10 to 15 worldclass VSSL. So, and then he goes on to talk about more uh things that he does for like the onboarding stuff, right?
+[29:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Modular Agent Components"
+NÚMEROS: Não especificados
+VISUAL: Conceito de quebrar processo complexo em múltiplos agentes modulares, cada um com função específica e bem definida
+[29:45] Um, and I thought this was interesting just because I think it's relevant to everyone here, but also it proves a point where um when you're building out agents, you don't want one agent to do everything. Like, you need to have modular components to the overall outcome.
+[30:15] So, remember how I said like you want to think kind of like reverse engineer like what you want your outcome to be. So like in this case he basically wants to be able to uh fulfill on his client duties right and it starts with a transcription and then it goes on. So like every part of this whole entire process has many processes within it.
+[30:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Market Research Agent Sub-Tasks"
+NÚMEROS: Não especificados
+VISUAL: Breakdown detalhado das sub-tarefas dentro do market research agent: research target audience → analyze core outcomes → identify limitations → assess emotions → etc.
+[31:00] And the first step to building any agent is again understanding what you're trying to accomplish which which means that you need to be thinking about what your outcome is first and then start to map out using a tool like I showed you excaladraw which is basically a diagram to get to that outcome.
+[31:30] So, for example, what this um post said is like you're going to have an onboarding call, then it's going to do a market research agent, you're going to have a VSSL agent, you're going to have a landing page AI agent, and then you're going to have an upsell downell email advertising AI agent, and then that is going to complete 50 to 100 ads generated.
+[32:00] So, like that's the entire process, but you can see that it's broken down into um different modular components of the entire process. And even within these different um agents, there's even more, right? So like really it's not it doesn't just stop at a market research agent, right?
+[32:30] That market research agent has to go do research on the target audience. It then has to analyze the core outcomes. It has to identify limitations. It has to assess the emotions and so on. So like each part of um the agent process or the system has different parts of it to get to that ultimate outcome.
+[33:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Purpose Statement → Agent Workflow"
+NÚMEROS: Não especificados
+VISUAL: Metodologia de começar com declaração de propósito clara antes de construir workflow de agent
+[33:15] And again like this is what he was describing up here. Um, but you can see it when you break it down like this is the entire thing. So, it's kind of it's kind of long. Um, so there's there's the point is like within an agent tick process, there are many steps within each one.
+[33:45] And by mapping it out, it makes it way easier for you to really conceptualize the amount of work that would go into it, but also just like what am I actually trying to do here? So, um I want to show you um well, I kind of already showed you this, but basically the purpose is to start with a way to like a purpose statement of like understanding what you want to do.
+[34:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Content Format Agent with Multiple Tools"
+NÚMEROS: Não especificados
+VISUAL: Exemplo de agent com acesso a múltiplas ferramentas: Perplexity (pesquisa), browser automation, PDF conversion, APIs diversas
+[34:30] And then in this example, it's like, okay, I want to create social media or news content. I have a trigger that's going to do something. And then agent one's going to an analyze all this stuff, right? There's one thing that I didn't talk about which is I kind of mention briefly mentioned it but I'm going to go back here real quick just to show you something.
+[35:00] Um and it's really you'll notice that and I'm going to show you from scratch so don't get crazy don't get scared here but like if you see this agent it says content format format agent this agent has access to different tools. So another part of this is understanding like what tools does the agent need to get to whatever outcome I'm trying to do.
+[35:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "API Marketplaces: Rapid API & Apify"
+NÚMEROS: Milhões de APIs disponíveis
+VISUAL: Demonstração de marketplaces de APIs onde é possível encontrar integrações para qualquer funcionalidade necessária (YouTube, web scraping, etc.)
+[35:45] So um you might want to give it perplexity which is a you know AI tool that does research. You might want to do a browser automation tool so they can go and like actually automate certain parts of your process using a real web browser. Um you might want to uh you know convert a PDF to a doc or like there's so there's such a lot of different things that you can potentially do.
+[36:15] Um and you need to know like what tools will you give your AI agent to do whatever you're trying to do. And a lot of the tools will um already be inside of nin which is what we're using. And again I'm going to show you from scratch but you can also use APIs.
+[36:45] So that's a bit more tech like technical but u essentially you can like basically uh use services like um there's I mean there's millions of APIs but you can if you want to like quickly find APIs for whatever you're trying to do you can use a service called rapid API which basically you can just search like for example if I was looking for um like a YouTube I don't know uh like transcription or something or media downloader like they have an API for so like these are all like um APIs that people have built themselves.
+[37:15] But you can use a marketplace like Rapid API. There's another one called um Appify. Um let me just Appy and again it's a another marketplace where you can find different APIs for whatever you're trying to do. This one's more like web scraping but again they have all different type of APIs.
+[37:45] But the point is like you can connect different services or softwares to your area agent and then that AI agent can use it. So anyway, after uh enough explaining, let me actually show you something for real now.
+[38:00] Jeremy: May I ask you a question as you're building?
+Gelani: Yeah, go ahead.
+[38:15] Participant: So I build some custom bots on PO. Am I able to connect my custom bot through the agent?
+[38:30] Gelani: So if PO has a API, yes. I don't know if PO does to be honest with you. I don't use it that much. Um but if they have an API, you can. I know Poppy for example has an API. So, like if you wanted to use like Poppy where you could, you know, put all your info and stuff um and like in a board in Poppy and then you can use the API and connect it to an agent and then that agent has access to that board.
+[39:00] So, I'm like if if PO has an API, you can do um something similar. I just don't know.
+Participant: Okay, I can rebuild it on Claude and then just connect it that way.
+Gelani: Yeah, you can. Um Okay, for sure. 100%.
+[39:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "N8N Platform Introduction"
+NÚMEROS: Unlimited automations (self-hosted)
+VISUAL: Interface do N8N mostrando plataforma no-code similar a Zapier/Make com funcionalidades mais avançadas e opção de self-hosting
+[39:45] Um, okay. So, I'm going to just hop in here real quick into this one and um I'm just going to delete this. So, basically I'm using n and I I personally love n. It's a no code uh builder so similar to zap or make but they just I don't know it's very familiar but it's different at the same time and the amount of functionality that they give you is really powerful for all different types of things.
+[40:15] So, I really like it. So, N it's fairly cheap. You can also do a self-hosted version where you like self-host it and you get unlimited automations, but um that's a different conversation, but the point is it's it's a really good service.
+[40:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Chat Trigger Setup"
+NÚMEROS: Não especificados
+VISUAL: Demonstração de setup inicial com chat trigger como ponto de partida para testar agent workflow
+[41:00] So, anyway, typically I start my workflows through web hooks like I mentioned earlier, but for this presentation, I'm just going to do a chat trigger, which is basically like I can basically trigger the automation or the AI agent from this chat here. So I'm just going to be able to communicate like you know I can chat here and it's going to send whatever I want into an AI agent.
+[41:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "N8N Trigger Options"
+NÚMEROS: Dezenas de integrações disponíveis
+VISUAL: Lista extensa de triggers disponíveis: App Events, Airtable, HubSpot, CRMs diversos, PayPal, Stripe, etc.
+[41:45] So um just like Zapier just like make you add different nodes into your entire thing. And this is why I was saying like beforehand you want to build it out and like map it out because then it becomes easier to understand okay what do I actually need to add in this whole entire flow.
+[42:15] But for now we're just going to build something very simple so you guys can get your your heads around like this entire thing. So, I'm going to start with a chat trigger, but just know that there are all different types of triggers that you can add. So, you can do on app events.
+[42:45] So, like if something happens in a particular app, like I said, like Air Table, you can like literally choose any of these um from the options. So, there's all different types of like HubSpot, like all different types of CRM, PayPal, Stripe. So, like any type of action that happens, you can trigger an agent basically is what I'm trying to get at.
+[43:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Building Market Research Agent Live"
+NÚMEROS: Não especificados
+VISUAL: Início de build ao vivo de agent para pesquisa de mercado baseado no exemplo do post sobre agência de $2.1M
+[43:30] Um, but for now I'm just going to, like I said, do a chat trigger. So, um, and the reason why I want to do chat is because I actually want to build out, um, I want to build out the first part of this. So when it says onboarding call gets transcribed and sent to market research agent, I want to build out the the market research agent and then just kind of see what that looks like and then you can kind of get the the understanding of what it looks like to build modular agents basically.
+[44:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "AI Agent Node Configuration"
+NÚMEROS: Não especificados
+VISUAL: Interface de configuração do AI Agent node mostrando opções: Chat Model, Memory, Tools
+[44:15] So anyway, so I'm going to start with the chat trigger and then after that I'm going to click plus and then I'm going to go to AI and then in this AI there's a lot of different things that you can do but I'm going to go to AI agent and this is where you would start the process.
+[44:45] So you'll see that this says chat model memory tool. So the AI agent like I said can have access to multiple tools. It can have access to different memory systems that you build out here. Um and you can also add different chat models.
+[45:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "OpenAI Model Selection"
+NÚMEROS: GPT-4o
+VISUAL: Seleção de modelo OpenAI, explicação sobre necessidade de API key e créditos na plataforma OpenAI
+[45:30] So um in this example I'm just going to use OpenAI. So I'm just going to select OpenAI. You need to connect your OpenAI account before you um use this. So you have to get an OpenAI API key. You can do that by going to platform.openai.com and then just get an API key.
+[46:00] You have to like add credits. You just put like 20 bucks, 50 bucks, whatever if you're testing and then you'll be good to go there. Um, and you just add your API key here once you get one from platform. Um, so anyway, their docs are really good. So if you ever have questions or you're stuck with anything, just click on open docs and it will walk you through like what you need to do.
+[46:30] So anyway, I'm going to select open AI and then they have all the different models that you can choose from. So I'm just going to choose 40. And now I have my model. So you can only have one model to an AI agent right now. So you can't have u multiple.
+[47:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Open Router Alternative"
+NÚMEROS: Todos os modelos AI disponíveis
+VISUAL: Demonstração do Open Router que permite acesso a todos os modelos AI (Anthropic, OpenAI, etc.) e seleção automática do melhor modelo para cada tarefa
+[47:15] If you wanted to have multiple and like you wanted to test different ones, there's another tool called Open Router that you can um use, which is pretty cool because Open Router actually has access to every single AI model. So like you can see here that it has all of them.
+[47:45] And the cool thing about this is you can actually do um uh what is it called? I think it's called like any but basically or like auto you basically open rout will choose which AI model it it will use for the task which is pretty pretty neat. So like again it has all access to all of them. So you can choose like what AI model that you want.
+[48:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Prompt Configuration: Define Below vs Chat Trigger"
+NÚMEROS: Não especificados
+VISUAL: Opções de configuração de prompt no agent: manter conectado ao chat trigger ou definir prompt específico abaixo
+[48:30] Um let's say I'm anthropic for this one anyway. So this is the first part of it, right? And then inside of the AI agent, you can because I'm using a chat trigger, um I want it to stay connected to chat trigger node, but in most instances, you want to have it defined below.
+[49:00] So what that means is you can define the prompt and how you want it to operate. So you can just like chat, you're prompting, you're prompting this AI agent to do whatever you're trying to do. You can also add a system message as well, which gives it a bit more like you're basically directing it a bit more inside of the system message.
+[49:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Example Prompt Structure"
+NÚMEROS: Não especificados
+VISUAL: Exemplo de prompt real mostrando instruções para reescrever post com feedback do usuário
+[49:45] So, you can make this super super long or short depending on whatever action that you're you're trying to do. I'm going to make this not as uh like my prompting like for example in one of these um uh like you can I'll give you an example of like a real one.
+[50:15] So, like for example, this is a prompt, right? That's just saying your job is to take feedback from the user and rewrite this original post. Here's the original post. Here's the feedback from the user. Um, and don't worry about this. I'll I'll explain what this is, but basically just you're just prompting it, right?
+[50:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "System Message Rules"
+NÚMEROS: Não especificados
+VISUAL: Exemplo de system message definindo persona ("world-class direct response copywriter") e regras específicas de comportamento
+[51:00] And then within the system message, you have additional things that says like you're a world-class direct response copywriter who specializes in LinkedIn uh content hooks and then just has like additional rules. This is basically this like the rules you want to follow.
+[51:30] So this is where like your prompt engineering skills come into play where you actually have to understand like what words or what um what phrases or things of that nature affect how the AI agent works. So, a lot of the time when I'm building out these agents, I'm actually experimenting prompts and seeing the results of of what it actually outputs.
+[52:00] Um, so there's a lot of testing involved to be honest with you. So, you have to like test different prompts, test different tools, test different things to just see like what it is going to do for your outcome. But just think of like a prompt is instructions and then like system message are the rules basically uh to get to the point where you feel really good.
+[52:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Set Node for Variable Storage"
+NÚMEROS: Não especificados
+VISUAL: Uso de Set node para armazenar mensagem do chat em variável reutilizável no workflow
+[52:45] Um, but this is like a very simple agent. So, what we're going to do is build that market research agent. And I'm just going to in between this chat, what I'm going to do is do a set uh node. And if you're not familiar with basically, it's like a variable.
+[53:15] So, I can I can uh whatever message I put in here, I can just store it in here. So, I don't have to like connect it to chat only cuz I want to actually give it a prompt. So, I'm going to say define below, but then I'm going to send my chat message into this variable so I can use it elsewhere.
+[53:45] And I'm trying to be as like simplistic as possible. So, I'm sorry if this is not making ton of sense. It's just hard to kind of show you everything. I have a list, if you guys want. I have a list of like 50 videos that I've watched in the past. I could give you access. If you really want to go super deep on this stuff, um that I've watched to get really good at this and, you know, feel free to watch all them as well.
+[54:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Testing Workflow with Sample Data"
+NÚMEROS: Não especificados
+VISUAL: Processo de executar workflow para obter dados de teste e poder configurar nós subsequentes
+[54:30] Um I can give you guys that list after this. But anyway, um the point is when I when I send a message into this chat, remember how I said I can open the chat and say like hey for example, right? Um I can store this into here.
+[55:00] So what I'm going to do is I'm going to say um the reason why this is I'm just going to say hey what's up because I need to have some type of prompt here. So when I say hey here I'm just going to rerun this. It's going to run right. So now it's like it's actually running.
+[55:30] So you saw like this this all ran basically. So what I'm going to do though is I need to run it to get data, right? So if you're familiar with Zapier or like make, you always have to like run it to get access to the different information within the node.
+[56:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Dynamic Expression Setup"
+NÚMEROS: Não especificados
+VISUAL: Configuração de expressões dinâmicas (verdes/vermelhas) vs texto fixo, uso de variáveis de nós anteriores
+[56:15] So very similar to inn where I had to run this so that I can get access to this message. So basically what I'm saying is I want to be able to take the message that I said which was hey, and then store it in this variable that says um message, right?
+[56:45] So now I can reuse this wherever I want basically. And now what I can do is I can actually pull in that message from here. So if I say if I rerun this again um this should be message. And now in the AI agent I can say you know use this variable in the prompt.
+[57:15] So now it becomes an expression which means it's dynamic. So this is fixed. So if you ever see like if you're building out these and you ever see like this and it's not green or red, it means that it's not a variable or it's not dynamic. It needs to be dynamic.
+[57:45] Meaning you got to turn this to an expression to use this message from a previous node. So I say use this, right? So that's the message.
+[58:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Fake Transcription for Testing"
+NÚMEROS: Não especificados
+VISUAL: Uso de transcrição fictícia gerada pelo ChatGPT para simular onboarding call real
+[58:15] So what I'm trying to get at here though is I want to be able to build a market research agent. So, I actually had chatbt um build me out like a transcription because remember that that started with a transcription and then it uh went into the market research agent, right?
+[58:45] So, what I want to do is just basically say I'm going to add this all into here. So, now this message should have this entire transcription that I have from chat attribute, right? Um now I can use this in this agent. This agent doesn't have any tools yet though.
+[59:15] So like how do we actually get it to do research based off of this client that we have, right? So um whatever this client is, I had tragedy team make up some story. So I don't really know what this is. So figure that out.
+[59:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Research Tool Selection Strategy"
+NÚMEROS: Não especificados
+VISUAL: Processo de decisão sobre quais ferramentas de pesquisa fornecer ao agent (Perplexity, Tavily, etc.)
+[1:00:00] Um but the point is you have to like know, all right, what tools do I need to do the research to identify all of these different problems? If you remember from this um message, he said the market research agent does research on the target audience, core outcomes, limitations, blah blah blah.
+[1:00:30] So, we have to have some type of way to figure this out. So, if you're ever unsure of like an API or a tool or a way you don't know like how to actually do that, just ask AI. Just chatbt search it, Grock, search it, Perplexity search it. Nine times out of 10, it will give you resources where you can find out different tools.
+[1:01:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Tavily Search Tool Integration"
+NÚMEROS: Não especificados
+VISUAL: Integração da ferramenta Tavily Search como alternativa ao Perplexity para pesquisa web no agent
+[1:01:15] In my case, I already know what I need to do. So, for me, I'm going to use Perplexity for this. So, I'm just going to search Perplexity. And you can see as I'm adding tools, if I click on that, there's like all different type of tools that you can give your agent access to.
+[1:01:45] So like there's all different types of tools um that the agent can use. So again, if you were to pre pre-plan this, you would have some type of u inclination of like what tool should my agent use beforehand. But um I'm going to search for her Actually, let me save this real quick.
+[1:02:15] And I forget the name of it. This guy. All right. Um, okay. So, why is this not coming up? Weird. Change of plans. We're going to use a different tool. We're going to use Tavly. Um, and I'm going to just use an API node for this. I'm not sure why that one's not coming up.
+[1:02:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "HTTP Request Tool for API Calls"
+NÚMEROS: Não especificados
+VISUAL: Configuração de HTTP Request node para fazer chamadas API, acesso a recursos externos
+[1:03:00] Um, anyway, so for this one, I was going to use Perplexity, but we can use Table. It's very similar. It's basically, if you go to Tavly, it's a search tool. So, Perplexity is similar. It's just Tavly is different. Um, and I can just use this to search the web essentially.
+[1:03:30] So, basically what I'm saying is I just want to search the web to get a better understanding of this client um, for the market research agent. So, I'm going to add an HTTP request tool. Um, and basically this is a way to call an API.
+[1:04:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "API Documentation Research"
+NÚMEROS: Não especificados
+VISUAL: Demonstração de como usar documentação de API (Tavily docs) para entender endpoints e configurar integrações
+[1:04:15] So, if you're not familiar with this, um, I'm basically saying I need a way to access a resource, and this is how I'm going to do it. So, I'm going to go to Tavly, and every like if you're ever looking for an API, they usually have really good API docs.
+[1:04:45] Um, and you can basically just use those documentations to do whatever you're trying to do. So like for example you can go to documentation page for Tavly in this in this case and then you can literally see all the different things that you can do.
+[1:05:15] This is kind of technical so I don't want to get too deep into this but the point is you can always do research either using AI to figure out what level of access do you have and um that should give you a good starting place to do whatever you're trying to do.
+[1:05:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "cURL Import Feature"
+NÚMEROS: Não especificados
+VISUAL: Funcionalidade de importar cURL diretamente no N8N, auto-preenchimento de configurações de API
+[1:06:00] Um cool. So what I'm going to do here is I'm going to go to API playground and I'm going to just look at this to figure out okay what is the query that I need to make and the AI tool will make will actually make the query.
+[1:06:30] So I don't really need to do that but I do need to do is just kind of configure this. So I want to advanced search because I wanted to actually do like pretty deep analysis of a market and that's pretty much it. like I don't really need need more than that.
+[1:07:00] I'm going to click on this which is shell which is basically a whenever you see c URL this is what you want. You don't want python javascript you want where it says c URL and the reason for that um is because if you go into n and you're using an http request module or node you can click import curl and it's going to add all this stuff for you so you don't have to like manually do all of this.
+[1:07:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "AI-Defined Query Parameter"
+NÚMEROS: Não especificados
+VISUAL: Configuração de parâmetro de query para ser definido automaticamente pelo AI agent, não manualmente
+[1:07:45] Um and it just makes your it's going to make your life just way easier. Um, so you don't have to even worry about like technical like NAT will handle all of this. So now that I have this set up, I'm just going to click on this little like star icon because what it's saying is I'm going to let AI define the query.
+[1:08:15] Like I don't even have to define the query. I'm just going to select this and then AI the AI agent is going to put in what it needs to research. So then what I can do at this point is I can say um I can in in the system message I'm going to say something like um uh please do market research.
+[1:08:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Naming Tools for Agent Recognition"
+NÚMEROS: Não especificados
+VISUAL: Importância de nomear ferramentas claramente (ex: "Tavily Search") para o agent saber qual usar
+[1:09:00] And again I'm doing this really quickly. Like typically my prompts are pretty um specific and precise, but I'm just going to make something up. So please do market research using the And before we do this, I'm going to name this so that the AI agent knows. So, I'm just going to say Tavly search.
+[1:09:30] And I'm just going to say please using the Tavly search tool um to figure out the needs of the customer. Let's just say something like that. And I'm going to hop back into trap GPT because I want to copy this again, this fake transcription.
+[1:10:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Prompt Engineering with Transcription"
+NÚMEROS: Não especificados
+VISUAL: Inclusão da transcrição fictícia no prompt com instruções específicas sobre o que pesquisar (target audience, outcomes, limitations, desires)
+[1:10:15] And then I'm going to say I'm going to save this real quick. And I'm just going to pop this in here and send this so I can get access to this. It shouldn't do anything, but let's just see. Okay, perfect.
+[1:10:45] So, then I'm going to say use this um message to um and then what did the guy say? The guy said something about uh client target audio outcomes, limitations, and desires. So, I'm just going to copy that from what the message was before.
+[1:11:15] Um so, I'm going to say use this message. And you can see like the message is there. um to I'm going to open this up just by clicking this so I can see to figure out the Okay, that's a pretty simple prompt.
+[1:11:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "IMPORTANT Prompt Technique"
+NÚMEROS: Não especificados
+VISUAL: Técnica de usar "IMPORTANT:" em prompts para garantir que instruções críticas sejam seguidas 9/10 vezes
+[1:12:00] Um and then if I wanted to, I could say uh like something like this, which is really cool. Like I always do like important, especially if it's something I wanted to do always. I just do this and nine times out of 10 it will follow it um uh specifically.
+[1:12:30] So I'm going to say important. use the Tavly search tool to um do this research. Even though I said in the system prom, I I kind of want to do it again here. And um let's click on uh let me let's actually rerun this.
+[1:13:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Agent Execution in Real-Time"
+NÚMEROS: Não especificados
+VISUAL: Visualização do agent executando em tempo real, alternando entre OpenAI e Tavily Search conforme necessário
+[1:13:15] So I'm going to scroll up here and then I'm just going to rerun this chat so that it runs it again. And let's just see if it uses the Tavly search tool. And now you can see the agent is using that tool. You can see it's running. It's doing its research. It's going back to anthropic, going back to the search tool.
+[1:13:45] You can see it's like going back and forth figuring out like what it needs to do to do this actual research. And you can actually see the logs on here where it says AI agent node. You actually see like what it's actually doing, right?
+[1:14:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Agent Search Queries Log"
+NÚMEROS: Múltiplas buscas realizadas
+VISUAL: Log detalhado mostrando queries específicas: "challenges e-commerce Facebook ads scaling", "burnout stress Facebook ads", "digital marketing agencies trust building"
+[1:14:30] So, it's actually using the challenges facing e-commerce businesses with Facebook ads scaling our rorowass. It's using uh tably search to figure out the burnout and stress for Facebook ads. It's using tably search to um figure out the digital marketing agencies to build trust.
+[1:15:00] So, it's like it's literally going back and forth based off what the conversation is, but also based off what I said in the prompt um to figure out these different things. So, now it's done.
+[1:15:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Market Research Output"
+NÚMEROS: Não especificados
+VISUAL: Output completo do agent mostrando análise estruturada: target audience, pain points, mental state, business analysis detalhada
+[1:15:45] So, if I double click in here, I can actually see that it did research, right? So, based on the research analysis of this conversation between Alex and Jamie, here's a comprehensive breakdown of Jaime's digital marketing agency business uh digital marketing uh uh analysis, target audience, and it like you can see like it pretty it did pretty well.
+[1:16:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Chaining Multiple Agents"
+NÚMEROS: 10-15 VSLs mencionados
+VISUAL: Conceito de adicionar próximo agent na sequência (VSSL agent) que recebe output do market research agent
+[1:16:30] Um, and now what I could do, right, is I could uh add another agent, right? Because the next step of what we said or what this guy said was like the market research agent sends a completed doc to our via cell agent that perfectly and instantly executes 10 to 10 to 15 word class VSLs, right?
+[1:17:00] So what you could do then is like okay if that's the case let's add another AI agent here and um I'm going to then say okay let's define below and then start adding another prompt and then a system message where you can have you know your different uh VSSL frameworks or whatnot.
+[1:17:30] Or you can have it set to pull from a rack system which is more advanced but you can have a rack system that has all your different frameworks examples SOPs etc and then the AI agent pulls from that to make the best decision. ision on what that VSSL should be should be based off the market research.
+[1:18:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Structured Output Parser"
+NÚMEROS: Não especificados
+VISUAL: Ferramenta para estruturar output do agent em formato JSON, permitindo acesso individual a cada elemento da resposta
+[1:18:15] So the point is you can have different agents for different parts of the process. And um one thing that I really like to do depending on like what I'm building is I will do something called structured output.
+[1:18:45] So you see here that this is like one megalong message which is not really good for us because uh essentially what we need to do is break down each of these different things. Right? So the the um the pain points we need to break that out. We need to break out the mental state so that we can use it and um use it in different parts of this whole entire sequence, right?
+[1:19:15] So what we can do to do that is inside of the AI agent we have a a little toggle here that says require specific outcome format. And in this we can then define if I click on this you'll see if I scroll in here see it says output parser.
+[1:19:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "JSON Structure Creation with ChatGPT"
+NÚMEROS: Não especificados
+VISUAL: Processo de usar ChatGPT para gerar estrutura JSON que quebra resposta longa em componentes individuais acessíveis
+[1:20:00] If I click on this, I can do structured output parser, which means I can define like okay, this is going to be the mental state and then it's going to output that mental state in its individual um component essentially.
+[1:20:30] So what I normally do for stuff like this is to make it easier is I will be like I'll go to chat GPT and let's just say I wanted I wanted to break this out into its own individual parts. So, I would go into chatgpt and then I would say um please take this um response and make a JSON because that's what it's called.
+[1:21:00] It's basically like a structured format. Uh make a JSON um that breaks out each of the elements of this response and um let's see just to see what it does here. Yeah. So, this this is pretty good.
+[1:21:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Simplified JSON Schema"
+NÚMEROS: Não especificados
+VISUAL: Versão simplificada do JSON focando apenas nos elementos principais necessários para uso posterior
+[1:21:45] So, now it's like breaking out each of these business analysis, target audience, right? So now it's more specific. This might be too long. Like you can simplify this. Um and we could try it just to see if it if it runs. Um and let's just say he's make it more simple. Um just the main ones.
+[1:22:15] And uh let's just see if it's if it's more simple for us. Yeah, this is this is fine. We can run with this. Cool. So then what I would do is just copy this, go back to nan into this structured output parser and literally just paste this and it's just examples right.
+[1:22:45] So um what you could do as well is you can say uh just give me the JSON without the example text here. and yeah, let's just try this one instead because I don't want it to actually um do that.
+[1:23:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Testing Structured Output"
+NÚMEROS: Não especificados
+VISUAL: Reexecução do workflow para testar se structured output está funcionando corretamente
+[1:23:30] So, let's just try this and click on save and I'm going to rerun this and uh let's just see the output what it what it does and it will make more sense if it runs correctly. So, let's just click on this again and uh okay, let's let's see why that's not doing that. Let's just copy this.
+[1:24:00] And um okay, so what I'm going to do is just refresh this real quick. And in the chat, hit enter and let it run again. And at the end it's going to structure this output basically is what I'm saying.
+[1:24:30] So that way we have access to all of these individual things. So instead of it being like one long mega thing like this, it'll be split based off the different um elements of the like of the market research which will make it easier for us to use when let's say we're trying to build out that VSSL agent.
+[1:25:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Structured Output Success"
+NÚMEROS: Revenue range: $100K-$2M
+VISUAL: Output estruturado mostrando separação clara de: target audience type, revenue, pain points, mental state, etc. - cada elemento acessível individualmente
+[1:25:15] We can actually say, okay, um, and for VSSLs, like for like anything really, like I would probably break it down. So like for the VSSL, you would have a hook, right? Like you would have a body, you have a CTA. So each of those should be like their own individual agent just because it'll be easier for you to define like what actually it needs to do to make it something that's really good.
+[1:25:45] Um, but the point is you can now use this. So if I open this, you can see it it broke down all of this, right? So like target audience type, ecom, e-commerce brands, revenue, blah blah. So like now I can actually pull individual components of the market research into other parts of the AI agent um for future AI agents.
+[1:26:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Using Structured Data in Next Agent"
+NÚMEROS: $100K-$2M revenue range
+VISUAL: Demonstração de como usar dados estruturados (ex: revenue range) como input para próximo agent na cadeia
+[1:26:30] So for example, if I wanted to add a um another AI agent here, let's just say that this is the VSSL agent. DSL agent and let's say I wanted it to do um I should say like please find please find five um e-commerce brands that are and then let's just say that make this an expression and I say are in this range right.
+[1:27:00] So I can pull in that revenue now and I can pull all of these individual components of the response so please find five e e-commerce brands that are um in between this range, right? Let's just say that I'm doing another research agent or something like that, right?
+[1:27:30] Um, but the point is I can now have another agent that just uses uses individual components of that research that the AI agent did. So now I can say, okay, I'm just going to pull this to this one. You can actually I'm just not going I'm just going to pull that there.
+[1:28:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Tool Reusability Between Agents"
+NÚMEROS: Não especificados
+VISUAL: Conceito de reutilizar ferramentas (Tavily Search) e modelos AI entre diferentes agents no workflow
+[1:28:15] And um now I can pull this tool as well. You can reuse basically what I'm saying. You can reuse tools or or or AI models from other agents to new ones. And now if I say run this VSSL agent or do the research based off of what I said which is find five e-commerce brands that are in between this range which is going to be 100K to 2 million in revenue.
+[1:28:45] Um it should go and take that in to consideration when it's doing its research for Tavi. So you can see here it's running again and now it should output five different brands um that are in that in that range.
+[1:29:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Simple Agent Scalability"
+NÚMEROS: Não especificados
+VISUAL: Conceito de que agents simples podem escalar para complexidade ilimitada baseado em necessidades
+[1:29:30] But this is how like this is like a very simple agent and you can take this as far as you want and you can also you know send this elsewhere. So like just say that this is the end of the agent, right? Like maybe you just wanted a market research agent. You didn't need the VSSL agent.
+[1:30:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Sending Data to External Apps"
+NÚMEROS: Não especificados
+VISUAL: Opções de enviar output do agent para apps externos: Airtable, Google Sheets, Telegram, etc.
+[1:30:15] Um maybe you wanted just the market research and you wanted to place that in air table for example. You can then add a um just another action, right? So you can literally say okay air table create a record right and now you can pull in the data from these past nodes.
+[1:30:45] So like from the VSSO agent, AI agent um or any other the past nodes and actually add data. So if it's Air Table, Google, Telegram, whatever, you can basically just send that data wherever you want. Um, just like how you would do in a Zap year or make.
+[1:31:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "VSSL Agent Output"
+NÚMEROS: 5 e-commerce brands, $100K-$2M revenue
+VISUAL: Output do segundo agent mostrando lista de 5 marcas e-commerce dentro do range de receita especificado
+[1:31:30] Um, so now the VSSL agent, which is really not a VSSL agent, it's a market research part two agent. But the point is it did the research, right? So here are five e-commerce brands that fall within 100K to $2 million or in revenue range, right?
+[1:32:00] So um, and then it just gave me different brands, right? And then now I can use that for whatever and I can take this to, like I said, any other app.
+[1:32:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Advanced Features Available"
+NÚMEROS: Não especificados
+VISUAL: Menção a recursos adicionais: data transformation, if-then statements, human-in-the-loop approval systems
+[1:32:45] Um there's other things that you can do as well like data transformation like if then statements um there's a lot of other things that you can do but this is just like a simple way to start thinking about agents um and start doing like really cool stuff that you can then automate the whole process.
+[1:33:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Additional Trigger Types"
+NÚMEROS: Não especificados
+VISUAL: Opções de triggers adicionais: schedule (diário/semanal), webhooks, human-in-the-loop approval steps
+[1:33:30] You can also for example add additional triggers. So let's say that you wanted um a daily thing or something, you can add a um like on a schedule, right? Or again like web hooks, you can also do human in the loop elements, which is essentially having a human approve or decline a particular action for whenever the AI agent is done.
+[1:34:00] Again, that's a bit more complex and I don't want to go like super super deep, but I can show you, like I said, I'll give you the list of videos that um I've watched in the past and you guys can watch them as well.
+[1:34:30] So, that is pretty much the gist of it. I wanted to just get your minds turning. That's what I'd like to do is like start to just introduce you guys to stuff and then um you know, you guys can take it, ask questions and whatnot. So, I'm going to open the floor for some questions and uh I'll be able to answer them.
+[1:35:00] Jeremy: Anybody who's got a question for Galani, just unmute yourself and ask away or just drop it in the chat. So,
+[1:35:15] Participant: Uh, Galani, so when you were reducing down the the JSON, uh, how do you know like when to do that and why exactly was that being done?
+[1:35:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "When to Use Structured Output"
+NÚMEROS: Não especificados
+VISUAL: Explicação de quando usar structured output: quando precisa acessar pontos de dados específicos em partes subsequentes do processo
+[1:36:00] Gelani: Great question. So, it really comes down to the data that you need. So, for me, like for example, like this long long ass response beforehand, um, let me move this out of the way. So like for example like the message right like this is like you can't really dissect things out of this to use in other parts of the process.
+[1:36:30] So you want to basically structure the output. So structure what the AI agent's response is into better um better usability for other parts of the process. You don't always have to do a structured output. It just depends on if you need access to data points that are inside of um that response.
+[1:37:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Content Selection Agent Example"
+NÚMEROS: 10 insights
+VISUAL: Exemplo real de uso: agent que encontra 10 insights, cada um precisa estar separado (não em texto único) com index, insight e data
+[1:37:15] So sometimes like um like a real example of this is uh let me exit out of here. So like a real example here like in in a production use case is um a content selection AI agent. So like this AI agent, the goal is for it to find different insights for me, like 10 different insights.
+[1:37:45] And I need those 10 different insights to not be in one like mega long wall of text. I need them to be split out in in individual insights. So in this structured output, I'm basically saying like I need you to break out each index or each insight in this manner.
+[1:38:15] So like I want to index, I want the insight that it's broken down to and the date of that insight that it came from and I want you to continue on for as how many insights that you provide me. So it's not necessarily like one long text. It's now broken into um different insights from that long text if that makes sense.
+[1:38:45] So it just depends on um like your use case and like what you're trying to achieve for each part of the process.
+Participant: If you go too long, is it not going to work
+[1:39:00] Gelani: Uh for sorry like what do you mean
+Participant: Like if you don't break it down uh like you or reduce it down like you did? Is it is the bot not going to work?
+[1:39:15] Gelani: No, it'll work. It just it'll it just it's just one long text instead of something that's broken into parts that you need. So yeah, it's it's totally up to like what you're trying to do. Sometimes I don't use this just because I don't need it to be broken into parts. I just I just need the text to come back, right?
+[1:39:45] And then I need to use that long text into the other parts of the process. It just totally depends on what you're trying to do. Does that answer your question?
+Participant: Yeah. Cool. Thank you.
+Gelani: Okay, awesome.
+[1:40:00] Jeremy: Uh, there's a few questions in the chat, Jalani.
+Gelani: Um, how do you know? Oh, yeah, I just answered that. Um, can I pay you to build for me? Yeah. Yeah. Yeah. Absolutely.
+[1:40:15] Jeremy: That's what I do, JC. I I just pay him to do all this random cuz
+Gelani: Yeah.
+[1:40:30] Jeremy: I mean, some people in IC want to do it themselves, right? And that's totally cool, too. But you know it can get like depending on what you're trying to do. You need someone that understands all this process to kind of come in.
+[1:40:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Customer Information Collection Methods"
+NÚMEROS: Não especificados
+VISUAL: Discussão sobre métodos: Zoom + Dscript, formulários extensos, Fathom, outras ferramentas de transcrição com APIs
+[1:41:00] Um what's the best way to collect the initial customer information to feed to this? A Zoom call with dscript an extensive intake form. That's a great question. Yeah. So um you can yeah you can definitely do a Zoom transcription if Zoom has a uh I don't know if Zoom has Let's check real quick because that is a great question.
+[1:41:30] If they have a trigger, a zoom trigger. They do have triggers. Oh, no, they don't. It says they don't. So you would have to you would have to yeah figure out if like dcript or fathom or any of those other uh AI transcription tools have an API that you can just you know kind of man automatically do this.
+[1:42:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Alternative Data Collection Methods"
+NÚMEROS: Não especificados
+VISUAL: Soluções alternativas: construir form customizado (Bolt/Lovable), usar GoHighLevel, usar Airtable com webhook trigger
+[1:42:15] Or you can build out like I said I was showing you like you can literally go to bold for example or let's just try lovable because bolt is weird on arc. So um you could just build a tool that says like build me a tool that you know is a form that allows me to enter a transcription, right?
+[1:42:45] So like you could do something like that and then on that form have a button and then trigger a web hook inside n. Um or you can just do a go highle form. You can do air table like you can literally have an air table.
+[1:43:15] Um I'll show you that one second. I was messing around with this earlier because I was going to show you guys this but um I didn't I didn't get it in time but basically you can have an air table that just you paste the transcription and when you do it triggers an automation from air tableable.
+[1:43:45] So like when a record is created you can run a script that calls that in in web hook and then it does that whole entire process for you. So there's different ways that you can you can do something like that uh for in like customer intake um depending on like how you want that to go.
+[1:44:15] Uh let me see if there's any other questions in chat.
+Jeremy: Actually a quick question for you. So I have an in-house team of SCRs who handle my clients lead follow-ups and go high level. I know go high level has an AI chatbot as well as an AI caller.
+[1:44:45] If I'm going to go about building an AI agent to basically start to take over my client's lead follow-ups, would you recommend doing it directly within GoH High Level or building it on NAN?
+[1:45:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "GoHighLevel vs N8N Decision"
+NÚMEROS: Não especificados
+VISUAL: Critérios de decisão: quantidade de variáveis/contexto necessário, padronização vs personalização, integração entre plataformas
+[1:45:30] Gelani: Yeah. Um, it depends on if the information that you're providing is like how how are there a lot of variables to the information that's being provided? And the reason why I say that is because an agent, if you build an AI agent, you can provide it a lot of context and a lot of additional information that it can pull from to formulate the responses.
+[1:46:00] Versus if you had something that's more standardized and it's just the same thing for every single person, then you might just want to build it and go high level. Um, but it comes down to that, I would say.
+[1:46:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "GoHighLevel Integration with N8N"
+NÚMEROS: Não especificados
+VISUAL: Demonstração de como integrar GoHighLevel com N8N usando webhooks dentro de workflows/automations
+[1:46:45] Uh, and go high level though you could um go high level. So, GoHigh Level and I can show you guys real quick like some of the ways that you can interact with GoHigh Level with N. Um, to be clear, NA does have a a uh I think it's called lead connector or go high level.
+[1:47:15] Participant: No, they definitely do. Hold up. High level. I think I saw it in there.
+Gelani: Yeah, there you go. It's like dude, high level. Go high.
+Participant: They have like three sever names.
+[1:47:30] Gelani: Yeah, I know. That's anyway. So yeah, so they do have other ways that you can um interact with go high level, but they don't have triggers.
+[1:48:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Webhook Setup in GoHighLevel"
+NÚMEROS: Não especificados
+VISUAL: Tutorial passo-a-passo: criar webhook em GoHighLevel workflow → POST request → colar URL do N8N webhook → diferença entre test URL e production URL
+[1:48:15] So to trigger an ina from go high level, you would have to um so inside of here. So let's just go here real quick and then go to automation. So I'm assuming workflow trigger within the workflow and then have a web hook that goes into that end.
+[1:48:45] Exactly. Yeah, exactly. So like you would just literally do web hook and then um you would do a post request and then in the URL you would um so you would add a web hook trigger to your NA instance and you would just copy this and then paste that here and that's how you do it.
+[1:49:15] The one thing to note here though is the test URL is only for testing and also you need to make this post but the test URL is for testing. So when you're actually live in production, you have to actually use the production URL. So you would copy the production URL and then paste that here when when you turn this on. Um and then also turn on this as well.
+[1:49:45] Participant: Okay, got it. And is there any sorts of like types of information you'd recommend consuming in order to be like more proficient in building something like this or is that covered in that doc you were talking about earlier?
+[1:50:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Learning Resources"
+NÚMEROS: 20-30+ videos
+VISUAL: Promessa de compartilhar lista de 20-30+ vídeos do YouTube assistidos, recomendação de aprender fazendo (hands-on)
+[1:50:15] Gelani: Yeah, there's tons and tons of YouTube videos. Um, I like I said, I'm going to give you I'll give you guys a list of all the videos I've watched. Um, and you guys can just like there's no order to them to be honest, but I find the best personally like the best way that I learn is just like going head first into it, even if I don't know like a damn thing about whatever I'm learning and I just start getting familiar with things.
+[1:50:45] So, um, but anyway, yeah, I'll give you a list of like 20 or 30 videos that I've just slammed and watched that you can watch as well.
+Participant: Perfect. Thank you, man. Appreciate it.
+Gelani: Yeah, for sure.
+[1:51:00] Any other questions, guys? Or was this too technical? If it was too technical, I apologize.
+Jeremy: Anybody got any final questions for Julian? Just feel free to unmute yourself and ask away.
+[1:51:30] Participant: Last question or one question. Um, and you may have went over this. I I missed a little bit of the call. Have you like tested wiring this up with Poppy AI at all? like an NA because I'm I'm just not getting in the weeds with NAN.
+[1:52:00] And I'm thinking of like building a sales call analysis bot where you know if the deal stage is X it shoots through transcripts maybe comes them down or like trains them somehow through either pop or NAND um and then can kind of automate that process to limit time you know what I mean spent on watching sales call reviews
+[1:52:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Poppyai Integration"
+NÚMEROS: Não especificados
+VISUAL: Discussão sobre API do Poppyai (enterprise plan), possibilidade de conectar boards via API, uso de switch nodes para routing condicional
+[1:52:45] Gelani: Yeah so Poppy has an API so I think their API is part of their enterprise plan. Don't quote me on that. Um I don't have access to their API, but I know for sure like for 100% certain they have an API, which means that you can your your Poppy boards, you can add an API call to those boards.
+[1:53:15] And one thing that you can do, so you mentioned like switching or like if then statements. So let's just say that you had information come in from wherever, you can basically add different like directional flows.
+[1:53:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Switch Node for Conditional Routing"
+NÚMEROS: Não especificados
+VISUAL: Demonstração de switch node com regras condicionais para direcionar fluxo baseado em conteúdo (ex: mensagem contém "Germany")
+[1:54:00] So you can say like a switch for example. Um, and you can add rules. So like you can determine where that person or where that flow goes based off the rule. So um let's just say like this message contains um I don't know I'm going to say like ger right and you can see it had an X here. So it doesn't contain Germany.
+[1:54:30] But let's say that um let's just say that the message does not contain Germany. Right. So now it says yes. So then you can have different routes. So I can have different agents doing different things depending on like whatever you want it to do.
+[1:55:00] So in that case you would route it and then have an agent have access to the um Poppy API. And with M Poppy, you would have, you know, you can connect your different boards or whatever for whatever part of the process for whatever way they go, right?
+[1:55:30] Um, but you can reach out to their team to figure out what that API situation looks like. I know they just launched it like a month ago or so, so I don't really know the full details.
+Participant: Cool.
+[1:56:00] Jeremy: Anybody else got any questions for Galani before we go? Going once, going twice. Okay, amazing. Big thank you to Gelani. This is absolutely awesome.
+[1:56:30] U just to be clear, like I said, give Jelani a little shameless plug. I've given Jelani an an unknown lump sum of money over the years now just to build out random stuff like this. He built the Hammer them software for us. He built out our Telegram summary bot, although we don't use it that frequently. Still awesome though.
+[1:57:00] And uh we're building out a few more softwares as we speak. He also just recently built out all the financial modeling tools that we have um although we're still refining that one too. And then we have uh we have a new one in the works that we're building and dropping ideally pretty soon on confirmation page videos.
+[1:57:30] Um kind of like the hammer them software to be able to produce confirmation page video ideas for you guys just based on some input. So anyway, long story short, you want to work with Galani, shoot him a DM on Telegram. He's inside of the group chat.
+[1:58:00] Um, if this is a recording and you're watching it in the weekly group call, then there's a email below that you can also see in the uh description down there. And then Jelan, you said something in the middle of this. I think it was in the first third some kind of list or some that you were going to send people. Do you have that? You want to tell them like how you're going to send them that or whatever?
+[1:58:30] Gelani: Yeah, I was going to just drop a Google Doc link in and I see.
+Jeremy: Okay, cool. Yeah. So, Gelani will drop a link for those who are here watching live into the uh Telegram chat. And again, for everybody who's watching the recording, you'll probably find that link down in the description of this video.
+[1:59:00] Okay, cool. John, you got anything else?
+John: No, that's it. Thank you so much. Appreciate it.
+Jeremy: All right, guys. Big virtual round of applause for Galani. Thank you so much, man. Appreciate it. Peace out. Peace.
+📊 RESUMO EXECUTIVO
+NÚMEROS PRINCIPAIS:
+$2.1 milhões adicionados à agência em 6 meses usando AI agents
+80% de automação de tarefas mencionada como objetivo
+10-15 VSLs de classe mundial gerados automaticamente
+50-100 anúncios gerados por processo
+20-30+ vídeos de aprendizado recomendados
+Range de receita exemplo: $100K-$2M
+10 insights de conteúdo por execução
+12 meses estimados até agents construírem agents automaticamente
+ESTRATÉGIAS E SISTEMAS:
+TOP Framework: Tasks, Operations, People - framework para identificar oportunidades de substituição por AI agents
+Modular Agent Architecture: Quebrar processos complexos em múltiplos agents especializados
+RAG System: Retrieval Augmented Generation para busca precisa em databases (usado no Jeremy AI)
+Structured Output Parser: Transformar respostas longas em JSON estruturado para reutilização
+Human-in-the-Loop: Sistema de aprovação humana em pontos críticos do workflow
+Webhook Triggers: Método preferido para iniciar workflows de agents
+No-Code First Approach: Priorizar soluções no-code antes de partir para código
+ESTRUTURA:
+Fluxo Básico de Agent: Trigger → AI Agent (com acesso a Model + Tools + Memory) → Actions → Output
+Processo de Onboarding Automatizado: Call → Transcription → Market Research Agent → VSSL Agent → Landing Page Agent → Ads Agent
+Market Research Agent Sub-tasks: Target audience research → Core outcomes analysis → Limitations identification → Emotions assessment → Consequences → Objections → Vision mapping
+Ferramentas Recomendadas:
+Construção: N8N (no-code), Replit, Bolt.new, Lovable.dev
+Pesquisa: Perplexity, Tavily Search
+APIs: Rapid API, Apify (marketplaces)
+Planejamento: Excalidraw (diagramação)
+Modelos: OpenAI, Anthropic Claude, Open Router (acesso a todos)
+Integrações: GoHighLevel, Airtable, HubSpot, Stripe, PayPal, Telegram, LinkedIn, X (Twitter)
+DADOS FINANCEIROS:
+N8N: Fairly cheap, opção self-hosted com automações ilimitadas
+OpenAI API: $20-$50 créditos iniciais recomendados para testes
+Investimento não divulgado da Jeremy em múltiplos softwares construídos por Gelani:
+Hammer Them software
+Telegram summary bot
+Financial modeling tools
+Confirmation page video generator (em desenvolvimento)
+PRINCÍPIOS-CHAVE:
+Sempre planejar antes de construir usando ferramentas de diagramação
+Agents não são lineares - usam raciocínio para escolher ferramentas
+Um agent não deve fazer tudo - modularidade é essencial
+Structured output quando precisar reutilizar dados específicos
+Testar extensivamente prompts, tools e outputs
+Documentação é sua amiga - sempre consultar docs de APIs
+IA pode ajudar a encontrar ferramentas - pergunte ao ChatGPT/Claude
+"IMPORTANT:" em prompts aumenta taxa de compliance para 9/10
+DURAÇÃO: ~2 horas FORMATO: Masterclass ao vivo com demonstração técnica, Q&A interativo, build em tempo real

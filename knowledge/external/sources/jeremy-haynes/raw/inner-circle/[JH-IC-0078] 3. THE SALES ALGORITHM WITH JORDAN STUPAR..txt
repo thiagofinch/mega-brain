@@ -1,0 +1,1743 @@
+Transcrição Completa: The Sales Algorithm with Jordan Stupar
+
+ 
+
+[00:00]"I want to talk to you guys about obviously marketing and how it goes into sales. So, this is going to be beneficial for you if you are on the phone on a Zoom call, you're doing the meetings or you have a sales team."
+
+ 
+
+[00:15]"I'm going to give you guys a process driven approach to selling people stuff because at the end of the day, it's important to do so that you can make money."
+
+ 
+
+[00:25]"Uh, but first, real quick, I'm Jordan in case you guys didn't know, we didn't meet, didn't connect yet. I uh live in Milwaukee, Wisconsin. I built a multi-million dollar sales training company in about 18 months using some of the things that I'm going to share with you guys today and I'm here to help you crush sales."
+
+ 
+
+[00:45]"Jeremy called me. He was like, 'Hey, man. You want to come down and you want to speak to my team?' And I was like, 'Yes, I do. That would be awesome.' So, I'm pumped about this."
+
+ 
+
+[00:55]"And I will say I have never done this presentation before. I actually made this from scratch on an airplane. And uh ultimately, this is going to be the most info I've ever dropped at one period of time."
+
+ 
+
+[01:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Cash Cards - Objection Handling Product"
+
+ 
+
+NÚMEROS: 13,414 leads, $143,000+ revenue, 93% profit margin
+
+ 
+
+VISUAL: Deck de cartas físico com objeções de um lado e respostas do outro, métricas de vendas, dashboard de e-commerce
+
+ 
+
+[01:15]"First and foremost, I started my business uh and I ended up creating a product that some of you guys have been talking to me about. Some of you guys already have them. It's called cash cards. It's a little deck of cards that has an objection on one side and kind of what to say on the other side."
+
+ 
+
+[01:30]"I ended up putting that on my Facebook account, my personal one, and I ended up continuously selling out of these things. So, I started like making them really good and I've been marketing them."
+
+ 
+
+[01:40]"I've spent it looks like I don't know close to a quarter of a million dollars marketing this product. The beautiful thing about this product is that I get paid to generate leads."
+
+ 
+
+[01:52]"I know a lot of people have a lead form or a VSSL or whatever. And obviously there's a lead acquisition cost there. And then you're looking at your lifetime value to figure out what you're doing right, what you're doing wrong."
+
+ 
+
+[02:05]"At the end of the day, this product has been insanely profitable for me. I run about a 93% profit margin on it."
+
+ 
+
+[02:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Revenue Dashboard - Year to Date"
+
+ 
+
+NÚMEROS: $143,000+ revenue, 13,414 customers, missing second comma due to platform switch
+
+ 
+
+VISUAL: Dashboard de e-commerce mostrando métricas de vendas, gráfico de receita, número de clientes
+
+ 
+
+[02:20]"That little blank spot right there. I'm missing out on my my second comma on this because I switched off a Shopify into WordPress. That was a horrible mistake. I'll never do that again."
+
+ 
+
+[02:30]"But the point is is that it's a profitable lead generation source. And while most people look at the revenue number, that's that fancy thing that a lot of ecom people put on their, you know, Instagram stories to impress people."
+
+ 
+
+[02:45]"I'm busy looking at that number, the 13,414 people, because that's 13,414 people that have raised their hand and said, 'I need at least some help when it comes to uh training objections and closing deals.'"
+
+ 
+
+[03:00]"These are people in every single industry. There's not a single industry that I haven't sold a deck of cash cards to. I've got contractors, HVAC, roofers, solar, SAS, insurance, car dealerships, you name it."
+
+ 
+
+[03:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Backend Sales Performance - Year to Date"
+
+ 
+
+NÚMEROS: $1.1M+ in sales from existing customers
+
+ 
+
+VISUAL: Métricas de conversão de clientes existentes, funil de vendas backend, números de receita
+
+ 
+
+[03:20]"And at the end of the day, because I don't have any specific niche, I have to figure out how to tailor my presentations and my sales pitch to each one of these different industries, overcome their objections, and ultimately ultimately close business."
+
+ 
+
+[03:35]"But I've done really good at that in the last, this is just year to date from like a couple days ago, done over $1.1 million in sales from people that have already transacted with us."
+
+ 
+
+[03:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Lead Temperature Spectrum"
+
+ 
+
+NÚMEROS: Não especificados numericamente
+
+ 
+
+VISUAL: Espectro de leads: Cold (problema desconhecido) → Warm (procurando solução) → Hot (comparando soluções) → Customers (problema resolvido)
+
+ 
+
+[03:55]"So whether you guys are doing that hydra thing that you that you learned from Jeremy and you guys are just getting a lead form and people don't really know about your company, they don't really know about your service, they don't really know about your product and you're there to take them from I'm kind of interested in what this is and learning about it."
+
+ 
+
+[04:15]"You obviously have to have a process driven approach to getting there. But one thing I was going to take this slide out, but I think that it's kind of useful."
+
+ 
+
+[04:25]"Back in the day when Jeremy met me at Grant's office, I didn't have any leads. I was just like going onto Google, typing in car dealerships Houston, going to the maps, clicking on the blue dot, going to the website, writing down the general manager's name, the phone number, and trying to cold call that person."
+
+ 
+
+[04:45]"That's where obviously I have to prove a solution or a problem to somebody and be help them become aware of a problem that they might have."
+
+ 
+
+[04:55]"For those of you that have sales teams, that's where all the money is in commission because you're not really providing them with any leads. You have to go sell somebody on a problem that they didn't know that they have and simultaneously make them aware of a solution that they didn't know exists and get them to actually do it."
+
+ 
+
+[05:15]"Another place to be is warm leads. That's where people are like, 'Hey man, I've got a problem. I need more leads or I need more sales training or I need this or that or the other thing.' And they become part of uh where they're actually going to be looking for a solution."
+
+ 
+
+[05:30]"Then you have hot leads. These are pretty much the people that I'm calling on with my cash card sales. These are people that are aware of a solution. They see an Instagram or a Facebook ad. They're like, 'Hey, I'm going to buy some objection flashcards and now they're considering potentially getting a little bit better using some of that training.'"
+
+ 
+
+[05:50]"And then of course you have all those people turn into customers. Those are people that have solved a problem, purchased a product because we can all agree that the main reason somebody buys something is to solve a problem."
+
+ 
+
+[06:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Packer Sweep - Process Driven Approach"
+
+ 
+
+NÚMEROS: Não especificados numericamente
+
+ 
+
+VISUAL: Referência ao Green Bay Packers, Coach Lombardi, Troféu Lombardi, diagrama de jogada de futebol americano
+
+ 
+
+[06:10]"So, with that being said, either way, if you're going to be converting leads, whether it's somebody that is in your VSSL, whether it's somebody that's on your calendar, whether it's a cold call, you have to have a process driven approach."
+
+ 
+
+[06:25]"I'm from Wisconsin originally. I spent five years here in Miami. That's how I met a couple of you guys. And in Wisconsin, we love our Green Bay Packers. How many of you guys like football?"
+
+ 
+
+[06:40]"I don't really watch it anymore because I don't have time, but I enjoy football. Usually the playoffs if the Packers are in it. Other than that, I don't really give a shit."
+
+ 
+
+[06:50]"But the Packers back in the day, you guys know that the Super Bowl trophy is named the Lombardi Trophy. That was our coach from back back in the day."
+
+ 
+
+[07:00]"And the Packers were famous for running one play. It was called the Packer Sweep. And during practices, Coach Lombardi ran this play every single day. No other plays. It went to the left of the field or to the right."
+
+ 
+
+[07:15]"And it was the same shit play over and over and over again. And the point of doing that play is to get so good at that play. Even if the defense knows that you're running that play, you can still run it better than them and you can still get some yards and get into the end zone."
+
+ 
+
+[07:35]"So, I've been thinking a lot about that over the years. And I was like thinking about my sales process. What helped me uh have success at my sales jobs? What helped me build some businesses?"
+
+ 
+
+[07:50]"And ultimately what I'm going to do is give you guys the game and give you the playbook of what this actual process driven approach is."
+
+ 
+
+[08:00]"For those of you that have sales teams, this will be gold for you because your sales team, unless they're on a unified front doing the same things over and over again, you can't really track and measure why Tom did well and why Susan failed or vice versa."
+
+ 
+
+[08:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Scalable vs Non-Scalable Lead Follow-Up"
+
+ 
+
+NÚMEROS: 14,000 leads, 1,200 leads per month
+
+ 
+
+VISUAL: Comparação entre vídeo selfie personalizado vs automação com Vidyard/Zapier, ícones de smartphone e ferramentas de automação
+
+ 
+
+[08:25]"So, I'm going to give you guys exactly what works for me and what's worked for literally hundreds if not thousands of our clients."
+
+ 
+
+[08:35]"So, whether you guys get a lead in or not, I wanted to talk about this real quick. You have a scalable way of reaching out to a lead when they get into your funnel, your calendar, or whatever, and you have a scalable way."
+
+ 
+
+[08:50]"Obviously, the non-scalable way that I like to do this is I grab Jeremy's info, hopefully his cell phone number, I type it into my phone, and I literally shoot out a selfie video."
+
+ 
+
+[09:05]"What's up, Jeremy? It's your boy Jordan over here up in Wisconsin. Wanted to put a face to the name, let you know I'm a real guy. Look forward to speaking with you at 4:00 on Tuesday. My job is simple. I just want to give you all the information that you need so that you can make a decision. If you have any questions, hit me back. This is my personal cell phone number."
+
+ 
+
+[09:30]"Obviously, that's not very scalable, especially if you're getting a ton of leads. scalable way of doing that would maybe be pre-recording something like that that's a little bit generic, uploading that to like Vidyard or something like that and using some type of automation software like Zapier to text message that video out to somebody's phone with that link so that they can actually open it and they can actually see it."
+
+ 
+
+[09:55]"Um, I'm switching softwares for that case because 14,000 leads, 1200 leads a month, I can't very well uh do a personalized video for every single person uh when they come into our funnel."
+
+ 
+
+[10:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "4 Benefits of Selfie Video Follow-Up"
+
+ 
+
+NÚMEROS: 50% increase in conversion, 400% increase in customer engagement, 5 minute response time
+
+ 
+
+VISUAL: Lista numerada de benefícios: diferenciação, engajamento, experiência única, conversão aumentada
+
+ 
+
+[10:15]"So, I'm changing some software. So, if you guys are getting involved in any of my uh my stuff, you're probably not going to get a personalized selfie video right off the rip."
+
+ 
+
+[10:25]"With that being said, you're going to do four things if you do decide to take this approach. The first thing that you're going to do with a selfie video is you are going to make sure that you increase your ability to convert them by 50%."
+
+ 
+
+[10:40]"If you can get to them within the first five minutes, chances are pretty good that if you guys were all recently on the internet shopping for something, looking at something, an ad popped up, you put it in your browser, you probably forgot exactly what that thing is."
+
+ 
+
+[10:55]"You probably forgot the name of the product, the company, the website, or whatever it was because our attention, it goes everywhere, right? You guys know that you guys are marketers."
+
+ 
+
+[11:05]"So, at the end of the day, if you can get uh in contact with that lead within the first five minutes, statistically, you will increase your odds of converting that person by 50%."
+
+ 
+
+[11:20]"Also, you guys are going to be able to differentiate yourself from uh competitors. There's going to be people out there that don't send a shit video because they're too lazy, they think they had a bad hair day, they don't speak very well or whatever."
+
+ 
+
+[11:35]"So, if you are well spoken, you look halfway decent, shoot somebody a video real quick and humanize that experience that they're not going to get from any of your competitors."
+
+ 
+
+[11:50]"The third thing that you're going to do is increase your customer engagement by 400%. I'm saying like they're going to text you back or they're going to ask you a question or they're going to say, 'lol, cool,' or whatever. It doesn't really matter."
+
+ 
+
+[12:05]"All that I want to do is get in communication with people because if I can't get in communication with somebody, I can't do shit with them. Can't sell them. can't book an appointment."
+
+ 
+
+[12:20]"And then the final thing is that you're giving people an experience that they're just unlikely to find anywhere else. And I've implemented this in pretty much every industry and the results are phenomenal."
+
+ 
+
+[12:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Appointment Booking Strategy"
+
+ 
+
+NÚMEROS: Não especificados numericamente
+
+ 
+
+VISUAL: Técnicas de agendamento: never be too available, option closes (24th vs 26th), reiterar benefícios da call
+
+ 
+
+[12:40]"When you get a lead, if you can do something with some type of video, the results are absolutely insane. And this is something that I've been doing since 2014."
+
+ 
+
+[12:50]"If you don't automatically have somebody just, you know, go to your calendarly or your schedule once and book something for you and you have to get in contact with this person to book something, it is worth mentioning that you're going to have to book an appointment with them."
+
+ 
+
+[13:05]"A couple of tips that I have for you is never be too available. Um, I want you guys to be like high social status. People that have money don't have what—exactly. And if you have money, you're busy. You've got appointments. Everybody wants to see your product."
+
+ 
+
+[13:25]"So, what I usually do is I just tell people like, 'Dude, I'm booked out for like the next week and a half. I got something like uh the the 29th of this month at like 4:00. Does that work for you?'"
+
+ 
+
+[13:40]"Sometimes I use option closes. Does the 24th work for you or does the 26th? And I like to narrow things down. If you ask people what time works best for you, Jeremy's going to be overwhelmed. He's going to be like, I I don't know. Like, it's too many options that he's thinking about."
+
+ 
+
+[14:00]"But if you can narrow things down to one or two different things, you're going to increase your chances of somebody being able to say, 'Sure, 3:00 on the 24th works best for me.'"
+
+ 
+
+[14:15]"And also, of course, you're going to want to reiterate what type of highlights or things that they're going to be able to take away from your call."
+
+ 
+
+[14:25]"So, if I'm talking to any of you guys and I find out that the thing that you have attention on is following up with customers, I'm going to reiterate at the end of that scheduling the appointment phone call that you're going to walk away with at least three different techniques that you can use for free for the rest of your life to follow up with customers that are going to be highly converting."
+
+ 
+
+[14:50]"And I'm going to leave a little hook right there because I want you to understand that this appointment that you have with me is important and that you should show up. And here's why."
+
+ 
+
+[15:05]"Finally, after I uh schedule an appointment with somebody, again, if this is if I'm manually a part of that process, that's where they're also getting another selfie video."
+
+ 
+
+[15:20]"Hey Tom, Jordan over here, obviously I got you locked in on my calendar at 4:00 on the 24th. I genuinely look forward to it. Again, wanted to remind you that if you need to reschedle, have any questions, or need anything from me between now and then, feel free to reach out. This is my personal cell phone number."
+
+ 
+
+[15:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Sales Algorithm - Process Overview"
+
+ 
+
+NÚMEROS: Não especificados numericamente
+
+ 
+
+VISUAL: Fluxograma de processo de vendas, estrutura algorítmica: se cliente diz X → você diz Y
+
+ 
+
+[15:45]"Again, you're doing everything that I just mentioned by increasing conversion rate and um also increasing your customer engagement."
+
+ 
+
+[15:55]"But sooner or later, and I wanted to get to this part uh pretty quickly because I know that this is the one thing that we all do is we pitch the deal."
+
+ 
+
+[16:05]"So, sooner or later, 4:00 on the 24th pops up, it's time for me to get on a Zoom call with Tom and show him something or at least have a conversation."
+
+ 
+
+[16:15]"And so, what I want to do is I want to give you guys my sales algorithm. I've been doing the sales training thing for a long time and a client in Tennessee, he's a marketing company. Um, they do uh all the Airbnbs and verbos in the Smoky Mountains. Pretty dope little business."
+
+ 
+
+[16:35]"And I was talking to him and his team about the pitch. And he's like, 'Dude, doesn't really matter what the customer says. Like, you're always in control. Nowhere to go.' And it's like, it's like an algorithm. If they say this, you say that, and it just doesn't shit matter."
+
+ 
+
+[16:55]"So that's what I want to give you guys is as close to the detail as possible of how you guys can just have a a controllable process that you can duplicate over and over and over again like the Green Bay Packers back in the day and win a lot of Super Bowls."
+
+ 
+
+[17:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "High Social Status Opening"
+
+ 
+
+NÚMEROS: $10,000-$50,000 per month range example
+
+ 
+
+VISUAL: Comparação de postura: high status (confiança, igualdade) vs low status (agradecer demais, beijar a bunda)
+
+ 
+
+[17:20]"So you start off your pitch, the first thing that you're going to want to do is be high social status. If you're on the phone with Kim Kardashian and she's trying to talk to you about some makeup, are you going to pay attention? Probably."
+
+ 
+
+[17:35]"One, cuz she got an assload of followers. two, she's rich as hell, and three, she knows what she's talking about when it comes to makeup."
+
+ 
+
+[17:45]"A lot of us, and I spent a lot of my career doing this, jump on and we prize our customer. It's like, man, if I could just get a deal with Jeremy, I'm going to I'm going to kiss his ass when he jumps on the call."
+
+ 
+
+[18:00]"Hey, man, thank you so much for taking time out of your day. I know you're super busy, and I'm just really excited that you're going to like take a look at this. That's a low social status thing."
+
+ 
+
+[18:15]"people with money, people with affluence, people with wealth, they don't want to talk to people that are on a lower level than them. They'd let like to reach up or at least be on the same level."
+
+ 
+
+[18:30]"So the thing that I always do first thing is I say, 'Hey, Tom, I'm really happy we were both able to take some time out of our day to take a look at this. I know the one thing that we both have in common is that neither of us have enough time to discuss probably every single thing that it is that we do.'"
+
+ 
+
+[18:50]"So, to make best use of your time and my time, I want to give you the price of our product upfront so you can justify it as we go. Fair enough."
+
+ 
+
+[19:05]"I'm getting straight to the point. I'm putting myself on their level. I'm letting them know I don't have a whole lot of time and I'm going to give people the price of my product upfront."
+
+ 
+
+[19:20]"For those of you that have a ballpark or a range, like it could vary from $10,000 a month to 50,000, give them a range."
+
+ 
+
+[19:30]"Hey, I want to let you know completely dependent upon what you value and what you see inside here, you could expect to invest $10,000 a month up to $50,000 a month. Not saying that you will, not saying that you should."
+
+ 
+
+[19:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Golden Question"
+
+ 
+
+NÚMEROS: $50,000 per month investment example
+
+ 
+
+VISUAL: Framework de pergunta chave com backdoor out, estrutura de descoberta de necessidades
+
+ 
+
+[19:55]"But if you were going to make a $50,000 per month investment today, what would be the one, two, maybe three things you would absolutely need to see here today in order to justify an investment like that?"
+
+ 
+
+[20:15]"That right there is gold. It's absolute straight shit fire if you guys caught it. I've been using this on every single sales pitch for years."
+
+ 
+
+[20:30]"And what this does is it gets to the point. It increases my social status. It puts me on a short time limit. And I'm getting to price quickly."
+
+ 
+
+[20:45]"And instead of me actually guessing now for the next 20, 30, 40 minutes what somebody might need to see or hear in order to be impressed with my product enough to buy it, I'm asking them with a back door out."
+
+ 
+
+[21:05]"Hey, I'm not going to say that you should do this or that you will, but if you were going to blow 100K with me today on your AMX and get a bunch of points, what would be the one, two, maybe three things you would absolutely need to see here today in order to justify a decision like that?"
+
+ 
+
+[21:25]"Now, I put the ball in their court and they get to tell me the one, the two, the three, the most important things that they're hoping to find out on this call. Again, I haven't given them any information. I haven't given them shit. I've given them a price and I've asked them if you were going to do something with that, what would you need to see?"
+
+ 
+
+[21:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Benefits of Upfront Pricing"
+
+ 
+
+NÚMEROS: Não especificados numericamente
+
+ 
+
+VISUAL: Vantagens: filtra leads não qualificados, elimina objeção de preço no final, mantém controle
+
+ 
+
+[21:55]"And that is your intro. It goes super fast, keeps you in control, high social status, and gets to the point."
+
+ 
+
+[22:05]"By the way, introducing pricing details up front. You're going to shuffle the jokers out of the deck. Occasionally, there's going to be people that can't afford your shit. Why talk to them?"
+
+ 
+
+[22:20]"I don't want to waste 40 minutes talking to somebody that ultimately is going to be like, 'Dude, really? I'm not authorized to make that transaction. I don't have that type of money.' I want them off the call like in the first minute."
+
+ 
+
+[22:35]"I don't want to talk to people that don't have money because that's just a waste of my time. I'm not going to educate people that can't afford what it is that I do."
+
+ 
+
+[22:50]"So, that's the additional side of that. And also again, you've gotten pricing out of the way. A lot of people tend to wait to drop price at the end, but really at the end of the day, when you have that pricing at the end, that's the main reason why people can cop out of receiving all the value that you just spent 30 minutes showing them."
+
+ 
+
+[23:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Talk Time Statistics"
+
+ 
+
+NÚMEROS: Top closers: <40% talking, Average closers: 58% talking, Bottom performers: excessive talking
+
+ 
+
+VISUAL: Gráfico comparativo de porcentagem de tempo falando vs ouvindo por nível de performance
+
+ 
+
+[23:20]"So, now that you've gotten it out of the way, now you can move on into the rest of your pitch. One thing that you're also going to want to do is shut the hell up."
+
+ 
+
+[23:30]"Statistics and reports show that top closers, the top 1%ers, the people that close deals, are going to spend less than 40% of the entire sales interaction doing the talking."
+
+ 
+
+[23:45]"Statistics show that average closers, people that are probably, you know, barely meeting or kind of around quota or whatever it is that they're trying to accomplish, are going to spend about 58% of that conversation doing the talking."
+
+ 
+
+[24:00]"worst sales reps, the ones that you fire, the ones that are at the bottom 1%, well, they talk a shit ton. They just jibber jabber over and over in what I call like word vomit about how excited they are about their product and about what it does and how it's going to be beneficial and they never ask questions."
+
+ 
+
+[24:25]"And ultimately, those are amateur salespeople. So, be mindful of how much time you spend speaking."
+
+ 
+
+[24:35]"And one tip that I used uh back in the day when I was really wordy is I just grabbed my iPhone, went to the little timer thing and I would just watch a stopwatch and I would just wait till it hit 30 to 40 seconds and then what I wrote down was a massive list of questions that I could just pop in at any time just to do a little pingpong with my buyer."
+
+ 
+
+[25:00]"And then finally I finally I got it kind of set up now where it's like I know I've been talking too much. What do you like about that? Simple question. Does that make sense? and I can just at least get get my conversation finished and allow them an opportunity to do some speaking."
+
+ 
+
+[25:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Emotion vs Logic in Buying Decisions"
+
+ 
+
+NÚMEROS: 6 core emotions
+
+ 
+
+VISUAL: Dicotomia emocional vs lógica, framework de decisão de compra
+
+ 
+
+[25:25]"Uh but again, a lot of what I practice is question-based selling and uh it's just a long list of questions essentially that sound conversational which I can talk about in a little bit."
+
+ 
+
+[25:40]"I'm sure that you guys have heard I need to frame the rest of this uh this the tactical parts of this sales pitch. I need to frame it. And so you guys have probably heard that people buy off of emotion and they close on logic."
+
+ 
+
+[26:00]"Does it make sense? Can I afford this? Is this in the budget? Is this responsible? Do I need this?"
+
+ 
+
+[26:10]"So, let's talk about emotions because I don't think that I know any sales trainers, books, people that ever really talk about this and unpack it."
+
+ 
+
+[26:25]"So, I'm going to give you guys um a pretty good idea here of why people buy your shit. I want you guys to think for a quick second, though. What specific emotions come to mind that you believe your buyers feel that cause them to say, 'Here's my credit card number. send me the contract. I'm ready to do some business with you.'"
+
+ 
+
+[26:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The 6 Emotions That Drive Purchasing Behavior"
+
+ 
+
+NÚMEROS: 6 emotions total
+
+ 
+
+VISUAL: Lista das 6 emoções: Confidence, Creative, Relief, Competent, Savvy, Accepted - com ícones e exemplos
+
+ 
+
+[26:55]"Think about that real quick. Uh you can write a couple of ideas down. I'm going to give you guys some game here in a second, but but think about what somebody feels when they're purchasing something."
+
+ 
+
+[27:10]"And also maybe think about the last time you uh bought a car or you bought a house or you bought something. It's like what did you feel that caused you to do that?"
+
+ 
+
+[27:25]"There's six emotions that drive purchasing behavior. The first one, and they're not in any real order or anything like that. These are just the six different emotions. The first one is confidence."
+
+ 
+
+[27:40]"I rented a uh Porsche 911 because, well, there's a lot of emotions that are going to be tied into why I decided to spend money on a car when I could have just Ubered."
+
+ 
+
+[27:55]"There's a Porsche 911 out there. One thing that I wanted to do when I pulled into Jeremy's inner circle when I see uruses and all these nice cars out here is I wanted to feel confident about parking my car out front and being that type of person to walk in the front door with the silhouette of a sports car behind me. I wanted to feel confident."
+
+ 
+
+[28:20]"Does your product or service give your buyer an emotion or feeling of confidence? I've built a multi-million dollar business on ultimately sales training is sales training. But what am I really giving people? I'm giving them what to do next."
+
+ 
+
+[28:40]"And when people know what to do next, what to say next, they have confidence. And ultimately, when I'm asking my students, my clients, you know, how do you feel about the training? I want them to drop that C word, confidence, because then I know that I've done my job and they're going to get the results that they need because they know what to do next."
+
+ 
+
+[29:05]"So, think about your products and services. Do your uh buyers feel more confident in any type of way that they have better performance or that they are able to look better than somebody else? You know, whatever."
+
+ 
+
+[29:25]"The next thing is creative. Apple built a trillion-dollar business on this. They help people make uh they help make people feel creative."
+
+ 
+
+[29:40]"And there's obviously a lot of softwares out there, a lot of different things that help people express themselves or do things that they otherwise couldn't do without that product or that service. So, do your products and services help people feel creative? That might be an anchor that you can use in your communication with those buyers."
+
+ 
+
+[30:00]"Third one, and probably the most powerful one, is relief. People make all sorts of decisions because they've got a pain point that they want to fix and they will pay money. They will do business to experience relief."
+
+ 
+
+[30:20]"I know some people that don't do business with my company because they want more sales. It's a growing business and maybe the owner, the director of sales is getting too busy to actually give their team attention and the training that they need."
+
+ 
+
+[30:40]"And so the main thing that they're just looking to do is get some of that sales training off their plate. And I have to make sure obviously in our onboarding process that I understand that or else I'm going to be watching the wrong me wrong metrics."
+
+ 
+
+[31:00]"So be thoughtful and be thinking on does my product or service is it being marketed is the reason why people purchase it based on the fact that you're really solving a pain point for them versus trying to give them an advantage because a lot of people will do things to avoid pain and I know that you guys would agree with that."
+
+ 
+
+[31:25]"The fourth one is competent. Uh there's a Porsche outside like I mentioned. Uh but I don't have like I'm assuming they don't have $100 tires on there. I'm assuming that they have the actual tires that belong on a Porsche 911."
+
+ 
+
+[31:45]"So that the Porsche 911 when I'm taking a 1G turn on the freeway on-ramp today that I don't go and hit a wall. I feel more competent like I'm a better driver because I got better tires on that car. That's why they're worth more money. That's why I would want to purchase those."
+
+ 
+
+[32:10]"Does your product and service help people do things that they otherwise can't do or get results that they otherwise can't get? Do they feel more competent, more effective, like they're more autonomous? That's going to again be a critical emotion for somebody to experience that's going to help them make sense out of giving you their hard-earned money."
+
+ 
+
+[32:35]"The fifth one, savvy. Walmart built a huge business on this. When you walk into Walmart, you know one thing. You're getting the lowest shit price possible for those products and for those things that you're going to pick up. You feel good that you're getting a deal there."
+
+ 
+
+[33:00]"Pay less shoe stores built a huge business on this, that you're getting a deal. Uh this is uh your favorite coffee shop that's not Starbucks. When they give you the little punch thing, you know, you're feeling pretty savvy that, yeah, if I go here every day for my coffee, I buy 10 of these shit I'm going to get a latte for free. I feel pretty good about that."
+
+ 
+
+[33:25]"And then of course you have accepted. Accepted is a strong critical driver because people want to be accepted. This is why you might forego being savvy at Pay Less and you might end up going and you know buy some Yeezys for your kid for school so that they can feel accepted if all the other kids at school wear Yeezys."
+
+ 
+
+[33:50]"The main reason I bought an iPhone years and years ago, I had an Android at one point. That was a low life in my my life. low point in my life is because all my friends had one. They're all like, 'Dude, blue messages.' I'm like, 'What? I want to be a part of that.' So, I went and bought an iPhone."
+
+ 
+
+[34:15]"So, the point is that acceptance is also a really big thing as well. So, think about what you really sell. Think about the products, the services that you represent, the things that you're getting people to do."
+
+ 
+
+[34:30]"And ultimately be thinking on what is the main character, the one big emotion that people probably experience. And then what are the other supporting cast emotions that you might be able to pull on a little bit inside your pitch?"
+
+ 
+
+[34:50]"I know for me, confidence is that main thing. Hey man, I'm going to teach you how to sell, how to close, what to say. So the next time you get on a demo, you shit slay it."
+
+ 
+
+[35:05]"But I also might mention a couple of other things where you're like, 'Oh, thank God, man. I don't have to be the worst salesperson in my team anymore.' Relief. I might be giving you guys uh the ability to say, 'Hey, we got uh networking or whatever. Now you have accepted.'"
+
+ 
+
+[35:25]"So, be thinking on the fact that there are multiple emotions that people can experience throughout your sales pitch and help them buy into the reasons why they should do business with you."
+
+ 
+
+[35:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Proof: Why You Joined Inner Circle"
+
+ 
+
+NÚMEROS: 30-40 people in room
+
+ 
+
+VISUAL: Análise emocional de decisões de compra, exemplo do Inner Circle de Jeremy
+
+ 
+
+[35:45]"And just for proof, you guys can take a quick minute, look at your neighbor, look around the room. There's, I don't know, 30, 40 of you guys here, maybe more. I'm not good at counting."
+
+ 
+
+[36:00]"I'm assuming, and correct me if I'm wrong, but before you guys gave a credit card number to Jeremy and you're like, 'Hey man, I want to join the inner circle.' You were feeling something."
+
+ 
+
+[36:15]"Some of you guys are here because you just want to be part of these quarterly events. I think they're quarterly. Yeah. You just want to be part of the quarterly events. You're like, 'Man, I just want to be accepted.'"
+
+ 
+
+[36:30]"I have three marketer friends that I know that are a part of the inner circle, man. I just I just want to be a part of it because they talk about how shit awesome these events are and then you're sitting off and you're not part of it. That's a main reason why somebody would actually give some money."
+
+ 
+
+[36:50]"So, be thoughtful and think on what were you maybe feeling or experiencing when you're on the phone trying to figure out if this is the right choice for you because everybody in here had some type of feeling going into this."
+
+ 
+
+[37:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Feature, Advantage, Benefit (FAB) Framework"
+
+ 
+
+NÚMEROS: Exemplo: 400 horsepower engine
+
+ 
+
+VISUAL: Pirâmide ou estrutura FAB: Feature → Advantage → Benefit, exemplo do Porsche 911
+
+ 
+
+[37:15]"So, now that we've kind of got the framework set up of how this actually works, I'm going to give you guys the sauce. I've never actually done this for free. This is part of my my expensive shit. So, I'm going to give you guys the game right here."
+
+ 
+
+[37:35]"something that you guys can actually use because I want to bring some value to you guys. So, let's get back into the actual sales pitch. We've already done the whole like, hey, what are the one, two, maybe three things you would absolutely need to see?"
+
+ 
+
+[37:50]"Guy on the phone tells me I need to see X, Y, and Z. All of the things that you guys sell have hundreds, if not thousands sometimes, of features. A feature is one of the components of your product or service that allows some somebody to do something."
+
+ 
+
+[38:10]"Porsche out there, dude. There's so many features on that car. You got an engine, you got blind spot monitoring, you've got PDK, dual clutch transmission, you got dual exhaust. Those are all features."
+
+ 
+
+[38:30]"People don't buy shit because of features. They don't because they don't get anybody emotional. They don't get anybody to actually feel anything. It's like, I know that there's a 400 horsepower engine in that car. Whoop-de-doo."
+
+ 
+
+[38:50]"The advantage, every feature has its own advantage. The advantage is the thing that you can usually do because you have the feature. If I have a 400 horsepower engine, might be able to go pretty fast."
+
+ 
+
+[39:10]"If I have dual sport exhaust that sounds nice, I can make some noise. If I have a really great camera on my phone, I can take really good photos and 4K video. Again, nobody's going to buy anything from you because of the advantages."
+
+ 
+
+[39:30]"Every single advantage has its own benefit. And the benefit is the intangible feeling or thing that somebody gets because they're able to do or have."
+
+ 
+
+[39:45]"I've got a 400 horsepower engine that allows me to go fast, which means that dude, if I if I line up with another car on the at a red light, I can take off and I can beat him off the line, feel like a big shot, feeling confident."
+
+ 
+
+[40:05]"Or maybe I'm feeling relief. Man, all my friends have sports cars. I'm feeling relief and acceptance because every time I'm at my friend's house and we're peeling out of the driveway, dude, I'm the last one in line cuz my car is slow. I'm gonna go buy a faster car."
+
+ 
+
+[40:25]"So, the benefits again are the thing that you want to uncover with every single feature in in what it is that you're explaining with your customer."
+
+ 
+
+[40:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Sales Performance Levels: Feature vs FAB"
+
+ 
+
+NÚMEROS: Não especificados numericamente
+
+ 
+
+VISUAL: Comparação de níveis: Horrible (só features) vs Good (FAB) vs Kick-ass (FAB + Emotional Gap + Inarguable Yes)
+
+ 
+
+[40:45]"Horrible salespeople, and I've been one before. When I was a newbie, I just show off features. I was selling alarm systems. I'm like, 'Hey, man. This one's got a this thing called two-way voice.' Didn't even explain it. They're like, 'Okay, cool. Sounds good.' and be like, 'Do you want it?' They're like, 'Yes.' They're like, 'No, can you get the shit out of my house, please?'"
+
+ 
+
+[41:15]"Good good salespeople, they know this little thing called FAB, feature advantage benefit, and they'll explain it. Hey, man, I got this two-way voice thing that allows you to actually speak to the police."
+
+ 
+
+[41:30]"So, like if it's a false alarm or if it's the real deal, the police show up, which obviously is going to make you feel a little bit more peace of mind. Would you agree that's a good salesperson?"
+
+ 
+
+[41:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Kick-Ass Salesperson Formula: FAB + Emotional Gap Question + Inarguable Yes"
+
+ 
+
+NÚMEROS: Quarterly events example
+
+ 
+
+VISUAL: Framework completo com exemplo do Inner Circle: Feature → Advantage → Benefit → Emotional Gap Question → Inarguable Yes Question
+
+ 
+
+[41:55]"Kick-ass sales people are going to do what I'm going to do, and I'm going to show you. This is the This is the secret sauce right here that that just you guys can't find nowhere else."
+
+ 
+
+[42:10]"The inner circle is the live events here at Jeremy's Place. That's one feature of what you get as an inner circle member. So, if I'm on the phone with a customer and I'm like, 'Hey, man. We got these quarterly live events at Jay's mansion down here in uh Farmland Miami.'"
+
+ 
+
+[42:30]"A horrible salesperson is going to stop right there, be like, 'Hey, man. You want it?' They're going to be like, 'I don't know.'"
+
+ 
+
+[42:40]"A good salesperson is going to continue going on. They're going to say, 'Which means that you can meet, you can mastermind, you can network with other people, and you can actually meet Jeremy yourself.' That's the advantage of these events."
+
+ 
+
+[43:00]"And then the benefit is the opportunity to really connect, establish real relationships with people that are probably more successful than you that can help you grow, help you learn, and ultimately hang out in a nice 10,000 foot mansion in Miami. 12,000. Sorry, I stand corrected."
+
+ 
+
+[43:25]"And that's the main benefit so that you can get better and you can have an uh have the uh the benefit of becoming better with other people."
+
+ 
+
+[43:40]"Now, what you're going to do after explaining the benefit is you are going to ask this. What are you currently doing to help ensure that you have the opportunity to continue to meet, network, mastermind, and establish relationships with people that are maybe more successful than you so that you can continue to grow and get better?"
+
+ 
+
+[44:10]"Open-ended question. What are you doing right now? More often than not, your customers are going to say, 'Uh, nothing.' You just shit slapped them with something that creates a gap."
+
+ 
+
+[44:30]"Some people might tell you, 'Yeah, man. you know, I do uh Zoom meetings every week with this other group.' It's like cool, man. Doesn't really matter what they say."
+
+ 
+
+[44:45]"What you're doing is you're creating a gap between what they are mentioning that they currently have or what they currently do and what you just explained as the benefit. So now there's a gap and that's why that question is called an emotional gap question."
+
+ 
+
+[45:10]"Again, you're just comparing what you just explained the client gets with you to what it is that they already have. And that's going to create desire."
+
+ 
+
+[45:25]"Then you're going to finish off this whole little process with you would agree that if you were able to meet each quarter in person with a bunch of other successful, like-minded individuals that are shit crushing it in life, you would probably feel more confident, more competent as a marketer and in turn make a shitload more money and get richer, right?"
+
+ 
+
+[45:55]"And every single person you talk to is going to say, 'Yeah, I would. Yeah, that dude. I would I would feel confident. I will feel competent.'"
+
+ 
+
+[46:10]"You can literally take those six emotions, insert them into this statement, and get people to agree with you on it. This is borderline manipulation. I do this all the time."
+
+ 
+
+[46:25]"That's called what I I call it an inarguable yes question. It's inarguable. What are you going to tell me that if you were really part of all this that you like you wouldn't be better off? You wouldn't make more money. You wouldn't feel at least a little bit more confident. You wouldn't feel accepted because three of your friends are already in this. Of course not."
+
+ 
+
+[46:50]"People are always going to agree with that statement for a, you know, preferred emotional state."
+
+ 
+
+[47:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Tying It All Together - The Bullet Point Method"
+
+ 
+
+NÚMEROS: 3-5 times repetition
+
+ 
+
+VISUAL: Estrutura de apresentação: repetir FAB + Gap + Yes para cada necessidade identificada (3 coisas que o cliente mencionou)
+
+ 
+
+[47:05]"What you're going to do is tie all this stuff together. So maybe uh you're on the phone and I'm on the phone for Jeremy and I'm like, 'Hey, you know, what are the three things you would need to see in order to make an investment in Jeremy's inner circle? Well, I'd like, you know, to meet some people and do some networking.'"
+
+ 
+
+[47:30]"That's feature number one, advantage, benefit, emotional gap question, inarguable yes question. The end."
+
+ 
+
+[47:40]"The second thing that they might mention is something else. In which case, I would say in addition to having our live networking events where you can meet other people, become the more successful version of yourself and kick ass as a marketer, we also have next thing that they mentioned that they wanted to see."
+
+ 
+
+[48:05]"That could be an online course. It could be an accountability feature that Jeremy has here. It could be any anything. And you're just going to bullet point this three to five times in your sales pitch. And make sure that you check the boxes of the three things that your customer told you that they would need to see."
+
+ 
+
+[48:30]"Now, I'm going step off from the slide real quick. I'm a salesperson. If you tell me that you need to hear or see three things and I and I make good on that and I show you the three things, guess what? I want to get paid. I did my job."
+
+ 
+
+[48:50]"If you guys were working at McDonald's and you were flipping burgers for a week and on Friday, what are you hoping for? Paycheck. Because you did your job."
+
+ 
+
+[49:05]"I'm a sales guy and I want to get paid because I did my job. I just showed you the three things that you already agreed to that if I was able to show you, you would at least consider doing business with me."
+
+ 
+
+[49:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Check-In Question"
+
+ 
+
+NÚMEROS: 15 minutes into call
+
+ 
+
+VISUAL: Pergunta chave: "What have you liked most about what I've shown you so far?" - coletar ammunition para close
+
+ 
+
+[49:30]"So, what I'm going to do real quick right here after this three to five times of feature advantage benefit is I'm just going to step back and say, 'Hey, man, you know, I know that we've only been on the phone here for like 15 minutes and obviously there's a whole lot of other things I could show you. What have you like most about what I've shown you so far?' Or, 'What do you like most about what you've heard so far?'"
+
+ 
+
+[50:00]"And get your pen and pencil ready. This is the ammunition that you're going to need in the close to overcome any of the objections that we'll talk about here in a second."
+
+ 
+
+[50:15]"Oh man, I really like the idea that, you know, Jeremy opens up his house and he's got a master uh griller out here and he's got, you know, people for networking and guest speaker. I love it. That sounds awesome."
+
+ 
+
+[50:30]"And you're just jotting all those things down and try to do it verbatim. Use their language the best that you can on them because it's their language. You want to speak speak their lingo."
+
+ 
+
+[50:50]"So, what did you like most about what you've seen or heard so far? You're either going to get a list of things that they really liked or you're going to hear buying questions."
+
+ 
+
+[51:05]"Buying questions usually start with the words how or what. Well, how does how does it work? You know, if I signed up, yada yada yada. Um, how do I, you know, get into the next inner circle map or when's the next time that it's going to be? Whatever. Those are buying questions."
+
+ 
+
+[51:30]"They're trying to take mental ownership now over the next steps of this process. And you want to be alert and you want to be uh privy. Can't believe I just used that word, privy. You're going to make sure that you're privy to those types of uh responses from your buyer because those are buying signals."
+
+ 
+
+[52:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Three Supporting Elements"
+
+ 
+
+NÚMEROS: Não especificados numericamente
+
+ 
+
+VISUAL: Três pilares: Company (benefícios corporativos), Service & Support (garantias, suporte 24/7), Person (você como valor)
+
+ 
+
+[52:05]"From there, as marketer, I want to let you know that you're working with three other things. One is your company. Your company is beneficial."
+
+ 
+
+[52:20]"At my company, I say, 'Dude, we throw up big numbers in our company, but we're small. We run lean.' Which means no red tape. Means that if you need a sales meeting from me, you got a new hire that needs a little little a little smack, call me up. Like, you got my cell phone number already from like pre-appoint. We're going to pay attention to you. You're not just a number to us. You're going to be a very valued client."
+
+ 
+
+[52:55]"Also, by the way, if your company is doing charitable work or you give 5% of, you know, net profits to your church or you guys clean up trash in your community, like these are important things that people might want to consider in order to do business with you because this is going to again create some of those emotional responses that they're working with a great company."
+
+ 
+
+[53:25]"If you've been in business for a really long time, great. That's awesome. If you've been in business for a really short period of time, you can let people know that, hey, this is our vision and this is how you can help us get there by doing business with us."
+
+ 
+
+[53:45]"Then, in addition to the fact that you're working with a kick-ass company, I want to let you know we have service and support that's 24/7 or we have chat or we have email support, screen share support."
+
+ 
+
+[54:00]"I want to let you know that you're going to get a dedicated account manager. You're going to get a dedicated this. you're going to have the service and support so that if you have any questions, you have any concerns, you have any hiccups, problems, or uh need any attention, we got you."
+
+ 
+
+[54:20]"If you have a warranty, guarantees, um any type any one of those types of things that give people that peace of mind of making a decision, this is the spot where you're going to give it to them."
+
+ 
+
+[54:40]"In addition to having a great company that you're working with, and in addition to the fact that you're going to get unlimited, unbelievable support and service from us, I want to let you know you're working with a great person."
+
+ 
+
+[54:55]"My name is Jordan. I'm the type of guy, dude, I'm up at 3:00 in the morning. I stay up till like 10, 11:00 at night. I'm crazy. You need to get a hold of me. I'm the type of person that's going to pick up the phone. And if I am sleeping, chances are pretty good I'll pick up your call."
+
+ 
+
+[55:20]"If it's raining too much over where you're at and you just got back from Walmart with a bunch of groceries and you only want to make one trip, holler at me. I'll be the person that swings by and helps you out with those couple extra bags and let people know how great you are because ultimately you're more valuable than anything it is that you sell. You're a human being. Would you guys agree with that?"
+
+ 
+
+[55:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "What to Expect When You Get Started"
+
+ 
+
+NÚMEROS: 0% to 67% closing ratio improvement
+
+ 
+
+VISUAL: Processo de onboarding: assinatura → CSV upload → agendamento de calls, eliminação de fricção
+
+ 
+
+[55:55]"I see a lot of heads nodding. Good. We're all on the same page. So, you're working with a great company. In addition to that, you've got service, you've got support, and in addition to that, you're working with me."
+
+ 
+
+[56:10]"The last thing that I want to let you know here, Tom, is exactly what you can expect when you decide to do some business with us."
+
+ 
+
+[56:25]"I had a uh CRM company while I was getting sued because I couldn't do this. I built a software company. Anybody ever done that? I don't really recommend it. It's really hard to do. It's really expensive and uh wild."
+
+ 
+
+[56:45]"Anyway, I decided I'm going to start a CRM company. My ideas on it and the layout and the features and all that was great. My demo was awesome. People were like, 'Dude, you're going to blow up Salesforce in like by tomorrow.'"
+
+ 
+
+[57:05]"Business owners are like, 'Man, this is kick-ass. We've never seen anything like this.' I'm like, 'Sweet, man.' Like, 'Ready to get started?' And they're like, 'Yeah.' No."
+
+ 
+
+[57:20]"I was like, I had a 0% closing ratio for the first month once we had kind of a go to market product. And I'm like, dude, I'm kind of like a sales guy. Like, I know what I'm doing here, but why is nobody doing business with me?"
+
+ 
+
+[57:40]"Is because I didn't actually show them what happens when they decide to do business with us? Because in the back of their head, they're like, 'Dude, this is awesome. Love it. My whole team would love this. I can see the benefits here.'"
+
+ 
+
+[58:00]"But in the back of their head, they're like, 'Uh, who's going to do our onboarding? It took us seven years to get our people to do Salesforce right now.' Like, is it going to take another seven years for us to implement this in our business?"
+
+ 
+
+[58:20]"And by the way, who's going to take the 173,000 contacts we have inside of Salesforce and migrate it perfectly into your system? By the way, how long does that process take? Is there any cost associated with scrubbing that data? Who's my dedicated onboarding specialist and my support?"
+
+ 
+
+[58:45]"And I wasn't answering any of those questions. And once I actually put a one or two pager together to show them at the end of my demos, my closing ratio went from 0% to 67%."
+
+ 
+
+[59:05]"Because people knew what to expect, how much it was going to cost, how long it would take, how what's the process."
+
+ 
+
+[59:20]"So these days, this is literally what I show business owners right now that work with us. At the end of my presentation, I say, 'Hey, the only thing left for you to do is really just pick a package and sign our proposal. Then we already have a CSV form. I'm going to send that to you. You just put in your people's first, last name, and email address, send it over to us, and schedule your sales kickoff, your manager's onboarding, and all of our recurring training calls.'"
+
+ 
+
+[59:55]"And literally, that's it. Takes no more than maybe like 10, 15 minutes. You have to open up your calendar and then type a couple of names into a list. That's it."
+
+ 
+
+[60:10]"Now people know what to expect when they're like, 'Okay, I'm signing up.' You don't want any uncertainty there."
+
+ 
+
+[60:20]"And be mindful of the fact that you guys sell what you sell every single day. You know your product, your service, your contracts inside and outside. So it might be like completely like we don't have to explain this to anybody, but your buyer doesn't know what they don't know and they're not going to ask what they don't know how to ask."
+
+ 
+
+[60:45]"So be mindful of the fact that you can make a slide like this or whatever just to show them what those next steps look like. And once you implement that, I believe that your closing ratios by default, if you take nothing else away from this, are going to improve because people are going to understand what next steps are."
+
+ 
+
+[61:10]"And by the way, for those of you selling your actual marketing services, dude, everyone else probably sucks for the most part. I've hired a lot of different marketing services before, and it's the people that tell me like, 'Hey man, we've got this onboarding thing. I'm going to send you a request for Facebook access, which is going to allow us to do Facebook and Instagram. I'm going to need Tik Tok access, yada yada yada.'"
+
+ 
+
+[61:40]"Here's exactly what to click on, where to go, and what to do. If you guys don't have that stuff available, people are going to be overwhelmed and they're going to be wondering where to go in the business Facebook thing to go and give access to somebody else."
+
+ 
+
+[62:00]"Those things should be loomed out, videoed out, screen recorded, whatever on a PDF so that people can actually follow those directions easily. Because the more friction that you guys put into any part of the deal process or the onboarding process, the less likely it is that you're going to have a successful customer."
+
+ 
+
+[62:25]"I want things to be as frictionless as possible. And as the CEO of my company, that's like the number one thing I always have attention on is how can I make it easier for people to give me their money and get exactly what they're looking for on the other side."
+
+ 
+
+[62:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Close Like a Boss"
+
+ 
+
+NÚMEROS: Não especificados numericamente
+
+ 
+
+VISUAL: Pergunta de fechamento: "How soon do you want to get started?" - resposta ideal: "Yesterday"
+
+ 
+
+[62:55]"From there, close like a boss. How soon do you want to get started? That's my favorite question. How soon would you like to get started?"
+
+ 
+
+[63:10]"If you've done everything really right and you shit slayed and you're talking to a qualified buyer, they're going to say yesterday. And you can give yourself a pat on the back and shoot me a DM on Instagram and be like, 'Dude, they say yesterday.' People do that all the time. It's my favorite DM to get now."
+
+ 
+
+[63:35]"Of course. Oh, wow. This time is going fast. Damn. All right. Yeah, we're still on track."
+
+ 
+
+[63:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Objection Handling - ART Formula"
+
+ 
+
+NÚMEROS: Não especificados numericamente
+
+ 
+
+VISUAL: Framework ART: Acknowledge + Reply + Transition (with question mark), estrutura de resposta a objeções
+
+ 
+
+[63:50]"So, obviously, when you ask somebody when they'd like to move forward, when they want to do something, or when they want to get started, that's ultimately to where you're going to hear objections. How many of you guys have heard an objection before? Yeah, everybody."
+
+ 
+
+[64:10]"Objections suck. They're the worst. It's like now it's combative. We just had this really good time for 20, 30 minutes on a call. I did my job. I showed you everything that you needed to see. We've had a couple of giggles and laughs and we've made some jokes and now the sudden what?"
+
+ 
+
+[64:30]"You need to shit think about it. Now you're going to tell me after I gave you the price 30 minutes ago that this is too expensive. Are you telling me that you need to talk to your business partner, your spouse, or your kitchen sink or the family dog?"
+
+ 
+
+[64:50]"Hey man, we're going to wait until next quarter. We're going to wait until next year. We're going to wait until our contract with our marketing company is done right now where we're going to I mean you guys have heard it all the other shit reasons why people don't want to take advantage of your offer now."
+
+ 
+
+[65:15]"So what I want to do is I want to give you guys some examples of what you can do and what you can say. At the end of the day I have an objection handling formula. This is what those cash cards are made out of. It's follows the same process but a couple different words every other time."
+
+ 
+
+[65:35]"It goes art plus question mark. That's the fancy formula that I have for you. It stands for acknowledge, reply, and transition away from the objection with a question."
+
+ 
+
+[65:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Objection Example: 'I Need to Think About It'"
+
+ 
+
+NÚMEROS: Scale 1-10
+
+ 
+
+VISUAL: Exemplo completo de ART aplicado: acknowledge → reply → transition com escala 1-10 → "What would make it a 10?"
+
+ 
+
+[66:00]"While most people say, you know, well, what do you need to think about? I'm going to follow this formula and say, hey, I completely understand acknowledgement that you would want to think about it."
+
+ 
+
+[66:20]"Fact of the matter is, I have a brain. I think about most of the decisions that I make as well. So, I can't fault you for wanting to think about it, but out of curiosity, on a scale from 1 to 10, 10 being you've seen enough. This makes sense. You're ready to do this. This is going to be a great decision."
+
+ 
+
+[66:45]"And a one being you wouldn't do business with me if I literally gave you what we have for free. Where do you stand right now?"
+
+ 
+
+[66:55]"And now I'm going to get a number from them probably from four to nine. It's never going to be a 10 because they just gave you an objection. And they're not going to go lower than a four because they don't want to hurt your precious feelings."
+
+ 
+
+[67:15]"Whatever number that is, it doesn't matter. You say, 'What would make it a 10 right now?' Think about it. Just left. Now they're going to move on to something else."
+
+ 
+
+[67:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Algorithm in Action - Business Partner Objection"
+
+ 
+
+NÚMEROS: Monday follow-up example
+
+ 
+
+VISUAL: Fluxo de objeções: "Need to talk to partner" → fork in road → either "I'll do it anyway" OR "What would they say no to?"
+
+ 
+
+[67:35]"Well, you know, to make it a 10, I would need to talk to my business partner. It's like, okay, I completely understand that you want to, you know, put this on your business partner's desk and have a chat about it. I usually like, you know, talking to my wife and business partner and other people before making a decision, too. I get it. Couldn't fault you for wanting to do the same."
+
+ 
+
+[68:05]"But out of curiosity, when I call you back on Monday and you guys have had, you know, gone to Morton Steakhouse over the weekend with your business partner, you've gone over all these details, you had some wine, you've had the desserts, and you've been talking about this deal with Jordan, I'm curious to find out when I call you on Monday, what are you going to say to me if your business partner says no?"
+
+ 
+
+[68:35]"I'm dropping a fork in the road right there because they're only going to give me one of two different things. It's an algorithm, remember?"
+
+ 
+
+[68:45]"Either they're gonna say, 'Well, dude, I'm gonna do it anyway. I'm the I'm the I'm 51% owner over here.' It's like, 'Sweet. What's your credit card number? Let's do this.'"
+
+ 
+
+[69:00]"Or if they tell me, 'Hey, man, you know, I don't know if I'd move forward if my partner said no.' Hey, I completely understand you would feel some type of way about moving forward if your partner said no. Out of curiosity, what exactly do you think your partner would say no to?"
+
+ 
+
+[69:25]"Would it be the fact that we've got a 12-month contract? Would it be the upfront technology fee that we have in here? Would it be the monthly retainer that we ask for? Would it be the all the benefits that I just mentioned? Would it be the fact that you're working with an awesome company? What exactly would your partner say no to?"
+
+ 
+
+[69:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Price Objection Response"
+
+ 
+
+NÚMEROS: Não especificados numericamente
+
+ 
+
+VISUAL: Técnica de isolamento de objeção de preço: "If we were the same price, who would you choose?" → estabelecer valor → "When's the last time you regretted paying more for better service?"
+
+ 
+
+[69:55]"Well, honestly, man, your guys's uh your guys' price is a little bit higher than this other marketing company we're looking for. Oh, okay. So, shit what? How many of you guys have heard that one before? Good. I hear it all the time, too."
+
+ 
+
+[70:15]"Hey, I completely understand that you found some marketing services for a little bit less somewhere else. Between you, me, and the fence post here, Tom, I wouldn't be upset if you made a smart decision on saving some money. I like to save money when I can, too."
+
+ 
+
+[70:35]"But before I jump off the call with you here, I'm curious to find out that if we happen to maybe, not saying that we will or that we should, but if we were maybe the same price as marketing company X over here, who would you rather do business with if prices were the exact same?"
+
+ 
+
+[71:00]"they're probably going to tell you you because you just listened to Jordan Stupar. You made a cool presentation. You outlined all the benefits and everything that we have here. They're probably going to tell you, I'd rather do business with you. Great. Excellent."
+
+ 
+
+[71:20]"Most people say that out of curiosity, why would you rather work with us versus them if we happen to be the same price? And they're going to reiterate exactly what it is that they loved about you more than somebody else. And there's value to each one of those things."
+
+ 
+
+[71:40]"In which case, you can say, 'Great. That's what most people say. I appreciate that.' When's the last time you regretted paying a little bit more money for a better service?"
+
+ 
+
+[72:00]"You guys can write that line down. When's the last time you regretted paying a little bit more money for a better service, a better experience, better communication?"
+
+ 
+
+[72:15]"Have you ever flown first class? Yeah, I have. Was it more expensive than coach? Yeah. Did you regret it? No. Why? cuz I drank 31 shots tequila sitting in row 2F and I didn't have to shit pay for it."
+
+ 
+
+[72:35]"Have you ever regretted flying private instead of first class? No. Why not? Well, I didn't have to go through TSA. I got to land closer to the place I actually wanted to go."
+
+ 
+
+[72:50]"I mean, dude, all of you guys have bought shit that's more expensive than what you could have purchased easily. People do this shit all the time, but like we get tripped off tripped up on the fact that people are just saying it to us. It's like, I don't give a shit. I know I'm more expensive. The value is there."
+
+ 
+
+[73:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Case Study: $50M Window Company"
+
+ 
+
+NÚMEROS: $50M → $110M projected, $22,000 average ticket, doubled prices, 72% more net profit, 40 salespeople in 10 states
+
+ 
+
+VISUAL: Transformação de negócio: Janeiro (preço original) → Outubro (preços dobrados, receita mais que dobrada), métricas de crescimento
+
+ 
+
+[73:20]"Quick story. I started working with a $50 million window company in Arkansas back in January. And uh we've been doing some really good training with their whole team. They got about 40 people in 10 states uh that do in-home sales. Their average price uh average ticket is about $22,000 to put new windows in a house."
+
+ 
+
+[73:50]"I told the CEO in January, I was like, 'Dude, let's do something fun. As we do the training, why don't you double your prices?' And he was like, 'What the fuck?' I was like, 'Just do it.' He's like, 'Dude, my people are going to struggle with that super hardcore.'"
+
+ 
+
+[74:15]"And I was like, 'They're struggling with the same objections right now.' Like worst case scenario, you do a 50% discount. You're back at your original price."
+
+ 
+
+[74:30]"They are now on track to do $110 million this year and it's only what October and they're doing more gross. They're doing a 72% more uh net profit than they were previously in January."
+
+ 
+
+[74:50]"Business owners keep on texting me. They're like, 'Fuck, dude. Whatever you want on renewal time, bro. We'll sign that contract.' I'm like, 'Y'all better.' because I took him from, you know, $2 to 5 million a month to 7 to 12 million a month with literally increase your prices. Let's train your people how to bring that value and how to overcome the same objections they're already hearing."
+
+ 
+
+[75:20]"So, this is a little piece of gold for you guys. I can maybe do some roleplay with you guys uh here in a little bit."
+
+ 
+
+[75:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Better Than Handling Objections: Not Having Them"
+
+ 
+
+NÚMEROS: Não especificados numericamente
+
+ 
+
+VISUAL: Referência Matrix: Neo parando balas, conceito de prevenção vs reação
+
+ 
+
+[75:35]"But, you want to know what's better than handling objections? Not. Not having to."
+
+ 
+
+[75:50]"So, you guys have probably all seen The Matrix. you know, at the end of the movie, he puts out his hand, stops all the bullets. It's kind of how I relate to like, let's just stop the objections, okay? Because they're all shit. They're all shit."
+
+ 
+
+[76:10]"I want you guys to think real quick in the back of your head, maybe write down some ideas, whatever, real quick. What is the one reason, just one, the one reason why somebody might not buy something from you? What's the one reason why?"
+
+ 
+
+[76:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Subconscious Library"
+
+ 
+
+NÚMEROS: Não especificados numericamente
+
+ 
+
+VISUAL: Conceito de subconsciente: biblioteca de memórias, experiências dolorosas, decisões passadas ruins vs boas
+
+ 
+
+[76:35]"I'll get to the real answer here in a second, but their subconscious is doing something. The subconscious, as I like to kind of understand it, is basically a library in the back of your head of videos, photos, memories, painful experiences, yada yada, that you can use to pre-program what to do when you're in a certain circumstance later on in life to protect you, to keep you safe, to keep you cozy and warm. That's typically what the subconscious does."
+
+ 
+
+[77:15]"Now, your buyer is not in their conscious. They're thinking in their subconscious and saying, 'Well, you know, I need to think about this.' It's like, 'What the shit. You don't need to think about shit. You've already thought about it. You have a brain.'"
+
+ 
+
+[77:35]"So, the main reason why we hear objections is because people aren't comparing the decision to do business with us to the long list of good decisions that they've already made in their past. They're just not."
+
+ 
+
+[77:55]"What they are doing is they're comparing the decision to do business with us to all the bad decisions that they've made in the past."
+
+ 
+
+[78:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Personal Example: Porsche 911 Purchase Hesitation"
+
+ 
+
+NÚMEROS: $450,000/year income, $20,000 down payment, $1,876/month for 60 months, 2007 Audi S4 past experience
+
+ 
+
+VISUAL: História pessoal de hesitação: renda alta mas memória de experiência ruim com Audi, comparação de pagamentos
+
+ 
+
+[78:15]"When I lived here in Miami, I was making 4 500 grand a year. I I could buy a Porsche 911 uh three times in cash if I wanted to. I ended up leasing it or uh buying it on payments because shit dude. money was cheap."
+
+ 
+
+[78:40]"Point is is that it was my dream car. I've wanted a Porsche 911 since I was four years old. I finally worked my ass off hard enough to actually purchase one. I'm in Miami. I'm getting the 911."
+
+ 
+
+[79:00]"I'm in the store and they print out all the contracts and it's time for me to sign that shit and give them a down payment of 20 grand and agree to $1876 a month for the next 60 months."
+
+ 
+
+[79:20]"I wouldn't have felt the down payment. I sure as hell didn't give a shit about $1876 a month. I was making like 40, 50, 60 grand a month. But for some reason, I had some hesitation. I'm like, why?"
+
+ 
+
+[79:40]"Well, because in the past, back in Dallas, Texas, where I live, when I was knocking doors and didn't have very good work ethic, I bought a 2007 Audi S4, that unbelievable 4.2 L V8. I couldn't afford the shit payments. I ended up getting behind like 60 days. had to go to the car dealership and had to trade it in for a Nissan Maxima that I didn't really like."
+
+ 
+
+[80:15]"So, when I'm looking at the Porsche payments now, I'm like, it's like $1,000 more than those Audi payments, man. Am I sure like I want to do this?"
+
+ 
+
+[80:30]"Luckily, I, you know, kind of got past that. But I was wondering like, dude, why am I not signing these these papers right now? Why am I not excited to say, hell yeah, dude. Here's the money. Let's go."
+
+ 
+
+[80:50]"And it was because I had some painful experiences in the past that kept me from making a quick and swift decision right now on doing something that I've always wanted to do for like my whole life."
+
+ 
+
+[81:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Marketing Agency Reality Check"
+
+ 
+
+NÚMEROS: Last 3 agencies, last dozen agencies mentioned
+
+ 
+
+VISUAL: Verdade por trás das objeções: "too expensive" = medo baseado em experiências ruins anteriores, "how are you different?" = trauma de agências passadas
+
+ 
+
+[81:15]"So marketing services, I know that most of you guys selling marketing services. Somebody's telling you that they need to think about it. You're too expensive. They're going to wait. They want to talk to somebody else. That's what they're saying."
+
+ 
+
+[81:35]"What they're really thinking more than likely is, 'Dude, the last three agencies that I hired didn't really get me the results that I was looking for.' That might come out as how are you different? I'm sure that you guys have heard that one a couple of times."
+
+ 
+
+[82:00]"but essentially that's what they're thinking to themselves is, dude, the last dozen agencies that I hired that blew sunshine up my ass and told me that they were going to make me a billion dollars didn't move the needle at all. They were hard to communicate with. They didn't give me the service and support that they said that they were going to do."
+
+ 
+
+[82:30]"And now you're there, popped up, ready to go. You're with a reputable company given a great service. you know exactly what to do. You know how to get these people results, but now you're having a hard time getting it because of the last couple of agencies that worked with them."
+
+ 
+
+[82:55]"You might also have people that have never hire hired an ad agency and they've had a little bit of success running some ads on their own and they're thinking, well, you know, we're kind of good right now. We don't need you. It's not like we're going to go out of business if I don't hire your agency to help increase our um our revenue or our leads or whatever."
+
+ 
+
+[83:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Confronting Reality - The Truth Bomb"
+
+ 
+
+NÚMEROS: Não especificados numericamente
+
+ 
+
+VISUAL: Técnica de confronto direto: "The only reason you wouldn't sign is because you don't think this will work" → bypass subconsciente com pergunta sobre decisões passadas bem-sucedidas
+
+ 
+
+[83:30]"So, that's what they're thinking. The thing that we need to do is we need to have the balls to confront reality. And you can say, 'The only reason why you wouldn't sign our agency agreement right now, let me inside your Facebook account literally crush advertising for you, is because you don't think this is going to work for you.'"
+
+ 
+
+[84:00]"And the truth is is that it won't. And it can't because you haven't signed my shit contract yet. It's the only reason why it's not going to work for you. You haven't hired us yet."
+
+ 
+
+[84:20]"And then I'm going to bypass that subconscious and I'm going to ask them, when's the last time you hired someone? When's the last time you took a chance? When's the last time you did something that you didn't feel 100% comfortable with and you got some results that you were happy with or exceeded your expectations?"
+
+ 
+
+[84:50]"Now, what they're going to do is they're going to have to put some attention on that question. They're going to think about the last time they hired a salesperson and it was like, 'Man, I don't know if this guy's going to work out and they crushed it.'"
+
+ 
+
+[85:10]"They're going to be thinking about the last time that they hired a a different type of person or they did something and they got a great result and they're going to communicate that to you because you just asked them a question."
+
+ 
+
+[85:30]"It's like, 'Dude, great to hear. Let's add you working with me to that list of smart decisions that you've made. After all, you've made a lot to get to where you're at right now. I'm not here to subtract from that. We're only here to contribute to the success that you're going to have in the future. What's your credit card number?'"
+
+ 
+
+[85:55]"And you go in for the kill and you go in for the close that way. But again, now what you're actually doing is pulling that conversation from their subconscious into your bio's buyer's neocortex where all the analytical and smart decisions are made inside of the brain."
+
+ 
+
+[86:20]"So, this is actually pretty pretty decent. I could go on and on, but I'm probably out of time a little bit."
+
+ 
+
+[86:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Connect with Jordan - Contact Information"
+
+ 
+
+NÚMEROS: Não especificados numericamente
+
+ 
+
+VISUAL: QR code, informações de contato, call to action para treinamento de equipes
+
+ 
+
+[86:35]"Um, one thing that I definitely want to do is give you guys an opportunity to connect with me. If you guys are interested in having me train your team, uh, or yourselves, or you want to get involved in any of the things that we do, everything that we touch turns into extra revenue, uh, because we have a process driven approach."
+
+ 
+
+[87:00]"I would love for you guys to drop me an email, a follow, whatever it is that you need. Um, or one of those little contact forms, that's the QR code. Um, and of course I'll be in touch with you guys."
+
+ 
+
+ 
+
+📊 RESUMO EXECUTIVO
+
+ 
+
+NÚMEROS PRINCIPAIS:
+
+$143,000+ em receita com Cash Cards
+
+13,414 clientes/leads gerados
+
+93% de margem de lucro
+
+$1.1M+ em vendas backend (year to date)
+
+~$250,000 investidos em marketing do produto
+
+1,200 leads por mês
+
+50% aumento em conversão com vídeo selfie nos primeiros 5 minutos
+
+400% aumento em engajamento de clientes
+
+0% → 67% melhoria em closing ratio com processo de onboarding claro
+
+$50M → $110M projetado (case study empresa de janelas)
+
+$22,000 ticket médio (empresa de janelas)
+
+Preços dobrados resultaram em 72% mais lucro líquido
+
+$2-5M/mês → $7-12M/mês (crescimento da empresa de janelas)
+
+40 vendedores em 10 estados (empresa de janelas)
+
+Top closers falam <40% do tempo
+
+Closers médios falam ~58% do tempo
+
+Escala 1-10 para qualificação (nunca 10 após objeção, nunca abaixo de 4)
+
+$10,000-$50,000/mês range de investimento (exemplo)
+
+$20,000 entrada + $1,876/mês por 60 meses (exemplo Porsche)
+
+$450,000/ano de renda (história pessoal Jordan)
+
+ 
+
+ESTRATÉGIAS E SISTEMAS:
+
+ 
+
+Lead Generation Lucrativo:
+
+Produto físico (Cash Cards) como ferramenta de geração de leads
+
+Ser pago para gerar leads vs custo de aquisição tradicional
+
+Shopify superior ao WordPress para e-commerce
+
+ 
+
+Follow-up em Vídeo:
+
+Selfie videos personalizados ou automatizados (Vidyard + Zapier)
+
+Resposta dentro de 5 minutos = 50% mais conversão
+
+Diferenciação vs competidores
+
+Humanização da experiência
+
+ 
+
+Agendamento Estratégico:
+
+Nunca estar muito disponível (high social status)
+
+Option closes (24th vs 26th)
+
+Reiterar benefícios específicos da call
+
+Segundo vídeo selfie pós-agendamento
+
+ 
+
+The Sales Algorithm - Estrutura Completa:
+
+Abertura High Status: Igualar-se ao cliente, não agradecer demais
+
+Preço Upfront: Eliminar objeção de preço e filtrar não-qualificados
+
+Golden Question: "Se fosse investir $X hoje, quais 1-3 coisas precisaria ver?"
+
+Falar <40% do tempo: Top performers ouvem mais
+
+FAB Framework: Feature → Advantage → Benefit
+
+Emotional Gap Question: "O que você está fazendo atualmente para [benefício]?"
+
+Inarguable Yes Question: "Você concorda que [benefício emocional], certo?"
+
+Repetir 3-5x: Cobrir todas as necessidades mencionadas
+
+Check-in: "O que você mais gostou até agora?" (coletar ammunition)
+
+3 Pilares: Company + Service/Support + Person
+
+Onboarding Claro: Mostrar exatamente próximos passos
+
+Close: "How soon do you want to get started?" (resposta ideal: "Yesterday")
+
+ 
+
+Objection Handling - ART Formula:
+
+Acknowledge: Validar a objeção
+
+Reply: Concordar/empatizar
+
+Transition: Fazer pergunta para desviar
+
+Escala 1-10: "Onde você está?" → "O que faria ser 10?"
+
+Fork in the road: Criar duas opções que levam ao close
+
+Price objection: "Se fôssemos mesmo preço, quem escolheria?" → valor
+
+"Quando foi a última vez que se arrependeu de pagar mais por serviço melhor?"
+
+ 
+
+Prevenção de Objeções:
+
+Entender subconsciente do comprador (biblioteca de experiências ruins)
+
+Confrontar realidade: "Única razão é não achar que funciona"
+
+Bypass: "Quando foi última vez que arriscou e deu certo?"
+
+Puxar para neocórtex (decisões lógicas) vs subconsciente (medo)
+
+ 
+
+Estratégia de Precificação:
+
+Dobrar preços = mesmas objeções + mais lucro
+
+Treinar equipe para justificar valor
+
+Worst case: desconto 50% = preço original
+
+ 
+
+ESTRUTURA:
+
+ 
+
+Packer Sweep Philosophy:
+
+Uma jogada perfeita > múltiplas jogadas medianas
+
+Repetição até maestria
+
+Processo duplicável e mensurável
+
+ 
+
+Espectro de Leads:
+
+Cold: Problema desconhecido (mais comissão, mais difícil)
+
+Warm: Procurando solução
+
+Hot: Comparando opções (Cash Cards)
+
+Customers: Problema resolvido
+
+ 
+
+6 Emoções de Compra:
+
+Confidence: Saber o que fazer next
+
+Creative: Expressar-se, criar
+
+Relief: Resolver pain point (mais poderoso)
+
+Competent: Fazer mais/melhor
+
+Savvy: Getting a deal (Walmart)
+
+Accepted: Pertencer (iPhone, Yeezys)
+
+ 
+
+Hierarquia de Vendedores:
+
+Horrible: Só mostra features
+
+Good: FAB (Feature-Advantage-Benefit)
+
+Kick-ass: FAB + Emotional Gap + Inarguable Yes
+
+ 
+
+Onboarding Sem Fricção:
+
+Processo claro e visual
+
+Looms/vídeos para cada passo técnico
+
+Remover todas as barreiras
+
+CEO focus: "Como facilitar dar dinheiro e receber valor?"
+
+ 
+
+DADOS FINANCEIROS:
+
+Margem de lucro: 93% (Cash Cards)
+
+ROI marketing: Positivo com $250K investido gerando $143K+ direto + $1.1M backend
+
+LTV optimization via backend sales de clientes existentes
+
+Modelo: Produto de entrada lucrativo → Upsell alto ticket
+
+Case study: 72% aumento em lucro líquido com preços dobrados
+
+Crescimento: 2-3x em revenue mensal (empresa de janelas)
+
+ 
+
+ 
+
+DURAÇÃO: ~87 minutos FORMATO: Apresentação ao vivo para Inner Circle de Jeremy, keynote com slides e exemplos práticos

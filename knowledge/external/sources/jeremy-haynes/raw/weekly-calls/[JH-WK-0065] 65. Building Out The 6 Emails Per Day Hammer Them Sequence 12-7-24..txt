@@ -1,0 +1,489 @@
+Transcrição Completa: 65 Building Out The 6 Emails Per Day Hammer Them Sequence 12 7 24
+[00:00] All right. So, we had a request uh earlier this week. I believe it was from Dicki if I'm not mistaken on the hammer them strategy, specifically the email component. So, I kind of realized that I hadn't gone through with I haven't gone through that specifically with you guys yet. So, I wanted to take some time to do kind of like a walkthrough exercise together of actually doing it.
+[00:25] Uh rather than just teaching it to you, I figured we could actually do it collectively here today. Allow me to first just explain uh how it works from like a strategy perspective. So we make sure we get that part covered and then uh we'll dive into the exercise.
+[00:42] So remember the hammer them strategy's intention okay the intention of the campaign is to turn the sales people into cashiers and in order to do that we have to essentially take all the information that would otherwise be asked, talked about and considered inside of a sales call and put it all in front of the person prior to the sales call.
+[01:08] We do that mainly through the content and we ideally with the content have anywhere between 30 and 50 pieces of content collectively just hammering the shit out of people pre-call or pre-event such as as an example like pre-webinar and the goal is to have a minimum frequency of at least 15 to 20.
+[01:32] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Hammer Them Strategy - Email Component"
+NÚMEROS: 30-50 pieces of content, 15-20 minimum frequency, 6 emails per day, 18 total emails, 72-hour delay
+VISUAL: Estrutura visual mostrando fluxo de emails, timeline de 72 horas, frequência de distribuição de conteúdo
+[01:35] Okay. Now when it comes to the email side of the hammer them strategy we want a frequency count of at least 18. The hammer them strategy email component sends upwards of six emails a day.
+[01:49] Now again, you could always stretch that out if your timeline is greater. Uh keep in mind the six emails a day is the standard that I set it at because in most instances when you run it with a book a call funnel, you have about a 72-hour delay prior to the call generally occurring.
+[02:09] Um, there's a few little nuanced questions I just want to get out of the way real fast, which is, as an example, like, what happens if the call happens in 48 hours or 24 hours? Well, in that case, the person just gets far less emails. You don't compress the full 18 emails to send off prior to the call.
+[02:28] You ideally just set it off to where there's about six emails a day between the 12 hours that you decide to set it to. As an example, it could be like 8:00 a.m. through 8:00 p.m. that you send your six emails every other hour.
+[02:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Dynamic Marketing Automation Setup"
+NÚMEROS: 8:00 AM - 8:00 PM window, 6 emails, every 2 hours
+VISUAL: Timeline visual mostrando distribuição de emails ao longo do dia, sistema de tags, automação de CRM
+[02:48] as an example, um you are doing dynamic marketing automation in order to stop the email sequence once somebody's call actually happens. So, inside of a CRM, you could typically either create a specific field for it or you're just using a field that already exists or you're using a tag to signify through marketing automation.
+[03:10] You could use Zapier for this as an example. Um, okay. So a person booked a call, a tag gets applied that starts this specific marketing automation sequence of emails and then in addition to that you can have a zap that says apply this tag that the call was a no-show, cancelled or did happen, which again would then pull them out of that specific sequence.
+[03:35] Um, you could do it with a tag like what I just articulated, which I think is the easiest way to do it, but you can also do it with a dynamic field where you literally input the call time. So, as soon as that field gets populated, it starts the marketing automation.
+[03:51] As soon as the time of that specific field happens, then again, it pulls them out of the marketing automation. Depending on what CRM you use kind of dictates which one might be a preferential to you, but again, I prefer the tag system. I think it's easier.
+[04:08] Most schedulers have the most basic function of allowing you simply put to tag somebody when the call gets booked and then tagging somebody again when the call happens or the call time passes or the call gets no-showed or or cancelled.
+[04:24] You can also just to be clear base it on if your sales people are on top of the uh pipeline stages uh when the pipeline stages are actively being moved in and out of. So as an example, if a opportunity or a deal or whatever you want to call it, a lead gets created in your deal pipeline, then you simply put trigger the marketing automation to start firing
+[04:47] and when that person gets moved out of that specific deal stage into whatever the next step is, call happened, no show, whatever, again, the marketing automation stops firing and pulls them out as a result.
+[05:00] Uh, do me a favor real quick, put a one in the chat if that makes sense. Unmute yourself if you have any questions on that technical aspect of it before we continue.
+[05:12] Cool. Good. Okay. Sweet. Again, no questions on any of that. Seeing a bunch of ones in the chat. Sweet.
+[05:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Email Creation Assets & Tools"
+NÚMEROS: Não especificados
+VISUAL: Lista de ferramentas - Perplexity, ChatGPT, Claude, documentos de propaganda, quatro quadrantes de conteúdo
+[05:22] Okay. So, again, when it comes to the creation of the emails itself, there's a bunch of ways to do it. Um, for starters, I'm just going to walk through a few things that I want to make sure you have in place and then I'm going to tell you like tactically how you can execute it the easiest leveraging some of these LLMs like Perplexity, uh, ChatGPT, Claude
+[05:44] uh, if they're on a day where they don't have a shit limit. Uh, but let's get started with some of the assets that I use in order to actually build it out.
+[05:53] So, for starters, let me explain a few things. We have this document where for the propaganda content ideas, it just lists off like a very specific technical way to film them. Um, this isn't like a critical document per se. It's just like a piece of the hammer them strategy, but again, like just in terms of technical execution, usually we send this over to the client and make sure that they have it.
+[06:18] So, I put that into the group chat if you guys want to download it. Um, if you guys just to be clear for the recording later on are watching this inside of the course library, like somewhere below the video, there's a little download section and you can find it there.
+[06:34] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Four Quadrants of Hammer Them Strategy"
+NÚMEROS: 4 categories, 30-50 total content pieces
+VISUAL: Quadro dividido em 4 seções: Questions, Second Layer Questions, Objections, Expectations - com bullet points em cada categoria
+[06:36] Um, from there what we do is we get the actual content ideas created. So, keep in mind there's four quadrants of the hammer them strategy. Okay? And those four quadrants being questions, second layer questions, objections, and then expectations.
+[06:54] So ideally you have a doc where you have these four categories listed and then you just have some bullet points where you just kind of populate all the data that you need to fit into the four quadrants.
+[07:06] So in terms of the execution side of it, the reason this doc eventually becomes important for the emails is it makes it super simple to craft the emails when you already have a list full of all these questions.
+[07:19] Because when you look at the actual email sequences themselves, you know, we have 18 total emails. And again, I'm going to share this guys. I'm going to share this over to you guys, so don't worry about like typing this up or anything.
+[07:32] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "18 Email Sequence Template"
+NÚMEROS: 18 total emails, 6 per day
+VISUAL: Lista numerada de 1-18 com descrição de cada email: Call Confirmed, General FAQ, Story of X, About Founders, etc.
+[07:35] Um, where each one of these is usually listed with like what that email should be about. Okay? So, as an example, it starts off with just your call being confirmed. Uh, we'll talk again about each one of these emails specifically here in a moment when we do the exercise, but let me just go over it as a higher level first.
+[07:54] You have general FAQ. So, as an example, like with general FAQ, this is where it becomes really helpful to go into my list of all my content ideas for my different categories and literally I can just pull from these specific questions and just answer them in the emails. Okay.
+[08:12] Um again like when I have the story of X in this specific case when you see this email type come up in the sequence in the template sequence this represents us telling a story and weaving in some of these different components like expectations objections questions.
+[08:30] Usually with the story of X I'm able to articulate like okay recently we had you know X person buy our product and they had a bunch of questions before they purchased and then I could just answer like question question these were some of the things that they had that you know were kind of holding them back.
+[08:49] They had one specific objection which a few people have handle the objection and then they wanted to know about you know how long it would take expectations and then again I could just flex a case study after that you know
+[09:03] so it's like this is how we strategically work in testimonials while also ensuring that we cover the actual content components in the emails
+[09:12] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Content Compression Strategy"
+NÚMEROS: 30-50 pieces compressed to 18 emails, 1.6-2.7 points per email average
+VISUAL: Fórmula matemática visual: 30÷18=1.6, 50÷18=2.7, mostrando distribuição de conteúdo por email
+[09:15] uh just to be clear from the perspective I'm really trying to make sure I make clear here is you are attempting to take the same points that you are emphasizing in the content and you're just emphasizing them in written form in the emails. Okay?
+[09:30] But instead of having a singular piece of content per question, second layer question, objection or expectation, you are weaving in multiple of them into 18 emails because again you have to compress it from, you know, 30 to 50 pieces of individual content all the way down to just 18. So you strategically have to stack them together.
+[09:52] Um, just for super simple mathematical purposes to help you guys understand how this would end up looking. Uh, let's use the example that you have 30 total pieces of content that you've created. Okay? You would take 30 divided by 18. That would mean on average you'd have 1.6.
+[10:11] So an occasional email that has one of those single singular things being answered and a majority of your emails having at least two of the individual things answered.
+[10:22] Okay, let's use the example that you had 50 pieces of content. You would take 50 divided by the 18. That means you would have a minimum of two of these different things covered per email. But a majority of the time, since the number comes out to 2.7, you'd have three, okay, per email.
+[10:43] Does that make sense to everybody? Again, just do me a favor, throw a one in the chat or just unmute yourself if you got a question on these. Uh, again, just feel free to answer anything.
+[10:54] Uh, Daniel says, "So, they're all primarily text-based." uh not sending them to a YouTube video. Okay, so Daniel, great question. Think about it like this, right? WE'RE ALREADY FUCKING HAMMERING them with content via videos.
+[11:10] Why the fuck would we send more videos to them via email when they're already going to get their ass tapped by by content? We are absolutely not going to be lazy here. We are going to fucking write them down and we're going to send people written forms of the same things.
+[11:28] We can link. So, as an example, we can answer the question and then link to a video that might have more information on that question, but to be extremely clear, we are not just going to have a stupid email sequence that says, "Hey, like here's a common question. Here's a link to the video. Here's a common question. Here's a link to the video." That's not how fucking people read their email. Okay?
+[11:52] That's not how it works. We we make the point via email. So we ensure with a higher probability that the point is made. Okay? You can absolutely link people to the video to be clear, but do not do not rely on the video to make the point. Does that make sense?
+[12:10] >> For sure.
+[12:11] >> Okay, good. Um, so I'm a little passionate about that topic by the way. Again, human beings are generally extremely extremely laxidasical and the and the point that most people make is to attempt to like simplify these strategies down to a point where they're like simpler to execute.
+[12:31] This is not like a simple to execute strategy. This does take, you know, in comparison to like a direct response strategy, excessive amounts of time and effort. You want to stay in the mental frame of like, I'm really putting in effort here to get this done.
+[12:48] Because if you do it the right way the first time around, you can rely on it literally forever until you need to potentially update it in the future based on like new objections or new questions or like other products. But again, like really be intentional about crafting it the best you can the first go around.
+[13:08] Um, I am going to to be fair give you a somewhat laxical dasical way to do it. Like you don't have to just write them all yourself. You know, we're going to use AI. So to be fair, it's still rather efficient. But again,
+[13:22] >> I had a I had a quick question about the video. You said 15 to 20 on the frequency of video, right?
+[13:28] >> Correct. That's the minimum frequency that you want to shoot for with the content frequency. Uh when again, whatever that key window is, you want a minimum of 15 to 20 to get in front of them in that key window. Ideally, that's the minimum.
+[13:43] >> Okay. Because that that's going to be my biggest question once you get to it is like how do you handle it if a lot of calls are booked in? I would say more like a 7-day window is kind of how it ends up happening.
+[13:55] >> Yes, you can you can stretch that window to a 7-day window, but I wouldn't have a 7-day window. That's far too long. You're going to have a high no-show rate regardless of whether you do the hammer them over seven days or not. Ideally, you want to have that call booked out 3 days max. 4 days is pushing it.
+[14:15] Like, you see substantial deterioration in your show rate after that fourth day onward. So, again, like three days is really as far out as you want to push it.
+[14:25] Um, to be fair though, you can have contextual hammer them sequences set up for very specific steps in your sales process. So, as an example, you could do the hammer them strategy for that pre-call. Then you could have, okay, the call officially occurred. Now, I'm going to have a hammer them strategy specific to people who did have a call but didn't buy yet.
+[14:48] You see what I mean? So, that could handle the call happening. And then let's use the example you have a three-month, you know, window where someone's probable to buy because you're helping people raise capital or maybe it's like a two week average sales process.
+[15:04] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Multi-Stage Hammer Them Sequences"
+NÚMEROS: 3-day max booking window, 3-month follow-up window possible
+VISUAL: Diagrama de fluxo mostrando múltiplas sequências: Pre-Call Sequence → Post-Call Sequence → Long-term Nurture, com diferentes frequências para cada estágio
+[15:06] You you could keep content in front of that individual just at typically a lower daily frequency and still get the benefits to be clear of the content distribution since it's cost effective. Um, but you wouldn't want to stretch your original like pre-call hammer them sequence to handle that. It'd be a separate hammer them sequence.
+[15:27] said be lower budget, more stretched out. Does that make sense?
+[15:31] >> Okay. No, yeah, cuz I was thinking emails tactically because I I just did this last last week. I wrote 18 emails. So, I was thinking, do I do six emails a day for three days or do I do three emails a day for six days? I was thinking three a day for six days, but maybe I'm wrong.
+[15:49] >> Yeah. So, if you're talking about the email specifically, then yeah, again, like you would you would stretch it out relative to whatever that time frame is.
+[15:57] >> Okay. Yeah, I think three a day for six days is not horrible.
+[16:01] >> Uh Daniel has a question. He says, "Are order or ranking to these?" Uh Daniel, are you talking about the emails or are you talking about the content? What are you talking about?
+[16:11] >> Yeah, like uh what order you put the content in the email sequence. Um
+[16:17] >> yeah, good question. Um to be fair, it really depends on your email consumption rate with your list. If you see that people are consistently, you have to you have to essentially run it. And then the good news about marketing automation on almost all instances, it's like a drag and drop builder. So you can always rearrange it at a later time in the instance that you see like a drop off
+[16:40] in consumption through time. Um in most instances and this is very important to understand in terms of the behavior of these individuals, it stays at a rather consistent open rate throughout the entirety of this email sequence which to me was rather shocking.
+[16:57] Again, a majority and I mean by far a majority of instances like I've so far seen 90 plus percent instances where it just stays the same throughout the open rate of the entirety of this email sequence.
+[17:11] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Email Open Rate Consistency"
+NÚMEROS: 90%+ of instances, 20% average open rate maintained throughout
+VISUAL: Gráfico de linha horizontal mostrando taxa de abertura consistente ao longo de 18 emails, destacando comportamento incomum de engajamento sustentado
+[17:13] Um which again is why I constantly reiterate here that these people actually do want this information. Um because they're opening all of them extremely consistently. Um even if you average as an example like a 20% open rate, you should on average see that 20% open rate stay pretty consistent throughout the entirety of the sequence.
+[17:34] Um, if you don't see that, that'd be where you'd ideally prioritize what's coming up on the sales calls that holds people back the most at the front end of the sequence. That way, you ensure you get those initial impressions off with what makes the most impact. Does that make sense?
+[17:51] >> Yeah. Yeah. We analyze the calls and looked at like the most common questions and we just stack those toward the front of the emails. Is there any importance to doing something like that?
+[18:01] >> Uh, I'm I'm sorry. Say that one more time. I didn't process. So, we analyzed like all the calls uh and came up with like a list of questions, all the insight that we wanted and like the most common questions we got, we stacked those toward the front of the sequence.
+[18:17] >> Yeah, you could again, but like that not that might not be effective though. You might actually want to stack it especially if your email open rate stays the same throughout the process towards the end like pre-call. You see what I mean?
+[18:31] But also it depends on like the where okay if you're consistently getting people like when they book that are always three days out
+[18:40] then remember it's not dynamic in the sense that the email sequence compresses and gets all the emails off. So it's like on average if you have people that are always booking in that 72nd hour onward then again like you could technically stack those emails to be like right before the call to have the most effectiveness to get those points across.
+[19:02] But at the same time, if on average people are randomly booking between 24 and 72 hours, then yes, you would ideally stack the most important things at the be beginning to ensure that they actually see that specific content that you know has an impact. Does that make sense?
+[19:20] >> Yeah. Yeah.
+[19:21] >> Okay, cool. Um, and and yeah, if you guys can't tell yet, just to make a quick note on this, it's like it's it's very dynamic in terms of how you do it relative to what you are specifically dealing with in your average booking time to like show rate window or like average opt-in to webinar window or again like what whatever it is.
+[19:43] It's just remember it's not like a static has to be this way. You know, stretch it out or compress it down to like whatever window you prefer that's going to be best for you, you know, and rearrange as you see fit.
+[19:55] Um, all right. Barov, you got a question. Uh, do you have the metrics for consumption rate on each of these six emails a day? Target open.
+[20:04] Well, look, target open rates are silly because again, it's like you might have an absolute dog shit deliverability and your open rate metrics might need to just be worked on with having your email fixed up and cleaned. You know, you might you might have a CRM that like you've historically harassed and therefore they punish you and what your open rates are going to be and like you might be on a shared IP or a dedicated IP.
+[20:29] So, no, there is there's no like static open rate you need to shoot for. It's it's the same thing in all marketing rules. It's like, look, push the statistic to as high as you possibly can. Um, that's that's all you're really shooting for is as much consumption of the information that you can.
+[20:47] Again, you're not like it's not a static answer where it's like, oh, it have has to be like a 50% open rate. I I don't give a fuck if it's like 10%. I just want to push it up wherever it starts at to a higher amount. make sure that we're doing best practices for email deliverability and just maximizing the overall uh again just open rate in general. Does that make sense?
+[21:09] >> Gotcha.
+[21:10] >> Okay, cool. Max, what's your question? You want to mute yourself?
+[21:14] >> Yeah, it's more on the the content side. So like my thing will never spend a daily budget. Do you just increase it or do you do something like on the actual adset to make sure it's spending the full amount each day?
+[21:27] >> Well, okay. So, how big is the audience that's being targeted there?
+[21:31] >> Probably like 150 people a day to be honest. It's not that much.
+[21:35] >> No, that that's fine to be fair. Again, it just has to be the minimum of 100 people. Yeah. And if it's not spending the full amount, that's not bad because again, like if it did spend the full amount in your example, it probably just spin the wheels.
+[21:49] Um, it depends. Are you still seeing the frequency over the desired time frame? I mean, I'm sorry time frame in the in the frequency. What am I
+[21:59] the desired frequency in your time frame? Are you seeing that number or not?
+[22:03] >> No, I am not. In the last hour, it's like 11.
+[22:07] >> Okay, understood. Then yeah, try to kick it up a little bit to see like as an example, what what's it at right now per day?
+[22:14] >> 300. I'm at 300 a day.
+[22:17] >> And what what's it actually spending per day?
+[22:20] >> Uh like in the last three days, I spent 600. So spend about 200 a day.
+[22:25] >> Yeah. I mean, that's that's pretty extreme. You you might want to try to like lengthen it by an extra day or two for whatever that audience is and see if it can get off that spend more efficiently. You know, that sounds like a lot.
+[22:39] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Hammer Them Ad Budget Optimization"
+NÚMEROS: 100 minimum audience, $300 daily budget target, $200 actual spend, $100 max per 100-150 people recommended
+VISUAL: Comparação de orçamento vs gasto real, cálculo de eficiência de CPM, recomendações de ajuste de budget
+[22:41] uh in in most instances when you have that minimum of a 100 people in there or like in your case 150 like you really shouldn't need to spend more than like a hundred at max in a day to like have that frequency cap.
+[22:55] Uh it could just be to be fair the time of year or like a very competitive niche that you're actively targeting people in and those people even though it's only 150 are just getting fucked by a bunch of other ads at the same time.
+[23:09] um tough tough call because at the same time like if you increase it too much becomes inefficient in the in the sense that it eats into your rorowaz. So
+[23:19] yeah,
+[23:20] just do the math to determine if it's worth it to increase it or not further by factoring in that hammer them spend into your overall spend as you should be anyway to determine rorowaz. Does that make sense?
+[23:32] >> Okay. Yeah. Maybe it's because I'm targeting optins because we don't have enough book calls, you know, per day for that to make sense where I can do 100. So I have to do the optins.
+[23:43] >> Yeah. I would I would really ensure that you actually have the 150. Like maybe maybe you think you have 150 but your match rate is actually lower and again like maybe you need to widen the window or add another like key audience type to that specific type window to try to
+[24:01] try to just make it more efficient. It sound simply put it sounds rather inefficient
+[24:06] uh based on how you're attempting to do it. But again, if the rorowaz is fine, then you know, the simplest thing to do would just be kick it up and and maintain the the spend at a higher level to get the frequency up uh while also just ensuring obviously it's not eating into your rorowaz in a negative way.
+[24:24] >> Okay. Yeah. And the other thing, maybe you'll cover this more like with like the actual stuff they're writing. One of the things that I see is like there's people who they see a testimonial is like they still don't believe it. Like they're just still that skeptical. Is there anything you've done like more in the bizop space to help with that or is that just the nature of it?
+[24:43] >> Yeah, the testimonials have to be believable. So, I talk about this very frequently. It can't be like like as an example, what testimonials are you putting in front of people? Like what like where are they from? Are they screenshots from where they wrote them? Are you rem what they said?
+[24:59] Uh is it like Trust Pilot or some other third party platform? Like where where is it from?
+[25:04] >> Just selfies. Silly videos.
+[25:06] >> Yeah, understood. I mean to be fair like just with where UGC is at nowadays as silly as it sounds like I mean technically somebody could just pay somebody to make testimonials for their business in the form of videos. So yeah again like you know depends on the level of skepticism that you're dealing with with your specific audience there.
+[25:25] Believe it or not might actually be secondary actions that you could take outside of the testimonials to increase trust and believability but I mean you're going to deal with that anyway.
+[25:35] >> Sure.
+[25:36] >> Okay. Uh, I'll give you a good example. Like when I was doing the trading with the uh the prop firms, I would go into the prop firm Facebook groups and I would just hard flex on everybody because it's full of skeptics and I love stunting on skeptics. It's one of my favorite things.
+[25:54] It's a very euphoric like drug-like high for me to stunt on skeptical people with things I know are true and overcoming their like, you know, highly unbelievable like that can't be true kind of perspective.
+[26:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Overcoming Skepticism Through Proof"
+NÚMEROS: $50-100K monthly payouts mentioned
+VISUAL: Exemplo de estratégia de prova social em grupos de Facebook, demonstração de resultados consistentes para superar ceticismo extremo
+[26:10] I remember I'd consistently get like 50 to 100k payouts every month, which is like the max payouts you'd get while you're on their limited payout schedules. And again, like I'd always get people that like I started getting people towards the tail end after being consistent on that for so long before they before I made too much money where they literally were like, "All right, you got to go live. Like you're done."
+[26:32] Where they would say things like, "Uh, oh, is this guy like working for this company now? Like is he like, you know, like they they'd get to that point like skeptical people?"
+[26:42] Again, they're like determined to be skeptical. So it's important to know sometimes like you won't actually overcome the skepticism and believe it or not, you actually kind of want to deter those people from being in the funnel in its entirety.
+[26:57] Like there's a difference between somebody who's on the like I'll give you a perfect example like some of you sitting here right now who haven't implemented the hammer them yet. You might be skeptical as to whether it'll actually get you the result of like higher show rates, higher close rates, but like you know, you're still here and invested into learning this one thing of like who knows how many things we could sit here and cover together through time, which of course we will.
+[27:23] And my point being is like
+[27:25] that's a different level of skepticism where that skepticism you're still willing to take action through that level of skepticism and find out if it's true or not for yourself. That's the type of skepticism we do want to handle.
+[27:37] We do not want to handle the skepticism where it's like they they want to be skeptical and they're going to stay skeptical and like they're not going to attempt to overcome it. Does that make sense?
+[27:47] >> Yeah, that gives you some ideas. Thank you.
+[27:50] >> Okay, great. All right. So, let's get started with this exercise together here and uh allow me just to walk you guys through what we are going to do.
+[28:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Exercise Setup - Required Documents"
+NÚMEROS: 18 emails, 4 quadrants, 30-50 content pieces
+VISUAL: Checklist visual mostrando 3 documentos necessários: 1) Hammer Them SOP, 2) Email Sequence Template, 3) Four Quadrants Content List
+[28:02] So, first of all, um I'm going to share this over to you and you are all going to press uh file make a copy. It's in the Zoom chat now. Um, again, you are going to come up here to the top left after you open it and you are going to press file and then make a copy so you have your own version of it that you can officially type into.
+[28:24] Uh, so again, hopefully you guys are all on a computer and are officially pressing file make a copy after you click on that link. Um, okay. The second thing that I want to make sure ideally you all have that makes it a lot easier. Okay?
+[28:39] And you could still technically accomplish this exercise whether you have this or not. But again, I just want to reiterate having the questions, the second layer questions, the objections and the expectations document handy um does make it far easier to accomplish this task. Okay?
+[28:57] because we can feed it into an AI together and we can simply put make sure that you know we at least leverage something that could make it efficient for writing all of these things. Otherwise, you will have to write everything in there um in its entirety. So, nothing wrong with that again, but just want to make clear you ideally have a document that has the four quadrants.
+[29:18] Um, outside of that, the only other thing that I want to make sure that you guys ideally have is the actual hammer them strategy SOP. So, after you if you have the hammer them SOP, uh, great. Again, this is specific to being able to add it into one of the, uh, AIS of your choice, the LLMs, uh, whether it be Perplexity, Claude, Chatgvt, etc.,
+[29:42] um to write the emails for you just using some of the best practices that are covered in the document itself. So
+[29:49] >> yeah, I copied and pasted it in there into a chat GBT and when I wrote it, the emails came out really really good. So that that's a that's a pro hack.
+[29:58] >> Good. Um as an example, Rohan, do you want to share your screen and show people what you did so they can see it from you and then I'll go through it more from like an instructional perspective?
+[30:08] >> Sure. Yeah. So here's what I just wrote this 18 emails like I broke it down into questions. This is a a a capital raising deal they're raising for outside of Atlanta. So, I broke into questions, uh questions that come from other questions, expectations, and then objectives.
+[30:28] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Rohan's 18 Email Sequence Example - Real Estate Syndication"
+NÚMEROS: 18 emails, 4 quadrants, $3K offer mentioned
+VISUAL: Documento do Google mostrando estrutura completa de 18 emails organizados por categoria, com foco em capital raising para real estate em Atlanta
+[30:30] And then obviously one one guy follows Cole Gordon, so he has his seven beliefs. So, I always try to also put that in there as well. So, um it's kind of how I wrote it. And then I have 18 emails.
+[30:43] Again, these four like I think Maxi said in the beginning like I started them out with more like higher level questions cuz like certain people this is a real estate syndication so they they don't know what it is or like they haven't invested in it before.
+[30:57] So like I try to answer some of those more surface level questions in the beginning and then towards the end we kind of get into like more like technical questions. So, like again, I don't want to get too much into the weeds, but like people that invested in 2022 in the space, they lost money because it was a bad timing in the real estate market, but then now is a better timing in the real estate market.
+[31:18] So, we have to explain that to them. So, again, that's kind of what this email does, right? It kind of explains like the risk was higher back in 2022 and people lost money, but then now investing now there's lower leverage, lower debt, like it's better. So, again, that's kind of how I I I did. And actually, Jeremy,
+[31:37] which LLM did you use for this?
+[31:40] >> Uh, Chad GBT. You want to open chat GBT and show the prompts of it?
+[31:45] >> Sure. Yeah, let me uh let me pull it up here. Uh if I got it here. Um let me see if I have it here.
+[31:54] >> That was great. By the way, for anybody that needs a little inspiration, Rohan's 21 stunting on you. Just just know that.
+[32:02] >> Okay. Yeah. So, I have it right here. Uh is this it? Yeah, this is it. So, um sorry, trying to pull it up here. So, I have it right here.
+[32:12] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "ChatGPT Prompt Structure for Email Sequence"
+NÚMEROS: 18 emails, 2 example emails provided
+VISUAL: Tela do ChatGPT mostrando prompt completo: "Act as world-class email copywriter" + Hammer Them overview + 2 example emails + editing feedback loop
+[32:14] So, yeah. So, what I did was I uh I I uh I need you to act as a world-class email copywriter. Uh we're going to be implementing the hammer them email strategy for Nighthawk Equity. Uh this is designed to be a ton of emails before they're called to properly frame them. Here's an overview of the strategy. Then I just copy and pasted Jeremy's document in there. So, it kind of did its standard thing.
+[32:38] Then I gave it here's two emails I wrote. So, these are like two example emails I gave it just so it knows like how I write and how I want it to be how I want it to be done.
+[32:49] >> Great idea.
+[32:50] >> And then it spat it out. And then what I did is I did it after that and then I said, "Hey, nice job. Here's how I edited your email." So then I kind of did my my like my edits just so it knows like how I would write it. And then I just kind of started going into it like then I just started then I just started asking it
+[33:08] then then it just started spitting out these emails and these are all pretty good actually. So like this is how I did it. And then yeah and then I got it into here. And then you know these again these are kind of now more like questions after questions cuz again for me I like the way I ordered it because in the beginning I wanted to make sure like the biggest thing is I had I have to get them over the skepticism about real estate and then the skepticism about real estate syndications.
+[33:32] Once I kind of get them over that then I can kind of get into all this technical stuff which again I think is more like that. And then it's actually funny Jeremy because we had a webinar last week and there were some even more technical questions. So I may after I deploy this which I'll deploy this this week I may start adding in more questions that came up on the webinar last weekend. So or last Wednesday. So great choice.
+[33:54] >> All right. Perfect. Yeah. Awesome. And I I noticed one thing that you could also add to that specific set of prompts
+[34:02] is Chat GBT has been inherently lazy. I consider it like a donkey. You know, donkeys don't do what you want them to do unless you beat the donkey. Usually what it wants to do on its own. To be clear by what I mean on that, I tell it to write like an email that has a minimum amount of characters.
+[34:21] >> Okay.
+[34:22] >> Or I also tell it um I'll be like like what you said as an example, like nice, great job. That was way too short though. And I'll also tell it in the initial rule of thumb, I'll say do not be efficient. Meaning, do not tr try to simplify what you're trying to express with bullet points and short sentences. Be elaborate and overly articulate about the points you're trying to make.
+[34:48] And usually what it does when you like force it to do that is at least writes a little bit longer. It doesn't necessarily overdo it in any way, shape, or form. It just writes like what I think would normally be written.
+[35:00] And then if it still writes it too short, then I'll always come back and I'll correct it right after and I'll be like, "Nice. Uh, okay. Now, extend what you just wrote uh twice the length, but make the same points, just be more articulate. And then usually that's on that second round. That's generally when I'll get like the actual email that I find that I can use.
+[35:22] >> Okay. Yeah, that's good because Yeah, I I I've noticed when I do that, I feel like it just starts getting into a little bit of like nonsense. But I agree with you because much easier if they write a lot, you can cut it down versus trying to add more kind of
+[35:36] >> That's exactly what I was going to say. It's like in most instances I can have like I'll give you a good example here. So sometimes I literally have to like cuss chat GBT out, dude. It's fucking stupid. Uh, hold on. Let me let me tell you something, though.
+[35:51] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "ChatGPT Blog Writing Prompt Example"
+NÚMEROS: Minimum word counts specified, multiple failure conditions
+VISUAL: Tela mostrando prompt detalhado para blog com regras específicas: não mencionar vídeo, não usar bullet points, escrever no tom de Jeremy Haynes, múltiplas condições de "failure"
+[35:53] So, let's say uh this right here. So, usually what I'll do for like the blogs that end up getting posted on uh on jeremyhanes.com is all like literally every single one of these is just my YouTube videos transcribed and then rewritten up by Chad GBT. And then usually we'll come in from there and like touch them up.
+[36:12] But it's like, okay, so this is the prompt. So, it's like, "All right, you're going to write a blog that fits." Like, and then I'll pick one that I think is formatted well, and then I'll reiterate specifically what I want to make sure in terms of formatting it follows.
+[36:28] Uh, and then this is where I try to get it to use like the entirety of the video transcript that I'm about to paste, voice, and style of the brand. And then in this case, keep in mind, Chad GPT has the history of like every single thing you've ever talked to it about now that it can access it with.
+[36:46] So, I feel confident about this without having to paste more about specific tone lessons. Um, okay. Do not write the blog with anything that makes it sound like it's from the video or subscribe to the channel. This is really important, by the way.
+[37:01] Uh, if you're actually going to use because like one of the pro tips with like all these videos is you can you can have all those videos and the content of the videos transcribed and you could add those to like a master doc.
+[37:15] So again, like just in the instance that you do transcribe any of the videos and there's like something in the video where it references some kind of visual that like can't be seen in the form of a transcript, just make sure that you write that specific rule to not reference anything as if it's talking as though it's a video, you know, like make sure it's formatted in in your case in this in this scenario of the hammer them strategy email sequence like writing it as though it's an email and not talking as though it's a video. Does that does that make sense?
+[37:48] Okay. And then I always tell it like if you fail like you if if you fail to use all the content you know then we're gonna start over. Uh you know make the article longer than this amount of words. Again this would be the same thing that you can add inside of the emails for like whatever quantity of of words and or characters that you want it to be.
+[38:08] Uh I always say avoid using short bullet points to simplify anything down. Be articulate in the voice and tone of Jeremy Haynes the author. You fail the task if you do not write it exactly as Jeremy Haynes would. you fail the task if you are trying to be efficient rather than doing the task right the first time around. You fail the task if you use too many bullet points for simplification.
+[38:31] Here's the transcript. And then I just use this uh this tool called tactique.io and I throw the YouTube video in there. Again, you can use any video transcription service for you know whatever you're posting from like Facebook or Instagram. And then again this is just all the video transcript that you're seeing here. Okay.
+[38:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "ChatGPT First vs Second Draft Comparison"
+NÚMEROS: Multiple revisions shown
+VISUAL: Comparação lado a lado mostrando primeira versão (curta, com bullet points) vs segunda versão (expandida, mais articulada, seguindo feedback)
+[38:52] Okay. So, then it writes the article and then generally whatever it writes the first time around, like you see in this case how it's using these bullet points and writing like singular sentences like this, this isn't bad, but it's missing like so much of the video even though I I went through it.
+[39:09] So, I say, "Okay, yeah, you did a great job. It just needs to be longer and with only additional words that the brand would say." Okay. And then this is generally where I get like the actual blog, you know, and this is this is where it ends up being good.
+[39:25] Okay, so you want to follow this same, you see how much longer it is, and much more like articulate it is. And then in some instances, um, okay, this is just me asking a question like, what do I need to make sure I add in my future prompts to ensure that you actually do it right since I think you did a great job on that one.
+[39:44] So anyway, you see how much longer this one is comparatively to the initial one that it wrote, even though all the initial prompts would indicate that it should have been written like this the first time around. This is generally where I say you have to do the same thing with the emails in the instance that you want them to be a little longer and a little more thorough. Okay.
+[40:05] And to Rohan's point, Rohan actually made an excellent point in his prompt structure, his prompt engineering there, which was how good he did on giving it examples of the brand's already written emails. Okay?
+[40:18] Because again, almost all of you here for your own businesses or for your clients businesses or whatever you're doing have emails that are already written that you think are good and like structured well. And if you don't um you let's use the example you have like long form sales pages that are written well or like the styles of long form sales pages that you want to emulate.
+[40:40] Um again you can feed it any kind of examples that you want to for its writing style. Um I typically don't like the the one discrepancy between what Rohan did and what I chose to do. I don't typically tell it like you are an expert like email copywriter in this case.
+[40:57] You could and I I again I don't disagree with that in any way, shape or form. It's just I don't do it, but I still find that it gets me like the outcome that I'm looking for overall. So again, what we ideally want to do here just in terms of like technical execution so you guys understand.
+[41:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Email Sequence Template Setup Instructions"
+NÚMEROS: 18 emails, customizable subject lines and outros
+VISUAL: Instruções passo a passo: 1) Download SOP em PDF, 2) Usar template de sequência, 3) Command+F para substituir saudações/despedidas, 4) Personalizar para CRM
+[41:17] So first of all, um get the get the SOP downloaded and you can download it in its entirety just in PDF form. I threw it into the the uh inner circle group chat and then again for anybody who's watching the recording at a later time if you're watching it in the course library, it's somewhere below this video. You'll see like a little download section. You can download it.
+[41:37] Um, then you have the hammer them email sequence template. And again, you could structure this however you want. Like they don't all have to start with hey name, you know, talk soon, signature. Like ideally, you can just do like a command F on this and then just do like a replace all for whatever you want to end your email outros with.
+[41:57] Um, just to be clear, same thing here on the hey first name. You could change that to whatever you want just by doing a simple command F. And then again just replace all with however you want to start the emails.
+[42:09] Um okay there is sections for the subject lines and then this at the top in bold is just intended to be like ideally what the email should be about for the structure that I generally use.
+[42:22] Uh one of you guys I don't remember who asked a question at the beginning might have been Max in terms of the flow that you're going to use for like when you structure what. Uh no I think it was Daniel actually. Anyway, I digress.
+[42:34] Again, if you find that people are booking as soon as 24 hours or as late as 72 hours or whatever the specific key event that you are building this email sequence for, you can prior like reshuffle them if you will where you have some of these at the top and some of these at the bottom.
+[42:52] And then also keep in mind ideally you have a document that has all of your questions, your second layer questions, your objections and your expectations. That way you can also just download this in a PDF and throw it all into your prefer your preferred LLM.
+[43:08] Um, some people really prefer Claude for copywriting. Um, I I don't hate on Claude, but I will say this, I fucking hate that it has that limitation currently on the quantity of messages that it can send out. And even though if you pay for it, you know, it still limits you.
+[43:27] I know somebody said like, "Oh, just buy a second account so you can get around that and copy and paste the chat history." I just find that so fucking silly. So, I usually default to chat GBT.
+[43:38] Uh, Perplexity has also been a very good LLM in the instance that you guys are, you know, struggling or just don't like ChatG for its writing style. Um, I also would say just to be clear, like don't necessarily blame the LLM. You know, most of the time it's like your prompt engineering for like why it sucks. So, just keep all that in mind.
+[43:59] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "LLM Model Recommendations"
+NÚMEROS: 01 model (previously 01 preview)
+VISUAL: Comparação de LLMs - ChatGPT (01 model recomendado), Claude (limitações de mensagens), Perplexity (alternativa viável) - com prós e contras de cada
+[44:01] Uh, okay. I digress. You have the hammer them dock, you have the email sequence dock, and then you have your actual like content lists for what you used to film everything. Okay? Take all three of these documents, throw it into chat GBT again, or whatever your specific uh preference is.
+[44:20] Uh, by the way, just currently at the time I'm filming this video, I find that the 01 uh, which historically has been the 01 preview has currently worked the best. And again, like just to future proof this video, whatever the fuck the newest model is from these guys, like, you know, use whichever one is being exploited at that specific time for copyrightiting the best. Um, and just keep that in mind.
+[44:45] So anyway, just going to take a moment. Uh, does anybody have questions on that? You guys want to unmute yourself and ask anything just based on what we talked about so far?
+[44:55] Daniel says, "Is this homework you assigned to a client?" Daniel, can you unmute yourself? What do you mean?
+[45:01] >> Yeah. Yeah. So, like those questions, do you assign that to the client or do you have to like find that information? You say, "Hey, like can you give me, you know, five to 10 questions of each of these four contract?"
+[45:13] >> Usually, usually I'll jump on with the client and we'll just like build it out together. I'll just be like, "All right, so like let's talk through like what happens on your sales calls. like let's right I'll generally be able to come up with a lot of them as well just based on
+[45:28] uh my my my breath of marketing knowledge
+[45:31] not to sound pretentious there anyway moral of the story is like usually it's faster and easier if I jump on and just like help them knock it out if it's like a consulting deal or like you know just again like something that I'm not as involved in then yes it's just like a homework assignment where we provide them the hammer them SOP and then how like we an example like that to be clear you know and and show them what it should look like
+[45:56] and then give them examples like what the content should look like just like just like you saw there at the top of the dock. What if they're like disconnected from the sales process? Like I worked
+[46:05] >> You can talk to the sales people themselves, you know, like just coordinate a call with the sales team and jump on, which which to be fair is also typically a good best practice for that doc where you jump on and you're like, "All right, guys, like you know, fuck at me real quick and like tell me what uh
+[46:21] like what you guys are constantly talking about on these calls, like what you're upset people don't know before the calls. Uh what are the common reasons that like people are held back? What are some of like the niche reasons that you've seen that people are held back?
+[46:36] Um, do does anybody even give a fuck about the expectations of like what what happens after they buy? You know, if they do, like what specifically are you talking about that makes them feel good about it? What what do they ask additional questions on at that stage?
+[46:51] Um, you're just trying to get as much information from whoever knows it. And and and again, I usually will talk to both in those instances. like I I'll preferably have a call with the sales team too because
+[47:03] regardless of whether the business owner thinks they're tapped in or not in a majority of instances talking to the sales team is still a best practice regardless as long you have the time for it to be clear.
+[47:15] >> Yeah. And then can you share that that first prompt I think that you had with the the chat GPT
+[47:21] for the blog?
+[47:22] >> Yeah. Um how you you asked it a few like key questions about the structure length of the responses. Yeah, sure. I'll share here. Um, one sec.
+[47:33] >> Thanks.
+[47:34] >> There you go. It won't let me put it into the Zoom chat. Uh, I'll just put it into I'll put it into a a Google doc and then I'll just share it over that way.
+[47:43] >> Thank you.
+[47:44] >> Share. Skip. Uh, does anybody else have questions on anything to be clear before we continue?
+[47:51] Okay, cool. So, what I want you guys to ideally do is uh first of all, just do me a favor. Put a one in the chat if you already have your four quadrants defined. Put a two in the chat if you do not.
+[48:04] again. One in the chat if you have your four quadrants defined, two in the chat if you do not.
+[48:11] Okay, so it's about half and half. So, okay, at this point there's kind of like a split seems seems to be about 50/50. Kind of like a pre a pre-step to like being able to execute the emails in my opinion is getting that done.
+[48:26] So, for those who have it done, you know, feel free to get started on the emails. Uh for those of you who do not have it done, then I would encourage that you get started by listing your four quadrants of content and ensuring that you have that specifically built out because again it makes it makes it tremendously easier uh for the execution of this, especially if you're going to use one of one of the chat models um in order to get it done essentially just more efficiently.
+[48:54] Um feel free to take a moment and just start knocking those out. And uh again, we'll kind of just sit here for a bit and see if you guys have any questions on any of this stuff. So uh we can make sure that you guys get your questions answered while you start executing it.
+[49:09] But again, at this point, I would like for you guys to start actually taking action and attempting to uh to get this done. Um if you already have this done, like Rohan is an example, feel free to jump off in the instance. You guys don't have anything else.
+[49:24] >> Hi Jeremy, I have a question.
+[49:26] >> Oh, what's up, Julie?
+[49:28] >> Yeah, all good. Uh, so I've joined the call a little bit late, so I don't have um the two first five that you shared. I I only have the email sequence template, but I don't have the the SOP and the ads template, I think.
+[49:43] >> Sure. Uh, let me share this real quick. Hold on one second.
+[49:47] >> Thank you.
+[49:48] >> Okay, those are all shared into the uh Zoom chat there. You can download them.
+[49:53] >> Okay, perfect. And I have another question when it comes to uh market research. In case what the business owner says that they are really busy and they don't have time to like fill a questionnaire, do would you recommend using a transcript from the a webinar or the sales page copy and as a basis?
+[50:13] >> Yeah, there's nothing wrong with that to be fair. Again, you just you have to get it done one way or the other. So, any way that you prefer to get it done is uh is is better than not doing it at all.
+[50:25] >> All right, perfect. Thank you.
+[50:27] >> All right, cool. And then as you guys are executing it, just feel free to unmute yourself if you guys have questions on on what you're doing or if if you have like any prompt issues or again if you get stuck on any particular email, we'll just kind of sit here for a few minutes and make myself available to you guys to help you guys through this and then uh yeah, we'll head out.
+[50:47] And then again, just for anybody watching the recording, uh all these documents, the hammer them SOP, the prompt for the blog examples, the ad ideas for a specific, I should say a content ideas list for one of the inner circle members, Jesse, and then the uh hammer them email sequence. All these PDFs are below the video if you guys want to download it. They're also all in the inner circle group chat to be clear.
+[51:12] Is is there a like a a core section on on like the four quadrants for content or is that just something we just need to establish?
+[51:21] >> Uh yeah, there is plenty of information on on that inside of the SOP here. So if you scroll down
+[51:28] >> Oh, it's inside here. Okay, cool. Cool. Perfect.
+[51:31] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Four Pillars of High Converting Content - SOP Section"
+NÚMEROS: 4 pillars, extensive examples at bottom of SOP
+VISUAL: Navegação pelo documento SOP mostrando seção "Four Pillars", imagem visual dos 4 pilares, exemplos em vídeo no final do documento incluindo Cody Sanchez e outros clientes
+[51:32] >> Yeah, I'll I'll show you where it is just so you have perspective on it. But if you if you scroll down in the SOP right here where it says uh the four pillars of high converting content, uh this this this image right here will kind of also signify if you just want to scroll scroll through it quickly.
+[51:49] And then you got the four pillars right here for like what each one is with uh pretty pretty lengthy explanations. Um, also if you go to the bottom of the list, uh, like way down here at the bottom of the SOP after all the technical executions of like how to set it up and measure it and all that fun stuff,
+[52:08] there's talking head content examples with video explainers as well of like me literally going behind the scenes and like filming content for it so you could see how it looks to execute it. Um, random pieces of content from like clients that we have like Cody Sanchez.
+[52:24] Um, I've even pulled a few from the ecom and like services niche. Uh, a lot of these are just like Tik Tok videos and then each one of them is layered with like what it could be used for like objections and second layer questions, expectations, framing questions, etc.
+[52:40] So, there's there's a pretty wide range of examples at the very bottom of the SOP that you can watch through as well if you're struggling to actually execute the content itself.
+[52:50] >> Sweet. Thanks, Jeremy.
+[52:52] >> Yeah, no problem. Jeremy, I had a question about one of your other concepts you were going over recently.
+[52:58] >> Yeah. What's up?
+[53:00] >> So, you had a recent YouTube video about like going low ticket to high ticket. When Cuz like obviously like the example you gave was kind of like a more interesting example because your low ticket was like 5K and then your obviously your mid ticket is whatever this is and then your high ticket is obviously your your agency offer.
+[53:18] >> Uh-huh.
+[53:19] >> When do you feel like it's a good idea to do like the traditional low ticket, like the $37 thing, and then you upsell them with like a $100 course or $200 course, and then you get them on your high ticket call? Do you feel like that's a good thing to implement or do you feel like it just distracts from like the main high ticket webinar or call funnel?
+[53:38] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Low Ticket to High Ticket Pricing Strategy Evolution"
+NÚMEROS: $37 old model, $200-300 current recommendation, $5K example for education company, $35K high ticket mentioned
+VISUAL: Comparação histórica de modelos de precificação: antigo ($37 + upsells para AOV de centenas) vs atual (começar com centenas devido a CPMs mais altos), exemplos proporcionais por indústria
+[53:40] >> Well, okay. So, for starters, uh, when you say like the traditional $37 thing, you know, that was in a day and age where CPMs were far cheaper than they are today. Like if if that same person who would give that type of advice back in the day would give that advice today, it'd probably sound more like you need to you need to have something that's like a couple hundred as the first thing so you could be profitable on it.
+[54:05] Because again, like back in the day, the $37 thing, the logic of it was you're you're likely like as an example, I remember Russell Brunson would propagate this information quite frequently where he'd be like, "All right, the AOV of your upsell funnel still ends up being a couple hundred bucks, so you end up profitable."
+[54:23] But you might start with, you know, something that's like couple bucks, you know, and then you have like upwards of three to four different little things that people could buy that gradually work them up to an AOV that is hundreds of dollars.
+[54:37] Again, that way you can acquire people at a profitable rate on the front end, deliver them that marginal result through the low ticket product, and then after that marginal result time frame has passed, you start all the upsell uh sequences, you know, via email, content, or I should say ads and sales teams reaching out to them, try to upsell.
+[54:58] Um, to be clear, you you can still do it that way where you just send people through like a multi-step high ticket proc or I should say low ticket low ticket process kind of chipping away and getting the AOV up. You can also just go straight for the couple hundred dollar thing if it's a it's a product that like has some demand to it.
+[55:19] Uh really just depends on the business because again like with my example that I provided for the business of the education company the agency model the low ticket being 5K makes the most sense like and it is technically still following the logic of the traditional low ticket but it's proportionate to like what everything else is above that.
+[55:40] It's like, as an example, you don't go to Ferrari and get, you know, something that's like a couple bucks, like a hat or something, and then ascend to a fucking multi-hundred-thousand dollar car. You start off with like a piece of shit Ferrari, like a Ferrari California, you know, or like a Ferrari Roma, you know what I mean? Or like nowadays, it's like a Portoino.
+[56:02] And these cars become the vehicles that you start off with and then at later points you ascend to like SF90s, you know, uh uh Daytonas, you know, fucking Ferrari 296s, like their newest A12 GTS's, you know what I mean?
+[56:18] So again, it's like proportionate to like you start off with a Lamborghini Gallardo, you know, and then eventually you might work your way up to an Aventador, you know what I mean? Or or think about how many guys out there own Huracans. It's like huracans aren't cheap. They're 300k, but again, it's like,
+[56:35] you know, the SVJ is anywhere from like 600K to 900K currently based on where they're valued at. So again, it's like
+[56:43] the the the low ticket thing should be proportionate to like what the high ticket thing that you intend to push them into is
+[56:51] 30 bucks and then go to like 5K. You know what I mean?
+[56:55] >> Yeah. Yeah. So I have a client that their main thing is that where it's coming from is like a 35k mastermind or whatever mentoring thing. So like the current low ticket thing is 3K. So I guess the question is
+[57:08] >> that makes sense.
+[57:09] >> Do I like because I was thinking because again the biggest like challenge is like we're doing well. It's just that our webinar is a little bit inconsistent. Like our last webinar was like a nine row and then we'll have like a zero row one. So it's kind of like up and down. So for me, my thought is like, do we
+[57:26] The problem is like if we sell the 3K initially, the 3K thing is like a 90-day result window, maybe like 60-day result window. I mean, I guess it's not terrible cuz if we can be like two, three rows on the 3K thing from just direct selling it on the webinar, then ascending that might not be a terrible option.
+[57:44] >> Yeah, that's what it's all about. Ideally, you're breaking even. I even more ideally you're profitable on whatever that low ticket front end thing is and just liquidating ad spend putting a little bit in your pocket and then again the main intention would be to sell what really generates the profit in that case the 35k offer.
+[58:04] You could also likely have something in between in that example where it's like you have a 3k maybe like a 12k and then a 35k.
+[58:13] >> Yeah, that they have a 10k as well. So I was going to say yeah like there's a 10
+[58:17] >> and a 10k would be like the drop cell for the people who can't afford the 35.
+[58:22] >> Correct. It is right now
+[58:24] >> towards the 35. Not focus on the 10, but again, drop sell the 10 when it's appropriate.
+[58:30] >> Right. Yep. That's what they do right now. Okay. Cool.
+[58:33] >> Cool. Anybody having any questions come up as you're executing this uh this hammer them email sequence?
+[58:40] Feel free to unmute yourself and ask away if you do. Just keep chipping away. If not, give it another couple minutes.
+[58:48] >> I hopped in a few minutes late. Um, I think you were covering something about the structure or how to like preset it up before uh the content. Um, what was that like other than just like building it out and like go high level or some uh email uh service provider?
+[59:06] >> I'm not necessarily sure I understand your question. Can you be a little more articulate?
+[59:11] >> Yeah. So, um I I yeah, I apologize. I was a few minutes late, so I could always just go back and watch it. But I think you were talking about how to set it up before possibly uh going into like what the content of itself would be.
+[59:25] >> Yeah. Like are you talking about this this email sequence here of the uh the template uh where you this where it's like all of these emails? Is this what you're talking about?
+[59:35] >> Is is that is that all you covered at the at the start? Is that what it was?
+[59:39] >> Yeah. examples. I think it was like 8 minutes late or something. So, um,
+[59:44] >> yeah, I'm happy to reiterate it to be clear. So, as an example, like for email one, I call it the call confirmed email. In this email in particular, it's like you're going to confirm the call. And remember, depending on how many pieces of content you have overall dictates
+[1:00:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Email Sequence Structure Breakdown - Email by Email"
+NÚMEROS: 18 emails, 2-3 content points per email average (based on 50 pieces ÷ 18)
+VISUAL: Walkthrough detalhado de cada tipo de email: Call Confirmed, General FAQ, Story of X, About Founders, Why We Do What We Do, What Sets Us Apart, Feature/Service Highlight, What Holds People Up, Timeline Expectations, Other Resources, Connect Socials, Be The Person Who Shows Up
+[1:00:02] how many total uh of these like points from the four quadrants you're incorporating per email. So, like let's use the example that you have 50 pieces of content. you know, 50 divided by 18 is like 2.7. So that means on average you're going to need to work in three a majority of the instances, three of these different 50 things you've got.
+[1:00:26] Uh in some instances throughout these 18 emails, you'll have the opportunity to do two things per email. So in your initial call confirmed email, like you might start off with some of the general questions that get asked just like you would inside of the hammer them sequence.
+[1:00:43] You kind of just flow through it through questions, second layer questions, objections, and expectations. And I generally like to start off with the call confirmed email at like a very high level and just answer some of like the biggest questions that are asked about like how it works overall.
+[1:01:00] Um giving people like you know resources and information to be able to sell themselves on just again like the idea of whatever it is that you're pushing or like the core premise behind like your product or service.
+[1:01:14] when you see general FAQ. So general FAQ, these emails are formatted in a way where it's like the subject line might be like um our most common questions we get, you know, and then again you might work in like three of literally the most common questions, second layer questions, objections, like etc.
+[1:01:34] When you see the story of X, so these are essentially testimonial emails or case study emails, but you're strategically weaving in some of the four quadrant content. So, let me use the example. I have to work in three different qu like se uh three different points from my four quadrants and I'm also trying to weave it into a testimonial.
+[1:01:56] I might say let me tell you the story of Daniel. So subject lines like u Daniel got X result you know and then the body copy would be like um Daniel recently bought XYZ from us and going through our sales process he had a few key questions that were really holding him back you know
+[1:02:16] and then I could work in like a question an objection and like an expectation throughout just the buying process and then I just flex the testimonial part of the story after that where it's like oh yeah so after he bought you know this is what he ended up doing and like here's the result that he accomplished you know maybe I even have a video to it and I can link to that video after that explanation.
+[1:02:38] Um, again, general FAQ, the story of X, same things. Now, these are some of my favorite ones where it's like the about the founders, like why we do what we do. U, these two are again just opportunities to strategically weave things in.
+[1:02:54] So, let's say that in almost all instances, like the business owners themselves are very passionate about whatever they're selling or there's like a specific reason that sometimes they created the product or service. Um, this is where you weave in again anywhere from like one to three of these total points that you're trying to work in from the four quadrants, but through like the founder story, you know what I mean?
+[1:03:18] So, it's like Daniel started helping people in the med spa space because
+[1:03:23] he got he he got really excited about the potential of med spas and like all the services that they offered. And, you know, he lives in Orange County, California, and he was just seeing beautiful women and older men all day who were retaining youth.
+[1:03:38] and he ended up finding out that a lot of this was done through men's spa services and so he got into the industry took his digital marketing skills and applied it to this and you know long story short and then again like I'm weaving in like some of the most common like expectations or objections or second layer questions and questions into that overall story. Does that make sense?
+[1:04:01] >> Yeah.
+[1:04:02] >> Same thing for like the why we do what we do. It's just another extension of the of that same logic you're going to use here but just a second opportunity. not necessarily from like the founders perspectives, just you know, company beliefs, company morals, why you guys are doing it.
+[1:04:19] Um the classic like here's what sets us apart. This is a great opportunity just to answer some of the stuff in the four quadrants. You know, nothing crazy there. Um okay, you'll love this feature or like you'll love this about our service. You know, this is uh again just an opportunity to flex like an expect.
+[1:04:38] But my most common thing I like to flex with this one just to be fair is usually like an expectation or an objection. Like people love this about what we do because it helps them with objection or expectation, you know, um what holds people up the most. This is an objection email. Uh timeline expectations. This is an expectations email. This is an expectations email. The what you can expect.
+[1:05:03] Um, other resources in the meantime, this is actually a little different. So, the other resources you can expect in the meantime, email is mainly intended to cover like other lead magnets or like maybe as an example, you got them in through a call funnel, but you also have like webinars.
+[1:05:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Other Resources Email - Asphalt Kingdom Example"
+NÚMEROS: Multiple free resources, courses, webinars, guides
+VISUAL: Screenshot do site Asphalt Kingdom mostrando página de recursos extensa com categorias: guides, courses, webinars - demonstrando como direcionar prospects para consumo adicional de conteúdo
+[1:05:24] Um, this this is literally intended to just push them towards a bunch of other shit that could increase their consumption in the meantime. Maybe you have like an extensive YouTube channel. Um, to Daniel's point, uh, uh, the other Daniel that was here to be clear that helps accountants and CPAs, um, this is a great email to actually be able to push people to like places where they could consume video content or just additional resources from the company.
+[1:05:50] Some companies literally have like I I'll give you a good one here with um, a company that we help called Asphalt Kingdom. Uh, they have an entire page literally called resources. And I mean, look at the look at the breadth of shit that's here, dude.
+[1:06:05] like they have guides and uh they have courses and and like dude all this stuff is free. They have webinars and like I you could just push people to any of this, you know, and like list them off in the email like one by one by one by one, you know, or like categorically and just link them to each one of these, you know,
+[1:06:25] um tons tons of information here that are like genuinely helpful stuff, you know? Like look how look how long this shit is. Like you're not going to put each one of the each one of these into an email. She's got a link to it. So anyway, that kind of stuff helps.
+[1:06:40] Um, again, the story of X, general FAQ, uh, most common objections, um, connect them to all their socials, and then, okay, this last one, I I'm actually glad we're touching on this. So, so to be clear, the be the person who shows up, this like a framing email.
+[1:06:59] That's kind of like the literal last email that goes off. And this one's intended to be that uh kind of like a, you know, don't be the person who who wants to do something and doesn't show up or pushes it off or, you know, says, "Oh, I'm going to do it next week instead." And then next week becomes like fucking three years later and you still didn't do it. You know, this is more of like a mental framing email here, not necessarily an opportunity to work in something from the content.
+[1:07:27] Just again, more of like a framing email. Does that all make sense?
+[1:07:32] >> Yeah. Yeah. So then you're just sprinkling in those four content pillars throughout those all those emails.
+[1:07:38] >> Correct. That's exactly right.
+[1:07:40] >> Okay, understood. Thanks.
+[1:07:42] >> Yeah, no problem.
+[1:07:44] >> Yo, I got something on um like FAQs like when you're talking about what you do, how in detail do you go? Because like one of the things I noticed the inner circle like you're very detailed like this is exactly what we offer. Usually that's information I withhold until the sales call. I think it' probably be helpful though to just be totally upfront.
+[1:08:03] >> I'm sorry. Say that one more time, Max. I I
+[1:08:06] >> Yeah.
+[1:08:07] >> I need I apparently need to eat lunch or something. I don't know what the fuck going on with my bra.
+[1:08:11] >> You're good, bro. In your in your inner circle offer, right? Like on your landing page stuff, you're extremely upfront. You know, price is exactly what you get.
+[1:08:21] >> I withhold all of that information basically until the sales call. So, what are your thoughts on just being even more transparent emails like this is exactly how we help like the exact deliverables of my pitch, but being like having that be an email
+[1:08:36] too much.
+[1:08:37] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Price Transparency Strategy by Market Segment"
+NÚMEROS: $5K+ disclose, $3K maybe not, $10K+ definitely disclose, $35K+ always disclose
+VISUAL: Matriz de decisão sobre transparência de preço baseada em: valor do ticket, demografia do público, nível de sofisticação financeira, histórico de investimento do avatar
+[1:08:39] >> Here's the thing. I'm very sold that that's a good idea, but that's because I sell to rich people. Like, yeah, you want to know that
+[1:08:47] and I don't like I don't want you coming through our funnel if you don't know that because
+[1:08:52] I don't want to waste my salespeople's time with people who don't know that information. Like ideally you do know that information. We put it in the video. We put it in our application. Uh we reiterate it to you before we get on a call with you because again like we are actively trying to weed out broke people in this case.
+[1:09:10] Like this is a community offer in addition to everything else that comes with it. You for your own selfish benefit don't want some shit turds that are like little guppies coming through this offer and trying to trying to be alongside of you here. It's like it has to be somebody who is very finan like in in a financially secure position simply put.
+[1:09:31] So again, I want the pricing to be there for that reason. However, there's plenty of other offers where like we're not actively trying to weed people out just because, you know, they they we want the community to be like stronger. You know, there's other instances again where we just
+[1:09:48] we want we want to turn the sales people into cashiers. if the sales people are going to otherwise fuck and be like, "Oh, people are showing up and like, you know, they're brokies." You know what I mean? Well, what they're really saying is people are showing up and they don't have the money.
+[1:10:03] So, if you're getting a lot of brokies who don't have the money, that's because you're not telling the people upfront what the amount of the cost is. And so, therefore, they come through thinking it's something that they could otherwise have afforded.
+[1:10:17] So, to solve that issue, it's like in most instances, all you have to do is just say the price, set the expectation. I was on I was on about a two-hour call last night helping one of my new clients build out their BSL and at at one point in the presentation uh we were talking about this um this expectation of like how it was a real estate based offer
+[1:10:40] and it was like all right how much does it cost on average to get started and it was like he he said anywhere from like 60 to 80 grand. It's like, imagine we don't tell people that it costs somewhere between 60 and 80 grand to get started with that specific real estate investment vehicle.
+[1:10:58] It's like, yeah, ideally you have that amount liquid, but it's like, okay, you could get approved for funding or you could work with hard money lenders because again, it's a form of real estate that can can can again like have hard money lenders working with you and and you know, giving you like one year relatively high interest rate loans and you still can profit a tremendous amount.
+[1:11:20] But again, it's like you you have to disclose all that stuff. Otherwise, you're just going to get a bunch of turds on the phone who are like 70 grand, you know, like what the fuck are you talking about?
+[1:11:31] It's like we worked that in in very direct ways and we worked it in through examples of the guy buying specific, you know, of like of these properties to be fair and like the costs and and and setting the expectation that way as well.
+[1:11:46] We'll do that same thing in the application where we're like, you know, on average it takes somewhere between 60 and 80K that could be liquid and or you know given to you through hard money lenders, but obviously you have to be in good credit standing to have that happen and like you know again like is this something you're comfortable with?
+[1:12:04] Um if you simply put get a lot of feedback from your sales team where it's like hey we're dealing with brokies then yes I I absolutely encourage that you're upfront about it. If it's like a small cost that the general public of of whatever country you're targeting should otherwise have financially available to them in either cash or credit, then no, you know, you don't necessarily have to say that price upfront.
+[1:12:29] Like let's let's take Rohan's example where he's talking about 3K offer through a webinar. It's like I'm not going to fucking say in the webinar opt-in, hey, this we're going to make an offer to you and it cost 3K. Like do you have that amount? It's like no. I mean again like somebody should have 3K, you know? They should have it on a credit card or they should have it on
+[1:12:49] credit. No, I'm sorry. They should have in credit or they should have it in cash or like, you know, payment plans, whatever. Um, totally different though if it's like, you know, fucking like 5K even though it's only 2K more is a little bit more. Uh, 10K is like I'm absolutely saying the price. If it's like 7500, I'm absolutely saying the price, you know, like
+[1:13:11] >> Okay,
+[1:13:12] >> in the VSSL, you're going to say the price, Jeremy.
+[1:13:15] >> Oh, yeah. Yeah. And again, like if you want examples of that, like just go through literally any funnel that we have, you know, like you'll see it. You'll see it in the DSLs. You'll see it in the applications like that. And that those are the two places where we're typically putting it. Just to be very direct on that point.
+[1:13:32] >> When you when you're making a major change like this because like we talked about this in the messaging of how I need to shift it over. Would you literally just start working on a second funnel because there's so many things that I need to change from like the ads, the funnel itself, the
+[1:13:47] >> 100%. Yeah. This would just be this would just be a test because again like there's
+[1:13:53] you're you're in a very sensitive position based on where you're at in revenue and and how it comes from how you're doing things currently where again like if you just abandon that you don't have like the cash reserves or the bandwidth financially to be able to endure like that window where it's going to suck in a in a short-term time frame, it's going to contract you substantially.
+[1:14:15] So you have to sustain what you're currently doing while also transitioning and you know strategically testing things with smaller budgets making sure they work and then scaling those up once they do work. Um so again don't go all in on that like test budget for it and do it the way we talked about.
+[1:14:33] >> Jeremy actually I'm glad you brought it up because it's a point. So my client that has the 35k thing because we started we weren't dropping the price. It was going fine. We tried dropping the price. We did it twice. The first time it went okay. The second time it went absolutely terrible.
+[1:14:48] Again, I think the biggest thing is like I feel like it's like a a little bit of a grenade where it's like 35k and it kind of hits people in the in the gut a little bit and starts like getting their mind to think a little bit too much. So my thought is like
+[1:15:01] >> based on how you frame it though. It's really based on how you frame it. Like as an example, when I talk about my price, I immediately generally follow it up with like the you're fucking me hook, you know, where I make it extremely clear how biased in your favor it is comparatively to me and my benefit.
+[1:15:21] It's like as an example, literally what each one of you independently pay for the inner circle. You are fucking me. I make you tremendously more money than what you pay me. There's people in the group like take Chris and and his partner Chad as an example. They're here to get an extra $50 million on the exit value of their company.
+[1:15:42] They already get exit buyouts for people who want to currently give them $50 million. They want to add another 50 million to it. It's like them spending whatever they spend on it currently. The point I'm attempting to make is again they're fucking me.
+[1:15:57] So it's like I can use examples like that as soon as I provide price. I can use examples all the way down to people who are making the minimum of like currently the minimum is 40k to be a part of the group. So I can say look like we have a minimum of this much currently. You spend this much. But again like we understand the game.
+[1:16:18] >> Why I think we we sorry
+[1:16:21] >> you got to lay it out fast. Simply put like you can't drop the price and then just go away from it. You have to treat it like you did you did talk to them on a sales call about it and you immediately justify the value of the price following the drop.
+[1:16:36] >> Well actually Jeremy because we actually do it the other way around because like we go through like the average deal like how much you're going to make and it's like 600 grand. So it's like a lot of money. So like 35k in context to 600 grand is obviously like kind of chump change. So I guess maybe like my thought was like then do we just to say hey you need 25k liquid cuz again they normally put like a 10k down payment on
+[1:16:59] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Pogo Stick Close - Price Drop Technique"
+NÚMEROS: $35K offer, $600K potential return, $10K down payment, $25K liquid requirement
+VISUAL: Técnica de fechamento: 1) Drop price first, 2) Immediately justify value after, 3) Transition seamlessly (pogo stick) - evitar deixar prospect "pendurado" no preço
+[1:17:01] >> the classic classic sales technique Rohan is to is to drop the price first and justify the value after because if you justify the value first then you leave them with price at the end it's a real cliffhanger. So, as shocking as it is and as simple as it sounds, like I'm not joking here. Like, if you reverse that,
+[1:17:23] there's a higher probability you'd have a better hit rate with it simply simply because again, you say the price first, it justifies whatever follows it. If I use the justifications first, I leave you with price at the end. That's all you're left with.
+[1:17:39] There's a good concept. I call it the pogo stick close where it's like I say the price and I just immediately transition to like what happens afterwards. Okay? You can't just leave them at the price and then like transition to something completely different. Does that make sense?
+[1:17:55] >> Got it. No, that's the point. Okay. Okay. All right.
+[1:17:59] >> To be fair, you know, to your point, like there are there are certain offers I always think it comes down to how it's executed, but there are certain offers where it's like you're selling to a demographic where that's an extreme amount of money to them that they've never invested even remotely close to that before, where they've never taken like loan values for that amount before.
+[1:18:20] or if they're getting involved in something. It's like again that can that can have a diminishing return depending on the demographic you're selling to. If you're selling
+[1:18:30] >> I think that's the issue.
+[1:18:32] >> Yeah. And to be fair again like if that is the issue then for sure it can it can be a good strategy to not say the price. Get them onto the call so you can work through that discomfort of doing it for the first time you know.
+[1:18:46] >> Well because that's again like I looked back at like who bought on the initial webinars. It kind of went like that right where they got on the call and they kind of worked through the thing and they did it right. It's like okay
+[1:18:57] >> yeah I'm I'm all for it. Again I don't want to be right. I just want to make money, you know, working that shit's working. I'm I'm fucking riding it out. Test budget, you know, a test budget. I'm seeing if I can get the other thing to work, too.
+[1:19:10] >> All right. Yeah, I think let me let me try what you're doing because I actually do like because like if we do that, it's almost like taking the sales call and like doing it to a hundred people and it kind of it kind of works. You know what I mean? So, I understand. Okay.
+[1:19:23] >> That's generally where I'm at. Like I just I I I don't know. I just don't trust sales people at all. And and not to like sit here and talk shit about sales people, but
+[1:19:33] I like to make the salesperson's job as easy as possible because otherwise they just fuck about the fact I'm not making it easy as possible. So I just by default with like every strategy and tactic I deploy when it involves a sales team, try to like turn them into cashiers, you know?
+[1:19:50] Saying the price is generally something that's required if I want them to if I want to take away the fucking objection of them saying, "Oh, I'm just getting a bunch of brokies on the phone." It's like, you know, that that's what solves it
+[1:20:03] for sure. Okay. All right. I'll uh
+[1:20:06] >> All right. Cool. Well, I imagine you guys are either sitting here continuously executing on this and you guys have some stuff done by now or you are or not doing it. Does Did anybody get the task done? Anybody?
+[1:20:20] >> I had it uh I had it done previously, but I was listening the conversation.
+[1:20:25] >> Nice. Cool. Okay. Sweet. We'll jump off then. Does anybody have any final questions for us here?
+[1:20:31] >> I do have one last question Jeremy in terms of targeting when you are selling an offer that's multiple five figure like you mentioned 60k 70k which interest do you go after and do you prioritize YouTube ad over Facebook ads or do you
+[1:20:48] >> no we still we still do Facebook and Instagram ads for that and we just we just use the wealth stack that we have just uh shoot me a DM after the show we we have the wealth stack posted in the master internet marketing community uh we have it posted in the inner circle community and then I can just forward it over to you if you don't have it yet
+[1:21:08] >> that would be awesome. Thank you.
+[1:21:10] >> Cool.
+[1:21:11] >> I don't have it. I don't think I do.
+[1:21:13] >> Oh, good. I shoot over to you.
+[1:21:15] >> Okay. Thank you.
+[1:21:17] >> Nick, did you have a question or no?
+[1:21:19] >> Yeah. Yeah. Real quick before we jump off. Um I I guess this is more of insight and I get I I kind of just want to hear your perspective. We used to never disclose price because we sell to sports coaches, right? And so I used to think like, oh, these guys are super broke. Like it's going to be difficult to get them on.
+[1:21:37] And we like started going through a lot of the sales training in there, too. and we're disclosing price up front and I'm also going to be putting price in the VSSL on the call funnel. So, I guess just wanted to hear your thoughts on that cuz like it's 5K, it's not a ton of money, but it's also like um an avatar who doesn't really understand like the info product space at all.
+[1:21:59] >> Yeah. Again, if this is like a big stretch for them, and I'll give you some perspective like this, like just based on the demographic, it sounds like you're selling to, like their mortgage is probably less than that, their car payments are probably less than that, and they're like insurance they pay for every month is probably less than that combined.
+[1:22:18] So, collectively, like when they have those that are less than what they're going to spend on you, you'll definitely get a price objection. I do think it's sensible in that example to withhold price because again that's that's the demographic example that I provided which is certain people it's like this is going to be the biggest investment they've made and it just you know it doesn't make sense unless you have them on a call to work through it you know
+[1:22:42] it's not that they're not financially qualified it's just again like that you know they need to they need to have somebody work through it since probably their first time like investing into such a thing you know what I mean
+[1:22:54] >> 100%. So, follow-up question to that. Do you think we should sort of frame like a range or just sell the dream in the VSSL and uh and and get as many of them on the phone as we possibly can?
+[1:23:07] >> What are you doing now?
+[1:23:09] >> Um through the DMs, if they're coaching athletes and they have like more than five to 10 athletes, we're just slamming them on the phone.
+[1:23:18] >> Yeah, I I would hold that same that same trend then to be fair. Try try to maximize the call volume and then deal with the problems that come up from there.
+[1:23:27] >> Gotcha. Okay. Yeah, maximize the throughput. Cool. Thank you.
+[1:23:32] >> Cool. All right. Sweet. Well, it was great talking with you guys. Uh, always a pleasure. And of course, you got any questions to follow this up, let me know. Talk soon.
+📊 RESUMO EXECUTIVO
+NÚMEROS PRINCIPAIS:
+18 emails totais na sequência
+6 emails por dia (distribuição padrão)
+72 horas: janela ideal de booking até call
+30-50 peças de conteúdo total recomendadas
+15-20 frequência mínima de exposição ao conteúdo
+90%+ das instâncias mantêm taxa de abertura consistente ao longo da sequência
+20% taxa de abertura média típica (mantida consistentemente)
+8:00 AM - 8:00 PM: janela de envio sugerida
+A cada 2 horas: frequência de envio dentro da janela
+100 pessoas: audiência mínima para ads do Hammer Them
+$100-300: budget diário típico para 100-150 pessoas
+3 dias máximo: janela ideal de booking
+4 dias: já começa deterioração da show rate
+60-90 dias: janela típica de resultado do low ticket
+1.6-2.7: média de pontos de conteúdo por email (30÷18 ou 50÷18)
+ESTRATÉGIAS E SISTEMAS:
+Hammer Them Strategy: Transformar vendedores em caixas através de educação pré-call massiva
+Four Quadrants Content Framework: Questions, Second Layer Questions, Objections, Expectations
+Email Sequence Types: Call Confirmed, General FAQ, Story of X, About Founders, Why We Do What We Do, What Sets Us Apart, Feature Highlight, What Holds People Up, Timeline Expectations, Other Resources, Connect Socials, Be The Person Who Shows Up
+Dynamic Marketing Automation: Uso de tags/fields para iniciar e parar sequências baseado em call status
+Pogo Stick Close: Técnica de dropar preço primeiro, depois justificar valor imediatamente
+Content Compression: Estratégia de comprimir 30-50 peças de conteúdo em 18 emails
+Multi-Stage Sequences: Pre-call sequence + post-call sequence + long-term nurture com frequências diferentes
+Wealth Stack: Sistema de targeting para ofertas high-ticket ($60K-80K+)
+Low Ticket to High Ticket Ascension: Modelo proporcional ao ticket final (não $37 universal, mas relativo)
+ESTRUTURA:
+CRM Setup: Tag system preferível vs dynamic fields para automação
+Pipeline Stages: Trigger sequences baseado em movimento de deal stages
+Zapier Integration: Para conectar scheduler com CRM e aplicar tags
+Email Template Organization: Command+F para substituições em massa de saudações/despedidas
+ChatGPT Prompt Engineering: Exemplo prompts, feeding brand voice, correction loops, minimum character counts
+LLM Hierarchy: 01 model (ChatGPT) > Perplexity > Claude (limitado por mensagens)
+Content Distribution: Facebook/Instagram ads para hammer them, não YouTube prioritariamente
+Transcription Tools: Tactique.io para YouTube, qualquer serviço para Facebook/Instagram
+DADOS FINANCEIROS:
+Pricing Disclosure Strategy:
+$3K: Opcional disclosure (depende do avatar)
+$5K+: Considerar disclosure
+$7.5K+: Definitivamente disclose
+$10K+: Always disclose
+$35K+: Always disclose com contexto de ROI
+$60K-80K: Disclose com opções de financing/hard money lenders
+Real Estate Syndication Example: $3K front → $10K mid → $35K high
+Education Company Example: $5K low → mid ticket → agency high
+Capital Raising Deal: $600K potential return justifica $35K investment
+Ferrari Analogy: Proporção low→high ticket deve ser como California→SF90, não hat→supercar
+CPM Evolution: $37 front-end funcionava quando CPMs eram baratos, agora precisa $200-300 para ser lucrativo
+ROI Framework: Liquidar ad spend no low ticket, profit vem do high ticket ascension
+Ad Budget Efficiency: $100 max/dia para 100-150 pessoas geralmente suficiente
+DURAÇÃO: 1:23:32 FORMATO: Workshop ao vivo com demonstração de tela, exemplos de clientes (Rohan/Nighthawk Equity), Q&A interativo, walkthrough de setup técnico

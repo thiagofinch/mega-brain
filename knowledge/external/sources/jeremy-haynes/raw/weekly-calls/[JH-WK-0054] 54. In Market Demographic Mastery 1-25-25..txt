@@ -1,0 +1,464 @@
+Transcrição Completa: 54 In Market Demographic Mastery 1 25 25
+[00:00] "So in market demographics, you've heard me talk about it before. I'm going to reiterate first of all just a little bit about what it is and then we're going to talk in this video at a high level on how to make sure you understand how to effectively communicate to inmarket demographics. Okay?"
+[00:15] "There are very specific, you know, words that you have to make sure you use in order to reach these people that can just create with such with such a small vocabulary difference the ability to reach a needscon demographic versus an inmarket demographic."
+[00:30] "The pain points that specific demographics identify with and that you get the opportunity to leverage can create wild differences in profitability in your paid ad spend."
+[00:42] "So, let me make sure that we talk about this. By the way, there will be a follow-up video on using majority hooks. Um, I'll dedicate an entire video to that to follow this up."
+[00:52] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Stadium Selling - Chad Holmes"
+NÚMEROS: 3-4% (in-market), 30% (needs convinced)
+VISUAL: Conceito de funil de vendas em formato de estádio, mostrando diferentes níveis demográficos com percentuais
+[00:55] "So, for starters, this originated with Chad Holmes. He has a book, Ultimate Selling Machine, and he called this stadium selling. Okay? And that was where I originally had heard of this concept."
+[01:08] "Chad had essentially said there's 3 to 4% of people at a given time that are what you call an inmarket demographic. These are the people that when you have whatever the offer is, they already identify as buyers for that offer."
+[01:23] "They want the offer. They're enthused about the opportunity to solve whatever the problem is that they have associated with your offer. Simply put, they're money in hand. I want to give you cash. I want to do the deal. Okay? That's what these types of people are."
+[01:38] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "In-Market = Money in Hand"
+NÚMEROS: 3-4% ready to buy NOW
+VISUAL: Representação visual de cliente com dinheiro pronto, ícone de carteira aberta, sinal de "ready to buy"
+[01:42] "They're ready to buy. They are already buyers. In market means money in hand. I want to buy from you. There's very little that they actually need to be convinced of to pull the trigger. Okay? They just got to make sure you're the right person."
+[01:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The 4 Demographics"
+NÚMEROS:
+3-4% In-Market
+30% Needs Convinced
+Mass Market
+Non-Buyers
+VISUAL: Pirâmide invertida mostrando os quatro níveis demográficos com percentuais, cores diferentes para cada categoria
+[01:58] "And then Chad goes on to articulate that there's these three other demographics. There's this 30% demographic of what he calls the needs convinced demographic. This is where you go when you want to scale. Okay?"
+[02:12] "Then you have the mass market demographic and the mass market demographic is where you are forced to go to after you have already scaled beyond the needs convinced and in market demographics and you've kind of tapped them out."
+[02:25] "And then the final demographic is made up of non-buyers. Okay, these are people that again are typically just part of the general public at scale. Never would identify as a buyer for you. they in no way, shape or form want what you've got. Okay?"
+[02:40] "So therefore, there's no point in ever marketing to that demographic specifically. Now, in order, right, you always want to make sure that you start with in market, then you move to needs convinced, and then from there you move to the mass market demographic."
+[02:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Common Business Mistake"
+NÚMEROS: Split messaging across all 3 demographics = chaos
+VISUAL: Diagrama mostrando mensagens confusas indo para múltiplos públicos simultaneamente, linhas cruzadas representando falta de foco
+[02:58] "Whenever any kind of business, an inner circle member, a consulting deal, an agency client that we have comes in, like almost every single time they have just a set of messaging hooks and offers that are kind of split between like all three of these different demo types."
+[03:15] "And they don't heavily lean into one specific audience type over another. and it creates so many problems for them."
+[03:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Signs of Random Messaging"
+NÚMEROS: 90%+ consistency when done right
+VISUAL: Comparação lado a lado - messaging caótico vs focado, gráfico mostrando inconsistência vs consistência
+[03:25] "One of the ways just to be able to identify right off the bat, if you're one of those people that is actively right now communicating between these three different demographics or even two of these different demographics at the same time unknowingly is looking at your sales feedback and considering if any randomness is present."
+[03:43] "Okay, if you have an inconsistent type of person that gets on the phone, you likely are a victim of this. If your salespeople say, 'Dude, some people get onto the phone and they're super hot and ready to buy, and then some people get on the phone and like they need so much convincing before they're ready to buy.' Again, you're likely a victim of this."
+[04:02] "When things are going right, you have consistency in who comes onto the phone in a big majority of the time. Like 90 plus percent of the time when you are specifically communicating to the right demographic and and and you're being intentional about it, you are going to get 90 plus percent of the people who come through the phones or that come onto the conversion mechanisms being that type of person."
+[04:24] "So you mitigate a lot of randomness and a lot of chaos when you successfully implement this strategy. Okay."
+[04:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "In-Market Demographics = Highest ROAS"
+NÚMEROS:
+Highest ROAS
+Highest AOV
+Shortest sales cycles
+Lowest cost per conversion
+VISUAL: Gráfico de performance mostrando métricas otimizadas, setas ascendentes para receita, descendentes para custos
+[04:32] "So final thing on why this all matters and then we'll dig into the tactics of the whole thing. Okay. So when you specifically and actively choose to communicate to inmarket demographics, you are actively choosing to increase your rorowaz to the highest potential that it can get to because remember inmarket demographics should logically be the cheapest people to reach that convert at the highest rate."
+[04:58] "So therefore you should have the highest rorowaz. You should be able to spend the least amount of money and make the most money. You should have the highest AOV. You should have the shortest sales cycles when you are selling to a inmarket demographic of people. Okay?"
+[05:14] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Scaling Progression & ROAS Decline"
+NÚMEROS:
+In-Market: Highest ROAS
+Needs Convinced: Medium ROAS (hundreds of thousands/month ad spend)
+Mass Market: Lowest ROAS (low millions/month ad spend)
+VISUAL: Gráfico descendente mostrando declínio de ROAS conforme escala, linha do tempo de progressão de gastos
+[05:17] "When you choose to pivot eventually and the only reason to be clear that you eventually have to pivot is you run out of inmarket customers to convert. That's really the only time that it ever makes sense to pivot into a needsconvinced demographic."
+[05:31] "And then the same logic applies there. Eventually, you tap out of the needsconvinced demographic because you've scaled into it so aggressively, likely give or take the market. You're at high hundreds of thousands, maybe even low millions per month in ad spend at that point."
+[05:47] "And you're officially transitioning at that scale into the mass market where each time you scale into that lesser and lesser probable to convert demographic, your rorowaz goes down as a result. The friction increases in your sales process."
+[06:02] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "AESOP Case Study - Coconut Grove"
+NÚMEROS: $500+ per shirt neighborhood
+VISUAL: Mapa/ilustração de Coconut Grove, Miami, ícones de luxo, loja AESOP, posicionamento premium
+[06:05] "As a result, the marketing messaging and the conversion mechanisms associated with getting people to buy also typically change. I can give you a perfect example, right? When you are in market, I just last night I have my second place down here in Coconut Grove, okay?"
+[06:20] "Little little community in Miami. You could technically call it a village. They have nice stores and there's typically a very like financially well-off demographic that lives in this specific area."
+[06:32] "It's a lot of women, a lot of families. Uh, a lot of capital groups actually have their offices located in Coconut Grove. Um, it's a part of, it's a suburb of Coral Gables and Coral Gables, again, typically a very financially well-off neighborhood."
+[06:47] "Now, the shops in that neighborhood, like there's clothing stores that have single shirts that are like $500 something dollars, you know, that kind of neighborhood. And there's a store there. It's a technically like soap and fragrance brand called ASOP. Okay?"
+[07:03] "And maybe you've heard of it. AESO and I have seen random pieces of content for this brand over the years where mainly it's kind of like a almost like a dating signal from what I've seen from content where it's like, oh, you know, he's the right one if he's got this type of soap, you know, and it just shows like a fucking ASOP bottle of soap."
+[07:23] "Now, that didn't in any way, shape, or form convince me to go buy it. that didn't in any way, shape, or form convince me to like randomly become an inmarket demographic and be like, 'Oh, dude, I actively need better smelling soap.' Like, who's my fucking company that's going to sell it to me?"
+[07:39] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "In-Market Moment: Need-Based Purchase"
+NÚMEROS: April to present (almost 1 year), weekend visits
+VISUAL: Timeline de awareness da marca vs momento de compra, transição de "aware but not interested" para "in-market buyer"
+[07:42] "I just live in that neighborhood and happen to be a shop in that neighborhood. I've lived there since April. It's been almost a year that I've had this place there. And I I generally just go on the weekends."
+[07:53] "So, last night I was in that general neighborhood. I had dinner at an incredible Italian spot there called Bellini. Okay. And I come downstairs after an amazing dinner. I was on my way to my golf cart and uh I look over and I see that shop ASOP."
+[08:08] "And coincidentally, I had transitioned to being in market for needing soap. I was going to have to order something through Instacart. My kitchen sink there at the house. That bottle of soap in particular had ran out."
+[08:21] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "In-Market Buyer Behavior"
+NÚMEROS: Any bottle would work = zero resistance
+VISUAL: Representação de comprador pronto, barreira de resistência mínima, decisão rápida de compra
+[08:24] "So, long story short, in my head, I walk past ASOP and I see bottles of soap and I'm like, 'Hey, let's stop here real quick. I've heard good things about this brand. Let's see what they got.' So, literally, I walk in and I'm like, 'What's good, man? Never bought anything from you guys before. I want to buy some soap.'"
+[08:40] "And here's my point, dude. That guy could have sold me fucking any bottle of soap and I would have bought it because I was in market, okay?"
+[08:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Upsell Success: In-Market Advantage"
+NÚMEROS: 1 soap purchase → candles, lotions, facial products (multiple items)
+VISUAL: Funil de upsell, compra inicial expandindo para múltiplos produtos, representação de AOV aumentado
+[08:51] "I had known about the brand prior, never given a fuck to shop with that brand prior because they had a physical location that catered to my need in that exact moment. I was happy to give them some money to buy some soap. Okay."
+[09:04] "Now, as I go in there and I again make that transaction, I end up buying a bunch of other fucking like candles and lotions and like facial stuff because it ends up that brand's fucking awesome and it smelled amazing."
+[09:17] "And like, yeah, I can't talk highly enough about that fucking even though it's been less than 24 hours since I've had their products. Truly luxury goods that business sells. Okay, but I digress."
+[09:28] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "In-Market Truth: They Don't Care WHO Sells"
+NÚMEROS: CVS vs AESOP = same result when in-market
+VISUAL: Comparação visual entre opções low-end e high-end, ambas funcionam para in-market buyer
+[09:31] "Point I'm trying to make is at any given time, when you all of a sudden just need something, you don't really give a fuck at all about who specifically is going to sell it to you. You just need it. Okay?"
+[09:43] "Like, I needed soap. It's like I could have gone down the road to a fucking CVS and bought soap for all I care. I needed soap for my kitchen sink to wash my hands whenever I'm in the kitchen doing random fucking You see what I'm saying?"
+[09:56] "Inmarket demographics are the easiest people to sell to versus that ASOP brand. It's like I've been aware of it. They have not ever run an ad to me or at least that I'm aware of or could think of that convinced me to start buying from them."
+[10:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Le Labo Brand Loyalty Example"
+NÚMEROS: Rose 31 = consistent scent choice
+VISUAL: Comparação de marcas premium de fragrâncias, demonstração de lealdade de marca estabelecida
+[10:13] "They are a luxury fragrance provider as a business. Okay? Like I buy on a consistent basis this uh brand called Labo. Okay? And maybe you've heard of it. They're very well known for this scent called Sanl 33. I buy a scent from them called Rose 31. It's my favorite lotion. It's my most consistent smell that I have and I love that brand."
+[10:35] "And anyway, long story short, ASOP is in that category. Okay. It would take a fucking ton of money for them to somehow advertise to me that especially without smelling it in person. I should be convinced of switching from La Labo over to ASOP for my scents. Okay."
+[10:52] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Demographic Transition: Needs Convinced → In-Market"
+NÚMEROS: Expensive conversion vs zero-cost in-market capture
+VISUAL: Fluxo de transição entre categorias demográficas, custo de aquisição comparativo
+[10:55] "But because I entered into the needs convinced demographic from that to in market, I entered into in market as a customer of just needing some fucking soap. Well, now I'm all of a sudden in their store buying exactly what I need. Super enthused about what I bought. Bought some lotions, too."
+[11:12] "There's a high probability I might switch from Labo to ASOP now, or at least use both. I digress, though. Again, I'm just giving you an example of it would cost a fuckload of money to convert me from needs convinced to inmarket."
+[11:27] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Demographic Flow: Constant Movement"
+NÚMEROS: Continuous in/out flow of in-market customers
+VISUAL: Diagrama circular mostrando movimento constante de pessoas entrando e saindo do status in-market
+[11:30] "But customers move between these two categories. There's always people at a given time, given whatever market you operate in, that are actively entering in and leaving the the inmarket demographic."
+[11:42] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Industry Size = In-Market Pool Size"
+NÚMEROS:
+Real estate: massive industry
+1 in 8 people = salespeople globally
+VISUAL: Comparação de tamanhos de indústrias, gráfico proporcional de pools demográficos
+[11:45] "The bigger the industry that you operate in, the more people there are at a given time that are in the inmarket demographic. Okay, this is very important to understand."
+[11:53] "As an example, if I am in the real estate space, period, no matter what the fuck I sell in real estate, an info product, a service, fucking a real estate agent selling homes or a brokerage, that niche is one of the largest industries on earth. Okay?"
+[12:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Jeremy Miner Case Study"
+NÚMEROS:
+$42M/year current
+$100M goal
+1 in 8 people = salespeople
+VISUAL: Escala de mercado endereçável, potencial de crescimento em indústria massiva
+[12:11] "Or like when I was sitting with Jeremy Miner and he's like, 'Dude, I'm making $42 million a year as a sales trainer. I'm going to take this thing to hund00 million.' It's like, 'Well, no fucking you can take it to $100 million. One out of every eight people on Earth are a salesperson."
+[12:27] "So when one out of every eight people on Earth are a salesperson, you have a really high probability to dip your toe in the water and make a $100 million because it's a massive fucking industry. Okay?"
+[12:38] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Industry Size Reality Check"
+NÚMEROS: Small niche = limited in-market pool
+VISUAL: Comparação de pools demográficos: indústria massiva vs nicho pequeno
+[12:41] "And the point I'm attempting to make just to tie this into the inmarket demographic, your ability to scale aggressively and make a big business possible out of just tapping into inmarket demographics solely comes down to the industry that you operate in."
+[12:56] "If I sell some like super niche fringe fucking that is in a small tiny little industry that there's barely any people in, you have to look at it and take some responsibility for potentially having to fill up the inmarket demographic."
+[13:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Russell Brunson Strategy: Market Creation"
+NÚMEROS:
+$1M spend on challenge funnel
+$3M return
+Creates new customers for entire industry
+VISUAL: Funil de criação de mercado, investimento em educação de massa, efeito cascata na indústria
+[13:13] "I'll give you another great example. So with Russell Brunson, I fucking love Russell Brunson because he actively spends a fuckload of money, a fuckload of money on creating new personal brands."
+[13:25] "Russell will take an offer like how to sell online as an example was a recent challenge funnel he did which he's actively marketing to mass market customers and needs convinced customers. Russell might spend like a million dollars on that challenge funnel and he might make back like three million and he'd still be pumped. Okay."
+[13:44] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Market Creation Responsibility"
+NÚMEROS: Russell's spend = new agency clients for entire industry
+VISUAL: Efeito dominó de criação de mercado, benefício para todo ecossistema
+[13:47] "But what he actually did for the market as a whole is what I'm thankful is what I'm thankful for and giving as the example here. Russell takes responsibility for creating new customers."
+[13:58] "Like if if as an example, all the agency owners that come to me when they first get started, oh, I want to work in the info space. It's like you better fucking pray and thank Russell Brunson when you get an opportunity to because without that man spending money to grow that industry and niche, so there's new personal brands who have no idea what the fuck they're doing that are willing to work with a brand new agency owner."
+[14:22] "You see, like that market just wouldn't exist if it wasn't for a guy like Russell creating new opportunities by creating new people that enter into the inmarket demographic for all the people that service that niche. Okay."
+[14:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Small Business Mindset Trap"
+NÚMEROS: Market size awareness = critical
+VISUAL: Representação de visão limitada vs visão estratégica de mercado
+[14:38] "The smallest way to think as a business person is to just not be aware to act like you're oblivious to what the market size is that you're selling into. Sure, it's not like you can find a finite number. In some instances, for big industries and big niches, you can, but for some, it's hard. Okay."
+[14:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Market Size Comparison Examples"
+NÚMEROS:
+Chiropractors: 80,000 people
+B2B business offer: 10,000-12,000 people
+3-4% of these = very small in-market pool
+VISUAL: Comparação lado a lado de tamanhos de mercado, cálculo de 3-4% sobre bases diferentes
+[14:58] "Now, the point I'm trying to make, if I had I have uh some inner circle members right now that sell to chiropractors, as an example, and I have another set of inner circle members that sell to like a 12,000 person big B2B business offer. Okay?"
+[15:15] "And both of those, like one of them is like an 80,000 person demographic, and the other is like a 10 to 12,000 person demographic. Okay? Well, 3 to 4% of 80,000 or 3 to 4% of 10 to 12,000 for an in-market demographic is pretty fucking small. Okay?"
+[15:33] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Small Market Reality"
+NÚMEROS:
+Jeremy Miner: 1 in 8 = massive pool
+Real estate: massive pool
+Small markets: limited exploitation time
+VISUAL: Gráfico de duração de exploração de mercado, comparação entre indústrias grandes e pequenas
+[15:36] "So, those businesses that are going to advertise actively to an in-market demographic, like they don't get the benefit of just having a fuckload of people right there ready to buy at all times at scale like what Jeremy Miner would operating in the sales training space where one out of eight every pe well one out of eight of every person on earth is in sales."
+[15:57] "the real estate people, they all have massive in-market customer demographic pools to tap into and pull from because again it is a massive fucking industry and niche."
+[16:07] "The smaller guys that have like an 80,000 person total addressable market or a 10 to 12,000 person total addressable market do not get the benefit to openly exploit at scale for long durations of time exclusively selling to inmarket demographics."
+[16:24] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Small Market Strategy Adjustment"
+NÚMEROS: Must pivot to needs convinced sooner
+VISUAL: Timeline acelerado de progressão demográfica para mercados pequenos
+[16:27] "So that is one of the first things you have to consider to apply what we are going to talk about next. Some of you simply put as a caveat of that exact lesson I just described will have to choose to actively communicate to a needsconvinced demographic instead."
+[16:43] "So you have to update your messaging in your ads to be towards that demographic type. That is the key thing here that you got to understand."
+[16:51] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "In-Market Communication Framework"
+NÚMEROS: 4 key elements
+VISUAL: Framework visual com 4 componentes principais destacados
+[16:54] "So let's dig into this a little bit and let's look at to start how to communicate specifically to an inmarket demographic of customers first. Okay. So when you look at how to communicate specifically to an inmarket customer type, you first have to think of who. Okay?"
+[17:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The 4 Elements of In-Market Targeting"
+NÚMEROS:
+WHO
+CONDITIONS
+CIRCUMSTANCES
+THINKING & WORLDVIEW
+VISUAL: Diagrama mostrando os 4 elementos interconectados, cada um com ícones representativos
+[17:13] "who it is, what their conditions are, okay? What their circumstances are, what they're thinking, okay? And how they currently view both themselves and the world. Okay?"
+[17:26] "When you combine all this, this gives you a very clear perspective on essentially the position that our ideal inmarket customer is in. Okay?"
+[17:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Airbnb Rental Arbitrage Case Study"
+NÚMEROS:
+Low out-of-pocket cost
+Sublease strategy
+No property purchase required
+VISUAL: Modelo de negócio de arbitragem de aluguel, fluxo de landlord → lease → Airbnb
+[17:38] "And I have to be able to sit there and I have to think like I'll give you a good example. I was talking to a consulting client earlier this week. It was uh I think it was actually just yesterday. They have an Airbnb offer and they teach people how to start selling on Airbnb with this like rental arbitrage opportunity."
+[17:57] "So rather than buying a property and then Airbnbing it, they would actually encourage that you communicate to a landlord that owns a property, sign a lease with that landlord, get permission from that landlord to essentially subleasase the property on Airbnb and then come out of pocket for like very little, set up the property like an Airbnb, and then, you know, start start essentially servicing the property on Airbnb and other short-term rental sites that way."
+[18:24] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Element 1: WHO - Target Identification"
+NÚMEROS: Already sold on Airbnb, low capital available
+VISUAL: Avatar de cliente ideal, características demográficas e psicográficas
+[18:27] "Now, okay, just based on that strategy, right, think with me real quick as an example. So metaphorically, you get out of your own head and you can think with something else. So you understand the exercise here. Then we'll then we'll turn it around and we'll we'll make it for your business. Okay."
+[18:44] "The who. Okay. Think about this real quick. Who out there is probable to be in a position where they're like, I want to be selling on Airbnb right now. I don't have a lot of money and I I'm like sold on the idea of Airbnb already. Okay."
+[19:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Element 2: CONDITIONS - Financial & Time"
+NÚMEROS:
+Capital available
+Time investment capacity
+2 primary variables
+VISUAL: Balanças representando tempo vs dinheiro, condições variáveis do prospect
+[19:03] "If it starts off with the conditions, okay, the conditions in this case are like a financial condition. They're like a time condition, okay, for how much time the person has to be able to invest."
+[19:15] "It's also those two things are typically the biggest variables to be clear, but there's like little nuanced variables that you can also factor in the conditions like do they have a family? Are they single? Are they doing it like out of state? You know, like there's all kinds of like random fucking like that you can factor into the specific conditions of a deal. But time and money are some of the biggest conditions to be clear."
+[19:38] "So, if I just think with that, okay, if I'm trying to think of somebody who's already sold on Airbnb, they already know it's a good idea. They already believe it's a good idea. That thought is already in their head."
+[19:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Pre-Sold Advantage: Cost Savings"
+NÚMEROS: Massive ad spend saved, higher conversion probability
+VISUAL: Gráfico comparativo de custo de aquisição: pre-sold vs needs convinced
+[19:53] "That alone immediately saves me a tremendous amount of money. It immediately increases my probability of being able to sell the person on doing it and giving me money to help them transact with teaching them that strategy. Right? You see what I'm saying? Okay."
+[20:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Element 3: CIRCUMSTANCES - Life Position"
+NÚMEROS:
+Just received inheritance
+$30K saved
+Already owns 2 Airbnbs
+VISUAL: Timeline de vida mostrando diferentes momentos/circunstâncias que criam oportunidades de venda
+[20:11] "Now, circumstances. It's like the circumstances could be all kinds of things that we specifically leverage, give or take what we want to target. Like I could circumstantially say I want to target a a person who just got an inheritance. Okay?"
+[20:26] "I could circumstantially say I want to target somebody who's got $30,000 set aside. I could circumstantially say I want to get in front of somebody who already has two Airbnbs and they want to get their next ones with less money out of pocket."
+[20:40] "You see, it's like the circumstances are essentially like what is the person got going on currently in their life? Where where are they at? That way we can definitively start carving out some audiences and talking to these people individually. Okay? You see what I mean?"
+[20:56] "Like the circumstances are essentially like life positions. You you get what I'm saying?"
+[21:01] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Inheritance Hook Example"
+NÚMEROS: $30K inheritance, 3-5K/month cashflow per property, 8 properties
+VISUAL: Script de ad copy específico para herança, estrutura de hook hiperespecífico
+[21:04] "Like think about this. just on that inheritance note alone. If I had an ad that specifically said, 'Hey, so you just got an inheritance and you're wondering what to do with the money. You're already sold that Airbnb makes a ton of sense. Short-term rentals is the future and you want to take advantage of it. I've got a great opportunity for you."
+[21:25] "Press this link below. I put together a short training and I would love for you to watch it on how I can help you get started in the short-term rental market. By the way, I have eight properties currently that I barely had to come out of pocket for."
+[21:39] "I actually negotiated with landlords to allow me to subleasase their properties on these short-term rental sites like Airbnb. On average, I cash flow about 3 to 5K a month per property. I don't have to come out of pocket that much when I acquire these properties."
+[21:55] "And just like you, I actually started with an inheritance from my grandmother to be able to get into the game. If you're interested, press the link below. I'd love to get you started and uh show you what we can do to help you."
+[22:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Circumstance-Based Targeting Power"
+NÚMEROS: Hyper-specific = in-market capture
+VISUAL: Alvo de tiro ao alvo mostrando precisão de targeting baseado em circunstâncias
+[22:11] "It's like, dude, that is an inmarket demographic that relates just to the circumstances of that individual. Okay, it's a great hook."
+[22:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Element 4: THINKING & WORLDVIEW"
+NÚMEROS: Skeptical vs Sold mindset
+VISUAL: Comparação de mentalidades, espectro de crença do prospect
+[22:23] "Now, if I wanted to be a little more broad in that example, just with these first two things, okay, of conditions and circumstances, I could tie in the following two as well, which is like thinking and how they currently view themselves in the world. Watch this."
+[22:39] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Hook Comparison: Skeptical vs Sold"
+NÚMEROS:
+Skeptical: "Does Airbnb still work in 2025?"
+Sold: "You know Airbnb still works in 2025"
+VISUAL: Comparação lado a lado de hooks, diferença de audiência atingida
+[22:42] "Okay, if I said, 'Does Airbnb still work in 2025?' It's like, think about just how that hook changes who I'm talking to. It's like, that's a more skeptical person that's not sold versus if I started like this. You and I both know Airbnb still works in 2025."
+[23:00] "That's why it's still one of the most downloaded apps in the app store still today, right now. And you want to take advantage of that. You want to get in on that. You see what I mean?"
+[23:10] "I go just from that one skeptical group by saying does Airbnb still work in 2025 to you know Airbnb still works in 2025 that's why it's one of the most downloaded apps in the app store currently and you want to get in on it."
+[23:24] "You see I'm just that one shift and it's and it's broader than the inheritance example that I provided. Okay, but again it's specifically communicating to an inmarket demographic of people. You get what I'm saying? Okay."
+[23:38] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Worldview Leverage: Real Estate Believers"
+NÚMEROS: Real estate = most millionaires created, $40K+/month net from 8 properties
+VISUAL: Hierarquia de veículos de investimento, real estate no topo
+[23:41] "Now, watch this. So, how they currently view themselves and the world. Okay. So, in this specific case, when we look at just this one characteristic alone, this is one of my favorite things when I think of inmarket demographics to use is how they're thinking and how they currently view like them in the world or just the world in general. Okay?"
+[24:03] "So, let me give you another example. Let me say that they're in market, but they're in market for just real estate in general. Okay? So, they're not necessarily in a position where they're sold on Airbnb, but they're absolutely sold on real estate."
+[24:19] "I would start the video with something like, 'You and I both know real estate as a category creates the most millionaires on Earth. Real estate creates wealth and short-term rentals. Airbnb is no different."
+[24:33] "Let me show you how I have eight different properties currently that generate me over $40,000 a month net and why I think you should get involved in Airbnb as your next real estate investment.'"
+[24:46] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "In-Market Spectrum: Vehicle Sold vs Strategy Sold"
+NÚMEROS: Real estate believer easier than non-investor
+VISUAL: Espectro de dificuldade de conversão, gradiente de in-market a needs convinced
+[24:49] "You see, now that's technically still somebody who needs convinced, but they're in market in the sense that they're already sold on real estate being the vehicle, which would still be far easier to sell to in comparison to selling to somebody who's not even sold on doing real estate, right?"
+[25:07] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Personal Investment Strategy Example"
+NÚMEROS:
+$200K+/month into equities
+$535K every 5 years into real estate (from whole life insurance)
+VISUAL: Estrutura de portfolio pessoal, estratégia de diversificação
+[25:10] "So, as an example, like I invest a good couple hundred grand uh every month into stocks, into equities, okay? And I have a very consistent long-term plan. Like I'm so sold on my plan to hitting my financial goals and outcomes."
+[25:27] "And on an every five-year basis, I take my funds from my overfunded whole life insurance policy and I loan them to myself. A little more than half a million dollars, $535k every five years that I loan myself as down payments on real estate."
+[25:45] "And honestly, I'm not sold at all that my real estate portfolio by the time I'm of retirement age is going to be like, you know, something that I dramatically care about and give a fuck about. It's really the equities."
+[25:58] "Like, the equities is what I'm so sold on. I'm almost just doing the real estate stuff as like a hedge just in case I'm wrong, so I have cash flow and, you know, so I still have like an alternative in case something goes wrong in the equities market."
+[26:14] "Because to be fair, when you're talking about retirement, I'd rather have more than one thing instead of just one thing. So again, I'm not necessarily like even though I do it sold on doing it, you know, but I do it well, like I'm fully committed to it regardless and I take it extremely serious."
+[26:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Wrong Target Example: Committed Investor"
+NÚMEROS: $200K/month equities, $200K/5 years real estate = wrong prospect
+VISUAL: Representação de prospect errado, barreira de resistência alta
+[26:33] "The point I'm trying to make is is there can even be somebody just like me who's already doing it where I already invest a couple hundred grand a month into equities. I already invest a couple hundred grand every five years into real estate as down payments for my own pocket."
+[26:51] "And it's like if you tried to sell me like, 'Hey, you already invest in real estate and I want to tell you why you should be doing short-term rentals instead of wherever you're currently putting that money now.' It's like, 'Dog, if that kind of ad reached me, I would be appalled.' You know, I'd be like, 'Fuck no, dude. I'm not pivoting from what I'm doing now.'"
+[27:09] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Right Target: Uncertain Real Estate Investor"
+NÚMEROS: Doing real estate BUT not sold on current strategy
+VISUAL: Prospect com dúvidas, aberto a alternativas, posicionamento correto
+[27:12] "You see, it takes so much more money to convert that type of person versus instead, again, just the slight change in language where it's like, look, you're already putting money into real estate, but you're not necessarily that sold that what you're currently doing is the best way to participate in real estate."
+[27:30] "Let me tell you why short-term rentals is better. You've already been considering Airbnb as a real estate investment alternative to what you're currently doing now. And I think you're right for thinking that."
+[27:43] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Perfect In-Market Hook Script"
+NÚMEROS: Long-term rentals → short-term rentals pivot story
+VISUAL: Script completo de ad copy, estrutura de storytelling para in-market
+[27:46] "As a matter of fact, that's exactly what happened to me. I was doing long-term rentals and flips, and I just wasn't making as much cash as I wanted, and it was taking so much time for me."
+[28:00] "So, when I initially started seeing a lot of people take advantage of short-term rentals in Airbnb, it changed my entire worldview. It started making me question if I was doing the right thing."
+[28:11] "And as time went on, I started watching more and more content. Could it be Airbnb? Could that be what I need to switch to? But the issue is I hadn't found anybody up to that point that I felt confident in could help me and you know make this transition with me and get me involved in that game."
+[28:30] "That's why I do what I do. I want to help people like you who are already in real estate that think, yeah, real estate's awesome and this is what's going to create my long-term wealth, but you're just not necessarily sold that what you're doing currently is the best thing you could do."
+[28:47] "You know, Airbnb could be that thing. I want to be the guy that helps you make that transition. I put together a short video for you on this next page that goes through all the details of how we can get started together and what specifically you can do and why it makes sense to get involved in the short-term rental market."
+[29:07] "By the way, you won't even have to come that much out of pocket. We do rental arbitrage Airbnb, which is another huge reason that I decided to pivot into this as my real estate vehicle."
+[29:18] "Go ahead and press that button and watch the video on the following page. I'll go through all the details with you."
+[29:24] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Subtle Language Difference = Massive Results"
+NÚMEROS: Small vocabulary shift = in-market capture
+VISUAL: Comparação de duas versões de copy, mudanças destacadas
+[29:27] "It's like, dude, again, just that one subtle fucking difference in how I'm communicating that same thing."
+[29:33] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "FOUNDATIONAL ASSUMPTION"
+NÚMEROS: Core principle
+VISUAL: Texto em destaque máximo, fundação de toda estratégia
+[29:36] "I'm making a lot when I communicate to inmarket demographics, like I'm making a lot of assumptions about how they already think and I'm trying to conclude to like this person wants to do what I want to do with them or what I want to do for them."
+[29:52] "Like they want to buy what it is that I have. I'm making that assumption right off the bat when I'm considering how I'm going to communicate. Okay."
+[30:02] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "In-Market Communication Exercise"
+NÚMEROS:
+WHO
+CONDITIONS
+CIRCUMSTANCES
+THINKING/WORLDVIEW
+VISUAL: Framework aplicado, template para aplicação prática
+[30:05] "So, when you do this exercise and you consider like how can I effectively get in front of this demographic that Jeremy keeps talking about this inmarket demographic and sell them."
+[30:17] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Content HQ Case Study"
+NÚMEROS: Few hundred dollars for hours of filming
+VISUAL: Exemplo de negócio local, modelo de serviço de conveniência
+[30:20] "It's like as an example, okay, I'll use this company I'm literally sitting in right now. It's a company called Content HQ and they have a great service. You get to literally just pay them a couple hundred bucks for a few hours."
+[30:34] "They have video teams, equipment, like literally all I have to do is just show up, sit down, they fucking do everything else, and then they send me the footage for my editors to handle afterwards."
+[30:45] "I bet if they don't already, an editing service would be a baller fucking upsell for them to have. And they could just use a fleet of outsourced contractors as an alternative to in-house staff. But I digress."
+[30:58] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Wrong Target: Needs Convinced on Content"
+NÚMEROS: Teaching content creation = expensive
+VISUAL: Prospect errado, pessoa que precisa ser convencida do valor de conteúdo
+[31:01] "This specific business, guess what? There's a bunch of people who needs convinced, okay, on shooting content. That would be a fucking demographic for them to sell to because those people don't know how to come in and sit down and just film fucking content."
+[31:17] "You see, they have to be sold on why content matters to film at all."
+[31:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Right Target: Active Content Creators"
+NÚMEROS: Already filming tons of content = in-market
+VISUAL: Prospect correto, criador ativo buscando conveniência
+[31:25] "And in market demographic comparatively for them are people like me who already film a fuckload of content, who are already in the game, who just as a convenience factor for a place locally to me here in Miami, I can just fucking show up."
+[31:40] "You tell me I can go and street park outside, pull up, sit down, and film some fucking videos, and you'll send them to me a few hours later or a day later. Sounds sick. Sign me up. See what I mean?"
+[31:53] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "In-Market Definition Reinforced"
+NÚMEROS: Already in the game = in-market
+VISUAL: Definição clara com exemplo aplicado
+[31:56] "An inmarket demographic is the person who already is in the game."
+[32:01] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Content HQ Marketing Strategy"
+NÚMEROS: "By creators for creators"
+VISUAL: Análise de website, messaging focado em in-market
+[32:04] "So I all these people do on their website and all of their content on their social platforms is leverage people like me to say, 'Hey, this place was amazing. You know, super easy, clean. I I I you know felt very like simplistic. Uh the people were great. You know I had a great time and at the end of the day I would come here and I would do it again."
+[32:27] "And then they take content like that they leverage it on the front end. All their content on their website like the messaging on their website is like by creators for creators you know like fucking like that."
+[32:38] "Uh and it all talks specifically if you go to their website it's called Content HQ. If you go to their website, you look like how it's written. In no way, shape, or form does it look like they're trying to sell to a person who for the first time in their fucking life is filming content. Okay?"
+[32:56] "I highly doubt that person walks through these doors. All of the messaging on their site looks like it is built for the person who's already in the fucking game. Okay?"
+[33:07] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "In-Market = Money Maker"
+NÚMEROS: Highest cash generation demographic
+VISUAL: Ícone de dinheiro, representação de lucratividade máxima
+[33:10] "That is who you want to be talking to, my friend. In market customers, those are the people that make you a fuckload of cash."
+[33:18] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "THE ASSUMPTION (Repeated for Emphasis)"
+NÚMEROS: Foundation = they already want it
+VISUAL: Texto em destaque, princípio fundamental reforçado
+[33:21] "Again, you're assuming you're assuming that they already want what you have. That is the that is like the foundational premise to successfully communicating to inmarket demographics."
+[33:34] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Inner Circle Member Case Study"
+NÚMEROS: Lower financial performer experiencing chaos
+VISUAL: Exemplo de problema comum, sintomas de messaging errado
+[33:37] "I was talking to one of the inner circle members who, you know, unfortunately is on the lower end of the spectrum of our financial average in the group. and you know he's trying to make more money and um I'm sitting there and I'm talking with him and he realized he was like you know Jeremy I've been watching some of your videos on on this inmarket demographic stuff and um dude I'm experiencing the randomness like I'm experiencing the chaos"
+[34:05] "of like sometimes people show up and they're in the needs convinced category. Sometimes people don't show up at all and then I go look at them online and like they don't even look like they'd be a buyer for me so I think they're like mass market or something. I don't know."
+[34:19] "And then sometimes people show up and they're like so ready to buy and I dude I just want more of those people, you know, like how do I get more of those people to show up? And I'm really struggling with the message is what he kept saying. He's like, I'm really struggling to figure out like how do I communicate to those people?"
+[34:38] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Solution Given: Make The Assumption"
+NÚMEROS: They want it, they know they need it
+VISUAL: Resposta direta, solução simples mas poderosa
+[34:41] "And I told him that simple lesson I just told you. I said, dude, just make the assumption right away. The foundation to all of that is they want what you have. They know they need what you have."
+[34:54] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Apply The Framework Questions"
+NÚMEROS: 4 key questions to answer
+VISUAL: Checklist de perguntas para definir in-market messaging
+[34:57] "Like what are the conditions of that individual? what are they thinking like? What's their life like right now? What's their view on the world? What's their like what's their way of thinking?"
+[35:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Norway High Ticket Sales Example"
+NÚMEROS: Target: Norwegians wanting to sell high ticket
+VISUAL: Exemplo específico aplicado ao caso do membro
+[35:11] "So for him in specifically, he was selling to people in Norway, okay, that wanted to sell high ticket services. So I was like, 'All right, well, what's that mean? Does that mean the easiest way to communicate to them is literally just by saying, "Hey, so you already know that it makes sense to sell high ticket, but you're struggling to figure out like and then that's where you plug all the specific things that you can help them with is what I said.'"
+[35:38] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Norway High Ticket Hook Script"
+NÚMEROS: Already know high ticket is the way
+VISUAL: Script completo de hook para caso específico
+[35:41] "So I was like, 'Your initial hook might be you already know that selling high ticket is the way to go and it makes the most sense, but you're kind of struggling to put together the right offers. You're struggling to figure out how to find the people that are going to buy."
+[35:59] "you don't you you know never necessarily sold anything high ticket so you don't necessarily understand the sales process. Well, I mastered selling high ticket products and services. And I would love the opportunity to show you on this next page in a short video some of the ways that we can help you get into the game of selling high ticket products and services."
+[36:22] "After all, you already know that it makes perfect sense to do. You're already sold on the fact that you need to be doing it. You've just been looking for the right person who can hold your hand and help you get it done. I'm your guy. go watch this video I put together for you on the next page. I'm here to help you out."
+[36:42] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Why This Would Crush"
+NÚMEROS: Leverages the assumption = success
+VISUAL: Análise de por que o script funcionaria, elementos-chave destacados
+[36:45] "You know, it's like, dude, that would fucking crush for that guy because it leverages the assumption. You see, that's all you really have to do."
+[36:54] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "THE CORE PRINCIPLE (Final Emphasis)"
+NÚMEROS: All comes down to assumptions
+VISUAL: Princípio central em máximo destaque, fundação de tudo
+[36:57] "That's all that really all of this comes down to is just assumptions that they want it already. Okay, that's what you need."
+[37:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Mastery Formula"
+NÚMEROS: Assume they want it = master in-market communication
+VISUAL: Fórmula simples de sucesso
+[37:08] "When you assume that they already want it, you will master inmarket demographic communication."
+[37:14] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Rotation Strategy"
+NÚMEROS: Rotate assumptions + tie to help = money
+VISUAL: Processo de rotação de mensagens, combinação de elementos
+[37:17] "And it's just from there a game of rotating what you're assuming they want. And you tie those different things that they want to different things and ways that you can help that person. You put those two together and bang, you're making a fuckload of money off inmarket customer demographics."
+[37:34] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "ACTION ITEM: Audit Your Current Marketing"
+NÚMEROS: Takes just a few minutes
+VISUAL: Checklist de auditoria, passos específicos a seguir
+[37:37] "If you find yourself, and this is a really good audit to go do, by the way, if you're already advertising, you already have websites built, you already have like email communication built, just please, for the love of God, go take a few minutes."
+[37:52] "It doesn't take a long time, go take a few minutes, like watch your own ad videos from this perspective. Read your own copy on your website, in your ads, and your email marketing from this perspective and just ask yourself, who am I talking to?"
+[38:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Label Exercise"
+NÚMEROS: 3 categories to label
+VISUAL: Template de categorização: In Market | Needs Convinced | Mass Market
+[38:11] "And just label it for these three categories. In market, needs convinced, mass market. Those three categories are what I want you to view it through. Okay?"
+[38:22] "All right. All right, I'll see you in the next video."
+📊 RESUMO EXECUTIVO
+NÚMEROS PRINCIPAIS:
+3-4% da população = in-market demographic (prontos para comprar AGORA)
+30% = needs convinced demographic (próximo nível de escala)
+90%+ de consistência quando messaging está correto
+$42M/ano (Jeremy Miner atual) → $100M meta
+1 em 8 pessoas no mundo = vendedores
+$1M gasto em challenge funnel → $3M retorno (Russell Brunson)
+80,000 pessoas (mercado de quiropráticos)
+10,000-12,000 pessoas (mercado B2B específico)
+$200K+/mês em investimentos em ações (exemplo pessoal)
+$535K a cada 5 anos em imóveis (exemplo pessoal)
+$40K+/mês líquido de 8 propriedades Airbnb
+3-5K/mês cashflow por propriedade Airbnb
+$30K herança (exemplo de circumstance)
+"Few hundred bucks" (Content HQ pricing)
+ESTRATÉGIAS E SISTEMAS:
+Stadium Selling Framework (Chad Holmes)
+Originou no livro "Ultimate Selling Machine"
+4 demografias distintas: In-Market → Needs Convinced → Mass Market → Non-Buyers
+Progressão de Escala Estratégica
+Sempre começar com in-market
+Escalar para needs convinced apenas quando in-market esgota
+Mass market é último recurso (high hundreds of thousands a low millions/month em ad spend)
+4 Elementos de Comunicação In-Market
+WHO (quem é o prospect)
+CONDITIONS (financeiras e de tempo principalmente)
+CIRCUMSTANCES (posição de vida atual)
+THINKING & WORLDVIEW (como veem a si mesmos e o mundo)
+Rental Arbitrage Airbnb Model
+Lease de proprietário → Sublease no Airbnb
+Low out-of-pocket cost
+Setup como Airbnb property
+Cashflow 3-5K/mês por propriedade
+Russell Brunson Market Creation Strategy
+Gastar agressivamente para criar novos clientes
+Beneficia indústria inteira
+Challenge funnels para mass market/needs convinced
+Aceita ROI menor para crescimento de mercado
+Content HQ Business Model
+"By creators for creators"
+Conveniência para criadores ativos
+Equipamento + equipe fornecidos
+Footage entregue para editores do cliente
+Personal Investment Strategy (Jeremy)
+Overfunded whole life insurance
+Self-loan para down payments
+Diversificação: equities (primário) + real estate (hedge)
+ESTRUTURA:
+Framework de Diagnóstico de Messaging:
+Sintoma: Randomness nos leads
+Sintoma: Inconsistência de qualidade de prospects
+Sintoma: Variação dramática em "prontidão para comprar"
+Solução: 90%+ consistência quando focado em uma demografia
+Hook Structure Formula:
+Assumir que já querem o que você vende
+Identificar condições específicas
+Alavancar circumstances de vida
+Espelhar thinking/worldview
+Conectar ao que você pode ajudar
+Comparative Hook Examples:
+Skeptical: "Does Airbnb still work in 2025?"
+In-Market: "You know Airbnb still works in 2025"
+Circumstance-Based Targeting:
+Inheritance hook (hyper-specific)
+Real estate believer (vehicle sold, strategy open)
+Active investor pivot (current method questioning)
+DADOS FINANCEIROS:
+ROAS Progression:
+In-Market: HIGHEST ROAS, lowest cost, shortest cycles
+Needs Convinced: MEDIUM ROAS, medium cost, medium cycles
+Mass Market: LOWEST ROAS, highest cost, longest cycles
+Market Size Economics:
+Large industries (real estate, sales training): Massive in-market pools
+Small niches (80K people): 3-4% = very limited in-market
+Tiny niches (10-12K people): Must pivot to needs convinced quickly
+Cost Implications:
+Converting needs convinced → in-market: "fuckload of money"
+Capturing existing in-market: Minimal cost
+Pre-sold prospects: Massive ad spend savings
+Case Study Financials:
+AESOP soap purchase: Upsold from 1 soap → multiple products (candles, lotions, facial)
+Airbnb example: 8 properties, $40K+ net/month, 3-5K per property
+Jeremy Miner: $42M/year → $100M goal
+Russell Brunson: $1M spend → $3M return (still happy with ROI for market creation)
+DURAÇÃO: 38:22 FORMATO: Masterclass educacional, apresentação direta para câmera com slides conceituais e exemplos práticos aplicados

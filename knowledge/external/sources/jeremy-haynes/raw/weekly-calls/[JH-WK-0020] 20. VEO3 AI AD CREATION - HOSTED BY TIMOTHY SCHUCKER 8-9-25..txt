@@ -1,0 +1,1279 @@
+Transcrição Completa: 20 Veo3 AI Ad Creation - Hosted By Timothy Schucker 8 9 25
+
+ 
+
+ 
+
+[00:00] Cool. So, for all those who don't know, V3 is a tool from Google. They released it with their big old Gemini update that they did, I think, in the most recent like three or four months.
+
+ 
+
+[00:15] Um, it's pretty cool. There's a lot of great stuff that you can do with it, ranging from using it for the initial hook of the ad and then just using a standard body and CTA that you may have filmed after that. It's good for hook variation.
+
+ 
+
+[00:30] Um, also just to be clear, there's companies as large as like the Hard Rock that is using it for their complete advertising efforts at this point. As an example, living here in Miami, I get targeted by the uh Florida Hard Rock division literally every day with ads to go and do sports gambling and they are 100% VO3 ads.
+
+ 
+
+[00:52] Um, interestingly enough though, I will point out that with every Hard Rock ad that I see, there's a good like several dozen comments of regular people saying they're going to boycott the Hard Rock for using AI ads.
+
+ 
+
+[01:05] So, I want to be fair and saying there's some controversy with what you're going to see in comments potentially when you run these kind of things. But, it's also quite the opposite, too. There's also people depending on how good of an ad you create that absolutely love these things and it can skyrocket the performance of ad campaigns comparatively.
+
+ 
+
+[01:25] So moral of the story whether you're looking to make literal full-blown movies like what Euan has in as as an example and run them as ads or whether you're looking to just make you know shorter more attention grabbing ads for your specific industry and niche. We'll learn a lot here today.
+
+ 
+
+[01:42] Timothy specifically in the inner circle here has opted and volunteered to give us a class today on how he's using V3. Um it's actually pretty interesting. He shared a few of his videos uh ranging from people skydiving to it's it's reason it's interesting.
+
+ 
+
+[01:58] I want to be clear when I say this. He's in a niche that you could consider like rather boring to a degree. you know, it's essentially him selling to insurance agents who are selling things like ILS, uh, term life policies, whole life insurance policies, just they're selling insurance in general.
+
+ 
+
+[02:18] So, moral of the story is in an industry like that, rather than just shooting like basic videos of yourself, you can use all this crazy stuff that V3 can allow you to do comparatively. So, there's a lot of cool creative stuff you can do.
+
+ 
+
+[02:32] A lot of people struggle with things like character consistency throughout VO3. Sometimes you'll come across like credit issues. There's third party softwares that you can use. U long story short, there's going to be a tremendous amount that we all learn here today.
+
+ 
+
+[02:47] Um I'd consider most of us relatively new to this. I'm sure to be fair to most of you guys. You guys have messed around with it a little bit, but not all of you have actually committed to running ads with it. So that's what we're here to learn about today.
+
+ 
+
+[03:02] Without further ado, we'll give it up to Timothy and let him take away the uh the class for today. Go ahead.
+
+ 
+
+[03:08] Cool. Cool. What's going on everyone?
+
+ 
+
+[03:11] What up?
+
+ 
+
+[03:12] Um, let me share my screen here. And I'll just give you guys basically kind of a brief background. Um, say like maybe two months ago, Nick and I had tried to do some stuff on VO3. Just found it to be extremely time consuming. We were like typing all the prompts inside of V3.
+
+ 
+
+[03:30] basically kind of just like gave up on it for a while until I had a conversation with um actually Cole Gordon's CMO and he was telling me that they were using it uh basically as like a UGC replacement.
+
+ 
+
+[03:42] So, I'm going to show you guys like a couple different use cases, ways that we've used it. I'll kind of tell you guys about our experience and then what I think would be super valuable and helpful is kind of just like building out an ad live here.
+
+ 
+
+[03:55] So, if anyone has um like a script that of one of their proven ads that you guys want to share, we can basically take that and then turn it into an ad.
+
+ 
+
+[04:05] So, our I'll start off by showing you guys kind of a couple examples of our ads. Let me uh share the sound so you guys can see this. Okay, cool.
+
+ 
+
+[04:16] So basically what we did is we took ads that we had already found worked with me in them and then we essentially just replaced me with a hot AI Latino woman and the ads ended up outperforming the ones with me surprise surprise.
+
+ 
+
+[04:32] So I'll play the first example and then I'll show you guys the other.
+
+ 
+
+[04:36] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: [Vídeo de exemplo começa a ser reproduzido]
+
+ 
+
+NÚMEROS: Não especificado
+
+ 
+
+VISUAL: Mulher latina gerada por IA aparece na tela, ambiente profissional
+
+ 
+
+[04:38] [AD PLAYBACK] If you're selling IL annuity or cash value whole life insurance and you want to sell to high networth clients, you need to be seen as a trusted expert, not a telemarketer.
+
+ 
+
+[04:52] If your clients don't view you as an expert, they're not going to trust you with their money. The truth is, your sales skills aren't the problem. It's your brand.
+
+ 
+
+[05:03] You see, there's top producers in this space that aren't good at sales, but their brand positions them as an expert. That way, wealthy clients book appointments on your calendar, already trusting you and wanting to buy.
+
+ 
+
+[05:17] Our clients are closing five and six figure policies every single week using this exact strategy. And our company's CEO, Tim, is hosting a free live training to show you how you can start positioning yourself as an expert using AI and branding.
+
+ 
+
+[05:32] So, go ahead and click that link down below to register for the free training. Or you can just sit around and let this opportunity pass you by while other agents get rich. Totally up to you.
+
+ 
+
+[05:44] Cool. So, how long do you guys think that video took to make? Just guessing it from watching it.
+
+ 
+
+[05:52] An hour.
+
+ 
+
+[05:54] Yeah, like an hour and a half basically. I was I was hoping someone was going to say like five hours, but Jeremy was pretty on point. Yeah, it took like an hour and a half to make that.
+
+ 
+
+[06:05] And like, you know, I would argue that that ad is probably it looks it's more engaging than like an Harmon Brothers ad where you would spend 500 grand to create it and it would take like probably six months to even produce something and you can literally spit these out in like an hour.
+
+ 
+
+[06:22] Okay. Uh I did another one with this where like when they mention me, it shows like a clip of me walking up on stage. So it kind of like intros us a little bit more. Um I'll show you guys another one.
+
+ 
+
+[06:34] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: [Segundo vídeo exemplo começa]
+
+ 
+
+NÚMEROS: $100 trillion
+
+ 
+
+VISUAL: Transição para novo vídeo com mesma personagem IA em cenário diferente
+
+ 
+
+[06:36] [AD PLAYBACK] 100 trillion is set to exchange hands over the next two decades. Will you be one of the agents who capitalizes on it?
+
+ 
+
+[06:47] Right now, the biggest financial shift in history is happening. $100 trillion dollars is set to exchange hands. You see, baby boomers are the wealthiest generation to have ever lived.
+
+ 
+
+[07:00] And right now, they're retiring and dying in droves. a massive portion of their wealth is set to go into life insurance and annuities.
+
+ 
+
+[07:10] So, if you're watching this video right now and you have a life insurance license, now is the time to capitalize. You can either spend all your time making dials and chasing tiny little policies for people that ultimately charge back.
+
+ 
+
+[07:24] Or you can serve wealthy retirees and benefit from the $100 trillion wealth transfer. 100 trillion.
+
+ 
+
+[07:32] Now the agents who position themselves as trusted experts are the ones who will win. So I put together an 8-minute video that explains exactly how you can capitalize on the 100 trillion dollar wealth transfer.
+
+ 
+
+[07:45] Click the link down below and don't miss out on this once in-a-lifetime opportunity. Or you can just sit around and let this opportunity pass you by while other agents get rich. Totally up to you.
+
+ 
+
+[07:58] Cool. So, um, when we first launched these, I think our average Nick, what's like our average like clickthrough rate on an ad? It's like 0.98%. It's sub 1% typically.
+
+ 
+
+[08:12] Yes.
+
+ 
+
+[08:13] Yeah. with this it was like two and a half percent. Overnight, correct me if I'm wrong.
+
+ 
+
+[08:20] Um, no, it is uh very close to 2% on a majority of our V3 ads right now.
+
+ 
+
+[08:27] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: Performance Metrics Comparison
+
+ 
+
+NÚMEROS: CTR: 0.98% → 2.5% | CPL: $25-30 → $6-7 | Cost per booked call: $250 → $67
+
+ 
+
+VISUAL: Comparação de métricas antes e depois, setas indicando melhoria dramática
+
+ 
+
+[08:28] Yeah. So, our cost per lead um and this was like to have we were doing like conversion leads with an instant form to test out a ton of ads. It was like around like 25-30 bucks. With these, we were consistently getting leads for like six or seven bucks.
+
+ 
+
+[08:45] So, dramatically decreased our cost. Our cost per book call went from like 250 on an average campaign to we were getting we had one of these adsets that was ripping like a $67 cost per book call.
+
+ 
+
+[09:00] Um and there was a little bit of an issue with the tracking. So we don't know the exact number of sales that have come from this. But we've gotten extremely positive feedback from our clients especially because we're a marketing agency.
+
+ 
+
+[09:13] And so it's like it's almost like a meta concept where because we're doing we have really good ads, they're like, "Oh, these guys obviously know how to make really good ads."
+
+ 
+
+[09:23] So, um, it's not like we've been doing this for like six months in full transparency. So, like I don't have six months of data to report you guys. But what I can tell you is like from the early results of what we've seen, like we're going all in on VO3
+
+ 
+
+[09:38] and basically, you know, these ads take less time to film than like ripping a ton of variations. And then the other thing too is that they're modular, right?
+
+ 
+
+[09:48] So essentially what you do whenever you create these is you get like a ton of 8-second clips. Like I probably have a hundred little random 8-second clips on my computer.
+
+ 
+
+[10:00] So, kind of like what Jeremy was talking about a couple weeks ago with like creative testing is I can very easily create infinite variations of these ads just by assigning tasks to my video editors.
+
+ 
+
+[10:13] Like I don't got to go out and film more stuff and I can have the craziest things happen in the scene. So, I could have the hook of her um doing a bank robbery. I I made another one where she's like scaling a mountain full of money. Like the mountain's made out of cash.
+
+ 
+
+[10:30] I could do another one where she's just talking at a pool. Like anything you can possibly imagine, you can create with these ads and you can test infinite numbers of like number of avatars and people.
+
+ 
+
+[10:42] So if you guys thought at the end, I use the same ending, the same CTA for both of those ads. So I could just clip that in at anyone and I can split test very easily and create it and do a lot more than I can do as uh an individual. Right?
+
+ 
+
+[10:58] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: Veo3 Use Cases
+
+ 
+
+NÚMEROS: 8-second clips, 100+ clips generated
+
+ 
+
+VISUAL: Lista de casos de uso: Hook variations, Proven concept variations, UGC replacement, Full ad creation
+
+ 
+
+[11:00] So, um, what I've kind of seen, and I haven't used all of these ways to be fair, but, uh, specifically, we've we've mostly done variations of proven concepts, but, uh, what I saw, I think, think the guy's name is James Ki.
+
+ 
+
+[11:15] I don't know if he's on this call, but what he did was he basically had the VO3 as the hook intro him in his app. So, that's like super easy to do. You could probably do that in like 30 seconds and test tons of variations of that.
+
+ 
+
+[11:30] So, you can basically kind of have like the VO3 tie in and intro you in the ad. That's one way to do it. Or you can do it kind of the way that we did where we just took a proven script and made variations of it. I'll show you guys how to do both.
+
+ 
+
+[11:45] Um, but who here has ever seen like Vshreed's ads? You guys have probably seen those where it's like it's basically just like brain rot stacked like stacked on top of each other. uh it just like repeats itself over and over, but it's super engaging.
+
+ 
+
+[12:00] And so it'll be like some woman in a bikini is like, "Have you seen this guy all over your social media?" And then it goes over to uh the Vshreed guy and then it's just a bunch of ads clipped together.
+
+ 
+
+[12:12] So I think you could do something like that with VO3 and just basically replace UGC. So that's another way that I've seen people use it that uh seems to work.
+
+ 
+
+[12:22] But the main thing that we've done is the uh variation of a proven concept and just taking something where it's like me direct to camera and just spicing it up and making it more engaging.
+
+ 
+
+[12:33] Uh and then also very easy to make tons and tons and tons of hook variations, CTA variations, body variations, everything.
+
+ 
+
+[12:42] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: [Screen share mostrando SOP document]
+
+ 
+
+NÚMEROS: Não especificado
+
+ 
+
+VISUAL: Documento SOP sendo compartilhado na tela, interface de documento
+
+ 
+
+[12:44] So I'm going to show you guys um I made like a SOP that kind of breaks down how we actually create these. Um and I even have a GPT that'll even write the prompts for you.
+
+ 
+
+[12:55] All you got to do is just voice prompt into the AI uh what you want it to create and it'll put it together for you. So, I'll share this with you guys at the end of the call if you want to check it out.
+
+ 
+
+[13:07] Uh but does anyone here have like a solid script that they want us to make a variation of? Like if you have like an ad that's working um just feel free to drop it in the chat and we can basically build that live.
+
+ 
+
+[13:20] Devin, you want to rip it?
+
+ 
+
+[13:22] Yeah, let me let me grab it. Thanks.
+
+ 
+
+[13:25] All right, 100%. Cool. So, as he's pulling that up, I'll kind of just show you guys like how this works.
+
+ 
+
+[13:32] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: Veo3 GPT Interface
+
+ 
+
+NÚMEROS: Não especificado
+
+ 
+
+VISUAL: Interface do GPT customizado para Veo3, campo de prompt visível
+
+ 
+
+[13:33] So, I made this. It's a VO3 GPT. So, uh Golani, I'll give him a shout out. He was saying the best way to get character consistency is to use JSON format, which is I don't know, some nerd stuff some coding. I don't really know what it means, but I've I've been using it.
+
+ 
+
+[13:52] Um, so essentially this will automatically spit it out in uh JSON. So this GPT will so cool. I'll probably This is a long ass script. I'll probably just take like we'll just do like the first two paragraphs, right?
+
+ 
+
+[14:07] As an example and then Devon, you can take this and run with it if you
+
+ 
+
+[14:11] 100%.
+
+ 
+
+[14:12] Cool. So here's kind of what I'll do. Um, I'll just get like really wacky and creative with that. I I enjoy it. Like I kind of have fun with it. As you can see, I just put her in like random scenes and just did like crazy stuff
+
+ 
+
+[14:27] I will say the crazier you try to get, the more the AI just like messes up and just does some wild stuff Like really wild stuff You guys will see some examples of that as I go and create this. But sometimes it's like nightmare field type of stuff.
+
+ 
+
+[14:42] So cool. Uh, I'm just going to voice prompt in here. All right. So, uh, you're going to help me create an ad. Um, we're going to have a blonde woman in her late 20s, and she's going to be on a golf course um, walking across the golf course towards the camera, have like cinematic lighting,
+
+ 
+
+[15:05] so basically, you know, it like kind of like looks like a movie. and then she's going to look directly at the camera and say, "If you're a high ticket business owner and you're not getting booked on the top podcast, you're leaving tons of money on the table."
+
+ 
+
+[15:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: Voice Prompt Example
+
+ 
+
+NÚMEROS: Não especificado
+
+ 
+
+VISUAL: Demonstração de prompt de voz sendo processado pelo GPT
+
+ 
+
+[15:24] So, that's literally all that I do in terms of the prompting. You can whatever details you want, you can add it in there. You can see right here, all I do got to do is click send and then literally instantaneously it's going to write this entire prompt for me in JSON format.
+
+ 
+
+[15:42] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: [Tela mostrando Google AI Studio / Flow interface]
+
+ 
+
+NÚMEROS: 100 credits (V3 Quality), 10 credits (V3 Fast)
+
+ 
+
+VISUAL: Interface do Flow/Google AI Studio, opções de modelo visíveis, configurações de créditos
+
+ 
+
+[15:44] So, I'll copy this I'll then go into flow here, which is just the V3 thing. Um, one thing that I messed up that I would definitely recommend paying attention to is they have these different models, right?
+
+ 
+
+[16:00] And so this one V3 quality is what it defaults to, I'm pretty sure. Or maybe I just selected this and I don't know, but this one uses 100 credits per time you generate. And half the time the videos suck.
+
+ 
+
+[16:14] So V3 fast is actually faster and in my opinion it's just as good and it's like literally a tenth of the price. It's $10 per uh generation you do.
+
+ 
+
+[16:27] So I'll just paste it. Um I usually will do you I have two variations per output. So, like when you go in here and select it or outputs per prompt and then I'll always do it like four times
+
+ 
+
+[16:42] because most of the video that you get is like trash and sometimes it'll go on a it'll go in like a it'll go in like a consistent like it'll consistently put out like this like weird AI voice like sounds like it has like peanut butter stuck stuck to the top of his mouth.
+
+ 
+
+[17:00] it just sounds terrible. And so you kind of have to just like feed it over and over and over and then eventually it'll rip out good ones. It's like it's either like consistently good or consistently bad. It's very odd.
+
+ 
+
+[17:13] But anyway, as this is generating, I'll just go through and I'll already start building out the second scene.
+
+ 
+
+[17:20] So, um let's see. Okay, perfect. And then now, uh have her skydiving in. just have her skydiving and she's looking at the camera and she yells and she says, "Now that's where we come into play. We get you booked on 10 of the top podcast in your industries in your industry in 90 days or less or you don't pay."
+
+ 
+
+[17:45] Um, so there we go. Just make sure that this looks properly. Just have her scout through the camera. She yells and she says, "We get you booked on 10 of the top podcasts in your in your industry in 90 days or less you don't pay."
+
+ 
+
+[18:02] So, I'm already generating the second one as these other ones are going up. Cool. So, we got our first video. Let's check it out. 80% of the time this is just going to be utter garbage and we'll have to redo it.
+
+ 
+
+[18:17] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: [Vídeo gerado sendo reproduzido]
+
+ 
+
+NÚMEROS: 80% taxa de descarte inicial
+
+ 
+
+VISUAL: Primeira geração de vídeo mostrando mulher loira no campo de golfe
+
+ 
+
+[18:20] [GENERATED VIDEO] If you're a high ticket business owner and you're not getting booked on the top podcast, you're leaving tons of money on the table.
+
+ 
+
+[18:28] That one is actually pretty good, right? The voice sounds normal. Um, I don't know why it's putting this little watermark, but that doesn't matter. I could just crop that out.
+
+ 
+
+[18:38] [CHECKING OTHER VARIATIONS] If you're a high ticket business not getting booked on the top,
+
+ 
+
+[18:42] see why I do like four. like 50% of the
+
+ 
+
+[18:46] If you're a high ticket business,
+
+ 
+
+[18:48] if you're a high ticket business owner and you're not getting booked on the top podcast, you're leaving tons of money on the table,
+
+ 
+
+[18:55] right? So, this one's like good enough. So, there's ways where you can do it. And I think if you want to have like a consistent scene where like let's say I still wanted her to be on the golf course in the next one, then I would click here and I would click add to scene.
+
+ 
+
+[19:10] And then you can build off of that. I found in my opinion that just makes it harder to work with. So what I'll actually do is I'll go ahead and open up like a iMovie project and I'll just download it and I'll start building it out here.
+
+ 
+
+[19:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: [iMovie interface mostrada]
+
+ 
+
+NÚMEROS: Não especificado
+
+ 
+
+VISUAL: Interface do iMovie com timeline vazio, preparado para edição
+
+ 
+
+[19:27] Um because a lot of times like you end up creating it in non-sequential order. Like the the clips that I'm actually putting together are not in order of how I'm generating them because sometimes it'll just get stuck on creating one specific clip that I have to redo over and over. Right?
+
+ 
+
+[19:45] So I'll just put my first scene here. Now, while Go ahead.
+
+ 
+
+[19:50] Yeah, you should uh demonstrate the utility in that though in terms of adding to the scene to be able to have continuity in your video and the continuity of the same scene you're using uh the frame to video.
+
+ 
+
+[20:03] Yeah, 100%. I'll do I'll do that um for another one as well just to show you guys kind of how that works. And I know with with you and when you're building yours that are like the consistent flow, I'm assuming you're probably doing that.
+
+ 
+
+[20:17] Um cool. So, as these are generating, the key is like if you want to get it done fast, you got to you got to do multiple things at the same time.
+
+ 
+
+[20:27] So, um as these are generating, I'm going to go ahead and do the next prompt. So, so why do I say you're leaving so much money on the table? Well, just look at the top online marketers in the space are doing right now. Where do you hear them?
+
+ 
+
+[20:43] You guys have any ideas for like I want to make this a little more interactive. Like you guys feel free to drop ideas for what what we want this scene to be.
+
+ 
+
+[20:52] Um Devin, you as well. Like let's say because it's gonna be an eight-second clip. Let's say for example, we're gonna do um let's see. Let's say we're going to do this line her on a podcast.
+
+ 
+
+[21:07] There we go. Yeah, that makes perfect sense. All right, cool. All right, cool. So, for the next one, I want you to put her in like a podcast studio almost where it looks like she's on Joe Rogan with like that red curtain in the background.
+
+ 
+
+[21:25] She's got the headphones on. She's talking to the microphone and you just see her like it's not like Joe Rogan's on the other side. But she says, "So, why do I say you're leaving so much money on the table?" Which is look at what all the top online marketers in the space are doing right now.
+
+ 
+
+[21:42] And she said she said it like with a lot of like authority and conviction so that it like cuts across and like you you really believe what she's saying.
+
+ 
+
+[21:52] Cool. And so basically I'm just going to I repeat this process. Here we go. We got the skydiving one ready. And we'll rip this as I'll as I view the skydiving one. I'll have this other one being created. Let's see.
+
+ 
+
+[22:07] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: [Vídeo de paraquedismo gerado]
+
+ 
+
+NÚMEROS: Não especificado
+
+ 
+
+VISUAL: Mulher loira paraquedista falando para câmera em queda livre
+
+ 
+
+[22:10] [GENERATED VIDEO] Now that's where we come into play. We get you booked on 10 of the top podcasts in your industry in 90 days or less or you don't pay.
+
+ 
+
+[22:22] So V3 is actually behaving pretty well today. Usually it'll just go like as Jeremy would say full [expletive] with a hard R.
+
+ 
+
+[22:32] [CHECKING VARIATIONS] We get you booked on 10 of the top podcast in your industry in 90 days or less or you don't pay.
+
+ 
+
+[22:40] All of these look solid. So I could just literally just, you know, pick whatever one I want. I try to do like if they're like shouting or it sounds like there's wind like I find that's like super engaging.
+
+ 
+
+[22:52] Now that's where we come into play.
+
+ 
+
+[22:55] What is this one?
+
+ 
+
+[22:57] Now that's where we come into play. We get you booked on 10 of the
+
+ 
+
+[23:02] Yeah. So she's like still strapped to the airplane. That doesn't make sense. I'll just download this one and then I will literally just go and take that here.
+
+ 
+
+[23:13] And then now I'm starting to kind of get like, as you can see, we're starting to get like a consistent flow of the scene. And here's the thing, right? I know uh Jeremy wanted me to touch on um the character consistency, but it's like you can see here they look similar enough that if you're just watching the ad, like you're not going to care, right?
+
+ 
+
+[23:33] And that's like I think the JSON format does well because it gives a little more detail in terms of what they should actually look like. Um, but like there's sometimes where it'll just spit it out and it'll look like a totally different person.
+
+ 
+
+[23:47] So what I would say about character consistency is it really comes down to it's like a numbers game.
+
+ 
+
+[23:53] Well, Tim, there there is the hack with the uh the frame to video like I was talking about. So if essentially if you add it to a scene like if you want to pull up the golf course one like one of the ones that we like real quick like inside of flow.
+
+ 
+
+[24:08] Yep. Here.
+
+ 
+
+[24:10] Yeah.
+
+ 
+
+[24:11] Yeah. Let's just do a quick little demonstration with this. And so essentially go to the end of that frame there.
+
+ 
+
+[24:18] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: Frame to Video Feature Demonstration
+
+ 
+
+NÚMEROS: Não especificado
+
+ 
+
+VISUAL: Interface mostrando recurso "Save frame as asset", slider de vídeo no final do frame
+
+ 
+
+[24:20] Uh like the last video uh the la like slide the slider all the way to the end of the video and then click the uh plus save frame as an asset.
+
+ 
+
+[24:30] And then essentially if we add a prompt in from here, we can use that frame as a starting point for the next prompt. So that essentially we can have a continuation of the scene with this that frame being the first one.
+
+ 
+
+[24:45] Will it still do audio with that too?
+
+ 
+
+[24:48] Yeah. Yeah. So um it will still do audio. It used to not doing audio. Uh it used to not do audio with this.
+
+ 
+
+[24:56] There we go. Well, yeah, that changes everything. That makes it so much easier. So you can actually have clips that are longer than eight seconds to have to do that. Nick just taught me something.
+
+ 
+
+[25:08] Um, so yeah, you could just frames the video and then you could just say whatever you wanted to do and the scene would continue. It's pretty baller.
+
+ 
+
+[25:17] Uh, cool. So, I'll go back into the scene here. We'll see how this Joe Rogan one came. Doesn't look quite like Joe Rogan Studio, but I mean, close enough, I would say.
+
+ 
+
+[25:28] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: [Vídeo de podcast studio gerado]
+
+ 
+
+NÚMEROS: Não especificado
+
+ 
+
+VISUAL: Mulher em estúdio de podcast com cortina vermelha ao fundo, fones de ouvido, microfone
+
+ 
+
+[25:30] [GENERATED VIDEO] So, why do I say you're leaving so much money on the table? Well, just look at what all the top online marketers in the space are doing right now.
+
+ 
+
+[25:40] Yeah.
+
+ 
+
+[25:42] So, why do I
+
+ 
+
+[25:44] even got the yeah at the end like someone else is on the podcast.
+
+ 
+
+[25:48] Let's see.
+
+ 
+
+[25:50] So, why do I say you're
+
+ 
+
+[25:52] cool? So, I'll just use this one. This one looks pretty good.
+
+ 
+
+[25:56] Drop that over there. And then let's see.
+
+ 
+
+[26:00] Devin in the chat, he was saying uh so there's no way to ensure 100% consistency, right? And what Devon, one thing that we've learned is is you can actually take a screen capture of the character from, as an example, like that original golf that original golf course shot since that seems to be the start of this ad.
+
+ 
+
+[26:20] And you could tell whatever your preferred LLM is, whether it's ChatGPT, Claude, Gemini, etc. to make an extremely detailed JSON file of that character. So like the features of the character, how they look. That way you can ensure there's a higher probability of character consistency.
+
+ 
+
+[26:38] Okay.
+
+ 
+
+[26:40] Yeah. You're saying just literally taking a screenshot, adding it here and say like describe this character. Yeah, that makes tons of sense.
+
+ 
+
+[26:48] All right, cool. Keep keep going.
+
+ 
+
+[26:51] Thank you.
+
+ 
+
+[26:53] Cool. So then we'll just continue on with the script, right? Where do you hear them? Where do you see them? Right. I'm just going to go. You see them on podcast, but the question is why? Why are they appearing on all these podcasts when they could be just doing so many other things, right?
+
+ 
+
+[27:10] Anyone have another idea for a scene? Another podcast. There we go. That's famous. Cool. Yeah, we could even Let's see if we can throw Joe Rogan in there or Joe Rogan look alike.
+
+ 
+
+[27:25] Cool. Now, for this next one, have her say you see them on podcast, but the question is why? Why are they appearing on all these podcasts when they could be doing so many other things?
+
+ 
+
+[27:38] and she's in the same podcast studio as before, but this time she's sitting across from a bald-headed dude that's smoking a um cigar and uh is wearing a monkey shirt.
+
+ 
+
+[27:52] Could probably get a little more detailed to get closer to Joe Rogan, but that'll be good enough. You got to tell the AI to uh describe Joe Rogan to great detail and then have it Yeah, there you go. You have to have it prompt itself essentially. Use that trick.
+
+ 
+
+[28:08] And then pro tip, you you can't use actual people in uh VO3. So, you have to also describe it to be like a striking lookalike. It's like one of those hypothetical ones where you get it to commit a crime without actually getting it to commit a crime because you say it's hypothetical.
+
+ 
+
+[28:25] Okay, cool. We just we'll just keep it simple with this first one, honestly. Um, cool. So, let me remove the frame to video. We'll go back to text to video and then boom, boom.
+
+ 
+
+[28:38] And then literally this is just going to create. And that's I mean, guys, that's pretty much the process is I'm just essentially just going back and forth from the script. As these videos are generating, I'm going ahead and creating the next prompt.
+
+ 
+
+[28:53] and then adding the next thing in the script. And honestly, like it's it's performing pretty well today. Maybe maybe uh maybe they made some improvements to it like over the weekend or something or throughout the end of the week. I don't know.
+
+ 
+
+[29:08] But uh yeah, this is like this is this was performing better than it normally does to be honest. So I'm pretty happy about it. But yeah, you guys have questions about specific process. Yeah, go ahead.
+
+ 
+
+[29:22] Yeah. So you just gave it two different prompts. So you you gave it like the first one and then you gave it like the Joe Rogan lookalike one. So when you do that, it's going to build those four videos around those two different prompts. Like it's going to take both of the ones that you just fed it and then create
+
+ 
+
+[29:38] Actually, I fed it the same prompt just twice.
+
+ 
+
+[29:42] You fed it the same prompt but twice.
+
+ 
+
+[29:44] Yeah. The reason I do that is like because most of the time like half the half of them will be terrible. Um and so if I do four I don't have to like you see how it takes a minute to load.
+
+ 
+
+[29:57] It doesn't, from what I found, it doesn't take longer if you do multiple at once. But if I just wait for it to be good, then I'm delaying my process of getting this done. So like you can see right here,
+
+ 
+
+[30:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: [Múltiplas variações sendo geradas]
+
+ 
+
+NÚMEROS: 4 variações por prompt
+
+ 
+
+VISUAL: Interface mostrando 4 vídeos sendo processados simultaneamente
+
+ 
+
+[30:12] [CHECKING GENERATED VIDEOS] you see them on podcasts, but the question is why?
+
+ 
+
+[30:17] Yeah.
+
+ 
+
+[30:18] Why are they appearing on all these podcasts when they could be doing so many other things?
+
+ 
+
+[30:23] Yeah,
+
+ 
+
+[30:24] you see them,
+
+ 
+
+[30:26] but it's got this like whack ass like caption at the bottom.
+
+ 
+
+[30:30] You see them on podcasts, but the question is why? Why are they appearing on all these podcasts when they could be doing so many other things?
+
+ 
+
+[30:38] She's got one set of headphones on and then another set. So like sometimes it just like whacks out.
+
+ 
+
+[30:45] So I have podcast, but the question is why?
+
+ 
+
+[30:48] Yeah.
+
+ 
+
+[30:49] Why are they appearing on all these podcasts when they could be doing so many other things?
+
+ 
+
+[30:54] Like this one's actually pretty fire. Let's see if this one's better.
+
+ 
+
+[30:58] You see them on podcasts, but the question is why? Why are they appearing on all these podcasts when they could be doing so many other things?
+
+ 
+
+[31:07] He's about to be buzzing with a long hit like that from a cigar. That was impressive. But anyway, I'll I'll go with this one. And uh download that.
+
+ 
+
+[31:18] And then I'll just add it here. And so now like even though it's not even like I prompted it to be the same thing and yeah, she was in long sleeves and now she's in short sleeves and maybe like her nose is a little different, like you're not even gonna like no one's gonna care.
+
+ 
+
+[31:35] Like it's still super engaging and interesting. So, for me personally, like I think as long as the ad is like kind of funny and engaging, the character consistency is is good, but I don't think it's like the end all be all.
+
+ 
+
+[31:48] Uh, yeah, that's that's Temu Joe Rogan. Um, for sure. For sure. Um, cool.
+
+ 
+
+[31:55] So, then why are they on the podcast? Simple answer. They understand leverage. They understand that just that just by getting on one podcast, they in front of them.
+
+ 
+
+[32:07] Cool. Damn, Devon, this is a long ass script, bro. Was it like a five minute ad?
+
+ 
+
+[32:13] Two minutes, baby.
+
+ 
+
+[32:15] Two minutes. Damn. All right. I love it. I don't know if we're going to do the whole two minutes, but
+
+ 
+
+[32:21] No. I mean, I get the I get the point. I get the point for sure.
+
+ 
+
+[32:25] Uh, anyone have another idea for what you guys want us to rip here or do you guys have questions? Because I mean, we could just keep creating this whole ad, but I feel like we've kind of demonstrated the process.
+
+ 
+
+[32:37] Um, cool. Was there any major change in lead quality when you went harder on V3 ads? Uh, no, honestly. Um, we have this thing called uh sales kick. It's it's similar to leadfy, but it has like a AI lead nurture thing as well that like texts to confirm.
+
+ 
+
+[32:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: Lead Quality Analysis
+
+ 
+
+NÚMEROS: Não especificado
+
+ 
+
+VISUAL: Menção a Sales Kick platform, sistema de qualificação de leads com AI
+
+ 
+
+[32:57] And so we get uh we get like financial data from the leads and we haven't seen that there's a dip in the qualified call quality at all.
+
+ 
+
+[33:07] Um, the biggest thing is I I I don't know this for sure, but I would say you would you wouldn't want to replace all of your ads with V3. What I think, and again, I don't have like data to back this up, but my theory is like the best way to do it is like have ads where it's just you, have ads where it's just V3, and then have ads where it's both.
+
+ 
+
+[33:30] So, they're just getting like all this variety and like creative diversity where like they're going to see my face and then they're going to see a different, you know, character and it's gonna be super engaging ad and then I can have one where it's like the AI is introing me
+
+ 
+
+[33:45] and so it's just like a mix where like they start to associate the V3 ads with my brand. And then we also had the idea to even do like a V3 VSL as well, which I think would probably crush, which just take some take some time to put together. But that's that's something Nick and I have on the chat as well.
+
+ 
+
+[34:05] Cool. Uh you need the GPT drop bot. Can you drop that here? Absolutely. Um I'll just drop it at the end so that you can't get it and then leave.
+
+ 
+
+[34:17] Any other uh questions? Um, are your hammerhead hammer them videos usually your guys or your clients so they see your face or your brand?
+
+ 
+
+[34:28] Yeah. Um, I saw uh it was another inner circle member in the group. I think it was Brooke uh Hit Inc. But we saw that he was running this is this is something that's actually been really positive for us is we'll run hammer them retargeting ads that are photo ads.
+
+ 
+
+[34:47] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: Retargeting Strategy - Hammer Them Ads
+
+ 
+
+NÚMEROS: 3-5 second videos, 5-6 ad impressions
+
+ 
+
+VISUAL: Estratégia de retargeting com fotos convertidas em GIFs, screenshots de reviews
+
+ 
+
+[34:48] We basically took a still photo and then turned it into like a GIF. Um, it's like a three to five second video. So, we can do the same hammer them thing with like a Trust Pilot review or a screenshot of a client saying something good about us.
+
+ 
+
+[35:05] And so, for me, like whenever I go on Instagram, I'll just see like tons of screenshots of our clients saying good things about us. I'll see my ads with my face in it. And then I'll also see the VO3.
+
+ 
+
+[35:18] So, it's just like we're hitting them from all these different angles where it's like you just can't get away. Like you're going to get you're like you're going to have probably five to six impressions of ads, but it's hard to get ad blindness because it just looks different.
+
+ 
+
+[35:33] Um, that's where I think like really the power of this would be is like combining VO3 of like different hooks and different UGC creators introing you where you could have like an old person, you could have a young person, you could have like a a guy, you could have a girl,
+
+ 
+
+[35:50] like different, you know, races, ethnicities of of people like just tons of creative variation is like super easy to do. And I think honestly it could replace UGC because UGC creators like suck to deal with nowadays.
+
+ 
+
+[36:05] I would say um one other thing about the uh quality of leads to speak to here. Um as far as the quality goes like we have had sales uh popped through our V3 ads as recent as they are like uh I'm not exactly sure like you are as well because of our recent tracking issues.
+
+ 
+
+[36:25] But we have had and like even with our longer sales cycle, we have had several of these pop very early and some of them even through uh webinar ads and our cost per lead overall is cut in half on average across all of the V3 ads relative to the ads with you in it.
+
+ 
+
+[36:45] And uh along with that the cost per call
+
+ 
+
+[36:48] Yeah, the cost per call is uh down significantly. It's down about $100 like around like a 250 average is what we were running before. like it was like 220 to 250 and now we're down on average of the V3 ads to around like 140 150.
+
+ 
+
+[37:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: Cost Per Call Improvement
+
+ 
+
+NÚMEROS: Before: $220-250 | After: $140-150 average | Best: $60-100
+
+ 
+
+VISUAL: Comparação de custos antes e depois, destaque para melhor performance
+
+ 
+
+[37:10] Top performings are between uh 60 and $100 cost per call right now. So the uh V3 is uh performing by like all metrics uh better.
+
+ 
+
+[37:22] Yeah. Yeah. 100%. Uh, Faith says, "When we run ads, we run them from existing posts and when you post some discuss, Tik Tok asks you to toggle on AI generated if it's AI generated."
+
+ 
+
+[37:37] Um, I didn't do that to be honest. We didn't toggle anything specific on when we ran these ads. Um, somebody told me I I looked in Meta's policies and I didn't see anything to confirm this. Jeremy, I don't know if you have a a take on this or have heard this,
+
+ 
+
+[37:55] but someone said that you're not supposed to have an ad that is entirely AI generated, but I couldn't find a policy that said that. That might just be like a rumor.
+
+ 
+
+[38:05] I haven't I haven't seen any disapprovals or anything from that.
+
+ 
+
+[38:10] Yeah. If if anything, honestly, it's been easier for us to get the V3 ads approved than not.
+
+ 
+
+[38:17] That's actually true.
+
+ 
+
+[38:19] Yeah. Because we're we kind of get roped into the financial services category even though we target insurance agents. So if we say anything with any of the products, they just like flag it. Um, but this has been has been better.
+
+ 
+
+[38:35] So overall lead quality hasn't changed from the stats in percentage of qualified calls. I noticed when I run testimonial ads versus talking heads my ass percentage um close percentage or sales bet on the back end for the V3 ads versus normal talking head ads.
+
+ 
+
+[38:52] No, I mean we've been we how long we been running these ads? Like two and a half, three weeks maybe. That was about Yeah, three.
+
+ 
+
+[39:02] Yeah,
+
+ 
+
+[39:03] about three.
+
+ 
+
+[39:04] Like our sales cycle is about three weeks. Um, but we already have deals that are coming from it. I mean, honestly, I feel like it's kind of hard to especially when you have a lot of ads running. It's hard to actually track like what's the closing percentage from an individual ad
+
+ 
+
+[39:22] because like they're probably seeing multiple of them. And so it's like, you know, they might have clicked on this one, but the one that actually convinced them was a different one. Or it was just the overall frequency of seeing it a ton that actually sold them and convinced them.
+
+ 
+
+[39:38] So I think that that kind of stuff is useful, but I don't put too much stock in it personally just because I feel like you kind of get into a trap where like you just only focus on like the ones that are directly converting when the other ones actually can play a factor as well. Good question.
+
+ 
+
+[39:55] Um, cool. you guys have other other questions on the VO3 ads, I'll I'll share the SOP with you guys. Um, let me just make sure it's anyone with the link can view and then I'm happy to we can either keep creating stuff or I can just kind of do like Q&A.
+
+ 
+
+[40:13] I think we kind of like demonstrated how to do it. I don't want to like
+
+ 
+
+[40:17] just repeat the same thing over and over.
+
+ 
+
+[40:20] After you actually get your uh your videos created, you want you want to emphasize to them what you do from there. Like are you just throwing it into a video editor and like writing text over it and throwing music on it to get the finished product? Anything to tie the bow on this whole thing?
+
+ 
+
+[40:37] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: Post-Production Workflow
+
+ 
+
+NÚMEROS: 5 minutes editing time
+
+ 
+
+VISUAL: iMovie timeline com clipes, menção a VEED.io para legendas
+
+ 
+
+[40:38] Yeah. Uh 100%. One sec. V3 SOP.
+
+ 
+
+[40:45] Yeah. So what I did is I kind of just like I when I first got it, I just wanted to see what the finished product looked like. Normally, I would have sent it to a video editor and had them do do everything, but like here, I have all my clips in iMovie.
+
+ 
+
+[41:00] So, I mean, it'll take me like five minutes to go through and just like chop this up and make it look nice, right? I don't know why it's whacking out, but um anyway, you kind of just like do what you normally would with editing, making them engaging and and cut fast.
+
+ 
+
+[41:17] And then I just added music over them. I found this. There's like this song that is in the video editor VEED.IO, which is what I use to do the the captions. Um, so I just downloaded that song. I add it in on iMovie and then I'll just upload it into VEED.IO and I'll have it automatically do the transcriptions.
+
+ 
+
+[41:38] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: Organic Post Style Ad Format
+
+ 
+
+NÚMEROS: Não especificado
+
+ 
+
+VISUAL: Banner de "compartilhamento orgânico" sobre o vídeo, simulando post nativo da plataforma
+
+ 
+
+[41:40] And then what I did specifically for some of these, I got this idea from you and I totally ripped this off of you and like copy paste um is this thing where you have it almost look like it's an organic post like someone's sharing the ad
+
+ 
+
+[41:55] which I think is a that's a pretty cool way of doing it because it almost is a little more sneaky where it doesn't look like an ad like testing this kind of thing as a banner and then we even did it where it's like our own company sharing the video.
+
+ 
+
+[42:10] And these are performing really well for us, too. But you can make this in Canva in just a few minutes. You don't even really need your video editors to clip it together because you're already kind of putting it um already in the in the right order and and putting the clips together properly.
+
+ 
+
+[42:28] And then it's just like the captions. But like, you know, if I'm in an ad talking direct to camera, usually I'm going to have the video editors fill like some graphics on it and like popups, animations, and things like that. So, it takes a little longer.
+
+ 
+
+[42:43] But with this, like because the scenes are so engaging anyway, you can just like you it doesn't really need much editing. If you overedited these videos, if anything, I think it would take away from it. Um, but yeah, that's pretty much the process I've been doing.
+
+ 
+
+[43:00] Yeah, I can show you with you guys like Yeah. Yeah, exactly. It's like it's more sneaky. Um, but also I think uh you and with some of the stuff that you've done like with your ads like depending on the ones that I've seen is I think the more like the it's like with anything
+
+ 
+
+[43:20] the more you go towards entertainment and it's not still hitting like the main angle of targeting the people you want to target. I think that's where people are probably getting lead quality issues because the videos are so interesting that like anyone will watch them.
+
+ 
+
+[43:37] Like you guys have seen Euan's ad with the PDF method, like that ad's fire. I'm probably never going to buy the PDF method course. Um, but I would watch that whole ad like 10 times.
+
+ 
+
+[43:50] And so I think it's like if you can just take an ad that you already have that's like targeting the right people and then just make it more interesting, I think that's a pretty it's a pretty safe use case for it.
+
+ 
+
+[44:05] And it doesn't take that much effort because you're just like you're literally just talking into your phone or your computer and having it spit everything out for you.
+
+ 
+
+[44:15] Yeah, I think it literally just depends on obviously the offer and who you're targeting, right? If it's like a high ticket 10K product and you're going after like a very specific niche market, it's going to be a totally different ball game than something more mass market, right? So, yeah, just
+
+ 
+
+[44:32] 100%.
+
+ 
+
+[44:33] Keep Yeah, keeping that in mind.
+
+ 
+
+[44:36] Yeah. Yeah. Exactly. Like you got to you got to know what your what's your marketing like for Yuan's PDF method. anyone can buy that. And so that his style of how he put that ad together makes sense.
+
+ 
+
+[44:50] But like for us, like if I did some stuff like that, I'd probably have terrible terrible leads coming in. No one would be qualified. So I just like just had the AI just speaking directly to what I what I would want the avatar to uh see.
+
+ 
+
+[45:08] Bigger issue for call funnels versus low ticket funnel because low ticket you're optimizing for purchase. Yeah. Exactly. Exactly. Exactly. Yeah. So you can drive more traffic if you're getting the purchase and it'll optimize properly.
+
+ 
+
+[45:25] Cool. You guys are there any other questions?
+
+ 
+
+[45:30] Feel free to unmute yourself. You guys got any questions? You can just throw them into the chat. We'll do some final ones here and then we'll wrap it up. Anybody going once?
+
+ 
+
+[45:42] I'll just add something quickly. So, um, on the whole character consistency thing, one f one thing that I found works really well, I know I put a note in the in the telegram, but it might have got better the other day when everyone was going crazy messaging about two or three.
+
+ 
+
+[46:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: Character Consistency Hack
+
+ 
+
+NÚMEROS: Não especificado
+
+ 
+
+VISUAL: Processo: Gerar imagens primeiro → Usar Runway para consistência → Frame to video no Veo3
+
+ 
+
+[46:02] Um, but one thing I found works well is generating images of each scene first. So you can use something like free pick for that and then use the frames to video because with the image generation you can use something um called runway
+
+ 
+
+[46:20] which essentially means you can have the exact same character in totally different settings and then you generate the images of that throw those images into V3 and then from there it's like it's the exact same character even holding specific products or literally any any scene you want.
+
+ 
+
+[46:38] It can be the same character doing it that way and then you can obviously just add voice. But yeah, there's there's so many different ways to to do it, but that's the way I found if you want like consistent characters doing it from images and then using that frames to video.
+
+ 
+
+[46:55] That's fire. Yeah, I think it's I think we're like in the early stages of VO3, like kind of like what UGC was like back in the day. And I think like I think we all have like a crazy window. If you capitalize on it, like I think you can get some some really good results. before everyone else in in your industry catches on.
+
+ 
+
+[47:18] Does VL3 do 16 by 9 or is it always like landscape style?
+
+ 
+
+[47:24] I haven't gotten it to do 16 by 9. Um, I guess you could probably prompt it to just have the character standing like in the middle and then just have your editors clip it.
+
+ 
+
+[47:35] Um, you have you seen anything different? I haven't I haven't
+
+ 
+
+[47:40] What I've usually found is if you want something like super important, for example, you want that specific dimension or anything that's really really important to include in the video, I found that if you include that at the start of the prompt, then it cuts more weight towards that.
+
+ 
+
+[47:58] So, if you was to put the start of the prompt, this video needs to be 16 by 9. It will be hit or miss, but generally you will find that like Timothy there is generating four videos per generation, right? One of those will come out 16 by 9.
+
+ 
+
+[48:15] But yeah, I've not really found a way to get it 100% of the time, but there is ways to do it and that's like the number one way I found.
+
+ 
+
+[48:24] Okay, cool. Thank you.
+
+ 
+
+[48:27] One other thing I will add, this is not necessarily like tied into VO3, but just another way we've been using AI is like basically instead of creating like SOPs within our company, we'll just create a GPT for the team members to use which requires left thinking.
+
+ 
+
+[48:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: AI Workflow Automation - Custom GPTs
+
+ 
+
+NÚMEROS: 45 second monologue → full task breakdown
+
+ 
+
+VISUAL: GPTs customizados: SOP Generator, Task Assignment Generator
+
+ 
+
+[48:47] So like um we literally made a we made a GPT that creates SOPs in like a specific format. So someone can just film a Loom, copy the Loom transcript, paste it into the SOP generator, and it builds the whole SOP for them because like people are lazy. Like I hate building SOPs.
+
+ 
+
+[49:08] So I actually made it more for myself. But like for everyone on our team now, there's no excuse to not document the processes of what you're doing. Like same thing with assigning tasks. Like I literally just I made it where it spits it out in a consistent format.
+
+ 
+
+[49:25] So I can just like voice chat into my phone. Hey, this is what I want this person to do. And I can just have like a 45 second monologue and then it'll assign it into a specific task with like step-by-step instructions and everything written out.
+
+ 
+
+[49:40] And so like any process that you have in your company, you can probably create a GPT that can do a lot of it for you and then you can just give your employees that GPT and teach them how to use it. And so that's been something we've been implementing that's been huge for us.
+
+ 
+
+[49:57] The SOP generator. Yes. Yeah. I have it's like in our company's internal

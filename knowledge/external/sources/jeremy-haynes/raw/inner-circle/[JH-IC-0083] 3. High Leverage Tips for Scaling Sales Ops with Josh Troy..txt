@@ -1,0 +1,641 @@
+Transcrição Completa: 3 High Leverage Tips for Scaling Sales Ops with Josh Troy
+[00:00] "Awesome. Thanks for that, Jeremy. I appreciate it. Yeah, Jeremy's a good friend. We started working together a couple years ago. Like he just said, we've worked on a lot of accounts together. It's been a lot of fun. All different types of acquisition models. So yeah, WFS group stands for wires from strangers. And the name sounds badass, right? But it actually refers to much more because to actually extract a wire from a stranger, we're talking about taking cold traffic and converting them into a trusted raving customer, right?"
+[00:35] "And so, that's what I love about high ticket sales. And there's so many things that really have to happen to scale a sales operation. So, today I was talking to Jeremy and he's telling me, you know, when we're going to speak to this mastermind, he said, 'Dude, bring your best stuff. You know, bring some good stuff. I want to give them some really valuable stuff here.' And I know you guys are an elite group."
+[00:55] "And I'll be honest with you guys, that's hard to do. I'm going to try to keep to like 45 minutes. That's hard to condense a lot of different trainings that I have. I have over 700 slides. And I love sharing stuff about sales ops and marketing strategy."
+[01:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "High Leverage Tips for Scaling Integrity-Based Sales Ops"
+NÚMEROS: 700+ slides mencionados
+VISUAL: Título da apresentação principal, design profissional com foco em "integrity-based"
+[01:20] "So, what I ended up doing for this, I made this presentation a handful of the most high leveraged tips for scaling integrity-based sales ops. And you guys might be thinking like, why did he feel the need to mention integrity base? And guys, I'll just tell you this. Having an elite sales operation that operates with integrity is so much harder than lying to people, right?"
+[01:45] "And so I just want to be extremely clear here. I only talk about integrity based offers, integrity based sales operations. And all of the basics have to happen first before you can scale an offer. You have to have good intentions, right? You have to have strong fulfillment and like Jeremy and a couple other people mentioned today, even Ryan, you want to make sure what you're selling has a lot more value than the money that your customers exchange."
+[02:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Sales Operations Metrics"
+NÚMEROS: 7 métricas principais listadas
+VISUAL: Lista vertical com as principais métricas: Lead Velocity, Lead Quality, Pipeline Velocity, Close Rate, Average Sales Price, Overall Volume, Profitability
+[02:15] "And so today, I'm just going to run you guys through a few things, some of the most valuable things that I've seen. I'm going to talk really fast, too, because it's a lot of information, and I'd be happy to answer any questions or talk to you guys one-on-one while I'm here."
+[02:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Quick Background - Josh Troy"
+NÚMEROS: Started first company at age 21
+VISUAL: Timeline de carreira, ícone de telefone representando cold calling, evolução profissional
+[02:35] "Quick background, won't go much into it, but I started my first company when I was 21 and I really cut my teeth on outbound sales. It was all outbound. I loved outbound sales. I used a bunch of outbound intelligence tools and I would make a lot of cold calls, lots of dials every single day."
+[02:55] "And I'll tell you guys this, when I first started cold calling, I got good through getting hung up on hundreds of times. I've been hung up on more times than a lot of you guys in this room have made calls, right? And I don't say that to brag. I say it actually for the opposite. It was a very hard journey to learn this skill set of really high ticket sales, right?"
+[03:15] "And so anyways, I started with outbound because I believe that that's the truest definition of generating money out of thin air. People that are intentionally reaching out or scheduling like Jeremy said earlier, that's why I love his new strategy. What do you call it?"
+[03:30] "The hydra."
+[03:32] "The hydra. I also love the fact that he brands like all his different strategies. It's funny, but great name. I love it because it compounds outbound strategies and tactics with inbound. I actually like it for a bunch of other reasons, but anyways, that's what I did."
+[03:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Experience Overview"
+NÚMEROS: Millions of dollars raised, multiple industries
+VISUAL: Ícones representando diferentes indústrias, gráfico de crescimento, símbolo de dinheiro
+[03:55] "I've scaled a lot of different sales operations, different offers I've been involved in different companies across different industries. Last thing that I'll say is that I was a partner in a commercial real estate investment firm and my primary responsibility I was in charge of investor relations and capital management."
+[04:15] "And so I've raised millions of dollars from cold traffic through things like webinars and it's kind of similar to the automation space. There's actually a couple automation clients in here that I've consulted and I've built and designed a lot of their different sales processes. And really just ultimately, how do you take a lot of money from someone that you've never met before in a way that feels good to all parties involved?"
+[04:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Connect with Josh - @troy.jshua"
+NÚMEROS: Instagram handle mostrado
+VISUAL: Logo do Instagram, call-to-action para seguir e compartilhar conteúdo
+[04:45] "By the way, guys, this is my Instagram, troy.jshua. If you guys see anything today that you guys like, solid. I'd love it if you guys follow me and share my stuff. I'd love getting connected here and it's an easy way for me to connect with you guys after the fact."
+[05:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Presentation Agenda"
+NÚMEROS: 3 seções principais
+VISUAL: Estrutura da apresentação dividida em: 1) First Principles of Sales Ops, 2) Scalable Model Framework, 3) Sales Architecture and Engineering
+[05:05] "Okay, so here's the thing. We're gonna go I just did a quick intro. I'm going to go over the first principles of sales ops. Basically, like what are the fundamental things that you really have to understand about sales before you even talk about scaling?"
+[05:20] "And I don't come from the position that everything that leaves my mouth is profound, but this is designed to be a very advanced training here. So, I'm not going to say a bunch of the basic stuff that we all already assume if you have a little ounce of knowledge on sales."
+[05:35] "So, basically some of the things that we want to assume first before even scaling. I'm going to talk about kind of like a scalable model framework and a bunch of the boxes that you'd want to check before even knowing that you're good to scale. Or things that will prevent a lot of bottlenecks down the road when you're scaling."
+[05:55] "Then I'm going to talk about sales architecture and engineering type things. Hopefully we'll have some time for a Q&A after."
+[06:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Scaling Sales Ops Has Very Little To Do With Sales"
+NÚMEROS: Nenhum número específico
+VISUAL: Texto provocativo em destaque, design minimalista para enfatizar a mensagem contraintuitiva
+[06:10] "I'll tell you guys this. Scaling sales ops has very little to do with sales. Okay? It always shocks people when I say that every time I talk about this stuff, but here's what here's what I mean. That's like saying that a professional race car driver needs a car. It's like no shit. That's the most basic minimum bare minimum thing that you could have, right?"
+[06:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Required Skill Sets for Scaling Sales Ops"
+NÚMEROS: 5+ skill sets listados
+VISUAL: Lista de competências: Offer Design, Financial Modeling, Forecasting, Tracking & Measuring, Analytics, Transparent Data
+[06:35] "Scaling a sales operation actually has a lot of other skill sets that you'll want to get good at and we're going to go over them on this training. Things like offer design, things like financial modeling and forecasting and tracking and measuring and analytics and transparent data, different things like this, right?"
+[06:55] "I could pick up a phone. I'm always the person to get in the trenches to set an example for my team and I lead a lot of the process on new offers. However, even though I scale sales operations, that's what I do best. I don't spend a lot of my time selling, right? It's all around the process stuff and everything else that I'm going to go over here today."
+[07:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Main Variables We Measure"
+NÚMEROS: 7 métricas principais
+VISUAL: Gráfico circular ou dashboard mostrando: Lead Velocity, Lead Quality, Pipeline Velocity, Close Rate, Average Sales Price, Overall Volume, Profitability
+[07:25] "So, when I was brainstorming, what am I going to talk about to really provide a lot of value to you guys here? How do I brainstorm the most high lever things to speak on? And so what I basically did is I just came up with the main variables that we're always measuring ourselves against as a sales operation, right?"
+[07:45] "These are pretty much the main ones here. We're going to have lead velocity, right? Lots of leads. Lead quality, right? Most of us understand that that's a trade-off between the two, right? You could have more lead velocity by decreasing friction, but then you have lower lead quality. You could have higher lead quality by increasing friction and qualifications, but then you have less lead velocity, right? That's a balanced relationship."
+[08:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Pipeline Velocity"
+NÚMEROS: Foco em redução de tempo do ciclo de vendas
+VISUAL: Funil de vendas com setas indicando velocidade, cronômetro, comparação entre ciclos longos vs curtos
+[08:20] "Then we're going to go over one of my favorite things called pipeline velocity, right? How many people in here have had a lot of good metrics on the front end of marketing and you close a lot of deals, but your sales cycles take forever, right? We've all seen that."
+[08:35] "You want to collapse the sales cycle because here's the thing. I heard something a long time ago. I think a mentor said it to me at one point and he said, 'If you make a million in a month and a million in a year, you guys made the same amount of money. The only difference is the component of time.' So collapsing sales cycles is something that I spend a lot of time focusing on and implementing a lot of process to do so."
+[09:00] "Obviously, we'll talk about close rate, but I'm probably going to talk about it in a different way that you guys usually hear. Then we'll talk about average sales price, overall volume, and profitability. Okay?"
+[09:15] "Just because I was giving some context around it, I'm going to read them through once more. These are basically the main metrics for sales operations. You have lead velocity, lead quality, pipeline velocity, close rate, average sales price, overall volume, and profitability. In other words, you want to do all those things profitably or it was a waste."
+[09:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Creating Sales Operations from the Foundation"
+NÚMEROS: Princípios fundamentais listados
+VISUAL: Estrutura de pirâmide ou base sólida, elementos fundamentais empilhados
+[09:45] "Okay, so here's creating a sales operations from the foundation. Okay, from a foundational perspective before we even get into like selling or whatever it is, these are the things that I would want us to understand."
+[09:58] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Best Sales Strategy Is A Great Offer"
+NÚMEROS: Nenhum número específico
+VISUAL: Texto em destaque, possivelmente com ícone de troféu ou estrela, design enfático
+[10:00] "Okay, these are fairly straightforward, but it's also questions that I get all of the time and I think people overthink it and we have to go back to the basics. Okay, the best sales strategy is a great offer."
+[10:15] "Okay, I'm going to read some of these and I'll give examples in between. Ryan, I love what you said. He was talking about the fact that the value exchange has to be so effortless and mindless in the lead or the prospect's mind. If you guys don't have a great offer, you could be the best closer in the world, it's going to feel like you're rollerblading uphill, right?"
+[10:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Best Offer = Avatar's Problems + Desired Mechanism + Willingness to Pay"
+NÚMEROS: 3 componentes principais
+VISUAL: Equação visual ou diagrama de Venn mostrando a intersecção dos três elementos
+[10:40] "Best sales strategy is a great offer. The best offer sells your avatar's problems where the desired and preferred mechanism is aligned with willingness to pay."
+[10:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Travel Example: Current State → Desired State"
+NÚMEROS: $50,000 para jato privado vs economia
+VISUAL: Ilustração de viagem: ponto A para ilha (ponto B), comparação entre jato privado e voo econômico
+[10:55] "Okay, here's an example of that. Let's say that you guys are taking a trip and you want to go to an island, right? Literally, I talk about current state and desired state. The sales process is just the bridge. Your current state in this literal physical example is you're here. The desired state is you want to go to an island."
+[11:15] "Okay. Do you guys want to go on a private jet for free? Or would you rather take, you know, whatever, what do they even call economy? Or would you what would you rather do if they're free?"
+[11:25] "You want to take a jet?"
+[11:27] "Perfect. Okay, thank you. But a jet is 50 grand actually. Now, which one do you think you're going to do?"
+[11:35] "Right in this example, the common sense tells us economy. So, in other words, we're solving their problem. We're getting them from point A to point B, right? Their desired mechanism is actually a jet, but the willingness to pay isn't aligned with that."
+[11:50] "So, you see how the simplest thing makes it so your offer doesn't scale there, right? So, we're going to come back to this later, but the best offer, it solves their problem, but the desired mechanism is aligned with the willingness to pay. A lot of people misunderstand that gap. Okay?"
+[12:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Best Price Point = Elasticity of Willingness to Pay vs Net Profit"
+NÚMEROS: Fórmula de elasticidade
+VISUAL: Gráfico de curva de demanda, balança equilibrando preço e volume, planilha de exemplo
+[12:15] "The best price point is elasticity of willingness to pay versus net profit. Okay? People ask me all the time, what do we price our offer at? They overthink it constantly. Should I increase it? Should I decrease it? Such a dumb question. Just take it to a spreadsheet and it will tell you."
+[12:35] "It's all going to be about elasticity, right? In price sensitivity, but it has to do with how much can I raise the willingness to pay where the frequency of buyers still nets me more profit. And you can only really calculate that with data and financial modeling. So, I'll come back to it later."
+[12:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Price Sensitivity = Market Comparables + Differentiation"
+NÚMEROS: Exemplo de diferença de preço: $25K vs $80K
+VISUAL: Comparação lado a lado de ofertas, gráfico de posicionamento de mercado
+[13:00] "Price sensitivity will largely depend on market comparables and ability to differentiate. Who has any type of limited knowledge on real estate? Single family real estate, just very limited basic stuff. How do you value a house if you're going to price your house? What do they typically an agent will tell you how you base the price upon?"
+[13:20] "Comparable sales."
+[13:22] "Comparable sales. What have similar homes sold for recently in my area? Then they compare it. Same with the used car. You're going Kelly Blue Book, right? I'm selling this car. They have you put in all the information, the mileage, the year, the model, the make, whatever it is, right? Then they spit out a price that's comparable to that."
+[13:45] "Okay? So, I want to tell you guys something. The market matters. If you guys have an offer and you better believe that people are using the same type of targeting that you are and if they have an offer at 25k and your guys' is 80k and you failed to differentiate, your offer will fail because the price sensitivity."
+[14:05] "They're going to be too sensitive to the price because of market alternatives. So, it's largely dependent on the market comparables and the ability to differentiate. I cannot tell you guys how important that is."
+[14:20] "I've consulted with so many clients and I dive into their stuff and I'm looking at their offer. And by the way, a lot of us are dealing with ROI based offers and info product or alternative education, however you describe it, doesn't matter. It's the same thing. And so I'm going to use a lot of those analogies today, even though this is true for all sales and lead generation."
+[14:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Real Example: $25K Offer Analysis"
+NÚMEROS: $25K price point mencionado
+VISUAL: Checklist de comparação de valor, análise competitiva
+[14:50] "I get under the hood, right? They'll have an offer say, 'Hey, 25K.' And then they'll ask me this. I just met him. I always get asked this. This always comes to price. They say, 'Is that a good price?' I don't know. I don't know anything about your offer. Then I look into it and I tell them no, it's not."
+[15:10] "But the reason I say no a lot of the times is because of comparables. If you just compare the value, the type of content, the quantity, all of these other things to what other people are selling it for, doesn't compare. Okay."
+[15:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Best Platform/Funnels = Determined by Data"
+NÚMEROS: Nenhum número específico
+VISUAL: Ícones de múltiplas plataformas (Facebook, YouTube, etc.), dashboard de analytics
+[15:30] "The best platform or funnels determined by data. A lot of people overthink this. Where should I advertise? Wherever's producing the best results most efficiently, right? Obviously, there's more things that could be said around that, but it's going to be determined by data."
+[15:45] "Sometimes YouTube performs better than Facebook for certain offers. I don't know why. Maybe Jeremy does, but it's just how it works, right?"
+[15:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Best Upsell Strategy = Overdeliver"
+NÚMEROS: Nenhum número específico
+VISUAL: Seta ascendente, ícones de entrega de valor excepcional, cliente satisfeito
+[16:00] "The best upsell strategy is to overdeliver. Again, guys, these are first principles to sales. These are things that are just boiling it down to things that we don't want to overthink, right? You want more people to accelerate and upsell, right? You got to overdeliver. That's obvious."
+[16:20] "And we could go over a lot by the way if you guys have questions on upsells at the end of this presentation because there's a lot of strategies around that. I call it integrated acceleration, right?"
+[16:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Best Optimizations = Won Deals + Lost Reasons"
+NÚMEROS: Análise de wins e losses
+VISUAL: Diagrama de análise de vendas, feedback loop, otimização contínua
+[16:35] "The best optimizations are informed by won deals and lost reasons. I pay a lot of attention. I spend a lot of time analyzing the end of the sales funnel and what happened. I want to know exactly who bought and why. I want to know exactly who didn't buy and why."
+[16:55] "Okay, most of my optimizations all the way back to the top of the funnel and marketing have to do with those things, right? Messaging, resonance, tweaks in the offer, feature benefit things like why didn't they buy and I attack that, right?"
+[17:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Nobody Cares How Much You Know Until They Know How Much You Care"
+NÚMEROS: Nenhum número específico
+VISUAL: Texto inspiracional, possivelmente com coração ou ícone de conexão humana
+[17:20] "Lastly, nobody cares how much you know until they know how much you care. Okay, it's true. And by the way, I'll tell you guys this. The days of like unsophisticated or non-sophisticated, that's not a good word to mess up because it means not smart. But the days of reps not knowing a lot about what they do are over, right?"
+[17:40] "Consumers are educated online. I see a lot of actually different closer pods or whatever it is these days. And they talk a lot about like, well, if you know sales, you don't even need to know the offer. Put them against my guys. Put them against my guys. Right?"
+[17:58] "There's opportunity loss. Product knowledge is highly important and how you communicate that matters and you have to do it in a way that they feel good about."
+[18:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Best Close = Strong Open"
+NÚMEROS: Nenhum número específico
+VISUAL: Funil de vendas destacando a importância da abertura, discovery process
+[18:15] "Oh, I did miss it. Thank you for that. It's very self-explanatory though. A best close is a strong open. Okay. If you didn't open well, and what I mean by that is discovery, finding the pain points, really listening, building rapport, having connectivity, and building that establishing that connection, you're going to have a hard time closing, right?"
+[18:40] "So, so many people, they so many trainings I see, sales trainings, they talk so much about the closing techniques, but I'll tell you guys this, it's about the open and it's about the framing and it's about the objection blocking."
+[18:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Objection Handling Hierarchy"
+NÚMEROS: 3 níveis de vendedores
+VISUAL: Pirâmide ou escada mostrando: Bad Salesman (evita), Good Salesman (supera), Great Salesman (antecipa)
+[19:00] "If you guys are taking notes, this is a good one to write down. A bad salesman avoids objections. Right? Their thoughts, their hopes is that you don't have to write all that part, just the first part. Okay? Write this. A bad salesman avoids objections. Just that. Okay?"
+[19:20] "Their thought, their hope is that maybe it will never come up and they'll just buy because of that. Whether they vocalize it or not, maybe that happens or not, but it's in their head. Believe that. A good salesman overcomes objections, right? You guys all know that though."
+[19:35] "A great salesman knows the objections before their lead and they beat them to it. Okay? I tell leads why they're not going to buy or why somebody wouldn't buy way before they ever tell me that that crossed their mind and I overcome it and I rationalize it and I justify it. Right? That's what that means. The best close is a strong open."
+[20:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Prerequisites to Scale"
+NÚMEROS: Lista de pré-requisitos
+VISUAL: Checklist ou roadmap mostrando etapas antes de escalar
+[20:05] "Okay. So, here's what I call kind of prerequisites to scale. These are all things that have to do with scaling a sales operation, but they need to be addressed kind of from the beginning, right?"
+[20:18] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Market Validation ≠ Product Market Fit"
+NÚMEROS: 2 conceitos distintos
+VISUAL: Diagrama de Venn ou comparação lado a lado mostrando as diferenças
+[20:20] "First of all, I'm going to read through them, and there's some that I have examples and we'll talk about. Okay, first of all, market validation. Market validation is not the same as product market fit. Okay, it's not the same."
+[20:35] "I ask people when I take offers, by the way, I only want to take offers when I'm scaling it with my team that have product market fit. I do consulting on things that aren't there yet. But if I'm going to scale something, it has to have product market fit already."
+[20:50] "A lot of people think they have product market fit, and they don't. They have problem solution fit. Here's the difference. Okay, product market fit, and I have a slide on this I'm going to show you in a second, but product market fit solves for a lot more variables and means that your actual offer is legit and ready to scale."
+[21:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Problem Solution Fit vs Product Market Fit"
+NÚMEROS: Comparação entre 2 conceitos
+VISUAL: Dois círculos ou caixas comparativas destacando as diferenças: Problem Solution Fit (identifica dor + quer solução) vs Product Market Fit (inclui método + preço)
+[21:15] "Problem solution fit just means that you've identified a pain point and your audience wants you to solve it for them. So a lot of people get that confused because they have all these questions on why am I scaling? Why aren't I getting more sales? I know that so many people want that. There's so much demand but I can't close them."
+[21:35] "It's because you have problem solution fit. You don't have product market fit which takes into account the method that you actually deliver it and the price point. We'll go over there in a second. Right. So you have to have those two things."
+[21:50] "Incorporates what? I'm going to show a slide on it, but it's like the method and the mechanism that they want to deliver it at the price point. That's when you have product market fit. Okay, I'll show you in a second."
+[22:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Scale Will NOT Solve Unit Economics"
+NÚMEROS: Ênfase em margens unitárias
+VISUAL: Gráfico mostrando que escala não corrige margens ruins, setas indicando problema multiplicado
+[22:10] "Scale will not solve for unit economics. Okay, won't solve for it. So what you basically are going to want to do is you're going to want to figure out what is your profit margin on an individual unit level. Okay, it's really highly important guys because if you don't have a great margin and if everything doesn't pencil on one unit scale does not solve that."
+[22:35] "That's when your sales go up and your profit margin goes down. Right."
+[22:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "NOPMD Framework"
+NÚMEROS: 5 variáveis (N-O-P-M-D)
+VISUAL: Framework visual mostrando: Niche, Offer, Price, Mechanism, Distribution com conexões e relações entre elementos
+[22:45] "Lastly on this side NOPMD. Okay. So this is something I created right here. This whole entire chart. This right here is maybe the quickest way to explain how to build a scalable offer. It refers a lot to offer design, right? That's kind of the main concept that this is on."
+[23:05] "But what's so interesting about this NOPMD, it stands for niche, offer, price, mechanism, distribution. What's really interesting about this slide that I'm going to share with you guys today is the relationship between the variables. And depending on which you cluster together, they solve for different things."
+[23:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "NOPMD: Business Strategy vs Business Economics"
+NÚMEROS: Top = Strategy, Bottom = Economics
+VISUAL: Diagrama dividido horizontalmente mostrando como diferentes combinações das 5 variáveis resolvem para estratégia (topo) ou economia (base)
+[23:30] "On the top, by the way, if you guys can't see it, it talks about business strategy. On the bottom of those five variables, it speaks to business economics. Strategy, economics, right? Different things."
+[23:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "NOP = Market Validation (Problem Solution Fit)"
+NÚMEROS: 3 variáveis: Niche + Offer + Price
+VISUAL: Três círculos conectados ou equação visual mostrando N+O+P = Market Validation
+[23:50] "Okay, we're talking about market validation and problem solution fit, right? If you look at this chart right here, that's NOP. That's niche, offer, price. Those variables together."
+[24:05] "Okay, let me demonstrate. If you guys have an offer that a certain niche, a certain market segment or audience or avatar wants to buy and they are willing to pay the price for the offer that you're exchanging with nothing else involved, no other factors, you would have problem solution fit. Okay. So again, NOP is market validation, right?"
+[24:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "NOPM = Product Market Fit"
+NÚMEROS: 4 variáveis: Niche + Offer + Price + Mechanism
+VISUAL: Quatro elementos conectados mostrando como o Mechanism completa o Product Market Fit
+[24:35] "But check this out. It's not product market fit because that's going to solve for niche, offer, price, and mechanism. Okay, it factors in mechanism."
+[24:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Mechanism Example: $1,000 Training"
+NÚMEROS: $1,000 price point, 6 horas de duração
+VISUAL: Comparação visual: Chalkboard vs Virtual Webinar, mesmo conteúdo, mecanismos diferentes
+[24:50] "Now, okay, here's the example. Niche, offer, price, mechanism. I'll give you an example, and I'm just coming up with this one right now, so it might not be super compelling, but it will make the demonstration work."
+[25:05] "Let's say that I have a training that I'm going to do. It's a piece of content, right? Or it's a crash course, call it six hours, and I'm going to put you guys through a boot camp on this marketing knowledge that you guys all want to learn, right? And it's $1,000, okay?"
+[25:25] "And so, you guys are the right niche. Let's say that you want to learn that and the offer is okay with you guys and all of you guys can afford $1,000. I technically have problem solution fit."
+[25:38] "But let's say that the entire presentation is on a chalkboard, okay? And I tell you guys that I guarantee there's a lot of you guys here that don't want to buy it now, right?"
+[25:50] "But let's say that I give this to you guys on a webinar and you guys are sitting on your couch, right? It's the same niche, same offer, same price, but now I'm delivering it virtually. I'm coming straight to you in your home. You're on your couch and you're sitting in your pajamas. It's a different mechanism, right?"
+[26:10] "And now you buy because you like the mechanism that I'm delivering the content. Now we have product market fit. You're getting what you want at the price you want it in the way that you want it."
+[26:25] "So it's really interesting because the mechanism makes a big difference. I mean I'll tell you guys this video content courses that's a mechanism. That's a way of delivering your value proposition."
+[26:40] "So to make this extremely clear for some of you guys who might understand the concept but you're struggling to have the application of this information, it would come down to like the pillars in the offer. All of the things that your offer comes with, right?"
+[26:55] "How they're receiving the information if it's an info product. Are they happy with all of the deliverables that they actually get? Because they might like the price and they might want the offer, but they're not happy with the actual mechanism that you're communicating the value through."
+[27:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "NOPMD = Scalable Business"
+NÚMEROS: 5 variáveis completas
+VISUAL: Framework completo com todas as 5 variáveis conectadas, seta apontando para "Scalable Business"
+[27:20] "Now, when you have niche, offer, price, mechanism, and distribution. Distribution is customer acquisition. How you're generating these clients, now you're going to have a scalable business because you've solved for all five of those variables."
+[27:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "OPM = Unit Economics"
+NÚMEROS: 3 variáveis: Offer + Price + Mechanism
+VISUAL: Três elementos conectados mostrando como eles determinam: COGS, Fulfillment Cost, Profit Margin
+[27:45] "Okay, check this out. The bottom three offer price mechanism solves for unit economics. If you have an offer and it costs a certain price based on how you deliver it is going to change your cost of goods. It's going to change your fulfillment cost and it's going to indicate your profit margin. Am I right?"
+[28:05] "Right. So that's the mechanism. That's the method. So the offer, the price, and the mechanism is what you're going to want to evaluate when you're solving for unit economics."
+[28:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Contribution Margin"
+NÚMEROS: Profit margin sem custos fixos
+VISUAL: Fórmula ou gráfico mostrando Revenue - Variable Costs = Contribution Margin
+[28:25] "And you're going to have something called contribution margin. And contribution margin means what is your profit margin on a variable cost level without fixed cost. So in other words, let me say this simpler. How much money do I make from selling this one unit without the rest of all of my fixed cost? Right?"
+[28:45] "So you want to have a strong contribution margin to be able to cover the rest of the business."
+[28:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "NOP = Willingness to Pay"
+NÚMEROS: 3 primeiras variáveis
+VISUAL: Três elementos conectados mostrando como determinam o preço máximo que o cliente pagará
+[28:55] "The first three niche offer price represents solving for willingness to pay because you have to figure out with this niche and with this offer, how much are they willing to pay for it. Okay?"
+[29:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Complete Equation = Business Profitability"
+NÚMEROS: Todas as 5 variáveis + CPA
+VISUAL: Framework completo mostrando como todas as variáveis juntas + Cost Per Acquisition = Business Profitability
+[29:15] "And lastly, the entire equation again solves for the business profitability. The way that you did all of that and then you take into consideration cost per acquisition and all that stuff, now you can solve for business profitability."
+[29:30] "Is that stuff pretty cool?"
+[29:32] "Yeah."
+[29:35] "Yeah, we're following. Is this different than most sales types of content?"
+[29:40] "Cool, guys. It's funny. I don't even really talk about sales when I tell people how to scale a sales operation. Yeah."
+[29:50] "These graphs. Is it cool to send this slide out after?"
+[29:55] "Yeah. Let me get with Jeremy with the best way to do that. But yeah."
+[30:00] "Okay. Thanks."
+[30:02] "Yeah."
+[30:05] "What are some other examples of distribution?"
+[30:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Distribution Examples"
+NÚMEROS: Múltiplos canais listados
+VISUAL: Ícones representando: Affiliate Program, Facebook Ads, YouTube Ads, Webinars, Crash Courses, Challenges, Live Events
+[30:10] "So, distribution is customer acquisition. So maybe it's an affiliate program, maybe it's Facebook ads, maybe it's YouTube ads, maybe it's a webinar model, I'm going to talk about acquisition models, maybe it's a crash course, maybe it's a challenge, right? Maybe it's a live event."
+[30:30] "It's the way that you're bringing in customers. So we all know that some of them are more cost effective than others. So you don't have a scalable business until you actually have a distribution model that works for you profitably. Okay."
+[30:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "MSP: Minimal Sellable Product"
+NÚMEROS: Conceito único de Josh
+VISUAL: Comparação entre MVP (Minimal Viable Product) vs MSP (Minimal Sellable Product), destaque para o conceito original
+[30:50] "Next is MSP. Okay. Who here has heard of MVP? Minimal viable product. By show of hands, most of us, right? It's a pretty popular entrepreneurial term."
+[31:05] "A long time ago, I came up with something called MSP. Stands for minimal sellable product. Minimal sellable product. It's one of my favorite things. I'm telling you guys, this one thing has changed the way that I do business and I've been doing it for a long time."
+[31:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "MSP Definition"
+NÚMEROS: Bare minimum para ir ao mercado
+VISUAL: Diagrama mostrando o mínimo necessário para vender vs desenvolvimento completo do produto
+[31:30] "Minimal sellable product is coming up with the bare minimum that you actually have to have developed or established or ready to be able to take to market, get a response from the market and make some sales before you have to incur a bunch of other costs for something that may or may not work."
+[31:50] "So, I'll give you guys an example of it. And by the way, it's okay if this is you. You don't even have to raise your hand, but I know it's either you or someone you know because this happens all the time."
+[32:05] "How many of you guys, whether it's yourself or somebody that you know, you spend a lot of money developing a product, maybe it's a course or a mastermind or whatever it is, spend all this money developing it. You take it to market and it doesn't sell, right? We've done that. We know people that have done that."
+[32:25] "And the reason why is because they're building the entire product. They don't have market validation and they don't have product market fit. So, what we want to do before we actually have those things and we figure out what resonates with their audience is we want to build a minimal sellable product."
+[32:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "MSP Strategy: Acceleration Models"
+NÚMEROS: 4-8 semanas típicas
+VISUAL: Timeline mostrando venda primeiro, desenvolvimento depois, semana a semana
+[32:50] "Fair enough. So, here's different one of my some of my favorite ways that I like to do that. Acceleration models. Are we familiar with acceleration models? Jeremy's master internet marketing. It is a good example of an acceleration product."
+[33:10] "I'm not saying he does this, by the way. That's a good example though of acceleration model. You have a bunch of information. You're delivering it over a course of time. It's usually like four to eight weeks and you're doing a training every single week, right?"
+[33:28] "The cool thing about that is as long as I know the content that I'm going to go over and I come up with some pitch design and I know how I'm going to sell it, I can take that to market and start selling it with nothing because let's say it's an eight-week acceleration model. I have eight weeks after point of sale to actually build out that product, right?"
+[33:50] "I could build out one per week."
+[33:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Real Example: Grant Cardone Cold Calling Course"
+NÚMEROS: Centenas de milhares de dólares vendidos, 6 meses antes de desenvolver
+VISUAL: Timeline mostrando vendas massivas antes do desenvolvimento do produto
+[34:00] "So when I worked for Grant back in the day, he had this course that he called like something about cold calling, like master cold calling, and we sold the shit out of it. Like we sold I want to say at least a couple hundred thousand dollars worth of the program and he didn't even develop it until like six months later and everybody was always freaking out."
+[34:20] "His staff were always the ones that freak out. They were like, 'Yeah, dude, like we got to get this shit done. Like we've been selling it to people and like Grant didn't give a fuck.' Like you guys don't understand like it doesn't matter. It's like we're developing. But they knew that when they bought."
+[34:40] "That's exactly right. And I like how he said that at the end too. They knew that when they bought it. Sometimes you could be really transparent around that. But a lot of the times you don't have to because you have eight weeks to build one training per week, right?"
+[35:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "MSP Benefits"
+NÚMEROS: Comparação de riscos financeiros
+VISUAL: Dois cenários: Refund pequeno vs Investimento grande desperdiçado, setas mostrando otimização em tempo real
+[35:05] "Here's why that's powerful, though. If it fails, you can refund some people, right? Instead, it's way better. You refund five grand or whatever it is because the offer failed, we're assuming. So, it's not going to be a lot of sales rather than you spend a ton of time, energy, and money developing this whole thing and then it failing, right?"
+[35:25] "So, I've done that before. I've just refunded people. I'm like, 'Ah, this offer sucked.' And then I fixed it, right?"
+[35:35] "But what's even cooler that's more common that happens is it's not converting and so you start tweaking and optimizing it and adjusting the pitch and adjusting the features and adjusting the content, right? You start changing that in kind of real time and your marketing starts improving and then you nail it and you didn't have to redo anything because nothing was built yet. You're just adjusting the offer, right?"
+[36:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "MSP Examples"
+NÚMEROS: Múltiplas opções listadas
+VISUAL: Lista com ícones: Weekly Pod Coaching, One-on-One Coaching, Waiting Lists, Delayed/Dripped Fulfillment
+[36:05] "Weekly pod coaching or one-on-one coaching, waiting lists, right? Pretty much anything with a delayed or dripped fulfillment will give you a lot of time to be able to build it after the fact."
+[36:20] "And so the idea is you go to market with your pitch design, right? You adjust the offer design based on the resonance or the feedback that you get and then you invest resources for product development after you've been able to generate a lot of money."
+[36:40] "Okay, does that make sense? And by the way, guys, do you understand why this is so important? It's not like I'm over here like, I need to make some money right now. I'm just gonna sell something and I'll figure it out. That's actually different because people do that, right? That's different."
+[36:58] "This is strategic because I know I'm not going to go spend a ton of money. And by the way, this is very similar to MVP. I'll tell you this. I know this guy from Silicon Valley. He's made a lot of money building softwares and apps and all this stuff. If you see the first version of it, it looks like shit. It looks like a little website and he's telling me it's some big app, right?"
+[37:20] "But it's because he goes to market with it. He adjusts the offer. He figures out what his audience actually wants and then he starts to build it all out. Okay, I'm going to speed this up a little here."
+[37:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Financial Modeling & Capacity Mapping"
+NÚMEROS: Exemplo: 76 applications projetadas vs 72 reais
+VISUAL: Spreadsheet ou dashboard mostrando projeções vs resultados reais, alta precisão
+[37:40] "Next is financial modeling and capacity mapping. Okay, so here's all I'm going to say. You have to do financial modeling to scale a sales operation. I don't understand this. It's I'll say that this is the most confusing thing me and Jeremy work with. We talk to new clients all the time."
+[38:00] "We're like, 'So, what do you guys want to spend?' They're like, 'I don't know. 250. How's that sound?' I'm like, 'I don't know.' Like, 'Well, what's your cost per acquisition? You know, what's your profit margin? What's this? What's that?' We ask all these questions. They have no idea. And it's just weird to me. It's so weird to me."
+[38:20] "You have to do I have financial models and spreadsheets for every funnel that you guys can think of. Me and Jeremy plug them in all day long, right? And so, I know. And guess what? Here's what's really cool. I projected this one challenge this week. I projected that we would have 76 applications on day three of this event. And we had 72. Right?"
+[38:45] "It's accurate because I've done it a long time. It's very accurate. And so we have that's how we measure everything that we do, right?"
+[39:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Reps Are The #1 Thing"
+NÚMEROS: Exemplo: 4 reps → 30 reps em 2 semanas
+VISUAL: Gráfico de crescimento de equipe, ênfase em número de reps vs revenue
+[39:05] "But not only that, when you're able to build financial modeling and different assumptions. I have other presentations where I show people how to do this. We just don't have time today. But when I do that, what it also shows you is the amount of reps. The number one thing that sales and sales operations is what, Sean?"
+[39:25] "Reps."
+[39:27] "How many reps did you just have?"
+[39:30] "We had four."
+[39:32] "How many do you have now?"
+[39:35] "We have 30."
+[39:37] "In what period of time?"
+[39:40] "Like less than two weeks."
+[39:42] "In two weeks. And a lot of people are going to struggle finding those reps. So, here's the thing. Based on if you guys say, so I don't even talk in terms of revenue anymore, guys. I talk in terms of the stuff that matters."
+[40:00] "I don't tell clients, hey, we need to be at $5 million this month. I tell people, hey, we need 60 reps this month because that's the actionable thing that matters, right? The revenue is going to come based on having all these other things in place, right?"
+[40:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Operational Constraints Beyond Sales"
+NÚMEROS: Foco em fulfillment e bottlenecks
+VISUAL: Diagrama de processo mostrando múltiplos pontos de gargalo além de vendas
+[40:25] "So, you want to know what your capacity is, namely your rep capacity. Then I look at all the other operational lags and bottlenecks to also scale. If you have large fulfillment, Mike, you guys are crushing it at wealth accelerators. You don't have a problem with sales, right?"
+[40:45] "If you could sell twice as many trucks right now, don't you feel confident that you'd be able to sell it?"
+[40:52] "Dude, we could sell 100, but the hard part is just the fulfillment."
+[40:58] "Okay. And he has a great offer. So, this is not the greatest example because he has a strong offer, but there's a lot of fulfillment. But the point is this. You want to look at all the other things, the variable fulfillment and cogs that once you sell it, what are the bottlenecks?"
+[41:15] "What's going to be the hardest things to fix and put strategies into place to overcome those? Because I'm telling you guys, you can't scale a sales operation by making more deals. What are all the other things that are going to be the constraints as you start to do more volume?"
+[41:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Reduce Constraints"
+NÚMEROS: Exemplo: $2M/mês com one-on-one coaching = 5,000 horas
+VISUAL: Cálculo visual mostrando impossibilidade matemática, necessidade de ajuste do modelo
+[41:40] "Okay, reduce the amount of constraints. When you draw up your offer and you're looking at the unit economics and everything that comes up with your offer, look at all the things that you need more of."
+[41:55] "If you have one-on-one coaching and your goal is $2 million a month in revenue. How many hours of one-on-one coaching is that? You know what's funny? Sometimes they're like, 'Yeah, I'm going to be at 2 million a month. I'm doing one-on-one coaching.' I'm like, 'So, you're going to do 5,000 hours of coaching this week?'"
+[42:15] "You know, like a lot of the times you'll find stuff like that. And so, you have to adjust your offer. Okay, maybe I can't do one-on-one coaching. I have to do pod coaching. And then you go back to unit economics and it's more profitable."
+[42:30] "Anyways, my point is you have to limit the constraints."
+[42:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "OTE Modeling (On-Track Earnings)"
+NÚMEROS: Exemplo: $50,000 potencial por rep
+VISUAL: Tabela mostrando quotas, comissões e earnings potenciais para sales reps
+[42:40] "Lastly, OTE modeling. Does anybody know what OTE is?"
+[42:45] "On track earnings."
+[42:48] "Okay, earning potential for the sales rep. So, basically, it's saying if we forecast out and our sales team hits their metrics and their quotas, this is how much they're expected to make."
+[43:05] "The reason that's so important is because if you don't model out your on-track earnings when you're forecasting all this stuff, you might say that you want to be at X amount of dollars per month and you have a model that means that your sales reps would make $50,000 and you're expecting to have great sales reps to sell it, right?"
+[43:25] "Well, now it doesn't work because no sales reps are going to work for you. So, it's really important you consider that and pay your reps well. Okay."
+[43:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Main Constraints Are NOT Sales"
+NÚMEROS: Nenhum número específico
+VISUAL: Diagrama mostrando múltiplos fatores além de vendas: fulfillment, operations, systems, etc.
+[43:40] "Like I said, usually the main things that actually prevent sales operations from scaling are not actually sales or all the other constraints. Okay, I don't have that much left, guys. I'll go through this quickly."
+[43:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Sales Architecture and Engineering"
+NÚMEROS: Seção principal
+VISUAL: Título de seção com elementos de design técnico/arquitetural
+[44:00] "Sales architecture and engineering. Okay, so I have something called the pitch design canvas."
+[44:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Pitch Design Canvas"
+NÚMEROS: Framework para design de pitch
+VISUAL: Canvas ou framework visual mostrando elementos de um pitch efetivo
+[44:10] "Pitch design is everything. Pitch design, by the way, if I just spent my time on sales calls, my value is going to be limited to the amount of calls that I can take, right? That's it. And then I'm maxed out."
+[44:25] "However, pitch design is how I sell through every other rep because I'm designing the entire pitch and training on exactly like the ingenuity, the innovativeness of how we're selling this and then I train all the reps on it."
+[44:40] "And pitch design, by the way, is how you differentiate, is how you increase your prices. It's how you do all of those things. Client facing, right? And you're really illustrating how good your offer design is."
+[44:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Pitch Design Variables"
+NÚMEROS: 6 variáveis principais
+VISUAL: Lista ou diagrama mostrando: Existence Narrative, Current vs Desired State, 3 P's of Pain, Elevator Pitch, Unique Enforcement Frames, Main Pillars vs Details
+[45:00] "So these are just a few variables that I solve for in my pitch design. So if you have a pitch and you want to make it a little bit better, these are just a few things that you're going to want to work on."
+[45:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Existence Narrative"
+NÚMEROS: Nenhum número específico
+VISUAL: Timeline ou storytelling visual mostrando origem do produto/oferta
+[45:20] "The first is existence narrative. A lot of people don't in their sales pitch share why you created the product or the offer. Like how did that happen? It's so compelling, right? It's especially because a lot of people in this space, guys, we all know it. They think that you just want to get rich. You want to make a lot of money."
+[45:40] "And while for most of us that is also a goal, right? There's more to it. And so you want to illustrate how you got to this point. And while you share your story, it's blocking a lot of objections, right?"
+[45:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Current State vs Desired State"
+NÚMEROS: 2 estados comparados
+VISUAL: Duas caixas ou pontos conectados por ponte/seta, representando jornada do cliente
+[46:00] "Second thing, current state versus desired state. That's the entire point of your pitch, it needs to clearly demonstrate how you're getting them from the current state to the desired state."
+[46:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "3 P's of Pain"
+NÚMEROS: 3 elementos: Pain, Problem, Pressure
+VISUAL: Três círculos ou camadas mostrando progressão: Pain → Problem → Pressure (urgência)
+[46:20] "I have something called three Ps of pain. Starts with pain. You have to identify the pain. You have to identify the problem that the pain's causing. And then you have to identify the pressure that's creating urgency for them wanting to solve it."
+[46:38] "If you can't identify those three Ps early on in the sales call, chances are you're probably not going to get the deal because they don't have enough pain to actually want the solution, right? So, I spend a lot of my time on that."
+[46:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Elevator Pitch"
+NÚMEROS: Nenhum número específico
+VISUAL: Exemplo de pitch conciso e impactante, possivelmente com antes/depois
+[47:00] "Elevator pitch is obvious. You have to have a way to explain your offer in a really sexy way. I mean, for Mike, by the way, just so you guys know, we ended up calling it an alternative investment opportunity, and we came up with all these different ways. And dude, was it not freaking awesome?"
+[47:20] "It smashed. I mean, you have to figure out like what is the sexiest way that I could explain this and don't focus on it being super gimmicky, but you can't just articulate what it is. You have to in your elevator pitch say why it's the best thing that they've ever seen, unlike anything else they've ever had. Right?"
+[47:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Unique Enforcement Frames"
+NÚMEROS: Múltiplos frames/conceitos
+VISUAL: Exemplos de frames únicos que justificam superioridade da oferta
+[47:45] "Unique enforcement frames are what I call different little bits, different things that you could explain that really justify why your offer is the best. So, this one's kind of hard to articulate and I wish that I had an actual example in this moment, but basically I take everybody through a closing deck."
+[48:05] "It's a slide deck when I actually extract money when I'm on a closing call and I have visualizations or concepts or stories that help me land certain points other than just simply reading through the details that the product has. Right?"
+[48:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Sell Main Pillars, NOT Details"
+NÚMEROS: Exemplo: $30,000 mastermind, 100% collections, zero planos de pagamento
+VISUAL: Comparação visual: Pilares principais (grandes) vs Detalhes (pequenos), ênfase nos pilares
+[48:30] "Lastly, sell the main pillars, not details. I'll tell you guys an interesting fact. It's just an interesting fact. We have a new client, okay? Sold hundreds of thousands of dollars in the last couple weeks on this new mastermind. Okay? So, it's a $30,000 mastermind."
+[48:50] "So, we got a good amount of buyers on it so far in the first couple weeks here. Not a single person asked me the dates or locations of the mastermind. I just found that so fascinating. I'm like, not a single one of these people even asked me where or when it is. And they bought and they wired 30K and we had 100% collections, by the way. Not a single payment plan."
+[49:15] "So, that really is a good example of sell the main value pillars, not the details. I don't even get into the details because a lot of people what they do is they talk themselves out of a deal because they think that they know every single little intricate detail that the lead wants to see and then you say something that they're like, 'Oh, that's my cousin's bar mitzvah that weekend. I'm not going.'"
+[49:40] "But if doesn't come up and then they buy and now all of a sudden they're down the road and they're going to go to the mastermind, they're going to figure it out at that point, right? Point is, it's just interesting how a lot of people don't care about the details. So, sell the sizzle."
+[50:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Content Funnels & Buying Gradient"
+NÚMEROS: Múltiplos tipos de funnels
+VISUAL: Lista de funnels: Mini Webinar, VSSL, Regular Webinar, Crash Course, Master Class, Boot Camp - todos = Content Funnels
+[50:05] "Okay. Buying gradient. Here's the topic that I'm going to end on. This is content funnels, right? A lot of people, and by the way, this isn't a slash to anybody that has name for these funnels. It's just a way that I communicate them better because certain people refer to certain funnels with different names and then it gets confusing and semantics."
+[50:25] "So like Jeremy, he calls them mini webinar and mini webinar 2.0. And then there's like VSSLs and regular webinars and all these other things and crash courses and master classes and boot camps. I call them content funnels because it's the same shit you're just doing content in different styles and different lengths of time."
+[50:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Buying Gradient"
+NÚMEROS: Progressão de awareness
+VISUAL: Escada ou gradiente ascendente mostrando níveis: Cold Lead → Problem Aware → Solution Aware → Brand Aware → Product/Service Aware → Hot Lead
+[50:50] "The important thing to understand about content funnels, regardless of what you're putting people through to sell your stuff, it's all about the buying gradient. We call it a buying gradient. You have to take people up the gradient to the point where there's enough value, trust, and credibility where they're willing to pay for what you have, right? It's called the buying gradient."
+[51:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Heat Index"
+NÚMEROS: Progressão de temperatura do lead
+VISUAL: Termômetro ou escala de cores mostrando: Cold → Warm → Hot, com níveis de awareness
+[51:20] "And so, here's something we call the heat index, right? From the top of the funnel. They're not that hot of a lead. They go through everything you have in all of your content. They're problem aware. They're solution aware. They're brand aware. They're product and service aware."
+[51:38] "Now, they're the most aware of your solution and everything that you have to solve their problem. And you took them through this valuable gradient with the time that they spent with you and now they're ready to buy and they're a hot lead."
+[51:55] "A lot of the times I'll tell you guys this. If you're saying, 'How do I have a cold lead and how do I make them a warmer lead before my sales team talks to them?' It's content. That's literally it. Have them watch more content. They'll be a hotter lead by the time you talk to them."
+[52:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Every Piece of Content = Closer or Further"
+NÚMEROS: Nenhum número específico
+VISUAL: Setas bidirecionais mostrando que conteúdo pode aproximar ou afastar do negócio
+[52:20] "So, the way that we look at content is every piece of content is getting your audience closer or further away from doing business with you. So, it obviously depends on what type of content it is and how it's designed and what it's supposed to do."
+[52:38] "So, when we talk about indoctrination sequence, he's talking about the Hydra, if I'm remembering that name right, the Hydra strategy. And he's saying he's slamming them with three emails a day. Jeremy's smart and he knows a lot of this stuff and we work together on a lot of this stuff."
+[52:55] "And I'm willing to bet you guys that in those emails there's lots of content. It's not, 'Hey, are you ready? Hey, are you ready? Do you want to jump on a phone call? Hey, did you get my last email? Hey, did you get my last three emails?' That just annoys people. You have to get them content."
+[53:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Capital Raising Example"
+NÚMEROS: $250K-$500K wires, 90% mesmas perguntas
+VISUAL: Exemplo de high-ticket sales com capital raising, processo de indoctrinação
+[53:20] "And so, I'll tell you guys this because it's interesting and it speaks directly to this point. When I was raising capital online from people that I never met before and they're wiring me $250,000 to $500,000 at a time. Obviously, lower amounts, but those were the bigger ones that I would get between a quarter million to 500 grand. Never spoke to them before. Right."
+[53:45] "What was so interesting about this is that 90% of the questions that I would get on this call, and again, Jeremy ran the ads for this, so he's familiar with all this stuff, guys. We would do a lot of this stuff together. Here's what's super interesting. 90% of every question that I would get on every call was the exact same."
+[54:05] "So, I decided, this is bullshit. I'm not answering these questions anymore. So, then in my indoctrination sequence, I told them, I don't talk to people that haven't watched these videos. They jump on and I'm polite about it, right? I'm just being blunt with you guys, but that's what I say."
+[54:25] "They jump on the phone. Have you watched these videos? No. Let's reschedule. That's what I do. Okay. So, what ended up happening is people get on the phone. This is a good one for you, Sean. We'll talk about it later."
+[54:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Result: 'How Does The Wire Work?'"
+NÚMEROS: 45 minutos de vídeo antes da call
+VISUAL: Transformação do tipo de pergunta: de básicas para apenas logística de fechamento
+[54:45] "When people get on the phone and they already watch all this content and they already watch the pitch and I have a 45-minute video on exactly what the investment opportunity is and they jump on with me and they say, 'So, how does the wire work?' Right?"
+[55:00] "That's the question. That's the first question I get and now I'm just closing them basically at that point asking those last couple questions. So you want to use content to push them further down the gradient."
+[55:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Key Acquisition Models"
+NÚMEROS: Múltiplos modelos listados
+VISUAL: Grade ou lista mostrando: Challenge Models, Crash Courses, Webinars, Sales Pages
+[55:20] "Only a couple more slides Jeremy just as an update."
+[55:25] "Cool. So again key acquisition models, content funnels, right? Challenge models crash courses, webinars, even sales pages. It's the same concept. It's the same concept."
+[55:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Content Depth = Decision Weight"
+NÚMEROS: Balanceamento entre conteúdo e CTA
+VISUAL: Balança ou equação mostrando: Quantidade/Profundidade de Conteúdo ↔ Peso da Decisão/CTA
+[55:45] "So what you guys really got to look at because again people overthink it. What type of content should I do in this challenge? How long should my sales page be? Has anyone ever been you guys are agency owners? Has any of you guys been asked that before?"
+[56:00] "Like how long should the sales page be? I see some people's are really long. It's a funny question because there is no right answer except for understanding this concept. Okay. All of your content I think I have a slide on it. I do."
+[56:20] "All of your content, the amount of depth and information of the content has to be balanced out with the weight and size of the decision or the type of call to action. Okay, here's an example."
+[56:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Free Webinar Example"
+NÚMEROS: $0 custo, landing page simples
+VISUAL: Exemplo de opt-in page minimalista, sem risco
+[56:40] "You have a free webinar, have an opt-in page. Have you guys ever seen them? It's like even it'll be like a webinar jam landing page. It's not even branded, right? You've seen that people there's no risk. Such as, 'Hey, it's free. Sign up. Watch it.' There's no risk. Okay?"
+[57:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "$5,000 Offer with Just Credit Card Form"
+NÚMEROS: $5,000, zero vendas
+VISUAL: Comparação mostrando oferta cara com conteúdo mínimo = falha
+[57:05] "If it was a $5,000 offer and it was just a credit card form, they're going to get exactly zero sales, right? So, the reason why is because it's the amount and depth of the information and the weight of the risk of the decision that you're asking."
+[57:25] "So, naturally, if you have a long sales page, you're going to have to have content that is doing all those things that's taking them up the buying gradient. It is the exact same with your different content funnels."
+[57:40] "So, as marketers, as sales people, we really have to look at this because sales operations, I'll tell you, this is why Jeremy and I work so closely together. I can't do my job well if marketing isn't done right because we don't even get the opportunities. We won't even end up seeing them."
+[58:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Real Challenge Example"
+NÚMEROS: $1,000 oferta → $25,000 oferta, mudança de conteúdo dia 3
+VISUAL: Comparação de dois challenges: mesmo formato, conteúdo diferente, resultados drasticamente diferentes
+[58:05] "So, I'll give you guys one example, and I won't say any names, but Jeremy and I work on an account, and they had a challenge model. And what they initially did is they had a challenge model where they ended up selling a $1,000 offer at the end of the week. And it smashed it. They did that a bunch of times."
+[58:25] "Then they said, 'Josh, we need you because we want to sell a $25,000 offer.' I was like, 'Perfect.' First question, 'How do you guys feel about the content of the challenge?' We got it. It's dialed in. It smashes. Trust me, we feel so good about it. Cool."
+[58:45] "We get on the challenge model and I had a heart attack day one. It was the most basic fluffy type of content that you guys could see, right? With respect to what they can offer. They're talented, sophisticated individuals that I respect a lot, but compared to what they could have shared, it was very fluffy. It was very watered down."
+[59:10] "This was going to bomb, guys, right? It was going to bomb. You know it was going to bomb because that content was enough to get the weight of a $1,000 decision. But this would not take them up the buying gradient to be able to get them to pay $25,000 a few days later. Okay."
+[59:30] "So, what do we do? Emergency. Change your entire content. What were you guys thinking? These are the conversations we have. And they did."
+[59:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Application Grading System"
+NÚMEROS: A, B, C, D grades baseadas em qualificação financeira
+VISUAL: Sistema de notas mostrando qualificação de leads, priorização de A's e B's
+[59:50] "Here's what's so interesting about it. I love to see this stuff in real time. We grade our applications. People apply at the end of these different models. We grade them. We talk to the most financially qualified people first. This is obvious, right? If you guys don't do that, you have to, right?"
+[01:00:10] "We want to talk to the people with the money first and the most qualified. It's not always just money. It's like, do you guys want this? Yes or no? Right?"
+[01:00:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Content Change Results"
+NÚMEROS: Dias 1-2: maioria C's e D's → Dia 3+: shitload de A's e B's
+VISUAL: Gráfico de antes/depois mostrando mudança dramática na qualidade de leads após mudança de conteúdo
+[01:00:25] "So what was interesting is on excuse me we didn't change it until day three I believe day one or two a majority of our applications were all C's and D's which I'm not going to share all my criteria right now for time reasons but it's low financial qualifications okay we changed all the content all of the sudden we got a shitload more A's and B's financially qualified people it's all about the content the buying gradient."
+[01:00:55] "I actually saw a couple confused looks. So, let me break that down for a second. What happens is, so we always say as sales speakers, you have to speak to the A's in the room."
+[01:01:10] "I remember when I first started speaking at things like this, I would get really nervous because I'd think to myself like neglecting this side of the room, sorry. Speaking of speaking, I would get really nervous that like some of the things I would say are going over certain people's heads."
+[01:01:28] "And I had a mentor of mine who's actually a business partner of mine, and he'd say, 'Dude, don't even worry. You speak to the A's.' You don't want to cater content that is speaking to the D applications that aren't qualified because that's why you're going to get all these people on the phone that can't afford what you sell."
+[01:01:50] "You want to cater to the A's. You want to speak to the A's, the main perfect fit. And your content has to do that. So, it was just interesting in real time that we change all the content. All of a sudden, the A's start coming on."
+[01:02:05] "But the reason it's more particularly important and interesting is because they were all already on the same training. We didn't have a different audience. It was the same people there, but they received information a different way and they were now interested in what we have to offer."
+[01:02:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Assignment Selling & Nurturing"
+NÚMEROS: 2 métodos de entrega de conteúdo
+VISUAL: Diagrama mostrando: Marketing Automation vs Manual Assignment por Sales Reps
+[01:02:30] "Okay, last two slides here. Assignment selling and nurturing. Guys, there is two ways when you're using content funnels and your different acquisition models. There's two ways that you can deliver content to people. You could do it through marketing automation or you do it manually. Okay?"
+[01:02:50] "And so sales reps that are divas that say I'm not gonna do that because they should have already watched, you know, whatever. And again, I just talked about setting expectations though, right, with content, but that was because I have the content to share with them, right?"
+[01:03:10] "My point is this. If they didn't watch a mini webinar, right, and they come into your funnel and they miss, they don't have a bunch of information. Now, it's your job as a sales rep to still take them up the content gradient."
+[01:03:28] "So, you have to understand that based on where they're at, you have to give them the content as you're working them through the funnel. Hey, by the way, I think that's a fair point. Let me send you a video. I think you're going to really enjoy it. And let's set up another follow-up after this. Right?"
+[01:03:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Commitment Over Compliance"
+NÚMEROS: Princípio chave
+VISUAL: Comparação visual mostrando engajamento genuíno vs obediência forçada
+[01:03:50] "So, assignment selling is really strong. And then what I would say is make sure you have commitment over compliance if you're taking notes. Commitment over compliance. People will do stuff if you tell them to do it, but you want them to want to do it because of the value you have on the other end."
+[01:04:10] "So, you want to be careful about that when you're talking about watch this video. You really want to make sure that it's, you know, they're actually with you. Okay."
+[01:04:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Sales Closing Deck & Pipe Cleaner"
+NÚMEROS: Frequência sugerida: 2x por mês
+VISUAL: Conceito de pipe cleaner event, Zoom call com múltiplos prospects
+[01:04:25] "And then, sales, a closing deck and a pipe cleaner. A pipe cleaner just means, guys, if so, here's a really good way to increase sales. I do it all the time to organizations when I come in."
+[01:04:40] "If you guys want to increase sales and you have a bunch of leads in the pipeline, I call it a pipe cleaner. Based on the time that you could commit to whatever you're doing. Either it's once a month or it's every week if you could or it's twice a month."
+[01:05:00] "I have a pipe cleaner event where I just have a Zoom or a webinar or whatever it is. I prefer Zoom where it's more intimate. You invite everybody that's currently in your pipeline that your sales reps are working onto a call. You do a customized training specifically for those leads or you just do an open Q&A. It's a pipe cleaner."
+[01:05:25] "You invite everybody on. You give them more content and your sales reps invite them to it and then they try to close them afterwards."
+[01:05:35] "When I'm actually on the sales call or when I'm actually get on one of these pipe cleaner calls, I say, 'Hey, by the way guys, I know a lot of you guys are right there on the fence. You're saying, Hey Josh, it looks like you guys have a ton of value, but we're just not sure.' And that's a fair thing to say."
+[01:05:55] "So, let's make sure that you guys find that certainty and today I hope we're able to do that. And then I go into whatever it is. So, it's specific to whatever we're going over or to wherever they're at. That's a pipe cleaner event."
+[01:06:15] "What do you guys think about that one by the way?"
+[01:06:18] "It's solid, right? Because it's so easy. Everybody could do that today, but barely anybody does it. So, just have a pipe cleaner event. Okay."
+[01:06:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Marketing & Sales = No Gap"
+NÚMEROS: Comunicação diária mencionada
+VISUAL: Diagrama mostrando integração perfeita entre marketing e sales, feedback loop
+[01:06:35] "Now, me and Jeremy, the reason we work so well together is because no gap exists between us. I talk to him every single day, right? My girlfriend's jealous. No, I'm kidding. But we talk all the time."
+[01:06:50] "And the point is marketing and sales has to work in tandem. It has to work in unison. And like I said earlier, our best ad ideas, messaging, copy, landing page ideas, mini webinar type stuff and content in these different funnels, it comes from won deals and lost reasons. Okay?"
+[01:07:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Listen to Sales Call Recordings"
+NÚMEROS: Ênfase em múltiplas escutas
+VISUAL: Ícone de fone de ouvido, waveform de áudio, análise de calls
+[01:07:20] "Most of the best messaging tweaks or ideas that I get is from listening to sales calls over and over and over and over again. That's where it happens, guys. If you listen to enough sales call recordings, your leads will tell you exactly what you have to do to get more of them. Okay?"
+[01:07:45] "Say it again."
+[01:07:47] "That last part."
+[01:07:50] "Can't remember."
+[01:07:52] "Oh, I said if you listen to enough sales call recordings, your leads will tell you exactly what you have to do to get more of them. In other words, the information is on the call. You just have to listen to it and you're going to be like, 'Aha, that's what people care about.'"
+[01:08:10] "Or you're like, 'Oh shit I keep hearing this question coming up all the time.' Or you say, 'Wow, literally the last five people said no because of this one thing.' It's all on the sales calls, but people don't listen to sales calls."
+[01:08:28] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Havasu Drive = Sales Call Analysis"
+NÚMEROS: 5 horas de direção = 5 horas de análise
+VISUAL: Ícone de carro, fones de ouvido, dedicação ao aprendizado
+[01:08:30] "I'll tell you guys this. I go to Havasu often. It's a river or a lake or whatever it is where I live, and it's like a five hour drive there and back. I listen to sales calls the whole time. Drives my girlfriend crazy, but I do it because that's where the money is. Okay."
+[01:08:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Four Types of Rep Trainings"
+NÚMEROS: 4 tipos de treinamento
+VISUAL: Quadrante ou lista mostrando: 1) Sales Training, 2) Process Training, 3) Product Knowledge, 4) POV Training
+[01:08:55] "Four types of rep trainings. Okay, four types of trainings that I give. If you're training your sales reps, sales training, obvious, everybody does it."
+[01:09:10] "Process training, maybe half the people do it. Train them on the process and the CRM and everything that you guys have going."
+[01:09:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Product Knowledge Training"
+NÚMEROS: Reps devem completar programa inteiro
+VISUAL: Ícone de certificação, reps passando pelo produto completo
+[01:09:25] "Product knowledge training. If you have an info product or an offer, right, educational whatever and your sales reps have not been through the entire program, that is a mistake. That's a mistake."
+[01:09:40] "They need to be I'll tell you this. We have an offer. We have a client that actually has an offer where you have to be certified on and all of our reps are getting certified because that's how they're going to sell."
+[01:09:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "POV Training (Point of View)"
+NÚMEROS: Quase ninguém faz isso
+VISUAL: Perspectiva do cliente, reps pesquisando como prospects, análise competitiva
+[01:10:00] "Lastly, a training that almost no one does. Mike can attest to this one is POV training. This is really cool and it's super unique. You have to regularly do this. Your reps need to pretend that they're your leads and you send them off onto the internet as if they were looking for you but didn't know who you are."
+[01:10:25] "What are the things they find? What comes up? What are the other offers, right? What are the questions that you have when you're looking? And then what usually happens if you have a main few that comes up is you have battle cards where you know exactly how to sell against those alternative offers. They have to get really good at that."
+[01:10:45] "But you guys get that, right? It's like if you don't even like most reps don't even know what the person saw after they scheduled a call with you. It's really interesting if you think about it."
+[01:11:00] "Think about how powerful Facebook is. It's the reason we all use it. So, what happens when they schedule a call with you and they're on your page and they got put into this interest based category? They're going to see five other automation offers or whatever it is. So, you better know what those ones are that they're going to see."
+[01:11:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Capital and Credit"
+NÚMEROS: Exemplo: 2 D leads fecharam $25K cada
+VISUAL: Ícone de dinheiro, cartões de crédito, múltiplas fontes de capital
+[01:11:30] "Last slide of the day and I'll pass this back to my dog Jeremy is capital and credit. When you're actually closing, our reps are highly trained extraction experts. Part of why I say that is because it's true. The other part of why I say that is because it sounds cool, right? Just being honest with you guys."
+[01:11:50] "But they're extraction experts. And here's what that means. Capital and credit. Okay. So remember, we have lead qualification. This is the last slide. Jeremy just has a cue for you."
+[01:12:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Lead Grading: A, B, C, D"
+NÚMEROS: D = sem capacidade financeira, mas 2 D's fecharam $25K
+VISUAL: Sistema de notas A-D, destaque para transformação de D leads em buyers
+[01:12:15] "So when we are grading applications and we're actually measuring lead quality of our different apps, right? It's largely based on financial capability. A D lead means that they do not have the financial capability to purchase what we have. They don't have the money in their account. They don't have the income and they don't have the credit available."
+[01:12:40] "Okay, we had two D leads yesterday wire $25,000 in full. Because what you guys want to know is that people don't know this stuff. So they think they don't have access to money because they don't have very much financial education."
+[01:13:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Capital Discovery Questions"
+NÚMEROS: Múltiplas fontes de capital identificadas
+VISUAL: Checklist de perguntas: 401k? Stock Market? Financial Advisor? Wealth Management?
+[01:13:05] "So we get on the phone with them and we start asking, 'Awesome. I mean, so if you guys are comfortable with it, if I have your permission, I'd love to go over some personal questions just so I could see if I could help you kind of get creative and get into this community with us. Would you like me to do that?'"
+[01:13:25] "Always ask for permission. Be polite, whatever, right? Yeah, sure. Okay, great. And if they say no, say, 'Well, it's kind of hard for us to help you with limited information because you're telling us that you would like to go where and you're not telling us where you're currently at. So, it's really hard to give you maps to a destination if I don't know where you're currently at, right?'"
+[01:13:50] "And a lot of them will be like, 'Okay, I guess that makes sense.' And then they tell you, you have to There's all these conversations around it. But here's what happens."
+[01:14:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Hidden Capital Sources"
+NÚMEROS: Exemplo: $800K no mercado de ações
+VISUAL: Lista de fontes ocultas: 401k, Stock Market, Financial Advisors, Wealth Management
+[01:14:05] "We start asking them if they have 401ks. We start asking them if they're in the stock market. We start asking them if they have financial advisors. We start asking them if they work with a wealth management company. Right? We start asking them all these questions and all of a sudden, oh yeah, I got 800 grand in the stock market."
+[01:14:25] "You have zero money. Well, yeah, it's in the stock market. You know, you could send one email and get all that money right now, right? That's a good point. And then they send that email."
+[01:14:40] "So, you have to know like how to actually get the money where the money's at. And so, we do it. So, guys, we get big wires from people that say that they have no money all day long."
+[01:15:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Credit Strategy"
+NÚMEROS: 600 credit score mínimo, 0% por 12 meses
+VISUAL: Cartão de crédito, 0% APR por 12 meses, estratégia de financiamento
+[01:15:05] "Also credit. As long as they usually have like a 600 credit score, they can get financed. We also have a lot of training on how to get a 0% credit card for 12 months. Okay?"
+[01:15:20] "And then you ask them, 'Hey, is it your intention? Is it your belief that you're going to want to pay this off over the course of the next 12 months?' I freaking hope so. I do too. But in that case, it's interest free, right? We show them how to get a new credit card. Boom. Same day, put the full amount on the credit card. Okay."
+[01:15:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Integrity-Based Extraction"
+NÚMEROS: Nenhum número específico
+VISUAL: Balança mostrando ética: nunca tirar "cheese off macaroni" ou "shut off hot water"
+[01:15:50] "My point is this, and again, I started this presentation sharing about integrity based sales operations. I don't So, the thing that I say is I'm never going to do anything that's going to take the cheese off someone's macaroni. I'm never going to do anything that's going to shut off your hot water, right?"
+[01:16:10] "So, the point is not to take advantage and put people in the worst financial situation. But, dude, you guys got to know how to find money with people that are willing to pay it if they knew how to find it. And then we just tell them how to do it."
+[01:16:30] "And that's how our average sales price and our overall close rate goes through the roof. Okay, so with the time that I had here today, this is what I prepared for you guys. I hope you guys got a lot of value out of it. But yeah, I'm happy to do any questions if we had any time for it."
+[01:16:50] "Would love to know a little bit more about your the pipe cleaning that you do. So for like automation based offers, would that just be like another webinar instead of like a training or would it be a training on what we do? And how would you do that?"
+[01:17:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Pipe Cleaner Content Strategy"
+NÚMEROS: Nenhum número específico
+VISUAL: Exemplo de conteúdo para pipe cleaner: screen share, client results, how it works
+[01:17:15] "Yeah. So again, remember content from first principles. The content has to be designed to take them up the buying gradient. So how do you take them up the buying gradient? Value, rapport, trust, credibility, likability, authority, all these things."
+[01:17:35] "So if you're to your point, an automation, what'd you say, an investment firm?"
+[01:17:42] "Like a automated YouTube channel."
+[01:17:45] "Yeah. I would screen share and show. By the way guys, this is what it looks like. This is like some of our client results. So this is how it works. I'd break it down for them and spend some time. Then I'd say, 'Hey, here's some case studies. This is what we've done for some of our clients.'"
+[01:18:05] "I would show things that they actually want to see that are going to build trust in them. Yeah. Not another webinar. It's not meant to be like emotional and state of mind and all this other stuff. Like you want to show them the content that's going to get them from not ready to buy to ready to buy."
+[01:18:25] "And in that situation, I would show them the things that they want to see. And it's going to be results. It's going to be how it works. You have to remember this. A lot of people don't invest in things they don't know about, right? If it's confusing to them, a lot of them don't do it. So, break it down. Show them how it works."
+[01:18:50] "On that note, for the pipe cleaner events, are those closed loss and follow-ups or like what specific what's"
+[01:19:00] "I don't do it from close loss because I find that that's not the most leveraged use of our time. We put them into other automation stuff and things like that. Find other ways to re-engage them. But these are leads that are currently in the sales cycle."
+[01:19:20] "So, they're being worked. They have not been marked lost yet. They may have ghosted."
+[01:19:28] "Yeah."
+[01:19:30] "And you haven't heard from them for a few days, but for whatever reason, they're not closed out. They're still there."
+[01:19:38] "Nurture follow."
+[01:19:40] "Yeah."
+[01:19:42] "How often do you do those type of things?"
+[01:19:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Pipe Cleaner Frequency"
+NÚMEROS: 2x por mês recomendado, 20-50 pessoas ideal
+VISUAL: Calendário mostrando cadência bi-semanal, tamanho ideal de grupo
+[01:19:50] "So, it's going to depend on the amount of people because you want it to be high leveraged. If you have one lead, I'm not going to do that often. But if you're scaling up and you have 20 to 50 people and your offer is $100,000 or even $15,000 or $10,000 and you can get that many people on, I would do it every week as often as you can commit to it."
+[01:20:15] "But to answer your question, I typically have clients do this twice a month. Every other week is a cadence that makes sense. And I don't advertise it at all. It's a private invite from the sales rep that's working with them."
+[01:20:35] "If people know that you do it all the time, that's where your show rate gets destroyed. It's like, 'Hey dude, by the way, I was talking to my manager about some of the things that you were saying and like they're valid and we want to answer them.'"
+[01:20:50] "So, we were actually thinking about doing a special training for other people that were kind of in the same position as you. Is that something that you'd want to come to? I think it could answer a lot of your questions and you invite them."
+[01:21:08] "So, yeah, once or twice a month there's someone here. Yeah."
+[01:21:15] "Yeah. For the existence narrative. Is that generally philanthropic or is that can be any premise that makes sense or"
+[01:21:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Existence Narrative Example"
+NÚMEROS: Milhares de clientes prévios mencionados
+VISUAL: Timeline mostrando: Comunidade existente → Demanda do mercado → Decisão de expandir oferta
+[01:21:30] "I mean people want to know that you're good people? I don't lead with that. I also find it's kind of patronizing. Like I don't tell them like you know right before I started this company I went on a mission trip to Mexico and the look on these kids' faces made me decide I need to start a new offer to donate more. Like I think those I don't like when people do that personally. It doesn't feel right. So I don't do that."
+[01:21:55] "But here's an I'll give you an example of a real one that I use right now. I have a client and they already had a very successful community, very successful. Almost all of you guys in this room would know it and I'm just not going to mention it because I don't know if I can."
+[01:22:15] "But point is they had thousands of people that have already purchased one of their offers and it was basically around well I won't even say it did a certain thing and what happened is they got really good at that. I'm just answering a question real quick."
+[01:22:35] "They basically were successful there but they had all these thousands of people that started reaching out and saying dude this was so great but I wish we had the next step like yes this worked but now all of a sudden I'm successful in this part of my business and we're experiencing problems in other places."
+[01:22:55] "And then we said now at the same time we were already building all these other things for our portfolio CEOs because we want them to know how to run their businesses more efficiently so on one hand we had a community with people begging us to do this and on the other hand we were already doing it internally."
+[01:23:15] "So, we just made the decision that we weren't going to be selfish. All of these proprietary methodologies that we built to take advantage ourselves. We decided that we're going to go ahead and offer it to the public."
+[01:23:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Existence Narrative Power"
+NÚMEROS: Múltiplos frames em uma história
+VISUAL: Breakdown mostrando: Demanda (milhares querendo), Credibilidade (já pagaram), Propriedade (metodologias únicas), Decisão (não ser egoísta)
+[01:23:40] "And so, I take them through all this whole timeline that shows them that and they're like, 'Oh shit.' So, dude, there's so much framing in there. I showed them how many people want it. I covered how credible we are. I covered how many other people, thousands of people have already given us money."
+[01:24:00] "I covered how proprietary it is that we already were doing it for ourselves. So, you see how there's so much value in just explaining why we created it."
+[01:24:15] "That's an existence narrative. Cool. I'll talk Yeah, I'm here all weekend, so I'll talk to you guys more. But, uh, yeah, Jeremy, I'm done. It's all you."
+📊 RESUMO EXECUTIVO
+NÚMEROS PRINCIPAIS:
+700+ slides de conteúdo de treinamento
+7 métricas principais de sales ops
+5 variáveis do framework NOPMD (Niche, Offer, Price, Mechanism, Distribution)
+4-8 semanas típicas para acceleration models
+76 aplicações projetadas vs 72 reais (95% de precisão)
+4 reps → 30 reps em 2 semanas (crescimento de 650%)
+$1,000 → $25,000 mudança de oferta
+$30,000 mastermind com 100% de coleta, zero planos de pagamento
+$250K-$500K wires de cold traffic
+90% das perguntas eram as mesmas em calls
+45 minutos de vídeo de indoctrinação
+2 D leads fecharam $25K cada
+$800K exemplo de capital oculto no mercado de ações
+600 credit score mínimo para financiamento
+0% APR por 12 meses estratégia de crédito
+ESTRATÉGIAS E SISTEMAS:
+Framework NOPMD:
+NOP (Niche + Offer + Price) = Market Validation / Problem Solution Fit
+NOPM (+ Mechanism) = Product Market Fit
+OPM (Offer + Price + Mechanism) = Unit Economics
+NOP (primeiros 3) = Willingness to Pay
+NOPMD (completo) = Scalable Business
+MSP (Minimal Sellable Product):
+Vender antes de construir completamente
+Acceleration models de 4-8 semanas
+Construir uma semana por vez após venda
+Ajustar oferta em tempo real baseado em feedback
+Refund pequeno vs investimento desperdiçado
+Objection Hierarchy:
+Bad Salesman: evita objeções
+Good Salesman: supera objeções
+Great Salesman: antecipa e bloqueia objeções
+Buying Gradient & Heat Index:
+Cold → Problem Aware → Solution Aware → Brand Aware → Product/Service Aware → Hot
+Conteúdo = ferramenta para subir o gradiente
+Quantidade/profundidade de conteúdo deve balancear com peso da decisão
+Capital & Credit Extraction:
+Perguntas sobre 401k, mercado de ações, advisors financeiros
+Identificar capital "escondido"
+Estratégia de 0% credit card por 12 meses
+Nunca "tirar cheese do macaroni" ou "desligar água quente"
+Pipe Cleaner Events:
+Frequência: 2x por mês
+20-50 pessoas ideal
+Convite privado do rep
+Conteúdo customizado para leads em nurture
+Screen share, case studies, how it works
+ESTRUTURA:
+Prerequisites to Scale:
+Market Validation (≠ Product Market Fit)
+Unit Economics (scale não resolve)
+Financial Modeling & Capacity Mapping
+OTE Modeling (On-Track Earnings)
+Constraint Reduction
+Pitch Design Canvas - 6 Variáveis:
+Existence Narrative (por que criou)
+Current State vs Desired State
+3 P's of Pain (Pain → Problem → Pressure)
+Elevator Pitch (sexy explanation)
+Unique Enforcement Frames
+Sell Main Pillars, NOT Details
+4 Types of Rep Training:
+Sales Training
+Process Training (CRM, systems)
+Product Knowledge (completar programa inteiro)
+POV Training (perspectiva do cliente, pesquisa competitiva)
+Lead Grading System:
+A leads: financeiramente qualificados, alta intenção
+B leads: qualificados mas menor urgência
+C leads: baixa qualificação financeira
+D leads: sem capacidade financeira aparente
+DADOS FINANCEIROS:
+Contribution Margin = Profit sem custos fixos
+Unit Economics deve funcionar antes de escalar
+Financial modeling permite projetar com 95%+ precisão
+Foco em número de reps, não revenue
+OTE modeling previne problemas de retenção de reps
+Market comparables determinam price sensitivity
+Elasticity: maximizar preço onde frequência de buyers ainda gera mais profit
+Content depth deve balancear com decision weight
+DURAÇÃO: ~1h 24min FORMATO: Apresentação de mastermind com Q&A

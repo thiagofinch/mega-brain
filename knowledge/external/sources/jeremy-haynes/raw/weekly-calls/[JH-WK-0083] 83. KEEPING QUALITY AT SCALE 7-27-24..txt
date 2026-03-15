@@ -1,0 +1,1323 @@
+Transcrição Completa: 83 Keeping Quality at Scale 7 27 24
+
+ 
+
+[00:00] All right, awesome. So, this week we had a topic request from Jacob. Uh, Jacob's one of our long-term inner circle students. Uh, his business partner Jordan. They run a company called Growth Partner. And long story short, they've had a similar issue that a few people have also experienced in the group now, which is to be clear in his own words, it would be cool to have a weekly session on how to maintain stability at scale.
+
+ 
+
+[00:28] We have crazy fluctuations in our accounts. Might also be helpful for others. And he's absolutely right. So to be clear, this in hindsight after usually I go through it will be very obvious for why you experience fluctuations. And the fluctuations generally come from a few main things that cause these fuckups and they're all very simple, believe it or not.
+
+ 
+
+[00:51] So we'll go through it together one by one and we'll make sure that you guys understand it. So number one, when it comes to the fluctuations of revenue, first of all, it's important to note that everything is more extreme the bigger the number is.
+
+ 
+
+[01:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Revenue Fluctuation Scale Comparison"
+
+ 
+
+NÚMEROS: $70K-$100K (30% difference, $30K gap) vs $700K-$1M (30% difference, $300K gap)
+
+ 
+
+VISUAL: Comparação lado a lado de flutuações de receita em diferentes escalas, destacando que a porcentagem é igual mas o valor absoluto é 10x maior
+
+ 
+
+[01:15] So when you have more revenue, simply put, the fluctuations are going to appear like they're wider than the fluctuations that you deal with at smaller levels. So you think that you're actually fluctuating more when you scale when in reality you're likely experiencing the same fluctuations that you had at smaller levels.
+
+ 
+
+[01:35] So an example of this like let's use the example you're boopping around between like 70k a month and 100k a month. Okay. Now to be clear that's a 30k difference but in this example that's about a 30% difference when you really break it down.
+
+ 
+
+[01:52] Now when you look at this on a on a bigger scale once again it's like if I go from you know the same level of 700K to a million it's like that is a 300k difference. However it's the same in terms of percentages.
+
+ 
+
+[02:08] So to be clear in this example the first thing I just want to point out is over here it's only 30k but here we have a 300k. Obviously, just for pointing this out so we're all on the same page, just put into the chat real quick. Yeah, they're both 30%, but you're going to feel 300K versus 30K, a lot more, right?
+
+ 
+
+[02:30] If I if I only lose, you know, a little $30,000, it's like that's not that much. But 300K, it's like it's perceptually a whole lot different, right? So, first of all, it's important to note it's just the more revenue, the more extreme everything is. Okay?
+
+ 
+
+[02:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "More Revenue = More Extreme Everything"
+
+ 
+
+NÚMEROS: N/A
+
+ 
+
+VISUAL: Frase de destaque em negrito, conceito central da apresentação sobre percepção de flutuações
+
+ 
+
+[02:52] So, long story short, more revenue feels more extreme. Now, you can attack these problems when you're at smaller levels. It doesn't just have to happen when you're at the bigger levels, but you have more of an incentive at the bigger level.
+
+ 
+
+[03:08] that's usually why you're going to start paying more attention to it. And that's usually why when you're at smaller levels, you don't really pay much attention to it because simply put, you're focused on scale on on simply put like making more when you're at the smaller level.
+
+ 
+
+[03:25] And long story short, you're typically focused more on retention. Like what what Jacob's essentially asking for, just so we're all on the same page, is he's essentially seeking stability. Okay, he's seeking for that fluctuation to not exist and for that number to go into a tighter range.
+
+ 
+
+[03:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Causes of Lack of Stability"
+
+ 
+
+NÚMEROS: N/A
+
+ 
+
+VISUAL: Lista de causas principais que serão exploradas: Distração, Problemas Pessoais, Viagens Internacionais, Novos Negócios
+
+ 
+
+[03:48] And let me give you a few specific examples of what causes a lack of stability. Okay, so lack of stability can come from first of all distraction. Now distraction comes in many forms.
+
+ 
+
+[04:02] One thing that I've recently heard specifically about Jacob and Jordan's business is instead of taking their attention and putting it 100% into the main revenue driver, which is their growth partner business, they've chosen recently to consider starting up as much as three other businesses.
+
+ 
+
+[04:22] If you take your attention off of the main thing and you start diversifying it, put in the chat, does that help you or hurt you when it comes to the stabilization of the main thing's revenue. Yeah. Hurt hurt.
+
+ 
+
+[04:38] You see, so it's very important first of all that if you take your attention like this happened with Dan Lock, you know, I'll never forget that example. This poor guy gets up to $2 and a half million dollars a month for like I don't even know Gabe without exaggeration how long did we hit $2.5 million a month for like two to 2.5 mil a month. How long was it in terms of time?
+
+ 
+
+[05:05] [GABE:] I would say like definitely three to six months
+
+ 
+
+[05:08] of just consistently clearing two to two and a half mil a month. Okay. So that's like six to upwards of $12 million.
+
+ 
+
+[05:18] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Dan Lock Case Study: Distraction Kills Stability"
+
+ 
+
+NÚMEROS: $2-2.5M/month for 3-6 months = $6-12M total, 40 different companies purchased, $400K domain, $300K domain
+
+ 
+
+VISUAL: Caso de estudo destacando as consequências de distração extrema, múltiplas aquisições empresariais simultâneas
+
+ 
+
+[05:22] And the the expenses of the business were I mean pretty low minus ad spend which was probably the greatest expense. There wasn't a lot else that was fucking that business in terms of expenses. You know what Dan chose to do with all the money? If you said distraction, you're right. He went and bought 40 different companies. 40. Okay.
+
+ 
+
+[05:45] Gabe says he bought 400,000 domains.
+
+ 
+
+[05:48] [GABE:] He he bought he bought one domain for 400k.
+
+ 
+
+[05:52] Okay.
+
+ 
+
+[05:53] [GABE:] And another one for 300k. So yeah, distractions.
+
+ 
+
+[05:57] It's like, dude, you know, if you buy a domain for $300,000 or $400,000, like you're going to have to put attention into that. You see what I mean? And that's the illusion when you're seeking stability is that you can focus elsewhere. Okay?
+
+ 
+
+[06:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Types of Distraction"
+
+ 
+
+NÚMEROS: N/A
+
+ 
+
+VISUAL: Lista categorizada: International Travel (não travel regular), Starting Other Businesses, Personal Problems (relacionamentos, drogas/álcool, fame)
+
+ 
+
+[06:18] Distraction comes in many forms. Uh very frequent one and let me be specific on this one because it's generally not just regular travel. It's international travel. Huge huge red flag when I'm doing a deal and they start fucking off and traveling and just going abroad and leaving things for whoever's in the business at that time.
+
+ 
+
+[06:42] huge fucking distraction. Uh starting other businesses once again in the examples that we just provided, they strip you of attention. Okay, there's many other individual distractions I could sit here and list. I'll give you another good one.
+
+ 
+
+[06:58] I won't say this person's name because this is more of a personal thing. So, we were just talking to a a long-term person we've been pitching. Okay, this person's well known inside of the real estate info product space.
+
+ 
+
+[07:12] And long story short, you know, Leo and I were super excited. Leo finally gets this guy on a call. We we tee up the sales call, you know, we pitch him on the tornado. Obviously, it makes sense to the guy. He's like, "Sweet." Like, "Let me connect you to my COO." We get into the sales process.
+
+ 
+
+[07:30] were like two or three follow-up calls deep and then boom, personal problems. The guy ends up Leo, unmute yourself and tell me what happened to who you know I'm talking about.
+
+ 
+
+[07:42] [LEO:] Yeah, it's uh it's Cody Spurber as soon as you say his name. Okay, but
+
+ 
+
+[07:48] Oh, sorry.
+
+ 
+
+[07:49] [LEO:] Say the specific problems. Oh, he he wanted to stop doing my bad. I'm doing video pitches, too. So, um he he wanted to stop coaching. Um he just announced this cuz he was going through uh a midlife crisis. I think he was he was ending a relationship with his current girlfriend. Then he wanted to stop coaching. Um, so it was just kind of like out of the wing, left wing, you know, he was pump on our calls, but then few days later he just announced and he put this on his stories on Instagram. So yeah, we wouldn't.
+
+ 
+
+[08:25] So this kind of stuff, this kind of stuff comes up. Thank you, Leo. This kind of stuff comes up out of the blue, you know, and we've had that happen over the years with with I mean, to be fair, like some personal problems are are not within your control.
+
+ 
+
+[08:42] personal problems can you know manifest in the form of like somebody dying as an example or or like sickness or disease. Um you know those things I'm I'm not specifying to be clear. I mean you know to be fair yes they will cause you know issues and they will they will lower your stability of course but you know some of these personal problems the ones I'm specifically specifying are the ones that are more within your control.
+
+ 
+
+[09:10] you know, and getting into the right relationships. Uh, simply put, making sure that your your home life is stable. That's the easiest way to describe it. Um, in addition to that, I would also encourage to look out for drugs and alcohol under this category.
+
+ 
+
+[09:28] Uh, I've had maybe one or two instances over like my, you know, 11 year ongoing career now as an agency owner and marketer where somebody makes a fuckload of money and like they just start doing pills or something, you know, or they start doing like a lot of partying, you know, and in some instances, to be fair, believe it or not, this actually comes as a result of them becoming well-known or some kind of fame.
+
+ 
+
+[09:55] You know, they get access to opportunities that they previously didn't get access to. More rare. more rare for sure. But regardless, international travel, okay, starting other businesses, personal problems, these all manifest in a lack of stability in the business's revenue and that typically leads to wider fluctuations. Okay?
+
+ 
+
+[10:18] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "What Causes Stabilization: FOCUS"
+
+ 
+
+NÚMEROS: N/A
+
+ 
+
+VISUAL: Transição de problemas para soluções, destaque principal na palavra FOCUS como solução primária
+
+ 
+
+[10:22] So to be clear, outside of these specific issues, okay, when it comes to to what can deter stability, allow me to focus on what's going to cause you to stabilize. Okay? So when you when you seek stabilization, finally, the main thing when you seek the stabilization, first of all, focus. Okay?
+
+ 
+
+[10:45] You have to really dial in the attention into the business full-time. I was just talking to Tom yesterday, okay? I was doing a one-on-one call with our inner circle student, Tom. And dude, Tom's over here telling me he's boopping around between like a certain range of revenue for, you know, who knows how long right now.
+
+ 
+
+[11:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Tom's Business Issues - Case Study"
+
+ 
+
+NÚMEROS: 2,400 video pitches/month
+
+ 
+
+VISUAL: Lista de problemas identificados: Poor retention, Occasional bad deals, Abandoned working strategy (video pitches), Tested new unproven strategy for 45 days, Not involved in operations
+
+ 
+
+[11:12] And when you just dig into it one by one by one, this is actually Tom and I's notes from our conversation yesterday. It's like there's so much fucking going on in Tom's business that's clear as day. Like his retention's poor. He occasionally onboards a bad deal.
+
+ 
+
+[11:28] Uh Tom went all in on a new a new sales strategy. You know, rather than specifically focusing for him, it's video pitches. This dude's sending 2400 video pitches a month. It's consistently kicking out deals for him.
+
+ 
+
+[11:42] And then over the last 45 days, Tom just goes 100% into to a new test, completely bails on what's working, you know, and then doesn't get any new deals, loses some revenue because his retention had issues.
+
+ 
+
+[11:58] And the main thing that's like really fucking Tom a lot is just he's not involved in the operations anymore. So when I specifically list here focus, okay, what I'm specifically talking about is remember when you're at lower levels of revenue, what are you doing? You are fucking in the trenches. You are in the weeds, okay?
+
+ 
+
+[12:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "In The Trenches vs Out Of The Weeds"
+
+ 
+
+NÚMEROS: $500K/month milestone (3 attempts)
+
+ 
+
+VISUAL: Comparação visual entre estar "nas trincheiras" (envolvido) vs "fora do mato" (desconectado), usando James como exemplo positivo
+
+ 
+
+[12:25] You are trying to figure out what works. You are in the business. Like a great example of this is like take James right now. Dude, James got the business up to 500K like three times in the last several months, you know?
+
+ 
+
+[12:40] And then the first time around the salespeople get overwhelmed. The second time around the fucking ad account goes down from a payment method verification issue. This is the third time that he's cracking 500k a month. Okay?
+
+ 
+
+[12:55] And he's going to get above it this time because he's fucking locked in. Like if I ask James like, "Hey, tell me the best performing ads in the business right now." You know, tell me where the drop off is in the VSSL. Like tell me what's going on with the sales team. He knows every single thing happening in the business because he's in the fucking weeds, okay? He's in the trenches.
+
+ 
+
+[13:18] And some people will demonize this. They'll say, "Oh, that's that's not what a good business owner will do." It's like, "Who the fuck are you listening to? Are you listening to the people who own Walmart, you know, and have completely systematized and taken themselves out of the businesses by replacing themselves with worldclass executive and manager talent, you know, is that you? Have you done that yet? No.
+
+ 
+
+[13:42] Like, you're your greatest asset. You are likely the greatest driver of revenue in your business. So it's important to note when you remove yourself from the trenches, okay, where where data is consistently giving you signs of what to do and what not to do, what needs to be done next, and you just solely rely on your people to give you that information. Okay?
+
+ 
+
+[14:08] And and hopefully you have great people who are actually going to do that. But I mean, God forbid you hired some mediocre folks, you know, that's going to limit the growth. That's going to cause for some instability to occur.
+
+ 
+
+[14:22] So, once again, when I say focus, what I mean is is like, dude, you lock the fuck in. You tap in. You get with the data. You look at everything. You hear what's going on. Ear to the ground. Okay? That's what focus means. You do not remove yourself.
+
+ 
+
+[14:38] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Mark Jennison Case Study: Psycho Focus"
+
+ 
+
+NÚMEROS: $1M-$2M+ per month revenue range
+
+ 
+
+VISUAL: Exemplo extremo de foco obsessivo, contato diário múltiplo, questionamento constante sobre calendário e métricas, resultado: venda para private equity
+
+ 
+
+[14:42] you you focus on the next highest revenue driven action every single day. You push people. One of my favorite people I've ever worked with. Some people would call this annoying. And to be fair, at times I even interpreted it that way. A guy who's in our inner circle, his name is Mark Jennison.
+
+ 
+
+[15:00] I've talked about Mark many times throughout the years since we've had a lot of success on that deal. And it's important to note Mark is I would honestly articulate him as fucking psycho. Okay, Mark will contact me every single day. Every single day. Multiple times a day.
+
+ 
+
+[15:18] Like if he wakes up and the calendar's not full, he will hit me up since I'm responsible for filling up the calendar at this time when we're doing the deal and be like, you know, what can we do to get the calendar full today?
+
+ 
+
+[15:32] He's not hitting me up like a fucking Like, why is the calendar not full? He's asking the right questions. What's what's missing? Like, what do I need to do? What do you need to do? Do we need to spend more? Is something fucked up? Like, what's happening? What's causing this issue? You know, and I mean, look, I'm one to generally articulate to you, you should not be doing fucking in the ad account every day.
+
+ 
+
+[15:55] I'm I'm I still believe that today to be fair. you should a majority of the time kind of sit back and almost kick back and and let the data tell you over a 72-hour window whether you need to tweak something or not. But dude, not in Mark's business. You don't get that opportunity in Mark's business.
+
+ 
+
+[16:15] Mark will not tolerate that. He will press every single individual in every single department to fucking get that revenue up. And and look at the result the guy got at that specific time. The guy's boopping around between like a million and $2 million dollars plus a month. Okay. And then he sold the business to a fucking private equity firm.
+
+ 
+
+[16:38] Now, to be clear, it's important to note that level of involvement. I I have seen that like literally if I quantified every deal I've done, Mark would be like a single statistic for how many people have actually done that in a deal. It just doesn't happen.
+
+ 
+
+[16:55] Because once again, the advice that's commonly given that most people will follow as they make more money is they think to themselves the right advice to listen to is I need to do less in the business as I make more money. I need to be less involved as I make more money.
+
+ 
+
+[17:12] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Bad Advice: 'Do Less As You Make More'"
+
+ 
+
+NÚMEROS: Billion dollar companies, Multi-hundred million companies, High 8-figure companies
+
+ 
+
+VISUAL: Alerta sobre conselho comum mas perigoso, contexto de quando esse conselho é válido (apenas com world-class talent)
+
+ 
+
+[17:15] And once again to be clear that advice is handed down by executives who run billion dollar or multihundred million dollar companies or high high eight figure companies and organizations who have worldclass talent that literally enable them to not have to do that.
+
+ 
+
+[17:32] And like I said if you do not have that worldclass talent you do not get to follow that advice. Okay? You lock the fuck in. you tap in and you push everybody. You push each department, okay?
+
+ 
+
+[17:48] And you don't do so once again in a fucking way. You do so in a way where it's the right questions being asked. You do so in a way where it's like, "What resources are we missing that I need to put towards you?" You know, like what's happening here? What's preventing this from from going the right way? Okay.
+
+ 
+
+[18:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Allocation of Resources"
+
+ 
+
+NÚMEROS: 10-20% typical sales team payment
+
+ 
+
+VISUAL: Breakdown de departamentos principais: Ad Spend, Organic (Content Budget, Shoutouts), Staff, Sales Team (10-20%)
+
+ 
+
+[18:12] in addition to the focus which once again I just want to stress this is just an excessively critical you know sub point I want to make sure you all really put attention on. Okay. So, outside of the focus, once again, if we look at some of these other variables, it comes down to, oh man, I don't I don't even really know what this word is.
+
+ 
+
+[18:35] I mean, I guess you could say it's it's uh like allocation of resources, you know, when you specifically break down like what's working in a business,
+
+ 
+
+[18:45] [SIRI:] okay, and you find something particular. Hey Siri, set a reminder for
+
+ 
+
+[18:50] when you specifically look at what's making the most money and what is not making the most money, there's generally like a shift in where money needs to go. Okay, so as an example of this, what you'll sometimes consider is, you know, as an let's just break down your departments. Okay, you have ad spend.
+
+ 
+
+[19:12] Uh you might have, I don't know, like organic. organic can be compartmentalized into like your content budget. Maybe you're paying for shoutouts, you know, like any kind any kind of once again thing that's classified under these different these different categories. You have staff, you have the sales team.
+
+ 
+
+[19:32] Now to get you to a certain point like you might have put you know a little bit of money towards ad spend and you might have put this is very common you know like you can typically get to like one to 300k a month organically if you got a decent following and you're consistent with content you know you might have put historically like a little bit of money towards staff and most businesses will pay anywhere from like 10 to 20% to their sales team so generally that's a pretty good chunk okay
+
+ 
+
+[20:02] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Plateau Pattern"
+
+ 
+
+NÚMEROS: $300K ceiling example
+
+ 
+
+VISUAL: Gráfico mostrando dinheiro vs tempo, padrão de platô repetitivo (hit ceiling → drop → hit ceiling → drop), janela de limitação identificada
+
+ 
+
+[20:05] but once you reach a certain point where you can kind of recognize like there's some kind of financial plateau occurring. So, let me give you a visual of this. Okay, if we have money and down here we have time. Okay, what will happen is is like you'll reach a certain point and then you'll just kind of plateau.
+
+ 
+
+[20:28] Generally, how this will end up looking in a more specific way is like you'll hit the plateau and you'll kind of bop back down, hit the plateau, bop back down, hit the plateau. You never really break the ceiling. There's like a limitation that occurs in this specific window. Excuse me.
+
+ 
+
+[20:45] This window in particular, the ceiling. This is when you want to look at this specific lesson when it comes to stabilization is where do I need to reallocate my resources? Something's not working if you consistently hit a ceiling. Okay.
+
+ 
+
+[21:02] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The One Thing - 4 Hour Focus Window"
+
+ 
+
+NÚMEROS: 4 hours per day
+
+ 
+
+VISUAL: Lição do livro "The One Thing" por Brandon, conceito de janela de 4 horas focada em um driver principal de receita
+
+ 
+
+[21:05] So, one thing that we talked about at this mastermind, we uh had Brandon come in on Saturday night and he did, you know, one of his usual talks and he focused specifically on this lesson from a book called The One Thing.
+
+ 
+
+[21:22] And long story short, just to boil it down to the simplest, you know, sentence of that book, you want to have a 4hour window in a day focused on one main driver of revenue. You know, one main thing that can make a substantial difference.
+
+ 
+
+[21:38] Now, if you specifically take that lesson and you look at it like allocation of resources instead of time allocation, I would I would consider that if you hit a ceiling consistently and you fail to break through it, there's likely something different that has to have money prioritized or people thrown at it in order to break through that ceiling and hit the next levels.
+
+ 
+
+[22:02] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Growth Partner (Jordan & Jacob) Resource Allocation"
+
+ 
+
+NÚMEROS: $300K-$500K monthly range
+
+ 
+
+VISUAL: Breakdown do negócio: Sales team, Call funnel básico, Ad spend em Twitter/YouTube/Facebook/Instagram, Facebook/Instagram como maiores drivers
+
+ 
+
+[22:05] So, this changes. So like as an example, if we look at Jordan and Jacob's business for their growth partner who requested this topic today, one thing that they are currently doing, you know, they have their sales team that takes all their sales calls. They're running a a pretty basic call funnel.
+
+ 
+
+[22:25] They have ad spend allocated towards Twitter, YouTube, uh Facebook, Instagram, and you know, Facebook and Instagram are one of their biggest drivers, okay? And they're they're right around the same level, you know, like give or take the month, they're right around the same thing that some of you guys are also dealing with. 500K to 300K, 500K to 300K. It's like they range in that same that same area. Okay.
+
+ 
+
+[22:52] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Risk Mitigation Strategy"
+
+ 
+
+NÚMEROS: 5:1 or 3:1 profitability ratios
+
+ 
+
+VISUAL: Estratégias de mitigação de risco: Múltiplas contas aquecidas, Consultores/anunciantes mais inteligentes, Estabilização de canais
+
+ 
+
+[22:55] Now, the plan in this case sometimes has to change like the scaling plan for when you spend money versus when you pull it back a little bit. Um, sometimes you just need to do scaling math again like is it a specific channel that's driving all the revenue? Does it deserve more spend?
+
+ 
+
+[23:15] And did that specific channel cause some instability and that's what causes the pullbacks? Then you might need to implement like a risk mitigation strategy which in this case still falls under the allocation of resources lesson. I need to throw smarter people at that specific problem.
+
+ 
+
+[23:32] Okay, maybe a consultant, maybe a different advertiser, whoever's responsible for that department needs to have multiple ad accounts warmed up, spending money, you know, that way it stabilizes the channel more. Okay, to be clear, the allocation of those resources, I just might need to push a fucking ton more money into ad spend.
+
+ 
+
+[23:52] Sometimes I talk to people and like they're profitable, you know, five to one or three to one. Like they got profitable campaigns and they'll have these narratives, okay? They'll have narratives that they talk about that are something along the lines of like, "Yeah, every time we attempt to scale, we just uh we you know, it like doesn't work." You know what I mean?
+
+ 
+
+[24:15] Well, that's that's just not how advertising works, you know? Like, you don't just fucking spend more money and it fails. It fails for a specific reason, you know? Is the audience too tight? Is that specific messaging not resonating with people at scale as you attempt to increase spend? Are you not refreshing creatives fast enough? You know, there's always specific reasons.
+
+ 
+
+[24:38] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Breaking Narratives - Resource Reallocation"
+
+ 
+
+NÚMEROS: $100K-$300K organic monthly potential
+
+ 
+
+VISUAL: Exemplos de narrativas limitantes vs realidade, necessidade de quebrar histórias que bloqueiam alocação de recursos
+
+ 
+
+[24:42] So, to be clear, breaking narratives, okay, so you can allocate additional resources towards where they need to go. And once again, when you look at this, sometimes it's as simple as like you already got profitability, but there's some kind of narrative that holds back the additional allocation of resources, you know, and then vice versa.
+
+ 
+
+[25:02] Sometimes you're doing really well organically, okay? And you just kind of stop. You put all your time and attention into paid advertising and to be fair, you just don't attempt to scale organic anymore from that point forward.
+
+ 
+
+[25:18] Sometimes you focus all your attention on sales and marketing and then your your operations and your staff end up sucking ass. So you do a terrible job at retaining the recurring revenue you're bringing into the business, you know, or you just don't have good people on the back end that are increasing upselles.
+
+ 
+
+[25:38] Or sometimes, you know, you just have the wrong salespeople. My point being this is just an example of four categories of the allocation of resources here that honestly a majority of the time when you when you when you get to the point once again where you experience growth you then hit ceilings and you experience a little contraction and then you hit the ceiling again.
+
+ 
+
+[26:02] Generally it's just a change in plans. Something's got to change. Something's got to have more money thrown at it. Something's got to have more people thrown at it. You know, once again, what got you here won't get you there. That's a good lesson when it comes to the allocation of resources when you're seeking stabilization. Okay?
+
+ 
+
+[26:22] Do you guys have questions on this so far? Feel free to unmute yourself and ask anything. You got anything? Put throw it in the chat. If you can't talk, is this making sense to everybody? Throw yes in the chat if this is making sense to you. You guys are sticking with me. Okay, cool. Good. Okay.
+
+ 
+
+[26:42] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Narrative - Client's Story"
+
+ 
+
+NÚMEROS: 50/50 split
+
+ 
+
+VISUAL: Conceito de que 50% do trabalho de agência são resultados, 50% é gerenciar a narrativa do cliente, histórias ativas que dirigem comportamentos
+
+ 
+
+[26:45] Now, to be clear, one point I made kind of in the middle of the allocation of resources lesson that I think deserves its own uh lesson is the narrative. So, how I initially learned this lesson was the hard way many times over as an agency.
+
+ 
+
+[27:02] It's in my opinion a half and half job as an agency. When I go in and I work with a business, half my job is results. Half of my job is what I call the client's narrative. Okay? Because the believe it or not, yeah, the results are really important.
+
+ 
+
+[27:22] But we've had deals where we have been really successful with the results, but the client's living through some kind of story that ends up fucking the growth of the business. Okay, now this is a really interesting one to look at.
+
+ 
+
+[27:38] You might have seen this before, maybe you haven't, but to me, especially when you're considering scaling and seeking stability, dude, like the the active story, okay, that you are that you are telling and living through drives the results.
+
+ 
+
+[27:58] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Story Line Concept - Movies & TV Shows"
+
+ 
+
+NÚMEROS: N/A
+
+ 
+
+VISUAL: Analogia com filmes/shows de TV, linha de história principal, pequenos desvios que retornam à história principal, todos os personagens comportam-se baseados na história percebida coletivamente
+
+ 
+
+[28:02] So, as an example of that, it's like when you watch a TV show or something or you watch a movie, there's a story line. Very very rarely in any kind of movie you've seen or a show is there a complete deviation away from the main story line. Okay, there might be like small branches away from it, you know, but everything typically comes back to the main story line
+
+ 
+
+[28:25] and all the characters behave a specific way in the movie or the TV show based on the overarching storyline that's happening that they all perceive is collectively going on. Okay.
+
+ 
+
+[28:38] So one of the main things that is very very important to look at is what is that story of the business that everybody's currently perceptually living through. It's a perception thing. I don't know if you view this as cheesy. I sure fucking don't because I've lost a tremendous amount of money to people living through the wrong stories. Okay? Tremendous amounts.
+
+ 
+
+[29:02] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Examples of Limiting Business Narratives"
+
+ 
+
+NÚMEROS: N/A
+
+ 
+
+VISUAL: Lista de narrativas comuns que bloqueiam crescimento: "Não podemos escalar ad spend", "Isso nunca funciona quando tentamos X", "Paramos porque Y aconteceu e nunca voltaremos"
+
+ 
+
+[29:05] a few examples of that just to give you some perspective. Like I just gave the example with ad spend. Okay. Sometimes the specific story is is yeah like we can't there's always a why simply put like if they have these kinds of ceilings occurring 100% of the time there is a reason why 100% of the time you want to find what that reason is.
+
+ 
+
+[29:28] Oh, every time we try to spend more money, like it doesn't fucking work, you know? Or uh you know, oh, every time I try to get more people onto my closer calendars, you know, like they stop doing this.
+
+ 
+
+[29:42] Or sometimes it's like, oh no, we uh we completely deviated away from what was working because like such and such happened and now we will never do that again, you know, even though it worked tremendously well. And honestly, it never really stopped working.
+
+ 
+
+[30:00] we just kind of all thought it stopped working because there was a very short-term period of time where it had some fluctuations to it. So, we just abandoned it. Now, we're doing all this and we'll never do that again.
+
+ 
+
+[30:15] So, it's like sometimes people won't even be willing to resurrect successful actions. They won't be willing to go back to the original plot. You know, they won't be willing to try what already was proven because once again, there's a story that blocks that.
+
+ 
+
+[30:32] I want to be clear in saying this specific point in terms of weight has such a strong weight on preventing stabilization for a lot of businesses. You have to be aware once again what is the story of the business. Where is everybody at in their character arch? Okay, who's currently responsible for what? How are they viewed in the story?
+
+ 
+
+[30:55] What are those specific like, okay, well, we tried this and this happened. Those become like lessons that people think carry through forever and should never be retested, you know? And that's a part of our evolution.
+
+ 
+
+[31:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Evolutionary Programming vs Business Reality"
+
+ 
+
+NÚMEROS: N/A
+
+ 
+
+VISUAL: Analogia da baga venenosa: evolução nos ensinou a evitar perigos permanentemente, mas em negócios isso cria narrativas limitantes desnecessárias
+
+ 
+
+[31:12] It's like, guys, back in the day, if we fucking ate a berry off the wrong bush and it got us sick, that kind of information and retention of that story is critical for the survival of us, our communities, whoever we fucking associate with, our families. That's where that comes from.
+
+ 
+
+[31:32] in business. Like, dude, sometimes if you fucking launched a specific set of ads or like you tried something and you failed with it, it's like that doesn't mean that it's a fucking poison bush and it should never be tried again. You know, it doesn't make sense. You get what I'm saying?
+
+ 
+
+[31:50] It's like sometimes what worked that then got you sick later does not mean that it's going to get you sick forever. You might have gotten sick for a different reason. So we got to over we literally have to overcome what's evolutionarily ingrained into our brain. Okay, to leverage this specific point to drive up the revenue of the business and stabilize it once we're there. Okay,
+
+ 
+
+[32:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Scaling Process Pattern"
+
+ 
+
+NÚMEROS: N/A
+
+ 
+
+VISUAL: Diagrama de fluxo: Testing → More Testing → Something Worked → Resource Allocation → Scaling Attempt → Works/Reaches Plateau → Repeat Successful Actions (STABILIZATION)
+
+ 
+
+[32:18] another very interesting one and once again this is just really this is really simple. uh when you look at a business as it grows, okay, and you think to yourself, well, what what would what would cause, you know, a uh a lift in revenue and then for that revenue to to fluctuate back down? Okay, what I generally will think of is some kind of deviation that occurred in the actions of the business. Okay.
+
+ 
+
+[32:45] So, I like to think to myself, this is how this is how it typically looks. It's like there's some testing. There's usually a little more testing, you know. Oh, bingo. Something worked. There's then some resource allocation that goes into scaling that specific thing. Okay.
+
+ 
+
+[33:02] Once that thing starts scaling, it either works. Now you are officially scaling because now you've actually tried to throw some additional spend towards it or you've tried to just take that action to a greater level. Okay, it worked. You reached some kind of plateau.
+
+ 
+
+[33:20] Now when it comes to the stabilization of it, it's typically a game of repeating the successful actions. Okay, repeating that successful process.
+
+ 
+
+[33:32] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Tom's Video Pitch Case Study - Deviation Example"
+
+ 
+
+NÚMEROS: 2,400 video pitches per month, 45 days complete stop, X calls/month, X recurring clients, X transactional clients
+
+ 
+
+VISUAL: Exemplo de desvio catastrófico: parou processo comprovado por 45 dias para testar 100% nova estratégia não comprovada
+
+ 
+
+[33:35] Now, the actions or the processes, okay, these are examples of what I'm talking about when it comes to some kind of narrative that gets you away from doing this, but just some kind of deviation. It's like with Tom as an example. Dude, let me just use this example because literally from yesterday with Tom,
+
+ 
+
+[33:55] Tom's been doing video pitches for like I don't even fucking know how long. He's so consistent. He gets X amount of video pitches out per month. He gets x amount of calls as a result of that. He gets x amount of recurring clients and transactional uh clients on the other side of that.
+
+ 
+
+[34:12] And you look at his month over month overmonth numbers from this and it's exactly this. It's like, oh, he's testing. He's testing. It worked. He put a VA on it and a salesperson. He started scaling into it. Okay, it's officially scaled. He reached like a ceiling with the scaling, but you know, it's officially like a scaled action. It's definitely not what he was doing when he was dabbling with it.
+
+ 
+
+[34:38] And then now he's just repeating the successful actions. This is the stabilization window. Okay. However, then what Tom chose to do is deviate. Okay. So instead of just the continuation occurring, Tom said, "All right, I'm going to go 100% into a new test." He just, without exaggeration, guys, he literally just stopped 45 days ago, he just stopped doing video pitches. Okay.
+
+ 
+
+[35:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Adam's Success - Different Channels"
+
+ 
+
+NÚMEROS: $100K profit goal
+
+ 
+
+VISUAL: Comparação de estratégias: Adam tem sucesso com Facebook ads + referrals, Tom tentou copiar abandonando seu método comprovado (video pitches)
+
+ 
+
+[35:12] Now, to be fair, it's like, let's use Adam as an example on this call. Adam comes in, he's getting great deals right now. He's shooting for 100k profit. Adam's not getting his deals from video pitches. Adam's getting his deals from Facebook ads and from referrals.
+
+ 
+
+[35:28] So, as an example, somebody like Tom hears that and he thinks to himself, "Okay, dude, I'm going to fucking try some ads and I'm going to try to get my referral network up." Now, that's smart. That's definitely not a dumb decision for Tom to attempt and to try. However, it's a minority effort. Okay?
+
+ 
+
+[35:48] It's a test cuz it's not currently a proven action for Tom. What's a proven action for Tom is what got him to the point where he had an officially scaled action that turned into a repetitive process that he's going to repeat forever.
+
+ 
+
+[36:05] You don't stop repeating the successful actions. You literally do them forever until the wheels fall off. Okay? You just do them forever. You don't want to deviate away from it. What you ideally want to do is add to it. Okay.
+
+ 
+
+[36:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The 90/10 Rule - Multiple Process Model"
+
+ 
+
+NÚMEROS: 90% proven process, 10% new test
+
+ 
+
+VISUAL: Diagrama mostrando alocação de recursos: 90% mantido em processo comprovado, apenas 10% em novo teste até que o teste seja comprovado
+
+ 
+
+[36:25] How this ends up looking when you do it successfully is very very simple. Okay. We want to have multiple of these processes. Okay. So, as an example, when I have 100% of my time and attention that is currently going towards a proven process that works. Okay?
+
+ 
+
+[36:45] So, like for some of you on this call as an example, what works for you at scale is like call funnels. You have a VSSL call funnel that you're running traffic to and it's fucking printing. Sure, you might have an ad channel or two variants, but like you got a system and it's fucking working and you're like 100% all in on that.
+
+ 
+
+[37:08] And then you're like, "All right, well, I just heard from a guy or a girl that like webinars, you know, are doing really well for them, so I want to try that out." It's like, okay, great. Great. That's not a dumb idea. That's a good idea. There's nothing wrong with that. Okay.
+
+ 
+
+[37:25] But what you got to do is you got to understand it's like you'll then take 90% of your time, effort, resources, and you'll keep it on the proven one. And then you'll take 10%. Okay? And you'll treat it as a test because remember when you first start this process, this is the only thing happening initially is you're you are trying to figure it out and see if it can work for what you got going on.
+
+ 
+
+[37:52] It doesn't just automatically work. You don't just automatically get the entirety of this process. It doesn't just duplicate as simple as you saw me duplicate. Okay? You quite literally have to understand this this whole logic of deviating. Okay, means that you don't follow this when you test something new.
+
+ 
+
+[38:12] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Ideal Multi-Department Structure"
+
+ 
+
+NÚMEROS: 90% → proven, 10% → test initially, then separate departments when test becomes proven
+
+ 
+
+VISUAL: Progressão de alocação de recursos até ter múltiplos departamentos independentes, cada um com processo comprovado próprio
+
+ 
+
+[38:15] Now, this is important to understand. Okay, here's how this ends up looking ideally when you make this work. What happens is or what's ideal to happen is that you reach a point where okay you put 90% towards this you put 10% towards this okay this starts to progress okay you go through the testing phase you make it through the okay hey this is kind of working now you start the scaling phase okay it's officially scaled
+
+ 
+
+[38:45] now you've got it to the point where you're repeating the successful action and it's a process in that specific window that is when congratulations you get to reallocate now. So it's like you'll have an entire department that will be responsible for this and then in addition to that you'll have a different department that is responsible for this.
+
+ 
+
+[39:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Justin Case Study - Multiple Offers Strategy"
+
+ 
+
+NÚMEROS: $200-300K/month (wholesaling course cap), $1M/month goal (premium offer)
+
+ 
+
+VISUAL: Estrutura de dois negócios separados: Wholesaling course (agência diferente + sales agency) vs Premium offer (Furion + in-house sales team)
+
+ 
+
+[39:12] So, it's like we had a guy, we were talking to him, I think it was uh Wednesday. I had a call with this dude, his name's Justin, and he's a pretty well-known guy. Uh, long story short, Justin was referred over to me by Brandon Carter, and Justin's already doing something with his personal brand. He's selling some wholesaling course.
+
+ 
+
+[39:35] And I was kind of confused by that. I was like, why the fucking is this guy selling a wholesaling course? That makes no sense. You know, like this guy's not known for that at all. And in addition to that, if you know anything about the personal branding space, specifically with real estate, wholesaling is what you sell to brokies. Okay?
+
+ 
+
+[39:55] Rich people don't buy wholesaling courses. Financially welloff people don't buy wholesaling courses. People who have a lot of time and don't have a lot of money, they buy wholesaling courses. And in addition to that, he's working with one of the worst sales agencies on earth. Okay?
+
+ 
+
+[40:15] And to be clear, those two things were like huge red flags to me. And he was considering working with some other agencies. He was considering working with, I think, at least two other people. Okay? However, he gets on this call with me. Not to sit here and sound pretentious. Naturally, I'm the best fucking option this dude's got on earth. Okay?
+
+ 
+
+[40:35] I outshine every other person he could consider talking to. And long story short, he's like, "Dude, I want to go with you." And I'm like, "Yeah, great. However, I don't want to go with you. You have a terrible sales agency you're working with. You're selling wholesaling courses. Like, there's not a single person selling wholesaling courses that does more than a couple hundred grand a month max. And that doesn't align with our goal."
+
+ 
+
+[41:02] And in addition to that, this guy didn't want to pay a rev share because he thinks, "Oh, well, I'm I'm kind of well known, you know, like I I should I don't deserve to pay a rev share." So, it's like three red flags. we're not doing the deal. Okay.
+
+ 
+
+[41:18] Now, however, this is important to note. I do tell him, I'm like, "Well, listen, what you need to do to really be successful and hit a million a month and like be somebody who we do want to work with, like I think these two offers would make a lot more sense for you and I think they align better to who you are and like what I think you're known for."
+
+ 
+
+[41:38] And he was totally open to that. He was like, "Yeah, 100% makes sense. I agree." I'm like, in addition to that, the current sales agency you're working with is trash. They don't stand a chance to be able to make this work. You need to get either a a better sales agency and I can refer you a a great one or two, I need you to build an in-house sales team.
+
+ 
+
+[42:02] And he was like, "Yeah, I mean, dude, I want to have an office. Um, I'm moving from Louisiana to Miami, you know, like I'm fucking dialed in right now. I uh I do want to do that. I want to have an in-house sales team. I'm great at sales, you know." And he starts saying all the right things.
+
+ 
+
+[42:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Separate Teams for Separate Offers"
+
+ 
+
+NÚMEROS: Wholesaling: $6K product, Premium: $15-20K product
+
+ 
+
+VISUAL: Estrutura de atenção dividida: Time 1 (100% atenção em wholesaling) vs Time 2 (100% atenção em premium offer), evita conflito de prioridades
+
+ 
+
+[42:25] So, simply put, here's here's the whole point of what I'm trying to say in this example. Okay, he now has we'll call this section up here for him his wholesaling course. He tells me he's like, you know, what I'm going to do is I'm going to work with one of these other agencies that is going to specifically focus on the wholesaling course since you don't want to do that and I'm going to work with that sales agency.
+
+ 
+
+[42:48] And to be fair, that sales agency is just really bad at selling to financially welloff, sophisticated people. They're great at selling to like young guys, you know, with some kind of business opportunity who are who are typically not financially well off.
+
+ 
+
+[43:05] So, the sales agency that he's working with and one of the other agencies that he's considering working with, they're going to be great. They're going to be great at handling that. And he in turn is going to have 100% of their attention on that. Okay.
+
+ 
+
+[43:22] Now, even if this right here only gets him, let's use the example, he gets up to like, you know, the usual wholesaling info product cap, okay? Where he's doing like 200 to 300K a month with that. That's great.
+
+ 
+
+[43:38] What he's then going to do is he's going to have us on our end, okay? Once he gets down here to Miami, I was like, "Yeah, man. Like, come over to the house, you I'll fucking lay out the whole shebang for what you need to do for your other offer. You can get it filmed. You know, we can we can teach you and talk to you about the sales process and what you need to do on that end.
+
+ 
+
+[44:02] And then to be clear, he'll have 100% of our attention on this on the product that we are going to help him scale, which in my opinion is what's going to get them to the million- dollar. Okay? without even factoring in any any of that revenue up there, just the revenue from this other thing.
+
+ 
+
+[44:22] Now, this this is the best fucking setup because in both scenarios, he has a se treat he's treating them like separate businesses even though they're under the same legal entity. Okay? Very, very few people do this. Okay?
+
+ 
+
+[44:38] And it's important to note once again, these are different offers. The difference here is not like a call funnel versus a webinar funnel. Your existing marketing team and your existing sales team, they should be able to handle that fucking no problem. Okay, that's not a big deviation.
+
+ 
+
+[44:55] They need to do the 9010 system at first as an example with resources. It's like 90% of the ad spend should go towards the call funnel, 10% should go towards like the webinar or the new fucking paid lead strategy you're doing or whatever.
+
+ 
+
+[45:12] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Attention Allocation - Marketer's Perspective"
+
+ 
+
+NÚMEROS: $6K offer vs $15-20K offer
+
+ 
+
+VISUAL: Pergunta crítica: onde vai a atenção quando há múltiplos produtos? Marketer quer 100% atenção no premium, 0% no low-ticket
+
+ 
+
+[45:15] But in this example, okay, these are literally different offers and having completely different marketing teams and sales teams on those different offers will lead him to a tremendously greater level of success. Listen to what I said as the marketer he wanted to hire. I want my attention on this. I want none of my attention, literally zero, on this. Think about that.
+
+ 
+
+[45:38] If he hired me and he wanted me to do both, where would my attention go? Does it sound like it's smart? Now, think about the salespeople. This is cheaper. This is like 6K. This is going to be more expensive. This is going to be like 15 20k. Where's the attention of the sales team going to go? Where do what do you think they're going to care about selling?
+
+ 
+
+[46:02] If he had the same team for both, can you see how there'd be a discrepancy there? So, to be clear, deviation comes off in a few different ways. The main way I want you to remember is when you go through a testing phase, you do not allocate 100% of your resources towards it.
+
+ 
+
+[46:22] You do not allocate 100% of your time, energy, attention on it. Okay? You don't do what Tom did, which is he bailed completely on what worked and he deviated into a new test. Tom went 100 to zero to 100 on a completely different thing that was unproven, untested.
+
+ 
+
+[46:42] Does everybody get what I'm saying? Drop a one in the chat if you're picking up what I'm putting down here. This one's critical. Does anybody have questions on this? Feel free to unmute yourself and ask away if you do.
+
+ 
+
+[46:58] [STUDENT:] At what point would you start testing? Like for example, myself in revenue being around 150k per month. Like do you do you recommend just focusing on your initial client acquisition system until you get to a certain monthly revenue and then you can start the tests or do you just do it whenever?
+
+ 
+
+[47:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Testing Windows - When to Test"
+
+ 
+
+NÚMEROS: $300K ceiling example, 8 months to scale from $300K to $2M, $2M-$2.5M plateau
+
+ 
+
+VISUAL: Gráfico temporal mostrando duas janelas de teste: ANTES do crescimento (testing phase inicial) e DEPOIS do crescimento (quando atinge novo plateau)
+
+ 
+
+[47:25] Well, here's the thing. If you're going through a phase, and this is a great question by the way. Thank you for asking. If you're going through a phase, remember how I think it looks. So like this is in my opinion how the testing phase looks. This is usually when you have a very clearly defined like ceiling and floor and when you start to finally experience a breakout
+
+ 
+
+[47:48] and in my opinion on how to how to scale the fucking out of a business once you recognize that something is is getting you above the historical ceilings I think damn near 100% of your time, energy, and attention goes into it until it eventually plateaus.
+
+ 
+
+[48:08] Because when you plateau, really what happens is is like, okay, you've kind of stalled out and then you have to go through the testing phase again to try to figure out what's going to lead to the next breakout.
+
+ 
+
+[48:22] So, long story short, during this specific window, okay, I personally I don't think a lick of attention should go towards anything other than maximizing that specific revenue that comes from that. Like, you know, a great example of that, like I'll use I'll use Dan Lock again.
+
+ 
+
+[48:42] when we started like the ceiling and floor for him like his ceiling was about 300k. Okay. And then when I came in it took about eight months, okay, to go from 300K to about 2 mil per month. Okay?
+
+ 
+
+[49:02] Now the new floor and the new ceiling became about 2.5 mil a month to 2 mil a month. We never went below two. We never broke above 2.5. So, in that specific window, that's when you have to start testing again.
+
+ 
+
+[49:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Dan Lock Testing Phase - What NOT To Do"
+
+ 
+
+NÚMEROS: $2M-$2.5M plateau, HTC (High Ticket Closer) main program, Toot Your Own Horn, High Income Copywriter, various smaller info products
+
+ 
+
+VISUAL: Exemplo negativo: múltiplos testes simultâneos que levaram a contração ao invés de breakout, abandono do que funcionava
+
+ 
+
+[49:25] And to be fair, I mean, you know, Dan did before he took all of his attention off of that business, um, he did attempt to come out with different courses, you know. So, this specific window was one thing and it was a program for him called HTC, high ticket closer.
+
+ 
+
+[49:45] And long story short, when we got to this window, this window he came out with some stupid program called to your own horn because he had a million subscribers on YouTube. He wanted to teach other people how to do that. And then he came out with another program called HighIncome Copywriter.
+
+ 
+
+[50:05] In addition to that, there was a bunch of like smaller smaller stuff like info products that he came out on the website. And unfortunately, as I described many times over, that did not lead to the next breakout. You know what that ended up doing is just unfortunately taking it taking it back down, you know.
+
+ 
+
+[50:25] So, but that sometimes happens to be fair. I mean, when you go through a testing phase, if you go all in on something that's a test that's not working and you fail to stabilize what is working or you just abandon what's working, you know, many different lessons for what causes that contraction.
+
+ 
+
+[50:45] Long story short, completely different set of lessons, but regardless, the testing happens in one of two places. Okay. Once again, just for clarity, it happens here before the growth or it happens here after the growth. Does that make sense?
+
+ 
+
+[51:05] [STUDENT:] Yeah, that makes sense.
+
+ 
+
+[51:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Growth Window - 100% Focus Required"
+
+ 
+
+NÚMEROS: N/A
+
+ 
+
+VISUAL: Janela de crescimento destacada entre os dois pontos de teste, ênfase em "push it to the limit", não fazer NADA além de maximizar o que está funcionando
+
+ 
+
+[51:10] This this specific window, not a fucking thing should happen besides you are printing money and you need to push that fucking up. You know, push it to the limit and you'll know when you hit the ceiling. Does that make sense?
+
+ 
+
+[51:28] [STUDENT:] Yes, sir.
+
+ 
+
+[51:30] Okay, cool. And you got to recognize that once again, that goes back to the lesson. I don't know what call it was. I I know we did a call here though on uh on the breakouts. You remember that call? Did you listen to that one?
+
+ 
+
+[51:45] [STUDENT:] Yeah.
+
+ 
+
+[51:48] So, once again, when you're self-aware of like, okay, a breakout's happening, bro, for the love of God, don't do fucking else other than pay attention to the breakout. Okay? Because, like I said, it's a disservice if you finally get the breakout and you don't recognize it. You know, you don't get to act you don't get to actualize on its potential. Does that make sense?
+
+ 
+
+[52:12] [STUDENT:] Yes. Yeah. Thank you.
+
+ 
+
+[52:15] All right. Cool. Yeah. Anybody else have questions on this? Anything we talked about here today? Any comments you guys want to add? Something you want to contribute to it? No. Nothing. Going once. Going twice.
+
+ 
+
+[52:32] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Q4 Mastermind Announcement"
+
+ 
+
+NÚMEROS: October 19-20
+
+ 
+
+VISUAL: Anúncio do próximo mastermind presencial, gravações disponíveis no topo do grupo Telegram
+
+ 
+
+[52:35] All right. Cool. Well, we got the Q4 mastermind on October 19th and 20th. Uh looking forward to seeing everybody there. We also got the mastermind recordings posted and pinned to the top of the inner circle chat. If you just look up towards the top of the group chat there on Telegram by the name of it, you'll see the uh pinned messages.
+
+ 
+
+[52:58] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Mastermind Talk Highlights"
+
+ 
+
+NÚMEROS: $600-800K/month (Mason's organic webinars)
+
+ 
+
+VISUAL: Lista de palestras disponíveis: Gelani (AI Avatars), Mason (Organic Webinars $600-800K/month), Alex (Press/News Articles), Furion (Goal Math), Brandon Carter (The One Thing)
+
+ 
+
+[53:02] Um feel free to watch the recordings, download them. I would really encourage if you weren't there, uh which obviously a majority of you were not, I would watch the talks specifically. Um they're so good. Gelani had a great talk on AI avatars, which honestly was shocking uh for how well that currently works.
+
+ 
+
+[53:25] Uh everybody that was there realized like they might never have to film ads again after watching that talk. Uh we had Mason talk on organic webinars and how he's printed about 600 800K a month consistently off of them and he went through the full strategy. That that talk was sick.
+
+ 
+
+[53:45] We also had Alex talk on uh contributing press publications and news articles so we can flood our own search engine results. Um I had a talk that was really good on goal math and uh yeah it was a great day. It was a great day. And then we had Brandon Carter close out the day with going over the one thing and you know good good set of lessons there all around if you didn't get a touh check those out yet.
+
+ 
+
+[54:12] So yeah, per usual if you guys have any other questions on this feel free to uh drop them in the chat, DM me on it. Um, Looking forward to everybody having a big week. All right, talk to you guys.
+
+ 
+
+ 
+
+📊 RESUMO EXECUTIVO
+
+ 
+
+NÚMEROS PRINCIPAIS:
+
+$70K-$100K/mês = 30% de flutuação ($30K diferença)
+
+$700K-$1M/mês = 30% de flutuação ($300K diferença)
+
+Dan Lock: $2-2.5M/mês por 3-6 meses = $6-12M total
+
+Dan Lock comprou 40 empresas diferentes
+
+Domínios: $400K e $300K cada
+
+Tom: 2,400 video pitches/mês
+
+Teto típico de wholesaling courses: $200-300K/mês
+
+Meta de Justin: $1M/mês
+
+Produtos: $6K (wholesaling) vs $15-20K (premium)
+
+Mason: $600-800K/mês com organic webinars
+
+Pagamento típico sales team: 10-20%
+
+Potencial orgânico: $100-300K/mês
+
+Rentabilidade: 3:1 a 5:1 ROI
+
+Janela de foco: 4 horas/dia (The One Thing)
+
+Dan Lock: teto de $300K → $2M em 8 meses
+
+ 
+
+ESTRATÉGIAS E SISTEMAS:
+
+Regra 90/10: 90% recursos em processo comprovado, 10% em novos testes
+
+Fases de Crescimento: Testing → More Testing → Works → Resource Allocation → Scaling → Plateau → Repeat Actions (Stabilization)
+
+Janelas de Teste: Apenas ANTES do crescimento ou DEPOIS do plateau
+
+Múltiplos Departamentos: Ofertas diferentes = times completamente separados
+
+Video Pitches: Sistema comprovado de Tom (abandonado erroneamente)
+
+Call Funnels: VSSL + traffic = sistema de impressão de dinheiro
+
+Organic Webinars: Mason's $600-800K/mês strategy
+
+Mitigação de Risco: Múltiplas contas aquecidas, consultores especializados
+
+The One Thing: 4 horas focadas no principal driver de receita
+
+ 
+
+ESTRUTURA:
+
+Departamentos Principais: Ad Spend, Organic (Content Budget, Shoutouts), Staff, Sales Team
+
+Estrutura de Ofertas Múltiplas: Negócios separados sob mesma entidade legal
+
+Alocação de Recursos: Identificar teto/piso, realocar quando atingir plateau
+
+Growth Partner: Sales team + call funnel básico + múltiplos canais (Twitter, YouTube, Facebook, Instagram)
+
+Estrutura de Justin: Wholesaling (agência externa) + Premium offer (Furion + in-house team)
+
+ 
+
+CAUSAS DE INSTABILIDADE:
+
+Distração:
+
+Viagens internacionais (não travel regular)
+
+Iniciar outros negócios (3+ negócios simultâneos)
+
+Problemas pessoais (relacionamentos, midlife crisis)
+
+Drogas/álcool
+
+Fame/acesso a novas oportunidades
+
+ 
+
+Desvio de Processos Comprovados:
+
+Abandonar 100% do que funciona
+
+Ir 100% para teste não comprovado
+
+Não repetir ações de sucesso
+
+ 
+
+Narrativas Limitantes:
+
+"Não podemos escalar ad spend"
+
+"Isso nunca funciona"
+
+"Paramos porque X aconteceu"
+
+Programação evolutiva vs realidade de negócios
+
+ 
+
+Falta de Foco:
+
+Não estar "nas trincheiras"
+
+Não conhecer métricas-chave
+
+Remover-se das operações prematuramente
+
+Não fazer perguntas certas diariamente
+
+ 
+
+SOLUÇÕES PARA ESTABILIZAÇÃO:
+
+FOCUS (Foco Total):
+
+Estar "in the weeds" (nas trincheiras)
+
+Conhecer todos os números
+
+Contato diário com equipe
+
+Fazer perguntas certas (não reclamar)
+
+Exemplo Mark Jennison: contato múltiplo diário, obsessão com calendário cheio
+
+ 
+
+Allocation of Resources (Alocação de Recursos):
+
+Identificar o que está funcionando
+
+Jogar mais dinheiro/pessoas no que funciona
+
+Quebrar narrativas limitantes
+
+Reconhecer quando atingir teto
+
+Mudar plano de scaling quando necessário
+
+ 
+
+Breaking Narratives (Quebrar Narrativas):
+
+Identificar a história do negócio
+
+Questionar "whys" estabelecidos
+
+Estar disposto a ressuscitar ações de sucesso
+
+Superar programação evolutiva
+
+Retesting estratégias que "falharam" antes
+
+ 
+
+No Deviation (Sem Desvio):
+
+Nunca parar ações de sucesso
+
+Adicionar, não substituir
+
+Usar regra 90/10 para testes
+
+Departamentos separados para ofertas diferentes
+
+100% foco durante janela de crescimento
+
+ 
+
+DADOS FINANCEIROS:
+
+Flutuações percentuais são iguais em diferentes escalas (30% = $30K ou $300K)
+
+Mais receita = flutuações mais extremas percebidas
+
+Expenses baixas exceto ad spend (caso Dan Lock)
+
+Sales team: 10-20% typical
+
+ROI: 3:1 a 5:1 considerado lucrativo
+
+Teto wholesaling: $200-300K/mês máximo
+
+Meta premium offers: $1M/mês+
+
+Crescimento Dan Lock: $300K → $2M em 8 meses
+
+ 
+
+EXEMPLOS DE CASO:
+
+Dan Lock: $2-2.5M/mês → comprou 40 empresas → contração
+
+Tom: 2,400 video pitches/mês funcionando → parou 45 dias para testar → perda de receita
+
+Justin: Wholesaling ($200-300K) + Premium offer ($1M goal) = estrutura separada
+
+Mark Jennison: Foco psicótico → $1-2M/mês → vendeu para PE
+
+James: $500K terceira tentativa → locked in → vai quebrar teto
+
+Adam: $100K profit goal via Facebook ads + referrals
+
+Cody Spurber: Midlife crisis → parou coaching → deal perdido
+
+ 
+
+LIÇÕES PRINCIPAIS:
+
+Mais receita = tudo mais extremo
+
+Estabilidade requer foco total, não diversificação
+
+Teste apenas em 2 janelas: antes ou depois do crescimento
+
+Nunca abandone o que funciona
+
+90/10 rule para novos testes
+
+Ofertas diferentes = times diferentes
+
+Estar nas trincheiras até ter world-class talent
+
+Quebrar narrativas evolutivas que limitam negócios
+
+Repetir ações de sucesso até as rodas caírem
+
+World-class talent é único requisito para se remover
+
+ 
+
+DURAÇÃO: ~54 minutos FORMATO: Masterclass/Workshop de Inner Circle com Q&A ao vivo

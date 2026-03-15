@@ -1,0 +1,335 @@
+Transcrição Completa: 78 Call Funnel CPAs 8 24 24
+[00:00] All right, cool. Welcome in to this week's weekly group call. Um, we got a topic today that has come up three separate times this week and therefore I wanted to cover it on a weekly group call together. So, you know, we can ensure that collectively everybody can benefit from this.
+[00:18] So, first of all, call funnels. Okay, when you run a call funnel, there's a few key things that matter the most. And it's important to note these topics this week were central around CPA.
+[00:31] So to be clear, CPA, I'm I'm sure every single one of us know this, of course, but it's our it's our cost to acquire a customer. So, when you look at, you know, once again, how much it actually costs to get a customer in the door, the people who brought this up to me this week were ranging anywhere from like $3,000 to upwards of $4,000 to acquire a customer.
+[00:54] Now, to be clear, the two different people that had most recently brought this up to me and the person who brought this up earlier in the week, two out of three had products that were 15K to 25K.
+[01:07] So, to be clear, you know, from a perspective of, well, is this good or is this bad? It's obviously determined by what your actual AOV is, which average order value.
+[01:19] So, long story short, if I can acquire a customer for $3,000 to $4,000 and, you know, I get $15,000 and that's my gross margin, that's not that bad. Obviously, we have to factor in all the costs of the deliverables.
+[01:34] Um, you know, to be clear, it starts off with obviously the salesperson's commission. Uh, we then have ad spend to to deduct against that, which would be that 3 to 4K. In addition to that, we have our costs of the service or the product.
+[01:49] Once again, like whatever it is that we that we got to factor in and there's usually an unknown statistic for most businesses. Like when we ask this question to most of the clients that we work with, we generally don't get an answer on this right away.
+[02:02] We have to actually help them do the math to figure out what the answer is to this specific question, which is what is the minimum ROAS? Like what can the minimum ROAS be to acquire a customer profitably on the front end?
+[02:17] And sometimes as an example it's the lowest it can be is like 3 to one. You know sometimes the e-commerce guys as an example in the group they fully relate to what I just said where they're getting customers for you know 3 to 1 ROAS and the client is still bitching about it.
+[02:33] You know what I mean? But when you're like when you're a service provider and you have a substantially higher net margin per deal to be clear all it comes down to is you typically have a higher margin. So therefore you can have a higher cost to acquire customers. Therefore you can have a lower ROAS for like the minimum.
+[02:53] But you got to be aware first of all what the minimum ROAS is. Okay. By the way, what's up Bash? How you doing man?
+[03:00] >> Hey man, how are you? Good to see you.
+[03:02] >> Feeling good. Feeling good.
+[03:04] Um, okay. To be clear, the point I'm attempting to make is your cost of whatever your actual AOV is, once again, average order value determines what this can be. Okay, in terms of whatever that CPA is.
+[03:19] So, long story short, obviously, regardless of whatever your CPA currently is, the lower it is, the better. So when it comes to call funnels and driving down CPAs, I'm going to go through that today on this call uh step by step for what we do.
+[03:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Call Funnel Conversion Points"
+NÚMEROS: Não especificado
+VISUAL: Estrutura de funil de chamadas mostrando pontos de conversão sequenciais
+[03:37] So the first thing that I want to make clear is we have to be aware of each conversion point in our process so we can identify a potential bottleneck.
+[03:47] For anybody who's gone through my master internet marketing class or really just anybody who's been in this group for a long time, I'm sure I've brought this up a tremendous amount of times. All I do when I'm advertising is I look for the point in the process where there's a contraction.
+[04:03] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Adventure Time Water Tank Analogy"
+NÚMEROS: 3-4 compartimentos/paredes
+VISUAL: Tanque de água com compartimentos separados por paredes ajustáveis, água fluindo da entrada para a saída, demonstrando conceito de gargalo
+[04:05] So, as an example, I always give this perspective of when I was a kid, I had this uh this place. It was called Adventure Time. It was badass. It had this like really know how to describe it was like a fish tank and it had a source of water that would come in through this pipe right here and then it also had an exit point on the other side.
+[04:25] And in between it had these walls. And like what you could do as a kid is you could you could like lift the wall or lower the wall. And obviously if you lowered the wall, what would happen is is like this whole first compartment would fill up with water.
+[04:39] And eventually it would like fill up over the top and that's the only reason that water would get into the next part of the uh the little chamber here. And so there were there were a total of like three or four walls, you know, so you could lift them, you could lower them, you know, you you didn't even have to have them in the container at all.
+[04:56] Like you could have it way above here. And obviously the container itself, like if water's just flowing in this case, like water would immediately reach this point and then it would start to back up into this all because this wall right here is blocked off.
+[05:11] So the point I'm trying to make is when we have a blockage, it prevents everything until it's so full that it literally overflows into the next cavern. That's bad. We don't want that.
+[05:22] When we look at our advertising efforts and we determine like, okay, what is a bottleneck? A bottleneck, when I say that is an example, it's one of those walls. It's something that is contracted in comparison to everything else where if there's a shitload of people that can come into our process, let's say our cost per call is low, our show rates high, but then as an example, let's say our close rate is low, you know, or or our cancellation rate is exceptionally high or our rescheduling rate is exceptionally high.
+[05:52] All the steps that follow that point in this case typically the sale and then the lifetime value getting increased upsell percentages etc. All that is contracted exponentially all because of this little bottleneck right here.
+[06:06] So now that you guys are all on the same page with that uh let me just make sure I go through a few things with you so we can understand in a call funnel what typical bottlenecks are going to be.
+[06:17] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Call Funnel Structure"
+NÚMEROS: Não especificado
+VISUAL: Estrutura hierárquica começando com Ad Spend no topo, seguido por elementos do funil incluindo headline, VSSL, application
+[06:19] So first of all it all starts off with our ad spend. We then have a few line items here that we need to go through together. So, first of all, whenever I run a call funnel, I'm running it like this where I have a headline. I have my VSSL.
+[06:34] This VSSL, by the way, is usually a mini webinar. And give or take what type of client we have. It's either the 1.0 or the 2.0. However, in some instances, it's also just a standard VSSL where the person's just like standing there doing well.
+[06:49] If the person's not as great at talking, then we'll typically have them do a mini webinar, a mini webinar 2.0, so they have like a structured presentation.
+[06:58] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Typeform + Calendly Integration"
+NÚMEROS: 50% drop-off rate (quando separado)
+VISUAL: Comparação entre integração Typeform+Calendly vs. separação de application e scheduler, mostrando diferença na taxa de conversão
+[07:00] Now, it's important to note in this part of the process right here where I have my application, I will generally use type form and in addition to type form, I use Calendly. And the reason I do that is because I can combine type form and Calendly together.
+[07:16] Like literally in type form. It is the only software like that's an application based software like Jot Form doesn't do this. Uh fuck whatever CRM function like go high level and HubSpot are some of the most common ones that get brought up alongside of this.
+[07:31] This combo, it's like fucking magic because what typically happens is a business will run the application on page one and then after the application's filled out, they'll send people to the scheduling.
+[07:43] And what that does is it creates a tremendous bottleneck where you'll get like this is this is the usual, by the way. This is not an exaggerated statistic. You'll usually get 50% of the qualified people that'll just drop off completely. Okay? I fucking hate that.
+[07:59] So typically when that happens, it's like let's use the example they're using go high level for their application and for their scheduler or they're using like jot form and then you know go high level for the scheduler or they're using whatever fuck hubspot any literally any form software.
+[08:15] It could also be Typeform and they're just using a a different scheduler besides Typeform and Calendly. If that happens once again you will likely see that 50% drop.
+[08:26] It is an exceptionally high probability that that's going to occur for you if that's the case. I I hate that. Once again, I don't want that to be the case.
+[08:35] So, I run my funnels like this where I have type form and Calendly as my application. That way, when somebody hits my first step, I don't have to separate my line items here. Okay?
+[08:47] So, in my math, based on how I do it, I can immediately just look at my cost per scheduled call. Okay? However, some of you, you'll immediately have a bottleneck based on an inability to do that. You'll have to have a cost per app that then leads you to whatever your scheduled call is. Does that make sense?
+[09:07] >> I'm missing out one thing here, which is I don't understand how you're combining them because they're still two separate steps. I'm still filling out a questionnaire and type form and then it's taking me to book a call on Calendly. So that's the same thing as an app and a schedule.
+[09:23] >> Thank you for bringing that up, Ash. So to be clear, when you integrate Typeform and Calendly, they are within the same application.
+[09:32] >> Ah,
+[09:33] >> meaning perceptually to the user. Okay, let's say let's just use the example. You have five questions in an application. Okay, got it. And then you got the scheduler at the end.
+[09:45] It's important to note the person just filled out five questions and they are essentially forced perceptually to schedule the call. Otherwise, it looks like they just spent all that time and they're abandoning it and the app didn't get submitted.
+[09:59] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Typeform + Calendly Conversion Rate"
+NÚMEROS: Próximo a 100% de conversão de apps qualificados para agendamento
+VISUAL: Comparação visual mostrando alta conversão com integração vs. 50% drop com separação
+[10:01] So, without exaggeration, this once again I want to be very clear when I say this quite literally no exaggeration in this statistic. We will have damn near 100% of our qualified apps schedule when we use type form and Calendly in combination with one another versus somebody fills out the application.
+[10:20] Okay, they press submit then they get forwarded to a different page. Okay, that psychologically is I completed the application and now it's like an option to schedule the call or not. That's where you get that 50% drop on average. Does that make sense?
+[10:35] >> Yes, it does. It does.
+[10:37] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Real Client Example - Schedule Once Problem"
+NÚMEROS: $48-$52 cost per scheduled call, poderia ser metade com Typeform+Calendly
+VISUAL: Comparação de custos mostrando impacto do 50% drop-off na estrutura de custos
+[10:39] And be clear, this drives me up a fucking wall because like as an example right now, I have a huge client where their sales team is adamant about the fact that Calendly sucks for them at scale and they're a sales agency and long story short, they do a great job.
+[10:54] So I won't sit here and say their name because I don't want to make it sound like I'm trashing them or anything. However, they hate Calendly with a passion because they operate at a scale where they have a fuckload of reps and essentially anything that goes outside of their templated process they've built adds a tremendous amount of complexity to their like reporting and operations side of the business.
+[11:17] So they essentially and and they have the 50% drop in their type form going to schedule once. Okay, so 50% of qualified people literally will not schedule a call in their example.
+[11:29] And what that does to be clear is immediately it doubles my fucking cost per call. Okay, so listen to this. Right now for that specific client as an example, I actually have a $48 to $52 cost per scheduled call on average. Okay, now that's really good.
+[11:45] I just want to be clear that's a qualified scheduled call. That's tremendous. However, without exaggeration, it could be half if I had Calendly and type form versus count versus uh type form and schedule once. Does that make sense?
+[12:01] >> Yeah.
+[12:02] >> Okay. That's why I like it. Does that answer your question?
+[12:05] >> Yeah. And we can basically go I can go find a YouTube video just to see exactly how to do that. I use type form and calendar a lot anyway, but I'm sure I never knew about this funnily enough. So, I'll
+[12:17] >> It's pretty simple. Like you know how in type form when you go to build the actual like questionnaire and it gives you that long uh list of all the different like pre-built questions like you know multiple choice math fuck short form long form one of those options is Calendly.
+[12:33] >> Yeah. Got it. Got it. Perfect.
+[12:36] >> Okay. Now to be clear I just want to reiterate what I was saying since we got a little off track there which is and that was a great question by the way Ash. To be clear, if you have your application and your scheduler separated, your math has to look like this.
+[12:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Funnel Math Comparison"
+NÚMEROS: 3 passos vs. 5 passos no funil
+VISUAL: Dois modelos lado a lado - modelo simplificado (Ad Spend → Cost per Scheduled Call → Show Rate → Close Rate) vs. modelo complexo (Ad Spend → Opt-in → Application → Scheduled Call → Show Rate → Close Rate)
+[12:52] Okay, this is how you have to break down your bottlenecks versus me, I don't have to do that. What I do, once again, just based on how I have it set up, is mine just goes straight to what my cost per scheduled call is. Okay?
+[13:05] In addition to that, some of you, to be clear, you add even greater complexity than that. You'll have a fucking opt-in first. Then you'll have your application and you do what I just talked about.
+[13:16] You have you have type form or whatever fuck you know little little uh application software you're using. And then you have a different scheduler. So you'll add three steps. You'll have your cost per opt-in, you'll have your cost per application, and you'll have your cost per schedule.
+[13:32] So, right there, I mean, to be clear, we've all as marketers seen the cliche funnel example. Okay? In my example, it literally goes ad spend, scheduled call. Okay? And that's my cost per scheduled call, show rate, and close rate. Okay?
+[13:49] Now, what's the cliche lesson about the funnel, right? What's that? It's just such a simple core lesson of marketing. The more steps we add, the more friction we create.
+[14:01] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Friction Impact on Cost Per Call"
+NÚMEROS: 3x maior custo com passos adicionais
+VISUAL: Demonstração visual de como cada passo adicional multiplica o custo por chamada agendada
+[14:03] So, to be clear, most of you guys, when you run a call funnel, you got the ad spend at the top. And in that example I just provided, you'll have a fucking opt-in. You'll have your cost per app where somebody's got to fill out your application. Then you'll have your scheduled call.
+[14:18] Just without even going further, what is the difference going to be in your cost per scheduled call versus mine? It's going to be like 3x higher because you added two additional steps prior to it. Okay?
+[14:31] And to be clear, I'm not skipping an application. They're still filling out an application. I have just reduced the bottleneck to literally zero. Then then we have our show rate and then below that we have our close rate. Okay.
+[14:45] So in this example we have a total of five steps. In my example I have a total of three. Okay. So I want to be clear when I say this. This alone, if you have the opt-in, the application, and then the schedule, you've added two additional steps that are unnecessary.
+[15:03] I'm in huge disagreement with that to be clear. The argument and and let me let me play both sides to be clear, okay? Because I'm rational. I don't want to be right. I just want to make money. Okay?
+[15:16] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "When Opt-ins Make Sense"
+NÚMEROS: Não especificado
+VISUAL: Análise de quando capturar email faz sentido: demografias menos qualificadas financeiramente, ciclos de compra mais longos, necessidade de nurturing
+[15:18] So to be clear, when I look at why people will have an application, it's important to note in some instances it makes sense. If I'm selling to a lower financially qualified demographic, okay, capturing their email and their phone number, that makes sense. You know why?
+[15:36] Because lesser financially qualified demographics require longer durations of time when it comes to decision-making around a buying cycle. So therefore, I need their information so I can nurture them longer.
+[15:48] Tell me I'm wrong here. Okay, somebody who's on this call, tell me I'm wrong. Do people who are not financially well off make decisions quickly or slowly?
+[15:57] >> Slowly.
+[15:58] Do people who are not financially well off, do they typically take big risks on a whim?
+[16:04] >> Well, they do if they can think a lot, they can make a lot of money off it like gambling and stuff,
+[16:10] >> but they don't make huge risks. I guess they wouldn't gamble their house. They would just gamble small amounts of money to try and become rich. So, no.
+[16:18] So typically if somebody is lesser financially qualified capturing their information because I'm going to need to nurture them, it's going to take a longer duration of time on average and it's it's not going to be a fast buying cycle and it's going to require me to list build.
+[16:34] However, there still will be a percentage of that demographic that's willing to buy. So it makes sense obviously to still get those people on a call right away in an attempt to capture that revenue.
+[16:45] However, we're going to make a fuckload more money by capturing that demographic with an opt-in because we're going to get the opportunity to follow up via email marketing and text marketing in addition to obviously just standard retargeting list. Does that make sense?
+[17:00] So, argumentatively, once again, if I'm selling to a lesser financially qualified demographic, sure, from an argumentative perspective, you know, you could justify an opt-in.
+[17:11] However, I still don't see any justification for why you would separate those two, whether they're financially qualified or lesser financially qualified. You see what I'm saying?
+[17:21] So, you you can add an extra step, but there's no sensible argument. And trust me, I've attempted to make it. Why would you justify double the cost per call just to separate out your softwares because you don't like Calendly? Okay.
+[17:36] And hopefully as time progresses, like this is just where we're at right now in fuck late 2024, you know what I mean? Hopefully some other softwares collaborate with each other and build integrations or even more ideally hopefully type form just enables us to integrate with other scheduling softwares like schedule once or go high level like that would be tremendous if we can do that all within the application of whatever software enables us to do that.
+[18:01] So my point being if you have that and you're aware of it and I'm not tremendous you know just make sure you understand the principle of the lesson which is you want to ideally combine the the application and the scheduler into one step which means you integrate those softwares together. Okay.
+[18:18] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Setter vs. Direct Close Model"
+NÚMEROS: Não especificado
+VISUAL: Comparação de modelos: Show Rate Setter → Set Calls to Closer → Show Rate Closer → Close Rate vs. modelo direto mais simplificado
+[18:20] So I digress. The point I'm attempting to make is we have to be aware. That's where it all starts. We have to be aware of what our steps are within our process. So for me it goes ad spend. What's my cost per scheduled call? What's my show rate? And what's my close rate?
+[18:36] Now, let's talk about this step specifically as well because some people they'll run a model that's similar to this. However, the issue becomes they add complexity with a setter.
+[18:47] So, you have a show rate to a setter first. Okay. Then you have how many set calls to the closers, you have the show rate to the closer call, and then you have the actual close rate.
+[18:58] So, same thing, you have your ad spend, you have ideally, once again, not a cost per application and a separated cost per scheduled call. And even worse than that, ideally you don't have ad spend, opt-in, cost per app, cost per scheduled call, the show rate to the setter, the quantity of people that go from the setter to the closer, the show rate to the closer, and then your fucking final close rate. You see?
+[19:24] So, simply put, the point I'm attempting to make is number one, you got to be aware of what your conversion points are. Okay, that's the point I'm trying to make. regardless of how you currently have it set up and what changes you might potentially make.
+[19:38] Now, I got to be aware of my conversion points in my in my funnel process. Okay. The second thing I want you to be aware of and ideally taking action on is reduce the steps. Okay.
+[19:51] Reduce the complexity of this whole thing down to near zero or ideally in this case it can be upwards of one, two, three, four. Okay. So reduce the steps, reduce complexity, and like I said, if you have some kind of argumentative reason for why you're able to add all these additional steps and still be highly profitable, then you know, by all means, dude, fucking ride it out, you know, do what you need to do.
+[20:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Financial Modeling Structure"
+NÚMEROS: Não especificado
+VISUAL: Framework de modelagem financeira para análise de funil, incluindo campos para plugar dados e testar cenários
+[20:17] But what we then want to do with this data, once we're aware of it, to be clear, is we want to create a financial model. Okay? We need to financially model everything out.
+[20:28] That way we can just plug in data and we could see clearly, okay, what is my cost per application? What is, you know, my uh my cost per scheduled call? What can my show rate be at the absolute lowest before everything starts to break?
+[20:43] And I've gone through this with you guys before in terms of our financial model that we like to use, but just for visual reference, you know, let me let me pull it up here for you guys so you guys can see.
+[20:54] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Financial Model Example - Andrew's Inner Circle"
+NÚMEROS: 100% (application to schedule quando integrado), 3 cenários (Conservative, Outperforming, Ambitious)
+VISUAL: Planilha financeira detalhada mostrando Ad Spend, Cost Per Call, Show Rate, Close Rate, AOV, Closer Commissions, Fixed Expenses, Net Profit
+[20:56] So to be clear, like here's one just recently that we have for our inner circle member Andrew here. Okay, so as I mentioned, this model is built to where you can see if you have an application and a scheduled call step separated, this number would not be 100%.
+[21:12] You know this would be whatever the quantity of people that apply and then schedule is however in this case we're assuming once again that our application and scheduled call step is combined as I talked about so that's why this number would represent 100%.
+[21:27] Here we have our ad spend. We have three scenarios altogether. So we can see a conservative, outperforming and ambitious model. We can see and plug in what our cost per call is. We can plug in what our show rate is. And we can we can vary that a little bit. We can add our closing percentage. Okay.
+[21:47] We can add in what our AOV is here. We can add in what our closer commissions are. You can even see here I left an open line item for fixed expenses is what you'd ideally add there.
+[21:58] You can either take a specific dollar value of just fixed expenses that you have in the business and add it there. And or you can add a percentage meaning okay per sale it costs you know this much of a percentage of that sale in order to deliver on it.
+[22:14] And that'll also give you a line item that then gives you at the bottom here what your true net is going to be off of spending that amount.
+[22:22] So here we can see what we spend. Here we can see what we gross. And to be clear, this is where we factor in what our net is, which takes our total that we made minus our ad spend minus our sales commissions.
+[22:36] And that's technically, I still want to be clear, uh, like a gross net profit because you still will always have the expenses of the business that you can ideally factor into that as well.
+[22:47] But this is what I'm talking about when I say financially model everything out. Um, to be clear, it's very important to note, financial modeling gives you the ability to see like, okay, if my show rate and my close rate stay the same, what's the highest cost per call I can tolerate?
+[23:05] Okay, if you consistently get a cost per call that doesn't fluctuate much, but you see that your show rate fluctuates or your close rate fluctuates, that's why we have three different scenarios.
+[23:16] So, I can I can gauge with a variance in my statistics for my conversion points in the process. what specifically has to stay the same no matter what or what my parameters of that statistic can be to remain in my ideal profit zone. Does that make sense? Everybody with me on that?
+[23:34] >> Yeah.
+[23:35] >> Yeah.
+[23:36] >> Cool. Good. Okay. So to be clear, back to my point, when we look at everything that goes on inside of one of our funnels, okay, and we financially model it out and we get the clarity, that's what this does.
+[23:49] Just to be clear, everything that we do when we financially model everything out is all intended just to give us some perspective of of once again what those fluctuations can be within our statistics.
+[24:01] And remember, when you add a bunch of additional steps, you need to financially model that out so you can see the differences. That's why I've through time concluded to this model on the left is because yeah, reducing the steps obviously makes more profit, but in addition to that, adding the additional steps, you will be amazed of how one of the specific statistics at the beginning can fuck everything else later down the line.
+[24:27] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Bottleneck Location Impact"
+NÚMEROS: Não especificado
+VISUAL: Comparação visual de gargalos no início vs. final do funil, mostrando impacto exponencial de problemas iniciais
+[24:29] So as an example, at the beginning I showed you a bottleneck that looked like this where the bottleneck was towards the tail end of the the the steps. Okay? Now imagine it's the opposite where the bottleneck is at the very very beginning.
+[24:43] And let's use the example that your cost per call is exceptionally high. You know what that does is it affects everything that follows it. So if I have a tight bottleneck here, it doesn't really even widen that much after that versus once again if I have a bottleneck towards the tail end of my process.
+[25:01] I can have a significantly greater quantity of people flowing through it until that barrier is reached where as an example once again it might be our close rate, it might be our show rate. You know the point I'm trying to make.
+[25:15] No matter what it is that's at that tail end of the process, it will never affect ROAS as much as what happens here. This will significantly limit the quantity of people that flow through to the other side if it all starts with a high cost for that initial step or that initial step is contracted. Okay.
+[25:35] So, if I'm running that opt-in model and I have an exceptionally low opt-in, every single statistic that follows will just be way higher than it could be. Okay?
+[25:46] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "CPM & CTR Impact Example"
+NÚMEROS: $200 CPMs (skincare example)
+VISUAL: Exemplo de Elliott com e-commerce de skincare, demonstrando impacto de CPMs altos no custo por venda
+[25:48] And when I specifically highlight the first step as ad spend, let me be fair in saying that could start with CPMs, that could start with our unique click-through rates. You know, these statistics factor into what this first step means to be clear.
+[26:02] So when I break that down, it's like, you know, we just had, I believe it was Elliot in the inner circle. He was asking
+[26:09] >> Yeah.
+[26:10] >> Hey, I'm I'm advertising. What's up, Omar? He was advertised in ecom and he was like, "Yo, I'm fucking doing skincare over here and I'm getting like $200 CPMs." Like, you know, he's not used to that.
+[26:22] And that'll obviously lead to a tremendously higher cost per sale because it's the first statistic in the entire process. If that first statistic is bottlenecked, you got to put attention into it.
+[26:34] So anyway, the reason I say all this is wherever the bottleneck is, whether it's all the way down here at the end or whether it's at the very beginning, I need as a marketer to be highly aware of when there's a bottleneck and where it is in my process. And I consider it like a fucking code red. Okay?
+[26:52] I do not fuck around in the instance that I have something that happens at the very beginning of my process because it will ruin ruin the potential of the rest of that funnel.
+[27:03] If it's a little further down, yeah, absolutely I still care about it. I definitely do. I don't want to make it sound like I do not. However, a lot of those statistics that are further down, I don't necessarily, as a marketer, have direct control over. Okay,
+[27:17] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Sales Team Support Resources"
+NÚMEROS: 3-4 diferentes Sales SOPs
+VISUAL: Lista de recursos: Sales Training Library, Sales SOPs, Show Rate & Connection Rate Mastery SOP
+[27:19] I've done a lot over the years to be fair to influence those statistics that are down the road when it comes to a call funnel. I've had an I've built an entire sales training library full of I look listen I know I'm a marketer to be clear and that's how most of you guys think of me. But like dude, I'm a great fucking salesperson too. I've run sales teams for a tremendous amount of time.
+[27:40] And to be clear, I take all of the lessons I've seen from my highest level clients and I put them into a sales training library and I give every single closer that works on my client accounts access to that.
+[27:52] I've had, I think, three or four different sales SOPs that we've created. The most recent one that's circulating that I've shared with you guys is the close rate, I'm sorry, the uh show rate and connection rate mastery SOP.
+[28:05] And that's an example of something I share. I'll jump on fucking sales training calls with these closers if I have to, you know, just to check them and give them some perspective.
+[28:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Brandon Carter Sales Training Example"
+NÚMEROS: 8 quartos, 2 camas queen por quarto, 1 semana completa
+VISUAL: Exemplo de dedicação - oferecendo casa (farmhouse mansion) para treinamento presencial de equipe de vendas do cliente
+[28:17] A great example of this, I'm not using the farmhouse mansion right now. It doesn't really feel like home anymore. you know, we'll have our mastermind there for October, but to be clear, the penthouse starts on September 1st.
+[28:30] So, we're going to get everything moved in in that first week in September to the penthouse, minus our mastermind equipment that we need to have that event there. Simply put, that house is essentially empty, minus the furniture that came with the house and the mastermind equipment.
+[28:45] Brandon Carter, one of my clients and my friend, his sales team has been fluctuating in performance most recently, and he was like, they're all remote. So, I told Brandon, I'm like, "Hey, man, like maybe you get everybody to the house and you do like an in-person, you know, everybody stays there at the house.
+[29:02] It's got fucking eight bedrooms and like two queen beds per room, you know, like have them stay there and do an in-person fucking sales training mastermind with them for an entire week, you know?
+[29:12] I'll do things like that where I literally give up my house to a client for a full week, you know, to have his sales team stay there with him so they could do in-person sales training. I will show up to my own house and help train his fucking sales team on how to be better because they affect my ROAS.
+[29:29] So my point is whenever and wherever there's a bottleneck, it's different if it's marketing knobs, okay? Like all the stuff that's typically at the beginning of the process like CPMs, click-through rates, like we it's I don't want to make it sound super easy to be clear because we all know that it's not like as simple as just, you know, like okay, we can just do a relaunch.
+[29:49] Sometimes we need to go go out and create fresh ad creatives, you know. Um, we have to wait for a few days to get the clients to film some stuff and contribute ad ideas. Uh, sometimes it's varying our audiences or our body copy or our funnels, you know.
+[30:04] But my point is is like, dude, all that shit is tremendously easier in most instances than having to deal with human beings on the sales side of things.
+[30:13] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Marketer vs Sales Team Control"
+NÚMEROS: Não especificado
+VISUAL: Comparação de controle: estatísticas iniciais (controle total do marketer) vs. estatísticas finais (responsabilidade da equipe de vendas)
+[30:15] So simply put, all the statistics that are at the beginning are typically easier and faster to influence and they're always within the marketer's control. Anything that is towards the tail end of the process, this is typically in the wheelhouse of the sales team's responsibility.
+[30:31] However, once again, because it affects ROAS, I'm going to step in and assume responsibility as well because that allows me to contribute some kind of solutions to it. Okay, it's a mental state. Does that make sense to everybody?
+[30:45] So to be clear, let me just emphasize what I'm saying in simpler words. when I solve a bottleneck at the beginning of my process, I can in a compounded way because once again, if I have, let's use the example of that five-step process.
+[31:01] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "5-Step Process Example"
+NÚMEROS: 5 passos totais
+VISUAL: Ad Spend → Cost Per Call → Show Rate → Close Rate → Upsell Rate, mostrando efeito cascata de problemas
+[31:03] Okay, I have my ad spend statistics. I have my cost per call. Okay, I have my show rate. I have like maybe a close rate. Okay, and then let's say over here I have like my upsell rate later on.
+[31:16] If I have a problem here, once again, it compounds into every other statistic that follows. Okay. Versus same logic I just described. What's going on? Let me press that little button. Okay, there we go.
+[31:31] So, the same logic I just described. If I have this going on where I have a problem, let's say at the show rate, okay, very common issue. Well, that only affects my close rate and my upsell rate. You see?
+[31:45] So when I have a compounded problem like in this example here up above, I need to attack it because every other statistic suffers. So simply put, what that means is I'm going to have a tremendously higher cost of acquiring a customer versus here, even though my show rates fucking I'll still have a lower cost of acquiring a customer.
+[32:06] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Priority Framework for Bottleneck Resolution"
+NÚMEROS: Não especificado
+VISUAL: Framework de priorização: focar em estatísticas iniciais primeiro, depois trabalhar sequencialmente
+[32:08] So long story short, if you want to impact your cost of acquisition the most, focus on the front end statistics where you typically have the easiest within your control, fastest available solutions. Okay, to be clear, don't neglect problems like this.
+[32:25] There's unique solutions for each one of these steps. If I have a show rate problem, as an example, I can run a specific content sequence towards that clientele. I can work on my email sequences. You know, I can do a lot of stuff that's going to successfully influence my show rate being higher.
+[32:42] But remember, if everything's relatively normal, okay? And this is an interesting situation too where things don't look that bottlenecked. It's like you might have like little dips in your process where it's not it's not a tremendous contraction. Okay, but it's still two areas where you might have contractions nonetheless.
+[33:02] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Doubling Game"
+NÚMEROS: 0.5% CTR, $200 cost per call, 60% show rate, 20% close rate
+VISUAL: Análise comparativa de qual métrica é mais fácil de dobrar e seu impacto no ROAS
+[33:04] My point being, yeah, you could put attention into one or the other. What I like to play as a game when I'm looking for bottlenecks is a very simple game. What is the easiest statistic to double? Okay,
+[33:18] so let's use the example I have like a 0.5% unique click-through rate. Okay, let's say that I have a cost per call of $200. Okay, let's use the example my show rate's pretty good. Let's say that it's 60%.
+[33:33] Which historically, by the way, would be terrible, but nowadays in 2024, it's not that bad. And let's use the example my closers are closing at like 20%. Okay,
+[33:43] when you look at these statistics, which one looks like the easiest one to essentially could I double my click-through rate? Could I cut my cost per call in half? Could I increase my show rate? Could I double my close rate? Which one of these just looks like the easiest to double out of all these statistics?
+[34:02] To me, it's simple. And also, remember what I said, factoring in everything I talked about above. This bias has to be considered. Do I want to focus at the high end or the low end?
+[34:14] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "CTR Doubling Impact Analysis"
+NÚMEROS: 0.5% → 1% CTR = $200 → $100 cost per call = 2x revenue
+VISUAL: Cálculo do efeito cascata: dobrar CTR resulta em metade do custo por chamada, dobro de pessoas no show, dobro de fechamentos, dobro de receita
+[34:16] For me, I'm taking all my attention here in this case because every other thing that follows once again is going to be influenced based on that statistic going from 0.5 to 1%. Just to be clear, let me put that in perspective. If I did get that to 1%.
+[34:33] Okay, that means my cost per call would immediately go to $100, that would immediately mean I get twice as many people showing up and I get twice as many people closing, which means I get twice as much revenue on the other side. All from doubling that one statistic at the very beginning. Does that make sense?
+[34:52] So to be clear, I can take attention and I can put it on my cost per call in that example by, you know, changing a VSSL or changing the layout of my page or, you know, once again, potentially just tweaking the audiences that I'm targeting and still maintain a .5% clickthrough rate, but they respond better, so therefore I get a $100 cost per call.
+[35:15] The same logic would technically occur. However, it wouldn't make my ad spend more efficient. In the first example I articulated it would allow me to spend the same amount and send twice as many people.
+[35:28] In the example where I focused specifically on the cost per call in this case initially well I still have to spend the same amount of money and I would not get twice the amount of traffic. I would just get twice the amount of people through. You see?
+[35:42] So my point being I want to focus on ideally a step by step comparison here of what's the easiest to double. Once I double one, I then want to take my attention and I want to focus on that next one. Okay, that's the goal. Does that make sense to everybody?
+[35:58] >> Yeah.
+[35:59] Anybody have questions on this?
+[36:02] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "SEO Call Funnel Case Study - Ash"
+NÚMEROS: Não especificado
+VISUAL: Discussão sobre opt-in "Claim the SEO Guarantee" vs. direct booking, percepção de scam, estrutura de funil SEO
+[36:04] >> Um, yeah. I have a question about the Call Funnel um opt-ins. So, basically, I was actually talking to someone about my call funnel and why my SEO call funnel wasn't actually working. Um, and we always have an opt-in, which is to claim the guarantee.
+[36:24] And then the guy said to me, and he's not a marketer, he's a techie, but he said to me, "If I was someone who wanted," and I want to see if you agree, if I were someone who wanted these SEO services, I see the opt-in as a distraction.
+[36:39] And to be clear, I don't want to make this about my business, but he said, he said, "The opt-in seems scammy to me. Opt in to claim the SEO guarantee." He said, "If I were you, I would just take it straight to book a call." And you said something similar to me.
+[36:54] Now, the reason that I don't do that is because maybe I have a limiting mindset, which is like if I'm they're not going to book a call, at least I'll get them to put down their email.
+[37:04] Um, but I feel that your type form might solve this because if I'm clear on what you're saying, the type form going into the Calendly will mean that they don't fill out their name and email once on the type form and then fill it out again on the Calendly.
+[37:20] You can just go to to the last bit of the Calendly and even if they don't book the call, you'll still get their info in the type form if they half complete it. Am I right?
+[37:29] >> You can add a step within the type form. I forget the specific term that it's called, but it's uh essentially a point in the process where regardless of whether they continue from that point forward, you still technically capture the info if they abandon the application. Uh but yeah, to be clear, yes, to your point.
+[37:47] >> So then my question would be what is the opt-in? What is the CTA when you're doing the type form into the Calendly? Is the CTA book a call or is it like learn like do you know what I mean? What is the CTA to get them to start?
+[38:03] >> Fill out the application below and you're going to talk with our team. Uh if you're qualified, there'll be an opportunity for you to schedule in a call time. Just make sure you do that so it's convenient for you and goes onto your schedule on your preferred time and you'll talk with us and you know get started with your SEO business.
+[38:24] >> But here's here's an example. If I just show you denfield.com/seoguarantee, this is exactly my funnel. Now, this is it. We'll guarantee you, that's the offer. We'll guarantee you to rank on the first page of Google.
+[38:40] Um, if we go to guaranteed rankings, my my new VSSL, which was recorded this week, is going to go there. This is the guarantee. Right now, it's claim the SEO guarantee.
+[38:52] So they have to this is exactly what you were saying. It's an application that then leads into a Calendly. Should I change that to from claim the SEO guarantee to book a strategy call directly and then they go type form then Calendly?
+[39:09] >> I would I would personally not even have the button there. I would just have the application embedded right there that has got
+[39:16] >> I'd embed the type form right there with the Calendly integrated into it.
+[39:21] >> And got it. It depends on what you want to do because you know to be clear and just to give you some perspective like if you want a lot of people to flow through it then you would do what I just articulated because you're reducing friction.
+[39:34] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Friction Management Strategy"
+NÚMEROS: Não especificado
+VISUAL: Conceito de reduzir fricção para aumentar volume vs. adicionar fricção para qualificar melhor (exemplo Inner Circle)
+[39:36] Remember anytime you reduce friction you're increasing the quantity of people that are probable to go to the other side of it versus right let me give you an example where it's where it's the opposite and this is very uncommon to be clear but still it's an example that we can use nonetheless.
+[39:53] >> So with the inner circle okay I have a limited quantity of people that we can let into this group. First of all, my one-on-one time is associated with it. But second of all, it's like we only want high-level fuckers in this group. We don't want a lot of people.
+[40:07] >> Yeah.
+[40:08] >> So, to be clear, I add an opt-in prior to the application because I want less people, not more. So, I add friction. Does that make sense?
+[40:18] >> Right. Yes.
+[40:19] >> So, to be clear, remember it's like if I want less people, which is very uncommon, add friction. If I want more people, reduce friction.
+[40:28] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Selfish Marketing vs. Value Exchange"
+NÚMEROS: Não especificado
+VISUAL: Instagram DMs como exemplo de comunicação egoísta, lições sobre considerar ambos os lados da troca
+[40:30] And then it's also important to note like why make somebody opt in to watch a pitch. You got you got to take in both sides. Like when you as a marketer only think of your side of things, it it typically comes off exceptionally selfish. Okay?
+[40:45] And I always like to use my Instagram DMs as an example of this because this is fucking selfish central over here with how people communicate. Okay. So, let's give a few examples. Okay.
+[40:57] So, this guy right here. Okay. So, tell me if he has considered me or if he's only considered himself in this type of example. Okay. Tell me if this person's considered me or only themselves.
+[41:12] See, it's like every single thing is typically when you look at these people's pitches, they're just a bunch of selfish fuckers Let me find a really good one where it's like following up with me for fucking infinite periods of time
+[41:25] >> just saying some stupid shit
+[41:27] >> Yeah, like this.
+[41:29] >> Yeah, that one.
+[41:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Bad Follow-up Example"
+NÚMEROS: Não especificado
+VISUAL: Screenshot de DM: "I see you are simply not interested in checking my video. Lol. understand that not everybody wants to make more cash."
+[41:32] I see you are simply not interested in checking my video. Lol. understand that not everybody wants to make more cash. Like, dude, I have a fucking get richer neon sign. I guarantee I'm infinitely richer than this fucker right here.
+[41:45] And my point being to assume that and then to also say, "Yeah, I won't follow." Like, dude, this just indicates this guy just expects a response. You know, that's not how it works. There's nothing valuable about what he's chosen to follow up with me with.
+[42:01] So my point being it's like when you want to as a marketer just be reminded like it's got to be two ways. Meaning yeah like I want a response when we pitch people. I want to get on calls with people. I want sales calls but I can't be selfish like those people.
+[42:17] I have to contribute to their to their benefit too. Which is where value-driven follow-up comes in in that example. It's like we always attempt to actually be valuable in every communication that we have with somebody else because we're considering their perspective.
+[42:33] So in your example, it's like you want people to opt in so you could follow up with them, but what are they opting in for?
+[42:40] >> I think that's the point I'm trying to make is that I wasn't,
+[42:43] >> you know, it's like significant value there. It's like if you want somebody to opt in like that, there has to be an exchange where it's like, oh, that makes sense. You know, I'd love to watch it. But it's like all they're really doing in that example, Ash, is they're giving you their information so you can harass them forever and so they can then watch a pitch.
+[43:03] >> Well, actually, the pitch is already there. So, the video is free to watch,
+[43:07] >> just so you're aware.
+[43:08] >> So, just my point being my point being is I want to be clear as long as they're opting in for something that has like actual perceptual value on the other side of it, that's a fine thing to opt in for.
+[43:20] It's most of the time when we're talking about a call funnel, it's literally just a VSSL pitch and there is no opt-in. There is no like value on the other side of it. It's literally just I'm going to have you opt in to watch my fucking pitch. That's where opt-in makes no sense. Does that make sense to you?
+[43:37] >> Yeah. So, in my case, it it does make theoretical sense or not because I get them to watch the video for free, but it's just I'm getting them to opt in to claim a guarantee. I think the it doesn't make sense in my case cuz I'm giving them a free video with value, but then I'm getting them to opt in for a guarantee and that's like not a tangible thing. Would you agree?
+[43:59] >> It's like once again just depends on what you want. Like in your case, your actual intention is to sell them SEO services. So to be clear, to get more people on the phone to sell SEO services to, it still argumentatively makes more sense to reduce the friction down to
+[44:16] >> Yeah.
+[44:17] >> Here's the video, here's the application, and then see if you see a difference in quantity of calls out the other side.
+[44:23] >> Yeah. And then I think this is the other thing where for some reason because I've I'm self-taught on the call funnel by looking at lots of other people's call funnels, which is why this Zoom call is so useful.
+[44:35] I think that what I was doing was assuming that there's sales resistance to them directly booking a call. So there has to be some step where at least I get their email, which I agree with you is that now looking back at it, it's actually quite selfish.
+[44:50] So I guess the type form application could either say, hey, if you're interested, fill out this application to see if you're a fit to to to book a call or it could be likely, hey, fill out this application to book a sales call. Like do you think the second type of language is just better because it's straight to the point? Fill out this application.
+[45:10] >> I'll test it and find out. But yeah, I mean I I would think the second one would be better. Yeah.
+[45:16] >> Okay. But I mean, do you have any precedents with your clients that would indicate which one's better?
+[45:22] >> I never use any kind of opt-in because we're typically selling to a very financially well-off demographic and the video is always a pitch. There's never any actual like it's not like they're opting in for a for a valuable video on the other side of it. They're they'd be opting in to watch a pitch. So as
+[45:40] >> good. So the type forms you just say, "Hey, um, if you like the video, book a call with our sales team. Here's the next steps." And there's a type form.
+[45:49] >> It's exceptionally direct. If you go look at the mini webinars for the templates, you'll see like how direct they are. There's like literally nothing about there are literally just pitch videos.
+[46:00] >> Sorry. Which templates, buddy? Just Just so
+[46:03] >> Many webinar and the mini webinar 2.0.
+[46:06] >> Okay. Is that in the sale? Is that in the course that you have? Yeah. Mini webinar 2.0.
+[46:11] >> It is. Let me see if I can just grab you the uh files real quick for you and put it in.
+[46:16] >> Sorry. Sorry. No, all good.
+[46:18] >> If is it in the DMM? I'll check there.
+[46:21] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "DSL - Deck Sales Letter SOP"
+NÚMEROS: Não especificado
+VISUAL: Link compartilhado no chat contendo mini webinar 1.0 e 2.0, templates de apresentação para VSSL
+[46:23] >> Uh here that I just put into the chat that's got links to both of them. This is called the DSL. It's a deck sales letter SOP, but inside of there you'll see there's hyperlinks to the mini webinar 1.0 and the mini webinar 2.0. So you have that
+[46:39] >> typically they're your courses, right? Mini webinar 1.0 and 2.0.
+[46:43] >> Yeah, correct. We got it. We've uh used presentations for VSSLs.
+[46:48] >> Nice one. Yep. All right, cool. Anybody else got questions or anything you guys need clarity on out of everything we've talked about here today?
+[46:57] >> All right, sweet. All right, guys. I appreciate you jumping on and uh per usual, you you guys got questions, just follow up with me and uh shoot them my way.
+[47:06] >> Thanks, Jeremy. Cheers. Take
+📊 RESUMO EXECUTIVO
+NÚMEROS PRINCIPAIS:
+CPA (Cost Per Acquisition): $3,000-$4,000 mencionado pelos clientes
+AOV (Average Order Value): $15,000-$25,000 para produtos high-ticket
+ROAS mínimo: 3:1 para e-commerce
+Drop-off rate: 50% quando application e scheduler estão separados
+Conversão com Typeform+Calendly: próximo a 100%
+Cost per scheduled call atual: $48-$52 (poderia ser metade com integração correta)
+CPM exemplo skincare: $200
+Show rate 2024: 60% (considerado aceitável)
+Close rate exemplo: 20%
+CTR exemplo: 0.5%
+Cost per call exemplo: $200
+Farmhouse: 8 quartos, 2 camas queen por quarto
+ESTRATÉGIAS E SISTEMAS:
+Typeform + Calendly Integration: Única combinação que permite integração completa de application e scheduling em um único fluxo
+Financial Modeling: Três cenários (Conservative, Outperforming, Ambitious) para testar variações
+Bottleneck Identification: Sistema de identificação de gargalos usando analogia de tanque de água
+The Doubling Game: Framework para priorizar qual métrica atacar primeiro
+Value-Driven Follow-up: Abordagem não-egoísta de comunicação
+Mini Webinar 1.0 e 2.0: Templates estruturados para VSSLs
+DSL (Deck Sales Letter): SOP para apresentações de vendas
+Show Rate & Connection Rate Mastery SOP: Treinamento específico para equipes de vendas
+Sales Training Library: Biblioteca completa de treinamentos compilados de clientes high-level
+ESTRUTURA:
+Funil Simplificado (3 passos): Ad Spend → Cost Per Scheduled Call → Show Rate → Close Rate
+Funil Complexo (5+ passos): Ad Spend → Opt-in → Application → Schedule → Show Rate → Close Rate (ou mais com setter)
+Modelo com Setter: Show Rate Setter → Set Calls to Closer → Show Rate Closer → Close Rate
+Financial Model Components: Ad Spend, Cost Per Call, Show Rate, Close %, AOV, Closer Commissions, Fixed Expenses, Net Profit
+Conversion Points Tracking: CPM, CTR, Cost per app, Cost per schedule, Show rate, Close rate, Upsell rate
+DADOS FINANCEIROS:
+Gross margin calculation: AOV - CPA - Sales Commission - Service/Product Costs
+Fixed expenses: Dollar value ou percentage per sale
+Net profit = Total revenue - Ad spend - Sales commissions - Fixed expenses
+Impacto de dobrar CTR de 0.5% para 1%: Cost per call cai de $200 para $100, dobrando volume e receita
+Efeito cascata: Problemas no início do funil multiplicam custos exponencialmente vs. problemas no final
+DURAÇÃO: 47:06 FORMATO: Weekly group call / Master class sobre Call Funnels e otimização de CPA

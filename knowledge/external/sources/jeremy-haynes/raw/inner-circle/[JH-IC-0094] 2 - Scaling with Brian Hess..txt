@@ -1,0 +1,721 @@
+Transcrição Completa: Scaling with Brian Hess
+[00:00]
+"Thanks for the kind intro. Uh I just want to start out by thanking Jeremy because uh you know this guy took a chance on me years ago."
+[00:08]
+"Uh I just shared this with him earlier. A lot of people don't know this, but uh I'm 42 years old today. I didn't step into entrepreneurship until I was 38 years old."
+[00:18]
+"So think about that. Less than four years ago, I was working for somebody. And uh right after that happened, I started multiple companies."
+[00:27]
+"Uh I met Jeremy and this dude flew halfway around the world to Angilla to speak at an event for me. So it's an honor and a privilege to be here uh for you, man."
+[00:38]
+"So um thanks for having me and thanks to you guys for having me. So what I thought I'd do today is to tell you guys a story because I've got multiple businesses."
+[00:48]
+"My main business is a construction company. Um we do asphalt and concrete around the United States. So, in all 50 states in Puerto Rico."
+[00:58]
+"Um we've been begged to go to Canada. We haven't taken that step yet because it's a pain in the ass from an exchange standpoint."
+[01:06]
+"Um but I started multiple businesses at the same time and then later on uh due to influence, so building online presence and influence, I ended up as a partner in this digital marketing company."
+[01:19]
+"So, I'm I'm playing in your world. And we we sold digital marketing to hundreds of contractors. We now have over a thousand clients."
+[01:28]
+"Um, but I I thought I'd tell you the story of how we built and exited a company for quite a bit of money in in just around 18 months, right?"
+[01:38]
+"So, uh, that company is called Lead Revenue. Uh, Jason is familiar with it. Jason does some work for us."
+[01:46]
+"Um, he's a great example of how that works. This guy did an excellent job of not just building a relationship with me, but showing the persistence without being annoying of being able to build a relationship."
+[01:59]
+"And and that takes uh it takes skill. It takes having grace. It takes uh confidence, right? Self-confidence to be able to hang around and let that happen."
+[02:10]
+"And so that is that's kind of what I had that led me to this scenario of being part of this company, right? So I had two other companies uh and I actually started doing business with lead revenue as a client."
+[02:24]
+"Uh, I just, you know, went to speak at an event much like this one that Brett Sutherland, my partner in this company, uh, was a speaker at."
+[02:33]
+"Just a quick side story, the night before I went to speak at that event, I was literally throwing up off the side of my bed and my wife said, 'Uh, you need to call and cancel.'"
+[02:43]
+"And I said, 'Absolutely fucking not. I will be there because that dude has exited multiple businesses for nine figures each and I need to meet him.'"
+[02:54]
+"Uh, and today that's a a a story for you guys to remember. Today, that guy is my business partner. So, think about that. Take the chance, right? Show up no matter what."
+[03:06]
+"Um, so I met Brett. He pitched me on doing my digital marketing for my construction company. That experience went incredible."
+[03:15]
+"And so ultimately, um, I became a a a customer of theirs. And then I coach I also have a coaching company called Top Contractor School."
+[03:24]
+"I coach about 400 contractors around the world um on how to scale and market and lead their businesses a little bit better."
+[03:33]
+"And so I started referring clients over to lead revenue, right? And uh sent over probably six or seven deals the first month."
+[03:42]
+"Uh Brett calls me on the phone and he says, 'Hey man, uh we got to get you set up on an agent agreement.' And I said, 'Well, what's an agent agreement?'"
+[03:51]
+"He said, 'Well, we pay you for referring these people to us.' And I said, 'Well, I didn't send them to you cuz I'm getting paid, right?'"
+[04:00]
+"I just sent them to you because you did a great job on on my stuff and so I want to send you business and I want to help the people that that are important to me."
+[04:10]
+"And he said, 'Well, if you don't want the $23,000 that I have sitting here for you, then uh no problem.' I said, 'Well, it's not like that, man. Hold on a second. We can figure this out.'"
+[04:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Agent Commission Structure"
+NÚMEROS: $23,000 primeira comissão mencionada
+VISUAL: Estrutura de comissionamento de agentes, sistema de referência, pagamento por indicação de clientes
+[04:24]
+"So, uh long story short, I became an agent and just was referring deals over. Uh did a great job at doing that."
+[04:32]
+"Just just influence allowed people the transfer of trust, right? allowed me to become an important part of their uh system and I became a board member for lead revenue."
+[04:43]
+"So now I was an advisory board, board of directors member and uh that unlocked all kinds of other opportunities, right? Other people that I got to meet."
+[04:53]
+"Uh but that entire business model ultimately got launched through what I'll refer to as influencer marketing, right?"
+[05:01]
+"So if you look at how do you how do you launch a company? So, how many of you guys in this room struggle with getting enough attention to your own companies, getting more customers, getting more opportunities, right?"
+[05:14]
+"I always find it ironic that uh when you talk to marketers, the biggest trouble that they have is marketing, right? Ironic, but it's true."
+[05:23]
+"And it's true in our company, right? So, when I stepped in, um that is what I have always done. I've been in sales my whole life."
+[05:32]
+"And so doing that for this company was just second nature to me. Business development is natural, right?"
+[05:38]
+"So if you guys are struggling in that regard, I would highly recommend that you start to look for those."
+[05:44]
+"So in in this case, uh we went into the construction vertical because that was something that I had a warm audience in, right?"
+[05:52] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Vertical Market Penetration Strategy"
+NÚMEROS: 6 meses para centenas de clientes, 30 clientes/mês
+VISUAL: Estratégia de penetração vertical, crescimento rápido em nicho específico, construção como mercado inicial
+[05:54]
+"And very quickly went from a brand new company to 6 months later having hundreds of contractors, right, as as clients."
+[06:03]
+"Then word of mouth, processes, procedures, doing things the right way and getting people results obviously leads to that multiplying."
+[06:12]
+"And so, um, how many of you guys do you think could benefit if you chose if you had the right influencer and you could get into a space, a space that maybe you're already doing business in?"
+[06:24]
+"Just shout out an example. Somebody's doing business in a vertical that, you know, maybe if you had an influencer, you could you could multiply that vertical. Anybody have an example of it?"
+[06:35]
+"Oh any other example other than branded? Because that would be an easy one. Who who is doing business in a vertical right now that you would like to do more business in? What's the vertical?"
+[06:46]
+"I'm in the pre-IPO space. Pre-IPO. And so who who are the influencers online in that space?"
+[06:54]
+"No one. People talk about stocks and stuff. Impossible. There has to be somebody. Maybe. Not even."
+[07:02]
+"So, who's on television doing it? No, he doesn't even do. I'm not even kidding. I don't think there's anybody to be honest."
+[07:10]
+"Then it's you, right? If you can't figure out who it is, it's likely you, right? Or somebody that you know or somebody that's doing this, somebody that's talking about."
+[07:21]
+"You wouldn't be selling marketing or selling a package to something that didn't exist, right? So, somebody is influencing that, right?"
+[07:29]
+"If you think about that in any vertical like construction's a good a good example like there's me there's Lee Hale there's all kinds of guys right that uh when people told me hey man you should be more present on social media."
+[07:42]
+"When I started my construction company I'm like who the hell is going to listen to somebody talk about construction well in all reality it's not about just talking about construction right."
+[07:53]
+"It's about building an audience uh telling your story becoming what I call evangelical about your cause that allows people to be able to connect to you, right?"
+[08:05]
+"So, when you put yourself out there and you talk about something every single day over and over and over again, whether that's your personal values, what you stand for, whatever vertical you're part of."
+[08:17]
+"People become inquisitive about who it is that you actually are, right? Everybody knows Brandon for what he is online, but the people that really follow him know a lot more than just what the Instagram headlines say."
+[08:30]
+"True. Yeah, I would hope so. Yeah. And so when you think about that, how does that look within your business?"
+[08:38]
+"If you find one of these influencers and and your trust for your business is automatically turned on because of their trust, right?"
+[08:47]
+"Do you think if Brandon was going to endorse a business or I was going to endorse a business or Jeremy was going to endorse a business with the level of trust that we've built with followers."
+[08:57]
+"What is the chance that we would do that with someone that's not trustworthy? So, the speed of trust increases, right?"
+[09:05]
+"And it enables you to get out into this industry that you've never been in. Brett Sutherland, my business partner, built a digital marketing agency before this one that he scaled to 2500 automotive dealers."
+[09:18] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Brett Sutherland's Track Record"
+NÚMEROS: 2,500 concessionárias automotivas
+VISUAL: Histórico comprovado do parceiro, experiência prévia em escala massiva, credibilidade no setor automotivo
+[09:20]
+"His dad was a car dealer. That was the business that he spent all his life in, right? So, everyone knew him in automotive, but he had nowhere to turn, right?"
+[09:30]
+"No other industry that he could go into easy. Um, and so there was me and another person that was part of that company who's no longer part of the company that really got it off the ground from an influence standpoint."
+[09:43]
+"And started to make inroads into that. So I I challenge you guys to think about that. Who is that for each of your businesses?"
+[09:51]
+"Who is that one person that's out there that you could build a relationship with? I met Brett and Brett met me by chance."
+[10:00]
+"But who is that in your life that could turn the switch and build that company to that massive of an exit in a short period of time?"
+[10:09]
+"So when you think about how that works, you have influencer-driven marketing, right? And that's that's step one."
+[10:16]
+"How do you actually incent those people? So I was talking to a couple of the guys earlier and and so to walk you guys through this process, I'm going to give you the whole playbook of exactly how we did it here."
+[10:28] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Commission Structure Playbook"
+NÚMEROS: 2x MRR inicial, depois 1x MRR + residual mensal
+VISUAL: Estrutura completa de comissionamento, evolução do modelo de pagamento, incentivos escalonados
+[10:30]
+"Um when we started the company, we needed to incent people at a high level, right? So we took the monthly recurring revenue of uh and to back up a second."
+[10:40]
+"We do website, social media posting, Google my business optimization and paid search, right?"
+[10:47]
+"So whatever that client was paying monthly, we would pay the agent, which at the beginning was me and then a lot of other people came behind that."
+[10:56]
+"We would pay them two times the monthly recurring revenue of that contract right up front as soon as they signed the deal."
+[11:04]
+"And then we would wait to get paid, right? So it would take us a couple of months to recover that money."
+[11:10]
+"So you do in order to execute that, you do have to have a lot of funds up front. Not saying you have to necessarily do it that way, but that is that's the way that we did it."
+[11:20]
+"You could do one times monthly MRR, right? But when we did that, it got people really interested."
+[11:27]
+"So, you can imagine if somebody's signing a $1,500 a month contract, it's not really a whole lot of money, but to the person that's selling it, all they're doing is referring that business in and they're making three grand right off the bat, right?"
+[11:42] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Agent Incentive Math"
+NÚMEROS: $1,500/mês = $3,000 comissão inicial, contrato de 12 meses
+VISUAL: Matemática de incentivos, exemplo de cálculo de comissão, estrutura de contrato garantido
+[11:44]
+"12-month contract, so it guarantees, you know, cash on the back end for us. But that's how we started."
+[11:51]
+"As we started to get into it, we needed a little less of that because we had an agent network and we flipped that um compensation plan over to one month with then a monthly residual on the back end of that, right?"
+[12:05]
+"So, we would it was less upfront and a little bit more to keep the agents interested in maintaining that client."
+[12:13]
+"Um, and then as we got it, man, we had so many agents that there was one agent that created a sub agent program."
+[12:21] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Sub-Agent Automation System"
+NÚMEROS: $500 por cliente referido para sub-agentes
+VISUAL: Sistema de sub-agentes automatizado, portal de qualificação, processo escalonado de comissionamento
+[12:23]
+"So, he put out a website that would qualify people. Hey, you have influence on over general contractors. Sign up here and we're going to we're going to send you $500 for every time we sign up a customer that you refer to us."
+[12:37]
+"So, he was getting paid this. He was paying these people this. And the entire process of unloading these sub agents was automated."
+[12:46]
+"He only talked to the people that went through three or four steps to actually qualify themselves and prove that they weren't full of shit right?"
+[12:54]
+"So, when you think about how quickly that builds, right? I mean, we're talking about signing probably 30 clients a month on a brand new company. That's a lot of money, right?"
+[13:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Current Growth Trajectory"
+NÚMEROS: 30 clientes/mês inicial, 6 figuras MRR/mês atual, múltiplas 6 figuras próximos 3 meses
+VISUAL: Trajetória de crescimento explosivo, previsão de receita recorrente, escala progressiva
+[13:07]
+"Um to give you guys an idea of how that looks as you fast forward now we're you know going on two years of this um our forecast now month over month is adding six figures in monthly recurring revenue every single month."
+[13:22]
+"And for the next three months it's multiple six figures every single month. How many of you could use explosive growth like that?"
+[13:30]
+"Then the question is how do you support it? Right? So, you find somebody that's going to be the evangelist for your company."
+[13:38]
+"Jason and I were talking about this. If you have someone that you can paint the vision to, like when I met with Brett the first time, the vision was crystal clear, like what it was going to look like."
+[13:50]
+"To Jeremy's point, we were building this company with the intention of exiting it. There was no there was no doubt about it that that's what we were doing, right?"
+[14:00]
+"So, I bought into that because that's what I do, right? I like to build businesses and I'm way better at building them. I get bored when I have to run them for long periods of time, right?"
+[14:11]
+"It's just not my thing. I'm way better at designing them and getting them off the ground."
+[14:16]
+"So, when you think about what that looks like from a process and procedure standpoint to be able to support it, you get the evangelist out here preaching, right? Talking to everybody about what it is."
+[14:28]
+"But the only way that that works is on the back end if the processes, procedures, the foundational pieces are all lined out perfectly."
+[14:37]
+"So what does that look like in your business? Could your business support that today?"
+[14:42]
+"So the best advice I could give you if you're looking to do this is really start with the end in mind, right? And and chunk it off."
+[14:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Scalable Planning Strategy"
+NÚMEROS: $50,000 MRR inicial planejado vs $300,000 MRR atual
+VISUAL: Estratégia de planejamento escalonado, começar com meta alcançável, expandir progressivamente
+[14:52]
+"So we if we would have started to build this business thinking, hey, you know, in January of 2022, we're going to add $300,000 in monthly recurring revenue, it would have been too much, right?"
+[15:04]
+"But we could plan to say we're going to build this so that we can do 50,000 in monthly recurring revenue and be able to process all that."
+[15:13]
+"So what does that look like? How many people do we need? How many customer service reps? How many performance managers? How many people do we need running ads?"
+[15:23]
+"What does each category within the business look like? And then when do we need to hire these folks?"
+[15:29]
+"So today it's crazy. I don't know if you get these emails or not, but like literally on a daily basis is like welcome to lead revenue. this person, you know, their name and their position."
+[15:41] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Hiring Velocity"
+NÚMEROS: 6-12 pessoas contratadas por semana, 150-200 funcionários totais
+VISUAL: Velocidade de contratação massiva, crescimento de equipe, expansão operacional
+[15:43]
+"We're adding, you know, 6 to 12 people a week, right? But that is happening because it was already planned out in advance."
+[15:51]
+"We know exactly how many accounts each person can manage. We know exactly how many ads one person can run. We know exactly every single category. It's well defined."
+[16:02]
+"Part of that is because Brett has been through this before, right? So the it's repeating the process over and over again."
+[16:10]
+"And it's it's the equivalent. And by the way, this is the exact same thing that I'm doing in my paving business."
+[16:16]
+"Um, we we doubled in size in 2020, we tripled in size in 2021, and it has never felt out of control."
+[16:25]
+"And by the way, just for all of you who ever make excuses for yourself, I do this with four children, three businesses, um, and find a way to get enough sleep and make it all happen."
+[16:38] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Personal Context"
+NÚMEROS: 4 filhos, 3 empresas, 9, 7, 4 e 2 anos de idade
+VISUAL: Equilíbrio vida-trabalho, gestão múltipla de negócios, contexto pessoal de execução
+[16:40]
+"9, 7, 4 and 2 for those who are wondering. So, think about that. How do you juggle it all?"
+[16:47]
+"Well, you have to get super clear on what the vision is. Jeremy said it. If you start out not knowing what you want to do."
+[16:55]
+"And I believe there's there's two different types of approaches to these types of businesses, and neither one is right or wrong."
+[17:02]
+"But there is a lifestyle element like I'm going to I'm going to own and operate this business, and this is how I want to build it, and I just want to build it and keep it, right?"
+[17:12]
+"And I'm going to try to build that revenue to support my lifestyle. or I want to build it to exit it."
+[17:19]
+"Anybody in here want to build to exit? I'm going to give you some of the individual things that private equity companies look for in these types of companies."
+[17:29] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Private Equity Acquisition Criteria"
+NÚMEROS: Contratos de 12 meses, múltiplos massivos de EBITDA
+VISUAL: Critérios de aquisição por PE, valoração como SaaS, estrutura de contratos recorrentes
+[17:31]
+"So, for those of you that don't know, these types of businesses, if you have 12-month contracts, extended contracts, they look at uh digital marketing businesses, monthly recurring revenue businesses as SAS businesses, so software as a service, right?"
+[17:47]
+"And so those businesses exit for massive multiples on EBITDA and growth rate propels that higher."
+[17:55]
+"So, that's one of the things high growth rate is what they're looking for. So, it's not just get it to, you know, 5 million, 10 million in annual revenue and let it sit."
+[18:06]
+"It's you want to be adding significant amounts of money every month. So, when I throw out numbers like a hundred thousand in monthly recurring revenue, that's $1.2 million in annual revenue being added every month."
+[18:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Revenue Impact Math"
+NÚMEROS: $100K MRR = $1.2M ARR anual, $300K MRR = $3.6M ARR anual
+VISUAL: Matemática de impacto de receita, conversão MRR para ARR, escala exponencial
+[18:22]
+"300,000 this month will add 3.6 million in annual recurring revenue. Think about that."
+[18:29]
+"So high growth rate is one of the things that they're looking at strong EBITDA which it's very difficult not to have strong EBITDA in this business right it's just a very high margin business."
+[18:41]
+"But every dollar matters right when you start looking at this at scale it gets easier to be good at EBITDA because it's hard to literally if you get 3.6 million in annual recurring revenue a month. It's hard to spend it all right."
+[18:56]
+"It's hard to even keep up with hiring at that rate. But strong EBITDA uh the most important and if you don't get everything right on the front end, this is where everything can come off the rails."
+[19:08]
+"Low churn is a very critical piece. Many digital marketing companies can grow but they can't keep clients."
+[19:16]
+"What is a low? Um less than 5%. On what annual?"
+[19:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Churn Rate Benchmark"
+NÚMEROS: Menos de 5% anual
+VISUAL: Benchmark de taxa de cancelamento, padrão de retenção para PE, métrica crítica de qualidade
+[19:24]
+"Yeah. So if you look at your revenue, you should have less than 5% on an annual basis leaving you total. And that's pretty good. And the more you can get it under that, the higher the multiple goes."
+[19:36]
+"When you say strong, you quantify that. So uh to give you an idea, probably in the 30 something 40 something% range of your total revenue."
+[19:46] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "EBITDA Margin Target"
+NÚMEROS: 30-40% de margem EBITDA
+VISUAL: Meta de margem de lucro, padrão de rentabilidade para PE, range ideal de operação
+[19:48]
+"Sorry, one more time. What's that? Just repeat that for EBITDA 30 something to 40 something percent. The higher you can get it, the better off you are."
+[20:00]
+"Rock solid financials. Uh this is one and I'll I'll just share uh you know kind of Brett's lesson."
+[20:07]
+"I mean he had a massive digital marketing company in automotive and when he went to market 2500 automotive dealers doing business with him."
+[20:16]
+"And there were a lot of back and forth things that they had to do to kind of clarify financials right to make sure that everything was in line."
+[20:24]
+"Because these companies I can't remember the exact total but it was thousands of pages of documents that went back and forth to do this first transaction."
+[20:33] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Due Diligence Reality"
+NÚMEROS: Milhares de páginas de documentos
+VISUAL: Processo de due diligence massivo, revisão financeira extrema, escrutínio total de contratos
+[20:35]
+"I mean thousands and some of those were handled by the attorneys. Many of them are reviewed by Brett or somebody on our staff, but it's a massive amount."
+[20:45]
+"They don't they don't miss a thing. They will not buy your company if those things are not clear."
+[20:51]
+"So, if you're thinking about building a company like that, making sure that that stuff is all crystal clear. There's there's nothing uncertain, there's nothing on your books."
+[21:01]
+"Uh, you know, a lot of people in our situations, I was guilty of this early in my career. You know, the the company bank account is your bank account."
+[21:09]
+"That shit doesn't fly with private equity. They will uh they will literally get under the hood of every single detail."
+[21:17]
+"To give you an idea, they read every single contract. My man in the back knows he's shaking his head cuz he's probably been through it, right?"
+[21:25]
+"Like every contract they read and they will ask you questions. I mean, I'm talking any contract."
+[21:31]
+"There was one that came across that was like $150 or $200 a month that we signed in the beginning of the company that they were questioning."
+[21:39]
+"I was like, 'Holy shit man. They really do read every single one of these things, right?'"
+[21:44]
+"Um and and last but not least, the right people. Who is on your staff and what is the quality of those people?"
+[21:52]
+"Uh they will do background checks on every single person. When this was happening, they literally followed me on social media for an extended period of time to see what I was speaking about."
+[22:03]
+"Was it controversial? was it, you know, within the lines of what they could represent. Very important things, right?"
+[22:11]
+"When you think about that, um, all of those things combine into a very massive pile of cash on the back end."
+[22:19]
+"To give you guys an idea, I was saying this to Jeremy and he was like, make sure you break this down simple."
+[22:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Enterprise Value Formula"
+NÚMEROS: $1 MRR = $50-80 valor empresarial, $100K MRR = $5-8M valor adicionado, múltiplo 16x em média
+VISUAL: Fórmula de valoração empresarial, matemática de exit, impacto direto de MRR no valor de venda
+[22:27]
+"So, every dollar in monthly recurring revenue on a 12-month contract that we add right now, it adds $50 to $80 in enterprise value for the company."
+[22:38]
+"I'll break that down for you. Every $100,000 in monthly recurring revenue that we add right now is $8 million in value added to the exit of the company."
+[22:49]
+"Somewhere from 5 to 8 million depending on growth rate and all the other things that I just mentioned. So on average it's probably a 16 multiplier on exit."
+[23:00]
+"Is that serious? Yeah. Contracts on digital marketing service. Yes. Nothing special. No proprietary software."
+[23:10]
+"Tell the services again. So it's website um chat so live chat with operators you know that that we use um Google my business optimization paid search."
+[23:23]
+"But remember guys this is not like you know you what's the average client average client's probably around 1 1500 1200 to 1500 a month."
+[23:33]
+"Contract for 12 months yes how many staff you got it changes every day now but it was it's probably 150 maybe 200."
+[23:43]
+"And then there's, you know, there's people taking care of stuff all over the place, everywhere."
+[23:48]
+"You guys see a 95% rate contract. Yeah. We don't lose barely anybody. But it it's about delivery, right?"
+[23:57]
+"Like you have to be and this is, you know, I always say like I I was like almost born to be a digital marketer because I was a contractor first and nobody trusts us."
+[24:08]
+"Uh and nobody trusts digital marketers. So, like I knew I knew already how to deal with clients and I knew that, you know, to be able to secure these clients and to be able to deliver at this level, um, you have to have a great customer experience."
+[24:26]
+"And so, uh, my business partner Brett Sutherland, for those of you, you know him. I mean, the guy is, um, you know, has a very high net worth already."
+[24:36]
+"Uh, is about to exit another company for a significant amount of money. You call him at 5:00 in the morning, he'll answer on the second ring. You call him at 10 o'clock at night, he'll answer on the first ring."
+[24:48]
+"Uh he's the first person I talk to almost every morning and he's the last person I talk to at night."
+[24:54]
+"Um and it is that is his passion, right? He he is passionate about creating the right experience and getting results."
+[25:03]
+"Does that mean we're perfect? Absolutely not, man. I've seen I've seen us build the exact same platform, the exact same content, the exact same delivery."
+[25:13]
+"And the results that you get in Charlotte, North Carolina versus Chicago, Illinois are completely different."
+[25:19]
+"So, you're not going to satisfy. That's why churn is a normal thing, right? You're not going to satisfy 100% of the customers."
+[25:27]
+"When you can't get it right, you have to handle that situation properly, too, right? So that it doesn't snowball, you don't get bad reviews, things like that."
+[25:36]
+"I can tell you this, there have been a handful of customers in in two years that have been like genuinely upset with us."
+[25:44]
+"Other than that, it comes down to their monthly experience. Like they get a call and an email from their performance manager."
+[25:52]
+"Uh they get the opportunity to talk to us and review everything that's going on once a month. They get a report with their actual results with no bullshit right?"
+[26:03]
+"Because this is what digital marketers do. They create their own reports and make it look a certain way, but the people aren't getting results, right?"
+[26:12]
+"We onboard people every single day. They get a customized report from their digital marketing agency."
+[26:18]
+"And the customized report is similar to what the government tells us about uh finances and money and uh medical reports and all those kinds of things."
+[26:27]
+"It's like it's manipulated to make them look good, right? And so you have to be honest and you have to have something that you are working consistently to actually get these people results."
+[26:39]
+"And when you do that, you're just not going to have a lot of churn because quite frankly, just like being a good contractor, there's not a lot of them out there. So people don't want to leave you."
+[26:49]
+"So if you're experiencing high churn, for example, in your business, um, look at what you're doing, right?"
+[26:56]
+"Look at is the communication good enough? Is the customer experience good enough? Is the process of onboarding them on the front end good enough?"
+[27:05]
+"Uh, when I had my website built, right out of the gate, people would ask me, 'What was it like?' And I literally described it like this."
+[27:13]
+"I said, 'It was like buying a website from Chick-fil-A. It was the easiest and fastest and simplest and least amount of pain I've ever been through.'"
+[27:24] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Customer Experience Philosophy"
+NÚMEROS: Não especificados
+VISUAL: Analogia Chick-fil-A para experiência do cliente, simplicidade extrema, processo sem fricção
+[27:26]
+"And I've built websites with tons of companies. It's what sold me. Make it easy. Don't expect everything from them because you'll be disappointed."
+[27:36]
+"Prepare to do it all yourself. If they give you anything, it's a bonus. But customer experience is everything. You have to be different."
+[27:45]
+"You know, everybody that's been in sales has talked about differentiation. What is differentiation?"
+[27:51]
+"In the construction industry, people will tell you they have the best equipment or they have the best employees with the most experience. That's not differentiation."
+[28:00]
+"I can buy that. If you can buy it, it's not differentiation. It has to be something unique that can't be duplicated easily. It's about experience."
+[28:11]
+"You guys are marketers. What makes people buy? There's two things that unlock people to be able to buy stuff. A logical side of the decision and an emotional side of it."
+[28:22]
+"If you cannot unlock emotion, people have no loyalty to you. Right. Just like any other business."
+[28:30]
+"What is it that makes them go to Chick-fil-A every time? What is it that makes people go to Chick-fil-A?"
+[28:36]
+"It's fast. It's a great experience. The food's consistent, right? Can it be duplicated?"
+[28:43]
+"Well, I don't know. Chick-fil-A makes like four or five times the profit that McDonald's makes and they're on the same street."
+[28:51] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Chick-fil-A vs McDonald's Profitability"
+NÚMEROS: 4-5x mais lucro por unidade que McDonald's na mesma rua
+VISUAL: Comparação de rentabilidade, poder da experiência do cliente, diferenciação através de serviço
+[28:53]
+"Any individual Chick-fil-A makes four or five times the profit of the McDonald's in raw dollars than the McDonald's that's on the same street."
+[29:02]
+"How do you create that as a digital marketer? Here's what I believe the curse of digital marketing is."
+[29:09]
+"It's a very profitable business and it's pretty easy to get enough money to be comfortable. Only the best of the best deliver at the highest level."
+[29:19]
+"And they don't get seduced by success. You get a little bit of money in your pocket and you say, 'Man, I'm making 30, 40, 50 grand a month.'"
+[29:28]
+"If that's how you feel, if you get seduced by success, you'll never get multiple nine figure exit because that's what it takes."
+[29:37]
+"Because it's not about the money for the people that are doing that. Once you get enough money that you can live forever, you better you better not get seduced by success."
+[29:48]
+"Or you will find yourself in all kinds of troubles, not just in business but personally as well."
+[29:54]
+"So build trust with your customers. Uh have somebody that is the evangelist. Throw out some examples of evangelists that you know of."
+[30:03]
+"Who comes to mind? An evangelist. Somebody that preaches about their cause."
+[30:09]
+"Jesus. Jesus. Martin Luther King. Love him or hate him. Donald Trump. Mark Zuckerberg. Oprah Winfrey."
+[30:20]
+"Jeremy Haynes. Jeremy Haynes. It's true, man. Brandon evangelical about their cause and what they stand for and who they are."
+[30:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Evangelist Examples"
+NÚMEROS: Não especificados
+VISUAL: Lista de evangelistas reconhecidos, figuras que pregam suas causas, modelos de influência
+[30:32]
+"You have to get super clear on what it is that you want. What does it look like? Cuz let me tell you something, man. It is not everybody is built for this shit That's the truth."
+[30:44]
+"And don't try to force yourself into it, right? I was telling Jason earlier, I'm like, you can't you can't make yourself an incredible salesperson. You can't."
+[30:55]
+"You can over time, right? You can get better at it, but if that's not you, don't try to fit yourself into that spot. Try to find that person."
+[31:04]
+"But figure out who that is. Get that evangelical person, that person that just has a natural knack for people to listen to them. We all know them. You probably advertise for them."
+[31:16]
+"Think about it. Those people who are out there, when you find that person, that person will help you leverage the brand. They will also help you expand the messaging."
+[31:27]
+"I was back in the back of the room this morning texting with Brett. We've signed up so many people in the paving space that it's getting more difficult to get their attention, right?"
+[31:38]
+"Because the immediate audience, Jeremy and I were talking about this in the kitchen, the immediate audience is almost dry, right?"
+[31:46]
+"Like those people who are actively watching what we're doing all the time. So, we're talking about recrafting the messaging because now we are the choice in digital for paving contractors."
+[31:58]
+"We're not trying to make it anymore. We have most of them. We have hundreds and hundreds of paving contractors."
+[32:05]
+"So, evolving the message, that person will help you evolve the message. They'll know the temperature of the market and how to change it and help you continue to grow, never to face those roadblocks."
+[32:17]
+"Um, once we tapped out the paving contractors and all the contractors that were attached to me, we went out and got roofing contractors influencers."
+[32:26] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Vertical Expansion Strategy"
+NÚMEROS: Centenas de empreiteiros de pavimentação, 20-30-60 clientes/mês por vertical
+VISUAL: Estratégia de expansão vertical, replicação do modelo em novos nichos, múltiplos influenciadores
+[32:28]
+"So, now we have two people in roofing influencing, right? Another person in real estate. And so we're exploding in these markets."
+[32:36]
+"I mean, I'm talking again signing up 20, 30, 60 clients a month in one vertical from an influencer, from somebody that can get people on a webinar."
+[32:47]
+"Mass demo, set up a portal where people can put their own name, their own email address, and their company name, and it autogenerates a contract to them for a flat rate."
+[32:58]
+"That's scalability, right? You're not going to do that in the beginning because it wouldn't work very well, right? It's a more personal touch."
+[33:06]
+"You're paying more on the back end and then it evolves, right? What's that?"
+[33:12]
+"Yeah. I don't want to drill this too much, but I just in co I was doing a gym in this gym and I moved into contracting space. I fucking hated it."
+[33:22]
+"Like the worst clients I've ever worked with in my life. I get just fucking amazed when you're saying that like you're holding underneath the 5% churn."
+[33:31]
+"How the fuck are you like not getting chargebacks with these guys too? How are you not like a lot of these guys like they get paid 60 gs home month they'll go drive for you know."
+[33:42]
+"It's who you're selling it's also why the influencer is important think about this I know who every fucking contractor is right you know who they are right."
+[33:54]
+"And so it's it's getting you're taking something you know nothing about and you're getting granular through someone else's vehicle that does know about."
+[34:05]
+"By the way, Brett said to me last week, 'I don't understand why everybody doesn't run this model.' I said, 'Two reasons, man. Number one, nobody's really thought of it.'"
+[34:16]
+"Number two, a lot of people don't have 200, 300 grand to put up in commissions before they get any money.'"
+[34:24]
+"How do you how do you go find the these people? How do you suggest those relationships?"
+[34:31]
+"Networking. Yeah, it's all networking. It's asking people."
+[34:36]
+"You're incentivizing those people on what like the 1500 times do you?"
+[34:42]
+"Yeah. Like give you an idea, dude. Like when I met Brett and Brett did this agent agreement with me, I made, you know, couple hundred thousand dollars literally sending a text to Brett saying."
+[34:54]
+"'Brett, meet Jeremy Haynes. Jeremy works for XYZ Contracting and he's interested in our services. Can you set up I'll I'll let you guys take it from here to set up a demo.'"
+[35:06]
+"Boom. I get the next month I get $4,000 from Jeremy wired into my bank account."
+[35:13] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Agent Referral Process"
+NÚMEROS: $4,000 por referência, centenas de milhares em comissões totais
+VISUAL: Processo simples de referência, introdução por texto, comissão automática, sistema escalável
+[35:15]
+"It's pretty easy once you you just you have to be careful to find the right influencers though because there are influencers out there that will do it just for the money."
+[35:25]
+"They have to have values, right? They have to be honest. They can't be somebody that's just going to send you anybody and everybody."
+[35:33]
+"It's just like hiring an employee, but it's it should be easier, right? You can tell a lot from people online."
+[35:40]
+"Um, what's your take on having a a more scaled up like a more horizontally scaled agency like this? Um, and having like revshare agreements with your clients."
+[35:51]
+"Um, revshare is not purchasable by private equity."
+[35:56]
+"What if you had what if you had the $1,500 per month and a rev? Uh, don't know about that possibly."
+[36:04]
+"But yeah, I I threw that past Brett because I knew that that's how a lot of you guys did it and he he told me it's not they won't touch it because it's too it's too fluctuating."
+[36:15]
+"But to your point, yeah, if it was if it was contracted for X, but you probably wouldn't get anything from them on the upside of it, right, on the multiple because it's not guaranteed, right? It could go away tomorrow."
+[36:28]
+"Yep. What's that? Yeah. Yeah. If you guys have whatever questions you have."
+[36:35]
+"Um, how do these PE companies like grow from there?"
+[36:40]
+"I mean, what honestly it's harder uh they buy those because it's easier to uh they have a staff uh to simplify."
+[36:49]
+"They have a staff of people that they will rotate around into these companies that help run them."
+[36:56]
+"Uh if you put good operators behind any company that's already got momentum, it's naturally going to grow."
+[37:03]
+"Um it's a it's a great example like when we bring on these influencers now who are, you know, joining our advisory board."
+[37:11]
+"Um basically that's one of the things we say to them is after this exit, the PE company could pick you up and take you to the next company."
+[37:20]
+"You get another couple points of equity in that deal and you exit deal after deal after deal for multiple seven figures, right?"
+[37:29] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "PE Career Path for Influencers"
+NÚMEROS: Múltiplos exits de 7 figuras, pontos de equity em cada deal
+VISUAL: Caminho de carreira com PE, múltiplos exits sucessivos, acumulação de wealth através de equity
+[37:31]
+"Um, you know, me being around these guys as long as I have, uh, there's an opportunity for me to potentially run one of their companies one day if I wanted to do that, right?"
+[37:42]
+"Um, I don't think I will do that, but if if I wanted to, those are relationships that you build."
+[37:48]
+"And then when you run the company again, you get a salary and all that stuff, but then you get a couple points of equity in every deal to take it over, run it for the period of time that they want to run it to grow it, and then they flip it out again."
+[38:02]
+"Anybody else have questions?"
+[38:05]
+"What originally gave you this idea? You presented Brett with?"
+[38:10]
+"So he he had created the company. So he had already started the company. Um, when I became a customer, because of my influence in construction, I knew this was an open space, right?"
+[38:24]
+"I knew that there was nobody of this experience, uh, of this ability to perform."
+[38:30]
+"Like, you know, Brett's knowledge, I joke around, I say Brett knows more about Google than Google."
+[38:37]
+"Um, and it's it's for real. He's been doing it since uh to take a step back, he had Beach Honda right here in uh in North Miami, I think it is."
+[38:48]
+"And he canceled all traditional advertising. Anybody that knows anything about automotive, they spend hundreds of thousands of dollars a month in some cases advertising."
+[38:58]
+"And this was in like 2004. He canceled all traditional marketing and went exclusive online to search."
+[39:07] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Brett's Digital Marketing Pioneer Story"
+NÚMEROS: 2004, Beach Honda, bottom 25 para top 25 concessionária Honda nos EUA
+VISUAL: História pioneira em marketing digital automotivo, cancelamento de marketing tradicional, foco exclusivo em busca online
+[39:09]
+"And uh so he had a company that helped that helped him build his website and that company was called Fusion Zone."
+[39:16]
+"He eventually got Beach Honda from a bottom uh bottom 25 dealership to a top 25 dealership in the country within Honda and then sold that and kept the digital part."
+[39:28]
+"And he started Fusion Zone Automotive. He acquired Fusion Zone and made it Fusion Zone Automotive, grew that to 2500 dealers."
+[39:37]
+"So when I talked to him, I just knew that, you know, this was a huge gap in the contracting space."
+[39:44]
+"And so that's why I started funneling customers to him and it was you know just instant. It was very clear to him on the number of people that were saying yes that this was a massive opportunity. Right."
+[39:57]
+"So in the model of lead generation agencies when they work with local clients like I would say the shitty ones are the ones that are having like 45 to 60 day like retention rates."
+[40:09]
+"But like a lot of the ones that are quote unquote good at least from probably a couple hundred. It seems like somewhere between two to six and a half months."
+[40:18]
+"The ones that rock are going to stick with you for years. But then you got guys like even though it's a good client, you can do everything right, it just seems like it's gone like six months."
+[40:28]
+"From your experience working in the space, um I don't know if you have specific guess what are what are local generation agencies doing wrong to have such a short lifespan."
+[40:39]
+"Um I think people aren't doing the right things to be honest with you. Like you know we have we also have uh a double your leads guarantee."
+[40:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Double Your Leads Guarantee"
+NÚMEROS: 2x leads garantidos ou reembolso total
+VISUAL: Garantia de performance, rastreamento de leads atual, duplicação garantida ou dinheiro de volta
+[40:50]
+"So we'll take, you know, whatever leads they're getting from their website right now. So we get, you know, whatever email address those leads are being delivered to, we get them to carbon copy our email for the month that it takes us to build their website."
+[41:05]
+"We get an idea of how many leads were coming in through that and we guarantee double their leads or they don't pay."
+[41:12]
+"So I believe that it's it's literally just a performance issue. Like I I think to be honest with you and transparent, I think most digital marketing companies are too small."
+[41:23]
+"Uh, so they can't keep up, you know, as they grow, just like again comparing it to construction. They grow and they start to have trouble and they can't keep up because it's underfunded."
+[41:35]
+"Um, so I think I think that's really the issue is like, you know, signing up too many people too quick and not having the scalable processes and spending too much of the profit. Um, not being able to keep up."
+[41:48]
+"They just don't do a good job of product and stuff become fucking. Yep."
+[41:53]
+"Okay. I don't think it's any more complicated than that. Like they just don't perform."
+[41:59]
+"I mean, I could show you hundreds of Google My Business profiles that have next to no activity and we take them over and it multiplies by five."
+[42:08]
+"So, on the agent model, essentially, you're losing money at the beginning by paying the commissions."
+[42:15]
+"Yeah. You're losing cash. Okay. So, you're not losing money because you have a contract value, right?"
+[42:22]
+"Yeah. All the contracts are 12 months. Nothing shorter than that. Yes. And they're all locked in for 12 months. Yes."
+[42:30]
+"Now, automotive, that's kind of different. Like, you know, there's a company over there that kind of changed everything, so it's more month-to-month, but they're a lot more stable of an industry as well."
+[42:41]
+"So, it's easier to operate there. They're not going to move their website and leave two months later. It's just too big of a task."
+[42:49]
+"That double your leads guarantee, obviously, it's going to uh be pertinent to each industry. It's going to be different, but for your guys, are you saying double your leads in that first month of working with you?"
+[43:01]
+"Uh, I believe that I think there's wording of that. It's either 60 or 90 days like you know to give us time but then we refund all the money if we don't do it."
+[43:11]
+"Yeah. 5% for the users. Mhm. Um no it would still be considered churn."
+[43:19]
+"Yeah. Whether we refund them or not it's still considered churn. We just I mean in all honesty we don't lose a lot of customers."
+[43:27]
+"So and it comes down to uh Jason's on the inside so you can ask him some questions too. It's it is literally man we are maniacal about service."
+[43:37]
+"Did you just eat the chargeback case to the sent to the agent if you lost the so they get charged back technically right so it you know it would go against future uh commissions."
+[43:48]
+"But in a lot of cases cuz agents are 1099 so if they get too many chargebacks they would you would eat that money but it doesn't happen that often."
+[43:57]
+"Do you ever do you ever cap the agents on how much they."
+[44:01]
+"Absolutely not. No. Terrible idea to ever cap a salesperson."
+[44:06]
+"All right, guys. Let's give it up for Brian."
+[44:09]
+"Thanks, guys. Appreciate it."
+📊 RESUMO EXECUTIVO
+NÚMEROS PRINCIPAIS:
+Idade ao começar: 38 anos (menos de 4 anos atrás)
+Tempo até exit: Aproximadamente 18 meses
+Clientes totais: Mais de 1.000 clientes
+Primeira comissão recebida: $23.000
+Crescimento inicial: 6-7 deals no primeiro mês
+Taxa de crescimento: 30 clientes/mês inicialmente
+Crescimento atual: 6 figuras em MRR adicionados mensalmente
+Próximos 3 meses: Múltiplas 6 figuras em MRR/mês
+Ticket médio: $1.200-1.500/mês
+Estrutura de comissão inicial: 2x MRR upfront
+Estrutura de comissão atual: 1x MRR + residual mensal
+Sub-agentes: $500 por cliente referido
+Equipe: 150-200 funcionários
+Contratações: 6-12 pessoas por semana
+Taxa de churn: Menos de 5% anual
+Margem EBITDA: 30-40%
+Múltiplo de valoração: 16x em média
+Fórmula de valor: $1 MRR = $50-80 em valor empresarial
+Impacto de escala: $100K MRR = $5-8M em valor adicionado
+$300K MRR mensal = $3.6M ARR adicionado
+Experiência prévia de Brett: 2.500 concessionárias automotivas
+Garantia de performance: Dobrar leads ou reembolso total
+Prazo da garantia: 60-90 dias
+Histórico familiar: 4 filhos (9, 7, 4 e 2 anos), 3 empresas
+Crescimento da empresa de pavimentação: 2x em 2020, 3x em 2021
+Chick-fil-A vs McDonald's: 4-5x mais lucro por unidade
+ESTRATÉGIAS E SISTEMAS:
+Modelo de Influencer Marketing:
+Identificar influenciadores com audiência quente em verticais específicas
+Transferência de confiança através de relacionamentos estabelecidos
+Sistema de agentes com comissionamento agressivo inicial
+Estrutura de Comissionamento Evolutiva:
+Fase 1: 2x MRR upfront para atrair agentes iniciais
+Fase 2: 1x MRR + residual mensal para sustentabilidade
+Fase 3: Programa de sub-agentes automatizado ($500/cliente)
+Expansão Vertical:
+Começar com vertical familiar (construção)
+Replicar modelo em novos verticais (roofing, real estate)
+Múltiplos influenciadores por vertical
+Automação de Escala:
+Portal automatizado para geração de contratos
+Webinars em massa para demos
+Sistema de qualificação automático de sub-agentes
+Experiência do Cliente:
+Onboarding simplificado ("como comprar da Chick-fil-A")
+Garantia de dobrar leads
+Relatórios honestos sem manipulação
+Chamadas mensais com performance manager
+Comunicação proativa
+Preparação para Exit:
+Contratos de 12 meses obrigatórios
+Financeiras impecáveis desde o início
+Documentação completa de todos os contratos
+Background checks de toda equipe
+Monitoramento de presença online dos sócios
+ESTRUTURA:
+Serviços oferecidos: Website, social media posting, Google My Business optimization, paid search, live chat
+Estrutura de time: Customer service reps, performance managers, ad managers - cada categoria bem definida
+Modelo de contrato: 12 meses mínimo, locked-in
+Sistema de agentes: 1099 contractors com comissões escalonadas
+Board structure: Advisory board com influenciadores recebendo equity
+DADOS FINANCEIROS:
+Modelo de receita: MRR (Monthly Recurring Revenue)
+Valoração como: SaaS business por private equity
+Múltiplos de exit: 16x em média, variando com growth rate
+Requisitos para PE:
+High growth rate (adicionando milhões em ARR mensalmente)
+Strong EBITDA (30-40%)
+Low churn (menos de 5% anual)
+Rock solid financials (milhares de páginas de documentação)
+Right people (background checks completos)
+Investimento inicial necessário: $200-300K para comissões upfront
+Recuperação de investimento: 2-3 meses por contrato
+Due diligence: Milhares de páginas, revisão de cada contrato (até os de $150/mês)
+LIÇÕES-CHAVE:
+"Want the deal but don't need the deal" - nunca demonstrar desespero
+Influencers devem ter valores, não apenas buscar dinheiro
+Nunca cap salespeople
+Começar com fim em mente - build to exit ou build to keep
+Não se seduzir pelo sucesso inicial - manter foco no crescimento
+Diferenciação real não pode ser comprada - deve ser experiência
+Desbloquear emoção, não apenas lógica, para criar lealdade
+Network relentlessly - "show up no matter what"
+Performance > Marketing para agências
+Scale requer capital inicial significativo
+DURAÇÃO: 44:09 FORMATO: Apresentação ao vivo para agência de marketing digital

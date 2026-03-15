@@ -1,0 +1,1156 @@
+Transcrição Completa: 6 Pain Based Messaging Best Practices 11 15 25
+[00:00]
+"All right. So, we've been on messaging over these last couple weeks, mainly because of how important it is as it relates to Andromeda. Andromeda when you're marketing requires you to be a master of messaging."
+[00:18]
+"Because, as we've talked about in this most recent week's call, as it relates to foundational campaigns, messaging is what enables you to get in front of specific pockets of people at a given time."
+[00:30]
+"And when you run out of a certain pocket of people or simply put when you want to scale and add even more pockets of people, you have to in today's advertising day and age be able to successfully communicate to those individuals because messaging controls targeting."
+[00:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Messaging Controls Targeting"
+NÚMEROS: Não especificados
+VISUAL: Conceito central enfatizado - a mensagem determina quem você alcança, não mais as configurações de segmentação tradicionais
+[00:52]
+"Okay, messaging controls targeting. It's no longer a game of going in and selecting all the different variables inside of an ad set like interest, behaviors, and demographic traits. As a matter of fact, pretty much all of those are considered suggestions now."
+[01:10]
+"And obviously, well beyond advertising, messaging controls who are probable to get in front of organically as well. You know, recently one of my buddies, he was going through a bit of an issue with one of his relationships that he was a part of."
+[01:26]
+"And before he told anybody on a social media platform, guess what? Instagram started serving him when he was scrolling through reels, started serving him breakup content and like relationship motivation content."
+[01:40]
+"You know, the moral of the story is, and I can't express this enough in simpler words, whether it's organic or paid, messaging controls targeting."
+[01:51] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Pain = Intent"
+NÚMEROS: Não especificados
+VISUAL: Equação simples e poderosa destacando a relação direta entre dor e intenção de compra
+[01:55]
+"Now, the one thing that amplifies our ability to get in front of the right types of people is leveraging pain-based messaging to increase the intent of the leads that we can get in front of. Okay, simply put, pain equals intent."
+[02:12]
+"Okay, this is a very important consideration that you have to have when you're running your paid ads. Okay, it's not tough to understand. It's actually a pretty simple spectrum."
+[02:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Pain vs Intent Spectrum"
+NÚMEROS: Não especificados
+VISUAL: Espectro visual mostrando correlação entre nível de dor (baixo a alto) e nível de intenção de compra (baixo a alto), linha ascendente
+[02:25]
+"When you look at the level of pain that an individual has, okay, the more pain that that person is in in a given moment, the higher the intent is, the more willingness there is to just immediately purchase."
+[02:40]
+"You know, a great example of this, I earlier this year was in the process of suing the IRS. We were trying to go to tax court with them intentionally to get the opportunity to essentially go in front of a tax judge to lower my overall tax burden on a previous year's dispute that we had."
+[03:00]
+"Long story short, the specific attorney that I chose to hire for that, the tax attorney, this guy was paid within two emails. Okay, I fucking hate the IRS. The IRS causes me literal monthly pain by dishing them out six figures a month."
+[03:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Tax Attorney Case Study"
+NÚMEROS: 6 figures/month, $10K retainer, 2 emails
+VISUAL: Timeline de compra ultra-rápida: referência → email → acordo → wire transfer, demonstrando compra por dor extrema
+[03:25]
+"Okay? I'll do pretty much anything. I'll throw money at anybody as long as it's legal, ethical, moral, and won't get me put in jail. I'll fuck the IRS as much as I possibly can."
+[03:38]
+"Okay? I get referred while I'm in pain to a tax attorney. I email back from the referral intro. Send me your wire and tell me how much to send. The guy says, 'Here's the agreement. Wire 10K for the retainer.' Fucking got his wire the next email."
+[03:55]
+"I didn't even think twice. I didn't even need to talk to the guy. Okay. Why did deals like that happen? Because I was in an excessive amount of pain. And so my intent to solve the problem was extremely high."
+[04:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "TMJ Muscle Scraper Case Study"
+NÚMEROS: $250
+VISUAL: Ilustração de crânio mostrando área de dor (lateral da cabeça e mandíbula), conexão muscular, ferramenta de scraping
+[04:15]
+"You know, just recently I had gotten targeted by an ad. And the ad, it had a little... I don't think I've ever actually drew out a skull, so bear with me while I try to draw this."
+[04:30]
+"Okay, so long story short, there was this skull image. And it said this visual of like, hey, if you have headaches in like this area of your head on the side of your face, like going down the side of your head, it's probably because you have TMJ, right?"
+[04:48]
+"And TMJ essentially deals with this little area on the side of your jaw and your jaw gets all tight and that is all connected is what this ad then shows. It was like this whole area is like a giant fucking muscle group right here."
+[05:05]
+"And it was simply saying like, hey, if you've got pain like right here or if you've got pain right here, those two areas on the side of your head or on the side of your jaw, it's all one giant muscle group."
+[05:18]
+"And what you need is... And then it plugged this little tool, like a muscle scraping tool that you sit there and drag on the side of your face. Man, that little fucking tool was $250."
+[05:30]
+"Okay, I didn't blink twice about buying that little fucking thing because guess what? In their ad, they immediately communicated something that was pretty simple, right?"
+[05:42]
+"They didn't have to go through some fucked up set of circumstances that I was going through. They didn't have to take me to like some dark place mentally, you know? That's not the necessary kind of pain that I'm sitting here telling you about."
+[05:56] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Pain Communication Framework"
+NÚMEROS: Não especificados
+VISUAL: Comparação visual - não precisa dramatizar vs. simplesmente identificar a dor existente, abordagem direta e eficaz
+[06:00]
+"It's like the tax attorney guy didn't have to communicate anything to me. He literally just said, 'Here's my wire info and here's how much to send.' He didn't tell me a plan. He didn't tell me how much I hate the IRS and how all my IRS problems are going to fuck me."
+[06:15]
+"All he had to do is just find me in pain. Okay? You understand? People are always willing to pull the trigger when they're in pain because guess what? One of the number one drivers of human behavior is moving away from pain."
+[06:32] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Primary Human Behavior Driver"
+NÚMEROS: #1 driver
+VISUAL: Seta grande apontando para longe de "PAIN", conceito de movimento de afastamento como motivador principal
+[06:35]
+"Okay? That's one of the literal number one drivers of human behavior to do almost anything is getting away from pain. Okay. A lot of people when they communicate messaging what they do is they articulate moving people towards something that they want which is great."
+[06:52]
+"But a master of messaging, what they can do as well is they can talk about the pain and talk about moving the person away from the pain they're currently experiencing."
+[07:05]
+"When I saw that ad about the TMJ fucking muscle scraper tool for 250 bucks, they didn't talk to me about desirable outcomes. They didn't say like, 'Hey, don't you wish your headaches would go away? Like, don't you wish you wouldn't have a tight jaw?'"
+[07:20]
+"Like, don't you wish you could just like feel fully fucking relaxed on the side of your face for once? Like, no, I didn't say any of that. They said, 'Okay, you are currently dealing with a tight jaw.'"
+[07:33]
+"While you sit here and watch this ad, you have to understand the entire side of your head is all one giant muscle group. And if you have tightness in the jaw, that could be a big reason that you have these headaches going down the side of your head is because your jaw is tight."
+[07:50]
+"And what you need to do... bridge, plug the product, right? Right? They didn't really move me away towards an outcome. Okay? They just said, 'Here's the pain that you're actively dealing with.'"
+[08:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "4 Types of Pain"
+NÚMEROS: 4 categorias
+VISUAL: Lista vertical com 4 tipos: Current Pain, Future Pain, Past Pain, Recurring Pain, cada um com ícone distintivo
+[08:10]
+"And so, simply put, there's different types of pain that somebody could be exposed to in real time. Okay? There's current pain, there's future pain, there's past pain, there's recurring pain, and there's many more."
+[08:25]
+"Let's dig into each one of these so you guys can thoroughly understand this. Okay. Current pain relates to something that somebody's dealing with like literally right now."
+[08:38]
+"Okay. When I get fucking migraines, as apparently a lot of us in the inner circle do, as our most recent group chat conversation revealed, I'm in pain, you know, like literally and physically I'm like in pain, okay?"
+[08:55]
+"And psychologically I'm in pain because I'm thinking about the lack of productivity I'm going to have from this like fucked up headache I got, right? I'm like in current pain."
+[09:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Migranium Case Study"
+NÚMEROS: Não especificados
+VISUAL: Produto Migranium da Zach Relief, suplemento com B vitaminas e magnésio, compra imediata durante episódio de dor
+[09:12]
+"Well, the other day there's this company, they hit me with an ad and it said something about migranium, some fucking supplement full of like B vitamins and magnesium. And it's from this company called Zach Relief."
+[09:25]
+"And Zach Relief has this device that I completely disagree with that you like put in your ear and it's supposed to alleviate pressure. Maybe that works for some people. Migraines are very different for everybody, but the Zach Relief company came out with a supplement, smart play on their end, and they called it Migranium."
+[09:42]
+"Okay. Well, I happen to see the ad for migranium literally in the moment that I'm having a fucking migraine. Like again, how fast do you think I bought migranium without even looking too much into it, right? Damn near immediately."
+[09:58]
+"Okay, I haven't even tried it yet cuz I'm not in pain right now and I'm not having a migraine right now. Pain gets people who are highly probable to take an action."
+[10:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Current Pain = Highest Intent"
+NÚMEROS: Não especificados
+VISUAL: Gráfico de barras mostrando Current Pain no topo do espectro de intenção, maior barra, cor destacada
+[10:15]
+"So, if I can appeal to current pain that they're in, I have a very high probability I'm going to get people through that wildly influence all my marketing and sales stats in a very positive direction."
+[10:28]
+"Okay. There's also something else to consider which is how these different types of pain relate to the pain and intent spectrum here. Okay. Generally, current pain is one of the highest forms of pain."
+[10:42]
+"Current pain is where people are going to show up and just immediately buy. Current pain is the shortest sales cycle you get. Current pain is where people are most prone to take aggressive action."
+[10:55]
+"Okay? And so when it comes down to messaging and being able to successfully communicate to somebody in pain, that's exactly what you're attempting to do when you talk."
+[11:08]
+"You're not attempting to talk about the future. You're not attempting to talk about the past. It's like I get migraines technically on a recurring basis, but I'll tell you when I pull the trigger most often on solving anything related to a migraine is when I have one."
+[11:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Communication Timing Critical"
+NÚMEROS: Não especificados
+VISUAL: Timeline mostrando momento ideal de comunicação = durante a dor ativa, não antes ou depois
+[11:28]
+"You know, because again, I'm in pain. So that's when I have the highest probability to deal with it. Okay. Now, very important to note when it comes to literally communicating to somebody via an ad or via a video organically, doesn't matter where you're posting it, paid or organic, the lesson applies the same."
+[11:48]
+"Okay? How we communicate to that person needs to be as though they're watching it in real time while they're suffering from whatever it is that you're specifically talking to them about."
+[12:02]
+"Have any of you put a one in the chat if you've ever been poor enough to angry cry about your circumstances? Meaning you were broke, down bad, fucking pissed and fed up. It bubbled up inside of you and it got you to the point where like literally you were just fucking angry crying about it."
+[12:22]
+"You were like, 'Man, I would do fucking anything besides something illegal to get out of this fucking circumstance, you know?'"
+[12:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Brandon Carter - Excuses Are for Bitches"
+NÚMEROS: $180K in one day (resultado mencionado posteriormente)
+VISUAL: SoundCloud/YouTube track, motivacional, exemplo de conteúdo consumido durante dor emocional extrema
+[12:35]
+"And as an example, like I have one of my good friends, his name's Brandon Carter, okay? And Brandon, he has this SoundCloud. It's technically on YouTube, I guess, and somebody else put it on Soundcloud. And the title of it was called Excuses Are for Bitches, okay?"
+[12:52]
+"And when I was poor and I would angry cry about my circumstances, I would listen to this track from Brandon. And this specific track, I mean, it's like an integral part of my life story from how often I'd listen to it, it got me through many circumstances, you know."
+[13:10]
+"And when I finally started getting money, one of the very first people that I had hired to come and speak at an event was Brandon Carter, you know, and Brandon's one of my good friends now. I get to hang out with him all the time and, you know, it's a great thing."
+[13:25]
+"But to be clear, Brandon didn't make an offer in that video. The excuses are for bitches video is more of like a motivational track. Dog, he could have plugged anything in there and I would have bought it on the spot while I was in that level of pain, angry, crying about my circumstances."
+[13:42]
+"If he would have plugged like just in the context of the fact that I was down bad listening to it, maybe something that was like a hundred bucks, I'd have bought the fucking out of it."
+[13:52] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Pain + Financial Capacity = AOV"
+NÚMEROS: $100 (exemplo baixo AOV)
+VISUAL: Equação mostrando que dor intensa + baixa capacidade financeira = AOV baixo, mas ainda há conversão
+[13:55]
+"Okay. Now obviously we have to understand the pain that people deal with dictates what we can sell them and how much it can be for. Okay? And so we also want to remember when we're talking about pain, the example that I just provided and how many of you put a one in the chat that you've angry, cried being broke and fed up with your circumstances in your lifetime."
+[14:18]
+"Think about that in the context of where you were at financially, right? You didn't have a lot of money to throw at your problems. So therefore, talking to that type of person in that moment would obviously lead to a low AOV."
+[14:32]
+"We wouldn't get a lot of money out of those people. We could help them, but we wouldn't get a lot of money out of them. Let me give you a different example."
+[14:42] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Polymath Partners Tax Strategy"
+NÚMEROS: $5K/month retainer, $880K tax savings, $232K total cost, $150K to Polymath, $75K other expenses
+VISUAL: Breakdown financeiro detalhado, ROI massivo (880K savings vs 232K cost), estrutura de pagamento em camadas
+[14:45]
+"Just this last two weeks here in the inner circle, we have my lawyer. His name's Kyle. One of my few lawyers. And Kyle has a company called Polymath Partners. I've also talked about Kyle and his company in the AI manipulation back-end selling system SOP in that subsequent training video in the weekly group call library."
+[15:08]
+"Some of you even work with Kyle. Kyle has a company called Polymath Partners and he has a business partner named James. Okay, Kyle and James, I hired them as my fractional CFOs. I pay them 5K a month to do that and they do a lot of my tax stuff for me now, too."
+[15:25]
+"They do my bookkeeping. They obviously do all my accounting and you know they do a tremendous amount of other stuff but one of the main things that they've done most recently is tax strategy."
+[15:38]
+"Okay. And as you can imagine like I said at the beginning of this call I perpetually deal with a lot of pain as it relates to taxes and it's a recurring problem for me."
+[15:50]
+"Okay? And as a recurring problem it comes up perpetually. I don't like open cycles. I want to close that fucking cycle and I want to negate it from happening."
+[16:02]
+"Okay, it's like I don't feel it every day. I don't feel it every moment. Doesn't last forever. Technically happens twice a month because I pay estimated taxes and payroll taxes twice within the month."
+[16:15]
+"Okay, that recurring problem, they presented a plan to me. Kyle and James said, 'We can save you about $880,000 on this year's tax liability, and it's only going to cost about $232,000.'"
+[16:30]
+"And I said, 'What do I got to spend the money on?' They said, 'You have to spend 150,000 on us to do this plan because we have to also then take all the legal costs. There's a lot of like structures that we have to create.'"
+[16:45]
+"Those structures realistically cost them like low thousands of dollars, right? They're probably pretty cheap. Here's my point. I wasn't paying them $150,000 for whatever the fuck they were going to do with the $150,000."
+[17:00]
+"I was paying them $150,000 to them personally to save me $880,000 in tax liability. I'm paying them $150,000, which by the way, I literally paid that night."
+[17:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Same-Day Payment Timeline"
+NÚMEROS: 11:00 AM proposal, 11:00 PM payment, $150K wire
+VISUAL: Timeline mostrando velocidade de decisão: proposta pela manhã → pagamento à noite, demonstrando urgência por alívio de dor
+[17:18]
+"Okay? They proposed this plan to me around 11:00 a.m. that day. I was on calls most of that day. Did work after that. Around 11:00 p.m. that night when I was catching up on communication and looking at all the fucking I had to do to close out that day's cycles."
+[17:35]
+"I saw that I had my agreement from them in my email inbox, signed it, wired them the money, 150k, hit their account the next morning."
+[17:45]
+"Okay, that lowered my tax burden by $880,000. I felt like immediate alleviation. Okay, I still have to spend the other like $75ish thousand dollar on other stuff."
+[18:00]
+"But again, my point remains the same. I and anybody else in pain, especially when it's a recurring pain, will spend an unbound amount of money to get out of that said pain."
+[18:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Psychology of Pain"
+NÚMEROS: Não especificados
+VISUAL: Conceito central destacado - humanos odeiam dor, farão qualquer coisa legal para evitá-la, gastos ilimitados possíveis
+[18:18]
+"Okay? There's a reason that people do these kinds of things. And as I said, it's all psychological. We as human beings fucking hate pain, okay?"
+[18:30]
+"We hate it when, as an example, and I'm just going to have you guys ideally be honest here. I'm sure a few of you guys are going to try to say that you love this, but for the most part, if you're honest, you probably don't."
+[18:45]
+"Who here actually likes when you haven't worked out for a while going and starting the process of working out again? Put a one in the chat if you love that process. Put a two in the chat if you hate the physical pain that you endure while you initially start working out again."
+[19:05]
+"Right? And it's like, look at all the twos, right? We got a bunch of honest people here, right? And again, it's okay in the instance that you like it. I understand there are a few people like that. But as you can see, like pretty much everybody says, 'I fucking hate that level of pain.'"
+[19:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Gym Pain Mitigation Products"
+NÚMEROS: Não especificados
+VISUAL: Lista de produtos: TRT, Pre-workout, Creatine, Amino Acids, Peptides, Massage Gun - todos vendidos como "gains" mas na verdade mitigam dor
+[19:25]
+"Okay. Now, just to be clear, you work out however often you work out. Maybe it's as low as like three days a week. Maybe it's as high as like seven days a week, right? Maybe you even do more than that. Maybe do twice a day."
+[19:38]
+"The people who go to the gym most often, what do they usually buy? What? Put it in the chat. What is somebody who goes to the gym extremely often, who's enduring that level of pain, what do they usually buy to help supplement their way through the pain?"
+[19:55]
+"Right? Jamie says TRT. Dylan says pre-workout. Timothy says a massage gun. Chris says creatine, pre-workout, amino acids. Adam says supplements. Peter says creatine. Devin says peptides."
+[20:10]
+"Right? And so think about this, okay? They're actively in pain at a higher frequency than somebody who goes to the gym less and they literally buy more stuff to mitigate the pain."
+[20:22]
+"The framing when they're buying things like creatine, the framing when they're injecting their ass with fucking testosterone or peptides or the belly fat with peptides or TRT or whether they're taking a pill to get their test up is perceived as something to help the gains, right?"
+[20:40]
+"But what's what's it actually doing? Moving the person away from pain. Okay. As I've actively started my fitness journey, again, I have an in-person personal trainer now. He works with us literally 12 hours a day."
+[20:55]
+"He sits in the office, provides us all our food. Everybody that's a staff member at Megalodon, they get trained throughout the day whenever they want. They get stretched whenever they want. They get massaged whenever they want. Nobody's taking them up on that hell."
+[21:12]
+"The long story short is like, you know, we work out every day now over at the office. You know, the first thing that I've been saying, I've been like, man, I got to get on some drugs. Got to start injecting the booty or something."
+[21:25]
+"You know why? It's just a lot of pain to go through the process again. Lot of pain. The drugs will mitigate some of that real time pain. But you know what it also does? It mitigates the recurring pain. It also mitigates future pain."
+[21:42] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Multi-Pain Solutions = Money"
+NÚMEROS: Não especificados
+VISUAL: Diagrama de Venn mostrando produtos que resolvem múltiplos tipos de dor simultaneamente (current + recurring + future + past)
+[21:45]
+"Okay? And what you have to learn about pain is some things that we sell actually solve multiple things at once. Like the migranium that I've talked about that solves a recurring problem for me. It can solve a current problem for me. It can solve a future problem for me."
+[22:02]
+"It'll also feel like it can solve a past problem for me. Those ones are fucking money when you figure those out."
+[22:10]
+"Okay. So anyway, here's my point. What I want you to ideally understand with all these examples that I'm attempting to provide to you are different circumstances where we can find people in pain."
+[22:25]
+"Okay? And ideally shortly here, I'm going to do an exercise with you where I want you to try to consider where people are as it relates to this spectrum of pain."
+[22:35]
+"And I want you to just try to think of your ideal customer and where specifically they are in these different circumstances. Let's talk about a few more real quick before we do that though."
+[22:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Future Pain = Anticipated Anxiety"
+NÚMEROS: Não especificados
+VISUAL: Pessoa olhando para frente com preocupação, evento futuro não confirmado gerando ansiedade presente
+[22:50]
+"Let's talk about future pain. Okay, future pain is anticipated. Who here agrees? Put a one in the chat if you agree. Put a two in the chat if you disagree. That anxiousness comes from anticipating a future event that may not even be real. Could be real, may not be real."
+[23:08]
+"A lot of anxiousness and anxiety comes from just anticipating future pain. Right? Think of that. Right? It's like technically there's pain there, but is it as high or as motivating as current pain or recurring pain? Arguably no."
+[23:25]
+"So, it's a little lower on the spectrum, but it still gets a fuckload of people every day to take an aggressive level of action to mitigate it, doesn't it?"
+[23:35]
+"Think about all the things that people do when it comes to mitigating future anxiety. You could argue that you sitting here right now learning lessons like this is to mitigate future pain of financial loss from not knowing what to do with paid ads or marketing or business in general."
+[23:52]
+"You could argue that you right now are attempting to move away from future pain. You could argue that some of you sitting here right now are dealing with recurring pain."
+[24:05]
+"Some of you have ran webinars for fucking perpetuity and you suck at them and you got to continue to improve and like you pay to be here because you're attempting to improve your recurring pain."
+[24:18]
+"You're in current pain if you're fucking running daily lead flow and your show rate sucks or your close rate sucks or you don't have enough closers. You don't know what to do. Think about all that, right? It's really just moving people away from pain."
+[24:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Pain Framing - Don't Say 'Pain'"
+NÚMEROS: Não especificados
+VISUAL: X vermelho sobre palavra "pain", checkmark verde sobre descrição de circunstâncias específicas
+[24:38]
+"Think about how it's framed, though. It's framed in the context of what you actually are experiencing. It's not framed. How many times have I ever told any of you like, 'Oh yeah, man. You're in a lot of pain with your show rate sucking ass.'"
+[24:52]
+"It's like you don't have to say something so obvious. Like literally the word pain. You have to talk to the circumstances of the individual."
+[25:02]
+"It goes back to that master messaging SOP and that specific weekly group call we did on that problems, circumstances, and outcomes, right? Of pain-based problems, circumstances and outcomes. Powerful amplifier. Okay, powerful amplifier."
+[25:20]
+"Future pain is generally mitigating anxiousness. Something that when you think of future pain, think of it in terms of what is my customer anxious about? What is my customer anticipating or fearful of that hasn't happened yet, but they're thinking through?"
+[25:38] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Past Pain = Trauma/Anchors"
+NÚMEROS: Não especificados
+VISUAL: Âncora prendendo pessoa ao passado, impedindo progresso futuro, necessidade de "cortar" a âncora
+[25:42]
+"Okay, let's talk about past pain. So, past pain is obviously in the past. It already happened. Pain that happened behind us is something that we generally try to run from."
+[25:55]
+"Okay. Sometimes you can interpret this as like dealing with some level of trauma. Great example is my hypnotist Dr. George Prep. Go to Dr. George every year. Every year something traumatizing typically happens to me. I go and I get that thing fucking nuked from my subconscious."
+[26:15]
+"Get hypnotized every year. Scheduled it out between Christmas and New Year's. Sometimes I do more than that. Another great example of past pain could be like a breakup or like a business partner split, you know?"
+[26:30]
+"Or past pain could also be something like as an example, let's say you tried to have a kid and it failed, right? Something like that. There's all kinds of services that people do and invest into and products that people buy and invest into to try again to try to just move away from some painful event that already happened."
+[26:52]
+"Okay? And so when you think of past pain, think of it as something that literally happened or that was interpreted to have happened that you were trying to move somebody away from."
+[27:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Future Pain Visual Model"
+NÚMEROS: Não especificados
+VISUAL: Pessoa aqui → Dor percebida ali (futuro) → Seta mostrando caminho em direção à dor → Seu produto como "course correction" mudando o caminho
+[27:10]
+"Okay? So when you look at future pain, just for clarity on this, I'll try to visualize it for you guys. Future pain would be like the person's here, okay? They perceive pain over here and they view themselves is heading towards it."
+[27:25]
+"It's kind of like if the Titanic could see the iceberg it was going to hit and what would happen if they hit it. That'd be an example of like how people view themselves when they're moving towards a pain in the future, right?"
+[27:38]
+"Your job is to come in in that example and course correct them. Your job is to change the path that they were on. Okay? That's how you mitigate future pain."
+[27:50]
+"Your bridge is here. You're moving somebody away. This is what you sell. Okay? You sell moving them out of the way of that future pain."
+[28:02] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Past Pain Visual Model"
+NÚMEROS: Não especificados
+VISUAL: Pessoa progredindo → Âncora atrás puxando de volta → Tentativa de avançar → Snap back → Seu produto como "tesoura" cortando a âncora
+[28:05]
+"Now, when you look at past pain comparatively, past pain is something that actually happened. Okay? They are already further along. But what is happening is they view this as an anchor."
+[28:20]
+"Okay? They view the past pain as something that's preventing them from continuing on. As much as they try to continue on, they snap back to this exact position again."
+[28:32]
+"Okay? And so your job is to come in and your job is to act as the scissors in this example, right? Your job is to attempt to cut that anchor. Okay? And so you're selling getting rid of that perceived pain from the past."
+[28:48]
+"Okay? So like as an example, when I tell you guys I'm like, 'Hey man, like I go get hypnotized every year for success.' You know, the idea might be like I'm sitting down with Dr. George and you know he's fucking programming my subconscious for some kind of successful traits and characteristics, which after you're out of pain, he does do."
+[29:10]
+"But when you have some trauma, you're not doing fucking with programming your subconscious for success. You're releasing trauma. It's like a bait and switch."
+[29:22]
+"Whatever fucked up shit has happened to you in your life, it's for sure anchoring you down and preventing progress. You can go get hypnotized. He'll fucking alleviate that pain. He'll cut that damn anchor for you."
+[29:35]
+"So when you give Dr. George money for those sessions, you're getting rid of the pain. When you guys come here and you're in the inner circle, these two things happen all the time."
+[29:48]
+"Like I'm pretty sure every single person here can relate to you. Have current circumstances or past circumstances or recurring circumstances or future circumstances that cause pain or that you want to prevent from occurring to you or that you want to have stop happening."
+[30:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Pain Hierarchy (High to Low Intent)"
+NÚMEROS: 1. Current, 2. Recurring, 3. Future, 4. Past
+VISUAL: Lista hierárquica com setas descendentes, Current Pain no topo (maior intenção), Past Pain na base (menor intenção)
+[30:12]
+"Okay, think of these things. I'm going to give you about two minutes here and then ideally we can go through a few of these together. Okay? Feel free to drop questions in the chat if anything comes up as you go."
+[30:25]
+"So, just to be clear on the framing of this before we do this exercise, I want to make sure you guys have an opportunity to ask questions because I want you guys to be able to do this exercise correctly."
+[30:38]
+"If you have a question, drop it in the chat or also just feel free to unmute yourself and ask away."
+[30:55]
+"Jamie says, 'Example recurring pain being stuck at the same revenue level.' Oh, yeah. That's a fucking big one. I've never considered why I bought, but it was 100% from that pain. Exactly."
+[31:10]
+"Yeah. And that's kind of the other interesting thing, Jamie, is pain is generally not something that we actively think with. It's if we do, if it does come up, we'll do a lot. We'll lie to ourselves. We'll lie to other people. We'll immediately take action."
+[31:28]
+"Like again, human beings do not want to sit in pain. Okay? So, when pain comes up, an action typically occurs. Very important consideration."
+[31:40]
+"It's not something that most people actively think with, but when you successfully communicate to them about whatever pain they're dealing with, there's a high probability they'll take action, assuming that they're sitting in that pain currently, anticipating future pain or acknowledging that past pain is holding them back or some level of recurring pain is existing. Get what I'm saying?"
+[32:05]
+"Okay. Again, so no questions on this. You guys are all clear on this. You ready to do the exercise? Again, feel free to unmute yourself if you have a question. Want to make sure you guys get this before we continue on."
+[32:20] PARTICIPANTE (JOHN):
+"I got one. So the future pain, is it okay if they don't know that that future pain is going to exist yet? I'm curious if that's still effective."
+[32:32]
+"So like for example, somebody that's just getting into it, they're usually in my industry, they're blaming their marketing first where as soon as they get their first deal, they're going to have sales problems, right?"
+[32:48]
+"Like they're going to continue to run into sales problems, but they don't know that yet cuz they're kind of still stuck in setup phase. Is it all right to plant that seed? Hey, you're going to set up your business. This is the problem you're going to run into."
+[33:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Seeding Future Pain = Expensive & Low ROI"
+NÚMEROS: Millions to hundreds of millions of dollars
+VISUAL: Gráfico mostrando custo massivo vs. resultado baixo de tentar convencer pessoas sobre dores que não sentem ainda
+[33:10] JEREMY:
+"Okay. So, let me give you an example of what happens pretty much every day on Earth. Some large lobbying or government organization or in some instances a private company will spend upwards of millions to tens of millions to sometimes even hundreds of millions of dollars to seed some level of future pain to like create anxiousness so people move away from that future reality and do something else instead."
+[33:38]
+"Okay. But it costs an unfucking believable amount of money and it costs a whole lot of time as well. So much resources are expensed in trying to get people to believe things that they don't actively think."
+[33:55]
+"It's arguably one of the lowest profitable things that you could do to try to seed future pain. Okay? So, just to be clear, let me give you a perfect example. John, you ready?"
+[34:10]
+"So, John, when you finally hit $5 million a month, one of the biggest problems that you're going to likely deal with is thinking, 'How the fuck can I get to 10 million?' Your business is going to be moving slower than it ever has. You'll have more people than you've ever had before."
+[34:28]
+"You're going to get so fed up with how slow things move at that level compared to how fast they moved when you were at lower levels of revenue. 10 million a month feels farther away than a million a month felt."
+[34:42]
+"And you know that technically you can get there and you do actually believe deeply that it's possible. As a matter of fact, you have plenty of signs that you deeply believe and can see that are reality based signs that you can do it."
+[34:58]
+"But at the same time, like you're going so fucking slow, you just get so fed up with the fact that something's got to change. Maybe you have the wrong people in place. Maybe you need a new CMO, you know?"
+[35:12]
+"Something's got to change, but you don't necessarily know what that something is. Do you give a fuck about that at all? Your current level of revenue at a couple hundred grand a month."
+[35:25] JOHN:
+"No, don't give a fuck. You're right. Okay, that answers my question. Yeah, that's exactly what I was thinking."
+[35:32] JEREMY:
+"So, it's like if I tried and now think about this, John. Think about truly how much money, time, and resources it would take for me to convince you that that's a problem you need to spend time and money solving."
+[35:48] JOHN:
+"Crazy. Yeah. No, that makes sense. I was trying to think of selling an avatar. It's just outside of my demographic, but it's not even worth going after those people."
+[35:58] JEREMY:
+"No. So, the idea here is with what I'm communicating to you guys, like you're ideally talking to somebody who currently is dealing with the pain, whether it be current, future, past, or recurring pain. Okay?"
+[36:15]
+"We ideally are talking to somebody through our messaging that is like literally thinking of that future pain right now and like dealing with it and it's causing them anxiousness."
+[36:28] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Tax Pain Journey Example"
+NÚMEROS: $10K tax attorney (failed), $15K Kyle/James (success), $150K tax plan, $75K remaining
+VISUAL: Timeline mostrando múltiplos pagamentos progressivos enquanto em dor, demonstrando quanto dinheiro dor extrema gera
+[36:32]
+"Okay. Like back before I found Kyle and James as an example with the tax solutions they offer could help me, I was just consistently thinking like, man, I am fucking cooked."
+[36:48]
+"That tax attorney that I mentioned I hired like right away from dealing with IRS shit and that I just instantly wired 10K to that guy didn't fucking help me at all. As a matter of fact, like that guy charged me 15 minutes of his time to send me an email that had two words in it. Thank you."
+[37:08]
+"I immediately fired him. And guess what? I couldn't get a refund either. So the guy just sits there and holds this money unless I actually use his retainer services. So super fucked."
+[37:22]
+"Okay. And anyway, here's my point. That pain that I tried to buy away didn't work with that tax attorney. And that's when I talked to Kyle, my attorney, about it. I was like, 'Hey, do you have any fucking tax referrals?'"
+[37:38]
+"And he ended up being able to do it. Kyle and James were able to help with that. And in between the time of hearing that Kyle and James could do it versus paying Kyle and James the 150k to solve that problem, I was just sitting in like this anxiousness."
+[37:58]
+"It's kind of like I started the path. It's like I was here when I realized the tax attorney guy failed. I thought I had started the journey of transitioning away from the path of pain when in reality it's like that guy was a fucking idiot and I went right back to the fucking pain I was in."
+[38:18]
+"Then I hire Kyle and James. Kyle and James without exaggeration within like a week solved the problem that the tax attorney was supposed to solve in a way more efficient, less liable way."
+[38:32]
+"Now I'm no longer thinking like I'm cooked. I'm thinking, dude, these are the right guys, you know? And around this point, that's where they proposed the 150K plan. At that same point, I fucking paid them immediately."
+[38:48]
+"Right now, literally, as of like yesterday or the day before, they were communicating to me about being in motion on a lot of the things that they proposed in that plan. I'm not finished with the plan yet. I'm in the middle of the plan, so I'm not technically to here, but at the same time, you know, I'm in motion and like again, it feels like I'm out of the way."
+[39:12] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "3 Cars Tax Strategy"
+NÚMEROS: 3 cars, 6,000 lbs each, $500K value, $500K deduction, $75K down payment + taxes
+VISUAL: Estratégia fiscal específica usando veículos pesados para dedução, rental income offset, desbloqueio de deduções adicionais
+[39:15]
+"I still have about 75K left. Not that I'm paying to them, but I'm paying for like, as an example, they told me I need to buy three 6,000 lb cars that value are around 500K."
+[39:30]
+"I then also need to like rent those cars out, which coincidentally, right around the office area, there's actually a guy I just met two days ago that can handle the rental stuff."
+[39:42]
+"That 75k will be in tax on those cars and then it'll also be on the down payments for those cars. Those three cars specifically will enable me to take a $500,000 deduction for this specific year and those cars will pay for themselves cuz they'll be rented."
+[40:00]
+"So it's not like we're buying the cars for any fucking reason other than to get a half a million dollar deduction. By the way, soon as I get those three cars, my other four cars that I currently have that I use myself that I will obviously never fucking rent also become available for another huge fucking deduction."
+[40:20]
+"They also said some crazy shit about my Richard Mills and my other watches with some kind of structure. I don't understand it enough to articulate it to you here to be honest."
+[40:32]
+"But anyway, my point is I still have about 75k left that I need to spend to be able to close the rest of this gap. I'm waiting on them to tell me that I'm clear to spend that."
+[40:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Total Pain-Based Spending Journey"
+NÚMEROS: $10K + $15K + $150K + $75K = $250K total, timeframe: few months
+VISUAL: Timeline completa de gastos progressivos movidos pela dor, demonstrando LTV massivo quando vendendo para pessoas ricas em dor
+[40:48]
+"Anyway, moral of the story is, think about this, right? At this point of the path, I spent 10K on the tax attorney, failed. Right around here, I gave Kyle and James 15K to solve that same tax problem that I gave the other tax attorney 10K to."
+[41:08]
+"Around here, I spent 150K on Kyle and James to solve that tax problem, and I still have 75K to go."
+[41:18]
+"Okay, Simone, it's named they're named Kyle and James. Kyle spelled K-I-E-L. He's in the inner circle. He's been my attorney for a long duration of time and he runs a company called Polymath Partners."
+[41:32]
+"I actually do highly recommend him. They're fucking sick. Arguably some of the smartest people I think I've actually hired to date when it comes to tax stuff."
+[41:45]
+"Okay. Anyway, long story short, here's my point, right? I'm trying to tell you guys in terms of being a rich guy, literally look how much money I've spent just in like this is a couple months span of time. Like this is not a long duration of time."
+[42:02]
+"This is all within this year. 10K, 15K, 150K, 75K. And I have spent like literally the full amount in cash, 10K, 15K, and 150K. And I still have 75K before December 31st that I have to dish out otherwise. You understand?"
+[42:22]
+"So, it's like here's my point, right? The path of mitigating future pain has a lot of money in it when you sell to the right people. Okay? When you sell to the wrong people, poor people, or just the general public, period. Obviously, this number would be dramatically lower."
+[42:42]
+"Technically, they can follow a similar path of like some level of tax burden. But keep in mind, like you want to obviously sell to rich people, but that's a different lesson in itself."
+[42:55]
+"Back to my point, John, I'm actively trying to sell to people who are in pain because the people who are in pain are going to be the ones who spend money. You understand?"
+[43:08] JOHN:
+"Okay. Makes sense."
+[43:12] JEREMY:
+"Jamie says, 'Also, does your organic content for your channel speak to pain?' Yeah, of course, Jamie. Abso-fucking-lutely. That's what I was saying at the beginning of this call and throughout this call."
+[43:25]
+"This by no means is just pretty much everything that I teach is not isolated to just fucking paid advertising to be clear. I know we talk about it a lot, but in this context especially, this is very beneficial to consider for every YouTube video, you know, every single fucking short form piece of content you put out."
+[43:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Priority List Psychology"
+NÚMEROS: Não especificados
+VISUAL: Lista de tarefas com itens relacionados à dor no topo, mostrando como dor determina prioridades diárias
+[43:52]
+"You got to remember like when you talk about stuff that people don't actively give a fuck about, it's just not going to be a priority for them. Okay. What do people prioritize on their list?"
+[44:05]
+"Right? Most of you guys can consider that the people that you sell to have a bunch of things to do throughout the day, right? And what is that priority list mainly comprised of? What sits at the top of that list?"
+[44:18]
+"Right? You might say it's things like, hey, my people want to get richer, right? Like, oh, my people want to get like this result or that result. But if you really boil it all down to what actually sits at the top of that list, it's like all the things that they actually do in a day relate to moving away from pain, mitigating future pain, dealing with some level of current pain that they're in, or getting rid of some fucking recurring pain that they're feeling right now."
+[44:48]
+"Really think of it. Tell me if you disagree. Okay, pretty like as an example, I fucking love money because the more money I make and the richer I get, the less problems I deal with, aka the less pain I have, the more options I have, the more options I get, the less pain I'm going to be in because I have a faster way to solve all my pain-based problems."
+[45:12]
+"So, yeah, I'm focused on the most revenue-driven actions throughout the day, but I'm doing so from a perspective of mitigating future pain, right? Mitigating past pain, dealing with current pain, dealing with recurring pain, right?"
+[45:28]
+"But it's like guised in this perspective of like, oh, I'm just trying to get richer. You understand? It's like really remember that when you do what you do and try to work active pain that they're dealing with psychologically or physically into your messaging. Okay."
+[45:48]
+"Okay. I think somebody else had a question. Leo, you're unmuted. You have a question?"
+[45:55] LEO:
+"Yeah, I have a question. So, you brought up the skull example. Is that like a different awareness level of pain?"
+[46:05] JEREMY:
+"I brought up what? I'm sorry, I couldn't hear you."
+[46:08] LEO:
+"Like the skull like the headache machine or..."
+[46:12] JEREMY:
+"Yeah, physical pain. Yeah. What's your question on that?"
+[46:15] LEO:
+"So that would that be like a different awareness level of pain because it's like..."
+[46:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Current vs Recurring Pain Classification"
+NÚMEROS: Não especificados
+VISUAL: Diagrama mostrando sobreposição entre Current Pain e Recurring Pain, mesma oferta pode atingir ambos
+[46:25] JEREMY:
+"That'd be current pain. That'd be how that's classified because as an example like it could be recurring to be fair. I'll give you a great one, right? Like literally related to that exact thing."
+[46:38]
+"I don't know about you, like I don't really sit around all day and just think, 'Damn, my jaw is tight as fuck,' you know? Like, I'm not sitting there thinking that."
+[46:48]
+"I chew gum pretty much in between all meals, okay? I don't know why. I just fucking love gum. And I don't really feel soreness in my jaw. But I tell you what, I do relate to when they said that headache thing down the side of your head, dog."
+[47:05]
+"Every time I get a fucking migraine, it's down the side of my head. And I thought to myself, I'm like, damn, maybe it is related to the jaw thing. I've never tried that. And that was more recurring pain that they sold to me in that example."
+[47:22]
+"They could also frame it around the perspective of there are likely a lot of people who are literally sitting there in real time saying, 'Yeah, my jaw is tight as fuck.' Maybe one of you sitting here right now like, 'Yeah, no, my jaw is like always tight.' Right?"
+[47:38]
+"And like again, in the current pain and the recurring pain context, both would be buyers. In that example, there'd be a much much lower probability that somebody who would think to themselves from an anxiousness perspective like, 'Oh, maybe I'm going to deal with that.' That person's not going to buy it, right? They have a much lower probability of buying it."
+[48:00]
+"And then people who are in the past where they're like, 'Yeah, my jaw's been tight, but it's no longer tight and they feel like they have some level of a solution in place. They're not probable to buy it either.'"
+[48:12]
+"So, in the jaw example with that device, that muscle scraper, people in current pain or recurring pain are going to be the people who are most probable to buy in that example. That'd be who they'd talk to in those ads. And guess what? That's exactly who they talk to in the ads."
+[48:30]
+"They say things like, 'Your jaw is currently tight while you sit here and watch this video.' And that's a big reason you have these headaches going up the side of your head."
+[48:42]
+"Even if your jaw is not actively tight all the time, there could be a big correlation between your jaw being tight in general, even if it doesn't feel like it's in pain, and those headaches that you randomly get going down the side of your head, right?"
+[48:58]
+"It's like that's the perfect example of talking to current and recurring pain-based people. You get what I'm saying?"
+[49:05] LEO:
+"Yeah, thanks."
+[49:08] JEREMY:
+"Okay. Jamie in the chat says, 'We've tested out a new shift in messaging for our podcast service last week to speak to 1 million to 10 million year businesses to speak to stabilizing their paid marketing through earned media plus podcast.'"
+[49:25]
+"'So, our content and ads should speak to the pain of rising ad costs. Yes. And risk of one channel dropping. Yes. Ad accounts getting deleted. Yes.' Yeah. All that is a great example, Jamie. For sure."
+[49:42]
+"And those would be the things that like you know you'd want to start the ad with like ad costs are rising, the instability of the channels that you're on, ad accounts getting disabled, ads getting rejected, whatever's happening to you on the advertising side comes because you're not diversified enough."
+[50:00]
+"You haven't gone on podcasts and seen the massive upside that happens with consistent lead. You know, get what I mean? Like it's a great example for sure."
+[50:12] PARTICIPANTE:
+"Just on that Jeremy, do you just focus on one type of pain like?"
+[50:18] JEREMY:
+"No, no, you can pepper it in. So, just in that same example with the jaw that I just articulated, notice how I gave the example of somebody who's currently in pain, but also could be dealing with just recurring pain that might not be sitting in pain right now."
+[50:35]
+"So, yeah, you can always pepper in more than one pain point if you want to."
+[50:42]
+"Okay, cool. Anybody else got questions on this before we do this exercise here? Peter, I think you had one, right? I think I missed it in the chat."
+[50:52] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Business Opportunity Pain Question"
+NÚMEROS: $30K close, 2 people closed last week
+VISUAL: Questão sobre como alavancar dor quando vendendo oportunidade de negócio para pessoas que acabaram de sair de empresas
+[50:55]
+"How do you leverage current pain if you're selling a business opportunity? Starting a telemedicine weight loss clinic to someone who just exited a business and has a bunch of money. Will you tell me, Peter, what specific pain are they dealing with? Is it current pain, future pain, past pain, recurring pain? What do you think?"
+[51:18] PETER:
+"We started getting a influx of people closing on the software last week. So, we closed two people and we have a 30k close, which was pretty cool, but I don't really see a lot of pain. That's why I'm asking that question."
+[51:32]
+"I see it's more about yeah, I just have a bunch of money. We close a hedge fund guy. The guy has a bunch of money. He just wanted to start a new business because he saw the opportunity."
+[51:45]
+"So to us, it's more of a call that is very based on logic where we do a lot of calculations and break down the business model rather than just the pain itself. So I was wondering if there's a way that we can leverage that to maybe get more people and do a specific ad in regards."
+[52:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Post-Exit Pain Points"
+NÚMEROS: $54M exit, $110M exit (Judge Graham examples)
+VISUAL: Lista de dores após venda de empresa: perda de cash flow, perda de controle, medo de perder dinheiro, ansiedade de investimento errado
+[52:10] JEREMY:
+"Yeah. And so thank you for bringing up this example, Peter. It gives us a great talking point, which is what most of you are likely going to struggle with when you attempt to implement this lesson is because you aren't dealing with their pain, you may not be able to successfully communicate to it."
+[52:30]
+"And you really have to take yourself as a great marketer and put yourself completely in their shoes. You cannot think through your perspective."
+[52:40]
+"Your perspective in this case and I'm not trying to be a dick when I say it like Peter your perspective in this case... you haven't sold a company for whatever they've sold it for. You have no idea what happens as soon as that occurs."
+[52:55]
+"Okay, let me give you some examples of what happens. You get a big lump sum. All your cash flow literally gets shut off overnight. You no longer have control. Every single rich person on earth fucking loves control. You no longer have control over what you built. Somebody else is calling the shots now."
+[53:18]
+"You're scared shitless that you're going to lose all that money or that you're going to invest into the wrong thing. You're actively anticipating a future set of pain with those variables."
+[53:30]
+"Your current pain is now you have literally no cash flow. You just have a lump sum. Your current pain or potential recurring pain that you may deal with depending on how long it's been since the exit. Could be you've tried to invest in some things, they haven't worked. Those kind of variables."
+[53:50]
+"There's definitely pain in that same mindset. You understand? And by the way, that's like literally what those people say when they do things like join into this group. There's people that are amongst you literally in this very call right now that have dealt with that exact situation. You understand?"
+[54:10]
+"My mentor named Judge Graham. He says 'hey I have an issue with you know I sold a company for 54 million then I sold a company for 110 million and like you know he immediately went and started other companies like immediately."
+[54:28]
+"You got to also consider why he would do that, right? I really just want you to... most people have a very naive perspective of what happens when you sell a company. They think that you go fucking off and like buy an island."
+[54:45]
+"They think that you just like completely disconnect and become a different person overnight. You have no idea what... cuz Peter, what are you like 18, 19? How old are you?"
+[54:55] PETER:
+"19."
+[54:58] JEREMY:
+"Peter, you're 19. Like most of the people here on this call have been grinding for like a fucking decade in a row. Okay. You become a different person over 10 straight years of working like 12 to 14 hours a day just grinding your ass off to get rich as fuck."
+[55:18]
+"Okay. And then when you sell your company and you no longer have to do anything, do you think that that just shuts off overnight?"
+[55:28] PETER:
+"No, of course not. I'm sure they want to they're going to want to I just think it's in them and they love the game probably."
+[55:38] JEREMY:
+"Yeah, 100%. 100%. And that's kind of my point is like that's another example of just the perspective I'm trying to give you. I'm trying to give you a multitude of perspectives that you can think with to try to find the pain within that context. You understand?"
+[55:55]
+"So that's what you got to try to do rather than saying... here's the thing, right? What I want you to do is I want you to always willfully say to yourself there's never an instance, never an instance where somebody's not in pain. Okay?"
+[56:12] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Universal Pain Principle"
+NÚMEROS: Não especificados
+VISUAL: Declaração enfática: "Everyone is ALWAYS in some form of pain" - nunca assuma ausência de dor, apenas procure mais profundamente
+[56:15]
+"Don't conclude to what you just tried to articulate, which is, hey, like, you know, my demographic, like they don't deal with pain. No, no, they do. You just got to be good enough to be able to spot it and then dig into it. You understand?"
+[56:30]
+"And generally, this is the same as almost any other messaging test. Y'all are going to take a set of guesses and you're going to have success in some of those guesses and you're going to completely fail in others."
+[56:42]
+"And the good news is with Andromeda, we have to load it up with a fuckload of different messages anyway. And so we're going to have a high probability to find something that lands because we are essentially mandated to come up with several different variations of messaging nowadays. Okay."
+[57:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Sales Calls = Pain Discovery Goldmine"
+NÚMEROS: Não especificados
+VISUAL: Sales call como fonte primária de descoberta de dor, feedback loop entre calls e messaging
+[57:05]
+"And by the way, one of the best places to typically like see and experience and feel the pain of your given demographic is inside of your sales calls."
+[57:18]
+"So, like when you guys talk to people, you know how I'm sure pretty much all of you have had this experience where you get people to show up to sales calls and you hear your sales people or you yourself may conclude to this where you say, 'These people just aren't like they aren't warm enough, right?'"
+[57:38]
+"What you're really saying is they're not in enough pain. They're not probable to purchase, right? They're interest... I say it in different context. I say like, 'Oh, your interest level's too low.' They're maybe just like curious or generally interested, right?"
+[57:55]
+"When you attract those types of people, having to convince them to buy all comes down to being able to resonate with some level of pain that they're currently experiencing."
+[58:08]
+"The sales process for the best salespeople on earth, they can take those lower intent leads, find the pain button, and immediately move them up the spectrum of intent."
+[58:20]
+"So, generally what gets people interested is that you successfully communicated whatever they're currently going through and were able to say it out loud, right?"
+[58:32] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Low-Intent Lead Conversion Strategy"
+NÚMEROS: Não especificados
+VISUAL: Processo de vendas pivotando para descoberta de dor quando lead tem baixa qualificação/intenção
+[58:35]
+"But if you get people all the way to the call, here's my point. If you get people all the way to the call and they're still low intent, they're still not that qualified, however you want to describe it, the sales call should pivot to trying to find the pain buttons."
+[58:52]
+"That works unfucking believably well with those specific types of leads. You get what I'm saying? If you trained your sales staff, hey, this lead's not that qualified. This lead, and again, qualification could literally mean, by the way, like obviously they just don't have any money at all. That's totally different. That's not what I'm talking about."
+[59:12]
+"Assume that they could close, but they're not qualified because they're not warm enough in this context. Pivot the call to pain-based communication instead. Try to find the pain. That'll work. Okay, very good."
+[59:28]
+"Again, does anybody else have questions on this before we do this exercise now? Yeah, future pain missed opportunity. Exactly, Daniel. That was related to selling the company by the way, Peter, for that feedback."
+[59:42]
+"This is why using the closed sales call transcripts so useful. Can literally use their own words. Yes, exactly, Nick. You know, the power of recorded sales calls nowadays like undeniable for what it does in this age of AI."
+[59:58] PARTICIPANTE:
+"Use managed to break down the deepest pain points of your customer and do research."
+[1:00:05] JEREMY:
+"Fucking yeah. Daniel says, 'How would you motivate people who are stuck with marketing that works but it doesn't work?' Great. For example, they're making money at 10 to 30K a month in spend but can't break past that."
+[1:00:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Stuck Growth Scenario Visual"
+NÚMEROS: $10-30K/month spend, 2:1 ROAS
+VISUAL: Pessoa presa em platô de resultados, comparação entre "making money" (atual) vs "limitation" (reframe necessário)
+[1:00:25]
+"Yeah, great example, Daniel. Usually the pain in that example is... Let me actually try to visualize this for you because I think it's a great question. It brings up a more complex area that we can talk about."
+[1:00:40]
+"So they're currently here. Okay. And here is technically generating money in the context of what you said. Okay. Where you're trying to get them to go, you're trying to lead them to a place where there is better results and more money, which is an outcome-based scenario. Okay?"
+[1:01:00]
+"What you would ideally do is you would take this context here. You would ideally take where they're currently at, okay? And label it. You'd want them to reframe how they currently view these circumstances as like a limitation. Okay?"
+[1:01:20]
+"Because what you're focused on in the example you provided is this part of it. You're focused on selling the outcome. When you're attempting to communicate it from a place of like, hey, you're in pain right now. The pain is there."
+[1:01:38]
+"They're not oblivious to this pain that they're experiencing. This isn't made-up pain either that you're going to try to anchor them to. You're just bringing it to their awareness. Okay."
+[1:01:52] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Resistance to Change Example"
+NÚMEROS: 2:1 ROAS current
+VISUAL: Pessoa ancorada em resultado atual "seguro" vs. caminho desconhecido com risco potencial, resistência natural
+[1:01:55]
+"So, I just had this... I don't remember who it was. May have been one of you on this very call. There was like two or three calls I did this week where you guys were saying something along the lines of 'hey, my current webinar is at like a two ROAS, you know, like it's doing good.'"
+[1:02:15]
+"And I told you I'm like I think you're bringing in the wrong audience. Like I think you need to try some serious variations in messaging to bring in more of the right people."
+[1:02:28]
+"And the people that I talked to about this, they had a lot of resistance to it because where they currently were was at least doing a two to one. Okay?"
+[1:02:40]
+"And the change that I was attempting to sell them on wasn't possible in their mind because they were anchoring themselves to the pain of financial loss."
+[1:02:52]
+"Again, this path, this area right here was an unknown. Like I'm essentially proposing to them to endure pain. I'm essentially saying like, 'Hey, you need to take a financial risk and like abandon this current demographic that you're attempting to sell to and like sell to somebody completely different.'"
+[1:03:12]
+"And you guys all know exactly what that means. That means you need to go film new ads. There's pain in that to a degree. That means you'd have to ideate on all those new ads. By the way, again, pain in that."
+[1:03:28]
+"You'd also then have to spend money to take a risk and test whether that demographic is going to be good or not, right? And in addition to that, you'd also have to endure the risk of financial loss in the instance it doesn't work and go through the process again and again and again."
+[1:03:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Path Perception Problem"
+NÚMEROS: Não especificados
+VISUAL: Dois caminhos: um direto para resultado (ideal na mente do prospect) vs. caminho real através da dor antes do resultado
+[1:03:48]
+"I in my head am selling you on something that's probable to make you more money. But in your head, what I'm actually doing is I'm taking you from your current circumstance and I'm actually moving you towards a path of pain in that example. You see."
+[1:04:08]
+"And so what you have to do in this case is for this journey to occur where there is a chance to be very clear where they do endure that journey of pain and it still leads to that outcome. There's also a probability where they take that path and it leads straight to the outcome."
+[1:04:28]
+"The good news is both of those paths lead to the outcome. What will prevent them from starting that path at all is that there's not enough pain to move them away from where they currently are."
+[1:04:42]
+"So what I would have to help them understand and this is very important to consider is like I have to bring up enough pain anchored to their current circumstances and what they're currently doing in order to get that action to occur."
+[1:05:00]
+"I'd have to envelop the additional pain and make it more prevalent to them that like where they're currently at is a fucked up spot. Right?"
+[1:05:12]
+"And that's assuming that, you know, going on this path of potentially enduring a different type of pain and getting a different outcome is worth taking in the first place. It has to be something that they genuinely give a fuck about. Okay."
+[1:05:28] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Pain Amplifier vs Outcome Seller"
+NÚMEROS: Não especificados
+VISUAL: Balança mostrando necessidade de amplificar dor atual para superar medo de dor futura do processo
+[1:05:32]
+"So, and again, from the perspective of them genuinely giving a fuck about it, this whole half of the equation here that we're talking about, that has more to do with what we've previously discussed as it relates to messaging."
+[1:05:48]
+"That has more to do with being able to break down like their circumstances, their problems, you know, their desired outcomes. Pain in this case as the amplifier, the amplifier comes from trying to really relate to like this specific part of the context here, which is done through again circumstances, problems, desired outcomes."
+[1:06:10]
+"So anyway, does that make sense to you, Daniel?"
+[1:06:15] DANIEL:
+"Yeah. How would that sound like for like a marketing offer? Like I feel like these are some of the most ideal clients that I'm missing. Generally, they're like dealing with some shitty lead gen agency that can spend like four to five times ROAS for them at those like small numbers, but they can't break past it and they're just like, well, I'd rather have money than the risk of like no money."
+[1:06:42] JEREMY:
+"Yeah. No, and that's very real. Again, like essentially in that example, the future pain, like you literally said it out loud, the future pain outweighs the current pain. So why would they go through a process of getting more pain when what they're currently doing gives them less pain? You tell me why they would do that."
+[1:07:05] DANIEL:
+"Yeah, that's what I don't know. So, like is that something you can sell or no? Those are just people that aren't going to..."
+[1:07:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Pain Equation Must Balance"
+NÚMEROS: Não especificados
+VISUAL: Equação: Current Pain > Future Pain from Solution = Action | Current Pain < Future Pain from Solution = No Action
+[1:07:18] JEREMY:
+"Well, again, I'm gonna say it out loud again so you can really understand. Okay, really think about this. If what you're claiming that you want them to do gives them more pain than what they're currently doing, why would they take an action?"
+[1:07:35] DANIEL:
+"Yeah, they wouldn't."
+[1:07:38] JEREMY:
+"Right. And to be clear, to get the person to take an action, what they're currently dealing with would have to give them more pain than what you are attempting to get them to do, right?"
+[1:07:52]
+"And so you have to either amplify the existing pain or bring it to their awareness that they're in more pain than they may consider in order to get them to take that action."
+[1:08:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Bad Offer Diagnosis"
+NÚMEROS: $10K upfront + ads, $20K/month total, $130-140K gross revenue, 40% expenses = $60K free cash, asking for 33% of free cash
+VISUAL: Breakdown financeiro mostrando oferta insustentável para demographic específico, risco desproporcional
+[1:08:10]
+"The type of person that you're talking about is in a very interesting predicament. They don't have a lot of money. So the money that they risk, it's barely turning into more money. So the money that they do risk, it has to return. Otherwise, they're financially fucked."
+[1:08:28]
+"So the question is, can you reduce the future pain by saying that they could spend less than what you may be proposing? Like what are you proposing for them to do?"
+[1:08:40] DANIEL:
+"Yeah. Spend like 10 grand upfront plus ads."
+[1:08:45] JEREMY:
+"Okay. And how much is the total amount? Because you're not obviously factoring in the total amount."
+[1:08:52] DANIEL:
+"Like per month like 20 grand."
+[1:08:55] JEREMY:
+"And then how much money in cash flow do they make per month? Like total gross in this example of this client you're talking about?"
+[1:09:05] DANIEL:
+"I want to say like 130, 140."
+[1:09:08] JEREMY:
+"Okay. And how much total expenses are they putting out on average?"
+[1:09:15] DANIEL:
+"Not entirely sure."
+[1:09:18] JEREMY:
+"Make it up. What do you think?"
+[1:09:20] DANIEL:
+"Probably like 40%."
+[1:09:22] JEREMY:
+"So they have free and clear call it 60 grand. Yeah. And you want them to risk 33% of that. And what have their experiences been with people like you on being able to successfully turn that money into more money?"
+[1:09:42] DANIEL:
+"Not great."
+[1:09:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Offer Reality Check"
+NÚMEROS: 33% of free cash flow requested
+VISUAL: Avaliação brutal: "Complete fucking shit offer" - análise honesta de proposta insustentável
+[1:09:48] JEREMY:
+"You see, and so literally every single thing that you're saying makes this sound like complete fucking shit doesn't it?"
+[1:09:58] DANIEL:
+"Yeah."
+[1:10:00] JEREMY:
+"Okay. And so again, what you're saying out loud is, hey, what they're currently doing is technically working for them. You're just claiming it could work better. Is that what you're saying?"
+[1:10:15] DANIEL:
+"Yeah."
+[1:10:18] JEREMY:
+"And so again, it sounds like you have a terrible fucking offer in this context. It sounds like you're trying to sell them something that would make no sense for them to buy. And it sounds like you need some kind of transition offer if you ever wanted to sell what you're claiming you want to sell here. Can you see that?"
+[1:10:38] DANIEL:
+"Yeah. Yeah."
+[1:10:42] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Transition Offer Solution"
+NÚMEROS: Need to earn them $20K first
+VISUAL: Escada de ofertas: oferta de transição de baixo custo → ganha dinheiro para cliente → cliente agora pode pagar oferta principal
+[1:10:45] JEREMY:
+"And so the question is is like what could you sell them that costs way less than 20 grand that gives them an opportunity to earn more money or amplify it? Like how could you earn them that extra 20k to make it so they can easily spend it."
+[1:11:05] DANIEL:
+"Yeah."
+[1:11:08] JEREMY:
+"Right. You need some kind of transition offer in that example because like what you're claiming you want to sell and this is a great example. I'm really glad you brought this up because a lot of you guys try to do this shit all the time."
+[1:11:22]
+"You have the absolute most donkey trash fucking setup ever that you're trying to put somebody through and you're like, 'Oh, well, like why isn't any of the pain-based messaging working and you're not considering what I just said out loud?'"
+[1:11:38]
+"Like, you're literally... You are actively trying to sell somebody into pain in that example, right? It's like that's not what we're talking about. Like, we're talking about selling people away from pain. We're talking about getting people out of pain, not selling them into pain. That's an offer issue, right?"
+[1:11:58]
+"You got to find something that mitigates the offer issue in that example and makes it more appealing. Right? So in this case, it's probably a pretty simple one. You just would reduce the overall financial output that they have upfront, right?"
+[1:12:15]
+"You would just want to reduce the out of pocket in that context and you know make it easier for them to do something that can help amplify the earning that they have now and then use some of that extra money cuz nobody's probable to risk you know that much money unless they're in like some desperate level of pain with what they're currently doing."
+[1:12:38] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Agency Client Acquisition Pain Types"
+NÚMEROS: Não especificados
+VISUAL: Dois tipos ideais de clientes de agência: 1) Odeia agência atual (perdendo dinheiro), 2) Nunca tentou ads antes
+[1:12:42]
+"I'll give you a great example just for further awareness on this Daniel. Who are the people who generally do sign up with you?"
+[1:12:52] DANIEL:
+"Like seven figure earners."
+[1:12:55] JEREMY:
+"Nope. Not what I mean. Let me be more clear. As an agency, as an example, I generally get two types of people nowadays. I get somebody who hates their current agency because their current agency is losing them money. Or I get somebody that hasn't tried paid ads yet and thinks I'm the fucking man. What do you get?"
+[1:13:18] DANIEL:
+"Yeah. Like same thing."
+[1:13:22] JEREMY:
+"Okay. And so again, in those two different contexts, they're both in pain, actively attempting to get away from the pain. Taking somebody who's actively in a good spot and saying, 'Hey, do you want to go into a process of pain with me?' Like, bro, we never convert those people. You already know that."
+[1:13:42]
+"You never sell to those people because again, it's in this context. You get what I'm saying?"
+[1:13:48] DANIEL:
+"Yeah. Yeah. Yeah. Yeah. That makes sense."
+[1:13:52] JEREMY:
+"So, if you're actively... think about this, right? If you're actively spending money and running ads and trying to literally convert that demographic, like, bro, you're financially cooked when you spend money on that type of messaging."
+[1:14:08]
+"It has a very low probability to get people to buy if you were advertising for that. You get what I'm saying? And when you think of it in that context, like isn't it extremely obvious?"
+[1:14:22] DANIEL:
+"Yeah. Yeah, it is. Yeah. I don't advertise to them, but those are the people that I've struggled to convert and it makes sense now."
+[1:14:32] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Inner Circle Transition Offer Example"
+NÚMEROS: $10K/month Inner Circle, $5K/month Half Circle, $5K one-time Master Internet Marketing
+VISUAL: Hierarquia de ofertas demonstrando como recomendar oferta menor para pessoas em dor mas sem capacidade para oferta principal
+[1:14:35] JEREMY:
+"Yeah. Exactly. And so for those people specifically, it's like, dude, let me just give you a good example, right? Like we get people all the time, they want to be an inner circle member and we tell them, we're like, dude, we don't think it makes sense for you to do this."
+[1:14:52]
+"Like we think it makes more sense. Just spend 5K one time and go into Master Internet Marketing. It's a fucking awesome program, dude. You're not going to endure the ongoing financial burden of what the inner circle is going to cost you every month."
+[1:15:08]
+"I mean, it's fucking 10K a month nowadays. Cost 5K a month for the half circle, you know, a big cost, a respectable amount of money, you know, and the point is is like, why not just do a 5k one-time cost?"
+[1:15:22]
+"And they'll usually say some shit like, well, I really want the inner circle. I really want like the higher level stuff. And I'm like, yeah, I get it. But to be clear, just because you're in like a desperate condition doesn't mean that it's a good time to risk the amount of money that just getting into it is going to cost, let alone all the other money we're going to have you risk."
+[1:15:42]
+"Like take this lesser risk instead, right? And it can make more sense of the deal for those people sometimes."
+[1:15:52]
+"In somebody coming to us saying who's in a good spot, you know, just not in a lot of pain. Hey, you know, I'm thinking about becoming an agency client of yours, like are you guys taking on deals right now."
+[1:16:05]
+"And we're like, oh, well, why are you thinking of switching? And then they say like the most red flag shit ever, Daniel, where they're like, 'Yeah, I mean, I'm spending like, you know, 10 to 30k a month on ads. Like, I'm doing all right. I've worked with my current guy for like a month or two, you know? I'm just not really sure that like it's going well.'"
+[1:16:28]
+"And I'm like, 'Well, what's the ROAS?' And they're like, 'Oh, it's a 2:1.' And I'm like, 'All right, well, I would just stick with that guy. Maybe in the meantime, if you want some additional lessons, like join the inner circle or, you know, do something else.'"
+[1:16:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Offer Stack Expansion Required"
+NÚMEROS: Não especificados
+VISUAL: Três níveis: DIY (Do It Yourself), DWY (Done With You), DFY (Done For You) - necessidade de múltiplas ofertas
+[1:16:48]
+"It's like, you got to have transition offers. There's a great weekly inner circle group call on do-it-yourself, done with you, and done for you best practices. It sounds like you just got to expand your offer stack a little bit. Does that make sense to you?"
+[1:17:05] DANIEL:
+"Yeah. Yeah, that's what I'm currently doing, too. So, yeah, that makes perfect sense."
+[1:17:12] JEREMY:
+"Perfect. Good. Okay. Do you have any further questions on that? Does that all make sense?"
+[1:17:18] DANIEL:
+"Oh, no. Yeah, that was great. Thanks."
+[1:17:22] JEREMY:
+"All right. Perfect. Thank you for the opportunity to share that lesson. I appreciate that."
+[1:17:28]
+"Okay. So my company uses Zapier to take the sales call fathom transcript with an AI analyzer prompt to extract all our prospects pain points, current situation and ideal outcomes. Very leverageable for the sales management marketers. Absolutely great. Great job on that, Dylan."
+[1:17:48]
+"John says, 'I gave the feedback to my team and now they're just sending framing videos when someone's not warm enough and close them a week later.' Nice. Good job, John."
+[1:18:00]
+"Jamie says, 'You ever get those prospects who just refuse to believe they're in any pain and are just happy being?' Yeah, I mean Jamie, I had that literally happen yesterday with Brendan as an example in the inner circle here where, you know, he actively says in his message like, 'Hey, I'm just struggling to get more qualified calls.'"
+[1:18:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Brendan EOS Case Study"
+NÚMEROS: $600K/month for 2 years (stuck)
+VISUAL: Exemplo de pessoa em negação de dor real, focando em solução errada (EOS) em vez de problema real (qualified calls)
+[1:18:25]
+"But his focus is on like the EOS implementation shit that he was talking about where he was like, 'Hey, I think I need to learn this.' And I'm like, 'The fuck you do, bro. You need to get more qualified sales calls on your calendar. Stop being fucking and pay attention to what your actual problem is.'"
+[1:18:45]
+"He just says, 'I'm going to drop out.' I don't like this coaching style. It's like, 'All right, buddy. Get fucked.' You know, doesn't matter. We'll replace you tomorrow."
+[1:18:58]
+"Here's my point. Okay, that guy in real time is in active denial. That happens all the time. It's probable to happen."
+[1:19:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Vital Lies and Simple Truths by Daniel Goleman"
+NÚMEROS: Top 15 books of all time (Jeremy's list)
+VISUAL: Capa do livro, conceito de "making the circle disappear" - como humanos criam mundos falsos para evitar dor
+[1:19:15]
+"There's a great book. It's literally one of my favorite psychology books I've ever read. It's called Vital Lies and Simple Truths. This book is fucking insane, dude."
+[1:19:30]
+"Okay, what it does is it talks about this concept. By the way, Daniel Goleman wrote Focus, Emotional Intelligence, Emotional Intelligence 2.0. He's got some fucking banger books, but this one's one of my favorite books of like all time. I'd arguably put it in my top like 15 books I've ever read."
+[1:19:52]
+"And here's how it works. Okay. In the very first chapter of the book, like I think within the literal first few pages, he has you hold the book up at a certain distance and there's like a circle and you're moving the book back and forth."
+[1:20:08]
+"And at a certain point in your vision, when it's a certain distance from your eyes, the circle just disappears. And then he goes on to make the point that we can do that in our brain where there's reality based things."
+[1:20:22]
+"That's what he was trying to demonstrate with this book. He's trying to say there's things that are in reality that we can literally make disappear. It's how powerful the brain is."
+[1:20:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Pain-Induced False Reality Creation"
+NÚMEROS: Não especificados
+VISUAL: Diagrama mostrando como dor prolongada leva a: mentiras para si mesmo → mentiras para outros → criação de mundo falso
+[1:20:38]
+"And we do it through lying to ourselves, lying to others, manipulating reality. When we're in enough pain, okay, we don't operate in reality. We create a false world. Okay?"
+[1:20:52]
+"So, as an example with Brendan in the inner circle and him thinking to himself like, 'Oh, I'm like desperately clinging on to this like corporate management character that he's choosing to participate as.' It's like, I personally think that's fucking shit cuz I'm operating in reality, right?"
+[1:21:12]
+"In his worldview, he's been stuck at 600K a month for like fucking 2 years, dude. He needs somebody like me to smack him back to reality, right?"
+[1:21:25]
+"However, that shatters his entire false world he's created. At the same time, there's far too much immediate pain, anxiousness that comes with shattering that worldview. So, what's he do instead? Runs away from it. That's all that happened."
+[1:21:42]
+"He was dealing with so much pain over such a long duration of time, fed up. And he's got a family, dude. He's got like kids, you know? He's probably got who knows how many employees. His expenses have probably been inflating. His costs, as we all know with ads, go up as time passes. His organic hasn't really grown that much."
+[1:22:05]
+"It's like, bro, the guy's just dealing with a fuckload of pain. What's he do? Convinces himself that corporate management shit like EOS is going to get him out of it."
+[1:22:18]
+"Everybody here who's not in a false world knows that if the guy's just struggling to get more qualified calls, he actually just needs to focus on getting more qualified calls. Okay, that's all he actually needs to focus on. He doesn't need to do literally anything else. He just needs to do that."
+[1:22:38]
+"But it shatters that worldview that he's created that's insulating him from the pain of his actual reality. No human being actively wants to wake up in pain and endure pain throughout the entire day."
+[1:22:52]
+"So if we deal with pain for a long enough duration of time, we lie to ourselves. We lie to others and we start creating a fake world to participate in. We make the circle disappear. People do that all the time. That happens very often."
+[1:23:10]
+"So anyway, moral of the story, Jamie, yeah, that kind of shit is very real. It's a psychological phenomenon, and that book explains it quite well."
+[1:23:22]
+"Okay, cool. Anybody else have questions? Feel free to unmute yourself and ask away. There's a lot of stuff here in the chat. I just want to make sure I get to questions I may have missed."
+[1:23:35]
+"We're going to do this exercise now. If not, I paid because Jeremy's funnel made me 180K in one day of house money. Nice. Great work, Dylan. It's a great example what I was telling Daniel there. Thank you for that."
+[1:23:52]
+"Simone says, 'I've heard someone saying they needed to implement EOS2. Same issue. Not enough qualified leads.' Yeah, it's dumb as fuck when people focus on these things that have nothing to do with their actual problems."
+[1:24:08]
+"But, and I'm not hating on EOS. Like, to be fair, I've seen like benefits of EOS when that's your actual problem as it relates to like corporate management shit. But again, that wasn't his actual problem. So, that's how we know it wasn't the ideal thing to focus on."
+[1:24:28] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Exercise Instructions"
+NÚMEROS: 2 minutes
+VISUAL: Framework: Avatar (Problems, Circumstances, Outcomes) + Pain Layer (Current → Recurring → Future → Past)
+[1:24:32]
+"Okay. So, anyway, long story short, guys, let's do this exercise now. Okay. Very simple exercise, and then we're going to go through a few examples for what you guys come up with."
+[1:24:45]
+"Let's get this done. Okay, so here's how simple this exercise is. In our initial messaging call that we did together where we were talking about avatars, okay, I told you guys I want you to define customer avatars from a perspective of problems, circumstances, and outcomes. Okay."
+[1:25:05]
+"I want you to ideally think right now with one of those specific avatars that you've defined and I just want you to add a simple layer to how you view that person."
+[1:25:18]
+"Now I want you to add the layer of additional complexity where you layer in and try to think of it remember always work through the pain spectrum from high to low. Okay."
+[1:25:32]
+"The highest pain is current pain that somebody is sitting in when they watch or listen or read that thing you're going to put in front of them. Okay? Then we go to recurring pain. Then we go to future pain. And then we go to past pain. Okay? We want to ideally work our way down that list. Okay? That's our goal. We want to work our way down that list."
+[1:25:58]
+"So when you think of the avatar and you're looking at their problems, their circumstances, their outcomes, and you're just thinking of that type of person, just try to add some context of current pain that they're in."
+[1:26:12]
+"Try to add, if you can't think of current pain, recurring pain that they may consistently be having come up and dealing with. If you can't think of recurring pain, deal with a future pain that they're anticipating could occur, something they're anxious about."
+[1:26:30]
+"And again, if future pain is hard to think with, think of past pain. Something that's anchoring them to where they currently are that they need to evade from that they'll willfully spend some money to get around. Okay, think of these things."
+[1:26:48]
+"I'm going to give you about two minutes here and then ideally we can go through a few of these together. Okay? Feel free to drop questions in the chat if anything comes up as you go."
+[1:27:00]
+"Do another 30 seconds."
+[1:27:30]
+"Okay, time's up. So, let's read a few of these. Does anybody want to volunteer? Ideally, you articulate specifically that avatar and then tell us some pain they're in and what type of pain it is."
+[1:27:48] PETER:
+"Yeah, I can go. So, my avatar is investors or business owners who are actively investing in like telehealth businesses. Their current pain is they're burning through cash. They're seeing rising cost of acquisition or they hate their current agency and marketing personnel."
+[1:28:12]
+"And the future pain is missing opportunity from you know this telehealth boom. I don't really know what their current pain or their recurring pain would be. I don't know if that really is motivated."
+[1:28:28] JEREMY:
+"Do you ever talk to them?"
+[1:28:32] PETER:
+"Do I ever talk to them? Yeah."
+[1:28:38] JEREMY:
+"Do you ever ask about these things?"
+[1:28:42] PETER:
+"What the recurring pain is? No, I haven't."
+[1:28:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Direct Pain Discovery Method"
+NÚMEROS: Não especificados
+VISUAL: Processo simples: falar com clientes ideais → fazer perguntas sobre dor → coletar dados reais vs. adivinhar
+[1:28:52] JEREMY:
+"Great. As an exercise since you seem rather unaware of it rather than just guessing. Talk to your ideal clients and literally ask them these types of questions and try to extract the information so you have more to think with."
+[1:29:08]
+"What you had talked about isn't necessarily bad with the idea of missing out on the boom as you call it, but again like you want to find real pain that they actively think with, you know."
+[1:29:22]
+"And a lot of the times we only talk about pain to the people who can help us move away from it. And realistically, you are there to help them move away from that pain or move to a better place. So, why wouldn't they talk to you about it, right?"
+[1:29:38]
+"Ask them those types of questions and see if you can get some data from them and then report back, follow up with me via DM. Okay, cool."
+[1:29:52]
+"Okay. Let's see. Jamie, you want to read yours out loud?"
+[1:29:58] JAMIE:
+"Yeah, no worries. So yeah, current pain of the one to 10 million year business. So, I'm noticing a lot of this is kind of around scaling with Facebook ads and you know, I'm blanking a bit on the other prospects that we maybe sell to that aren't doing that."
+[1:30:18]
+"But current pain is like rising ad costs, Facebook ads shut down. Basically drops in consistency, you know, of where they've gotten to. So, you know, they've got big overheads, maybe their marketing took a dive off a cliff and they're worrying about paying the bills, lower quality leads, conversion rate dropping."
+[1:30:42]
+"And then also the AI fucking the funnel. Like, that's a huge thing right now. And then recurring pain is maybe just the effort and energy that has to go into maintaining the current result, like with refreshing Facebook ad angles and stuff like that."
+[1:31:00]
+"And then future pain really thinking about scaling to the next level. Every time they've tried to raise ad spend, maybe the ROAS dropped, which also maybe is past pain, too. And talking about building out, you know, consistency across earned media to make that stronger before they scale."
+[1:31:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Andromeda Pain Point Addition"
+NÚMEROS: Não especificados
+VISUAL: Sugestão de adicionar "criar ads em taxa muito maior" como pain point relacionado a Andromeda
+[1:31:25] JEREMY:
+"You know, I'm surprised that you didn't mention anything about just having to create ads at a much higher rate than they ever have before as it relates to Andromeda. I would imagine that adding that to your list would be something that you definitely want to talk towards as well."
+[1:31:42] JAMIE:
+"Yeah, great idea. Thank you."
+[1:31:45] JEREMY:
+"Yeah. Okay, good. Yeah, good. Otherwise, a lot of different things. And then obviously now what you would want to do with that, Jamie, you want to turn those into some ads and then ideally you just at the very end of these ads just bridge over same exact lessons from the master messaging SOP."
+[1:32:05]
+"Just sell the bridge at the end as the call to action, you know, and we can help you with that by doing blank do this. Okay, that make sense? Very good."
+[1:32:18]
+"Nick, you want to unmute yourself? You said you have two."
+[1:32:22] NICK:
+"Yeah, I think you guys actually covered one of them just now, but the two that come to mind are and the avatar is people that have a high ticket offer, service, or consulting offer doing at least 100k a month or more currently trying to scale."
+[1:32:42]
+"The two that come to mind are number one, people who have their organic audience for the offer like drying the fuck up in terms of the revenue, which is obviously a huge problem and causes a lot of anxiety."
+[1:32:58]
+"And then the second one is for a recurring one would be people who every time they try to scale past like a couple grand a day in spend or some spend per day, their cost per call shoots through the roof, for example, as a recurring pain. Those are two that I consistently see."
+[1:33:18] JEREMY:
+"Nice. And to be clear, are you already leveraging these pain points?"
+[1:33:25] NICK:
+"Not in ads because I have good referral partners right now, but in terms of like I touch on them a lot on the sales calls for sure. But there's ways like there's ways I could plant myself better."
+[1:33:42] JEREMY:
+"You don't make content about this at all as an example to try to get more inbound since you mentioned you're not doing paid currently."
+[1:33:52] NICK:
+"A little bit on YouTube, but not consistently enough. That's one of the things I should be doing more of to be honest."
+[1:34:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Recurring Pain Topics in Organic Content"
+NÚMEROS: Não especificados
+VISUAL: Estratégia de conteúdo: múltiplos ângulos do mesmo pain point recorrente fazem pessoas sentirem que encontraram a pessoa certa
+[1:34:05] JEREMY:
+"Nice. Yeah. If you go to a channel like mine as an example, a lot of the recurring talking points that you see me touch on just from multiple angles are exactly that just like a specific pain talking point that my demographic deals with."
+[1:34:22]
+"Definitely leverage that on the organic side as well. It makes people feel like they finally found the right person. You understand?"
+[1:34:32] NICK:
+"Yeah, we'll do it. I'll do it more on YouTube."
+[1:34:38] JEREMY:
+"Okay, very good. Leon, you want to unmute yourself and go through yours?"
+[1:34:45] LEON:
+"Yes. So for current pain for me it was lacking freedom in their lives. They I hear a lot they just feel like they work a shitty job just to live for the weekend so then they can focus on their sport, play games, whatever it is, not making enough money and just feeling I guess stuck in an endless cycle."
+[1:35:12]
+"Recurring is I guess timeline based pain where the older you get your chances of making it professionally as an athlete get lower every day. Every day you have to work a job instead of training. You're getting further away from your dreams."
+[1:35:30]
+"And I was a professional footballer. I know every day they wake up with that pain. And then future pain is I guess if they don't make a change, they don't quit their job, they worked 20 years to achieve a professional sporting career and then they never achieve it because their dream slipped away because of their job."
+[1:35:52] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Iceberg Pain Model"
+NÚMEROS: Não especificados
+VISUAL: Iceberg com "surface pain" (freedom) no topo vs. "deep pain" (time running out, AI replacing jobs) embaixo da água
+[1:35:58] JEREMY:
+"Okay. And you gave a great opportunity here just to close out this call in a very good way. So you've seen this meme, right, of the iceberg."
+[1:36:08] LEON:
+"Mhm."
+[1:36:12] JEREMY:
+"And you know in the context of this meme generally it's like as an example not having freedom, right? Like that's more of like a surface level like it's at the top of the iceberg. That's something that like absolutely they want and absolutely they likely think with but it's likely not something that actually is like that dramatic. Okay."
+[1:36:38]
+"When you take that same context and you think with some level of depth for what a specific demographic that you're selling to is dealing with in mass as like a deeper pain point. Okay."
+[1:36:52]
+"So this comparatively right I'm just coming up with the shit off top my head here. When I say the thing like okay not having freedom but I change that to say time is running out."
+[1:37:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "AI Job Replacement Pain Example"
+NÚMEROS: 15,000 people fired (Amazon/Microsoft example)
+VISUAL: Comentários negativos em ads com AI, medo crescente de substituição, gap diminuindo entre presente e futuro temido
+[1:37:12]
+"Currently there are people... I'll give you a good one just so you can understand the severity of this. Have you seen an ad that is clearly AI and then you go look at the comments of that ad and every single person commenting is just like 'Fuck this company for using AI never fucking buy from these guys. Like, fuck you for using AI.' Have you seen that? Have you guys seen that experience? Put a one in the chat if you've seen that experience."
+[1:37:42]
+"Just to be clear, it's like people are tweaking the fuck out when you use AI right now. But you guys tell me because I'm sure some of you guys like Timothy as an example in the chat saying he's seeing that on his own ads."
+[1:37:58]
+"I mean, those ads are still fucking ripping. Those ads are still printing money. They're profitable. Like, it's not like they're bad ads. Why are there more people than ever before commenting on ads that use AI that are printing money and producing a positive ROAS? Why are there still people on them that are so negative?"
+[1:38:20]
+"Right? It's like the narrative of AI is going to take your job is not a narrative. Like there are people actively right now losing jobs because long story short, they are actively getting replaced by AI and the fear is growing and the reality of that situation for them potentially increasing."
+[1:38:42]
+"It's a future-based pain. Remember that visual I showed you with they're here and the future anticipated anxiousness is here. Well, as they see ads in their news feed, that condenses that gap down. It makes it feel closer than what it otherwise feels. It's better for them to distance it. You see?"
+[1:39:05]
+"So, like psychologically, when you move closer to pain, they get more vocal about it. They get more antsy and like they do more action in order to mitigate the pain."
+[1:39:18] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Jordan & Jacob Case Study"
+NÚMEROS: $500K/month (January) → $5M/month (July), BizOp offer pivot
+VISUAL: Crescimento explosivo usando pain-based messaging "AI taking your job" → "sell AI instead", um dos maiores crescimentos já vistos
+[1:39:22]
+"That's why as an example, like guys, think about in the context of one of our inner circle members here, Jordan and Jacob. Like dog, they were at half a million dollars a month in January with a different offer."
+[1:39:38]
+"They switched to teaching people how to sell AI to businesses and their whole narrative is rather than AI taking your job, like why don't you go sell AI to businesses instead. It's like one of their initial narratives still fucking rips right now while we're sitting here talking."
+[1:39:58]
+"They got a $5 million month trophy at the end of July. It's like some of the most insane growth I've ever seen. But again my point is imagine them in the context of the iceberg saying like oh hey you don't have enough freedom."
+[1:40:15]
+"Like technically they are selling a BizOp right and like when you sell a BizOp you could say like oh hey you don't have enough freedom right but like in reality one of their best hooks is like people are... they can take any fucking news clip right like AI replaces jobs in tech."
+[1:40:35]
+"Right I'm just typing in a random fucking search AI replaces jobs in tech. And long story short, there are fucking infinite articles that I could sit there and pull up about people actively being replaced."
+[1:40:52]
+"Like I could cite I think Amazon is an example. Just I think Microsoft or Amazon just fired like 15,000 people and Salesforce fired people and they literally said like, 'Yeah, we're just going to replace these roles with AI.'"
+[1:41:08]
+"There's entire businesses right now that run with just agentic AI instead of human beings, you know? And again, my point is is like ideally what you would do with that, Leon, just simply put back to the point is try to avoid being up here at the surface and try to articulate it more from a perspective of like way down here comparatively. You understand?"
+[1:41:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Deep Pain = Higher Responsiveness"
+NÚMEROS: Não especificados
+VISUAL: Quanto mais profunda a dor relevante para grande grupo de pessoas, maior a responsividade e intenção
+[1:41:38]
+"And the deeper you're able to go with pain that is relevant to like a large swath of people at the same time, the more responsiveness you get as a result, you know."
+[1:41:52]
+"Like as an example, with the migraine stuff, whenever I see an ad that just says like, 'Hey, do you get migraines? Like, we have this.' It's like that'd be surface level pain."
+[1:42:05]
+"The reality of the situation, if they wanted to go deeper, cuz plenty of people with migraines experience what's called aura symptoms. And aura symptoms, I'm one of those people."
+[1:42:18] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Migraine Aura Symptoms Deep Pain"
+NÚMEROS: 30 minutes duration
+VISUAL: Descrição detalhada: perda de visão focal, sunspot effect, peripherals going black, numbness in hands/face - dor muito mais profunda e específica
+[1:42:22]
+"Aura symptoms are like I woke up the other day and I can't see in the focal point of my vision. Like I literally just have to lay there for like 30 minutes and not do anything because the focal point of my vision is like when you look at the sun and then look away, you get that like sunspot and it's just there like morphing."
+[1:42:45]
+"And then generally my peripherals will go black and like I can't do anything for like 30 minutes, right? And then my fucking my hands will randomly go numb, you know, or like some areas on my face will go numb."
+[1:43:00]
+"That's much deeper pain that a large quantity of people deal with as it relates to migraines. So instead of just saying like, 'Hey, do you get migraines?' It's like you could instead say..."
+[1:43:15]
+"'You know how scary it is to be in the middle of driving and have a migraine happen where you can no longer see in the focal point of your vision. You know what it's like to wake up and just have a migraine and then the excessive head throbbing.'"
+[1:43:32]
+"'Like you're afraid to cough in the middle of having a migraine from how bad it'll hurt your head. And other people, yeah, they tell you like, Oh, it's just a headache. Like you'll be fine. But you know the severity of these things and you got to finally do something about it. Introducing Migranium, the new supplement from Zach Relief.'"
+[1:43:52] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Depth of Pain = Intent Level"
+NÚMEROS: Não especificados
+VISUAL: Correlação direta: dor mais profunda = maior relatabilidade + maior intenção, dor superficial = menor intenção
+[1:43:58]
+"You know, it's like the deeper the pain is, the more relatability there is from a messaging perspective and also the higher the intent is that you're tapping into as a result of going deeper in pain."
+[1:44:15]
+"You will appeal to people who have more surface levels of pain. Therefore, they naturally will have a much lower level of intent if you don't actually like dig into it a little bit."
+[1:44:28]
+"Doesn't have to be anything crazy, but again, my perspective is is like when you just say having freedom, I'd rather you say something that like really kind of itches at something. You know what I mean?"
+[1:44:42] LEON:
+"Yeah, makes sense."
+[1:44:45] JEREMY:
+"Okay, very good. All right, cool. Well, thank you all for being here. Ideally, you do this exercise and you think with it and, you know, throw some examples out in the group chat if you want or shoot me some DMs if you have follow-up questions on this."
+[1:45:02]
+"I hope you guys enjoyed this call. I just want to be clear. I've really been drilling messaging with you guys and trying to give you as much as I can on it due to the fact that Andromeda essentially all targeting is controlled by messaging nowadays."
+[1:45:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Andromeda Requires Messaging Mastery"
+NÚMEROS: Não especificados
+VISUAL: Conceito final: Andromeda = messaging controls targeting, necessidade de unlimited thinking para ad ideation
+[1:45:25]
+"So I'm trying to load you up as many things as you possibly can have. So you have unlimited thinking when you need to go and ideate around ads."
+[1:45:38]
+"So you can take these kinds of things and throw them into LLMs to help you with the ad ideation side of things. Simply put, like it's more critical than ever before to be able to tap into just the right type of people by articulating yourself properly as a result of doing so. Does that make sense to everybody?"
+[1:46:00]
+"Okay, very good. Allow me to eat some food. It was a rather split poll on whether we should do Black Friday, Cyber Monday prep today or whether we should do pain-based messaging."
+[1:46:15]
+"So, let me see how the rest of my day looks and I may throw another video out here towards the end of the day on Black Friday Cyber Monday prep. Just again, there was pretty equal amount of votes. I don't want to leave you guys hanging."
+[1:46:32]
+"Okay. Cool. Again, if there's anything else, please let me know. Okay. Thank you all."
+📊 RESUMO EXECUTIVO
+NÚMEROS PRINCIPAIS:
+$10K - Retainer do tax attorney (pago em 2 emails)
+$250 - TMJ muscle scraper tool (compra imediata)
+$880K - Tax savings oferecidos por Kyle/James
+$232K - Custo total do tax plan
+$150K - Pagamento para Polymath Partners (pago na mesma noite)
+$75K - Despesas restantes (3 carros 6,000 lbs)
+$500K - Dedução fiscal dos 3 carros
+$15K - Pagamento inicial para Kyle/James resolver problema do IRS
+6 figures/month - Dor mensal com IRS
+$5M/month - Jordan & Jacob (julho), crescimento de $500K/month (janeiro)
+$180K in one day - Resultado de Dylan com funnel de Jeremy
+$600K/month por 2 anos - Brendan stuck no mesmo revenue
+$10-30K/month - Spend típico de prospects stuck
+2:1 ROAS - Exemplo de resultado "ok" mas limitante
+$10K/month - Inner Circle membership
+$5K/month - Half Circle membership
+$5K one-time - Master Internet Marketing
+$130-140K - Gross revenue mensal do exemplo de Daniel
+40% - Despesas estimadas
+$60K - Free cash flow
+33% - Porcentagem de free cash que oferta de Daniel pedia
+$20K/month - Total da oferta de Daniel ($10K upfront + ads)
+$30K - Close de Peter na semana passada
+15,000 people - Demissões Amazon/Microsoft por AI
+30 minutes - Duração de migraine aura symptoms
+ESTRATÉGIAS E SISTEMAS:
+ANDROMEDA FRAMEWORK:
+Messaging controls targeting (não mais interest/behaviors/demographics)
+Todas variáveis de ad set são apenas "suggestions"
+Necessidade de multiple message variations
+Organic e paid seguem mesmas regras
+4 TYPES OF PAIN (High to Low Intent):
+Current Pain - Highest intent, shortest sales cycle, immediate action
+Recurring Pain - Perpetual problem, high willingness to spend
+Future Pain - Anticipated anxiety, lower but still actionable
+Past Pain - Trauma/anchors, need to "cut the anchor"
+PAIN = INTENT EQUATION:
+Mais dor = maior intenção de compra
+Dor extrema = compra em 2 emails (tax attorney example)
+Surface pain = low intent, Deep pain = high intent
+MESSAGING BEST PRACTICES:
+Comunicar como se pessoa está sofrendo AGORA enquanto assiste
+Não usar palavra "pain" - descrever circunstâncias específicas
+Trabalhar pain spectrum de high to low (Current → Recurring → Future → Past)
+Pode "pepper in" múltiplos tipos de dor
+Evitar surface level (freedom) → ir para deep level (time running out)
+ICEBERG MODEL:
+Surface pain = low relatability, low intent
+Deep pain = high relatability, high intent
+Quanto mais profunda a dor relevante para massa = maior responsividade
+SALES CALL PIVOT STRATEGY:
+Low-intent leads = pivot para descoberta de pain buttons
+Recorded calls + AI = goldmine para pain discovery
+Use prospects' own words
+Melhores closers movem leads de low para high intent via pain
+OFFER STACK REQUIRED:
+DIY (Do It Yourself)
+DWY (Done With You)
+DFY (Done For You)
+Transition offers essenciais
+Exemplo: não vender $20K/month para pessoa com $60K free cash e bad experiences
+FALSE REALITY CREATION:
+Dor prolongada = lies to self + lies to others + false world
+"Making the circle disappear" (Vital Lies book)
+Pessoas em negação não operam em realidade
+Brendan example: stuck $600K/month, focando em EOS em vez de qualified calls
+ESTRUTURA:
+PAIN-BASED MESSAGING FRAMEWORK:
+Avatar (Problems + Circumstances + Outcomes)
+   ↓
++ Pain Layer
+   ↓
+Current Pain (NOW) → Recurring Pain → Future Pain → Past Pain
+   ↓
+Deep vs Surface Level
+   ↓
+Bridge to Solution
+   ↓
+CTA
+CUSTOMER JOURNEY PAIN MODELS:
+Future Pain Visual:
+Person HERE → Perceived Pain THERE (future)
+        ↓
+   Your Product = Course Correction
+        ↓
+   Move Away from Path of Pain
+Past Pain Visual:
+Person Moving Forward ← Anchor (past) Pulling Back
+        ↓
+   Snap Back Effect
+        ↓
+   Your Product = Scissors Cutting Anchor
+Current Pain Path (Tax Example):
+Pain → $10K (failed) → Back to Pain → $15K (success) → Relief → $150K (major relief) → $75K remaining
+PAIN AMPLIFICATION REQUIREMENTS:
+Current pain must > Future pain from solution = Action
+Current pain < Future pain from solution = No action
+Amplify existing pain OR bring awareness to hidden pain
+Never try to "seed" future pain (costs millions, low ROI)
+UNIVERSAL PAIN PRINCIPLE:
+Everyone is ALWAYS in some form of pain
+Never conclude "no pain" - dig deeper
+Rich people pain = different but still intense
+Post-exit pain: loss of control, cash flow, fear of wrong investment
+DADOS FINANCEIROS:
+TAX PAIN JOURNEY TOTAL:
+$10K tax attorney (failed)
+$15K Kyle/James (IRS problem)
+$150K Kyle/James (tax strategy)
+$75K remaining (cars + deductions)
+Total: $250K spent in few months on tax pain
+ROI: $880K savings vs $232K cost = $648K net benefit
+INNER CIRCLE OFFER STACK:
+Master Internet Marketing: $5K one-time
+Half Circle: $5K/month
+Inner Circle: $10K/month
+POLYMATH PARTNERS:
+$5K/month fractional CFO retainer
+$150K tax strategy implementation
+$880K tax savings delivered
+3 cars 6,000 lbs strategy = $500K deduction
+Additional car deductions unlocked
+DANIEL'S BAD OFFER BREAKDOWN:
+Client gross: $130-140K/month
+Expenses: 40% = ~$50K
+Free cash: $60K
+Asking: $20K/month ($10K upfront + ads)
+= 33% of free cash flow
+Previous experiences with similar: "Not great"
+Diagnosis: Complete fucking shit offer
+JORDAN & JACOB GROWTH:
+January: $500K/month (different offer)
+July: $5M/month (AI BizOp pivot)
+10x growth in 6 months
+Hook: "AI taking your job → sell AI instead"
+DURAÇÃO: ~1:46:32
+FORMATO: Inner Circle Weekly Group Call - Pain-Based Messaging Training com Q&A ao vivo e exercício prático

@@ -1,0 +1,136 @@
+Transcrição Completa: Section 1 - Agency Sales Structure and Valuation
+[00:00] Section one is all about how agency sales are structured and valued. So we're going to get into the structure, the value, the buyers, what's the difference between billings, revenue, EBITDA, how do you increase your overarching value at some point to sell that agency to a buyer. So let's jump into it.
+[00:20] First off, I want to go over the types of deal structures.
+[00:23] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Types of Deal Structures"
+NÚMEROS: Não especificados neste momento
+VISUAL: Lista de diferentes estruturas de negócio, layout organizado mostrando opções de compra de agência
+[00:25] You can see here somebody can come into your agency immediately and they could do an all-cash offer. Meaning literally they'll come in day one and they'll buy your agency one for one all cash. That's usually an unlikely scenario but I've seen it happen and it is possible.
+[00:42] The other one and it's probably a more typical is cash and equity. So you'll get certain amount of cash. It could be 70% cash and then you roll over 30% equity into the entity that just purchased you.
+[00:56] Sometimes there's an all equity deal, right? So, this could be, let's say you're wanting to do a merger with a company and they really don't have cash to give you. So, you'll basically let them purchase your company with potential all upside and all equity. And that's a potential deal structure.
+[01:13] Then if it's a publicly traded company, very similar to the first one cash and equity, the difference here would be cash and then physical stock that you would get from that publicly traded company.
+[01:24] Then there's an all, you know, all stock deals which would be similar to an all equity deal as well.
+[01:30] I want to get into this concept of earnout because a lot of people that are, you know, naive to this or they're not aware of selling an agency, more than likely you're going to get a cash deal with rollover equity, right? So we're looking at here, cash and equity.
+[01:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Earnout Structure"
+NÚMEROS: $10 million total, $7 million cash, $3 million rollover, 1-2 year period
+VISUAL: Destaque para o conceito de earnout, divisão visual entre cash upfront e equity rollover, timeline de 1-2 anos
+[01:48] And with that, they're going to create a component called an earnout. So, they're willing to give you a hey, this lump sum, let's call it $10 million, you know, we're going to give you 7 million cash. We're going to roll over 3 million, but we're going to make you earn out some of that cash upfront over a year or two period by retaining accounts, growing accounts, and some other things. So we'll dive into more of an earnout later, but that's the concept of an earnout, which is important.
+[02:16] Then I want to jump into the types of potential buyers, right?
+[02:19] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Types of Potential Buyers"
+NÚMEROS: Não especificados
+VISUAL: Lista categorizada de tipos de compradores: Strategic, Private Company, Holding Company, Public Company, Private Equity
+[02:21] You have strategic. So let's say, you know, you're just a digital marketing agency and all of a sudden somebody like Accenture comes in and they buy you. That's a strategic buy. They're looking for that asset and they just buy you because they have a strategic need, or it's a technology company and they want to layer on a service arm in order to make them, you know, more well-rounded. That could be a strategic buy.
+[02:45] A private company, so this could be a bigger agency that isn't publicly traded, is not owned by a private equity, and they come in and then they purchase you.
+[02:54] Or a holding company. So, if you guys have been familiar with like a Publicis or an Omnicom, this is a gigantic conglomeration of multiple agencies. They come in and then they would buy your agency and bolt it on to a larger agency within the holding company or keep you as a standalone within the holding company.
+[03:13] A public company, it's just a publicly traded, they could come in and do it.
+[03:17] Or private equity, right? The most experience I've had is in the private equity space. So, a private equity company comes in, they have a fund, they buy your company. Typically, it's going to be a cash and equity offer, and what they're looking to do is buy you, and then in three or four years, they want to sell, or it could be, you know, five to seven years, and they want to sell it much larger than what they purchased you. So, they're looking for growth and scale and plus some additional acquisitions to put everything together to then ultimately exit that company.
+[03:48] So now that we have a little idea of kind of the deal structures and the deal types, I want to get into, you know, what I would really call like nomenclature of the agency world.
+[03:58] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Agency Nomenclature: Billings vs Revenue vs EBITDA"
+NÚMEROS: Não especificados neste slide
+VISUAL: Três colunas comparativas mostrando definições distintas, layout educacional com separação clara entre conceitos
+[04:01] So most of you are probably familiar with this, but I want to just kind of ground everybody between, you know, billings, revenue, and EBITDA.
+[04:08] So billings, the short definition is company's total client billings. This is not revenue, it's not profit. So, for those of you that are running media through your agency right now, and that media actually flows through your entity, but it's the client's dollars. So, your billings are the client's dollars, your revenue. It's total, right? It's everything that's flowing through your entity. That'd be your billings.
+[04:35] Your revenue is the company's total earnings, not the profit, right? So, this is backing out your billings, which is usually your the client's working media. And this is what you're billing, right? as far as for services, commissions and markups, that would be your revenue.
+[04:53] And then EBITDA, right? EBITDA is earnings before interest, tax, depreciation, and amortization is a measure of the company's operating performance.
+[05:03] The word EBITDA is important because we're going to get to how do companies value agencies and how do they buy them? They buy them on EBITDA in the simplest form. And Jay, we'll include some links here below on more definitions around EBITDA because you should get more familiar with it. But think of it as just your profit, right?
+[05:21] So I want to ground everybody when we get into these next exercises on how agencies are valued and what multiples are. It's always against EBITDA. So when we're going through this next section, think about really your net profit at the end of the day and tie that back to EBITDA for now.
+[05:38] So when someone comes in and they do a deal structure and they're trying to value your agency, they do it this way.
+[05:44] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Valuation Formula"
+NÚMEROS: EBITDA x Multiple = Deal Value
+VISUAL: Fórmula matemática simples destacada, equação visual clara mostrando multiplicação
+[05:46] They take the EBITDA times a multiple. Okay? So again, think this is your profit and a multiple could be, you know, 1 through 20.
+[05:56] And what I've done on this next slide is I've illustrated some deal examples.
+[05:59] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Deal Examples"
+NÚMEROS: $1M EBITDA, 5x multiple, $5M total transaction
+VISUAL: Exemplo ilustrativo com cálculo visual, destaque para os números em formato de equação
+[06:02] So let's say your EBITDA, i.e. profit is 1 million. Then if somebody came in, they could buy you. And these are just hypothetical, right? I'm going to get into these are just illustrated examples. I just want to make sure you understand the flow here.
+[06:15] So EBITDA is 1 million. Somebody comes in, they audit that million. They confirm you have a million in EBITDA. They offer you five times your EBITDA. Therefore, you would have five million, a five million total transaction.
+[06:28] And again, back to these other slides from earlier, that could be an all-cash 5 million. It could be cash and equity 5 million. It could be cash and stock. Whatever the structure is in this example, your total deal value is 5 million.
+[06:41] Okay guys, again, EBITDA times a multiple gets you your deal value. Your total deal value.
+[06:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Comparison Example"
+NÚMEROS: $1M EBITDA, 7x multiple, $7M total deal value
+VISUAL: Segundo exemplo comparativo, mesmo EBITDA mas múltiplo diferente, destaque visual para a diferença de $2M
+[06:50] Okay, I did the same example. This is a different company have a million but they get a 7x which yields 7 million. And we're going to get into this. It's called enterprise value.
+[07:00] So why would a similar company get a seven versus a five? That's going to be some of the things we're going to try to teach you in this workshop on how to build your agency value. You do that through scale, recurring revenue, great leadership team, stickiness of clients, low customer concentration, creating intellectual property, technology. We're going to get into that.
+[07:21] But, you know, position yourself now because you can see the difference, right? If you put in the work to create more value, you know, it could be huge, especially if these numbers get larger, right?
+[07:31] So, I want to make sure everyone understands that the things we're going to talk about today and the more valuable you can make your agency allow you to get a higher multiple that ultimately is going to yield you a bigger number.
+[07:43] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Larger Deal Examples"
+NÚMEROS: Example 1: $7M EBITDA, 8.6x multiple, $60.2M total deal value | Example 2: $10M EBITDA, 10x multiple, $100M total deal value
+VISUAL: Dois exemplos de grande escala lado a lado, números em destaque mostrando valores significativamente maiores, progressão visual
+[07:45] Okay. Other examples here: 7 million in EBITDA, 8.6x equals 60.2 million total deal value. You have 10 million in EBITDA, 10x, 100 million.
+[07:56] Now again, these are illustrative, but you know, I've, Jeremy gave me a lot of questions people have been asking, so I'm going to cover this right now.
+[08:04] Some of the questions were, you know, how big do I have to be to sell, right? What is that number?
+[08:10] I think everybody in here, there's really kind of two strokes at this. You really need to get to a million in my opinion in EBITDA to start being considered for a large sale. Not to say that a strategic buyer if you could be a couple hundred thousand, 500,000 or 700,000, there's definitely buyers out there for that. You can sell your agency. Your multiple is going to be lower.
+[08:33] But once you get to a million, I've seen the ranges in multiples, you know, be as low as a 4x to as high as almost a 9x. A lot of that is timing, circumstance, if it's a strategic offer.
+[08:46] But you know the question was, at what point in my agency can I start to actually consider selling? My opinion: you want to be at a million in EBITDA. So that's why the majority of this workshop is teaching you frameworks to scale to get you higher EBITDA.
+[09:02] Now you're going to notice that next level when you really get to 4 million in EBITDA to let's say you know 8 million, that's kind of that next tier of where there's even more buyers and you start to see numbers and multiples go up.
+[09:16] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "EBITDA Tiers and Multiples"
+NÚMEROS: $1M EBITDA = 4x-9x multiple | $4M-$8M EBITDA = higher multiples | $10M+ EBITDA = 10x+ multiples guaranteed
+VISUAL: Escala progressiva mostrando tiers de EBITDA, setas ascendentes indicando aumento de múltiplos, código de cores para diferentes níveis
+[09:18] So, this example: 7 million in EBITDA, 8.6, that's a pretty fair multiple for that much EBITDA. So, think of it this way. The higher the EBITDA by default, the higher the multiple is going to be.
+[09:30] Now, at 10 million, it's almost guaranteed. Nothing's guaranteed, but if you're at 10 million in EBITDA, your multiple probably is going to start at a 10x and go up higher.
+[09:41] So, the idea here is again, the more the EBITDA is, the higher the multiple. And then how do you then optimize to get a higher multiple? And you do that, we're going to get into, is enterprise value. It's technology, it's customer stickiness, it's a multitude of things we're going to cover.
+[09:57] But as you're kind of grounding yourself in this workshop you need to be thinking about what is my current EBITDA and then what can I start taking notes in this workshop in order to ensure that if I have that opportunity I increase that multiple up the highest.
+[10:12] Okay, so I just covered that. You know, what size do I need to be able to sell? Again, I believe that you need to really be at that million in EBITDA, right?
+[10:22] So, think of if you're close to a million in profit, you've got a really good shot of going to market and selling it. If you're higher than that, your odds are even better. If you're lower than that, it's not that it's impossible, it's just harder.
+[10:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Before You Can Sell, You Must Build Scale and Value"
+NÚMEROS: $1M+ EBITDA threshold
+VISUAL: Statement em destaque, posicionamento hierárquico mostrando pré-requisito antes da venda
+[10:37] Okay. But before that, right, I mean this whole workshop and I'm so excited you're here is, you know, but before you can sell, you must build scale and value.
+[10:47] So unless you're watching this right now and you've got a million plus in EBITDA, you still haven't reached that scale piece of this. And so the next part of this workshop is going to start diving into how do we start getting you closer to that million plus in EBITDA.
+[11:02] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "You Can't Scale and Build Value Until You Know What You Want and When You Want It"
+NÚMEROS: Não especificados
+VISUAL: Statement filosófico em destaque, call-to-action visual para reflexão pessoal, design enfatizando importância da clareza de objetivos
+[11:04] But even before then, you can't scale and build value until you know what you want and when you want it. And this next section is super important. I want everybody to after I finish this section to pause it, to take the time, and to fill out this because it will change your mindset. It will change potentially what you think you want now and how to map your business to your desires.
+📊 RESUMO EXECUTIVO
+NÚMEROS PRINCIPAIS:
+$1M EBITDA - Threshold mínimo recomendado para venda de agência
+4x-9x - Range de múltiplos para agências com $1M EBITDA
+$4M-$8M EBITDA - Tier intermediário com mais compradores e múltiplos maiores
+$10M+ EBITDA - Múltiplos começam em 10x e sobem
+70% cash / 30% equity - Estrutura típica de deal
+$10M - Exemplo de deal: $7M cash + $3M rollover
+1-2 anos - Período típico de earnout
+3-7 anos - Timeline de hold de Private Equity antes de exit
+$5M - Exemplo: $1M EBITDA x 5x multiple
+$7M - Exemplo: $1M EBITDA x 7x multiple
+$60.2M - Exemplo: $7M EBITDA x 8.6x multiple
+$100M - Exemplo: $10M EBITDA x 10x multiple
+ESTRATÉGIAS E SISTEMAS:
+Fórmula de Valuation: EBITDA x Multiple = Deal Value
+Earnout Structure: Parte do cash é "earned out" através de retenção e crescimento de contas
+Rollover Equity: Parte do pagamento mantida como equity na nova entidade
+Enterprise Value Building: Aumentar múltiplo através de valor agregado
+Scale First, Sell Later: Foco em construir escala antes de considerar venda
+ESTRUTURA:
+Tipos de Deal Structures:
+All-Cash Offer
+Cash and Equity (mais comum)
+All Equity Deal
+Cash and Stock (empresas públicas)
+All Stock Deal
+Tipos de Compradores:
+Strategic - Empresas como Accenture comprando por necessidade estratégica
+Private Company - Agências maiores não-públicas
+Holding Company - Conglomerados como Publicis, Omnicom
+Public Company - Empresas de capital aberto
+Private Equity - Fundos com timeline de 3-7 anos para exit
+Nomenclatura Fundamental:
+Billings = Total client billings (inclui working media do cliente)
+Revenue = Company's total earnings (serviços, comissões, markups)
+EBITDA = Earnings Before Interest, Tax, Depreciation, Amortization (profit)
+Fatores que Aumentam Multiple:
+Scale (escala)
+Recurring revenue (receita recorrente)
+Great leadership team
+Client stickiness (retenção)
+Low customer concentration
+Intellectual property
+Technology
+DADOS FINANCEIROS:
+Valuation baseada em EBITDA, não em billings ou revenue
+Múltiplos variam de 1x a 20x+ dependendo do tamanho e qualidade da agência
+$200K-$700K EBITDA - Possível vender, mas múltiplos menores
+$1M EBITDA - Sweet spot mínimo para venda significativa
+$4M-$8M EBITDA - Tier com mais compradores e melhores termos
+$10M+ EBITDA - Múltiplos premium garantidos (10x+)
+DURAÇÃO: ~11 minutos FORMATO: Apresentação educacional com slides sobre valuation e venda de agências de marketing

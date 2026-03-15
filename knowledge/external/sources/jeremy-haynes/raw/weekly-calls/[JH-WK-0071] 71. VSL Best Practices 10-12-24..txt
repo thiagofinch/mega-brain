@@ -1,0 +1,800 @@
+Transcrição Completa: 71 VSL Best Practices 10 12 24
+[00:00]
+"All right, sweet. First of all, welcome in. Uh, today we're going to be going through VSSL best practices. I've got some great data for you here today and I think it's going to be quite helpful for all of us who run uh VSSL funnels, of course."
+[00:15]
+"Um, I'm going to do a little bit of note taking and then we're also going to look at some data from some existing VSSLs uh that we run traffic to and we're going to see together um what specifically is working best."
+[00:30]
+"So, first of all, when we talk about VSSLs, it's important to note I'm obviously talking about the videos that go on pages that look like this. Okay, my VSSLs are typically on call funnels and they're typically super simple."
+[00:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: Exemplo de página de VSSL simples
+NÚMEROS: Não especificado
+VISUAL: Layout minimalista com headline no topo, vídeo centralizado no meio da página, e formulário de aplicação/agendamento logo abaixo. Design clean focado em direcionar atenção para o vídeo.
+[00:50]
+"Uh, we usually have a headline, we have our VSSL, and then we have our application/call ruler right below that. Okay. So, for starters, the place where you put the VSSL and how you frame the VSSL to either be consumed or not makes a substantial difference."
+[01:10]
+"Okay. The reason that I've simplified pages down to literally just this is because this isolates the attention to where I want it to go, which is watching the fucking video."
+[01:20]
+"Okay. I want to be clear. We've already had in our group chat today, one of our new members, Oscar, say something about optins. So, allow me to address that right off the rip. I never make people opt in to watch my VSSLs."
+[01:35]
+"Okay, opt-ins mathematically drastically increase our cost per qualified call. It in addition to that um lowers our ROAS. It just compounds negatively throughout the rest of our statistics in our funnel. I fucking hate optins on a VSSL page."
+[01:55]
+"You'll never hear me say, 'Hey, go ahead and run an optin on that thing. Why don't you have an opt-in? Makes no sense.' I will say this, the only time that you should consider some kind of optin is when you are selling to poor people."
+[02:15]
+"Okay? If you are selling to poor people or the general public, they are typically not as prone to take immediate action unless it is some kind of uh what's the right word here without sounding like highly classist, you know?"
+[02:30]
+"I don't want to sound like a dick to poor people to be clear, but it's like, okay, poor people will go buy like junk food on the spot, you know? Like poor people will go to like a casino and throw it down on black without even like blinking twice."
+[02:45]
+"You know what I mean? uh poor people when it comes to buying something that can improve their life like a product or service from a business believe it or not is typically slower you know"
+[03:00]
+"so that's why I mentioned like if you are selling to more of like a regular working class person and you are not selling to rich people who are more probable to make immediate decisions that benefit them especially for things that make them money save them time etc that's really the only time for an opt-in"
+[03:20]
+"and I still would not put the opt-in page first Okay. What I would do if I was selling to, once again, a less financially well-off demographic is I would put a popup optin when they're going to leave the page."
+[03:35]
+"That way, I can capture some of those people. I would not do that for rich people. That's super annoying. Um, to be clear, once again, I fucking hate opt-ins. They're they're net negatives on VSSL funnels."
+[03:50]
+"Okay. Um, to be clear in terms of terminology, uh, some of you have heard me use terms like the mini webinar or, you know, the mini webinar 2.0 or you potentially just heard me use the term VSSL."
+[04:05]
+"In either sense, that is just the difference of what that video looks like. In most instances, people are not good enough to film VSSLs on their own in a well structured way. Most people need a script or some type of template to follow and that's where the mini webinar 1.0 and the mini webinar 2.0 come into play."
+[04:25]
+"Um, just for clarity, the mini webinar 1.0 is like a great universal uh template that you can use. The mini webinar 2.0 is meant for like a more sophisticated product or service that you're selling that typically makes people money."
+[04:40]
+"If you are doing any kind of make money offer, the mini webinar 2.0 should be what you use. It is so well proven. I've spent I honestly don't even know to be fair. I'm not going to make up a number of how much money I've spent on that funnel and how much money I've made on that funnel for clients over the years and myself, but it's fucking insane."
+[05:00]
+"Um, the mini webinar 2.0 once again, if you're doing a make money offer, should be your go-to. The mini webinar 1.0 is used for like everything else. Like we've used the 1.0 for ecom funnels."
+[05:15]
+"Uh, we've used the mini webinar 1.0 for like info products. We've used it for like just regular run-of-the-mill products and services. We've used it for local businesses. The the 1.0 is pretty universal to be clear."
+[05:30]
+"But the 2.0, once again, isolated specifically to make money offers. Now, what do I mean when I say, well, you don't necessarily need a template all the time. You know, if you can just go into a VSSL and know what to say, okay, you have a high probability be able to just stand in front of a camera and rip some great content out."
+[05:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: Exemplo de VSSL sem template
+NÚMEROS: Não especificado
+VISUAL: Pessoa em pé diante da câmera em ambiente profissional, falando diretamente para o público. Formato mais natural e menos estruturado que apresentações com slides.
+[06:00]
+"And uh to be clear, there's plenty of examples of that. Um I'll give you a few as an example. If you go to any of my funnels, I typically just stand in front of the camera and I will film a standard VSSL."
+[06:15]
+"So as an example, like that'll look more like this where to be clear, um you'll just once again stand there, talk, and you know, looks great. These funnels are usually structured in a way where they could be a little longer."
+[06:30]
+"Um, to be clear, this is more of an application funnel that has additional information about the program. So, it doesn't necessarily follow that exact structure that I just laid out. It's got like infinite testimonials below as an example."
+[06:45]
+"But this is because this is not a product that's typically sold to rich people. This is a product that's typically sold to a lesser financially qualified person who's just getting into digital marketing and wants to learn some digital marketing skills."
+[07:00]
+"So, I have to have more information on the page. Um, in addition to that, we'll talk briefly about what's called your play rate. Um, to be clear, a play rate is the quantity of people that go to the page and press play on the video."
+[07:15]
+"I'll sideline that for a moment. We'll talk about that later. But when you have a low play rate, simply put, you can also add more information that's covered in the VSSL below the VSSL so people can assume the points you're trying to make."
+[07:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: Fluxo básico de VSSL
+NÚMEROS: Não especificado
+VISUAL: Diagrama de fluxo mostrando a estrutura sequencial de um VSSL: Hook inicial → Credibilidade → Venda do conceito → Oferta → Objeções → Call to action
+[07:35]
+"Um, now to be clear, the emphasis of what I'm trying to say, right? If you're not using a mini webinar template or any kind of VSSL based template, here's the simple flow of how a VSSL typically works."
+[07:50]
+"Okay. So, when you run a VSSL and you're not going to use a template or you just want to potentially make your own template, it typically starts with what you can help them with. And this is very direct."
+[08:05]
+"Okay? This starts off as an example. If I use this funnel, hey, my name's Jeremy Haynes. I'm going to help you master internet marketing. If you want to learn digital marketing skills, I'm your guy. And then you have to start to give credibility."
+[08:20]
+"Okay, credibility is what follows. Otherwise known as the why. Okay, this is why you can do whatever it is that you just made a claim about."
+[08:35]
+"So, as an example, once again, hey guys, my name's Jeremy Haynes. I can help you master internet marketing. If you are looking to get into digital marketing, this is the best program you could possibly take. It's seven weeks worth of a set of classes."
+[08:50]
+"Each week has a different topic. I'll go over that here in a moment. But to be clear, you know, why am I the person that can teach you this? You know, why am I your guy? Um, allow me to introduce myself."
+[09:05]
+"You know, my name's Jeremy Haynes. I've been a digital marketer now for over 12 years. And I've spent a shitload of money. Um, to be clear, paid advertising is a skill set. All these different digital marketings are a skill set."
+[09:20]
+"And the better you are at this of those skills, you know, the more money you can make. My first skill set was, and then I'll just start going into my backstory, you know."
+[09:35]
+"So, to be clear, you want to avoid those like super cheesy like I don't really know how to I usually just trash Russell Brunson when uh I tell people like what not to do in webinars and VSSLs because he typically makes it like the cringiest out of anybody that you could copy from."
+[09:50]
+"Um Russell has this like, you know, backstory stack that typically is very dry and cringey. It's like points that people don't really give a fuck about. Like, I don't need to tell you where I'm from in this backstory."
+[10:05]
+"I don't need to tell you anything that's not relevant to my hook, you know? I just need to tell you things in this case about why I'm great at digital marketing, how much money I've spent, how much money I've made."
+[10:20]
+"I need these numbers to be specific. I need these numbers to be believable. I essentially need like credibility assets here. You know, the backstory is just one piece of the credibility assets, okay?"
+[10:35]
+"It's not always just your backstory. Credibility assets can also be considered like you could potentially just plug some testimonials right after this if you wanted to and you wanted to avoid having to give a backstory on the character if it's not like a personality backed business."
+[10:50]
+"You know, it doesn't always have to be a backstory, okay? Um it doesn't always have to be like why you're selling what you're selling either. You know, people don't give a fuck about that. They care about once again like how can I trust you?"
+[11:05]
+"That's essentially what they're looking for when I say credibility assets. Okay, does that make sense to everybody?"
+[11:15]
+"Okay, hold on one sec. We got a few questions in the chat already. Um, Sanjay said, 'What about the client I told you that has a 95% Indian audience? Opt in to deter all of the Indians.'"
+[11:30]
+"Yeah, I mean to be fair, Sanjay, that's actually a very valid question. Um, to be fair, once again, we've already talked about this a little bit, but yeah, to reiterate, you could do an opt-in in that case, and the opt-in could actually have conditional logic on it."
+[11:45]
+"So, I love using conditional logic. I'm a huge fan of deterring the wrong people from the funnel. And just to be clear, as ridiculous as this might sound, um I might do something as significant as like, okay, name, email, phone number, and then this product cost this amount of money."
+[12:00]
+"Do you have that amount to invest? You know, and if they say no, once again, it's like, I'm not even going to collect their information. I'm going to forward them to some other fucking... They're out of the funnel right away."
+[12:15]
+"you know, that could be something that you could do when you're um to be clear, not to sound racist against Indians, to be fair, it could be any type of unqualified demographic that's coming through your funnel"
+[12:30]
+"but regardless, like, yeah, if you're getting a lot of unqualified people, then conditional logic can be your best friend to deter people from getting this far into your process."
+[12:45]
+"Um, Nick says, '2.0 for my book a call page for my ad agency.' Yeah, Nick, the 2.0 for your advertising agency would make a lot of sense for the mini webinar 2.0, for sure."
+[13:00]
+"Noah says, 'Is the 2.0 in the workshop training?' Yeah, Noah, I'll make sure in the group chat after this to put the uh mini webinar 2.0 and the 1.0 templates for you so you have access to both of them."
+[13:15]
+"Um I'll put that in the group chat afterwards so you guys all have it. Daniel says, 'Are these covered in the course, the differences between them?' Yeah. Um to be clear, the templates themselves once you go through them, Daniel, like you'll see the differences yourself."
+[13:30]
+"I wouldn't necessarily say that you need to waste your time like going through an entire course about the differences between the two. Literally just read through the templates. It's pretty night and day for, you know, why one's different over the other."
+[13:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: Exemplo: Multifamily Real Estate
+NÚMEROS: Não especificado
+VISUAL: Exemplo prático de aplicação do fluxo de VSSL para oferta de curso sobre investimento em imóveis multifamiliares, mostrando como adaptar o framework para diferentes nichos.
+[13:50]
+"All right, cool. So, once again, uh, back to the VSSL flow. Okay, so what can you do to help them? That's like your opening hook. It's why they're going to watch the video. It has to be strong enough to like make them think they're in the right place"
+[14:05]
+"you know, that you can help solve whatever problem it is that you can that you can uh, once again help this person with. You then go in right away to why you're the person, why you're the company that can actually help"
+[14:20]
+"could be a backstory, might not be. It's really just like how they can trust you. You know, it's credibility assets. Um, to be clear, right after that, you ideally sell them on this as a little broader."
+[14:35]
+"Okay? So, as an example, like if I'm selling that master internet marketing program and I'm trying to tell somebody like, 'Look, digital marketing skills are one of the most valuable set of skills that you can possibly have. Like, here's why.'"
+[14:50]
+"you know, I'm going to start trying to sell them more on like the opportunity of what I'm selling, like the industry itself, you know, and why it's important. U real quick, somebody just give me some random shit that they're selling or that a client's selling, and I'll use that as an example, too, so I can give you more context beyond just this."
+[15:10]
+"Feel free to unmute yourself or just throw it in the chat. Anybody? Okay. Multifamily real estate offer. Okay. So I'd be like listen is it a course Sanjay or is it uh an investment opportunity uh mm mainly course."
+[15:30]
+"Okay so to be clear VSSL flow okay my name's whatever I want to help you get into multifamily real estate it's one of the greatest opportunities that exists in real estate and as we all know real estate creates generational wealth."
+[15:45]
+"Okay, why am I the person or why am I the company that's able to help you with this? You know, here's a little bit about me and my portfolio. Here's how much cash flow I'm able to pull."
+[16:00]
+"Here's like the amount of tax deductions I'm able to get out of my real estate portfolio on a year-to-year basis. Here's some people that we've already helped, by the way, in terms of other people that have already trusted us and done deals with us."
+[16:15]
+"Um, to be clear, I want you to understand like why multifamily real estate over all the different types of real estate. Like you might be hearing nowadays about section 8 flipping, uh, single family home rentals, commercial real estate, industrial real estate, storage units, land"
+[16:30]
+"like why pick multifamily real estate over every other thing that's available to you out there? Let me go through the details of of once again, why is it multifamily real estate?"
+[16:45]
+"So, it's like you're selling them on the thing that you are trying to like centrally talk about and pitch, you know?"
+[17:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: Exemplo: Brez (THC Drink)
+NÚMEROS: 600,000+ casos vendidos por mês
+VISUAL: Exemplo de produto de bebida alternativa com THC. Página de produto mostrando benefícios: cannabis full spectrum, lion's mane, características não-aditivas, alternativa ao álcool. Layout com destaque para benefícios nutricionais e diferenciais.
+[17:05]
+"So, I'll give you a good example. There's this uh company that my old digital marketer runs now. And to be clear, it's this company called uh Brez and it's this like THC drink."
+[17:20]
+"Uh I won't click on their ad out of respect to not charge them. Hope you do the same. Okay. Has anybody ever heard of this before? Put a yes or no in the chat. Have you heard of like this drink category? Not necessarily this brand."
+[17:35]
+"Okay. No. Yes. Okay. So, so look at this. So, to be clear, I'm still trying to wrap my head around whatever the fuck this is, okay? But apparently, they take THC and other components of weed and they put it into a drink."
+[17:50]
+"And long story short, they add other nootropics with it. And they try to sell it as like something that creates essentially like an alternative to alcohol and a euphoric kind of feeling is typically how I see it marketed."
+[18:05]
+"Uh the point I'm trying to make is this is like a new category. Okay, so as an example, if they had a VSSL here, it'd be like, okay, uh just to be clear, if you're looking for a way after a long day just to be able to kick back and relax"
+[18:20]
+"and you're tired of the effects the next day of alcohol and hangovers and you know, you're just you're looking for something that can essentially without negative consequences, help you kick back at the end of a long day. Let me introduce Brez."
+[18:35]
+"Okay, to be clear, brez is a non-alcoholic beverage. It's an alternative drink. Uh we infuse cannabinoids and mushrooms and other nootropics that create like a euphoric feeling without necessarily getting you high."
+[18:50]
+"They just make you feel calm. They make you feel good. You know, it's a great product. Once again, if you're looking for something that can help you kick back to be clear, like, and this is where you transition to the credibility part"
+[19:05]
+"like look, we're not some random unlicensed, you know, uh making it in our kitchen company. We're a fully licensed FDA backed uh beverage company that manufactures these products at scale."
+[19:20]
+"As an example, last month we sold over 600,000 cases of our product. You can find our products online. You can find our products in some liquor stores. You can find our products even as even in some Target locations currently."
+[19:35]
+"Um, to be clear, we as founders, you know, we were tired of the negative effects of alcohol and we were looking in the market for something that could give us something to just kind of take the edge off, you know, make us feel better at the end of a long day."
+[19:50]
+"But, you know, we also loved to occasionally kick back and smoke weed, but as we grew older, we also noticed a lot of negative effects from that. It just wasn't what it was when we were younger and it was having same kind of thing, like some negative effects on us."
+[20:05]
+"It wasn't 100% what it used to be. So that's when we came out with Brez, you know, that's when we took an opportunity to create an alternative beverage that did exactly what we wanted."
+[20:20]
+"You know, removed all the negative consequences of drinking alcohol. Still gave us like a euphoric kind of like social feeling. You know, we could drink it at a bar and feel like, you know, kind of the same effects of alcohol just without being drunk."
+[20:35]
+"And to be clear, you know, I want I want to talk to and then we sell them on the thing. I want to talk to you about like why this, you know, is such a huge thing right now and why why we consider it like a groundbreaking opportunity, you know"
+[20:50]
+"and then to be clear when you look at their at their product page, okay, they start to go through essentially what could be covered inside of a VSSL, like there's a lot of benefits that they could start to cover about THC, CBD, Lion's Mane."
+[21:05]
+"Um, to be clear, they could start to talk about this like non-addictive, you know, fucking alternative drink. Um, they could talk about, you know, once again, like you could drink fucking 12 of these."
+[21:20]
+"My point being this specifically, like this part here is what I would consider plugging into the sell them on the thing part. like what are the actual benefits of consistently consuming full spectrum cannabis and lion's mane"
+[21:35]
+"and then you're selling them on like these beneficial things that you've put into one drink and then some of the sub points like non-addictive uh non-addictive characteristics you know it's different than smoking doesn't have the negative effects of smoking"
+[21:50]
+"um and once again like the nootropic benefits of lion's mane as an example my point being VSSL flows work fucking perfect for damn near any product."
+[22:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: Estrutura da Oferta
+NÚMEROS: $15,000 fee inicial, 10% net rev share
+VISUAL: Breakdown detalhado de oferta de agência: plataformas de ads (Facebook, Instagram, TikTok, Google/YouTube), serviços incluídos (copywriting, edição de vídeo, construção de funis, automação de marketing, email sequences, consultoria).
+[22:10]
+"Okay. But once you once you go broad, okay, and you're selling them more on once again like the industry or the why, like the big why, you know, or the the huge overarching benefit of the whole thing. You got to get back into the nitty-gritty."
+[22:25]
+"Okay? And this is typically where you transition to your offer about how you want to get them involved. Okay? So, from here, this is where we actually are going to present like how we're going to help them do this."
+[22:40]
+"Okay. So, as an example, like with Sanjay's uh multifamily real estate, it's like once again, we'd say, 'Well, let me let me tell you why, you know, it's multifamily real estate instead of commercial or section 8 or flipping.'"
+[22:55]
+"And, you know, then I explain everything about multifamily and why it's the fucking... And then I go, 'Look, and this is this is how I want to help you get involved in this, okay? Let me show you what I can do for you to help you take action and get involved in this opportunity.'"
+[23:10]
+"Okay? and then bam, I'm going to immediately pitch what my offer is. Okay, I want to be very clear. This is this is one of those examples where I like to trash Russell Brunson's uh VSSL offers and his his full webinar. Do not do a value stack."
+[23:25]
+"Okay, a value stack is fucking... a value stack, meaning, hey, it comes with this and this is $9,000 and it comes with this and this is $4,500. You know, it's like, don't fucking do that."
+[23:40]
+"Okay, first of all, it's FTC... It's not FTC compliant. Okay, second of all, it is horrendous when it comes to degrading trust. Immediately, all the trust you build is out the fucking window when you start making up exceptionally high prices that you've never charged for any of this shit you're selling"
+[23:55]
+"and then just saying, 'And instead of charging you fucking $100,000, I'm going to charge you $9.97.' Don't fucking do that. Okay? What you want to do is you want to list what comes with it, right? That's what you want to do."
+[24:10]
+"So, as an example, like for the for the master internet marketing offer, it's pretty simple. I'd be like, 'Yeah, so listen. When you invest into this product, um, here's what you get access to. You're going to get access to immediately the recordings of all our past cohorts, okay?"
+[24:25]
+"It's a seven-week live class. They're about three to five hours per class. There's worksheets paired with every class. There's downloads paired with every class, like strategies and SOPs and just how to do all this stuff."
+[24:40]
+"There's also these tremendously large homework libraries in between each one of the live classes. They're essentially full courses that I have you consume in between each live class. This immerses you in a shitload of information."
+[24:55]
+"In addition to that, we go live with this class every year or every other year. It kind of just depends when new stuff happens in the digital marketing world. But to be clear, you get access when you buy to all the future live classes."
+[25:10]
+"Any future live class we ever do, you get access to no matter what. Okay? In addition to that, we have a community on Telegram. It is active. You can tag me and ask questions. I'm active in it as well. And it's it's incredibly valuable."
+[25:25]
+"My point is, I'm just trying to go through what comes with it. Okay. Hey, when you work with our marketing agency, uh to be clear, we charge $15,000. We charge 10% of a net rev share. I'll talk about that math here shortly for how that works, but let me just break down what comes with it."
+[25:40]
+"We're going to run your advertising. We typically start on Facebook and Instagram, but we also do TikTok, Google AdWords, LinkedIn. By the way, YouTube is owned by Google, in case you didn't know. So, Google Adwords covers the search engine and YouTube and even the display network."
+[25:55]
+"Uh, but to be clear, we run ads on all platforms. We'll write copy for those ads. We'll tell you what to say inside of your videos. We'll edit your ad videos, you know, we'll tell you what to say inside of VSSLs when necessary."
+[26:10]
+"By the way, we'll build those funnels for you as well. You don't got to worry about any of that. We'll connect all the marketing automation together. So, all the different softwares we use communicate and uh we'll build some email sequences as well to help follow up with people"
+[26:25]
+"some text sequences if needed, and um you know, moral of the story, last thing that we include in our offer is a little bit of consulting. Typically, every business relies on us to tell them what to do, how to do it, and uh we just call that consulting."
+[26:40]
+"But moral of the story is that's typically everything that comes with our offer when you work with us. And you know, allow me to just cover some of the most common questions that come up uh when you first hear about what our offer is. To be clear, this becomes the opportunity to transition to objections."
+[26:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: Seção de Objeções
+NÚMEROS: Não especificado
+VISUAL: Transição para slide de objeções comuns. Estrutura mostrando perguntas frequentes que surgem após apresentação da oferta: preço, prazo para resultados, requisitos do cliente, resultados esperados.
+[27:00]
+"Okay. So, you want to say though, um yeah, allow me to answer some of the most common questions that come up when people are considering working with us. Okay. And these are really just the objections."
+[27:15]
+"Okay. So, to be clear, this can be as many slides as you want it to be. This could be like literally just the most common ones. This could be like, you know, the fucking nitty-gritty ones that you go over."
+[27:30]
+"Uh my point being, it's officially time to like go through once again what's going to hold people back and just answer it right then and there on the VSSL. So, you know, as an example, this is where I could start to handle some potential pricing objections."
+[27:45]
+"I I want to be very direct on this as well. Uh on this part specifically, I want you to bring up price. Okay? I used this example in our group chat this week when I think it was Brendan. He was asking something about if he should bring up price."
+[28:00]
+"And I think it's I just simply put I mean I think it's fucking... not to bring up price. Like you don't go to a hotel and then they tell you the price when you fucking show up to check in. You know, people book the hotels they book because of the prices that they cost."
+[28:15]
+"You know, you don't go to a restaurant and order food and just wait for the check to show up to fucking then learn what the prices are. You know, that that's what keeps people at McDonald's versus people going to Michelin restaurants."
+[28:30]
+"You know what I mean? It's like every every single thing like you don't go and book a fucking flight, okay, and then show up and they tell you the price then, you know? It's like they always tell you the price first."
+[28:45]
+"That's what dictates whether you fly economy first uh uh to be clear business class or fucking private, you know, is the cost. So, this is this is an opportunity to be clear to like disqualify, you know, you want to disqualify."
+[29:00]
+"Um, and to be very direct, we have a we have a whole separate section of the presentation here where, you know, typically after we transition to objections, we want we just want to be extremely clear. Who is it for and who is it not for? Okay, classic qualifying."
+[29:15]
+"And my point being, who is it not for? Okay, my point being, we have to be able to say the price confidently because that's what real fucking businesses do. Okay, we do not want infinite calls on our calendars clogging our lines, okay?"
+[29:30]
+"Even if you're just getting started, one of the most fucking justifications I consistently see is, 'Oh, well, oh, I don't have a lot of calls yet.' You know, I'd rather have more calls than less calls. No, you want to have the right calls"
+[29:45]
+"because if you send that data back to your advertising pixel with the wrong people on it, you're setting yourself up for failure by conditioning your pixel with the wrong fucking people. And then the pixel is going to go after more of that type of person."
+[30:00]
+"We only want the right people coming through our offers. And and once again, for some reason, there's this illusion in the internet marketing world of I don't want to say price so I can get a lot more people through."
+[30:15]
+"It's like no you like once again the the fucking airport uh you know Southwest Airlines or Spirit like they exist as a Frontier Airlines like they exist for the people who want to pay that little to fly you know"
+[30:30]
+"uh flying private like they tell you what the fucking price is all the time so you don't show up there expecting to fly with them and then they waste all the time on you and then you leave because then you found out what the price was later. It's like that's not how that fucking works."
+[30:45]
+"So my point is when you talk about the offer like say the price okay always say the price and typically you want to say the price first. So it's like once again uh back to Sanjay's example like okay this is this is why multifamily real estate is the fucking... once again in comparison to all the other vehicles."
+[31:00]
+"Let me tell you how I can get you involved in this industry. Okay I want to go through my offer and what I can do to help you get involved in this space. So first of all my offer costs this. Okay and let me explain what comes with it."
+[31:15]
+"There's a concept that I learned back in the day when I was working for Mr. Grant Cardone and it was always bring up price first and then justify the value after. Okay? When you say price last, it leaves it as a cliffhanger."
+[31:30]
+"When I say it first, it's like everything that I say after therefore justifies that price that I brought up at the beginning. Does that make sense? So, say the price, then go through your value, okay? Of like what comes with it."
+[31:45]
+"And from there, once again, we transition to our objections. So, when we get to the point where we're at the objections, uh, this is pretty simple. Like, you are either guessing if it's a brand new offer."
+[32:00]
+"In most instances, it's not a brand new offer, and you've already had like some conversations, you've already got feedback from your sales team. uh you've already got, you know, some potential like DMs or some messages back and forth with customers that go through like why somebody would not do it or the questions that somebody has."
+[32:15]
+"Objections don't necessarily always have to just be like straight up objections. They could just be, to be fair, the most common questions that people have. That's okay to do both there."
+[32:30]
+"But it's like slide by slide by slide you answer that right here. Or once again, if you're just doing a VSSL without a presentation, you're literally just saying like, 'Okay, hey, by the way, so some of the most common questions we get after people hear that offer are, uh, you know, things like this.'"
+[32:45]
+"So, first of all, uh, why is it $5,000? Well, to be clear, and you know, did I answer that question? One of the one of the other common questions that we get from people is, are there any kind of payment plans? You know, is there some way to make it easier?"
+[33:00]
+"Um, is there any financing options? You know, is there anything like this? Uh some some of the things that we get are well why why do you structure it this way Jeremy like why the seven-week live class you know why not just like a video course you know"
+[33:15]
+"my point is I just want to go through the most common things okay I want to go through the most common things um I want to go through like what's the timeline to get results you know like what uh what are you expecting from me in order to you know ensure that I get the results that that uh you're promising here"
+[33:30]
+"you know what are the expected results I can get just go through it all right here okay okay um to be clear Brandon says, 'Is there a way to clean the pixel if it's been seasoned with the wrong audience?'"
+[33:45]
+"Yeah, Brandon, a lot of people get really attached to their pixels. Um, there's like if I if I was the advertiser on that account and you told me there was a bunch of dog shit on the pixel, I would literally just start a new pixel."
+[34:00]
+"Like I wouldn't be too concerned about that at all. Um, if you want to unmute yourself, you can walk me through the specific circumstances. like is that for that accounting business that has a ROAS of seven or is this for a business that's kind of struggling with the return on investment in their ads?"
+[34:15]
+[Brandon responde] "Uh no. So the the problem with this business is there's um we kind of target two different groups in in a sub segment right? So it's bookkeepers generally but we also have a lot of first time bookkeepers right and those are the broke people."
+[34:30]
+"Okay. And then we also have people who are successful bookkeepers who are looking to upskill and that's where this more expensive higher ticket product comes in. And I'm concerned that like almost we're like we're cross-pollinating the sub audience there for our higher ticket product."
+[34:45]
+"We're drawing in a bunch of first timers and it's just not a good fit for them. So I'm wondering if there's a way to like separate those two audiences. And again, I apologize for maybe using the wrong terminology. I'm not a digital marketer here so I'm learning. So please be patient with me."
+[35:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: Standard Events e Separação de Audiências
+NÚMEROS: Não especificado
+VISUAL: Explicação de como usar diferentes standard events do Facebook Pixel para separar audiências qualificadas de não-qualificadas: Lead, Submit Application, Complete Registration, Schedule, Purchase.
+[35:05]
+"Yeah. All good. Um, to be clear, you could use the same pixel in that example. You would you would separate the entry level people from the higher level people based on what's referred to as the standard event."
+[35:20]
+"So when you when you start a campaign and you optimize the campaign for a specific standard event like there's several uh you might use lead as a standard event or submit application or complete registration or schedule or purchase as a few common standard events that are used in advertising on the ad platforms."
+[35:35]
+"So, as an example, when your broke people take a specific action, you could send that data back to the pixel using a specific standard event. Because to be clear, when you optimize future campaigns for that same standard event, it's going to go after the people who have already taken that action on your pixel"
+[35:50]
+"and who are probable to take that action based on who you're targeting, who have also historically taken that action on their advertising accounts."
+[36:05]
+"So if I'm a Facebook user and I constantly am like opting in for lead magnets, I'm essentially constantly adding lead as a standard event to my Facebook profile. So then when some random advertiser targets me as a Facebook user in the future, I have a higher probability to convert on a on a lead magnet"
+[36:20]
+"as an example in comparison to somebody who never opts in as a lead magnet and therefore never gets that standard event of lead assigned to their profile."
+[36:35]
+"So the moral of the story is the higher level people, right? If you just use a specific standard event for them when they take an action that signifies they're a higher level person um and you send that data back to the pixel"
+[36:50]
+"and all your future campaigns where you specifically want to target the higher level people, you would optimize the campaign for that specific standard event. Like as an example, you could use complete registration or or you know once again any number of the other standard events that are available to you to optimize for. Does that make sense?"
+[37:05]
+[Brandon] "Okay. Yeah. I know that that actually really helps. So then basically for each product then I'm optimizing for the standard event for that specific audience and then sending that data back to the pixel for that specific product."
+[37:20]
+"Exactly. Exactly. So to be fair basically if I if I'm uh constantly sending like if I'm sending people to that low ticket thing that you mentioned and I'm just trying to get them to buy like through a sales page, you're probably getting people to hit the standard event of purchase."
+[37:35]
+"Okay. Yeah. You're going to get low-level people and high level people that do that. But let's use the example that like after they purchase there's some type of call funnel that has conditional logic that can separate like the lower level people from the higher level people and get them on a booked call to upsell them something else."
+[37:50]
+"the lower level people maybe I use like submit application as my standard event for the low-level people and then maybe for the high level people who separate themselves and signify their higher level I use the standard event of complete registration or schedule"
+[38:05]
+"and I I just constantly remind my advertiser in that case never fucking use the standard event for the high quality people for the low-level people ever and never use the low level standard events for the high level people ever"
+[38:20]
+"but like to be fair there will be crossover for funnels that technically can attract both. Does that make sense?"
+[38:30]
+[Brandon] "No, that makes so much sense. Thank you for for clarifying."
+[38:35]
+"Yeah, no problem."
+[38:40]
+[Brandon] "Appreciate it."
+[38:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: Fluxo Completo do VSSL - Parte 2
+NÚMEROS: 2-10 minutos para audiências ricas, 15-45 minutos para audiências menos abastadas
+VISUAL: Continuação do fluxo mostrando segunda metade: Testimonials → Refund Policy → More Testimonials → Call to Action → More Objections (4 Quadrants) → Expectations → Final Testimonials → Final CTA. Divisão clara entre "Action Takers" (parte superior) e "Skeptics/Analytical" (parte inferior).
+[38:50]
+"Okay, so to be clear, back to the VSSL flow, right? So, what can you help them with the credibility or the why, you know, essentially like the how they can trust you data, the sell them on the thing."
+[39:05]
+"Okay, then we're transitioning to the offer. We're bringing up price. We're saying what it comes with. We're essentially telling people like how we can actually help. We do not do that stupid shit value stack where we make up random numbers and then say it's only this amount, okay?"
+[39:20]
+"We literally just lead with what it costs. We don't make up any fucking... To be clear, we then transition to the objections. Look, these are the most common questions that we get. You know, here they are. Boom, boom, boom, boom."
+[39:35]
+"Um, now, let me just be very direct, okay? This is who it's for. This is who it's not for. This is typically who we get the best results with in terms of like demographic traits and characteristics and circumstances that people find themselves in."
+[39:50]
+"These are typically terrible deals for us, and we don't really like to do these kinds of deals. Okay. Um to be clear at this point we want to do a few things. Okay, number one we want to make our call to action."
+[40:05]
+"So our call to action could be like hey by the way like you know if you're sold you're ready to go just you'll do this below this video and you know you'll take the next steps. That could be purchase as an example. Typically it's apply schedule."
+[40:20]
+"Now from here we want to throw in some testimonials. Okay. And this typically I like to do three to sometimes even four testimonials. Sometimes I get people that ask me, um, should I do like videos here? Um, should I do just like text based testimonials? You know, like it's really up to you."
+[40:35]
+"But the best thing I want you to remember is it needs to be believable. Okay? This fails if it does not come off as believable. So, this is the most important part. Okay?"
+[40:50]
+"And I typically, if I'm not going to use a video, I'm going to use um simply put like a screenshot of where it came from. So, as an example, like if I ever wanted to highlight Jeremy making 136K off of that one client that he was talking to us about in his weekly wins here today"
+[41:05]
+"well, he shared that in Telegram and he literally showed a screenshot of the wire. And although, yes, like he talked about it here today, you know, we don't record those weekly wins to be direct and I wouldn't use that regardless. I would just show the screenshot because the screenshot is highly believable."
+[41:20]
+"It shows a literal fucking wire from a bank. Okay? And in addition to that, it shows it in the natural environment where it came from, which in this case was on Telegram. I want my testimonials to be real. I want them to be believable. I want them to come off as high trust."
+[41:35]
+"I would encourage deeply that you do not try to like make testimonials pretty. Okay? As an example of that, if we look at this page, like tell me if you would look at all these testimonials and say, 'Oh, these are all fake.'"
+[41:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: Página de Testimonials do Master Internet Marketing
+NÚMEROS: Dezenas de depoimentos visíveis
+VISUAL: Página longa com múltiplos screenshots de depoimentos reais do Telegram. Formato autêntico sem edição excessiva, mostrando mensagens orgânicas de alunos com nomes completos e fotos de perfil. Layout de scroll infinito com testimonials consecutivos.
+[41:55]
+"You know, it's like, could I make all of these pretty and like copy specific parts of the text and then like use their name and like, you know, fucking... No, it's like I could do that, but that then it makes it less believable."
+[42:10]
+"These are just the literal screenshots from Telegram of all the students going through the master internet marketing class just saying how fucking awesome it was, you know, and they it goes for miles, okay?"
+[42:25]
+"How how much belief do you have when you see that many fucking testimonials? And by the way, people will look up these people on social media and they'll they'll ask them. They'll say, 'Hey, like how was your experience with Master Internet Marketing? Like did you still like it?'"
+[42:40]
+"You know, and that also helps, by the way, is having the first and last name of these folks with some kind of like photo that people can see about this individual, you know, and you can make it easy on them as well, by the way."
+[42:55]
+"And you could link their social profiles, which also help them organically, by the way, for the person that you're linking as a testimonial, just to be clear. But you don't have to do that. Uh my point is is just any kind of testimonial you use, like make it believable, okay? Make it real. Uh and ideally you show like three to four."
+[43:10]
+"Okay. From here um if you have any kind of like refund policy uh this would be good. This is essentially the point in the presentation where if there is anybody left there the analytical skeptical like kind of on the fence folks and this is where you need to start like pushing that person over the fence and kind of optimizing the presentation around that person."
+[43:25]
+"Um, I want to be clear in kind of creating a separation here. Anything above this are the action takers. Okay, these are the people who are like, 'Yeah, this all makes sense. Like, I'm ready to go.' Okay, below this is typically the skeptics and the people who are more analytical."
+[43:40]
+"Okay, uh these are also typically where the poor people lay. So this is important to understand the analytical folks they require like a lot of a lot of data to make decisions and they require you to go from like big picture to a more like smaller detail oriented picture."
+[43:55]
+"Okay. The action takers like they just need to hear what it is, how it works, how much it is, what comes with it. Answer some common questions that they might have. just literally signify that it's for them through the who it's for part and then tell them to go do the action."
+[44:10]
+"Okay. Below this, like this is where the VSSLs can get a lot longer if you wanted them to depending on the level of skepticism and essentially how like cold versus hot somebody can be."
+[44:25]
+"Um, look, this is rather broad in terms of this specific part of the advice, but I will say it regardless. Um, you kind of got to have this understanding of your demographic that you sell to for whether you have more action takers or more skeptics."
+[44:40]
+"Okay, once again, typically when you sell to less financially well off people, you have more skeptics and more highly analytical people. Okay, who like take the decision more seriously."
+[44:55]
+"Okay, but I'll give you a perfect example. So, right here on this call, there's a whole bunch of you guys who obviously purchased being in this very group. Okay, really think about your buying decision. Was it that fucking hard? You know, did it really take that much time to make the decision?"
+[45:10]
+"Like, think about the information that you needed and at what point you were officially sold and you were like, 'Okay, I'll do it.' You know, versus to be fair, there probably have been some people in the group that Leo's followed up with for a while that are a little slower or required more data"
+[45:25]
+"you know, or required like something that they saw that officially pushed them over the fence. My point being, dude, the more financially well off somebody is who comes into this group, the less time it takes for them to take an action."
+[45:40]
+"That's like again and again and again and again and again and again. My point being, action takers are typically more financially well off and would prefer shorter VSSLs."
+[45:55]
+"Okay, if you sell to a more financially well-off demographic, the length of the VSSL to go through this specifically should, no exaggeration, be like two to 10 minutes max. Okay?"
+[46:10]
+"versus when you sell to a less financially well-off demographic, your VSSLs are typically going to be somewhere between like 15 minutes all the way up to like 40 45 minutes long, sometimes even an hour depending on how long you really want to go through this bottom part."
+[46:25]
+"Okay, my point being make sure from a length perspective you optimize it around the demographic financially that you're selling to. Okay, so okay, back to the point. testimonials, ideally three to four refund policy"
+[46:40]
+"and then you repeat this same part here again where I want you to go through more testimonials. And ideally, you repeat this exact process over again. And then from here, we do a call to action. Yeah. Hey, so testimonials, here's our refund policy, here's more testimonials, here's our call to action."
+[46:55]
+"And then once again, remember ideally in this section of the video, you're dealing with the skeptics. So it's like overcome more questions and objections that people might have. Remember the four quadrants."
+[47:10]
+"Okay, those four quadrants being questions, questions that come from those other questions getting answered. I use this example of the water in New York where the fucking New Yorkers always talk about their bagels and their bread being better."
+[47:25]
+"Um, to be clear, if you ask a New Yorker, you say, 'Hey, like what makes what makes your bagel so good?' They'll be like, 'Oh, it's the water.' And it's like, well, based on that answer, you probably have another question right away. You're like, 'What the fuck are you talking about? Like, what about your water?' Like, what do you what? you know"
+[47:40]
+"so it's like, okay, the question gets answered, then you immediately have another question. Okay, we did this, I think it was like two weeks ago where we were using Andrew as an example and then Chris as an example with our offers where Andrew was selling sober living homes."
+[47:55]
+"And you know, when you first heard it, it made sense. But he brought up something about the fact that it's considered a real estate class, like it's an asset class within real estate. And then immediately you're like, whoa, like hold on, it's it's a real estate class."
+[48:10]
+"you had a bunch of other questions that immediately came from getting the original question answered of like what's a sober living home. You see uh from there we have our objections and then we have our expectations."
+[48:25]
+"Okay. So for this part specifically where I say more objections, you could really take the four quadrants and plug it here for this step specifically. Okay. It's important to note it's a repetition once you get to this second half of the presentation based on how long you want to do it."
+[48:40]
+"Okay? It's typically testimonials and then I like to end it off here with just the final call to action. This half of the of the presentation once again if you choose to go this long this is what can lengthen it significantly. This is where you can get into like the 20 minutes like an hour mark."
+[48:55]
+"Okay. Um my point being this is our VSSL flow. So, if if once again, if I'm not using the mini webinar or I'm not using the mini webinar 2.0 and I'm just going to stand there and I'm going to film, this is specifically what I'm going to remember to do if I'm just going to do it without some type of template or some type of script."
+[49:10]
+"I'm just going to go through this specific flow. Does that make sense to everybody?"
+[49:20]
+[Resposta de participante] "Like, no, you're going to disclose everything about it. You're going to make sure they understand it. You're going to answer the questions they have about it. Like you're essentially in a VSSL going through what the other person would otherwise ask on a sales call."
+[49:35]
+"That's all you're doing just without the other person conversating with you. Does that make sense?"
+[49:40]
+[Resposta] "Absolutely. Yeah. Got it."
+[49:45]
+"Okay, great. Other questions?"
+[49:50]
+[Participante pergunta] "When it comes to like if you have a client that's running mainly organic versus a client who like obviously you're scaling with cold, do you have separate VSSL funnels or are you using the same framework for organic and cold?"
+[50:05]
+"Great question. Uh we will try whatever is working on the organic with the paid first. But in most instances, you're going to find that you do need to create separate assets for those."
+[50:20]
+"Um, just to your point, it's the difference in whether somebody's already like very familiar with the business or and the offering to be fair or whether somebody is completely new to the business and like requires a little bit different uh potentially like more more trust assets as an example"
+[50:35]
+"or like more credibility assets or like different explanations for how things are going to work just in an attempt to optimize like somebody who's never heard of you converting."
+[50:50]
+"So to your point, yes, typically separate assets is where you end up. So like if I have someone who's running like an organic funnel and a cold funnel, typically in the organic funnel, like I'm I'm assuming that they're more model aware"
+[51:05]
+"like I don't have to explain what the opportunity is. Like I was explaining it to a fifth grader and they're a little bit more trust like built with the person. So I'm usually going lighter on those aspects and more of just like selling the offer."
+[51:20]
+"Whereas like cold traffic, it's more selling the model and then more establishing credibility, more trust for the person. Um, so obviously they're very different lengths. Would you change that or you think that's on the right track?"
+[51:35]
+"It's on the right track to be fair. Uh, and and once again like it just requires testing to see like how how much like what are the differences that need to be made, you know? Does it need a lengthier sales page because you get a really low play rate?"
+[51:50]
+"um does it need, you know, substantially longer VSSLs? Uh technically, believe it or not, you'd probably with the cold audiences actually be optimizing for less of their attention with a shorter VSSL."
+[52:05]
+"Um there's once again like a lot of differences that you find through testing that are necessary and you kind of got to let that data reveal itself to you. try try to take your best shot first of course and ideally it will work"
+[52:20]
+"but in most instances you're going to have some um you know some significant iterations that are going to be required between organic and and cold audiences to get it to convert"
+[52:35]
+[Participante] "from what you've found is that different case by case or have you found any like commonalities between different..."
+[52:45]
+"it's it's pretty different case by case but one of the most common things that we find especially when it comes to VSSLs is the VSSLs need to be shorter for cold audiences they give you less attention"
+[52:55]
+[Participante] "okay but more the content will be curated more towards like selling them the model, selling them the person. Whereas like a direct organic VSSL..."
+[53:05]
+"organic I mean in some instances like I'll use Andrew as an example like Andrew is pretty strong on YouTube and he gets a lot of his revenue from that. He just has a fucking application funnel without anything else on it inside of his uh you know fucking description on YouTube you know"
+[53:20]
+"versus obviously that would never work on cold audiences in comparison. So yeah, to your point, like you can you can strip things down to like the bare basic call to actions in an organic funnel and people will still take that action."
+[53:35]
+"Um, versus obviously when you talk about cold audiences, you're talking about like direct response best practices and direct response principles, which you know, once again, can vary give or take what the client is"
+[53:50]
+"but keep in mind like you just typically have to earn their attention more inside of a cold audience funnel and VSSL in comparison to what you're going to do organically. Uh if that makes sense for you."
+[54:00]
+[Participante] "Yeah, that makes sense."
+[54:05]
+"Okay, cool. Uh other questions on this."
+[54:10]
+"All right. Sweet. All right, real quick. I want to go through some data with you guys on VSSLs."
+[54:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: Wistia Analytics - Cliente 1
+NÚMEROS: 1h07min de duração, 800+ views iniciais caindo para <200 em 4 minutos, oferta de $11,000-$34,000
+VISUAL: Gráfico de engajamento do Wistia mostrando queda acentuada nos primeiros 4 minutos (de 800+ para <200 pessoas), mas retenção relativamente boa para quem permanece até o final da hora completa. Linha descendente íngreme no início, depois mais gradual.
+[54:25]
+"Okay, so to be clear, this was a client that I sent the mini webinar template to. Okay, and I told this client, I said, 'This mini webinar should be no longer than like 15 minutes.' They sent me back an hour and seven minute VSSL."
+[54:40]
+"Okay, so first of all, horrendous in terms of actually following what I needed them to do. Um, you know, all that aside, the uh the point being, look at this. Look at this what's called engagement rate."
+[54:55]
+"Okay, so you see how steep the decline is just in the first four minutes of this video. like we go from over 800 people to less than 200 people in four minutes. Okay, that's that drop off is pretty significant."
+[55:10]
+"However, look at the retention for the people who watch to the full hour. Although, yes, it's not a significant amount of people who originally pressed play getting to the very end. I mean, to be fair, that's pretty decent retention. You see that?"
+[55:25]
+"So, this specific business is an $11,000 to $34,000 offer. Okay? And although yes, they lose a significant amount of people at the beginning, remember what I said about action takers versus the skeptics and the analytics."
+[55:40]
+"Okay? A lot of this at the very beginning is just a basic hook and then the who am I. So to be clear, are we losing action takers in that first four minutes? No. We're probably just losing people who think this guy's talking too long about these things."
+[55:55]
+"So when you hear me say like in the VSSL flow, the what you are and how you can help them and you go into the credibility, I mean, that's got to be fast. Like if you really look at it, that should have all been accomplished in like under a minute."
+[56:10]
+"And then he should have gotten into the why this opportunity matters kind of hook right after that. But instead, it took him four minutes just to finish off the first two points of the VSSL flow. You see that? Pretty fucking... And you lose a lot of people that way."
+[56:25]
+"And remember, on an 11 to $34,000 offer, a lot of the qualified people are going to be, you know, looking for speed. Like, they want you to be direct. They want you to be punctual. They want you to be to the point. They want you to to not be over articulate. You know, just articulate enough for them to understand. and then and then make your next point."
+[56:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: Wistia Analytics - Cliente 2 (Amazon Automation)
+NÚMEROS: 9 minutos de duração, 5% retenção até o final
+VISUAL: Gráfico mostrando queda catastrófica: praticamente todos os espectadores saem nos primeiros 15 segundos. Linha quase vertical de queda, uma das piores retenções possíveis. Contexto: negócio de automação Amazon após escândalos do setor.
+[56:45]
+"Okay. Um to be clear, this is a 9-minute VSSL. Look how low the retention is on this video. You see that? So this shows that what is said in the first 15 seconds is so bad, okay, that people just leave. Like damn near everybody who presses play just leaves."
+[57:00]
+"5% of people stay to the very end. This is truly one of the worst VSSLs. Even though the length of it is only nine minutes, this is to a very financially well-off demographic."
+[57:15]
+"This is actually, I'll give you the context here. This is actually for an Amazon automation business after all the other Amazon automation businesses already fucked everybody. So to be clear, this business is trying to sell you on an Amazon opportunity after everybody's already been scammed."
+[57:30]
+"So this is essentially the result of, okay, once somebody finds out in the first 30 seconds that it's just another Amazon automation business, they don't even give them a shot. They just leave. You see that?"
+[57:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: Wistia Analytics - Cliente 3 (Asphalt Contractor)
+NÚMEROS: 12 minutos de duração, declínio gradual e saudável
+VISUAL: Gráfico mostrando queda gradual e consistente ao longo dos 12 minutos. Linha descendente suave, indicando que pessoas entendem o conteúdo em diferentes pontos e tomam ação. Padrão considerado "bom" de retenção.
+[57:50]
+"Okay. To be clear, this is an asphalt contractor. He's he's coaching people on scaling up their asphalt business. This is a 12-minute VSSL. This is a 9-minute VSSL for comparison on the engagement rate here. Okay, look. Look how many more people stick. You see how this is a little more gradual of a decline."
+[58:05]
+"This is good. This is usually indicative that you're doing a good job at getting people to peel off in the VSSL to take the action below the video. Does that make sense?"
+[58:20]
+"So remember, like once the action takers, for that matter, once anybody feels like they understand something, that's it. They're done. They just leave. They're like, 'All right, I got what I needed. I'm ready to go.'"
+[58:35]
+"You see, it's like people don't need to stick around for the full thing. The illusion in VSSL, and this is very important to remember, the illusion in VSSLs is that people are going to stick around to the very end and consume all of it. That's never the case. That's a facade."
+[58:50]
+"If you want people to understand what you're saying in the VSSL and you realize that they're not going to watch the whole thing, you'll use content ad strategies and the six emails a day and they hammer them. Then the hammer them strategy to get those points across after they've already taken the action."
+[59:05]
+"Once again, total illusion and a fucking facade for people to... It's Wistia, Daniel. This is Wistia that we're looking at."
+[59:20]
+"Um, to be clear, it's an illusion once again that people are going to watch the full thing. If we want people to understand those points, we use the hammer them strategy. Okay?"
+[59:35]
+"But this, to be clear, I think this is a great example of once again, people understand what the guy's saying at multiple points throughout the VSSL and they're like, 'All right, cool. Like, I'm ready to go.' And they take action."
+[59:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: Wistia Analytics - Cliente 4 (Melhor Exemplo)
+NÚMEROS: 2 minutos de duração, 62% engagement médio, 45%+ chegam ao final
+VISUAL: Gráfico mostrando a melhor retenção de todos os exemplos: linha descendente muito suave, com 62% de engagement médio e mais de 45% dos espectadores chegando ao final. Vídeo curto e altamente eficaz focado apenas na parte "action takers" do framework.
+[59:55]
+"Okay, now this this is a two-minute VSSL. Do you see how great the retention is on this video? This is phenomenal. This is literally the best example out of my entire Wistia account of clients that I can show you in terms of retention. It's the highest retention out of any video."
+[60:10]
+"The average engagement is 62%. Which means which means on average out of everybody who plays 62% of people get to the end, which is fucking sweet. I'm sorry, 62 you get to about 62% in the video, which is awesome. And more than 45% of people get to the very end. That's crazy."
+[60:25]
+"Now, this guy, he took the concepts I talked about in the VSSL above the action takers line and that's what he put inside of this. Okay."
+[60:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: Play Rate Analysis
+NÚMEROS: Cliente 1: 30% play rate, $212 cost per call; Cliente 2: 74% play rate; Cliente 3: 25% play rate, $39-$80 cost per call; Cliente 4: 100% play rate, 5.1K-5.4K plays
+VISUAL: Comparação de play rates entre diferentes clientes, mostrando percentual de visitantes que pressionam play no vídeo. Análise de como thumbnails, design de página e framing do ad afetam play rate.
+[60:45]
+"Now, one thing I also want to show on these different videos is the play rate. Let's focus on this now. Okay. So, this is the quantity of people that hit the page and pressed play."
+[61:00]
+"Okay, so on this guy's page only one only 30% of people are pressing play. What's that? What's that mean? Is that bad? Is that good? Well, it really depends on your cost per call. It depends on your cost per whatever you're optimizing for."
+[61:15]
+"So, to be clear, like this guy's cost per call was about $212. Keep in mind, it's an 11,000 to $33,000 offer. Is that good or bad? That's pretty good. You know, pretty good. What can make the play rate better? Great question."
+[61:30]
+"typically better thumbnails and in some instances how your page is designed. In other instances, it's how you frame them coming from the ad. So, if you tell people like, 'Hey, I've got a video I put together for you on this next page. Press the button below.'"
+[61:45]
+"There's a higher probability people go to the page and watch the video. If you make some kind of call to action like, 'Hey, talk to my team.' And then they go to the next page and there's just a fucking video. low qual low quantity of people going to press play because they weren't framed to watch it. That's what I mean when I say like based on how they're sent to the page."
+[62:00]
+"Okay, to be clear, this play rate on the other hand is 74%. One of the worst retention videos ever, but 74% of people go to the page and press play. Unfortunately for him, in this case, as soon as they find out it's an Amazon automation company, they're like, get fucked. And they leave."
+[62:15]
+"But I mean, dude, the ads did an incredible job at framing people to come to the page and got them interested enough to come here and press play. That's a really good play rate."
+[62:30]
+"By the way, I I just want to be clear on something real fast. I've had million-dollar a month clients that have a 9% play rate. Okay? So, the higher the play rate, the better. But I just want to be fair and saying what really matters is is the engagement rate."
+[62:45]
+"Play rate is once again indicative of more of the funnel design, the thumbnail, and how people were framed going to the page. Higher the play rate, the better, of course."
+[63:00]
+"Okay, this client $50,000 offer selling to a blue collar demographic. I don't know about you guys, but if you've ever sold to a blue collar demographic, I don't know why, but they fucking hate technology. They uh they think it's the devil."
+[63:15]
+"So, we typically get a lower play rate on funnels that are for blue collar entrepreneurs or business people or that demographic in general. Unfortunate, but true. 25% believe it or not, in this particular client's case, I actually I loved the cost per call here."
+[63:30]
+"We were getting $39 to $80 cost per calls on this client. And once again, the engagement rate not terrible. Now, once again, this client, look at this. So hot, dude. The statistics here are fucking insane. 100% play rate."
+[63:45]
+"And it's not like it's on a lower quantity of people. Look at this. 5.1K plays, 3K plays, 5.4K, 1.1K. So it's like, dude, this is this is this is fucking great. Once again, tremendous in terms of a VSSL."
+[64:00]
+"Okay. So, my point being once again, you can typically influence play rate based on how people are framed coming to the page from the ads, the uh the style of the page itself and then the thumbnail."
+[64:15]
+"Um, sometimes you ever go to a page, you see a video and the thumbnail is just whack and you're like, I'm not fucking watching that, you know? Versus other times like the thumbnail is so appealing you're like, oh, that's great. That's how YouTube works. as an example."
+[64:30]
+"All my YouTube guys typically master thumbnails and do really well on VSSL play rates as a result of that skill set. Okay."
+[64:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: Plataforma Recomendada: Wistia
+NÚMEROS: Não especificado
+VISUAL: Logo e interface do Wistia destacada como plataforma preferida para hospedar VSSLs. Ênfase em analytics detalhados e função de video thumbnail (thumbnail em movimento) versus imagem estática.
+[64:50]
+"And then uh as you noticed just in terms of platforms we prefer to host VSSLs on. I love using Wistia. Uh Wistia is hands down my favorite um just based on the analytics and I also love the video thumbnail function that they have."
+[65:05]
+"Um I'm a big fan of it. But I think it makes the videos much more enticing to watch having a video thumbnail in comparison to an image. That's another little pro tip just to kind of close it out."
+[65:20]
+"Okay, to be clear, does anybody have questions on any of this? Feel free to unmute yourself and ask. Drop a question in the chat if you've got anything."
+[65:35]
+[Participante] "How do you set up the ads for this? Are you running like cold conversion for for these bookings and then retargeting like retargeting them with the hammering?"
+[65:50]
+"Uh, good question. So to be clear, we we will typically have that headline, the video, and then the application. We'll typically use Typeform and Calendly for our combination of the application and scheduler, we'll optimize the campaign for the standard event of schedule in in almost all instances."
+[66:05]
+"And to be clear, um after somebody takes that event of of scheduling, to be clear, that's when we'll implement the hammer them strategy. Six emails a day, try to get the content frequency to about 15 to 20 within that 72-hour period of time. and start the process of of trying to turn the sales people into cashiers after they take the action."
+[66:20]
+[Participante] "Okay. So like that's cold that conversion essentially the top of funnel is that that schedule..."
+[66:30]
+"to be fair it could be uh could be totally cold audiences in most instances. It's a combination of warm audiences and cold audiences um in two separate campaigns."
+[66:45]
+"So we'll typically have u depending on the depending on the business. I mean, not every business has a warm audience to leverage, but if they do, we'll have a campaign for warm audiences and we'll have a campaign for cold audiences."
+[67:00]
+"Sometimes, to be fair, just as a pro tip, we'll also create a duplicate version of the funnel. That way, the analytics are totally separate for the cold versus the warm, so we can see the differences on the funnel as well beyond the ads."
+[67:15]
+"That would include duplicating the Wistia video as well, so we can also see the retention differences between the two. Um, yeah, to be clear, more of a pro tip when it comes to like the separation of assets like that"
+[67:30]
+"but it gives you the clarity that you need because there are significant statistical differences between cold audiences and warm audiences that will signify what changes need to occur. And if you blend the two together, it's much harder to see what those changes need to be."
+[67:45]
+[Participante] "Okay,"
+[67:50]
+[Outro participante] "Jeremy,"
+[67:55]
+"what's up, Ash?"
+[68:00]
+[Ash] "you you um you said at the very beginning you were talking about how you want to put all attention on the VSSL. Yeah. Um did was did I misunderstand? Were you saying don't have a long landing page?"
+[68:15]
+"For example, don't have lots of testimonial videos underneath it because then I also saw you show all those screenshots and I was wondering if they were on the same landing page."
+[68:30]
+"Correct. It depends on once again what your play rate is. So, if you're getting a low play rate, meaning essentially your VSSL is not being consumed or sometimes it's also a combination of you're getting a higher cost per call than you want"
+[68:45]
+"that's where you should build out a longer landing page below it that emphasizes the points that are made in your VSSL. So, to be clear, anytime that you see like a longer landing page that has a VSSL on it, that's that's one of those two situations occurs."
+[69:00]
+"Your cost per call is usually just too high. you've made like uh thumbnail changes, you've made changes to the ads for how you're framing people going to the page to watch the videos. You're still not really seeing the result that you're after. So then you start to build out the page in a little more length."
+[69:15]
+[Ash] "That's interesting because I just started with a long landing page because I didn't have this advice before. But to be clear, you're if if I haven't tried my landing page as a short one, I should probably try a short one as well, right?"
+[69:30]
+"I definitely split test it to be fair, unless just keep unless you're satisfied with your result. It's like, as an example, Brandon the other day in the chat was asking about some changes he should make. The first question I always have is, 'Well, what's the ROAS?'"
+[69:45]
+"Dude, he was getting like a fucking seven ROAS. You know what I mean? It's like, no, don't literally don't change anything. Just spend more money. You know, he doesn't need to change anything else."
+[70:00]
+"Um, to be clear, so if you're satisfied with your result, then I mean, just keep doing whatever you're doing. But yeah, we'll typically start the opposite the way you did. We'll start with a shorter page and then work our way up to a longer page through time."
+[70:15]
+[Ash] "Got it. And where do you which course do you talk about VSSL 2 versus one? If we want to go and look at that course..."
+[70:25]
+"we just watch this video again. Yeah. Yeah. To be clear, I would I would encourage you just look at the template differences. So once again, in the in the chat right after I upload the recording here, I'll share the uh the mini webinar 2.0 and the mini webinar 1.0 PowerPoints."
+[70:40]
+"And they're they're pretty night and day for the differences when you just scroll through the templates themselves. The the flow of a VSSL. This is once again I always make everything the best that I can for you guys as inner circle students."
+[70:55]
+"So, long story short, the um the point I'm trying to make that the VSSL flow that I just covered here is more in-depth than anything else I could refer you in terms of a course I have."
+[71:10]
+[Ash] "Got it."
+[71:15]
+"Other questions? Anybody else got anything?"
+[71:25]
+"Okay, cool. Yeah. And as you can see, just to be clear, make sure you always say the price. Okay. As you can tell, I'm very passionate about that. Sorry that Noah was the uh the the end of the stick for that one. You know, don't don't don't fight that battle against me, okay?"
+[71:40]
+[Noah] "What's the word? No. Yeah. I I hate not showing the price to my least favorite thing."
+[71:50]
+"Yeah. Because like like I said, I mean, to be clear, dude, just think about it like this, right? Just try to find any business that hides the price. Like, can you even think of anything?"
+[72:05]
+[Noah] "Um, yeah. Yeah, I mean a lot of them that have annoying funnels where it's like..."
+[72:15]
+"I'm talking about like a real business like give me like a real business in like real life that like hides the price from you and like..."
+[72:25]
+[Noah] "Yeah, I guess like I guess any company that does like actual quotes where it's like you know get like get a quote now and then they fill out some optin form and they're like all right give us a call and we'll give you a quote or we're going to call you with a quote. Um I guess those are the only ones that I could think of but those are for custom quotes so can't really think of another one."
+[72:45]
+"Yeah, like you're talking products or something like that."
+[72:50]
+[Outro participante] "variable like like high ticket SaaS but like enterprise packages and stuff like that but other than that if it's like a if it's a a steady price then no"
+[73:00]
+"yeah makes sense okay you say something Ash"
+[73:05]
+[Ash] "um premium gym memberships will often hide the price of one of the higher prices and they'll say it's bespoke enterprise SaaS will also hide the price"
+[73:15]
+"like what like Equinox"
+[73:20]
+[Ash] "yeah exactly Exactly. Stuff like that. There's one in London called Harbor Club where they're like it costs, you know, 2K entry fee and then monthly and stuff like that. Exactly. I don't know about Equinox to be clear."
+[73:35]
+"Yes. They make you do this. That's what you're saying."
+[73:40]
+[Ash] "Yeah. No, I just playing along right with your question. But I do I do agree with your logic. I just I also find it annoying, right, when they do that because you would rather see and know, but they they do hide it. And enterprise SaaS is the other one, right?"
+[73:55]
+"I do. I do. Just to be clear, I uh it's very important, right? I follow a good quote. I don't want to be right. I just want to make money."
+[74:10]
+"So, to be fair, I mean, you're not wrong in saying enterprise B2B SaaS, you know, uh Equinox looked like they didn't just openly disclose their price, but obviously they're doing very financially well."
+[74:25]
+"So, to be clear, it's important to note once again, almost all All businesses that have made a substantial amount of money that I've like either once again worked with, helped directly, coached, showing the price versus not showing the price, we always see a significantly greater quantity of qualified people come through"
+[74:40]
+"which is typically praised and appreciated by the sales people that are taking those sales calls. Um, the one the one thing that also is really important to understand about like why we like to show the price and not bog down the sales people with a bunch of fucking leads is they operate on narrative."
+[74:55]
+"So to be clear, like have you ever worked with a sales team where they start to get a bunch of bad leads and then even if they start to get a bunch of good ones, will they just got conditioned that they're all bad? So they also just kind of default think like these are bad leads. You guys ever had that happen?"
+[75:10]
+[Participante] "Yeah."
+[75:15]
+"Or like same thing with sales people's morale. Like dude, their morale is fragile, you know? So to be clear, like when we go through the process of getting a bunch of qualified and then and then we work through a bunch of unqualified leads at the same time"
+[75:30]
+"dude, if if that ratio is off, like give or take a particular day, like let's use the example there's like a whole week where they're more unqualified than qualified. Okay, what do you think that does to a salesperson's morale after just five days?"
+[75:45]
+"Like what do you think that makes them think about their job? You know, does that make them excited to go through the phones? Does it make them does it make them less excited?"
+[76:00]
+"like you know the the thing that really has um like I always talk about this with fat cat closers and I like to say that it's an internet business phenomenon that sales people only like to take qualified scheduled calls"
+[76:15]
+"but the reason that behavior got conditioned into these internet salespeople is because there were such dog shit leads that they were calling you know that they just said it's not worth our time and effort to ever call on leads that aren't qualified and coming straight onto my calendar"
+[76:30]
+"because from their own experience experiences, you know, they've learned from conditioning that there's just so many bad leads that they have to dial through otherwise versus once again like I can get Hydra leads as an example coming through lead forms that are filling out conditional logic that are exceptionally qualified people"
+[76:45]
+"that to be clear, man, you'd be happy as a salesperson to call through those leads even if they didn't schedule onto your calendar. But at the same time, like all that historical experience tells you it's going to be a waste of a time."
+[77:00]
+"it's going to be a waste of your time because of all of that all that stacked experience against you just saying it's bad leads, you know, like they're not going to be qualified, they're turds."
+[77:15]
+"So, just kind of keep that in mind. Like I also as a marketer, you know, I I I keep the salesperson's morale and I keep essentially the narrative that they're living in. I try to keep it in this frame of like all the leads are good, all the leads are worth dialing, all the leads are worth following up with."
+[77:30]
+"you know, like this marketer does a great job at getting qualified leads onto my calendar and just for me to contact and dial on. You know, as soon as you break that trust, that sacred bond with your sales team, you get that game of sales versus marketing"
+[77:45]
+"and it leads to um just like a horrendous set of conditions that aren't beneficial for anybody. You know, it leads to like a distrust in your sales organization and it leads them to to just be in that bias of like I only want scheduled qualified calls on my calendar"
+[78:00]
+"which really limits what the business can do to make more money. Do you get what I'm saying? That's that's that's my experience to be clear for why I'm so passionate about showing the price. I uh it's just it's, you know, it's conditioning, I guess."
+[78:15]
+[Participante] "No, that makes sense. We actually, just to kind of add to that, we um had like a one funnel that was just it was producing a lot of leads, but again like the the quality is about like 20 30% qualified."
+[78:30]
+"And the second we added pricing, our opt-in rate went significantly down, but like you know like maybe a fifth of people are now opting in, but every time they opt in the sales team's like super pumped to like actually dive in and call those leads now."
+[78:45]
+"So um and before they were just ripping through the dialer on just not pumped about it. Now they're like, 'Um, I'm going to harass this person as much as possible because I could probably close.'"
+[79:00]
+"Exactly. Right. And that and that's the state you want them in, you know. And then Daniel's not here anymore, but he did ask he said, 'Do you bring new sales people on if their morale gets drastically affected?'"
+[79:15]
+"And at the end of the day, I mean, yeah. Uh I usually use the example of a relationship where like, let's use the example, you just cheat on your significant other all the time. Uh that trust is like so mangled and fucked up that like, you know, could you potentially ever get the trust back up to what it was?"
+[79:30]
+"I mean, I highly doubt it, but like maybe, you know, and at the end of the day, is it probably easier at that point for both you just to go out there and get in a new relationship? Yeah. I mean, you have a higher probability of just starting things fresh and getting off on a better foot faster to the point you're trying to get at in a relationship"
+[79:45]
+"than you do trying to mend like a once again horrendously fucked up situation in comparison, you know? So yeah, in some instances, once again, if their morale is just totally fucked... much easier just to get new sales people that come in fresh in comparison."
+[80:00]
+"So, you know, but once again, like view it as your job to maintain morale. Maintain morale and maintain narrative. Two very important things when when it when it comes to working with sales teams."
+[80:15]
+"All right. Sweet. Anybody else got questions on anything?"
+[80:25]
+"All right. Cool. All right. Hey, just a disclosure, I'm going to clip that part where I yelled. Okay. That was that was that was mean. I'm sorry. Um my bad."
+[80:35]
+[Noah] "All good, man. It was fun. You want me to make a lot of money. I appreciate it."
+[80:45]
+"Bye, guys."
+📊 RESUMO EXECUTIVO
+NÚMEROS PRINCIPAIS:
+Play rates variam de 9% a 100% dependendo do funnel
+Cliente 1: $212 custo por call (oferta $11K-$34K)
+Cliente 3: $39-$80 custo por call (oferta $50K)
+Retenção exemplar: 62% engagement médio, 45% chegam ao final
+Pior caso: 5% retenção (Amazon automation pós-escândalos)
+Queda típica ruim: 800+ para <200 viewers em 4 minutos
+Master Internet Marketing: 7 semanas de aulas, 3-5h por classe
+Agência: $15,000 fee + 10% net rev share
+Brez: 600,000+ casos vendidos mensalmente
+ROAS de 7x considerado excelente
+ESTRATÉGIAS E SISTEMAS:
+Framework de VSSL (Ordem Sequencial):
+Hook: O que você pode ajudar (abertura direta)
+Credibilidade/Why: Por que você/empresa pode ajudar
+Sell the Thing: Venda da oportunidade/indústria (visão ampla)
+Oferta: Preço PRIMEIRO, depois valor incluído
+Objeções: Perguntas mais comuns
+Who It's For/Not For: Qualificação clara
+Call to Action inicial
+Testimonials (3-4 primeiros)
+Refund Policy
+More Testimonials (repetição)
+Second Call to Action
+More Objections (4 Quadrants para skeptics)
+Expectations
+Final Testimonials
+Final Call to Action
+Templates:
+Mini Webinar 1.0: Universal (ecom, info products, local business, produtos gerais)
+Mini Webinar 2.0: Específico para ofertas "make money"
+Hammer Them Strategy:
+6 emails por dia
+15-20 frequência de conteúdo em 72h
+Implementado APÓS agendamento
+Objetivo: transformar vendedores em caixas
+Standard Events para Separação de Audiências:
+Lead: Para opt-ins básicos
+Submit Application: Para prospects de baixo nível
+Complete Registration: Para prospects qualificados
+Schedule: Evento principal de otimização
+Purchase: Para vendas diretas
+NUNCA misturar eventos de audiências diferentes
+Conditional Logic Applications:
+Deterrent de audiências não-qualificadas
+Perguntas de investimento disponível
+Separação de demographics (exemplo: 95% Indian audience)
+Redirecionamento de não-qualificados
+ESTRUTURA:
+Duração de VSSL por Demographic:
+Ricos/Action Takers: 2-10 minutos máximo
+Menos abastados/Skeptics: 15-45 minutos (até 1h)
+Linha divisória: "Action Takers" vs "Skeptics/Analytical"
+Design de Página:
+Padrão: Headline + VSSL + Application/Calendar (minimalista)
+Low play rate ou high cost per call: Adicionar conteúdo abaixo do VSSL
+Testimonials: Screenshots autênticos do ambiente original (Telegram, etc)
+Evitar opt-ins EXCETO para demographics pobres ou altamente não-qualificados
+Separação de Funnels:
+Orgânico: Mais curto, assume model awareness, menos credibilidade necessária
+Cold: Mais longo, vende o modelo, estabelece credibilidade profunda
+Duplicar funnels completamente (incluindo Wistia video) para analytics separados
+4 Quadrants de Objeções:
+Perguntas diretas
+Perguntas que surgem das respostas
+Objeções reais
+Expectations/requisitos
+DADOS FINANCEIROS:
+Custo por call qualificado: $39-$212 (variação por offer value)
+Ofertas analisadas: $5K, $11K-$34K, $50K range
+ROAS benchmark: 7x considerado excelente
+Pixel "sujo" com audiência errada: Melhor começar novo pixel
+Play rate não correlaciona diretamente com ROI (cliente $1M/mês tinha 9% play rate)
+PRINCÍPIOS CRÍTICOS:
+SEMPRE mostrar preço (desqualificar cedo)
+NUNCA fazer value stack fake (não FTC compliant)
+Preço PRIMEIRO, justificativa DEPOIS (Grant Cardone principle)
+Testimonials devem ser 100% autênticos e verificáveis
+Morale de sales team é frágil - proteger a narrativa
+Ilusão do VSSL: Pessoas NÃO assistem até o fim (use Hammer Them depois)
+Wistia = plataforma preferida (analytics + video thumbnails)
+Video thumbnails > Static thumbnails
+Framing do ad determina play rate tanto quanto thumbnail
+DURAÇÃO: ~80 minutos FORMATO: Treinamento ao vivo com análise de dados Wistia + Q&A interativo

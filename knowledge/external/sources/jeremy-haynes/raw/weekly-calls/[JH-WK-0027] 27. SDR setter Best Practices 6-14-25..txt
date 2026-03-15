@@ -1,0 +1,549 @@
+Transcrição Completa: 27 SDR Setter Best Practices 6 14 25
+[00:00] "All right. All right. Welcome into the weekly group call. You guys know what it is. This week we got a request from Brooke. Brooke, you want to articulate yourself for the people or would you like me to articulate it for you?"
+[00:12] "Yeah, I can give a brief overview. So, essentially, um, what's happening is we have like we've always had pretty liberal qualifications on our sales calls just to to minimize the amount of cash being left. So, a lot a lot of what's happening now is our STRs. We're canceling a ton of calls. like 30 30% of the calls we booked were being cancelled."
+[00:35] "Um, and essentially now we've been putting a lot of work in to hammer them. So to to improve our pre-call process, but what I was worried about happening is like we're very quick. So like someone books a call or SCR's call them within a minute or two."
+[00:50] "So essentially someone books a call, STR calls them, but then before hammer them even has a chance to take effect, we're already canceling the call. So I'm just like and essentially they're canceling them for weird reasons that seem to me like um should be handled on the sales call."
+[01:10] "like lead, they booked in the call, but then lead um lead's worried about it being a bad time or lead is worried about lead wants to follow up on this in a month or something like that. Like to me, that should seem to be all be addressed on the sales call."
+[01:25] "So, um have now tightened the tightened the qualifications. So, we're getting way way more qualified calls. Um not cancelelling them, but now our cost per call is like nearly double. So just trying to find a healthy balance between like allowing the right amount through um not not not letting [__] on the calendar but still um yeah essentially just having a healthy balance between the two."
+[01:50] "Sounds fair to me. So that rolls into our topic for today which is going to be SDR best practices. Okay. We're going to make sure that we cover in depth what a setter's job is. Okay. Setters can really make or break revenue if you have them involved. Period."
+[02:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Perceived Job of a Setter"
+NÚMEROS: Não especificados
+VISUAL: Conceito de qualificação e agendamento, função básica do setter
+[02:10] "Just like what Brooke was just saying, they are responsible for qualifying in most instances. Okay, so generally the perceived job of a setter. Okay, the perceived job is for them to qualify and schedule."
+[02:25] "Okay. In some instances, setters are intended to qualify and increase the probability of a scheduled call showing up. So, they'll kind of reach out prematurely. To Brook's point, they like when they reach out matters a lot."
+[02:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Call Funnel Structure"
+NÚMEROS: Não especificados
+VISUAL: Fluxo do funil: Ad → VSSL Page → Application → Call Booking → Confirmation Page → Email Sequences → Setters/Closers Outreach → Hammer Them Campaign
+[02:42] "Okay. We talked about this on last week's call where I talked about just some of the pre-call best practices that the sales team should be implementing. And I talked about this concept of um creating prioritization in the lead's mind."
+[03:00] "And we generally accomplish that through tailored communication. Okay? Tailored communication can be all kinds of things. We can send somebody sales assets and trust assets that are specific to things that the lead is actually going to give a [__] about while we do the same thing of attempting to qualify."
+[03:20] "Okay, this is really important to understand this. When a setter reaches out prematurely, I was actually just talking about this in a YouTube video I was filming on this jet where I said usually as an example in a call funnel what happens is you have the ad as the first step."
+[03:38] "You know, obviously they go through the process of the VSSL page applying and booking a call. From there with this back-end selling system that I encourage everybody to implement. We have our confirmation page best practices. We have our value dense email sequences and then simultaneously we have our setters and our closers doing manual outreach and our hammer them campaign."
+[04:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "First Interaction Importance"
+NÚMEROS: Não especificados
+VISUAL: Representação da primeira interação do setter como parte crítica da experiência do cliente
+[04:02] "Okay. What's important to understand is this specific action can generally happen give or take somewhere in between the confirmation page and the value dense email sequences. This step of the setters generally reaches people in one of the first things."
+[04:20] "Okay? It's like one of the first interactions that they're going to have as a representation of what your business is like."
+[04:28] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Restaurant Reservation Analogy"
+NÚMEROS: Michelin star restaurants mencionados
+VISUAL: Comparação entre experiência de reserva em restaurante de luxo vs. atendimento ruim, impacto da primeira impressão
+[04:30] "U I'll give you guys a quick, you know, like pulled back example of how important this interaction is. If you go online and you book a reservation at a fancy restaurant, all right, something that you genuinely look forward to going and eating at, maybe it's a Michelin restaurant or just whatever it is."
+[04:48] "And most of us, if not all of us, are literally just going to book through some software like Open Table, resi Top Tip, whatever the [__] it is. Uh, moral of the story is what then generally happens is one of the hostess or the reservation management team is going to reach out either the day of or sometimes days before and just confirm that you're actually going to show up."
+[05:10] "Has anybody here put in the chat ever had a bad experience with one of those people that reach out to confirm a reservation? It could be as simple as they just sound like a [__] It could they could be that they sound pretentious and you therefore interpreted it as a shitty experience."
+[05:28] "Whereas every time you've ever booked at a fancy restaurant somewhere and those reservation people reach out to you and they confirm your reservation, they've done a great job and they've left a very positive impression with you in comparison."
+[05:42] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Internet Marketing vs. Michelin Restaurants"
+NÚMEROS: Não especificados
+VISUAL: Comparação entre abordagem profissional de restaurantes Michelin vs. abordagem egoísta de setters em marketing digital
+[05:45] "Okay, that initial interaction, right, is very overlooked by most people in the internet marketing space. What I've noticed is is like a fancy restaurant that has a Michelin star, they know what I just said is true. Not only do they know it, they build the experience around that principle that this interaction lit even just down to the reservation booking experience is a part of the experience you have with interacting with their business."
+[06:10] "And so they want it to be a great experience. From what I've seen specifically in like this internet money space is setters are perceived for very selfish intentions which are I want to get shitty leads off my calendar to free up my closers and I only want them to reach out to people to qualify."
+[06:28] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Selfish Intent Problem"
+NÚMEROS: Não especificados
+VISUAL: Intenção egoísta dos setters transparecendo para os leads, experiência negativa inicial
+[06:30] "And when you have that intent it shines through clear as day to the lead and it starts the experience off in a violent way."
+[06:38] "So, as an example, like Brooke, when someone reaches out on behalf of your business and they're and and the setter's having that conversation right away after a lead comes in, what's the conversation usually look like?"
+[06:50] "Usually ask like why they want to start the business?"
+[06:53] "Great question."
+[06:54] "Reason why. And then, um, usually trying to assess what sort of budget they have set aside to do so."
+[07:02] "So they essentially reach out and they're like, 'Hey, Brooke, what's going on? Jeremy over here with Brooks team wanted to touch base, ask you a few questions. You got two minutes for me. Why Why is it you wanted to start this business?' So, and then you give me some answer and then I follow up with if you don't mind me asking, what budget do you have to actually commit to this thing to make it work? That's the question."
+[07:25] "Maybe not exactly that, but we more try and ask indirectly."
+[07:28] "How does that sound? something along the lines of um have you started an online business before? Have you joined a program before? What was your experience like? Okay. Um you want to start a business? What types of businesses do you want to start? Do you have something set aside to do so?"
+[07:45] "Record these calls."
+[07:47] "Yeah, we do."
+[07:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "AI Call Analysis Strategy"
+NÚMEROS: Não especificados
+VISUAL: Uso de Gong, ChatGPT, Claude para análise de transcrições, automação com N8N
+[07:50] "Do you run them through an AI to assess the questions that are asked and like how often they're asked?"
+[07:55] "Working on that right now with Gong, but having tech issues."
+[07:58] "Understood. I mean, you could do something as simple as just export the transcripts, each one of these calls, import them into chat GBT or claude in the meantime to do a general assessment."
+[08:10] "And it's really easy to do once you get them in there. You can go back to that same thread and just upload the calls for that day. So, it's a repetitive task for it. I'm sure you can automate it too with something like NADN."
+[08:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "LLM Training for Call Assessment"
+NÚMEROS: Escala 0-100 mencionada
+VISUAL: Treinamento de LLMs para avaliar qualidade das conversas dos setters, escala de avaliação
+[08:25] "Moral of the story is you essentially want to know like you want to train one of these LLMs to be able to assess for you like a sales manager would whether these conversations on a scale of like zero to 100 are coming off wildly selfish and one-sided for your organization or whether these questions are as you intend them to be asked in more of like a I don't know just less direct more friendly way I guess we could put it right"
+[08:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Data Collection Purpose"
+NÚMEROS: Não especificados
+VISUAL: Acumulação de dados para CRM, comunicação personalizada, intenção real da qualificação
+[08:52] "the the other and this is really important to understand like when business setter is getting those questions, right? In most instances, businesses are simply asking these questions to get to the point where they can ask the qualification questions that relate to finances."
+[09:08] "Okay? When the setters ask these questions, what they're doing is is they're accumulating data that should be inputed into a CRM. That way, the closer who the lead is being handed off to and the setter who's getting that information can then tailor communication that is going to help aid that lead closing in the sales process."
+[09:28] "Okay? That is like the ultimate intention of a setter. Okay? Absolutely. If they talk to a [__] dud lead, cancel them off the calendar. Remove them off the calendar."
+[09:38] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Interest Scale"
+NÚMEROS: 5 níveis de interesse
+VISUAL: Escala vertical de interesse: Curiosity → General Interest → High Interest → Conviction → SOLD (Money Zone entre Conviction e Sold)
+[09:40] "But what we always have to remember is is the interest scale. Okay. So, if this represents interest and this just simply represents the lead. All right. We have essentially a few different levels of interest we've got to look at."
+[09:55] "First of all, we have curiosity. Then we have general interest. Then we have high interest. Then we have conviction. And generally between conviction and sold, this is like the money zone."
+[10:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Money Zone"
+NÚMEROS: Não especificados
+VISUAL: Zona destacada entre Conviction e Sold onde negócios são fechados
+[10:12] "At this range, this is where deals get done. Okay? Anything below this, there is no money collected. Like you can get people close to this, but if you don't actually get them through that level, then you're not going to get a lead sold."
+[10:28] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "In-Market Buyers Definition"
+NÚMEROS: Não especificados
+VISUAL: Características de compradores no mercado: lidando ativamente com problema, priorizaram solução
+[10:30] "Now, generally, leads come through with a few different levels of interest. They can come through, as an example, curious or general interest. The only times you really get people who have high interest are people who are actively dealing with the problem and have prioritized solving the problem. Okay, these are inmarket buyers."
+[10:50] "So, as an example for Brook's business, Brooke, tell me if I'm way off here. Somebody who's already sold on the idea. They want to start an ecom store. They want to leverage AI to be able to help them do it. U they maybe have already [__] up a few times with ecom and they know that they have a shitty teacher and they look up to you already."
+[11:12] "This person's like, 'I love Brooke. I love what he can teach and help me do. I already have these problems and I'm ready to give him money to solve it.' But they might have a handful of questions that need answered in order to still get them to the point where they're at high interest to getting into the conviction or sold category. How how rare does that happen?"
+[11:30] "Yeah, that's I would say most people."
+[11:33] "So, think about this, right? It's like if that's what most people are coming in at, that's what you're saying a majority of your leads are at."
+[11:40] "Most people are like have some questions. They know who I am. They've watched pre-call content, but they have objections either around trust, around how the business model works. Like they have a high like we have like a 20 25 minute force VSSL. So they they have a decent idea of who I am and how everything works. So it's not like they're they have no clue."
+[12:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "High vs General Interest Distinction"
+NÚMEROS: 20-25 minutos de VSSL
+VISUAL: Diferenciação clara entre interesse geral (perguntas) vs. interesse alto (pronto para comprar)
+[12:08] "Now, there's a big difference between high and general. What you described there sounds more general to me in comparison to high. High would be like, I'm already ready to give you money. Like, I'm like fully willing to give you money. However, if these few questions don't get answered, like I'm not going to give you the money. If they do get answered, then again, all I got to do is kick up one interest level and I'm there."
+[12:32] "If you see that, like right now, as an example, Brooke, what's your closing rate on showed calls?"
+[12:38] "About 35%."
+[12:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Closing Rate Analysis"
+NÚMEROS: 35% taxa de fechamento
+VISUAL: Taxa de fechamento indicando qualidade do pré-call, leads entre interesse geral e alto
+[12:42] "Yeah, pretty good. So I would say most of the people coming through for you have a high probability to be by the time they reach the closers they're realistically within these two categories here somewhere between general and high interest which is great that represents that your pre-call information is doing awesome"
+[13:00] "like confirmation page best practices value dense email sequences hammer them putting them through the VSSL whatever the setters andor closers might be getting to them in information that's all solid"
+[13:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Real Problem"
+NÚMEROS: Não especificados
+VISUAL: Setters interpretando baixo interesse como desqualificação, comparação com leads de maior interesse
+[13:18] "what's sounds to be the disconnect here and this happens for a lot of businesses is is it sounds like you have setters that are talking to people that are at a lower interest level in direct comparison to the two higher interest level types of leads and they might be interpreting those people as unqualified as a result of lower interest. Does that make sense in a line or no?"
+[13:40] "That's exactly what I feel like the problem is. Like I feel like there's um a whole bunch of people who are on the line who could close who are just being dqed because we almost have an overabundance of calls."
+[13:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Abundance Problem"
+NÚMEROS: 30% cancelamento mencionado
+VISUAL: Excesso de calls levando ao cancelamento dos 30% inferiores, dinheiro sendo deixado na mesa
+[13:58] "So um there's just so many calls that we can book in that the bottom 30% just get canned even though there's a lot of cash there."
+[14:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Abundance Behavior Example"
+NÚMEROS: $50, $100, $140 gorjetas mencionadas
+VISUAL: Comparação de comportamento com gorjetas: abundância leva a gastos maiores, recursos não são vistos como escassos
+[14:10] "When we're in abundance, right? Like Brooke, you make a lot of money. How what what do you tip a valet?"
+[14:15] "50 bucks, 100 bucks."
+[14:17] "Okay. I know people that like they come to my building where they have a valet and they'll try they'll try to tip him like five bucks or 10 bucks. Like why do you and I like I just came out of this sprinter van. I I gave the guy 140 bucks. Why do you and I give people 50 100 bucks? Why do you think that is?"
+[14:35] "Because we have it's it means less to us than someone"
+[14:38] "excess. Yeah. It's just excess. Abundance and excess. When we're in abundance and excess, we'll naturally treat the resources that we have available to us as, you know, they're not scarce. They're not scarce by any means, which obviously changes the behavior dramatically that we're going to have and follow through with. Correct."
+[14:58] "Correct. Yeah."
+[15:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Comparison Bias in Setters"
+NÚMEROS: 3 tipos de pessoas mencionados
+VISUAL: Três categorias de leads, viés de comparação se desenvolvendo independente do volume de leads
+[15:02] "Okay. So, watch this. There's a few very important things to understand here. So, number one, SDRs, okay, when they deal because think about this, guys, like they deal with every one of these ranges."
+[15:18] "And let's label these types of people. Let's label them person type number one, person type number two, and person type number three. Whether they have a fuckload of leads or whether they have very few leads, human beings develop a bias."
+[15:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Comparison Bias Mechanics"
+NÚMEROS: Não especificados
+VISUAL: Processo de desenvolvimento de viés: comparação de leads → julgamento de qualificação baseado em interesse → leads curiosos parecem desqualificados
+[15:38] "Okay? And the biases that we have and that we act through in this case come down to comparison bias more than anything else. If I compare leads and I'm trying to think with who's qualified and who's unqualified and I'm taking people who are at an interest level that's already high or even an interest level that's already at general, I'm naturally going to consider those much more qualified leads"
+[16:00] "but that doesn't necessarily actually mean that they're qualified or not. It's just an interest level that I'm gauging more so than anything else."
+[16:10] "And then when somebody comes along who has a qualified level of interest that's only curious, they think, 'Oh, this person like they'll they'll give shorter answers.' Think about this. Somebody who's curious, are they going to give as good of answers? Are they going to sound as enthusiastic about the opportunity? Right? Are they going to come through excited?"
+[16:30] "It's like, well, no. Those these traits might not be there. They might not exist, right? That doesn't mean that they're not financially qualified. That doesn't mean that they can't be sold. It might just mean they need more information in comparison to the leads that are already at a higher interest level."
+[16:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Information = Action Principle"
+NÚMEROS: Não especificados
+VISUAL: Equação fundamental: Information → Action, gap de informação cria baixo interesse
+[16:50] "Information is what gets people to act. Okay? Information leads to action. Okay? This is where most people really [__] up with their setters."
+[17:02] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Critical Mistake"
+NÚMEROS: Não especificados
+VISUAL: Erro comum: treinar setters → desenvolver viés de comparação → leads financeiramente qualificados com baixo interesse são bloqueados
+[17:05] "Okay? They'll train their setters and let the setters develop those comparison biases. And through time, financially qualified leads at lower interest levels aren't allowed through."
+[17:18] "Yeah, that's% because of the comparison."
+[17:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Cancellation Creep Over Time"
+NÚMEROS: Taxa de cancelamento aumentando gradualmente
+VISUAL: Mesmo funil, taxa de cancelamento subindo ao longo do tempo devido ao viés de comparação
+[17:25] "Over time, this the SDR is like we've had the same funnel, but our cancellation percentage has slowly creeped up over time because of exactly that. I think"
+[17:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Real Setter Job"
+NÚMEROS: Não especificados
+VISUAL: Função correta do setter: não DQ o lead → fornecer informação personalizada → aumentar nível de interesse → levar à ação
+[17:38] "and think about this, Brooke and everybody else listen. Okay. And this is really important you understand this. In that specific scenario where the person's financially qualified, capable of purchasing, can technically be deemed a good lead, and whether there's abundance or excess or just a normal daily lead flow that they're working with."
+[18:00] "If I allow comparison bias to creep into my closer psyches, I am [__] Okay? Because in that scenario, the setter's job is not to dq the lead and get them off the books. The setter's job becomes I need to get this person tailored information that increases their interest level which is going to lead to action."
+[18:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Information Gap = Lower Interest"
+NÚMEROS: Não especificados
+VISUAL: Gap de informação cria níveis baixos de interesse, não falta de qualificação
+[18:25] "Okay? It's an information gap that creates lower interest levels. You understand?"
+[18:32] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Setter's Lazy Argument"
+NÚMEROS: Não especificados
+VISUAL: Viés de conservação de energia: setters preferem trabalhar apenas com leads de alto interesse que requerem menos trabalho
+[18:35] "So what we have to do what we have to train our setters to do and and think about this this is also when you talk about comparison bias like the setters argument is going to be well I can do far less work if I'm just talking to leads that don't need information and I let those people through"
+[18:52] "the people who are technically qualified but just at lower interest levels they are going to have to do some work they're going to have to help see what information is necessary for that person to yet that's going to lead to action."
+[19:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Skin Cancer Example - Low Impact"
+NÚMEROS: 50% maior chance para homens
+VISUAL: Estatística genérica sobre câncer de pele, sem impacto emocional, não leva à ação
+[19:10] "Let me give you a great example of this. Okay, if I told any one of you right now, hey man, you got a little spot on your arm there. Um, I don't want to freak you out or anything, but I think that might be skin cancer."
+[19:25] "Like my mom, she had skin cancer. And her I mean before she even knew she had it, like she had something on her arm that looked just like that. And I mean, dude, what you got there is I'm not joking. I'm not trying to freak you out or anything. I mean, it's pretty [__] similar, dude. you know, I would go get a scan if I were you."
+[19:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Generic Statistic - No Action"
+NÚMEROS: 50% estatística mencionada
+VISUAL: Comparação: estatística genérica vs. observação pessoal específica, impacto na ação
+[19:48] "Versus if I just said, 'Hey guys, uh, apparently men have a 50% higher chance of getting skin cancer because next to none of us ever wear [__] sunscreen when we go outside.' So, it's like I'm rolling around top down in my cars all day, just ripping around in the Miami sunshine out here, enjoying the heck out of the sun."
+[20:10] "Makes me feel great. I'm not thinking of skin cancer. I don't even give a [__] about that statistic that 50% of of of of uh the status 50% higher for men getting skin cancer than women. That doesn't lead me to action. You see, but if somebody"
+[20:28] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Dermatologist Authority Example"
+NÚMEROS: Não especificados
+VISUAL: Amplificação através de autoridade: dermatologista apontando problema específico + experiência pessoal = ação imediata
+[20:30] "Let me let me amplify it further. If a [] dermatologist was the one that pointed out that first scenario where a dermatologist that I just coincidentally run into while I'm at a restaurant or some [] is like sitting next to me and goes, 'Hey man, just want to point out to you I think you got something on your arm that should get checked out there.'"
+[20:50] "'Not trying to freak you out, but you know, my mom, she had something very similar. And I had a few patients recent, I'm a dermatologist, had a few patients recently had had that same thing. And there was that actually ended up being a little melanoma. Um, maybe you want to go get a scan and get it checked out.'"
+[21:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Information Difference = Action"
+NÚMEROS: Não especificados
+VISUAL: Comparação clara: mesma informação, contexto diferente, resultado completamente diferente em termos de ação
+[21:12] "It's like, can you see how the differences in information there would lead to action? You understand?"
+[21:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Spray and Pray Marketing"
+NÚMEROS: 15-20 vídeos, 5-20 vídeos, 6 emails/dia, 30-50 short form, 15-30 long form
+VISUAL: Abordagem de marketing ampla: múltiplos vídeos na página de confirmação, múltiplos emails, muito conteúdo porque não sabemos qual vai funcionar
+[21:22] "So, it's like, think about this. When when as marketers we attempt to get people information, it's like a [] spray and prey. It's like when you look at all these steps up here, it's like the confirmation page has 15 to 20 videos on it. Like five to 20 videos on it because we have no [] clue which one of the videos that specific person needs that's going to increase their interest level and inspire action. So, we put as many as we can."
+[21:50] "It's like it's the same thing with emails. It's like why the [__] are we sending six a day? It's like cuz I have no clue which one's going to lead to the action. I have like a general idea, but I mean that's why I have all the emails. I I have a general idea that all of them will technically do something. So, I got to send all of them. I don't know which one's going to have the impact."
+[22:12] "It's the same thing with my hammer them strategy. It's like, why do I have to put 30 to 50 short form pieces of content and 15 to 30 long form pieces of content? It's like for a majority of you sitting here, I don't even know which [__] YouTube video specifically inspired you to take action."
+[22:30] "I just know in general that YouTube helps, you know? I don't I don't know if it was one video or a combination of videos. I have no [__] clue. But but it's like that's why I have to keep churning out more videos. It's like it can't just be a oneanddone thing."
+[22:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Setter/Closer Advantage"
+NÚMEROS: Não especificados
+VISUAL: Vantagem única: conversa permite coletar informação → julgar nível de interesse → enviar informação específica categorizada
+[22:50] "Whereas when you look at a setter specifically, you look at a setter and a closer specifically, what they can do is based on the conversation that they're having, they can collect information about what that person's needs are and they can judge where they're at on the interest spectrum."
+[23:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Organized Information Library"
+NÚMEROS: Não especificados
+VISUAL: Lista massiva e bem organizada no Google Doc: sales assets, trust assets, categorizados por necessidade do lead
+[23:10] "And then your job as the business owner in this case is to have a monster list of well organized information that can be sent to leads categorically based on what that lead needs in order to get their interest levels up. That's where most people [__] up."
+[23:28] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Business Model Example"
+NÚMEROS: Não especificados
+VISUAL: Exemplo prático: Google Doc com todos os assets sobre modelo de negócio organizados
+[23:30] "So, as an example, if Brooke's getting questions about the business model, why wouldn't Brooke have a massive list inside a Google Doc of every sales asset and trust asset and piece of information he's got that relates to how the business model works? Why wouldn't he have that? You understand?"
+[23:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Setter Script - Information Offering"
+NÚMEROS: Não especificados
+VISUAL: Script completo do setter oferecendo múltiplos formatos de informação: SOPs, FAQs escritos, vídeos, podcasts, testimonials, case studies
+[23:50] "And why wouldn't the setter say, 'Hey, Brooke, actually really appreciate you asking that question about the business model. I I can do two things, man. First of all, I can explain it to you right now, but second of all, generally what people like you need in order to make this a priority and like actually take action on starting this whole thing. You just need information.'"
+[24:12] "'I have a handful of things I can send to you. I have SOPs that explain how the business model works. Like I have essentially like written FAQ things that I can send to you. I have a handful of videos I can send to you. As a matter of fact, I even have like a longer podcast if you prefer it broke down that way explaining how the business model works.'"
+[24:32] "'Um, I also have some testimonials and case studies that outside of the results that they're articulating, they also articulate how the business model works. Uh, any one of those sound like a good preference for you for which one you might want to bias towards'"
+[24:48] "and whether the person Oh, yeah. I don't know. I don't know, Jeremy. You just send me whatever. You know, it's like, all right, no problem. And my goal from there as the setter would be to ensure I get that person the information they need."
+[25:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Human Laziness Problem"
+NÚMEROS: Não especificados
+VISUAL: Problema fundamental: humanos são naturalmente preguiçosos, conservam energia, setters preferem leads fáceis
+[25:08] "Okay. If you want to really amplify this and make the setter's job easier, because here's the thing that I hate about giving this advice, humans are naturally and inherently lazy. Okay? We always bias towards energy conservation."
+[25:22] "So, it's like when I am a setter and a closer, why wouldn't I bias towards the people that are already at higher levels of interest that are more probable to close? That's what I get paid on, right?"
+[25:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Solution: Incentive + Easy System"
+NÚMEROS: Não especificados
+VISUAL: Solução dupla: criar incentivo + tornar ação fácil de executar
+[25:38] "It's like I have to either have an incentive and or an easy way to be able to take action on what I just articulated to you. So, let's make the setter's job easy. Okay?"
+[25:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "CRM Disposition System"
+NÚMEROS: Não especificados
+VISUAL: Sistema de dropdown no CRM: seleção de razão de baixo interesse → aplicado ao registro do contato → automação contextual
+[25:52] "So, as marketers, what we can do is we can create in the CRM, we can create I always [__] this word up, by the way. I always forget what it is. I always call it dispositions, but I honestly don't think that's the word."
+[26:08] "Uh just what I'm trying to articulate is is like inside of the CRM if you have a little drop- down field that has what the reasons are that the person has a low interest level and they just all the setter has to do is select that specific box and that applies it to the contact record in the CRM."
+[26:28] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Contextual Marketing Automation"
+NÚMEROS: Não especificados
+VISUAL: Sistema automatizado: seleção no CRM → automação contextual envia comunicação personalizada sobre necessidade específica
+[26:30] "We can then as marketers set up contextual marketing automation that sends tailored communication to that individual about what they specifically needed to get their interest levels higher."
+[26:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Joint Strategy: Manual + Automated"
+NÚMEROS: Não especificados
+VISUAL: Estratégia conjunta: outreach manual do setter/closer + outreach automatizado contextual = probabilidade dramaticamente aumentada
+[26:48] "And we would want to do that in conjunction ideally with the setters or the closers just manually sending some stuff prior to the call. Okay, this joint strategy of manual outreach in addition to the automated contextual outreach makes it so one or the other happens either way, which dramatically increases the probability that we get that interest level up prior to the call."
+[27:12] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Low Interest = Education Call"
+NÚMEROS: Não especificados
+VISUAL: Problema do closer: baixo interesse = call educacional não call de vendas, reclamações sobre qualidade de lead
+[27:15] "Okay? Because that's really all that matters. When closers get on calls with people that have low interest levels, they're going to say that they're too early in the sales process. They're going to [__] about lead quality. And they're not wrong technically because they're not talking to people who are there to have a sales conversation. They're talking to people who are there to have an educationbased call."
+[27:38] "So the setters, their job in their eyes is I'm trying to tee people up onto the calendars that are actually probable to close."
+[27:48] "Brooke, talk about your incentives real quick. How do you pay your setters?"
+[27:52] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Current Setter Compensation"
+NÚMEROS: $2-3K base mensal, comissão em webinar buyers
+VISUAL: Estrutura de pagamento atual: base pay + comissão seletiva, sem comissão em calls do VSSL
+[27:55] "So, the ones who do the dialing for the calls just get um I believe 2 or 3k a month base and then they get paid commission based on um other things like like our DM setter gets a commission if a deal closes. If they call a webinar buyer and the webinar buyer closes, they get a commission, but they're not actually getting paid commission off of these because it's every single one is called within a minute. So, that's more the base pay."
+[28:22] "Yeah. And so, think about that, right? It's like there's not even an incentive that you have to pass through calls. It's just a part of their base pay. It's just like a function of their job."
+[28:32] "The calling the booked calls for the VSSL. Yes."
+[28:35] "Okay. Now, watch this. Right. What's an ideal time frame that a lead would close for you, Brooke?"
+[28:42] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Ideal Sales Cycle"
+NÚMEROS: 2-3 dias ideal, 4-5 dias usual
+VISUAL: Timeframe de fechamento: 2-3 dias idealizado, 4-5 dias realidade comum
+[28:45] "Two or three days ideally. Um, usually within four or five."
+[28:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "New Incentive Structure Proposal"
+NÚMEROS: $50-100 bônus, 50% redução, milhares extras possíveis/mês
+VISUAL: Sistema de bônus escalonado: fechamento em 2-3 dias = $50-100, fechamento em 7 dias = 50% menos, potencial de milhares extras mensais
+[28:52] "Okay. So, watch this. So as an example of setter incentives, right? What if I paid the setters for two things? Number one, I can pay the setters when somebody closes that they set within a tighter time frame. So it's like pay based on ideal sales cycle and then pay pay a little less if the sales cycle is longer."
+[29:15] "And what am I [__] dyslexic over here? Jesus. If the sales cycle is longer. So, as an example, right, we have a base pay in Brook's case. What if we added like a $50 or $100 bonus if the person closed within two to three days?"
+[29:32] "What if that dropped 50% if they closed within seven days, right? And what if it was a meaningful amount of money to the point where the setters have several thousand extra that they can make in a month as a result of this incentive program, right?"
+[29:48] "What would the intention of that incentive be? Wouldn't Wouldn't this just make them focus on the higher quality leads more?"
+[29:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Incentive Impact"
+NÚMEROS: Não especificados
+VISUAL: Resultado do incentivo: mais leads passam + leads de baixo interesse são priorizados para receber informação
+[29:58] "No. So, think about this, right? To your point, they will absolutely push through more people realistically. But it's also very important you understand for this lower interest level lead right here. This person will now be prioritized at a greater rate to actually send this person information to get the person the information they need to actually do that function we just talked about."
+[30:22] "Because to your point, there's always a finite amount of these people coming through. You understand? So the the financial opportunity, and this is important, you frame it this way too, Brooke, when you introduce the incentive, the financial opportunity is going to absolutely help them get paid off these people, right?"
+[30:42] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Mathematical Reality"
+NÚMEROS: Mais tipo 1 do que tipo 2 ou 3
+VISUAL: Realidade matemática: maioria dos negócios têm mais leads curiosos do que leads de alto interesse
+[30:45] "But technically, and this is very important to understand, a lot of businesses, they have more of those those person type number ones than they do person type number two or three."
+[30:58] "And so, at the end of the day, if mathematically, right, if mathematically you say your cancellation rate continues to creep up, that's okay if they're the wrong people. We always want to keep the wrong people off, right?"
+[31:12] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Defining Wrong People"
+NÚMEROS: Não especificados
+VISUAL: Necessidade de reiterar definição clara de "pessoas erradas" para os setters
+[31:15] "And you got to you got to reiterate to them what the wrong people are defined to be. Okay? That's the biggest thing with SDRs that most people lack."
+[31:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Sales People Need Repetition"
+NÚMEROS: Não especificados
+VISUAL: Verdade fundamental: vendedores precisam das mesmas lições reiteradas repetidamente
+[31:28] "Here's one thing I've learned about sales people through time. They have to have the same lessons reiterated to them again and again and again."
+[31:38] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Cultural Leadership Concept"
+NÚMEROS: Não especificados
+VISUAL: Liderança cultural: pregar constantemente crenças coletivas vs. polarização por falta de liderança
+[31:40] "Okay, a good example of this u you know here in America a lot of people like to complain about the polarization that we experience and the polarization comes from the lack of cultural leadership. Cultural leadership is really just somebody preaching all day about the beliefs we all collectively hold."
+[32:00] "And as a result of nobody constantly preaching collective beliefs that we all hold true to ourselves collectively, we individually start to define our beliefs instead."
+[32:12] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Beliefs Control Behavior"
+NÚMEROS: Não especificados
+VISUAL: Princípio fundamental: crenças controlam e ditam comportamento, trabalho do gestor é reiterar crenças organizacionais
+[32:15] "Okay. So our jobs when we manage salespeople and setters in this case is to ensure that we constantly reiterate the beliefs that we have as an organization because beliefs control and dictate how we behave."
+[32:32] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Cancellation Rate Analysis"
+NÚMEROS: Taxa de cancelamento aumentando
+VISUAL: Possibilidades: leads piores OU setters com crenças diferentes das organizacionais
+[32:35] "Okay, so as an example, like if my cancellation rates creeping up, it's like I could just have more shitty leads coming through to be fair, but it's like at the same time, I might also have setters that are starting to have their own beliefs that are different than the organization's beliefs that have historically allowed more people to go through. Right?"
+[32:58] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Money-Only Judgment Problem"
+NÚMEROS: Não especificados
+VISUAL: Problema: julgar apenas por dinheiro faz setters perderem responsabilidade de ajudar pessoas
+[33:00] "If I as an organization judge things solely based on money, okay, what happens is is like the setters lose their responsibility of what they're actually doing. Like they're helping people. Like think about it, Brooke. What are you really doing when you sell somebody something? What's the outcomes you're actually helping people with?"
+[33:20] "Yeah. Helping them start a business to accomplish whatever goals they have. Whether that's"
+[33:25] "they're successful with that. Like how the [__] does that impact that person's life?"
+[33:30] "Huge."
+[33:32] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Real Mission vs Money"
+NÚMEROS: Não especificados
+VISUAL: Perspectiva dupla: sim, queremos escalar e ficar ricos MAS também estamos impactando vidas substancialmente
+[33:35] "So really think about it, right? It's like, yeah, sure. Like we're obviously trying to close as many people as we can, scale month over month, get filthy [__] rich, right? But we're also trying to remember like we're making a substantial impact on the lives of the people that we're helping."
+[33:52] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Individual Responsibility"
+NÚMEROS: Não especificados
+VISUAL: Responsabilidade individual do setter: não enviar informação personalizada = pessoa deixada na poeira = qualidade de vida ruim mantida
+[33:55] "Every time that one of those setters doesn't take on the individual responsibility of sending tailored information that can lead to a higher interest level and therefore lead to action, that's another person to this organization failed to help, right?"
+[34:12] "It's another person left in the dust that's going to maintain a [] quality of life all because some [] setter determined that they weren't good enough to get onto the closer calendar. And why?"
+[34:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Not Financial Qualification"
+NÚMEROS: Não especificados
+VISUAL: Clareza: na maioria dos casos não é falta de qualificação financeira, é nível de interesse comparado a outros leads
+[34:28] "It's like in most instances, it's not because they weren't financially qualified. It was because they had an interest level lower than the compared leads that have interest levels that were higher. Right?"
+[34:42] "So again, it's it's an info gap. You understand? That's what has to be resolved. That's how we attack it. That's how we justify leads having higher prioritization on what we need to get them right."
+[34:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Good Info Requirement"
+NÚMEROS: 50% estatística de câncer repetida
+VISUAL: Reforço do exemplo: boa informação = ação, estatística genérica = não ação, contexto é tudo
+[34:58] "It has to remember it has to be good info. Like the skin cancer thing I told you, I can't just tell y'all a statistic like, 'Hey man, men have 50% greater chances of skin cancer than women and h and expect y'all to go get [__] skin cancer tests.'"
+[35:15] "You know, think about it, guys. It's like if I literally am a doctor and I approach you and I like look at you intently for a few seconds and then I tell you that same information, dude, what's the difference? It's substantial. One leads to action and one doesn't. You get what I'm saying?"
+[35:32] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Simple But Routinely Fails"
+NÚMEROS: Não especificados
+VISUAL: Conceito simples, fácil de executar, mas rotineiramente falha no cenário de Brooke
+[35:35] "This is a very simple concept, very simple, very easy to execute, but routinely routinely gets to the point where this exact scenario that Brooks experiencing occurs."
+[35:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Failure Pattern"
+NÚMEROS: Não especificados
+VISUAL: Padrão de falha: setters desenvolvem crenças próprias → desenvolvem vieses → baseiam em qualificação comparativa vs. real → falham em reconhecer função real
+[35:50] "Setters develop their own inherent beliefs. Set up setters develop biases from qualified higher interest leads comparatively to lower interest leads. And rather than basing it off of actual qualification, like do does this person have the money? Does this person have any any level of interest, they fail to recognize their job, which is to get necessary information that leads to action to the lead to inspire action."
+[36:18] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "One Call Do or Die Problem"
+NÚMEROS: Não especificados
+VISUAL: Sistema problemático: uma call e pronto, cancelado = sem follow-up, lead abandonado
+[36:20] "It's like, as an example, Brooke, what about this? They obviously just want to do a one call and then just [__] what? Leave the lead in the dust. Like it's it's it's like do or die in your business at this point. Is there any follow-up with these people?"
+[36:35] "Usually on the STR call, do or die. If it's canceled, there's definitely no followup."
+[36:42] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "System Ignores Everything"
+NÚMEROS: Não especificados
+VISUAL: Sistema configurado para ignorar tudo que foi dito, necessidade de incentivo para corrigir
+[36:45] "And think about that. It's like it's just [__] do or die and that's it. You know, it's like you have a system set up that's inherently going to ignore everything that I just said. So, it's like you realistically have to create some type of incentation to fix this, right?"
+[37:02] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Cost of Lead Generation"
+NÚMEROS: Não especificados
+VISUAL: Todo tempo e dinheiro gasto gerando leads sendo desperdiçado com abordagem one-and-done
+[37:05] "Think about how much like Brooke, really think about it. All the time and money that you spend to generate the amount of leads you do and you're just [__] one and done in people."
+[37:18] "Do I thought about just like not having STRs? It seems like an easier solution than trying to manage their biases and and things like this and and handling it through automation, contextual automation. Like you said, do you think they provide that much of an upside if it's done right?"
+[37:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Not Either/Or - Both"
+NÚMEROS: Não especificados
+VISUAL: Não é jogo de escolha, pode ser ambos: pessoas + automação
+[37:38] "You're not wrong in thinking that, but it's it doesn't have to be a game of either or. It can definitely be a game of both."
+[37:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Comparison Bias vs Automation"
+NÚMEROS: Não especificados
+VISUAL: Viés de comparação também: automação é fácil, lógica, sem emoção vs. pessoas têm razão de existir
+[37:50] "That's just to be really clear also relatively a comparison bias. It's like, yeah, we we have all kinds of [__] we could do that's autonomous and that's easy and that makes a high impact, but at the same time, like there's a reason that people are involved and there's a reason you've gotten to the revenue that you're at now because of the people being involved."
+[38:12] "It's really easy to abandon people. You know, systems and automation and computers like, dude, that's always going to be easy and logical and straightforward and it's not going to have emotion and it's not going to have biases and it's just going to just going to do what we need it to do."
+[38:28] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "AI Technology Evolution"
+NÚMEROS: Não especificados
+VISUAL: Tecnologia evoluindo: possibilidade de substituir setters completamente com AI, Simple AI case studies
+[38:30] "But at the same time, it's very important to note, I want to be really clear. When I say this, there's a lot of technology now. Like one of the guys in this call, Chris Gordon, he runs the uh the simple AI team with Michael. It's like as tech continues to evolve, we might be able to replace these setters with AI tech completely. And they have a lot of success in case studies relative to that."
+[38:52] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Fail-Safe System Alternative"
+NÚMEROS: Não especificados
+VISUAL: Alternativa: pessoas fazem primeiro passo → sistema AI setter faz follow-up
+[38:55] "But my my point being is like, dude, if you're one and doneing people, why not have like a fail safe system like that instead? So, it's like if you have the people do the first step, then you have like an AI setter system that follows, that could also be a great alternative in comparison to just cutting it all out."
+[39:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Repeat Successful Actions"
+NÚMEROS: Não especificados
+VISUAL: Princípio fundamental: sempre repetir ações bem-sucedidas, não cortar o que te trouxe aqui
+[39:18] "I will say this, I'll I'll close it with this for you. We always want to repeat successful actions. So, so to a degree, it's like it's actually very bad advice for me to tell you to to cut out what you're currently doing because that's what got you here. You know, it's what's worked to a degree."
+[39:38] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Test Then Roll Out"
+NÚMEROS: Não especificados
+VISUAL: Estratégia prudente: mudanças grandes devem ser testadas antes de implementação total
+[39:40] "Big system changes are good if you're going to test them and then roll it out, but don't go all in on that in the instance you're going to choose to do it. Does that make sense?"
+[39:52] "Yeah. We actually just introduced them a couple months ago, though. So, we did get pretty close to where we are without any STRs calling."
+[40:02] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Management Reality"
+NÚMEROS: Não especificados
+VISUAL: Realidade: é chato, nuanceado, repetitivo gerenciar setters, mas não precisa ser seu trabalho
+[40:05] "That's is phenomenal. I I just want to be clear, right? It's uh it's annoying. It's nuanced. It's repetitive to have to say the same things to these people and get them to do what they need to do. Ultimately, that doesn't have to be your job. It can also be a sales manager's job or a setter manager's job."
+[40:25] "But you're still going to inherently deal with the same stuff even at the management level. You still have to as I mean I do want to be fair and saying like there's plenty of really small staff, multi-million dollar businesses that I'm aware of at this point and and they do operate with like very subtle or small sales teams at that."
+[40:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Numbers Game With People"
+NÚMEROS: Multi-8 figures, million-dollar months mencionados
+VISUAL: Jogo de números: disposto a passar pelos ruins para chegar aos bons, grandes negócios têm líderes carismáticos
+[40:48] "Um it's a numbers game with people, man. I mean, you got to be willing to churn through the bad ones to get to the good ones. But through the process of that, typically most big businesses that do like multi- eight figures a year and hit million-dollar months and like scale up dramatically from there"
+[41:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Charismatic Leadership"
+NÚMEROS: Não especificados
+VISUAL: Líderes carismáticos: constantemente pregando o que pessoas precisam pensar, reconhecem que crenças dirigem comportamento
+[41:10] "they are just um the best word to describe it is is like they're like these charismatic leaders is the word I always use. They're constantly just preaching what people need to be thinking because they recognize that beliefs drive all behavior."
+[41:28] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Belief-Oriented Teaching"
+NÚMEROS: Não especificados
+VISUAL: Conteúdo desta call: coisas orientadas a crenças que se transformam em ação, necessidade de pregar do topo
+[41:30] "It's like when you're dealing with the people, the reason that I cover a lot of things in this call as an example that are belief oriented that then turn into action is because those are the things that you have to preach from the hilltop to the organization collectively on a daybyday or like every fewday basis."
+[41:50] "That's generally what leads to the outcomes that you're looking for in this case. And it's not that crazy. Like being a charismatic leader is arguably one of the easiest things to do in business."
+[42:02] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Leader's Job Definition"
+NÚMEROS: Reuniões semanais mencionadas
+VISUAL: Trabalho do líder: projetar crenças que beneficiam organização em receita E ajudam pessoas sendo vendidas
+[42:05] "You just have to step up and be able to recognize like it's my job to project these beliefs onto my people because those are the beliefs that are going to benefit the organization from a revenue perspective and help the people we're trying to sell to. You understand?"
+[42:22] "It's really not that bad. You know, it's just a handful of meetings a week that you're just preaching from the hilltop about what you want people to think. You get what I'm saying?"
+[42:32] "Okay. Very good. Anybody have any questions on this?"
+[42:38] "Um, Chris, you want to add anything? Maybe maybe pitch something with your AI stuff about how this solves this. I'm sure you've been holding your tongue."
+[42:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "AI Solution Context"
+NÚMEROS: Não especificados
+VISUAL: Informação não pitch, plataformas como serviço disponíveis
+[42:50] "Yeah, I won't make it a pitch. I'll just make it more of umformational, I guess, because I know that we have a lot of technically uh in net people in here. Um, and there's a lot of platforms as a service that allow you to go in and have someone prompt it for yourself, etc."
+[43:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "AI For Ad-Generated Leads"
+NÚMEROS: Não especificados
+VISUAL: Leads de ads já conhecem marca e viram VSSL, já têm componente humano
+[43:10] "But, um, from when you're running ads, people are already familiar with your brand and they've already seen your VSSL. They kind of already have that human component to it."
+[43:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "AI Speed to Lead Advantage"
+NÚMEROS: 1-3 perguntas mencionadas
+VISUAL: AI alcança com velocidade → responde Q&As → ultrapassa threshold de 1-3 perguntas para conforto de comparecimento
+[43:25] "So, when running ads specifically, having the AI reach out um with a speed to lead, you know, proponent to answer those Q&As's and to to kind of get the lead over the threshold of that one or two or maybe even three questions that they needed to know to make them more comfortable to show up. The AI is very good at that."
+[43:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "AI Technology Evolution"
+NÚMEROS: Não especificados
+VISUAL: Tecnologia continuará melhorando, ficará mais indistinguível de humanos
+[43:50] "And um Jeremy's right when he said the technology will continue to get better and it will become more and more indistinguishable from a human."
+[44:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "AI As Addition Not Replacement"
+NÚMEROS: Não especificados
+VISUAL: Benefício principal: dar respostas ao prospect + enviar trust assets, AI trabalha lado a lado com humanos
+[44:02] "But the main benefit of it is just to get the prospect those answers to those questions or even send out those trust assets. The AI can also do that as well. So just thinking of it like that and not a human replacement, more of like addition to your setters to have right now um to kind of automate that follow-up process and work hand in hand with the uh the humans."
+[44:28] "Yeah, it makes sense. All right, very good. Anybody else have any questions or anything you want to mute yourself and ask away? Anything we need to address to help you guys turn this into action going once."
+[44:42] "Brooke, any final thoughts on this you want to share with the people since you're dealing with this problem? Anything you want to add to it?"
+[44:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "AI Transcript Analysis Idea"
+NÚMEROS: 6 setters mencionados
+VISUAL: Ideia: exportar transcrições → AI analisa → automação contextual baseada em transcrição vs. abordagem em massa
+[44:52] "Uh, no. I think I think yeah, I have a ton a ton of stuff to put in. The only other thing I was thinking, I'm not sure if this is what your tool does, Chris, or if it would do this at all, is um I wonder if there's a way to like export the transcripts from these calls and then based upon the transcript have AI analyze it and then do contextual automation that way"
+[45:15] "instead of like the mass approach like still have the mass assets we make now, but um sending them specific things based upon the call automatically I just think would be at scale simpler than than a team of six setters doing however many calls a day."
+[45:32] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "N8N Integration Possibility"
+NÚMEROS: Não especificados
+VISUAL: Possibilidade técnica: N8N + análise de call + CRM + comunicações contextuais automatizadas
+[45:35] "Very good question. I would imagine that there is through likely something with NADM and tying that into call analysis and your CRM and then doing what I articulated to fire off those contextual communications."
+[45:50] "I'm not sure if as an example like Chris's technology with simple AI has that ability to do so too with tying into to N8 to do something similar but yeah I mean that'd be that'd be pretty sick a lot of sense and I feel like we're there with technology be more than capable of doing that so if you end up trying something like that that'd be sick to hear about it."
+[46:12] "Yep. Of course."
+[46:15] "All right cool. Anybody else got anything?"
+[46:18] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Q3 Mastermind Announcement"
+NÚMEROS: Julho 12-13, Q3
+VISUAL: Anúncio de mastermind: data, expectativa de grande participação ao contrário do usual Q3 mais leve
+[46:20] "Very good. Shorter call today. Appreciate you guys being here. upcoming Q3 mastermind July 12th and 13th. We got a fuckload of people coming. Normally, I would set the expectation Q3 masterminds are generally a little lighter. Uh we are not shaping up for that at all. This seems to be a very normal mastermind in terms of attendance comparatively."
+[46:42] "So, looking forward to seeing everybody who's going to make it out. You have any questions about anything, let me know. Um all the details for the mastermind are pinned at the top of the group chat. Uh be sure to take a look at that and then let me know after."
+[46:58] "All right, cool. Talk soon, everybody."
+📊 RESUMO EXECUTIVO
+NÚMEROS PRINCIPAIS:
+30% taxa de cancelamento de calls
+35% taxa de fechamento em calls que aparecem
+Custo por call quase dobrou após qualificações mais rígidas
+$2-3K base mensal para setters
+$50-100 bônus proposto por fechamento rápido
+2-3 dias timeframe ideal de fechamento
+4-5 dias timeframe usual de fechamento
+50% redução de bônus após 7 dias
+20-25 minutos de VSSL forçado
+15-20 vídeos na página de confirmação
+6 emails por dia enviados
+30-50 peças de conteúdo short form
+15-30 peças de conteúdo long form
+6 setters na equipe
+Q3 Mastermind: Julho 12-13
+Multi-8 figures e million-dollar months mencionados como benchmark
+ESTRATÉGIAS E SISTEMAS:
+Problema Identificado:
+Setters cancelando 30% das calls por razões que deveriam ser tratadas na sales call
+Leads preocupados com timing ou querendo follow-up em um mês sendo desqualificados prematuramente
+Custo por call dobrou após apertar qualificações
+Call Funnel Structure:
+Ad → VSSL Page → Application → Booking
+Confirmation Page Best Practices
+Value Dense Email Sequences
+Setters/Closers Manual Outreach
+Hammer Them Campaign
+Escala de Interesse (Interest Scale):
+Curiosity (mais baixo)
+General Interest
+High Interest
+Conviction
+SOLD
+Money Zone: entre Conviction e Sold
+Problema do Comparison Bias:
+Setters desenvolvem viés comparando leads de baixo vs. alto interesse
+Leads financeiramente qualificados mas com baixo interesse são cancelados
+Viés aumenta com tempo independente de abundância ou escassez de leads
+Solução Proposta - Três Pilares:
+A. Informação Personalizada:
+Criar biblioteca massiva organizada no Google Doc
+Categorizar por tipo de objeção/necessidade
+Incluir: SOPs, FAQs escritos, vídeos, podcasts, testimonials, case studies
+Setter oferece múltiplos formatos e deixa lead escolher
+B. Sistema CRM com Dispositions:
+Dropdown field no CRM para razão de baixo interesse
+Seleção aplica ao registro do contato
+Dispara automação contextual de marketing
+Envia comunicação específica sobre necessidade identificada
+C. Estratégia Conjunta Manual + Automação:
+Setter envia informação manualmente antes da call
+Sistema automatizado também envia baseado em seleção CRM
+Garante que uma ou outra acontece
+Aumenta dramaticamente probabilidade de elevar interesse
+Nova Estrutura de Incentivos:
+Base pay mantido ($2-3K/mês)
+Bônus de $50-100 por fechamento em 2-3 dias
+50% do bônus por fechamento em 7 dias
+Potencial de milhares extras por mês
+Incentiva priorização de leads de baixo interesse para enviar informação
+Princípio Information = Action:
+Gap de informação cria baixo interesse
+Informação certa leva à ação
+Exemplo: estatística genérica vs. observação específica de autoridade
+Contexto e autoridade amplificam impacto da informação
+Abordagem Spray and Pray do Marketing:
+Múltiplos vídeos porque não sabemos qual funciona
+Múltiplos emails porque não sabemos qual converte
+Muito conteúdo porque não sabemos qual inspira ação
+Setters têm vantagem: podem identificar necessidade específica
+AI Integration Possibilities:
+Simple AI para speed to lead
+Responder 1-3 perguntas críticas rapidamente
+Enviar trust assets automaticamente
+AI como adição, não substituição de humanos
+Fail-safe system: humanos primeiro → AI follow-up
+Exportar transcrições → AI analisa → automação contextual via N8N
+Análise de Calls com LLM:
+Usar Gong ou exportar transcrições
+Importar em ChatGPT/Claude
+Treinar LLM para avaliar (escala 0-100)
+Identificar se perguntas soam egoístas ou amigáveis
+Automação possível com N8N
+ESTRUTURA:
+Função Real do Setter:
+NÃO apenas qualificar e agendar
+NÃO apenas tirar leads ruins do calendário
+SIM: Coletar dados para CRM
+SIM: Identificar gap de informação
+SIM: Enviar informação personalizada que leva à ação
+SIM: Aumentar probabilidade de show-up
+SIM: Elevar nível de interesse do lead
+Primeira Interação é Crítica:
+Analogia do restaurante Michelin
+Experiência de reserva faz parte da experiência total
+Internet marketing negligencia isso
+Intenção egoísta transparece para o lead
+Começa experiência de forma violenta
+Liderança Cultural Necessária:
+Crenças controlam comportamento
+Vendedores precisam lições reiteradas constantemente
+Falta de liderança cultural leva à polarização
+Indivíduos definem próprias crenças sem liderança
+Líder carismático prega crenças coletivas constantemente
+Responsabilidade do Líder:
+Não é chato ou difícil
+Algumas reuniões por semana
+Pregar do topo sobre o que quer que pensem
+Projetar crenças que beneficiam organização E ajudam clientes
+Pode ser delegado a sales/setter manager
+Missão Além do Dinheiro:
+Sim, queremos escalar e ficar ricos
+MAS também impactamos vidas substancialmente
+Cada lead não ajudado = pessoa deixada na poeira
+Qualidade de vida ruim mantida por decisão do setter
+Responsabilidade individual de cada setter
+Teste Antes de Mudanças Grandes:
+Sempre repetir ações bem-sucedidas
+O que te trouxe aqui funcionou
+Mudanças grandes devem ser testadas
+Não ir all-in sem validação
+Pode ser ambos: pessoas E automação
+DADOS FINANCEIROS:
+Base pay setters: $2-3K/mês
+Bônus proposto: $50-100 por deal rápido
+Redução bônus: 50% após 7 dias
+Potencial extra mensal: milhares de dólares
+Closing rate atual: 35% em showed calls
+Cancellation rate: 30% das calls bookadas
+Custo por call: quase dobrou após qualificações apertadas
+Benchmark revenue: multi-8 figures anuais, million-dollar months
+ROI do tempo/dinheiro em geração de leads sendo desperdiçado com one-and-done approach
+DURAÇÃO: ~47 minutos FORMATO: Group coaching call, screen sharing com slides visuais, discussão interativa focada em resolver problema específico de Brooke com SDR cancellation rates e comparison bias

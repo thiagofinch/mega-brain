@@ -1,0 +1,458 @@
+Transcrição Completa: 17 Prepping For Q4 To Make Big Money 8 30 25
+[00:00] All right, Q4 is coming in hot and it's going to be a hell of a year for Q4. Some years we have what we call the black swan event, which is typically every four years. That's when we have an election cycle for the president here in the United States. Thankfully, it's not that year. It's almost like having a leap year, you know, every four years.
+[00:25] Anyway, this is going to be a normal Q4 year and you might assume that means that your ad spend is going to have less volatility during those three months out of the year of October, November, and December, but you would be wildly incorrect.
+[00:40] Q4 is going to be a shit show for this year and it seems like every year ongoing. How do we know? Easy. We can look at the rest of the entire year and see the indications that all of the small insignificant holidays have had on ad cost inflation.
+[01:00] This year in particular, more so than any year in the past, the ecom boys have essentially always, to be clear, caused a lot of the Q4 inflation. This year, they've taken advantage of the other times of the year as well.
+[01:15] As an example, right now why I literally filmed this video here in the good old USA, we have Labor Day coming up on Monday. This is Labor Day weekend. Some of you right now might be dealing with some inflation related to your cost per result.
+[01:30] We've seen that from the very beginning of the year around February's time frame when we had the Super Bowl, we had Valentine's Day and we had President's Day all fall on the same weekend between Friday and Monday.
+[01:45] There were a good six, seven days prior to that and a good 3 to 4 days after that where we still saw inflation throughout that duration of time. We then rolled into March. We saw things like St. Patrick's Day cause inflation. Shit, April Fool's Day caused inflation, you know?
+[02:05] So, that lets you know that it's going to be a pretty wild year for those specific months that we are about to endure. Of course, for all those that for some reason may be a little fucked and not know what Q4 is, Q4 is October, November, and December.
+[02:20] To be clear, 70% of the entire year, the entire ad spend for the year is spent in those three months of October, November, December.
+[02:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Q4 Ad Spend Concentration"
+NÚMEROS: 70% do gasto anual total
+VISUAL: Representação visual enfatizando a concentração massiva de investimento publicitário em apenas três meses do ano
+[02:30] And a lot of that specifically is concentrated in November going up until Black Friday, Cyber Monday, and obviously going into early December, mid December for milking the holiday season specifically.
+[02:45] So, long story short, if you're going to experience upwards of, you know, 70% of additional ad spend against what you are currently spending currently, that simply means that your cost per result is very probable to go up.
+[03:00] If you were a gambling man, which literally all of you are, and you look at the odds of essentially 70/30, 30% of the probability playing out in your favor that you don't deal with any inflation, upwards of 70% that you're going to be dealing with hyperinflation, then you would want to prepare well ahead of time.
+[03:20] So, as we step into September, September is essentially the month of momentum. I look at going into Q4 like trying to run through three walls.
+[03:30] I don't want to try to run through three walls by walking into them. I also do not want to walk into the walls at a pace that is not going to get me through all three of the walls. I want to go at the literal fastest possible speed that I can running through those three walls.
+[03:45] I want to have proper equipment and tools to make sure that running through those walls is easier and produces less friction so I make it out the other side to January without any issues and without a lot of damage.
+[04:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Running Through Three Walls"
+NÚMEROS: 3 paredes (outubro, novembro, dezembro)
+VISUAL: Analogia visual de três paredes representando os três meses de Q4, cada uma progressivamente mais espessa, ilustrando o aumento da inflação de custos mês a mês
+[04:05] Now, how do we specifically do that? So, first of all, CRO is going to be your best friend throughout this specific window on the funnels that you already have in place where you are fronting cash.
+[04:20] So to be clear, if I have, let's say, a 3x ROAS, okay, and I look at, let's say, a call funnel specifically, and I dealt with upwards of 70% inflation on my cost per result.
+[04:35] So let's use the example that I have $100 cost per result currently. With 70% inflation factored in, I'm going to be dealing with upwards of $170 cost per result.
+[04:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Cost Per Result Impact"
+NÚMEROS: $100 atual → $170 com 70% de inflação, 3x ROAS
+VISUAL: Comparação de custos antes e depois da inflação, mostrando o impacto dramático no custo por resultado
+[04:50] Now moral of the story from that perspective, we can do some basic math here and we can go into a financial model and we can project into that financial model what that would do to our profitability and how much it would erode our current ROAS.
+[05:05] Okay? And you got to remember this is very important you understand this like there's several ways to combat this from a CRO perspective. Okay? You guys hear me talk about this shit all the time with bottleneck analysis.
+[05:20] And bottleneck analysis, simply put, is the process of being able to identify step by step throughout our marketing and sales process which specific statistic is choked out, contracted, what we want to put our attention into and open up in order to make a lot more people flow through to the other side.
+[05:40] So we get more revenue out the other side without having to spend more dollars. So as an example of this, if I'm going into September, okay, and I look at my current call funnel statistics as an example, right?
+[05:55] I'm just going to map some statistics so we can all be on the same page here. Let's use the example I currently have like $70 CPMs. Let's use the example that I have a 8% link click-through rate.
+[06:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Call Funnel Statistics Example"
+NÚMEROS: $70 CPMs, 8% link CTR, 3.4% conversão para calls qualificadas
+VISUAL: Dashboard de métricas de funil de chamadas mostrando estatísticas-chave do processo de conversão
+[06:15] Okay, let's use the example that I'm not using an opt-in on my page and I'm just using a standard application and calendar. And let's use the example I'm currently converting 3.4% of people into qualified calls.
+[06:30] I just want to be fair and saying I would break that statistic down and I would go with the application drop off rate and I would also go with the app to schedule rate and I would attempt to see how many people are dropping off in between each step.
+[06:45] From there I'm going to make sure that I do the simple things as well like show rates, close rates, AOVs, etc. Okay. Now, once I have these statistics all mapped out, if they all seem great and again, you're currently producing a great ROAS right now in Q3, no issues, right?
+[07:05] That's what you might think. And you might just be in the middle of scaling up, you want to I can't stress this enough, you really want to focus on a CRO driven perspective of what statistics down here could be improved upon.
+[07:20] And you want to use essentially the front end of September. This is very important in terms of the timing of this call. The front end of September is where you want to gain as much momentum and speed as you possibly can.
+[07:35] Okay, I just reiterated this with how this works. Okay, you're essentially going to be running through three brick walls. Okay, you got October, you got November, and you got December.
+[07:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Three Brick Walls"
+NÚMEROS: Outubro (parede 1), Novembro (parede 2), Dezembro (parede 3)
+VISUAL: Três paredes de espessura progressivamente maior, representando aumento gradual da inflação de custos ao longo de Q4
+[07:55] And look at it like the costs inflate each month at a greater and greater amount. Okay. So technically the thickness of each wall is thicker as we get further along into these three months.
+[08:10] Okay. I have to run as fast as I possibly fucking can in the month of September to try to gain as much momentum as possible to break through the first wall, to make it through to November and be able to break through that wall and then to also be able to break into December's wall.
+[08:30] So many high ticket businesses specifically that aren't ecom-based really suffer throughout these three months because they don't take September seriously and they don't actually like plan and they don't have any they don't have momentum going into those three months and then all the inflation comes along and they find themselves in a hyperreactive position.
+[08:50] You do not want to be in a hyperreactive position in those three months because it's the most volatile time of the year. So again as an example if these are your current stats that you have we have to strengthen all of these okay every single thing that we see over here we have to find a way to improve upon.
+[09:10] So as an example if you still haven't taken action on the Meta Andromeda best practices um this would be a great time through the first part of September to figure that out and try to see if you can get a reduction in your CPMs and increase in link click-through rates.
+[09:30] Some of what we've covered with Timothy as an example and with an upcoming module that will be released here soon enough from Euan on V3 ads. We've talked about that as a group and what that's done specifically to link click-through rates.
+[09:45] Okay, as another great example of a way to strengthen your overall statistics, if I can start incorporating some V3 ads and see dramatically higher link click-through rates, that alone could be the momentum that I need in order to break through those three walls of October, November, and December and make it to 2026 unscathed and very profitable to finish up this last part of the year.
+[10:10] If I and I just want to be really clear when I say this like if I have a great statistic in a specific area like let's use the example I already have upwards of a 70% show rate. I want you to make sure that you focus on the specific things that are a little bit fucked.
+[10:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Focus on Weak Statistics"
+NÚMEROS: 70% show rate (bom), link CTR (precisa melhorar), 3-5% calls qualificadas (pode melhorar), 15-20% close rate (pode melhorar)
+VISUAL: Dashboard destacando métricas fortes vs. fracas, com ênfase visual nas áreas que precisam de atenção imediata
+[10:35] Okay. So as an example like link click-through rate here could be improved. Although this is within range between that 3 to 5% of qualified booked calls that statistic could be improved. Let's use the example that my close rate is sitting at like 20% or maybe 15%. Again, that could be improved.
+[10:55] If I'm getting a lot of split pays or payment plans and I'm not actually cash collecting on the full amount. That could be improved. Like I was just talking to one of the inner circle members just yesterday or the day before. His name's Cameron and Cameron has a lower ticket monthly subscription offer and he wasn't being profitable until like month two or three.
+[11:15] And I was like, "Dude, that's a fucking awful setup. Like, wouldn't you want to be profitable sooner?" He was like, "Yeah, of course." I told him, I was like, "Why don't you try charging for 3 months upfront?"
+[11:30] And that ended up not working for him. But you know what? The 3-month upfront thing did do well. It got him converting his annual amounts at a substantially higher rate. It was like the popcorn pricing where the monthly amount became less appealing.
+[11:45] The 3 months upfront was now a requirement in order to sign up for the monthly. So what did people do instead? They just signed up for the annual amount. He had six of those within the week whereas previously he didn't sell any of them prior. You see what I mean?
+[12:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Popcorn Pricing Strategy"
+NÚMEROS: 6 vendas anuais em uma semana (vs. 0 anteriormente), 3 meses upfront como requisito
+VISUAL: Estrutura de preços tipo "pipoca" onde a opção intermediária torna a opção premium mais atrativa, ilustrando ancoragem de preços
+[12:05] That strengthens his AOV a dramatic amount, makes him substantially profitable upfront, and obviously allows him to start the scaling process and deal with the lower statistics that he's going to have throughout these next couple months.
+[12:20] Okay. The other way to go about doing this is to time-stake specific lump sum funnels throughout those three months of Q4. So, as an example of this, most of our clients that have the ability to do this, what they're doing throughout those three months specifically is placing something like a challenge funnel, as an example, in the middle of it.
+[12:45] And so, they'll have a 3-day virtual event in the middle of all that chaos. Why? Well, for several reasons. I mean, number one, people got to pay in order to go to that event. Again, we'll talk a little bit more about low ticket to high ticket here in a minute.
+[13:00] But in addition to that, the whole concept of a challenge funnel or a 3-day virtual event, whatever you want to call it, is to juice a fuckload of revenue at one specific time.
+[13:15] Okay? And so if I'm going to be dealing with tighter margins throughout those three months due to the inflationary events of that time of year, why not throw something in there that can self-liquidate some buyers and give me an opportunity to have a huge fucking cash flow event at one specific time right in the thick of all that, right?
+[13:35] And there's also like key windows. Like as a great example, we have a client right now. They actually have a challenge in late September that they're currently promoting for. I'm spending upwards of 50K a day.
+[13:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Challenge Funnel Timing"
+NÚMEROS: $50K/dia em ad spend, evento de 3 dias, final de setembro
+VISUAL: Timeline mostrando posicionamento estratégico de eventos de desafio durante Q4 para maximizar cashflow
+[13:50] Okay? Now, on that specific campaign, I'm already profitable going into it. However, there's Labor Day right now, as I mentioned, like we're sitting here talking during Labor Day weekend. We're running a Labor Day sale.
+[14:05] The cool part about promoting during those three times a year for something like a 3-day virtual event or a challenge funnel is I have so many little themed sales that I could run relative to the time of year that I place these events.
+[14:20] Okay. It's also very important to note for the business owner demographic specifically, they typically seek larger purchases during this final time of year for write offs.
+[14:35] Like as a great example of that, a majority of the people who pay annually for the inner circle are typically within this last two-month cycle period of time of the year, somewhere between November and December.
+[14:50] And it's not because we have some kind of discount. It's because obviously education is 100% write off here in the United States. So moral of the story is we have people that, you know, prefer to lump sum pay during that time of year is my point.
+[15:05] From that perspective, simply put, a lump sum cash flow event, the best time of year to schedule that in is during one of these three months. Ideally, either in November, in like the middle of November or towards the beginning of December.
+[15:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Optimal Event Timing"
+NÚMEROS: Meio de novembro ou início de dezembro (ideal), 3-4 semanas de atividade de vendas pós-evento
+VISUAL: Calendário de Q4 destacando janelas ideais para eventos de lump sum, evitando conflitos com feriados
+[15:30] Okay? If you place it in the middle of December or obviously late December, you're going to be pretty fucked because usually there's a substantial amount of sales activity that follows for like a good 3 to four weeks after the actual event.
+[15:45] And you don't want holidays to interfere with your lump sum events that you have the ability to milk there in order to increase your profitability and finish the year strong.
+[16:00] So now this segues into the next point which is you got two things that you can do and I wouldn't necessarily encourage just to play into one or the other. Okay, you have lump sum events and then you also have low ticket to high ticket.
+[16:20] If there's ever been a period of time to have a low ticket to high ticket funnel dialed in, it is during Q4. Okay? If you ideally are profitable on whatever it is that you're selling low ticket and you have an average cash velocity cycle of less than four weeks, meaning the money that you front on your credit card is already going to be returned to you within a four-week duration of time, so you can pay that credit card cycle off without issue.
+[16:50] That's the most dialed in ideal low ticket to high ticket time frame that you can have. And even if you aren't profitable on your low ticket to high ticket, you're at the least liquidating some of those dollars that you would otherwise just have to front on non-paid funnels.
+[17:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Low Ticket to High Ticket Benefits"
+NÚMEROS: Ciclo de velocidade de caixa < 4 semanas (ideal)
+VISUAL: Comparação de funis pagos vs. não-pagos, mostrando como low ticket liquida custos de aquisição durante períodos inflacionários
+[17:15] Like as an example, live webinars, free challenges, free webinars, call funnels, DM ads. Those are all fronting cash funnels that are essentially the most exposed to the inflationary cycle of these last three months of the year.
+[17:30] Okay? So, just to be clear, it's really not a game of either or. You don't want to put yourself in a position where you are just using like one or the other. Okay? The best thing to do during Q4 is to typically be well diversified.
+[17:50] And that diversification is what's going to strengthen your ability to remain profitable and still scale throughout those three months. A lot of people consistently suffer throughout October, November, and December because they're one funnel. They're a one-legged stool. They have no diversification.
+[18:10] They have no alternative funnel sources to run traffic through. And then they reactively attempt to launch them in the most inflationary period of the year. When you are trying to run tests throughout October, November, and December, all of your testing is rather inconclusive.
+[18:30] That stuff that you're launching during those three times a year may work during the other nine months out of the year, but due to the inflation that occurs during those last three months out of the year, you're going to misrepresent every statistic and think that it's a terrible funnel that you're testing when in reality you're just upwards of 70% inflated in terms of your cost per result comparatively to what you otherwise would be during the other nine months.
+[18:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "September: The Shoot The Gap Moment"
+NÚMEROS: 70% inflação em custos durante Q4 vs. outros 9 meses
+VISUAL: Timeline enfatizando setembro como janela crítica de preparação antes da tempestade de Q4, analogia de "shooting the gap"
+[19:00] So, this is why September specifically is the shoot the gap moment. Okay? September specifically is where you have to dial everything in. It's like if you were told that there's a fucking hurricane coming, okay?
+[19:15] Prior to the hurricane, if you have upwards of a month out, okay, even like two weeks out, the cost of booking a jet is still cheap. Okay? The cost of water and the availability of water is still accessible and still normal cost.
+[19:30] The cost of gas is still normal and the gas stations don't have excessively long lines out the fucking out the lot. Okay, you can still buy food, but for anybody who's ever dealt with a hurricane before, if it's a fucking two to one, like a one to three day period of time out from the actual hurricane itself, you're fucked on everything I just said.
+[19:50] You go to the grocery store, it looks like there's a fucking famine going on. There's nothing in there. Every water bottle is going to be completely cleared off the shelf. You're going to go to a gas station and it's going to be a line down the block and they might run out of gas.
+[20:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Hurricane Analogy"
+NÚMEROS: 30 dias antes (preparação ideal) vs. 1-3 dias antes (pânico total)
+VISUAL: Comparação dramática entre preparação antecipada (recursos abundantes, preços normais) vs. preparação de última hora (escassez, inflação, pânico)
+[20:15] Like literally gas stations run out of gas. And the people who come, the tankers, they don't come down and fill up those fucking tanks again. They wait until the hurricane's gone.
+[20:30] Okay. The ability to go just buy basic supplies. Like sometimes people will go buy plywood to put over their windows if they don't have like metal shades or hurricane impact windows. Again, the worst fucking time to do that is the day or 3 days before the hurricane.
+[20:45] The best time to do that is as far out from the hurricane that you can get. Okay, it's much more laxidaisical. It's all the supplies is actually available, right? You can afford things because there's no inflation.
+[21:00] But like when the hurricane comes, okay, which in that case is during these three months in this analogy, you are absolutely fucking cooked, okay? You're fucking cooked.
+[21:15] Like, yeah, you can technically still go get gas, but it's like they might not have gas. You might have to run to a bunch of different gas stations, right? It's going to be a lot more stressful and it's going to be a way higher cost. Same thing with any other basic supplies or anything else in what I just articulated in my analogy to you.
+[21:30] Okay? Therefore, September would be the equivalent of having a 30-day notice prior to a natural disaster about to occur where you want to be able to accumulate your supplies and get yourself prepared and batten down the hatches.
+[21:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "September = 30-Day Hurricane Warning"
+NÚMEROS: 30 dias de preparação
+VISUAL: Setembro destacado como período crítico de preparação, analogia completa com preparação para desastre natural
+[21:55] Okay. So, again, just to be clear, if you already have something that's very profitable or that's profitable enough for you to scale it, you do want to continue scaling throughout September. To be clear, I don't in any way, shape, or form want to make it sound like you shouldn't. You absolutely should in all regards scale up throughout those months.
+[22:15] Okay? However, in September, you want to be very intentional about planning, okay, and testing either a new funnel that can self-liquidate, like low ticket to high ticket or a 60-day promotion timeline for a challenge.
+[22:35] I have two people specifically. We had TJR that just recently joined the inner circle. By the way, super smart play. The guy buys a Coen Sig and buys Jeremy's inner circle the same week. Smart play. That's how you turn money into more money.
+[22:50] He specifically joins in and he hires us to do a consulting deal for him cuz he has a challenge in the middle of Q4 and we're going to start the 60-day promotion cycle soon and teach his team exactly what they need to do to promote it.
+[23:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "60-Day Challenge Promotion Timeline"
+NÚMEROS: 60 dias de promoção, evento no meio de Q4
+VISUAL: Timeline de promoção de desafio mostrando estrutura de 60 dias levando ao evento principal durante Q4
+[23:15] Okay. Same thing with another inner circle member that just cracked a million a month that were given a trophy to and going to be hearing from in our upcoming Q4 mastermind in October. Carlton and Jared. They cracked a million a month.
+[23:30] And guess what? They're also going to do a challenge funnel right in the middle of Q4. Okay, smart guys. They are going to make a fuckload of money during that three-month period of time.
+[23:45] Even if their other funnels start to get fucked or a little less profitable, they'll have that huge lump sum event to offset that another in their other funnels cutting some of their profitability.
+[24:00] Okay? And then again, low ticket to high ticket. If you still don't have something that's a low ticket to high ticket ascension funnel, the best possible time to dial it in is the month of September.
+[24:15] And let me be clear, there's several different low ticket to high ticket funnels that you could crack rather easily. Okay? And I'm going to name a few of them just so you can understand what likely has the highest probability to work for you in a rather short period of time.
+[24:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Low Ticket to High Ticket Funnel Options"
+NÚMEROS: Múltiplas opções de funis
+VISUAL: Lista de diferentes tipos de funis low ticket to high ticket com probabilidades de sucesso
+[24:35] Okay. Number one, Book Funnels. Big fan of Book Funnels. Let me just give you some quick pro tips. If you do a book funnel, number one, have a short book. Okay? You don't want to have a book that's hard to read. You don't want to have a book that's going to take a long period of time to read.
+[24:55] Essentially, whatever you sell low ticket, and we talked about this inside of our weekly inner circle group call that's dedicated to low ticket to high ticket best practices, to be clear, which I've encouraged you go watch because it'll go a lot more in depth than what I'm going to cover here with you now.
+[25:15] But regardless, I'm still gonna make sure you get some pro tips on the types of funnels I think you should run. So, moral of the story, low ticket to high ticket with Book Funnels specifically or any low ticket product, the speed in which somebody can consume it and put it into action and get a result is essentially your sales cycle timeline.
+[25:35] So, if I sell somebody a book and it takes them like fucking four months to read the book, I'm going to have a four-month sales cycle timeline for my high ticket thing.
+[25:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Consumption Speed = Sales Cycle"
+NÚMEROS: 4 meses para ler = ciclo de vendas de 4 meses
+VISUAL: Correlação direta entre velocidade de consumo do produto low ticket e timeline do ciclo de vendas high ticket
+[25:55] Most of the time when somebody purchases something low ticket, they have very little to low probability to high ticket upsell until the consumption of the low ticket thing occurs.
+[26:10] Otherwise, the high ticket purchase is viewed as wasteful and unnecessary because they still didn't actually try to get the value out of whatever they purchased at a lower ticket price.
+[26:25] Low ticket funnels should never be even remotely close to long, extensive, huge, a lot to consume. It should be quick, actionable, result-oriented, easy to consume, right?
+[26:40] And when you do a book funnel, again, short books obviously help with that a lot. But in addition to that, we can be creative, right? Let's say I do have a longer book that's 20 chapters.
+[26:55] I can make 20 individual executive summaries for each chapter. And I can send a 20-day email sequence. And now I've condensed the timeline of my book without somebody even having to read it. They just got to read these executive summaries in the email to feel like mentally they got the value of the book.
+[27:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Book Funnel Acceleration Strategy"
+NÚMEROS: 20 capítulos = 20 resumos executivos, sequência de email de 20 dias
+VISUAL: Estratégia de condensação de livro usando resumos executivos para acelerar consumo e encurtar ciclo de vendas
+[27:20] I could send one long executive summary to start and then I could send individual executive summaries for each chapter. I could also pair with those executive summaries individual videos of me articulating what each thing is in terms of those executive summaries from each chapter of the book.
+[27:40] In addition to that, some people are auditory. So rather than just having a video, I could also extract the audio and I could essentially have like an audio version of each chapter, but the executive summary version of that sent to people via email prior to me actually attempting to upsell them to a high ticket product.
+[28:00] The activation rate of your low ticket funnel dictates how many people are probable to be upsold. If I sell 100% of people a book and I only get 50% of them to read it, then I'm only going to have 50% of the total people that buy the book that are actually probable to upsell.
+[28:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Activation Rate = Upsell Probability"
+NÚMEROS: 100% vendas, 50% ativação = 50% probabilidade de upsell
+VISUAL: Funil mostrando correlação entre taxa de ativação do produto low ticket e probabilidade de conversão para high ticket
+[28:25] We're obviously still going to dial on 100% of them, but realistically, the quantity of people that actually use the low ticket thing are the quantity of people that are probable to upsell.
+[28:40] So, moral of the story, if you're going to do something like a book funnel, book funnels are super cracked as a low ticket product for sure. They're still a very OP strategy. However, you got to make sure that you don't have too long of a book. You got to make sure your activation rate is high and you got to make sure that you do a great job at shortening that timeline.
+[29:00] Okay. In terms of other funnels that are really good as low ticket products, mini courses can be really good for this as well. Same exact logic, short, sweet, result-oriented.
+[29:15] As an example of this, since you guys all have access to my SOP library here in the inner circle, we used to have as a low ticket product some of our SOPs, like we would take the Venus fly trap and that SOP, we would sell it as a low ticket product on the front end.
+[29:35] We would then upsell the video library for the trainings as it related to the Venus fly trap. And then we had a mastermind bundle as our second upsell.
+[29:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Mini Course / SOP Funnel Structure"
+NÚMEROS: SOP (front-end) → Video library (upsell 1) → Mastermind bundle (upsell 2)
+VISUAL: Estrutura de funil em três camadas mostrando progressão de SOP para biblioteca de vídeos para bundle de mastermind
+[29:55] Mini courses, SOPs in either scenario. Those are great low ticket to high ticket products, especially if you have some kind of training library on the back end.
+[30:10] Obviously for all like the physical product guys in here, we have a guy as an example, he sells hyperbaric oxygen chambers. Okay, now those hyperbaric oxygen chambers, they're like tens of thousands of dollars at a minimum.
+[30:25] However, his low ticket product that he sells is just a little can of oxygen. And what he articulates when you buy the can of oxygen is he gives you like a little instruction guide where he's like take a hit of the oxygen and do something that you routinely do so you can notice the differences between how it feels and how you think when you regularly do it versus how you'll think and how you'll feel right after you take a hit of high-grade oxygen.
+[30:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Physical Product Low Ticket Example"
+NÚMEROS: Câmaras hiperbáricas = dezenas de milhares de dólares, lata de oxigênio = low ticket
+VISUAL: Estratégia de "prova de conceito" usando produto físico acessível para demonstrar valor antes de venda high ticket
+[30:55] Right? And long story short, that can help with the idea of transitioning somebody into a hyperbaric chamber who like literally wants to see the effects before spending tens of thousands of dollars that having a heightened amount of oxygen can lead to better cognitive function as an example, right?
+[31:15] And so again, moral of the story is there's plenty of creative ways to be able to take something that's low ticket and upsell the fuck out of them after they've had some level of result.
+[31:30] To be clear. Obviously from a low ticket to high ticket perspective, we've already talked about this in this regard with having some kind of challenge funnel, some kind of paid event. You can also do paid webinars.
+[31:45] Paid webinars will get far less people by a lot comparatively to free webinars. However, instead of calling a paid webinar, you know, you call like a paid training or something like that, essentially still comes off like a mini-course, but just one longer day.
+[32:05] Sometimes we also call these crash courses. Crash courses are really good for that same logic, just framed a little differently than a paid webinar training.
+[32:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Paid Event Naming Strategies"
+NÚMEROS: Paid webinars (menos pessoas) vs. free webinars
+VISUAL: Diferentes nomenclaturas para eventos pagos: paid training, mini-course, crash course - todas mais atrativas que "paid webinar"
+[32:25] Anyway, the point I'm trying to make is again with the low ticket products that you specifically dial in and pick in the month of September, the whole point of them is to get yourself to be very profitable on the high ticket thing.
+[32:40] Okay? And if you had upwards of 70% erosion into your current funnels and it doesn't mean anything, well then to be fair, like you know, don't you feel like you need to focus on this?
+[32:55] Like we have some clients as an example where they're at like a let's say a 4x or a 5x profitability, right? And if they had 70% inflation, that might knock them down into like a high 2:1 or like maybe even a low 3:1 profitability, right?
+[33:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Profitability Impact Analysis"
+NÚMEROS: 4x-5x ROAS → 2:1-3:1 ROAS com 70% inflação
+VISUAL: Análise de impacto mostrando erosão de lucratividade com inflação de 70% em diferentes níveis de ROAS inicial
+[33:20] It's like do you even need to take the attention off of that funnel in that example and like do all this other stuff? Arguably no. But like again, if you're riding out at like a 2:1 or like a 3:1 for your profitability currently and you're a little bit scared of what 70% eating into your total costs is going to do and what that's going to look like for your profitability afterwards, then yeah, I would absolutely encourage that you use the month of September as the hurricane preparedness month, right?
+[33:50] Before the natural disaster comes where resources are still cheap, where you still have like this laxidaisical approach where you can do things in a pretty casual way, but you're still preparing for a significant event that can otherwise be disastrous for the unprepared, you're going to go into it prepared. You understand?
+[34:10] That's the whole point of this conversation here today is I need you to focus on either introducing new funnels that have higher levels of profitability, whether that be a lump sum funnel, whether that be a low ticket to high ticket funnel.
+[34:25] And I also need you to remember, okay, if whatever you're currently running is running well, make it run better before October 1st. Okay, strengthen the profitability of that funnel by doing a bottleneck analysis and identify the specific leverage points and attack the fuck out of them extremely aggressively through the month of September.
+[34:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "September Action Plan"
+NÚMEROS: Prazo: antes de 1º de outubro
+VISUAL: Plano de ação duplo: 1) Melhorar funis existentes via análise de gargalos, 2) Introduzir novos funis de alta lucratividade
+[34:55] And just to be clear, and I'll reiterate again, if I've got low link click-through rate, try some V3 ads. Try the Meta Andromeda best practices that we've talked about. Okay?
+[35:10] If I've got too high of CPMs, same exact logic. If I'm running too low on my opt-in rate for my webinar, on my total qualified conversion rate on my call funnel, if I'm getting too few people to go from a DM to a scheduled call, right?
+[35:30] I'm strengthening those specific statistics with conversion rate optimization best practices and I have an entire month to be able to pull that off in September prior to the chaos of October, November, and December coming along.
+[35:45] Now, again, if you look over here at this specific section, okay, I've reiterated to you and I'll make sure I say it again, October not that bad. It's not terrible. You're going to notice some inflation, but you'll be like, "Yeah, whatever."
+[36:00] You know, maybe it's maybe Q4 is not that bad this year. You know, and then around the Halloween time frame, you're going to be like, "What the fuck is happening?"
+[36:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Q4 Inflation Timeline"
+NÚMEROS: Outubro (moderado) → Halloween (piora) → Novembro 1º (choque)
+VISUAL: Progressão da severidade da inflação ao longo de Q4, com marcos específicos de quando a situação se intensifica
+[36:20] And then November's going to happen and you're going to wake up November 1st, you're going to be like, "Holy shit this is insane." It's like the people who stay in their house during a hurricane and they live on the second floor and they look out their window and the water is 20 ft high and it's reached the bottom of their balcony and they're like, "Oh my god, I am unprepared for this event."
+[36:45] That's what November 1st feels like, okay? And it's going to be the entire month of November. And it gets worse through Thanksgiving because then you got Black Friday, Cyber Monday, of course.
+[37:00] And then you think to yourself, "Oh my god, thank god Cyber Monday's over with. Maybe I get a little bit of breathing room here in this first week of December and the last part of November." Wrong.
+[37:15] Everybody runs extended Cyber Monday and Black Friday sales. And long story short, they carry that through all the way up until Christmas.
+[37:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Extended Sales Period"
+NÚMEROS: Black Friday → Cyber Monday → vendas estendidas até Natal
+VISUAL: Timeline mostrando extensão de promoções de Black Friday/Cyber Monday mantendo inflação alta até o Natal
+[37:35] And then to be clear, after everybody essentially stops advertising throughout that specific period of time, that's the little business owner gauntlet where between Christmas and New Year's, you might get a handful of people that lump sum some money your way because write offs and then you go into January and then usually after about the first week of January, everything goes back to normal and you made it out the other side just fine.
+[38:00] Okay. However, it's like besides the highly inflated costs that come from the ecom boys climbing out from under their rock and spending their entire years nut in that 3-month window of time.
+[38:15] You also just have humans that are being targeted by these ads that are fucked off for weeks at a time due to holidays and time off. Okay, so moral of the story is people get milked during this time of year.
+[38:30] They have less money as they progress further into Q4 to spend. Okay? And in addition to that, they take time off and so they scroll less. So people get served with less ads. So the auction costs go up even if there isn't a lot of advertisers targeting people.
+[38:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Q4 Audience Behavior Changes"
+NÚMEROS: Menos dinheiro disponível progressivamente, menos tempo de scroll, custos de leilão aumentam
+VISUAL: Múltiplos fatores contribuindo para inflação: gastos de ecom, menos disponibilidade de audiência, orçamentos consumidos
+[38:55] So moral of the story, you got CRO, you got lump sum funnels, and you got low ticket to high ticket. And you got the entire month of September to prepare.
+[39:10] Okay? Does this make sense to everybody? Drop a one in the chat if you understand what I'm saying, how serious this shit is. It's easy to navigate through if you actually are prepared going into it is a fucking devious fucking period of time. If you are unprepared and just get put into a reactive position comparatively.
+[39:30] So, okay, just to be clear, I really don't need to dwell on this much further. This is more just a preparedness call to make sure you guys are all going into September with the right frame.
+[39:45] We do have individual calls, of course, on literally everything that we just talked about. Challenge funnels. We have an entire weekly group call dedicated to. We have the challenge funnel SOP.
+[40:00] We have low ticket to high ticket mastery inside of our weekly group call library. And obviously, we have entire modules of content for you as it relates to CRO actions, driving down your costs and improving your overall conversion rates per funnel that you're running traffic to.
+[40:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Available Resources"
+NÚMEROS: Múltiplos recursos disponíveis
+VISUAL: Lista de recursos educacionais disponíveis: calls semanais de challenge funnels, SOP de challenge, masterclass de low ticket to high ticket, módulos de CRO
+[40:25] So, if anybody has any specific questions you want to ask as it relates to anything that we just talked about, feel free to unmute yourself and ask away.
+[40:35] [PARTICIPANTE PERGUNTA] Yeah, I got a few. The first one is since I do a weekly webinar, would you recommend that I just condense like for example Thanksgiving week or maybe like the weeks that are going to be really bad, I take the same level of spend but I frontload it for the weeks that will work in Q3. Like for example like Thanksgiving, maybe take off two weeks there but front end the exact same spend on the first two webinars of November.
+[41:05] Yeah, you could do that. Yeah, you could for sure. The other thing that you can do is and it depends on what your like willingness is and what type of brand you have, but you could do a themed event where as an example, you might have like specific bonuses or a specific discount opportunity for people to purchase from you during that Black Friday window, you know?
+[41:30] So, if you have something, let's use the example you'd get ahead of Black Friday and you would do your webinar on a Wednesday, the day before Thanksgiving. Maybe even go on Tuesday because people likely are going to be traveling the day before Thanksgiving.
+[41:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Thanksgiving Week Webinar Strategy"
+NÚMEROS: Terça-feira antes do Thanksgiving (ideal timing)
+VISUAL: Estratégia de timing de webinar para semana do Thanksgiving, evitando dia de viagem (quarta-feira)
+[41:55] So, you go with Tuesday. Okay. You could just theme that specific webinar event to have some kind of like exclusive shit that you're going to give people relative to like Black Friday and Cyber Monday being that weekend. That's a great example of something you could play into.
+[42:15] Also whether you do a discount or not, because again, I know a lot of you guys aren't going to do any I don't fucking discount anything ever. So, moral of the story is, if you're not going to run any kind of discount, even just the timing that I just said, you could still likely see great results if you just did your webinar on that Tuesday rather than, you know, on your usual like Wednesday, Thursday, Friday of that period of time. You get what I'm saying?
+[42:40] Yeah, absolutely. And then the second question I had was when you're if you're when you're picking a new funnel, are you just going to pick one and just say, "Hey, I'm going to go all in on that in September on top of the one that we're already optimizing," or would you go, "I'm going to try two or three different funnels in September to see if I can crack one to go into Q4."
+[43:05] Yeah, understood. So, moral of the story, I like to play into my strengths. So, if I've got a client, let's use the example, they're really good at webinars, like we have a client, his name's J. He's only doing webinars right now. He does a weekly live webinar and he's doing really good on his profitability. He's at a little over a 4x right now.
+[43:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Play to Your Strengths Strategy"
+NÚMEROS: 4x+ ROAS em webinars, $19M em um único evento
+VISUAL: Exemplo de caso mostrando como alavancar pontos fortes existentes ao invés de diversificar demais
+[43:35] And J's also spoke on stages for like I'm pretty sure his entire career of having this education company that he's got. Moral of the story is we're going to have J do a challenge funnel because it just makes sense. We can liquidate that ad spend.
+[43:55] He's presented on stages for a long period of time over many years and he's cleared literally tens of millions of dollar. He cleared $19 million at one event that he did. Just to put it in perspective.
+[44:10] So in that example, it's like I'm not going to introduce a low ticket thing. I'm just going to introduce a challenge funnel. You understand? And his webinar profitability being at a 4x, it's like I'm just going to look like right now he has a CPL of about $30ish dollars, like $30 to $32 give or take the webinar.
+[44:30] It's like I can strengthen that. I can get the opt-in rate up on that page and I can lower that which would increase the profitability. So I'm going to focus on the CRO for in that example and I'm also going to introduce a challenge funnel.
+[44:50] Now comparatively like let's look at a brand like Cody Sanchez as an example. So Cody has many different funnels. She has her webinar, she has challenge funnels, she has a VSSL, but the only thing she doesn't have is low ticket to high ticket.
+[45:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Cody Sanchez Funnel Portfolio"
+NÚMEROS: Webinar (lucrativo), VSSL (lucrativo), Challenge (super lucrativo), Low ticket (faltando)
+VISUAL: Portfólio de funis diversificados mostrando o que existe e o que precisa ser adicionado
+[45:15] Now her webinars are very profitable. Her VSSL is typically very profitable. And obviously her challenge funnels are like super profitable. However, she scheduled her challenge funnel in late September.
+[45:30] So I'm not going to get another challenge out of her throughout the remaining three months of the year. What I realistically need to introduce throughout the month of September, which we already have planned, are low ticket products.
+[45:45] I need to have something that is low ticket that can feed into the closing team or in this case the setting team to try to get some upsells out of people. Now I have several products I can do that with and I have several funnels that we're going to launch with.
+[46:05] At this point I'm actually getting Cody to film some ads literally today and she's going to send them over to us. We'll have them by Tuesday and then we'll get that launched and we'll get that in motion.
+[46:20] Her other funnels to be clear that I already said like the webinars and the VSSL we're just going to focus on CRO and strengthen the profitability of them. The thing is and this is really important you understand this like the logic of when I say like you're running through a wall and you're trying to gain as much momentum as you possibly can in the month of September to just run through October without issue.
+[46:45] You're going to be a little slower of course because you just ran through a wall. You try to break through that thicker wall of November and then do the same thing for December. The moral of the story is one of these things is probable to fall off. Like one of them is probable to get fucked right?
+[47:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "One-Legged Stool Problem"
+NÚMEROS: 1 funil = alto risco, múltiplos funis = diversificação
+VISUAL: Comparação entre negócio com um único funil (vulnerável) vs. múltiplos funis (resiliente durante Q4)
+[47:10] And that's the issue with being a one-legged stool and only having like one specific funnel. You either have to just have all of your attention on the CRO of that specific funnel that you're currently running or you have to try to introduce something else.
+[47:25] Okay. And I can't stress this enough. This is September should be viewed as like a high effort month. Yeah. Okay. Because it's not a game of either or. It's like I am going to do all of this. I am going to strengthen the CRO of every single funnel that we have no matter what.
+[47:50] Okay. That way, if whatever I'm testing still doesn't work by the end of September for whatever I try to introduce, like a low ticket product, as an example, I don't really give a fuck because I strengthen the product that we're already selling with CRO on those main funnels. You understand?
+[48:10] It's like that's the emphasis I'm trying to make clear is it's like ideally you have multiple things that way when one inevitably gets fucked on, you're not hurting, right? And if you only have that one thing, that's still okay. It's just going to be a little scarier. And you just got to make sure you aggressively put attention into the improvement cycle of those specific funnel steps. Does that make sense?
+[48:35] Yeah. I'm going to keep the webby and optimize it. It sounds like for you you would go like next step would be a challenge funnel. Not like do a challenge funnel, launch a book a call funnel and do like three things and just go all right which one's going to work and let's carry that. It's like pick the next thing that you have the best likelihood of being able to scale.
+[49:00] Yeah, that's exactly right because you got to keep in mind like where attention goes, results flow. And when you diversify your attention too much, like notice I didn't say like, "Hey, launch three low ticket products on top of whatever you're already doing right now."
+[49:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Where Attention Goes, Results Flow"
+NÚMEROS: 1 marketer por oferta (modelo Tai Lopez)
+VISUAL: Princípio de foco de atenção: muito diversificado = nada funciona, foco estratégico = resultados
+[49:25] That's going to realistically cause nothing to work. You know, it's going to take a lot of attention away. Now, let me be clear when I say this. Like, one thing Tai Lopez does as an example is he'll have a marketer per offer.
+[49:40] So, like I'm a marketer of Tai, but I only market the challenge funnel that we have together. I don't market anything else. And so therefore, with Tai, all of my attention is on that one funnel, right? And then again, to be clear, with every other subsequent offer the guy's got, it's the same exact way, right? One marketer per thing.
+[50:00] So the moral of the story is like, if you did want to do that and you're one of like the richer people in the group that has more money and resources and like therefore can like take on that cost, you should have an offer owner per low ticket funnel in that example or like per VSSL or whatever other funnels you have running.
+[50:20] And of course if you're not in that if that's not the case and again that in itself would it also take effort just to fucking hire on all these people in come September you know I would encourage just isolated attention on what you view as the most probable bet to play out in your favor through an inflationary period of time of Q4. Does that make sense?
+[50:45] Cool. Yeah. Thanks Jeremy.
+[50:50] Okay cool. Ezra you had unmuted yourself. Do you have a question? Okay, cool. We got some questions in the chat. Mason says, "Any broad messaging changes that tend to work better this season compared to more agnostic periods like summer?"
+[51:10] Not necessarily. I mean, it depends on the product. Mason, you know, if there's something specific that you can play into, it's really offer-centric like for the client as an example that teaches people to cut out alcohol.
+[51:25] Like they obviously have some specific communication that they can tailor for this time of year that you know a lot of people get sad and sedate through this period of time whether it be loneliness or just the amount of money that you have to expense on gifts for your loved ones.
+[51:45] The expectations that are set upon you, you know, like those things are obviously contextual and can be leveraged for that time of year. Obviously, if you have themed sales, you know, need I not say that can obviously be tailored towards this time of year.
+[52:00] A lot of the other messaging for like most offers that I can think of that you guys sell in this group, like you're not really doing anything specific to this time of year. If anything, you're just kind of carrying on as normal. If there is something that you can opportunistically leverage in your messaging, then, you know, try it for sure. I wouldn't necessarily say go all in on it.
+[52:25] Brennan says, "Noob question, clarity on V3 ads." Yeah. So, long story short, Brennan, there's a training video that we have in the weekly inner circle group call library that one of our inner circle members here, Timothy, looks like he even shared that with you. He did a training video on it.
+[52:45] It's a Google video tool that allows you to essentially script out ads or any video for that matter. And then we also have another inner circle member named Euan. Euan created like a preview course to leverage for the upcoming mastery internet marketing week three class.
+[53:05] We're finishing off just polishing that module and then we'll release that too to everybody of course here in the inner circle. Moral of the story, V03. V3 is simply put just a way to have ads that are getting a much higher clickthrough rate than like standard talking head ads.
+[53:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "V3 Ads Overview"
+NÚMEROS: CTR muito mais alto que talking head ads
+VISUAL: Ferramenta do Google para criar anúncios com roteiros, resultando em taxas de clique dramaticamente superiores
+[53:30] Simone says, I have a question. Jeremy, do leads get confused if you are running, let's say, weekly webinar ads, your challenge ticket ads at the same time or even low ticket funnels, webby ads.
+[53:45] So, Simone, just a perfect example of this. This month, I won't you know, I will say who I mean, it doesn't really matter. Cody spent upwards of like $700,000 this month on paid ad spend.
+[53:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Multi-Funnel Case Study"
+NÚMEROS: $700K/mês em ad spend, múltiplos funis simultâneos
+VISUAL: Caso real de operação multi-funil sem confusão de leads: webinars quinzenais, challenge de 60 dias, VSSL, hammer campaign
+[54:00] And we had essentially an every other week live webinar. We have our challenge funnel on a 60-day promotion timeline where we're spending an aggressive amount of money. We have our standard VSSL funnel that runs.
+[54:15] We have the hammer them campaign and some other content components to that with the tornado that are actively running. And no, we have profitability across the board in every single funnel. We don't get leads that come in that are like, "Oh, I thought like this was that or this that was this."
+[54:35] You know, all our funnels to be clear are distinct in this and you can go to the ads library. You can see for yourself for all the stuff that we actively run. Although right now there's not a webinar to be clear.
+[54:50] The moral of the story is although some of the ads to be fair are like just Cody in that example like sitting there talking just doing talking head content and like the messaging is relatively similar all the ads and the copy and then obviously the pages have different outcomes.
+[55:10] So no we don't really see that from a customer service perspective if that's what you're asking and we see profitability across the board. So I assume that also is indicative that the answer is no.
+[55:25] Does anybody else have questions? Feel free to unmute yourself and ask away if you do. I want to make sure you guys understand all this. Very important time of the year to master. I don't want you guys to be in a reactive position getting fucked on. Make sure you ask any clarifying questions you have. Drop it in the chat or just unmute yourself. You got anything?
+[55:50] Okay. So, in that case, the question I then have for you is what's your plan? I would like to see just a summarize. Give me a synopsis like give me like one to two sentences in the chat. I'll give you a moment to type it up.
+[56:10] What specifically is going to be your battle plan throughout this period of time, right? Where are you going to focus your attention? Is it a specific contraction that you're hyper aware of from doing a bottleneck analysis in your specific process? Is it launching a new funnel? Is it scheduling out a challenge? Is it doing a combination of these? Is it something else? Right? What specifically is your plan?
+[56:35] Try to use this period of time while we sit here together as an intentional period of time to think in an isolated way. Try to put that intentional thought into it right now so you don't have to do it later. You know, let's walk away here and try to come up with something that makes sense for you. You got something?
+[56:55] I do have a question, Jeremy.
+[57:00] Sure. Go ahead.
+[57:02] For agency funnels, is there like any other funnel that works than like a VSSL funnel that you would recommend?
+[57:10] Yeah, of course. I mean, pretty much any other funnel is open to be used for no matter what the offer is. But as an example, like webinar funnels, you could also do low ticket to high ticket. You could do audit funnels.
+[57:25] Typically, one thing that we see work really well with agencies throughout this year, and this was a Daniel Fazio recommendation, when he spoke at the Q1 mastermind of this year, he had said that what's it called? A setup offer. That's what he called it, a setup offer.
+[57:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Setup Offer for Agencies"
+NÚMEROS: +$70K/mês adicional (caso Evan)
+VISUAL: Modelo de "setup offer" para agências: oferta baseada em resultado onde você configura o sistema e entrega ao cliente, com alta taxa de upsell para gestão completa
+[57:55] And we've seen, as an example, Evan is one of the guys that I think wrote this out really well. There was another inner circle member this year that was doing quite well with that named Adam. But Evan specifically is still milking the fuck out of that. That added an extra like 70k a month to what Evans revenue was.
+[58:15] And these setup offers are essentially as described. It's like rather than doing a recurring offer, you have some kind of like outcome based offer where you're setting somebody up to then just like hand it off to them and have them run it on their own.
+[58:30] And usually there's a pretty high upsell rate to just you taking it over and doing whatever it is that you set them up to do after that. But yeah, setup offers are really good and that could be done.
+[58:45] So is that like a build like buildin release same thing?
+[58:50] Kind of. Yeah. Moral of the story is if you want more details on that and you want to hear it from Daniel himself, just go to the mastermind library and navigate to Daniel Fazio's talk from the Q1 2025 mastermind and he talks about it inside of that chat that he has. Really good talk, man.
+[59:10] Okay, cool. Yeah. So, let's read through some of your plans here and see what you guys came up with. So, Simone says she's going to launch her low ticket funnel. She's also going to do her weekly webinars. She's going to do a challenge funnel in Q4. That's very good, Simone. Definitely setting yourself up for success.
+[59:30] Daniel says, "Launching slash testing new offers, new creatives." Make sure you blitz through that. By the way, Daniel, very important to note like in terms of time frame, you don't want to still be like in the testing phase at the last week of September.
+[59:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "September Testing Timeline"
+NÚMEROS: Primeiras 3 semanas = teste agressivo, última semana = momentum já estabelecido
+VISUAL: Timeline de setembro mostrando janela crítica de teste nas primeiras semanas, com momentum já construído antes de outubro
+[59:55] Ideally, the first three weeks of September, like you are aggressively dialing shit in if it's new and you get to the point where you come out the other side with that in motion. And like remember, you got to run through the wall. So, it's got to already be in a momentum state like running into October. Very important. Focus on the front end of the month.
+[01:00:15] Brennan says, "Standard book of call funnel plus low ticket to high ticket scale. Plus a lump sum event end of September and mid November." Yeah, smart play. Awesome. Make sure you time it right. Mid November is perfect, by the way.
+[01:00:35] It's like the perfect time of year where people still have money. A lot of people, as we saw in these last several years, it's actually pretty interesting. The most recent November, a lot of people seem to be Black Friday scamming where they'll just like act like they have a discount, but they don't have a discount, and they'll like mark up the regular price and make it look like the price they regularly charge at is the discount.
+[01:01:00] I think that a lot of people got called out on that. And I think that this year will actually be like a great Black Friday year. So, I do expect there to be like some serious sales.
+[01:01:15] And I do think I do think and this is a bet. This is all an assumption that I'm saying at this point. I have no data to back what I'm communicating. It's a pure gut feeling.
+[01:01:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "2025 Black Friday Prediction"
+NÚMEROS: Anos recentes = ofertas fracas, 2025 = previsão de ofertas reais
+VISUAL: Análise de tendência prevendo retorno de ofertas genuínas de Black Friday após anos de "scamming" de preços
+[01:01:35] I believe that this year it will be like a true Black Friday and a true Cyber Monday. I think it will actually be some banging deals and I think that it'll milk a lot more money than people currently anticipate because the last several years just haven't had anything good.
+[01:01:55] You know, like maybe you're in agreement, maybe you're in disagreement with what I'm saying, but like Black Friday just hasn't been what what it's supposed to be for like years in a row. And there's so much significant macro change this year. I think it just makes sense to have some serious good offers during that period of time.
+[01:02:15] So, be prepared for people to be a little cash with a little less dry powder during that period of time from spending the money on some good stuff.
+[01:02:30] John says, "Film a fuckload of ads for the current webby and nail down show up rates. Launch a three-day challenge. Smart." Simone says she needs her trophy. Still time before October. Yeah, as long as you finish September there, we'll happily give you your trophy.
+[01:02:50] We got $3 million month trophies and the speakers for those that are going to be talking at our upcoming Q4 October mastermind. We also have a $5 million a month trophy. Those guys in particular, they are currently shopping an exit and they might be able to go, they might not be. We'll end up finding out soon enough.
+[01:03:10] Let's see. Unfuck my call funnel and low ticket funnel test book a call. Webby smart play Charles again bias towards the first part of September for the testing grounds for that.
+[01:03:25] Mason says low ticket mini-course launch in two weeks big high ticket upsell to high performing students deal renewals for existing. Yeah great smart play Mason.
+[01:03:40] Terron says optimize existing funnel CRO call funnel advertorial webinar for preparing for Q4 email service. Smart.
+[01:03:55] And Brennan says I promise we will hit 1 million a month non-negotiable. Yeah, you better. You better. Nothing whacker than fucking being below a mill a month. How you supposed to fly around on PJs below a mill a month? You know, you got to take the small ones.
+[01:04:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Participant Battle Plans Summary"
+NÚMEROS: $1M/mês meta, $3M e $5M troféus disponíveis
+VISUAL: Compilação dos planos de ação dos participantes mostrando diversas estratégias: CRO, low ticket, challenges, webinars
+[01:04:20] Okay. Anyway, anybody have any questions? Anything else you guys want to follow up with? Any contributions you guys have for something you've seen historically work well for you in Q4 that you want to share?
+[01:04:35] Okay, cool. Well, great call. Take this so serious. Okay, I can't stress it enough. I'm not trying to like make you freak out or anything, but time and time again throughout Q4, the amount of you that are going to contact me in some like highly reactive, hyperfucked position because you didn't prepare is unimaginable.
+[01:04:55] Every year I'm always shocked by how many of you go into Q4 just acting like you didn't know it was going to happen. You know, like you contact me and you're like, "Oh my god, like my CPMs are through the roof or like my costs are in like my profitability is eroded by like this much."
+[01:05:15] And I'm like, "Yeah, dude. It's this time of year. Like, what the fuck do you need?" You know, and then I give you a lot of stuff to do. And to be clear, when you test stuff in Q4, it's going to be very unconclusive because a lot of the testing you do in Q4 is going to look like shit when it doesn't work.
+[01:05:35] Whereas when you do testing during the other nine months out of the year, like the test still might look all right. You know, it just might not have been the best test that you launched, but like Q4 testing is so brutal. Just like vaporizing money.
+[01:05:50] You don't want to do significant testing in Q4, right? You'd rather have something that's already dialed in going into Q4 that you're just trying to feed money into to gain more and more and more momentum. Okay? That's the key.
+[01:06:10] Don't be one of the people that ends up in a hyperreactive position. Of course. Is that probable to happen to some of you? For sure. For sure. And don't worry, we're here. We'll help you out. We have plenty of things that we can encourage you to do in real time to make sure that you come out the other side profitable.
+[01:06:30] It's not a scary time of the year. It's actually a great period of time to make a lot of fucking money. This is a period of time where consumers are conditioned to spend a lot of fucking money.
+[01:06:45] And as I mentioned, business owners, even if you're in a B2B demographic, still spend a fuckload of money, okay? Write offs, the just natural conditioning to let it flow during this period of time. It's a great time of year, okay?
+[01:07:05] However, man, if you're unprepared or you act like it doesn't exist, you're going to get fucked on so hard. Okay? Don't be one of those people.
+[01:07:20] Nick says his plan is aggressively attack cost per app/call on the maiden call funnels to strengthen profitability. Lander test and several new ad angles and variation launched per week. Second step identify what funnel type we can launch that can strengthen profitability. Low ticket funnel for example to liquidate spend. Once we can have our clients quickly create the product. One that we can have our clients quickly create the products for. Yeah. Perfect.
+[01:07:50] All right guys, listen. It's Saturday. Okay. It's still technically August while we sit here and film this. Monday is September 1st. Monday's Labor Day. Everybody's gonna be fucked off on Labor Day for the most part.
+[01:08:10] You can be dialed the fuck in this weekend getting all this stuff in motion. That way you go into September with all these things launched. Remember, take advantage of the first part of September. Okay.
+[01:08:25] Yeah. Nick says a great idea, which is you can increase price. Abso-fucking-lutely you can increase price. Offset your costs onto customers.
+[01:08:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Additional Strategy: Price Increase"
+NÚMEROS: Repassar custos para clientes via aumento de preço
+VISUAL: Estratégia adicional de combate à inflação: aumentar preços para compensar custos aumentados
+[01:08:45] Okay, cool. All right. Great call. Don't lose money. Make a fuckload of money. Per usual. Get richer. Talk soon.
+📊 RESUMO EXECUTIVO
+NÚMEROS PRINCIPAIS:
+70% do gasto anual total de ads concentrado em outubro, novembro e dezembro
+70% de inflação esperada em cost per result durante Q4
+Exemplo: $100 CPR atual → $170 CPR com inflação
+Cliente com $50K/dia em ad spend para challenge de final de setembro
+$700K/mês em ad spend (caso Cody Sanchez) rodando múltiplos funis simultaneamente
+$19M gerados em um único evento (exemplo de sucesso)
++$70K/mês adicional com setup offers (caso Evan)
+4x-5x ROAS pode cair para 2:1-3:1 com 70% de inflação
+$70 CPMs, 8% link CTR, 3.4% conversão para calls (exemplo de métricas)
+70% show rate considerada boa
+15-20% close rate pode ser melhorada
+Ciclo de velocidade de caixa ideal: menos de 4 semanas
+50% de ativação = 50% probabilidade de upsell
+6 vendas anuais em uma semana usando popcorn pricing (vs. 0 anteriormente)
+ESTRATÉGIAS E SISTEMAS:
+PREPARAÇÃO DE SETEMBRO:
+Setembro é o "mês de momentum" - ganhar velocidade antes de Q4
+Analogia das três paredes: outubro, novembro, dezembro (cada uma mais espessa)
+Analogia do furacão: preparar com 30 dias de antecedência vs. 1-3 dias (desastre)
+Foco nas primeiras 3 semanas de setembro para testes agressivos
+Última semana de setembro deve ter momentum já estabelecido
+CRO (CONVERSION RATE OPTIMIZATION):
+Análise de gargalos (bottleneck analysis) para identificar estatísticas fracas
+Fortalecer métricas específicas antes de 1º de outubro
+Meta Andromeda best practices para reduzir CPMs
+V3 ads para aumentar drasticamente link click-through rates
+Foco em melhorar: CPMs, link CTR, opt-in rates, show rates, close rates, AOV
+FUNIS DE LUMP SUM:
+Challenge funnels de 3 dias no meio de Q4
+Timeline de promoção de 60 dias para challenges
+Timing ideal: meio de novembro ou início de dezembro
+Evitar meio/final de dezembro (conflito com feriados)
+3-4 semanas de atividade de vendas pós-evento
+Vendas temáticas aproveitando feriados (Labor Day, Black Friday, etc.)
+LOW TICKET TO HIGH TICKET:
+Essencial ter dialed in durante Q4
+Liquida custos de aquisição em funis não-pagos
+Velocidade de consumo = timeline do ciclo de vendas
+Taxa de ativação dita probabilidade de upsell
+TIPOS DE FUNIS LOW TICKET:
+Book funnels (livros curtos, fáceis de consumir)
+Mini courses (curtos, orientados a resultados)
+SOPs com biblioteca de vídeos
+Produtos físicos como "prova de conceito"
+Paid webinars/trainings/crash courses
+Setup offers para agências
+ESTRATÉGIAS DE ACELERAÇÃO:
+20 resumos executivos para livro de 20 capítulos
+Sequência de email de 20 dias
+Versões em vídeo e áudio de resumos
+Popcorn pricing (3 meses upfront torna anual mais atrativo)
+DIVERSIFICAÇÃO:
+Não ser "one-legged stool" (banqueta de uma perna)
+Múltiplos funis para quando um inevitavelmente sofrer
+Modelo Tai Lopez: 1 marketer por oferta
+Caso Cody Sanchez: webinars + challenges + VSSL + low ticket simultâneos
+TIMING ESTRATÉGICO:
+Terça-feira antes de Thanksgiving para webinar (evitar quarta de viagem)
+Vendas temáticas para Black Friday/Cyber Monday
+Aproveitar window de write-offs de final de ano (novembro-dezembro)
+Gauntlet de final de ano: entre Natal e Ano Novo
+ESTRUTURA DE Q4:
+OUTUBRO:
+Inflação moderada
+Ainda gerenciável
+Piora próximo ao Halloween
+NOVEMBRO:
+1º de novembro: "choque" de inflação
+Pior mês de Q4
+Black Friday e Cyber Monday intensificam
+Vendas estendidas continuam após Cyber Monday
+DEZEMBRO:
+Vendas estendidas de BF/CM até Natal
+Pausa durante feriados
+Gauntlet final: Natal até Ano Novo
+Primeira semana de janeiro: volta ao normal
+FATORES DE INFLAÇÃO:
+Ecom boys gastando 70% do orçamento anual em 3 meses
+Audiências com menos dinheiro disponível progressivamente
+Menos tempo de scroll (feriados, time off)
+Custos de leilão sobem mesmo com menos anunciantes
+ERROS A EVITAR:
+Entrar em Q4 sem preparação (posição hiperreativa)
+Testar novos funis durante Q4 (resultados inconclusivos)
+Ser one-funnel business (vulnerável)
+Diversificar atenção demais em setembro
+Agendar eventos no meio/final de dezembro
+Livros longos em book funnels
+Produtos low ticket com consumo lento
+RECURSOS DISPONÍVEIS:
+Weekly group calls sobre challenge funnels
+Challenge funnel SOP
+Low ticket to high ticket mastery (biblioteca de calls)
+Módulos de CRO
+Treinamento V3 ads (Timothy)
+Módulo V3 ads (Euan) - em breve
+Talk de Daniel Fazio sobre setup offers (Q1 2025 mastermind)
+CASOS DE SUCESSO MENCIONADOS:
+J: 4x+ ROAS em webinars, $19M em um evento, fazendo challenge em Q4
+Carlton e Jared: $1M/mês, fazendo challenge no meio de Q4
+TJR: Comprou Coen Sig + Inner Circle na mesma semana, challenge no meio de Q4
+Evan: +$70K/mês com setup offers
+Cameron: Vendeu 6 anuais em uma semana com popcorn pricing
+Cody Sanchez: $700K/mês em ads, múltiplos funis lucrativos simultâneos
+FILOSOFIA CENTRAL:
+"Where attention goes, results flow"
+Preparados prosperam, despreparados sofrem
+Q4 é ótimo para fazer dinheiro SE preparado
+Consumidores condicionados a gastar em Q4
+Business owners gastam mais (write-offs)
+Setembro = 30-day hurricane warning
+Correr através de três paredes requer momentum máximo
+Fortalecer o que já funciona + adicionar diversificação
+DURAÇÃO: ~1h 09min
+FORMATO: Aula estratégica ao vivo com Q&A, apresentação de slides, exemplos de casos reais

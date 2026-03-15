@@ -1,0 +1,780 @@
+Transcrição Completa: Josh Troy Sales QA
+[00:00]
+"All right, without further ado, ladies and gentlemen, please give a big round of applause to Mr. Josh Troy."
+[00:03]
+"Thank you, sir."
+[00:05]
+"All right, what's going on, guys? Um, yeah, Jeremy, this is actually, I think, the fourth or fifth time now. Uh, who's been in this group since 2021? So, that was probably the first year that I spoke at one of these."
+[00:18]
+"Um, yeah. Anyways, for those of you who have seen my presentations, I go very deep. Um, that's kind of part of my positioning and what I care about. I really like sophisticated stuff."
+[00:28]
+"Uh, like Ryan said earlier, uh, Ryan Clog, um, he just wants to be like the best version of himself. This is all he ever wants to do. This is all he wants to talk about. I relate to that heavily. Like I like to play this at the highest level."
+[00:42]
+"And so, you know, I could go an inch wide and a mile deep on any subject. In the past, I'll do these really long presentations. They're very technical and then I'm just like bombarded with questions and we never have time to get to them."
+[00:55]
+"So, this time I just wanted to do a full Q&A if you guys just want to start literally anything sales ops and we'll see where this takes us."
+PRIMEIRA PERGUNTA: CALL INTELLIGENCE SOFTWARE
+[01:05]
+"Um I have a question actually for like there's Fathom, there's Bulma, there's Gong, there's so many different software that you can use for call intelligence. Which one do you think is like for you personally based on what you've seen the most accurate?"
+[01:18]
+"And then on top of that, how much do you use that in decision-making on a week-to-week basis uh to like train your sales people on like—"
+[01:26]
+"Yeah. So for those of you who don't know, he's asking about call intelligence softwares uh which is basically like AI call analysis. There's a bunch of different products in the market. He was just naming a bunch of them."
+[01:38]
+"The fact of the matter is it doesn't really matter here. Here's the thing. They all have most the basic capability. What matters and why most of them are useless is because it's kind of like a CRM."
+[01:50]
+"The tool itself isn't the important thing. It's the configuration and the configuration needs to be custom to your actual workflow and your sales motion."
+[02:00]
+"So you need to find one and then have a standardized configuration. So we use Avoma. Why do I use Avoma? I'll be very honest. It's not because there's anything special with the software."
+[02:12]
+"It's because the CEO wanted my business so badly. He said, 'I'll put my entire engineer team on this and you could do whatever you want.' And I said, 'All right, I'll work with you.'"
+[02:22]
+"And so he built a bunch of custom features for us. And that's kind of cool. We have that leverage sometimes because we have a bunch of different brands and we standardize every tech stack."
+[02:32]
+"So we'll roll it out across everybody. So since I had that leverage, I chose them and they did literally that. I mean, we have features that nobody else has."
+[02:43]
+"And so what we did um and you guys might have heard me talk about this last time. We trained AI uh and the learning model on our entire sales curriculum that has taken us years and years to build and revamp."
+[02:57]
+"We have a custom process for that. We train the AI on that. We built scorecards based on that. And then we calibrated it."
+[03:05]
+"We went through a three-month calibration period where what happened was every time my sales management team scored the calls manually based on the configuration and did call reviews within the software."
+[03:18]
+"And so the software now knows exactly how we do call reviews, exactly how we grade calls and how we develop our team members."
+[03:26] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "AI Call Intelligence System"
+NÚMEROS: 100%, 3 meses de calibração, 4 scorecards principais
+VISUAL: Sistema de inteligência artificial para análise de chamadas, processo de calibração com equipe de gestão de vendas, scorecards automatizados
+[03:28]
+"So now 100% of every single call taken in the whole organization is automatically graded, scored, and given feedback to every single rep."
+[03:38]
+"And on a weekly basis, it creates a custom rep development plan for them. So if you have sales managers, um you guys know that you're only ever managing with sample sizes."
+[03:48]
+"The economics will never make sense to be able to listen to 100% of every call. And so the idea is the hope the goal is that you can have enough coverage where it's indicative of what's really happening."
+[04:00]
+"But I want to know what's happening on 100% of calls. And so we have four main scorecards."
+[04:06] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "4 Main Scorecards"
+NÚMEROS: 4 scorecards, 100% cobertura
+VISUAL: Estrutura de 4 scorecards principais: Sales IQ (qualitativo), Process Compliance (aderência ao processo), FTC Compliance (conformidade regulatória), Product Knowledge (conhecimento do produto)
+[04:08]
+"We have uh sales IQ scorecards which is qualitative. It's like how well are they doing based on these criteria. We have process compliance meaning how specifically and directly are they following our process on in talk track."
+[04:21]
+"The third one is FTC compliance because that stuff is really important to us. And then the fourth is product knowledge which is custom based on the offer they're selling."
+[04:30]
+"So the short answer in that is uh pick anyone. It doesn't matter but then make sure you have a custom configuration because if you use an out of the box scorecard it's useless. It doesn't do anything for you."
+SEGUNDA PERGUNTA: CULTURA DE TRABALHO EM FINS DE SEMANA
+[04:43]
+"I got a couple but I think they'll be relevant to everyone. Um encouraging or designing a culture where closers work on nights or weekends or having specific reps for that time. Is that something you guys do or how do you think about that?"
+[04:58]
+"It depends. Um and it depends on the avatar and the audience. There are some offers that for whatever reason a lot of the times with B2B like business owner offers where they want to take their calls nights, weekends, whatever."
+[05:12]
+"And so it's more important to some of those offers. We also have offers that they have uh webinars twice a week."
+[05:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Webinar Schedule Strategy"
+NÚMEROS: 4 webinars por semana, 4 horas cada, 7 dias de cobertura
+VISUAL: Calendário de webinars ao vivo, cobertura semanal completa, estrutura de equipes alternadas
+[05:22]
+"We actually Jeremy and I have an offer we work on together does four webinars a week live. They're four hours long. So in that case, uh we have reps that have coverage seven days a week."
+[05:34]
+"And here's where people go wrong. I'll put it like this. Here's where people go wrong is they try to use the same team for that availability and that's just impossible. You're going to burn them out."
+[05:44]
+"And so it's two different teams and their off days are staggered. And so that has to start with the hiring process."
+[05:52]
+"So some people work Friday till what is it Monday and have Tuesday, Wednesday off and then the rest is like a normal week. So it's just staggered and layered."
+[06:02]
+"And then the last thing I'll say is comp plan is the ultimate tool. Reps will do everything for two things. It's compensation and it's acknowledgement."
+[06:14] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Rep Motivation Formula"
+NÚMEROS: 2 fatores principais
+VISUAL: Duas colunas principais - Compensation (remuneração) e Acknowledgement (reconhecimento), estrutura de gamificação, spiffs, guerras e competições
+[06:16]
+"So you have to create a culture around acknowledgement and have spiffs and wars and competitions. I love what they said earlier about gamification. We gamify everything."
+[06:26]
+"Um and then you have to pay people. So if you're having a challenge incentivizing them to take those activities, just create compensation incentives that align with that."
+[06:36]
+"So that's the two ways we do it. But don't have them take calls seven days a week. That won't work."
+TERCEIRA PERGUNTA: FEEDBACK LOOP ENTRE MARKETING E VENDAS
+[06:44]
+"All right. I'll do one more. How do you create the you talk a lot about incorporating sales team feedback into the marketing. Do you have like a weekly sync with both of them on the call or how do you structure those?"
+[06:56]
+"Yeah, so every single week, one of the most expensive parts of high ticket sales operations when you're direct response, it's lead generation. It's an offline conversion and an extended sales cycle."
+[07:08]
+"You have to have the shortest amount of time, the time to knowledge and the feedback loop between marketing and sales. So it's so expensive when there's a gap between those things."
+[07:18]
+"And so we meet weekly, but we're in Slack daily and sometimes we have things that we pick up on even faster, but once a week it's marketing the brand and it's us."
+[07:30]
+"We go over marketing metrics, we go over sales metrics, and then we talk about feedback and it's everything that we're hearing on the phones. It's the main objections we're getting."
+[07:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "AI Call Insights & Trends Deck"
+NÚMEROS: Últimas 30 chamadas, 17 de 30 mencionaram objeção específica
+VISUAL: Dashboard de insights de IA, rastreadores de FAQ, rastreadores de objeções, matriz de qualificação, conversão de dados qualitativos em quantitativos
+[07:42]
+"Um what I have now in the last few months we've implemented this. We are investing heavily into AI and whatever the word heavily means to you right now increase it a little bit and that's how much we're investing in that right now."
+[07:56]
+"It's been significant and so we actually have uh I forget what we call it it's a call insights and trends deck that we now create."
+[08:06]
+"Aside from the scorecards in the configuration. We have all of these qualification matrix, we have FAQ trackers, we have objection trackers, and we configured it this way."
+[08:17]
+"And so we can turn all qualitative insights into quantitative. So the hardest part about lead quality, by the way, for those of you who've heard me speak, I say my sales management team is not allowed to use the word lead quality."
+[08:32]
+"I despise that word because it's useless to anybody and it's not actionable and lead compared to what and what made it lower quality and how do we fix it?"
+[08:42]
+"So, the hardest part about the feedback loop with what's happening on the call and translating that to marketing is you don't actually know quantitatively if there's an impact."
+[08:52]
+"I can literally tell you now any objection whatever they say I could say hey out of the last 30 calls 17 of them said this and it's all categorized."
+[09:02]
+"And so now we can actually manage what was never managed before without AI we could actually manage based on real statistics and data of what we're hearing on phones and that's the shit that we give to marketing."
+QUARTA PERGUNTA: GESTÃO DE TIME FEMININO
+[09:15]
+"We have a female sales team. What do you think is crucial when in regards to users when it's only women?"
+[09:26]
+"Um what can you explain that maybe differently? What do you mean when you say what do I think is crucial?"
+[09:32]
+"Is there a difference when when it comes to leading only a female sales team versus a male team."
+[09:40]
+"I want to be extremely clear here. We have a lot of males and a lot of females. Um we hire whoever's best by the way. So gender has nothing to do with it."
+[09:50]
+"I'll tell you this though. Um we have a much lower percentage of females because of just application and hiring metrics. There's a lot less females that are applying to these roles just statistically."
+[10:02]
+"I actually we have an all women brand and it's an all women sales team on that specific brand. So I know what you're referring to companywide though. That's obviously not our deal."
+[10:14] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Management Style Differences"
+NÚMEROS: Não especificado
+VISUAL: Comparação de estilos de gestão: abordagem mais suave vs agressiva, necessidade de nurturing, reconhecimento e empatia para times femininos, tolerância diferente a feedback direto
+[10:16]
+"Um here's what I'll tell you. Uh they do have a much they require a much softer um management style. They require more nurturing. They require more acknowledgement and a little bit more empathy."
+[10:30]
+"Um we have seen and even with high performing high performing competitive like men salespeople I don't know why but like they have like a thing for pain. Like they want to be like you're a piece of shit."
+[10:43]
+"Like now we don't do that but I say that half joking because like they react well to that. It's like dude like who even are you bro? You can't close a freaking open-face sandwich today."
+[10:54]
+"Like they react to that. Uh a lot of the times a female will cry and maybe quit if that happened. So you have to be aware of just that dynamic of what motivates people and what they care about."
+[11:06]
+"Um but other than some of those technical like management leadership traits, the team itself is the same. Um, and then to your point, the biggest difference is who they're selling to because their selling style is usually different based on the avatar."
+QUINTA PERGUNTA: PROCESSO DE FOLLOW-UP
+[11:22]
+"What's your process around follow-ups so the deal doesn't close on the first call? What's your guys' like SOP around that?"
+[11:30]
+"Yeah. So, um, in every playbook for every position, we have KPIs, but then we have expectations. And I think that those need to be talked about a little bit more because KPIs is like everyone uses that even if they don't even have them because it's a buzzword."
+[11:46]
+"But there's also expectations. So you can't put follow-up into a KPI technically. I mean the metric would technically be booked call close rate because how efficient are they with all the leads that they were assigned?"
+[11:58]
+"That would be the KPI. But the expectation is a minimum amount of contacts, attempts, etc. And so I don't have those off the top of my head, but we have that in the playbook."
+[12:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "High Velocity Sales Math"
+NÚMEROS: 8 chamadas/dia, 22 dias úteis/mês, 176 novas chamadas/mês por rep
+VISUAL: Cálculo de volume de chamadas, desafio de gestão de pipeline em alta velocidade, impossibilidade de rastreamento mental
+[12:12]
+"What's most important is this. It's high ticket, but it's not just high ticket. It's high velocity sales based on this game that we play."
+[12:22]
+"On an average of eight calls a day, there's an average of 22 working days in a month. That's 176 new calls per month per rep."
+[12:32]
+"How are you going to manage them at every single stage of their journey? How do you know like who to follow up with and when and what person you owe a text to and who was about to close and didn't?"
+[12:44]
+"Mentally, you'll never know. By the way, your managers won't know either. You can't do it. It's impossible."
+[12:50]
+"So, the answer to that question and in a long time, I'd get really frustrated with this because so much neglect and I'd be like, 'Dude, do you guys not give a shit about us?'"
+[13:00]
+"I'd take it personally. Like, do you not care about the business as a whole? And I changed my belief around that a long time ago because I had way too many people and no matter who I hired and how good they were and how much I felt like they cared, it was always the same problem."
+[13:14]
+"And I realized people and reps genuinely want to do a good job, but they can't because of the concept I just explained."
+[13:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Priority Buckets System"
+NÚMEROS: 7 dias para próximo fechamento
+VISUAL: Sistema de buckets de prioridade, smart views em CRM, filtros customizados, listas baseadas em atributos específicos
+[13:24]
+"So the answer to your question is all systems. And so we have priority buckets. Raise your hand if you've seen me talk about those."
+[13:34]
+"I mean most of the room is new so it makes sense that most of you won't have your hand up. Um, but the priority buckets is for exactly that."
+[13:42]
+"And in what we do, the way we design our priority buckets, uh, that's what we call them, but uh, in a technical term, they're smart views in CRM. Some CRM call them filters. It's a custom list based on certain attributes."
+[13:56] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Priority Bucket Structure"
+NÚMEROS: Bucket 1, 2, 3, etc., 7 dias, 90% probabilidade
+VISUAL: Hierarquia de buckets: 1) Tomorrow's Calls, 2) Hot List (próximos 7 dias), 3) Expected Close Date Past Due, 4) Qualified Not Closed, 5) Neglected Deals, 6) Lost Deals Previously Forecasted, 7) Lost Deals Low Attempts
+[13:58]
+"And so what we did is we think of everywhere that revenue leakage occurs and we reverse engineer that to come up with like, well, what do we put in place at that point?"
+[14:08]
+"So, for example, we have one that this one's not really a revenue leakage bucket, but the first bucket is going to be tomorrow's calls because we want them to get prepared, make sure they were all confirmed."
+[14:20]
+"The second one is going to be hot list, which means that there's a high probability of closing within the next seven days because again, that's the closest to convert to cash. It's priority number one."
+[14:32]
+"Number two, be technically behind that unless you count the first one, then it'd be three, is expected close date past due, first point of revenue leakage."
+[14:42]
+"Your highest most probable to convert to cash and they didn't and it said they were supposed to already close. Sometimes those are arguably hotter than the ones that aren't due yet."
+[14:52]
+"So it's like well what happened? Did you schedule a follow-up? Um did they ghost you? Like do you need to re-engage them?"
+[15:00]
+"And so that'd be expected close date past due. The other one would be qualified not closed. Then we have neglected deals which is determined by a certain amount of days that they haven't been engaged."
+[15:14]
+"So once you work through all of these active conversations on where they're at, then it shows you the ones that are being neglected."
+[15:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Management Report Buckets"
+NÚMEROS: 9 tentativas de contato mínimas, máximo 2 por dia
+VISUAL: Buckets paralelos para gestão, "Lost Deals Low Attempts" como bucket de auditoria, comparação com expectativas de tentativas de contato
+[15:24]
+"And then at the very bottom of everything um in a management report, so you have your priority buckets for the reps."
+[15:32]
+"Um there's all these priority buckets on the rep perspective, but then you have to have the parallel ones on the management perspective so we know that they're doing what they're supposed to be doing."
+[15:42]
+"And my favorite bucket at the bottom of the list is uh lost deals, low attempts. So there's actually two qualified lost deals and then uh or sorry, lost deals previously forecasted and then lost deals low attempts."
+[15:56]
+"And here's why. Because if there was a deal that they were saying there's a 90% chance of them closing and they didn't. I want to know why. That is one of the most important buckets."
+[16:08]
+"That's your biggest spiff bucket. Reopen. You want to see a competitive rep assign a deal and tell them, 'Hey, this was a qualified lead that this person that's ahead of you right now on the leaderboard was supposed to close and didn't. Let's see what you can do with it.'"
+[16:22]
+"But the other one is lost deals, low attempts. That's the gotcha bucket. Because they have to zero out these buckets on a daily basis, the closers. They have to make sure everything's up to date."
+[16:34]
+"Well, you can cheat the system by just closing leads out. But in the lost deal, low attempts, that's where we compare to the expectations."
+[16:42]
+"If we said, 'Hey, you're supposed to have nine contact attempts.' Uh, and then there's qualifiers, too. So, it's like no more than two per day, x amount of calls, x amount of texts. We have all these things."
+[16:54]
+"If they're in that bucket and it's under those thresholds, then we compare it and we can see who's not actually efficient with the pipeline."
+SEXTA PERGUNTA: CLEANERS NO PIPELINE
+[17:04]
+"Do you I know some people use like cleaners to help closers in their pipeline. Do you once a lead goes to the closer, do they own it the entire time or do you guys use cleaners at all?"
+[17:16]
+"Describe cleaners."
+[17:18]
+"So cleaners I've seen in the past is someone that comes in and like re-engages the lead for them."
+[17:24]
+"We don't. And I'll tell you why we don't. Because there is an acceptable level of reasonability of like, hey, you have good intentions, but let me give you all the systems to do your job well."
+[17:36]
+"But then there's just enabling bad behavior and creating really lazy reps. I'm not going to hire somebody to take care of the shit that you can't do."
+[17:46] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "CRM Admin Audit System"
+NÚMEROS: Não especificado
+VISUAL: Sistema de auditoria via CRM admins, relatórios de vazamento de pipeline, sistema de tags, expectativas de tempo de resposta, penalidades por não conformidade
+[17:48]
+"But what we do have is uh CRM admins and all they do is audit. But that's an accountability thing. They're not cleaning and doing things. They're directly reporting on like this person has this much leakage."
+[18:00]
+"They're going through that and they're leveling all those insights up to the sales management team right now. And by the way, in that system, they're tagging the reps."
+[18:10]
+"And then there's a certain expectation of when they have to respond to that tag from the CRM admin to get back on track and then we penalize based on those things."
+[18:20]
+"But we don't have somebody that takes care of their pipeline. That's an important skill set a closer has to own. The second they have that call, they own the life of the lead."
+SÉTIMA PERGUNTA: NOTAS E GRAVAÇÃO DE CHAMADAS
+[18:32]
+"Are you recording your sales calls and are the closers taking notes? And then afterwards, what's the process to make sure that's in the CRM?"
+[18:42] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "AI-Powered Note Taking"
+NÚMEROS: Não especificado
+VISUAL: Sistema automatizado de notas via IA, formato padronizado: discovery questions, core desires, pain points, lead quality summary, next steps, recommended materials
+[18:44]
+"All AI now. And so, um, we had in our training exactly the type of notes that we wanted people to take. We pulled our hair out on a weekly basis because imagine the amount of reps we have and trying to get every single person to take notes the same way."
+[18:58]
+"And so I standardize that. It's in the configuration in the software that we use and it just automatically connects to it. So all the notes are like picture perfect."
+[19:08]
+"It's like here's the discovery questions that were asked. Here's the core desires. Here's the number one pain points. Here's the lead quality summary. Here's the next steps. Like here's the material we recommend."
+[19:20]
+"It has everything that we want the notes to be summarized in. And so we don't have that issue anymore."
+[19:26]
+"And what's the software?"
+[19:28]
+"So, that was the one I was saying earlier. We use Avoma. Um I think there's a lot of really good ones out there and it doesn't really matter as long as you configure."
+[19:38] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "CRM Standardization"
+NÚMEROS: 98 páginas de SOP, 72 horas para deploy
+VISUAL: Manual de configuração de CRM, processo de padronização, deploy rápido para clientes, documentação completa
+[19:40]
+"It's the same thing with CRM. People used to always ask me what's the best CRM? It's not that one is better than the other. It's that one is better than two."
+[19:50]
+"Meaning like what we do at scale everything has to be standardized. So like Close may be good, Go High Level may be good, Pipe Drive, HubSpot, none of that stuff matters. We just have to pick one so we can standardize it."
+[20:04]
+"We have a 98 page CRM configuration SOP that we deploy and set up for clients in 72 hours. I could never do that if I was in every CRM."
+[20:14]
+"So it's just like pick one that has the features that you want and then focus on a custom configuration that you could document and standardize."
+OITAVA PERGUNTA: FEEDBACK AO VIVO NAS CHAMADAS
+[20:24]
+"And does that software also give you like live feedback on the call? For example, like this prospect just had this objection. Okay, like this is exactly how to handle it. Like this is the script. Could I like give it live or is it more after the call itself?"
+[20:38]
+"So, it changed what I thought you were asking at the very end. We do not do it live. It has those features. I personally don't believe that to be effective. I found it to be more distracting."
+[20:52] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Live AI Feedback Limitations"
+NÚMEROS: 10 segundos de contexto vs contexto completo da conversa
+VISUAL: Comparação entre feedback pontual de IA vs habilidade humana de conectar múltiplos pontos da conversa, limitações do contexto em tempo real
+[20:54]
+"I don't think that reps in real time and also AI is really tricky because even as dialed in as you could get it to give you like the perfect response that makes sense when you're like here's what AI can do."
+[21:06]
+"AI can tell you exactly what to say based on what you trained it to say off that one thing. But I know as a great salesperson myself that when a closer is in the moment, they're connecting the dots from the past 10 things that were said."
+[21:20]
+"And they're trying to work to a certain situation. I don't want to throw them off with something that's only relevant to that 10 seconds. So, we don't do that. Uh, but we do develop them after."
+NONA PERGUNTA: GAMIFICAÇÃO E TREINAMENTO
+[21:34]
+"You talked about gamification and incentives and sales management. How do you gamify?"
+[21:42] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Training Center Gamification"
+NÚMEROS: $30,000 investidos em treinamento externo, 100% completion necessário
+VISUAL: Sistema de treinamento progressivo, unlock de conteúdo por mérito, estrutura de qualificação para acessar níveis avançados
+[21:44]
+"I'll give you a perfect example. So, we have arguably the best like most thorough sales training that I've ever seen. It's just very comprehensive. Like all of our sales curriculum, all of the SOPs and training, the playbooks, um the product knowledge for the offer they sell, everything we have."
+[22:00]
+"And what really frustrated me was that we would have reps that basically everybody treated it as a one-time event. So like they would onboard, they have to go through 100% completion to be placed on call."
+[22:14]
+"So they would be like, 'This is the best training I've ever had, blah blah blah.' I'd be like, 'Really?' 'Oh, yeah. Well, why don't you fucking ever watch it again?'"
+[22:24]
+"And so what I realized is because there's some really good sales trainers out there, by the way. Um but I can't tell you the amount of times we hire a sales rep and they say, 'Dude, this is the best training we have ever gone through in our entire life, and we've paid 30 grand for sales training.'"
+[22:40]
+"We get that all the time. And but here's the interesting thing. Like if it's so valuable, why aren't they watching it way more often?"
+[22:48]
+"And so what we realize is they devalue it because it's free. It's given to them. And so now our system is we give them the bare minimum that they need to be at the level we want to be."
+[23:00]
+"Plus, you give them training overload when they learn too much. So we give them the bare minimum to go on calls and they have to qualify to unlock the other training."
+[23:10]
+"And it's something the entire management team has been trained on. It's like, 'Dude, trust me when I tell you, you're not ready for that. Focus on the basics.'"
+[23:20]
+"So, they're stoked once they get to the level where they're like, 'Oh, I can go through this now because we've determined that they've shown that they can handle that level of skill set.'"
+[23:30]
+"So, this is an idea of gamification where they unlock it and they can't wait to watch the training. Now, that's just one example. So, now surprise surprise, they watch it way more often."
+DÉCIMA PERGUNTA: ONE CALL VS TWO CALL CLOSE
+[23:44]
+"Thoughts on one call, two call with like possibly like a triage person or just directing to a closer on the one call."
+[23:54] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Call Model Decision Criteria"
+NÚMEROS: 3 critérios principais, 1 hora de duração típica
+VISUAL: Framework de decisão com 3 pilares: Show Rate, Clear Path to Results (CPR), Level of Awareness
+[23:56]
+"All right, so here's the criteria to decide between a call model. There's three main things. The first thing is your show rate."
+[24:04]
+"Why does show rate matter? Because typically if you're going to have a one call close, the call is going to be longer. So it's going to be like an hour."
+[24:14]
+"Because you need enough time to take them through the whole process, discovery and pitch, objection handle, and you don't want to hang up in the middle of taking money."
+[24:24]
+"So usually it's like an hour price point dependent of course and so if it's an hour long and you have a really low show rate imagine the downtime for the reps."
+[24:34]
+"The second thing is in the most simple way even though there's a lot of criteria for this I call it CPR clear path to results, clear path to revenue, clear path to ROI. How clear is that to understand in terms of the offer?"
+[24:50]
+"How complex is the offer in terms of a decision process? So, you know, something, some things that we sell, it's like we'll explain it in a paragraph and they're like, I don't even know what else to ask. It's really straightforward. If that's a response, one call close every time."
+[25:06]
+"But we have some things that even though we do our best to not create objections and not talk people out of the deal and we give them the bare minimum that we can, there's way more questions once they hear about the offer."
+[25:18]
+"And they're like, 'Man, but now it depends on this, this, and this.' And so the amount of people that can make the decision in that moment is statistically so much lower."
+[25:28]
+"Because of that, why are we going to pitch them before they're ready to receive it? Because now we have trouble. Now we have trouble chasing them and we want to hold the posture. So a lot of the times that's a two call close."
+[25:40]
+"Um and the third thing is level of awareness. It's all about level of awareness because if they show up to the call and the first question is what do you do? Dude, you have a big gap to bridge on that call."
+[25:54]
+"If they show up to the call and they're like I've been following this person, this is the amount of content. Oh dude, you're 80% of the way there. And so that's a strategy that you could work on."
+[26:06]
+"So that's what the call model depends on. Um we have criteria that I basically just explained on like how we evaluate that. But even still a lot of the time we're testing and pivoting based on the things that I just said."
+DÉCIMA PRIMEIRA PERGUNTA: SPEED TO LEAD E TRIAGE
+[26:20]
+"For like a speed of lead thing like a triage person in that same model. Are you guys calling immediately if like lead comes in versus booking like a day two days out or anything like that?"
+[26:34]
+"Oh, of course. As opposed to what?"
+[26:38]
+"Yeah, that's the model. Setters, closers, completely different roles. If you try to mix them, you'll lose a lot of freaking money."
+[26:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Setter vs Closer Model"
+NÚMEROS: 2 funções distintas
+VISUAL: Separação clara entre setters (qualificação, agendamento) e closers (fechamento), funções incompatíveis quando misturadas
+[26:50]
+"Completely different roles. You have people that are setting appointments and qualifying, building, amplifying interest, whatever. And you have people that are closing. Completely different role."
+[27:02]
+"So, yeah, it's two different people. Speed is super important. Focus on penetration, get them on content, qualify, and then set into the closer."
+[27:12]
+"The only thing is how are you differentiating on the first call sometimes with people as far as talking to a different person and not over talking on that first call?"
+[27:24]
+"I actually don't understand. What do you mean?"
+[27:28]
+"So they a lead comes in and they're having a call with that triage person to qualify before they talk to the closer. How are you kind of keeping the triage call initially pretty short so they're not kind of getting repetitive questions that the closer would go on again?"
+[27:44] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Strategic Overlap Between Setter and Closer"
+NÚMEROS: Não especificado
+VISUAL: Conceito de sobreposição estratégica, aprofundamento no setter call, importância da duração e profundidade da primeira chamada
+[27:46]
+"Okay, so again we talked about this a little bit earlier. You actually do want overlap, but it needs to be strategic overlap."
+[27:54]
+"And so what happens is on the triage and the discovery call actually what we see is there's a much higher show rate and a much higher throughput and close rate if they can go deeper."
+[28:06]
+"Most of the time the people the things that people struggle with with setters and you'll see it in all metrics. You'll see much lower show up rates from the set calls when set calls by the way should be the highest show up rates out of anything you do."
+[28:20]
+"They already had a full conversation with the setter. So if your show rate and your close rate from set calls is down then it usually is only a result of how the setter call is going and it's usually two things."
+[28:34]
+"They're not going deep enough and they're not going long enough. And so you could literally measure like what was the length of the call and what was the stuff they talk about. That usually perfectly equates."
+[28:46]
+"So, we do have a pretty deep discovery with the setters and we're not afraid to do that. The closer though, and here's the biggest issue."
+[28:56] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Call Review Best Practice"
+NÚMEROS: 2 chamadas analisadas juntas
+VISUAL: Processo de revisão de setter call + closer call em sequência, análise de congruência, fluxo como se fosse uma única conversa
+[28:58]
+"One of the biggest issues. I literally just talked about this a minute ago with somebody else in this group. One of the biggest issues who is a sales manager uh or like manages their own sales team?"
+[29:10]
+"All right. So, here's the thing. Even though this is intuitive, I'm sure you've maybe done it occasionally. What's so important with a setter model is you're watching the setter call and the closer call back to back."
+[29:24]
+"Like at the same time like the setter call plus the closer call and watch the congruency of them. Does it like if it was one actual call would it even make sense? The more seamless that is, the higher the close rate will be."
+[29:38]
+"And so because what happens is two things. Either it's way too repetitive, which was what the question was, or it's completely disconnected and they're almost ignoring all the information that was on the first call."
+[29:50]
+"And that's like the worst thing that you could do. So you do an information. So first of all, they read all the notes from the setter."
+[30:00]
+"And what you really want to do is understand out of the discovery, you want to understand what were the main things. So basically, the closer does another discovery, but only focuses on the things they know are most important."
+[30:14]
+"Now, because what is an actual discovery? It's an exploratory process to find out what the lead cares about. You're focusing on core desires, main pain points, expand the gap, amplify desire, and you have to ask a shitload of questions to find it."
+[30:30]
+"But once you already know it, now the closer is just going to focus on those things, but still into discovery to take them back to that state, take him a little bit deeper, and then transition into the pitch."
+[30:42]
+"So, if you're doing a discovery on the first call and then the second call you go right into the close, it's not super effective."
+[30:50]
+"You want to confirm and recap everything that happened on the first call. Take them deeper in the appropriate areas without being too repetitive because you know what they already talked about."
+[31:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Anchoring Back Technique"
+NÚMEROS: Não especificado
+VISUAL: Técnica de ancoragem: referenciar conversa anterior, aprofundar sem repetir, criar continuidade natural entre chamadas
+[31:02]
+"So, a lot of the times you're anchoring back. By the way, do you know how big of a difference it is to say this? Let's say that they already told you that their biggest pain point was they're not making enough money."
+[31:14]
+"And you start asking them questions like, 'So, how do you feel about your income?' That's where you lose them. They're like, 'Dude, I had a whole freaking call about this already.'"
+[31:24]
+"But imagine how simple it is to say this. So, listen. I know you were already talking to John about some things about your income. I just wanted to recap that for a second."
+[31:34]
+"When you said to him that like you weren't really feeling like you were making enough income, like compared to what? Like, where is that really stemming from?"
+[31:44]
+"Like, I'm still asking the same thing, but just simply referencing it and letting them know, I know you already covered this. I want to go deeper. It's night and day."
+DÉCIMA SEGUNDA PERGUNTA: MERCADOS SOFISTICADOS
+[31:56]
+"Do you have a framework that deals with like more sophisticated markets where they've been sold to a hell of a lot? They're very resistant to one call close."
+[32:08]
+"What's the question?"
+[32:12]
+"It's just like do you have a hypothesis, but it's not validated by amount of data that you have. You have a lot of data and I wondered whether you find there are certain very sophisticated markets which are characterized by them having been aggressively sold by everyone."
+[32:28]
+"Which makes them very resistant to closing and they therefore show a lot of tactics and whether that's actually true or not and how you deal with it."
+[32:38]
+"How you deal with what specifically sales resistance as a whole because they're sophisticated or are you saying like skip steps in the process because they don't want to go through it?"
+[32:50]
+"They'll maybe like show higher rates of ghosting, higher rates of just agreeing with everything just to get the information they need to then get off the call."
+[33:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Sophisticated Buyer Response"
+NÚMEROS: 2 respostas
+VISUAL: Dual approach: 1) Não há diferença se o processo de vendas for bom, 2) Sim, existem mercados mais sofisticados mas não se pula etapas
+[33:02]
+"So there's two answers to this, I guess. One is actually no. It depends on how good your sales process is. And the other one is actually yes, that there are more sophisticated markets."
+[33:14]
+"There are more sophisticated markets, but I'll tell you that we don't skip steps in process. It all comes down to skill level. A good rep will still know how to take care of that and wind and reel them in."
+[33:28]
+"You don't change your processes. You don't say, 'Oh, no, don't do one call closes for that market.'"
+[33:36] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Selfish Discovery Concept"
+NÚMEROS: Não especificado
+VISUAL: Conceito de descoberta egoísta vs valor entregue, balanço entre perguntas e demonstração de expertise, reciprocidade no tempo concedido
+[33:38]
+"The biggest so here's the balance, I'll say, with more sophisticated audiences in the discovery process. There's a concept you may some of you guys may have heard me talk about called a selfish discovery."
+[33:50]
+"This is the biggest difference with sophisticated buyers. It will frustrate them really fast, myself included. If I'm on a call with a shitty sales rep, I'm like, I don't give a fuck dude. What is the thing?"
+[34:02]
+"I get pissed of like give tell me what I'm here for. Because it's selfish. They're asking these basic questions. Less sophisticated audiences, they don't really react to it that fast."
+[34:14]
+"So, what you do in more sophisticated audiences, I still need to go through that process, but what I do is I demonstrate a lot more expertise in how I ask them."
+[34:26]
+"And so, we're peppering in value throughout the discovery. And basically the amount of value that you give it's like they reciprocate on the amount of time they give you to ask more stuff."
+[34:38] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Sophisticated Discovery Example"
+NÚMEROS: Não especificado
+VISUAL: Exemplo de framework de descoberta sofisticada: contextualização antes da pergunta, demonstração de conhecimento do mercado, pergunta específica com razão explicada
+[34:40]
+"So for example instead of just saying stuff like so you know and so what's your goal because a sophisticated buyer they start to get annoyed with that."
+[34:50]
+"I would say something like yeah and you know obviously our solutions are pretty custom. Um like what's your service?"
+[34:58]
+"Oh mine's healthcare. More specific. What's your offer? Marketing for dentists."
+[35:06]
+"Okay. So, you'd say, 'Yeah, now here's the thing. Like, I talk to a lot of people every day. Obviously, I know that by way of you booking this call, you want to book more leads, like you want more customers. That's obvious.'"
+[35:20]
+"'But if I just may, I want to ask a little bit more specifically around like what is the actual outcome that you're seeking? And the reason that I asked that is because people come on these calls and it's actually kind of all over the place.'"
+[35:34]
+"'Sometimes they actually have the lead volume but they're not happy with the average order value of the actual patient itself and so they focus on different things. So like for you specifically, what is that metric?'"
+[35:48]
+"So my point is like with more sophisticated audiences, it's more about framing, it's more about delivery and then giving them value in that."
+[35:58]
+"And so if you can do that now, they're listening and they're engaged. But if you are like what's your goal and then you're like awesome and why does that care to you? Why though?"
+[36:10]
+"Like you know these are the things that the sales trainers teach in this space. You have to go through it in a more sophisticated way. The more sophisticated they are."
+DÉCIMA TERCEIRA PERGUNTA: CAPITAL RAISING
+[36:22]
+"I was just asking about my niche, but also like stuff like capital raising where there's a taboo around trying to collect like raise capital quickly. Hey, why I made that money? Have you ever done sales for capital?"
+[36:38] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Investor Relations Sales Force"
+NÚMEROS: 7 dias para decisão
+VISUAL: Framework para vendas de capital: balanço entre deal flow e capital raising, qualificação de investidores, postura vs desespero
+[36:40]
+"I've built entire investor relation sales force. So, here's the deal. Listen, here's the deal. You know the hardest part about my business?"
+[36:50]
+"I'm paid to deploy money and get a return for our investors. You know the worst thing I could do? Take on too much capital. Now it's sitting on the sidelines. I have a bunch of dry powder I can't return."
+[37:02]
+"And so the hardest thing in our business is that we're constantly balancing deal flow with the amount of capital that we bring on."
+[37:12]
+"And by the way, the worst thing that we could do is bring on the wrong investors. Why do you think that is? Yeah, exactly. Because it's a massive pain in the ass."
+[37:24]
+"And so what I'm always trying to do at any given point, it all comes down to the precision of how well I can balance the amount of new investors I bring on and the amount of deals that I have available to invest into."
+[37:36]
+"And so I never want you to make a decision before you're ready. But I do need to have an idea if this is something that you want to do or if this is something that's far down the line."
+[37:48]
+"So here's what we'll do. I'm going to give you all the information you need in the next seven days. Is that realistic for you to be really honest with me if you're in or out? Because I need to know how much more capital I have to raise."
+[38:02]
+"My point is all I'm asking is the same thing I would ask if say when are you going to move forward. But you have to do it in a more sophisticated way based on the audience that applies context to what you're selling."
+DÉCIMA QUARTA PERGUNTA: QUANDO PUSH VS FOLLOW-UP
+[38:18]
+"So, Josh, my question is, uh, how do you how do you teach the sales team when to push for the close versus follow up?"
+[38:28] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Quality of Delay Framework"
+NÚMEROS: 2-3 chamadas, 3 horas de conversa
+VISUAL: Framework de decisão: delay substantivo vs objeção superficial, razões legítimas vs desculpas, momento de pressionar vs agendar follow-up
+[38:30]
+"I want to actually repeat this so people hear. This is a really important one. He said, 'How do you know when to push for a follow-up?'"
+[38:40]
+"How do you guys know if you should push for a follow-up or push for a close? It all comes down to the quality of the delay."
+[38:48]
+"And because what we find is if you have a stall delay, you have a stall objection, it's not a substantiated reason that logically makes sense of why they need another call, it's an excuse. It's a surface level reaction."
+[39:02]
+"And so you need to spend more time trying to identify what exactly is holding them back. But if they have a legitimate reason um that you know they need some time or they're very honest about it and you can feel that they're genuine and they have some things they want to look through, then you don't want to blow them out."
+[39:20]
+"So we look at the quality of the delay. Let's say that you've had two, three calls with them again and they're like, 'Okay, cool. Well, I need to think about it, get back with you.' That's when you hit them."
+[39:32]
+"Hey, listen, Devin. I'm not an aggressive salesman. You know that, by the way. I've spent 3 hours with you, right? Like, I'm all about making sure that everybody has all the information they need before they make an informed choice."
+[39:46]
+"But at this point, dude, I don't have anything else to tell you. Do you want to do this? And the way I just said that is what gets the deals because people are like they fumble around."
+[39:58]
+"And it's at a certain point in time they want it or they don't. And you have to hold them accountable. And that's when you go into things like identity frames."
+[40:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Accountability Close"
+NÚMEROS: Não especificado
+VISUAL: Técnica de responsabilização: questionar se decisões atuais levam aos objetivos declarados, usar identidade do prospect, postura de coaching
+[40:12]
+"You say, 'Listen, dude. Let me be really honest with you. I like you a lot. I would never do anything to insult you. You know, that doesn't benefit me.'"
+[40:22]
+"'But the type of decisions you're making, do you think that that's going to get you the goals that you want that you previously explained?' And you have to hold them accountable to that."
+[40:34]
+"Say, at the end of the day, we're a coaching program. Can I tell you the number? So, whatever you sell, can I tell you the number one thing that nobody wants to hear, but they need to hear it that prevents people from succeeding and not succeeding in this program?"
+[40:50]
+"It's mindset and accountability. Like, dude, here's the thing. Some people come into our programs, they go on and make a ton of money. A lot of people don't. The content's the same, the delivery is the same. What's the difference?"
+[41:04]
+"It's usually the people that actually do it, that take the actions, that take the steps. I've had three calls with you. You can't even do something as simple as say yes."
+[41:16]
+"So, at a certain point, you have to take them there because you're going to lose them anyways. But if they have a really, really good answer and they're like, 'Listen, dude. You want to know a good example of a good answer?'"
+[41:28] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Legitimate Delay Example"
+NÚMEROS: Não especificado
+VISUAL: Exemplo de delay legítimo: ESCO (escrow), restrições bancárias reais, situações genuínas que impedem ação imediata
+[41:30]
+"'I'm in ESCO right now and I was told by my loan officer that I can't move any money in and out.' Yeah, you're like, 'Well, dude, I'm not going to freaking blow the home deal for you. Like, let's connect next week.'"
+[41:44]
+"Like, and then you lean into it. And anytime, by the way, you push for the delay, you act like it's your idea. That's really important."
+[41:54]
+"Like, oh yeah, dude. We recommend that to everybody, by the way. Like, I wouldn't, you know, if that's what you have to do and you want to go through those steps, let's schedule a call in a couple days."
+[42:06]
+"I feel better about that anyways cuz I just want to make absolute sure this is the best decision for you. And so, now you can use it as like, wow, this guy's a good guy and they were going to do it anyways."
+DÉCIMA QUINTA PERGUNTA: QUANDO TROCAR DE CLOSER POR SETTER
+[42:20]
+"So, as a founder, I've got another closer that's doing much better, but because he's got a wider available calendar, he's getting the majority of the calls booked. Other rep's a part-time rep, but he's doing better."
+[42:34]
+"Is there anything you ever do when it comes to like filtering more to the higher performer? Of course, any tips on software? We're using Calendly right now and it's difficult for me to limit the number of calls."
+[42:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Calendar Distribution System"
+NÚMEROS: Não especificado
+VISUAL: Comparação Calendly vs OnceHub, níveis de prioridade, controle de distribuição de chamadas para high performers
+[42:50]
+"I don't like Calendly especially for the thing that you're asking. We use OnceHub and the priority levels you have so much more control over."
+[43:00]
+"Yeah, that's always been a sticking point for me. Yeah, we use OnceHub. It's great for that. Um yeah, Calendly's priority levels are very limited."
+[43:12]
+"And then let's assume I decide to do that. Do you communicate it to him and how?"
+[43:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Transparency on Lead Distribution"
+NÚMEROS: Dezenas de milhares de dólares/mês em risco
+VISUAL: Abordagem de transparência: não comunicar proativamente mas ser honesto se questionado, framework de conversa difícil sobre performance
+[43:22]
+"No, I don't. And it's not because I don't want to be transparent, but there's no good conversation that comes from it. But I don't lie, dude. I don't lie."
+[43:32]
+"If somebody ever brought it up to us, like a rep, I'll be like, 'Um, hey, dude. I'm so glad that you trust us enough to bring this to our attention. Um, yeah, we did make some changes.'"
+[43:44]
+"And dude, like, let's just have an honest conversation about it. Like, you're really dropping the ball right now. Now, let me tell you this. We haven't gave up on you. We're not afraid to fire."
+[43:56]
+"Like, if we thought that this wasn't a fit anymore, we would have terminated you. We don't think it's there. I just needed to see, dude, that you could make the differences and the changes that we've talked about, and then I'll plug you right back in."
+[44:10]
+"But dude, let me ask you this. This is a relationship of reciprocity. Like, do you want us to lose tens of thousands of dollars a month? Like, honestly, do you?"
+[44:22]
+"They'd be like, 'No.' Well, what would you do in my position if somebody's making way more money with the leads that we give them? Seriously, not hypothetically, what would you do?"
+[44:34]
+"'I'd probably give it to other reps.' Yeah, dude. It's not a personal thing, but I'm running a business. So, I just explain it to them like that."
+DÉCIMA SEXTA PERGUNTA: DESQUALIFICAÇÃO DE LEADS
+[44:46] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Lead Disqualification Strategy"
+NÚMEROS: 220 aplicações/mês, 90 desqualificadas, $3K/mês mínimo de receita
+VISUAL: Processo de desqualificação: critérios de receita, capacidade de investimento, impacto no moral da equipe, bloat de calendário
+[44:48]
+"Yeah. We actually disqualify like 90 of our calls a month. And I'm thinking of maybe not doing that. 90?"
+[44:58]
+"Yeah. Yeah. We have 220 apps that book and we disqualify based on revenue. So, they're less than 3K a month or they say, 'No, I can't invest.' We'll disqualify those calls."
+[45:10]
+"And I'm wondering whether maybe I start to put some of those calls on. Never fucking put them on unless you have an actual way to convert them."
+[45:20]
+"Because it's calendar bloat and a few things happen. Rep mindset and morale will plummet. And then I dude I have a whole financial model around this."
+[45:32] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Lead Scoring Philosophy"
+NÚMEROS: Não especificado
+VISUAL: Filosofia central: não prevenir compradores de comprar, prevenir tire kickers de ocupar espaço valioso no calendário
+[45:34]
+"The actual throughput you want to get to the same amount of money faster by putting calls on the calendar that you have a high probability or confidence level that they won't convert. You are extending the amount of time to get the same amount of buyers."
+[45:50]
+"Here's the line I'll give you. The ultimate key, you ask me about segmentation. The ultimate key to lead scoring: you are not preventing buyers from buying. You are preventing tire kickers and non-buyers from taking up precious calendar space."
+[46:08]
+"That's the balance. So if you told me, well, we have a downsell and we have funding and we have this. Well, then at that point, if you have funding and downsells, then like, yeah, figure out a way to get them in."
+[46:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Lead Routing System"
+NÚMEROS: 3 categorias
+VISUAL: Sistema de roteamento por scoring: Qualified (direto para closers), Semi-Qualified (para setters), Non-Qualified (não podem agendar), páginas de agendamento diferentes por categoria
+[46:22]
+"Yeah, they can still book if they go through it. There's corporations. Well, so the way so the technical way we do that is based on the application scoring, there's just different pages they land on with different schedulers."
+[46:36]
+"That's the way we do it. Whether it's a different team, whether it's a setter or a closer, usually what we do, we have qualified, semi-qualified, non-qualified."
+[46:46]
+"Non-qualified people, they can't book at all. Semi-qualified, they go to setters. Qualified goes direct to closers."
+[46:54]
+"But don't even give them don't even give non-qualified people to setters because even if you give the non-qualified people to setters, they're still not going to buy. Give the semi-qualified. Dude, you got it."
+📊 RESUMO EXECUTIVO
+NÚMEROS PRINCIPAIS:
+100% das chamadas analisadas automaticamente por IA
+3 meses de período de calibração para IA
+4 scorecards principais: Sales IQ, Process Compliance, FTC Compliance, Product Knowledge
+4 webinars/semana, 4 horas cada, cobertura 7 dias
+8 chamadas/dia por rep
+22 dias úteis/mês = 176 novas chamadas/mês por rep
+98 páginas de SOP de configuração de CRM
+72 horas para deploy completo de CRM
+$30,000 investidos em treinamento de vendas externo (comparação)
+18% close rate (melhor performance mencionada)
+7% close rate (queda de performance)
+220 aplicações/mês, 90 desqualificadas
+$3K/mês mínimo de receita para qualificação
+17 de 30 chamadas mencionaram objeção específica (exemplo)
+90% de probabilidade de fechamento (bucket de prioridade)
+9 tentativas de contato mínimas
+Máximo 2 tentativas/dia
+7 dias para próximo fechamento (hot list)
+ESTRATÉGIAS E SISTEMAS:
+Call Intelligence & AI
+Uso de Avoma com configuração customizada
+Calibração de 3 meses com equipe de gestão
+100% das chamadas automaticamente graduadas e recebem feedback
+Planos de desenvolvimento semanais customizados por rep
+Notas automáticas padronizadas via IA
+NÃO usa feedback ao vivo durante chamadas (considerado distração)
+4 Scorecards Principais
+Sales IQ (qualitativo)
+Process Compliance (aderência ao talk track)
+FTC Compliance (conformidade regulatória)
+Product Knowledge (customizado por oferta)
+Sistema de Priority Buckets
+Tomorrow's Calls (preparação)
+Hot List (próximos 7 dias, alta probabilidade)
+Expected Close Date Past Due (primeiro ponto de vazamento)
+Qualified Not Closed (restante qualificados)
+Neglected Deals (por dias sem engajamento)
+Lost Deals Previously Forecasted (90% probabilidade que não fechou)
+Lost Deals Low Attempts (bucket de auditoria/"gotcha")
+Feedback Loop Marketing-Vendas
+Reuniões semanais obrigatórias
+Slack diário para issues urgentes
+Call Insights & Trends Deck via IA
+Conversão de insights qualitativos em quantitativos
+Rastreadores: FAQ, Objeções, Matriz de Qualificação
+Proibido usar termo "lead quality" sem dados específicos
+Cobertura 7 Dias/Semana
+Duas equipes diferentes com dias off escalonados
+Exemplo: trabalhar sexta-segunda, folgar terça-quarta
+Motivação por Compensation + Acknowledgement
+Gamificação pesada: spiffs, guerras, competições
+Gestão de Time Feminino
+Mesmo processo seletivo (hire o melhor)
+Estilo de gestão mais suave/nurturing
+Mais necessidade de reconhecimento e empatia
+Mesmo sistema, diferença no estilo de liderança
+Follow-up Process
+KPI: Booked Call Close Rate
+Expectativas: quantidade mínima de contatos/tentativas
+Impossível gerenciar mentalmente 176 calls/mês por rep
+Tudo baseado em sistemas, não em memória
+CRM Admins fazem auditoria (não limpeza)
+Reps taggeados com expectativas de tempo de resposta
+Penalidades por não conformidade
+Cleaners
+NÃO usa cleaners - seria enabler de comportamento ruim
+Rep deve ter ownership do pipeline desde primeira call
+CRM Admins apenas auditam e reportam vazamento
+Notas e Gravações
+100% automatizado via IA
+Formato padronizado: discovery questions, core desires, pain points, lead quality summary, next steps, materials
+Eliminou problema de padronização de notas
+CRM Configuration
+98 páginas de SOP
+Deploy em 72 horas
+Escolher um CRM e padronizar (Close, Go High Level, Pipe Drive, HubSpot)
+"Um é melhor que dois"
+Gamificação de Treinamento
+Reps desvalorizam treinamento gratuito
+Sistema: unlock progressivo por mérito
+Dar bare minimum para começar
+Qualificar para desbloquear treinamento avançado
+Gestores treinam: "você não está pronto ainda, foque no básico"
+Resultado: reps assistem muito mais frequentemente
+One Call vs Two Call Close - 3 Critérios
+Show Rate (calls longas = mais downtime se no-show)
+CPR (Clear Path to Results/Revenue/ROI - complexidade da oferta)
+Level of Awareness (quanto conhecem antes da call)
+Setter vs Closer Model
+Funções completamente separadas (misturar = perder dinheiro)
+Speed to lead crítico
+Setters: penetração, qualificação, amplificação de interesse
+Closers: fechamento
+Overlap estratégico é desejado entre setter e closer call
+Setter deve ir profundo e longo (não superficial)
+Closer revisa notas e faz discovery focada nos pontos principais já identificados
+Técnica de Anchoring Back: referenciar conversa anterior antes de aprofundar
+Review de calls: assistir setter + closer back-to-back para congruência
+Sophisticated Buyers
+Selfish Discovery frustra compradores sofisticados
+Solução: demonstrar expertise enquanto pergunta
+Peppering de valor durante discovery
+Framing e delivery mais sofisticados
+Contextualizar antes de perguntar
+Reciprocidade: valor entregue = tempo concedido
+Capital Raising/Investor Relations
+Construiu sales forces inteiras para IR
+Framework: balance entre deal flow e capital raising
+Worst case: muito capital sem deals para investir
+Worst case 2: investidores errados (pain in the ass)
+Abordagem: ser honesto sobre necessidade de saber timing (7 dias)
+Contextualizar pergunta de fechamento ao negócio específico
+Quality of Delay Framework
+Stall objection (superficial) vs legitimate reason
+Após 2-3 calls (3 horas): momento de pressionar
+Accountability close: "não tenho mais nada para te dizer, você quer fazer isso?"
+Identity frames: questionar se decisões levam aos objetivos
+Mindset e accountability como diferencial entre sucesso e fracasso
+Se delay legítimo (ex: ESCO): agir como se fosse sua ideia adiar
+Calendar Distribution
+OnceHub > Calendly (mais controle de prioridade)
+Distribuir mais calls para high performers
+Não comunicar proativamente, mas ser honesto se questionado
+Framework: "relação de reciprocidade", "você quer que percamos $10K+/mês?"
+Não dar up em underperformers imediatamente, mas proteger negócio
+Lead Scoring & Disqualification
+Filosofia central: não prevenir buyers de comprar, prevenir tire kickers de ocupar calendário
+Calendar bloat mata moral de reps
+Sistema de 3 categorias:
+Qualified: direto para closers
+Semi-Qualified: para setters
+Non-Qualified: não podem agendar
+Páginas de agendamento diferentes por scoring
+Não dar non-qualified nem para setters
+ESTRUTURA:
+Hierarchy
+CEO/Founder (Josh Troy)
+Sales Management Team
+CRM Admins (auditoria)
+Setters (qualificação)
+Closers (fechamento)
+Playbook Components
+KPIs
+Expectations (separado de KPIs)
+Talk tracks (não scripts word-for-word)
+Frameworks com checkboxes
+Objection matrix waterfalls (flowcharts)
+Product knowledge por oferta
+Rep Development
+Planos individualizados (não one-size-fits-all)
+Foco em 1-2 coisas max por semana
+Incrementar progressivamente
+Training one-to-many (leverage)
+Call reviews individuais mas gravados para todos aprenderem
+One-on-ones: accountability, performance reviews, KPIs (não semanal, a cada 2 semanas)
+Tech Stack
+Avoma (call intelligence)
+OnceHub (scheduling)
+CRM padronizado (escolher um: Close, Go High Level, Pipe Drive, HubSpot)
+Dialers para follow-up
+Slack (comunicação diária)
+Standardization
+Todas as marcas usam mesmo tech stack
+98 páginas de CRM SOP
+Deploy em 72 horas
+Configuração customizada > ferramenta específica
+DADOS FINANCEIROS:
+Dezenas de milhares de dólares/mês em risco por má distribuição de leads
+$30,000 benchmark de investimento em treinamento externo (comparação)
+High ticket sales operations
+Extended sales cycle
+Offline conversion
+Lead generation = parte mais cara
+ROI focado em shortest time to knowledge
+Revenue leakage = foco dos priority buckets

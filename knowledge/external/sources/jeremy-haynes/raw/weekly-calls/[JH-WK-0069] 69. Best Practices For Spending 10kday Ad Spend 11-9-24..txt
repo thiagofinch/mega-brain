@@ -1,0 +1,458 @@
+Transcrição Completa: 69 Best Practices For Spending 10k/day Ad Spend
+[00:00] All right. So, we had a request this week from Tampa Nick wanted to know what you do at $10,000 a day in ad spend, the big 300K a month. And I'm glad you asked, sir. There's a tremendous amount of lessons that come along with that level of daily spend and monthly spend. And I would love to dive into it.
+[00:25] Okay. So, for starters, let me get a new little page here going for us. 300k a month in ad spend is a serious amount of money. Okay? It is $10,000 a day. And when you are ripping that amount, you have a fuckload of data.
+[00:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Data & Testing at Scale"
+NÚMEROS: $10,000/dia, $300K/mês
+VISUAL: Conceito de volume de dados comparado à Amazon, metáfora de "mangueira de incêndio" de tráfego
+[00:50] Um, I'm going to start this off from a data perspective. When you look at companies like Amazon that run split tests in a couple hours, it's because they have a fire hose worth of traffic and therefore data that they can make decisions with in very short durations of time. Testing therefore changes.
+[01:10] Okay, most of us at lower levels of daily spend, what you'll do is you'll run tests for days at a time. Okay. And as an example, you know, you might have swings between week days and weekends. You'd have to run whatever test you're running for an entire 7-day duration to get exposure of week days versus weekends.
+[01:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Macro Events Impact Testing"
+NÚMEROS: 7 dias de teste, Q4
+VISUAL: Calendário mostrando eventos macro (eleições, Black Friday, Cyber Monday) que invalidam testes
+[01:40] In that example, obviously during times like Q4, it becomes very exposed that there are definitely macro events outside of our business's control that can influence our business's statistics. So, as an example, if I chose to run tests during the day of or the day after the election or a particular set of days leading up to the election, I could have my test invalidated just based on some kind of macro event.
+[02:15] However, that's typically why at lower levels of spend, you have to maintain tests over longer durations. At bigger levels of spend, you test differently. Okay? You do one of two things. You either go in on what's called all-in testing or you do what's called segmented testing.
+[02:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Budget Distribution Pyramid"
+NÚMEROS: $5K-8K foundation, 10-30% doing okay, remainder testing
+VISUAL: Pirâmide hierárquica mostrando 4 níveis: Foundation (base), Doing Okay, Rotation, Testing (topo)
+[02:45] Okay? And I want to get started with this because again, most people when they're at 10K a day in spend already have something that's like the foundation of what they're doing that just works tremendously well. This is where a majority of the daily spend typically goes and rightfully so.
+[03:05] There's generally a few campaigns that you keep on that are like doing okay is how you typically describe them. They're technically ROI positive. They are working but like they're nothing that you necessarily brag about. This is typically where you are attempting to test to get that to work better so you can add those things into the foundation.
+[03:30] Okay. To be clear, above and beyond that, you typically have a few campaigns that are in rotation where they're not necessarily doing great. Occasionally, they do well over the course of a month. You know, they become ROI positive. These might be the ones that you like flip on and off here and there.
+[03:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Daily Spend Breakdown"
+NÚMEROS: $5K-8K foundation, $1K-2K testing budget, 10-30% intermediate
+VISUAL: Breakdown detalhado da distribuição dos $10K diários entre categorias de campanhas
+[04:00] And then above and beyond that, you have a small daily budget that goes towards testing. Okay. Now, from a perspective of spend, it's important to note that when you look at it this way, you can break down like where the 10K total goes to. Okay? Most of the 10K is going to go towards the foundation.
+[04:25] Out of that total amount, you're typically putting upwards of I'd say realistically anywhere from five to 8K of that daily spend towards the consistent winners. Okay, these are the proven hooks. These are the things that work all the time.
+[04:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Foundation Campaigns Characteristics"
+NÚMEROS: $5K-8K diários
+VISUAL: Lista de características: proven hooks, long-term winners, consistent performance, scalable
+[05:00] These are like long-term like you figured something out with these and you're just consistently putting out more money. You're scaling them. You're not even necessarily limited on 5 to 8K a day. But again, you're consistent with this specific set of campaigns.
+[05:20] The doing okay column, this could be anywhere from like I'm going to use percentages from this point. Generally, like 10 to 30% of your budget. Again, these are campaigns like let's use the example, your ROAS on the foundational campaigns is the best. These ones are good. These ones are okay. And your tests are unknown.
+[05:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Rotation Campaigns"
+NÚMEROS: Variável, ROI positivo ocasional
+VISUAL: Campanhas que ligam/desligam, performance inconsistente, ciclo de vendas mais longo
+[06:10] The rotation campaigns, this is typically, again, relatively unknown in terms of the daily spend. It also fluctuates because these are the ones that you're turning on and off. These are the ones where you don't necessarily like feel confident about them.
+[06:35] Test budget is typically the remainder. Okay? Test budgets are usually anywhere from about $1,000 a day to $2,000 a day when you are in a 10K a day account. Testing becomes like a risk in a sense because it does take away from the ROAS that the foundation campaigns would have otherwise gotten.
+[07:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "All-In Testing vs Segmented Testing"
+NÚMEROS: $1K-2K testing diário normal, até $10K em all-in
+VISUAL: Comparação entre duas estratégias de teste: conservadora segmentada vs agressiva all-in
+[07:25] All right. So like let's talk about this real quick specifically. This model that I just described down here, this is not even close to all-in testing. All-in testing is as described where if you had a foundation campaign that historically worked, you're doing okay campaigns and your rotation campaigns, all of a sudden like something happens here where like these just become fucked.
+[07:55] I'll give you a great example. There was an account the other week randomly just started getting a ton of disapprovals on the foundation campaign and also started getting disapprovals on the doing okay campaign and then the rotation campaigns would have been in other accounts just to keep them active.
+[08:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Emergency All-In Testing Scenario"
+NÚMEROS: $10K diário completo para testes
+VISUAL: Cenário de crise: disapprovals, account down, ad fatigue extremo forçando pivot total
+[08:35] So all of a sudden, literally the only thing that was left was the testing campaigns. And at this point, because nothing could get approved in all of this majority spend, you know, the justification essentially became, okay, we have to test rapidly and we have to figure out what we can do to replace the hooks that are now getting disapproved from our foundation campaigns.
+[09:10] You essentially have periods simply put where that majority spend gets burnt somehow. Okay? And it could be from disapprovals, could be from an account going down, could be from just the hooks get fatigued and you overcome ad fatigue cycles and they just still aren't working.
+[09:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Rapid Testing Requirements"
+NÚMEROS: Dados em horas vs dias, 7 dias padrão vs 1-2 dias agressivo
+VISUAL: Timeline comparativa: testing normal (7 dias) vs rapid testing (24-48h), volume de dados necessário
+[09:55] Now when you look at testing at a $1,000 to $2,000 a day budget, that's not necessarily a dramatic amount of spend. You could still absolutely justify keeping that on for like a seven-day window. Okay? But I want to be clear when I say if and when I want to honestly say, God forbid you have to do the testing rapidly thing, you need to understand that you can make decisions a lot faster.
+[10:30] As little as I want to admit and as irregular as it is for me to ever blame a macro thing, you do have to consider macro things when you're testing rapidly. Let's use the example that I needed to rapid test on Tuesday and I needed to dump 10K a day to get my foundational campaigns swapped in with some new proven hooks after they just the bed. Well, Tuesday again, that was the day of the election. That would have been like an awful day where your test likely would have been invalidated.
+[11:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Macro Factors to Consider"
+NÚMEROS: Tuesday (election day), Black Friday, weekend vs weekday swings
+VISUAL: Calendário destacando dias problemáticos para testing: eleições, feriados, padrões semanais
+[11:30] If you have a historically bad day of the week, sometimes like you do really well on weekdays in a business and sometimes that same business does awful on weekends. Sometimes it's the exact opposite. You see huge lifts on the weekends and you see terrible weekdays or a terrible week day. Okay, I'd also consider that macro.
+[12:00] When you are testing rapidly, it's typically a shorter duration of data that you acquire a lot of data in a short duration of time so you can make decisions more rapidly as well. That's why I don't just call it a test window. I call it testing rapidly.
+[12:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Rapid Testing Characteristics"
+NÚMEROS: Decisões em 24-48h vs 7 dias
+VISUAL: Velocidade aumentada: mais criativo necessário, ad fatigue mais rápido, decisões em timeline comprimida
+[12:40] We can figure things out a lot faster than we otherwise can over shorter I should say longer durations with less spend shorter budgets. I get more data. I'm more probable to experience ad fatigue faster. Everything starts to essentially just go quicker and I need to be mindful of that when I'm doing any kind of testing.
+[13:10] Now, to be clear in comparison, if I'm doing segmented testing, all right, if I'm officially doing segments and this is typically again where I just see like 1 to 2k a day, something reasonable that goes towards testing budgets, that's your general time frame, 7 days.
+[13:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Speed at $10K/Day"
+NÚMEROS: $10K diário, $200 vs $700 cost per call em dias ruins
+VISUAL: Gráfico mostrando volatilidade extrema em high-spend accounts, necessidade de agilidade
+[13:50] At 10K a day, okay, things go fast. Everything comes at you pretty quick and you have to kick up your speed as a result. You can't be chilling at 10K a day. All right? Everything becomes serious. Like if you have a bad day, it is exacerbated. There is a significant swing in result potential.
+[14:15] If you have a bad day, like let's use the example, your cost per call is like $200. Okay? On a bad day, it might be like $700. Just because there was one bad day doesn't mean the next bad day is going to suck. You can't look at it day by day, even though you're getting a fuckload of data.
+[14:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "7-Day Average Analysis"
+NÚMEROS: Day 1: $80, Day 2: $67, Day 3: $190, Day 4: $110, Day 5: $207, Day 6: $91, Day 7: $98 | Average: $106 (target: $75)
+VISUAL: Linha temporal de 7 dias mostrando flutuações diárias de cost per call, média calculada em $106 vs target de $75
+[15:00] So over the course you have to find a timeline of what you agree can be average. Okay. So as an example, I like to look when I'm spending 10K a day at a 7-day average. This enables me. Let's use the example. I have a good day here on day one, good day on day two, four, six, and seven. But day three and day five suck ass.
+[15:30] And let's just for perspective say that we're running a call funnel. Let's use the example that you know historically a $75 cost per call is good. So let's use the example day one I was at 80. Let's say day two I was at like 67. Day three I was at 190. Day four, I'm back at like 110. Day five, it goes up to 207. Day six, I'm back down at 91. And day seven, I'm at let's call it like, I don't know, 98.
+[16:10] Now, my overall average for this duration, if as an example here, let's say that I see that it's at a total of like 106 for my average in this example. Point I'm trying to make in this example, it's like, well, I mean, that's pretty close. You know, that's really not that far off from what I want my ideal cost per call to be, but it's about 25ish% higher than what I'd want it to be.
+[16:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Ad Fatigue Cycle"
+NÚMEROS: Fatigue a cada semana vs a cada mês dependendo do spend, $2K/dia = mensal, $5K/dia = semanal
+VISUAL: Gráfico de intersecção mostrando volume de resultados caindo e custo por resultado subindo (ponto de fatigue)
+[17:00] Now, what I need to see over the following seven days in this example is do I get another 75% jump? Do I see a decline in the following week or do I see about the same as what it was the previous week? I can typically see things when I say everything goes faster, it's like I can typically experience ad fatigue on faster cycles.
+[17:30] And this for everybody to be clear and just on the same page, this is where our result volume starts to drop and this is where our cost per result starts to climb. And when we see this cross right here occur, all we do is we relaunch our creatives.
+[18:00] We go into our campaign, we relaunch it, and we just let me use proper terminology. We duplicate out the existing campaign, we pull out the previous video or image creatives, we put in the new images or videos, creatives, we publish it, we let it get approved, and then to be clear, we cut off the old campaign once the new one's approved.
+[18:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Creative Refresh Requirements"
+NÚMEROS: $2K/dia = refresh mensal, $5K/dia = refresh semanal ou a cada 1.5 semanas
+VISUAL: Frequência de necessidade de novos criativos aumenta proporcionalmente ao spend, alcance de mais pessoas em menos tempo
+[18:45] When this happens, this typically pulls it back to what it was pre-fatigue. However, if you notice what I said, we need new video and image creatives, and we're likely going to need it on a much more frequent basis than what we're historically used to at lower levels of daily spend.
+[19:10] As an example of that, and it's different for every account. I might experience fatigue at, let's call it $2,000 a day once a month, versus when I spend $5,000 a day on a foundation campaign, I might experience fatigue every week and a half or even every week, as ridiculous as it sounds, because I'm reaching far more people in a shorter duration of time.
+[19:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Ultimate Selling Machine - Market Layers"
+NÚMEROS: 3-4% in-market buyers (hottest), camadas externas progressivamente mais frias
+VISUAL: Círculos concêntricos: centro = 3-4% já prontos para comprar, camadas externas = need convincing, camada mais externa = never buy
+[20:00] It's also important to note at 10K a day the scale changes. Okay, there's this great book that is called the ultimate selling machine. It's by Chet Holmes and he consistently talks about this breakdown where at any given time you have like your in-market customers and then you have these layers beyond that.
+[20:30] You have this outer layer of people who would never ever buy from you regardless of the circumstances. You have these people here which are the literal hottest. You have this second layer which is like you know yeah they can be sold but they're not necessarily already sold. They require some data and these are people who need convinced.
+[21:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Cost Per Layer Increases"
+NÚMEROS: 3-4% mais barato (in-market), cada camada externa = mais caro
+VISUAL: Setas apontando para fora mostrando aumento progressivo de custo, camada externa impossível de converter em escala
+[21:10] The further out you go in these layers it gets more expensive each layer that you go beyond. And obviously here there's no point in going because the people don't convert out there at scale. It's like you don't know how big this needs. You don't know how big this 3 to 4% of people who are already probable to buy that are considered like in market are. But to be clear, like you'll find out when you're at 10K a day.
+[21:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Massive Niches Examples"
+NÚMEROS: 300+ milhões de pessoas em sales jobs globalmente
+VISUAL: Exemplos de nichos enormes: Sales, Real Estate, Stocks - mercados com centenas de milhões de participantes
+[22:00] If I'm going to give you an example of a few big industries that have really large sums of people in the 3 to 4%. Sales, real estate, stocks, okay? These are niches that are fucking massive, okay? Like literally some of the biggest niches on earth in terms of people that participate in them in economies globally.
+[22:25] It's like 300 something million people that are in sales on Earth, okay? In sales jobs as an example. 3 to 4% of that demographic. Like you could spend 300k a month and you might you likely might not even be halfway to the ceiling of hitting an invisible wall of when you'll eventually have to transition from this into this.
+[23:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Invisible Ceiling Indicators"
+NÚMEROS: CTR cai, CPMs sobem, conversões caem
+VISUAL: Sinais de que atingiu o teto: click-through rate diminuindo, CPMs aumentando, conversões do funil caindo (audiências mais frias)
+[23:15] But I'll tell you what you'll find out if you're in a smaller niche real quick. Okay? And typically what starts to happen is your stats start to fall. So, it's like your click-through rate will start to go down. Your CPMs will typically start to go up. The overall conversions throughout the rest of your funnel will also typically go down because you're reaching colder audiences.
+[23:45] Okay? And colder audiences require pivots in the ways that you market to them and the ways you communicate. They require different hooks. Okay. And this is one thing that prevents a lot of businesses from ever hitting 10K days in ad spend. They hit these walls that they can't see and they're not monitoring what the wall looks like.
+[24:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Scaling Ceiling Visualization"
+NÚMEROS: Gasto aumenta mas resultados param de crescer
+VISUAL: Gráfico de Results vs Time mostrando crescimento linear até bater em teto invisível, tentativas de escalar acima resultam em wheel-spinning
+[24:40] [Discussão com participante sobre identificação do teto através de dados - hooks similares não convertendo na mesma taxa, frequency alta, CPMs altos, CTR baixo]
+[25:30] Yeah, you see it in the data. So, as an example, it's like if I have results and time, okay? And what happens is like eventually I hit a ceiling where I'm consistently scaling through time and then eventually there's just this fucking wall. You know, you just can't go above it.
+[26:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Spinning Wheels Above Ceiling"
+NÚMEROS: Acima do teto = gastar mais só infla métricas sem resultados
+VISUAL: Representação de "rodas girando": spend aumenta mas resultados não, todas as métricas-chave inflam negativamente
+[26:15] No matter what you do, every time you try to be clear to spend beyond it, that's where all of this occurs. When you start to see that above a certain amount in spend, the results suffer and you start to spin the wheels, which means you spend more money and all you do is inflate the key statistics.
+[26:45] When that happens, that's why I broke down the testing budget in this pyramid because then you've officially found how much you can spend on your foundation campaigns. Your foundation campaigns become things that you could keep on forever. Okay? But they specifically they have limits. They do have limits.
+[27:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Lake Metaphor - Market Replenishment"
+NÚMEROS: 3-4% precisa ser constantemente reabastecido
+VISUAL: Metáfora do lago: empresa tirando água (clientes) vs alguém enchendo o lago (novos entrantes no mercado)
+[27:40] If there is somebody out there who's taking responsibility for consistently filling up this 3 to 4% of your demographic, lucky you, you'll be able to spend into it with your foundation campaigns forever, but you won't be able to scale into it past a certain point. That's what this represents.
+[28:10] I'll give you an example. Okay. So, Russell Brunson in the personal brand space for a very long duration of time was actively bringing new personal brands into the game at scale. Russell was taking financial responsibility for growing the quantity of people that were successful personal brands. He as a businessman took responsibility for growing an entire industry.
+[28:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Industry Growth Responsibility"
+NÚMEROS: Exemplo: Russell Brunson no personal branding, empresas contratando sales reps inexperientes
+VISUAL: Ciclo de crescimento: alguém trazendo novos participantes para todas as camadas do mercado constantemente
+[29:10] It's the same thing in the sales niche. Think about the quantity of businesses on earth that are willing to hire an unexperienced person and turn them into a sales rep. There's a lot of them, right? Can you really consider that because of that there's constantly new people being onboarded into every single one of these brackets?
+[29:45] When somebody else is not taking responsibility for growing the niche you participate in, you will not only experience the ceiling, the ceiling will get pushed down as time goes on because you'll continue milking.
+[30:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Lake Drying Out Without Replenishment"
+NÚMEROS: Teto histórico cai com o tempo sem reabastecimento
+VISUAL: Lago secando progressivamente: empresa retirando água sem ninguém reabastecendo, eventualmente o lago desaparece completamente
+[30:25] It's like having a lake or a body of water. Okay? And let's say there's a water company that comes in and they're taking water out of the lake consistently, okay? And they're filling it up into water bottles and using it for agriculture and all that. Well, as time goes on, you know, the lake gets smaller and smaller and smaller.
+[31:00] And if there's nothing to replenish that body of water, well, eventually the lake literally goes away and there's no more water. Versus if obviously there's a natural cycle that occurs where somebody's consistently filling up the body of water as somebody else takes away from the body of water. That's a natural balance that occurs and there'll always be more water.
+[31:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Big Pharma Conspiracy Theory Parallel"
+NÚMEROS: Conceito de criar demanda para manter o mercado
+VISUAL: Teoria: big pharma deixando pessoas doentes para vender mais remédios = enchendo o próprio lago
+[31:45] You ever heard those conspiracies of big pharma getting people sick to continue selling people more big pharma drugs? You ever heard that? I don't doubt it because they got to fill up the lake. Does that make sense? That's my point.
+[32:10] When you do not have this perspective and you're not aware of it, once again, what'll happen is your ceiling lowers as time goes on. So your historical ceiling that was here ends up getting pushed down to here and you're not able to get the same level of daily results from your foundation campaigns.
+[32:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Maintaining Foundation Campaigns"
+NÚMEROS: Spend consistente no teto identificado indefinidamente (se lago está sendo enchido)
+VISUAL: Estratégia de manutenção: mesmos hooks, novos criativos, refresh para superar ad fatigue, performance consistente
+[33:00] In comparison if somebody out there is taking responsibility for filling up the lake. Okay, you're good. And you'll be able to maintain a consistent daily spend on the foundation campaigns for that specific demographic that you're targeting that those current hooks are working with pretty much forever.
+[33:25] The only thing you'll need to do is just refresh the creatives here and there, but you'd want to refresh it with the same hooks, just new creatives. Okay? And to be clear again, I just want to be extremely clear, the game of scale is to duplicate this process and add campaigns like that to the foundation campaign part of the pyramid as many times over as you can as you scale up well beyond 10k a day in spend.
+[34:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Whole Game of Scaled Advertising"
+NÚMEROS: Múltiplas foundation campaigns empilhadas, cada uma no seu teto
+VISUAL: Estratégia completa: encontrar campanhas que produzem resultados consistentes até o teto, superar ad fatigue, repetir o processo
+[34:15] That's like the whole point of what you're attempting to do as an advertiser at scale. You're trying to find the campaigns that can produce consistent results that you run into the ceiling of and officially know, okay, above this amount in spend, I just spin the wheels. But if I stay at that level of spend, I get that level of result no matter what until it starts to fatigue. And then I just got to overcome ad fatigue.
+[34:50] And then my goal from there is to find another set of people that I can sell to that'll turn into a foundation campaign. Does that make sense? That's genuinely the whole game of scaled advertising.
+[35:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Eugene Schwartz Awareness Levels Application"
+NÚMEROS: N/A
+VISUAL: Discussão sobre como aplicar níveis de awareness (aware/unaware matrix) ao conceito de foundation campaigns
+[35:30] [Discussão com participante sobre Eugene Schwartz e awareness levels]
+[36:00] To be clear like when you find a hook that works it means you found something that you can say that consistently gets like a certain click-through rate you know that just works and lands well with the people that you're targeting. And in order to overcome ad fatigue, it's genuinely this simple. I mean, you're just refilming that ad again and again and again and making it new and unique.
+[36:30] But to be clear, it's the same hook. It's pretty much the same exact messaging. You're just like changing your clothes or like changing the environment or like putting on a hat, you know, like you're just literally changing something environmentally or about yourself, but you're trying to repeat the exact same messaging.
+[37:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Foundation Campaign Definition"
+NÚMEROS: Winning ad creative + Winning audience = Good ROI consistente
+VISUAL: Fórmula: creative combinations certas (copy + headlines + videos/images) + audiência certa = fundação sólida
+[37:15] A foundation campaign equals two things okay you found winning ad creative combinations okay like the right copy the right headlines the right videos or images plus you found a winning audience. And what you're doing is you're trying to scale like this. This produces good ROI.
+[37:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Scaling Until You Hit The Ceiling"
+NÚMEROS: Scale up progressivamente até encontrar o teto onde ROI diminui
+VISUAL: Gráfico ascendente de scaling mostrendo aumentos bem-sucedidos até bater no teto invisível onde gastar mais = ROI pior
+[38:00] And what you try to do in a foundation campaign is you try to scale it. Okay? And when you try to scale it, ideally, you know, you scale it up, you don't get any ceilings. You scale it up again, it still gets more results. You don't find any ceilings. You scale it up again, you know, again, you're still getting more results. You're still getting a good ROI.
+[38:30] And then one day, bam, you run into a ceiling where if you try to go above the ceiling, what happens is unfortunate. You do not get more results. You actually just spend more money and technically diminish your ROI as a result of spending the additional money.
+[39:00] And when that happens, you know, you officially found a ceiling and you know that you'll be able to maintain like whatever this level of spend is right here, but you won't be able to go above it. That's where you then need to focus again on testing new audiences, new creative combinations in an attempt to add more foundation campaigns.
+[39:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Rotation = Testing Phase"
+NÚMEROS: N/A
+VISUAL: Fase de rotação como período de teste de diferentes criativos, hooks e audiências para encontrar próximas foundations
+[39:50] [Discussão sobre rotation campaigns sendo a fase de teste]
+[40:15] And just to be clear this could also be you know different funnels as well in terms of like funnel strategy. This could be like, you know, as an example, like you get a foundational call funnel, okay, I can change out the audience type and the ad creatives that go to that winning funnel and I might be able to get like five or six foundation campaigns all towards my call funnel, right?
+[40:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Funnel Variations Strategy"
+NÚMEROS: 5-6 foundation campaigns por funnel type
+VISUAL: Múltiplas foundations usando diferentes combinações: call funnel + variações de audience/creative, webinar + mesmas variações, lead form, low ticket to high ticket
+[41:00] And then I might introduce a webinar. And then same thing, I could go back to my existing audiences with the existing hooks that worked and see if I can add another five to six foundation campaigns by doing the same hooks to the same audiences just with a new potential funnel.
+[41:30] You know, I could potentially do that same thing again when it comes to ad creative variations that worked and audience variations that worked with instead of a funnel, maybe I do the hydro and I do like a lead form campaign in comparison. Or like a sales page, like a low ticket to high ticket funnel. I could swap out the funnel as well in order to essentially just stack my foundations.
+[42:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "ROI Benchmarking Question"
+NÚMEROS: 2.5-3.5x ROAS exemplo mencionado
+VISUAL: Discussão sobre o que constitui "bom ROI" - varia por negócio, requer modelagem financeira
+[42:15] [Discussão sobre benchmarks de ROI]
+[42:45] Yeah and this is the thing it's really just math you know like that's the question that you're asking you want to do financial modeling and you want to find out like the question through math. It's not a made-up answer. It's okay. Well, at 2.5 ROAS, when you take off like whatever the expenses are to deliver on that revenue, is it a desired profit level for the business?
+[43:20] And if it is, then that's whatever the ROAS is, that's fine. You know, if 2.5 ROAS isn't enough, then you need to spend time optimizing things and trying to get the ROAS up before you get to punch the gas and scale it up. It's varied for every business.
+[43:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Nick's Success Story"
+NÚMEROS: $10K/dia por 6 meses, escalou para $15K/dia
+VISUAL: Case study: problema de ambulance bills, pivotou para unaware market criando o problema, permitiu escalar além do teto
+[44:10] [Nick compartilha: "We were spending 10K a day for six months, struggling to scale past that, going after the problem of ambulance bills. Started rolling out new ads that went after an unaware market, creating the problem for people, and we were able to scale to 15K in spend."]
+[44:35] Yeah, that's fucking sick. Good job.
+[44:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Dupe and Relaunch Clarification"
+NÚMEROS: N/A
+VISUAL: Esclarecimento sobre duplicar campanhas: foundation = mesmos hooks recriados exatamente, testing = novos hooks com audiências provadas
+[45:00] [Discussão sobre duplicar campanhas com novos criativos]
+[45:30] If I've got a foundation campaign specifically and that's what I'm talking about, then I'm duping it and I'm trying to recreate the proven hooks like to the T, you know, I'm not necessarily trying to create new variants of the ad hooks.
+[46:00] If I'm in a testing phase again, like I could take technically the same audience that's worked historically and I've got my foundation campaign where I just have proven hooks and I'm not varying those. But I could take that same campaign and also treat it as like I'm going to test that same audience with new hooks too and see if I can add like another foundation campaign with different hooks with the same audience.
+[46:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Three Variable Testing Matrix"
+NÚMEROS: 3 variáveis: Audiences, Ad Creatives, Funnels
+VISUAL: Matriz 3D de combinações possíveis entre audiências, criativos e funis para criar múltiplas foundations
+[46:55] These three things of audiences, ad creatives, and funnels like those become what I'm attempting to test and essentially just find combinations between the three that once again that's what equals foundation and gets me to the point where I just rack those up.
+[47:25] [Discussão sobre criar novos arquivos de vídeo às vezes sendo suficiente]
+[47:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Tall Tower of Foundation Campaigns"
+NÚMEROS: Múltiplas foundations empilhadas, cada uma no seu teto de scale
+VISUAL: Torre alta de campanhas foundation: cada uma escalada ao limite, cada uma atingiu seu teto de resultados, estrutura segura e estável
+[48:00] Ideally what you're doing is you're trying to build like a super tall just structure that's all foundation campaigns, you know, that you just grow through time and it's like winner winner winner winner and each one of these is like scaled out to its limit.
+[48:30] You've essentially found if each one of these had like a graph to it, you've in each one of these like reached that point of scale where you know it produces consistent results but every single one of these hit that hypothetical results ceiling and that's the whole game.
+[49:00] You're just trying to essentially compound foundation campaigns that ran into the ceilings. This is what creates like a really healthy and kind of like feel-good form of 10k days, you know, is when I'm able to just do that.
+[49:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "What Makes $10K/Day Feel Bad"
+NÚMEROS: Foundation campaign falha, account nuked
+VISUAL: Cenários de crise: campaign principal morrendo, conta sendo banida, instabilidade causando ansiedade
+[49:45] And again, like what makes 10K a day feel bad is when your foundation campaign that you have shits the bed and or like imagine again like your ad account just gets fucking nuked, you know, and they're like that's where things become problematic.
+[50:15] But to be clear, what creates like safety and stability and like honestly as ridiculous as this might sound like inner peace like makes you feel good about everything is a fuckload of foundation campaigns that have reached their limits.
+[50:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Combination Testing Strategy"
+NÚMEROS: Proven audience + new hooks = nova foundation, Proven hooks + new audience = nova foundation
+VISUAL: Processo sistemático de combinar elementos provados de formas diferentes para criar novas foundations
+[51:00] It's like, okay, I found the winning audience. I'm now going to try new hooks with the proven funnel. I've already got new foundation campaign unlocked. Throw it in the bin. You know, okay, now I'm going to try the same proven hooks, but with a new audience and with the same proven funnel. Bingo. New foundation campaign. Throw it on the pile.
+[51:35] I'm just taking those three things and I'm combining them in different orders to try to create as a result a new foundation campaign that makes me feel good and is consistent, safe, stable, and brings me the inner peace I'm looking for when I'm scaling the out of an account.
+[52:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Inner Peace at Scale"
+NÚMEROS: Million-dollar months mencionado
+VISUAL: Sentimento desejado: chão seguro sob os pés, não sentir que tudo vai desmoronar, estabilidade emocional em high-spend
+[52:15] I want to feel good. I don't want to feel like every day is scary, you know? I don't want to feel like it's all going to come crumbling down when you're cracking million-dollar months, you know? I want to feel like there's like a floor that I'm standing on that's extremely secure.
+[52:45] If anything feels the opposite of safe, stable, and bringing inner peace, you're doing it wrong and there's a high probability that you got to fix something.
+[53:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Rapid Problem Solving Mindset"
+NÚMEROS: $10K/dia = problemas precisam ser resolvidos rapidamente
+VISUAL: Mentalidade de sabujo: identificar instabilidade, encontrar raiz do problema, atacar agressivamente
+[53:25] When I said everything goes fast, okay, you are rapidly solving problems that create instability that make you feel insecure, okay? And that give you a perspective or perception that things are going to fall apart. You have to like a bloodhound on the hunt find what is wrong and creating that set of issues internally.
+[54:00] You have to identify where that's coming from. What's the root? And you got to fucking blow it out of the water. You've got to attack it so aggressively.
+[54:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Shattered Table Story"
+NÚMEROS: Mesa de vidro + mármore quebrou em milhões de pedaços
+VISUAL: Metáfora: mesa aparentemente de mármore era vidro embaixo, quebrou sem aviso, tinha rachaduras invisíveis
+[54:35] [História da mesa que quebrou]
+[55:30] I thought it was made of marble. Okay. It's like this little table outside on the balcony. And to my surprise, IT'S FUCKING SHATTERED INTO A MILLION PIECES this morning when I look out on my balcony and I'm like, "WHAT? WHAT THE FUCK HAPPENED TO MY TABLE?"
+[56:00] And it's apparently made of glass on the bottom with marble on top. And I'll send a photo after this if it's not already cleaned. It is literally in like a million pieces. And yesterday it was totally fine.
+[56:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Windshield Crack Analogy"
+NÚMEROS: Pequena rachadura se expande progressivamente
+VISUAL: Analogia do para-brisa: pequena rachadura se espalha, cria teia de aranha, eventualmente compromete toda a estrutura
+[56:45] Has anybody ever had glass that's got like a I'll give you an example like a windshield that has a crack in it. What happens to a windshield that has a crack? [Participante: "Starts to grow"] Yeah, it does. [Participante: "Starts to grow and then it just boom and widen"] And then what eventually happens to your windshield? [Participante: "Just like spiderwebs everywhere"]
+[57:30] My point being is like, dude, if there's a little fucking hairline crack in your windshield, it spreads and it gets bigger. I'm assuming that that happened. I'm assuming that that table, there were 400 people the owner had in the unit at one time. Who fucking knows what they did to that table? There's probably a small hairline crack.
+[58:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Unaware of the Crack = Still Breaks"
+NÚMEROS: N/A
+VISUAL: Consciência vs inconsciência: problema vai acontecer independente de você estar ciente ou não
+[58:15] And randomly, it's like to me, randomly, right, I didn't know there was a crack in the table. All of a sudden, my table is fucking shattered into a million fucking pieces. What would have happened if I would have looked on the bottom of the table and saw a hairline crack? I would have anticipated it would have fucking blown into a million pieces, right?
+[58:45] Could I do anything when I'm unaware of the crack? Does the problem still have the potential to shatter into a million pieces like it did for me because I'm aware of it or not? That table's still going to fucking break regardless. Whether I'm aware of it or not, it's going to break regardless.
+[59:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Finding Cracks at $10K/Day"
+NÚMEROS: $10K/dia = múltiplas "mesas" com potenciais rachaduras
+VISUAL: Necessidade de buscar ativamente problemas ocultos, mentalidade proativa vs reativa, inspeção constante
+[59:30] So, when you're at 10K a day, there are cracks under a random table that you're not looking at that are going to fucking shatter you that you have to be hyper aware of. You must find the crack, okay? And you have to fix the crack. You have to mend the crack. You have to actively seek the cracks.
+[1:00:00] You can't live in euphoria like I was on my balcony. I'm over here thinking it's all fucking lollipops and rainbows on the balcony over here. I'm not thinking my table's going to shatter into a million pieces. And boom. Now I don't have a little fucking table. Now I just got a problem. Now I got to spend money, buy a new fucking table.
+[1:00:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "What's Your Crack?"
+NÚMEROS: N/A
+VISUAL: Pergunta reflexiva: qual rachadura você não está vendo? Qual você está ignorando? Onde está o ponto de falha oculto?
+[1:00:45] I ask you a simple question and close it out. If you're at 10K a day in spend, what's the crack under the table that you don't see right now? Are you aware of the crack under the table and you're ignoring it? You got a crack in the windshield right now that you're thinking is not going to expand?
+[1:01:15] That's what I'm talking about when I say you got to look at it like a bloodhound. You got to find the crack and it has to be identified and fixed and have attention on it. You can't let those things sit cuz they will fuck you.
+[1:01:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Common Cracks Examples"
+NÚMEROS: $3,000 para AI exemption tag da Stephen
+VISUAL: Exemplos práticos: disapprovals (comprar AI exemption), payment failures (backup cards), só usar AMEX (adicionar Visas)
+[1:01:55] And that essentially can turn into things like let's say you start getting some disapprovals. Okay? Well, the crack that's a crack. Pay Stephen for the fucking AI exemption tag for like $3,000 and disable the AI from disapproving any ads from that point forward so you don't get a disabled account one day when you wake up.
+[1:02:25] If you've had payments failing and you don't have like another card or another three cards that are in the account as backup methods, dude, you might wake up to a fucking spend limit one day because they're not able to consistently charge your card and then all of a sudden you have payment method verification issues.
+[1:02:55] Are you only using AMEXs? Because AMEX's have a very high probability of fraud in Facebook in the ads manager. Do you have any Visas? You have like a Chase rewards card you could throw in that piece? You diversify. You look for the cracks.
+[1:03:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Andrew's Sales Guy Example"
+NÚMEROS: Sales guy prestes a desistir
+VISUAL: Exemplo de "rachadura": vendedor desmotivado durante eleições, problema de moral que precisa ser corrigido imediatamente
+[1:03:35] Andrew sales guy. Everybody heard that who was here at that first part of the call when Andrew was talking about a sales guy who was about to quit from talking to people who were burnt out during the election on sales calls. Crack or no fucking crack to me. I'm a super glue that shit closed. You know what I mean? Not cracking you're going to shattering my table.
+[1:04:00] That's what I'm talking about. The mental state of I'm annihilating problems, dog. There are there's not a single fucking crack in my table. You get what I'm saying?
+[1:04:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Stephen - The Facebook Plug"
+NÚMEROS: $2.5K para AI exemption (era $2.5K, mencionado como $3K antes)
+VISUAL: Recurso interno no Facebook: desabilita AI de rejeitar ads, anteriormente só desabilitava AI de desabilitar contas
+[1:04:35] [Discussão sobre Stephen, o contato no Facebook]
+[1:05:30] [Mostrado no chat: AI exemption por $2.5K que desabilita AI de rejeitar ads]
+[1:06:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Scaling Strategy Question - Multiple Campaigns vs Fewer"
+NÚMEROS: $500/dia por campanha = 20-25 campanhas para $10K/dia
+VISUAL: Dilema: muitas campanhas pequenas vs poucas campanhas grandes, preocupação com audience overlap
+[1:06:20] [Nick pergunta sobre ter muitas campanhas de $500/dia vs poucas maiores]
+[1:07:00] One thing I've seen like which makes sense, I'll be spending $500 a day on a campaign, for example, and you know, if I'm trying to scale an ad account with just like $300 a day campaigns or like $500 a day campaigns, that's like 20 25 maybe 28 fucking campaigns in an ad account to get to 10K a day.
+[1:07:30] I know your philosophy is like or I assume you would be like, "Okay, I want to have as few campaigns in this ad account as possible when spending that 10k a day for audience overlap, etc."
+[1:07:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Scaling Method Comparison"
+NÚMEROS: $500 para $1,000/dia, custo por call sobe significativamente às vezes
+VISUAL: Duas estratégias: duplicar e aumentar orçamento agressivamente vs escalar campanha existente gradualmente
+[1:08:10] But one thing I've seen is like, okay, if I'm going to scale a campaign from 500 to $1,000 a day in spend, I'll typically dup the campaign, relaunch at $1,000 a day. A lot of times it'll not always fall apart, but like the cost per call like significantly or reasonably goes up a decent amount.
+[1:08:45] So typically when you're spending 8, 9, 10k a day or even more, are you oftentimes spending like $1,000 a day per campaign and having like maybe 10 of them? Are you doing like two or three K a day per campaign oftentimes or is it a mix?
+[1:09:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Scale Existing Campaign First"
+NÚMEROS: 10-30% incrementos diários, testar se atinge teto
+VISUAL: Metodologia: escalar campanha existente gradualmente para identificar onde está o teto real antes de criar novas
+[1:09:30] Well, what I would do if I saw that is I would just scale up the already existing winning campaigns like just because I want to go from 500 to 1,000 overnight doesn't mean that's the best thing to do if I've consistently seen that inflates my result.
+[1:10:00] Remember what I had said when you run into the ceiling like it's better to scale an existing campaign so you know when you hit the ceiling versus what you did there which to be fair you know I do that all the time as well when I want to be really aggressive.
+[1:10:30] And I generally will just give it a few days to settle and then I'll typically see it fall back down to what it was previously for my cost per whatever I'm optimizing for. But to be fair, you should also attempt obviously to scale up the existing campaigns that you referred to as $500 a day winners and see if this same result occurs of spinning the wheels.
+[1:11:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "10-30% Daily Scaling Method"
+NÚMEROS: 10-30% acima do orçamento do dia anterior
+VISUAL: Método conservador: aumentos diários graduais permitindo identificação clara do teto de performance
+[1:11:15] Because again that'd be representing that you hit the ceiling on that specific campaign and then you just throw it in the foundation pile and go focus on the new campaigns. [Nick: "Got it. So you're still doing like the 10 to 20% per day"] Yeah, 30 is my more aggressive number if I do it that way. Yeah, we still do the cost per X scaling strategy.
+[1:11:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Cost Per X Aggressive Strategy Use Case"
+NÚMEROS: 4 novos closers contratados, $3,000 para $5,500/dia overnight
+VISUAL: Cenário que justifica agressividade: nova capacidade de closer, necessidade de preencher calendários rapidamente
+[1:12:10] I'll give you an example, right? Like we had a team the other day. They hired like four new closers. All four closers hit the calendars at the same time. Like if I would have scaled 10 to 30%, it probably would have taken like four full weeks for me to solve the problem of getting in their closer capacity.
+[1:12:45] Versus in that specific instance. That's an example where I'm gonna do the cost per X strategy and just try to like overnight fill their calendars, you know. I need to be aggressive because those are human beings and they're not just going to sit there for four weeks and like not have opportunity and therefore not get paid and therefore have a high probability to quit. I got to solve that problem fast.
+[1:13:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "When to Use Each Method"
+NÚMEROS: 10-30% = identificar teto, Cost Per X = urgência de capacidade
+VISUAL: Decision tree: sem urgência = método lento para ver teto, com urgência (closers, capacidade) = método agressivo
+[1:13:35] If there's no need for me to go from 500 to 1,000 overnight or from like 5,000 to 10,000 overnight on a specific campaign, it's like I'm going to preferably do the slow and steady method at 10 to 30%. That way again I can see when I hit the ceiling.
+[1:14:00] [Nick: "Do you ever see in the first like three to four days you'll have like an extremely high cost per call that'll start to come back down after that first three to four days?"] Yeah. Then follow the testing window where like I'm probably let it sit there for at least seven days before I make any kind of rash decision.
+[1:14:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "7-Day Testing Window for Aggressive Scaling"
+NÚMEROS: $7K de risco para aprender em 7 dias
+VISUAL: Janela de teste: dar 7 dias completos para campanha se estabilizar após scale agressivo, comunicar risco ao cliente
+[1:14:45] I'll tell the client I'll be like, "Hey, like we're going to risk 7K and see how this plays out, you know, and if it doesn't like we're spending 7K to learn that it didn't play out."
+[1:15:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Venus Flytrap Still Applies"
+NÚMEROS: N/A
+VISUAL: Confirmação de que estratégias de awareness (Venus Flytrap, Forester, Tornado) ainda se aplicam para encher o lago
+[1:15:25] [Discussão sobre Venus Flytrap e awareness campaigns]
+[1:16:00] When you're building out these foundations, so you're going to try out when you're trying to target a new audience. Obviously, the whole thing about the Venus fly trap still applies, right? Where like you could be first starting with awareness before you hit them with direct response.
+[1:16:30] Yeah. You could look at I mean well beyond the Venus fly trap like almost any content ad strategy that starts with like filling the lake, you know, like the forester does that, the tornado does that, the Venus fly trap would technically do that. Like all those versions of a content campaign would fill the warm audience lake in that example.
+[1:17:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Direct Response Can Also Fill The Lake"
+NÚMEROS: Nick escalou de $10K para $15K/dia sem content
+VISUAL: Alternativa: usar direct response ads para criar o problema na mente das pessoas, não requer necessariamente content ads primeiro
+[1:17:15] But with what Nick talked about in the chat, he didn't say that he used content to frame those people first. He said he changed the messaging inside of his creatives and the audience to go and create the problem for the people through the direct response ads to convert them which can still be just as effective.
+[1:17:45] So moral of the story is remember it doesn't necessarily mean that it relies on content to be able to reach new audiences and convert them. It just really depends on your marketing skill set for how capable you are at direct response ads to convince people who don't think they have a problem that they have a problem.
+[1:18:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Bunker Ad Example - Creating Problems"
+NÚMEROS: Alguns milhões de dólares para bunker + plano de fuga
+VISUAL: Anúncio de bunker mostrando plano ruim de fuga (kayak inflável), criando awareness do problema sem content ads
+[1:18:40] I saw a funny ad recently. I was actually in New York and I got targeted by this ad and it was a guy. It's like a survival video and his survival plan was a small inflatable kayak and like a backpack and it was describing that if something went wrong and he needed to leave, he's essentially going to go to the river, inflate this fucking kayak thing with his backpack full of shit and like kayak away from the city in the river.
+[1:19:20] And when you watch this video, it's comical how bad his plan was. And the ad was for selling a bunker and like a flight plan and a whole fucking rich person evade the city getaway setup for a couple million dollars.
+[1:19:50] And it was essentially making people who didn't think they had a problem aware that okay like well what's my plan if something went wrong which most people don't regularly think about and it would expose like literally you watched this guy like go down to the river and like try to fucking inflate his little kayak and it was such a bad plan.
+[1:20:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Content Inside Direct Response"
+NÚMEROS: Call funnel direto, sem content ads separados
+VISUAL: Exemplo de como o "conteúdo" pode estar dentro do próprio anúncio de resposta direta, não requer campanha separada
+[1:20:35] And I was like dude if I lived in New York and I saw that ad and like I was just balling like a fucker you know like had a couple million bucks for like a getaway plan you know like that would that would make me inquire about it for sure. And I was actually pretty pleased with the fact they got targeted with that ad.
+[1:21:00] Anyway, the point being, it's a great example of an ad that could create a problem in the mind of people without using any content. You know, the content was technically in the direct response ad itself. Just led to like a call funnel and I thought it was great. You don't always require content to be able to convince people of stuff.
+[1:21:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "How Are You Scaling to $10K/Day?"
+NÚMEROS: 10-30% diário OU Cost Per X strategy, exemplo $3,000 para $5,500
+VISUAL: Duas metodologias explicadas: incremental diário vs jump agressivo baseado em necessidade
+[1:21:50] [Pergunta sobre como escalar para $10K/dia]
+[1:22:10] 10 to 30% more than what the previous day's budget was or we do the cost per X strategy which is literally just you I'll give you an example like just the other day again client hit me up. Hey, we got two more closers on the calendar. We were at like I don't know 3,000ish a day in spend. With the math of the two new closers, I needed to be at about 5,500 a day in spend.
+[1:22:45] So, I just duped out the campaign, put the new campaign at $5,500 a day. You know, press publish, let it get approved, cut off the old one. Sometimes you could do it that way. Other times, it's more responsible to do it 10 to 30% a day and just scale it up incrementally over time.
+[1:23:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Scaling Math in Excel"
+NÚMEROS: Modelagem de quanto tempo para atingir target em 10%, 20%, 30%
+VISUAL: Planilha de Excel: spend atual, dias, taxa de crescimento, forecast de tempo necessário, cash flow, ciclos de vendas
+[1:23:30] You want to have a plan where you do scaling math. Ideally, you just do it in an Excel sheet so you could see like, all right, here's our current level of spend. Here's like the day. And if we scaled like 10%, here's how long it would take to get to the point we want to be at. If we scaled at 20%, here's how long it would take.
+[1:24:00] Kind of like financial modeling, but for your daily spend. It's also good to do that to also forecast like credit card bills and like how long you're fronting cash for and like, you know, sales cycles factoring into the scale math as well.
+[1:24:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Technical Scaling Execution"
+NÚMEROS: 10-30% acima do orçamento atual, uma vez por dia ou a cada dois dias
+VISUAL: Processo técnico: entrar na campanha existente, aumentar orçamento em 10-30%, monitorar volume de resultados
+[1:24:45] But like on a very technical level to be clear, we're just going into the existing campaign and we're just scaling it 10 to 30% above whatever the current day's budget is. And we're typically doing that once a day or like maybe once every other day depending on if that result is producing a better result volume the next day.
+[1:25:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Math of Small Budget Scaling"
+NÚMEROS: $200/dia budget + $200 cost per call + 10% scale = $20 aumento = sem novos resultados esperados
+VISUAL: Exemplo matemático: incremento precisa cobrir pelo menos um cost per result completo para ver novos resultados
+[1:25:35] It's important to note like also if you scale 10 to 30% a day, but that 10 to 30% doesn't cover whatever your cost per result currently is, then obviously you can't expect it to get a new result until you spend enough for whatever your cost per result is on top of the existing day spend.
+[1:26:00] So just as a very simple example, if I'm spending $200 a day and I have a $200 cost per call and I scale it 10% the next day, 10% of $200 is $20. So, if I added $20 to my $200 a day campaign, I literally wouldn't expect any results because it cost $200 for a cost per call. So, I'd have to get to the point where I spend $400 a day to see an extra cost per call as a result.
+[1:26:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Volume Math at Higher Spend"
+NÚMEROS: Higher spend = suficiente volume para ver resultados adicionais com 10-30%
+VISUAL: Contraste: low spend = queimando cash por mais tempo para acumular resultados, high spend = vê resultados incrementais rapidamente
+[1:27:00] So, at heightened levels of spend, you're typically when you're scaling 10 to 30% capable of seeing X amount of additional result per day because there's typically enough volume in that spend to see that result. But remember, at smaller levels, when you're taking like a campaign like Nick said from 500 and you're kicking it up, that math matters a lot more at that smaller level of spend when you start.
+[1:27:35] So just keep that in mind. You're almost like burning cash or just getting a smaller result volume over a longer duration at smaller levels first.
+[1:27:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Why Turn Off Winning Campaign?"
+NÚMEROS: $500/dia winner duplicado para $1,000
+VISUAL: Questão: por que desligar campanha de $500 que funciona ao invés de deixar ambas rodando?
+[1:28:10] [Nick pergunta: "What's your logic in terms of why you wouldn't just have another campaign and leave the one that's working and has the momentum on?"]
+[1:28:30] Winners win, dude. I mean, there's a high probability it's going to win when I dup it out and kick the budget up.
+[1:28:45] [Nick esclarece: "I could have kept the $500 a day one on, but I didn't. Would you sometimes leave the $500 a day one on that is within KPI?"]
+[1:29:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Scale Existing Campaign Instead"
+NÚMEROS: $500 para $1,000 via incrementos de 30%
+VISUAL: Abordagem correta: se Cost Per X falhou, escalar campanha existente gradualmente ao invés de criar nova
+[1:29:25] Well, I would attempt in your case, just to be extremely clear again, to scale up the $500 a day campaign if my cost per X strategy aggressive style did not work. So, that still wouldn't result in me creating a new campaign to get an extra $500 a day off. I would take the existing $500 a day campaign and get it up to $1,000 with likely 30% a day incremental increases in spend until I get to that thousand bucks.
+[1:30:00] And if my cost if my cost per result does not hold, what does that indicate based on what I talked about here today? [Nick: "It means that you can't scale to that point"] It's above the threshold. [Jeremy: "So then because I proved that then what would I do?"]
+[1:30:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "When You Hit Ceiling - Next Steps"
+NÚMEROS: Campanha mantida no teto identificado
+VISUAL: Processo: identificou teto → mantém campanha naquele nível → foca em testar novas audiências ou novos ad concepts
+[1:30:45] [Nick: "You'd probably turn the previous campaign back on or just relaunch and do a less aggressive strategy"] So again, if I did the less aggressive strategy of scaling the $500 campaign 10 to 30% and somewhere in between 500 and 1,000 I hit a ceiling. Okay? So, I then keep that campaign at whatever that ceiling is. What do I do after I hit the campaign ceiling?
+[1:31:20] [Nick: "You would either test new audience buckets or you would test new ad concepts"] There you go. Or maybe even a new funnel. You know, most probable to be audiences or creatives though for sure. That's where I'd then create a new campaign. Does that make sense?
+[1:31:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "CBO vs ABO Preference"
+NÚMEROS: N/A
+VISUAL: Preferência por CBO mas ABO usado ocasionalmente, especialmente para warm vs cold em mesma campanha
+[1:32:05] [Pergunta sobre CBO vs ABO]
+[1:32:20] Preferably CBO, but to be honest with you, I don't really care. I mean, you could do whatever you want. Adset budget is something I use occasionally. You know, if I want to essentially consolidate the amount of campaigns I have, let's use the example I'm doing like a warm audience and a cold audience and I want to put them in the same campaign, but I want to make sure both obviously get spend for like a test, I'm probably just going to use ABO.
+[1:33:00] I don't really see a difference nowadays. They both perform relatively the same from my experience. It fluctuates though to be fair. I mean sometimes one's more beneficial than the other, but right now I'm not seeing a bias.
+[1:33:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Call Closing Message"
+NÚMEROS: $10K/dia como objetivo
+VISUAL: Encerramento motivacional: sair e gastar $10K/dia, aplicar os conceitos aprendidos
+[1:33:45] Okay, cool. Great call. Had a lot of fun on this one. Hope you guys enjoyed it, too. Yeah, go out there and spend 10k a day, you know. Let her rip. All right, guys. Talk soon.
+📊 RESUMO EXECUTIVO
+NÚMEROS PRINCIPAIS:
+$10,000/dia = $300K/mês em ad spend (nível de scale discutido)
+$5K-8K/dia típico para foundation campaigns (50-80% do budget)
+10-30% do budget para "doing okay" campaigns
+$1K-2K/dia budget típico para testing
+7 dias janela de teste padrão em spend normal
+24-48h possível em rapid testing com $10K/dia
+3-4% do mercado são in-market buyers (hottest layer)
+$75 cost per call usado como exemplo target
+$106 average vs $200-700 em dias ruins (exemplo de volatilidade)
+$2K/dia = ad fatigue mensal | $5K/dia = ad fatigue semanal
+300+ milhões de pessoas em sales jobs globalmente
+2.5-3.5x ROAS exemplo mencionado (varia por negócio)
+$2,500-3,000 custo do AI exemption tag da Stephen (Facebook)
+10-30% incrementos diários para scaling conservador
+$500 para $1,000 exemplo de scaling agressivo
+ESTRATÉGIAS E SISTEMAS:
+Budget Distribution Pyramid:
+Foundation (maior parte): campanhas provadas, consistent winners, $5-8K/dia
+Doing Okay (10-30%): ROI positivo mas não espetacular
+Rotation: liga/desliga, ocasionalmente ROI positivo
+Testing ($1-2K/dia): remainder do budget, risco calculado
+Dois Tipos de Testing:
+All-In Testing: $10K inteiro em testes quando foundations falham (disapprovals, account down, extreme fatigue)
+Segmented Testing: $1-2K/dia, janela de 7 dias, abordagem conservadora
+Scaling Methods:
+10-30% Daily: método conservador para identificar tetos
+Cost Per X Strategy: duplicar e aumentar agressivamente quando há urgência (ex: novos closers)
+Ad Fatigue Management:
+Identificar quando result volume cai e cost per result sobe
+Duplicar campanha, trocar criativos (mesmos hooks), aprovar, desligar antiga
+Frequência aumenta com spend: $2K/dia = mensal, $5K/dia = semanal
+Market Layers (Chet Holmes - Ultimate Selling Machine):
+Centro: 3-4% in-market (hottest, mais barato)
+Camadas externas: progressivamente mais frias e caras
+Camada mais externa: never buy (não vale a pena)
+Lake Metaphor:
+Alguém precisa "encher o lago" (trazer novos participantes ao mercado)
+Sem reabastecimento, teto diminui com tempo
+Exemplos: Russell Brunson (personal branding), empresas contratando sales reps
+ESTRUTURA:
+Foundation Campaign = Winning Ad Creative + Winning Audience + Good ROI
+Proven hooks mantidos, apenas criativos novos para superar fatigue
+Escalados até encontrar teto invisível
+Mantidos naquele nível indefinidamente
+Three Variable Testing Matrix:
+Audiences: warm vs cold, diferentes demographics
+Ad Creatives: hooks, copy, headlines, videos/images
+Funnels: call funnel, webinar, lead form, low-to-high ticket, sales page
+Combinações para Criar Novas Foundations:
+Proven audience + new hooks + proven funnel
+Proven hooks + new audience + proven funnel
+Proven hooks + proven audience + new funnel
+Goal: empilhar múltiplas foundation campaigns
+Invisible Ceiling Indicators:
+CTR cai
+CPMs sobem
+Conversões do funil caem
+Gastar mais não gera mais resultados (spinning wheels)
+7-Day Average Analysis:
+Não julgar por dia individual em high-spend
+Calcular média de 7 dias para suavizar volatilidade
+Exemplo: dias bons ($67-98) vs ruins ($190-207) = average $106
+Rapid Problem Solving (Bloodhound Mentality):
+Identificar "cracks under the table" proativamente
+Exemplos: disapprovals → AI exemption, payment failures → backup cards, AMEX only → add Visas
+Sales guy desmotivado = crack que precisa ser colado imediatamente
+Mental state: aniquilar problemas agressivamente
+DADOS FINANCEIROS:
+ROI Determination:
+Não há número mágico universal
+Requer financial modeling específico por negócio
+Exemplo 2.5x ROAS: verificar se lucro após expenses é aceitável
+Se não suficiente, otimizar antes de escalar
+Cash Flow Considerations:
+Modelar em Excel: current spend, growth rate, dias para target
+Forecast de credit card bills
+Quanto tempo fronting cash
+Sales cycles impactando timing
+Scaling Math Example:
+$200/dia + $200 cost per call + 10% scale ($20) = sem novos resultados esperados
+Precisa $400/dia para ver resultado adicional
+Math mais crítico em low spend, menos em high spend
+Cost Examples:
+AI Exemption Tag: $2,500-3,000
+Bunker/Getaway Plan (ad example): alguns milhões
+Target cost per call: $75 (exemplo)
+Bad days: $200-700 cost per call
+Scale Economics:
+Nichos massivos (sales, real estate, stocks): pode escalar $300K/mês sem bater teto do 3-4%
+Nichos menores: encontra teto mais rápido
+Cada camada externa do mercado = mais cara para converter
+DURAÇÃO: ~1:34:00 FORMATO: Training call / Workshop sobre best practices para $10K/dia em ad spend

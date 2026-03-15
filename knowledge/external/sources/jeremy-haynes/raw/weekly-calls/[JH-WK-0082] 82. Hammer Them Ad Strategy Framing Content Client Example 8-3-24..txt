@@ -1,0 +1,515 @@
+Transcrição Completa: 82 Hammer Them Ad Strategy Framing Content Client Example 8 3 24
+[00:00] All right. So, this week we got a request from Jesse that won the weekly topic vote mini webinar pre-call homework sequence. Jesse, you want to describe the issue so we make sure we hit it on the head? You're muted.
+[00:15] Thank [laughter] you. So, what I was uh what I was going to go into or what what originally spurred the question was, you know, how I was just saying we had the setter booking show rate at like 96%. was the last week and over 90% average but then our self-booking show rate was 48% last week and over with cancellations and everything it's like around 50% which is just not good.
+[00:45] Um so we're looking at how do we increase that because yes Saturday show rates are great but even if we go to a triage call we have to you know get people to show up to the triage call. So essentially right now I'm seeing that the main le like the band-aids are yes triage or more set or whatever but the big root uh you know root cause here to solve for is the show rate.
+[01:10] So right now our show rate is currently meh. It's it's not bad, not great. It's obviously not great because it's not working very well. And that was what prompted me to ask for the the mini web because I think it not only gets people excited, raises perceived value, but it also raises the intent overall, not only just to show up, but to buy, right? So uh that was what that was the context for that.
+[01:35] Nice. Great prompt. Um to be clear, what is your process currently that's only producing a 50% show rate?
+[01:42] Yeah. So currently and we we had switched before we had like a pre-call flow that was kind of like your cliche, you know, testimonials just basically like you're about to get sold on something, right? Essentially like you know that's the kind of vibe it gave. It worked okay before like but I think that the reason it worked well before wasn't because of the short. It was because of the infancy of the offer and like the excitement in the industry since it is all organic and I have a pretty big following.
+[02:15] It was like the cult-like following was the first. So anything worked like we had shit closers, shit show rate, I mean shit pre-call. So anything worked. Then once that died down that pre-call flow stopped working.
+[02:30] So, we tried a new one which I got from someone that you know there it's kind of like whenever um you get advice that may work for someone else and it's from somebody you know is legit but it just didn't work for you. Um so we've used that and essentially right now what it has is it's like confidential it's like a subject line attention confidential information inside something like that.
+[02:55] It has a Loom video like it's like here view a walkthrough of the the the community and then it kind of shows like inside the the discord and we have some like you know indirect testimonials so to speak just showing like the wins channel where people make money like yo here's where you're going to ask me questions here's where our students are are killing it. It's not like bad but then there's that.
+[03:20] Then there's a free video from like one of our most favorite like kind of all-inclusive trainings so to speak from the the paid program. There's like a free lesson. Um and then uh there is there's like an R team page which I think is completely useless. I could be wrong.
+[03:40] Now it's a it's one of those ideas that sounds great. What I was going to do was split test this mini webinar with also another one because I have tons of live tradings where I've just made like crazy money on stream, you know, like make here's us making $20,000 in 20 minutes. Like that's going to excite people more than view our team page like you know what I mean? Strategy directors and all this.
+[04:05] So that I'm going to split test a bit of like a really good testimonial like hey we're excited for your call. Um so we can potentially take you on the same journey that you know John went on and he went from because I had this one where this guy's like yo I was inconsistent before I'm a new trader and now I made 18,000 bucks.
+[04:25] So that's like a good one. It kind of shows the journey and then here's also a look at some of the live trading calls you'll get to come on or whatever. And then basically it's like an I'm going to have it edited. So, like in the intro, it shows the profits, it shows the TP hitting and like the the Discord all hyped up.
+[04:45] But essentially, I I'm gonna make it way better. So, that that's one way. And then I want to test that with the the mini webinar or maybe somehow incorporate both of them to get people to just be like, damn, I want to show up to this. I don't want to cancel this. I want to buy this. Like, holy shit these guys are killing it. So, um
+[05:05] much better way to think about it.
+[05:07] Hell yeah. Thank you.
+[05:09] All right, cool. Well, to be clear, all that's done that you just talked about via email.
+[05:14] Yeah, email and text. So, it has we have a email. Well, right now, so the the main thing is there's just that one email that has the first stuff, it's all located in there and then every other text and email is just pointing to that email.
+[05:28] Got it. Okay. All right. So, typically when we come into a sales team and we see a 50% show rate, we know that there's a bunch of stuff that's broken and needs fixed. Um, I will say you can successfully scale a profitable business with a 50% show rate. So, it's not necessarily a totally fucked situation.
+[05:48] Um, it can be a lot worse. I've had in the most recent times an offer that had as low as a 35% show rate, but to be fair and disclose, it was a $50,000 offer. So, that substantially increases their probability of being profitable with such a low show rate.
+[06:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Show Rate Benchmarks & Best Practices"
+NÚMEROS: 50% show rate, 35% show rate, $50,000 offer, 65-80% show rate (2024 benchmark)
+VISUAL: Comparação de diferentes taxas de show rate com contextos de preço, linha do tempo 2024, indicadores de performance aceitável vs. ideal
+[06:20] Okay. Now, to be clear, every client that we have that has a 65 to 80% show rate in 2024, literally right now has dialed in what I'm about to talk about. Okay? So, number one, you have to get a lot more aggressive with the quantity of emails that you're sending to people. Um, in addition to that, the quantity of text reminders that you're going to send to people.
+[06:45] So, the worst thing that you could do is just use a reminder-based sequence and increase the frequency of it. That is not what I'm talking about here. Uh to be clear on that, reminder-based uh emails and texts are, hey, you got to call at this time, you know, make sure you show up. That is not what I'm talking about, okay?
+[07:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Reminder-Based vs. Selling-Based Sequences"
+NÚMEROS: Não especificados
+VISUAL: Comparação visual entre sequências de lembrete (X vermelho) vs. sequências de venda (check verde), ícones de email e SMS, diferenciação clara entre abordagens
+[07:15] You really have to master being able to sell each step of the process. So, look at it like this. And this is this is the deficiency and thinking that most people have that suffer with low show rates. They think because somebody booked the call that they are sold on showing up for that call. That's not true.
+[07:35] Okay, here's what is true. You were able to sell the person on booking a call. Now, you need to sell the person on showing up for the call. Okay? When you master that specific way of thinking about your show rate sequences and what you do to attack people to get them to show up, everything changes. The show rate improves dramatically.
+[07:58] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Two-Step Sales Process"
+NÚMEROS: Não especificados
+VISUAL: Dois estágios separados: 1) Vender o agendamento da call, 2) Vender o comparecimento na call, setas conectando os estágios, ícones de calendário e pessoa presente
+[08:10] And the sales team has to be with this same exact thinking. It starts with the owner of course transitions into the sales manager and has to carry over to the salespeople and the setters. Okay, you cannot neglect all the best practices that have to be implemented across the board here. But it starts with that mental frame. Okay, of everybody has to be on the same page. This person is not sold yet on showing up. Okay.
+[08:35] Now, to be clear right away when you start thinking that way, one of the first things that becomes very obvious is that the standard reminder-based email and text sequences are essentially worthless. Okay? They don't really do a lot. Somebody doesn't need reminded shit 20 times to increase the probability of them showing up for when they booked. Okay?
+[08:55] If anything, that's just going to be annoying. You know,
+[08:58] that's exactly right. It increases the probability of cancellations, of no shows. It actually increases the probability of no shows. It doesn't decrease it. And that comes from testing to be clear, not some made-up shit
+[09:12] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Reminder Overload = Lower Show Rates"
+NÚMEROS: 20+ reminders (exemplo negativo)
+VISUAL: Gráfico mostrando relação inversa entre excesso de lembretes e taxa de comparecimento, ícones de notificações excessivas, setas descendentes
+[09:20] Okay. Now, to be clear, you do want to get aggressive on increasing the frequency of I'm trying to sell you on showing up type communications. Okay? Now, here's how those look. And Jesse named a few of them towards the tail end of what he was describing.
+[09:38] So he's to you're totally right in saying that your you know our team page is worthless. That does not mean anything to people. So to be clear in Jesse's particular case, he's teaching people how to trade on prop firms and it might be broader than that now to teaching people to trade in general, but that's the main thing he's currently known for.
+[10:00] Okay. So, you're gonna you're going to see Jesse if you look him up online teaching you trading strategies, you know, and simply put, trying to teach you how to become profitable, consistent, and funded on these prop firms. Okay? And to be clear for everybody who doesn't know, prop firms are people who give you money to trade with. They typically keep 10% of the earnings that you generate and they pay you out.
+[10:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Prop Firm Trading Model"
+NÚMEROS: 10% (taxa da prop firm)
+VISUAL: Diagrama mostrando fluxo: Prop Firm → Capital para trader → Lucros → 90% trader / 10% prop firm, ícones de dinheiro e percentuais
+[10:30] Um, so a really good proposition if you're a new trader. Okay. Now, to be clear, the the tail end of what you talked about, Jesse, was very good in terms of what you'd want to follow for the entirety of your sequence, which is first of all, what are the things you're selling people on? Okay. Number one, consistency. Okay. What does that look like?
+[10:50] Well, I'm sure you're familiar with all the different trading softwares out there that you can upload as a trade journal so you can visualize how your trading actually looks. So, as an example, uh what's that? What's that one starts with a Z? Zel
+[11:05] trade listen trades I literally am best friends with Umar I have like a code everybody gets that for for a month when they join my thing for free
+[11:12] so trade trade zel is what it's called right
+[11:15] tradzela yeah
+[11:16] trade example
+[11:17] go by I was going to say as you were talking I wrote down trade journal that's a part of my offer I have a trade journal template in notion that I give people that that we can review so I don't want to go off track but I was going to say I was going to ask you maybe to pepper that in and be like you know this is the trade journal you can go ahead and have it but we're going to be reviewing or your trades through this or something like that.
+[11:40] Well, and you see, they don't give a shit about a trade journal right now for their own usage because it's only going to show them how inconsistent and unprofitable they are. They don't they don't want to look at that kind of stuff. What they want to see is what consistency looks like. And a trade journal typically allows you to visualize that very easily.
+[12:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Trade Journal Visualization Strategy"
+NÚMEROS: 86% win rate (exemplo mencionado)
+VISUAL: Interface de trade journal mostrando consistência, gráficos de wins vs. losses, visualização de performance diária, cores verde (lucro) e vermelho (perda) equilibradas
+[12:10] So, as an example, when Jesse is selling somebody on becoming a consistent trader, that means that you typically have a higher win rate than lose rate. It also means that you have a very consistent amount that you win daily. It also means that you have a very consistent conservative loss when you have your losing days.
+[12:28] Now, if Jesse can visually demonstrate, hey, just to be clear, we're going to help you become a consistent profitable trader. Just to be transparent with you, here are my literal trades that you can see for yourself. I am on average profitable 86% of my total trades. Uh you can see right here, here's the last most recent month.
+[12:48] And you literally want to update this at the beginning of every month after the previous month finishes. Just as an example of transparency, real-time information, showing people, here is, you know, my daily wins, my daily losses, and people want to be impressed by that.
+[13:05] So, to be clear, when you're selling people on being consistent, you quite literally want to demonstrate what that looks like. Okay? Because they then look at that, and what do they think to themselves, Jesse? They think, "Well, I mean, dude, this guy's doing it. like he's literally doing what I want to achieve.
+[13:25] So, I'll give you another example. We have a guy uh we just started working with him, so I'm not going to sit here and say his name. I don't really want to flex the results yet. We just got started like a month ago. The uh the guy's out there teaching people how to trade, but he has what he calls a set it and forget it strategy.
+[13:45] Okay, if your name I know that is don't say it, don't say it. So, long story long story short, okay, this particular guy has a histo,000 registrants. He made $7 million on that specific webinar. Okay, $7 million in one webinar.
+[14:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Case Study: Set It and Forget It Strategy"
+NÚMEROS: 38,000 registrants, $7 million revenue, 1 webinar, $3,500 product price
+VISUAL: Funil de conversão massivo, números impressionantes em destaque, ícone de webinar, calculadora mostrando matemática do sucesso
+[14:15] Now, long story short, I by the way, I don't want to say his name just so I can say that specific piece of data because he doesn't want that being shared. So, okay. Now, long story short, the uh the point is this guy did a challenge where he turned $100 into a million. Now, in that challenge, he only got it up to $379,000.
+[14:35] Just to be clear for everybody who's not a trader on this call, is turning $100 into $379,000 within 3 months impressive, right? And by the way, he transparently did it. He'd stream every time he traded. He would document it on reals, shorts, Tik Tok. He'd document it on YouTube live. And you can go literally watch every single individual trade that he made.
+[15:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Transparency Challenge Results"
+NÚMEROS: $100 → $379,000, 3 months, 38,000 webinar registrants, $7M revenue
+VISUAL: Gráfico de crescimento exponencial, múltiplas plataformas de streaming (YouTube, TikTok, Reels), ícones de transparência e prova social
+[15:10] That's about as transparent as it gets. That's why he got 38,000 registrants to a webinar. That's why he was able to get $7 million off of a $3,500 product, by the way. So, just to be clear, and that was all in one webinar, that whole seven mil when you put on display your skill set, it's like just you're attempting to articulate to people, you know, I can help you become a consistent, profitable, funded trader.
+[15:35] Well, you have to meet all three of those pieces of criteria yourself. Okay. Now, here's here's the good news. When you do that successfully yourself, that in that alone could be three separate emails. Proving consistency, proving profitability, and proving that you're funded. Okay, those are three emails.
+[15:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Three Pillar Email Strategy"
+NÚMEROS: 3 emails separados
+VISUAL: Três pilares verticais: 1) Consistência, 2) Lucratividade, 3) Funded Status, cada um com ícone representativo e check marks
+[16:05] But those aren't all we want. We then want to take the level of that lesson to a to a higher level. And we want to start incorporating some potential objections that come up on sales calls that we can weave into some additional email communications that go out to our our people who are going to show up to a call.
+[16:25] Now, when we start looking at the objections the sales team has, let me just give you one right off the bat that those three emails we just talked about would create. I get this shit all the time from little shit nerd losers that hate themselves and don't see their own potential. They say things to me like, "Oh, Jeremy, well, you can do it because you're an anomaly. I can't. No, I can't do that. Nobody else can do that, Jeremy. I can't get $100,000 off of an agency deal.
+[16:50] You know what I mean? You're you're an anomaly, Jeremy. So, why did they think that? Well, to be fair, I mean, you know, I'm the fucking man. So, I I get where they're coming from when they look at me and they think to themselves, "Well, I mean, this guy can do it. I'm completely different than that guy. Like, look how polished that guy is in comparison to me in my life right now.
+[17:10] There's a huge wide gap between where they're at and where I'm at. Okay? And perceptually, I don't say all this to be pretentious, just to be clear, okay? Don't think of it this way. I'm saying perceptually from this person's mind, that's what they're thinking. They're thinking to themselves, there's just such a wide gap.
+[17:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Anomaly Objection"
+NÚMEROS: $100,000 agency deal (exemplo mencionado)
+VISUAL: Diagrama mostrando gap percebido entre guru e prospect, setas de distância, ícones de pessoa em diferentes níveis de sucesso
+[17:40] They don't see all the steps that literally I myself went through to get to where I'm at and how they could take those same steps, too. So, what do I got to do? Well, I got to show somebody else who's closer to where they're at that's started to take the steps and is experiencing the initial results of what I claim I can help them with. Okay.
+[18:00] So, in Jesse's case, once again, consistent, profitable, funded trader. When somebody is none of those things, and Jesse's way over here getting who knows how much money from those things, we have to show people who are closer to where that person's starting at.
+[18:18] So, as an example, we can cherrypick some testimonials from our student communities or from our client base that specifically talked to those objections just like that one. Oh, when I was first getting started, honestly, man, I didn't think I could do this shit I looked at Jesse and I thought to myself, I don't know, just it's like, yeah, sure, he could do it, but I don't know if I could do it, too.
+[18:40] And, you know, I I had I had a piece of advice that I learned, which was don't allow skepticism to hold you back. You know, you got to take risks in life to get rich. Risk equals getting rich. So, I took the dive anyway. You know, I jumped in. I started the process and within weeks, I became consistent.
+[19:00] My losing days no longer ate up the entirety of my profits. I blew barely any accounts. And if I did, it was my fault. You know, I I was still getting control of myself in the first couple weeks of doing all this. I actually got funded faster than I'd ever passed any other eval account up to this point in my trading journey.
+[19:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Beginner Success Testimonial Template"
+NÚMEROS: $3,000 first payout (exemplo), "within weeks" timeline
+VISUAL: Jornada do iniciante: ceticismo → ação → primeiros resultados → caminho visível para sucesso maior, ícones de progresso gradual
+[19:30] And in addition to that, I managed to get a payout for $3,000. I can see clearly how I can get to Jesse's level now. It's amazing. And you know, I'm very grateful that I joined this program. And it's like, yeah, the guy only made $3,000. And yeah, he's still struggling with some stuff, but as an example, that guy's only a few steps ahead of the person who's considering buying.
+[19:55] And it's still an incredible testimonial to shine. Most of the testimonials people pick are really close to where Jesse is.
+[20:02] Yeah, I'm guilty of that.
+[20:05] Okay, I got testimonials I could sit here and flex from this very inner circle group to a person who doesn't even have an agency yet. Like I could sit here and say, "Oh, well, look at Robin over here who just got his first $100,000 payout. Look at Julian who just got his first $100,000 payout. Look at look at like this guy and this guy and this guy who are all doing 100k a month per deal.
+[20:28] But that's way too far along. That's way too far along. Those testimonials are good for this type of offer. Okay, for my general offer where I am selling people into starting a marketing agency or into digital marketing. Okay, I can't use the farthest along testimonials.
+[20:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Testimonial Selection Strategy"
+NÚMEROS: $100,000 payouts (muito avançado para iniciantes)
+VISUAL: Escada de progressão com diferentes níveis de testimonials, X vermelho nos testimonials muito avançados, check verde nos testimonials de iniciantes, setas mostrando proximidade ideal
+[20:55] This is this is this happens all the time. If you go to almost any fucking website for any program on earth, they pick people who have already achieved a like the most substantial result out of everybody who's ever bought from them. They don't ever highlight the people who are only a few steps away from where the person buying is at.
+[21:15] Those testimonials have a substantially greater impact than the ones that are closer to where you are. Does that make sense? So to be clear, you cannot pick you cannot cherry pick the big dogs. You cherry pick the people that are just getting started. And ideally, they're overcoming objections in their testimonial that the person who's considering buying has right now. Okay.
+[21:38] So let's give some other examples. So in trading, one of the most common things is either number one emotional trading, number two revenge trading. Okay. Let me give you examples of those. If you're sitting there trading and you lose money, all right, sometimes the loss is bigger than what you wanted it to be.
+[21:58] Or sometimes even if you just lose in general, you carry over some general good business principles like, well, I'm not going to walk away a loser, you know, I'm going to put in the work necessary to get back to my positive position. That is terrible mindset when you're trading. That can fuck you tremendously. Okay.
+[22:18] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Common Trading Objections"
+NÚMEROS: 2 principais: #1 Emotional Trading, #2 Revenge Trading
+VISUAL: Dois cenários problemáticos ilustrados, ícones de emoções negativas, ciclo vicioso de perdas, contas explodidas (blown accounts)
+[22:25] Now, to be clear, revenge trading in its simplest form is, okay, you lost money, you're going to try to trade to get it back, and you end up getting deeper and deeper in the hole. And then when you trade with these prop firms, or technically even with your own money, you have the ability to blow your account, which means you lost enough to have to start the whole process over again.
+[22:48] So, that's a very common thing that Jesse's buyers are going to deal with. So, same exact logic. If I can sit there and cherrypick, okay, a testimonial that's only a few steps ahead of where the buyer is that says, you know, before I bought Jesse's program, my most common reason I'd blow accounts was I just I had no control over myself.
+[23:10] I would be emotionally erratic. Like, I was all over the place. When I was down, I would revenge trade and I would just bury myself into a deeper hole and blow so many accounts. when I would be up, I would keep trading and then I'd actually lose what I made because I just I thought it could get better and better and it and it just wouldn't and that would that would screw me over.
+[23:35] And you know, I I kept blaming other people. I kept blaming the prop firms. I kept I you know, I just blamed everything but myself. I blamed my connection with the fucking brokerage accounts. Like any anything else I could point the finger at, I would.
+[23:50] And you know, then then I saw a few Jesse videos and you know, I took the risk at that point. I I had nothing to lose. you know, I decided to pull the trigger on it and I'm pleased to say I've been in the program for about six weeks now and I've gotten almost full control over myself. I never revenge trade anymore. I'm no longer emotional. I I'm patient. I wait for the right setups.
+[24:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Emotional Control Testimonial"
+NÚMEROS: 6 weeks no programa
+VISUAL: Transformação antes/depois: caos emocional → disciplina, ciclo de blame → responsabilidade pessoal, contas explodidas → controle sustentável
+[24:25] I have a clear set of defined rules. I I've honestly become very disciplined very quickly and it's kind of shocking to me. And that's that's a huge win for me. and I'm on my way to becoming a a profitably funded, consistent trader. In that example, I didn't even say the person made money. I literally just said they got control over one of the most common issues that a potential buyer of Jesse's is going to deal with.
+[24:50] That's another example. I want to cherrypick results and testimonials of the most common reasons that hold people back from achieving the outcome I can provide them. Think about that.
+[25:02] Yeah, you're right. I have so many of those, too. And I always am like, "Oh, here's the guy that made 20 grand on his payout or whatever or something like that instead of just doing that."
+[25:12] And to be clear, that's that's that's why you want to highlight once again, you want to cherrypick the objections. And to be clear, depending on how many objections your sales team relays to you, and there's all kinds there's simple stuff like, you know, I was uh really on the fence about buying this offer because, you know, co it cost a good amount of money.
+[25:35] I mean, a couple thousand bucks it cost, like it was tough for me to justify because I was already in the hole on so many accounts that I had purchased and blown. And uh, you know, I I managed to get the money together and I bought it anyway. It was some of my last dollars and I am fucking pumped that I did because it didn't even take me more than two accounts to actually pass them, become qualified.
+[26:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Money Objection Testimonial"
+NÚMEROS: "couple thousand bucks", 2 accounts para passar, $2,000 primeiro payout
+VISUAL: Jornada financeira: investimento difícil → resultados rápidos → ROI começando, ícones de dinheiro e confiança crescente
+[26:05] I'm now a funded trader. I apply all the rules that Jesse taught me and I actually got my first payout for $2,000. I'm on my way to earning what I invested into this offer and starting to make back all the money that I lost on blown accounts. I I'm really excited to become profitable soon.
+[26:25] You know, same thing. Not a huge crazy win, just an example of a money objection turned into a, you know, I'm really glad I I I invested into this. I mean, this this made a tremendous difference in my life after pulling the trigger on it. And uh you know, it made me a little uncomfortable, but dude, on the other side of this fence, like I'm fucking pumped that I did it.
+[26:48] I uh really would have kicked myself if I didn't pull the trigger on this, you know? It would have it would have screwed me over. I have a lot more confidence now that I invested into Jesse's program. You see what I mean?
+[27:00] So, to be clear, we want to have however many fucking emails we can get. Like, dude, I just want to put into perspective if I have like 15 to 20 emails that go out to somebody in 72 hours, you all might look at that as ridiculous, too excessive, far too many. And I look at it like that is the perfect amount.
+[27:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Email Volume Strategy"
+NÚMEROS: 15-20 emails em 72 horas
+VISUAL: Enxame de abelhas como metáfora, múltiplos ângulos de ataque, frequência agressiva mas estratégica, cada email com propósito específico
+[27:30] I look at it like I want to I want to attack these people like a fucking hornets's nest from every possible angle. I want to come at them in all ways possible because I'm selling showing up for the call and I don't know which particular angle is going to hit. You know what I mean?
+[27:48] Like it might be the big dog testimonial. It might be the fucking person who's two steps ahead of where they're at. It might be the specific objection handler sequence that we cherrypicked. It could be a framing video. Okay.
+[28:02] So, to be clear, outside of emails, allow me to demonstrate to you the uh the content side of things because I like to hammer people with content in addition to emails. Okay? Now, the content to be clear is usually a little different, but they follow the same principles. Okay?
+[28:20] because this is usually stuff that you are posting organically and it becomes an evergreen part of your sales process when you use it the way that I'll demonstrate to you here. So, to be clear, in this example, we have about $6,300 in spend towards an audience that is no bigger at a given time than a couple hundred people. Okay?
+[28:42] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Hammer Them Ad Campaign Metrics"
+NÚMEROS: $6,300 spend, couple hundred people audience, $0.89 cost per thru-play, 7,100 people reached, frequency of 9, 24 videos, 72 hours
+VISUAL: Dashboard de campanha Facebook Ads, métricas de alcance e frequência, audiência dinâmica em tempo real, números impressionantes de exposição
+[28:50] We have an 89 cent cost per through play, which means a cost to get somebody to watch 15 seconds of a video. And we see since the launch of this campaign days ago, that we have 7,100 people and a frequency of nine. Okay. So, what does that mean?
+[29:08] That means that out of 24 videos that I'll show you here shortly, 7,100 people have seen nine different videos within about 72 hours. Okay. Now, to be clear, just right off the bat, do you think that that positively or negatively impacts my probability of getting somebody to show up?
+[29:28] So, let me put this in perspective. This is a dynamically updating audience in a CRM. In this particular case, HubSpot, we have an audience that when somebody books a call, they get added into and then about 14 days after they booked that call, they get removed from the audience.
+[29:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Dynamic 14-Day Rolling Audience"
+NÚMEROS: 14 days window, minimum 100 people needed
+VISUAL: Funil dinâmico no HubSpot, pessoas entrando e saindo automaticamente, linha do tempo de 14 dias, sincronização com Facebook Ads
+[29:50] So, this is a 14-day rolling audience that people get added to and removed from. I widened it to 14 days so I had enough people to be able to target. If I had it within 72 hours or a day or two days or whatever amount of time your calls might actually be taking place, I might not have enough people to be able to actually run because some of you aren't operating where you have hundreds of calls within 72 hours.
+[30:15] Some of you guys are operating where you have like fucking 10 or 12. You need at least a hundred just to just to get the audience. And so to have at least a hundred, you might need like, you know, 200 or 300 in the actual list because you have a match rate that's typically lower than whatever the amount is in the audience that you've uploaded in the first place.
+[30:35] So, just to be clear, just do me a favor. Drop a drop a one in the chat if you understand what I just said. Feel free to unmute yourself if you do not understand what I just said. Okay, cool. Bunch of ones. Great.
+[30:48] Okay. So, to be clear, in this particular case, I added 24 total videos. Okay. Allow me to demonstrate to you what these 24 total videos are so we're on the same page. Okay. These videos are all framing videos that go out to people when they booked a call and after they had their call.
+[31:08] These are all intended to increase the probability of somebody showing up and in addition to that increasing the probability somebody buys. For everybody who doesn't know this particular client, her name's Cody. She teaches people how to buy businesses. Okay. The offer is uh a pretty significant offer of 10K to 24K give or take the uh the offer that they purchase.
+[31:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Cody's Business Buying Program"
+NÚMEROS: $10K-$24K offer price, 24 framing videos
+VISUAL: Portfólio de 24 vídeos organizados, cliente Cody ensinando compra de negócios, estrutura de conteúdo evergreen
+[31:40] And long story short, each one of these individual pieces of content, allow me just break down a few of them for you. So, to be clear, remember, somebody's booking a call to talk about getting into a program that teaches them to buy businesses. Okay? In this particular piece of content, she's giving some general rules for what not to do.
+[31:58] So, she says, "All right, my number one piece of advice for a new business buyer, you know, don't buy an unprofitable business. you know, here's what type of business I would encourage you to buy. Okay.
+[32:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Video #1: Rules for New Business Buyers"
+NÚMEROS: #1 advice
+VISUAL: Vídeo educacional, regras do que NÃO fazer, orientação sobre tipos de negócios para comprar, tom consultivo e educativo
+[32:15] Two, this particular piece of content talks about a framing mindset that I want people in. Okay. So, what she's talking about here, she's talking about 401ks, she's talking about stocks, she's talking about real estate, she's talking about making like your first significant amounts of money. She's talking about the fact that it doesn't take a significant amount of money to be able to make a lot of money.
+[32:38] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Video #2: Wealth Mindset Framing"
+NÚMEROS: Não especificados
+VISUAL: Comparação entre veículos de investimento (401k, ações, imóveis), mensagem de acessibilidade financeira, framing para seller financing
+[32:45] You know, this helps a lot in terms of framing because she teaches seller financing. So, when you're going to buy a business, you don't have to buy it in cash like in full upfront. You can you can seller finance it. And long story short, that in itself is directly addressed in one of these 24 pieces of content.
+[33:02] But I also just need people to be thinking in general when I talk about the mental frame I need people in. This is different than objection handling. This is different than showcasing testimonials. Framing is trying to teach people ways to think that benefit your buying cycle.
+[33:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Framing vs. Objection Handling"
+NÚMEROS: Não especificados
+VISUAL: Três categorias distintas: 1) Framing (ensinar a pensar), 2) Objection Handling (superar barreiras), 3) Testimonials (prova social), cada uma com função específica
+[33:28] Okay, I'm gonna say it again. Framing is teaching people how to think that benefit your buying cycle. Okay, let me give you some examples of that. If I have a piece of content that encourages action taking, okay, one thing I see all the time in people who suck in life is high levels of skepticism.
+[33:48] So, I always say skepticism ruins your life and your potential. Okay? It's one of the number one things that holds people back from making a lot of money. Being skeptical. Okay? Now, being skeptical had its evolutionary place in our lives. If we were going to eat a berry off of a bush, that shit could be poisonous and kill us. It's good to be skeptical about a berry on a bush that we've never eaten before, right?
+[34:12] But when I have an income opportunity that could potentially change my life and generations of my family's lives to follow, I wouldn't want to allow skepticism to potentially hold me back there, would I? So, as an example, I could literally make a content piece just like that where I'm like, look, I could start the video by saying, hey, skepticism ruins your life. It will ruin your potential.
+[34:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Framing Content: Anti-Skepticism"
+NÚMEROS: Não especificados
+VISUAL: Narrativa evolutiva (caveman example), contraste entre skepticism útil vs. destrutivo, mensagem de curiosidade vs. ceticismo
+[34:42] You know, back in the day when we were a fucking caveman and we were going to eat like a like a fucking raw piece of stinky meat, you know, off a dead bird or something, like being skeptical about if that would get us sick or not. Yeah, it's it's a good idea. I mean, that's a good time to allow skepticism to creep in, you know?
+[35:00] But like dude, if you have an opportunity where let's say you're already an agency owner, you're already making money and you know, you're just not making as much as you want and you see a guy like me come along and say, "Hey, I'm getting 100K a month off a deal doing Rev Shares." Like, you know, look, skepticism aside, it's probably a good idea for you to hear me out and at least consider what I'm talking about and not allow skepticism to block you from even hearing it.
+[35:28] You know, don't be skeptical. Like, be curious. And then the video ends and that's it. Okay, that'd be a great example of a framing piece of content that when a buyer gets on a call with my sales team and skepticism starts to creep in, they will remember. Do you get what I'm saying? Framing content. Okay.
+[35:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Framing Memory Trigger"
+NÚMEROS: $100K/month Rev Share deal (exemplo)
+VISUAL: Memória ativada durante call de vendas, conexão entre conteúdo pré-call e objeções na call, seta conectando framing a decisão de compra
+[35:55] Uh, now this one in particular, um, let's see what this one's about. Oh, the American dream. So, some people are pessimistic and I like to attack pessimism. Um, in this particular case, it's a relatively broad video, but same thing, it follows the logic of the framing that I just laid out.
+[36:12] I'm just trying to sell people on the fact that the American dream is alive, that it's possible, that people are out there doing it. Um, trying to have essentially Cody here be a voice for, you know, that side of the argument rather than there's a lot of people that, you know, they get caught up in politics and the news and like all this crazy shit going on in the world.
+[36:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Video #3: The American Dream"
+NÚMEROS: Não especificados
+VISUAL: Contra-narrativa ao pessimismo, Cody como voz positiva, combate à influência negativa de política e notícias
+[36:40] And through time, pessimism develops and they just think to themselves like, you know, I don't know if I don't know if what I previously viewed as possible is still possible for me or not, you know. So, we really want to sell people once again on the idea that it is.
+[36:55] Um, this one in particular, very direct. Uh, what three businesses she would buy? Okay, so that's a that's another big, you know, question, not necessarily an objection, but more so a question, something that could hold somebody back. If you were considering buying a program about buying businesses, it would make a lot of sense if you had a few businesses that make sense to go out and buy.
+[37:18] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Video #4: Three Businesses to Buy"
+NÚMEROS: 3 businesses específicos
+VISUAL: Lista específica de negócios recomendados, orientação prática e acionável, redução de incerteza pré-compra
+[37:25] You know, you probably have no fucking clue what businesses to buy. If I can plant in your head like, "Hey, here's three good ones I would buy." You'd think that would help, right? Okay, next one. Uh, let's see. High money, low money. What do you typically think on average is the lowest? Okay, here you go.
+[37:42] So this is her essentially selling people on buying what she calls boring businesses. So boring businesses to her are, you know, like she lists out here, laundromat, car washes, uh pressure washing businesses, like blue-collar businesses, like you know, not necessarily like sexy businesses.
+[38:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Video #5: Boring Businesses Strategy"
+NÚMEROS: Não especificados
+VISUAL: Exemplos de negócios "chatos": lavanderias, lava-rápidos, pressure washing, ícones de negócios blue-collar, reframing do "sexy" para lucrativo
+[38:08] So long story short, a lot of the businesses that she'll encourage people to buy are, you know, things that a lot of people won't otherwise start up or hear ads for on the internet about business opportunities for. You know what I mean? So, long story short, same kind of logic, selling people on what types of businesses that she's going to encourage you to buy before you even buy from her.
+[38:30] Okay, this one's a good one. This one is I'd consider it like a motivational piece of content. Every one of these little comments that you see here are essentially haters saying like, you know, something nasty about her. And she's essentially saying like, "Look, I'm glad I'm a fucking action taker and, you know, look at how great my life is now in comparison to what it could have been if I was like you."
+[38:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Video #6: Haters Response"
+NÚMEROS: Não especificados
+VISUAL: Comentários negativos na tela, resposta motivacional, contraste entre action takers vs. haters, transformação de vida como prova
+[39:00] and sat there and fucking hated on people on the internet all day. So, this is a good example of um same kind of logic. I'd consider this a framing piece of content in terms of the bucket that I'd fall under because like I said, you got to be able to show people the transition and make them think like I can do it too. You know what I mean?
+[39:20] Okay. Uh seven. Okay. Four stage plan for the next week. Jeremy, I'm just jotting down these ideas. They're gold, man. They're gold.
+[39:30] Say one more. What was the first part of what you said? I'm sorry. I was interrupting.
+[39:34] Thanks for giving me my reels content uh topics for the next week or so.
+[39:40] Yeah, you don't need a ton. You know, you need this this specific set of 25 p or 24 pieces of content. I mean, like I said, on average, somebody's seeing nine within the first 72 hours. And long story short, this uh you know, they have 14 days where they could technically get exposed to all 24.
+[40:00] But uh you know, you don't need a ton. You know, you don't need a ton for this specific sequence because it's, you know, in this case, a 14-day rolling audience. Just kind of keep that in mind. This doesn't have to be as broad as the tornado. This is specifically what we call the hammer them strategy.
+[40:18] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Hammer Them vs. Tornado Strategy"
+NÚMEROS: 24 videos, 9 views average in 72 hours, 14-day exposure window
+VISUAL: Comparação entre estratégias: Tornado (amplo) vs. Hammer Them (focado em quem já agendou), audiência tight e específica
+[40:25] So, the hammer them strategy is is uh what I'm going through here where you just have a very tight audience of people that already took a specific action. They're further down the sales process. And long story short, you are uh you know, getting them to take action and you know, just sit here and become framed a little better prior to the call. Okay.
+[40:45] Chris asked in the chat, "You still keep the send message thing." So, Chris, this specific content that I'm pulling from is organically posted on her page. Uh, all these captions, I know I I know you can't read the captions in this preview that you see here, but all the captions say like comment a specific word or something like that.
+[41:05] So, I'm not opposed to be clear of having that send message option. Um, generally I will not add any type of like call to actions or anything inside of these content pieces because all they're intended to do is just be watched and help with the framing process of the sales team.
+[41:25] Um, but to be fair once again like, you know, if you want to add some call to actions, you can. I'm uh I'm not opposed.
+[41:32] So, um, one question I had is the comment, does that have something to do with many chat? Like, do you automate like a delivery of ads?
+[41:42] Yeah, she she has all that set up for these some of these, not all of these, just some of these specific posts. they did that on. And yeah, that's already all connected. I didn't I didn't have to set any of that up in this particular case.
+[41:55] Cool. Awesome. And then I have some questions on the the show the uh show rate thing too, just in general. I don't know if you want me to wait to ask those or
+[42:05] Oh, sure. Go ahead. What do you got?
+[42:08] So, like what's the frequency? Because I know we said like be aggressive. So, like, you know, let's say, you know, how do we set the flow up? Just a high level overview. Like how many emails and texts should they be getting? You know what I mean?
+[42:22] So I like doing anywhere from like 10 to 15 at a minimum.
+[42:28] What happens if they book and it's like only within two days like still I'm hammering them 10 to 15 times in two days.
+[42:35] How frequent? Like in between each one?
+[42:38] Couple hours tops. I mean you don't have that much time.
+[42:42] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Email Frequency Formula"
+NÚMEROS: 10-15 emails mínimo, 2-4 horas entre cada, concentrado durante o dia
+VISUAL: Fórmula matemática: 48 horas ÷ 10-15 emails = frequência, distribuição temporal focada em horário comercial
+[42:45] I like that. Okay, cool. So like
+[42:48] take 48 hours divided by 10 or divided by 15 and that's your answer.
+[42:53] I was going to say yeah that's what I was going to say by like four three or four hours.
+[42:58] I like to stack them more during the daytime to be clear rather than I rather than at night time. that way they don't wake up to like four emails. Um, so the frequency is much higher during the day than it is like overnight hours.
+[43:12] I like that a lot. Every Okay, cool. Yeah, that I mean that's going to be fucking night and day to what I'm doing. It's we're literally sending them like Yeah, I won't bore you with the details, but not that. [laughter]
+[43:28] Yeah. And so, look, moral of the story, there's um there's a very important bias that I'm attempting to establish which I which I prioritize uh which is familiarity bias. Okay. I want within about 48 to 72 hours from the time the person books the call to the time they show up to the call. I want a frequency in email and I want a frequency with the content that I can reach them with on Facebook and Instagram above eight.
+[43:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Familiarity Bias Strategy"
+NÚMEROS: Frequency 8+ (por canal), 48-72 horas, 2 canais (email + Facebook/Instagram)
+VISUAL: Dois canais paralelos de ataque, frequência mínima de 8 impressões cada, construção de familiaridade como objetivo principal
+[44:02] I ideally want them to see at least eight things per channel. So I want them to see eight things via email at least and I want them to see eight things via Facebook and Instagram with the content at least.
+[44:15] Losing you, mate. Unless it's my internet.
+[44:18] Oh, we we can hear you, Chris. You're fine. Um, okay. Am I Am I good now? Can you hear me?
+[44:25] There we go. Yeah.
+[44:27] Yeah. A little breaking.
+[44:29] Okay. Sorry about that, guys. Um, what where did I break up? Just so I don't repeat myself.
+[44:35] I think we we heard the most of it, but
+[44:38] yeah, about the frequency of
+[44:40] I want a frequency of at least eight. Simply put, I want a frequency of eight on the uh on the on the Facebook and Instagram channel with content. I want a frequency of at least eight via email. That's why I try to always do more than that.
+[44:55] So, to be clear, that helps establish familiarity bias. That helps put the person who booked a call in a position where we've attacked them, like I said, like a hornets's nest. Like, they have they've gotten so many different angles that could potentially overcome objections that would hold them back.
+[45:15] And that's the main thing you got to understand about why the show race suffers. When I say they're not sold on showing up, it means that there's something in their mind. Now fucking Not sure why.
+[45:28] Am I good? Am I good now?
+[45:30] Good or no?
+[45:32] Here, talk for like a sentence.
+[45:34] Am I Am I good now? So, but
+[45:36] it seems like it, but I feel every time. Doesn't it happen like is that like just universal thing like and you're on a Zoom it's like am I good now? It's like yeah and then it just starts doing but it seems good seems good for now.
+[45:50] Yeah.
+[45:51] Like you're moving so
+[45:53] yeah that's good.
+[45:54] Is it like glitchy or laggy or something or like what goes on now?
+[45:58] It's perfect. It was just like
+[46:00] it was the Chinese that Chinese spyware rabbit thing must be hacking into your system.
+[46:05] I pay I paid for five gigs in this house from AT&T. They're getting a call from me after this. Okay. [laughter] Oh shit dude. I do that with X Feny all the time.
+[46:18] I think we got most of it, man. Um, if we got time, Jerry, can you go back and just break down a few more of those content pieces, please? Because that I think that, like Jesse said, super fucking helpful just for organic framing.
+[46:32] Yeah, sure. I got you.
+[46:34] Thanks, man.
+[46:35] Um, okay. So, long story short, these are five different reasons that make sense. like the these are like five uh indications for what you want to look for when you're buying a business. And essentially this this could be rolled out for anything really, but you're essentially listing uh like what people should look for in a sense. Okay.
+[46:58] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Video: 5 Indicators for Buying Business"
+NÚMEROS: 5 reasons/indicators
+VISUAL: Lista estruturada de critérios, formato educacional aplicável a qualquer oferta, orientação de "o que procurar"
+[47:05] Nine. This is one of the framing pieces of content uh that you got lucky. So, like I said, we're trying to make in this case Cody like more pulled down to where they're starting at and just breaking down kind of like what it takes to get lucky, you know, which is a very common thing that people will use as an objection.
+[47:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Video #9: 'You Got Lucky' Objection"
+NÚMEROS: Não especificados
+VISUAL: Desconstrução da objeção de sorte, Cody tornada mais acessível/relatable, explicação do que realmente é "sorte" (preparação + oportunidade)
+[47:30] Okay.
+[47:32] What was that?
+[47:34] Gold. This is gold, man. I'm like, "Wow, I'm fucking dropping the ball on show rate." Like, no wonder the show rates 50%.
+[47:42] Yeah, it's insaneness.
+[47:45] Yeah. And to be clear, the um okay, I was I was making a point before I broke up, by the way, which I want to make sure I reiterate, which is listen, the show rate suffers because there's something specifically that does not get addressed before the call that holds them back.
+[48:02] That's why we want to have all these specific angles that we use to attempt to get in front of the person and overcome pre-call because we don't know what the reason is. I use this example where, you know, I was at a point I I look, I fucking hate taxes, okay? I' I've gotten hypnotized to attempt to like taxes and I just get fucked every single year. Okay.
+[48:25] Now, long story short, at one point I kept seeing these specific uh companies that would essentially say, "Hey, we can we can move your corporation from whatever country you're in into Dubai and you will you will have essentially your money flow through Dubai and therefore you will report, you know, zero earnings in whatever country you're in.
+[48:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Dubai Tax Strategy Example"
+NÚMEROS: 7 days call window
+VISUAL: Estrutura offshore, Dubai como hub corporativo, fluxo de dinheiro internacional, promessa de redução de impostos
+[48:55] you'll be exposed to Dubai corporate tax rates in comparison to the corporate tax rates of your country instead. And I saw that and I thought to myself, I'm like, great, I fucking hate taxes. It sounds awesome. I'm going to book a call. Okay, now their call window was really wide. It was like seven days from the day that I booked.
+[49:15] Okay, now listen to this. When you don't give them the propaganda to think with, they will look up propaganda to think with from other people instead. Okay, your buyers don't sit there and just wait. What do they do between the time they book a call and the time the call happens? What do they do? They're researching.
+[49:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Research Phase Reality"
+NÚMEROS: 7 days research window
+VISUAL: Pessoa pesquisando online, múltiplas fontes de informação (Google, Reddit, YouTube), propaganda negativa preenchendo o vácuo
+[49:42] That's exactly fucking right. So, what did I do? Well, I didn't get any information from that company. I didn't get any framing material. I didn't get any objection handling material. I didn't even get any testimonials. So, I just sat there fucking sitting on my hands for seven days. No, that's not what I did.
+[50:00] I when I looked up I'm like, "Okay, is this possible? Is this realistic? Am I going to get fucking scammed by doing this shit?" Like, what's the reality of this situation? And almost every single thing I found was the same thing. It said, "You still have to report your earnings as an American citizen, even if they flow through an entity that's offshore.
+[50:22] And as long as you're a United States citizen, you're going to get fucked and you're going to have to pay those taxes." Now whether that's true or untrue, that's all the information that I found in my research phase between the time that I booked and the time that my call happened. Do you think I showed up for the call?
+[50:38] Yeah, exactly.
+[50:40] No. Why?
+[50:42] A thousand reasons why not to. You know, at that point, you had found them all.
+[50:48] That's right. So, to be clear, I did my research and I found out, well, this probably isn't true. It's a waste of my time. That's it. That's all it was. Propaganda. You have to take responsibility for being the propaganda. Okay.
+[51:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Be Your Own Propaganda Machine"
+NÚMEROS: Não especificados
+VISUAL: Controle da narrativa, empresa preenchendo o espaço de pesquisa com conteúdo próprio, prevenir propaganda negativa de terceiros
+[51:10] Now, to be clear, I'm going to use an example. I won't say these people's names just out of respect. But, uh, you know, long story short, I had I had an inner circle student recently that has a client and their show rate was struggling. And they had done every best practice under the sun in their own words.
+[51:30] And all we did was just Google the company's name and the word Reddit. Okay? And what came up was a Reddit thread on Reddit entrepreneur that was like the top ranked thing because that's what people do. Who here on this call put in the chat when you want to look up unbiased reviews, you search for it and use the word Reddit after to see what real people are talking about. Do you guys do that?
+[51:55] Mhm.
+[51:58] So two out of three of the people with their cameras on say, "Yeah, you do." So to be clear, that's 66% right there with this sample size. Imagine once again two-thirds of the people who are going to buy stuff from you will look up your company name or your name and the word Reddit and see what real people are talking about because it's an unbiased perspective from real people.
+[52:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Reddit Research Reality"
+NÚMEROS: 66% (2/3 people), 20 negative comments example
+VISUAL: Reddit como fonte de "verdade", busca "[Company Name] Reddit", threads negativos dominando resultados, impacto em show rate
+[52:30] And this particular company, when you look up their name and the word Reddit on Reddit entrepreneur, there's like 20 fucking comments literally about the the product and the call and just showing up for the call. It's like the perfect piece of propaganda. I would show it, but you know, I I just you guys will all know who they are right away, and I don't want to I don't want to, you know, throw them out under the bus like that because it doesn't look good.
+[52:55] But, um, anyway, long story short, all 20 comments were like, "No, don't show up to the call. That's a scam. No, don't buy the product. That's a scam." Uh, you can literally find all that for free on YouTube. Like, no, that doesn't make any sense. Like, don't do it. That was all 20 comments. There wasn't a single thing that was positive propaganda in any of that.
+[53:18] Um, to be clear, what's a great thing for that company to do? Take that Reddit thread, post it into their student community, and say, "Hey guys, for anybody that's got a good result with us or just, you know, wants to give their two cents, can you guys go, if you got a fucking Reddit account, and just respond to these people and like tell them how it really is because there's a high probability none of those people are students.
+[53:42] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Reddit Reputation Management"
+NÚMEROS: 20 negative comments → 0 positive responses
+VISUAL: Estratégia de mobilização de comunidade, estudantes respondendo a haters, balanceamento de narrativa, transformação de propaganda negativa
+[53:50] None of those people bought that person's program. None of those people are clients. They're just the classic cliche like, you know, oh no, don't do it. to fucking scam crowd. Okay, not even real people. But it's like that's Do you think that's a part of the research phase that a potential person showing up for a call that's going to cost $24,000 is going to go out of their way and look up?
+[54:12] If it's not before the call, it's after the call when they're considering buying. For sure. You see what I mean? You have to be your own company's positive propaganda machine when you fail to do that.
+[54:25] So, let me give you another example. I think Jeremy too because you mentioned at the mastermind uh the book propaganda as well.
+[54:35] Yeah. So the people weren't there just in case Jeremy recommended it. So
+[54:40] great
+[54:42] talks a lot about this as well.
+[54:45] Now to be clear it's it's important to note okay how many times have you bought something in your life where you've seen maybe one or two negative things but you've had an overwhelming amount of positive things that you've seen in your consideration phase and you bought it anyway.
+[55:02] Oh yeah. I' I'd say almost everything to be quite fair in some way.
+[55:08] It's like, you know, there's people how Okay, I'll give you an example. How many of you have heard terrible things about McLarens? Like, McLarens are pieces of shit McLarens break down all the time. McLarens are always in the shop. How many of you have heard similar things like that? How many people still buy McLarens?
+[55:28] Yeah.
+[55:30] Why do those people still buy McLarens?
+[55:32] Because the lure it gives. They're fast.
+[55:38] No, no. Break it down on a more technical level. They likely have seen more positive things than negative things about McLaren.
+[55:48] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "McLaren Example: Positive vs. Negative"
+NÚMEROS: Não especificados
+VISUAL: Balança com propaganda positiva superando negativa, exemplo de McLaren (negativo conhecido mas ainda vende), princípio de volume de impressões
+[55:52] Right. Yeah.
+[55:55] So, look at it like a scale. Okay. If neutral falls into a particular category, meaning they don't see anything, I technically want you to count that as the bad part of the scale. Okay? You have to be your own company's positive propaganda. That's why the email frequency is so high.
+[56:12] That's why our frequency on Facebook and Instagram with our content remarketing has got to be high because we want to have a far greater impression count of positive propaganda impressions comparatively to the handful of things they might see of skeptics, non buyers talking shit you know, or potentially even bad things that your company's done in the past.
+[56:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Propaganda Scale Strategy"
+NÚMEROS: Frequency 8+ (target per channel)
+VISUAL: Balança mostrando: Positivo (deve superar massivamente) vs. Negativo + Neutro, volume de impressões como estratégia, múltiplos canais somando
+[56:42] You know, because not every company has a perfect record, especially at scale. There's a good quote. Half the country has to hate you to be the president. You know, you might be one of those companies. You know what I mean? So anyway, my point being positive propaganda machine. Okay, that's where all this comes in. Does that make sense?
+[57:02] 100%. Yeah. Now, this is gold. Absolute fucking gold, man.
+[57:08] Okay. Do you guys have any questions? I uh I've got to go look at that penthouse here shortly, and I've got to dish out a 100 G's to fucking move. So, uh, yeah, that's all.
+[57:20] Just quickly, Jeremy, do you ever alter the amount you slam them on emails based on market sophistication, like if they're a higher level buyer,
+[57:30] I will not do that for, uh, investment companies that we raise capital for. I will do that at a much lower frequency and I will increase the sophistication of the communications. Um, yes, with a a lower financially qualified demographic, I will I will typically be more aggressive on the frequency and I won't be as uh proper versus uh you know, once again as a direct example specifically with the raising capital crowd.
+[58:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Market Sophistication Adjustments"
+NÚMEROS: $100K+ (investment crowd example)
+VISUAL: Dois níveis de abordagem: 1) High sophistication (lower frequency, PPMs, decks, compliance), 2) Lower sophistication (higher frequency, mais agressivo)
+[58:05] Um, like I said, I mean, when I when I use the word sophistication, it simply means like the vocabulary is different. Uh, we might we might send them over like fucking PPMs or decks. Uh, we might not have as like, you know, I I might not even have video testimonials to use. I might not have like any kind of testimonial I can use.
+[58:25] I might have some specific way I could demonstrate like historical annualized returns. Um, I might I might have like some kind of visuals for like numbers and shit like that. There's a lot of SEC compliance I have to follow as well in the investment care. So, yeah, to your point, I can't uh I can't communicate the same way for a more sophisticated demographic.
+[58:45] It's important to note though, um even in a demographic where I'm teaching people to buy businesses, that's still at a 10 to $15,000 price point, something that I would consider as like lower sophistication because I'm not teaching existing business owners how to go buy more businesses. I'm teaching people how to buy one of their first businesses.
+[59:08] And my point being um that that crowd is like the busier a person is in my opinion the frequency needs to elevate. The less busy a person is my frequency minimum is the 10 to 15.
+[59:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Busy vs. Not Busy Frequency"
+NÚMEROS: 10-15 emails (mínimo base)
+VISUAL: Correlação inversa: Mais ocupado = Maior frequência necessária, Menos ocupado = Frequência mínima (10-15), ajuste baseado em estilo de vida do prospect
+[59:30] Two quick questions just either and you can say hey save it I got to go to the penthouse. What does the first email consist of and do you do the same exact sequence through SMS?
+[59:42] No, I do not do the same exact sequence through SMS. SMS I try to stick to uh one sentence with links to videos. Um and then reminders via text and uh email. I mean, look, the first email is typically going to be something along the lines of like, "Hey, you booked your call. You know, here's all the data. Here's a button to add it to your calendar just in case it didn't populate in there."
+[1:00:08] And then I immediately go into all the framing content I just articulate.
+[1:00:12] Right. Yeah. I meant that I guess I should have said second cuz like that's like I look at Yeah. So
+[1:00:18] So dude, you you'd be surprised like the second email and beyond like they don't even look like you booked a call. They just look like I'm fucking hammering you with ways I want you to think. [laughter]
+[1:00:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Email vs. SMS Strategy"
+NÚMEROS: 4-6 SMS max em 72 horas
+VISUAL: Diferenciação de canais: Email (framing pesado, 10-15+) vs. SMS (leve, 4-6, uma frase + link, menos irritante)
+[1:00:35] Gotcha. Gotcha. All right. And then SMS frequency. I know you said just one sentence and then
+[1:00:42] So to be clear, uh when it comes to booking a call, I try to be a little lighter on SMS. I I find people get far more annoyed on SMS and I I I uh I try to be lighter specifically on texting. Let's use the example. I have 72 hours. I might try to text like four to six times max.
+[1:01:02] Cool. Okay, cool. Awesome, dude. Yeah, I'm sure that I'll have some questions like in Telegram after this, but dude, fucking I need to start showing up for these more. I've been so locked the fuck in. It's been a minute since I've been on here and I missed missed you guys at the mastermind. So, I'm going to um
+[1:01:22] yeah, I appreciate the value. I appreciate the directed help. And
+[1:01:28] there's one more thing. If you look into the Zoom chat, just click on that link. That's the show rate and best best pract uh I'm sorry, show rate and connection rate mastery SOP. And that specific SOP, I'll post into the the Telegram chat as well for everybody watching the recording.
+[1:01:45] Um, we didn't get to talk about it much, but simply put, I always make sure that the sales guys follow those best practices. So, in addition to everything I talked about on this call, I have the sales people doing manual outreach pre-call.
+[1:02:02] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Salesperson Pre-Call Best Practices"
+NÚMEROS: Não especificados
+VISUAL: SOP document, manual outreach requirements, estabelecer comunicação via texto antes da call, uso de iPhone obrigatório
+[1:02:08] and the manual outreach. The main thing that drives up the uh show rate is the salesperson being able to establish communication via text pre-call. The best way to do that, selfie videos and texts that do not look automated. I need them to text from an iPhone. Do not ever fucking text from a CRM phone number. Do not ever text from an Android. I need an iPhone in a salesperson's hands.
+[1:02:32] And I need them to text and establish communication prior to the call. That will dramatically improve the show rate. Okay, cool. I love it.
+[1:02:42] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "iPhone Texting Requirement"
+NÚMEROS: Não especificados
+VISUAL: iPhone mandatório (check), Android proibido (X), CRM phone proibido (X), selfie videos, textos não-automatizados, estabelecer rapport pré-call
+[1:02:48] Um, hey, just to be clear, while I got you guys on the call, did you guys did you guys get a chance to look at that one penthouse? Did you like it?
+[1:02:58] It looks fucking sick.
+[1:03:00] Yeah, it looks sick.
+[1:03:02] Okay, cool. Do you think uh just to be clear, like I'm going to go look at it and see if we might be able to do the mastermind inside of it or not? But regardless, we'll have uh that entire floor like there's an entire floor dedicated to event space there. Do you think that's a good flow?
+[1:03:18] Uh like we'll we'll have like the event part and some of the networking during the day like in that in that space and then we'll like go upstairs at night into the penthouse for like a networking and at least dinner. Yeah.
+[1:03:32] 100%. Yeah, I think that would be perfect. And it's also probably like easier to like everybody's kind of congregate where where's it's it's in I saw it was like it's like downtown area, right?
+[1:03:45] Yeah, correct. That that particular one's at this building called the Paramount which is right in downtown.
+[1:03:52] I think I know where that is actually.
+[1:03:55] Yeah, you should. It's essentially parallel to the uh basketball arena there. Like
+[1:04:00] Yeah. Yeah. Yeah. Okay. So, I have a friend that lives there actually. That's why I know where that is. Uh it's like literally right there and you can see the bridge going and then the the
+[1:04:12] Yeah. Cool.
+[1:04:15] In this particular case, this unit is like at the literal top.
+[1:04:20] That Yeah, that's fucking sick, bro. That that that's perfect. I think it'll be easier for people to get there and like then everybody can migrate downtown and do whatever the hell shenanigans they're doing, right? It closer to Nou, right?
+[1:04:35] It does.
+[1:04:38] Yeah. 14th. Actually, we'll have to try to do that damn pod. Well, if uh if I got to go if I got to lock this thing in, I'm gonna have to start it in September and uh I'll have to dish out it's it's it's 25K rent times four to move in.
+[1:04:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Penthouse Investment"
+NÚMEROS: $25K/month rent × 4 = $100K move-in cost, September start, January mastermind
+VISUAL: Paramount building downtown Miami, andar superior, espaço para eventos + penthouse, investimento em venue premium
+[1:05:00] So, I'll dish out 100K just to get the lease started. And long story short, we won't even need it until fucking January anyway. So, all right, we'll just have an extra penthouse until then. [laughter]
+[1:05:15] Hey, hell yeah, man. Well, good luck with that.
+[1:05:18] They they put they put bugs in your house because you were literally researching it when we were there, remember? you were showing us the the properties that were like had a lot of land mass.
+[1:05:30] Yeah. The worst part is like those those people at the mansion, they uh we negotiated our next year's lease like last week and we had like everything good to go and then they just randomly called Marina yesterday at 3 in the afternoon because they only speak Spanish. And they were like, "Yeah, we're going to sell it. Do you want to buy it?"
+[1:05:52] Um we were like, "What the fuck dude? Like you guys just negotiated with us like last week on this shit Like what happened?" And like, "Yeah, I mean, you know, we just want to sell it now." Um, so yeah, anyway, we got our uh long story short, we got our last mastermind at that house in Q4 for October, we'll go out with a bang.
+[1:06:12] Uh, I got great speaker lineup already already lined up, dude. It's going to be fucking badass and uh I'm really excited for it. So, make sure you're there. The last ones at whatever house we're always at are always a banger. So, looking forward to seeing everybody.
+[1:06:28] All right, cool. Wish me luck. Talk soon.
+[1:06:32] See you, brother.
+📊 RESUMO EXECUTIVO
+NÚMEROS PRINCIPAIS:
+Show rate atual do Jesse: 50% (self-booking) vs. 96% (setter booking)
+Benchmark ideal 2024: 65-80% show rate
+Exemplo de low show rate viável: 35% com offer de $50,000
+Frequência de email recomendada: 10-15 emails em 48-72 horas
+Frequência de conteúdo recomendada: 8+ impressões por canal (email + social)
+Frequência SMS: 4-6 mensagens max em 72 horas
+Intervalo entre emails: 2-4 horas (concentrado durante o dia)
+Campanha "Hammer Them": $6,300 spend, $0.89 cost per thru-play
+Alcance: 7,100 pessoas, frequência 9, 24 vídeos, 72 horas
+Audiência dinâmica: 14 dias rolling (HubSpot)
+Offer da Cody: $10K-$24K (ensino de compra de negócios)
+Case study trader: $100 → $379,000 em 3 meses
+Webinar result: 38,000 registrants, $7M revenue, produto $3,500
+Win rate exemplo: 86% profitable trades
+Testimonial ideal: $3,000 primeiro payout (não $20K+)
+Investimento penthouse: $25K/mês × 4 = $100K move-in
+Match rate audiência: tipicamente menor que lista original (precisa 200-300 para ter 100 targetable)
+ESTRATÉGIAS E SISTEMAS:
+Mindset Fundamental:
+Vender o agendamento ≠ Vender o comparecimento
+Duas vendas separadas no processo
+Pessoa NÃO está vendida em aparecer só porque agendou
+Estratégia "Hammer Them":
+Atacar como "hornets nest" de todos os ângulos
+Audiência tight de quem já tomou ação específica
+24 vídeos de framing em loop
+Diferente da estratégia "Tornado" (mais ampla)
+Três Tipos de Conteúdo:
+Framing: Ensinar formas de pensar que beneficiam o ciclo de compra
+Objection Handling: Superar barreiras específicas
+Testimonials: Prova social estratégica
+Seleção de Testimonials:
+NÃO usar os "big dogs" mais avançados
+Usar pessoas 2-3 steps à frente do prospect
+Testimonials que superam objeções específicas do buyer
+Exemplo: controle emocional > grande payout
+Exemplo: $3,000 primeiro resultado > $20,000 avançado
+Familiarity Bias:
+Objetivo: frequência 8+ por canal
+Email: 8+ impressões
+Facebook/Instagram: 8+ impressões
+Estabelecer familiaridade massiva em 48-72h
+Propaganda Machine:
+Empresa deve ser sua própria máquina de propaganda positiva
+Prospects pesquisam durante research phase (7 dias exemplo)
+Busca comum: "[Nome] Reddit" para reviews não-tendenciosas
+66% das pessoas fazem isso
+Vácuo de informação = preenchido por propaganda negativa
+Balança: Positivo deve superar massivamente Negativo + Neutro
+Gestão de Reputação:
+Mobilizar comunidade de estudantes no Reddit
+Responder a threads negativos com experiências reais
+SEO para empurrar negativos para baixo
+Criar volume de conteúdo positivo orgânico
+Framing Específico para Trading:
+Consistência: mostrar trade journal com 86% win rate
+Lucratividade: demonstrar payouts reais
+Funded status: provar que está funded
+Atacar objeções: emotional trading, revenge trading
+"Anomaly objection": mostrar pessoas próximas ao nível do prospect
+Sofisticação de Mercado:
+Lower sophistication: maior frequência, mais agressivo
+Higher sophistication (investment/capital raise): menor frequência, vocabulário diferente, PPMs, decks, compliance SEC
+Quanto mais ocupada a pessoa, maior a frequência necessária
+Best Practices Vendedores:
+Manual outreach pré-call obrigatório
+Estabelecer comunicação via texto antes da call
+Selfie videos (não automatizado)
+iPhone obrigatório (nunca Android ou CRM phone)
+Textos que não parecem automatizados
+ESTRUTURA:
+Sequência de Email (10-15 em 48-72h):
+Email 1: Confirmação + dados da call + calendário
+Email 2+: Imediatamente entrar em framing
+Não parecem "você agendou uma call"
+Parecem "estou te ensinando a pensar"
+Distribuição: concentrada durante o dia (evitar 4 emails ao acordar)
+Cada email com ângulo diferente de ataque
+Sequência SMS (4-6 em 72h):
+Uma frase + link para vídeo
+Lembretes
+Mais leve que email (pessoas se irritam mais)
+Nunca de CRM ou Android
+24 Vídeos de Framing (Exemplo Cody):
+Video 1: Regras para novos compradores de negócios
+Video 2: Mindset de riqueza (401k, ações, imóveis)
+Video 3: American Dream está vivo
+Video 4: 3 negócios específicos que compraria
+Video 5: Boring businesses (lavanderias, car wash, pressure washing)
+Video 6: Resposta a haters (motivacional)
+Video 7-24: Variações de framing, objeções, educação
+Todos postados organicamente
+Todos em remarketing para audiência dinâmica
+Captions com CTAs (comment word, manychat automation)
+Audiência Dinâmica (HubSpot):
+Adicionada: quando agenda call
+Removida: 14 dias após agendar
+Mínimo 100 pessoas para rodar (precisa 200-300 na lista)
+Sincronizada com Facebook Ads
+Rolling audience constante
+Estrutura de Objeções para Trading:
+Emotional trading
+Revenge trading
+Blown accounts history
+Money objection (já gastou muito)
+"You're an anomaly" (não consigo fazer)
+Skepticism
+"You got lucky"
+Research Phase Protection:
+Assumir 7 dias de research (ou tempo até call)
+Preencher com propaganda própria
+Monitorar Reddit threads
+Responder negatividade proativamente
+Criar volume de positivo que supera negativo
+DADOS FINANCEIROS:
+Jesse's offer: "couple thousand bucks" (não especificado exato)
+Cody's offer: $10K-$24K
+Investment offers: diferentes (mais compliance, menos frequência)
+Case study webinar: $3,500 product → $7M revenue em 1 webinar
+Prop firms: keep 10% dos earnings, pagam 90% ao trader
+Primeiro payout exemplo: $2,000-$3,000 (testimonial ideal)
+Penthouse Miami: $25K/mês rent, $100K move-in
+Ad spend exemplo: $6,300 para audiência de centenas
+Cost per thru-play: $0.89
+DURAÇÃO: ~66 minutos FORMATO: Webinar interno / Coaching call com análise de caso real (Jesse's trading program show rate problem) + demonstração de estratégia "Hammer Them" com exemplo de cliente (Cody - business buying)

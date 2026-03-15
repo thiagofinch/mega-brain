@@ -1,0 +1,293 @@
+Transcrição Completa: 4 Google PPC
+
+ 
+
+[00:00] This is how you sell Google PPC. I'm going to use Clickfunnels and I'm going to act like I'm talking to Russell Brunson here in my pitch video. Uh, all right. 3 2 1. Here we go.
+
+ 
+
+[00:12] Hey, what's going on, Russell? Or whoever might be watching this. I assume I'm talking to somebody a part of the ClickFunnels team. I just want to be clear. This is a valuable video where I'm going to show you guys just how to make even more money and drive even more leads into your business.
+
+ 
+
+[00:28] You guys are already killing it, doing a great job. I wanted to show you specifically how you can make more results happen for your business on Google PPC. I'm going to cover some exacts. I like using this tool called SpyFu. I have a paid membership with it.
+
+ 
+
+[00:44] And long story short, we're going to justify my ROI here today. And we're going to help you guys drive more leads and sales in the process.
+
+ 
+
+[00:52] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: SpyFu Dashboard - ClickFunnels PPC Analysis
+
+ 
+
+NÚMEROS: 16,500 clicks/mês, $50k/mês budget PPC, múltiplos keywords rastreados
+
+ 
+
+VISUAL: Interface do SpyFu mostrando painel de análise PPC, gráficos de performance, métricas de campanhas, layout profissional com dados de keywords e investimento publicitário
+
+ 
+
+[00:55] So, when I simply look up your domain and I'm under the PPC tab here, I can go down and I get a projected amount of how many keywords you guys are currently paying for in your PPC efforts. I get the estimated amount of clicks you're getting per month from those, which is about 16,500.
+
+ 
+
+[01:15] And I can see you're putting about 50k a month towards PPC budget. I want to be clear and not acting like I'm speaking out of certainty and confidence and accuracy, but more that these are projections for what SpyFu has been able to pick up on the Google Adwords API from your business for anything that's been documented.
+
+ 
+
+[01:35] You're potentially spending more or less. And the cool part about this, I can see the history of how you've grown and your PPC spend or your projected PPC spend that is.
+
+ 
+
+[01:46] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: Historical PPC Growth Chart
+
+ 
+
+NÚMEROS: Início mid-2015/late 2014, crescimento significativo de clicks ao longo do tempo
+
+ 
+
+VISUAL: Gráfico de linha temporal mostrando evolução do investimento PPC e volume de clicks, tendência ascendente clara, marcadores temporais destacando períodos-chave
+
+ 
+
+[01:48] So anyway, long story short, I can see the overall amount of clicks that you've been getting through time has significantly gone up. Looks like you guys got in the game around mid 2015ish or late late 2014 that is.
+
+ 
+
+[02:05] Um, long story short, if I go down, I enter in some of the different competitors that you have. And in this case, SpyFu picks a few automatically. But I'm going to enter in lead pages as a clear example. And I'm also going to see if WordPress is doing anything.
+
+ 
+
+[02:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: Competitive Analysis - ClickFunnels vs LeadPages vs WordPress
+
+ 
+
+NÚMEROS: LeadPages rodando mais keywords inicialmente, menos nos tempos recentes, ClickFunnels superando em clicks
+
+ 
+
+VISUAL: Comparação lado a lado de três competidores, barras comparativas de keywords, gráficos de performance relativa, cores distintas para cada empresa
+
+ 
+
+[02:25] And I can see the amount of keywords for lead pages. Looks like they're running a little bit more than you guys, but in the most recent times, they're doing a little less. So maybe they've honed in their specific PPC strategy.
+
+ 
+
+[02:38] When I click on paid click projections, I can see you guys are actually clearing them out and you're doing a great job at that. And the estimated budgets, it looks like they've spent more and technically got less clicks than you in the most recent times.
+
+ 
+
+[02:54] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: Combat Tab - Competitive Hacking Opportunity
+
+ 
+
+NÚMEROS: ClickFunnels: 7,800 keywords únicos, LeadPages: 5,900 keywords únicos, 174 keywords compartilhados, WordPress fora da competição
+
+ 
+
+VISUAL: Diagrama de Venn mostrando sobreposição de keywords entre competidores, três círculos com áreas de intersecção, números destacados em cada seção, WordPress excluído visualmente
+
+ 
+
+[02:57] So if we do a little competitive hacking to see where there's some opportunity to really crush them, make their spend go up a little more, and make your clicks go up while their clicks continue to go down, it's going to be on this combat tab here.
+
+ 
+
+[03:12] So, if you currently have anybody that handles your PPC or you know you guys are doing this in-house, maybe you're outsourcing to an agency, just show them this video. Show them that tools like this exist.
+
+ 
+
+[03:24] If you guys want us to come in and consult with the person who's currently doing this or the in-house staff, we do it for 5K because it's a result driven service. Uh we do it over 30 days and we just come in and skill transfer and knowledge transfer what we know.
+
+ 
+
+[03:40] If there's opportunity for us to work alongside of who's currently doing this, maybe they're maxed out, they need some additional help, or you just want some outside perspective to come in, we're more than willing to do that as well. and we have gotten great results for previous clients with that.
+
+ 
+
+[03:56] But anyway, so on SpyFu there's this combat tab. And if I type in your URL, Lead Pages URL, and then also WordPress. Looks like WordPress isn't even in the same competitive bracket as you guys.
+
+ 
+
+[04:08] What this little Venn diagram is showing here are all the keywords that are specific to what you're using, which are about 7,800 right now. All the specific keywords that Lead Pages are leveraging to get results with that you're not using, which there's about 5,900 of. And then in the middle there, the ones that you guys share, which is about 174 keywords you guys are both going after.
+
+ 
+
+[04:32] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: Recommended Keywords Export List
+
+ 
+
+NÚMEROS: Clicks estimados por keyword, custo mensal estimado por domínio
+
+ 
+
+VISUAL: Lista detalhada de keywords recomendados, colunas organizadas com métricas de performance, botão de exportação para Excel destacado, layout tabular com dados ordenáveis
+
+ 
+
+[04:35] So, it's really cool where we can then scroll down and we get to see all the different recommended keywords. And more importantly than anything else here, I get to see the estimated clicks that are coming from each one of the keywords that are searched.
+
+ 
+
+[04:49] And I get to export this list in an Excel sheet, which I can then import into the Google Adwords platform. and I can get an estimated monthly cost of how much people are putting towards each estimated domain.
+
+ 
+
+[05:02] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: LeadPages Competitive Keywords Analysis
+
+ 
+
+NÚMEROS: Keywords ordenados por volume mensal de buscas (alto para baixo), posições de ads específicas
+
+ 
+
+VISUAL: Tabela de keywords do LeadPages ordenada por volume de busca, coluna de posição de anúncios, filtros de ordenação ativos, interface de análise competitiva detalhada
+
+ 
+
+[05:05] Now, here kind of the fun part. If I go over to this competitive keyword tab, I look up lead pages, I can actually see in order from the amount of monthly searches down which keywords they're currently going after.
+
+ 
+
+[05:19] And I can list that based upon the search volume from high to low. and I can see the position that they have when targeting that specific ad, which means that they're likely to have a higher budget there than anything else.
+
+ 
+
+[05:32] I can in order add any specific keyword to a list that I can then export, which the intention of that would be to then import it into Google Adwords.
+
+ 
+
+[05:42] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: Ad History Feature - Competitor Ad Intelligence
+
+ 
+
+NÚMEROS: Keyword "landing page" - posição #1 do LeadPages, oferta de 14 dias free trial
+
+ 
+
+VISUAL: Interface de histórico de anúncios mostrando ads do LeadPages, preview de anúncios com headlines e body copy, linha temporal de variações de ads, estatísticas de performance à direita
+
+ 
+
+[05:44] There's a bunch of other cool stuff here that I can see just by having their keywords handy that I can put into an Excel sheet. One of the favorite things that I like to leverage is the ad history of these competitors.
+
+ 
+
+[05:55] So, we can actually see for all the different keywords. For example, landing page was one of the most searched and it was also their number one ad position that they had, which I imagine this has got to be a great ad for them.
+
+ 
+
+[06:08] We can actually see October's most recent ad. So, it says the number one landing page builder. Try lead pages for free for 14 days. We can see the headline. We can see the exact body copy. We can also see all the historical variations that they've been running.
+
+ 
+
+[06:26] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: Top Ads Statistics Panel
+
+ 
+
+NÚMEROS: Percentual de vezes servido, tempo no topo da página, posição média por keyword
+
+ 
+
+VISUAL: Painel lateral direito com estatísticas de ads, métricas de performance em percentuais, gráficos de posicionamento, dados comparativos de diferentes keywords e anúncios
+
+ 
+
+[06:28] In addition to that, we get some statistics going down the right hand side for top ads which show the percentage served, the amount of time that they're getting served at the top of the page and their average position for each one of these different keywords and the ad itself that they're going after.
+
+ 
+
+[06:46] So, I want to be clear, there's a lot of cool stuff that we can do and that we can really help your existing team leverage to get more results. Uh, work alongside of them. We're not here to necessarily take any jobs unless it's time to let that other person go because they're not performing or they're not being accountable.
+
+ 
+
+[07:06] But to be clear, we're here to make the good great and the great greater. We just want to drive additional leads and sales. As I described at the beginning of this video, we're more than willing to come in and see exactly what we can do after asking a few more questions that I'm sure would help through this process with literally just generating you guys more leads and sales.
+
+ 
+
+[07:28] Long story short, let me know what you guys think about this. My contact information is in the description below. I hope this video helps you guys drive more results. And if we get on a call, we'll talk a little bit further in detail about what we can do with the consulting or what we can do with the hands-on deal.
+
+ 
+
+[07:45] I'll talk with you guys soon. Bye. And that's how you sell Google PPC. I'll see you in the next video.
+
+ 
+
+ 
+
+📊 RESUMO EXECUTIVO
+
+ 
+
+NÚMEROS PRINCIPAIS:
+
+16,500 clicks/mês (projeção atual ClickFunnels)
+
+$50,000/mês budget PPC estimado
+
+7,800 keywords únicos do ClickFunnels
+
+5,900 keywords únicos do LeadPages (não utilizados pelo ClickFunnels)
+
+174 keywords compartilhados entre competidores
+
+Início das campanhas: mid-2015/late 2014
+
+$5,000 investimento para consultoria de 30 dias
+
+14 dias free trial (oferta LeadPages analisada)
+
+ 
+
+ESTRATÉGIAS E SISTEMAS:
+
+Análise competitiva usando SpyFu para Google PPC
+
+Competitive hacking através do Combat Tab
+
+Exportação de keywords para importação no Google Adwords
+
+Análise de histórico de anúncios dos competidores
+
+Skill transfer e knowledge transfer em 30 dias
+
+Reverse engineering de ads de alta performance
+
+Identificação de gaps de keywords entre competidores
+
+Otimização baseada em posicionamento de ads
+
+ 
+
+ESTRUTURA:
+
+Framework de análise PPC em 3 camadas: Keywords próprios, keywords do concorrente, keywords compartilhados
+
+Processo de consultoria: Análise → Transferência de conhecimento → Implementação colaborativa
+
+Sistema de priorização baseado em volume de busca e posição de ad
+
+Metodologia "make the good great and the great greater"
+
+ 
+
+DADOS FINANCEIROS:
+
+Investimento PPC: $50k/mês (ClickFunnels estimado)
+
+LeadPages: maior investimento, menos clicks (ineficiência competitiva)
+
+Serviço de consultoria: $5,000 por 30 dias
+
+ROI justificável através de análise SpyFu
+
+Custo mensal estimado disponível por keyword/domínio
+
+ 
+
+DURAÇÃO: ~8 minutos FORMATO: Video pitch de vendas / Demonstração de ferramenta (SpyFu)

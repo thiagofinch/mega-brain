@@ -1,0 +1,378 @@
+Transcrição Completa: 41 Amber COO Operations Lessons Dashboard Tracking 3 8 25
+📊 CONTEÚDO PRINCIPAL
+[00:00] All right, ladies and gentlemen, mainly gentlemen, we have a guest speaker today. We have these things in the inner circle. We call them group experts and they are like, as an example, Gelani, you know, Gelani's been our AI group expert for a while now.
+[00:15] He's done things like this as an example, weekly group calls. He's also done I think two different talks now at different masterminds and you know he runs best of AI daily and he's been doing a phenomenal job obviously at keeping us all updated of what's going on inside of that space.
+[00:35] And we have a few of these types of people in the group to be clear that we lean into for their expertise and Amber is one of those. Amber is our operational expert in the group that we look up to and look forward to hearing from when it comes to advice about operations.
+[00:52] For all those who don't know, obviously Amber does fractional COO services for different seven figure a month businesses. She has some that are like, what do you think the lowest one is, Amber? Like mid-range six figures a month.
+[01:05] Yeah. Most of her deals, simply put, are scaling up to the seven figure a month benchmark are already there for like mid-range, couple hundred grand.
+[01:18] She also has this service that she does where she builds out this like tracking dashboard for people. Long story short, there's an incredible amount of insight that I've gotten from Amber over the years that I just don't hear from other people.
+[01:35] I asked Amber, as somebody that I work with on a few different deals, if she'd be willing to share some of that expertise with us on something like this in a weekly group call, and she was more than happy to do it.
+[01:48] Keep in mind, Amber's also in our group chat. So, if you guys ever have like any operation related questions, you can always tag Amber and ask questions.
+[02:00] Awesome. Thank you. Let me go ahead and share my screen. Okay. Can you guys see my screen? Yeah, you're good. Yeah. Cool.
+[02:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Introduction to Data Tracking"
+NÚMEROS: Não especificados neste momento
+VISUAL: Slide de abertura da apresentação sobre tracking e dashboards
+[02:20] All right. So I had an intro, but Jeremy did a great job of introducing kind of my background and what I do. I think today what would be most valuable for you guys is just to focus on the importance of data tracking and hopefully show you guys some new ways that you could collect data or help you realize why you should be tracking some of the things that you are not tracking.
+[02:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Data-Driven Success Statistics"
+NÚMEROS:
+23x mais provável vencer concorrentes em aquisição de clientes
+19x mais provável manter lucratividade
+7x mais provável reter clientes
+VISUAL: Estatísticas do Forbes em destaque, números grandes com ícones representando cada métrica de sucesso
+[02:50] Whether you like it or not, it's statistically proven that a large portion of your success or failure in business is going to come down to your ability to effectively track and analyze data.
+[03:05] An article from Forbes has shown that it's 23 times more likely for you to beat your competitors in customer acquisition, 19 times more likely for you to stay profitable and nearly seven times more likely for you to retain customers if you are data driven.
+[03:25] So, this is not something that we want to miss. And even though it's something that a lot of the times we neglect, it is a very important part of scaling in business.
+[03:38] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Success Equation" "TRACKING + KPIs + ACTION = SUCCESS"
+NÚMEROS: 3 componentes essenciais
+VISUAL: Equação visual com três caixas conectadas por sinais de adição, levando a um resultado de "sucesso". Layout limpo e direto
+[03:42] And I know all of you guys are here because you want to get to million-dollar months. And that's simply not going to happen if you're not focused on your data.
+[03:55] So I have this equation. This was on the first slide and this is something that I've made up. Obviously the goal here is really focusing on your tracking like we've been talking about.
+[04:08] You need to track the data but not only track the data, you need to create KPIs from it. So I feel like a lot of entrepreneurs are really lacking in one of these three areas if they're, you know, most often they're not tracking at all.
+[04:25] But if they are, they're not effectively creating KPIs from it. Looking at data and knowing what your close rate is is great, but if you're not actually setting a benchmark or a KPI for you and your team to be hitting, then that tracking is kind of all for not.
+[04:42] So we want to make sure that we're actually setting measurable KPIs and then holding our team and ourselves to those so that it becomes very clear who is hitting or missing the mark, right?
+[04:58] Looking at these KPIs is important and then if we're not actually creating an action plan around these KPIs, you know, what are we really going to accomplish at that point, right?
+[05:12] A lot of people will look at all this data and then never actually do anything with it. And so again, you're creating these KPIs, you're not following through on them, you're not setting an action plan. And so nothing is really coming from it.
+[05:28] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Without Tracking = Blindness in Business"
+NÚMEROS: 0% de controle sem dados
+VISUAL: Imagem de pessoa vendada ou no escuro, representando falta de visibilidade. Contraste entre negócios com e sem tracking
+[05:32] Which basically leaves you blind in your business if you're not hitting all three of these things. If you're not tracking, you won't know what's working. You won't know what's not working. And you won't even know what targets are required for you to even reach your goals.
+[05:50] You can't repeat your successful actions. You can't stop doing unsuccessful ones. And again, as I said, you I can guarantee you're not going to hit those million-dollar months.
+[06:05] And in the off chance that you happen to hit one, you'll have no clue how you did it. And you'll have no clue how to repeat what you did in order to reach that million-dollar month.
+[06:18] Ultimately, what data gives you is control over your business. It's going to help you to act with intention and only increase your chances of success.
+[06:30] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Case Study: The Stripe Dashboard Trap"
+NÚMEROS: +10% de aumento aparente
+VISUAL: Screenshot de dashboard do Stripe mostrando receita crescente, aparência enganosa de sucesso
+[06:35] So, let's look at this example. You would actually be shocked at how many times I will go into a business to set up tracking or do operations and I say, "What are your reports?" And they pull out their Stripe dashboard and they say, "This is what I use as my north star for my business."
+[06:58] And that's great and all, but it really doesn't give you the full picture. And so, I'm going to use this example to help show this to you guys.
+[07:10] So, if you guys think based off just this screenshot alone that this business is starting off the month on a good pace, type one in the chat like just off that screenshot, right?
+[07:25] Okay. So, looking at that, we think, okay, yeah, we're having a great start to the month. We're up 10%.
+[07:32] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Adding Basic KPIs"
+NÚMEROS:
+Close Rate: 80%
+AOV increase: +$752
+VISUAL: Duas métricas adicionadas ao dashboard anterior, números em verde sugerindo performance positiva
+[07:35] Now, let's look at some common KPIs that people will track. So, like close rate, AOV, pretty standard. Now, let's look at this. Do we still feel good about where this business is at so far this month?
+[07:50] I mean, close rates up a ton. 80% is really great. And then average sale is up $752 from the previous month. Do we still feel like this business is, you know, off to a good start? Yes. Okay. I see some head nods.
+[08:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "The Real Picture: Revenue Breakdown"
+NÚMEROS:
+Total Revenue: $47,000
+New Revenue: $16,000 (apenas)
+New Revenue: -18% vs mês anterior
+VISUAL: Gráfico de pizza ou barras mostrando divisão entre receita recorrente e nova receita, destaque em vermelho para a queda
+[08:12] How about now? Now we're seeing, okay, so we have $47,000 this month, but only 16,000 of it has come from new revenue, and we're actually down in new revenue 18% from what we were this time last month, right?
+[08:32] So, what are some reasons why the business is down in new revenue or what else can we, you know, basically infer from this data that we now have? You guys can type ideas in the chat.
+[08:48] It's all recurring, right? So, your recurring payment plans are carrying your revenue. We can also likely infer that leads are down, right? Because new revenue is down, so we're not getting like new people coming in.
+[09:05] We could potentially infer that calls are also down, right? Cuz close rate is up, so calls might be down. So, we have some ideas about what's going on here, but we're not sure by any means, right?
+[09:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Deep Dive: Full Funnel Breakdown"
+NÚMEROS:
+Applications: -30%
+Triage: -30%
+Booked Calls: -30%
+Qualified Leads: -30% (adicional)
+Triage Show Rate: decente
+Sales Show Rate: 8%
+Close Rate: 80% (em showed calls)
+VISUAL: Funil completo de vendas com cada estágio mostrando percentuais, setas vermelhas indicando quedas, destaque visual no show rate de 8%
+[09:28] And this is from tracking basic numbers that most businesses will track. So, let's look at a better breakdown. Now, looking at this data, how do we feel about the state of the business this month?
+[09:45] Not so hot, right? There's a few issues we can identify here. Again, you guys can put some ideas in the chat.
+[10:00] But like things that I would look at that I would point out in looking at this data is that applications, triage, and book calls are down all around the same percentage, which means that our follow-through is the same.
+[10:18] So, the amount of people applying and then booking a triage call and then booking a sales call is effectively the same. Like that pass through rate is stable. However, we're still down about 30% across the board. And that's a huge issue.
+[10:38] And not only that, but let's look at our qualified leads. So, we're down 30% in total leads, but then on top of that, the leads that we deem to be qualified based on our application qualifying questions are down 30%.
+[10:58] So even the lower amount of applications or leads that we're getting are far less qualified in comparison. And then we go even deeper to say, okay, our triage show rates decent, but let's look at our sales show rate. 8%.
+[11:18] I mean, that's laughable. I would not, you know, praise anyone for an 8% show rate. That's pretty atrocious.
+[11:28] And so what we can see from this is that the close rate might be up, but that's likely because if I'm looking at a completed close rate, aka a close rate off showed calls, well, they're not showing up, right?
+[11:45] So this vanity metric of like, yay, I closed 80% of my completed calls is cool, but if the calls aren't showing up, like you have bigger problems you need to be addressing.
+[12:00] And I can promise you that there is no way that this started March 1st, right? This is likely an issue that's been trickling down since mid-February.
+[12:15] But if they're not looking at this data every single day, they're not able to catch this before it becomes a problem. So now what's going to happen?
+[12:28] If I'm an entrepreneur and I only use Stripe, I go into March thinking, "Oh wow, I'm up 10%. This is going to be a great month." I bet you by the end of March, this CEO is going to look at this and go, "Well, what the fuck happened?"
+[12:48] Like, "How come now all of a sudden I'm down 30-40% in revenue? Like, where did all this lead that we had go?" And then you're going to blame the sales team, right?
+[13:05] You're going to say, you know, they're not closing enough. You're not going to know exactly what the problem is. So, you're going to start looking in the wrong places to solve it.
+[13:18] Whereas, if you're tracking this kind of data from the beginning, you're going to say, "The leads suck." Exactly. But, do you know if the leads suck? Like, factually, no. If you're only looking at Stripe, right?
+[13:38] And if you come and look at this at the end of the month, then you're saying, "Okay, well, it's too late to fix it now, you know, if you go, "Oh, well, what the hell happened? Let me go into go high level, pull a lead report. Let me go into Type Form, pull my applications." Well, it's already too late.
+[13:58] Like, you already had a really bad March. And now, because this lead flow has been so bad for all of March because you thought you were doing well, you're probably going to have a shitty April, too. Right.
+[14:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Key Takeaways"
+NÚMEROS: Não especificados
+VISUAL: Lista de pontos-chave sobre importância de tracking frequente e abrangente
+[14:18] So, not only is it important to be looking at this frequently, but make sure that you're tracking all the important and available metrics. And I think that example is like a good way to kind of show that.
+[14:35] And so, the takeaways from that is like you're only as good as your data. Your business really is only as stable as the data that you're tracking. So, if you have shitty tracking, eventually it's going to catch up to you in some way, shape, or form.
+[14:55] And if you're not able to look at that data on a regular basis, you're going to miss these problems, out of sight, out of mind. Right?
+[15:08] If that data is not readily available for you, are you really going to go and pull a lead report every single day from go high level? Maybe. But even if you do that, is that efficient? No. Right?
+[15:25] Like you need a system in place that's automatically tracking that so you have access to that at any point in time within minutes so you can easily make those business and data-driven decisions.
+[15:42] So again, like my point with all this TLDR is track everything. You never know if you're going to need it. And it's better to have it and not use it than need it and not have it.
+[15:58] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "KPIs: Beyond Just Tracking"
+NÚMEROS: Não especificados
+VISUAL: Título sobre importância de KPIs, transição para próxima seção
+[16:02] So now let's look at KPIs because tracking the data is not enough. As I said before, if we're not actually setting a benchmark and using KPIs as a tangible tool for success, you know, we're not really holding anyone accountable to anything.
+[16:22] Another thing that I'll see with businesses that don't have KPIs is there's no transparent way to measure success. And when we talk about employee or team retention, that's a big factor.
+[16:38] Team members want to know if they're doing well, right? I get asked that all the time as someone who manages teams of 20 to 50 people. How do I know if I'm doing well in my role, right?
+[16:55] And so we have to define that and saying, you know, you're trying really hard like that's not good enough, right? We need to have a number, a black and white transparent way to say, hey, pass fail like you either did well or you didn't.
+[17:15] And that's what KPIs can provide us. They also create ownership, right? Because if somebody has to own a specific KPI, then they can take pride in hitting that goal, right?
+[17:32] They know, okay, this is the measure for me to show that I've done well in my role.
+[17:42] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Marketing vs Sales: The Blame Game"
+NÚMEROS: Não especificados
+VISUAL: Duas figuras apontando uma para a outra, representando culpa mútua entre departamentos
+[17:45] So it's really important because how many times have you guys had the marketing versus sales debate where you go to marketing and say, "What the hell happened?" And they go, "Your sales team sucks."
+[18:00] And then you go to sales and you go, "What the hell happened?" And they say, "Well, the leads suck. It's marketing's fault." Right? Right?
+[18:12] And it's just this point back and forth, this blame game of like, it wasn't me, it was him. Well, having KPIs that are specific to every department eliminates that need because then you can say, well, no, the leads didn't suck because our qualified lead percentage actually up 10% for the month, but your show rate is down.
+[18:38] So, you're clearly not following up with your leads prior to the call, and that's why they're not showing up. But, they're qualified. The application shows that they're qualified and we've done way more revenue in similar months with similar, you know, qualified app percentage.
+[18:58] So, it's not marketing's fault. The lead volume is there, the qualified percentage is there. They're dropping off. They're not showing up. And then when they get on the call, you're not closing them.
+[19:15] If you have those numbers, it's very difficult for somebody to point blame elsewhere because the numbers show you exactly where the problem is. Does that make sense for everyone? Okay, perfect.
+[19:32] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Best Practices for Setting KPIs"
+NÚMEROS: 90 dias (período ideal para média)
+VISUAL: Lista de melhores práticas, destaque para período de 90 dias como base estatística
+[19:35] So, when I set KPIs for businesses, these are some of my best practices that I like to kind of live by.
+[19:45] First of all, you want to set KPIs off of an actual statistically relevant data set. So, I've seen companies say, "Well, let's just set the goal based off last week's performance." Well, that's not good enough because there's so many reasons why last week could be an outlier for a high or for a low, right?
+[20:08] So, if I'm going to set a KPI, I like to base it off of a 90-day running average because I feel like that takes into account enough variances that may happen for different promotions or times of year, and it gives you a decent average of what your business is currently doing.
+[20:32] Whereas, if you take it off of a running 12-month average, sometimes that's almost like too much data because a lot can change in your business and it could be going through a different trajectory at that point in time.
+[20:48] So 90 days tends to be a good range for you to base your KPIs off of. Okay? It helps to eliminate overweighting or underweighting other outlier data.
+[21:05] Another mistake people make is set and forget. So they say, "Well, I want my team to have a 40% close rate." And then they never change that. That's just always a benchmark.
+[21:20] But if your team is statistically closing at 20%, just telling them every day you want 40 is just not realistic, right? And so really calculating what's a reasonable expectation for them to attain is that next step up and then raising that bar over and over again is a far better way to actually get them to 40%.
+[21:45] Than telling them, I want a 40% close rate when they're only doing half that and expecting them to just one day get there. So, we need to make sure that we're actually updating these KPIs.
+[22:00] And I like to update my KPIs monthly based again off the previous running 90-day average if anything has changed.
+[22:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Weighted KPIs by Team Member"
+NÚMEROS: Não especificados
+VISUAL: Diferentes membros da equipe com KPIs personalizados, conceito de justiça e transparência
+[22:18] Another thing a lot of people don't do is they don't weight their KPIs. So, they just say, you know, this is the KPI we're all hitting that.
+[22:30] I personally like to take into account different platforms, different team members and I like to give different departments and team members weighted KPIs because again it creates transparency and it removes the excuse of, oh, I don't get as many calls as Billy, you know, because their KPIs are set based off their previous 90-day running average.
+[22:58] And so again, it's like I'm only expecting you to do this much better than what you've previously done. So there's no excuse of, you know, it's not fair, it's, you know, it's not my fault. Like, you can't have that excuse if you're weighting your KPIs.
+[23:18] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Financial Incentives = Performance"
+NÚMEROS: Não especificados
+VISUAL: Conceito de bonificação atrelada a KPIs, ícones de dinheiro e crescimento
+[23:22] And then lastly, and almost most importantly, is setting bonuses around KPIs and creating financial incentive for your team.
+[23:35] I don't know if Adam's on the call today, but we were talking about this because he was asking me some questions about like how to get his team bought into his company.
+[23:50] And I told them, you have to stop trying to get your team to love your company and you have to start focusing on how you can get your company to make them love their life.
+[24:05] So how do and most for most people that is financial incentive. How do we provide things or money that helps those people love their life more versus expecting them to love our company?
+[24:22] Cuz no one's going to love your company as much as you do at the end of the day. It's just not it's not realistic.
+[24:32] But if your company is the vehicle that gives them access to resources that make them love their life, they will try 110% in your company.
+[24:45] So we have to make sure that if we're going to expect people to hit KPIs that when we win, they win because that's the only way that they're actually going to be motivated to do it at the end of the day because everybody at the end of the day wants like a selfish motive to what they're doing.
+[25:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Reverse Engineering: $1M Month"
+NÚMEROS:
+Goal: $1,000,000/mês
+Current Average: $700,000
+New Revenue Target: 60% típico
+Payment Plans Expected: $280,000
+New Revenue Needed: $720,000 (72%)
+VISUAL: Equação matemática reversa começando do objetivo final, breakdown visual de cada componente
+[25:12] So, when we look at calculating KPIs, here's how I run through it. If I want to hit a million dollar month, what a lot of people will do is just say, "Okay, so what's a million dollar divided by 30 days? This is how much money we need every day." Okay, that's our goal.
+[25:35] But there's so much more to it than that. So, if I'm going to set a KPI or goal post for anything, this is how I would do it for a million dollar month.
+[25:48] I would say, okay, so we want to do a million and we're running at a $700,000 average total revenue. So, let's see if a million is even possible.
+[26:05] Typically, you know, about 60% of our revenue is new revenue. Let's look at how many payment plans we expect to collect this month cuz that should not be included in what you're expecting of the sales team because they're not collecting on payment plans. They're just doing new revenue.
+[26:28] So, if let's say we expect $280,000 in payment plan revenue, that means that we have $720,000 of new revenue to make. So, that's 72% new revenue if we're breaking it down, right?
+[26:48] So, that is a decent jump. That's a 12% jump off what we normally do. So, let's take it a little bit further to see if this is realistic or possible.
+[27:02] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Sales Calculation Breakdown"
+NÚMEROS:
+AOV: $4,000
+New Revenue: $720,000
+Sales Needed: 180
+Close Rate: 25% (on showed)
+Showed Calls Needed: 720
+Show Rate: 50%
+Total Calls Needed: 1,440
+VISUAL: Funil matemático mostrando cada etapa do cálculo, números conectados por divisões e multiplicações
+[27:05] So, if we have a $4,000 average sale, 720,000 in new revenue equals 180 sales. Okay. So now we could look at, have we ever done anything close to 180 sales? Does that feel like in the realm of possibility?
+[27:28] Now let's look at our close rate. If our close rate on showed calls is 25%, we divide 180 by 25%. That means we would need 720 calls to show up again.
+[27:45] We can do a check against that. Does that feel realistic? Because if it doesn't, we should go back and readjust the goal because it's just it doesn't make sense.
+[28:00] But at a 50% show rate, we can then divide 720 by 50% which means we would need 1440 total sales calls. Okay.
+[28:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Funnel Requirements"
+NÚMEROS:
+Qualified Apps Needed: 2,880 (40% qual rate)
+Opt-ins Needed: 72,000 (10% conversion)
+Page Views Needed: 240,000
+Social Media Views: 6,000,000
+VISUAL: Funil completo do topo ao fundo, cada estágio com números específicos, visual de engenharia reversa
+[28:18] Now we look at the qualified app rate. So we would need 2,880 qualified applications because we have 40% rate of qualified people coming through. Okay.
+[28:38] If we have a 10% opt-in to app, we would need 72,000 opt-ins. And I mean, you get the point, right? We just reverse engineer the math.
+[28:52] We look at we're going to need 240,000 people to hit our funnel, right? And then based off of our page views, excuse me, off of our views on social media, if we reverse engineer how many views we typically get on social media and how many pages we need, then we would need 6 million views on social media.
+[29:18] Okay. But now I have a very clear breakdown of exactly what needs to happen. I can give marketing these goals. I need you to bring me 2,880 like very specifically qualified applications in order for us to hit a million dollars, right?
+[29:38] I need to generate 6 million views as the owner of the business, right? If you're the face of your business, how can you generate 6 million views? You can start asking these questions. How am I going to get 6 million views?
+[29:55] If you do not see six million views in the realm of possibility, again, we would just go back and adjust the goal and redo all of the math.
+[30:08] Now, the thing that I love about this is that I'm basing this off of our 90-day running average. So, I'm not even asking the sales team to do any better. I'm just asking you to do the same thing you've been doing.
+[30:25] And if they do better, I mean, that's just going to increase the likelihood of you hitting the million dollar, right? So, we're setting KPIs based off of their running averages and saying, "I just need you to keep doing what you're doing."
+[30:42] And as a result of that, this is what our, you know, number of sales needs to be. We need to keep an average sale of 4,000. And now, again, like I've been saying, it becomes very clear what needs to happen and who owns what.
+[31:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Weighting KPIs: Multiple Dimensions"
+NÚMEROS:
+Channel (Ads vs Organic)
+Platform (IG, FB, YT, LinkedIn)
+Funnel (Lead Magnet, Hydra, etc.)
+Product (LTO vs High Ticket)
+Team Member (individual performance)
+VISUAL: Matriz multidimensional mostrando diferentes formas de segmentação de KPIs, ícones para cada categoria
+[31:05] Now, how do we weight this? So as I was saying before for weighting I like to look at things like channel platform funnel product team member because again we cannot say hey I need the sales team to bring me 720k in new revenue if you have multiple products with an LTO cuz you're going to have LTO money coming in.
+[31:32] So take that out of the total amount of revenue that your sales team needs to be bringing in because it's not fair to expect that of them if you know they're not contributing to low ticket sales, right?
+[31:48] So you can break down, okay, well if 20% of my revenue, new revenue comes from low ticket, you can do 20% of the 720 and take that out, right?
+[32:02] It's just all math and it's very easy math. If you got through grade school, you should be able to do this or you can just ask AI to do it for you. Like you should be okay.
+[32:18] When we look at channel, I'm talking ads versus organic, right? So we can't expect our media buyer to carry that 720. We have to look at what's percentage comes from ads, what percentage comes from organic and we can break those goals out even further.
+[32:38] And now I can go to my media buyer and say, "Hey, you know, based off of the ads numbers, because we could always redo this calculation based off of ads, average sale, ads, show, qualified apps, etc. This is what I need you as my media buyer to bring me for me to hit a million dollar a month."
+[33:02] Organic as the face of the business, you have more control over. Or if you have a content team, that's a great KPI to now set for your content team.
+[33:15] We look at platform, we're talking Instagram, Facebook, YouTube, LinkedIn, Twitter, wherever you are, right? We can again split that out into platforms which you can either assign to different team members if they run certain platforms. Exactly. Yes. You want to delegate.
+[33:38] So you look at these different platforms and again you can see exactly what you can expect from each one and hold other people accountable or again if you're running that platform it gives you great clarity of what you need to be generating on that platform in order to for that trickle effect to happen down for your sales team for them to do what they need to do to hit the million dollar.
+[34:05] We'll even go as far as funnel strategy because certain funnels produce more revenue than others, right? So if you have a lead magnet funnel hydra, right? Again, this helps to give very specific actionable goals to media buyers to your team.
+[34:25] We need to push lead magnets this many times this month on Instagram because it's our biggest contributor to new revenue on that platform. But maybe the obviously the hydra for ads is generating the most. So let's dump more money into hydra because we know it returns us more money.
+[34:45] And all of these decisions can be made with competence because you have that data.
+[34:52] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Team Member Weighting Example"
+NÚMEROS:
+Closer 3: 10% de calls = $72K target
+Closer 2: % baseado em volume
+Closer 1: % baseado em volume
+Closer 3 AOV: $2,000
+Sales needed: 36 (72K ÷ 2K)
+VISUAL: Três closers com diferentes percentuais de distribuição, cálculos individualizados, conceito de fairness
+[34:55] And then team member, which we've talked about a little bit, but let's get a little bit more specific with that and what I mean when I say that.
+[35:05] So, let's say we have three closers, right? We have closer three. Typically, they are getting 10% of the call volume because they're new. So, we're kind of ramping them up.
+[35:20] Is it fair to just take 720 divide it by three and be like, that's your goal? I mean, the guy's only getting 10% of the leads. That's not fair at all. Right.
+[35:35] So, what I would recommend in these cases is, okay, closer three, I want you to bring me 72K because you're getting 10% of the lead volume, so you should be generating me 10% of the sales.
+[35:52] Now, if closer 3 doesn't hit that, what excuse do they have? If marketing hit all their targets, if closer one and two hit their what what excuse do they have at that point?
+[36:08] They can't say, well, you know, doing a third of the sales when I get 10% of the calls. No, no, no. I only asked you to do 10% of the sales and I gave you 10% of the calls.
+[36:25] They have no choice but to take ownership for their failure at that point, right? Or for their win if they if they hit the goal, right?
+[36:35] And then same thing would be for closer two based on call volume. And then what you can do again is break it down even further and say, okay, well, if closer 3 typically has an average sale of $2,000, that would mean that, you know, 72 divided by 2,000.
+[36:58] Hey, closer three, I need you to get me 72K. Just think of it as this many sales if you keep doing what you're doing. And so, again, they have very specific goals that they now need to attack.
+[37:15] And it makes it very clear for them, which gives them confidence in what they're going out to do because they have a number they know they need to hit, and they understand that number is weighted fairly for them to actually hit.
+[37:32] It's not just some inflated number that makes absolutely no sense and they're sitting there going, I mean, there's just no way that's going to happen because if you give a KPI to a team member or a media buyer, company, whatever, and it doesn't make sense, it's actually demotivating.
+[37:52] And statistics have shown that like if a goal feels too far away, it'll actually prevent people from trying cuz they'll just think, I just I'm never going to get there. Right?
+[38:05] It's like telling someone that needs to lose weight, you're telling them, "Oh, you need to lose 50 lbs." Like, don't focus on losing 50 lbs. Just focus on the first 10 and then we'll make another goal from there and another goal from there. Right?
+[38:25] So, that again, that's why we're always moving the goalpost. We're always adjusting the KPIs and that's why they need to be specific because if they're not specific, then they're they're just going to give up before they even start.
+[38:42] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Bonus Structure: Fair vs Weighted"
+NÚMEROS:
+Weighted KPI: $72K (Closer 3) vs $200K (Closer 1)
+Fair Bonus: $4K AOV = $5K bonus (para todos)
+VISUAL: Comparação visual entre estrutura injusta (bonificação igual para metas diferentes) vs justa (mesmo padrão para todos)
+[38:45] Now, when it comes to bonuses, do not use weighted KPIs for individual bonuses. If you use a weighted KPI for a media buying company, that makes sense.
+[39:00] But you can't say, well, if closer 3 hits 72,000, I'm going to give him a $5,000 bonus. And if closer one hits, you know, what was the goal? I think like 200,000. I'm also going to give him a $5,000 bonus. Well, that doesn't make any sense, right?
+[39:22] You want to use actual like team-based KPIs that are the same standard for everyone. So, if we say our average sale is 4,000, anyone who does over 4,000 average sale this month gets a $5,000 bonus. That is a fair bonus structure.
+[39:42] That is how cuz everyone can do a $4,000 average sale. That's the average of the company. If you fall below that, that's really not my problem. Like, I want to reward the top performers.
+[39:58] So, make sure that you're never using individual weighted KPIs for individual bonuses because it's just not fair to everyone and it'll end up causing turmoil in the company.
+[40:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Action: The Critical Component"
+NÚMEROS:
+Tracking × KPIs × 0 (Action) = 0
+VISUAL: Equação mostrando que sem ação tudo é zero, ícones de movimento e implementação
+[40:18] Now, let's talk about action. Probably like one of the most important pieces here because if and I've talked about different ways we can take action with KPIs throughout this.
+[40:32] But you have to actually put those into practice. The KPIs are designed to help you ask the right questions and then formulate a plan based around those and just follow the logic of the math, but you have to actually then put those into action, right?
+[40:52] So, some examples we've kind of talked about. So if if you're the head of, you know, marketing for your company because you're the face, if you need to generate 6 million views, you can start to think, okay, well, if that is, you know, more than double what I'm getting now, what's one easy way that I could get more than double the views, post twice as much, right?
+[41:18] Like that's just if you post more, you're going to get more views, right? So, there's different ways we can look at that, but it it asks it gets you asking the right questions, like, should I post more? Maybe I'm going to go more in on Instagram.
+[41:35] But it allows us to really look at what each person needs to do in order to make these things happen. But then you have to actually do those things, right?
+[41:48] Because if you're just not the type of person to take action, you're probably not in the right place right now. And you can just pack up your things because no amount of data or KPIs is going to save you if you're just not the type of person to actually take action on the stuff that you're looking at.
+[42:08] And basic math will show if we have action at zero, no matter how much tracking or KPIs we do, it's always going to equal zero. That's just math.
+[42:22] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Dashboard Examples: Looker Studio"
+NÚMEROS:
+Auto-feeding via Zaps
+Real-time data
+Multiple filtering options
+VISUAL: Screenshots de dashboards reais no Looker Studio, múltiplas métricas visíveis, interface profissional
+[42:25] So looking at some examples of like the dashboards that I'll set up because of the stuff I personally like to be able to look at and track and have access to it at like my fingertips.
+[42:38] Like this is the kind of tracking that is possible for you in your business if you set it up correctly. Our dashboards feed automatically. I think that's another important piece is like installing zaps and things like that. So you're able to get data in real time and you don't have to go looking for it.
+[42:58] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Key Metrics Dashboard View"
+NÚMEROS:
+Pacing metrics
+Applications, Calls, Units Sold, Revenue
+Unique Applications
+Qualified Lead %
+Show Rates
+Close Rate (2 ways: completed vs total)
+Estimated Pipeline Revenue
+VISUAL: Dashboard completo com todas as métricas principais visíveis, gráficos e números side-by-side
+[43:02] So being able to know like your pacing. So based off how much you're generating applications, calls, units sold, revenue, like what's your pace at and where is that going to leave you versus last month.
+[43:18] Those are really great numbers to look at so you know if you're on pace to beat the previous month based off how the current month is doing.
+[43:32] And we do all of our dashboards on Looker Studio or Google Data Studio. Looking at your unique applications but also your qualified show rates.
+[43:48] Obviously, I like to calculate close rate in two ways. I like to base it off completed calls and total calls. I think completed calls for me is a bit of an inflated number.
+[44:05] I personally prefer looking at total calls cuz I think it's important to consider cancellations, reschedules, etc., and be actively trying to fix those things instead of just looking at, you know, based off showed calls.
+[44:22] For me, that feels like a little bit of a vanity metric. But it is valuable to understand like how well the sales team performs once they're on a call, but also taking into account like what's happening with all the other calls is very important as well too.
+[44:42] Estimated pipeline revenue. So for me that is basically just a calculation of based off how many calls I have left. So what's on the calendar in future days?
+[44:58] If I multiply those calls by my show rate, by my close rate, by my average sale, that tells me my pipeline revenue. So that's a valuable number because that helps me to know based off what's in the pipeline so far where I would be at once those deals follow through.
+[45:22] So that is very helpful towards the end of the month to know if you have enough pipeline revenue to kind of push you over the finish line and then you know you need to fill your pipeline more if it's not going to make the difference that you need.
+[45:42] Again, we look at like applications versus different platforms, revenue by different products that we sell, seeing visually if you're on pace for targets, you know, this is what I need to hit for the week, this is what I need to hit each week to hit the month, like all of that is super helpful to have, you know, at your fingertips.
+[46:05] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Advanced Filtering Capabilities"
+NÚMEROS:
+Channel (Ads)
+Platform (YouTube)
+Funnel (Mini Webinar)
+Location tracking
+Date comparisons
+VISUAL: Interface de filtros no Looker Studio, múltiplos dropdown menus, demonstração de cross-comparison
+[46:08] I also like to be able to filter. So, this is another reason why I don't like using Google Sheets because you can't filter the same way you can on Google Data Studio.
+[46:22] So, with the way that we set up our dashboards, if I want to go and look at this page and I want to say channel ads, platform YouTube funnel mini webinar, it'll filter the whole page and show me all my triage calls for YouTube ads that went through the mini webinar, YouTube ad leads that went through mini webinar.
+[46:48] So, now I can start cross comparing for different funnels, how different platforms compare to others.
+[47:00] I can go as far as looking at location. This is another thing that we've recently started tracking. So again, if I want to know how many leads are coming from my Instagram lives, like I have that data and I can compare that against other locations as we call them to see what is more profitable to actually be dumping my time into, right?
+[47:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Location Performance Comparison"
+NÚMEROS:
+Bio: muitas calls, close rate baixo, collection % ruim, AOV baixo
+Affiliates: close rate maior
+Lives: close rate muito melhor, AOV melhor
+VISUAL: Tabela comparativa de diferentes "locations" ou sources, métricas coloridas indicando performance
+[47:28] So we can see for example the bio is generating a lot of calls. Total close rates go a right. So, like bio's like cool because it brings people in, but they're just not necessarily like the highest quality. Also, the collection percentage is god awful. The average sale not so hot.
+[47:52] But then when we look at something like, you know, like affiliates have a higher close rate. Even the lives have like a way better close rate. Average sales way better.
+[48:08] So, like where am I going to put my time? You know, looking at this data, I'm probably going to want to go live more.
+[48:18] And then we can do these comparisons against platforms like I said channels. You can compare all these stats against all your closers, all your setters.
+[48:32] It's just very valuable to have the filter capabilities and the date comparisons cuz Google Sheets is more static in that sense.
+[48:45] Whereas with data studio, you'll have a date filter. So you can actually very quickly just select dates and it'll filter all the data based off those dates. So it's also a very helpful feature.
+[49:00] But very powerful to have all of this again at your fingertips that you can see at any point in time and make those data-driven decisions.
+[49:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Final Takeaway: Control Through Data"
+NÚMEROS: Não especificados
+VISUAL: Conceito de controle e poder através de dados, mensagem de empowerment
+[49:18] But the great thing about everything I talked about today is that all this does for you is give you more control in the success of your business. So if you choose to believe in data, the only thing it's doing is allowing you to have the most control possible.
+[49:38] And it simplifies everything down to basic math. We're not doing trigonometry. I'm not asking you to do, you know, sine cosine tan. You know, your ninth grade math teacher was wrong. You're never going to use that. It's very unlikely.
+[49:58] You just need to know simple addition math, like addition, subtraction, and multiplication, division. Very, very, very easy stuff.
+[50:12] And then, as I had mentioned before, even easier than that, you can actually like have AI do that math for you if you want.
+[50:22] You can have AI analyze dashboards like that by submitting screenshots if you don't quite know what you're looking at. So even if you really suck at math or like analyzing that data, you know, you do have powerful tools available to you at this point in time that can help you analyze that data, you know, and make those conclusions from there.
+[50:45] So I hope that was helpful. I know it's basic, but it's important. And I'll open it up for questions at this point in time if anyone has questions.
+📊 RESUMO EXECUTIVO
+NÚMEROS PRINCIPAIS:
+23x mais provável vencer em aquisição de clientes (dados-driven)
+19x mais provável manter lucratividade (dados-driven)
+7x mais provável reter clientes (dados-driven)
+90 dias: período ideal para média de KPIs
+$1M/mês: objetivo usado no exemplo
+$700K: receita média atual no exemplo
+60% receita nova típica
+$280K: payment plans no exemplo
+$720K: nova receita necessária
+$4K: AOV no exemplo
+180 vendas necessárias
+25% close rate em showed calls
+720 calls showed necessárias
+50% show rate
+1,440 total calls necessárias
+2,880 aplicações qualificadas (40% qual rate)
+72,000 opt-ins (10% conversão)
+240,000 page views
+6,000,000 views em social media necessárias
+8% show rate (exemplo ruim)
+80% close rate (exemplo de métrica de vaidade)
+-30% em applications, triage, calls (exemplo problema)
+-18% nova receita (exemplo problema)
+$20,000: custo do serviço de dashboard da Amber
+ESTRATÉGIAS E SISTEMAS:
+Equação do Sucesso: TRACKING + KPIs + ACTION = SUCCESS
+Usar 90 dias como período base para KPIs (não 1 semana, não 12 meses)
+Atualizar KPIs mensalmente baseado em média móvel de 90 dias
+Weighted KPIs por: Channel, Platform, Funnel, Product, Team Member
+Não usar weighted KPIs para bonificações individuais
+Usar team-based KPIs para bonificações (ex: AOV acima da média)
+Tracking automático via Zapier + Python + Looker Studio
+Nunca confiar em self-reporting de closers
+Validar shows via duração de call recordings
+Separar close rate: completed calls vs total calls
+Calcular pipeline revenue: calls futuras × show rate × close rate × AOV
+Filtrar por múltiplas dimensões simultaneamente
+Profit pool para VAs e PMs (não comissionados)
+Weight profit pool por tenure
+ESTRUTURA:
+Looker Studio (Google Data Studio) como ferramenta principal
+CRM como source of truth para dados brutos
+Payment processor para dados financeiros (não closers)
+Auto-feeding via Zaps
+Dashboards com date filters dinâmicos
+Páginas de payroll automatizadas
+QA de dados por operations team
+Daily review pelo CEO
+Review em leadership calls
+Sales manager review com time
+DADOS FINANCEIROS:
+Reverse engineering de metas financeiras
+Separação: nova receita vs payment plans
+Tracking de collection percentage
+AOV por closer, por funnel, por platform
+Custo de setup de dashboard: $20K
+Retainer adicional para QA contínua (preço variável)
+Bonificações atreladas a KPIs específicos
+Profit pool para não-comissionados
+DURAÇÃO: ~50 minutos de apresentação principal + Q&A FORMATO: Apresentação de slides com exemplos práticos e demonstração de dashboards
