@@ -25,9 +25,10 @@ import yaml
 # ---------------------------------------------------------------------------
 # PATHS
 # ---------------------------------------------------------------------------
-BASE_DIR = Path(__file__).resolve().parent.parent.parent  # mega-brain/
-DOSSIERS_DIR = BASE_DIR / "knowledge" / "external" / "dossiers"
-DNA_DIR = BASE_DIR / "knowledge" / "external" / "dna" / "persons"
+from core.paths import KNOWLEDGE_EXTERNAL, ROOT
+
+DOSSIERS_DIR = KNOWLEDGE_EXTERNAL / "dossiers"
+DNA_DIR = KNOWLEDGE_EXTERNAL / "dna" / "persons"
 
 # DNA layer files and their ID prefixes
 DNA_LAYERS = {
@@ -376,7 +377,7 @@ def trace_dossier(
         filepath.write_text("\n".join(modified_lines), encoding="utf-8")
 
     return {
-        "file": str(filepath.relative_to(BASE_DIR)),
+        "file": str(filepath.relative_to(ROOT)),
         "person": person,
         "sections": len(sections),
         "refs_added": refs_added,
@@ -517,7 +518,7 @@ def main():
     else:
         target = Path(args.target)
         if not target.is_absolute():
-            target = BASE_DIR / target
+            target = ROOT / target
         if not target.exists():
             print(f"File not found: {target}")
             sys.exit(1)

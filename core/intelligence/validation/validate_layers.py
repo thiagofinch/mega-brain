@@ -22,9 +22,8 @@ import sys
 from datetime import UTC, datetime
 from pathlib import Path
 
-# Import from sibling module in same directory
-sys.path.insert(0, str(Path(__file__).parent.parent))
-from audit_layers import classify_path
+from core.intelligence.validation.audit_layers import classify_path
+from core.paths import ROOT
 
 
 def _unquote_git_path(line: str) -> str:
@@ -282,13 +281,7 @@ def main():
     )
     args = parser.parse_args()
 
-    # Resolve repo root: core/intelligence/ -> core/ -> mega-brain/
-    script_path = Path(__file__).resolve()
-    repo_root = script_path.parent.parent.parent
-
-    if not (repo_root / "core").exists():
-        print(f"ERROR: Could not find repo root. Expected core/ in {repo_root}", file=sys.stderr)
-        sys.exit(1)
+    repo_root = ROOT
 
     print(f"Repository: {repo_root}")
     print("Running layer validation...")

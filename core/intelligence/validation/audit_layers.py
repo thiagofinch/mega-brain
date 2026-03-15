@@ -21,6 +21,8 @@ import sys
 from datetime import UTC, datetime
 from pathlib import Path
 
+from core.paths import ROOT
+
 # Classification patterns (from CONTEXT.md)
 L1_PATTERNS = [
     # Core engine
@@ -461,13 +463,8 @@ def main():
 
     args = parser.parse_args()
 
-    # Determine repo root (parent of core/)
-    script_path = Path(__file__).resolve()
-    repo_root = script_path.parent.parent.parent  # mega-brain/
-
-    if not (repo_root / "core").exists():
-        print(f"ERROR: Could not find repo root. Expected core/ in {repo_root}")
-        sys.exit(1)
+    # Determine repo root
+    repo_root = ROOT
 
     print(f"Repository root: {repo_root}")
     print("Starting layer audit...\n")

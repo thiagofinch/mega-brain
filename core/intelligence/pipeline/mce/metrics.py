@@ -46,16 +46,7 @@ import yaml
 # Imports: core.paths (with standalone fallback)
 # ---------------------------------------------------------------------------
 
-try:
-    from core.paths import LOGS, ROUTING
-except ImportError:
-    _ROOT = Path(__file__).resolve().parent.parent.parent.parent.parent
-    LOGS = _ROOT / "logs"
-    _MISSION_CONTROL = _ROOT / ".claude" / "mission-control"
-    ROUTING = {
-        "mce_state": _MISSION_CONTROL / "mce",
-        "mce_metrics_log": LOGS / "mce-metrics.jsonl",
-    }
+from core.paths import LOGS, ROUTING
 
 logger = logging.getLogger("mce.metrics")
 

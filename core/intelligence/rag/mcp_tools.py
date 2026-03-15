@@ -20,9 +20,8 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-# Project root -- resolved relative to this file's location
-# core/intelligence/rag/mcp_tools.py  => 3 parents up = project root
-_PROJECT_ROOT = Path(__file__).resolve().parents[3]
+# Project root -- from core.paths single source of truth
+from core.paths import ROOT as _PROJECT_ROOT
 
 
 # ---------------------------------------------------------------------------

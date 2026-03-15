@@ -25,24 +25,28 @@ import sys
 from datetime import UTC, datetime
 from pathlib import Path
 
-# Local imports
-sys.path.insert(0, str(Path(__file__).parent.parent))
-from entity_normalizer import (
+from core.intelligence.entities.entity_normalizer import (
     REGISTRY_PATH,
     create_empty_registry,
     load_taxonomy,
     normalize_text,
     save_registry,
 )
+from core.paths import (
+    AGENTS_CARGO,
+    AGENTS_EXTERNAL,
+    KNOWLEDGE_EXTERNAL,
+    PROCESSING,
+    ROOT,
+)
 
 # ---------------------------------------------------------------------------
 # PATHS
 # ---------------------------------------------------------------------------
-BASE_DIR = Path(__file__).parent.parent
-CANONICAL_MAP_PATH = BASE_DIR / "processing" / "canonical" / "CANONICAL-MAP.json"
-TAXONOMY_PATH = BASE_DIR / "knowledge" / "dna" / "DOMAINS-TAXONOMY.yaml"
+CANONICAL_MAP_PATH = PROCESSING / "canonical" / "CANONICAL-MAP.json"
+TAXONOMY_PATH = KNOWLEDGE_EXTERNAL / "dna" / "DOMAINS-TAXONOMY.yaml"
 ROLE_TRACKING_PATH = (
-    BASE_DIR
+    ROOT
     / "system"
     / "backups"
     / "v3.4.0-pre-refactor"
@@ -50,10 +54,10 @@ ROLE_TRACKING_PATH = (
     / "discovery"
     / "role-tracking.md"
 )
-DOSSIERS_PERSONS = BASE_DIR / "knowledge" / "dossiers" / "persons"
-DOSSIERS_THEMES = BASE_DIR / "knowledge" / "dossiers" / "themes"
-AGENTS_PERSONS = BASE_DIR / "agents" / "persons"
-AGENTS_CARGO = BASE_DIR / "agents" / "cargo"
+DOSSIERS_PERSONS = KNOWLEDGE_EXTERNAL / "dossiers" / "persons"
+DOSSIERS_THEMES = KNOWLEDGE_EXTERNAL / "dossiers" / "themes"
+AGENTS_PERSONS = AGENTS_EXTERNAL
+AGENTS_CARGO_DIR = AGENTS_CARGO
 
 NOW = datetime.now(UTC).isoformat()
 

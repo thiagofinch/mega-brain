@@ -14,6 +14,8 @@ import json
 import sys
 from pathlib import Path
 
+from core.paths import ROOT
+
 # Directories to exclude from scan
 EXCLUDED_DIRS = {
     "node_modules",
@@ -58,8 +60,7 @@ def validate_json_file(file_path: Path) -> bool:
 
 def main():
     """Main validation function."""
-    # Start from project root (resolve dynamically)
-    project_root = Path(__file__).resolve().parents[2]
+    project_root = ROOT
 
     # Collect all JSON files
     json_files = []

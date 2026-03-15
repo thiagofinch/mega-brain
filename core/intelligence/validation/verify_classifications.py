@@ -4,10 +4,10 @@
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
-from audit_layers import classify_path
+from core.intelligence.validation.audit_layers import classify_path
+from core.paths import ROOT
 
-REPO_ROOT = Path(__file__).resolve().parent.parent.parent
+REPO_ROOT = ROOT
 
 # (relative_path, expected_layer, description)
 SPOT_CHECKS = [

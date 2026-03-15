@@ -25,8 +25,9 @@ from .hybrid_query import hybrid_search
 # ---------------------------------------------------------------------------
 # CONFIG
 # ---------------------------------------------------------------------------
-BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
-EVAL_DIR = BASE_DIR / ".data" / "rag_eval"
+from core.paths import DATA
+
+EVAL_DIR = DATA / "rag_eval"
 
 # ---------------------------------------------------------------------------
 # TEST CASES

@@ -24,15 +24,15 @@ from pathlib import Path
 
 import yaml
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
 from core.intelligence.entities.entity_normalizer import load_registry, load_taxonomy
 
 # ---------------------------------------------------------------------------
 # PATHS
 # ---------------------------------------------------------------------------
-BASE_DIR = Path(__file__).parent.parent
-TRIGGER_CONFIG_PATH = BASE_DIR / "scripts" / "trigger_config.yaml"
-TRIGGERS_LOG_PATH = BASE_DIR / "logs" / "triggers.jsonl"
+from core.paths import CORE, LOGS
+
+TRIGGER_CONFIG_PATH = CORE / "scripts" / "trigger_config.yaml"
+TRIGGERS_LOG_PATH = LOGS / "triggers.jsonl"
 
 
 # ---------------------------------------------------------------------------

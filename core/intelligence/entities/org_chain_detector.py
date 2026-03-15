@@ -22,14 +22,13 @@ import re
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
-from entity_normalizer import load_registry, normalize_text, save_registry
+from core.intelligence.entities.entity_normalizer import load_registry, normalize_text, save_registry
+from core.paths import PROCESSING
 
 # ---------------------------------------------------------------------------
 # PATHS
 # ---------------------------------------------------------------------------
-BASE_DIR = Path(__file__).parent.parent
-CHUNKS_DIR = BASE_DIR / "processing" / "chunks"
+CHUNKS_DIR = PROCESSING / "chunks"
 
 # ---------------------------------------------------------------------------
 # HIERARCHY PATTERNS

@@ -44,8 +44,6 @@ import yaml
 # ---------------------------------------------------------------------------
 # PATH SETUP
 # ---------------------------------------------------------------------------
-_ROOT = Path(__file__).resolve().parent.parent.parent.parent
-sys.path.insert(0, str(_ROOT))
 
 from core.paths import (  # noqa: E402
     AGENTS_BUSINESS,

@@ -21,9 +21,10 @@ from pathlib import Path
 # ---------------------------------------------------------------------------
 # PATHS
 # ---------------------------------------------------------------------------
-BASE_DIR = Path(__file__).resolve().parent.parent.parent  # mega-brain/
-NAV_MAP_PATH = BASE_DIR / "knowledge" / "NAVIGATION-MAP.json"
-DOSSIERS_DIR = BASE_DIR / "knowledge" / "external" / "dossiers"
+from core.paths import KNOWLEDGE, KNOWLEDGE_EXTERNAL, ROOT
+
+NAV_MAP_PATH = KNOWLEDGE / "NAVIGATION-MAP.json"
+DOSSIERS_DIR = KNOWLEDGE_EXTERNAL / "dossiers"
 
 # Patterns for chunk_id references in dossier content
 # Matches: CG001_010, AH-YT007_001, chunk_199, BATCH-041, etc.
@@ -205,7 +206,7 @@ def _process_dossier_category(
             # Try with path from entry
             alt_path = entry.get("path", "")
             if alt_path:
-                filepath = BASE_DIR / alt_path.lstrip("/")
+                filepath = ROOT / alt_path.lstrip("/")
             if not filepath.exists():
                 stats["skipped"] += 1
                 stats["details"].append(
@@ -277,7 +278,7 @@ def _discover_new_dossiers(
             new_sections = extract_sections_with_chunks(filepath)
 
             new_entry = {
-                "path": str(filepath.relative_to(BASE_DIR)),
+                "path": str(filepath.relative_to(ROOT)),
                 "sections": new_sections if new_sections else {},
                 "total_chunks": count_total_chunks(new_sections),
             }

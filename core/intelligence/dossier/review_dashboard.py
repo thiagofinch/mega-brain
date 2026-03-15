@@ -21,16 +21,16 @@ import sys
 from datetime import UTC, datetime
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
-from entity_normalizer import load_registry, save_registry
+from core.intelligence.entities.entity_normalizer import load_registry, save_registry
 
 # ---------------------------------------------------------------------------
 # PATHS
 # ---------------------------------------------------------------------------
-BASE_DIR = Path(__file__).parent.parent
-REVIEW_QUEUE_PATH = BASE_DIR / "processing" / "canonical" / "review_queue.jsonl"
-SKILLS_REGISTRY_PATH = BASE_DIR / "knowledge" / "external" / "dna" / "_dna-skills-registry.yaml"
-REVIEW_LOG_PATH = BASE_DIR / "logs" / "review_decisions.jsonl"
+from core.paths import KNOWLEDGE_EXTERNAL, LOGS, PROCESSING
+
+REVIEW_QUEUE_PATH = PROCESSING / "canonical" / "review_queue.jsonl"
+SKILLS_REGISTRY_PATH = KNOWLEDGE_EXTERNAL / "dna" / "_dna-skills-registry.yaml"
+REVIEW_LOG_PATH = LOGS / "review_decisions.jsonl"
 
 # ---------------------------------------------------------------------------
 # HUMAN CHECKPOINTS DEFINITION

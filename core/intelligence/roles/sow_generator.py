@@ -23,15 +23,14 @@ import sys
 from datetime import UTC, datetime
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
 from core.intelligence.entities.entity_normalizer import load_registry, load_taxonomy, save_registry
+from core.paths import AGENTS_CARGO, LOGS
 
 # ---------------------------------------------------------------------------
 # PATHS
 # ---------------------------------------------------------------------------
-BASE_DIR = Path(__file__).parent.parent
-AGENTS_DIR = BASE_DIR / "agents" / "cargo"
-SOW_LOG_PATH = BASE_DIR / "logs" / "sow_generation.jsonl"
+AGENTS_DIR = AGENTS_CARGO
+SOW_LOG_PATH = LOGS / "sow_generation.jsonl"
 
 # ---------------------------------------------------------------------------
 # EXECUTOR DECISION TREE

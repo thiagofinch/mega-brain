@@ -13,7 +13,6 @@ Usage:
 """
 
 import json
-import os
 import re
 from dataclasses import asdict, dataclass, field
 from datetime import datetime
@@ -22,15 +21,16 @@ from typing import Any
 
 import yaml
 
+from core.paths import CORE, LOGS, MISSION_CONTROL, ROOT
+
 # ============================================================================
 # Configuration and Constants
 # ============================================================================
 
-PROJECT_DIR = Path(os.getenv("CLAUDE_PROJECT_DIR", ".")).resolve()
-WORKFLOW_DIR = PROJECT_DIR / "core" / "workflows"
-TASK_DIR = PROJECT_DIR / "core" / "tasks"
-STATE_PATH = PROJECT_DIR / ".claude" / "mission-control" / "ORCHESTRATOR-STATE.json"
-LOG_PATH = PROJECT_DIR / "logs" / "orchestrator-execution.jsonl"
+WORKFLOW_DIR = CORE / "workflows"
+TASK_DIR = CORE / "tasks"
+STATE_PATH = MISSION_CONTROL / "ORCHESTRATOR-STATE.json"
+LOG_PATH = LOGS / "orchestrator-execution.jsonl"
 
 
 # ============================================================================
@@ -279,7 +279,7 @@ def resolve_task(task_ref: str) -> Path:
     if task_ref.startswith("tasks/"):
         task_path = TASK_DIR / task_ref.replace("tasks/", "")
     else:
-        task_path = PROJECT_DIR / task_ref
+        task_path = ROOT / task_ref
 
     if not task_path.exists():
         raise FileNotFoundError(f"Task file not found: {task_path}")

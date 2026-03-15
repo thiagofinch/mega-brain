@@ -28,16 +28,16 @@ from pathlib import Path
 
 import yaml
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
-from entity_normalizer import load_registry
+from core.intelligence.entities.entity_normalizer import load_registry
 
 # ---------------------------------------------------------------------------
 # PATHS
 # ---------------------------------------------------------------------------
-BASE_DIR = Path(__file__).parent.parent
-TRIGGER_CONFIG_PATH = BASE_DIR / "scripts" / "trigger_config.yaml"
-TRIGGERS_LOG_PATH = BASE_DIR / "logs" / "triggers.jsonl"
-DOSSIERS_THEMES_DIR = BASE_DIR / "knowledge" / "external" / "dossiers" / "themes"
+from core.paths import CORE, KNOWLEDGE_EXTERNAL, LOGS, ROOT
+
+TRIGGER_CONFIG_PATH = CORE / "scripts" / "trigger_config.yaml"
+TRIGGERS_LOG_PATH = LOGS / "triggers.jsonl"
+DOSSIERS_THEMES_DIR = KNOWLEDGE_EXTERNAL / "dossiers" / "themes"
 
 
 # ---------------------------------------------------------------------------
@@ -232,7 +232,7 @@ def _check_update_needed(canonical, theme_data, thresholds):
     # Check staleness via dossier file modification time
     dossier_path = theme_data.get("dossier_path")
     if dossier_path:
-        full_path = BASE_DIR / dossier_path
+        full_path = ROOT / dossier_path
         if full_path.exists():
             mtime = datetime.fromtimestamp(full_path.stat().st_mtime, tz=UTC)
             age_days = (datetime.now(UTC) - mtime).days

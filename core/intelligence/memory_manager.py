@@ -26,8 +26,9 @@ from pathlib import Path
 # ---------------------------------------------------------------------------
 # CONFIG
 # ---------------------------------------------------------------------------
-ROOT = Path(__file__).resolve().parent.parent.parent
-MEMORY_DIR = ROOT / ".data" / "agent_memory"
+from core.paths import ROOT, DATA
+
+MEMORY_DIR = DATA / "agent_memory"
 SHARED_STORE = MEMORY_DIR / "_shared"
 CONSOLIDATION_THRESHOLD = 0.85  # Cosine sim above this = merge candidates
 PRUNE_MIN_SCORE = 0.1  # Entries below this get pruned

@@ -46,12 +46,7 @@ logger = logging.getLogger("mce.cache")
 # Imports: core.paths (with standalone fallback)
 # ---------------------------------------------------------------------------
 
-try:
-    from core.paths import DATA, ROUTING
-except ImportError:
-    _ROOT = Path(__file__).resolve().parent.parent.parent.parent.parent
-    DATA = _ROOT / ".data"
-    ROUTING = {"mce_cache": DATA / "mce_cache"}
+from core.paths import DATA, ROUTING
 
 # ---------------------------------------------------------------------------
 # Constants

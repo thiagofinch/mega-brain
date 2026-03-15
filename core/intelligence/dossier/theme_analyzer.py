@@ -30,8 +30,7 @@ from collections import Counter
 from pathlib import Path
 
 # Local imports
-sys.path.insert(0, str(Path(__file__).parent.parent))
-from entity_normalizer import (
+from core.intelligence.entities.entity_normalizer import (
     get_domain_aliases,
     load_registry,
     normalize_entity,
@@ -42,9 +41,10 @@ from entity_normalizer import (
 # ---------------------------------------------------------------------------
 # PATHS
 # ---------------------------------------------------------------------------
-BASE_DIR = Path(__file__).parent.parent
-CHUNKS_DIR = BASE_DIR / "processing" / "chunks"
-INSIGHTS_DIR = BASE_DIR / "processing" / "insights"
+from core.paths import PROCESSING
+
+CHUNKS_DIR = PROCESSING / "chunks"
+INSIGHTS_DIR = PROCESSING / "insights"
 
 # ---------------------------------------------------------------------------
 # DOSSIER THEME ID MAP

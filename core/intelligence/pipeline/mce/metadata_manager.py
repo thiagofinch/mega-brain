@@ -44,12 +44,7 @@ import yaml
 # Imports: core.paths (with standalone fallback)
 # ---------------------------------------------------------------------------
 
-try:
-    from core.paths import ROUTING
-except ImportError:
-    _ROOT = Path(__file__).resolve().parent.parent.parent.parent.parent
-    _MISSION_CONTROL = _ROOT / ".claude" / "mission-control"
-    ROUTING = {"mce_state": _MISSION_CONTROL / "mce"}
+from core.paths import ROUTING
 
 logger = logging.getLogger("mce.metadata_manager")
 

@@ -72,8 +72,9 @@ class PipelineHealDetector:
 
     def __init__(self, project_root: Path | None = None):
         if project_root is None:
-            # Walk up from this file to find the project root
-            project_root = Path(__file__).resolve().parent.parent.parent
+            from core.paths import ROOT
+
+            project_root = ROOT
         self.root = Path(project_root)
         self._chunks_cache: dict | None = None
         self._insights_cache: dict | None = None

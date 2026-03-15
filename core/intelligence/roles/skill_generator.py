@@ -26,17 +26,16 @@ from pathlib import Path
 
 import yaml
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
 from core.intelligence.entities.entity_normalizer import load_registry
+from core.paths import KNOWLEDGE_EXTERNAL, PROCESSING
 
 # ---------------------------------------------------------------------------
 # PATHS
 # ---------------------------------------------------------------------------
-BASE_DIR = Path(__file__).parent.parent
-INSIGHTS_DIR = BASE_DIR / "processing" / "insights"
-CHUNKS_DIR = BASE_DIR / "processing" / "chunks"
-SKILLS_OUTPUT_DIR = BASE_DIR / "knowledge" / "external" / "dna" / "skills"
-SKILLS_REGISTRY_PATH = BASE_DIR / "knowledge" / "external" / "dna" / "_dna-skills-registry.yaml"
+INSIGHTS_DIR = PROCESSING / "insights"
+CHUNKS_DIR = PROCESSING / "chunks"
+SKILLS_OUTPUT_DIR = KNOWLEDGE_EXTERNAL / "dna" / "skills"
+SKILLS_REGISTRY_PATH = KNOWLEDGE_EXTERNAL / "dna" / "_dna-skills-registry.yaml"
 
 # ---------------------------------------------------------------------------
 # FRAMEWORK EXTRACTION PATTERNS

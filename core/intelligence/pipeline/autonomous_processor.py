@@ -28,18 +28,18 @@ from typing import Any
 
 # Import TaskOrchestrator from same package
 from core.intelligence.pipeline.task_orchestrator import TaskOrchestrator
+from core.paths import LOGS, MISSION_CONTROL
 
 # ============================================================================
 # Configuration and Constants
 # ============================================================================
 
-PROJECT_DIR = Path(os.getenv("CLAUDE_PROJECT_DIR", ".")).resolve()
-QUEUE_STATE_PATH = PROJECT_DIR / ".claude" / "mission-control" / "QUEUE-STATE.json"
-STOP_SIGNAL_PATH = PROJECT_DIR / ".claude" / "mission-control" / "STOP-AUTONOMOUS"
-PROCESSOR_STATE_PATH = PROJECT_DIR / ".claude" / "mission-control" / "AUTONOMOUS-STATE.json"
-MONITOR_PATH = PROJECT_DIR / ".claude" / "mission-control" / "AUTONOMOUS-MONITOR.json"
-CHECKPOINT_PATH = PROJECT_DIR / ".claude" / "mission-control" / "AUTONOMOUS-CHECKPOINT.json"
-LOG_PATH = PROJECT_DIR / "logs" / "autonomous-processing.jsonl"
+QUEUE_STATE_PATH = MISSION_CONTROL / "QUEUE-STATE.json"
+STOP_SIGNAL_PATH = MISSION_CONTROL / "STOP-AUTONOMOUS"
+PROCESSOR_STATE_PATH = MISSION_CONTROL / "AUTONOMOUS-STATE.json"
+MONITOR_PATH = MISSION_CONTROL / "AUTONOMOUS-MONITOR.json"
+CHECKPOINT_PATH = MISSION_CONTROL / "AUTONOMOUS-CHECKPOINT.json"
+LOG_PATH = LOGS / "autonomous-processing.jsonl"
 
 DEFAULT_TIMEOUT_SECONDS = 300  # 5 minutes
 DEFAULT_CHECKPOINT_INTERVAL = 5  # Save checkpoint every N files

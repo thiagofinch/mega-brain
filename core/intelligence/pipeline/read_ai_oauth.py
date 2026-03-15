@@ -33,8 +33,10 @@ from pathlib import Path
 from core.intelligence.pipeline.read_ai_config import load_config
 
 # Token storage (gitignored via .data/)
-TOKENS_PATH = Path(__file__).resolve().parent.parent.parent.parent / ".data" / "read_ai_tokens.json"
-PKCE_PATH = Path(__file__).resolve().parent.parent.parent.parent / ".data" / "read_ai_pkce.json"
+from core.paths import DATA
+
+TOKENS_PATH = DATA / "read_ai_tokens.json"
+PKCE_PATH = DATA / "read_ai_pkce.json"
 
 CALLBACK_PORT = 19821
 

@@ -39,14 +39,7 @@ logger = logging.getLogger("mce.workflow_detector")
 # Imports: core.paths (with standalone fallback)
 # ---------------------------------------------------------------------------
 
-try:
-    from core.paths import AGENTS_EXTERNAL, KNOWLEDGE_EXTERNAL, ROUTING
-except ImportError:
-    _ROOT = Path(__file__).resolve().parent.parent.parent.parent.parent
-    AGENTS_EXTERNAL = _ROOT / "agents" / "external"
-    KNOWLEDGE_EXTERNAL = _ROOT / "knowledge" / "external"
-    _MISSION_CONTROL = _ROOT / ".claude" / "mission-control"
-    ROUTING = {"mce_state": _MISSION_CONTROL / "mce"}
+from core.paths import AGENTS_EXTERNAL, KNOWLEDGE_EXTERNAL, ROUTING
 
 
 # ---------------------------------------------------------------------------

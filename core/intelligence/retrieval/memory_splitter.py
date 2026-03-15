@@ -34,7 +34,8 @@ from .query_analyzer import discover_agents, load_taxonomy
 # ---------------------------------------------------------------------------
 # CONFIG
 # ---------------------------------------------------------------------------
-BASE_DIR = Path(__file__).resolve().parent.parent.parent  # mega-brain/
+from core.paths import ROOT
+
 DEFAULT_UNCATEGORIZED_DOMAIN = "geral"
 BACKUP_SUFFIX = ".backup"
 

@@ -27,14 +27,13 @@ from collections import defaultdict
 from datetime import UTC, datetime
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
-from entity_normalizer import load_registry, save_registry
+from core.intelligence.entities.entity_normalizer import load_registry, save_registry
+from core.paths import PROCESSING
 
 # ---------------------------------------------------------------------------
 # PATHS
 # ---------------------------------------------------------------------------
-BASE_DIR = Path(__file__).parent.parent
-CHUNKS_DIR = BASE_DIR / "processing" / "chunks"
+CHUNKS_DIR = PROCESSING / "chunks"
 
 # ---------------------------------------------------------------------------
 # DETECTION PATTERNS

@@ -30,11 +30,12 @@ import yaml
 # ---------------------------------------------------------------------------
 # PATHS
 # ---------------------------------------------------------------------------
-BASE_DIR = Path(__file__).parent.parent
-REGISTRY_PATH = BASE_DIR / "processing" / "canonical" / "ENTITY-REGISTRY.json"
-TAXONOMY_PATH = BASE_DIR / "knowledge" / "external" / "dna" / "DOMAINS-TAXONOMY.yaml"
-TRIGGER_CONFIG_PATH = BASE_DIR / "scripts" / "trigger_config.yaml"
-REVIEW_QUEUE_PATH = BASE_DIR / "processing" / "canonical" / "review_queue.jsonl"
+from core.paths import CORE, KNOWLEDGE_EXTERNAL, PROCESSING
+
+REGISTRY_PATH = PROCESSING / "canonical" / "ENTITY-REGISTRY.json"
+TAXONOMY_PATH = KNOWLEDGE_EXTERNAL / "dna" / "DOMAINS-TAXONOMY.yaml"
+TRIGGER_CONFIG_PATH = CORE / "patterns" / "trigger_config.yaml"
+REVIEW_QUEUE_PATH = PROCESSING / "canonical" / "review_queue.jsonl"
 
 # ---------------------------------------------------------------------------
 # CONFIG

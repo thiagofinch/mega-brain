@@ -19,17 +19,18 @@ import yaml
 # ---------------------------------------------------------------------------
 # CONFIG
 # ---------------------------------------------------------------------------
-BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent  # mega-brain/
+from core.paths import KNOWLEDGE_EXTERNAL, ROOT
+
 CHUNK_SIZE = 2048  # ~512 tokens (4 chars/token avg)
 CHUNK_OVERLAP = 307  # ~15% of 2048
 MIN_CHUNK_SIZE = 100  # Skip chunks smaller than this
 
 # What to index
 INDEX_SOURCES = {
-    "dna": BASE_DIR / "knowledge" / "external" / "dna" / "persons",
-    "dossiers_persons": BASE_DIR / "knowledge" / "external" / "dossiers" / "persons",
-    "dossiers_themes": BASE_DIR / "knowledge" / "external" / "dossiers" / "themes",
-    "playbooks": BASE_DIR / "knowledge" / "external" / "playbooks",
+    "dna": KNOWLEDGE_EXTERNAL / "dna" / "persons",
+    "dossiers_persons": KNOWLEDGE_EXTERNAL / "dossiers" / "persons",
+    "dossiers_themes": KNOWLEDGE_EXTERNAL / "dossiers" / "themes",
+    "playbooks": KNOWLEDGE_EXTERNAL / "playbooks",
 }
 
 
@@ -177,7 +178,7 @@ def chunk_markdown(
     except (OSError, UnicodeDecodeError):
         return []
 
-    rel_path = str(filepath.relative_to(BASE_DIR))
+    rel_path = str(filepath.relative_to(ROOT))
     sections = _split_by_sections(text)
     chunks = []
 
@@ -216,7 +217,7 @@ def chunk_yaml(filepath: Path, person: str = "", layer: str = "") -> list[Chunk]
     except (yaml.YAMLError, OSError):
         return []
 
-    rel_path = str(filepath.relative_to(BASE_DIR))
+    rel_path = str(filepath.relative_to(ROOT))
     chunks = []
 
     if not isinstance(data, dict):

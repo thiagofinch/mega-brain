@@ -8,10 +8,11 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
-# Paths
-MEGA_BRAIN_ROOT = Path(__file__).parent.parent
-INBOX_PATH = MEGA_BRAIN_ROOT / "00-INBOX"
-KNOWLEDGE_PATH = MEGA_BRAIN_ROOT / "KNOWLEDGE"
+from core.paths import ROOT
+
+# Paths (legacy script -- references old dirs that no longer exist)
+INBOX_PATH = ROOT / "00-INBOX"
+KNOWLEDGE_PATH = ROOT / "KNOWLEDGE"
 
 # File type mappings
 FILE_ACTIONS = {

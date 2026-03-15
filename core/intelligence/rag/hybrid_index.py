@@ -21,17 +21,17 @@ from .chunker import Chunk, chunk_all
 # ---------------------------------------------------------------------------
 # CONFIG
 # ---------------------------------------------------------------------------
-BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
+from core.paths import ROOT, DATA
 
 # Auto-load .env if VOYAGE_API_KEY not in environment
 if not os.environ.get("VOYAGE_API_KEY"):
-    _env_file = BASE_DIR / ".env"
+    _env_file = ROOT / ".env"
     if _env_file.exists():
         for _line in _env_file.read_text().splitlines():
             if _line.startswith("VOYAGE_API_KEY=") and not _line.startswith("#"):
                 os.environ["VOYAGE_API_KEY"] = _line.split("=", 1)[1].strip()
                 break
-INDEX_DIR = BASE_DIR / ".data" / "rag_index"
+INDEX_DIR = DATA / "rag_index"
 VECTOR_INDEX_FILE = INDEX_DIR / "vectors.json"
 BM25_INDEX_FILE = INDEX_DIR / "bm25.json"
 CHUNKS_FILE = INDEX_DIR / "chunks.json"

@@ -86,7 +86,9 @@ def load_config() -> ReadAIConfig:
     otherwise relies on shell-exported vars.
     """
     # Best-effort .env loading (stdlib only — no external deps)
-    env_path = Path(__file__).resolve().parent.parent.parent.parent / ".env"
+    from core.paths import ROOT
+
+    env_path = ROOT / ".env"
     if env_path.exists():
         _load_dotenv_stdlib(env_path)
 

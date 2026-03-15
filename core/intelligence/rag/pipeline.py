@@ -155,11 +155,6 @@ def verify(response: str, pipeline_result: PipelineResult) -> dict:
 def _build_memory_context(query_text: str, agent_id: str | None, intent: str) -> str:
     """Build memory context using context_scorer."""
     try:
-        # Use context_scorer if available
-        root = Path(__file__).resolve().parent.parent.parent.parent
-        if str(root) not in sys.path:
-            sys.path.insert(0, str(root))
-
         from core.intelligence.context_scorer import build_adaptive_context
 
         return build_adaptive_context(

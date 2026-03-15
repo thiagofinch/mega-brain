@@ -117,7 +117,9 @@ def load_config() -> FirefliesConfig:
     shell-exported vars.  Falls back to _DEFAULT_* constants when the
     company classification env vars are absent.
     """
-    env_path = Path(__file__).resolve().parent.parent.parent.parent / ".env"
+    from core.paths import ROOT
+
+    env_path = ROOT / ".env"
     if env_path.exists():
         _load_dotenv_stdlib(env_path)
 

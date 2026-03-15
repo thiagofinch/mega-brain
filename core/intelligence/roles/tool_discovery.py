@@ -20,14 +20,13 @@ Data: 2026-02-26
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
 from core.intelligence.entities.entity_normalizer import load_registry, save_registry
+from core.paths import AGENTS_CARGO
 
 # ---------------------------------------------------------------------------
 # PATHS
 # ---------------------------------------------------------------------------
-BASE_DIR = Path(__file__).parent.parent
-AGENTS_DIR = BASE_DIR / "agents" / "cargo"
+AGENTS_DIR = AGENTS_CARGO
 
 # ---------------------------------------------------------------------------
 # TOOL REGISTRY (Knowledge base)

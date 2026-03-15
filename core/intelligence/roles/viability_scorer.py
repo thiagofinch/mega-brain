@@ -30,16 +30,15 @@ from pathlib import Path
 
 import yaml
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
 from core.intelligence.entities.entity_normalizer import load_registry, load_taxonomy, save_registry
+from core.paths import CORE, LOGS, PROCESSING
 
 # ---------------------------------------------------------------------------
 # PATHS
 # ---------------------------------------------------------------------------
-BASE_DIR = Path(__file__).parent.parent
-QUALITY_GATES_PATH = BASE_DIR / "scripts" / "quality_gates.yaml"
-CHUNKS_DIR = BASE_DIR / "processing" / "chunks"
-VIABILITY_LOG_PATH = BASE_DIR / "logs" / "viability_scoring.jsonl"
+QUALITY_GATES_PATH = CORE / "scripts" / "quality_gates.yaml"
+CHUNKS_DIR = PROCESSING / "chunks"
+VIABILITY_LOG_PATH = LOGS / "viability_scoring.jsonl"
 
 
 # ---------------------------------------------------------------------------

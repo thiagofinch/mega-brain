@@ -27,17 +27,21 @@ from pathlib import Path
 
 import yaml
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
-from entity_normalizer import load_registry, load_taxonomy, normalize_entity, save_registry
+from core.intelligence.entities.entity_normalizer import (
+    load_registry,
+    load_taxonomy,
+    normalize_entity,
+    save_registry,
+)
+from core.paths import CORE, KNOWLEDGE_EXTERNAL, LOGS, PROCESSING
 
 # ---------------------------------------------------------------------------
 # PATHS
 # ---------------------------------------------------------------------------
-BASE_DIR = Path(__file__).parent.parent
-ROLE_PATTERNS_PATH = BASE_DIR / "scripts" / "_ROLE_PATTERNS.yaml"
-TAXONOMY_PATH = BASE_DIR / "knowledge" / "external" / "dna" / "DOMAINS-TAXONOMY.yaml"
-TRIGGER_CONFIG_PATH = BASE_DIR / "scripts" / "trigger_config.yaml"
-TRIGGERS_LOG_PATH = BASE_DIR / "logs" / "triggers.jsonl"
+ROLE_PATTERNS_PATH = CORE / "patterns" / "_ROLE_PATTERNS.yaml"
+TAXONOMY_PATH = KNOWLEDGE_EXTERNAL / "dna" / "DOMAINS-TAXONOMY.yaml"
+TRIGGER_CONFIG_PATH = CORE / "patterns" / "trigger_config.yaml"
+TRIGGERS_LOG_PATH = LOGS / "triggers.jsonl"
 
 # ---------------------------------------------------------------------------
 # DETECTION WEIGHTS (configuravel)
@@ -865,7 +869,7 @@ def scan_all_chunks(registry=None, save=True):
     if registry is None:
         registry = load_registry()
 
-    chunks_dir = BASE_DIR / "processing" / "chunks"
+    chunks_dir = PROCESSING / "chunks"
     all_detections = defaultdict(lambda: {"direct": 0, "inferred": 0, "emergent": 0})
     all_triggers = []
     all_new_roles = []

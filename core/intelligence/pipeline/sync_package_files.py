@@ -22,8 +22,7 @@ from collections import defaultdict
 from datetime import UTC, datetime
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
-from audit_layers import L2_PATTERNS, L3_PATTERNS, NEVER_PATTERNS, scan_repository
+from core.intelligence.validation.audit_layers import L2_PATTERNS, L3_PATTERNS, NEVER_PATTERNS, scan_repository
 
 # Files auto-included by npm (do NOT add to files array)
 NPM_AUTO_INCLUDED = {
@@ -440,8 +439,9 @@ def main():
         sys.exit(1)
 
     # Determine repo root
-    script_path = Path(__file__).resolve()
-    repo_root = script_path.parent.parent.parent  # mega-brain/
+    from core.paths import ROOT
+
+    repo_root = ROOT
 
     if not (repo_root / "core").exists():
         print(f"ERROR: Could not find repo root. Expected core/ in {repo_root}", file=sys.stderr)
