@@ -169,9 +169,8 @@ def main():
         if CHRONICLER_AVAILABLE:
             try:
                 chronicler_end()
-            except Exception:
-                # Chronicler é opcional, não bloqueia se falhar
-                pass
+            except Exception as e:
+                sys.stderr.write(f"[session_end] chronicler error: {e}\n")
 
         # Atualizar log da sessão
         update_session_log(hook_input)

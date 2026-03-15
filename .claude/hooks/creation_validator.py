@@ -324,8 +324,8 @@ class CreationValidator:
 
             with open(LOG_FILE, "a", encoding="utf-8") as f:
                 f.write(json.dumps(log_entry, ensure_ascii=False) + "\n")
-        except Exception:
-            pass  # Falha de log não deve bloquear operação
+        except Exception as e:
+            sys.stderr.write(f"[creation_validator] log error: {e}\n")
 
 
 def main():

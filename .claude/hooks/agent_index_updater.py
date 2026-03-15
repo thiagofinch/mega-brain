@@ -12,10 +12,10 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
-BASE_DIR = Path(__file__).parent.parent.parent
-AGENTS_DIR = BASE_DIR / "agents"
+ROOT = Path(__file__).resolve().parent.parent.parent
+AGENTS_DIR = ROOT / "agents"
 AGENT_INDEX = AGENTS_DIR / "AGENT-INDEX.yaml"
-UPDATE_LOG = BASE_DIR / "logs" / "agent-index-updates.jsonl"
+UPDATE_LOG = ROOT / "logs" / "agent-index-updates.jsonl"
 
 # Layer paths
 LAYER_PATHS = {
@@ -90,7 +90,7 @@ def scan_agents() -> dict:
                     agents["minds"].append(
                         {
                             "id": agent_dir.name,
-                            "path": str(agent_dir.relative_to(BASE_DIR)),
+                            "path": str(agent_dir.relative_to(ROOT)),
                             "has_soul": (agent_dir / "SOUL.md").exists(),
                             "has_memory": (agent_dir / "MEMORY.md").exists(),
                         }
@@ -104,7 +104,7 @@ def scan_agents() -> dict:
                 agent_file = agent_dir / "AGENT.md"
                 if agent_file.exists():
                     agents["conclave"].append(
-                        {"id": agent_dir.name, "path": str(agent_dir.relative_to(BASE_DIR))}
+                        {"id": agent_dir.name, "path": str(agent_dir.relative_to(ROOT))}
                     )
 
     # Scan cargo (grouped)
@@ -120,7 +120,7 @@ def scan_agents() -> dict:
                         agent_file = agent_dir / "AGENT.md"
                         if agent_file.exists():
                             agents["cargo"][group_name].append(
-                                {"id": agent_dir.name, "path": str(agent_dir.relative_to(BASE_DIR))}
+                                {"id": agent_dir.name, "path": str(agent_dir.relative_to(ROOT))}
                             )
 
     return agents

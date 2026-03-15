@@ -72,7 +72,7 @@ try:
 
     _score_context_budget = _scb
     _HAS_SCORER = True
-except Exception:
+except Exception as e:  # noqa: F841
     pass
 
 _INTENT_QUICK_PATTERNS = [
@@ -140,8 +140,8 @@ def save_state(state):
         STATE_DIR.mkdir(parents=True, exist_ok=True)
         with open(STATE_FILE, "w", encoding="utf-8") as f:
             json.dump(state, f, indent=2, ensure_ascii=False)
-    except Exception:
-        pass
+    except Exception as e:
+        sys.stderr.write(f"[memory_hints] save_state error: {e}\n")
 
 
 def get_active_agent(state):
@@ -175,7 +175,7 @@ def read_agent_memory_hints(agent_slug, max_lines, max_tokens):
 
     try:
         content = memory_path.read_text(encoding="utf-8")
-    except Exception:
+    except Exception as e:  # noqa: F841
         return ""
 
     lines = content.split("\n")
@@ -271,7 +271,7 @@ def main():
                 elif scored_tokens > max_tokens:
                     max_tokens = min(scored_tokens, BRACKET_LAYER_MAP["CRITICAL"]["max_tokens"])
                     max_lines = min(scored_tokens // 10, BRACKET_LAYER_MAP["CRITICAL"]["max_lines"])
-            except Exception:
+            except Exception as e:  # noqa: F841
                 pass  # fail open: keep original bracket-based values
 
         if max_tokens <= 0:
@@ -313,8 +313,8 @@ def main():
         else:
             print(json.dumps({"continue": True}))
 
-    except Exception:
-        print(json.dumps({"continue": True}))
+    except Exception as e:
+        print(json.dumps({"continue": True, "warning": f"memory_hints: {e}"}))
 
 
 if __name__ == "__main__":

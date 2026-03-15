@@ -146,9 +146,9 @@ def main():
     except json.JSONDecodeError:
         # Fail-OPEN: can't parse input = not a valid hook call = allow
         print(json.dumps({"decision": "allow"}))
-    except Exception:
+    except Exception as e:
         # Fail-OPEN: unknown error = don't block user operations
-        print(json.dumps({"decision": "allow"}))
+        print(json.dumps({"decision": "allow", "error": str(e)}))
 
 
 if __name__ == "__main__":

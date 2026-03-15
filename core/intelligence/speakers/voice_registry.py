@@ -4,12 +4,13 @@ L3 Personal: VOICE-REGISTRY.yaml is gitignored.
 """
 
 from datetime import datetime
-from pathlib import Path
 
 import yaml
 
-REGISTRY_PATH = Path(__file__).parent / "VOICE-REGISTRY.yaml"
-EMBEDDINGS_DIR = Path(__file__).parent / "voice_embeddings"
+from core.paths import ROUTING
+
+REGISTRY_PATH = ROUTING["speakers"] / "VOICE-REGISTRY.yaml"
+EMBEDDINGS_DIR = ROUTING["voice_embeddings"]
 
 
 def _load_registry() -> dict:

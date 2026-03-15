@@ -19,19 +19,19 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 # ── PATHS ───────────────────────────────────────────────────────────
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
+ROOT = Path(__file__).resolve().parent.parent.parent
 
 try:
-    sys.path.insert(0, str(BASE_DIR))
+    sys.path.insert(0, str(ROOT))
     from core.paths import AGENTS, ARTIFACTS, KNOWLEDGE_EXTERNAL, LOGS, MISSION_CONTROL
 
     AGENT_DISCOVERY = AGENTS / "discovery"
 except ImportError:
-    KNOWLEDGE_EXTERNAL = BASE_DIR / "knowledge" / "external"
-    AGENTS = BASE_DIR / "agents"
-    ARTIFACTS = BASE_DIR / "artifacts"
-    LOGS = BASE_DIR / "logs"
-    MISSION_CONTROL = BASE_DIR / ".claude" / "mission-control"
+    KNOWLEDGE_EXTERNAL = ROOT / "knowledge" / "external"
+    AGENTS = ROOT / "agents"
+    ARTIFACTS = ROOT / "artifacts"
+    LOGS = ROOT / "logs"
+    MISSION_CONTROL = ROOT / ".claude" / "mission-control"
     AGENT_DISCOVERY = AGENTS / "discovery"
 
 DNA_PERSONS = KNOWLEDGE_EXTERNAL / "dna" / "persons"
@@ -151,7 +151,8 @@ def scan_persons() -> list[PersonRecord]:
     if MINDS_DIR.is_dir():
         for d in os.scandir(MINDS_DIR):
             if d.is_dir() and not d.name.startswith(("_", ".")) and d.name in persons:
-                persons[d.name].agent_exists = True
+                if (Path(d.path) / "AGENT.md").exists():
+                    persons[d.name].agent_exists = True
 
     for rec in persons.values():
         if rec.agent_exists:
@@ -402,7 +403,7 @@ WATCHED = ["knowledge/external/dna", "knowledge/external/dossiers", "artifacts/i
 def main():
     try:
         data = json.load(sys.stdin)
-    except Exception:
+    except Exception as e:  # noqa: F841
         data = {}
 
     tool = data.get("tool_name", "")

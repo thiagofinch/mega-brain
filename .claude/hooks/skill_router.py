@@ -82,7 +82,8 @@ def extract_metadata(item_path: Path, item_type: str) -> dict:
 
     try:
         content = md_file.read_text(encoding="utf-8")
-    except Exception:
+    except Exception as e:
+        print(json.dumps({"continue": True, "warning": f"skill_router: failed to read {md_file}: {e}"}))
         return {}
 
     # Extrai header (primeiras 40 linhas para garantir captura)
@@ -195,7 +196,8 @@ def match_prompt(prompt: str, index: dict = None) -> list[dict]:
             try:
                 with open(INDEX_PATH, encoding="utf-8") as f:
                     index = json.load(f)
-            except Exception:
+            except Exception as e:
+                print(json.dumps({"continue": True, "warning": f"skill_router: failed to load index, rebuilding: {e}"}))
                 index = build_index()
         else:
             index = build_index()
@@ -238,7 +240,8 @@ def get_skill_instructions(skill_path: str) -> str:
 
     try:
         content = full_path.read_text(encoding="utf-8")
-    except Exception:
+    except Exception as e:
+        print(json.dumps({"continue": True, "warning": f"skill_router: failed to read skill {full_path}: {e}"}))
         return ""
 
     # Retorna primeiras 100 linhas (instruções principais)
@@ -254,7 +257,8 @@ def get_skill_summary(skill_path: str) -> str:
 
     try:
         content = full_path.read_text(encoding="utf-8")
-    except Exception:
+    except Exception as e:
+        print(json.dumps({"continue": True, "warning": f"skill_router: failed to read skill summary {full_path}: {e}"}))
         return ""
 
     lines = content.split("\n")[:20]
@@ -275,8 +279,8 @@ def get_subagent_context(subagent_path: str) -> str:
             # Primeiras 150 linhas do AGENT.md
             lines = content.split("\n")[:150]
             context_parts.append("=== AGENT INSTRUCTIONS ===\n" + "\n".join(lines))
-        except Exception:
-            pass
+        except Exception as e:
+            print(json.dumps({"continue": True, "warning": f"skill_router: failed to read AGENT.md {agent_md}: {e}"}))
 
     # SOUL.md (opcional - personalidade)
     soul_md = base_path / "SOUL.md"
@@ -286,8 +290,8 @@ def get_subagent_context(subagent_path: str) -> str:
             # Primeiras 50 linhas do SOUL.md (personalidade é mais compacta)
             lines = content.split("\n")[:50]
             context_parts.append("\n=== AGENT PERSONALITY ===\n" + "\n".join(lines))
-        except Exception:
-            pass
+        except Exception as e:
+            print(json.dumps({"continue": True, "warning": f"skill_router: failed to read SOUL.md {soul_md}: {e}"}))
 
     return "\n".join(context_parts)
 
@@ -316,7 +320,8 @@ def get_agent_memory(agent_name: str) -> str:
         return ""
     try:
         return memory_file.read_text(encoding="utf-8")
-    except Exception:
+    except Exception as e:
+        print(json.dumps({"continue": True, "warning": f"skill_router: failed to read agent memory {memory_file}: {e}"}))
         return ""
 
 

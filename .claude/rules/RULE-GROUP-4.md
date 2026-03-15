@@ -4,6 +4,10 @@
 > **Keywords:** "agente", "dossier", "cascateamento", "source", "Fase 5", "person agent", "cargo agent", "5.1", "5.2", "5.3", "5.4", "theme", "dna"
 > **Prioridade:** ALTA
 > **Regras:** 18, 19, 20, 21, 22
+>
+> **DEPRECATION NOTICE (S16):** "Phase 5" numbering is from the legacy pipeline.
+> In MCE, agent creation/update is handled by the distribution step.
+> The cascading PRINCIPLES in Rules 21-22 remain valid regardless of pipeline version.
 
 ---
 

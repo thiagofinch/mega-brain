@@ -13,18 +13,18 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
-BASE_DIR = Path(__file__).parent.parent.parent
-CLAUDE_MD = BASE_DIR / ".claude" / "CLAUDE.md"
-PERSONA_REGISTRY = BASE_DIR / "agents" / "persona-registry.yaml"
-AGENTS_DIR = BASE_DIR / "agents"
-SYNC_LOG = BASE_DIR / "logs" / "claude-md-sync.jsonl"
+ROOT = Path(__file__).resolve().parent.parent.parent
+CLAUDE_MD = ROOT / ".claude" / "CLAUDE.md"
+PERSONA_REGISTRY = ROOT / "agents" / "persona-registry.yaml"
+AGENTS_DIR = ROOT / "agents"
+SYNC_LOG = ROOT / "logs" / "claude-md-sync.jsonl"
 
 
 def parse_stdin():
     """Parse JSON from stdin."""
     try:
         return json.load(sys.stdin)
-    except Exception:
+    except Exception as e:  # noqa: F841
         return {}
 
 

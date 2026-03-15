@@ -16,8 +16,8 @@ import sys
 from datetime import UTC, datetime
 from pathlib import Path
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
-MEMORY_DIR = PROJECT_ROOT / ".data" / "agent_memory"
+ROOT = Path(__file__).resolve().parent.parent.parent
+MEMORY_DIR = ROOT / ".data" / "agent_memory"
 
 TRACKED_PREFIXES = ("kops-", "dops-", "devops-megabrain")
 

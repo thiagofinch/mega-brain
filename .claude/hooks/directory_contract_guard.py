@@ -12,6 +12,8 @@ import json
 import sys
 from pathlib import Path
 
+ROOT = Path(__file__).resolve().parent.parent.parent
+
 # Directories where new files are PROHIBITED
 PROHIBITED_DIRS = [
     "docs",
@@ -48,8 +50,7 @@ def main():
     # Resolve to relative path from project root
     path = Path(file_path)
     try:
-        # Find project root by looking for core/paths.py
-        project_root = Path(__file__).resolve().parent.parent.parent
+        project_root = ROOT
         rel = path.resolve().relative_to(project_root)
     except (ValueError, RuntimeError):
         print(json.dumps({"decision": "allow"}))

@@ -46,7 +46,7 @@ def _load_index(project_root: Path) -> dict:
     except ImportError:
         # PyYAML not available — try simple line-based parsing
         return _parse_index_simple(index_path)
-    except Exception:
+    except Exception as e:  # noqa: F841
         return {}
 
 
@@ -69,7 +69,7 @@ def _parse_index_simple(index_path: Path) -> dict:
                 current_id = None
         _index_cache = result
         _index_mtime = index_path.stat().st_mtime
-    except Exception:
+    except Exception as e:  # noqa: F841
         pass
     return result
 

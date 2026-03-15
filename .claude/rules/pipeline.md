@@ -7,28 +7,19 @@ paths:
   - "batch*.py"
 ---
 
-# Regras do Pipeline Jarvis
+# Regras do Pipeline
 
-## 🎯 Fases (BLOQUEANTES)
+> **NOTICE:** The legacy 5-phase system (Phases 1-5) is DEPRECATED.
+> The current pipeline is MCE (Mental Cognitive Extraction) with 12 steps.
+> See: `core/intelligence/pipeline/mce/` and `/pipeline-mce` skill.
+> The principles below (sequencing, validation, DNA extraction) remain valid.
 
-```
-FASE 1 → FASE 2 → FASE 3 → FASE 4 → FASE 5
-   │         │         │         │         │
-   ▼         ▼         ▼         ▼         ▼
-Inventário Download Organização Pipeline Alimentação
-```
+## Pipeline Principles (valid for both legacy and MCE)
 
-**NÃO avançar fase sem completar a anterior.**
-
-## 📊 Critérios de conclusão por fase
-
-| Fase | Completa quando |
-|------|-----------------|
-| 1 - Inventário | Todas fontes mapeadas, totais conhecidos |
-| 2 - Download | Todos arquivos baixados, quarentena vazia |
-| 3 - Organização | Estrutura validada, arquivos renomeados |
-| 4 - Pipeline | Todos batches processados, DNA extraído |
-| 5 - Alimentação | Todos agentes alimentados |
+- **Sequential processing** — do not advance without completing the current step
+- **Batch-based** — process materials in manageable batches
+- **State tracking** — update state after each step
+- **Validation gates** — verify before advancing
 
 ## 🧬 DNA Cognitivo (extrair sempre)
 

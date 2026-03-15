@@ -280,9 +280,8 @@ def log_quality_gap(agent: str, score: int, missing: list, agent_type: str = "un
     try:
         with open(QUALITY_GAPS_LOG, "a", encoding="utf-8") as f:
             f.write(json.dumps(entry, ensure_ascii=False) + "\n")
-    except Exception:
-        # Falha silenciosa - não deve interromper fluxo
-        pass
+    except Exception as e:
+        sys.stderr.write(f"[quality_watchdog] log gap error: {e}\n")
 
 
 def log_watchdog_activation(agent_info: dict, mandatory_found: bool):
@@ -300,8 +299,8 @@ def log_watchdog_activation(agent_info: dict, mandatory_found: bool):
     try:
         with open(log_file, "a", encoding="utf-8") as f:
             f.write(json.dumps(entry, ensure_ascii=False) + "\n")
-    except Exception:
-        pass
+    except Exception as e:
+        sys.stderr.write(f"[quality_watchdog] log activation error: {e}\n")
 
 
 # ═══════════════════════════════════════════════════════════════════════════

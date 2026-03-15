@@ -63,17 +63,7 @@
           },
           {
             "type": "command",
-            "command": "python3 .claude/hooks/enforce_plan_mode.py",
-            "timeout": 5000
-          },
-          {
-            "type": "command",
             "command": "python3 .claude/hooks/memory_updater.py",
-            "timeout": 5000
-          },
-          {
-            "type": "command",
-            "command": "python3 .claude/hooks/pending_tracker.py",
             "timeout": 5000
           }
         ]
@@ -186,16 +176,6 @@
             "type": "command",
             "command": "python3 .claude/hooks/session_end.py",
             "timeout": 10000
-          },
-          {
-            "type": "command",
-            "command": "python3 .claude/hooks/ralph_wiggum.py",
-            "timeout": 5000
-          },
-          {
-            "type": "command",
-            "command": "python3 .claude/hooks/continuous_save.py",
-            "timeout": 5000
           },
           {
             "type": "command",

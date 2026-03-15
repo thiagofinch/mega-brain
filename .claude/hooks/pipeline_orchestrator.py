@@ -107,8 +107,9 @@ def _log_event(
         }
         with open(ORCHESTRATOR_LOG, "a", encoding="utf-8") as f:
             f.write(json.dumps(entry, ensure_ascii=False) + "\n")
-    except Exception:
-        pass  # Never let logging crash the hook
+    except Exception as e:
+        # Never let logging crash the hook, but emit warning
+        print(json.dumps({"continue": True, "warning": f"orchestrator log write failed: {e}"}), file=sys.stderr)
 
 
 # ---------------------------------------------------------------------------
@@ -433,8 +434,9 @@ def main() -> None:
             if handled:
                 messages.append(f"[PIPELINE] {route_name} triggered for {Path(normalized).name}")
                 break  # First match wins
-        except Exception:
+        except Exception as e:
             _log_event(route_name, normalized, "crash", traceback.format_exc()[:200])
+            messages.append(f"[PIPELINE] {route_name} crashed: {e}")
 
     # Build response
     response: dict = {"continue": True}

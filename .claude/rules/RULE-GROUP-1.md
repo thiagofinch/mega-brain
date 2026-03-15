@@ -4,6 +4,12 @@
 > **Keywords:** "fase", "pipeline", "batch", "missão", "inbox", "de-para", "fonte", "duplicata", "posição", "logging"
 > **Prioridade:** ALTA
 > **Regras:** ZERO, 1, 2, 2.1, 3, 4, 5, 6, 7, 8, 9, 10
+>
+> **DEPRECATION NOTICE (S16):** The legacy 5-phase system (Phases 1-5) referenced in
+> Rules 1-9 is superseded by the MCE pipeline (`core/intelligence/pipeline/mce/`).
+> Rule ZERO (JARVIS identity) and Rules 3-10 (source tracking, logging, templates)
+> remain valid. Rule 1 (sequential phases) applies conceptually but phase numbers
+> are now MCE steps, not the old 1-5.
 
 ---
 

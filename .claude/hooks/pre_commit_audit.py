@@ -25,8 +25,8 @@ from pathlib import Path
 
 # ── Resolve repo root ──────────────────────────────────────────────────────
 
-SCRIPT_DIR = Path(__file__).resolve().parent  # .claude/hooks/
-REPO_ROOT = SCRIPT_DIR.parent.parent  # mega-brain/
+ROOT = Path(__file__).resolve().parent.parent.parent
+REPO_ROOT = ROOT  # alias for backward compat within this file
 
 # ── Import classify_path from audit_layers ─────────────────────────────────
 
@@ -110,7 +110,7 @@ def get_staged_files() -> list[str]:
         if result.returncode != 0:
             return []
         return [f for f in result.stdout.strip().split("\n") if f]
-    except Exception:
+    except Exception as e:  # noqa: F841
         return []
 
 
@@ -148,7 +148,7 @@ def check_security(files: list[str], classifications: dict[str, tuple[str, str]]
             continue
         try:
             content = full_path.read_text(errors="ignore")
-        except Exception:
+        except Exception as e:  # noqa: F841
             continue
         for pattern in SECRET_PATTERNS:
             match = pattern.search(content)
@@ -223,7 +223,7 @@ def check_package_json_drift(classifications: dict[str, tuple[str, str]]) -> lis
 
     try:
         pkg = json.loads(pkg_path.read_text())
-    except Exception:
+    except Exception as e:  # noqa: F841
         return infos
 
     pkg_files = set(pkg.get("files", []))

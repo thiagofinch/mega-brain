@@ -72,7 +72,7 @@ def check_pending_batches() -> tuple[int, int]:
         batch_total = current.get("batch_total", 0)
 
         return batch_current, batch_total
-    except Exception:
+    except Exception as e:  # noqa: F841
         return 0, 0
 
 
@@ -100,7 +100,7 @@ def read_ledger() -> dict:
                         ledger["next_action"] = lines[i + 1].strip("- ")
 
         return ledger
-    except Exception:
+    except Exception as e:  # noqa: F841
         return {}
 
 

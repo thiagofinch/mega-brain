@@ -1,5 +1,9 @@
 # Regras de Gerenciamento de Estado
 
+> **DEPRECATION NOTICE (S16):** MISSION-STATE.json references legacy 5-phase system.
+> The MCE pipeline uses its own state in `core/intelligence/pipeline/mce/`.
+> The principle (single source of truth for pipeline state) remains valid.
+
 ## 🔴 MISSION-STATE.json é SAGRADO
 
 **Localização:** `/.claude/mission-control/MISSION-STATE.json`

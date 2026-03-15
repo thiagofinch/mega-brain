@@ -4,6 +4,11 @@
 > **Keywords:** "validar", "source-sync", "integridade", "enforcement", "validate", "sync", "template enforcement", "cascading integrity", "phase5 validation"
 > **Prioridade:** ALTA
 > **Regras:** 23, 24, 25, 26
+>
+> **DEPRECATION NOTICE (S16):** Rule 23 references `validate_phase5.py` which is
+> legacy. Validation principles (check before declaring complete, verify cascading)
+> remain valid. Rules 24-26 (template enforcement, source-sync, cascading integrity)
+> are pipeline-agnostic and fully current.
 
 ---
 

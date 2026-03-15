@@ -78,7 +78,7 @@ def scan_agents(matched_dir: str, file_name: str, rel_path: str):
             agent_name = agent_path.stem
             try:
                 content = agent_path.read_text(encoding="utf-8")
-            except Exception:
+            except Exception as e:  # noqa: F841
                 continue
 
             # Check if agent references this directory (with or without trailing slash)

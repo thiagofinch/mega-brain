@@ -76,7 +76,7 @@ def load_context_for_intents(intents):
                     context_parts.append(
                         f"[JARVIS Context] Estado: Fase {phase} | Progresso: {pct}%"
                     )
-            except Exception:
+            except Exception as e:  # noqa: F841
                 pass
 
     return context_parts
@@ -112,8 +112,8 @@ def main():
         try:
             with open(prompts_path, "a", encoding="utf-8") as f:
                 f.write(json.dumps(prompt_log) + "\n")
-        except Exception:
-            pass
+        except Exception as e:
+            sys.stderr.write(f"[user_prompt_submit] log error: {e}\n")
 
         # Output
         output = {"continue": True, "feedback": "\n".join(context_parts) if context_parts else None}

@@ -40,16 +40,18 @@ import yaml
 # CONFIGURATION
 # =================================
 
-PROJECT_DIR = os.environ.get(
-    "CLAUDE_PROJECT_DIR", str(Path(__file__).resolve().parent.parent.parent)
+ROOT = Path(
+    os.environ.get(
+        "CLAUDE_PROJECT_DIR", str(Path(__file__).resolve().parent.parent.parent)
+    )
 )
 
-AGENTS_DIR = Path(PROJECT_DIR) / "agents"
-KNOWLEDGE_DIR = Path(PROJECT_DIR) / "knowledge" / "external"
+AGENTS_DIR = ROOT / "agents"
+KNOWLEDGE_DIR = ROOT / "knowledge" / "external"
 DOSSIERS_DIR = KNOWLEDGE_DIR / "dossiers" / "themes"
-LOGS_DIR = Path(PROJECT_DIR) / "logs"
+LOGS_DIR = ROOT / "logs"
 CASCADING_LOG = LOGS_DIR / "cascading.jsonl"
-MISSION_STATE = Path(PROJECT_DIR) / ".claude" / "mission-control" / "MISSION-STATE.json"
+MISSION_STATE = ROOT / ".claude" / "mission-control" / "MISSION-STATE.json"
 
 
 # =================================
@@ -1684,7 +1686,7 @@ def process_batch(batch_path: str) -> dict:
         try:
             import sys
 
-            scripts_path = str(Path(PROJECT_DIR) / ".claude" / "scripts")
+            scripts_path = str(ROOT / ".claude" / "scripts")
             if scripts_path not in sys.path:
                 sys.path.insert(0, scripts_path)
             from validate_cascading_integrity import validate_batch_integrity

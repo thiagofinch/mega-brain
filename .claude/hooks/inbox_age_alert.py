@@ -263,7 +263,7 @@ def check_inbox_health() -> dict:
                 fpath = Path(root) / f
                 total_files += 1
                 total_size += fpath.stat().st_size
-            except Exception:
+            except Exception as e:  # noqa: F841
                 continue
 
     old_files = get_old_files()

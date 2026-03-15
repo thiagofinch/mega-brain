@@ -147,7 +147,7 @@ def append_to_memory(memory_path: Path, entry: str) -> bool:
 
         memory_path.write_text("\n".join(final_lines), encoding="utf-8")
         return True
-    except Exception:
+    except Exception as e:  # noqa: F841
         return False
 
 
