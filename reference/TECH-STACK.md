@@ -68,14 +68,12 @@
 
 ---
 
-## MCP Servers (4)
+## MCP Servers (2)
 
 | Server | Package | Purpose |
 |--------|---------|---------|
 | mega-brain-knowledge | Python (`core/intelligence/rag/mcp_server.py`) | RAG search |
-| mega-brain | `@anthropic/filesystem-mcp` | Filesystem access |
 | n8n-mcp | `n8n-mcp` | Workflow automation |
-| read-ai | `mcp-remote` (OAuth) | Meeting transcriptions |
 
 ---
 

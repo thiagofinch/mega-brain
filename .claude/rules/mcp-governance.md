@@ -15,7 +15,8 @@ Fonte: `.mcp.json`
 |------------|---------|-----------|-------|--------|
 | **mega-brain-knowledge** | `core.intelligence.rag.mcp_server` | RAG semântico local | @jarvis (system) | ATIVO |
 | **n8n-mcp** | `n8n-mcp` | Automação de workflows via n8n | @devops (system) | ATIVO |
-| **read-ai** | `mcp-remote` (OAuth) | Transcrições de reuniões via Read.ai | @jarvis (system) | ATIVO |
+| ~~read-ai~~ | ~~`mcp-remote`~~ | ~~Transcrições de reuniões~~ | — | REMOVIDO (2026-03-14) |
+| ~~mega-brain~~ | ~~`@modelcontextprotocol/server-filesystem`~~ | ~~Filesystem access~~ | — | REMOVIDO (2026-03-14) |
 | ~~clickup~~ | ~~`@nazruden/clickup-server`~~ | ~~Gestão de tarefas~~ | — | REMOVIDO |
 | ~~miro~~ | ~~`@llmindset/mcp-miro`~~ | ~~Quadros visuais~~ | — | REMOVIDO |
 | ~~figma-local~~ | ~~`figma-developer-mcp`~~ | ~~Design assets~~ | — | REMOVIDO |
@@ -43,7 +44,6 @@ SEMPRE preferir ferramentas nativas do Claude Code sobre MCP:
 |-----|-------------|-----------------|
 | **mega-brain-knowledge** | Busca semântica no knowledge base (RAG) | Busca por nome de arquivo (usar Glob) |
 | **n8n-mcp** | Criar/executar/listar workflows no n8n | Automações simples que Bash resolve |
-| **read-ai** | Baixar transcrições de reuniões via API | Leitura de arquivos locais já baixados |
 
 ---
 
@@ -59,7 +59,6 @@ SEMPRE preferir ferramentas nativas do Claude Code sobre MCP:
 |-----|---------------------|-------------|
 | mega-brain-knowledge | Nenhuma (local) | N/A |
 | n8n-mcp | `N8N_API_URL`, `N8N_API_KEY` | Shell env |
-| read-ai | OAuth token (via mcp-remote) | Gerenciado pelo MCP |
 
 ### Checklist de Segurança (por MCP)
 
