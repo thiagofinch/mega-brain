@@ -1,112 +1,150 @@
-# L4 FRAMEWORKS — Liam Ottley
-# Structured methodologies and processes for AIOS and AI Workforces
-# Version: 1.0.0
+##############################################################################
+# FRAMEWORKS - Liam Ottley
+# Layer 4: Structured methodologies and processes
+# Source: 3 YouTube podcasts (24,287 words)
+# Generated: 2026-03-13
+##############################################################################
 
 frameworks:
+
   - id: FW-LO-001
-    name: "5-Layer AIOS Architecture"
+    name: "5-Layer AIOS Framework"
     description: >
-      The complete architecture for building an AI Operating System, organized as
-      5 concentric layers that wrap around an existing business model:
-
-      LAYER 1 — CONTEXT: The system understands what the business IS. Business rules,
-      standard operating procedures, team structure, product details, customer profiles,
-      brand voice. Implemented via CLAUDE.md, context files, and structured documentation.
-      Without this layer, the AI is generic and useless.
-
-      LAYER 2 — DATA: The system connects to all information sources. CRM, email,
-      calendar, analytics, financial data, communication channels. Implemented via
-      MCP servers, API integrations, and data pipelines. Without this layer, the AI
-      is blind to reality.
-
-      LAYER 3 — INTELLIGENCE: The system makes sense of the data. Pattern recognition,
-      anomaly detection, insight generation, trend analysis, knowledge synthesis.
-      Implemented via RAG pipelines, knowledge graphs, and analytical agents. Without
-      this layer, the AI has data but no understanding.
-
-      LAYER 4 — AUTOMATE: The system acts on intelligence. Task execution, workflow
-      automation, decision-making, communication handling, scheduling. Implemented via
-      skills, cron jobs, webhooks, and agent actions. Without this layer, the AI
-      understands but cannot act.
-
-      LAYER 5 — BUILD: The system creates new capabilities. New automations, new
-      integrations, new agents, new products. This is the meta-layer where the AIOS
-      improves itself. Implemented via development workflows, epic cycles, and
-      self-improvement loops. Without this layer, the system is static.
-    source: LO-001
-    quote: "5 layers: Context, Data, Intelligence, Automate, Build. Each one wraps tighter around your business."
+      The core framework for building an AI Operating System. Five layers
+      that stack and compound, each powerful alone but transformative together.
+    layers:
+      - layer: 1
+        name: "Context"
+        purpose: "AI learns your business — team, strategy, products, history"
+        outcome: "No more re-explaining. AI knows like a co-founder."
+      - layer: 2
+        name: "Data"
+        purpose: "All dashboards consolidated — CRM, analytics, revenue, marketing"
+        outcome: "Check business health like checking the weather app."
+      - layer: 3
+        name: "Intelligence"
+        purpose: "Meeting synthesis, Slack analysis, daily briefs, SWOT analysis"
+        outcome: "Most informed person in the org before 8am without meetings."
+      - layer: 4
+        name: "Automate"
+        purpose: "Task audit → categorize → automate recurring tasks"
+        outcome: "60-70% of tasks automated, bandwidth permanently freed."
+      - layer: 5
+        name: "Build"
+        purpose: "Use freed bandwidth + AI workspace for new initiatives"
+        outcome: "7-day sprints replacing quarterly timelines."
+    quote: "When you stack them together, they compound into something that completely changes how you operate as a founder."
+    source: "The Biggest Shift in Business Since the Internet Just Happened"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/The Biggest Shift in Business Since the Internet Just Happened [youtube.com_watch_v=oC1h922cDoY].txt"
 
   - id: FW-LO-002
-    name: "AI Workforce Architecture"
+    name: "3 KPIs of AIOS"
     description: >
-      A framework for replacing traditional departments with digital AI teams.
-      Each department becomes a team of specialized AI agents that coordinate,
-      hand off work, and operate autonomously:
-
-      MARKETING TEAM: Content creator agent, distribution agent, analytics agent,
-      SEO agent, social media manager agent. Produces content calendar, distributes
-      across channels, measures performance, optimizes.
-
-      SALES TEAM: Lead qualifier agent, outreach agent, follow-up agent, proposal
-      agent. Qualifies inbound, conducts outreach sequences, manages pipeline.
-
-      OPERATIONS TEAM: Task router agent, scheduler agent, documentation agent,
-      quality assurance agent. Routes work, manages calendars, maintains SOPs.
-
-      CREATIVE TEAM: Design agent, copywriting agent, video editing agent, brand
-      consistency agent. Produces assets, maintains brand guidelines.
-
-      Each team has a coordinator agent that manages priorities, escalates to humans
-      when needed, and reports to the founder's daily brief.
-    source: LO-002
-    quote: "Digital teams per department. Marketing team, sales team, ops team, creative team. All AI."
+      Three key performance indicators to measure AIOS effectiveness.
+      Without clear KPIs, founders wander without direction.
+    kpis:
+      - kpi: 1
+        name: "Away-From-Desk Autonomy"
+        measure: "% of work doable from phone (Telegram)"
+        target: "100%"
+      - kpi: 2
+        name: "Task Automation Percentage"
+        measure: "% of recurring tasks automated or heavily augmented"
+        target: "60-70%"
+      - kpi: 3
+        name: "Revenue Per Employee"
+        measure: "Total revenue / headcount"
+        target: "Increasing trend"
+    quote: "Without a clear goal, we're just going to be wandering around."
+    source: "What Is an AI Operating System"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/What Is an AI Operating System (And Why Every Business Will Need One) [youtube.com_watch_v=DXcVT07bQ6g].txt"
 
   - id: FW-LO-003
-    name: "Task Audit Matrix"
+    name: "Task Audit Framework"
     description: >
-      A structured framework for identifying which tasks to automate first:
-
-      STEP 1 — LIST: Write down every task you perform in a typical week. Include
-      recurring tasks, ad-hoc tasks, communication tasks, decision tasks. Be
-      exhaustive — most founders undercount by 40%.
-
-      STEP 2 — CATEGORIZE: For each task, assign an AI capability score:
-      YES = AI can do this fully today (no human needed)
-      PARTIALLY = AI can assist but needs human review/decision
-      NO = Requires human judgment, creativity, or relationship
-
-      STEP 3 — MEASURE BANDWIDTH: For each task, estimate weekly hours consumed.
-
-      STEP 4 — PRIORITIZE: Sort by (AI_capability=YES) AND (bandwidth=HIGH) first.
-      These are your highest-ROI automations. Then PARTIALLY+HIGH. Then YES+LOW.
-
-      STEP 5 — EXECUTE: Build automations starting from the top of the prioritized
-      list. Each automation reclaims bandwidth that compounds into subsequent builds.
-    source: LO-001
-    quote: "List every task. Can AI do it: yes, partially, no. Sort by time consumed. Automate from the top."
+      Systematic approach to identifying automation opportunities.
+      List every recurring task, categorize AI capability, prioritize
+      by bandwidth impact.
+    steps:
+      - step: 1
+        action: "List every recurring task across all businesses/responsibilities"
+      - step: 2
+        action: "Ask AIOS to categorize each: YES (fully automatable), PARTIAL (augmentable), NO (human required)"
+      - step: 3
+        action: "Prioritize by bandwidth freed (highest impact first)"
+      - step: 4
+        action: "Use /explore to build automation for each task"
+      - step: 5
+        action: "Set up cron jobs for automated tasks"
+      - step: 6
+        action: "Track automation percentage against target"
+    quote: "Sit down and list out every single one of the tasks that you do across your business."
+    source: "The Biggest Shift in Business Since the Internet Just Happened"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/The Biggest Shift in Business Since the Internet Just Happened [youtube.com_watch_v=oC1h922cDoY].txt"
 
   - id: FW-LO-004
-    name: "Claude Code AIOS Stack"
+    name: "Daily Brief Framework"
     description: >
-      The specific technology stack Liam uses to implement his AIOS, centered on
-      Claude Code as the execution engine:
+      System for automated morning intelligence briefing. Combines
+      all data sources into synthesized report delivered via Telegram.
+    components:
+      - name: "Meeting Synthesis"
+        source: "Fireflies (meeting recorder) → local database"
+      - name: "Communication Analysis"
+        source: "Slack messages → stored and queryable"
+      - name: "Data Dashboard"
+        source: "Stripe, Bitly, Google Analytics, CRM → unified view"
+      - name: "SWOT Analysis"
+        source: "AI-generated based on all inputs"
+      - name: "Content Ideas"
+        source: "Pattern detection from community + comments"
+    outputs:
+      - "Short Telegram summary (daily)"
+      - "5-10 page PDF deep-dive (daily)"
+      - "Anomaly alerts (real-time)"
+    quote: "Every morning before I even get out of bed, I have a full briefing waiting for me on my phone."
+    source: "The Biggest Shift in Business Since the Internet Just Happened"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/The Biggest Shift in Business Since the Internet Just Happened [youtube.com_watch_v=oC1h922cDoY].txt"
 
-      ENGINE: Claude Code — the AI reasoning and execution layer. Handles complex
-      multi-step tasks, code generation, file management, and agent coordination.
+  - id: FW-LO-005
+    name: "AI Workforce Structure"
+    description: >
+      Framework for building AI teams organized by department.
+      Each department gets specialized AI agents that collaborate
+      to handle workflows end-to-end.
+    departments:
+      - name: "Marketing"
+        agents: "Content creation, ad management, analytics"
+      - name: "Sales"
+        agents: "Lead qualification, follow-up, proposal generation"
+      - name: "Operations"
+        agents: "Process automation, reporting, scheduling"
+      - name: "Creative"
+        agents: "Design, thumbnails, video concepts"
+      - name: "Customer Support"
+        agents: "Ticket handling, FAQ, escalation"
+    tools: "n8n, Make, Relevance AI, Claude Code"
+    source: "How to Build and Sell AI Agent Workforces"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE [youtube.com_watch_v=pTTvyQDK_tk].txt"
 
-      CONTEXT: CLAUDE.md and structured context files — business rules, SOPs, team
-      info, product details. Loaded at session start, referenced throughout.
+  - id: FW-LO-006
+    name: "Skills System"
+    description: >
+      Reusable workflow documentation that teaches Claude Code how to
+      perform specific tasks. Skills can be created by the founder or
+      borrowed from others. They're the building blocks of AIOS automation.
+    mechanism: >
+      Skills are docs/folders that document a workflow. When triggered,
+      Claude reads the skill and follows the instructions. Skills are
+      shareable and installable as plug-and-play modules.
+    example: "Thumbnail creation skill — teaches Claude to create thumbnails with AI image generators"
+    quote: "Skills are like little docs or folders that you can get Claude to create which document a workflow."
+    source: "What Is an AI Operating System"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/What Is an AI Operating System (And Why Every Business Will Need One) [youtube.com_watch_v=DXcVT07bQ6g].txt"
 
-      DATA: MCP servers — connect to external systems (CRM, email, calendar, analytics,
-      databases). Each MCP server is a typed interface to an external data source.
-
-      SKILLS: Claude Code skills — reusable capabilities triggered by keywords or
-      commands. Each skill is a packaged automation (e.g., /daily-brief, /process-inbox).
-
-      CRON: Scheduled tasks — automated recurring actions. Cron triggers skills on
-      schedule (daily briefs, weekly reports, inbox processing).
-
-      MOBILE: Telegram bot — the mobile command interface. Send commands, receive
-      updates, approve decisions from phone. The away-from-desk bridge.
-    source: LO-001
-    quote: "Claude Code plus context files plus MCP integrations plus skills plus cron plus Telegram. That's the stack."
+metadata:
+  total_items: 6
+  source_person: "Liam Ottley"
+  source_count: 3
+  extraction_date: "2026-03-13"
+  version: "1.0.0"

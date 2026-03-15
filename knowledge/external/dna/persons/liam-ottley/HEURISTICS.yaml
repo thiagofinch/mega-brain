@@ -1,109 +1,112 @@
-# L3 HEURISTICS — Liam Ottley
-# Practical rules and decision shortcuts for AIOS implementation
-# Version: 1.0.0
+##############################################################################
+# HEURISTICS - Liam Ottley
+# Layer 3: Practical rules and decision shortcuts
+# Source: 3 YouTube podcasts (24,287 words)
+# Generated: 2026-03-13
+##############################################################################
 
 heuristics:
+
   - id: HEUR-LO-001
-    name: "60-70% Automation Target"
+    name: "60-70% Task Automation Target"
     type: numeric
-    threshold: "60-70%"
     description: >
-      Within 30 days of starting an AIOS implementation, you should be able to
-      automate 60-70% of your repetitive operational tasks. This is not aspirational —
-      it is the baseline. If you are below 60% after 30 days, your context layer is
-      incomplete or your task audit was not thorough enough. The remaining 30-40%
-      typically requires human judgment, relationship management, or creative decisions
-      that AI cannot yet handle reliably.
-    source: LO-001
-    quote: "Within 30 days you should be automating 60 to 70 percent of your tasks."
+      A founder should aim to automate 60-70% of their recurring tasks
+      within 30 days of AIOS setup. This is the threshold where bandwidth
+      shift becomes significant enough to enable new initiatives.
+    threshold: "60-70% of tasks automated"
+    quote: "I'm going for 60 to 70% of mine over the next 30 days."
+    source: "What Is an AI Operating System"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/What Is an AI Operating System (And Why Every Business Will Need One) [youtube.com_watch_v=DXcVT07bQ6g].txt"
 
   - id: HEUR-LO-002
-    name: "7-Day Sprint Test"
-    type: qualitative
+    name: "80/20 Bandwidth Split (Reverse It)"
+    type: numeric
     description: >
-      If your AIOS is working properly, you should be able to conceive, build,
-      and launch a complete new initiative in 7 days. This is the acid test. Liam
-      demonstrated this by generating $1M NZD in 7 days using his AIOS to research,
-      create content, build infrastructure, deliver, and collect payment. If a new
-      initiative takes longer than 7 days, the system has friction points that need
-      to be identified and automated.
-    source: LO-003
-    quote: "If your system works, you can go from idea to $1M in 7 days. I proved it."
+      Default state: 80% time IN the business, 20% ON the business.
+      Goal state: 20% ITB, 80% OTB. The AIOS methodology exists
+      to systematically move this bar from 80/20 to 20/80.
+    threshold: "From 80/20 to 20/80 ITB/OTB ratio"
+    quote: "For most of us we are spending like 80% on must-dos and then we have this little bit here, our 20%."
+    source: "What Is an AI Operating System"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/What Is an AI Operating System (And Why Every Business Will Need One) [youtube.com_watch_v=DXcVT07bQ6g].txt"
 
   - id: HEUR-LO-003
-    name: "Away-From-Desk Test"
-    type: qualitative
+    name: "7-Day Sprint vs Quarter"
+    type: numeric
     description: >
-      The ultimate test of an AIOS: can you run your entire business from your phone
-      for a full day? No laptop, no desk, no office. If the answer is yes — the system
-      is working. If you need to sit down at a computer to handle operational tasks,
-      there are gaps in your automation layer. The phone becomes the command center,
-      not the workstation. Telegram bots, mobile dashboards, and voice interfaces
-      are the bridges.
-    source: LO-001
-    quote: "Can you run your whole business from your phone for a day? That's the test."
+      With AIOS bandwidth freed, a major initiative (webinar, product launch)
+      can be executed in 7 days vs the traditional 1-2 quarters. This is
+      possible when founder has both freed bandwidth AND the AI workspace.
+    threshold: "7 days with AIOS = 1 quarter traditional"
+    quote: "I got more work done in a week than an entire team would be able to do over a quarter normally."
+    source: "The Biggest Shift in Business Since the Internet Just Happened"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/The Biggest Shift in Business Since the Internet Just Happened [youtube.com_watch_v=oC1h922cDoY].txt"
 
   - id: HEUR-LO-004
-    name: "Context Before Automation"
+    name: "Daily Brief Before 8am"
     type: qualitative
     description: >
-      Never automate a task before the system has full context about what the business
-      is, how it operates, and why that task exists. Automation without context creates
-      brittle, incorrect automations that break at the first edge case. The context
-      layer (CLAUDE.md, business rules, operating procedures) MUST be complete before
-      any automation is built. This is the single most common mistake in AIOS
-      implementation — people rush to automate before the system understands them.
-    source: LO-001
-    quote: "Never automate before context. The system needs to know your business fully first."
+      Every morning before 8am, receive a synthesized 5-10 page PDF
+      briefing covering all businesses. Includes revenue, meetings,
+      Slack activity, SWOT analysis, content performance. Makes you
+      the most informed person in the organization without any meetings.
+    threshold: "Daily brief delivered before 8am via Telegram"
+    quote: "I'm the most informed person in my entire organization before 8:00 AM and I didn't have to sit through a single meeting."
+    source: "The Biggest Shift in Business Since the Internet Just Happened"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/The Biggest Shift in Business Since the Internet Just Happened [youtube.com_watch_v=oC1h922cDoY].txt"
 
   - id: HEUR-LO-005
-    name: "Daily Brief As First Milestone"
-    type: qualitative
+    name: "Revenue Per Employee Must Go Up"
+    type: numeric
     description: >
-      The first milestone of any AIOS implementation should be an automated daily
-      brief. Every morning, the system tells you: what happened yesterday, what is
-      scheduled today, what needs your attention, what metrics changed. This is the
-      "hello world" of AIOS. If you cannot get a daily brief working, you do not
-      have enough context or data integration. It is both the first checkpoint and
-      the diagnostic tool for everything else.
-    source: LO-001
-    quote: "Your first milestone is the daily brief. If you can't get that working, your foundation is broken."
+      With AIOS, revenue per employee should increase. Either revenue
+      goes up with same headcount, headcount goes down with same revenue,
+      or both. This is the efficiency metric to track.
+    threshold: "Revenue/employee trending UP"
+    quote: "Revenue per employee should be going up for you as an entrepreneur."
+    source: "What Is an AI Operating System"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/What Is an AI Operating System (And Why Every Business Will Need One) [youtube.com_watch_v=DXcVT07bQ6g].txt"
 
   - id: HEUR-LO-006
-    name: "Task Audit Before Automating"
-    type: qualitative
-    description: >
-      Before building any automation, perform a complete task audit. List every task
-      you do in a week. For each task, categorize: Can AI do this? (YES / PARTIALLY /
-      NO). Then prioritize by bandwidth impact — which tasks consume the most time?
-      Start automating from the top of the list. This prevents the common trap of
-      automating easy but low-impact tasks while ignoring the high-bandwidth bottlenecks.
-    source: LO-001
-    quote: "List every task. Categorize: can AI do it? Prioritize by time consumed. Start from the top."
-
-  - id: HEUR-LO-007
     name: "15% AI Decisions by 2028"
     type: numeric
-    threshold: "15%"
     description: >
-      Gartner predicts that by 2028, 15% of day-to-day work decisions will be made
-      autonomously by agentic AI. This is not futurism — it is a near-term forecast
-      from a conservative research firm. For AIOS builders, this means the market is
-      moving toward you. The businesses that have already built decision-capable AI
-      systems will have a 2-3 year head start over those who wait for 2028.
-    source: LO-002
-    quote: "Gartner says 15% of day-to-day decisions will be made by AI by 2028. We're already there."
+      Gartner predicts 15% of all work decisions will be made by
+      AI agents by 2028, up from near zero today. This validates
+      the urgency of building AI workforce capabilities now.
+    threshold: "15% by 2028 (Gartner)"
+    quote: "Gartner predicts that 15% of all work decisions will be made by AI agents by 2028."
+    source: "How to Build and Sell AI Agent Workforces"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE [youtube.com_watch_v=pTTvyQDK_tk].txt"
 
-  - id: HEUR-LO-008
-    name: "Three KPIs of AIOS"
+  - id: HEUR-LO-007
+    name: "Test Away-From-Desk Regularly"
     type: qualitative
     description: >
-      There are exactly three KPIs that measure whether your AIOS is working:
-      (1) Away-from-desk autonomy — can the business run without you physically
-      present? (2) Task automation percentage — what fraction of operational tasks
-      are handled by AI? (3) Revenue per employee — how much output does each
-      human produce with AI leverage? If all three are improving month over month,
-      the system is working. If any is flat or declining, there is a specific layer
-      failure to diagnose.
-    source: LO-001
-    quote: "Three KPIs: away-from-desk autonomy, task automation percentage, revenue per employee."
+      Periodically test running your business entirely from your phone
+      (Telegram). If something breaks or is missing, that's what to
+      fix next. Goal: 100% capability away from desk.
+    threshold: "100% business operations from phone"
+    quote: "You need to test that occasionally. Go away for the weekend without your laptop."
+    source: "What Is an AI Operating System"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/What Is an AI Operating System (And Why Every Business Will Need One) [youtube.com_watch_v=DXcVT07bQ6g].txt"
+
+  - id: HEUR-LO-008
+    name: "7-8 Dashboards Consolidated to One"
+    type: numeric
+    description: >
+      The average founder checks 7-8 platforms daily (CRM, analytics,
+      revenue, marketing). AIOS data layer consolidates all into one
+      place, checkable like a weather app.
+    threshold: "7-8 dashboards → 1 unified view"
+    quote: "It used to be seven or eight different platforms just to understand what was going on in the morning."
+    source: "The Biggest Shift in Business Since the Internet Just Happened"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/The Biggest Shift in Business Since the Internet Just Happened [youtube.com_watch_v=oC1h922cDoY].txt"
+
+metadata:
+  total_items: 8
+  source_person: "Liam Ottley"
+  source_count: 3
+  extraction_date: "2026-03-13"
+  version: "1.0.0"

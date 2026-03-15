@@ -1,7 +1,7 @@
 # Alan Nicolas — Insights Acumulados
 
-> **Meetings processados:** MEET-0022, MEET-0023, MEET-0024, MEET-0028, MEET-0038, MEET-0095
-> **Última atualização:** 2026-03-12
+> **Meetings processados:** MEET-0022, MEET-0023, MEET-0024, MEET-0028, MEET-0038, MEET-0095, MEET-0097, MEET-0098, MEET-0099
+> **Última atualização:** 2026-03-13
 
 ---
 
@@ -29,9 +29,27 @@
 
 ---
 
+## Insights de MEET-0097, MEET-0098, MEET-0099
+
+| # | Insight | Tema | Confiança |
+|---|---------|------|-----------|
+| 9 | Assume ownership de padronização de instalação (MEET-0097) | Process Ownership | ALTA |
+| 10 | Reordenou evento: Copy → Content → Traffic (copy gera inputs) | Event Strategy | ALTA |
+| 11 | Proteção Enterprise via decoy paths em notebooks | IP Protection | ALTA |
+| 12 | Criou Squad de Editais (governo) em 8h madrugada (MEET-0098) | Product Expansion | ALTA |
+| 13 | Editou paths manualmente e quebrou scripts — lição (MEET-0098) | Technical Debt | ALTA |
+| 14 | Gastou R$30K em API Azure sem perceber (MEET-0099) | Cost Control | CRÍTICO |
+| 15 | MCPs devem virar serviços background (CEO Perplexity ref) | Architecture | ALTA |
+| 16 | Criou repo dashboard-premium compartilhado no SYNCRA | Collaboration | ALTA |
+| 17 | Ficou 2 dias sem dormir criando sistema de editais | Work Pattern | ALTA |
+
+---
+
 ## Padrões de Pensamento
 
 - **Data-first:** Sempre começa pela estruturação de dados antes de features
 - **Protection-minded:** Preocupação constante com IP e competição
 - **Quality over quantity:** Prefere entregar menos com mais inteligência
 - **Multi-business thinker:** Usa mesmo sistema para AIOX e Academia
+- **Speed over process:** Cria intensamente (2 dias sem dormir) mas gera dívida técnica (paths manuais)
+- **Cost-blind:** Não monitora gastos de API até explodir (R$30K)

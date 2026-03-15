@@ -1,7 +1,7 @@
 # Pedro Valerio Lopez — Insights Acumulados
 
-> **Meetings processados:** MEET-0022, MEET-0024, MEET-0028, MEET-0038, MEET-0095
-> **Última atualização:** 2026-03-12
+> **Meetings processados:** MEET-0022, MEET-0024, MEET-0028, MEET-0038, MEET-0095, MEET-0098
+> **Última atualização:** 2026-03-13
 
 ---
 
@@ -27,9 +27,27 @@
 
 ---
 
+## Insights de MEET-0098
+
+| # | Insight | Tema | Confiança |
+|---|---------|------|-----------|
+| 8 | Vendeu projeto governo R$2.4M + R$600K usando squads (time autônomo) | Validation | CONFIRMADA |
+| 9 | BBB: 848 criativos, 424 cortes, 4 meses — processo definido previamente | Scale Case | ALTA |
+| 10 | 4 registries obrigatórios: Service, Tool, Squad, Process | Architecture | ALTA |
+| 11 | Agentes forçados a usar tools registradas — zero criações aleatórias | Governance | ALTA |
+| 12 | Syntra sem livro — protege via parcerias por nicho vertical | Business Model | ALTA |
+| 13 | Modelo: implementação exclusiva (caro + equity) vs licenciamento (preço normal) | Pricing | ALTA |
+| 14 | Validação de squads: "se não vende, não está validado" (projeto gov = prova) | Quality Gate | ALTA |
+| 15 | 46-step pipeline: mapeamento → Squad Creator → validação → ClickUp deploy | Process | ALTA |
+| 16 | Cláudio entendeu Syntra após Pedro mapear processo jurídico na frente dele | Onboarding | ALTA |
+
+---
+
 ## Padrões de Pensamento
 
 - **Process absolutist:** Tudo precisa ser mapeado e estruturado
 - **Security-paranoid:** Sempre pensando em como proteger o código
 - **Pragmatic tester:** Testa múltiplos caminhos em paralelo
 - **Anti-SaaS for high-value:** Prefere implementação high-ticket sobre recorrência baixa
+- **Validation-obsessed:** "Se não vendeu, não está validado" — resultados reais > demos bonitos
+- **Niche-first monetization:** Protege IP core e distribui via parcerias verticais

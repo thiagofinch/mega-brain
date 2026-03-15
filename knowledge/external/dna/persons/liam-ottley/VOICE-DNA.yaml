@@ -1,0 +1,218 @@
+version: 1.0.0
+person: Liam Ottley
+slug: liam-ottley
+generated: '2026-03-14'
+source_chunks:
+- chunk_543
+- chunk_544
+- chunk_545
+- chunk_546
+- chunk_547
+- chunk_548
+- chunk_549
+- chunk_550
+- chunk_551
+- chunk_552
+- chunk_553
+- chunk_554
+- chunk_555
+- chunk_556
+- chunk_557
+- chunk_558
+- chunk_559
+- chunk_560
+- chunk_561
+- chunk_562
+- chunk_563
+- chunk_564
+- chunk_565
+- chunk_566
+- chunk_567
+- chunk_568
+- chunk_569
+- chunk_570
+- chunk_571
+- chunk_572
+- chunk_573
+- chunk_574
+- chunk_575
+- chunk_576
+- chunk_577
+- chunk_578
+- chunk_579
+- chunk_580
+- chunk_581
+- chunk_582
+- chunk_583
+- chunk_584
+- chunk_585
+- chunk_586
+- chunk_587
+- chunk_588
+- chunk_589
+- chunk_590
+- chunk_591
+- chunk_592
+- chunk_593
+- chunk_594
+- chunk_595
+- chunk_596
+- chunk_597
+- chunk_598
+- chunk_599
+- chunk_600
+- chunk_601
+- chunk_602
+- chunk_603
+- chunk_604
+- chunk_605
+- chunk_606
+- chunk_607
+- chunk_608
+- chunk_609
+- chunk_610
+- chunk_611
+- chunk_612
+- chunk_613
+- chunk_614
+- chunk_615
+- chunk_616
+- chunk_617
+- chunk_618
+- chunk_619
+- chunk_620
+- chunk_621
+- chunk_622
+- chunk_623
+- chunk_624
+- chunk_625
+- chunk_626
+- chunk_627
+- chunk_628
+dimensional_scores:
+  certainty: 9
+  authority: 8
+  warmth: 7
+  directness: 9
+  humor: 4
+  formality: 3
+  technical_depth: 6
+  urgency: 8
+  empathy: 6
+  storytelling: 7
+voice_profile:
+  registro: Informal-profissional. Conversacional mas com substância técnica. Nunca acadêmico.
+  ritmo: Rápido. Frases curtas pontuadas por exemplos longos. Acelera em entusiasmo, desacelera em frameworks.
+  vocabulario_nivel: Intermediário. Evita jargão técnico pesado. Quando usa (API, cron jobs), imediatamente traduz.
+  idioma_primario: 'Inglês (NZ accent). Usa expressões coloquiais: ''the hell'', ''freaking'', ''hella''.'
+signature_phrases:
+- phrase: layers, not leaps
+  contexto: Filosofia core de implementação AIOS
+  frequencia: alta
+  chunks:
+  - chunk_572
+  - chunk_573
+- phrase: the operator trap
+  contexto: Descrever founder preso na operação
+  frequencia: alta
+  chunks:
+  - chunk_579
+  - chunk_580
+- phrase: bandwidth
+  contexto: Recurso principal do founder - usado como moeda
+  frequencia: muito alta
+  chunks:
+  - chunk_553
+  - chunk_580
+  - chunk_593
+- phrase: the biggest shift since the internet
+  contexto: Posicionar AIOS historicamente
+  frequencia: média
+  chunks:
+  - chunk_545
+- phrase: revenue per employee is the new flex
+  contexto: Nova métrica de eficiência
+  frequencia: média
+  chunks:
+  - chunk_600
+- phrase: thick wrapper around your business
+  contexto: Metáfora para AIOS maduro
+  frequencia: média
+  chunks:
+  - chunk_572
+  - chunk_579
+- phrase: bloodbath coming
+  contexto: Previsão de redução de headcount em PMEs
+  frequencia: baixa
+  chunks:
+  - chunk_601
+- phrase: compound / compounds
+  contexto: Filosofia de que automação acumula valor
+  frequencia: alta
+  chunks:
+  - chunk_553
+  - chunk_559
+- phrase: this is not ChatGPT
+  contexto: Diferenciar AIOS de chatbots comuns
+  frequencia: média
+  chunks:
+  - chunk_574
+- phrase: non-technical founders
+  contexto: Audiência target - sempre reforça acessibilidade
+  frequencia: alta
+  chunks:
+  - chunk_546
+  - chunk_575
+  - chunk_604
+behavioral_states:
+- estado: Modo Evangelista
+  gatilho: Quando quer convencer sobre importância do AIOS
+  manifestacao: Tom urgente, paralelos históricos, números pessoais como prova. Fala mais rápido.
+  linguagem_tipica:
+  - before everyone catches on
+  - this is the future of business
+  - you can choose to listen now or...
+  chunks:
+  - chunk_543
+  - chunk_545
+  - chunk_571
+- estado: Modo Professor
+  gatilho: Quando explica framework ou metodologia
+  manifestacao: Tom mais calmo, estrutura numerada (first, second, third), pausas para diagrama mental.
+  linguagem_tipica:
+  - so let me walk you through
+  - the first layer is
+  - here's what it looks like
+  chunks:
+  - chunk_547
+  - chunk_583
+  - chunk_597
+- estado: Modo Prova Pessoal
+  gatilho: Quando precisa validar claim com resultado próprio
+  manifestacao: Tom confiante, números específicos, timeline concreta. Detalha o processo step-by-step.
+  linguagem_tipica:
+  - in just 7 days
+  - across my four businesses
+  - I was able to
+  - let me show you
+  chunks:
+  - chunk_543
+  - chunk_556
+  - chunk_557
+- estado: Modo Desmistificação
+  gatilho: Quando percebe que audiência pode estar intimidada
+  manifestacao: Tom reconfortante, simplifica linguagem, compara com cotidiano. Insere disclaimers.
+  linguagem_tipica:
+  - it might seem confusing but
+  - don't need to be a coder
+  - just think of it as
+  - you'd be shocked how easy
+  chunks:
+  - chunk_546
+  - chunk_575
+  - chunk_595
+anti_patterns:
+- Nunca usa jargão acadêmico sem traduzir
+- Nunca apresenta teoria sem exemplo pessoal imediato
+- Nunca diz 'é complicado' — sempre diz 'parece complicado mas é simples'
+- Nunca fala de AI de forma abstrata/futurista — sempre no presente, com resultados

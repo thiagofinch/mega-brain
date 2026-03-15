@@ -1,69 +1,93 @@
-# L2 MENTAL-MODELS — Liam Ottley
-# Thinking and decision frameworks for AI Operating Systems
-# Version: 1.0.0
+##############################################################################
+# MENTAL-MODELS - Liam Ottley
+# Layer 2: Thinking and decision frameworks
+# Source: 3 YouTube podcasts (24,287 words)
+# Generated: 2026-03-13
+##############################################################################
 
 mental_models:
+
   - id: MM-LO-001
-    name: "The Operator Trap"
+    name: "Bandwidth Trap / Operator Trap"
     description: >
-      Most founders are trapped in the operator role. They spend 80% of their time
-      IN the business — firefighting, managing, executing tasks — and only 20% ON
-      the business — strategizing, building systems, creating leverage. The Operator
-      Trap is self-reinforcing: the more you operate, the more dependent the business
-      becomes on you operating, the less time you have to build systems that free you.
-      The AIOS breaks this trap by automating the operator layer. Target state:
-      20% IN the business, 80% ON the business.
-    source: LO-001
-    quote: "You're stuck doing 80% IN the business. The goal is to flip it — 20% IN, 80% ON."
+      Most founders spend 80% of time IN the business (must-dos, maintenance)
+      and only 20% ON the business (growth, new initiatives). The AIOS goal
+      is to reverse this ratio to 20/80. Being stuck in the operator trap
+      means zero bandwidth for growth, making you vulnerable when the market
+      moves fast.
+    application: "Diagnose current bandwidth split. If >50% ITB, prioritize automation."
+    source: "What Is an AI Operating System"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/What Is an AI Operating System (And Why Every Business Will Need One) [youtube.com_watch_v=DXcVT07bQ6g].txt"
 
   - id: MM-LO-002
     name: "The Wrapper Model"
     description: >
-      Think of your business model as a cube — it has defined edges, processes,
-      inputs, and outputs. An AI Operating System wraps AROUND this cube in 5
-      concentric layers. Layer 1 (Context) is the innermost wrap — the system
-      understands what the business IS. Layer 2 (Data) connects all information
-      sources. Layer 3 (Intelligence) makes sense of the data. Layer 4 (Automate)
-      acts on the intelligence. Layer 5 (Build) creates new capabilities. Each
-      layer wraps tighter around the business model, making it more autonomous.
-      The business model itself does not change — the wrapper changes how it runs.
-    source: LO-001
-    quote: "Think of your business as a cube. AIOS wraps around it in 5 layers. The model stays, the operation transforms."
+      AIOS is NOT a business model — it's a methodology that wraps around
+      your existing business model as layers. The cube (business model) sits
+      in the center, and the AIOS wraps around it. Thicker wrapper =
+      more efficient founder. The wrapper grows layer by layer, not all at once.
+    application: "Evaluate thickness of your current AI wrapper. Each layer should compound."
+    source: "What Is an AI Operating System"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/What Is an AI Operating System (And Why Every Business Will Need One) [youtube.com_watch_v=DXcVT07bQ6g].txt"
 
   - id: MM-LO-003
-    name: "Compounding Automation"
+    name: "Three Historical Shifts"
     description: >
-      Every task you automate is time you never lose again. Unlike hiring (which
-      requires management overhead) or outsourcing (which requires coordination),
-      automation compounds cleanly. Automate 1 hour/day in week 1 = 5 hours saved.
-      Add another hour in week 2 = 10 hours saved. By month 3, you have reclaimed
-      an entire workweek. This compounding effect is why founders who start building
-      their AIOS early develop an insurmountable advantage — the gap widens every week.
-    source: LO-001
-    quote: "Every automated task is time you never lose again. It compounds. Every single week."
+      Business history has only three fundamental shifts: (1) Industrial Revolution
+      changed how we MAKE things, (2) Internet changed how we REACH people,
+      (3) AIOS changes how we RUN everything. Each shift created massive
+      winners among early adopters.
+    application: "Position AI adoption as existential, not optional. Same magnitude as internet adoption."
+    source: "The Biggest Shift in Business Since the Internet Just Happened"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/The Biggest Shift in Business Since the Internet Just Happened [youtube.com_watch_v=oC1h922cDoY].txt"
 
   - id: MM-LO-004
-    name: "Build or Enjoy"
+    name: "Compound Automation Flywheel"
     description: >
-      When the AIOS frees founder bandwidth, there are exactly two productive uses
-      for that bandwidth: BUILD (expand the business, launch new products, enter new
-      markets) or ENJOY (travel, relationships, health, experiences). Both are valid.
-      The key insight is that this is a CHOICE — not a default. Without an AIOS,
-      founders have neither option; they are locked in the Operator Trap. With an
-      AIOS, the freed bandwidth becomes a strategic decision: growth or lifestyle.
-      Most founders, once freed, oscillate between both.
-    source: LO-003
-    quote: "Once the system runs itself, you have a choice: build more, or enjoy more. Both are right."
+      Each task automated permanently frees bandwidth. Freed bandwidth
+      enables automating more tasks. This creates a compounding flywheel
+      where week after week the founder systematically buys back their
+      own time. Unlike one-off productivity hacks, AIOS gains are permanent.
+    application: "Start with highest-ROI tasks. Each automation accelerates the next."
+    source: "The Biggest Shift in Business Since the Internet Just Happened"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/The Biggest Shift in Business Since the Internet Just Happened [youtube.com_watch_v=oC1h922cDoY].txt"
 
   - id: MM-LO-005
-    name: "One-Person Billion Dollar Company"
+    name: "Context OS vs ChatGPT"
     description: >
-      Sam Altman predicted the first one-person billion-dollar company will exist
-      soon, enabled by AI. This is not hyperbole — it is the logical endpoint of
-      AI workforces. If one person can deploy AI agents for marketing, sales,
-      operations, finance, and product development, the constraint is no longer
-      labor but imagination and capital allocation. The mental model is: what would
-      you build if headcount was zero and capability was infinite? That thought
-      experiment is becoming a practical business plan.
-    source: LO-002
-    quote: "Sam Altman said the first one-person billion-dollar company is coming. AI workforces make it real."
+      ChatGPT requires re-explaining everything from scratch every time
+      (like onboarding a new employee each conversation). Context OS means
+      the AI knows your business like a co-founder — team, strategy,
+      products, history. This eliminates the biggest friction of AI adoption.
+    application: "Building context layer is prerequisite to everything else. Skip it and nothing works."
+    source: "The Biggest Shift in Business Since the Internet Just Happened"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/The Biggest Shift in Business Since the Internet Just Happened [youtube.com_watch_v=oC1h922cDoY].txt"
+
+  - id: MM-LO-006
+    name: "Build or Enjoy Decision"
+    description: >
+      Once bandwidth is freed, founders face a choice: (1) Pour freed time
+      into new initiatives and growth, or (2) Enjoy the freedom you originally
+      wanted when starting the business. Both are valid. The point is having
+      the choice, not being trapped.
+    application: "After automation phase, consciously decide: expand or enjoy. Don't default back into operator trap."
+    source: "The Biggest Shift in Business Since the Internet Just Happened"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/The Biggest Shift in Business Since the Internet Just Happened [youtube.com_watch_v=oC1h922cDoY].txt"
+
+  - id: MM-LO-007
+    name: "AI Workforce Department Model"
+    description: >
+      AI agents can form digital teams organized by department: marketing,
+      sales, operations, creative, customer support. Each department has
+      specialized agents that collaborate. This replaces the traditional
+      hire-per-function model with build-per-function using AI.
+    application: "Map your departments. Identify which can be partially or fully staffed by AI agents."
+    source: "How to Build and Sell AI Agent Workforces"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE [youtube.com_watch_v=pTTvyQDK_tk].txt"
+
+metadata:
+  total_items: 7
+  source_person: "Liam Ottley"
+  source_count: 3
+  extraction_date: "2026-03-13"
+  version: "1.0.0"

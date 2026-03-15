@@ -1,72 +1,75 @@
-# DNA-CONFIG — Liam Ottley
-# AI Operating Systems pioneer, Morningside AI founder
-# Version: 1.0.0
-# Last Updated: 2026-03-12
+##############################################################################
+# DNA-CONFIG - Liam Ottley
+# Configuration and metadata for DNA layers
+# Generated: 2026-03-13
+##############################################################################
 
-person:
+persona:
   name: "Liam Ottley"
   slug: "liam-ottley"
-  companies:
-    - "Morningside AI"
-    - "Personal Brand"
-    - "Education Business"
-    - "AI SaaS Product"
-  domains:
-    - ai-operating-systems
-    - ai-agent-workforces
-    - business-automation
-    - founder-productivity
-    - ai-consulting
-  location: "Cape Town, South Africa"
-  experience: "7 years business, 3 years AI-focused"
-
-dna_sources:
-  - id: LO-001
-    title: "The AI Operating System — What It Is and Why You Need One"
-    type: youtube
-    platform: YouTube
-    status: processed
-    date_processed: "2026-03-12"
-
-  - id: LO-002
-    title: "I Built an AI Workforce — Here's What Happened"
-    type: youtube
-    platform: YouTube
-    status: processed
-    date_processed: "2026-03-12"
-
-  - id: LO-003
-    title: "How I Made $1M in 7 Days Using AI"
-    type: youtube
-    platform: YouTube
-    status: processed
-    date_processed: "2026-03-12"
+  type: "PERSON"
+  category: "external"
+  domain: "AI Operating Systems, AI Business, AI Agency"
+  company: "Morningside AI"
+  role: "Founder & CEO"
+  country: "New Zealand / South Africa (Cape Town)"
 
 dna_layers:
   philosophies:
-    count: 7
     file: "PHILOSOPHIES.yaml"
+    count: 10
   mental_models:
-    count: 5
     file: "MENTAL-MODELS.yaml"
+    count: 7
   heuristics:
-    count: 8
     file: "HEURISTICS.yaml"
+    count: 8
   frameworks:
-    count: 4
     file: "FRAMEWORKS.yaml"
+    count: 6
   methodologies:
-    count: 3
     file: "METHODOLOGIES.yaml"
-  total_elements: 27
+    count: 4
 
-raiz:
-  inbox_path: "knowledge/external/inbox/liam-ottley/"
-  dna_path: "knowledge/external/dna/persons/liam-ottley/"
-  dossier_path: "knowledge/external/dossiers/persons/DOSSIER-LIAM-OTTLEY.md"
+total_elements: 35
 
-metadata:
+dna_sources:
+  - id: "LO-001"
+    title: "The Biggest Shift in Business Since the Internet Just Happened"
+    type: "PODCAST"
+    platform: "YouTube"
+    url: "https://youtube.com/watch?v=oC1h922cDoY"
+    words: 3807
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/The Biggest Shift in Business Since the Internet Just Happened [youtube.com_watch_v=oC1h922cDoY].txt"
+
+  - id: "LO-002"
+    title: "How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE"
+    type: "COURSE"
+    platform: "YouTube"
+    url: "https://youtube.com/watch?v=pTTvyQDK_tk"
+    words: 14343
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE [youtube.com_watch_v=pTTvyQDK_tk].txt"
+
+  - id: "LO-003"
+    title: "What Is an AI Operating System (And Why Every Business Will Need One)"
+    type: "PODCAST"
+    platform: "YouTube"
+    url: "https://youtube.com/watch?v=DXcVT07bQ6g"
+    words: 6137
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/What Is an AI Operating System (And Why Every Business Will Need One) [youtube.com_watch_v=DXcVT07bQ6g].txt"
+
+statistics:
+  total_words: 24287
+  total_sources: 3
+  extraction_date: "2026-03-13"
   version: "1.0.0"
-  created: "2026-03-12"
-  last_updated: "2026-03-12"
-  extracted_by: "Pickle Rick (The Resourceful Builder)"
+
+themes:
+  - "AI Operating Systems (AIOS)"
+  - "Business Automation"
+  - "AI Agency / Consulting"
+  - "AI Workforce Building"
+  - "Founder Productivity"
+  - "Claude Code"
+  - "Task Automation"
+  - "Revenue Per Employee"

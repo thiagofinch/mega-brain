@@ -1,89 +1,115 @@
-# L1 PHILOSOPHIES — Liam Ottley
-# Core beliefs and worldview about AI Operating Systems and business transformation
-# Version: 1.0.0
+##############################################################################
+# PHILOSOPHIES - Liam Ottley
+# Layer 1: Core beliefs and worldview
+# Source: 3 YouTube podcasts (24,287 words)
+# Generated: 2026-03-13
+##############################################################################
 
 philosophies:
+
   - id: FIL-LO-001
-    name: "AIOS Is The Third Major Shift"
+    name: "AIOS is the Third Major Business Shift"
     description: >
-      Three seismic shifts defined modern business. The Industrial Revolution changed
-      how we MAKE things — mechanizing production. The Internet changed how we REACH
-      people — democratizing distribution. Now, AIOS changes how we RUN businesses —
-      automating the operator layer itself. This is not incremental improvement; it is
-      a fundamental restructuring of what it means to operate a company. The founder
-      who ignores this shift will be outpaced by the founder who embraces it, just as
-      factories outpaced workshops and websites outpaced catalogs.
-    source: LO-001
-    quote: "The Industrial Revolution changed how we MAKE. The Internet changed how we REACH. AIOS changes how we RUN."
+      There have been only three major technological shifts that fundamentally
+      changed how companies operate: Industrial Revolution (how we make things),
+      Internet (how we reach people), and AIOS (how we run everything).
+    quote: "This is the future of business. It's the biggest shift since the internet."
+    source: "The Biggest Shift in Business Since the Internet Just Happened"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/The Biggest Shift in Business Since the Internet Just Happened [youtube.com_watch_v=oC1h922cDoY].txt"
 
   - id: FIL-LO-002
     name: "Layers Not Leaps"
     description: >
-      An AI Operating System is not built in a single leap. It is constructed
-      incrementally, layer by layer, where each layer compounds on the previous one.
-      Context first, then data integration, then intelligence, then automation, then
-      the build phase. Skipping layers creates fragile systems. Each layer that lands
-      properly makes the next layer exponentially more powerful. This is why most
-      people fail at AI adoption — they try to leap to automation without laying
-      context and data foundations first.
-    source: LO-001
-    quote: "You don't build an AIOS in one shot. Each layer compounds. Skip one and the whole thing is fragile."
+      An AI operating system is built incrementally through layers wrapping
+      around the business model. Each layer adds capability and compounds
+      with previous ones. Never attempt to build everything at once.
+    quote: "It's built up in what I call layers and not leaps."
+    source: "What Is an AI Operating System"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/What Is an AI Operating System (And Why Every Business Will Need One) [youtube.com_watch_v=DXcVT07bQ6g].txt"
 
   - id: FIL-LO-003
-    name: "Bandwidth Is The Bottleneck"
+    name: "Bandwidth is the Founder's Most Valuable Asset"
     description: >
-      The single biggest constraint on founder growth is not capital, not talent,
-      not market — it is founder bandwidth. Most founders spend 80% of their time
-      working IN the business (operations, fires, tasks) and only 20% working ON the
-      business (strategy, vision, growth). The entire purpose of an AIOS is to invert
-      this ratio to 20% IN / 80% ON. Every automation, every AI agent, every system
-      is measured by one question: does this free founder bandwidth?
-    source: LO-001
-    quote: "Founders spend 80% IN the business and 20% ON the business. The goal is to flip that to 20/80."
+      Most founders are trapped in the "operator trap" spending 80% of time
+      IN the business instead of ON it. Freeing bandwidth through automation
+      is the primary objective of an AIOS. Bandwidth = ability to grow.
+    quote: "The reason most people's businesses aren't growing is because you are too much in this bucket and not enough in this one."
+    source: "What Is an AI Operating System"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/What Is an AI Operating System (And Why Every Business Will Need One) [youtube.com_watch_v=DXcVT07bQ6g].txt"
 
   - id: FIL-LO-004
-    name: "Not ChatGPT — Entirely Different Beast"
+    name: "Non-Technical Founders Can Build AI Systems"
     description: >
-      An AI Operating System is NOT a chatbot. It is not ChatGPT with a business
-      prompt. It is a comprehensive system that knows your business fully — your
-      context, your data, your processes, your team, your customers, your metrics.
-      It operates across every layer of the business simultaneously. When people hear
-      "AI for business" they think chat interface. An AIOS is to ChatGPT what an
-      aircraft carrier is to a rowboat. Same medium, entirely different capability.
-    source: LO-001
-    quote: "This is not ChatGPT. This is an entirely different beast. It knows your business fully."
+      Claude Code despite the name does not require coding skills. The tools
+      are accessible to any founder who follows the right methodology and
+      uses plug-and-play modules. Technical skill is not a barrier.
+    quote: "Claude Code which despite the name does not actually require you to be a coder."
+    source: "The Biggest Shift in Business Since the Internet Just Happened"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/The Biggest Shift in Business Since the Internet Just Happened [youtube.com_watch_v=oC1h922cDoY].txt"
 
   - id: FIL-LO-005
-    name: "Revenue Per Employee Is The New Flex"
+    name: "Revenue Per Employee is the New Flex"
     description: >
-      The old flex was headcount. "We have 200 employees." The new flex is revenue
-      per employee. A 5-person company doing $10M is more impressive than a 200-person
-      company doing $10M. AI workforces make this possible. There is a bloodbath
-      coming to small business — companies that adopt AI workforces will operate at
-      10-50x the efficiency of those that do not. Efficiency is the new scale.
-    source: LO-002
-    quote: "Revenue per employee is the new flex. There's a bloodbath coming to small business."
+      The era of flexing headcount is over. The new measure of business
+      efficiency is revenue per employee. AI systems will cause a
+      "bloodbath" in small business headcount as fewer people are needed.
+    quote: "Revenue per employee has become a very sexy metric in the age of AI and this is the new flex."
+    source: "What Is an AI Operating System"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/What Is an AI Operating System (And Why Every Business Will Need One) [youtube.com_watch_v=DXcVT07bQ6g].txt"
 
   - id: FIL-LO-006
-    name: "Skills Are Transferable Modules"
+    name: "AGI is Here Now"
     description: >
-      Every component of an AI Operating System — every skill, every automation,
-      every agent configuration — is a transferable module. What you build for your
-      business can be packaged, productized, and sold to other businesses. This
-      creates a dual value proposition: you improve your own operations AND you
-      create sellable IP. The AIOS builder is simultaneously an operator and a
-      product creator. Skills are not locked to one system; they are plug-and-play.
-    source: LO-002
-    quote: "Everything you build is a transferable module. Package it, sell it. Your AIOS is also your product."
+      Artificial General Intelligence is not a future concept. Claude Code
+      represents general intelligence for digital-based roles. Anything
+      digital is automatable. The question is when you adopt, not if.
+    quote: "AGI is here. Claude Code is that. It can be trained to do anything you want it to."
+    source: "What Is an AI Operating System"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/What Is an AI Operating System (And Why Every Business Will Need One) [youtube.com_watch_v=DXcVT07bQ6g].txt"
 
   - id: FIL-LO-007
-    name: "AI Workforces Replace Departments, Not Just Tasks"
+    name: "Small Business Advantage in AI"
     description: >
-      The first wave of AI adoption focused on task automation — write this email,
-      summarize this document. The second wave, which is happening now, replaces
-      entire departments. Not "an AI that helps marketing" but "an AI marketing
-      department." Not "an AI that assists sales" but "an AI sales team." The unit
-      of automation is no longer the task; it is the department. Digital teams
-      coordinate, hand off work, and operate 24/7 without human intervention.
-    source: LO-002
-    quote: "We're not automating tasks anymore. We're replacing entire departments with digital teams."
+      Small businesses have a structural advantage over enterprises in AI
+      adoption. They can be nimble, drop old tech stacks, freely connect
+      APIs. Enterprise legacy systems (ERPs) make AIOS adoption harder.
+    quote: "It is the benefit of the small business who can be nimble, can drop their old tech stack, can move over to new things easily."
+    source: "What Is an AI Operating System"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/What Is an AI Operating System (And Why Every Business Will Need One) [youtube.com_watch_v=DXcVT07bQ6g].txt"
+
+  - id: FIL-LO-008
+    name: "AI Replaces Departments Not Just Jobs"
+    description: >
+      AI is not coming for individual jobs but for entire departments.
+      Teams that required dozens of people can be replaced by AI workforces
+      that run 24/7 without fatigue, quitting, or paychecks.
+    quote: "AI isn't just coming for jobs. It's coming for entire departments."
+    source: "How to Build and Sell AI Agent Workforces"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE [youtube.com_watch_v=pTTvyQDK_tk].txt"
+
+  - id: FIL-LO-009
+    name: "Build AI Workforces or Be Replaced By Them"
+    description: >
+      The opportunity lies not in what disappears but in what's created.
+      People who can build AI workforces will thrive. Those who can't
+      will be replaced. Position yourself as the builder, not the replaced.
+    quote: "The real opportunity lies in what's going to be created."
+    source: "How to Build and Sell AI Agent Workforces"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE [youtube.com_watch_v=pTTvyQDK_tk].txt"
+
+  - id: FIL-LO-010
+    name: "Compound Automation Effect"
+    description: >
+      Each automated task compounds with the next. The bandwidth freed
+      is permanent and cumulative. It's like the most addicting video game
+      because you're permanently crossing items off your list.
+    quote: "Every task that you wrap in automation is time you're never going to lose again. It actually compounds."
+    source: "The Biggest Shift in Business Since the Internet Just Happened"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/The Biggest Shift in Business Since the Internet Just Happened [youtube.com_watch_v=oC1h922cDoY].txt"
+
+metadata:
+  total_items: 10
+  source_person: "Liam Ottley"
+  source_count: 3
+  extraction_date: "2026-03-13"
+  version: "1.0.0"
