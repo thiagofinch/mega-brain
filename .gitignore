@@ -228,6 +228,7 @@ core/intelligence/speakers/*.pkl
 
 # Frameworks externos (nunca rastrear — AIOS-Core, IDE sync)
 .aios-core/
+.aiox-core/
 .claude/aios/
 
 # Projeções IDE externas
@@ -651,7 +652,8 @@ workspace/config/mappings/**
 # Planning, docs — L3 only (not needed for machine to function)
 # NOTE: tests/ removed from deny — already allowed in BLOCO 4 (lines 278-279)
 .planning/
-docs/
+docs/*
+!docs/framework/
 
 # Reference — sensitive files
 reference/N8N-MCP-CONFIG.md
@@ -692,3 +694,23 @@ scripts/google-drive/**
 
 # Local apps (deployed separately, not in repo)
 apps/
+
+
+# ══════════════════════════════════════════════════════════════════════
+# BLOCO 8 — FINAL DENY (dev artifacts that leak through generic allows)
+# The wildcard allows (!core/**, !agents/**, !tests/**) in BLOCO 4
+# override the BLOCO 1 denies. These re-deny patterns MUST come last.
+# Added: 2026-03-14
+# ══════════════════════════════════════════════════════════════════════
+
+# OS metadata (leaks through !core/**, !agents/**, !reference/**, etc.)
+**/.DS_Store
+
+# Python bytecode (leaks through !core/**, !tests/**, !.claude/hooks/**)
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+
+# Stale CLAUDE.md in subdirectories (only root and .claude/ are valid)
+core/.claude/
+core/intelligence/.claude/
