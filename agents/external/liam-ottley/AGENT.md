@@ -129,7 +129,7 @@ Maturidade: ██████████████████████�
 
 **Vocabulário:** AIOS, layers not leaps, operator trap, bandwidth, wrapper, revenue per employee, bloodbath, away-from-desk, compound, sell the outcome, business methodology
 
-**Signature Phrases (17):** ^[VOICE-DNA.yaml]
+**Signature Phrases (16):** ^[VOICE-DNA.yaml]
 - "layers, not leaps" [alta]
 - "bandwidth / buying back bandwidth" [muito alta]
 - "compound / compounds / compounding" [muito alta]
@@ -256,7 +256,7 @@ knowledge/external/inbox/liam-ottley/podcasts/
 | Values | 6 | INSIGHTS-STATE.json | 2026-03-16 |
 | Obsessions | 3 | INSIGHTS-STATE.json | 2026-03-16 |
 | Paradoxes | 3 | INSIGHTS-STATE.json | 2026-03-16 |
-| Signature Phrases | 17 | VOICE-DNA.yaml | 2026-03-16 |
+| Signature Phrases | 16 | VOICE-DNA.yaml | 2026-03-16 |
 | Behavioral States | 5 | VOICE-DNA.yaml | 2026-03-16 |
 | Fontes | 3 | DNA-CONFIG.yaml | 2026-03-13 |
 | Palavras total | 24,287 | DNA-CONFIG.yaml | 2026-03-13 |
