@@ -20,18 +20,18 @@
 
 1. **Transcription quality** — accuracy for PT-BR + EN mixed calls
 2. **Auto-categorization** — tag by company area automatically
-3. **API access** — programmatic export to `workspace/inbox/meetings/`
+3. **API access** — programmatic export to `knowledge/business/inbox/meetings/`
 4. **Cost** — monthly cost at scale
 5. **Integration path** — how quickly can we connect to Mega Brain
 
 ## Current Recommendation
 
-**Read.ai** — already integrated via `read-ai-harvester` skill. Transcriptions can be harvested directly into `workspace/inbox/meetings/` using the existing pipeline.
+**Read.ai** — already integrated via `read-ai-harvester` skill. Transcriptions can be harvested directly into `knowledge/business/inbox/meetings/` using the existing pipeline.
 
 ## Data Flow
 
 ```
-Meeting Tool → Export/API → workspace/inbox/meetings/ → bucket_processor → workspace/meetings/{area}/
+Meeting Tool → Export/API → knowledge/business/inbox/meetings/ → bucket_processor → workspace/meetings/{area}/
 ```
 
 ## Decision

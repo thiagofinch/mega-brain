@@ -46,5 +46,5 @@ The council reads financial data as structured markdown tables. Each financial f
 ## Data Flow
 
 ```
-Google Sheets / CSV → workspace/inbox/financial/ → bucket_processor → workspace/finance/
+Google Sheets / CSV → knowledge/business/inbox/financial/ → bucket_processor → workspace/finance/
 ```

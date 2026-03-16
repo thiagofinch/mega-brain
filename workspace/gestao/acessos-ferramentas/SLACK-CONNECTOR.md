@@ -28,7 +28,7 @@ Absorb Slack messages into `workspace/meetings/` or relevant area directory, cla
 ## Data Flow
 
 ```
-Slack API → MCP/N8N → workspace/inbox/slack/ → bucket_processor → workspace/meetings/
+Slack API → MCP/N8N → knowledge/business/inbox/slack/ → bucket_processor → workspace/meetings/
 ```
 
 ## Dependencies
