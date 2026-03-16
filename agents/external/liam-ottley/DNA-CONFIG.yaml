@@ -1,6 +1,7 @@
 ##############################################################################
 # DNA-CONFIG - Agent Pointer
 # Points to full DNA at knowledge/external/dna/persons/liam-ottley/
+# Updated: 2026-03-16 (MCE Consolidation Step 10.5)
 ##############################################################################
 
 persona:
@@ -8,8 +9,27 @@ persona:
   slug: "liam-ottley"
   type: "PERSON"
   category: "external"
+  domain: "AI Operating Systems, AI Agency, AI Workforce"
+  company: "Morningside AI"
+  role: "Founder & CEO"
 
 dna_path: "knowledge/external/dna/persons/liam-ottley"
+
+dna_summary:
+  filosofias: 13
+  modelos_mentais: 9
+  heuristicas: 13
+  frameworks: 7
+  metodologias: 5
+
+mce_summary:
+  behavioral_patterns: 11
+  values: 6
+  obsessions: 3
+  paradoxes: 3
+  signature_phrases: 17
+  behavioral_states: 5
+  voice_dna: true
 
 dna_sources:
   - id: "LO-001"
@@ -22,5 +42,6 @@ dna_sources:
     title: "What Is an AI Operating System (And Why Every Business Will Need One)"
     raiz: "knowledge/external/inbox/liam-ottley/podcasts/What Is an AI Operating System (And Why Every Business Will Need One) [youtube.com_watch_v=DXcVT07bQ6g].txt"
 
-total_elements: 35
-version: "1.0.0"
+total_elements: 54
+version: "1.1.0"
+updated: "2026-03-16"

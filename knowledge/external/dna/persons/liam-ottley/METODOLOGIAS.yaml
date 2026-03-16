@@ -35,7 +35,10 @@ methodologies:
           - "Connect Slack to queryable storage"
           - "Build Daily Brief automation (Telegram + PDF)"
           - "Set up cron job for daily synthesis before 8am"
+          - "Include daily SWOT analysis and synthesis as part of the brief"
           - "Verify: receiving comprehensive daily brief"
+        reinforced_chunks: ["chunk_639"]
+        reinforced_by: "INS-LO-027"
       - step: 4
         name: "Automate Layer"
         actions:
@@ -45,6 +48,9 @@ methodologies:
           - "Use /explore command to build each automation"
           - "Set up cron jobs for recurring automations"
           - "Track: automation percentage target 60-70%"
+          - "Ensure every automated task compounds with the next — bandwidth freed is permanent"
+        reinforced_chunks: ["chunk_640"]
+        reinforced_by: "INS-LO-028"
       - step: 5
         name: "Build Layer"
         actions:
@@ -55,6 +61,8 @@ methodologies:
     timeline: "Days to weeks per layer, not months"
     source: "The Biggest Shift in Business Since the Internet Just Happened + What Is an AI Operating System"
     raiz: "knowledge/external/inbox/liam-ottley/podcasts/The Biggest Shift in Business Since the Internet Just Happened [youtube.com_watch_v=oC1h922cDoY].txt"
+    reinforced_chunks: ["chunk_647", "chunk_649"]
+    reinforced_by: "INS-LO-034 (Task Audit: 83 tasks, 54 targeted for automation), INS-LO-036 (Daily Brief spec: 5-10pg PDF, 80 API calls across 6 data streams)"
 
   - id: MET-LO-002
     name: "7-Day Sprint Methodology"
@@ -81,6 +89,8 @@ methodologies:
     result: "$1M NZD in 7 days (Liam's case study)"
     source: "The Biggest Shift in Business Since the Internet Just Happened"
     raiz: "knowledge/external/inbox/liam-ottley/podcasts/The Biggest Shift in Business Since the Internet Just Happened [youtube.com_watch_v=oC1h922cDoY].txt"
+    reinforced_chunks: ["chunk_642"]
+    reinforced_by: "INS-LO-030"
 
   - id: MET-LO-003
     name: "Explore Command Method"
@@ -128,9 +138,54 @@ methodologies:
     source: "How to Build and Sell AI Agent Workforces"
     raiz: "knowledge/external/inbox/liam-ottley/podcasts/How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE [youtube.com_watch_v=pTTvyQDK_tk].txt"
 
+  # ---- INS-LO-038 + INS-LO-041 (Pipeline Run 2, chunks 636-655) ----
+
+  - id: MET-LO-005
+    name: "Metodologia de Vendas para Agência de IA (4 Etapas)"
+    description: >
+      Processo estruturado de vendas para agências de IA, do primeiro
+      contato ao onboarding. Quatro etapas sequenciais com regra crítica
+      na etapa de discovery: 80% escuta, 20% fala.
+    steps:
+      - step: 1
+        name: "Lead Generation"
+        actions:
+          - "Identificar empresas com departamentos manual-heavy"
+          - "Usar LinkedIn, comunidades e referrals como canais primários"
+          - "Criar conteúdo demonstrando capacidade (case studies > posts teóricos)"
+      - step: 2
+        name: "Discovery Call"
+        actions:
+          - "REGRA: 80% do tempo OUVINDO, 20% falando"
+          - "Mapear workflows atuais e pain points"
+          - "Identificar tarefas repetitivas e departamentos com overhead humano"
+          - "Nunca propor solução na call de discovery — apenas coletar informação"
+        heuristic_ref: "HEUR-LO-011"
+      - step: 3
+        name: "Proposal"
+        actions:
+          - "Gerar proposta usando Claude Code a partir do transcript da discovery"
+          - "Precificar agentes a 40-60% do custo humano equivalente"
+          - "Stackear 3-5 agentes por cliente ($1.5-3K cada)"
+          - "Mostrar ROI claro: custo AI vs custo headcount atual"
+        heuristic_ref: "HEUR-LO-009, HEUR-LO-010"
+      - step: 4
+        name: "Onboarding & Deploy"
+        actions:
+          - "Construir AI workforce usando n8n/Make/Relevance AI"
+          - "Deploy incremental (1 agente por vez, validar antes de escalar)"
+          - "Monitorar performance e iterar"
+          - "Coletar case study com números reais para próxima venda"
+        heuristic_ref: "HEUR-LO-013"
+    insight_ref: "INS-LO-038, INS-LO-041"
+    source: "How to Build and Sell AI Agent Workforces"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE [youtube.com_watch_v=pTTvyQDK_tk].txt"
+    reinforced_chunks: ["chunk_651", "chunk_653"]
+
 metadata:
-  total_items: 4
+  total_items: 5
   source_person: "Liam Ottley"
   source_count: 3
   extraction_date: "2026-03-13"
-  version: "1.0.0"
+  updated: "2026-03-16"
+  version: "1.1.0"

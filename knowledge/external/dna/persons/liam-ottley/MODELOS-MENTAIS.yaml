@@ -40,6 +40,8 @@ mental_models:
     application: "Position AI adoption as existential, not optional. Same magnitude as internet adoption."
     source: "The Biggest Shift in Business Since the Internet Just Happened"
     raiz: "knowledge/external/inbox/liam-ottley/podcasts/The Biggest Shift in Business Since the Internet Just Happened [youtube.com_watch_v=oC1h922cDoY].txt"
+    reinforced_chunks: ["chunk_637"]
+    reinforced_by: "INS-LO-025"
 
   - id: MM-LO-004
     name: "Compound Automation Flywheel"
@@ -85,9 +87,40 @@ mental_models:
     source: "How to Build and Sell AI Agent Workforces"
     raiz: "knowledge/external/inbox/liam-ottley/podcasts/How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE [youtube.com_watch_v=pTTvyQDK_tk].txt"
 
+  # ---- INS-LO-032, INS-LO-037 (Pipeline Run 2, chunks 636-655) ----
+
+  - id: MM-LO-008
+    name: "AIOS é Metodologia, Não Modelo"
+    description: >
+      O AIOS não depende de nenhum modelo de IA específico (GPT, Claude, Gemini).
+      É uma metodologia que se envolve ao redor de qualquer modelo. Quando o
+      modelo melhora, o sistema inteiro melhora automaticamente. Quem constrói
+      em cima de um modelo específico fica preso; quem constrói a metodologia
+      é agnóstico e resiliente.
+    application: "Nunca acoplar o sistema a um provider. Construir camadas abstratas que aceitem qualquer LLM."
+    insight_ref: "INS-LO-032"
+    source: "What Is an AI Operating System"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/What Is an AI Operating System (And Why Every Business Will Need One) [youtube.com_watch_v=DXcVT07bQ6g].txt"
+    reinforced_chunks: ["chunk_644"]
+
+  - id: MM-LO-009
+    name: "Dois Modelos de Agência: Dev Customizado vs AI Workforce"
+    description: >
+      Existem dois caminhos para uma agência de IA: (1) Custom Development —
+      construir soluções sob medida por projeto, alta margem mas difícil de
+      escalar; (2) AI Workforce — construir e vender forças de trabalho de IA
+      como serviço recorrente (retainer mensal). O modelo Workforce escala
+      melhor porque gera receita recorrente e permite stackear agentes por cliente.
+    application: "Escolher modelo com base no estágio. Custom Dev para começar e ganhar cases; Workforce para escalar receita recorrente."
+    insight_ref: "INS-LO-037"
+    source: "How to Build and Sell AI Agent Workforces"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE [youtube.com_watch_v=pTTvyQDK_tk].txt"
+    reinforced_chunks: ["chunk_650"]
+
 metadata:
-  total_items: 7
+  total_items: 9
   source_person: "Liam Ottley"
   source_count: 3
   extraction_date: "2026-03-13"
-  version: "1.0.0"
+  updated: "2026-03-16"
+  version: "1.1.0"

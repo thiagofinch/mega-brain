@@ -36,6 +36,8 @@ frameworks:
     quote: "When you stack them together, they compound into something that completely changes how you operate as a founder."
     source: "The Biggest Shift in Business Since the Internet Just Happened"
     raiz: "knowledge/external/inbox/liam-ottley/podcasts/The Biggest Shift in Business Since the Internet Just Happened [youtube.com_watch_v=oC1h922cDoY].txt"
+    reinforced_chunks: ["chunk_638"]
+    reinforced_by: "INS-LO-026"
 
   - id: FW-LO-002
     name: "3 KPIs of AIOS"
@@ -58,6 +60,8 @@ frameworks:
     quote: "Without a clear goal, we're just going to be wandering around."
     source: "What Is an AI Operating System"
     raiz: "knowledge/external/inbox/liam-ottley/podcasts/What Is an AI Operating System (And Why Every Business Will Need One) [youtube.com_watch_v=DXcVT07bQ6g].txt"
+    reinforced_chunks: ["chunk_648"]
+    reinforced_by: "INS-LO-035"
 
   - id: FW-LO-003
     name: "Task Audit Framework"
@@ -142,9 +146,36 @@ frameworks:
     source: "What Is an AI Operating System"
     raiz: "knowledge/external/inbox/liam-ottley/podcasts/What Is an AI Operating System (And Why Every Business Will Need One) [youtube.com_watch_v=DXcVT07bQ6g].txt"
 
+  # ---- INS-LO-039 (Pipeline Run 2, chunks 636-655) ----
+
+  - id: FW-LO-007
+    name: "Arquitetura de Agentes: Context + Tools + Workflows + Guardrails"
+    description: >
+      Framework para construir agentes de IA robustos com 4 componentes
+      obrigatórios: (1) Context — o agente precisa saber quem é, para quem
+      trabalha e qual o objetivo; (2) Tools — conexões com APIs, bancos de
+      dados e sistemas externos; (3) Workflows — sequência de passos que o
+      agente segue para completar uma tarefa; (4) Guardrails — limites e
+      validações que impedem o agente de sair do escopo ou gerar erros.
+      Sem qualquer um dos 4, o agente falha em produção.
+    components:
+      - name: "Context"
+        purpose: "Identidade, objetivo e conhecimento de domínio do agente"
+      - name: "Tools"
+        purpose: "APIs, databases, integrações externas que o agente pode usar"
+      - name: "Workflows"
+        purpose: "Sequência de passos estruturados para completar tarefas"
+      - name: "Guardrails"
+        purpose: "Validações, limites de escopo e fallbacks de segurança"
+    insight_ref: "INS-LO-039"
+    source: "How to Build and Sell AI Agent Workforces"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE [youtube.com_watch_v=pTTvyQDK_tk].txt"
+    reinforced_chunks: ["chunk_651"]
+
 metadata:
-  total_items: 6
+  total_items: 7
   source_person: "Liam Ottley"
   source_count: 3
   extraction_date: "2026-03-13"
-  version: "1.0.0"
+  updated: "2026-03-16"
+  version: "1.1.0"

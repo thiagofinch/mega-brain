@@ -17,21 +17,21 @@ persona:
 dna_layers:
   filosofias:
     file: "FILOSOFIAS.yaml"
-    count: 10
+    count: 13
   modelos_mentais:
     file: "MODELOS-MENTAIS.yaml"
-    count: 7
+    count: 9
   heuristicas:
     file: "HEURISTICAS.yaml"
     count: 13
   frameworks:
     file: "FRAMEWORKS.yaml"
-    count: 6
+    count: 7
   metodologias:
     file: "METODOLOGIAS.yaml"
-    count: 4
+    count: 5
 
-total_elements: 54
+total_elements: 47
 
 dna_sources:
   - id: "LO-001"
@@ -62,7 +62,16 @@ statistics:
   total_words: 24287
   total_sources: 3
   extraction_date: "2026-03-13"
-  version: "1.0.0"
+  updated: "2026-03-16"
+  version: "1.1.0"
+
+pipeline_run_2:
+  date: "2026-03-16"
+  chunks_processed: "636-655"
+  insights_applied: 19
+  new_items_added: 6
+  reinforcements_applied: 10
+  insight_ids: ["INS-LO-024", "INS-LO-025", "INS-LO-026", "INS-LO-027", "INS-LO-028", "INS-LO-029", "INS-LO-030", "INS-LO-031", "INS-LO-032", "INS-LO-033", "INS-LO-034", "INS-LO-035", "INS-LO-036", "INS-LO-037", "INS-LO-038", "INS-LO-039", "INS-LO-040", "INS-LO-041", "INS-LO-042"]
 
 themes:
   - "AI Operating Systems (AIOS)"
@@ -73,3 +82,5 @@ themes:
   - "Claude Code"
   - "Task Automation"
   - "Revenue Per Employee"
+  - "Agent Architecture"
+  - "AI Sales Methodology"

@@ -30,6 +30,8 @@ heuristics:
     quote: "For most of us we are spending like 80% on must-dos and then we have this little bit here, our 20%."
     source: "What Is an AI Operating System"
     raiz: "knowledge/external/inbox/liam-ottley/podcasts/What Is an AI Operating System (And Why Every Business Will Need One) [youtube.com_watch_v=DXcVT07bQ6g].txt"
+    reinforced_chunks: ["chunk_645"]
+    reinforced_by: "INS-LO-033"
 
   - id: HEUR-LO-003
     name: "7-Day Sprint vs Quarter"
@@ -111,6 +113,8 @@ heuristics:
     quote: "If an SDR costs $5K/month, price the AI SDR agent at $2-3K/month — saves 40-60% with 24/7 coverage."
     source: "How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE"
     raiz: "knowledge/external/inbox/liam-ottley/podcasts/How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE [youtube.com_watch_v=pTTvyQDK_tk].txt"
+    reinforced_chunks: ["chunk_652"]
+    reinforced_by: "INS-LO-040"
 
   - id: "HEUR-LO-010"
     name: "Agent Stacking Sweet Spot"
@@ -119,6 +123,8 @@ heuristics:
     quote: "3-5 agents per client at $1.5-3K each = $4.5-15K/month retainer. This gives you great margins (80%+)."
     source: "How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE"
     raiz: "knowledge/external/inbox/liam-ottley/podcasts/How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE [youtube.com_watch_v=pTTvyQDK_tk].txt"
+    reinforced_chunks: ["chunk_652"]
+    reinforced_by: "INS-LO-040"
 
   - id: "HEUR-LO-011"
     name: "Discovery Listening Rule"
@@ -135,6 +141,8 @@ heuristics:
     quote: "Get must-dos down to 15-20% and working ON the business up to 80%."
     source: "What Is an AI Operating System (And Why Every Business Will Need One)"
     raiz: "knowledge/external/inbox/liam-ottley/podcasts/What Is an AI Operating System (And Why Every Business Will Need One) [youtube.com_watch_v=DXcVT07bQ6g].txt"
+    reinforced_chunks: ["chunk_645"]
+    reinforced_by: "INS-LO-033"
 
   - id: "HEUR-LO-013"
     name: "Case Study vs Posts Ratio"
@@ -143,11 +151,13 @@ heuristics:
     quote: "One good case study with real numbers beats 100 theoretical posts."
     source: "How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE"
     raiz: "knowledge/external/inbox/liam-ottley/podcasts/How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE [youtube.com_watch_v=pTTvyQDK_tk].txt"
+    reinforced_chunks: ["chunk_654"]
+    reinforced_by: "INS-LO-042"
 
 metadata:
   total_items: 13
   source_person: "Liam Ottley"
   source_count: 3
   extraction_date: "2026-03-13"
-  updated: "2026-03-15"
+  updated: "2026-03-16"
   version: "1.1.0"

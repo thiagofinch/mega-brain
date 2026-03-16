@@ -107,9 +107,48 @@ philosophies:
     source: "The Biggest Shift in Business Since the Internet Just Happened"
     raiz: "knowledge/external/inbox/liam-ottley/podcasts/The Biggest Shift in Business Since the Internet Just Happened [youtube.com_watch_v=oC1h922cDoY].txt"
 
+  # ---- INS-LO-024 to INS-LO-031 (Pipeline Run 2, chunks 636-655) ----
+
+  - id: FIL-LO-011
+    name: "AIOS Habilita Fundador Solo a Execuções de Nível Enterprise"
+    description: >
+      Com um AIOS completo, um único fundador consegue executar lançamentos
+      e operações que normalmente exigiriam uma equipe enterprise inteira.
+      A barreira entre solopreneur e empresa grande se dissolve quando o
+      sistema operacional de IA está maduro.
+    insight_ref: "INS-LO-024"
+    source: "The Biggest Shift in Business Since the Internet Just Happened"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/The Biggest Shift in Business Since the Internet Just Happened [youtube.com_watch_v=oC1h922cDoY].txt"
+    reinforced_chunks: ["chunk_636"]
+
+  - id: FIL-LO-012
+    name: "L5-BUILD: AIOS como Co-Fundador, CEO e COO"
+    description: >
+      No nível mais alto do AIOS (Layer 5 — Build), o fundador recupera
+      bandwidth suficiente para que o sistema funcione como um co-fundador
+      digital. O AIOS assume papéis de CEO (estratégia) e COO (operações),
+      liberando o humano para criação e decisões de alto nível.
+    insight_ref: "INS-LO-029"
+    source: "The Biggest Shift in Business Since the Internet Just Happened"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/The Biggest Shift in Business Since the Internet Just Happened [youtube.com_watch_v=oC1h922cDoY].txt"
+    reinforced_chunks: ["chunk_641"]
+
+  - id: FIL-LO-013
+    name: "Truques Isolados de IA Falham Sem Sistema Unificador"
+    description: >
+      Usar ferramentas de IA individuais (ChatGPT aqui, automação ali) sem
+      um sistema unificador que conecte tudo é como ter funcionários que
+      nunca se falam. O valor real vem do efeito composto — cada peça
+      alimenta a próxima. Sem o sistema, os ganhos individuais não compõem.
+    insight_ref: "INS-LO-031"
+    source: "The Biggest Shift in Business Since the Internet Just Happened"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/The Biggest Shift in Business Since the Internet Just Happened [youtube.com_watch_v=oC1h922cDoY].txt"
+    reinforced_chunks: ["chunk_643"]
+
 metadata:
-  total_items: 10
+  total_items: 13
   source_person: "Liam Ottley"
   source_count: 3
   extraction_date: "2026-03-13"
-  version: "1.0.0"
+  updated: "2026-03-16"
+  version: "1.1.0"
