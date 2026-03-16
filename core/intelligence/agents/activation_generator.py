@@ -41,7 +41,9 @@ import yaml
 # PATH SETUP
 # ---------------------------------------------------------------------------
 
-from core.paths import AGENTS, COMMANDS, LOGS  # noqa: E402
+from core.paths import AGENTS, COMMANDS, LOGS, ROOT  # noqa: E402
+
+_ROOT = ROOT
 
 logger = logging.getLogger(__name__)
 
@@ -281,11 +283,11 @@ def _resolve_agent_dir(slug: str, category: str) -> Path | None:
     if candidates:
         return candidates[0]
 
-    # System agents may nest further (system/conclave/sintetizador)
-    if base_folder == "system":
-        for child in base.rglob(slug):
-            if child.is_dir():
-                return child
+    # System and business agents may nest further (system/conclave/sintetizador,
+    # business/collaborators/finance/diego-monet)
+    for child in base.rglob(slug):
+        if child.is_dir() and (child / "AGENT.md").exists():
+            return child
 
     return None
 
@@ -402,7 +404,12 @@ def _extract_keywords_from_dna(dna_config: dict[str, Any], max_words: int = 5) -
             break
 
     if len(keywords) < max_words:
-        sources = dna_config.get("dna_sources", {}).get("primario", [])
+        dna_sources = dna_config.get("dna_sources", {})
+        if not isinstance(dna_sources, dict):
+            dna_sources = {}
+        sources = dna_sources.get("primario", [])
+        if not isinstance(sources, list):
+            sources = []
         for src in sources:
             title = src.get("source_title", "")
             if title:
@@ -917,12 +924,13 @@ def _discover_all_agents() -> list[tuple[str, str, Path]]:
                     if agent.is_dir() and (agent / "AGENT.md").exists():
                         found.append((agent.name, "cargo", agent))
 
-    # Business people
+    # Business people (may nest: business/collaborators/finance/diego-monet/)
     business_dir = AGENTS / "business"
     if business_dir.exists():
-        for child in sorted(business_dir.iterdir()):
-            if child.is_dir() and (child / "AGENT.md").exists():
-                found.append((child.name, "business", child))
+        for agent_md in sorted(business_dir.rglob("AGENT.md")):
+            agent_dir = agent_md.parent
+            if not agent_dir.name.startswith(("_", ".")):
+                found.append((agent_dir.name, "business", agent_dir))
 
     # Personal
     personal_dir = AGENTS / "personal"
