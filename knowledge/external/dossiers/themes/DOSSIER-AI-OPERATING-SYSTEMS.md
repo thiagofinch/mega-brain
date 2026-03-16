@@ -1,9 +1,9 @@
 # DOSSIER: AI OPERATING SYSTEMS (AIOS)
 
-> **Version:** 1.0.0
+> **Version:** 1.1.0
 > **Created:** 2026-03-12
-> **Last Updated:** 2026-03-12
-> **Primary Source:** Liam Ottley (LO-001, LO-002, LO-003)
+> **Last Updated:** 2026-03-16 (MCE Consolidation Step 10.4)
+> **Primary Source:** Liam Ottley (LO-001, LO-002, LO-003) — 42 insights, 11 behavioral patterns, 6 values, 3 obsessions
 > **Contributing Sources:** (Pending — cross-reference as more sources are processed)
 
 ---
@@ -202,8 +202,55 @@ agents (CLOSER, CRO, CFO, CMO) serve as the equivalent of Liam's department-leve
 | Dossier Path | `knowledge/external/dossiers/themes/DOSSIER-AI-OPERATING-SYSTEMS.md` |
 | Primary Expert | Liam Ottley |
 | Contributing Experts | (none yet — update as more sources contribute) |
-| Total DNA Elements | 27 (from Liam Ottley) |
+| Total DNA Elements | 54 (from Liam Ottley) |
+| MCE Elements | 11 BP + 6 VAL + 3 OBS + 3 PAR + Voice DNA |
+| Chunks | 86 total (chunk_543 to chunk_655) |
+| Insights | 42 (23 original + 19 reinforced/new) |
 
 ---
 
-*Dossier compiled by Pickle Rick (The Resourceful Builder) -- 2026-03-12*
+## POSIÇÕES POR PESSOA
+
+### Liam Ottley
+
+**Posição resumida:**
+AIOS é a 3ª revolução nos negócios. Construído em 5 camadas que compõem. O founder que adota cedo ganha vantagem permanente. Revenue per employee é o novo flex. Sell outcome, not technology. [chunk_545] [chunk_637] [chunk_644]
+
+**Nuances:**
+- AIOS é metodologia, não modelo de negócio — se aplica a qualquer modelo [chunk_644]
+- Non-technical founders podem construir AIOS sem código [chunk_546]
+- PMEs têm vantagem sobre enterprises (sem legacy) [chunk_602]
+- AI agency model: Workforce > Custom Dev [chunk_650]
+- Pricing: benchmark vs human cost, 40-60% savings [chunk_653]
+
+**Evidências:** 42 insights, 86 chunks, 11 behavioral patterns
+
+**Link:** → [DOSSIER-LIAM-OTTLEY.md](/knowledge/external/dossiers/persons/DOSSIER-LIAM-OTTLEY.md)
+
+---
+
+## SOURCES POR PESSOA
+
+| Pessoa | Arquivo SOURCES | Status |
+|--------|-----------------|--------|
+| Liam Ottley | → [knowledge/external/sources/liam-ottley/01-AIOS-FRAMEWORK.md] | 🟢 |
+| Liam Ottley | → [knowledge/external/sources/liam-ottley/02-BANDWIDTH-AUTOMATION.md] | 🟢 |
+| Liam Ottley | → [knowledge/external/sources/liam-ottley/05-AI-WORKFORCE.md] | 🟢 |
+| Liam Ottley | → [knowledge/external/sources/liam-ottley/06-AI-AGENCY-MODEL.md] | 🟢 |
+
+---
+
+## HISTÓRICO DE EVOLUÇÃO
+
+### 2026-03-12
+**Fonte:** LO-001, LO-002, LO-003 (initial extraction)
+**Adição:** Dossier criado com 5-layer architecture, KPIs, stack mapping, workforce concept.
+**Chunks:** chunk_543 a chunk_628
+
+### 2026-03-16 — NOVO
+**Fonte:** MCE Consolidation Step 10.4
+**Adição:** Atualizado com 42 insights, MCE data (behavioral patterns, identity core, voice DNA). Seções POSIÇÕES POR PESSOA e SOURCES adicionadas. DNA elements atualizados de 27 para 54.
+
+---
+
+*Dossier compiled by Pipeline Jarvis | 2026-03-12 | MCE Update 2026-03-16*
