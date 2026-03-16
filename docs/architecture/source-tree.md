@@ -31,7 +31,7 @@ mega-brain/
 │   │   ├── INDEX.md
 │   │   ├── marketing.md
 │   │   ├── operations.md
-│   └── ... (+81 more)
+│   └── ... (+82 more)
 ├── agents/
 │   ├── _templates/
 │   │   ├── INDEX.md
@@ -75,7 +75,7 @@ mega-brain/
 │   │   ├── jeremy-haynes/
 │   │   ├── jeremy-miner/
 │   │   ├── naming-strategist/
-│   └── ... (+628 more)
+│   └── ... (+621 more)
 ├── knowledge/
 │   ├── business/
 │   │   ├── decisions/
@@ -93,20 +93,23 @@ mega-brain/
 │   │   ├── playbooks/
 │   │   ├── sources/
 │   │   ├── NAVIGATION-MAP.json
-│   │   ├── TAG-RESOLVER 2.json
 │   │   └── TAG-RESOLVER.json
 │   ├── personal/
 │   │   ├── calls/
-│   └── ... (+9 more)
+│   │   ├── cognitive/
+│   └── ... (+8 more)
 ├── workspace/
+│   ├── _example/
+│   │   ├── strategy/
+│   │   ├── team/
+│   │   ├── COMPANY-CONTEXT.example.md
+│   │   ├── structure.example.yaml
+│   │   └── workspace.example.yaml
 │   ├── _system/
 │   │   ├── _ref/
 │   │   ├── config/
-│   │   ├── CLICKUP-IDS 2.json
 │   │   ├── CLICKUP-IDS.json
-│   │   ├── DRIVE-FOLDER-IDS 2.json
 │   │   ├── DRIVE-FOLDER-IDS.json
-│   │   ├── SETUP-PENDING 2.md
 │   │   └── SETUP-PENDING.md
 │   ├── _templates/
 │   │   ├── content/
@@ -116,10 +119,7 @@ mega-brain/
 │   │   └── sales-process/
 │   ├── aios/
 │   │   ├── agents/
-│   │   ├── checklists/
-│   │   ├── knowledge/
-│   │   ├── library/
-│   └── ... (+60 more)
+│   └── ... (+63 more)
 ├── bin/
 │   ├── lib/
 │   │   ├── ascii-art.js
@@ -145,28 +145,27 @@ mega-brain/
 ├── docs/
 │   ├── architecture/
 │   │   ├── .gitkeep
-│   │   ├── architect-review-constitution 2.md
 │   │   ├── architect-review-constitution.md
 │   │   ├── coding-standards.md
-│   │   ├── constitution 2.md
 │   │   ├── constitution.md
 │   │   ├── deep-dive-aiox-governance.md
 │   │   ├── deep-dive-megabrain-dependencies.md
 │   │   ├── deep-dive-megabrain-full-system.md
 │   │   ├── HARDENING-STATE.md
 │   │   ├── pipeline-logging-guide.md
-│   │   ├── prd-constitution 2.md
 │   │   ├── prd-constitution.md
 │   │   ├── source-tree.md
 │   │   ├── SPEC-MCE-REALTIME-LOGGING.md
-│   │   ├── stories-constitution 2.md
 │   │   ├── stories-constitution.md
 │   │   ├── system-architecture.md
 │   │   └── tech-stack.md
-│   └── ... (+50 more)
+│   ├── frontend/
+│   ├── plans/
+│   │   ├── 2026-02-17-repo-reorganization.md
+│   │   ├── 2026-02-23-mega-brain-pro-distribution.md
+│   └── ... (+48 more)
 ├── reference/
 │   ├── architecture/
-│   │   ├── BROWNFIELD-AIOXBRAIN 2.md
 │   │   ├── BROWNFIELD-AIOXBRAIN.md
 │   │   ├── BROWNFIELD-MEGABRAIN.md
 │   │   └── CROSS-REPO-ANALYSIS.md
@@ -180,12 +179,13 @@ mega-brain/
 │   ├── prds/
 │   │   └── prd-jarvis-mega-brain-v3.md
 │   ├── protocols/
-│   │   ├── agent-cognition 2.md
 │   │   ├── agent-cognition.md
-│   │   ├── agent-integrity 2.md
 │   │   ├── agent-integrity.md
-│   │   ├── epistemic-standards 2.md
-│   └── ... (+29 more)
+│   │   └── epistemic-standards.md
+│   ├── templates/
+│   │   └── phase5/
+│   ├── API-KEYS-GUIDE.md
+│   └── ... (+19 more)
 ```
 
 ---

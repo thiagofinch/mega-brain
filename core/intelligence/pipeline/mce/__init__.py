@@ -20,6 +20,12 @@ Date: 2026-03-10
 """
 
 from core.intelligence.pipeline.mce.cache import CacheStats, MCECache, make_cache_key
+from core.intelligence.pipeline.mce.log_renderer import (
+    render_pipeline_footer,
+    render_pipeline_header,
+    render_progressive,
+    render_step_start,
+)
 from core.intelligence.pipeline.mce.gemini_analyzer import (
     GeminiAnalysisError,
     GeminiAnalyzer,
@@ -54,5 +60,9 @@ __all__ = [
     "cmd_status",
     "detect",
     "make_cache_key",
+    "render_pipeline_footer",
+    "render_pipeline_header",
+    "render_progressive",
+    "render_step_start",
 ]
 __version__ = "2.0.0"

@@ -450,6 +450,31 @@ These rules resolve conflicts when a task could match multiple agents:
 
 ---
 
+## MEMORY CONTEXT INJECTION
+
+After routing to a specific agent, include their recent execution history as context.
+This helps the dispatched agent resume from where it left off.
+
+### Step 3: Load Recent Memory
+
+Once routing decides which agent handles the task:
+
+1. Read `.data/agent_memory/{agent_id}/memories.jsonl` (use the agent's canonical ID or dispatch prefix)
+2. Take the last 5 entries (sorted by timestamp, newest first)
+3. Format as a bullet list and include in the dispatch prompt:
+
+```
+RECENT MEMORY:
+- [2026-03-15] Classified 3 meeting transcripts to business bucket (outcome: success)
+- [2026-03-14] Processed MEET-0091 through MCE steps 1-4 (outcome: partial)
+- [2026-03-14] Agent memory initialized via memory_bootstrap.py
+```
+
+If the memory file does not exist or is empty, skip this section silently.
+Do NOT fail or warn if memory is absent -- it is optional enrichment.
+
+---
+
 ## ACTIVATION
 
 This skill is triggered by:

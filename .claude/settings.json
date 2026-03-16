@@ -147,8 +147,8 @@
           },
           {
             "type": "command",
-            "command": "python3 '.claude/hooks/memory_capture.py'",
-            "timeout": 5000
+            "command": "python3 .claude/hooks/memory_capture.py",
+            "timeout": 30000
           },
           {
             "type": "command",
@@ -189,6 +189,11 @@
             "type": "command",
             "command": "python3 .claude/hooks/recompile_alert.py",
             "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/rag_rebuild_trigger.py",
+            "timeout": 30000
           }
         ]
       }

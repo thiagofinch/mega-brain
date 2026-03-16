@@ -66,6 +66,12 @@ from typing import Any
 # ---------------------------------------------------------------------------
 # Module imports (after path fix)
 # ---------------------------------------------------------------------------
+from core.intelligence.pipeline.mce.log_renderer import (
+    render_pipeline_footer,
+    render_pipeline_header,
+    render_progressive,
+    render_step_start,
+)
 from core.intelligence.pipeline.mce.metadata_manager import MetadataManager
 from core.intelligence.pipeline.mce.metrics import MetricsTracker
 from core.intelligence.pipeline.mce.state_machine import PipelineStateMachine
@@ -278,6 +284,7 @@ def cmd_ingest(file_path: str) -> dict[str, Any]:
     """
     t0 = time.monotonic()
     resolved = Path(file_path).resolve()
+    print(render_step_start(_slug_from_path(resolved), step=1, total=12))
 
     # Step 1: validate
     if not resolved.exists():
@@ -426,6 +433,19 @@ def cmd_ingest(file_path: str) -> dict[str, Any]:
     # Step 7: JSONL log
     _append_jsonl(result)
 
+    # Progressive feedback
+    print(render_progressive(
+        slug,
+        step=1,
+        details={
+            "primary_bucket": getattr(decision, "primary_bucket", "unknown"),
+            "confidence": f"{round(getattr(decision, 'confidence', 0.0) * 100)}%",
+            "workflow": wf_mode.mode,
+            "routed_to": str(getattr(route_result, "moved_to", "")),
+        },
+        bucket=primary_bucket,
+    ))
+
     return result
 
 
@@ -450,6 +470,7 @@ def cmd_batch(source_slug: str) -> dict[str, Any]:
         Structured result dict with batch IDs.
     """
     t0 = time.monotonic()
+    print(render_step_start(source_slug, step=2, total=12))
 
     # Load/create state infrastructure
     sm = PipelineStateMachine(source_slug)
@@ -540,6 +561,18 @@ def cmd_batch(source_slug: str) -> dict[str, Any]:
     )
 
     _append_jsonl(result)
+
+    # Progressive feedback
+    print(render_progressive(
+        source_slug,
+        step=2,
+        details={
+            "batches_created": len(batches_for_slug),
+            "files_scanned": getattr(scan_result, "files_scanned", 0),
+            "state": sm.state,
+        },
+    ))
+
     return result
 
 
@@ -565,6 +598,7 @@ def cmd_finalize(slug: str) -> dict[str, Any]:
         Structured result dict.
     """
     t0 = time.monotonic()
+    print(render_step_start(slug, step=11, total=12))
 
     sm = PipelineStateMachine(slug)
     mgr = MetadataManager.load(slug) or MetadataManager(slug)
@@ -656,6 +690,19 @@ def cmd_finalize(slug: str) -> dict[str, Any]:
     )
 
     _append_jsonl(result)
+
+    # Progressive feedback
+    print(render_progressive(
+        slug,
+        step=11,
+        details={
+            "enrichment_appended": enrichment_result.get("appended", 0) if isinstance(enrichment_result, dict) else 0,
+            "workspace_synced": sync_result.get("synced", 0) if isinstance(sync_result, dict) else 0,
+            "state": sm.state,
+            "duration": f"{elapsed / 1000:.1f}s",
+        },
+    ))
+
     return result
 
 
@@ -834,6 +881,7 @@ def cmd_full(file_path: str) -> dict[str, Any]:
         Combined result dict.
     """
     t0 = time.monotonic()
+    print(render_pipeline_header(_slug_from_path(file_path)))
 
     # Step 1: ingest
     ingest_result = cmd_ingest(file_path)
@@ -866,6 +914,10 @@ def cmd_full(file_path: str) -> dict[str, Any]:
     )
 
     _append_jsonl(combined)
+
+    # Progressive feedback -- pipeline footer
+    print(render_pipeline_footer(slug, success=True, duration_ms=elapsed))
+
     return combined
 
 
