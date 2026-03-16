@@ -52,11 +52,11 @@ from core.paths import ROUTING
 logger = logging.getLogger("inbox_watcher")
 
 # Directories to monitor -- sourced from core.paths, never hardcoded.
+# NOTE: workspace/inbox removed (S-02). All content routes to knowledge buckets.
 WATCHED_DIRS: dict[str, Path] = {
     "external": ROUTING["external_inbox"],
     "business": ROUTING["business_inbox"],
     "personal": ROUTING["personal_inbox"],
-    "workspace": ROUTING["workspace_inbox"],
 }
 
 # Debounce window in seconds.
@@ -106,14 +106,11 @@ def _resolve_bucket(path: Path) -> str | None:
     """Match a file path to its inbox bucket.
 
     Returns ``'external'``, ``'business'``, ``'personal'``, or ``None``.
-    ``workspace/inbox`` maps to ``'business'`` for
-    ``organize_inbox()`` purposes.
     """
     for bucket, inbox_path in WATCHED_DIRS.items():
         try:
             path.relative_to(inbox_path)
-            # workspace inbox maps to the "business" bucket
-            return "business" if bucket == "workspace" else bucket
+            return bucket
         except ValueError:
             continue
     return None
@@ -433,8 +430,7 @@ def startup_sweep(state: WatcherState, *, dry_run: bool = False) -> int:
         if not inbox_path.exists():
             continue
 
-        # Resolve effective bucket (workspace -> business).
-        effective_bucket = "business" if bucket_key == "workspace" else bucket_key
+        effective_bucket = bucket_key
 
         # Use the same inbox root that organize_inbox would use.
         from core.intelligence.pipeline.inbox_organizer import BUCKET_INBOXES

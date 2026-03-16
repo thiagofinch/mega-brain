@@ -47,7 +47,10 @@ from core.paths import (  # noqa: E402
     KNOWLEDGE_EXTERNAL,
     KNOWLEDGE_PERSONAL,
     LOGS,
+    ROOT,
 )
+
+_ROOT = ROOT
 
 logger = logging.getLogger(__name__)
 

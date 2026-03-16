@@ -45,7 +45,6 @@ logger = logging.getLogger(__name__)
 
 # Signal 1: Path Analysis
 PATH_INBOX_WEIGHT = 10
-PATH_WORKSPACE_WEIGHT = 8
 
 # Signal 2: Participant Analysis
 PARTICIPANT_ORGANIZER = 5
@@ -403,27 +402,6 @@ def _signal_path(
 
     # Order: most specific first
 
-    # 1f: workspace/inbox/PESSOAL/ -> personal (deprecated backward compat)
-    if "workspace/inbox/pessoal/" in path_lower:
-        scores["personal"] += PATH_INBOX_WEIGHT
-        reasons.append("path:personal (workspace/inbox/pessoal -- DEPRECATED)")
-        signals["S1_path"] = "personal"
-        return
-
-    # 1g: workspace/inbox/EMPRESA/ -> business (deprecated backward compat)
-    if "workspace/inbox/empresa/" in path_lower:
-        scores["business"] += PATH_INBOX_WEIGHT
-        reasons.append("path:business (workspace/inbox/empresa -- DEPRECATED)")
-        signals["S1_path"] = "business"
-        return
-
-    # 1e: workspace/inbox/meetings/ -> business (strongest workspace signal)
-    if "workspace/inbox/meetings/" in path_lower or "workspace/inbox/meeting" in path_lower:
-        scores["business"] += PATH_INBOX_WEIGHT
-        reasons.append("path:business (workspace/inbox/meetings)")
-        signals["S1_path"] = "business"
-        return
-
     # 1a: knowledge/external/inbox/ -> external
     if "knowledge/external/inbox/" in path_lower:
         scores["external"] += PATH_INBOX_WEIGHT
@@ -445,12 +423,8 @@ def _signal_path(
         signals["S1_path"] = "personal"
         return
 
-    # 1d: workspace/inbox/ (generic, DEPRECATED) -> business (weaker)
-    if "workspace/inbox/" in path_lower:
-        scores["business"] += PATH_WORKSPACE_WEIGHT
-        reasons.append("path:business (workspace/inbox -- DEPRECATED)")
-        signals["S1_path"] = "business"
-        return
+    # workspace/inbox/ removed (S-02). All content routes to knowledge bucket inboxes.
+    # No backward compat -- files must be in knowledge/{bucket}/inbox/ to be classified.
 
     signals["S1_path"] = None
 

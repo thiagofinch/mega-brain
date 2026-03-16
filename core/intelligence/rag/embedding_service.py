@@ -15,7 +15,9 @@ import json
 import os
 from pathlib import Path
 
-DEFAULT_CACHE_DIR = Path(".data/embedding_cache")
+from core.paths import DATA, ROOT
+
+DEFAULT_CACHE_DIR = DATA / "embedding_cache"
 
 
 class EmbeddingCache:
@@ -130,7 +132,7 @@ class EmbeddingService:
         api_key = os.environ.get("VOYAGE_API_KEY")
         if not api_key:
             # Try loading from .env
-            env_file = Path(".env")
+            env_file = ROOT / ".env"
             if env_file.exists():
                 for line in env_file.read_text(encoding="utf-8").splitlines():
                     if line.startswith("VOYAGE_API_KEY="):

@@ -10,6 +10,7 @@ from __future__ import annotations
 from pathlib import Path
 
 from core.intelligence.rag.vector_store import SearchResult, VectorStore
+from core.paths import DATA
 
 
 class ChromaStore(VectorStore):
@@ -32,7 +33,7 @@ class ChromaStore(VectorStore):
             ) from exc
 
         if persist_dir is None:
-            persist_dir = Path(".data/chroma")
+            persist_dir = DATA / "chroma"
         persist_dir = Path(persist_dir)
         persist_dir.mkdir(parents=True, exist_ok=True)
 

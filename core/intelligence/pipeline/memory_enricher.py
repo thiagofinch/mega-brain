@@ -50,8 +50,11 @@ from core.paths import (  # noqa: E402
     AGENTS_CARGO,
     AGENTS_EXTERNAL,
     LOGS,
+    ROOT,
     ROUTING,
 )
+
+_ROOT = ROOT
 
 logger = logging.getLogger(__name__)
 

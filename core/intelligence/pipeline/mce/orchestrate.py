@@ -202,7 +202,8 @@ def _slug_from_path(file_path: str | Path) -> str:
     Looks for known inbox/sources patterns like:
     - ``knowledge/external/inbox/{slug}/...``
     - ``knowledge/external/sources/{slug}/raw/...``
-    - ``workspace/inbox/{category}/{slug}/...``
+    - ``knowledge/business/inbox/{category}/{slug}/...``
+    - ``knowledge/personal/inbox/{category}/{slug}/...``
 
     Directory names listed in :data:`_SLUG_SKIP_DIRS` are skipped so the
     function walks up until it finds a meaningful slug.
@@ -813,7 +814,7 @@ Commands:
   full <file_path>       Shortcut: ingest + batch + status
 
 Examples:
-  python -m core.intelligence.pipeline.mce.orchestrate ingest "workspace/inbox/file.txt"
+  python -m core.intelligence.pipeline.mce.orchestrate ingest "knowledge/business/inbox/file.txt"
   python -m core.intelligence.pipeline.mce.orchestrate batch alex-hormozi
   python -m core.intelligence.pipeline.mce.orchestrate finalize alex-hormozi
   python -m core.intelligence.pipeline.mce.orchestrate status

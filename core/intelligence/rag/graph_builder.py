@@ -35,14 +35,17 @@ DNA_DIR = KNOWLEDGE_EXTERNAL / "dna" / "persons"
 GRAPH_DIR = KNOWLEDGE_GRAPH
 GRAPH_FILE = GRAPH_DIR / "graph.json"
 
-# DNA layer file → top-level key mapping
-LAYER_KEYS = {
-    "FILOSOFIAS.yaml": "filosofias",
-    "MODELOS-MENTAIS.yaml": "modelos_mentais",
-    "HEURISTICAS.yaml": "heuristicas",
-    "FRAMEWORKS.yaml": "frameworks",
-    "METODOLOGIAS.yaml": "metodologias",
-}
+# DNA layer file -> top-level key mapping
+# Each layer maps to a list of (filename, expected_key) pairs.
+# English filenames are tried first; Portuguese filenames serve as fallback
+# for legacy experts that haven't been migrated yet.
+LAYER_VARIANTS: list[list[tuple[str, str]]] = [
+    [("PHILOSOPHIES.yaml", "philosophies"), ("FILOSOFIAS.yaml", "filosofias")],
+    [("MENTAL-MODELS.yaml", "mental_models"), ("MODELOS-MENTAIS.yaml", "modelos_mentais")],
+    [("HEURISTICS.yaml", "heuristics"), ("HEURISTICAS.yaml", "heuristicas")],
+    [("FRAMEWORKS.yaml", "frameworks"), ("FRAMEWORKS.yaml", "frameworks")],
+    [("METHODOLOGIES.yaml", "methodologies"), ("METODOLOGIAS.yaml", "metodologias")],
+]
 
 # MCE layer file → (top-level key, entity type) mapping
 MCE_LAYER_KEYS = {
@@ -326,22 +329,30 @@ def build_graph(dna_dir: Path | None = None) -> KnowledgeGraph:
             _process_config(graph, config_path, person, person_id)
 
         # Process each DNA layer (5 classic layers)
-        for filename, key in LAYER_KEYS.items():
-            filepath = person_dir / filename
-            if not filepath.exists():
+        for variants in LAYER_VARIANTS:
+            # Try each (filename, key) variant; first match wins
+            filepath = None
+            layer = None
+            entries: list[dict] = []
+            for filename, key in variants:
+                candidate = person_dir / filename
+                if candidate.exists():
+                    filepath = candidate
+                    layer = key
+                    entries = _load_yaml_entries(filepath, key)
+                    break
+            if not filepath or not entries:
                 continue
-
-            layer = key
-            entries = _load_yaml_entries(filepath, key)
 
             for entry in entries:
                 entry_id = entry.get("id", "")
                 if not entry_id:
                     continue
 
-                # Determine label
+                # Determine label (supports both Portuguese and English field names)
                 label = (
                     entry.get("nome")
+                    or entry.get("name")
                     or entry.get("regra")
                     or entry.get("declaracao")
                     or entry.get("crenca")
@@ -350,7 +361,7 @@ def build_graph(dna_dir: Path | None = None) -> KnowledgeGraph:
                 if isinstance(label, str) and len(label) > 100:
                     label = label[:100] + "..."
 
-                domains = entry.get("dominios", [])
+                domains = entry.get("dominios", entry.get("domains", []))
                 if isinstance(domains, str):
                     domains = [domains]
                 weight = entry.get("peso", 1.0)
@@ -407,11 +418,15 @@ def _load_yaml_entries(filepath: Path, expected_key: str) -> list[dict]:
         return []
 
     if isinstance(data, dict):
-        # Try expected key
+        # Try expected key first
         entries = data.get(expected_key)
         if isinstance(entries, list):
             return entries
-        # Try any list value
+        # Try generic 'entries' key (used by legacy Portuguese-format files)
+        entries = data.get("entries")
+        if isinstance(entries, list):
+            return entries
+        # Try any list value as last resort
         for v in data.values():
             if isinstance(v, list) and v and isinstance(v[0], dict):
                 return v
@@ -422,13 +437,22 @@ def _load_yaml_entries(filepath: Path, expected_key: str) -> list[dict]:
 
 
 def _layer_to_type(layer: str) -> str:
-    """Map layer key to entity type."""
+    """Map layer key to entity type.
+
+    Supports both Portuguese (filosofias) and English (philosophies) key names.
+    """
     mapping = {
+        # Portuguese keys
         "filosofias": "filosofia",
         "modelos_mentais": "modelo_mental",
         "heuristicas": "heuristica",
         "frameworks": "framework",
         "metodologias": "metodologia",
+        # English keys
+        "philosophies": "filosofia",
+        "mental_models": "modelo_mental",
+        "heuristics": "heuristica",
+        "methodologies": "metodologia",
     }
     return mapping.get(layer, layer)
 

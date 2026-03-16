@@ -30,7 +30,8 @@ WORKSPACE = ROOT / "workspace"  # Prescriptive business ops (L1 template, L2 pop
 # ── WORKSPACE: SYSTEM & TEMPLATES ─────────────────────────────────
 WORKSPACE_SYSTEM = WORKSPACE / "_system"
 WORKSPACE_TEMPLATES = WORKSPACE / "_templates"
-WORKSPACE_INBOX = WORKSPACE / "inbox"
+# WORKSPACE_INBOX removed (S-02): all inbox routing now uses knowledge bucket inboxes.
+# Use BUSINESS_INBOX (knowledge/business/inbox) or KNOWLEDGE_PERSONAL / "inbox" instead.
 
 # ── WORKSPACE: 7 DEPARTMENTAL SPACES (ClickUp mirror) ────────────
 WORKSPACE_AIOS = WORKSPACE / "aios"
@@ -65,15 +66,16 @@ WORKSPACE_ORG = WORKSPACE_ADMIN  # was: WORKSPACE / "org"
 WORKSPACE_AUTOMATIONS = WORKSPACE_WORKFLOWS  # was: WORKSPACE / "automations"
 WORKSPACE_TOOLS = WORKSPACE_FERRAMENTAS  # was: WORKSPACE / "tools"
 
-# Backward compat: root inbox/ no longer exists (S03 distributed to bucket inboxes).
-INBOX = WORKSPACE / "inbox"
-
 # ── GITIGNORED (L3 / Runtime) ────────────────────────────────────
 LOGS = ROOT / "logs"
 KNOWLEDGE = ROOT / "knowledge"
 KNOWLEDGE_EXTERNAL = KNOWLEDGE / "external"
 KNOWLEDGE_PERSONAL = KNOWLEDGE / "personal"
 KNOWLEDGE_BUSINESS = KNOWLEDGE / "business"
+
+# Backward compat: root inbox/ no longer exists (S03 distributed to bucket inboxes).
+# DEPRECATED: workspace/inbox removed (S-02). Use BUSINESS_INBOX or KNOWLEDGE_PERSONAL / "inbox".
+INBOX = KNOWLEDGE_BUSINESS / "inbox"
 
 # ── PERSONAL SUBDIRS (L3 only) ─────────────────────────────────
 PERSONAL_EMAIL = KNOWLEDGE_PERSONAL / "email"
@@ -177,7 +179,7 @@ ROUTING = {
     "personal_data": KNOWLEDGE_PERSONAL,
     "rag_expert": RAG_EXPERT,
     "rag_business": RAG_BUSINESS,
-    "workspace_inbox": WORKSPACE_INBOX,
+    "workspace_inbox": BUSINESS_INBOX,  # S-02: workspace/inbox removed, permanently redirected to knowledge/business/inbox
     "personal_inbox": KNOWLEDGE_PERSONAL / "inbox",
     "external_inbox": KNOWLEDGE_EXTERNAL / "inbox",
     # ── Workspace: Departmental Spaces (S13 restructure) ────────

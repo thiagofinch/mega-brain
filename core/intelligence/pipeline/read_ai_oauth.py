@@ -22,13 +22,11 @@ import json
 import os
 import secrets
 import sys
-import threading
 import urllib.error
 import urllib.parse
 import urllib.request
 import webbrowser
-from datetime import datetime, timezone
-from pathlib import Path
+from datetime import UTC, datetime, timedelta
 
 from core.intelligence.pipeline.read_ai_config import load_config
 
@@ -63,9 +61,24 @@ def _generate_pkce() -> tuple[str, str]:
 
 
 def _save_tokens(tokens: dict) -> None:
-    """Save tokens to secure location."""
+    """Save tokens to secure location.
+
+    Computes ``expires_at`` (ISO-8601 UTC) from ``expires_in`` so that
+    downstream code can check token validity without remembering when the
+    save happened.
+    """
     TOKENS_PATH.parent.mkdir(parents=True, exist_ok=True)
-    tokens["saved_at"] = datetime.now(timezone.utc).isoformat() + "Z"
+    now = datetime.now(UTC)
+    # Format as naive-UTC + Z suffix for clean ISO-8601 (no +00:00Z duplication)
+    now_str = now.strftime("%Y-%m-%dT%H:%M:%S.%f") + "Z"
+    tokens["saved_at"] = now_str
+
+    # Compute absolute expiry timestamp when the server tells us lifetime
+    expires_in = tokens.get("expires_in")
+    if expires_in is not None:
+        expires_at = now + timedelta(seconds=int(expires_in))
+        tokens["expires_at"] = expires_at.strftime("%Y-%m-%dT%H:%M:%S.%f") + "Z"
+
     with open(TOKENS_PATH, "w") as f:
         json.dump(tokens, f, indent=2)
 
@@ -81,12 +94,117 @@ def load_tokens() -> dict | None:
         return None
 
 
+def _parse_iso_utc(value: str) -> datetime | None:
+    """Parse an ISO-8601 timestamp that may end with ``Z`` or ``+00:00``.
+
+    Returns a timezone-aware UTC datetime, or ``None`` on parse failure.
+    """
+    try:
+        # Strip trailing Z (if present) and parse; ensure UTC
+        cleaned = value.rstrip("Z")
+        dt = datetime.fromisoformat(cleaned)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=UTC)
+        return dt
+    except (ValueError, TypeError):
+        return None
+
+
+def _is_token_expired(tokens: dict, buffer_seconds: int = 300) -> bool:
+    """Return True if the token is expired or will expire within *buffer_seconds*.
+
+    Uses the ``expires_at`` field written by ``_save_tokens``.  If the field
+    is missing we fall back to ``saved_at`` + ``expires_in``.  When neither is
+    available we conservatively assume the token is still valid (the server
+    will reject it if not).
+    """
+    expires_at_str = tokens.get("expires_at")
+    if expires_at_str:
+        expires_at = _parse_iso_utc(expires_at_str)
+        if expires_at is None:
+            return False
+    else:
+        # Fallback: reconstruct from saved_at + expires_in
+        saved_at_str = tokens.get("saved_at")
+        expires_in = tokens.get("expires_in")
+        if not saved_at_str or expires_in is None:
+            return False
+        saved_at = _parse_iso_utc(saved_at_str)
+        if saved_at is None:
+            return False
+        expires_at = saved_at + timedelta(seconds=int(expires_in))
+
+    now = datetime.now(UTC)
+    return now >= expires_at - timedelta(seconds=buffer_seconds)
+
+
+def _refresh_token(tokens: dict) -> dict | None:
+    """Attempt to refresh the access token.
+
+    Returns the new token dict on success, or ``None`` on failure.
+    """
+    env = _load_env()
+    refresh_tok = tokens.get("refresh_token")
+    if not refresh_tok:
+        return None
+
+    body = urllib.parse.urlencode({
+        "grant_type": "refresh_token",
+        "refresh_token": refresh_tok,
+    }).encode()
+
+    creds = f"{env['client_id']}:{env['client_secret']}"
+    auth = base64.b64encode(creds.encode()).decode()
+
+    req = urllib.request.Request(
+        env["token_url"],
+        data=body,
+        headers={
+            "Content-Type": "application/x-www-form-urlencoded",
+            "Authorization": f"Basic {auth}",
+        },
+        method="POST",
+    )
+
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            new_tokens = json.loads(resp.read().decode())
+
+        # Preserve refresh_token if the server did not return a new one
+        if not new_tokens.get("refresh_token") and refresh_tok:
+            new_tokens["refresh_token"] = refresh_tok
+
+        _save_tokens(new_tokens)
+        return new_tokens
+
+    except (urllib.error.HTTPError, urllib.error.URLError, OSError):
+        return None
+
+
 def get_access_token() -> str | None:
-    """Get current access token, refreshing if needed."""
+    """Get current access token, refreshing automatically if expired.
+
+    Returns ``None`` when no tokens exist or when the refresh attempt fails.
+    In the failure case a human-readable message is printed to stderr so
+    operators can diagnose the issue.
+    """
     tokens = load_tokens()
     if not tokens:
         return None
-    # TODO: check expiry and auto-refresh
+
+    if _is_token_expired(tokens):
+        refreshed = _refresh_token(tokens)
+        if refreshed is None:
+            print(
+                "ERROR: Read.ai access token is expired and auto-refresh failed. "
+                "Run `python3 -m core.intelligence.pipeline.read_ai_oauth refresh` "
+                "or `python3 -m core.intelligence.pipeline.read_ai_oauth authorize` "
+                "to re-authenticate.",
+                file=sys.stderr,
+            )
+            return None
+        tokens = refreshed
+
     return tokens.get("access_token")
 
 
@@ -151,7 +269,7 @@ def cmd_authorize() -> None:
     print("=" * 60)
     print()
     print("Opening browser for authorization...")
-    print("(Waiting for callback on localhost:{})".format(CALLBACK_PORT))
+    print(f"(Waiting for callback on localhost:{CALLBACK_PORT})")
     print()
 
     server = http.server.HTTPServer(("127.0.0.1", CALLBACK_PORT), CallbackHandler)
@@ -248,48 +366,20 @@ def cmd_exchange(code: str) -> None:
 
 
 def cmd_refresh() -> None:
-    """Refresh expired access token."""
-    env = _load_env()
+    """Refresh expired access token (CLI entry point)."""
     tokens = load_tokens()
 
     if not tokens or not tokens.get("refresh_token"):
         print("ERROR: No refresh token available. Run 'authorize' first.")
         sys.exit(1)
 
-    body = urllib.parse.urlencode({
-        "grant_type": "refresh_token",
-        "refresh_token": tokens["refresh_token"],
-    }).encode()
-
-    creds = f"{env['client_id']}:{env['client_secret']}"
-    auth = base64.b64encode(creds.encode()).decode()
-
-    req = urllib.request.Request(
-        env["token_url"],
-        data=body,
-        headers={
-            "Content-Type": "application/x-www-form-urlencoded",
-            "Authorization": f"Basic {auth}",
-        },
-        method="POST",
-    )
-
-    try:
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            new_tokens = json.loads(resp.read().decode())
-
-        # Preserve refresh_token if not returned
-        if not new_tokens.get("refresh_token") and tokens.get("refresh_token"):
-            new_tokens["refresh_token"] = tokens["refresh_token"]
-
-        _save_tokens(new_tokens)
-        print("Token refreshed successfully.")
-        print(f"  Expires in: {new_tokens.get('expires_in', 'unknown')} seconds")
-
-    except urllib.error.HTTPError as e:
-        body = e.read().decode() if e.fp else ""
-        print(f"ERROR: Refresh failed ({e.code}): {body}")
+    refreshed = _refresh_token(tokens)
+    if refreshed is None:
+        print("ERROR: Refresh failed. Run 'authorize' to re-authenticate.")
         sys.exit(1)
+
+    print("Token refreshed successfully.")
+    print(f"  Expires in: {refreshed.get('expires_in', 'unknown')} seconds")
 
 
 def cmd_status() -> None:

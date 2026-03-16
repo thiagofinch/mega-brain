@@ -15,7 +15,7 @@ import sys
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from core.paths import INBOX, MISSION_CONTROL, ROUTING, WORKSPACE
+from core.paths import KNOWLEDGE_BUSINESS, KNOWLEDGE_PERSONAL, MISSION_CONTROL, ROUTING
 
 
 @dataclass
@@ -50,13 +50,12 @@ class ReadAIConfig:
         default_factory=lambda: MISSION_CONTROL / "STOP-READ-AI-HARVEST"
     )
 
-    # Inbox destinations
-    # empresa meetings go to workspace/inbox/meetings/ (matches existing harvest output)
+    # Inbox destinations (S-02: migrated from workspace/inbox to knowledge buckets)
     empresa_dir: Path = field(
-        default_factory=lambda: WORKSPACE / "inbox" / "meetings"
+        default_factory=lambda: KNOWLEDGE_BUSINESS / "inbox" / "meetings"
     )
     pessoal_dir: Path = field(
-        default_factory=lambda: INBOX / "PESSOAL" / "MEETINGS"
+        default_factory=lambda: KNOWLEDGE_PERSONAL / "inbox" / "meetings"
     )
 
     def validate(self) -> list[str]:

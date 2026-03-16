@@ -5,7 +5,7 @@ Determines which knowledge bucket a file belongs to based on its path,
 and provides output routing for each pipeline phase.
 
 Used by Pipeline Jarvis (Phase 1) to decide:
-  - Which bucket: external / workspace / personal
+  - Which bucket: external / business / personal
   - Which subdirectory within the bucket
   - Whether dual-routing applies (owner insights → personal too)
 
@@ -18,10 +18,9 @@ import re
 from pathlib import Path
 
 from core.paths import (
-    INBOX,
+    KNOWLEDGE_BUSINESS,
     KNOWLEDGE_EXTERNAL,
     KNOWLEDGE_PERSONAL,
-    WORKSPACE,
 )
 
 # ---------------------------------------------------------------------------
@@ -77,44 +76,38 @@ def detect_bucket(file_path: str | Path) -> str:
     """Detect which bucket a file belongs to based on its path.
 
     Priority:
-      1. Explicit bucket inbox paths (workspace/inbox/, knowledge/personal/inbox/, etc.)
-      2. Root inbox/ with bucket-indicating subfolder names
-      3. Content-based classification (fallback)
+      1. Explicit bucket inbox paths (knowledge/business/inbox/, knowledge/personal/inbox/, etc.)
+      2. Path-based indicators (business/personal keywords in path)
+      3. Default to external (fallback)
 
     Args:
         file_path: Absolute or relative path to the file.
 
     Returns:
-        One of: 'external', 'workspace', 'personal'
+        One of: 'external', 'business', 'personal'
     """
     path = Path(file_path).resolve()
     path_str = str(path).lower()
 
     # --- Priority 1: Explicit bucket inbox ---
-    workspace_inbox = str(WORKSPACE / "inbox").lower()
+    business_inbox = str(KNOWLEDGE_BUSINESS / "inbox").lower()
     personal_inbox = str(KNOWLEDGE_PERSONAL / "inbox").lower()
     external_inbox = str(KNOWLEDGE_EXTERNAL / "inbox").lower()
 
-    if workspace_inbox in path_str:
-        return "workspace"
+    if business_inbox in path_str:
+        return "business"
     if personal_inbox in path_str:
         return "personal"
     if external_inbox in path_str:
         return "external"
 
-    # --- Priority 2: Root inbox/ subfolder indicators ---
-    inbox_str = str(INBOX).lower()
-    if inbox_str in path_str:
-        # Get the subfolder name after inbox/
-        try:
-            rel = path.relative_to(INBOX)
-            subfolder = rel.parts[0].lower() if rel.parts else ""
-        except ValueError:
-            subfolder = ""
-
-        if any(ind in subfolder for ind in _WORKSPACE_INDICATORS):
-            return "workspace"
-        if any(ind in subfolder for ind in _PERSONAL_INDICATORS):
+    # --- Priority 2: Path-based indicators (content analysis) ---
+    # Check for workspace/business/personal indicators in the path
+    for ind in _WORKSPACE_INDICATORS:
+        if ind in path_str:
+            return "business"
+    for ind in _PERSONAL_INDICATORS:
+        if ind in path_str:
             return "personal"
 
     # --- Priority 3: Default to external (expert content) ---
@@ -134,12 +127,12 @@ PHASE_OUTPUT_MAP = {
         "playbooks": KNOWLEDGE_EXTERNAL / "playbooks",
         "sources": KNOWLEDGE_EXTERNAL / "sources",
     },
-    "workspace": {
-        "dossiers_persons": WORKSPACE / "_meetings",
-        "dossiers_themes": WORKSPACE / "_meetings" / "THEMES",
-        "dna": None,  # workspace doesn't produce DNA
-        "playbooks": None,  # workspace doesn't produce playbooks
-        "sources": WORKSPACE / "_meetings",
+    "business": {
+        "dossiers_persons": KNOWLEDGE_BUSINESS / "dossiers",
+        "dossiers_themes": KNOWLEDGE_BUSINESS / "dossiers" / "THEMES",
+        "dna": None,  # business bucket doesn't produce DNA
+        "playbooks": None,  # business bucket doesn't produce playbooks
+        "sources": KNOWLEDGE_BUSINESS / "inbox",
     },
     "personal": {
         "dossiers_persons": KNOWLEDGE_PERSONAL / "_cognitive",

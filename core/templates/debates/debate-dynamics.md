@@ -293,7 +293,7 @@ rag_policy:
     status: PERMITIDO
     max_queries: 5
     timeout_per_query: 15s
-    scope: "knowledge/, processing/insights/"
+    scope: "knowledge/, artifacts/insights/"
 
   external:
     status: PROIBIDO

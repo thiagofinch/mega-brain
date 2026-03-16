@@ -133,7 +133,7 @@ rag:
 
     scope:
       - "knowledge/"
-      - "processing/insights/"
+      - "artifacts/insights/"
       - "processing/narratives/"
 
     formato_citacao: "[RAG:{chunk_id}]"

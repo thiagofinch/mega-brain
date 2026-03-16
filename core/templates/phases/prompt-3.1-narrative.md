@@ -10,7 +10,7 @@
 
 ```
 VALIDAR ANTES DE EXECUTAR:
-[ ] CP-3.1.A: INSIGHTS-STATE.json existe em /processing/insights/
+[ ] CP-3.1.A: INSIGHTS-STATE.json existe em /artifacts/insights/
 [ ] CP-3.1.B: insights_state.persons não vazio
 [ ] CP-3.1.C: insights_state.themes não vazio
 
@@ -75,7 +75,7 @@ Arquivo: `/processing/narratives/NARRATIVES-STATE.json`
 
 ### INPUT C) Chunks para citações exatas (opcional, para enriquecimento)
 
-Arquivo: `/processing/chunks/CHUNKS-STATE.json`
+Arquivo: `/artifacts/chunks/CHUNKS-STATE.json`
 
 Usado quando a narrativa precisa incluir citações exatas.
 Navegar: insight.chunks[] → CHUNKS-STATE[chunk_id].texto

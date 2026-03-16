@@ -19,18 +19,49 @@ import yaml
 # ---------------------------------------------------------------------------
 # CONFIG
 # ---------------------------------------------------------------------------
-from core.paths import KNOWLEDGE_EXTERNAL, ROOT
+from core.paths import (
+    BUSINESS_DECISIONS,
+    BUSINESS_DOSSIERS,
+    BUSINESS_INBOX,
+    BUSINESS_INSIGHTS,
+    KNOWLEDGE_EXTERNAL,
+    KNOWLEDGE_PERSONAL,
+    ROOT,
+)
 
 CHUNK_SIZE = 2048  # ~512 tokens (4 chars/token avg)
 CHUNK_OVERLAP = 307  # ~15% of 2048
 MIN_CHUNK_SIZE = 100  # Skip chunks smaller than this
 
-# What to index
+# What to index — all 3 knowledge buckets
 INDEX_SOURCES = {
+    # --- External bucket (expert knowledge) ---
     "dna": KNOWLEDGE_EXTERNAL / "dna" / "persons",
     "dossiers_persons": KNOWLEDGE_EXTERNAL / "dossiers" / "persons",
     "dossiers_themes": KNOWLEDGE_EXTERNAL / "dossiers" / "themes",
     "playbooks": KNOWLEDGE_EXTERNAL / "playbooks",
+    # --- Business bucket (company operations) ---
+    "business_dossiers": BUSINESS_DOSSIERS / "persons",
+    "business_insights": BUSINESS_INSIGHTS,
+    "business_inbox": BUSINESS_INBOX,
+    "business_decisions": BUSINESS_DECISIONS,
+    # --- Personal bucket (founder cognitive) ---
+    "personal_cognitive": KNOWLEDGE_PERSONAL / "cognitive",
+    "personal_inbox": KNOWLEDGE_PERSONAL / "inbox",
+}
+
+# Map source keys to their knowledge bucket for metadata tagging
+_SOURCE_BUCKET_MAP: dict[str, str] = {
+    "dna": "external",
+    "dossiers_persons": "external",
+    "dossiers_themes": "external",
+    "playbooks": "external",
+    "business_dossiers": "business",
+    "business_insights": "business",
+    "business_inbox": "business",
+    "business_decisions": "business",
+    "personal_cognitive": "personal",
+    "personal_inbox": "personal",
 }
 
 
@@ -41,6 +72,7 @@ class Chunk:
     """A text chunk with metadata."""
 
     __slots__ = (
+        "bucket",
         "chunk_id",
         "domain",
         "end_char",
@@ -62,6 +94,7 @@ class Chunk:
         self.section = kwargs.get("section", "")
         self.start_char = kwargs.get("start_char", 0)
         self.end_char = kwargs.get("end_char", 0)
+        self.bucket = kwargs.get("bucket", "external")
         self.metadata = kwargs.get("metadata", {})
         # Generate deterministic chunk_id
         content_hash = hashlib.md5(
@@ -78,6 +111,7 @@ class Chunk:
             "domain": self.domain,
             "layer": self.layer,
             "section": self.section,
+            "bucket": self.bucket,
             "start_char": self.start_char,
             "end_char": self.end_char,
             "char_count": len(self.text),
@@ -170,7 +204,11 @@ def _recursive_split(
 # FILE CHUNKERS
 # ---------------------------------------------------------------------------
 def chunk_markdown(
-    filepath: Path, person: str = "", domain: str = "", layer: str = ""
+    filepath: Path,
+    person: str = "",
+    domain: str = "",
+    layer: str = "",
+    bucket: str = "external",
 ) -> list[Chunk]:
     """Chunk a markdown file preserving ## section hierarchy."""
     try:
@@ -199,6 +237,7 @@ def chunk_markdown(
                     domain=domain,
                     layer=layer,
                     section=sec_name,
+                    bucket=bucket,
                     start_char=start,
                     end_char=start + len(sub_text),
                     metadata={"section_index": i},
@@ -209,7 +248,9 @@ def chunk_markdown(
     return chunks
 
 
-def chunk_yaml(filepath: Path, person: str = "", layer: str = "") -> list[Chunk]:
+def chunk_yaml(
+    filepath: Path, person: str = "", layer: str = "", bucket: str = "external"
+) -> list[Chunk]:
     """Chunk a DNA YAML file — one chunk per entry."""
     try:
         with open(filepath, encoding="utf-8") as f:
@@ -262,6 +303,7 @@ def chunk_yaml(filepath: Path, person: str = "", layer: str = "") -> list[Chunk]
                 domain=domain,
                 layer=layer_name,
                 section=entry_id,
+                bucket=bucket,
                 chunk_id=entry_id,
                 metadata={"entry_index": i, "domains": domains},
             )
@@ -274,14 +316,16 @@ def chunk_yaml(filepath: Path, person: str = "", layer: str = "") -> list[Chunk]
 # FULL INDEX
 # ---------------------------------------------------------------------------
 def chunk_all(sources: dict[str, Path] | None = None) -> list[Chunk]:
-    """Chunk all knowledge base files.
+    """Chunk all knowledge base files across all 3 buckets.
 
-    Returns list of all chunks with metadata.
+    Returns list of all chunks with metadata including bucket tag.
     """
     if sources is None:
         sources = INDEX_SOURCES
 
     all_chunks: list[Chunk] = []
+
+    # ── EXTERNAL BUCKET ──────────────────────────────────────────
 
     # 1. DNA YAMLs (per person)
     dna_dir = sources.get("dna")
@@ -293,27 +337,94 @@ def chunk_all(sources: dict[str, Path] | None = None) -> list[Chunk]:
             for yaml_file in person_dir.glob("*.yaml"):
                 if yaml_file.name == "CONFIG.yaml":
                     continue  # Skip config, it's not content
-                all_chunks.extend(chunk_yaml(yaml_file, person=person))
+                all_chunks.extend(
+                    chunk_yaml(yaml_file, person=person, bucket="external")
+                )
 
-    # 2. Person dossiers
+    # 2. Person dossiers (external experts)
     persons_dir = sources.get("dossiers_persons")
     if persons_dir and persons_dir.exists():
         for md_file in sorted(persons_dir.glob("DOSSIER-*.md")):
             person = _person_from_filename(md_file.stem)
-            all_chunks.extend(chunk_markdown(md_file, person=person, layer="dossier"))
+            all_chunks.extend(
+                chunk_markdown(md_file, person=person, layer="dossier", bucket="external")
+            )
 
     # 3. Theme dossiers
     themes_dir = sources.get("dossiers_themes")
     if themes_dir and themes_dir.exists():
         for md_file in sorted(themes_dir.glob("DOSSIER-*.md")):
             domain = _domain_from_theme(md_file.stem)
-            all_chunks.extend(chunk_markdown(md_file, domain=domain, layer="theme"))
+            all_chunks.extend(
+                chunk_markdown(md_file, domain=domain, layer="theme", bucket="external")
+            )
 
     # 4. Playbooks
     playbooks_dir = sources.get("playbooks")
     if playbooks_dir and playbooks_dir.exists():
         for md_file in sorted(playbooks_dir.glob("*.md")):
-            all_chunks.extend(chunk_markdown(md_file, layer="playbook"))
+            all_chunks.extend(
+                chunk_markdown(md_file, layer="playbook", bucket="external")
+            )
+
+    # ── BUSINESS BUCKET ──────────────────────────────────────────
+
+    # 5. Business dossiers (collaborators, partners)
+    biz_dossiers_dir = sources.get("business_dossiers")
+    if biz_dossiers_dir and biz_dossiers_dir.exists():
+        for md_file in sorted(biz_dossiers_dir.rglob("*.md")):
+            person = _person_from_filename(md_file.stem)
+            all_chunks.extend(
+                chunk_markdown(md_file, person=person, layer="dossier", bucket="business")
+            )
+
+    # 6. Business insights (by-meeting + by-theme)
+    biz_insights_dir = sources.get("business_insights")
+    if biz_insights_dir and biz_insights_dir.exists():
+        for md_file in sorted(biz_insights_dir.rglob("*.md")):
+            all_chunks.extend(
+                chunk_markdown(md_file, layer="insight", bucket="business")
+            )
+
+    # 7. Business inbox (meeting transcripts, calls)
+    biz_inbox_dir = sources.get("business_inbox")
+    if biz_inbox_dir and biz_inbox_dir.exists():
+        for content_file in sorted(biz_inbox_dir.rglob("*")):
+            if not content_file.is_file():
+                continue
+            if content_file.suffix.lower() in (".md", ".txt"):
+                all_chunks.extend(
+                    chunk_markdown(content_file, layer="inbox", bucket="business")
+                )
+
+    # 8. Business decisions
+    biz_decisions_dir = sources.get("business_decisions")
+    if biz_decisions_dir and biz_decisions_dir.exists():
+        for md_file in sorted(biz_decisions_dir.glob("*.md")):
+            all_chunks.extend(
+                chunk_markdown(md_file, layer="decision", bucket="business")
+            )
+
+    # ── PERSONAL BUCKET ──────────────────────────────────────────
+
+    # 9. Personal cognitive (founder DNA, reflections)
+    personal_cognitive_dir = sources.get("personal_cognitive")
+    if personal_cognitive_dir and personal_cognitive_dir.exists():
+        for md_file in sorted(personal_cognitive_dir.glob("*.md")):
+            all_chunks.extend(
+                chunk_markdown(md_file, layer="cognitive", bucket="personal")
+            )
+
+    # 10. Personal inbox (personal calls, notes)
+    personal_inbox_dir = sources.get("personal_inbox")
+    if personal_inbox_dir and personal_inbox_dir.exists():
+        for content_file in sorted(personal_inbox_dir.rglob("*")):
+            if not content_file.is_file():
+                continue
+            if content_file.suffix.lower() in (".md", ".txt"):
+                all_chunks.extend(
+                    chunk_markdown(content_file, layer="inbox", bucket="personal")
+                )
 
     return all_chunks
 
@@ -343,16 +454,21 @@ def main():
     # Stats
     by_layer: dict[str, int] = {}
     by_person: dict[str, int] = {}
+    by_bucket: dict[str, int] = {}
     total_chars = 0
 
     for c in chunks:
         by_layer[c.layer or "unknown"] = by_layer.get(c.layer or "unknown", 0) + 1
+        by_bucket[c.bucket or "unknown"] = by_bucket.get(c.bucket or "unknown", 0) + 1
         if c.person:
             by_person[c.person] = by_person.get(c.person, 0) + 1
         total_chars += len(c.text)
 
     print(f"Total chunks: {len(chunks)}")
     print(f"Total chars: {total_chars:,} ({total_chars // 4:,} est. tokens)")
+    print("\nBy bucket:")
+    for bucket, count in sorted(by_bucket.items()):
+        print(f"  {bucket}: {count}")
     print("\nBy layer:")
     for layer, count in sorted(by_layer.items()):
         print(f"  {layer}: {count}")

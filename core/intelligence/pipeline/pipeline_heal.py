@@ -115,13 +115,13 @@ class PipelineHealDetector:
     @property
     def chunks_state(self) -> dict:
         if self._chunks_cache is None:
-            self._chunks_cache = self._load_json("processing/chunks/CHUNKS-STATE.json") or {}
+            self._chunks_cache = self._load_json("artifacts/chunks/CHUNKS-STATE.json") or {}
         return self._chunks_cache
 
     @property
     def insights_state(self) -> dict:
         if self._insights_cache is None:
-            self._insights_cache = self._load_json("processing/insights/INSIGHTS-STATE.json") or {}
+            self._insights_cache = self._load_json("artifacts/insights/INSIGHTS-STATE.json") or {}
         return self._insights_cache
 
     @property
@@ -208,7 +208,7 @@ class PipelineHealDetector:
 
     def _check_canonical(self, sid: str) -> CheckResult:
         """P3: Verify CANONICAL-MAP has entities from this source."""
-        cmap = self._load_json("processing/canonical/CANONICAL-MAP.json")
+        cmap = self._load_json("artifacts/canonical/CANONICAL-MAP.json")
         if cmap is None:
             return CheckResult(
                 "P3",
@@ -424,7 +424,7 @@ class PipelineHealDetector:
         ]:
             idx_path = self.root / rel
             if idx_path.exists():
-                chunks_path = self.root / "processing" / "chunks" / "CHUNKS-STATE.json"
+                chunks_path = self.root / "artifacts" / "chunks" / "CHUNKS-STATE.json"
                 if chunks_path.exists():
                     if idx_path.stat().st_mtime >= chunks_path.stat().st_mtime:
                         return CheckResult("P8.1.1", "RAG Index", True, "BM25 current")
