@@ -2,7 +2,7 @@
 # DO NOT EDIT MANUALLY -- regenerated on agent creation/update
 
 version: 1.0.0
-generated_at: '2026-03-16T03:47:24Z'
+generated_at: '2026-03-16T03:50:52Z'
 agent:
   name: Alex
   id: alex-hormozi
@@ -53,7 +53,7 @@ ide_registration:
 compilation:
   format: v2.0
   sections_embedded: 5
-  generated_at: '2026-03-16T03:47:24Z'
+  generated_at: '2026-03-16T03:50:52Z'
   source_hashes:
     agent_md: 94e80ae0d2e37bcabd2b630756a5e92ddf114d33596595f210b53453ec4bc3bd
     soul_md: 5405a0a1b0cedeafa7bfbef922ad1c8bf99af7dd7136e82611d831d54ea589d4

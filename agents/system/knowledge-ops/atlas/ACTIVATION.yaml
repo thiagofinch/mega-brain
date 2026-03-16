@@ -2,7 +2,7 @@
 # DO NOT EDIT MANUALLY -- regenerated on agent creation/update
 
 version: 1.0.0
-generated_at: '2026-03-16T03:47:26Z'
+generated_at: '2026-03-16T03:50:54Z'
 agent:
   name: Atlas
   id: atlas
@@ -53,7 +53,7 @@ ide_registration:
 compilation:
   format: v2.0
   sections_embedded: 5
-  generated_at: '2026-03-16T03:47:26Z'
+  generated_at: '2026-03-16T03:50:54Z'
   source_hashes:
     agent_md: 222ce711ded961c69af1b6621e77c66c7e7ffae6e0aa6045e1de7ddc76f42e24
     soul_md: e11e2483764a06db9dbb6fcc394dcf0bd80243840b925ab268d6ad731afb179c

@@ -2,7 +2,7 @@
 # DO NOT EDIT MANUALLY -- regenerated on agent creation/update
 
 version: 1.0.0
-generated_at: '2026-03-16T03:47:25Z'
+generated_at: '2026-03-16T03:50:53Z'
 agent:
   name: Captain
   id: sales-manager
@@ -53,7 +53,7 @@ ide_registration:
 compilation:
   format: v2.0
   sections_embedded: 5
-  generated_at: '2026-03-16T03:47:25Z'
+  generated_at: '2026-03-16T03:50:53Z'
   source_hashes:
     agent_md: 9a7cd7d77ec0f24bb21e10933dca636f4cad151ed0c9fa21cd4dd57a8c88637f
     soul_md: 22de0a655195683edd7e51109cde90b7560cfee1d9d4004ab6615eaee23acfeb

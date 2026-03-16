@@ -2,7 +2,7 @@
 # DO NOT EDIT MANUALLY -- regenerated on agent creation/update
 
 version: 1.0.0
-generated_at: '2026-03-16T03:47:26Z'
+generated_at: '2026-03-16T03:50:54Z'
 agent:
   name: Compass
   id: compass
@@ -53,7 +53,7 @@ ide_registration:
 compilation:
   format: v2.0
   sections_embedded: 5
-  generated_at: '2026-03-16T03:47:26Z'
+  generated_at: '2026-03-16T03:50:54Z'
   source_hashes:
     agent_md: 01e8df0f928d33b3e65e01af5fd654ad5bfbfcaaed85eb37c87d3110aa703823
     soul_md: 10153784bff91edb2ac6f8fbb0d35b4dea42dad4df75797deec977534eed521b

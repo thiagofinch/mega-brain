@@ -2,7 +2,7 @@
 # DO NOT EDIT MANUALLY -- regenerated on agent creation/update
 
 version: 1.0.0
-generated_at: '2026-03-16T03:47:24Z'
+generated_at: '2026-03-16T03:50:52Z'
 agent:
   name: Cole
   id: cole-gordon
@@ -53,7 +53,7 @@ ide_registration:
 compilation:
   format: v2.0
   sections_embedded: 5
-  generated_at: '2026-03-16T03:47:24Z'
+  generated_at: '2026-03-16T03:50:52Z'
   source_hashes:
     agent_md: 9886a8231a1ef4e3bd9dbd7140fc0a14edb4c245b5b0b66f3497ed4f3d15b4df
     soul_md: e2fff6592bcfcd852f0e3e345c4cc7c1df870b6a36f13be6bc3513f0acb8ade3

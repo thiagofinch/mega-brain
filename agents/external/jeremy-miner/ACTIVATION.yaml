@@ -2,7 +2,7 @@
 # DO NOT EDIT MANUALLY -- regenerated on agent creation/update
 
 version: 1.0.0
-generated_at: '2026-03-16T03:47:25Z'
+generated_at: '2026-03-16T03:50:52Z'
 agent:
   name: Jeremy
   id: jeremy-miner
@@ -53,7 +53,7 @@ ide_registration:
 compilation:
   format: v2.0
   sections_embedded: 5
-  generated_at: '2026-03-16T03:47:25Z'
+  generated_at: '2026-03-16T03:50:52Z'
   source_hashes:
     agent_md: 8b5294525205d0ee4f1eb8ee5f7e223f615e5ba784c111592a87acee0c7f760b
     soul_md: dc4fc9b6e152f9076798779d30a79c71e2d8edb25a450c907d01b4c5e1211854

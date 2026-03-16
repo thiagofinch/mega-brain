@@ -2,7 +2,7 @@
 # DO NOT EDIT MANUALLY -- regenerated on agent creation/update
 
 version: 1.0.0
-generated_at: '2026-03-16T03:47:26Z'
+generated_at: '2026-03-16T03:50:54Z'
 agent:
   name: Anvil
   id: anvil
@@ -53,7 +53,7 @@ ide_registration:
 compilation:
   format: v2.0
   sections_embedded: 5
-  generated_at: '2026-03-16T03:47:26Z'
+  generated_at: '2026-03-16T03:50:54Z'
   source_hashes:
     agent_md: 149ab82b41a20d7c780224aed43cf0529a0a27e682a48871d8f66a59c37b7342
     soul_md: 10a505cdebfca31c4932c1ae4e34ee0ced289be8a2af596a1ee7145c0b34dd0f

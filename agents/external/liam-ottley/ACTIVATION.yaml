@@ -2,7 +2,7 @@
 # DO NOT EDIT MANUALLY -- regenerated on agent creation/update
 
 version: 1.0.0
-generated_at: '2026-03-16T03:47:25Z'
+generated_at: '2026-03-16T03:50:53Z'
 agent:
   name: Liam
   id: liam-ottley
@@ -53,7 +53,7 @@ ide_registration:
 compilation:
   format: v2.0
   sections_embedded: 5
-  generated_at: '2026-03-16T03:47:25Z'
+  generated_at: '2026-03-16T03:50:53Z'
   source_hashes:
     agent_md: 1a061cec8c734c470561739dde88a1769ba41365937d54e61a371c25bf4217a0
     soul_md: 1a01b68ab2fe6d2b785bcbfd6b1710203317041899a08fcbf67c7bc4136f22d7

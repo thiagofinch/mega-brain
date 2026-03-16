@@ -240,6 +240,7 @@ DNA Composition conforme definido em SOUL.md ^[SOUL.md:20-25]:
 │   PARTE 8: PROTOCOLO DE DEBATE ................... Status: ████████ 100%      │
 │   PARTE 9: MEMÓRIA EXPERIENCIAL .................. Status: ████░░░░  50%      │
 │   PARTE 10: EXPANSÕES E REFERÊNCIAS .............. Status: ████████ 100%      │
+│   PARTE 11: VOICE INJECTION BLOCK ................ Status: ░░░░░░░░   0%      │
 │                                                                                 │
 │   ─────────────────────────────────────────────────────────────────────────────│
 │                                                                                 │
@@ -2361,6 +2362,44 @@ DNA Composition conforme definido em SOUL.md ^[SOUL.md:20-25]:
 
 ---
 
+# ╔════════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                                ║
+# ║   P A R T E   1 1 :   V O I C E   I N J E C T I O N   B L O C K              ║
+# ║                                                                                ║
+# ╚════════════════════════════════════════════════════════════════════════════════╝
+
+## PARTE 11: VOICE INJECTION BLOCK (Extraction Target)
+
+> Esta secao define os dados que o `activation_generator.py` extrai e embute
+> diretamente no command file (.claude/commands/agents/{slug}.md).
+> O command file e o artefato compilado. Este AGENT.md e o source code.
+
+### 11.1 IDENTITY (extraido de SOUL.md > QUEM SOU EU)
+<!-- 2-3 frases destiladas da identidade. Preenchido pelo MCE pipeline. -->
+
+### 11.2 ACTIVE BELIEFS (extraido de SOUL.md > O QUE ACREDITO)
+<!-- Top 5 crencas mais ativas, ordenadas por frequencia de ativacao. -->
+
+### 11.3 TONE (extraido de SOUL.md > SISTEMA DE VOZ > Tom)
+<!-- 4 descritores de tom com explicacao de 1 linha cada. -->
+
+### 11.4 MANDATORY VOCABULARY (extraido de SOUL.md > Vocabulario Caracteristico)
+<!-- Termos que o agente DEVE usar em toda interacao. 8-15 termos. -->
+
+### 11.5 FORBIDDEN VOCABULARY (extraido de SOUL.md > Nunca Digo / O Que Nao Sou)
+<!-- Termos e frases que o agente NUNCA usa. 5-10 itens. -->
+
+### 11.6 SIGNATURE PHRASES (extraido de SOUL.md > Frases Tipicas)
+<!-- 5-7 frases literais com citacao ^[SOURCE]. -->
+
+### 11.7 ARGUMENTATION PATTERN (extraido de SOUL.md > Padroes de Argumentacao)
+<!-- Sequencia numerada de como o agente estrutura respostas. -->
+
+### 11.8 ANTI-PATTERNS (extraido de SOUL.md > O Que Nao Sou)
+<!-- Comportamentos e identidades que o agente NAO adota. -->
+
+---
+
 # ═══════════════════════════════════════════════════════════════════════════════
 #                              METADADOS
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -2386,7 +2425,8 @@ DNA Composition conforme definido em SOUL.md ^[SOUL.md:20-25]:
 │   ├── PARTE 7: Interfaces de Conexão (integração com outros agentes)          │
 │   ├── PARTE 8: Protocolo de Debate (comportamento em council)                 │
 │   ├── PARTE 9: Memória Experiencial (casos + padrões)                         │
-│   └── PARTE 10: Expansões e Referências (onde buscar mais)                    │
+│   ├── PARTE 10: Expansões e Referências (onde buscar mais)                    │
+│   └── PARTE 11: Voice Injection Block (dados para command file compilado)     │
 │                                                                                 │
 │   Princípios do template:                                                      │
 │   1. FUNCIONA SOZINHO - Contém tudo essencial para operar                     │

@@ -2,7 +2,7 @@
 # DO NOT EDIT MANUALLY -- regenerated on agent creation/update
 
 version: 1.0.0
-generated_at: '2026-03-16T03:47:26Z'
+generated_at: '2026-03-16T03:50:54Z'
 agent:
   name: Sage
   id: sage
@@ -53,7 +53,7 @@ ide_registration:
 compilation:
   format: v2.0
   sections_embedded: 5
-  generated_at: '2026-03-16T03:47:26Z'
+  generated_at: '2026-03-16T03:50:54Z'
   source_hashes:
     agent_md: 8ad78398f980695159bde77eeeca6890a5b5fa9b558d0ce7d01dad09c8bab92f
     soul_md: 4b5c96ba83ed885832986cd1105e63c48061364f5e83e86f77e8c8467a0c2f7a

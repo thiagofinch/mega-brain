@@ -2,7 +2,7 @@
 # DO NOT EDIT MANUALLY -- regenerated on agent creation/update
 
 version: 1.0.0
-generated_at: '2026-03-16T03:47:26Z'
+generated_at: '2026-03-16T03:50:54Z'
 agent:
   name: Rocket
   id: rocket
@@ -53,7 +53,7 @@ ide_registration:
 compilation:
   format: v2.0
   sections_embedded: 5
-  generated_at: '2026-03-16T03:47:26Z'
+  generated_at: '2026-03-16T03:50:54Z'
   source_hashes:
     agent_md: 3bfc0060e24eda805ec4071b4ccdb447eb16677e907818f36ad1491b4f09e5b2
     soul_md: 1ca87847683a5a66ef9700579d02f525cd219d3dac3649f88869e2a7d3567708

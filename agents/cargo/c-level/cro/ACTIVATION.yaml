@@ -2,7 +2,7 @@
 # DO NOT EDIT MANUALLY -- regenerated on agent creation/update
 
 version: 1.0.0
-generated_at: '2026-03-16T03:47:25Z'
+generated_at: '2026-03-16T03:50:53Z'
 agent:
   name: Revenue
   id: cro
@@ -53,7 +53,7 @@ ide_registration:
 compilation:
   format: v2.0
   sections_embedded: 5
-  generated_at: '2026-03-16T03:47:25Z'
+  generated_at: '2026-03-16T03:50:53Z'
   source_hashes:
     agent_md: 2c825c8c2dfb0aac422a9f6d373b373a5e3a27406229afc8709388e21b686ad5
     soul_md: d2ecd2532ea8e02b5fb9416b5f9f412db93ffdb77052cae1299cd00da65cef90
