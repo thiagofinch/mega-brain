@@ -64,20 +64,17 @@ from pathlib import Path
 from typing import Any
 
 # ---------------------------------------------------------------------------
-# Ensure project root is on sys.path for direct invocation
-# ---------------------------------------------------------------------------
-
-from core.paths import ROOT as _PROJECT_ROOT
-
-
-# ---------------------------------------------------------------------------
 # Module imports (after path fix)
 # ---------------------------------------------------------------------------
+from core.intelligence.pipeline.mce.metadata_manager import MetadataManager
+from core.intelligence.pipeline.mce.metrics import MetricsTracker
+from core.intelligence.pipeline.mce.state_machine import PipelineStateMachine
+from core.intelligence.pipeline.mce.workflow_detector import detect as detect_workflow
 
-from core.intelligence.pipeline.mce.metadata_manager import MetadataManager  # noqa: E402
-from core.intelligence.pipeline.mce.metrics import MetricsTracker  # noqa: E402
-from core.intelligence.pipeline.mce.state_machine import PipelineStateMachine  # noqa: E402
-from core.intelligence.pipeline.mce.workflow_detector import detect as detect_workflow  # noqa: E402
+# ---------------------------------------------------------------------------
+# Ensure project root is on sys.path for direct invocation
+# ---------------------------------------------------------------------------
+from core.paths import ROOT as _PROJECT_ROOT
 
 logger = logging.getLogger("mce.orchestrate")
 
@@ -606,6 +603,14 @@ def cmd_finalize(slug: str) -> dict[str, Any]:
         logger.warning("Workspace sync failed: %s", exc)
         sync_result = {"error": str(exc)}
 
+    # Step 2.5: Rebuild RAG indexes (non-fatal)
+    index_result: dict[str, Any] = {}
+    try:
+        index_result = cmd_index(slug, bucket="all")
+    except Exception as exc:
+        logger.warning("Index rebuild during finalize failed: %s", exc)
+        index_result = {"error": str(exc)}
+
     # Step 3: Update state machine through remaining transitions
     # Try to advance to validation -> complete
     for trigger_name in ("start_validation", "finish"):
@@ -639,6 +644,7 @@ def cmd_finalize(slug: str) -> dict[str, Any]:
         duration_ms=elapsed,
         enrichment=enrichment_result,
         workspace_sync=sync_result,
+        index_rebuild=index_result,
         state={
             "current": sm.state,
             "metadata_status": mgr.pipeline_status,
@@ -649,6 +655,74 @@ def cmd_finalize(slug: str) -> dict[str, Any]:
         },
     )
 
+    _append_jsonl(result)
+    return result
+
+
+# ---------------------------------------------------------------------------
+# Command: index
+# ---------------------------------------------------------------------------
+
+
+def cmd_index(slug: str | None = None, bucket: str = "all") -> dict[str, Any]:
+    """Rebuild RAG indexes after pipeline extraction.
+
+    Step 12 of the MCE pipeline.  Rebuilds the BM25 indexes and
+    knowledge graph that feed Conclave, debate, and RAG queries.
+
+    Steps:
+        1. Import and call ``rebuild.rebuild()`` for specified bucket(s).
+        2. Update metadata with index stats (if slug provided).
+        3. Update metrics (if slug provided).
+        4. Log to JSONL.
+
+    Args:
+        slug: Person/source slug (used for metadata tracking, not filtering).
+              ``None`` for standalone rebuilds.
+        bucket: ``"external"``, ``"business"``, ``"personal"``, or ``"all"``.
+
+    Returns:
+        Structured result dict.
+    """
+    t0 = time.monotonic()
+
+    try:
+        from core.intelligence.rag.rebuild import rebuild
+
+        result_data = rebuild(bucket=bucket, skip_vectors=True)
+    except Exception as exc:
+        logger.warning("Index rebuild failed: %s", exc)
+        elapsed = (time.monotonic() - t0) * 1000
+        err = _build_result(
+            "index",
+            success=False,
+            slug=slug or "",
+            error=f"Index rebuild failed: {exc}",
+            duration_ms=elapsed,
+        )
+        _append_jsonl(err)
+        return err
+
+    # Update metadata if slug provided
+    if slug:
+        mgr = MetadataManager.load(slug)
+        if mgr:
+            mgr.mark_phase_complete("index_rebuild", **result_data)
+            mgr.save()
+
+        mt = MetricsTracker.load(slug) or MetricsTracker(slug)
+        mt.start_phase("index_rebuild")
+        mt.end_phase("index_rebuild")
+        mt.save()
+
+    elapsed = (time.monotonic() - t0) * 1000
+    result = _build_result(
+        "index",
+        success=True,
+        slug=slug or "",
+        duration_ms=elapsed,
+        indexes=result_data,
+    )
     _append_jsonl(result)
     return result
 
@@ -810,6 +884,7 @@ Commands:
   ingest <file_path>     Classify + route + organize a source file
   batch <source_slug>    Create batches from organized inbox
   finalize <slug>        Post-extraction: enrich memory + sync workspace
+  index [slug] [bucket]  Rebuild RAG indexes (all buckets by default)
   status [slug]          Show pipeline state (all if slug omitted)
   full <file_path>       Shortcut: ingest + batch + status
 
@@ -817,6 +892,7 @@ Examples:
   python -m core.intelligence.pipeline.mce.orchestrate ingest "knowledge/business/inbox/file.txt"
   python -m core.intelligence.pipeline.mce.orchestrate batch alex-hormozi
   python -m core.intelligence.pipeline.mce.orchestrate finalize alex-hormozi
+  python -m core.intelligence.pipeline.mce.orchestrate index alex-hormozi external
   python -m core.intelligence.pipeline.mce.orchestrate status
   python -m core.intelligence.pipeline.mce.orchestrate full "inbox/transcript.txt"
 """
@@ -865,6 +941,11 @@ def main(argv: list[str] | None = None) -> int:
                 print("Error: finalize requires <slug>", file=sys.stderr)
                 return 1
             result = cmd_finalize(rest[0])
+
+        elif command == "index":
+            slug = rest[0] if rest else None
+            bucket = rest[1] if len(rest) > 1 else "all"
+            result = cmd_index(slug, bucket)
 
         elif command == "status":
             slug = rest[0] if rest else None

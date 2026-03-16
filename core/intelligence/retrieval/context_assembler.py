@@ -1,27 +1,34 @@
 #!/usr/bin/env python3
 """
-CONTEXT ASSEMBLER - Smart Context Assembly (Phase 1.2)
-======================================================
+CONTEXT ASSEMBLER - Smart Context Assembly (Phase 1.2 + Phase 3 RAG)
+=====================================================================
 Mounts TRIMMED context per agent based on query analysis.
 Reduces CLOSER 542KB → ~30KB by loading only relevant MEMORY sections.
+Phase 3 addition: augments file-based context with RAG semantic search.
 
 Strategy:
 - AGENT.md: first 50 lines (identity header)
 - SOUL.md: complete (voice/personality, typically 10-17KB)
 - DNA-CONFIG.yaml: complete (routing table, typically 6-24KB)
 - MEMORY.md: ONLY sections relevant to query domains (biggest savings)
+- RAG_CONTEXT: top-K chunks from bucket-filtered semantic search (Phase 3)
 
 Zero external deps (stdlib + PyYAML only).
 
-Versao: 1.0.0
-Data: 2026-03-01
+Versao: 2.0.0
+Data: 2026-03-16
 """
 
+from __future__ import annotations
+
+import logging
 import re
 import sys
 from pathlib import Path
 
 from .query_analyzer import analyze_query, discover_agents, load_taxonomy
+
+logger = logging.getLogger(__name__)
 
 # ---------------------------------------------------------------------------
 # CONFIG
@@ -353,11 +360,162 @@ def assemble_agent_context(
     }
 
 
+# ---------------------------------------------------------------------------
+# RAG SEARCH (Phase 3 -- bucket-filtered semantic search)
+# ---------------------------------------------------------------------------
+DEFAULT_RAG_TOP_K = 8  # Chunks per bucket search
+DEFAULT_RAG_MAX_BUDGET_KB = 30  # Max KB for RAG context (from total budget)
+
+# Mode → allowed buckets for RAG search
+MODE_TO_BUCKETS: dict[str, list[str]] = {
+    "expert-only": ["external"],
+    "business": ["external", "business"],
+    "full-3d": ["external", "business", "personal"],
+    "personal": ["personal"],
+    "company-only": ["business"],
+}
+
+
+def _search_rag_buckets(
+    query: str,
+    buckets: list[str],
+    max_chars: int,
+    top_k: int = DEFAULT_RAG_TOP_K,
+) -> dict:
+    """Search RAG indexes across specified buckets, return formatted context.
+
+    Uses bucket_query_router for per-bucket search with graceful degradation:
+    if indexes are missing or the import fails, returns empty results.
+
+    Args:
+        query: The search query.
+        buckets: Which knowledge buckets to search (e.g. ["external", "business"]).
+        max_chars: Maximum characters for RAG context output.
+        top_k: Number of results per bucket search.
+
+    Returns:
+        {
+            "context": str (formatted RAG chunks for LLM consumption),
+            "sources": [{"chunk_id", "source_file", "person", "bucket", "score"}],
+            "chunks_used": int,
+            "total_chars": int,
+            "error": str | None,
+        }
+    """
+    try:
+        from core.intelligence.rag.bucket_query_router import query as rag_query
+    except ImportError as exc:
+        logger.debug("RAG bucket_query_router not available: %s", exc)
+        return {
+            "context": "",
+            "sources": [],
+            "chunks_used": 0,
+            "total_chars": 0,
+            "error": f"bucket_query_router import failed: {exc}",
+        }
+
+    all_results: list[dict] = []
+    for bucket in buckets:
+        try:
+            results = rag_query(query, bucket=bucket, top_k=top_k)
+            all_results.extend(results)
+        except Exception as exc:
+            logger.debug("RAG search failed for bucket '%s': %s", bucket, exc)
+            continue
+
+    if not all_results:
+        return {
+            "context": "",
+            "sources": [],
+            "chunks_used": 0,
+            "total_chars": 0,
+            "error": None,
+        }
+
+    # Sort merged results by score descending
+    all_results.sort(key=lambda r: r.get("score", 0), reverse=True)
+
+    # Deduplicate by chunk_id
+    seen_ids: set[str] = set()
+    unique_results: list[dict] = []
+    for item in all_results:
+        cid = item.get("chunk_id", "")
+        if cid and cid in seen_ids:
+            continue
+        if cid:
+            seen_ids.add(cid)
+        unique_results.append(item)
+
+    # Build context string within char budget
+    parts: list[str] = []
+    sources: list[dict] = []
+    total_chars = 0
+
+    for r in unique_results:
+        text = r.get("text_preview", r.get("text", ""))
+        if not text:
+            continue
+
+        chunk_id = r.get("chunk_id", "")
+        person = r.get("person", "")
+        bucket_name = r.get("bucket", "")
+
+        entry = f"[RAG:{chunk_id}]"
+        if person:
+            entry += f" ({person})"
+        if bucket_name:
+            entry += f" [{bucket_name}]"
+        entry += f" {text}"
+
+        if total_chars + len(entry) > max_chars:
+            break
+
+        parts.append(entry)
+        sources.append({
+            "chunk_id": chunk_id,
+            "source_file": r.get("source_file", ""),
+            "person": person,
+            "bucket": bucket_name,
+            "score": r.get("score", 0),
+        })
+        total_chars += len(entry)
+
+    return {
+        "context": "\n\n".join(parts),
+        "sources": sources,
+        "chunks_used": len(sources),
+        "total_chars": total_chars,
+        "error": None,
+    }
+
+
+def _determine_rag_buckets(analysis: dict) -> list[str]:
+    """Determine which RAG buckets to search based on query analysis.
+
+    Uses domain signals to infer the Conclave mode, then maps to buckets.
+    Falls back to ["external"] if no strong signal is detected.
+    """
+    domains = analysis.get("domains", [])
+    domain_ids = {d["id"] if isinstance(d, dict) else d for d in domains}
+
+    # Business signals: operacoes, financeiro, hiring
+    business_domains = {"operacoes", "financeiro", "hiring"}
+    has_business = bool(domain_ids & business_domains)
+
+    # Default to external (expert knowledge)
+    if has_business:
+        return ["external", "business"]
+    return ["external"]
+
+
 def assemble_debate_context(
     query: str,
     agent_names: list[str] | None = None,
     max_agents: int = 5,
     total_budget_kb: int = DEFAULT_TOTAL_BUDGET_KB,
+    use_rag: bool = True,
+    rag_buckets: list[str] | None = None,
+    rag_top_k: int = DEFAULT_RAG_TOP_K,
 ) -> dict:
     """
     Assemble context for a full debate/conclave session.
@@ -365,20 +523,32 @@ def assemble_debate_context(
     If agent_names is provided, uses those specific agents.
     Otherwise, auto-selects based on query analysis.
 
+    Phase 3 addition: when use_rag=True, augments file-based agent context
+    with semantically relevant RAG chunks from bucket-filtered indexes.
+    RAG uses remaining budget after file-based context is assembled.
+
+    Args:
+        query: The strategic question to debate.
+        agent_names: Explicit agent list, or None for auto-selection.
+        max_agents: Maximum agents to auto-select.
+        total_budget_kb: Total context budget in KB (~150KB default).
+        use_rag: If True, append RAG semantic search results (default: True).
+        rag_buckets: Explicit bucket list for RAG. If None, auto-detected
+            from query domains (e.g. expert-only=["external"],
+            business=["external","business"]).
+        rag_top_k: Number of RAG chunks to retrieve per bucket.
+
     Returns:
         {
             "query": str,
             "analysis": dict (from query_analyzer),
-            "agents": [
-                {
-                    "agent_name": str,
-                    "files": {...},
-                    "total_size_kb": float,
-                    ...
-                }
-            ],
+            "agents": [{...agent context...}],
             "total_context_kb": float,
-            "savings_vs_full_load": str,
+            "agent_count": int,
+            "rag_context": str (formatted RAG chunks, or "" if disabled/failed),
+            "rag_sources": [{"chunk_id", "source_file", "person", "bucket", "score"}],
+            "rag_chunks_used": int,
+            "rag_error": str | None,
         }
     """
     # Analyze query
@@ -405,15 +575,17 @@ def assemble_debate_context(
             (a["name"], a["score"], a["reason"]) for a in analysis["recommended_agents"]
         ]
 
-    # Calculate per-agent budget
+    # Calculate per-agent budget (reserve RAG budget from total)
+    rag_budget_kb = DEFAULT_RAG_MAX_BUDGET_KB if use_rag else 0
+    file_budget_kb = total_budget_kb - rag_budget_kb
     num_agents = max(len(agents_to_load), 1)
-    per_agent_budget = total_budget_kb // num_agents
+    per_agent_budget = file_budget_kb // num_agents
 
     # Extract query tokens for section scoring
     query_lower = query.lower()
     query_tokens = [t for t in re.sub(r"[^\w\s-]", " ", query_lower).split() if len(t) > 2]
 
-    # Assemble context for each agent
+    # Assemble context for each agent (file-based)
     agent_contexts = []
     for agent_name, score, reason in agents_to_load:
         if agent_name not in available:
@@ -429,14 +601,55 @@ def assemble_debate_context(
         ctx["selection_reason"] = reason
         agent_contexts.append(ctx)
 
-    total_kb = sum(a["total_size_kb"] for a in agent_contexts)
+    file_total_kb = sum(a["total_size_kb"] for a in agent_contexts)
+
+    # --- Phase 3: RAG semantic search augmentation ---
+    rag_result: dict = {
+        "context": "",
+        "sources": [],
+        "chunks_used": 0,
+        "total_chars": 0,
+        "error": None,
+    }
+
+    if use_rag:
+        # Determine remaining budget for RAG
+        file_total_bytes = int(file_total_kb * 1024)
+        total_budget_bytes = total_budget_kb * 1024
+        remaining_bytes = max(total_budget_bytes - file_total_bytes, 0)
+        # Cap RAG to its own budget or remaining space, whichever is smaller
+        rag_max_chars = min(rag_budget_kb * 1024, remaining_bytes)
+
+        if rag_max_chars > 0:
+            # Determine buckets: explicit > auto-detected from analysis
+            effective_buckets = rag_buckets or _determine_rag_buckets(analysis)
+
+            try:
+                rag_result = _search_rag_buckets(
+                    query=query,
+                    buckets=effective_buckets,
+                    max_chars=rag_max_chars,
+                    top_k=rag_top_k,
+                )
+            except Exception as exc:
+                logger.warning("RAG search failed, continuing without: %s", exc)
+                rag_result["error"] = str(exc)
+
+    # Calculate total including RAG
+    rag_kb = round(rag_result.get("total_chars", 0) / 1024, 1)
+    total_kb = round(file_total_kb + rag_kb, 1)
 
     return {
         "query": query,
         "analysis": analysis,
         "agents": agent_contexts,
-        "total_context_kb": round(total_kb, 1),
+        "total_context_kb": total_kb,
         "agent_count": len(agent_contexts),
+        # RAG context (Phase 3)
+        "rag_context": rag_result.get("context", ""),
+        "rag_sources": rag_result.get("sources", []),
+        "rag_chunks_used": rag_result.get("chunks_used", 0),
+        "rag_error": rag_result.get("error"),
     }
 
 
@@ -459,7 +672,7 @@ def main():
     result = assemble_debate_context(query, agent_names=agent_names)
 
     print(f"\n{'=' * 70}")
-    print("CONTEXT ASSEMBLY")
+    print("CONTEXT ASSEMBLY (v2 + RAG)")
     print(f"{'=' * 70}")
     print(f"Query: {result['query']}")
     print(f"Agents: {result['agent_count']}")
@@ -474,6 +687,27 @@ def main():
         )
         print(f"    MEMORY reduction: {ctx['memory_reduction_pct']}%")
         print(f"    Reason: {ctx.get('selection_reason', 'N/A')}")
+        print()
+
+    # RAG context stats (Phase 3)
+    rag_chunks = result.get("rag_chunks_used", 0)
+    rag_error = result.get("rag_error")
+    if rag_chunks > 0:
+        rag_sources = result.get("rag_sources", [])
+        buckets_hit = sorted({s.get("bucket", "?") for s in rag_sources})
+        print("  RAG Context:")
+        print(f"    Chunks used: {rag_chunks}")
+        print(f"    Buckets searched: {', '.join(buckets_hit)}")
+        print("    Top sources:")
+        for src in rag_sources[:5]:
+            print(f"      [{src.get('bucket', '?')}] {src.get('chunk_id', '?')} "
+                  f"(score: {src.get('score', 0):.4f})")
+        print()
+    elif rag_error:
+        print(f"  RAG Context: unavailable ({rag_error})")
+        print()
+    else:
+        print("  RAG Context: no results")
         print()
 
     print(f"{'=' * 70}\n")

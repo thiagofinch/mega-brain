@@ -16,12 +16,12 @@ import time
 from collections import Counter
 from pathlib import Path
 
-from .chunker import Chunk, chunk_all
-
 # ---------------------------------------------------------------------------
 # CONFIG
 # ---------------------------------------------------------------------------
-from core.paths import ROOT, DATA
+from core.paths import DATA, ROOT
+
+from .chunker import Chunk, chunk_all
 
 # Auto-load .env if VOYAGE_API_KEY not in environment
 if not os.environ.get("VOYAGE_API_KEY"):
@@ -303,6 +303,35 @@ class HybridIndex:
         if 0 <= index < len(self.chunks):
             return self.chunks[index]
         return {}
+
+    @classmethod
+    def build_for_bucket(
+        cls, bucket: str, skip_vectors: bool = True
+    ) -> "HybridIndex":
+        """Build index for a specific knowledge bucket.
+
+        Filters INDEX_SOURCES using the _SOURCE_BUCKET_MAP from chunker,
+        then chunks and indexes only that bucket's content.
+
+        Args:
+            bucket: "external", "business", or "personal".
+            skip_vectors: If True, BM25-only (default for business/personal).
+
+        Returns:
+            Built HybridIndex instance (not saved -- caller must save).
+        """
+        from .chunker import _SOURCE_BUCKET_MAP, INDEX_SOURCES, chunk_all
+
+        filtered = {
+            k: v
+            for k, v in INDEX_SOURCES.items()
+            if _SOURCE_BUCKET_MAP.get(k) == bucket
+        }
+
+        chunks = chunk_all(sources=filtered)
+        idx = cls()
+        idx.build(chunks=chunks, skip_vectors=skip_vectors)
+        return idx
 
 
 # ---------------------------------------------------------------------------
