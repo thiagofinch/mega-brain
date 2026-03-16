@@ -397,7 +397,12 @@ def log_events(persons: list[PersonRecord], cargo: list[CargoRole]):
 # HOOK ENTRY
 # ═══════════════════════════════════════════════════════════════════
 
-WATCHED = ["knowledge/external/dna", "knowledge/external/dossiers", "artifacts/insights"]
+WATCHED = [
+    "knowledge/external/dna",
+    "knowledge/external/dossiers",
+    "artifacts/insights",
+    "agents/",
+]
 
 
 def main():

@@ -19,7 +19,7 @@ Processa material **pessoal do founder** (emails, mensagens, calls, reflexões, 
 
 **Diferença dos outros comandos:**
 - `/ingest` → `knowledge/external/inbox/` (expert minds) — 🔵
-- `/ingest-empresa` → `workspace/inbox/` (dados do negócio) — 🔴
+- `/ingest-empresa` → `knowledge/business/inbox/` (dados do negócio) — 🔴
 - `/ingest-pessoal` → `knowledge/personal/inbox/` (dados cognitivos) — 🟢
 
 ---

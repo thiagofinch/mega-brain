@@ -63,7 +63,7 @@ When in plan mode, save the plan file to: `docs/plans/YYYY-MM-DD-description.md`
 | Knowledge Base (populated) | - | yes |
 | Mind Clone Agents | - | yes |
 | Pipeline Processing | - | yes |
-| Council / Conclave | - | yes |
+| Council / Conclave | yes | yes |
 
 ## DNA Schema (5 Knowledge Layers)
 

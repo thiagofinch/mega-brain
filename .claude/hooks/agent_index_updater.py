@@ -3,8 +3,11 @@
 Agent Index Updater Hook
 Auto-updates AGENT-INDEX.yaml when agents are created/modified.
 
+Discovery logic aligned with activation_generator._discover_all_agents()
+to ensure both produce the same agent count.
+
 Hook Events: PostToolUse (Write/Edit to agents/)
-Version: 1.0.0
+Version: 2.0.0
 """
 
 import json
@@ -17,13 +20,18 @@ AGENTS_DIR = ROOT / "agents"
 AGENT_INDEX = AGENTS_DIR / "AGENT-INDEX.yaml"
 UPDATE_LOG = ROOT / "logs" / "agent-index-updates.jsonl"
 
+# Safety guard: if discovered count drops below this fraction of current
+# count, abort the update to prevent accidental agent loss.
+SAFETY_THRESHOLD = 0.80
+
 # Layer paths
 LAYER_PATHS = {
     "L0": "core/jarvis/",
-    "L1": "agents/system/conclave/",
-    "L2": "agents/boardroom/",
+    "L1": "agents/system/",
+    "L2": "agents/business/",
     "L3": "agents/external/",
     "L4": "agents/cargo/",
+    "L5": "agents/personal/",
     "SUB": ".claude/jarvis/sub-agents/",
 }
 
@@ -48,14 +56,16 @@ def is_agent_file(file_path: str) -> bool:
 
 def detect_layer(file_path: str) -> str:
     """Detect which layer the agent belongs to."""
-    if "conclave/" in file_path:
+    if "agents/system/" in file_path:
         return "L1"
-    elif "boardroom/" in file_path:
+    elif "agents/business/" in file_path:
         return "L2"
-    elif "external/" in file_path:
+    elif "agents/external/" in file_path:
         return "L3"
-    elif "cargo/" in file_path:
+    elif "agents/cargo/" in file_path:
         return "L4"
+    elif "agents/personal/" in file_path:
+        return "L5"
     elif "sub-agents/" in file_path:
         return "SUB"
     elif "jarvis/" in file_path:
@@ -71,23 +81,30 @@ def extract_agent_id(file_path: str) -> str:
 
 
 def scan_agents() -> dict:
-    """Scan all agents and build index."""
+    """Scan all agents and build index.
+
+    Discovery logic mirrors activation_generator._discover_all_agents() exactly:
+    - external/: direct children with AGENT.md
+    - cargo/: nested 2 levels (cargo/{group}/{agent})
+    - business/: rglob to handle 3+ levels of nesting
+    - personal/: direct children with AGENT.md
+    - system/: nested 2 levels (system/{sub}/AGENT.md or system/{sub}/{agent}/AGENT.md)
+    """
     agents = {
-        "minds": [],
-        "cargo": {"sales": [], "marketing": [], "operations": [], "c-level": [], "other": []},
-        "conclave": [],
-        "autonomous": [],
-        "sub_agents": [],
+        "external": [],
+        "cargo": {},
+        "business": [],
+        "personal": [],
+        "system": [],
     }
 
-    # Scan external (expert mind clones)
-    minds_dir = AGENTS_DIR / "external"
-    if minds_dir.exists():
-        for agent_dir in minds_dir.iterdir():
+    # --- External experts (direct children) ---
+    external_dir = AGENTS_DIR / "external"
+    if external_dir.exists():
+        for agent_dir in sorted(external_dir.iterdir()):
             if agent_dir.is_dir() and not agent_dir.name.startswith("_"):
-                agent_file = agent_dir / "AGENT.md"
-                if agent_file.exists():
-                    agents["minds"].append(
+                if (agent_dir / "AGENT.md").exists():
+                    agents["external"].append(
                         {
                             "id": agent_dir.name,
                             "path": str(agent_dir.relative_to(ROOT)),
@@ -96,67 +113,151 @@ def scan_agents() -> dict:
                         }
                     )
 
-    # Scan conclave
-    conclave_dir = AGENTS_DIR / "system" / "conclave"
-    if conclave_dir.exists():
-        for agent_dir in conclave_dir.iterdir():
-            if agent_dir.is_dir():
-                agent_file = agent_dir / "AGENT.md"
-                if agent_file.exists():
-                    agents["conclave"].append(
-                        {"id": agent_dir.name, "path": str(agent_dir.relative_to(ROOT))}
-                    )
-
-    # Scan cargo (grouped)
+    # --- Cargo roles (nested 2 levels: cargo/{group}/{agent}) ---
     cargo_dir = AGENTS_DIR / "cargo"
     if cargo_dir.exists():
-        for group_dir in cargo_dir.iterdir():
+        for group_dir in sorted(cargo_dir.iterdir()):
             if group_dir.is_dir():
                 group_name = group_dir.name
                 if group_name not in agents["cargo"]:
                     agents["cargo"][group_name] = []
-                for agent_dir in group_dir.iterdir():
-                    if agent_dir.is_dir():
-                        agent_file = agent_dir / "AGENT.md"
-                        if agent_file.exists():
-                            agents["cargo"][group_name].append(
-                                {"id": agent_dir.name, "path": str(agent_dir.relative_to(ROOT))}
+                for agent_dir in sorted(group_dir.iterdir()):
+                    if agent_dir.is_dir() and (agent_dir / "AGENT.md").exists():
+                        agents["cargo"][group_name].append(
+                            {"id": agent_dir.name, "path": str(agent_dir.relative_to(ROOT))}
+                        )
+
+    # --- Business people (rglob for 3+ level nesting) ---
+    business_dir = AGENTS_DIR / "business"
+    if business_dir.exists():
+        for agent_md in sorted(business_dir.rglob("AGENT.md")):
+            agent_dir = agent_md.parent
+            if not agent_dir.name.startswith(("_", ".")):
+                agents["business"].append(
+                    {
+                        "id": agent_dir.name,
+                        "path": str(agent_dir.relative_to(ROOT)),
+                        "has_soul": (agent_dir / "SOUL.md").exists(),
+                        "has_memory": (agent_dir / "MEMORY.md").exists(),
+                    }
+                )
+
+    # --- Personal agents (direct children) ---
+    personal_dir = AGENTS_DIR / "personal"
+    if personal_dir.exists():
+        for agent_dir in sorted(personal_dir.iterdir()):
+            if agent_dir.is_dir() and not agent_dir.name.startswith("_"):
+                if (agent_dir / "AGENT.md").exists():
+                    agents["personal"].append(
+                        {
+                            "id": agent_dir.name,
+                            "path": str(agent_dir.relative_to(ROOT)),
+                            "has_soul": (agent_dir / "SOUL.md").exists(),
+                            "has_memory": (agent_dir / "MEMORY.md").exists(),
+                        }
+                    )
+
+    # --- System agents (nested 2 levels, same logic as activation_generator) ---
+    system_dir = AGENTS_DIR / "system"
+    if system_dir.exists():
+        for sub in sorted(system_dir.iterdir()):
+            if sub.is_dir():
+                if (sub / "AGENT.md").exists():
+                    # Direct system agent (e.g., system/jarvis/)
+                    agents["system"].append(
+                        {
+                            "id": sub.name,
+                            "path": str(sub.relative_to(ROOT)),
+                            "group": None,
+                        }
+                    )
+                else:
+                    # Nested system agents (e.g., system/conclave/{agent}, system/dev-ops/{agent})
+                    for agent_dir in sorted(sub.iterdir()):
+                        if agent_dir.is_dir() and (agent_dir / "AGENT.md").exists():
+                            agents["system"].append(
+                                {
+                                    "id": agent_dir.name,
+                                    "path": str(agent_dir.relative_to(ROOT)),
+                                    "group": sub.name,
+                                }
                             )
 
     return agents
 
 
+def _count_current_agents() -> int:
+    """Count agents in existing AGENT-INDEX.yaml by parsing the total line."""
+    if not AGENT_INDEX.exists():
+        return 0
+    try:
+        for line in AGENT_INDEX.read_text().splitlines():
+            if line.strip().startswith("total:"):
+                return int(line.split(":")[1].strip())
+    except (ValueError, IndexError):
+        pass
+    return 0
+
+
 def update_index():
-    """Update AGENT-INDEX.yaml with current agents."""
+    """Update AGENT-INDEX.yaml with current agents.
+
+    Returns the total agent count, or -1 if safety guard blocked the update.
+    """
     agents = scan_agents()
 
-    # Count totals
-    total_minds = len(agents["minds"])
+    # Count totals per category
+    total_external = len(agents["external"])
     total_cargo = sum(len(v) for v in agents["cargo"].values())
-    total_conclave = len(agents["conclave"])
-    total = total_minds + total_cargo + total_conclave
+    total_business = len(agents["business"])
+    total_personal = len(agents["personal"])
+    total_system = len(agents["system"])
+    total = total_external + total_cargo + total_business + total_personal + total_system
 
-    # Generate YAML content
+    # --- Safety guard: block if agent count drops > 20% ---
+    current_count = _count_current_agents()
+    if current_count > 0 and total < int(current_count * SAFETY_THRESHOLD):
+        msg = (
+            f"SAFETY GUARD: discovered {total} agents but AGENT-INDEX.yaml has {current_count}. "
+            f"Reduction exceeds {int((1 - SAFETY_THRESHOLD) * 100)}% threshold. "
+            f"Aborting update to prevent agent loss."
+        )
+        print(json.dumps({"continue": True, "warning": msg}), file=sys.stderr)
+        return -1
+
+    # --- Group system agents by sub-group for output ---
+    system_groups: dict[str, list] = {}
+    system_direct: list = []
+    for agent in agents["system"]:
+        group = agent.get("group")
+        if group:
+            system_groups.setdefault(group, []).append(agent)
+        else:
+            system_direct.append(agent)
+
+    # --- Generate YAML content ---
     content = f"""# AGENT-INDEX.yaml
 # Auto-generated by agent_index_updater.py
 # Last updated: {datetime.now().isoformat()}
 # Total agents: {total}
 
-version: "4.1.0"
+version: "5.0.0"
 updated: "{datetime.now().strftime("%Y-%m-%d")}"
 
 totals:
-  external: {total_minds}
+  external: {total_external}
   cargo: {total_cargo}
-  conclave: {total_conclave}
+  business: {total_business}
+  personal: {total_personal}
+  system: {total_system}
   total: {total}
 
 # =============================================================================
-# EXTERNAL (L2) - Expert Mind Clones
+# EXTERNAL - Expert Mind Clones
 # =============================================================================
 external:
 """
-    for agent in agents["minds"]:
+    for agent in agents["external"]:
         content += f"""  - id: {agent["id"]}
     path: {agent["path"]}/
     has_soul: {str(agent["has_soul"]).lower()}
@@ -166,27 +267,62 @@ external:
 
     content += """
 # =============================================================================
-# CONCLAVE (L1) - Deliberative Agents
+# CARGO - Functional Roles
 # =============================================================================
-conclave:
+cargo:
 """
-    for agent in agents["conclave"]:
+    for group, group_agents in sorted(agents["cargo"].items()):
+        if group_agents:
+            content += f"  {group}:\n"
+            for agent in group_agents:
+                content += f"""    - id: {agent["id"]}
+      path: {agent["path"]}/
+      status: active
+"""
+
+    content += """
+# =============================================================================
+# BUSINESS - Collaborator Clones
+# =============================================================================
+business:
+"""
+    for agent in agents["business"]:
         content += f"""  - id: {agent["id"]}
     path: {agent["path"]}/
+    has_soul: {str(agent["has_soul"]).lower()}
+    has_memory: {str(agent["has_memory"]).lower()}
     status: active
 """
 
     content += """
 # =============================================================================
-# CARGO (L4) - Functional Roles
+# PERSONAL - Founder Clones
 # =============================================================================
-cargo:
+personal:
 """
-    for group, group_agents in agents["cargo"].items():
-        if group_agents:
-            content += f"  {group}:\n"
-            for agent in group_agents:
-                content += f"""    - id: {agent["id"]}
+    for agent in agents["personal"]:
+        content += f"""  - id: {agent["id"]}
+    path: {agent["path"]}/
+    has_soul: {str(agent["has_soul"]).lower()}
+    has_memory: {str(agent["has_memory"]).lower()}
+    status: active
+"""
+
+    content += """
+# =============================================================================
+# SYSTEM - Infrastructure Agents
+# =============================================================================
+system:
+"""
+    for agent in system_direct:
+        content += f"""  - id: {agent["id"]}
+    path: {agent["path"]}/
+    status: active
+"""
+    for group_name, group_agents in sorted(system_groups.items()):
+        content += f"  {group_name}:\n"
+        for agent in group_agents:
+            content += f"""    - id: {agent["id"]}
       path: {agent["path"]}/
       status: active
 """
@@ -236,11 +372,15 @@ def main():
         layer = detect_layer(file_path)
         total = update_index()
 
+        if total == -1:
+            # Safety guard blocked the update
+            return
+
         log_update(file_path, agent_id, layer)
 
         print(
             json.dumps(
-                {"continue": True, "message": f"📋 AGENT-INDEX.yaml updated ({total} agents)"}
+                {"continue": True, "message": f"AGENT-INDEX.yaml updated ({total} agents)"}
             )
         )
 

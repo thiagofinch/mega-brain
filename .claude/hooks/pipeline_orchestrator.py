@@ -12,7 +12,7 @@ file_path against known patterns, and dispatches to:
   sop_detector          -- insight JSON written to knowledge/business/insights/
   dossier_compiler      -- dossier_trigger log entry says CREATE
   agent_generator       -- agent_creation_trigger state says READY
-  insight_speaker_linker-- meeting transcript written to workspace/inbox/meetings/
+  insight_speaker_linker-- meeting transcript written to knowledge/business/inbox/meetings/
 
 Design:
   - Never blocks (always exit 0, always {"continue": true}).
@@ -46,7 +46,6 @@ try:
         KNOWLEDGE_PERSONAL,
         LOGS,
         MISSION_CONTROL,
-        WORKSPACE_INBOX,
     )
 except ImportError:
     # Fallback for environments where core.paths is not importable
@@ -54,7 +53,6 @@ except ImportError:
     KNOWLEDGE_BUSINESS = _ROOT / "knowledge" / "business"
     KNOWLEDGE_PERSONAL = _ROOT / "knowledge" / "personal"
     BUSINESS_INSIGHTS = KNOWLEDGE_BUSINESS / "insights"
-    WORKSPACE_INBOX = _ROOT / "workspace" / "inbox"
     LOGS = _ROOT / "logs"
     MISSION_CONTROL = _ROOT / ".claude" / "mission-control"
 
@@ -70,11 +68,11 @@ _INBOX_MARKERS: list[str] = [
 # Business insight path marker
 _INSIGHT_MARKER = "knowledge/business/insights/"
 
-# Meeting transcript marker (workspace inbox for meetings)
+# Meeting transcript marker (knowledge business inbox for meetings)
 _MEETING_MARKERS: list[str] = [
-    "workspace/inbox/meetings/",
-    "workspace/inbox/meeting",
     "knowledge/business/inbox/meetings/",
+    "knowledge/business/inbox/meeting",
+    "knowledge/personal/inbox/meetings/",
 ]
 
 # Dossier trigger log — we check this for recent CREATE decisions
@@ -310,8 +308,8 @@ def _route_agent_generator(file_path: str) -> bool:
 def _route_insight_speaker_linker(file_path: str) -> bool:
     """Trigger insight_speaker_linker for meeting transcripts.
 
-    When a transcript is written to workspace/inbox/meetings/ or
-    knowledge/business/inbox/meetings/, we try to find corresponding
+    When a transcript is written to knowledge/business/inbox/meetings/ or
+    knowledge/personal/inbox/meetings/, we try to find corresponding
     insight JSON and link speakers.
     """
     is_meeting = any(marker in file_path for marker in _MEETING_MARKERS)
