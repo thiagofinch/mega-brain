@@ -50,7 +50,7 @@
     "paradoxes": { "total": 3, "new": 1, "all_productive": true }
   },
   "voice_extraction": {
-    "signature_phrases": { "existing_reinforced": 7, "new": 7, "total": 17 },
+    "signature_phrases": { "existing_reinforced": 7, "new": 6, "total": 16 },
     "behavioral_states": { "existing_reinforced": 3, "new": 1, "total": 5 },
     "metaphors_added": 5,
     "vocabulary_transforms_added": 6,
