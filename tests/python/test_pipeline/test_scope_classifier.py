@@ -165,10 +165,10 @@ class TestClassifyBusinessContent:
         decision = classify(ctx)
         assert decision.primary_bucket == "business"
 
-    def test_workspace_inbox_meeting_path(self):
+    def test_business_inbox_meeting_path(self):
         ctx = ClassificationContext(
             filename="standup.txt",
-            file_path="/workspace/inbox/meetings/standup.txt",
+            file_path="/knowledge/business/inbox/meetings/standup.txt",
         )
         decision = classify(ctx)
         assert decision.primary_bucket == "business"
@@ -243,12 +243,13 @@ class TestSignalPath:
         assert scores["personal"] > 0
         assert signals["S1_path"] == "personal"
 
-    def test_workspace_inbox_generic(self):
+    def test_workspace_inbox_no_longer_routes(self):
+        """workspace/inbox/ was removed in S-02. Paths there get no score."""
         scores = {"external": 0, "business": 0, "personal": 0}
         reasons, signals = [], {}
         _signal_path("/workspace/inbox/file.txt", scores, reasons, signals)
-        assert scores["business"] > 0
-        assert signals["S1_path"] == "business"
+        assert all(v == 0 for v in scores.values())
+        assert signals["S1_path"] is None
 
     def test_unknown_path(self):
         scores = {"external": 0, "business": 0, "personal": 0}
