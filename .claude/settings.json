@@ -179,6 +179,11 @@
             "type": "command",
             "command": "python3 .claude/hooks/governance_auto_update.py",
             "timeout": 15000
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/mce_step_logger.py",
+            "timeout": 5000
           }
         ]
       }
@@ -206,6 +211,11 @@
             "type": "command",
             "command": "python3 .claude/hooks/session_index.py",
             "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/mce_session_reporter.py",
+            "timeout": 30000
           }
         ]
       }

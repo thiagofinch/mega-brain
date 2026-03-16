@@ -297,6 +297,8 @@ ROUTING = {
     # MCE Pipeline (EPIC 3)
     "mce_state": MISSION_CONTROL / "mce",
     "mce_metrics_log": LOGS / "mce-metrics.jsonl",
+    "mce_step_log": LOGS / "mce-step-logger.jsonl",
+    "mce_sessions_dir": LOGS / "sessions",
     "mce_cache": DATA / "mce_cache",
     # Skill Seekers Bridge (Phase 2 integration)
     "ss_bridge_config": CORE / "intelligence" / "pipeline" / "ss_bridge_config.yaml",
