@@ -88,71 +88,36 @@ Este protocolo unifica o fluxo cognitivo de todos os agentes, integrando:
 
 ---
 
-## FASE 0: ATIVAÇÃO
+## FASE 0: ATIVACAO (Modelo Compilado)
 
-### Para Agentes HÍBRIDO (CARGO)
+O command file (.claude/commands/agents/{slug}.md) e um **artefato compilado** que contem
+toda a persona necessaria para ativacao. Gerado por `activation_generator.py`.
 
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                                                                             │
-│  ATIVAÇÃO DE AGENTE HÍBRIDO                                                 │
-│                                                                             │
-│  1. CARREGAR AGENT.md                                                       │
-│     └─ Responsabilidades, métricas, decision trees                         │
-│                                                                             │
-│  2. CARREGAR SOUL.md                                                        │
-│     └─ ENCARNAR identidade (seção "QUEM SOU EU")                           │
-│     └─ ADOTAR tom e vocabulário                                            │
-│     └─ INTERNALIZAR regras de decisão                                      │
-│                                                                             │
-│  3. CARREGAR DNA-CONFIG.yaml                                                │
-│     └─ Identificar fontes e pesos                                          │
-│     └─ Mapear conflitos conhecidos                                         │
-│                                                                             │
-│  4. CARREGAR MEMORY.md                                                      │
-│     └─ Precedentes e decisões anteriores                                   │
-│     └─ Calibrações específicas do contexto                                 │
-│                                                                             │
-│  5. CHECKPOINT DE IDENTIDADE                                                │
-│     └─ "Estou respondendo como [CARGO] falaria?"                           │
-│     └─ "Minha resposta reflete minhas fontes primárias?"                   │
-│                                                                             │
-└─────────────────────────────────────────────────────────────────────────────┘
-```
+**Passos de ativacao:**
 
-### Para Agentes SOLO (PESSOA/EMPRESA)
+1. **LER O COMMAND FILE COMPLETO** -- contem Voice Injection Block, Operational Core,
+   Decision Engine, Top Insights e Connection Interfaces inline.
 
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                                                                             │
-│  ATIVAÇÃO DE AGENTE SOLO                                                    │
-│                                                                             │
-│  1. CARREGAR AGENT.md                                                       │
-│     └─ Definição operacional do agente                                     │
-│     └─ Escopo e limitações                                                 │
-│                                                                             │
-│  2. CARREGAR SOUL.md                                                        │
-│     └─ ENCARNAR identidade da PESSOA                                       │
-│     └─ VOZ única (como a pessoa realmente fala)                            │
-│     └─ Padrões de argumentação                                             │
-│                                                                             │
-│  3. CARREGAR DNA-CONFIG.yaml                                                │
-│     └─ Referência para DNA único em knowledge/external/dna/persons/              │
-│     └─ Fonte = 100% (sem pesos, sem conflitos)                             │
-│                                                                             │
-│  4. CARREGAR MEMORY.md                                                      │
-│     └─ Insights extraídos das fontes processadas                           │
-│     └─ Padrões de pensamento identificados                                 │
-│     └─ Frases características e expressões típicas                         │
-│     └─ Lista de materiais já processados                                   │
-│                                                                             │
-│  5. CHECKPOINT DE IDENTIDADE                                                │
-│     └─ "Estou respondendo como {PESSOA} falaria?"                          │
-│     └─ "Estou usando o vocabulário característico?"                        │
-│     └─ "Minhas analogias são as que essa pessoa usaria?"                   │
-│                                                                             │
-└─────────────────────────────────────────────────────────────────────────────┘
-```
+2. **INTERNALIZAR A VOZ** -- usar MANDATORY VOCABULARY, respeitar FORBIDDEN VOCABULARY,
+   adotar TONE e ARGUMENTATION PATTERN.
+
+3. **CHECKPOINT DE IDENTIDADE** -- antes de cada resposta, verificar:
+   - Estou usando o vocabulario mandatorio?
+   - Estou seguindo o padrao de argumentacao?
+   - Estou dentro dos limites operacionais?
+   - A persona real diria isso?
+
+**Depth-seeking:** Se precisar de mais contexto alem do command file, os source files
+canonicos estao referenciados na secao "Deep Context" do command file.
+
+**Source files (canonicos, para edicao):**
+- `agents/{category}/{slug}/AGENT.md` -- definicao completa
+- `agents/{category}/{slug}/SOUL.md` -- identidade e voz
+- `agents/{category}/{slug}/MEMORY.md` -- insights e padroes
+- `agents/{category}/{slug}/DNA-CONFIG.yaml` -- ponteiro DNA
+
+**Nunca editar o command file diretamente.** Editar os source files e regenerar:
+`python -m core.intelligence.agents.activation_generator generate {slug} --category {cat} --force`
 
 ---
 
