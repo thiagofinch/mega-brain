@@ -1,0 +1,37 @@
+{
+  "slug": "liam-ottley",
+  "current_state": "chunking_complete",
+  "last_step_completed": 3,
+  "next_step": 4,
+  "chunks_created": 20,
+  "chunk_ids": [
+    "chunk_636",
+    "chunk_637",
+    "chunk_638",
+    "chunk_639",
+    "chunk_640",
+    "chunk_641",
+    "chunk_642",
+    "chunk_643",
+    "chunk_644",
+    "chunk_645",
+    "chunk_646",
+    "chunk_647",
+    "chunk_648",
+    "chunk_649",
+    "chunk_650",
+    "chunk_651",
+    "chunk_652",
+    "chunk_653",
+    "chunk_654",
+    "chunk_655"
+  ],
+  "sources_processed": 3,
+  "source_files": [
+    "The Biggest Shift in Business Since the Internet Just Happened",
+    "What Is an AI Operating System (And Why Every Business Will Need One)",
+    "How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE"
+  ],
+  "workflow_mode": "brownfield",
+  "updated_at": "2026-03-16T01:05:56.204578+00:00"
+}
