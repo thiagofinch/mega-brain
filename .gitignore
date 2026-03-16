@@ -126,8 +126,8 @@ docs/CREDENTIAL-ROTATION-*.md
 # ══════════════════════════════════════════════════════════════════════
 
 # Bucket inboxes (material bruto original — L3 only)
-# Root inbox/ was eliminated in S03; raw materials live in bucket inboxes now.
-workspace/inbox/**
+# Root inbox/ was eliminated in S03; workspace/inbox/ removed in S-02.
+# Raw materials live in knowledge bucket inboxes now.
 knowledge/personal/inbox/**
 # knowledge/business/inbox/** is re-denied below in BLOCO 4
 
@@ -536,6 +536,9 @@ knowledge/business/inbox/**
 # Para padrões com nomes de marca: usar .git/info/exclude (local only)
 # ══════════════════════════════════════════════════════════════════════
 
+# Claude worktrees (transient agent workspaces — L3 only)
+.claude/worktrees/
+
 # Commands injetados por sync externo (override de !.claude/commands/**)
 .claude/commands/doc-master/
 .claude/commands/mmos-squad/
@@ -629,7 +632,6 @@ workspace/*-central/
 workspace/team/
 workspace/meetings/
 workspace/businesses/
-workspace/inbox/
 workspace/events/
 workspace/finance/
 workspace/strategy/

@@ -5,26 +5,10 @@
   "next_step": null,
   "chunks_created": 20,
   "chunk_ids": [
-    "chunk_636",
-    "chunk_637",
-    "chunk_638",
-    "chunk_639",
-    "chunk_640",
-    "chunk_641",
-    "chunk_642",
-    "chunk_643",
-    "chunk_644",
-    "chunk_645",
-    "chunk_646",
-    "chunk_647",
-    "chunk_648",
-    "chunk_649",
-    "chunk_650",
-    "chunk_651",
-    "chunk_652",
-    "chunk_653",
-    "chunk_654",
-    "chunk_655"
+    "chunk_636", "chunk_637", "chunk_638", "chunk_639", "chunk_640",
+    "chunk_641", "chunk_642", "chunk_643", "chunk_644", "chunk_645",
+    "chunk_646", "chunk_647", "chunk_648", "chunk_649", "chunk_650",
+    "chunk_651", "chunk_652", "chunk_653", "chunk_654", "chunk_655"
   ],
   "sources_processed": 3,
   "source_files": [
@@ -33,17 +17,12 @@
     "How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE"
   ],
   "workflow_mode": "brownfield",
-  "updated_at": "2026-03-16T01:29:19.436780+00:00",
+  "updated_at": "2026-03-16T02:44:00.000000+00:00",
   "entity_resolution": {
     "new_entities": 0,
     "existing_entities_verified": 5,
-    "themes_added": [
-      "ITB/OTB",
-      "SDR"
-    ],
-    "themes_expanded": [
-      "AIOS"
-    ],
+    "themes_added": ["ITB/OTB", "SDR"],
+    "themes_expanded": ["AIOS"],
     "canonical_map_version": "v6"
   },
   "insight_extraction": {
@@ -56,62 +35,35 @@
       "MODELO-MENTAL": 3,
       "FRAMEWORK": 3
     },
-    "by_status": {
-      "new": 14,
-      "reinforced": 5
-    },
-    "by_priority": {
-      "HIGH": 15,
-      "MEDIUM": 4
-    }
+    "by_status": { "new": 14, "reinforced": 5 },
+    "by_priority": { "HIGH": 15, "MEDIUM": 4 }
   },
   "behavioral_extraction": {
     "reinforced_patterns": 7,
     "new_patterns": 4,
     "total_patterns": 11,
-    "new_ids": [
-      "BP-LO-008",
-      "BP-LO-009",
-      "BP-LO-010",
-      "BP-LO-011"
-    ]
+    "new_ids": ["BP-LO-008", "BP-LO-009", "BP-LO-010", "BP-LO-011"]
   },
   "identity_extraction": {
-    "values": {
-      "tier_1": 2,
-      "tier_2": 4,
-      "total": 6,
-      "new": 1,
-      "reinforced": 5
-    },
-    "obsessions": {
-      "master": 1,
-      "active": 1,
-      "secondary": 1,
-      "total": 3,
-      "new": 1
-    },
-    "paradoxes": {
-      "total": 3,
-      "new": 1,
-      "all_productive": true
-    }
+    "values": { "tier_1": 2, "tier_2": 4, "total": 6, "new": 1, "reinforced": 5 },
+    "obsessions": { "master": 1, "active": 1, "secondary": 1, "total": 3, "new": 1 },
+    "paradoxes": { "total": 3, "new": 1, "all_productive": true }
   },
   "voice_extraction": {
-    "signature_phrases": {
-      "existing_reinforced": 7,
-      "new": 7,
-      "total": 17
-    },
-    "behavioral_states": {
-      "existing_reinforced": 3,
-      "new": 1,
-      "total": 5
-    },
+    "signature_phrases": { "existing_reinforced": 7, "new": 7, "total": 17 },
+    "behavioral_states": { "existing_reinforced": 3, "new": 1, "total": 5 },
     "metaphors_added": 5,
     "vocabulary_transforms_added": 6,
     "anti_patterns_added": 2,
     "new_chunks_added": 20
+  },
+  "consolidation": {
+    "dossier_updated": true,
+    "dna_yamls_updated": 5,
+    "source_docs_created": 9,
+    "theme_dossiers_updated": 1,
+    "agent_files_updated": 4,
+    "cross_references_validated": true
   },
   "finalization": {
     "enrichment_appended": 0,

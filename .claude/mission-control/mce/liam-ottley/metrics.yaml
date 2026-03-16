@@ -10,8 +10,8 @@ phases:
     ended: '2026-03-14T23:49:22.244879+00:00'
     duration_seconds: 0.0
   finalization:
-    started: '2026-03-16T01:29:05.315020+00:00'
-    ended: '2026-03-16T01:29:05.319492+00:00'
+    started: '2026-03-16T02:43:40.260644+00:00'
+    ended: '2026-03-16T02:43:40.265860+00:00'
     duration_seconds: 0.0
 total:
   duration_seconds: 0.0
