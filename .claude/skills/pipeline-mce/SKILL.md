@@ -333,48 +333,99 @@ Display this to the user:
 
 ---
 
-### STEP 10: CONSOLIDATION (LLM)
+### STEP 10: CONSOLIDATION (LLM) — 6 Sub-Steps, ALL Mandatory
 
-**What:** Compile extracted knowledge into dossiers, sources, DNA YAMLs.
+**What:** Compile extracted knowledge into dossiers, sources, DNA YAMLs, theme dossiers, agents.
 **Depends on:** All artifacts from Steps 3-8.
+**CRITICAL:** Execute ALL 6 sub-steps. Do NOT skip any. Use **Write** tool for all saves.
 
-1. **Dossier compilation.** Read and execute:
-   ```
-   Read: core/templates/phases/dossier-compilation.md
-   ```
-   Save to: `knowledge/external/dossiers/persons/DOSSIER-{PERSON}.md`
+#### 10.1 — Person Dossier (MANDATORY)
 
-2. **Source compilation.** Read and execute:
-   ```
-   Read: core/templates/phases/sources-compilation.md
-   ```
-   Group insights by theme per person.
-   Save to: `knowledge/external/sources/{slug}/{theme}.md`
+Read the template, then create or MERGE into the person dossier:
+```
+Read: core/templates/phases/dossier-compilation.md
+```
+- If `knowledge/external/dossiers/persons/DOSSIER-{PERSON}.md` EXISTS: read it,
+  MERGE new MCE data (behavioral patterns, identity core, voice summary).
+  Add sections if missing. Increment version. NEVER overwrite existing data.
+- If NOT EXISTS: create from template.
+- Save using **Write** tool.
 
-3. **DNA YAML generation.** From INSIGHTS-STATE.json, generate/update:
-   ```
-   knowledge/external/dna/persons/{SLUG}/FILOSOFIAS.yaml
-   knowledge/external/dna/persons/{SLUG}/MODELOS-MENTAIS.yaml
-   knowledge/external/dna/persons/{SLUG}/HEURISTICAS.yaml
-   knowledge/external/dna/persons/{SLUG}/FRAMEWORKS.yaml
-   knowledge/external/dna/persons/{SLUG}/METODOLOGIAS.yaml
-   ```
-   Filter insights by `tag` field. If files exist, MERGE: increment version,
-   append new entries, preserve existing.
+#### 10.2 — DNA YAML Generation (MANDATORY — ALL 5 files)
 
-4. **Agent generation.** Read the agent template:
-   ```
-   Read: agents/_templates/TEMPLATE-AGENT-MD-ULTRA-ROBUSTO-V3.md
-   ```
-   Generate or update:
-   ```
-   agents/external/{SLUG}/AGENT.md
-   agents/external/{SLUG}/SOUL.md
-   agents/external/{SLUG}/MEMORY.md
-   agents/external/{SLUG}/DNA-CONFIG.yaml
-   ```
-   Integrate all MCE data (behavioral_patterns, value_hierarchy, obsessions,
-   paradoxes, VOICE-DNA) into the agent files following Template V3 structure.
+From INSIGHTS-STATE.json, filter insights by `tag` and append to EACH DNA YAML.
+**You MUST update ALL 5 files, not just one.** For each file:
+
+1. **Read** the existing file (if exists)
+2. **Append** new entries matching the tag. Dedup by insight ID.
+3. **Increment** version and add `updated` timestamp.
+4. **Save** using **Write** tool.
+
+| Tag in Insight | Target File | Action |
+|----------------|-------------|--------|
+| `[FILOSOFIA]` | `knowledge/external/dna/persons/{SLUG}/FILOSOFIAS.yaml` | Append new entries |
+| `[MODELO-MENTAL]` | `knowledge/external/dna/persons/{SLUG}/MODELOS-MENTAIS.yaml` | Append new entries |
+| `[HEURISTICA]` | `knowledge/external/dna/persons/{SLUG}/HEURISTICAS.yaml` | Append new entries |
+| `[FRAMEWORK]` | `knowledge/external/dna/persons/{SLUG}/FRAMEWORKS.yaml` | Append new entries |
+| `[METODOLOGIA]` | `knowledge/external/dna/persons/{SLUG}/METODOLOGIAS.yaml` | Append new entries |
+
+If a file has ZERO new insights for its tag, still read it and bump `updated` timestamp
+(no new entries, but confirms it was checked). Update `DNA-CONFIG.yaml` counts.
+
+#### 10.3 — Source Docs by Theme (MANDATORY)
+
+Read the template:
+```
+Read: core/templates/phases/sources-compilation.md
+```
+Group all insights for this person by theme. For each theme:
+- If `knowledge/external/sources/{SLUG-UPPER}/{THEME-UPPER}.md` EXISTS:
+  MERGE new insights incrementally (append to existing sections, never overwrite).
+- If NOT EXISTS: create from template.
+- Create `_INDEX.md` if missing, or update it.
+- Save using **Write** tool.
+
+**Anti-duplication:** Before appending an insight, check if its `id` already
+exists in the file. Skip if present.
+
+#### 10.4 — Theme Dossiers (MANDATORY)
+
+For each THEME that has 3+ insights from this person:
+- Check if `knowledge/external/dossiers/themes/DOSSIER-{THEME-UPPER}.md` EXISTS.
+- If EXISTS: MERGE — add/update this person's position in "POSICOES POR PESSOA" section.
+  Add new frameworks, metrics, quotes. Never remove existing content from other persons.
+- If NOT EXISTS and theme has 5+ insights: CREATE from theme dossier template
+  in `dossier-compilation.md`.
+- Save using **Write** tool.
+
+**Anti-duplication:** Check person's section in the theme dossier before adding.
+If person already has a section, update it with new data. Don't create duplicate sections.
+
+#### 10.5 — Agent Files (MANDATORY)
+
+Read the agent template:
+```
+Read: agents/_templates/TEMPLATE-AGENT-MD-ULTRA-ROBUSTO-V3.md
+```
+Generate or update (all using **Write** or **Edit** tool):
+```
+agents/external/{SLUG}/AGENT.md       — version bump, maturidade bar, DNA refs
+agents/external/{SLUG}/SOUL.md        — new beliefs from [FILOSOFIA] insights
+agents/external/{SLUG}/MEMORY.md      — new insights + decisional patterns
+agents/external/{SLUG}/DNA-CONFIG.yaml — update counts, version, timestamp
+```
+Integrate all MCE data (behavioral_patterns, value_hierarchy, obsessions,
+paradoxes, VOICE-DNA) into the agent files following Template V3 structure.
+
+#### 10.6 — Cross-Reference Validation (MANDATORY)
+
+After all sub-steps, validate cross-references:
+- Person dossier links to theme dossiers that exist
+- Source docs link back to dossier
+- Agent DNA-CONFIG.yaml counts match actual YAML file contents
+- All version numbers are consistent across the person's files
+
+Report any broken links or count mismatches.
 
 ---
 

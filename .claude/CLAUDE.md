@@ -69,11 +69,11 @@ When in plan mode, save the plan file to: `docs/plans/YYYY-MM-DD-description.md`
 
 | Layer | Name | Description |
 |-------|------|-------------|
-| L1 | PHILOSOPHIES | Core beliefs and worldview |
-| L2 | MENTAL-MODELS | Thinking and decision frameworks |
-| L3 | HEURISTICS | Practical rules and decision shortcuts |
-| L4 | FRAMEWORKS | Structured methodologies and processes |
-| L5 | METHODOLOGIES | Step-by-step implementations |
+| L1 | FILOSOFIAS | Crenças fundamentais e visão de mundo |
+| L2 | MODELOS-MENTAIS | Frameworks de pensamento e decisão |
+| L3 | HEURISTICAS | Regras práticas e atalhos decisórios |
+| L4 | FRAMEWORKS | Metodologias estruturadas e processos |
+| L5 | METODOLOGIAS | Implementações passo-a-passo |
 
 ## Commands
 

@@ -180,11 +180,11 @@ agents/external/liam-ottley/
 
 knowledge/external/dna/persons/liam-ottley/
 ├── DNA-CONFIG.yaml       ← Config master
-├── PHILOSOPHIES.yaml     ← 10 filosofias
-├── MENTAL-MODELS.yaml    ← 7 modelos mentais
-├── HEURISTICS.yaml       ← 8 heurísticas
+├── FILOSOFIAS.yaml       ← 10 filosofias
+├── MODELOS-MENTAIS.yaml  ← 7 modelos mentais
+├── HEURISTICAS.yaml      ← 13 heurísticas
 ├── FRAMEWORKS.yaml       ← 6 frameworks
-└── METHODOLOGIES.yaml    ← 4 metodologias
+└── METODOLOGIAS.yaml     ← 4 metodologias
 
 knowledge/external/dossiers/persons/
 └── DOSSIER-LIAM-OTTLEY.md ← Dossier consolidado
@@ -201,11 +201,11 @@ knowledge/external/inbox/liam-ottley/podcasts/
 
 | Métrica | Valor | Fonte | Data Verificação |
 |---------|-------|-------|------------------|
-| Philosophies | 10 | PHILOSOPHIES.yaml | 2026-03-13 |
-| Mental Models | 7 | MENTAL-MODELS.yaml | 2026-03-13 |
-| Heuristics | 8 | HEURISTICS.yaml | 2026-03-13 |
+| Filosofias | 10 | FILOSOFIAS.yaml | 2026-03-13 |
+| Modelos Mentais | 7 | MODELOS-MENTAIS.yaml | 2026-03-13 |
+| Heuristicas | 13 | HEURISTICAS.yaml | 2026-03-15 |
 | Frameworks | 6 | FRAMEWORKS.yaml | 2026-03-13 |
-| Methodologies | 4 | METHODOLOGIES.yaml | 2026-03-13 |
+| Metodologias | 4 | METODOLOGIAS.yaml | 2026-03-13 |
 | Insights | 15 | MEMORY.md:1-15 | 2026-03-13 |
 | Fontes | 3 | DNA-CONFIG.yaml:dna_sources | 2026-03-13 |
 | Palavras total | 24,287 | DNA-CONFIG.yaml:statistics | 2026-03-13 |

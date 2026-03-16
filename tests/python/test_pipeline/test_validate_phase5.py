@@ -46,7 +46,7 @@ def _build_complete_structure(root: Path) -> None:
         # Matching DNA directory with a YAML
         dna_dir = dna_persons / name
         dna_dir.mkdir(parents=True, exist_ok=True)
-        (dna_dir / "PHILOSOPHIES.yaml").write_text("philosophies: []\n")
+        (dna_dir / "FILOSOFIAS.yaml").write_text("filosofias: []\n")
 
     # Create dossiers
     dossiers_persons.mkdir(parents=True, exist_ok=True)

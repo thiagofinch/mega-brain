@@ -412,11 +412,11 @@ Each expert's DNA is stored in `knowledge/external/dna/persons/{person}/` with:
 
 | Layer | File | Description |
 |-------|------|-------------|
-| L1 | `PHILOSOPHIES.yaml` | Core beliefs and worldview |
-| L2 | `MENTAL-MODELS.yaml` | Thinking and decision frameworks |
-| L3 | `HEURISTICS.yaml` | Practical rules and decision shortcuts |
-| L4 | `FRAMEWORKS.yaml` | Structured methodologies and processes |
-| L5 | `METHODOLOGIES.yaml` | Step-by-step implementations |
+| L1 | `FILOSOFIAS.yaml` | Crenças fundamentais e visão de mundo |
+| L2 | `MODELOS-MENTAIS.yaml` | Frameworks de pensamento e decisão |
+| L3 | `HEURISTICAS.yaml` | Regras práticas e atalhos decisórios |
+| L4 | `FRAMEWORKS.yaml` | Metodologias estruturadas e processos |
+| L5 | `METODOLOGIAS.yaml` | Implementações passo-a-passo |
 
 Plus `DNA-CONFIG.yaml` for metadata and source references.
 

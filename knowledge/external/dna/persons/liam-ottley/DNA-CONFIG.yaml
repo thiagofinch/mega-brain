@@ -15,23 +15,23 @@ persona:
   country: "New Zealand / South Africa (Cape Town)"
 
 dna_layers:
-  philosophies:
-    file: "PHILOSOPHIES.yaml"
+  filosofias:
+    file: "FILOSOFIAS.yaml"
     count: 10
-  mental_models:
-    file: "MENTAL-MODELS.yaml"
+  modelos_mentais:
+    file: "MODELOS-MENTAIS.yaml"
     count: 7
-  heuristics:
-    file: "HEURISTICS.yaml"
-    count: 8
+  heuristicas:
+    file: "HEURISTICAS.yaml"
+    count: 13
   frameworks:
     file: "FRAMEWORKS.yaml"
     count: 6
-  methodologies:
-    file: "METHODOLOGIES.yaml"
+  metodologias:
+    file: "METODOLOGIAS.yaml"
     count: 4
 
-total_elements: 35
+total_elements: 54
 
 dna_sources:
   - id: "LO-001"
