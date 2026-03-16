@@ -4,8 +4,8 @@
 
 > **Em resumo:** Todo problema de negócio cai em três baldes: People, Process ou Management. Diagnóstico certo antes de ação. E urgência é o driver — os melhores resolvem agora, não amanhã. Uso AI pra analisar 100% das calls, não amostragem.
 >
-> **Versão:** 2.0 | **Atualizado:** 2025-12-20
-> **Densidade:** ◐◐◯◯◯ (2)
+> **Versao:** 3.0 | **Atualizado:** 2026-03-16
+> **Densidade:** ◐◐◐◯◯ (3)
 
 ---
 
@@ -166,16 +166,48 @@ Cuidado quando as coisas vão bem. A tendência natural é proteger o que funcio
 
 ---
 
+## MCE Update: Novos Dados dos YouTube Videos
+
+### Root Cause Analysis com WHY e WHAT FOR
+
+Quando um cliente diz "falta escala", minha reacao nao e concordar — e perguntar WHY. E depois WHAT FOR. Porque uma vez que voce entende as CARACTERISTICAS do problema, pode resolver coisas reais em vez de lutar contra ambiguidades. [chunk_733]
+
+> "it lacks scale, but why? What for? Because once you start to understand those characteristics, you can start to solve real things" — [chunk_733]
+
+### Interconexao de Problemas
+
+Tudo esta conectado. Sales, medo, inconsistencia, playing safe — todos vem da mesma raiz. Quando identifico isso no coaching, mudo a abordagem: em vez de tratar 5 sintomas, ataco 1 causa raiz. [chunk_720]
+
+> "Everything that you're discussing in terms of the challenges is interconnected... it's just one root cause" — [chunk_720]
+
+### CEOs sao Unreasonable
+
+Se estamos sendo unreasonable, bom. CEOs sao pessoas unreasonable. Os melhores esportistas do mundo sao unreasonable. Voce esta sendo RAZOAVEL demais. Pare de levar as coisas pessoalmente. [chunk_741]
+
+### Savage nas Prioridades
+
+Se recrutamento e o maior gargalo, por que voce esta fazendo 1 hora aqui e ali? Faca o DIA INTEIRO. Voce pode dizer pro cliente "nao vamos ter reuniao essa semana" e comprar semanas de tempo. Se voce nao forcar as prioridades, elas nao vao acontecer. [chunk_739, chunk_741]
+
+### Efetividade Antes de Eficiencia
+
+Eu nao penso que tudo que faco precisa ser eficiente. Penso: o que me permite investir AGORA para acelerar pro proximo nivel? Depois posso cortar as ineficiencias. O time de midia agora e ineficiente pro output que fazemos, mas estou OK com isso se estou sendo EFETIVO. [chunk_734]
+
+### Deploy Capital, Nao Acumule
+
+Cash no banco pode parecer bom, mas pode virar desculpa. A pergunta deveria ser "o que vou fazer com esse cash para desbloquear o proximo nivel de crescimento?" Nos investimos heavy no inicio e agora nossos negocios sao 10, 20, 50, 100x maiores que os de quem criticou nossos gastos. [chunk_718]
+
+---
+
 ## Metadados
 
 | Campo | Valor |
 |-------|-------|
 | **Fonte** | Jordan Lee |
 | **Tema** | 09-GESTAO |
-| **Chunks** | CJ001_011, CJ001_016 |
-| **Insights** | DF001, DF003, DF004, SP002 |
-| **Protocolo** | Narrative Metabolism v1.0 |
-| **Última consolidação** | — |
+| **Chunks** | CJ001_011, CJ001_016, chunk_718, chunk_720, chunk_733, chunk_734, chunk_739, chunk_741 |
+| **Insights** | DF001, DF003, DF004, SP002, INS-JL-006, INS-JL-010, INS-JL-011, INS-JL-038 |
+| **Protocolo** | Narrative Metabolism v2.0 |
+| **Pipeline** | MCE v1.0 |
 
 ---
 

@@ -1,0 +1,102 @@
+# Layer: HEURISTICAS
+# Person: Jordan Lee
+# Version: 1.0.0
+# Generated: 2026-03-16
+# Source: MCE Pipeline v1.0
+
+entries:
+  - id: "INS-JL-019"
+    nome: "Framework de Consequencias com Metricas"
+    descricao: "Abaixo de 70% da meta por 2 meses = warning formal. 3 meses = desligamento. Acima de 100% = double commission. Acima de 150% por 6+ meses = Million Dollar Club."
+    quote: "Below 70% target for 2 consecutive months: formal warning. Below 70% for 3 months: termination"
+    chunk_ids: ["chunk_712"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-020"
+    nome: "Compensacao Agressiva para Top Performers"
+    descricao: "Top closers fazem $45-50k/mes com double commission. Top 10% recebe comissao dupla. Closer medio faz $8-12k/mes."
+    quote: "Top sales reps can make $45-50k/month. Double commissions, Million-dollar club incentives"
+    chunk_ids: ["chunk_711"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-021"
+    nome: "300 Calls/Dia com Foco em Qualidade"
+    descricao: "300 calls/dia com 70 closers = ~4.3 calls por closer. Foco em qualidade, nao volume bruto."
+    quote: "300 sales calls per day capacity with 70 sales reps"
+    chunk_ids: ["chunk_701", "chunk_702"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-022"
+    nome: "100% QC com AI"
+    descricao: "100% de QC com AI, nao amostragem de 10%. De 2 calls revisadas/semana para 300+. Tempo de feedback de 1 semana para 24h."
+    quote: "Created live sales call analyzer + offline transcript analyzer - went from 2 calls/week to every single one"
+    chunk_ids: ["chunk_709"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-023"
+    nome: "Sink or Swim 60-90 Dias"
+    descricao: "Sink or Swim: 60-90 dias para provar performance. Se nao performa nesse periodo, provavelmente nunca vai."
+    quote: "If not consegue performar em 60-90 dias, provavelmente nao vai conseguir nunca"
+    chunk_ids: ["chunk_710"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-024"
+    nome: "Job Ads como VSL"
+    descricao: "Job ads como VSL: Recrute um nivel ACIMA do target. Postar vaga de Director atrai Manager ambicioso que quer subir."
+    quote: "Post 'Sales Director' role to attract Sales Managers who want to move up"
+    chunk_ids: ["chunk_704"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-025"
+    nome: "Rewards Exclusivos para Quem Bate Meta"
+    descricao: "Eventos e rewards so para quem bate meta. Quando todo mundo ganha premio, ninguem valoriza. Exclusividade cria status."
+    quote: "Events only for target hitters. Double commissions. Million-dollar club incentives"
+    chunk_ids: ["chunk_711"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-026"
+    nome: "Volume Problem Disfarcado de Sales Problem"
+    descricao: "Volume problem disfarcado de sales problem. Mais calls = mais oportunidades + mais pratica. Aumenta probabilidade mesmo sem melhorar habilidade."
+    quote: "what more calls means is more opportunities and more practice to get things right... increase your probability and likelihood of success"
+    chunk_ids: ["chunk_717"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-027"
+    nome: "Downsell Inteligente Abaixo de 1M"
+    descricao: "Downsell inteligente abaixo de $1M: nao adiciona complexidade, suaviza cash flow e maximiza pipeline. 3 meses, pipeline-focused."
+    quote: "below a million to avoid adding new offers because it can add complexity. But a smart downsell can do the exact opposite"
+    chunk_ids: ["chunk_736", "chunk_737"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-028"
+    nome: "1-2 Contratacoes Mudam o Jogo"
+    descricao: "1-2 contratacoes de alta competencia mudam o jogo. Nao precisa de 10, precisa de 1-2 que pensam como founders."
+    quote: "You need one or two to change the game here"
+    chunk_ids: ["chunk_738", "chunk_742"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-041"
+    nome: "Maior Offer = Menor Esforco"
+    descricao: "Maior offer ($25k) = menor esforco de vendas. Sell less to make more. Nichar demais limita crescimento — abrir ICP + nova offer = started printing."
+    quote: "Highest revenue offer is $25k (not 5k or 10k) - sell less to make more"
+    chunk_ids: ["chunk_700"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-044"
+    nome: "YouTube como Alavanca para Negocios"
+    descricao: "YouTube como alavanca para crescimento de negocio: warm audience compra mesmo com marketing ruim. Mais facil crescer business que crescer canal."
+    quote: "once you have the following, you just make an offer and even if it's crap landing page... you'll have so many warm hot viewers"
+    chunk_ids: ["chunk_780"]
+    priority: "MEDIUM"
+    confidence: "HIGH"

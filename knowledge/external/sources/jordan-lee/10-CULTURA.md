@@ -4,8 +4,8 @@
 
 > **Em resumo:** Minha cultura é o que alguns chamam de "tóxica" — expectativas altíssimas, zero tolerância pra baixa performance, rewards só pra quem bate meta. Resultado? Os melhores amam, os medianos saem, e o time fica composto só de A-players. Top closers fazem $45-50k/mês.
 >
-> **Versão:** 2.0 | **Atualizado:** 2025-12-20
-> **Densidade:** ◐◐◯◯◯ (2)
+> **Versao:** 3.0 | **Atualizado:** 2026-03-16
+> **Densidade:** ◐◐◐◯◯ (3)
 
 ---
 
@@ -151,16 +151,42 @@ Minha resposta: A-players não precisam de safety pra falar verdade. Eles falam 
 
 ---
 
+## MCE Update: Novos Dados dos YouTube Videos
+
+### Voce Nao Sobe ao Nivel da Ambicao — Cai ao Nivel dos Sistemas
+
+Como fighters: voce nao cai pro seu melhor, cai pro nivel do seu treinamento. E a mesma coisa em negocios com sistemas. Se o seu dia depende de como voce se sente, seu negocio e fragil demais. A solucao: sistemas que superam seus dias ruins. [chunk_716]
+
+> "You don't fall to your best, you actually fall to the level of your training. And that's the same in business with systems" — [chunk_716]
+
+### Reps com Intencao, Nao So Repeticao
+
+Voce vai na academia todo dia. Ve pessoas que estao la ha anos e continuam gordas. Por que? Nao sao intencionais. Voltam pra casa, comem mal, zero progresso. E a mesma coisa em negocios. Reps com intencao e onde esta o crescimento. [chunk_725]
+
+### Identidade sobre Taticas
+
+Nao e sobre o que voce faz — e sobre quem voce decide ser. A transicao de Jacob nao era sobre mais taticas, era sobre identidade: de ecom operator para high-lever founder. [chunk_726]
+
+### Doers vs Thinkers
+
+Thinkers ficam sentados pensando "eu poderia fazer tudo isso." Doers vao la e veem o que acontece. E da certo. Eles sao tenazes. Continuam. Nao importa quao ruim se sentem. Nao reclamam. So fazem. E quem reclama nao chega longe. [chunk_780]
+
+### Ambiente e Network
+
+Voce e produto do seu ambiente. Tem que ter cuidado com quem se cerca, mesmo que sejam mais bem-sucedidos que voce. Se eles nao estao realmente se desafiando, vao programar voce para pensar menor. [chunk_766]
+
+---
+
 ## Metadados
 
 | Campo | Valor |
 |-------|-------|
 | **Fonte** | Jordan Lee |
 | **Tema** | 10-CULTURA |
-| **Chunks** | CJ001_012 |
-| **Insights** | CU001, CO001 |
-| **Protocolo** | Narrative Metabolism v1.0 |
-| **Última consolidação** | — |
+| **Chunks** | CJ001_012, chunk_716, chunk_725, chunk_726, chunk_766, chunk_780 |
+| **Insights** | CU001, CO001, INS-JL-007, INS-JL-017, INS-JL-018, INS-JL-039 |
+| **Protocolo** | Narrative Metabolism v2.0 |
+| **Pipeline** | MCE v1.0 |
 
 ---
 

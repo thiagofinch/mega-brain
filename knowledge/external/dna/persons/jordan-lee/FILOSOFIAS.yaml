@@ -1,0 +1,102 @@
+# Layer: FILOSOFIAS
+# Person: Jordan Lee
+# Version: 1.0.0
+# Generated: 2026-03-16
+# Source: MCE Pipeline v1.0
+
+entries:
+  - id: "INS-JL-001"
+    nome: "Sistemas sobre Pessoas"
+    descricao: "Sistemas brilhantes executados por pessoas competentes > pessoas brilhantes fazendo coisas brilhantes. Quando a pessoa sai, o sistema continua."
+    quote: "240 employees total, but only 3 irreplaceable people besides Jacob"
+    chunk_ids: ["chunk_700"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-002"
+    nome: "Competencia sobre Experiencia"
+    descricao: "Competencia > Experiencia na contratacao. Jovem faminto de 22 que aprende rapido supera veterano de 35 cheio de vicios."
+    quote: "If you're 40 and you're not rich yet, you either have been working on the wrong thing or you're just shit"
+    chunk_ids: ["chunk_703"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-003"
+    nome: "Urgencia como Diferencial Competitivo"
+    descricao: "Urgencia como diferencial competitivo. Nao e 'vamos marcar reuniao terca', e 'resolvendo agora'. Faz em 1 ano o que outros fazem em 5."
+    quote: "Elon Musk, Jeff Bezos have highest urgency. 'We're getting on a call now, solving it now'"
+    chunk_ids: ["chunk_706"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-004"
+    nome: "Play to Win vs Play Not to Lose"
+    descricao: "Sucesso inicial e perigoso — te faz conservador quando deveria ser agressivo. Modo defensivo mata crescimento."
+    quote: "Falling into defensive mode at 500-700k/month hurt growth"
+    chunk_ids: ["chunk_708", "chunk_721", "chunk_722"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-005"
+    nome: "Cultura Auto-Selecionante de Alta Performance"
+    descricao: "High performance nao combina com conforto. Cultura 'toxica' atrai A-players e auto-seleciona: medianos nao aguentam e saem."
+    quote: "When we switched to more toxic, we just got much better team members"
+    chunk_ids: ["chunk_710", "chunk_712"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-006"
+    nome: "CEOs sao Unreasonable"
+    descricao: "CEOs sao pessoas unreasonable. Se voce esta sendo razoavel, nao esta fazendo coisas grandes acontecerem."
+    quote: "If we're being unreasonable, good, because CEOs are unreasonable people. Because of that they make things happen"
+    chunk_ids: ["chunk_741"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-007"
+    nome: "Cair ao Nivel dos Sistemas"
+    descricao: "Voce nao sobe ao nivel da sua ambicao, voce CAI ao nivel dos seus sistemas e treinamento."
+    quote: "You don't fall to your best, you actually fall to the level of your training. And that's the same in business with systems"
+    chunk_ids: ["chunk_716"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-008"
+    nome: "AI Business 70-80% Margem"
+    descricao: "AI business tem 70-80% de margem liquida vs ecom com 10%. O barco importa mais do que a remada (Warren Buffett)."
+    quote: "With AI, you literally have 70 to 80% net margins, profit margins that you can pull out and take as your own money"
+    chunk_ids: ["chunk_747", "chunk_726"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-009"
+    nome: "Crescer Primeiro, Escalar Depois"
+    descricao: "Crescer primeiro, escalar depois. Recurring revenue compounding: alguns deals por mes = negocio de 1M no fim do ano."
+    quote: "even if you're just closing a couple of deals per month, they're on recurring revenue. Those deals can compound"
+    chunk_ids: ["chunk_746"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-010"
+    nome: "Efetividade Antes de Eficiencia"
+    descricao: "Nao precisa de tudo pronto para escalar. Primeiro fique efetivo (mesmo que ineficiente), depois melhore a eficiencia."
+    quote: "I'm okay with being inefficient if I can be effective. Then once I'm effective I improve the efficiencies"
+    chunk_ids: ["chunk_734"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-039"
+    nome: "Doers vs Thinkers"
+    descricao: "Quem age rapido ve o resultado e aprende. Quem pensa demais nunca comeca. Tenacidade e persistencia definem quem vence."
+    quote: "doers just go and see what happens and it pays off... they're tenacious and they just keep going"
+    chunk_ids: ["chunk_780"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-040"
+    nome: "50/50 Partnership como Forca Multiplicadora"
+    descricao: "50/50 partnership com co-fundador e a melhor decisao ja feita. Certo co-fundador e forca multiplicadora, nao divisao."
+    quote: "50/50 partnership with Jacob Levine - Jordan calls it 'best decision ever made'"
+    chunk_ids: ["chunk_700"]
+    priority: "HIGH"
+    confidence: "HIGH"

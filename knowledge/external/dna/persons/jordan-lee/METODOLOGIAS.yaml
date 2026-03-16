@@ -1,0 +1,46 @@
+# Layer: METODOLOGIAS
+# Person: Jordan Lee
+# Version: 1.0.0
+# Generated: 2026-03-16
+# Source: MCE Pipeline v1.0
+
+entries:
+  - id: "INS-JL-034"
+    nome: "Escalar com AI SDR + Volume"
+    descricao: "Escalar removendo SDR work com AI SDR + 4x volume de email (Instantly) + LinkedIn outreach + ads quando tiver 2+ clientes. Buy back time com automacao."
+    quote: "we'll implement the AISDR for you, which will remove this from your day-to-day and buy back time"
+    chunk_ids: ["chunk_718", "chunk_719", "chunk_720"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-035"
+    nome: "Recrutamento Agressivo Multi-Canal"
+    descricao: "Recrutamento agressivo: LinkedIn ads + recruiters + referral fees + pedir para network divulgar + testar TODOS os canais. Nao parar ate encontrar."
+    quote: "We've spoke to recruiters. We've tried on LinkedIn. We've run LinkedIn ads. We've tested this. We've put a referral fee out"
+    chunk_ids: ["chunk_739"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-036"
+    nome: "Fire Yourself para Escalar"
+    descricao: "Escala via firing yourself: AI + contratacoes removem voce das funcoes operacionais. Business escala quando founder se torna dispensavel."
+    quote: "You scale by firing yourself, making yourself redundant from the job that you're doing with AI or new team members"
+    chunk_ids: ["chunk_732"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-037"
+    nome: "Best Person on Hardest Problem"
+    descricao: "A pessoa mais talentosa do time deve trabalhar no maior gargalo, nao no delivery do dia-a-dia. Highest leverage work primeiro."
+    quote: "The best person in your business, you're going to put on the hardest problems"
+    chunk_ids: ["chunk_743"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-038"
+    nome: "Root Cause Analysis com WHY"
+    descricao: "Quando problema parece grande e ambiguo, pergunte 'WHY?' e 'WHAT FOR?' ate definir os componentes reais. Decomponha antes de agir."
+    quote: "it lacks scale, but why? What for? Because once you start to understand those characteristics, you can start to solve real things"
+    chunk_ids: ["chunk_733"]
+    priority: "MEDIUM"
+    confidence: "HIGH"

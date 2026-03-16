@@ -1,0 +1,46 @@
+# Layer: FRAMEWORKS
+# Person: Jordan Lee
+# Version: 1.0.0
+# Generated: 2026-03-16
+# Source: MCE Pipeline v1.0
+
+entries:
+  - id: "INS-JL-029"
+    nome: "People, Process, Management"
+    descricao: "Framework de diagnostico: Todo problema de negocio cai numa dessas 3 categorias. Diagnostique ANTES de agir. O erro mais comum e mudar processo quando o problema e pessoa."
+    quote: "Every business problem falls into one of these 3 categories: People, Process, or Management"
+    chunk_ids: ["chunk_707", "chunk_736", "chunk_740"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-030"
+    nome: "Do, Document, Delegate"
+    descricao: "Faca primeiro, documente em SOP/video, depois contrate com playbook pronto. Nunca delegue o que nao documentou."
+    quote: "Never delegate what you haven't documented. The chaos comes from delegating without process"
+    chunk_ids: ["chunk_705"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-031"
+    nome: "Hierarquia de Vendas"
+    descricao: "Sales Coach (100% QC) -> Team Leads (com overrides) -> Closers (em squads) -> RevOps (infraestrutura). Estrutura que escala com qualidade."
+    quote: "Sales team structure: closers, team leads with overrides, RevOps, sales coach that watches calls"
+    chunk_ids: ["chunk_701", "chunk_702"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-032"
+    nome: "Framework de Consequencias"
+    descricao: "<70% meta 2 meses = warning, 3 meses = demissao, >100% = double commission, >150% 6+ meses = Million Dollar Club. Sem surpresas, regras claras desde o dia 1."
+    quote: "Below 70% for 2 consecutive months: warning. Below 70% for 3 months: termination. Above 100%: double commission"
+    chunk_ids: ["chunk_712"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-033"
+    nome: "Growth Partner Model"
+    descricao: "Setup fee ($5-15k) + Monthly retainer ($5-10k) + Revenue share. Margem 70-80%. Modelo de pricing que alinha incentivos e gera cash flow previsivel."
+    quote: "a growth partner model where we charge a fee and a revenue share and really help scale up businesses"
+    chunk_ids: ["chunk_713", "chunk_729"]
+    priority: "HIGH"
+    confidence: "HIGH"

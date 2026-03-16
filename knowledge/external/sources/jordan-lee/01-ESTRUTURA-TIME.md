@@ -4,8 +4,8 @@
 
 > **Em resumo:** Construí uma operação de 240 pessoas onde apenas 3 são insubstituíveis. O segredo não é contratar gênios — é criar sistemas que funcionam independente de quem está neles. Time de vendas com 70 closers, team leads com skin in the game, e um sales coach que assiste cada call.
 >
-> **Versão:** 2.0 | **Atualizado:** 2025-12-20
-> **Densidade:** ◐◐◯◯◯ (2)
+> **Versao:** 3.0 | **Atualizado:** 2026-03-16
+> **Densidade:** ◐◐◐◯◯ (3)
 
 ---
 
@@ -155,16 +155,36 @@ Se o override do team lead é muito baixo, ele não liga. Vi empresa dando 0.5% 
 
 ---
 
+## MCE Update: Novos Dados dos YouTube Videos
+
+### Operador como Contratacao Mais Importante
+
+O que meu time precisa nao e mais closers — e um operador que pense como founder. Raheem entrou pra fazer backend ops, mas tinha um problema de show rate. Disse "Raheem, resolve o show rate" — e ele resolveu melhor que qualquer vendedor, sem experiencia nenhuma em sales. Nao demora pra ramp up uma pessoa boa. 3-6 meses pra decisoes estrategicas, mas impacto imediato. [chunk_742]
+
+### Best Person on Hardest Problem
+
+A pessoa mais talentosa do time deve trabalhar no maior gargalo, nao no delivery do dia-a-dia. Matt nao deveria gastar tempo em delivery — ele deveria garantir que o front end e o management funcionem, porque ESSE e o trabalho de highest leverage. [chunk_743]
+
+### Matt Fecha $5M+/mes
+
+Matt nao faz mais sales calls. O time dele fecha mais de $5M/mes usando processos otimizados com AI e gestao efetiva. [chunk_755]
+
+### Hire Creatives, Thinkers, Tech
+
+So quero contratar agora criativos, pensadores de alto nivel e pessoas tecnicas. Nao tem necessidade de mais ninguem. Ate nossos consultores vao ficar cada vez mais tecnicos com 10x a 100x de avanco em tech. [chunk_741]
+
+---
+
 ## Metadados
 
 | Campo | Valor |
 |-------|-------|
 | **Fonte** | Jordan Lee |
 | **Tema** | 01-ESTRUTURA-TIME |
-| **Chunks** | CJ001_003, CJ001_004, CJ001_010 |
-| **Insights** | TS001, TS002, SP001 |
-| **Protocolo** | Narrative Metabolism v1.0 |
-| **Última consolidação** | — (documento novo neste formato) |
+| **Chunks** | CJ001_003, CJ001_004, CJ001_010, chunk_741, chunk_742, chunk_743, chunk_755 |
+| **Insights** | TS001, TS002, SP001, INS-JL-037, INS-JL-042 |
+| **Protocolo** | Narrative Metabolism v2.0 |
+| **Pipeline** | MCE v1.0 |
 
 ---
 

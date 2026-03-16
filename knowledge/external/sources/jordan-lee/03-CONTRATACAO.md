@@ -4,8 +4,8 @@
 
 > **Em resumo:** Contrato por competência, não experiência. Meu CTO começou com 18 anos, meu Head of Sales fechou 38 de 39 calls sem experiência prévia. Trato job ads como VSL — vendo o sonho, não listo requisitos. E pesco acima: posto "Director" para atrair quem quer crescer.
 >
-> **Versão:** 2.0 | **Atualizado:** 2025-12-20
-> **Densidade:** ◐◐◯◯◯ (2)
+> **Versao:** 3.0 | **Atualizado:** 2026-03-16
+> **Densidade:** ◐◐◐◯◯ (3)
 
 ---
 
@@ -152,16 +152,38 @@ Entrevista não mostra nada. O cara fala bonito, parece confiante, você contrat
 
 ---
 
+## MCE Update: Novos Dados dos YouTube Videos
+
+### Recrutamento Merece o Mesmo Esforco que Aquisicao de Clientes
+
+A maioria dos founders gasta mais tempo prospectando clientes do que recrutando talento. Em algum momento, isso TEM que inverter. Contratar a pessoa errada custa mais que perder um deal — drena tempo, moral, momentum, tudo. Um operador excelente resolve problemas antes de voce saber que eles existem. [chunk_739]
+
+> "Most founders spend more time prospecting for clients than recruiting talent. And at some stage it has to switch" — [chunk_739]
+
+### Testar TODOS os Canais
+
+Nao pode ser "testamos um pouco aqui e ali." Tem que ser: falamos com recruiters, testamos LinkedIn, rodamos LinkedIn ads, colocamos referral fee, pedimos pra rede divulgar, postamos no Instagram do Jordan. Todos os canais. Ate encontrar. [chunk_739]
+
+### Referencia: Amp It Up
+
+Aprendi com o livro "Amp it Up" de um tech founder que competia em Silicon Valley com menos investimento. Solucao: contratar pessoas com menos experiencia mas competencia muito maior. Custo menor, upside maior. [chunk_738]
+
+### 1-2 Contratacoes Mudam o Jogo
+
+Nao precisa de 10 contratacoes. Precisa de 1 ou 2 pessoas de alta competencia que pensam como founders. Isso muda o jogo completamente. [chunk_738, chunk_742]
+
+---
+
 ## Metadados
 
 | Campo | Valor |
 |-------|-------|
 | **Fonte** | Jordan Lee |
 | **Tema** | 03-CONTRATACAO |
-| **Chunks** | CJ001_004, CJ001_005, CJ001_006 |
-| **Insights** | HP001-HP006, DF002 |
-| **Protocolo** | Narrative Metabolism v1.0 |
-| **Última consolidação** | — |
+| **Chunks** | CJ001_004, CJ001_005, CJ001_006, chunk_738, chunk_739, chunk_742 |
+| **Insights** | HP001-HP006, DF002, INS-JL-016, INS-JL-028, INS-JL-035 |
+| **Protocolo** | Narrative Metabolism v2.0 |
+| **Pipeline** | MCE v1.0 |
 
 ---
 

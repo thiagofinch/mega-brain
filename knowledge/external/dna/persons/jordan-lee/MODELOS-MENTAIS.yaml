@@ -1,0 +1,94 @@
+# Layer: MODELOS-MENTAIS
+# Person: Jordan Lee
+# Version: 1.0.0
+# Generated: 2026-03-16
+# Source: MCE Pipeline v1.0
+
+entries:
+  - id: "INS-JL-011"
+    nome: "Deploy Capital, Nao Acumule"
+    descricao: "Cash no banco pode parecer seguro, mas normalmente nao e inteligente. Deploy capital para crescer, nao para acumular."
+    quote: "holding cash can feel safe, but it's usually not smart at any chapter in the journey"
+    chunk_ids: ["chunk_718", "chunk_719"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-012"
+    nome: "Objecoes como Pedidos de Clareza"
+    descricao: "Objecoes em vendas nao sao inimigos — sao pedidos de clareza do comprador. Se o prospect pergunta, esta interessado."
+    quote: "Objections are not the enemy. Most people take this personally... it's actually a request for clarity from your buyer"
+    chunk_ids: ["chunk_715", "chunk_723", "chunk_724"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-013"
+    nome: "Medo de Rejeicao e Medo de Desconexao"
+    descricao: "Medo de rejeicao e medo de desconexao. A maneira mais rapida de conectar e mostrar que esta unfazed, curioso e confiante."
+    quote: "Fear of rejection is just fear of disconnection. But the fastest way to connect with someone is to show them that you're just unfazed"
+    chunk_ids: ["chunk_723"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-014"
+    nome: "Compram Voce + Processo"
+    descricao: "Pessoas compram por duas razoes: acreditam no processo E compram VOCE. O X-factor e a presenca, nao o pitch perfeito."
+    quote: "They buy for two reasons. One, they understand the process and semi-believe in it and they buy into you"
+    chunk_ids: ["chunk_725", "chunk_724"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-015"
+    nome: "Falta de Escala e Limiting Belief"
+    descricao: "Falta de escala geralmente e limiting belief baseada em time/processos, nao nos numeros. O negocio poderia escalar — voce e que nao quer porque e responsavel por tudo."
+    quote: "it could scale this numbers wise, you just don't want to because you're responsible for everything"
+    chunk_ids: ["chunk_735"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-016"
+    nome: "Recrutamento = Aquisicao de Clientes"
+    descricao: "Recrutamento merece o MESMO esforco que aquisicao de clientes. Wrong talent custa mais que deal perdido — drena tempo, moral, momentum."
+    quote: "Most founders spend more time prospecting for clients than recruiting talent. And at some stage it has to switch"
+    chunk_ids: ["chunk_739"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-017"
+    nome: "Reps com Intencao"
+    descricao: "Reps sem intencao sao como ir na academia e continuar gordo. Repeticao com intencao e onde esta o crescimento."
+    quote: "it's reps but it's reps with intention. You go to the gym all the time. You've seen people who are at the gym. They're still fat"
+    chunk_ids: ["chunk_725"]
+    priority: "MEDIUM"
+    confidence: "HIGH"
+
+  - id: "INS-JL-018"
+    nome: "Identidade de Defensivo Limita"
+    descricao: "Nao e identidade de executor que limita — e identidade de defensivo. A transicao real e de operator para high-lever founder."
+    quote: "shift from this ecom operator to a high lever founder and it's less about what you're doing and it's more about who you decide to be"
+    chunk_ids: ["chunk_726"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-042"
+    nome: "Hire Creatives, Thinkers, Tech"
+    descricao: "Hire creatives, high-level thinkers e tech people. Consultores vao ficar cada vez mais tecnicos. 10x a 100x avanco em tech muito rapido."
+    quote: "I only want to hire now people who are creatives, high level thinkers or tech people. There's actually no need for anyone else"
+    chunk_ids: ["chunk_741"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-043"
+    nome: "Cash Flow Mata Negocios"
+    descricao: "Negocios nao falham porque nao trabalham duro. Falham por cash flow mal gerido. Scoreboard e cash, nao revenue."
+    quote: "most businesses don't fail because they're not working hard. They fail because of poor cash flow"
+    chunk_ids: ["chunk_719"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-045"
+    nome: "Business Partner Dynamics"
+    descricao: "Business partner dynamics: um e o goal scorer (faz dinheiro), outro e o support (organiza). O que faz dinheiro nao pode ser puxado para delivery."
+    quote: "if you are the goal scorer so you need to take lead on these things... Wesley can you pick these up because I need to do these things"
+    chunk_ids: ["chunk_743", "chunk_741"]
+    priority: "MEDIUM"
+    confidence: "HIGH"
