@@ -640,6 +640,17 @@ def _slug_from_state() -> str:
     return ""
 
 
+def _has_active_pipeline(slug: str) -> bool:
+    """Check if a slug has an active (non-complete) MCE pipeline."""
+    if not slug:
+        return False
+    state_file = MCE_STATE_DIR / slug / "pipeline_state.yaml"
+    data = _read_yaml(state_file)
+    if not data:
+        return False
+    return data.get("state") not in ("complete", "failed", None)
+
+
 def _detect_slug(rel: str) -> str:
     return _slug_from_path(rel) or _slug_from_state() or "unknown"
 
@@ -699,12 +710,15 @@ def _match_artifact(rel: str) -> tuple[int, str] | None:
         return (10, "consolidation")
 
     # 6. Source theme docs (in knowledge/*/sources/ but not the shared artifacts)
+    #    Guard: only match if an active MCE pipeline exists for the slug
     if (
         "/sources/" in rel
         and fname not in ("CHUNKS-STATE.json", "CANONICAL-MAP.json", "INSIGHTS-STATE.json")
         and (fname.endswith(".md") or fname.endswith(".yaml"))
     ):
-        return (10, "consolidation")
+        slug = _slug_from_path(rel)
+        if _has_active_pipeline(slug):
+            return (10, "consolidation")
 
     # 7. Chunks
     if rel.endswith("artifacts/chunks/CHUNKS-STATE.json"):

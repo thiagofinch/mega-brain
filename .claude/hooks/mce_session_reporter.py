@@ -115,15 +115,6 @@ def _bar(val: int, maxv: int, width: int = 20) -> str:
     return "█" * n + "░" * (width - n)
 
 
-def _steps_timeline(completed_steps: set[int]) -> str:
-    """Render compact step timeline: ●=done ○=missed"""
-    parts = []
-    for s in range(13):
-        sym = "●" if s in completed_steps else "○"
-        parts.append(f"S{s:02d}{sym}")
-    return "  ".join(parts[:7]) + "\n" + "  " + "  ".join(parts[7:])
-
-
 def _now_iso() -> str:
     return datetime.now(timezone.utc).isoformat()
 
@@ -243,7 +234,11 @@ def _aggregate_session(step_entries: list[dict]) -> dict[str, dict]:
 
         rec["completed"].add(step)
 
-    return dict(by_slug)
+    # Convert sets to sorted lists for JSON-serializability
+    result = dict(by_slug)
+    for slug_data in result.values():
+        slug_data["completed"] = sorted(slug_data["completed"])
+    return result
 
 
 def _aggregate_orchestrate(orch_entries: list[dict]) -> dict[str, list[dict]]:
@@ -265,7 +260,7 @@ def _slug_card(slug: str, data: dict, orch_data: list[dict]) -> list[str]:
     """Build a complete card for one slug."""
     steps     = data.get("steps", {})
     substeps  = data.get("substeps", [])
-    completed = data.get("completed", set())
+    completed = data.get("completed", [])
     bucket    = data.get("bucket", "external")
     first_ts  = data.get("first_ts", "")
     last_ts   = data.get("last_ts", "")
@@ -290,7 +285,8 @@ def _slug_card(slug: str, data: dict, orch_data: list[dict]) -> list[str]:
 
     # Completion %
     expected_steps = {3, 4, 5, 6, 7, 8, 9, 10}
-    done = len(completed & expected_steps)
+    completed_set  = set(completed)
+    done = len(completed_set & expected_steps)
     pct  = round(done / len(expected_steps) * 100)
     prog = _bar(done, len(expected_steps), 20)
 
@@ -422,10 +418,19 @@ def _log_inventory(cutoff: datetime) -> list[str]:
     ]
     lines = [_thin(), _section("INVENTÁRIO DE LOGS DA SESSÃO")]
     for path, name in log_files:
-        entries = _read_jsonl_since(path, cutoff)
-        total   = sum(1 for _ in _read_jsonl_all(path) if True)  # all time
-        mark = "●" if entries else "○"
-        lines.append(_row(f"  {mark} {name:<30s}  {len(entries):>4d} entradas na sessão"))
+        all_entries = _read_jsonl_all(path)
+        session_entries = []
+        for e in all_entries:
+            ts_str = e.get("timestamp", "")
+            if ts_str:
+                try:
+                    ts = datetime.fromisoformat(ts_str.replace("Z", "+00:00"))
+                    if ts >= cutoff:
+                        session_entries.append(e)
+                except (ValueError, TypeError):
+                    pass
+        mark = "●" if session_entries else "○"
+        lines.append(_row(f"  {mark} {name:<30s}  {len(session_entries):>4d} entradas na sessão"))
     return lines
 
 
@@ -526,7 +531,7 @@ def main() -> None:
                     "first_ts": orch_by_slug[slug][0].get("timestamp") if orch_by_slug[slug] else None,
                     "last_ts":  orch_by_slug[slug][-1].get("timestamp") if orch_by_slug[slug] else None,
                     "bucket":   "external",
-                    "completed": set(),
+                    "completed": [],
                 }
 
         # ── Compute grand totals ─────────────────────────────────────────────
