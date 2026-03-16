@@ -467,7 +467,7 @@ def merge_canonical(meetings: dict[str, dict]) -> dict:
                         "type": "person",
                         "aliases": [pname.lower()],
                         "role": role_desc if isinstance(role_desc, str) else "",
-                        "corpus": "bilhon_meetings",
+                        "corpus": "company_meetings",
                         "first_seen": NOW,
                         "sources": [meet_id],
                     }
@@ -490,7 +490,7 @@ def merge_canonical(meetings: dict[str, dict]) -> dict:
                     entities[pname] = {
                         "type": "person",
                         "aliases": [pname.lower()],
-                        "corpus": "bilhon_meetings",
+                        "corpus": "company_meetings",
                         "first_seen": NOW,
                         "sources": [meet_id],
                     }
@@ -515,7 +515,7 @@ def merge_canonical(meetings: dict[str, dict]) -> dict:
                 entities[pname] = {
                     "type": "person",
                     "aliases": [pname.lower(), key.lower()],
-                    "corpus": "bilhon_meetings",
+                    "corpus": "company_meetings",
                     "first_seen": NOW,
                     "sources": [meet_id],
                 }
@@ -534,7 +534,7 @@ def merge_canonical(meetings: dict[str, dict]) -> dict:
                         entities[org_name] = {
                             "type": "organization",
                             "aliases": [org_name.lower()],
-                            "corpus": "bilhon_meetings",
+                            "corpus": "company_meetings",
                             "first_seen": NOW,
                             "sources": [meet_id],
                         }
@@ -545,7 +545,7 @@ def merge_canonical(meetings: dict[str, dict]) -> dict:
                         entities[org_name] = {
                             "type": "organization",
                             "aliases": [org_name.lower()],
-                            "corpus": "bilhon_meetings",
+                            "corpus": "company_meetings",
                             "first_seen": NOW,
                             "sources": [meet_id],
                         }

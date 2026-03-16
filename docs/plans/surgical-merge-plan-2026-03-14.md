@@ -3,7 +3,7 @@
 
 > **Author:** Tiny Rick (The Architect, character envelope: rick-and-morty)
 > **Status:** FINAL
-> **Mega Brain:** v1.4.0 -- AI Knowledge Management System (internal, Bilhon)
+> **Mega Brain:** v1.4.0 -- AI Knowledge Management System (internal, [SUA EMPRESA])
 > **Skill Seekers:** v3.2.0 -- Universal Knowledge Preprocessing Tool (MIT, PyPI)
 > **Prerequisite:** This is NOT a repo merge. These are two DIFFERENT projects.
 > **Source Documents:**

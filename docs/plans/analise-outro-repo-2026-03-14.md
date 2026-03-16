@@ -18,7 +18,7 @@
 |----------|---------------|------------|
 | **Path** | `/Users/thiagofinch/Documents/Projects/Skill_Seekers/` | `/Users/thiagofinch/Documents/Projects/mega-brain/` |
 | **Versao** | 3.2.0 (PyPI: `skill-seekers`) | 1.4.0 (npm: `mega-brain-ai`) |
-| **Autor** | Yusuf Karaaslan (GitHub: yusufkaraaslan) | Thiago Finch (interno Bilhon) |
+| **Autor** | Yusuf Karaaslan (GitHub: yusufkaraaslan) | Thiago Finch (interno [SUA EMPRESA]) |
 | **Licenca** | MIT (open source) | Proprietaria (L1 community / L2 premium) |
 | **Python** | 3.10+ (puro Python) | 3.12 (Python + Node.js hibrido) |
 | **LOC (src)** | 77,305 linhas em 182 arquivos .py | 47,528 linhas em core/ (Python) + Node.js |
@@ -40,7 +40,7 @@ Ingestion Engine (horizontal)           Knowledge Orchestrator (vertical)
 INPUT:  websites, repos, PDFs, videos   INPUT:  transcricoes, cursos, reunioes
 OUTPUT: skills formatados p/ 16+ LLMs   OUTPUT: DNA schemas, playbooks, mind-clones
 
-Scope: Universal (qualquer dev)         Scope: Especializado (Bilhon/high-ticket)
+Scope: Universal (qualquer dev)         Scope: Especializado ([SUA EMPRESA]/high-ticket)
 Depth: Amplo mas raso (extrai texto)    Depth: Estreito mas profundo (extrai cognicao)
 ```
 

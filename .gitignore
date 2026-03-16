@@ -456,9 +456,16 @@ squads/
 !knowledge/external/inbox/
 !knowledge/external/inbox/.gitkeep
 
-# Workspace — root level (L1 template, L2 populated)
+# Workspace — L3 deny block (company data NEVER tracked)
+# Only scaffold templates and setup marker are allowed
 !workspace/
-!workspace/**
+workspace/**
+!workspace/_templates/
+!workspace/_templates/**
+!workspace/_example/
+!workspace/_example/**
+!workspace/_system/
+!workspace/_system/SETUP-PENDING.md
 
 # Knowledge business — bucket structure (L1 scaffold)
 !knowledge/business/
@@ -468,10 +475,9 @@ squads/
 knowledge/business/inbox/**
 
 # Knowledge personal — L3 ONLY (never commit content)
-# The personal/.gitignore blocks everything except itself and index.md
 !knowledge/personal/
+knowledge/personal/**
 !knowledge/personal/.gitignore
-!knowledge/personal/index.md
 
 # Logs scaffolding L1
 !logs/
@@ -511,8 +517,8 @@ knowledge/business/inbox/**
 !knowledge/external/TAG-RESOLVER.json
 !knowledge/external/inbox/**
 
-# Workspace populado (root level, not inside knowledge/)
-# Already covered by !workspace/** in BLOCO 4
+# Workspace populado — now denied in BLOCO 4 L3 deny block
+# Only _templates/, _example/, and _system/SETUP-PENDING.md are tracked
 
 # Expert agents populados (renamed from minds/ to external/ in S06)
 !agents/external/**
@@ -623,23 +629,8 @@ knowledge/business/inbox/**
 # Added: 2026-03-12
 # ══════════════════════════════════════════════════════════════════════
 
-# Workspace — only scaffolding allowed (templates, gitkeeps, domains, providers)
-# All populated content is L3
-workspace/*.yaml
-workspace/*.json
-workspace/*.md
-workspace/*-central/
-workspace/team/
-workspace/meetings/
-workspace/businesses/
-workspace/events/
-workspace/finance/
-workspace/strategy/
-workspace/org/
-workspace/automations/
-workspace/tools/
-workspace/config/mappings/**
-!workspace/config/mappings/.gitkeep
+# Workspace — L3 deny now handled in BLOCO 4 (workspace/** deny + selective allows)
+# No per-directory overrides needed here anymore
 
 # Docs — L3 only (not needed for machine to function)
 # NOTE: tests/ removed from deny — already allowed in BLOCO 4 (lines 278-279)

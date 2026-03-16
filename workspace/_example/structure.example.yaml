@@ -1,0 +1,26 @@
+# Organization Structure
+# Copy to workspace/structure.yaml and fill with your real data.
+# This file tells Mega Brain which business units exist and their status.
+
+version: "1.0.0"
+holding: "[SUA EMPRESA] Ltda"
+businesses:
+  # Add one entry per brand / business unit.
+  # type: education | saas | marketplace | community | media | services | agency
+  # status: active | planning | paused | sunset
+  brand-one:
+    type: education
+    status: active
+  brand-two:
+    type: saas
+    status: active
+  brand-three:
+    type: community
+    status: planning
+
+# Instructions:
+# 1. Copy this file to workspace/structure.yaml
+# 2. Replace "brand-one", "brand-two", etc. with your actual brand slugs (lowercase, kebab-case)
+# 3. Set type and status for each
+# 4. The slug you choose here becomes the subdirectory name under workspace/businesses/
+#    e.g., brand-one -> workspace/businesses/brand-one/

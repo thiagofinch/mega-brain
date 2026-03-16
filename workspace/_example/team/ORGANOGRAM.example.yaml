@@ -1,0 +1,175 @@
+# [YOUR COMPANY] ORGANOGRAM
+# Organizational structure used by the MCE pipeline to classify meeting participants
+# and route insights to the correct bucket (collaborator vs external expert).
+#
+# Copy to workspace/gente-cultura/equipe/ORGANOGRAM.yaml (or your equivalent team directory)
+
+version: "1.0.0"
+last_updated: "[YYYY-MM-DD]"
+generated_by: "JARVIS"
+
+# =============================================================================
+# ORGANIZATIONAL STRUCTURE
+# =============================================================================
+
+organization:
+  name: "[YOUR COMPANY]"
+  mission: "[Your company mission statement]"
+  companies:
+    - "[BRAND-1]"
+    - "[BRAND-2]"
+
+# =============================================================================
+# TEAM MEMBERS
+# =============================================================================
+
+members:
+
+  # ---------------------------------------------------------------------------
+  # EXECUTIVE LEADERSHIP
+  # ---------------------------------------------------------------------------
+
+  - id: "[XX001]"
+    nome: "[Founder Name]"
+    cargo: "Founder"
+    area: "Leadership"
+    reports_to: null  # Top of hierarchy
+    responsabilidades:
+      - "Strategic vision"
+      - "Capital and investment decisions"
+      - "Key partnerships"
+    decision_authority:
+      - "C-Level hires"
+      - "Investments > R$ [X]K"
+      - "Strategic partnerships"
+    quality_gates:
+      - "Final hiring approval"
+      - "Budget approval"
+
+  - id: "[XX002]"
+    nome: "[CEO Name]"
+    cargo: "CEO"
+    area: "Leadership"
+    reports_to: "[XX001]"
+    responsabilidades:
+      - "Operational management"
+      - "Strategy execution"
+      - "Executive team leadership"
+      - "OKR definition"
+    decision_authority:
+      - "Management-level hires"
+      - "Operational budget"
+      - "Internal processes"
+
+  # ---------------------------------------------------------------------------
+  # DEPARTMENT HEADS
+  # ---------------------------------------------------------------------------
+
+  - id: "[XX003]"
+    nome: "[Head of Sales Name]"
+    cargo: "Head of Sales"
+    area: "Sales"
+    reports_to: "[XX002]"
+    responsabilidades:
+      - "Revenue targets"
+      - "Sales team management"
+      - "Pipeline forecasting"
+    decision_authority:
+      - "Sales hires"
+      - "Pricing adjustments"
+    metrics:
+      revenue_target: "R$ [X]K/month"
+      close_rate_target: "[X]%"
+
+  - id: "[XX004]"
+    nome: "[CTO Name]"
+    cargo: "CTO"
+    area: "Tech"
+    reports_to: "[XX002]"
+    responsabilidades:
+      - "Technical architecture"
+      - "Product development"
+      - "Tech team management"
+    decision_authority:
+      - "Tech stack"
+      - "Tech hires"
+      - "Backlog priority"
+
+# =============================================================================
+# ORGANIZATIONAL AREAS
+# =============================================================================
+
+areas:
+
+  - id: "AREA001"
+    nome: "Leadership"
+    head: "[XX001]"
+    sub_areas: []
+    descricao: "Strategic direction"
+
+  - id: "AREA002"
+    nome: "Sales"
+    head: "[XX003]"
+    sub_areas:
+      - "SDR"
+      - "Closers"
+      - "Customer Success"
+    descricao: "Revenue generation and customer acquisition"
+
+  - id: "AREA003"
+    nome: "Tech"
+    head: "[XX004]"
+    sub_areas:
+      - "Backend"
+      - "Frontend"
+      - "DevOps"
+    descricao: "Product and platform development"
+
+  - id: "AREA004"
+    nome: "Marketing"
+    head: null  # Open position
+    sub_areas:
+      - "Paid Traffic"
+      - "Content"
+      - "Design"
+    descricao: "Demand generation and brand"
+    hiring_priority: "HIGH"
+
+# =============================================================================
+# VISUAL HIERARCHY
+# =============================================================================
+
+hierarchy_tree: |
+  [Founder Name] (Founder)
+  +-- [CEO Name] (CEO)
+      +-- [Head of Sales] (Sales)
+      |   +-- SDRs
+      |   +-- Closers
+      |   +-- CS
+      +-- [CTO Name] (Tech)
+      |   +-- Dev Team
+      +-- [OPEN POSITION] (Marketing)
+          +-- Traffic
+          +-- Content
+
+# =============================================================================
+# TEAM METRICS
+# =============================================================================
+
+metrics:
+  total_members_documented: 4
+  areas_with_head: 2
+  areas_without_head: 1
+  open_positions_estimated: 5
+
+# =============================================================================
+# WHY THIS FILE MATTERS FOR MCE
+# =============================================================================
+#
+# The MCE pipeline uses this organogram to:
+# 1. Identify meeting participants as "collaborator" vs "external expert"
+# 2. Route insights to the correct knowledge bucket
+# 3. Determine reporting chains for cascading decisions
+# 4. Auto-create agent profiles when insight threshold (3+) is reached
+#
+# Keep this file updated whenever team structure changes.

@@ -1,0 +1,30 @@
+# Workspace Manifest
+# Copy to workspace/workspace.yaml and fill with your real data.
+# This is the top-level manifest that JARVIS reads to understand your workspace.
+
+version: "1.0.0"
+company: "[SUA EMPRESA] Ltda"
+
+# List all business unit slugs (must match keys in structure.yaml)
+businesses:
+  - brand-one
+  - brand-two
+  - brand-three
+
+# Last time this manifest was updated
+updated_at: "[YYYY-MM-DD]"
+
+# Optional: workspace-level settings
+settings:
+  # Primary language for workspace content
+  language: "pt-BR"
+  # Currency for financial data
+  currency: "BRL"
+  # Timezone for scheduling and logs
+  timezone: "America/Sao_Paulo"
+
+# Instructions:
+# 1. Copy this file to workspace/workspace.yaml
+# 2. Replace [SUA EMPRESA] with your company name
+# 3. List your brand slugs (same slugs used in structure.yaml)
+# 4. Adjust settings to match your locale

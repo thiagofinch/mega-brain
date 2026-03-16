@@ -30,7 +30,7 @@ Preparacao para o evento de imersao de 2 dias do AIOX/Allfluence. Inclui cronogr
 ## Divergencias
 
 1. **Risco do terminal para 20+ pessoas:**
-   - **Thiago:** "Muito arriscado" fazer tudo via terminal. Experiencia ClickMax confirma.
+   - **Thiago:** "Muito arriscado" fazer tudo via terminal. Experiencia [SUA EMPRESA] confirma.
    - **Alan:** Confiante que funciona com preparacao adequada.
    - **Pedro:** Prefere ter dashboard como safety net.
    ^[MEET-0098 Tensao 2]

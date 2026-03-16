@@ -1339,7 +1339,7 @@ Cada pessoa processada gera 10-15 arquivos:
     │  Pipeline: core/intelligence/pipeline/read_ai_{config,oauth}.py  │
     │  State: .claude/mission-control/READ-AI-STATE.json               │
     │  Meetings harvested: 10+ (MEET-0001 a MEET-0010)                 │
-    │  Owner: thiago@bilhon.com                                        │
+    │  Owner: owner@[sua-empresa].com                                   │
     │  Status: OAuth token OK, API /v1/meetings precisa investigacao   │
     │                                                                  │
     └──────────────────────────────────────────────────────────────────┘
@@ -1358,7 +1358,7 @@ Cada pessoa processada gera 10-15 arquivos:
     │  State: .claude/mission-control/FIREFLIES-STATE.json             │
     │  Meetings: 50 (30 empresa + 20 pessoal)                          │
     │  Tag sequence: MEET-XXXX (compartilhado com Read.ai)             │
-    │  LaunchAgent: ~/Library/LaunchAgents/com.bilhon.fireflies-sync   │
+    │  LaunchAgent: ~/Library/LaunchAgents/com.[sua-empresa].fireflies-sync │
     │  Status: LIVE                                                    │
     │                                                                  │
     └──────────────────────────────────────────────────────────────────┘

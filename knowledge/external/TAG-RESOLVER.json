@@ -22,13 +22,13 @@
     "EDC-0003": "inbox/[EDC-0003] 3. Mod 1 Aula 9 Introdução (Quebra Gelo).txt",
     "JH-WK-0028": "inbox/[JH-WK-0028] 27. What Model Is Better Transactional Or Recurring..txt",
     "TSC-0025": "inbox/[TSC-0025] 53. What Is A VAK..txt",
-    "FPV-001": "inbox/[Bilhon] [FPV-001] Order Bumps.txt",
+    "FPV-001": "inbox/[[SUA-EMPRESA]] [FPV-001] Order Bumps.txt",
     "JH-ST-0014": "inbox/[JH-ST-0014] 1 - How To Win The Sales Game..txt",
     "EDC-0025": "inbox/[EDC-0025] 25. Mod 5 Aula 35 Treinamento Apresentação Comercial.txt",
     "EDC-0069": "inbox/[EDC-0069] 9. Curso 16 Aula 2 - Contratação e Recrutamento.txt",
     "JH-IC-0086": "inbox/[JH-IC-0086] 41. Daily Attitude And Training.txt",
-    "FWBN-001": "inbox/[BilhonClickmax] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
-    "FWBN-002": "inbox/[BilhonClickmax] [FWBN-002] Vídeo de Convite - WhatsApp API X1.txt",
+    "FWBN-001": "inbox/[[SUA-EMPRESA]] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
+    "FWBN-002": "inbox/[[SUA-EMPRESA]] [FWBN-002] Vídeo de Convite - WhatsApp API X1.txt",
     "JH-IC-0050": "inbox/SAM OVEN (SETTERLUN UNIVERSITY)/[JH-IC-0050] 1 - TRANSCRIÇÃO 9 FIGURE WORKSHOP CLIENT ACCELERATORS.txt",
     "CA-0014": "inbox/THE SCALABLE COMPANY/[CA-0014] Big Idea Email.pdf",
     "PAF-0043": "inbox/THE SCALABLE COMPANY/[PAF-0043] Big Idea Outline.pdf",
@@ -376,13 +376,13 @@
     "inbox/[EDC-0003] 3. Mod 1 Aula 9 Introdução (Quebra Gelo).txt": "EDC-0003",
     "inbox/[JH-WK-0028] 27. What Model Is Better Transactional Or Recurring..txt": "JH-WK-0028",
     "inbox/[TSC-0025] 53. What Is A VAK..txt": "TSC-0025",
-    "inbox/[Bilhon] [FPV-001] Order Bumps.txt": "FPV-001",
+    "inbox/[[SUA-EMPRESA]] [FPV-001] Order Bumps.txt": "FPV-001",
     "inbox/[JH-ST-0014] 1 - How To Win The Sales Game..txt": "JH-ST-0014",
     "inbox/[EDC-0025] 25. Mod 5 Aula 35 Treinamento Apresentação Comercial.txt": "EDC-0025",
     "inbox/[EDC-0069] 9. Curso 16 Aula 2 - Contratação e Recrutamento.txt": "EDC-0069",
     "inbox/[JH-IC-0086] 41. Daily Attitude And Training.txt": "JH-IC-0086",
-    "inbox/[BilhonClickmax] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt": "FWBN-001",
-    "inbox/[BilhonClickmax] [FWBN-002] Vídeo de Convite - WhatsApp API X1.txt": "FWBN-002",
+    "inbox/[[SUA-EMPRESA]] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt": "FWBN-001",
+    "inbox/[[SUA-EMPRESA]] [FWBN-002] Vídeo de Convite - WhatsApp API X1.txt": "FWBN-002",
     "inbox/SAM OVEN (SETTERLUN UNIVERSITY)/[JH-IC-0050] 1 - TRANSCRIÇÃO 9 FIGURE WORKSHOP CLIENT ACCELERATORS.txt": "JH-IC-0050",
     "inbox/THE SCALABLE COMPANY/[CA-0014] Big Idea Email.pdf": "CA-0014",
     "inbox/THE SCALABLE COMPANY/[PAF-0043] Big Idea Outline.pdf": "PAF-0043",
@@ -764,9 +764,9 @@
     },
     {
       "tag": "FPV-001",
-      "path": "inbox/[Bilhon] [FPV-001] Order Bumps.txt",
+      "path": "inbox/[[SUA-EMPRESA]] [FPV-001] Order Bumps.txt",
       "source": "UNK",
-      "filename": "[Bilhon] [FPV-001] Order Bumps.txt",
+      "filename": "[[SUA-EMPRESA]] [FPV-001] Order Bumps.txt",
       "in_planilha": false
     },
     {
@@ -817,16 +817,16 @@
     },
     {
       "tag": "FWBN-001",
-      "path": "inbox/[BilhonClickmax] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
+      "path": "inbox/[[SUA-EMPRESA]] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
       "source": "UNK",
-      "filename": "[BilhonClickmax] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
+      "filename": "[[SUA-EMPRESA]] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
       "in_planilha": false
     },
     {
       "tag": "FWBN-002",
-      "path": "inbox/[BilhonClickmax] [FWBN-002] Vídeo de Convite - WhatsApp API X1.txt",
+      "path": "inbox/[[SUA-EMPRESA]] [FWBN-002] Vídeo de Convite - WhatsApp API X1.txt",
       "source": "UNK",
-      "filename": "[BilhonClickmax] [FWBN-002] Vídeo de Convite - WhatsApp API X1.txt",
+      "filename": "[[SUA-EMPRESA]] [FWBN-002] Vídeo de Convite - WhatsApp API X1.txt",
       "in_planilha": false
     },
     {
@@ -6701,113 +6701,113 @@
     },
     {
       "tag": "FPV-001",
-      "path1": "inbox/[Bilhon] [FPV-001] Order Bumps.txt",
-      "path2": "inbox/[Bilhon] [FPV-001] Página de Sucesso.txt"
+      "path1": "inbox/[[SUA-EMPRESA]] [FPV-001] Order Bumps.txt",
+      "path2": "inbox/[[SUA-EMPRESA]] [FPV-001] Página de Sucesso.txt"
     },
     {
       "tag": "FWBN-001",
-      "path1": "inbox/[BilhonClickmax] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
-      "path2": "inbox/Cópia de [BilhonClickmax] [FWBN-001] Script do Webinar [2].txt"
+      "path1": "inbox/[[SUA-EMPRESA]] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
+      "path2": "inbox/Cópia de [[SUA-EMPRESA]] [FWBN-001] Script do Webinar [2].txt"
     },
     {
       "tag": "FWBN-001",
-      "path1": "inbox/[BilhonClickmax] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
-      "path2": "inbox/[BilhonClickmax] [FWBN-001] 00. Roteiro de Brainstorming Criativo.txt"
+      "path1": "inbox/[[SUA-EMPRESA]] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
+      "path2": "inbox/[[SUA-EMPRESA]] [FWBN-001] 00. Roteiro de Brainstorming Criativo.txt"
     },
     {
       "tag": "FPV-001",
-      "path1": "inbox/[Bilhon] [FPV-001] Order Bumps.txt",
-      "path2": "inbox/[Bilhon] [FPV-001] Página de Downsell 1.txt"
+      "path1": "inbox/[[SUA-EMPRESA]] [FPV-001] Order Bumps.txt",
+      "path2": "inbox/[[SUA-EMPRESA]] [FPV-001] Página de Downsell 1.txt"
     },
     {
       "tag": "FWBN-001",
-      "path1": "inbox/[BilhonClickmax] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
-      "path2": "inbox/[BilhonClickmax] [FWBN-001] E-mails de Pós-cadastro.txt"
+      "path1": "inbox/[[SUA-EMPRESA]] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
+      "path2": "inbox/[[SUA-EMPRESA]] [FWBN-001] E-mails de Pós-cadastro.txt"
     },
     {
       "tag": "FPV-001",
-      "path1": "inbox/[Bilhon] [FPV-001] Order Bumps.txt",
-      "path2": "inbox/[Bilhon] [FPV-001] Página de Vendas.txt"
+      "path1": "inbox/[[SUA-EMPRESA]] [FPV-001] Order Bumps.txt",
+      "path2": "inbox/[[SUA-EMPRESA]] [FPV-001] Página de Vendas.txt"
     },
     {
       "tag": "FWBN-001",
-      "path1": "inbox/[BilhonClickmax] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
-      "path2": "inbox/[BilhonClickmax] [FWBN-001] Backup do Furion.txt"
+      "path1": "inbox/[[SUA-EMPRESA]] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
+      "path2": "inbox/[[SUA-EMPRESA]] [FWBN-001] Backup do Furion.txt"
     },
     {
       "tag": "FWBN-001",
-      "path1": "inbox/[BilhonClickmax] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
-      "path2": "inbox/[BilhonClickmax] [FWBN-001] Prompts.txt"
+      "path1": "inbox/[[SUA-EMPRESA]] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
+      "path2": "inbox/[[SUA-EMPRESA]] [FWBN-001] Prompts.txt"
     },
     {
       "tag": "FPV-001",
-      "path1": "inbox/[Bilhon] [FPV-001] Order Bumps.txt",
-      "path2": "inbox/[Bilhon] [FPV-001] Vídeo de Upsell 1.txt"
+      "path1": "inbox/[[SUA-EMPRESA]] [FPV-001] Order Bumps.txt",
+      "path2": "inbox/[[SUA-EMPRESA]] [FPV-001] Vídeo de Upsell 1.txt"
     },
     {
       "tag": "FWBN-001",
-      "path1": "inbox/[BilhonClickmax] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
-      "path2": "inbox/[BilhonClickmax] [FWBN-001] Nome, Avatar, Descrição para Grupo de WhatsApp.txt"
+      "path1": "inbox/[[SUA-EMPRESA]] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
+      "path2": "inbox/[[SUA-EMPRESA]] [FWBN-001] Nome, Avatar, Descrição para Grupo de WhatsApp.txt"
     },
     {
       "tag": "FWBN-001",
-      "path1": "inbox/[BilhonClickmax] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
-      "path2": "inbox/[BilhonClickmax] [FWBN-001] Script do Webinar [Finch].txt"
+      "path1": "inbox/[[SUA-EMPRESA]] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
+      "path2": "inbox/[[SUA-EMPRESA]] [FWBN-001] Script do Webinar [Finch].txt"
     },
     {
       "tag": "FWBN-001",
-      "path1": "inbox/[BilhonClickmax] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
-      "path2": "inbox/[BilhonClickmax] [FWBN-001] Página de Obrigado.txt"
+      "path1": "inbox/[[SUA-EMPRESA]] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
+      "path2": "inbox/[[SUA-EMPRESA]] [FWBN-001] Página de Obrigado.txt"
     },
     {
       "tag": "FWBN-001",
-      "path1": "inbox/[BilhonClickmax] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
-      "path2": "inbox/[BilhonClickmax] [FWBN-001] VSL.txt"
+      "path1": "inbox/[[SUA-EMPRESA]] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
+      "path2": "inbox/[[SUA-EMPRESA]] [FWBN-001] VSL.txt"
     },
     {
       "tag": "FWBN-001",
-      "path1": "inbox/[BilhonClickmax] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
-      "path2": "inbox/[BilhonClickmax] [FWBN-001] 00. Mapa do Avatar.txt"
+      "path1": "inbox/[[SUA-EMPRESA]] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
+      "path2": "inbox/[[SUA-EMPRESA]] [FWBN-001] 00. Mapa do Avatar.txt"
     },
     {
       "tag": "FWBN-001",
-      "path1": "inbox/[BilhonClickmax] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
-      "path2": "inbox/[BilhonClickmax] [FWBN-001] 01. Checklist de Pesquisa.txt"
+      "path1": "inbox/[[SUA-EMPRESA]] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
+      "path2": "inbox/[[SUA-EMPRESA]] [FWBN-001] 01. Checklist de Pesquisa.txt"
     },
     {
       "tag": "FWBN-001",
-      "path1": "inbox/[BilhonClickmax] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
-      "path2": "inbox/[BilhonClickmax] [FWBN-001] Script do Webinar [1].txt"
+      "path1": "inbox/[[SUA-EMPRESA]] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
+      "path2": "inbox/[[SUA-EMPRESA]] [FWBN-001] Script do Webinar [1].txt"
     },
     {
       "tag": "FWBN-001",
-      "path1": "inbox/[BilhonClickmax] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
-      "path2": "inbox/[BilhonClickmax] [FWBN-001] Página de Captura.txt"
+      "path1": "inbox/[[SUA-EMPRESA]] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
+      "path2": "inbox/[[SUA-EMPRESA]] [FWBN-001] Página de Captura.txt"
     },
     {
       "tag": "FPV-001",
-      "path1": "inbox/[Bilhon] [FPV-001] Order Bumps.txt",
-      "path2": "inbox/[Bilhon] [FPV-001] Anúncios de Venda Direta - Vídeo.txt"
+      "path1": "inbox/[[SUA-EMPRESA]] [FPV-001] Order Bumps.txt",
+      "path2": "inbox/[[SUA-EMPRESA]] [FPV-001] Anúncios de Venda Direta - Vídeo.txt"
     },
     {
       "tag": "FWBN-001",
-      "path1": "inbox/[BilhonClickmax] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
-      "path2": "inbox/[BilhonClickmax] [FWBN-001] Script do Webinar [Original].txt"
+      "path1": "inbox/[[SUA-EMPRESA]] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
+      "path2": "inbox/[[SUA-EMPRESA]] [FWBN-001] Script do Webinar [Original].txt"
     },
     {
       "tag": "FWBN-001",
-      "path1": "inbox/[BilhonClickmax] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
-      "path2": "inbox/[BilhonClickmax] [FWBN-001] 02. One Pager.txt"
+      "path1": "inbox/[[SUA-EMPRESA]] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
+      "path2": "inbox/[[SUA-EMPRESA]] [FWBN-001] 02. One Pager.txt"
     },
     {
       "tag": "FPV-001",
-      "path1": "inbox/[Bilhon] [FPV-001] Order Bumps.txt",
-      "path2": "inbox/[Bilhon] [FPV-001] Página de Upsell 1.txt"
+      "path1": "inbox/[[SUA-EMPRESA]] [FPV-001] Order Bumps.txt",
+      "path2": "inbox/[[SUA-EMPRESA]] [FPV-001] Página de Upsell 1.txt"
     },
     {
       "tag": "FWBN-001",
-      "path1": "inbox/[BilhonClickmax] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
-      "path2": "inbox/[BilhonClickmax] [FWBN-001] Vídeo de Obrigado.txt"
+      "path1": "inbox/[[SUA-EMPRESA]] [FWBN-001] 00. Roteiro de Concepção Estratégica.txt",
+      "path2": "inbox/[[SUA-EMPRESA]] [FWBN-001] Vídeo de Obrigado.txt"
     },
     {
       "path2": "inbox/JEREMY HAYNES/[-0001] 121. Wealth Math 9-2-23..txt"
