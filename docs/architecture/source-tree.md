@@ -75,7 +75,7 @@ mega-brain/
 │   │   ├── jeremy-haynes/
 │   │   ├── jeremy-miner/
 │   │   ├── naming-strategist/
-│   └── ... (+627 more)
+│   └── ... (+628 more)
 ├── knowledge/
 │   ├── business/
 │   │   ├── decisions/
@@ -97,7 +97,7 @@ mega-brain/
 │   │   └── TAG-RESOLVER.json
 │   ├── personal/
 │   │   ├── calls/
-│   └── ... (+8 more)
+│   └── ... (+9 more)
 ├── workspace/
 │   ├── _system/
 │   │   ├── _ref/
@@ -163,7 +163,7 @@ mega-brain/
 │   │   ├── stories-constitution.md
 │   │   ├── system-architecture.md
 │   │   └── tech-stack.md
-│   └── ... (+49 more)
+│   └── ... (+50 more)
 ├── reference/
 │   ├── architecture/
 │   │   ├── BROWNFIELD-AIOXBRAIN 2.md
