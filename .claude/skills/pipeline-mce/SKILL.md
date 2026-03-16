@@ -25,6 +25,31 @@ orchestrator (`orchestrate.py`) for file ops with LLM prompt execution for extra
 Every run follows these 12 steps in order. Do NOT skip steps. Do NOT ask permission
 between steps unless the step says PAUSE.
 
+### MANDATORY RULES (apply to ALL steps)
+
+**RULE 1 — ALWAYS use Write tool for artifact saves.**
+Steps 3-10 MUST save all artifact files (JSON, YAML, MD) using the **Write** tool,
+NEVER via Bash with `python3 -c` or shell redirection. This ensures the PostToolUse
+hook (`mce_step_logger.py`) fires and records JSONL audit entries + metrics.
+Exception: Read-only Bash commands (status checks, validations) are fine.
+
+**RULE 2 — Display Raio-X panel after each step.**
+After completing each step (3-10), display an inline status panel to the user:
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  STEP {N} — {STEP_NAME}                    `●` DONE
+  Slug: {SLUG} | Bucket: {BUCKET}
+  ──────────────────────────────────────────────────
+  {2-4 lines of key metrics for this step}
+  ──────────────────────────────────────────────────
+  Progress: [{bar}] {N}/12 steps
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+Do NOT rely on hook feedback for display — hooks are invisible to the user.
+The skill itself must print status after each step completes.
+
 ### STEP 0: DETECT INPUT
 
 Read the user's message to determine:
@@ -141,10 +166,11 @@ Save CHUNKS-STATE.json incrementally after each batch.
 
 4. Execute entity resolution following the prompt instructions.
 
-5. Save MERGED output to:
+5. Save MERGED output using the **Write** tool to:
    ```
    artifacts/canonical/CANONICAL-MAP.json
    ```
+   (NEVER use Bash/python3 to write this file — Write tool triggers logging hook.)
 
 6. Validate: CANONICAL-MAP.json exists and has entities mapped.
 
@@ -180,10 +206,11 @@ One file grows over time across all pipeline runs.
    - For new persons, add a new entry to `persons`.
    - Dedup by `chunk_id`: skip insights whose `chunk_id` already exists.
 
-6. Save MERGED output to:
+6. Save MERGED output using the **Write** tool to:
    ```
    artifacts/insights/INSIGHTS-STATE.json
    ```
+   (NEVER use Bash/python3 to write this file — Write tool triggers logging hook.)
 
 7. Validate: INSIGHTS-STATE.json has `persons` object with at least 1 person
    entry and `insights` array with >= 1 entry.
@@ -205,7 +232,7 @@ One file grows over time across all pipeline runs.
 3. Execute behavioral pattern extraction. Follow the prompt instructions
    for output format (adds `behavioral_patterns` to INSIGHTS-STATE.json).
 
-4. Save updated INSIGHTS-STATE.json (merged, not overwritten).
+4. Save updated INSIGHTS-STATE.json using the **Write** tool (merged, not overwritten).
 
 5. Validate: INSIGHTS-STATE.json now has `behavioral_patterns` field with
    at least 1 pattern per person.
@@ -227,7 +254,7 @@ One file grows over time across all pipeline runs.
 3. Execute identity extraction. Adds `value_hierarchy`, `obsessions`,
    `paradoxes` to INSIGHTS-STATE.json.
 
-4. Save updated INSIGHTS-STATE.json.
+4. Save updated INSIGHTS-STATE.json using the **Write** tool.
 
 5. Validate: `value_hierarchy` has at least 1 Tier 1 value.
    `obsessions` has exactly 1 MASTER obsession.
