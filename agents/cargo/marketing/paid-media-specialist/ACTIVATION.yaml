@@ -2,7 +2,7 @@
 # DO NOT EDIT MANUALLY -- regenerated on agent creation/update
 
 version: 1.0.0
-generated_at: '2026-03-16T01:27:27Z'
+generated_at: '2026-03-16T03:47:25Z'
 agent:
   name: Pixel
   id: paid-media-specialist
@@ -50,3 +50,11 @@ ide_registration:
   cursor: .cursor/agents.yaml
   windsurf: .windsurf/agents.yaml
   gemini: .gemini/agents/paid-media-specialist.md
+compilation:
+  format: v2.0
+  sections_embedded: 5
+  generated_at: '2026-03-16T03:47:25Z'
+  source_hashes:
+    agent_md: 4b10329f63b68f39a32040e93eed7cefe538932947e94b36e0f8e6e2d916333b
+    soul_md: 79ce9885e41744fcf9bcdd4047d2ff67319eef4b517acd821ff93495b239b49f
+    memory_md: c8670aa9d379e6456bdafe1dc0a54d778f3f703c57bcae8d27681ff5f4615267

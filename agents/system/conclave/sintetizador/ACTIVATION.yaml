@@ -2,7 +2,7 @@
 # DO NOT EDIT MANUALLY -- regenerated on agent creation/update
 
 version: 1.0.0
-generated_at: '2026-03-16T01:27:28Z'
+generated_at: '2026-03-16T03:47:26Z'
 agent:
   name: Sintetizador
   id: sintetizador
@@ -50,3 +50,11 @@ ide_registration:
   cursor: .cursor/agents.yaml
   windsurf: .windsurf/agents.yaml
   gemini: .gemini/agents/sintetizador.md
+compilation:
+  format: v2.0
+  sections_embedded: 5
+  generated_at: '2026-03-16T03:47:26Z'
+  source_hashes:
+    agent_md: 52469f92773bfc22479faa820cb9763a4a055cd4adaf59637f77efb9a7ad5284
+    soul_md: baf7bb90915246d2db96a23a8373419cf88b7e9793d8261959a0924fdfe17630
+    memory_md: ''

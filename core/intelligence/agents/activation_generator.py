@@ -628,12 +628,13 @@ def _extract_voice_block(soul_md_path: Path) -> dict:
                     stripped = line.strip()
                     if stripped.startswith(("1", "2", "3", "4", "5")):
                         clean = stripped.lstrip("0123456789. ").split("^[")[0].strip()
-                        # Remove bold markers
-                        clean = clean.lstrip("*").rstrip("*").strip()
+                        # Remove bold markers like **text**
+                        clean = re.sub(r"\*\*(.+?)\*\*", r"\1", clean)
                         if clean:
                             arg_items.append(clean)
-                    elif stripped.startswith(("- ", "* ", "• ")):
-                        clean = stripped.lstrip("-*• ").split("^[")[0].strip()
+                    elif stripped.startswith(("- ", "• ")):
+                        clean = stripped.lstrip("-• ").split("^[")[0].strip()
+                        clean = re.sub(r"\*\*(.+?)\*\*", r"\1", clean)
                         if clean:
                             arg_items.append(clean)
                 if arg_items:
@@ -1468,7 +1469,10 @@ def _extract_title_from_agent_md(text: str, slug: str) -> str:
     # Skip PARTE X headers and internal section headers
     skip_prefixes = (
         "## QUEM SOU", "## PARTE ", "## IDENTIDADE", "## MISS",
+        "## METADADOS", "## DEPENDENCIES", "## DEPEND",
         "## 🛡", "## 🧬", "## 🗣", "## 📊", "## 💼",
+        "## O QUE", "## COMO ", "## OBSESS", "## PARADOX",
+        "## SISTEMA DE VOZ", "## REGRAS", "## PADR",
     )
     for line in text.split("\n"):
         stripped = line.strip()
@@ -1482,7 +1486,20 @@ def _extract_title_from_agent_md(text: str, slug: str) -> str:
             candidate = stripped.lstrip("# ").strip()
             if _is_valid_title(candidate):
                 return candidate
-    # Fallback: look for > **Type:** or > **Version:** lines for context
+
+    # Fallback 1: check YAML frontmatter for role field
+    frontmatter_match = re.search(r"^role:\s*[\"']?(.+?)[\"']?\s*$", text, re.MULTILINE)
+    if frontmatter_match:
+        return frontmatter_match.group(1).strip()
+
+    # Fallback 2: check for > **Tipo:** or > **Versao:** header block with title context
+    for line in text.split("\n"):
+        stripped = line.strip()
+        if stripped.startswith("> **Tipo:**"):
+            candidate = stripped.split("**Tipo:**")[1].strip()
+            if candidate:
+                return candidate
+
     return slug.replace("-", " ").title()
 
 

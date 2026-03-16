@@ -2,7 +2,7 @@
 # DO NOT EDIT MANUALLY -- regenerated on agent creation/update
 
 version: 1.0.0
-generated_at: '2026-03-16T01:27:28Z'
+generated_at: '2026-03-16T03:47:26Z'
 agent:
   name: Lens
   id: lens
@@ -50,3 +50,11 @@ ide_registration:
   cursor: .cursor/agents.yaml
   windsurf: .windsurf/agents.yaml
   gemini: .gemini/agents/lens.md
+compilation:
+  format: v2.0
+  sections_embedded: 5
+  generated_at: '2026-03-16T03:47:26Z'
+  source_hashes:
+    agent_md: 8a881e713a05e3ff91235a3ef988c1824e49857502c9d78f4f8400db7718c494
+    soul_md: 317564f130b7a3fa6322f40d82cf39d63621fe3a75f158a8875c939516d9fb14
+    memory_md: ''

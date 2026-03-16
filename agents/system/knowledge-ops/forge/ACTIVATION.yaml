@@ -2,7 +2,7 @@
 # DO NOT EDIT MANUALLY -- regenerated on agent creation/update
 
 version: 1.0.0
-generated_at: '2026-03-16T01:27:28Z'
+generated_at: '2026-03-16T03:47:26Z'
 agent:
   name: Forge
   id: forge
@@ -50,3 +50,11 @@ ide_registration:
   cursor: .cursor/agents.yaml
   windsurf: .windsurf/agents.yaml
   gemini: .gemini/agents/forge.md
+compilation:
+  format: v2.0
+  sections_embedded: 5
+  generated_at: '2026-03-16T03:47:26Z'
+  source_hashes:
+    agent_md: 76da650f27ba6fe1682cafbbb5fc00a9988edd866122ff720b491aa3269d86cc
+    soul_md: 4caf1353c3fd5c3928c7c788d68a7a18ac2473bcb08364b4a59ffc50fac23946
+    memory_md: ''

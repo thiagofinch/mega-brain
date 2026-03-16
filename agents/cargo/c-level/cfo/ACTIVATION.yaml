@@ -2,7 +2,7 @@
 # DO NOT EDIT MANUALLY -- regenerated on agent creation/update
 
 version: 1.0.0
-generated_at: '2026-03-16T01:27:27Z'
+generated_at: '2026-03-16T03:47:25Z'
 agent:
   name: Warren
   id: cfo
@@ -50,3 +50,11 @@ ide_registration:
   cursor: .cursor/agents.yaml
   windsurf: .windsurf/agents.yaml
   gemini: .gemini/agents/cfo.md
+compilation:
+  format: v2.0
+  sections_embedded: 5
+  generated_at: '2026-03-16T03:47:25Z'
+  source_hashes:
+    agent_md: 4945a921dc49b43a8a988f2e9136e7d41e81716441e90c6aa43491732f23e8c8
+    soul_md: 440d025a25f21c9738f1f382894fdeca02bc2aa160e53374d5f8ede7c343b3f8
+    memory_md: e6b2b3e943c84a00180dcd1bb4376c1ce029e4d2c1563d163e94b92758f8a207

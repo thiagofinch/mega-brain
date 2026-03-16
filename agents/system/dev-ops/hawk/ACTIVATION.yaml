@@ -2,7 +2,7 @@
 # DO NOT EDIT MANUALLY -- regenerated on agent creation/update
 
 version: 1.0.0
-generated_at: '2026-03-16T01:27:28Z'
+generated_at: '2026-03-16T03:47:26Z'
 agent:
   name: Hawk
   id: hawk
@@ -50,3 +50,11 @@ ide_registration:
   cursor: .cursor/agents.yaml
   windsurf: .windsurf/agents.yaml
   gemini: .gemini/agents/hawk.md
+compilation:
+  format: v2.0
+  sections_embedded: 5
+  generated_at: '2026-03-16T03:47:26Z'
+  source_hashes:
+    agent_md: 3d14a00ba15df8bb700e81fa565f91b07c454c8496a74d15db8c7128222fb595
+    soul_md: 93d031f78f778d08e8535ebd7a948fb51ee1f613e145e973169a89ae16e107e0
+    memory_md: ''

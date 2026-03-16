@@ -2,7 +2,7 @@
 # DO NOT EDIT MANUALLY -- regenerated on agent creation/update
 
 version: 1.0.0
-generated_at: '2026-03-16T01:27:28Z'
+generated_at: '2026-03-16T03:47:26Z'
 agent:
   name: Beacon
   id: beacon
@@ -50,3 +50,11 @@ ide_registration:
   cursor: .cursor/agents.yaml
   windsurf: .windsurf/agents.yaml
   gemini: .gemini/agents/beacon.md
+compilation:
+  format: v2.0
+  sections_embedded: 5
+  generated_at: '2026-03-16T03:47:26Z'
+  source_hashes:
+    agent_md: ad6cf7361982390e8e0fcc86cfd2eb5b8f99f97f46c6111b9c52761d6d96b2a9
+    soul_md: ef25f7a980c1ad505eb16175821adeb9d24fb577157f8c7d04ab5e0ea6e74a48
+    memory_md: ''

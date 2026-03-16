@@ -2,7 +2,7 @@
 # DO NOT EDIT MANUALLY -- regenerated on agent creation/update
 
 version: 1.0.0
-generated_at: '2026-03-16T01:27:27Z'
+generated_at: '2026-03-16T03:47:25Z'
 agent:
   name: Gardener
   id: lns
@@ -50,3 +50,11 @@ ide_registration:
   cursor: .cursor/agents.yaml
   windsurf: .windsurf/agents.yaml
   gemini: .gemini/agents/lns.md
+compilation:
+  format: v2.0
+  sections_embedded: 5
+  generated_at: '2026-03-16T03:47:25Z'
+  source_hashes:
+    agent_md: 3f5898fb1a2c698cf3eeda79f0a52690ec43819242ed80dc796a23964392d21e
+    soul_md: 8d71395f98b3044f33095cc6835bec486c299f7ba1ce3280da598729d81f9372
+    memory_md: 47c495630b39131ebec6983f13b858fc0f4cb763c6e0472f8a558a19cb2c3c41

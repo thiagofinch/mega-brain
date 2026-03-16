@@ -2,7 +2,7 @@
 # DO NOT EDIT MANUALLY -- regenerated on agent creation/update
 
 version: 1.0.0
-generated_at: '2026-03-16T02:49:38Z'
+generated_at: '2026-03-16T03:47:25Z'
 agent:
   name: Jordan Lee
   id: jordan-lee
@@ -50,3 +50,11 @@ ide_registration:
   cursor: .cursor/agents.yaml
   windsurf: .windsurf/agents.yaml
   gemini: .gemini/agents/jordan-lee.md
+compilation:
+  format: v2.0
+  sections_embedded: 5
+  generated_at: '2026-03-16T03:47:25Z'
+  source_hashes:
+    agent_md: a4964384a37d496189f74fa9ce59bfab7794a1f405f6c9716c3cedd684c2b9d8
+    soul_md: 572b1a9c904700e8c88cad9042f5c5fae83fb5540ba321300bd72b43f35fa80f
+    memory_md: a98bec2da2f1d912ad11ec3c8904b7f95710357f534b4a2e0deed16d03e465e4

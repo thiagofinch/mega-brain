@@ -2,7 +2,7 @@
 # DO NOT EDIT MANUALLY -- regenerated on agent creation/update
 
 version: 1.0.0
-generated_at: '2026-03-16T01:27:27Z'
+generated_at: '2026-03-16T03:47:25Z'
 agent:
   name: Relay
   id: sales-coordinator
@@ -50,3 +50,11 @@ ide_registration:
   cursor: .cursor/agents.yaml
   windsurf: .windsurf/agents.yaml
   gemini: .gemini/agents/sales-coordinator.md
+compilation:
+  format: v2.0
+  sections_embedded: 5
+  generated_at: '2026-03-16T03:47:25Z'
+  source_hashes:
+    agent_md: af0d9857ca58847421583c25d29249099861e22f427b161cd34b5117042512e6
+    soul_md: 1f09c2eaecf60cebf2a3087e0adc0e7ae7c3d5839ba47a65cf54f85b086bf49f
+    memory_md: 1f0f7d5644f449a37fe582eeb1f2136e15b296c4fd6cce1ac3168b13a5b79a4c

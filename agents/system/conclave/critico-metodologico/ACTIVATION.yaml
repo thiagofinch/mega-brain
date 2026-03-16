@@ -2,7 +2,7 @@
 # DO NOT EDIT MANUALLY -- regenerated on agent creation/update
 
 version: 1.0.0
-generated_at: '2026-03-16T01:27:28Z'
+generated_at: '2026-03-16T03:47:26Z'
 agent:
   name: Critico
   id: critico-metodologico
@@ -50,3 +50,11 @@ ide_registration:
   cursor: .cursor/agents.yaml
   windsurf: .windsurf/agents.yaml
   gemini: .gemini/agents/critico-metodologico.md
+compilation:
+  format: v2.0
+  sections_embedded: 5
+  generated_at: '2026-03-16T03:47:26Z'
+  source_hashes:
+    agent_md: 6a0f0eafef23410b31d838596ffd5b0f5f68742daed6f93899780a9b7947d528
+    soul_md: c96b64770c2302ab902ea170bc40e398354e15497e5bc54ba1aed70faaef587f
+    memory_md: ''

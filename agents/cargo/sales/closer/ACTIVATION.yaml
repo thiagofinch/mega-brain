@@ -2,7 +2,7 @@
 # DO NOT EDIT MANUALLY -- regenerated on agent creation/update
 
 version: 1.0.0
-generated_at: '2026-03-16T01:27:27Z'
+generated_at: '2026-03-16T03:47:25Z'
 agent:
   name: Hawk
   id: closer
@@ -50,3 +50,11 @@ ide_registration:
   cursor: .cursor/agents.yaml
   windsurf: .windsurf/agents.yaml
   gemini: .gemini/agents/closer.md
+compilation:
+  format: v2.0
+  sections_embedded: 5
+  generated_at: '2026-03-16T03:47:25Z'
+  source_hashes:
+    agent_md: 42b2f4dea90b98a17449972a1f9a4692fd8fc8cb1464dbb8ea4ef5be8b3e6bbd
+    soul_md: 07edb6123f986c0643c30e82e9e9237bd5b7b14668233d96c7e5d9bd689094ad
+    memory_md: 425b9cfd67daf375641b9ae8433e87c6d424813b0069b379a0f3967fee4a4b35

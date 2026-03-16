@@ -2,7 +2,7 @@
 # DO NOT EDIT MANUALLY -- regenerated on agent creation/update
 
 version: 1.0.0
-generated_at: '2026-03-16T01:27:27Z'
+generated_at: '2026-03-16T03:47:25Z'
 agent:
   name: Jeremy
   id: jeremy-miner
@@ -50,3 +50,11 @@ ide_registration:
   cursor: .cursor/agents.yaml
   windsurf: .windsurf/agents.yaml
   gemini: .gemini/agents/jeremy-miner.md
+compilation:
+  format: v2.0
+  sections_embedded: 5
+  generated_at: '2026-03-16T03:47:25Z'
+  source_hashes:
+    agent_md: 8b5294525205d0ee4f1eb8ee5f7e223f615e5ba784c111592a87acee0c7f760b
+    soul_md: dc4fc9b6e152f9076798779d30a79c71e2d8edb25a450c907d01b4c5e1211854
+    memory_md: 7ef19c3a9e8dae1f4d0e6dfe0af4f91897f8803cab2a72aad804b83751f158a0

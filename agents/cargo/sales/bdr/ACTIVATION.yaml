@@ -2,7 +2,7 @@
 # DO NOT EDIT MANUALLY -- regenerated on agent creation/update
 
 version: 1.0.0
-generated_at: '2026-03-16T01:27:27Z'
+generated_at: '2026-03-16T03:47:25Z'
 agent:
   name: Scout
   id: bdr
@@ -50,3 +50,11 @@ ide_registration:
   cursor: .cursor/agents.yaml
   windsurf: .windsurf/agents.yaml
   gemini: .gemini/agents/bdr.md
+compilation:
+  format: v2.0
+  sections_embedded: 5
+  generated_at: '2026-03-16T03:47:25Z'
+  source_hashes:
+    agent_md: 55149250b563cd5c6d3bac08f664448d6b4d2126e6f187dca2b8e2eefdae252a
+    soul_md: ddc284b1f14327d8221befd38a9e397107f46c4df7c9118e9b854371364f8a43
+    memory_md: cf644b822f00e28815d146135fd552b8c2a473b02cb8af416234a9825e7bbe67

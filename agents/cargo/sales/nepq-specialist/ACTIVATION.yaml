@@ -2,7 +2,7 @@
 # DO NOT EDIT MANUALLY -- regenerated on agent creation/update
 
 version: 1.0.0
-generated_at: '2026-03-16T01:27:27Z'
+generated_at: '2026-03-16T03:47:25Z'
 agent:
   name: Mirror
   id: nepq-specialist
@@ -50,3 +50,11 @@ ide_registration:
   cursor: .cursor/agents.yaml
   windsurf: .windsurf/agents.yaml
   gemini: .gemini/agents/nepq-specialist.md
+compilation:
+  format: v2.0
+  sections_embedded: 5
+  generated_at: '2026-03-16T03:47:25Z'
+  source_hashes:
+    agent_md: 6662d8a519fd6928a8900629e8243826e263cd549b7b57807e21c1520a88aebe
+    soul_md: 459df85df1c3032edce6c8d62390552a846aa21af9cd30362d585ef520f87f18
+    memory_md: 451bfb060676a88aae72e26b77882373ba753cc54c2a60a75cb79d208150b6fe

@@ -2,7 +2,7 @@
 # DO NOT EDIT MANUALLY -- regenerated on agent creation/update
 
 version: 1.0.0
-generated_at: '2026-03-16T01:27:27Z'
+generated_at: '2026-03-16T03:47:25Z'
 agent:
   name: The
   id: the-scalable-company
@@ -50,3 +50,11 @@ ide_registration:
   cursor: .cursor/agents.yaml
   windsurf: .windsurf/agents.yaml
   gemini: .gemini/agents/the-scalable-company.md
+compilation:
+  format: v2.0
+  sections_embedded: 5
+  generated_at: '2026-03-16T03:47:25Z'
+  source_hashes:
+    agent_md: 77278cabd865ad162a57109fb0888267cd8f0f2f22f8eb67e7b4bc8b710eca39
+    soul_md: d50c663d8bc36946533e85a64a7a03234bddf1f081cdc3f57e65b77ce50d9aa4
+    memory_md: 13ae7a3f80e078e8943d3ccb0e68c398fd86fe203c56dc7922f8ed414f402618

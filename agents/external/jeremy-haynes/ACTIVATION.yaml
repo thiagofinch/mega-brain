@@ -2,7 +2,7 @@
 # DO NOT EDIT MANUALLY -- regenerated on agent creation/update
 
 version: 1.0.0
-generated_at: '2026-03-16T01:27:27Z'
+generated_at: '2026-03-16T03:47:25Z'
 agent:
   name: Jeremy
   id: jeremy-haynes
@@ -50,3 +50,11 @@ ide_registration:
   cursor: .cursor/agents.yaml
   windsurf: .windsurf/agents.yaml
   gemini: .gemini/agents/jeremy-haynes.md
+compilation:
+  format: v2.0
+  sections_embedded: 5
+  generated_at: '2026-03-16T03:47:25Z'
+  source_hashes:
+    agent_md: 4a974de0b9dbfb405699ad39394a5dbd035ef5adb5f7101428371d46442dc6cb
+    soul_md: 12192a5b5949c175b51840ffc7629564014f4fdd80bf0942db7ab2a89c52ca2f
+    memory_md: 8257019c094bf430f8924eec66e5a4bc0991b8433c9b70deddb6c41fceda5837

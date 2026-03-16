@@ -2,7 +2,7 @@
 # DO NOT EDIT MANUALLY -- regenerated on agent creation/update
 
 version: 1.0.0
-generated_at: '2026-03-16T01:27:27Z'
+generated_at: '2026-03-16T03:47:25Z'
 agent:
   name: Revenue
   id: cro
@@ -50,3 +50,11 @@ ide_registration:
   cursor: .cursor/agents.yaml
   windsurf: .windsurf/agents.yaml
   gemini: .gemini/agents/cro.md
+compilation:
+  format: v2.0
+  sections_embedded: 5
+  generated_at: '2026-03-16T03:47:25Z'
+  source_hashes:
+    agent_md: 2c825c8c2dfb0aac422a9f6d373b373a5e3a27406229afc8709388e21b686ad5
+    soul_md: d2ecd2532ea8e02b5fb9416b5f9f412db93ffdb77052cae1299cd00da65cef90
+    memory_md: 4ce8305438047312f001e2600445301b93f53af15a39233b85efd475d97ae0d5
