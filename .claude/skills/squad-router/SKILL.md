@@ -358,6 +358,21 @@ Is the task about visual design or user experience?
 
 ---
 
+### Domain 13: SQUAD-SPECIFIC TASKS
+
+Quando o usuario quer ativar um squad especifico ou trabalhar num dominio coberto por squad:
+
+1. Ler `.squads/{squad}/config.yaml` para contexto
+2. Match por nome, keywords, ou dominio via SKILL-INDEX.json keyword_map
+3. Ativar o chief agent do squad (entry_agent do config.yaml)
+4. Carregar agents e workflows disponiveis
+
+Squads disponiveis: ler dinamicamente de `.squads/*/config.yaml`
+
+**Signal words:** squad, ativar squad, squad router, knowledge-ops squad, dev-ops squad, squad config, squad workflow
+
+---
+
 ## FALLBACK: "I Don't Know Which Agent"
 
 When the task does not clearly match any domain above:

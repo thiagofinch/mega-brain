@@ -31,12 +31,13 @@ def main():
         index = build_index()
         skills_count = index.get("skills_count", 0)
         subagents_count = index.get("subagents_count", 0)
+        squads_count = index.get("squads_count", 0)
         keywords_count = len(index.get("keyword_map", {}))
 
         # Output compacto para não poluir o chat
         # Formato compatível com outros hooks SessionStart
         print(
-            f"Skills: {skills_count} | Sub-Agents: {subagents_count} | Keywords: {keywords_count}"
+            f"Skills: {skills_count} | Squads: {squads_count} | Sub-Agents: {subagents_count} | Keywords: {keywords_count}"
         )
 
     except Exception as e:

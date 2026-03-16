@@ -25,9 +25,15 @@ import os
 import re
 from pathlib import Path
 
+try:
+    import yaml
+except ImportError:
+    yaml = None
+
 PROJECT_ROOT = Path(os.environ.get("CLAUDE_PROJECT_DIR", "."))
 SKILLS_PATH = PROJECT_ROOT / ".claude" / "skills"
 SUBAGENTS_PATH = PROJECT_ROOT / ".claude" / "jarvis" / "sub-agents"
+SQUADS_PATH = PROJECT_ROOT / ".squads"
 AGENT_MEMORY_PATH = PROJECT_ROOT / ".claude" / "agent-memory"
 INDEX_PATH = PROJECT_ROOT / ".claude" / "mission-control" / "SKILL-INDEX.json"
 
@@ -66,11 +72,109 @@ def scan_skills() -> list[tuple[Path, str]]:
                 if agent_md.exists():
                     items.append((item, "sub-agent"))
 
+    # Scan squads (.squads/*/config.yaml or config/squad.yaml)
+    if SQUADS_PATH.exists():
+        for item in SQUADS_PATH.iterdir():
+            if item.is_dir() and not item.name.startswith("_"):
+                config_yaml = item / "config.yaml"
+                alt_config = item / "config" / "squad.yaml"
+                if config_yaml.exists() or alt_config.exists():
+                    items.append((item, "squad"))
+
     return items
 
 
+def _derive_squad_keywords(name: str, description: str, entry_agent: str) -> list[str]:
+    """Derive keywords from squad config fields."""
+    keywords = set()
+    # Squad name and variants
+    keywords.add(name.lower())
+    keywords.add(name.lower().replace("-", " "))
+    if entry_agent:
+        keywords.add(entry_agent.lower())
+        keywords.add(entry_agent.lower().replace("-", " "))
+    # Extract significant words from description (>3 chars, not stopwords)
+    stopwords = {
+        "squad", "agents", "agent", "para", "com", "que", "uma", "use",
+        "quando", "ativar", "executar", "missoes", "dominio", "based",
+        "the", "and", "for", "with", "from", "this", "that", "elite",
+    }
+    if description:
+        words = re.findall(r"[a-zA-Z\u00C0-\u017F]{4,}", description.lower())
+        for w in words:
+            if w not in stopwords and len(w) <= 20:
+                keywords.add(w)
+    return [k for k in sorted(keywords) if len(k) > 2][:15]
+
+
+def extract_squad_metadata(squad_path: Path) -> dict:
+    """Extract metadata from a squad's config.yaml."""
+    config_file = squad_path / "config.yaml"
+    if not config_file.exists():
+        config_file = squad_path / "config" / "squad.yaml"
+    if not config_file.exists():
+        return {}
+
+    # Parse YAML
+    config = {}
+    if yaml:
+        try:
+            with open(config_file, encoding="utf-8") as f:
+                config = yaml.safe_load(f) or {}
+        except Exception:
+            config = {}
+    else:
+        # Fallback: regex extraction when PyYAML unavailable
+        try:
+            text = config_file.read_text(encoding="utf-8")
+            for field in ("name", "entry_agent", "description", "slashPrefix"):
+                m = re.search(rf'^{field}:\s*["\']?([^"\'\n]+)', text, re.M)
+                if m:
+                    config[field] = m.group(1).strip()
+        except Exception:
+            return {}
+
+    # Handle nested config (some squads use squad.name, pack.name, etc.)
+    if "squad" in config and isinstance(config["squad"], dict):
+        inner = config["squad"]
+        config = {**inner, **{k: v for k, v in config.items() if k != "squad"}}
+    if "pack" in config and isinstance(config["pack"], dict):
+        inner = config["pack"]
+        for k in ("name", "description", "slash_prefix"):
+            if k in inner and k not in config:
+                config[k] = inner[k]
+
+    name = config.get("name", squad_path.name)
+    description = config.get("description", "")
+    entry_agent = config.get("entry_agent", "")
+    slash_prefix = config.get("slashPrefix", config.get("slash_prefix", ""))
+
+    # Count agents
+    agents_dir = squad_path / "agents"
+    agent_count = 0
+    if agents_dir.exists():
+        agent_count = len([f for f in agents_dir.iterdir() if f.suffix == ".md"])
+
+    keywords = _derive_squad_keywords(name, description, entry_agent)
+
+    return {
+        "path": str(squad_path.relative_to(PROJECT_ROOT)),
+        "name": squad_path.name,
+        "type": "squad",
+        "entry_agent": entry_agent,
+        "slash_prefix": slash_prefix,
+        "agent_count": agent_count,
+        "description": description[:200] if description else "",
+        "keywords": keywords,
+        "priority": "MÉDIA",
+    }
+
+
 def extract_metadata(item_path: Path, item_type: str) -> dict:
-    """Extrai metadados de SKILL.md ou AGENT.md."""
+    """Extrai metadados de SKILL.md, AGENT.md, ou config.yaml."""
+
+    if item_type == "squad":
+        return extract_squad_metadata(item_path)
 
     if item_type == "skill":
         md_file = item_path / "SKILL.md"
@@ -142,17 +246,62 @@ def extract_metadata(item_path: Path, item_type: str) -> dict:
     return metadata
 
 
+def _ensure_squad_skill(squad_name: str, metadata: dict) -> None:
+    """Auto-generate SKILL.md for a squad that doesn't have one yet."""
+    skill_dir = SKILLS_PATH / squad_name
+    skill_md = skill_dir / "SKILL.md"
+    if skill_md.exists():
+        return
+
+    desc = metadata.get("description", "")[:150]
+    entry = metadata.get("entry_agent", squad_name + "-chief")
+    count = metadata.get("agent_count", 0)
+    squad_path = metadata.get("path", f".squads/{squad_name}")
+
+    content = f"""---
+name: {squad_name}
+description: |
+  {squad_name.replace('-', ' ').title()} Squad - {count} agents. {desc}
+
+  Use quando: ativar o squad {squad_name} para executar missoes do dominio.
+---
+
+# {squad_name.replace('-', ' ').title()} Squad
+
+Squad com **{count} agentes** especializados.
+
+## Activation
+
+O orchestrador principal e `{entry}`. Para ativar:
+
+1. Leia `{squad_path}/agents/{entry}.md` e adote a persona
+2. Carregue config: `{squad_path}/config.yaml`
+3. Siga o mission router do chief para delegar trabalho
+
+## Squad Directory
+
+`{squad_path}/`
+"""
+    try:
+        skill_dir.mkdir(parents=True, exist_ok=True)
+        skill_md.write_text(content, encoding="utf-8")
+    except Exception:
+        pass  # Non-blocking: skill creation is best-effort
+
+
 def build_index() -> dict:
-    """Constrói índice completo de skills e sub-agents."""
+    """Constrói índice completo de skills, sub-agents e squads."""
     items = scan_skills()
 
     index = {
-        "version": "2.0.0",
+        "version": "3.0.0",
         "skills_count": 0,
         "subagents_count": 0,
+        "squads_count": 0,
         "total_count": len(items),
         "skills": {},
         "subagents": {},
+        "squads": {},
         "keyword_map": {},
     }
 
@@ -164,6 +313,11 @@ def build_index() -> dict:
             if item_type == "skill":
                 index["skills"][item_name] = metadata
                 index["skills_count"] += 1
+            elif item_type == "squad":
+                index["squads"][item_name] = metadata
+                index["squads_count"] += 1
+                # Auto-generate SKILL.md if missing
+                _ensure_squad_skill(item_name, metadata)
             else:
                 index["subagents"][item_name] = metadata
                 index["subagents_count"] += 1
@@ -381,8 +535,9 @@ def cli_test():
     """CLI test mode - run directly for debugging."""
     index = build_index()
     print(f"Skills indexadas: {index['skills_count']}")
+    print(f"Squads indexados: {index['squads_count']}")
     print(f"Sub-agents indexados: {index['subagents_count']}")
-    print(f"Total: {index['total_count']}")
+    print(f"Total escaneados: {index['total_count']}")
     print(f"Keywords mapeadas: {len(index['keyword_map'])}")
 
     print("\nKeywords disponíveis:")

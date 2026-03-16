@@ -241,7 +241,7 @@ core/intelligence/speakers/*.pkl
 # Misc dirs de frameworks externos
 .commands-bak/
 .agent/
-squads/
+.squads/
 .antigravity/rules/agents/
 
 
@@ -566,12 +566,21 @@ knowledge/personal/**
 .claude/commands/greet.md
 
 # Squad-synced skills (aios-stage IDE sync)
+.claude/skills/ads-audit/
+.claude/skills/agent-autonomy/
 .claude/skills/advisory-board/
+.claude/skills/aiox-copy/
+.claude/skills/aiox-design/
+.claude/skills/aiox-traffic/
+.claude/skills/application-forms/
+.claude/skills/biohacking/
 .claude/skills/bob-orchestrator/
 .claude/skills/book-summary/
 .claude/skills/brand/
 .claude/skills/c-level/
+.claude/skills/claude-code-mastery/
 .claude/skills/cli-router/
+.claude/skills/clickup/
 .claude/skills/clone-mind/
 .claude/skills/commit/
 .claude/skills/context-cleaner/
@@ -594,22 +603,30 @@ knowledge/personal/**
 .claude/skills/face-forge/
 .claude/skills/franchise/
 .claude/skills/hormozi/
+.claude/skills/kaizen/
 .claude/skills/llm-scan/
+.claude/skills/media-buyer-squad/
 .claude/skills/movement/
 .claude/skills/new-etl/
+.claude/skills/photo-lab/
+.claude/skills/pitch-deck/
 .claude/skills/print-to-code/
+.claude/skills/project-dna/
 .claude/skills/pv-axioma-assessment/
 .claude/skills/refactor-workflow/
 .claude/skills/session-launcher/
 .claude/skills/skill-creator/
+.claude/skills/sop-factory/
 .claude/skills/spy/
 .claude/skills/squad-creator/
+.claude/skills/squad-creator-pro/
 .claude/skills/squad-guide/
 .claude/skills/story-cycle/
 .claude/skills/storytelling/
 .claude/skills/tech-research/
 .claude/skills/tech-search/
 .claude/skills/test-at-file/
+.claude/skills/theme/
 .claude/skills/test-memory-injection/
 .claude/skills/test-multi-skills/
 .claude/skills/traffic-masters/
