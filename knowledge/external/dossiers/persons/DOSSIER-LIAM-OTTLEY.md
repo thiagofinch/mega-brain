@@ -4,8 +4,8 @@
 > **Gerado:** 2026-03-13
 > **Atualizado:** 2026-03-16 (MCE Consolidation Step 10.1)
 > **Fontes:** 3 podcasts YouTube (24,287 palavras) — 86 chunks, 42 insights
-> **DNA Elements:** 54+ (13 FIL + 10 MM + 13 HEUR + 9 FW + 9 MET)
-> **MCE Elements:** 11 behavioral patterns + 6 values + 3 obsessions + 3 paradoxes + 17 signature phrases + 5 behavioral states
+> **DNA Elements:** 47 (13 FIL + 9 MM + 13 HEUR + 7 FW + 5 MET)
+> **MCE Elements:** 11 behavioral patterns + 6 values + 3 obsessions + 3 paradoxes + 16 signature phrases + 5 behavioral states
 > **Voice DNA:** Dimensional scores + 6 anti-patterns + 5 metaphors + 6 vocabulary transforms
 > **Status:** 🟢 Ativo
 

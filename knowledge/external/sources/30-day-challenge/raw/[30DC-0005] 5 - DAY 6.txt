@@ -1,0 +1,343 @@
+Transcrição Completa: Day 5 - 30-Day Sales Challenge
+
+ 
+
+[00:00] 30-day sales challenge. You're in real time hitting your 100 per day every single day. I got some good news for you though. I'm going to give you a little bit of a gamifying perspective on this whole process and this whole system.
+
+ 
+
+[00:15] So, in real time every single day when you're hitting your 100 per day, you are looking at a lot of data, especially if you're sending data driven emails or you're really getting ahead if you're sending those use Loom videos because you're being able to to talk about it. You're able to teach it.
+
+ 
+
+[00:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Retenção de Informação ao Ensinar"
+
+ 
+
+NÚMEROS: 70-90% de retenção ao ensinar vs 10% de retenção normal
+
+ 
+
+VISUAL: Comparação visual entre percentuais de retenção, destaque para o aumento significativo quando se ensina aos outros
+
+ 
+
+[00:40] Did you know I've heard a few different stats here 70% 90% it's in between the two of the information that you learn you have a 70 to 90% opportunity to retain that information comparatively to the normal 10% when retaining information that you're learning when you teach it to others.
+
+ 
+
+[01:00] So in real time if you are looking at data on all these clients that you're about to close as clients because keep in mind you're going to get paid for this you are learning a lot. You're taking in a lot. You're getting a marketing perspective. You're getting a data perspective. you're seeing in real time all the flaws of these businesses.
+
+ 
+
+[01:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Ferramentas de Análise de Website"
+
+ 
+
+NÚMEROS: Não especificado
+
+ 
+
+VISUAL: Ícones de ferramentas Chrome, Facebook Pixel Helper, layout de análise de dados, representação de extensões de navegador
+
+ 
+
+[01:30] You're looking at their uh in Google Chrome on their websites. Do they have the Facebook pixel helper? Are they doing Facebook ads? If they're not doing any kind of Facebook ads, are they using things like connect io.io?
+
+ 
+
+[01:50] Meaning, do you see a lot of Facebook pixel activity on that page in real time? You can have a tool from connect.io.io like connect retarget. It allows you to target people in an audience on Facebook based on how many times people visited a page, the time spent on the page, the date of the visit.
+
+ 
+
+[02:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Connect Retarget - Variáveis de Segmentação"
+
+ 
+
+NÚMEROS: Não especificado
+
+ 
+
+VISUAL: Lista de critérios: número de visitas, tempo gasto na página, data da visita, comprimento de scroll, segmentação para e-commerce e vendas sazonais
+
+ 
+
+[02:20] That's good for holiday sales, especially if you're targeting e-commerce stores or anybody doing any kind of transactions on holidays. Or you can target people based on the scroll length, time spent, if I didn't say that already, and a few other variables, all from something that you can identify just in one little Chrome extension called the Facebook Pixel Helper.
+
+ 
+
+[02:45] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Segurança SSL - Análise de Browser Bar"
+
+ 
+
+NÚMEROS: Não especificado
+
+ 
+
+VISUAL: Comparação HTTPS vs HTTP, ícone de cadeado de segurança, representação visual de vulnerabilidade de website
+
+ 
+
+[02:50] Guess what else you can use in their browser bar without even scrolling onto the page yet. You can see if they have an SSL, meaning if they don't have that fancy HTTPS, that means they don't have an SSL, which means in real time, if they don't have that, their website's vulnerable for people coming in and hacking it, taking all the emails that has ever been entered on that website, extracting them right out of the website because it's held on a server somewhere, and somebody can come in as a hacker, especially if there's not an SSL, rip it out.
+
+ 
+
+[03:30] They take credit cards on that same website. Oh man, that's a liability. Do you guys know what a DDoS attack is? DDDS is in real time somebody sending a lot of web traffic at one specific web page at once or any online abset and taking it down because so many requests are happening on the server at one time.
+
+ 
+
+[03:55] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Ataque DDoS - Vulnerabilidade de Servidor"
+
+ 
+
+NÚMEROS: 1 milhão+ de requisições simultâneas
+
+ 
+
+VISUAL: Representação de múltiplas setas convergindo para um servidor, ilustração de sobrecarga de tráfego, ícone de site bloqueado
+
+ 
+
+[04:00] So when real people want to come, they don't have the opportunity to because the site is being attacked by a million plus people at one time hitting the site. So it doesn't allow real people to come in. Do you know how much of a liability that is for a business owner, especially somebody who makes money online?
+
+ 
+
+[04:25] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Valor da Solução vs Custo do Problema"
+
+ 
+
+NÚMEROS: Não especificado
+
+ 
+
+VISUAL: Balança comparativa, lado esquerdo mostrando "custo do problema", lado direito "valor da solução", conceito de ROI visual
+
+ 
+
+[04:30] You have to be able to see these things in real time and know that that's a piece of value, right, that somebody's willing to pay for because they understand how much that problem could cost them or how much that solution could make them, right? How much the problem worth, how much is the solution worth.
+
+ 
+
+[04:50] So now that you're taking in all this data, you're a data machine. As you continue to look at this data and I give you the perspective of gamifying this, think how can you elevate your perspective on all the data that you're looking at, right? what in real time is gonna up your game right now.
+
+ 
+
+[05:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Ferramentas de Análise - Nível Inicial"
+
+ 
+
+NÚMEROS: 2 ferramentas principais mencionadas (Facebook Pixel Helper, SSL Check)
+
+ 
+
+VISUAL: Ícones de ferramentas Chrome, representação de progressão de habilidades, conceito de "leveling up"
+
+ 
+
+[05:20] If you didn't even know about those two things that I just looked at, just know that's the level that I'm just starting off at when I go into an email, right? What am I building upon as I continue to get more skilled? Right? What are you doing as you continue to look at just their landing pages alone?
+
+ 
+
+[05:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Social Blade - Análise de Redes Sociais"
+
+ 
+
+NÚMEROS: Não especificado
+
+ 
+
+VISUAL: Logo/conceito do Social Blade, ícones de Instagram, YouTube, Twitter, dashboard de analytics, gráficos de crescimento de seguidores
+
+ 
+
+[05:45] What tools are you using like socialblade.com to look at their Instagram, YouTube, Twitter, all their analytics just for their social medias alone?
+
+ 
+
+[06:00] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Ferramenta Secreta de Análise de Anúncios"
+
+ 
+
+NÚMEROS: Não especificado
+
+ 
+
+VISUAL: Ícone de ferramenta confidencial/fechada, representação de biblioteca de anúncios do Facebook, conceito de pesquisa por palavra-chave
+
+ 
+
+[06:05] Are you using any of the tools that allow you to see their ads, which I can't tell you a specific tool because I don't want to give it away. I'm going to be honest with you guys. It's actually already closed down and if I send a bunch of website traffic at it, it has more of an opportunity to get closed down.
+
+ 
+
+[06:30] So, there are other tools like this that you might be able to Google. I noticed a lot of them aren't even Google Google now. So, in real time, there's a tool I'm going to talk to you about that allows you to type in anybody's name or any specific keyword and you can see every single Facebook ad ever for that specific keyword or that specific person or that specific company that you just search within a tool like this.
+
+ 
+
+[07:00] There's a few tools that have already been shut down. Uh but in real time, once again, you might have an opportunity just based on what I said to go figure out what you can Google to go find something like that. Ask your friends, go ask people within groups. I don't want to be this specific one once again to get one of these tools shut down.
+
+ 
+
+[07:20] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Browser Bar Tools - Dia 5"
+
+ 
+
+NÚMEROS: Não especificado
+
+ 
+
+VISUAL: Barra de navegador Chrome destacada, múltiplos ícones de extensões, conceito de análise apenas pela barra do navegador
+
+ 
+
+[07:25] So those things exist as well. Just in the Chrome bar itself, once again, just in the browser bar, this is just browser bar on day five. We're talking about literally in real time.
+
+ 
+
+[07:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Google Tag Manager & Analytics"
+
+ 
+
+NÚMEROS: Não especificado
+
+ 
+
+VISUAL: Logo do Google Tag Manager, ícones de Analytics, Google AdWords, YouTube, conceito de tracking e retargeting
+
+ 
+
+[07:45] Google Tags Manager, you can see if they have analytics installed. You can see if they're doing any ads on pay-per-click. Are they using Google Adwords? Are they doing YouTube videos? If you hit their website, are you being retargeted as soon as you leave?
+
+ 
+
+[08:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Análise de Email Marketing"
+
+ 
+
+NÚMEROS: Não especificado
+
+ 
+
+VISUAL: Logos de plataformas de email (Constant Contact, Mailchimp, Infusionsoft), comparação HTML vs texto simples, conceito de qualidade de email
+
+ 
+
+[08:15] Are you filling out their forms? Are you trying to figure out if they have good email, bad email? Are they using HTML emails? What's their constant contact, Mailchimp, Infusion Soft? What are their tools? What are they using?
+
+ 
+
+[08:35] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Data Machine - Perspectiva Elevada"
+
+ 
+
+NÚMEROS: 100 por dia, 400+ total acumulado até dia 5
+
+ 
+
+VISUAL: Representação de máquina de dados, gráfico de acumulação de conhecimento, conceito de visão ampliada através de dados
+
+ 
+
+[08:40] Figure all this stuff out. Get the data because as you acquire data, you get a heightened viewpoint on all this stuff. You're a data machine. Okay? Hit your hundred. Go acquire some data and make some sales. Hit your 100 per data. Make sure all these people that you've reached out to at this point, cuz you should have had at least 400, you are following up
+
+ 
+
+ 
+
+📊 RESUMO EXECUTIVO
+
+ 
+
+NÚMEROS PRINCIPAIS:
+
+70-90% de retenção de informação ao ensinar vs 10% normal
+
+100 contatos por dia (meta diária)
+
+400+ contatos acumulados até o dia 5
+
+1 milhão+ de requisições em ataques DDoS
+
+ 
+
+ESTRATÉGIAS E SISTEMAS:
+
+Gamificação do processo de prospecção
+
+Análise de dados através de emails personalizados
+
+Uso de vídeos Loom para ensinar e reter conhecimento
+
+Estratégia de follow-up constante
+
+Identificação de vulnerabilidades como valor de venda
+
+Análise competitiva através de ferramentas de ads
+
+ 
+
+ESTRUTURA: Ferramentas de Análise (Browser Bar):
+
+Facebook Pixel Helper
+
+SSL/HTTPS Checker
+
+Google Tag Manager
+
+Connect.io (Connect Retarget)
+
+ 
+
+Ferramentas de Analytics:
+
+SocialBlade.com (Instagram, YouTube, Twitter)
+
+Ferramentas secretas de análise de Facebook Ads
+
+Google Analytics
+
+Google AdWords tracking
+
+ 
+
+Plataformas de Email Marketing:
+
+Constant Contact
+
+Mailchimp
+
+Infusionsoft
+
+ 
+
+Pontos de Análise:
+
+Presença de Facebook Pixel
+
+Segurança SSL
+
+Vulnerabilidade a ataques DDoS
+
+Retargeting ativo
+
+Qualidade de emails (HTML vs texto)
+
+Analytics instalado
+
+Campanhas PPC ativas
+
+ 
+
+DADOS FINANCEIROS:
+
+Foco em valor da solução vs custo do problema
+
+Liability financeira de vulnerabilidades de segurança
+
+Potencial de receita perdida em ataques DDoS
+
+ROI de implementação de soluções de segurança
+
+ 
+
+DURAÇÃO: ~09:00 minutos FORMATO: Vídeo educacional - Desafio de 30 dias (Dia 5)

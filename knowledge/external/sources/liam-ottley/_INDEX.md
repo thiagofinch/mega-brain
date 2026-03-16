@@ -69,10 +69,10 @@
 | Arquivo | Camada | Entries |
 |---------|--------|---------|
 | `FILOSOFIAS.yaml` | L1 | 13 |
-| `MODELOS-MENTAIS.yaml` | L2 | 10 |
+| `MODELOS-MENTAIS.yaml` | L2 | 9 |
 | `HEURISTICAS.yaml` | L3 | 13 |
-| `FRAMEWORKS.yaml` | L4 | 9 |
-| `METODOLOGIAS.yaml` | L5 | 9 |
+| `FRAMEWORKS.yaml` | L4 | 7 |
+| `METODOLOGIAS.yaml` | L5 | 5 |
 | `VOICE-DNA.yaml` | Voice | 1 (perfil completo) |
 
 ---

@@ -1,0 +1,158 @@
+Transcrição Completa: 29 QA 12 - Processo de Venda de Agência e Investment Banking
+[00:00] "with hiring the investment banker like like how you know what do you do?"
+[00:03] "Well, again, I think you've got to be you've got to know somebody like me, right? I mean, I I had to learn by fire through all this, right? So, again, I would always seek mentorship, right? Me or somebody like me who's done it at the level you're about to do it or or more, right? You always want to seek counsel, not advice."
+[00:25] "Um, from there, it's uh it it's just a it's a process. It's it's meetings. you typically will pay an investment banker um a onetime retainer. It could be 50,000 to 100,000."
+[00:38] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Investment Banker Retainer Structure"
+NÚMEROS: $50,000 a $100,000 (retainer inicial), 3 a 4 meses de trabalho, percentual do deal
+VISUAL: Estrutura de pagamento de investment banker, timeline de processo, custo inicial vs. percentual de comissão sobre venda
+[00:42] "Um then they staff up for you know three to four months. They start putting all these things together and they take a percent of the deal. So um the diligence process on a large transaction um can get very expensive and massive time consuming."
+[00:58] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Due Diligence Process - Large Transactions"
+NÚMEROS: 120 a 180+ dias, 15 horas por dia
+VISUAL: Timeline de processo de due diligence, representação de equipes envolvidas (CPAs, advogados, investment bankers, analistas), intensidade do trabalho
+[01:02] "Um, the deals I've been involved in have been, you know, 120 to 180 days plus of 15 hour days with fleets of CPAs, attorneys, investment bankers, analysts, team members. Um, so it's a lot involved in that."
+[01:18] "So, it's not like networking and who you know with investment banking. It's literally just like a profession. You just go hire an investment banker. Yeah, totally. It's like a high ticket service."
+[01:28] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "How Investment Bankers Find You"
+NÚMEROS: $2M+ em EBITDA (threshold mínimo)
+VISUAL: Processo de atração de investment bankers, maturidade da empresa como critério, threshold de EBITDA para ser descoberto
+[01:30] "Yeah, we we we'll we'll put some in the comments, but again, depending on the maturity of the company, the investment banker will find you. So when we were growing, investment bankers sought us out and said, 'Hey, we believe we can sell your asset, your company.'"
+[01:46] "So again, people right now in this phase listening to this workshop, unless you're over 2 million plus in EBITDA, this is where you need to get your focus. get close to a million plus, two million, three million, four million, five million in EBITDA and then go seek an investment banker if they haven't already found you."
+[02:08] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "EBITDA Growth Targets"
+NÚMEROS: $1M+, $2M, $3M, $4M, $5M em EBITDA (marcos de crescimento)
+VISUAL: Escada de crescimento de EBITDA, progressão de metas financeiras, ponto de entrada para investment banking
+[02:16] "What were you doing to make it so you could get scouted by these investment bankers? Like was it just making noise in the market, right?"
+[02:24] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Credibility Assets & Market Exposure"
+NÚMEROS: Inc. 5000, 2x capas de revista (AdWeek)
+VISUAL: Lista de credibility assets: Forrester, PR, Inc. 5000, AdWeek covers, Mashable, press releases, prêmios da indústria
+[02:26] "I mean, like back to those credibility assets. I mean, we we were uh had uh Forrester credibility. Forrester wrote white papers about us. We were in PR. We were in Inc. 5000. Um, I was on the cover of Adage or Ad Week twice. Um, you know, Mashable, you know, one of the most creative spaces in the world."
+[02:48] "I mean, we just had massive exposure, right, with one of the hottest um, agencies in our market. You know, we were winning big accounts and doing press releases about it. So, um, we just drummed up a bunch of noise."
+[03:05] "And what we can do, guys, too, is we're going to have a much more um, comprehensive Q&A. um that that's probably going to be um the next section I would assume in this and we'll we'll dive into that but just to kind of wrap this if there's one or two more Jeremy."
+[03:22] "So intellectual property wise like what is I'm I'm under the impression intellectual property are things that you like trademarked or copyrighted or or like even patented or you know just created that you own. What what is intellectual property to you as an agency owner that you sold?"
+[03:40] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Intellectual Property - Technology Example"
+NÚMEROS: Múltiplas exchanges integradas
+VISUAL: Exemplo de tech stack proprietária: trade desk, integração de exchanges, plataforma de atribuição, visualização de dados, interface única
+[03:42] "It's so um for us we built um pieces of technology that nobody else had. So we had a thing called like a trade desk to to buy and sell display and we integrated the plumbing to multiple exchanges and then we put an interface on it that had an attribution platform. It also had data visualization and a couple other tools that no other competitor at that time had and it was really cool and it was sophisticated. It brought a lot of value to the client. That was a piece of tech that we built that was intellectual property."
+[04:15] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Intellectual Property - Process Example: SMART Process"
+NÚMEROS: Não especificado numericamente
+VISUAL: Framework de processo proprietário, fluxo de onboarding a measurement, estrutura única de agência, vantagem competitiva de processo
+[04:17] "We also had um we called it the smart process. Um how we structured our agency um from a onboarding data to uh strategy to measurement. We had this very comprehensive process when a new client came on to ensure a high results and success rate and that was very unique to us."
+[04:36] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "IP Definition - Competitive Advantages"
+NÚMEROS: Não especificado numericamente
+VISUAL: Três tipos de vantagens: Speed Advantage, Cost Advantage, Product Advantage - aplicáveis tanto a processos quanto tecnologia
+[04:38] "So intellectual property can be a sophisticated but simple and impactful process that nobody has that gives you a speed advantage, a cost advantage, a product advantage or a piece of technology that gives you speed, product or cost advantage."
+[04:56] "But how would you set up your bank accounts for all this? Like did you just have one big bank account or did you have like five or six banks with multiple bank accounts?"
+[05:04] "Yeah. No, I mean it was just just one one bank account. Yeah. Whatever the entity bank account was. And then that's where you put the three to four months of operating cash."
+[05:13] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Bank Account Structure for Sale"
+NÚMEROS: 3 a 4 meses de cash operacional
+VISUAL: Estrutura bancária simples: uma conta por entidade, reserva de caixa operacional de 3-4 meses
+[05:15] "Yeah, for sure. Got it. And then two to three years of audited financials. Is that what you mentioned the investment banker does with his fleet of"
+[05:23] "No, no. You you've got to be ahead of that, right? So, if you're wanting to sell in three years from today, you better start getting audited financials today."
+[05:33] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Audited Financials Timeline"
+NÚMEROS: 2 a 3 anos de financials auditados necessários
+VISUAL: Timeline reversa: se quer vender em 3 anos, comece auditorias hoje, planejamento antecipado
+[05:35] "Who? Like, who do you hire to audit your financial"
+[05:38] "in any good reputable CPA? Yeah. And and so the bigger you're getting, the more expensive and well-known the CPA is, the better."
+[05:46] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "CPA Selection Strategy"
+NÚMEROS: Não especificado numericamente
+VISUAL: Correlação entre tamanho da empresa e reputação do CPA, importância de CPAs conhecidos para credibilidade
+[05:48] "Are these just, you know, to simplify, are these just like tax returns or are these"
+[05:52] "No, [clears throat] they're you literally hire a You say I want audit audited financials. Yeah. So everybody go and Google audited financials and then uh come back. Maybe we do a live and we go into to the nuances of that. But yeah, you want audited financials."
+[06:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Why Audited Financials Matter"
+NÚMEROS: $3.6M em EBITDA (exemplo usado)
+VISUAL: Conceito de verificação terceirizada, necessidade de validação externa para credibilidade com compradores
+[06:12] "And so think of it this way. If a a buyer comes to you and you say, 'Yeah, I'm 3.6 million in EBITDA.' They're not going to trust you. They're going to want to see a verified somebody else. Yeah, that's you know, we believe that that's their number, you know."
+[06:28] "Low customer concentration thing. You said that that is uh did you did you say lower customer price and then more quantity of customers? What does that mean?"
+[06:38] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Customer Concentration - Agency Comparison"
+NÚMEROS:
+Agency 1: $10M receita, 2 clientes ($1M + $9M)
+Agency 2: $10M receita, 10 clientes ($1M cada)
+90% de concentração (Agency 1) vs. 10% por cliente (Agency 2)
+VISUAL: Comparação lado a lado de duas agências, distribuição de receita por cliente, risco visual de concentração alta vs. baixa
+[06:40] "Okay. So, let me give you an example. We're going to do two tiers. Okay. This is going to be client one or let's call this um agency one. This is going to be agency 2. All right. They both have 10 million in rev."
+[06:54] "Agency two has one, two, three, four, five, 6, 7, 8, nine. Okay. Nine, 10 clients. Okay. All that give that agency each 1 million bucks, right? So agency 2 has 10 million in rev. Okay. And they have a total of 10 clients each paying them one mil each. Okay. Tracking."
+[07:14] "Y. Okay. That's agency two. I'm sorry. Agency one has 10 million and they've got two clients. Client one is giving them a million. and client two is giving them 9 million. This is high [ __ ] high high customer concentration."
+[07:33] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "High Customer Concentration Risk"
+NÚMEROS: 90% da receita em 1 cliente, perda de 3 clientes = $3M vs. perda de 1 whale = $9M
+VISUAL: Visualização de risco: whale client representando 90% da receita, comparação de impacto de perda de clientes
+[07:36] "Okay? You've got one client that contributes 90% of your revenue, right? And so what happens is how they value this is, you know, an agency like this may not even have the chance to be bought because it's way too risky. Okay?"
+[07:52] "So over here, let's say you're buying agency 2 and you lose three clients immediately. Well, that's only 3 million. Still bad, but it's only 3 million of the total revenue, right? You come over here, you buy this agency, this whale goes away. You lost 90% of the revenue. This is high customer concentration. You want low customer concentration."
+[08:14] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Customer Concentration Deep Dive Resource"
+NÚMEROS: Podcast de 45 minutos disponível
+VISUAL: Referência a recurso adicional em JudgeGraham.com, conteúdo aprofundado sobre concentração de clientes
+[08:16] "And I did a whole podcast. If you guys aren't doing that, judge.com. Judge Graham.com. hit the podcast. There's one on there. It's a 45minute podcast that explains customer concentration, how to avoid it, you know, all the different scenarios of customer concentration, what to overcome, how to look for it, how to grow out of it, how to grow into low versus high. So, I'd recommend you guys looking at that."
+[08:42] "Uh, last question. You mentioned Yeah, I remember what it was. It was Forrester. Uh, can you explain what Forrester is for everybody?"
+[08:50] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Forrester & Gartner - Industry Authority"
+NÚMEROS: 20 agências selecionadas de milhares de candidatas
+VISUAL: Organizações de pesquisa secundária, processo de validação da indústria, selo de aprovação autorizado
+[08:52] "Yeah, if everybody go look up Forrester. I'm a horrible speller. Let's drop it in the the comments. F O R E S T E R um and then Gartner. Um they are industry kind of authoritative figures that do uh secondary research and validation of of things."
+[09:10] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Forrester Wave Report Process"
+NÚMEROS: Milhares de agências aplicam, 20 são selecionadas
+VISUAL: Processo de seleção competitivo, categorização de performance (high performer, strong performer), write-ups oficiais
+[09:12] "So like Forrester um does what's called a RA a wave report every year and they do it across multiple categories. So like we were in um uh uh digital they'll look at you know thousands of digital agencies will want to be in this wave and they may take 20 right and then they rate the agency of are they a high performer a strong performer and then they give you a write up on it"
+[09:36] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Forrester Wave Impact - RFP Guarantee"
+NÚMEROS: 20 agências no wave = presença garantida em todos os RFPs
+VISUAL: Efeito multiplicador de estar no Forrester Wave, clientes usando como fonte de referência, pipeline de RFPs garantido
+[09:38] "but if Forrester put you in the wave you're like all the clients in the world are going to forrester to go who's good at digital marketing What's your most recent wave? What are the 20 agencies in it? And you're almost guaranteed you're going to be in every RFP. Right?"
+[09:52] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Third-Party Validation Strategy"
+NÚMEROS: Não especificado numericamente
+VISUAL: Estratégia de construir relacionamentos com organizações secundárias/terciárias, importância da validação externa para credibilidade
+[09:54] "So, you want to go build relationships with secondary or third party secondary or third party organizations that have credibility that clients view, oh, Forrester validated that."
+[10:06] "What What's a You said RFP uh request for proposal."
+[10:12] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "RFP Process - Request for Proposal"
+NÚMEROS: Não especificado numericamente
+VISUAL: Fluxo de RFP: procurement emite RFP → critérios → resposta → pitch → award do negócio
+[10:14] "Oh, so uh when when like large businesses uh want to get business, they'll go through procurement, they issue an RFP, you got to hit a certain uh criteria, you respond to the RFP, you've got a pitch, and if you win it, then you're awarded the business."
+[10:32] "Is that like just emailed to you or is there like a website for It's a combination of both. I mean, usually, um you get emailed to see if you want to participate in the RFP and then it's a massive document with all the criteria and everything you have to put together for it."
+[10:46] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "RFP Document Structure"
+NÚMEROS: Documento massivo com múltiplos critérios
+VISUAL: Processo de RFP: convite por email, documento extenso de requisitos, compilação de resposta complexa
+[10:48] "How are people finding you on that? Is there like a like a marketplace for shopping RFPs or is it just they find you on LinkedIn after looking you up?"
+[10:56] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Credibility Assets & Growth Tipping Points"
+NÚMEROS: 10 → 20 → 30 → 50 pessoas (tipping points de crescimento)
+VISUAL: Escada de crescimento de equipe, tipping points de agência, progressão impulsionada por clientes
+[10:58] "Well, it's credibility assets. I mean, really in this business, um, you know, I've always looked at tipping points. Like when you go to 10 people, your next jump is 20. 20 people, you go to like 30. 30 people, you jump to like 50. And it's all client driven, right?"
+[11:14] 📊 SLIDE DETECTADO ───────────────────────────── TEXTO: "Association Strategy - Big Client Impact"
+NÚMEROS: Não especificado numericamente
+VISUAL: Efeito de associação com grandes marcas: Jiffy Lube, Taco Bell, Lululemon, Y3, Adidas - círculos de CMOs, reputação por associação
+[11:16] "So once you win that big client and you deliver for them, then you kind of are who you associate with. So, if all of a sudden you've just been, you know, kind of middle of the row clients and all of a sudden you went agency of record and doing all of Jiffy Lube's digital, well, that CMO and that group, all their friends, you know, or Taco Bell, Lululemon, Y3, Adidas, whatever, you just start to associate in those circles and then you you become a known entity if you're proving yourself out."
+[11:48] "Got it. Those all the questions I had on there."
+[11:51] "All right, guys. So, back to that. Um, wrapping up the Q&A. We're going to have a much bigger section, but as it relates to this, fill it out. We'll answer it in the group, and I'll probably see you in the Q&A."
+📊 RESUMO EXECUTIVO
+NÚMEROS PRINCIPAIS:
+Investment Banker Retainer: $50,000 a $100,000 (pagamento inicial)
+Tempo de Processo: 3 a 4 meses de staffing inicial
+Due Diligence: 120 a 180+ dias de trabalho intensivo
+Jornada de Trabalho: 15 horas por dia durante due diligence
+Threshold EBITDA: $2M+ para atrair investment bankers
+Metas de Crescimento: $1M → $2M → $3M → $4M → $5M em EBITDA
+Financials Necessários: 2 a 3 anos de financials auditados
+Reserva de Caixa: 3 a 4 meses de cash operacional
+Exemplo de Concentração: Agency 1 ($10M, 2 clientes) vs. Agency 2 ($10M, 10 clientes)
+Risco de Whale Client: 90% de concentração de receita em 1 cliente
+Forrester Wave: 20 agências selecionadas de milhares
+Tipping Points de Equipe: 10 → 20 → 30 → 50 pessoas
+ESTRATÉGIAS E SISTEMAS:
+Contratação de Investment Banker: Buscar mentoria de quem já vendeu, pagar retainer + percentual do deal
+Credibility Assets: Forrester, PR, Inc. 5000, capas de revistas (AdWeek 2x), Mashable, press releases
+Propriedade Intelectual: Tecnologia proprietária (trade desk, plataforma de atribuição, visualização de dados) + processos únicos (SMART Process)
+Validação Terceirizada: Forrester Wave Reports, Gartner, organizações secundárias de pesquisa
+Gestão de Concentração: Diversificar base de clientes, evitar whale clients (90%+ de receita)
+Preparação para Venda: Começar auditorias financeiras 2-3 anos antes da venda desejada
+Processo RFP: Procurement → Critérios → Resposta → Pitch → Award
+Crescimento por Associação: Ganhar grandes clientes (Taco Bell, Lululemon, Adidas) → circular em redes de CMOs
+ESTRUTURA:
+Equipe de Due Diligence: CPAs, advogados, investment bankers, analistas, membros do time
+Estrutura Bancária: Uma conta por entidade legal
+CPA Selection: Quanto maior a empresa, mais renomado deve ser o CPA
+Tipping Points de Crescimento: Saltos de 10 → 20 → 30 → 50 pessoas impulsionados por grandes clientes
+IP Categories:
+Tecnologia proprietária (vantagem de speed/cost/product)
+Processos únicos (vantagem de speed/cost/product)
+DADOS FINANCEIROS:
+Investimento Inicial em IB: $50K-$100K
+EBITDA Alvo para Venda: $2M+ mínimo
+Exemplo de Valuation Risk:
+Agency 1: $10M receita, perda de 1 cliente = -$9M (90%)
+Agency 2: $10M receita, perda de 3 clientes = -$3M (30%)
+Reserva Operacional: 3-4 meses de runway
+Timeline de Preparação: 2-3 anos de auditorias antes da venda
+DURAÇÃO: ~12 minutos FORMATO: Q&A Workshop - Processo de Venda de Agência e Investment Banking
