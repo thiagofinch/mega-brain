@@ -104,9 +104,50 @@ heuristics:
     source: "The Biggest Shift in Business Since the Internet Just Happened"
     raiz: "knowledge/external/inbox/liam-ottley/podcasts/The Biggest Shift in Business Since the Internet Just Happened [youtube.com_watch_v=oC1h922cDoY].txt"
 
+  - id: "HEUR-LO-009"
+    name: "AI Workforce Pricing Formula"
+    heuristic: "Price AI agents at 40-60% of human equivalent cost. SDR at $5K/mo → AI SDR at $2-3K/mo."
+    threshold: "40-60% of human cost"
+    quote: "If an SDR costs $5K/month, price the AI SDR agent at $2-3K/month — saves 40-60% with 24/7 coverage."
+    source: "How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE [youtube.com_watch_v=pTTvyQDK_tk].txt"
+
+  - id: "HEUR-LO-010"
+    name: "Agent Stacking Sweet Spot"
+    heuristic: "Stack 3-5 agents per client at $1.5-3K each = $4.5-15K/month retainer with 80%+ margins."
+    threshold: "3-5 agents, $1.5-3K each, 80%+ margin"
+    quote: "3-5 agents per client at $1.5-3K each = $4.5-15K/month retainer. This gives you great margins (80%+)."
+    source: "How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE [youtube.com_watch_v=pTTvyQDK_tk].txt"
+
+  - id: "HEUR-LO-011"
+    name: "Discovery Listening Rule"
+    heuristic: "Spend 80% of AI consulting discovery call LISTENING. Map workflows first, then propose."
+    threshold: "80% listening / 20% talking"
+    quote: "The biggest mistake in AI consulting: building before understanding. Spend 80% of the discovery call LISTENING."
+    source: "How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE [youtube.com_watch_v=pTTvyQDK_tk].txt"
+
+  - id: "HEUR-LO-012"
+    name: "ITB/OTB Rebalance Target"
+    heuristic: "AIOS should rebalance from 80% ITB/20% OTB to 15-20% ITB/80% OTB."
+    threshold: "From 80/20 to 20/80"
+    quote: "Get must-dos down to 15-20% and working ON the business up to 80%."
+    source: "What Is an AI Operating System (And Why Every Business Will Need One)"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/What Is an AI Operating System (And Why Every Business Will Need One) [youtube.com_watch_v=DXcVT07bQ6g].txt"
+
+  - id: "HEUR-LO-013"
+    name: "Case Study vs Posts Ratio"
+    heuristic: "One case study with real numbers beats 100 theoretical posts for AI agency sales."
+    threshold: "1 case study > 100 posts"
+    quote: "One good case study with real numbers beats 100 theoretical posts."
+    source: "How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE [youtube.com_watch_v=pTTvyQDK_tk].txt"
+
 metadata:
-  total_items: 8
+  total_items: 13
   source_person: "Liam Ottley"
   source_count: 3
   extraction_date: "2026-03-13"
-  version: "1.0.0"
+  updated: "2026-03-15"
+  version: "1.1.0"

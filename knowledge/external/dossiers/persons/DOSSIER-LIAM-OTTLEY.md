@@ -1,9 +1,11 @@
 # DOSSIER: LIAM OTTLEY
 
-> **Versão:** 1.0.0
+> **Versão:** 1.1.0
 > **Gerado:** 2026-03-13
-> **Fontes:** 3 podcasts YouTube (24,287 palavras)
-> **DNA Elements:** 35 (10 FIL + 7 MM + 8 HEUR + 6 FW + 4 MET)
+> **Atualizado:** 2026-03-15
+> **Fontes:** 3 podcasts YouTube (24,287 palavras) — 20 chunks adicionais processados
+> **DNA Elements:** 54 (13 FIL + 10 MM + 13 HEUR + 9 FW + 9 MET)
+> **MCE Elements:** 11 behavioral patterns + 6 values + 3 obsessions + 3 paradoxes
 
 ---
 
@@ -53,6 +55,25 @@ Diferente de prompts isolados ou chatbots, o AIOS é um **sistema completo** con
 - Times digitais que trabalham 24/7 sem fadiga
 - Oportunidade: **construir** AI workforces, não ser substituído por elas
 
+### 5. AI Agency Model (NEW — LO-0003)
+- Dois tipos: **Custom Dev** (bespoke) vs **AI Workforce** (agent teams)
+- AI Workforce = futuro: deploy agents para SDR, content writer, data analyst
+- **Sell OUTCOME, not TECHNOLOGY**: clients don't care about Claude Code
+- Positioning: "AI transformation partner" > "AI developer"
+- Content formula: "I helped [client] save [X] by deploying [agent] for [task]"
+- One case study with real numbers > 100 theoretical posts
+
+### 6. Pricing & Unit Economics (NEW — LO-0003)
+- Benchmark contra **custo humano** (SDR $5K/mo → AI SDR $2-3K/mo = 40-60% savings)
+- Sweet spot: **3-5 agents per client** at $1.5-3K each = $4.5-15K/mo retainer
+- Margins: **80%+** (custo real de AI é minimal — API calls + hosting)
+- Discovery: **80% listening**, map workflows, find repetitive bottlenecks
+
+### 7. Agent Architecture (NEW — LO-0003)
+- Cada agent: **CONTEXT** + **TOOLS** + **WORKFLOWS** + **GUARDRAILS**
+- Start simple: 1 agent, 1 task. Then expand.
+- Human-in-the-loop triggers como guardrail essencial
+
 ---
 
 ## FRAMEWORKS PRINCIPAIS
@@ -63,6 +84,9 @@ Diferente de prompts isolados ou chatbots, o AIOS é um **sistema completo** con
 | FW-LO-002 | **3 KPIs of AIOS** | Away-from-desk autonomy, Task automation %, Revenue/employee |
 | FW-LO-003 | **Task Audit** | List → Categorize (Yes/Partial/No) → Prioritize → Automate → Track |
 | FW-LO-004 | **Daily Brief** | Meetings + Slack + Data → Synthesized PDF + Telegram |
+| FW-LO-005 | **Agent Architecture** | Context + Tools + Workflows + Guardrails |
+| FW-LO-006 | **4-Step AI Agency Sales** | Lead Gen → Discovery → Proposal (ROI) → Onboarding |
+| FW-LO-007 | **AI Workforce Pricing** | Human cost benchmark → 40-60% discount → 3-5 agents/client |
 
 ---
 
@@ -111,6 +135,11 @@ Diferente de prompts isolados ou chatbots, o AIOS é um **sistema completo** con
 | Daily brief timing | Antes das 8am | HEUR-LO-004 |
 | Dashboard consolidation | 7-8 → 1 | HEUR-LO-008 |
 | AI decisions by 2028 | 15% (Gartner) | HEUR-LO-006 |
+| AI agent pricing | 40-60% of human cost | HEUR-LO-009 |
+| Agents per client | 3-5 at $1.5-3K each | HEUR-LO-010 |
+| AI agency margins | 80%+ | HEUR-LO-011 |
+| Discovery listening ratio | 80% listening / 20% talking | HEUR-LO-012 |
+| ITB/OTB rebalance target | From 80/20 to 20/80 | HEUR-LO-013 |
 
 ---
 
@@ -141,4 +170,50 @@ Liam Ottley é **diretamente relevante** para o Mega Brain porque:
 
 ---
 
-*Dossier gerado via Pipeline Jarvis | 2026-03-13*
+## BEHAVIORAL PATTERNS (MCE-1)
+
+| ID | Pattern | Type | Priority |
+|----|---------|------|----------|
+| BP-LO-001 | Prova por Exemplo Pessoal | COMUNICACAO | HIGH |
+| BP-LO-002 | Framework-First Teaching | ENSINO | HIGH |
+| BP-LO-003 | Bandwidth como Filtro de Decisão | PRIORIDADE | HIGH |
+| BP-LO-004 | Anti-Complexidade Ativa | COMUNICACAO | HIGH |
+| BP-LO-005 | Urgência Histórica como Motor | COMUNICACAO | HIGH |
+| BP-LO-006 | Camadas Antes de Saltos | DECISAO | HIGH |
+| BP-LO-007 | Task Audit como Ponto de Partida | REACAO | HIGH |
+| BP-LO-008 | Outcome Over Technology | COMUNICACAO | HIGH |
+| BP-LO-009 | Human Cost Anchor | DECISAO | HIGH |
+| BP-LO-010 | Listen-Map-Build | REACAO | HIGH |
+| BP-LO-011 | Phone Test (Away-from-Desk) | DECISAO | MEDIUM |
+
+---
+
+## IDENTITY CORE (MCE-2)
+
+### Values
+| Tier | ID | Value | Score |
+|------|----|-------|-------|
+| 1 | VH-LO-001 | Liberdade Operacional do Founder | 9.5 |
+| 1 | VH-LO-002 | Compounding sobre Hacks | 9.0 |
+| 2 | VH-LO-005 | Prova pela Prática | 8.5 |
+| 2 | VH-LO-003 | Acessibilidade Tecnológica | 8.0 |
+| 2 | VH-LO-006 | Outcome Over Technology | 8.0 |
+| 2 | VH-LO-004 | Revenue per Employee | 7.5 |
+
+### Obsessions
+| ID | Obsession | Intensity | Status |
+|----|-----------|-----------|--------|
+| OBS-LO-001 | Bandwidth Liberation | 10/10 | MASTER |
+| OBS-LO-002 | Evangelismo AIOS | 8/10 | SECONDARY |
+| OBS-LO-003 | AI Workforce como Modelo | 7/10 | ACTIVE |
+
+### Paradoxes
+| ID | Paradox | Productive? |
+|----|---------|-------------|
+| PAR-LO-001 | Evangelista de Simplicidade com Sistema Complexo | Yes |
+| PAR-LO-002 | Anti-Headcount mas Multi-Company | Yes |
+| PAR-LO-003 | 80% Listening vs 100% Broadcasting | Yes |
+
+---
+
+*Dossier gerado via Pipeline Jarvis | 2026-03-13 | MCE Update 2026-03-15*
