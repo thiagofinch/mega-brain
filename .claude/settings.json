@@ -184,6 +184,11 @@
             "type": "command",
             "command": "python3 .claude/hooks/mce_step_logger.py",
             "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/recompile_alert.py",
+            "timeout": 5000
           }
         ]
       }
