@@ -467,12 +467,22 @@ workspace/**
 !workspace/_system/
 !workspace/_system/SETUP-PENDING.md
 
-# Knowledge business — bucket structure (L1 scaffold)
+# Knowledge business — scaffold only (L1). Content is L3.
 !knowledge/business/
-!knowledge/business/**
-
-# Knowledge business inbox — raw materials (L3, re-deny after allow)
-knowledge/business/inbox/**
+!knowledge/business/.gitkeep
+!knowledge/business/README.md
+!knowledge/business/decisions/
+!knowledge/business/decisions/.gitkeep
+!knowledge/business/dossiers/
+!knowledge/business/dossiers/**/.gitkeep
+!knowledge/business/insights/
+!knowledge/business/insights/**/.gitkeep
+!knowledge/business/narratives/
+!knowledge/business/narratives/**/.gitkeep
+!knowledge/business/people/
+!knowledge/business/people/.gitkeep
+!knowledge/business/sops/
+!knowledge/business/sops/.gitkeep
 
 # Knowledge personal — L3 ONLY (never commit content)
 !knowledge/personal/
@@ -520,8 +530,8 @@ knowledge/personal/**
 # Workspace populado — now denied in BLOCO 4 L3 deny block
 # Only _templates/, _example/, and _system/SETUP-PENDING.md are tracked
 
-# Expert agents populados (renamed from minds/ to external/ in S06)
-!agents/external/**
+# Expert agents — scaffold only (L1). Populated content is L3.
+# Allowed: .gitkeep, _example/ (template). Content: gitignored.
 
 # Cargo agents populados
 !agents/cargo/**

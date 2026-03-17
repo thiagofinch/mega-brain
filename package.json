@@ -1,7 +1,7 @@
 {
   "name": "mega-brain-ai",
   "version": "1.4.0",
-  "private": true,
+  "private": false,
   "description": "AI Knowledge Management System - Transform expert materials into actionable playbooks",
   "type": "module",
   "bin": {

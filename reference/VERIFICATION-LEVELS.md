@@ -269,8 +269,8 @@ python3 scripts/verify_state.py
 
 ```python
 # ❌ ERRADO
-api_key = "sk-abc123def456"
-password = "minhasenha123"
+api_key = "FAKE_VALUE"
+password = "FAKE_VALUE"
 
 # ✅ CORRETO
 api_key = os.environ.get("API_KEY")

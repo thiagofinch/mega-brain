@@ -31,7 +31,7 @@ mega-brain/
 │   │   ├── INDEX.md
 │   │   ├── marketing.md
 │   │   ├── operations.md
-│   └── ... (+82 more)
+│   └── ... (+84 more)
 ├── agents/
 │   ├── _templates/
 │   │   ├── INDEX.md
@@ -75,7 +75,7 @@ mega-brain/
 │   │   ├── jeremy-haynes/
 │   │   ├── jeremy-miner/
 │   │   ├── naming-strategist/
-│   └── ... (+621 more)
+│   └── ... (+644 more)
 ├── knowledge/
 │   ├── business/
 │   │   ├── decisions/
@@ -138,10 +138,10 @@ mega-brain/
 │   ├── install-skill-seekers-video.sh
 │   ├── install-skill-seekers.sh
 │   ├── log-header.py
+│   ├── mce-entity-manifest.yaml
+│   ├── mce-wave-launcher.sh
 │   ├── mega-brain.js
-│   ├── pre-publish-gate.js
-│   ├── push.js
-│   └── ... (+1 more)
+│   └── ... (+6 more)
 ├── docs/
 │   ├── architecture/
 │   │   ├── .gitkeep
@@ -163,7 +163,7 @@ mega-brain/
 │   ├── plans/
 │   │   ├── 2026-02-17-repo-reorganization.md
 │   │   ├── 2026-02-23-mega-brain-pro-distribution.md
-│   └── ... (+48 more)
+│   └── ... (+52 more)
 ├── reference/
 │   ├── architecture/
 │   │   ├── BROWNFIELD-AIOXBRAIN.md
@@ -185,7 +185,7 @@ mega-brain/
 │   ├── templates/
 │   │   └── phase5/
 │   ├── API-KEYS-GUIDE.md
-│   └── ... (+19 more)
+│   └── ... (+20 more)
 ```
 
 ---
