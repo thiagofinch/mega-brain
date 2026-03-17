@@ -1,0 +1,267 @@
+{
+  "$schema": "chronicler-design-system/1.0",
+  "version": "1.0.0",
+  "updated": "2026-01-31",
+
+  "fundamental_rules": {
+    "rewrite_100_percent": {
+      "id": "R001",
+      "priority": "CRITICAL",
+      "description": "O Chronicler REESCREVE 100% do documento, NUNCA adiciona ao final",
+      "prohibited": [
+        "Adicionar secao ao final do documento",
+        "Manter formato original e apenas decorar",
+        "Resumir conteudo em uma secao nova",
+        "Inserir conteudo fixo/template estatico"
+      ],
+      "required": [
+        "Ler todo o documento original",
+        "Reescrever da linha 1 ate a ultima linha",
+        "Aplicar layout completo em 100% do documento",
+        "Preservar TODAS as informacoes originais",
+        "Transformar apenas a APRESENTACAO visual"
+      ]
+    },
+    "width_120": {
+      "id": "R002",
+      "priority": "HIGH",
+      "description": "Largura fixa de 120 caracteres para todos os elementos externos",
+      "value": 120
+    },
+    "preserve_content": {
+      "id": "R003",
+      "priority": "CRITICAL",
+      "description": "TODA informacao do documento original DEVE ser preservada",
+      "validation": "Comparar contagem de informacoes antes/depois"
+    }
+  },
+
+  "document_structure": {
+    "order": [
+      {
+        "position": 1,
+        "component": "super_header",
+        "required": true,
+        "description": "Cabecalho com ASCII art e blocos solidos"
+      },
+      {
+        "position": 2,
+        "component": "metadata_box",
+        "required": false,
+        "description": "Caixa com metadados (documento, data, versao, autor)"
+      },
+      {
+        "position": 3,
+        "component": "changes_box",
+        "required": true,
+        "description": "O QUE MUDOU - obrigatorio mesmo no primeiro log"
+      },
+      {
+        "position": 4,
+        "component": "sections",
+        "required": true,
+        "description": "Secoes de conteudo transformadas"
+      },
+      {
+        "position": 5,
+        "component": "chronicler_notes",
+        "required": true,
+        "description": "Notas pessoais do Chronicler"
+      },
+      {
+        "position": 6,
+        "component": "footer",
+        "required": true,
+        "description": "Rodape com blocos solidos"
+      }
+    ]
+  },
+
+  "content_detection_rules": {
+    "numbers_and_metrics": {
+      "trigger": "Detectar numeros, porcentagens, metricas",
+      "action": "metric_grid_4x1",
+      "additional": "progress_bar se houver porcentagem"
+    },
+    "lists": {
+      "trigger": "Detectar listas com 3+ items",
+      "action": "bullet_list",
+      "nested_action": "tree_list se houver sub-items"
+    },
+    "hierarchy": {
+      "trigger": "Detectar estrutura hierarquica (pai/filhos)",
+      "action": "hierarchy_tree ou tree_list"
+    },
+    "steps_or_process": {
+      "trigger": "Detectar etapas sequenciais, processo, fluxo",
+      "action": "flowchart_horizontal"
+    },
+    "comparison": {
+      "trigger": "Detectar comparacao, antes/depois, vs",
+      "action": "side_by_side"
+    },
+    "ranking": {
+      "trigger": "Detectar ranking, top N, ordenacao por valor",
+      "action": "ranking_bars"
+    },
+    "alert_or_warning": {
+      "trigger": "Detectar alerta, aviso, importante, critico",
+      "action": "alert_box"
+    },
+    "formula_or_equation": {
+      "trigger": "Detectar formula, equacao, calculo",
+      "action": "equation_visual"
+    },
+    "tables": {
+      "trigger": "Detectar dados tabulares",
+      "action": "table"
+    }
+  },
+
+  "nesting_rules": {
+    "max_depth": 3,
+    "level_progression": [
+      {
+        "level": 0,
+        "border": "solid_block",
+        "width": 120,
+        "use_case": "Super header e footer"
+      },
+      {
+        "level": 1,
+        "border": "double",
+        "width": 112,
+        "use_case": "Caixa externa principal"
+      },
+      {
+        "level": 2,
+        "border": "single",
+        "width": 106,
+        "use_case": "Caixa interna de conteudo"
+      },
+      {
+        "level": 3,
+        "border": "single",
+        "width": 100,
+        "use_case": "Sub-caixa para destaques"
+      }
+    ],
+    "width_reduction_per_level": 6
+  },
+
+  "spacing_rules": {
+    "between_sections": {
+      "lines": 3,
+      "description": "3 linhas em branco entre secoes principais"
+    },
+    "between_subsections": {
+      "lines": 2,
+      "description": "2 linhas em branco entre subsecoes"
+    },
+    "inside_box": {
+      "lines": 1,
+      "description": "1 linha em branco no inicio e fim dentro de caixas"
+    },
+    "after_section_header": {
+      "lines": 1,
+      "description": "1 linha em branco apos header de secao"
+    }
+  },
+
+  "text_formatting_rules": {
+    "technical_terms": {
+      "rule": "TODO termo tecnico DEVE ter explicacao entre colchetes",
+      "example": "DNA Elements: 117 [Unidades de conhecimento extraidas]"
+    },
+    "metrics_context": {
+      "rule": "TODA metrica DEVE ter significado explicado",
+      "example": "Progresso: 45% [22 de 49 arquivos processados]"
+    },
+    "line_width": {
+      "max_content": 106,
+      "description": "Texto dentro de caixas nao pode ultrapassar 106 caracteres"
+    }
+  },
+
+  "quality_scoring": {
+    "minimum_score": 70,
+    "criteria": [
+      { "item": "super_header_present", "points": 15 },
+      { "item": "progress_bars_used", "points": 10 },
+      { "item": "changes_section_present", "points": 15 },
+      { "item": "metric_cards_present", "points": 15 },
+      { "item": "terms_explained", "points": 10 },
+      { "item": "chronicler_notes_present", "points": 15 },
+      { "item": "visual_structure_complete", "points": 10 },
+      { "item": "section_dividers_present", "points": 10 }
+    ]
+  },
+
+  "validation_checklist": [
+    { "id": "V01", "check": "Documento foi REESCRITO 100%" },
+    { "id": "V02", "check": "Cabecalho ASCII art presente (120 chars)" },
+    { "id": "V03", "check": "Metadados em caixa dupla" },
+    { "id": "V04", "check": "Headers de secao com barras decorativas" },
+    { "id": "V05", "check": "Subsecoes com numeracao N.M" },
+    { "id": "V06", "check": "Caixas aninhadas corretas (dupla > simples)" },
+    { "id": "V07", "check": "Largura 120 chars consistente" },
+    { "id": "V08", "check": "Tabelas estruturadas" },
+    { "id": "V09", "check": "Emojis apropriados" },
+    { "id": "V10", "check": "Rodape com blocos solidos" },
+    { "id": "V11", "check": "TODAS informacoes preservadas" },
+    { "id": "V12", "check": "Secao O QUE MUDOU presente" },
+    { "id": "V13", "check": "Notas do Chronicler presente" }
+  ],
+
+  "anti_patterns": [
+    {
+      "id": "AP01",
+      "pattern": "Output sem super_header",
+      "reason": "Perde identidade visual"
+    },
+    {
+      "id": "AP02",
+      "pattern": "Texto corrido sem estrutura",
+      "reason": "Impossivel escanear rapidamente"
+    },
+    {
+      "id": "AP03",
+      "pattern": "Metricas sem cards",
+      "reason": "Numeros soltos perdem contexto"
+    },
+    {
+      "id": "AP04",
+      "pattern": "Sem secao O QUE MUDOU",
+      "reason": "Usuario nao sabe o que e novo"
+    },
+    {
+      "id": "AP05",
+      "pattern": "Sem barras de progresso",
+      "reason": "Percentuais viram numeros abstratos"
+    },
+    {
+      "id": "AP06",
+      "pattern": "Termos tecnicos sem explicacao",
+      "reason": "Usuario fica perdido"
+    },
+    {
+      "id": "AP07",
+      "pattern": "Sem notas do Chronicler",
+      "reason": "Perde a voz do agente"
+    },
+    {
+      "id": "AP08",
+      "pattern": "Log resumido ou compacto",
+      "reason": "NUNCA resumir - sempre visual completo"
+    }
+  ],
+
+  "creativity_rules": {
+    "principle": "NUNCA repita a mesma combinacao visual duas vezes seguidas",
+    "guidelines": [
+      "Sempre introduza pelo menos 1 elemento visual nao-obvio",
+      "Surpreenda com composicoes que o usuario nao esperava",
+      "Combine pecas de categorias diferentes para criar algo novo"
+    ]
+  }
+}

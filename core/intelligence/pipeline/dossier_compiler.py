@@ -346,7 +346,7 @@ def get_all_person_names(state: dict) -> list[str]:
             if isinstance(entry, list) and entry:
                 names.add(key)
             elif isinstance(entry, dict):
-                # Dict entry like Thiago Finch or Diego Monet
+                # Dict entry for a person (name as key)
                 # Only add if they have insights somewhere
                 if entry.get("insight_count", 0) > 0:
                     names.add(key)

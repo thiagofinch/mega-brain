@@ -1,0 +1,364 @@
+{
+  "$schema": "chronicler-design-system/1.0",
+  "version": "1.0.0",
+  "updated": "2026-01-31",
+
+  "components": {
+
+    "super_header": {
+      "id": "super_header",
+      "name": "Super Header (Cabecalho Principal)",
+      "description": "Cabecalho com blocos solidos e ASCII art - OBRIGATORIO no inicio",
+      "required": true,
+      "position": "first",
+      "structure": [
+        "solid_bar_double",
+        "ascii_art_title",
+        "subtitle_box",
+        "solid_bar_double"
+      ],
+      "template": [
+        "████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████",
+        "████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████",
+        "████                                                                                                                ████",
+        "████     {ASCII_ART_TITLE}                                                                                          ████",
+        "████                                                                                                                ████",
+        "████                          ╔═══════════════════════════════════════════════════════════════╗                     ████",
+        "████                          ║                      {SUBTITLE}                               ║                     ████",
+        "████                          ╚═══════════════════════════════════════════════════════════════╝                     ████",
+        "████                                                                                                                ████",
+        "████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████",
+        "████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████"
+      ]
+    },
+
+    "section_header": {
+      "id": "section_header",
+      "name": "Header de Secao Principal",
+      "description": "Header com barras decorativas para secoes ## ",
+      "required": true,
+      "pattern": "## {header_bar}\\n## {emoji} SECAO {n}: {title}\\n## {header_bar}",
+      "template": [
+        "## ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀",
+        "## {EMOJI} SECAO {N}: {TITLE}",
+        "## ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀"
+      ]
+    },
+
+    "subsection_header": {
+      "id": "subsection_header",
+      "name": "Header de Subsecao",
+      "description": "Header para subsecoes ### com pin e numeracao",
+      "pattern": "### {emoji} {n}.{m} | {title}",
+      "template": "### 📌 {N}.{M} │ {TITLE}"
+    },
+
+    "content_box_nested": {
+      "id": "content_box_nested",
+      "name": "Caixa de Conteudo Aninhada",
+      "description": "Caixa com borda dupla externa e simples interna",
+      "layers": 2,
+      "structure": {
+        "outer": {
+          "border": "double",
+          "width": 112,
+          "padding": 4
+        },
+        "inner": {
+          "border": "single",
+          "width": 106,
+          "padding": 3
+        }
+      },
+      "template": [
+        "╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗",
+        "║                                                                                                                    ║",
+        "║    ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────┐    ║",
+        "║    │                                                                                                          │    ║",
+        "║    │   {CONTENT}                                                                                              │    ║",
+        "║    │                                                                                                          │    ║",
+        "║    └──────────────────────────────────────────────────────────────────────────────────────────────────────────┘    ║",
+        "║                                                                                                                    ║",
+        "╚════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝"
+      ]
+    },
+
+    "content_box_triple": {
+      "id": "content_box_triple",
+      "name": "Caixa de Conteudo Tripla",
+      "description": "Caixa com 3 niveis de aninhamento para destaques",
+      "layers": 3,
+      "template": [
+        "╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗",
+        "║                                                                                                                    ║",
+        "║    ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────┐    ║",
+        "║    │                                                                                                          │    ║",
+        "║    │   ┌──────────────────────────────────────────────────────────────────────────────────────────────────┐   │    ║",
+        "║    │   │                                                                                                  │   │    ║",
+        "║    │   │   {CONTENT}                                                                                      │   │    ║",
+        "║    │   │                                                                                                  │   │    ║",
+        "║    │   └──────────────────────────────────────────────────────────────────────────────────────────────────┘   │    ║",
+        "║    │                                                                                                          │    ║",
+        "║    └──────────────────────────────────────────────────────────────────────────────────────────────────────────┘    ║",
+        "║                                                                                                                    ║",
+        "╚════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝"
+      ]
+    },
+
+    "table": {
+      "id": "table",
+      "name": "Tabela Estruturada",
+      "description": "Tabela com bordas e separadores",
+      "template": [
+        "║    ┌─────────────────────────────┬───────────────────────────────────────────────────────────────────┐    ║",
+        "║    │ {COL1_HEADER}               │ {COL2_HEADER}                                                     │    ║",
+        "║    │─────────────────────────────│───────────────────────────────────────────────────────────────────│    ║",
+        "║    │ {COL1_VALUE}                │ {COL2_VALUE}                                                      │    ║",
+        "║    └─────────────────────────────┴───────────────────────────────────────────────────────────────────┘    ║"
+      ]
+    },
+
+    "bullet_list": {
+      "id": "bullet_list",
+      "name": "Lista com Bullets",
+      "description": "Lista com bullets triangulares",
+      "bullet_char": "▸",
+      "template": [
+        "║    │   ▸ {ITEM_1}                                                                                       │    ║",
+        "║    │   ▸ {ITEM_2}                                                                                       │    ║",
+        "║    │   ▸ {ITEM_3}                                                                                       │    ║"
+      ]
+    },
+
+    "tree_list": {
+      "id": "tree_list",
+      "name": "Lista Hierarquica em Arvore",
+      "description": "Lista com estrutura de arvore",
+      "template": [
+        "║    │   ▸ {PARENT}                                                                                       │    ║",
+        "║    │      ├── {CHILD_1}                                                                                  │    ║",
+        "║    │      ├── {CHILD_2}                                                                                  │    ║",
+        "║    │      └── {CHILD_LAST}                                                                               │    ║"
+      ]
+    },
+
+    "metric_card": {
+      "id": "metric_card",
+      "name": "Card de Metrica",
+      "description": "Card individual para exibir uma metrica numerica",
+      "width": 25,
+      "template": [
+        "┌─────────────────────────┐",
+        "│         {VALUE}         │",
+        "│         {LABEL}         │",
+        "│      [{EXPLANATION}]    │",
+        "└─────────────────────────┘"
+      ]
+    },
+
+    "metric_grid_4x1": {
+      "id": "metric_grid_4x1",
+      "name": "Grid de Metricas 4 colunas",
+      "description": "Grid horizontal com 4 cards de metrica",
+      "template": [
+        "╭──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮",
+        "│                                              📊 PAINEL DE METRICAS                                                   │",
+        "│                                                                                                                      │",
+        "│   ┌─────────────────────────┐   ┌─────────────────────────┐   ┌─────────────────────────┐   ┌─────────────────────┐   │",
+        "│   │         {V1}            │   │         {V2}            │   │         {V3}            │   │       {V4}          │   │",
+        "│   │         {L1}            │   │         {L2}            │   │         {L3}            │   │       {L4}          │   │",
+        "│   │      [{E1}]             │   │      [{E2}]             │   │      [{E3}]             │   │    [{E4}]           │   │",
+        "│   └─────────────────────────┘   └─────────────────────────┘   └─────────────────────────┘   └─────────────────────┘   │",
+        "│                                                                                                                      │",
+        "╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯"
+      ]
+    },
+
+    "progress_bar": {
+      "id": "progress_bar",
+      "name": "Barra de Progresso",
+      "description": "Barra visual de progresso com porcentagem",
+      "width": 50,
+      "filled_char": "▓",
+      "empty_char": "░",
+      "template": "▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░  50%"
+    },
+
+    "changes_box": {
+      "id": "changes_box",
+      "name": "Caixa O QUE MUDOU",
+      "description": "Caixa destacando mudancas desde ultimo log - OBRIGATORIA",
+      "required": true,
+      "template": [
+        "┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓",
+        "┃                                                                               ┃",
+        "┃                    O QUE MUDOU DESDE O ULTIMO LOG                             ┃",
+        "┃                                                                               ┃",
+        "┃   • {CHANGE_1}                                                                ┃",
+        "┃   • {CHANGE_2}                                                                ┃",
+        "┃   • {CHANGE_3}                                                                ┃",
+        "┃                                                                               ┃",
+        "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛"
+      ]
+    },
+
+    "chronicler_notes": {
+      "id": "chronicler_notes",
+      "name": "Notas do Chronicler",
+      "description": "Secao de observacoes pessoais do Chronicler - OBRIGATORIA",
+      "required": true,
+      "position": "near_end",
+      "template": [
+        "╔═══════════════════════════════════════════════════════════════════════════════╗",
+        "║                                                                               ║",
+        "║                         NOTAS DO CHRONICLER                                   ║",
+        "║                                                                               ║",
+        "║   {OBSERVATION}                                                               ║",
+        "║                                                                               ║",
+        "║                                                          — Chronicler         ║",
+        "║                                                                               ║",
+        "╚═══════════════════════════════════════════════════════════════════════════════╝"
+      ]
+    },
+
+    "footer": {
+      "id": "footer",
+      "name": "Rodape",
+      "description": "Rodape com blocos solidos fechando o documento",
+      "required": true,
+      "position": "last",
+      "template": [
+        "████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████",
+        "████                                                                                                                ████",
+        "████                                    {DOCUMENT_TITLE}                                                            ████",
+        "████                                    {VERSION} | {DATE}                                                          ████",
+        "████                                                                                                                ████",
+        "████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████"
+      ]
+    },
+
+    "flowchart_horizontal": {
+      "id": "flowchart_horizontal",
+      "name": "Flowchart Horizontal",
+      "description": "Diagrama de fluxo horizontal com setas",
+      "template": [
+        "   ┌─────────────┐     ┌─────────────┐     ┌─────────────┐     ┌─────────────┐",
+        "   │   {STEP_1}  │────▶│   {STEP_2}  │────▶│   {STEP_3}  │────▶│   {STEP_4}  │",
+        "   └─────────────┘     └─────────────┘     └─────────────┘     └─────────────┘"
+      ]
+    },
+
+    "hierarchy_tree": {
+      "id": "hierarchy_tree",
+      "name": "Organograma Hierarquico",
+      "description": "Diagrama de hierarquia vertical",
+      "template": [
+        "                                         ┌─────────────────────────┐",
+        "                                         │         {ROOT}          │",
+        "                                         └───────────┬─────────────┘",
+        "                                                     │",
+        "                          ┌──────────────────────────┼──────────────────────────┐",
+        "                          │                          │                          │",
+        "               ┌──────────▼──────────┐    ┌─────────▼──────────┐    ┌─────────▼──────────┐",
+        "               │      {CHILD_1}      │    │      {CHILD_2}     │    │      {CHILD_3}     │",
+        "               └─────────────────────┘    └────────────────────┘    └────────────────────┘"
+      ]
+    },
+
+    "ranking_bars": {
+      "id": "ranking_bars",
+      "name": "Ranking com Barras Proporcionais",
+      "description": "Lista de ranking com barras visuais de tamanho proporcional",
+      "template": [
+        "   🥇 {ITEM_1}                    ████████████████████████████████████████████████████████████  {VALUE_1}",
+        "      [{EXPLANATION_1}]",
+        "",
+        "   🥈 {ITEM_2}                    ██████████████████████████████████████████                     {VALUE_2}",
+        "      [{EXPLANATION_2}]",
+        "",
+        "   🥉 {ITEM_3}                    ████████████████████████████████                               {VALUE_3}",
+        "      [{EXPLANATION_3}]"
+      ]
+    },
+
+    "thermometer": {
+      "id": "thermometer",
+      "name": "Termometro Vertical",
+      "description": "Indicador visual vertical de progresso/nivel",
+      "template": [
+        "    ┌─────┐",
+        "    │ ▓▓▓ │ 100% ← META",
+        "    │ ▓▓▓ │",
+        "    │ ▓▓▓ │ 80%",
+        "    │ ▓▓▓ │",
+        "    │ ▓▓▓ │ 60%  ← ATUAL ◀◀◀",
+        "    │ ░░░ │",
+        "    │ ░░░ │ 40%",
+        "    │ ░░░ │",
+        "    │ ░░░ │ 20%",
+        "    │ ░░░ │",
+        "    └─────┘ 0%"
+      ]
+    },
+
+    "side_by_side": {
+      "id": "side_by_side",
+      "name": "Comparador Lado a Lado",
+      "description": "Comparacao visual entre ANTES e DEPOIS",
+      "template": [
+        "┌────────────────────────────────────┬────────────────────────────────────┐",
+        "│            ❌ ANTES                │            ✅ DEPOIS               │",
+        "├────────────────────────────────────┼────────────────────────────────────┤",
+        "│                                    │                                    │",
+        "│   {BEFORE_CONTENT}                 │   {AFTER_CONTENT}                  │",
+        "│                                    │                                    │",
+        "└────────────────────────────────────┴────────────────────────────────────┘"
+      ]
+    },
+
+    "alert_box": {
+      "id": "alert_box",
+      "name": "Caixa de Alerta",
+      "description": "Caixa destacada para alertas importantes",
+      "template": [
+        "╔══════════════════════════════════════════════════════════════════════════════╗",
+        "║ ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️ ║",
+        "║                                                                              ║",
+        "║                    {ALERT_MESSAGE}                                           ║",
+        "║                                                                              ║",
+        "║ ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️ ║",
+        "╚══════════════════════════════════════════════════════════════════════════════╝"
+      ]
+    },
+
+    "equation_visual": {
+      "id": "equation_visual",
+      "name": "Equacao Visual",
+      "description": "Representacao visual de formulas/equacoes",
+      "template": [
+        "┌───────────────┐     ┌───────────────┐",
+        "│               │     │               │",
+        "│   {NUMERATOR_1}│     │   {NUMERATOR_2}│",
+        "│               │  ×  │               │     ┌───────────────┐",
+        "│               │     │               │  =  │               │",
+        "│               │     │               │     │    {RESULT}   │",
+        "└───────────────┘     └───────────────┘     │               │",
+        "─────────────────  ÷  ─────────────────     │               │",
+        "┌───────────────┐     ┌───────────────┐     │               │",
+        "│               │     │               │     │               │",
+        "│ {DENOMINATOR_1}│  ×  │ {DENOMINATOR_2}│    │               │",
+        "│               │     │               │     │               │",
+        "└───────────────┘     └───────────────┘     └───────────────┘"
+      ]
+    }
+  },
+
+  "mandatory_components": [
+    "super_header",
+    "section_header",
+    "content_box_nested",
+    "changes_box",
+    "chronicler_notes",
+    "footer"
+  ]
+}

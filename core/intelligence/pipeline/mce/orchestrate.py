@@ -433,6 +433,17 @@ def cmd_ingest(file_path: str) -> dict[str, Any]:
     # Step 7: JSONL log
     _append_jsonl(result)
 
+    # QA Gate: validate ingestion
+    gate_result = None
+    try:
+        from core.intelligence.pipeline.mce.qa_gates import validate_step
+        gate_result = validate_step(1, slug)
+    except Exception as exc:
+        logger.warning("QA gate for step 1 failed: %s", exc)
+
+    if gate_result:
+        result["qa_gate"] = gate_result
+
     # Progressive feedback
     print(render_progressive(
         slug,
@@ -562,6 +573,17 @@ def cmd_batch(source_slug: str) -> dict[str, Any]:
 
     _append_jsonl(result)
 
+    # QA Gate: validate batch creation
+    gate_result = None
+    try:
+        from core.intelligence.pipeline.mce.qa_gates import validate_step
+        gate_result = validate_step(2, source_slug)
+    except Exception as exc:
+        logger.warning("QA gate for step 2 failed: %s", exc)
+
+    if gate_result:
+        result["qa_gate"] = gate_result
+
     # Progressive feedback
     print(render_progressive(
         source_slug,
@@ -623,6 +645,55 @@ def cmd_finalize(slug: str) -> dict[str, Any]:
     else:
         enrichment_result = {"skipped": "INSIGHTS-STATE.json not found"}
 
+    # FIX 2: Circuit breaker -- detect silent enrichment failures.
+    # If insights exist on disk but 0 were appended, something is wrong.
+    if enrichment_result.get("appended", 0) == 0 and insights_path.exists():
+        try:
+            _is_data = json.loads(insights_path.read_text(encoding="utf-8"))
+            _total_insights = 0
+            if isinstance(_is_data, dict):
+                # Count from "persons" dict
+                for _pdata in _is_data.get("persons", {}).values():
+                    if isinstance(_pdata, dict):
+                        _total_insights += len(_pdata.get("insights", []))
+                # Count from flat "insights" list
+                _total_insights += len(_is_data.get("insights", []))
+            if _total_insights > 0:
+                logger.error(
+                    "CIRCUIT BREAKER: %d insights available but 0 appended — "
+                    "check person_slug mapping",
+                    _total_insights,
+                )
+                enrichment_result["circuit_breaker"] = True
+                enrichment_result["insights_available"] = _total_insights
+        except Exception:
+            pass  # non-fatal diagnostic
+
+    # Step 1.5: Agent trigger evaluation
+    agent_trigger_result: dict[str, Any] = {}
+    try:
+        from core.intelligence.agents.agent_trigger import (
+            evaluate_cargo_agents,
+            evaluate_person_agents,
+        )
+
+        person_eval = evaluate_person_agents()
+        cargo_eval = evaluate_cargo_agents()
+        agent_trigger_result = {"person": person_eval, "cargo": cargo_eval}
+    except Exception as exc:
+        logger.warning("Agent trigger evaluation failed: %s", exc)
+        agent_trigger_result = {"error": str(exc)}
+
+    # Step 1.7: Explicit cascading (insights -> cargo agents + theme dossiers)
+    cascade_result: dict[str, Any] = {}
+    try:
+        from core.intelligence.pipeline.mce.cascading import run_post_extraction_cascade
+
+        cascade_result = run_post_extraction_cascade(slug, insights_path)
+    except Exception as exc:
+        logger.warning("Post-extraction cascading failed: %s", exc)
+        cascade_result = {"error": str(exc)}
+
     # Step 2: Workspace sync
     sync_result: dict[str, Any] = {}
     try:
@@ -652,11 +723,12 @@ def cmd_finalize(slug: str) -> dict[str, Any]:
         if trigger_fn is not None:
             try:
                 trigger_fn(None)
-            except Exception:
-                logger.debug(
-                    "State transition %s failed (may not be valid from %s)",
+            except Exception as exc:
+                logger.warning(
+                    "State transition %s failed from state %s: %s",
                     trigger_name,
                     sm.state,
+                    exc,
                 )
 
     # Step 4: finalize metrics
@@ -671,14 +743,42 @@ def cmd_finalize(slug: str) -> dict[str, Any]:
 
     elapsed = (time.monotonic() - t0) * 1000
 
+    # QA Gate: validate finalization
+    gate_result = None
+    try:
+        from core.intelligence.pipeline.mce.qa_gates import validate_step
+        gate_result = validate_step(11, slug)
+    except Exception as exc:
+        logger.warning("QA gate for step 11 failed: %s", exc)
+
+    # Step 6: Generate MCE pipeline log
+    log_result: dict[str, Any] = {}
+    try:
+        from core.intelligence.pipeline.mce.log_generator import generate_mce_log
+
+        log_result = generate_mce_log(
+            slug=slug,
+            enrichment_result=enrichment_result,
+            agent_trigger_result=agent_trigger_result,
+            cascade_result=cascade_result,
+            sync_result=sync_result,
+            index_result=index_result,
+        )
+    except Exception as exc:
+        logger.warning("MCE log generation failed: %s", exc)
+        log_result = {"error": str(exc)}
+
     result = _build_result(
         "finalize",
         success=True,
         slug=slug,
         duration_ms=elapsed,
         enrichment=enrichment_result,
+        agent_triggers=agent_trigger_result,
+        cascading=cascade_result,
         workspace_sync=sync_result,
         index_rebuild=index_result,
+        mce_log=log_result,
         state={
             "current": sm.state,
             "metadata_status": mgr.pipeline_status,
@@ -688,6 +788,9 @@ def cmd_finalize(slug: str) -> dict[str, Any]:
             "phases_timed": mt.phases_completed,
         },
     )
+
+    if gate_result:
+        result["qa_gate"] = gate_result
 
     _append_jsonl(result)
 

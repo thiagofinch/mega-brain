@@ -1,0 +1,223 @@
+{
+  "$schema": "chronicler-design-system/1.0",
+  "version": "1.0.0",
+  "updated": "2026-01-31",
+
+  "dimensions": {
+    "width": {
+      "full": 120,
+      "content_l1": 112,
+      "content_l2": 106,
+      "content_l3": 100,
+      "content_l4": 94
+    },
+    "padding": {
+      "border_block": 4,
+      "box_outer": 4,
+      "box_inner": 3,
+      "text": 3
+    },
+    "spacing": {
+      "between_sections": 3,
+      "between_subsections": 2,
+      "inside_box": 1
+    }
+  },
+
+  "characters": {
+    "blocks": {
+      "solid": "█",
+      "light": "░",
+      "medium": "▒",
+      "dark": "▓",
+      "upper_half": "▀",
+      "lower_half": "▄"
+    },
+
+    "borders": {
+      "double": {
+        "id": "double",
+        "name": "Borda Dupla (Externa)",
+        "top_left": "╔",
+        "top_right": "╗",
+        "bottom_left": "╚",
+        "bottom_right": "╝",
+        "horizontal": "═",
+        "vertical": "║",
+        "cross": "╬",
+        "t_down": "╦",
+        "t_up": "╩",
+        "t_right": "╠",
+        "t_left": "╣"
+      },
+      "single": {
+        "id": "single",
+        "name": "Borda Simples (Interna)",
+        "top_left": "┌",
+        "top_right": "┐",
+        "bottom_left": "└",
+        "bottom_right": "┘",
+        "horizontal": "─",
+        "vertical": "│",
+        "cross": "┼",
+        "t_down": "┬",
+        "t_up": "┴",
+        "t_right": "├",
+        "t_left": "┤"
+      },
+      "rounded": {
+        "id": "rounded",
+        "name": "Borda Arredondada (Decorativa)",
+        "top_left": "╭",
+        "top_right": "╮",
+        "bottom_left": "╰",
+        "bottom_right": "╯",
+        "horizontal": "─",
+        "vertical": "│"
+      },
+      "thick": {
+        "id": "thick",
+        "name": "Borda Grossa (Destaque)",
+        "top_left": "┏",
+        "top_right": "┓",
+        "bottom_left": "┗",
+        "bottom_right": "┛",
+        "horizontal": "━",
+        "vertical": "┃"
+      }
+    },
+
+    "decorators": {
+      "bullet": "▸",
+      "bullet_alt": "▹",
+      "arrow_right": "▶",
+      "arrow_left": "◀",
+      "arrow_down": "▼",
+      "arrow_up": "▲",
+      "diamond": "◆",
+      "diamond_empty": "◇",
+      "circle": "●",
+      "circle_empty": "○",
+      "check": "✓",
+      "cross": "✗",
+      "star": "★",
+      "star_empty": "☆"
+    },
+
+    "tree": {
+      "branch": "├──",
+      "last": "└──",
+      "continue": "│  ",
+      "space": "   "
+    },
+
+    "progress": {
+      "filled": "▓",
+      "empty": "░",
+      "filled_alt": "█",
+      "empty_alt": "░",
+      "bar_width": 50
+    },
+
+    "separators": {
+      "section": "═",
+      "subsection": "─",
+      "inline": "│",
+      "header_bar": "▀"
+    }
+  },
+
+  "hierarchy": {
+    "level_0": {
+      "name": "Super Header",
+      "border": "solid_block",
+      "width": 120,
+      "padding": 4
+    },
+    "level_1": {
+      "name": "Caixa Externa",
+      "border": "double",
+      "width": 112,
+      "padding": 4
+    },
+    "level_2": {
+      "name": "Caixa Interna",
+      "border": "single",
+      "width": 106,
+      "padding": 3
+    },
+    "level_3": {
+      "name": "Sub-caixa",
+      "border": "single",
+      "width": 100,
+      "padding": 3
+    }
+  },
+
+  "emojis": {
+    "sections": {
+      "document": "📄",
+      "data": "📊",
+      "list": "📋",
+      "calendar": "📅",
+      "note": "📝",
+      "check": "✅",
+      "target": "🎯",
+      "warning": "⚠️",
+      "error": "❌",
+      "info": "ℹ️",
+      "idea": "💡",
+      "fire": "🔥",
+      "star": "⭐",
+      "trophy": "🏆",
+      "rocket": "🚀",
+      "gear": "⚙️",
+      "pin": "📌",
+      "folder": "📁",
+      "search": "🔍",
+      "lock": "🔒",
+      "key": "🔑",
+      "chart": "📈",
+      "money": "💰",
+      "user": "👤",
+      "users": "👥",
+      "clock": "🕐",
+      "lightning": "⚡",
+      "tools": "🛠️",
+      "palette": "🎨",
+      "book": "📚",
+      "building": "🏗️",
+      "cycle": "🔄",
+      "brain": "🧠"
+    },
+    "status": {
+      "success": "✅",
+      "pending": "⏳",
+      "error": "❌",
+      "warning": "⚠️",
+      "info": "ℹ️",
+      "blocked": "🚫",
+      "progress": "🔄"
+    },
+    "numbers": {
+      "1": "1️⃣",
+      "2": "2️⃣",
+      "3": "3️⃣",
+      "4": "4️⃣",
+      "5": "5️⃣",
+      "6": "6️⃣",
+      "7": "7️⃣",
+      "8": "8️⃣",
+      "9": "9️⃣",
+      "10": "🔟"
+    }
+  },
+
+  "prebuilt_strings": {
+    "solid_bar_120": "████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████",
+    "header_bar_118": "▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀",
+    "double_line_112": "════════════════════════════════════════════════════════════════════════════════════════════════════════════════",
+    "single_line_106": "──────────────────────────────────────────────────────────────────────────────────────────────────────────",
+    "single_line_100": "────────────────────────────────────────────────────────────────────────────────────────────────────"
+  }
+}

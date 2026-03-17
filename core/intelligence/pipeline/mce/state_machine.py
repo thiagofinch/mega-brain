@@ -69,6 +69,9 @@ STATES: list[str] = [
     "paused",
 ]
 
+# Base transitions WITHOUT conditions -- used when qa_gates is not available
+# (e.g. in tests, or when the module cannot be imported).  The conditions
+# are layered on at runtime inside __init__ only when qa_gates loads OK.
 TRANSITIONS: list[dict[str, Any]] = [
     {"trigger": "start_chunking", "source": "init", "dest": "chunking"},
     {"trigger": "start_entities", "source": "chunking", "dest": "entities"},
@@ -84,6 +87,19 @@ TRANSITIONS: list[dict[str, Any]] = [
     {"trigger": "pause", "source": "*", "dest": "paused"},
     {"trigger": "recover", "source": ["failed", "paused"], "dest": "init"},
 ]
+
+# Condition mappings -- only applied when qa_gates is available.
+# Keys are trigger names, values are condition function name lists.
+_CONDITION_MAP: dict[str, list[str]] = {
+    "start_chunking": ["can_start_chunking"],
+    "start_entities": ["can_start_entities"],
+    "start_knowledge": ["can_start_knowledge"],
+    "checkpoint": ["can_checkpoint"],
+    "approve": ["can_approve"],
+    "start_agents": ["can_start_agents"],
+    "start_validation": ["can_validate"],
+    "finish": ["can_finish"],
+}
 
 
 # ---------------------------------------------------------------------------
@@ -123,12 +139,20 @@ class PipelineStateMachine:
               the state-file path.
         auto_load: If *True* (default), attempt to load existing state
                    from disk on construction.
+        enable_gates: If *True* (default), attempt to load ``qa_gates``
+                      condition functions.  When *False* (or when the
+                      import fails), transitions are unconditional --
+                      useful for unit tests that don't need artifact
+                      validation.
     """
 
-    def __init__(self, slug: str, *, auto_load: bool = True) -> None:
+    def __init__(
+        self, slug: str, *, auto_load: bool = True, enable_gates: bool = True
+    ) -> None:
         self.slug: str = slug
         self._state_path: Path = _state_path(slug)
         self._history: list[dict[str, str]] = []
+        self._qa_gates_available: bool = False
 
         # Determine initial state -- either from disk or "init".
         initial_state = "init"
@@ -138,12 +162,59 @@ class PipelineStateMachine:
                 initial_state = loaded.get("state", "init")
                 self._history = loaded.get("history", [])
 
+        # Bind qa_gates condition functions as methods on self.
+        # The transitions library resolves string condition names (e.g.
+        # "can_start_chunking") by looking them up as attributes on the model
+        # object.  Import is deferred to __init__ (not module-level) to avoid
+        # a circular import: state_machine -> qa_gates is allowed, but
+        # qa_gates must never import state_machine.
+        if enable_gates:
+            try:
+                from core.intelligence.pipeline.mce.qa_gates import (
+                    can_approve,
+                    can_checkpoint,
+                    can_finish,
+                    can_start_agents,
+                    can_start_chunking,
+                    can_start_entities,
+                    can_start_knowledge,
+                    can_validate,
+                )
+
+                self.can_start_chunking = can_start_chunking
+                self.can_start_entities = can_start_entities
+                self.can_start_knowledge = can_start_knowledge
+                self.can_checkpoint = can_checkpoint
+                self.can_approve = can_approve
+                self.can_start_agents = can_start_agents
+                self.can_validate = can_validate
+                self.can_finish = can_finish
+                self._qa_gates_available = True
+            except Exception:
+                logger.warning(
+                    "qa_gates not available — transitions will not be gated"
+                )
+
+        # Build transitions: add conditions only if qa_gates loaded successfully.
+        # When qa_gates is NOT available (e.g. in unit tests), transitions are
+        # unconditional so triggers fire without requiring artifact files on disk.
+        if self._qa_gates_available:
+            transitions = []
+            for t in TRANSITIONS:
+                t_copy = dict(t)
+                trigger = t_copy["trigger"]
+                if trigger in _CONDITION_MAP:
+                    t_copy["conditions"] = _CONDITION_MAP[trigger]
+                transitions.append(t_copy)
+        else:
+            transitions = list(TRANSITIONS)
+
         # Build the machine.  ``transitions`` attaches triggers as methods
         # on *self* (e.g. ``self.start_chunking()``).
         self._machine = Machine(
             model=self,
             states=STATES,
-            transitions=TRANSITIONS,
+            transitions=transitions,
             initial=initial_state,
             auto_transitions=False,
             send_event=True,

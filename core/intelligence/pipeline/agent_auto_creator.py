@@ -140,7 +140,7 @@ def count_all_person_insights(state: dict) -> dict[str, int]:
                 continue
             counts[person_name] += len(insight_list)
 
-    # 3. Top-level insights array (e.g. Thiago Finch entries)
+    # 3. Top-level insights array (e.g. person name entries)
     insights_list = state.get("insights", [])
     if isinstance(insights_list, list):
         for item in insights_list:

@@ -1,0 +1,500 @@
+# MCE Pipeline Governance -- Quality Gates + Veto Conditions
+# Synapse L3 Workflow Rule
+# Loaded by: core/engine/synapse.py load_l3_workflow("mce")
+# Adapted from patterns in:
+#   .squads/squad-creator-pro/config/quality-gates.yaml
+#   .squads/squad-creator-pro/config/veto-conditions.yaml
+#   .squads/paranoid-audit/config/veto-conditions.yaml
+#   .squads/hormozi/config/veto-conditions.yaml
+#
+# Version: 1.0.0
+# Date: 2026-03-17
+
+version: "1.0.0"
+workflow: "mce"
+description: >
+  Quality gates and veto conditions for the MCE (Mental Cognitive Extraction)
+  Pipeline. Each gate maps to one of the 12 pipeline steps defined in
+  SKILL.md RULE 3 and enforced by qa_gates.py. Veto conditions are physical
+  blocks -- if the condition triggers, the orchestrator CANNOT proceed.
+
+# ============================================================================
+# GATE TYPES (adapted from squad-creator-pro quality-gates.yaml)
+# ============================================================================
+gate_types:
+  auto:
+    description: "Deterministic validation, no human intervention"
+    max_duration: "60s"
+    executor: "Worker"
+  hybrid:
+    description: "AI prepares, human validates"
+    max_duration: "5min"
+    executor: "Hybrid"
+  manual:
+    description: "Human judgment required"
+    max_duration: "scheduled"
+    executor: "Human"
+
+# ============================================================================
+# QUALITY GATES (12 gates, one per MCE pipeline step)
+# ============================================================================
+# Field contract per AC4:
+#   id:              string (unique, pattern MCE-QG-{N})
+#   description:     string (what this gate validates)
+#   severity:        enum (block | warn | info)
+#   step_applies_to: list of ints (pipeline step numbers)
+#
+# Additional fields for qa_gates.py consumption:
+#   name, type, transition, criteria, veto_conditions,
+#   pass_action, fail_action
+# ============================================================================
+
+quality_gates:
+
+  # -- STEP 1: INGEST -------------------------------------------------------
+  - id: "MCE-QG-1"
+    name: "Ingestion Gate"
+    description: "Validates file exists, classification confidence meets threshold, and routing completed successfully"
+    severity: "block"
+    step_applies_to: [1]
+    type: "auto"
+    transition: "init -> chunking"
+    criteria:
+      - metric: "file_exists"
+        threshold: true
+      - metric: "classification_confidence"
+        threshold: 0.5
+        operator: ">="
+      - metric: "routing_success"
+        threshold: true
+    veto_conditions: ["MCE_VC_001"]
+    pass_action: "Proceed to Batch"
+    fail_action: "BLOCK -- file not properly ingested"
+
+  # -- STEP 2: BATCH --------------------------------------------------------
+  - id: "MCE-QG-2"
+    name: "Batch Creation Gate"
+    description: "Validates at least one batch was created and files meet the processing threshold"
+    severity: "block"
+    step_applies_to: [2]
+    type: "auto"
+    transition: "init -> chunking"
+    criteria:
+      - metric: "batches_created"
+        threshold: 1
+        operator: ">="
+      - metric: "files_above_threshold"
+        threshold: true
+    veto_conditions: ["MCE_VC_002"]
+    pass_action: "Proceed to Chunking"
+    fail_action: "BLOCK -- no batches created, add more source files"
+
+  # -- STEP 3: CHUNK --------------------------------------------------------
+  - id: "MCE-QG-3"
+    name: "Chunking Gate"
+    description: "Validates CHUNKS-STATE.json exists, chunks array is non-empty, and all chunk_ids are unique"
+    severity: "block"
+    step_applies_to: [3]
+    type: "auto"
+    transition: "chunking -> entities"
+    criteria:
+      - metric: "chunks_state_exists"
+        threshold: true
+      - metric: "chunks_count"
+        threshold: 1
+        operator: ">="
+      - metric: "chunk_ids_unique"
+        threshold: true
+    veto_conditions: ["MCE_VC_002"]
+    pass_action: "Proceed to Entity Resolution"
+    fail_action: "BLOCK -- chunking produced zero or invalid chunks"
+
+  # -- STEP 4: ENTITY RESOLUTION --------------------------------------------
+  - id: "MCE-QG-4"
+    name: "Entity Resolution Gate"
+    description: "Validates CANONICAL-MAP.json was updated and the source person has a mapped entry"
+    severity: "block"
+    step_applies_to: [4]
+    type: "auto"
+    transition: "entities -> knowledge_extraction"
+    criteria:
+      - metric: "canonical_map_updated"
+        threshold: true
+      - metric: "source_person_has_entry"
+        threshold: true
+    veto_conditions: ["MCE_VC_003"]
+    pass_action: "Proceed to Insight Extraction"
+    fail_action: "BLOCK -- entity resolution failed, no canonical entry for source person"
+
+  # -- STEP 5: INSIGHT EXTRACTION -------------------------------------------
+  - id: "MCE-QG-5"
+    name: "Insight Extraction Gate"
+    description: "Validates INSIGHTS-STATE.json has a person entry with non-empty insights, each linked to chunk_ids"
+    severity: "block"
+    step_applies_to: [5]
+    type: "auto"
+    transition: "knowledge_extraction -> mce_extraction"
+    criteria:
+      - metric: "insights_state_has_person"
+        threshold: true
+      - metric: "insights_count"
+        threshold: 1
+        operator: ">="
+      - metric: "all_insights_have_chunks"
+        threshold: true
+    veto_conditions: ["MCE_VC_004", "MCE_VC_005"]
+    pass_action: "Proceed to MCE Behavioral"
+    fail_action: "BLOCK -- zero insights extracted or insights missing chunk references"
+
+  # -- STEP 6: BEHAVIORAL ---------------------------------------------------
+  - id: "MCE-QG-6"
+    name: "Behavioral Pattern Gate"
+    description: "Validates behavioral_patterns field exists and each pattern is backed by 2+ chunk_ids"
+    severity: "block"
+    step_applies_to: [6]
+    type: "hybrid"
+    transition: "mce_extraction (behavioral phase)"
+    criteria:
+      - metric: "behavioral_patterns_exist"
+        threshold: true
+      - metric: "min_chunk_ids_per_pattern"
+        threshold: 2
+        operator: ">="
+    veto_conditions: ["MCE_VC_006"]
+    pass_action: "Proceed to MCE Identity"
+    fail_action: "BLOCK -- no behavioral patterns extracted or insufficient evidence"
+
+  # -- STEP 7: IDENTITY -----------------------------------------------------
+  - id: "MCE-QG-7"
+    name: "Identity Layer Gate"
+    description: "Validates value_hierarchy has at least one Tier 1 value and exactly one MASTER obsession"
+    severity: "block"
+    step_applies_to: [7]
+    type: "hybrid"
+    transition: "mce_extraction (identity phase)"
+    criteria:
+      - metric: "value_hierarchy_tier1_count"
+        threshold: 1
+        operator: ">="
+      - metric: "master_obsession_count"
+        threshold: 1
+        operator: "=="
+    veto_conditions: ["MCE_VC_007"]
+    pass_action: "Proceed to MCE Voice"
+    fail_action: "BLOCK -- missing Tier 1 values or MASTER obsession count != 1"
+
+  # -- STEP 8: VOICE --------------------------------------------------------
+  - id: "MCE-QG-8"
+    name: "Voice DNA Gate"
+    description: "Validates VOICE-DNA.yaml exists with signature_phrases, behavioral_states, and 6 dimensional scores"
+    severity: "block"
+    step_applies_to: [8]
+    type: "hybrid"
+    transition: "mce_extraction -> identity_checkpoint"
+    criteria:
+      - metric: "voice_dna_exists"
+        threshold: true
+      - metric: "signature_phrases_count"
+        threshold: 3
+        operator: ">="
+      - metric: "behavioral_states_exist"
+        threshold: true
+      - metric: "voice_dimensions_count"
+        threshold: 6
+        operator: ">="
+    veto_conditions: ["MCE_VC_008"]
+    pass_action: "Proceed to Identity Checkpoint"
+    fail_action: "BLOCK -- VOICE-DNA.yaml missing or incomplete"
+
+  # -- STEP 9: IDENTITY CHECKPOINT ------------------------------------------
+  - id: "MCE-QG-9"
+    name: "Identity Checkpoint Gate"
+    description: "Validates user explicitly approved the identity checkpoint before consolidation proceeds"
+    severity: "block"
+    step_applies_to: [9]
+    type: "manual"
+    transition: "identity_checkpoint -> consolidation"
+    criteria:
+      - metric: "user_decision"
+        threshold: "APPROVE"
+        operator: "=="
+    veto_conditions: ["MCE_VC_009"]
+    pass_action: "Proceed to Consolidation"
+    fail_action: "BLOCK -- checkpoint not approved by user"
+
+  # -- STEP 10: CONSOLIDATION -----------------------------------------------
+  - id: "MCE-QG-10"
+    name: "Consolidation Gate"
+    description: "Validates all 6 sub-steps complete: dossier exists, 5/5 DNA YAMLs generated, agent files created, cross-references pass"
+    severity: "block"
+    step_applies_to: [10]
+    type: "auto"
+    transition: "consolidation -> agent_generation"
+    criteria:
+      - metric: "consolidation_substeps_complete"
+        threshold: 6
+        operator: "=="
+      - metric: "dossier_exists"
+        threshold: true
+      - metric: "dna_yamls_count"
+        threshold: 5
+        operator: "=="
+      - metric: "agent_files_exist"
+        threshold: true
+      - metric: "cross_ref_pass"
+        threshold: true
+    veto_conditions: ["MCE_VC_010", "MCE_VC_012"]
+    pass_action: "Proceed to Finalization"
+    fail_action: "BLOCK -- consolidation incomplete, missing dossier, DNA YAMLs, or agent files"
+
+  # -- STEP 11: FINALIZE ----------------------------------------------------
+  - id: "MCE-QG-11"
+    name: "Finalization Gate"
+    description: "Validates enrichment appended insights to agent memory or confirmed no insights available; state is complete"
+    severity: "warn"
+    step_applies_to: [11]
+    type: "auto"
+    transition: "agent_generation -> validation"
+    criteria:
+      - metric: "enrichment_appended_or_none_available"
+        threshold: true
+      - metric: "state_is_complete_or_validation"
+        threshold: true
+    veto_conditions: ["MCE_VC_011"]
+    pass_action: "Proceed to Report"
+    fail_action: "WARN -- enrichment skipped insights that were available (circuit breaker)"
+
+  # -- STEP 12: REPORT ------------------------------------------------------
+  - id: "MCE-QG-12"
+    name: "Validation Report Gate"
+    description: "Validates final validation score >= 70 and all critical checks pass"
+    severity: "block"
+    step_applies_to: [12]
+    type: "auto"
+    transition: "validation -> complete"
+    criteria:
+      - metric: "validation_score"
+        threshold: 70
+        operator: ">="
+      - metric: "critical_checks_pass"
+        threshold: true
+    veto_conditions: []
+    pass_action: "Pipeline COMPLETE"
+    fail_action: "BLOCK -- validation score below threshold or critical checks failed"
+
+# ============================================================================
+# VETO CONDITIONS (12 conditions mapped to MCE pipeline steps)
+# ============================================================================
+# Field contract per AC5:
+#   id:                string (unique, pattern MCE_VC_{NNN})
+#   description:       string (what this veto blocks)
+#   trigger_condition: string (boolean expression that activates the veto)
+#   action:            enum (block | escalate)
+#
+# Additional fields for qa_gates.py and diagnostics:
+#   name, step, severity, recovery
+# ============================================================================
+
+veto_conditions:
+
+  # -- VC-001: Ingestion failure ---------------------------------------------
+  - id: "MCE_VC_001"
+    name: "Ingestion Failed"
+    description: "Classification confidence is below threshold or routing did not complete successfully"
+    step: 1
+    trigger_condition: "classification_confidence < 0.5 OR routing_success == false"
+    action: "block"
+    severity: "BLOCKING"
+    recovery: "Check file path is valid, verify file is readable text, re-run ingest with corrected path"
+
+  # -- VC-002: Zero chunks ---------------------------------------------------
+  - id: "MCE_VC_002"
+    name: "Zero Chunks After Chunking"
+    description: "Chunking step produced zero chunks -- cannot proceed to entity resolution"
+    step: 3
+    trigger_condition: "chunks_count == 0 after chunking step completes"
+    action: "block"
+    severity: "BLOCKING"
+    recovery: "Verify source files exist and contain text, check prompt template is accessible, re-run chunking"
+
+  # -- VC-003: No entities resolved ------------------------------------------
+  - id: "MCE_VC_003"
+    name: "Zero Entities Resolved"
+    description: "Entity resolution found no persons in the chunked content"
+    step: 4
+    trigger_condition: "entities_resolved == 0 after entity resolution completes"
+    action: "block"
+    severity: "BLOCKING"
+    recovery: "Verify chunks contain speaker attribution, check CANONICAL-MAP.json merge logic, re-run entity resolution"
+
+  # -- VC-004: No insights extracted -----------------------------------------
+  - id: "MCE_VC_004"
+    name: "Zero Insights Extracted"
+    description: "Insight extraction produced zero insights for the target person"
+    step: 5
+    trigger_condition: "insights_count == 0 for target person after extraction completes"
+    action: "block"
+    severity: "BLOCKING"
+    recovery: "Verify chunks are properly tagged with person, check prompt template coverage, re-run insight extraction"
+
+  # -- VC-005: Insights without provenance -----------------------------------
+  - id: "MCE_VC_005"
+    name: "Insights Without Chunk References"
+    description: "One or more insights lack chunk_ids, breaking traceability chain"
+    step: 5
+    trigger_condition: "any insight in insights[] has empty or missing chunks[] field"
+    action: "block"
+    severity: "BLOCKING"
+    recovery: "Re-run insight extraction ensuring every insight maps to source chunk_ids"
+
+  # -- VC-006: No behavioral patterns ----------------------------------------
+  - id: "MCE_VC_006"
+    name: "Zero Behavioral Patterns"
+    description: "MCE behavioral step extracted no patterns from insights"
+    step: 6
+    trigger_condition: "behavioral_patterns is empty or missing after MCE behavioral completes"
+    action: "escalate"
+    severity: "HIGH"
+    recovery: "Verify insights have sufficient depth for pattern detection, check prompt-mce-behavioral.md template, re-run with adjusted parameters"
+
+  # -- VC-007: Invalid MASTER obsession count --------------------------------
+  - id: "MCE_VC_007"
+    name: "Invalid MASTER Obsession"
+    description: "Identity layer is missing the MASTER obsession or has more than one"
+    step: 7
+    trigger_condition: "master_obsession_count == 0 OR master_obsession_count > 1"
+    action: "block"
+    severity: "BLOCKING"
+    recovery: "Re-run MCE identity extraction, ensure prompt enforces exactly 1 MASTER classification in obsessions"
+
+  # -- VC-008: Voice DNA incomplete ------------------------------------------
+  - id: "MCE_VC_008"
+    name: "Voice DNA Incomplete"
+    description: "VOICE-DNA.yaml is missing dimensional scores or has fewer than 3 signature phrases"
+    step: 8
+    trigger_condition: "voice_dimensions_count < 6 OR signature_phrases_count < 3"
+    action: "block"
+    severity: "BLOCKING"
+    recovery: "Re-run MCE voice extraction, verify chunks contain enough direct speech for phrase extraction"
+
+  # -- VC-009: Checkpoint not approved ---------------------------------------
+  - id: "MCE_VC_009"
+    name: "Checkpoint Not Approved"
+    description: "User did not explicitly approve the identity checkpoint -- consolidation cannot proceed"
+    step: 9
+    trigger_condition: "user_decision != APPROVE"
+    action: "block"
+    severity: "BLOCKING"
+    recovery: "Present identity checkpoint to user, wait for explicit APPROVE response before continuing"
+
+  # -- VC-010: Consolidation incomplete --------------------------------------
+  - id: "MCE_VC_010"
+    name: "Consolidation Artifacts Missing"
+    description: "Fewer than 5 DNA YAMLs generated or agent files are missing after consolidation"
+    step: 10
+    trigger_condition: "dna_yamls_count < 5 OR agent_files_missing == true"
+    action: "block"
+    severity: "BLOCKING"
+    recovery: "Re-run consolidation sub-steps 10.2 (DNA YAMLs) and 10.5 (agent files), verify all 5 DNA files + 4 agent files exist"
+
+  # -- VC-011: Enrichment circuit breaker ------------------------------------
+  - id: "MCE_VC_011"
+    name: "Enrichment Circuit Breaker"
+    description: "Enrichment appended zero insights to agent memory despite insights being available"
+    step: 11
+    trigger_condition: "enrichment_appended == 0 AND insights_available > 0"
+    action: "escalate"
+    severity: "HIGH"
+    recovery: "Check memory_enricher.py dedup logic, verify person_slug mapping, inspect INSIGHTS-STATE.json for valid person field"
+
+  # -- VC-012: Cross-reference broken links ----------------------------------
+  - id: "MCE_VC_012"
+    name: "Cross-Reference Broken Links"
+    description: "Consolidation sub-step 10.6 found broken links between dossier, sources, DNA, and agent files"
+    step: 10
+    trigger_condition: "cross_ref_validation has broken_links_count > 0"
+    action: "escalate"
+    severity: "HIGH"
+    recovery: "Run cross-reference validation report, fix broken file paths and count mismatches in DNA-CONFIG.yaml"
+
+# ============================================================================
+# EXECUTION WORKFLOW (adapted from squad-creator-pro execution_workflow)
+# ============================================================================
+execution_workflow:
+  on_gate_reached:
+    - "Log gate entry with timestamp to MCE session log"
+    - "Execute validation criteria against pipeline artifacts"
+    - "Check associated veto conditions"
+    - "Determine PASS or FAIL"
+    - "Log result to JSONL audit trail"
+
+  on_pass:
+    - "Record pass in audit trail with gate ID and timestamp"
+    - "Allow state machine transition to next state"
+    - "Append QA GATE panel to session log"
+
+  on_fail:
+    - "Record failure with gate ID, reason, and failed criteria"
+    - "Block state machine transition"
+    - "Report to user with recovery steps from veto condition"
+    - "If 3 consecutive failures at same gate: escalate to user with full context"
+
+# ============================================================================
+# ENFORCEMENT MATRIX (adapted from hormozi veto-conditions.yaml)
+# ============================================================================
+enforcement:
+  levels:
+    runtime:
+      description: "Checked at step completion, blocks state transition"
+      blocking: true
+      notification: "inline"
+
+    artifact_check:
+      description: "Validated by reading output files after step execution"
+      blocking: true
+      notification: "qa_gate_panel"
+
+    human_gate:
+      description: "Requires explicit user approval"
+      blocking: true
+      notification: "checkpoint"
+
+  escalation:
+    max_consecutive_failures: 3
+    escalate_to: "user"
+    escalation_message: "Pipeline halted after 3 failures at the same gate. Manual intervention needed."
+
+# ============================================================================
+# STEP-TO-STATE MAPPING (links gate steps to state_machine.py states)
+# ============================================================================
+step_state_mapping:
+  1: "init"
+  2: "init"
+  3: "chunking"
+  4: "entities"
+  5: "knowledge_extraction"
+  6: "mce_extraction"
+  7: "mce_extraction"
+  8: "mce_extraction"
+  9: "identity_checkpoint"
+  10: "consolidation"
+  11: "agent_generation"
+  12: "validation"
+
+# ============================================================================
+# METADATA
+# ============================================================================
+metadata:
+  total_quality_gates: 12
+  total_veto_conditions: 12
+  gate_id_pattern: "MCE-QG-{N}"
+  veto_id_pattern: "MCE_VC_{NNN}"
+  adapted_from:
+    - ".squads/squad-creator-pro/config/quality-gates.yaml"
+    - ".squads/squad-creator-pro/config/veto-conditions.yaml"
+    - ".squads/paranoid-audit/config/veto-conditions.yaml"
+    - ".squads/hormozi/config/veto-conditions.yaml"
+  consumed_by:
+    - "core/intelligence/pipeline/mce/qa_gates.py"
+    - "core/engine/synapse.py (load_l3_workflow)"
+    - ".claude/skills/pipeline-mce/SKILL.md (RULE 3)"

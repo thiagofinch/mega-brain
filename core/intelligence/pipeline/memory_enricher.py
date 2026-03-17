@@ -287,20 +287,21 @@ def _find_target_agents(person_slug: str) -> list[Path]:
 def _is_duplicate(memory_text: str, chunk_id: str) -> bool:
     """Check if a chunk_id already appears in the MEMORY.md text.
 
-    Simple string search -- if the chunk_id string is present anywhere
-    in the file, we consider it a duplicate. This handles both table rows
-    and inline references.
+    Uses word-boundary regex to avoid substring false positives.
+    For example, "chunk_1" must NOT match when "chunk_10" or "chunk_100"
+    is present. The \\b anchor ensures the chunk_id matches as a complete
+    token, not as a prefix/substring of a longer identifier.
 
     Args:
         memory_text: Full text content of MEMORY.md.
         chunk_id: The chunk identifier to search for.
 
     Returns:
-        True if chunk_id is already present in the text.
+        True if chunk_id is already present in the text as a whole token.
     """
     if not chunk_id:
         return False
-    return chunk_id in memory_text
+    return bool(re.search(rf'\b{re.escape(chunk_id)}\b', memory_text))
 
 
 # ---------------------------------------------------------------------------
@@ -683,9 +684,21 @@ def enrich(insights: list[dict[str, str] | Insight]) -> dict[str, Any]:
             normalized.append(item)
         elif isinstance(item, dict):
             try:
-                normalized.append(
-                    Insight(**{k: v for k, v in item.items() if k in Insight.__slots__})
-                )
+                # FIX 1: Before creating Insight, ensure person_slug exists.
+                # INSIGHTS-STATE.json uses "person" (display name), not "person_slug".
+                filtered = {k: v for k, v in item.items() if k in Insight.__slots__}
+                if "person_slug" not in filtered or not filtered.get("person_slug"):
+                    person_name = item.get("person", "")
+                    if person_name:
+                        filtered["person_slug"] = person_name.lower().strip().replace(" ", "-")
+                # Also handle chunk_ids -> chunk_id
+                if "chunk_id" not in filtered or not filtered.get("chunk_id"):
+                    chunks = item.get("chunks") or item.get("chunk_ids") or []
+                    if chunks:
+                        filtered["chunk_id"] = chunks[0] if isinstance(chunks, list) else str(chunks)
+                    elif item.get("id"):
+                        filtered["chunk_id"] = item["id"]
+                normalized.append(Insight(**filtered))
             except TypeError as exc:
                 results["errors"].append(f"Invalid insight dict: {exc}")
                 continue
@@ -696,7 +709,15 @@ def enrich(insights: list[dict[str, str] | Insight]) -> dict[str, Any]:
     enriched_agents: set[str] = set()
 
     for insight in normalized:
+        # FIX 1: Fallback -- if person_slug is empty but a "person" full name
+        # was provided (INSIGHTS-STATE.json uses "person" not "person_slug"),
+        # convert the display name to a slug: "Alex Hormozi" -> "alex-hormozi".
         if not insight.person_slug:
+            # Check if the original dict had a "person" key (stored in content
+            # as a side effect of Insight(**dict) dropping unknown keys).
+            # Since we can't recover it here, this fallback is handled in
+            # enrich_from_insights_state() during normalization.  But as a
+            # safety net, log and skip.
             results["errors"].append(f"Missing person_slug for chunk_id={insight.chunk_id}")
             continue
 
@@ -859,6 +880,11 @@ def enrich_from_insights_state(
     Returns:
         Same dict as enrich().
     """
+    # Force rebuild of cargo reverse map for each pipeline run.
+    # Without this, stale cache from a previous run in the same session
+    # would persist and miss newly created cargo agents.
+    invalidate_cargo_cache()
+
     if insights_state_path is None:
         from core.paths import ARTIFACTS
 
@@ -873,22 +899,95 @@ def enrich_from_insights_state(
     except Exception as exc:
         return {"appended": 0, "errors": [f"Failed to read state: {exc}"]}
 
-    # INSIGHTS-STATE.json may have various formats; handle the common ones.
+    # INSIGHTS-STATE.json has multiple formats accumulated over time.
+    # We need to extract insights and ensure each has person_slug + chunk_id.
     insight_list: list[dict] = []
 
     if isinstance(data, list):
         insight_list = data
     elif isinstance(data, dict):
-        # Try common keys
-        for key in ("insights", "items", "data"):
-            if key in data and isinstance(data[key], list):
-                insight_list = data[key]
-                break
+        # --- Source 1: "persons" dict (keyed by display name) ---
+        # Format: {"persons": {"Alex Hormozi": {"slug": "alex-hormozi", "insights": [...]}}}
+        persons_data = data.get("persons", {})
+        if isinstance(persons_data, dict):
+            for person_name, pdata in persons_data.items():
+                if not isinstance(pdata, dict):
+                    continue
+                # Derive slug: use explicit "slug" field, or convert name.
+                # NOTE: some entries have slug="Alex Hormozi" (display name, not
+                # kebab-case), so we always normalize to lowercase-hyphenated.
+                raw_slug = pdata.get("slug", "") or person_name
+                slug = raw_slug.lower().strip().replace(" ", "-")
+                person_insights = pdata.get("insights", [])
+                if not isinstance(person_insights, list):
+                    continue
+                for item in person_insights:
+                    if not isinstance(item, dict):
+                        continue
+                    # Normalize to enricher format: inject person_slug + chunk_id
+                    normalized_item = dict(item)
+                    normalized_item.setdefault("person_slug", slug)
+                    # Map "chunks" or "chunk_ids" -> "chunk_id" (first element)
+                    if "chunk_id" not in normalized_item:
+                        chunks = normalized_item.get("chunks") or normalized_item.get("chunk_ids") or []
+                        normalized_item["chunk_id"] = chunks[0] if chunks else normalized_item.get("id", "")
+                    # Map "insight" or "summary" -> "content"
+                    if "content" not in normalized_item:
+                        normalized_item["content"] = (
+                            normalized_item.get("insight")
+                            or normalized_item.get("summary")
+                            or normalized_item.get("title", "")
+                        )
+                    insight_list.append(normalized_item)
+
+        # --- Source 2: flat "insights" list ---
+        # Format: {"insights": [{"person": "John Smith", "chunk_ids": [...], ...}]}
+        flat_insights = data.get("insights", [])
+        if isinstance(flat_insights, list):
+            seen_ids: set[str] = {item.get("chunk_id", "") for item in insight_list if item.get("chunk_id")}
+            for item in flat_insights:
+                if not isinstance(item, dict):
+                    continue
+                normalized_item = dict(item)
+                # Convert "person" (display name) -> "person_slug"
+                if "person_slug" not in normalized_item:
+                    person_name = normalized_item.get("person", "")
+                    if person_name:
+                        normalized_item["person_slug"] = person_name.lower().strip().replace(" ", "-")
+                # Convert "chunk_ids" -> "chunk_id"
+                if "chunk_id" not in normalized_item:
+                    chunks = normalized_item.get("chunks") or normalized_item.get("chunk_ids") or []
+                    normalized_item["chunk_id"] = chunks[0] if chunks else normalized_item.get("id", "")
+                # Map "insight" or "summary" -> "content"
+                if "content" not in normalized_item:
+                    normalized_item["content"] = (
+                        normalized_item.get("insight")
+                        or normalized_item.get("summary")
+                        or normalized_item.get("title", "")
+                    )
+                # Dedup: skip if chunk_id already seen from persons dict
+                cid = normalized_item.get("chunk_id", "")
+                if cid and cid in seen_ids:
+                    continue
+                if cid:
+                    seen_ids.add(cid)
+                insight_list.append(normalized_item)
+
+        # --- Fallback: try "items" or "data" keys ---
+        if not insight_list:
+            for key in ("items", "data"):
+                if key in data and isinstance(data[key], list):
+                    insight_list = data[key]
+                    break
 
     if not insight_list:
         logger.info("No insights found in %s", insights_state_path)
         return {"appended": 0, "skipped_dedup": 0, "skipped_no_agent": 0, "errors": []}
 
+    logger.info(
+        "Loaded %d insights from INSIGHTS-STATE.json (persons + flat)",
+        len(insight_list),
+    )
     return enrich(insight_list)
 
 
