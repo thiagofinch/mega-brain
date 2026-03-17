@@ -29,9 +29,20 @@ def _make_routing(tmp_path: Path) -> dict[str, Any]:
 
 @pytest.fixture()
 def _patch_routing(tmp_path: Path):
-    """Monkeypatch ROUTING in both state_machine and its helper module."""
+    """Monkeypatch ROUTING in both state_machine and its helper module.
+
+    Also patches the qa_gates import so conditions are not applied.
+    Without this, condition functions check for pipeline artifacts on disk
+    that don't exist in tests, causing transitions to silently block.
+    """
     routing = _make_routing(tmp_path)
-    with patch("core.intelligence.pipeline.mce.state_machine.ROUTING", routing):
+    with (
+        patch("core.intelligence.pipeline.mce.state_machine.ROUTING", routing),
+        patch.dict(
+            "sys.modules",
+            {"core.intelligence.pipeline.mce.qa_gates": None},
+        ),
+    ):
         yield routing
 
 
