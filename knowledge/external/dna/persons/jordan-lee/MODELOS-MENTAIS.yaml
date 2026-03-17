@@ -1,15 +1,16 @@
 # Layer: MODELOS-MENTAIS
 # Person: Jordan Lee
-# Version: 1.0.0
+# Version: 2.0.0
 # Generated: 2026-03-16
-# Source: MCE Pipeline v1.0
+# Updated: 2026-03-16 (MCE Pipeline v4.0 — YouTube batch +3 entries)
+# Source: MCE Pipeline v4.0 — Incremental YouTube update
 
 entries:
   - id: "INS-JL-011"
     nome: "Deploy Capital, Nao Acumule"
     descricao: "Cash no banco pode parecer seguro, mas normalmente nao e inteligente. Deploy capital para crescer, nao para acumular."
     quote: "holding cash can feel safe, but it's usually not smart at any chapter in the journey"
-    chunk_ids: ["chunk_718", "chunk_719"]
+    chunk_ids: ["chunk_718", "chunk_719", "chunk_JL_030"]
     priority: "HIGH"
     confidence: "HIGH"
 
@@ -17,7 +18,7 @@ entries:
     nome: "Objecoes como Pedidos de Clareza"
     descricao: "Objecoes em vendas nao sao inimigos — sao pedidos de clareza do comprador. Se o prospect pergunta, esta interessado."
     quote: "Objections are not the enemy. Most people take this personally... it's actually a request for clarity from your buyer"
-    chunk_ids: ["chunk_715", "chunk_723", "chunk_724"]
+    chunk_ids: ["chunk_715", "chunk_723", "chunk_724", "chunk_JL_023"]
     priority: "HIGH"
     confidence: "HIGH"
 
@@ -25,7 +26,7 @@ entries:
     nome: "Medo de Rejeicao e Medo de Desconexao"
     descricao: "Medo de rejeicao e medo de desconexao. A maneira mais rapida de conectar e mostrar que esta unfazed, curioso e confiante."
     quote: "Fear of rejection is just fear of disconnection. But the fastest way to connect with someone is to show them that you're just unfazed"
-    chunk_ids: ["chunk_723"]
+    chunk_ids: ["chunk_723", "chunk_JL_023"]
     priority: "HIGH"
     confidence: "HIGH"
 
@@ -33,7 +34,7 @@ entries:
     nome: "Compram Voce + Processo"
     descricao: "Pessoas compram por duas razoes: acreditam no processo E compram VOCE. O X-factor e a presenca, nao o pitch perfeito."
     quote: "They buy for two reasons. One, they understand the process and semi-believe in it and they buy into you"
-    chunk_ids: ["chunk_725", "chunk_724"]
+    chunk_ids: ["chunk_725", "chunk_724", "chunk_JL_023"]
     priority: "HIGH"
     confidence: "HIGH"
 
@@ -49,7 +50,7 @@ entries:
     nome: "Recrutamento = Aquisicao de Clientes"
     descricao: "Recrutamento merece o MESMO esforco que aquisicao de clientes. Wrong talent custa mais que deal perdido — drena tempo, moral, momentum."
     quote: "Most founders spend more time prospecting for clients than recruiting talent. And at some stage it has to switch"
-    chunk_ids: ["chunk_739"]
+    chunk_ids: ["chunk_739", "chunk_JL_015"]
     priority: "HIGH"
     confidence: "HIGH"
 
@@ -57,7 +58,7 @@ entries:
     nome: "Reps com Intencao"
     descricao: "Reps sem intencao sao como ir na academia e continuar gordo. Repeticao com intencao e onde esta o crescimento."
     quote: "it's reps but it's reps with intention. You go to the gym all the time. You've seen people who are at the gym. They're still fat"
-    chunk_ids: ["chunk_725"]
+    chunk_ids: ["chunk_725", "chunk_JL_034"]
     priority: "MEDIUM"
     confidence: "HIGH"
 
@@ -65,7 +66,7 @@ entries:
     nome: "Identidade de Defensivo Limita"
     descricao: "Nao e identidade de executor que limita — e identidade de defensivo. A transicao real e de operator para high-lever founder."
     quote: "shift from this ecom operator to a high lever founder and it's less about what you're doing and it's more about who you decide to be"
-    chunk_ids: ["chunk_726"]
+    chunk_ids: ["chunk_726", "chunk_JL_035"]
     priority: "HIGH"
     confidence: "HIGH"
 
@@ -73,7 +74,7 @@ entries:
     nome: "Hire Creatives, Thinkers, Tech"
     descricao: "Hire creatives, high-level thinkers e tech people. Consultores vao ficar cada vez mais tecnicos. 10x a 100x avanco em tech muito rapido."
     quote: "I only want to hire now people who are creatives, high level thinkers or tech people. There's actually no need for anyone else"
-    chunk_ids: ["chunk_741"]
+    chunk_ids: ["chunk_741", "chunk_JL_006"]
     priority: "HIGH"
     confidence: "HIGH"
 
@@ -91,4 +92,70 @@ entries:
     quote: "if you are the goal scorer so you need to take lead on these things... Wesley can you pick these up because I need to do these things"
     chunk_ids: ["chunk_743", "chunk_741"]
     priority: "MEDIUM"
+    confidence: "HIGH"
+
+  # === NOVOS ENTRIES (MCE v2.0) ===
+
+  - id: "INS-JL-v2-016"
+    nome: "Root Cause: Todo Problema tem Uma Causa Raiz"
+    descricao: "Problemas que parecem separados (sales, medo, inconsistencia, playing safe) geralmente tem uma unica causa raiz. Atacar sintomas sem identificar a raiz e ineficiente."
+    quote: "Everything that you're discussing in terms of the challenges is interconnected... it's just one root cause."
+    chunk_ids: ["chunk_JL_021", "chunk_JL_022"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-v2-017"
+    nome: "Play to Win (Modelo Mental de Decisao)"
+    descricao: "Ao tomar qualquer decisao, pergunte: estou jogando pra ganhar ou pra nao perder? Sucesso inicial te faz conservador quando deveria ser agressivo."
+    quote: "Falling into defensive mode at 500-700k/month hurt growth."
+    chunk_ids: ["chunk_JL_028"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-v2-018"
+    nome: "Naval's 3 Things"
+    descricao: "Tres coisas para mudar na vida: onde voce vive, o que faz, e com quem faz. Dubai + AI + grandes pessoas = alinhamento total."
+    quote: "Naval Ravikant said there's three things to change in your life: where you live, what you do, and who you do it with."
+    chunk_ids: ["chunk_JL_037"]
+    priority: "MEDIUM"
+    confidence: "HIGH"
+
+  - id: "INS-JL-v2-019"
+    nome: "Mind-Body Flywheel"
+    descricao: "Fisico melhor → pensamentos mais elevados → mais disciplina → performance melhor → fisico melhor. O ciclo virtuoso comeca no corpo."
+    quote: "Quanto melhor me sinto fisicamente, mais elevado e o nivel dos meus pensamentos."
+    chunk_ids: ["chunk_JL_038", "chunk_JL_051"]
+    priority: "MEDIUM"
+    confidence: "HIGH"
+
+  - id: "INS-JL-v2-020"
+    nome: "Ambiente Programa Pensamento"
+    descricao: "Voce e produto do seu ambiente. Ate pessoas bem-sucedidas que nao se desafiam te programam para pensar menor."
+    quote: "Tem que ter cuidado com quem se cerca, mesmo que sejam mais bem-sucedidos que voce. Se eles nao estao realmente se desafiando, vao programar voce para pensar menor."
+    chunk_ids: ["chunk_JL_044"]
+    priority: "MEDIUM"
+    confidence: "HIGH"
+
+  - id: "INS-JL-050"
+    nome: "Trabalho Duro sem Alavancagem nao Cria Riqueza"
+    descricao: "Trabalhadores de obra fazem 12h/dia mas nao ficam ricos porque nao aprenderam a alavancar sistemas e pessoas. Riqueza vem de leverage, nao de esforco bruto."
+    quote: "If hard work was the route to success. People on building sites here work 12 hours a day but don't get paid a lot of money because they haven't figured out how to leverage stuff."
+    chunk_ids: ["JL-C-009"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-051"
+    nome: "1+1 = Aceleracao (nao 2)"
+    descricao: "Combinacao de expertise cria resultado multiplicativo, nao aditivo. Quando dois especialistas colaboram, o resultado e nao-linear — cada um amplifica o outro."
+    quote: "1 plus 1 doesn't equal two. When you add those together, they accelerate so much more."
+    chunk_ids: ["JL-C-009"]
+    priority: "MEDIUM"
+    confidence: "HIGH"
+
+  - id: "INS-JL-052"
+    nome: "Receita Recorrente Composta"
+    descricao: "2-3 deals/mes em recurring revenue, mantendo os clientes, compoe para $1M/ano no final do ano. Crescimento nao requer escala — requer acumulacao de receita recorrente."
+    quote: "Even if you're just closing a couple of deals per month, they're on recurring revenue. Those deals can compound. So by the end of the year, you've got a million-dollar business."
+    chunk_ids: ["JL-C-009"]
+    priority: "HIGH"
     confidence: "HIGH"

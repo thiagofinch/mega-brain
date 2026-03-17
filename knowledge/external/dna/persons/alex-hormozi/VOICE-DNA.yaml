@@ -1,63 +1,561 @@
-version: 1.0
-person: alex-hormozi
-generated: "2026-03-15T20:50:00Z"
-source_chunks: [chunk_629, chunk_630, chunk_631, chunk_632, chunk_633, chunk_634, chunk_635]
+# knowledge/external/dna/persons/alex-hormozi/VOICE-DNA.yaml
+# Gerado em: 2026-03-16 (MCE-3 Voice DNA Extraction)
+# Versão anterior: 1.0 (2026-03-15, 7 chunks)
+# Versão atual: 2.0.0 (merged, 52 chunks de 15 fontes AH-0001 a AH-0019)
+
+pessoa: "Alex Hormozi"
+versao: "2.0.0"
+data_extracao: "2026-03-16T12:30:00Z"
+total_signature_phrases: 12
+total_immune_triggers: 5
+total_metaphors: 6
+total_behavioral_states: 4
+chunks_analisados: 52
+fontes_processadas:
+  - AH-0001
+  - AH-0003
+  - AH-0005
+  - AH-0006
+  - AH-0007
+  - AH-0008
+  - AH-0009
+  - AH-0010
+  - AH-0011
+  - AH-0013
+  - AH-0014
+  - AH-0015
+  - AH-0016
+  - AH-0017
+  - AH-0018
+  - AH-0019
+
+# ═══════════════════════════════════════════════════════════════════════
+# PERFIL TONAL (6 dimensões, escala 0-10)
+# ═══════════════════════════════════════════════════════════════════════
 
 tone_profile:
-  certainty: 9.2
-  authority: 8.5
-  warmth: 7.8
-  directness: 9.0
-  humor: 7.5
-  formality: 3.2
+  certainty:
+    score: 9.2
+    justificativa: "Linguagem absolutista em 90%+ das afirmações: 'always', 'every time', 'non-negotiable', '100 percent'. Nunca usa hedges."
+    chunk_ids:
+      - AH-chunk-013-03
+      - AH-chunk-015-01
+      - AH-chunk-018-02
+      - AH-chunk-014-01
+    exemplos:
+      - "Cut the bottom 10%. You'll see 30% jump. Every time."
+      - "Clear beats clever every single time."
+      - "You can never make a sale if you never ask for it."
+
+  authority:
+    score: 8.5
+    justificativa: "Posiciona-se consistentemente como mentor/professor com prova pessoal (4.000 closes, múltiplos negócios). Usa histórico como credencial, não como arrogância."
+    chunk_ids:
+      - AH-chunk-001-01
+      - AH-chunk-013-03
+      - AH-chunk-015-01
+    exemplos:
+      - "I've personally closed 4,000 people, one-on-one sales. Like weight loss. Susie's kid trying to write permanent marker on the wall and I'm trying to close her credit card."
+      - "Alex Hormozi here, founder of Gym Launch, Allen, Prestige Labs, and owner of a couple other companies."
+
+  warmth:
+    score: 6.5
+    justificativa: "Tom pragmático e instrucional dominante. Momentos de calor são genuínos (Keep being awesome, Lots of love) mas não são o modo operacional padrão — são fechamentos rituais."
+    chunk_ids:
+      - AH-chunk-014-02
+      - AH-chunk-015-01
+    exemplos:
+      - "Keep being awesome. Lots of love."
+      - "I hope this was valuable for you."
+
+  directness:
+    score: 9.5
+    justificativa: "Extremamente direto. Usa imperativo frequentemente. Não atenua más notícias. Usa 'you' em segunda pessoa como instrução direta."
+    chunk_ids:
+      - AH-chunk-013-03
+      - AH-chunk-010-02
+      - AH-chunk-013-01
+    exemplos:
+      - "Cut the bottom. Even if the team is going okay."
+      - "Record every call. If you're not recording, you're not compliant."
+      - "Never ask for the vacation without selling it first."
+
+  teaching_focus:
+    score: 9.0
+    justificativa: "Quase todo o conteúdo é instrucional. Usa frameworks nomeados, listas, acrônimos, histórias de 30 segundos. Arquitetura pedagógica explícita em todas as fontes."
+    chunk_ids:
+      - AH-chunk-013-01
+      - AH-chunk-013-02
+      - AH-chunk-018-01
+      - AH-chunk-019-01
+    exemplos:
+      - "CLOSER framework: C — Clarify. L — Label. O — Overview pain. S — Sell vacation. E — Explain concerns. R — Reinforce."
+      - "There are only four ways to get customers: warm outreach, cold outreach, content, paid ads. The Core Four."
+
+  confidence:
+    score: 9.5
+    justificativa: "Nunca expressa dúvida sobre seus frameworks. Qualifica limitações com 'context' mas não com 'maybe'. Autoconfiança baseada em prova empírica."
+    chunk_ids:
+      - AH-chunk-013-01
+      - AH-chunk-001-01
+      - AH-chunk-015-02
+    exemplos:
+      - "This is from the streets. Closing 4,000 people one-on-one."
+      - "I can tell you from having raised prices in a number of different businesses, this process has worked very, very well."
+
+# ═══════════════════════════════════════════════════════════════════════
+# FRASES DE ASSINATURA
+# ═══════════════════════════════════════════════════════════════════════
 
 signature_phrases:
-  - phrase: "What's going on, everyone?"
-    occurrences: 3
-    context: "video opening greeting"
-  - phrase: "Keep being awesome"
-    occurrences: 3
-    context: "video closing"
-  - phrase: "Lots of love"
-    occurrences: 2
-    context: "video closing"
-  - phrase: "I'll catch you on the flip side"
-    occurrences: 1
-    context: "video closing"
-  - phrase: "Fair enough"
-    occurrences: 4
-    context: "sales close technique, conversational anchor"
-  - phrase: "The thing is"
-    occurrences: 3
-    context: "transitioning to key insight"
-  - phrase: "Let me give you an example"
-    occurrences: 2
-    context: "introducing case study or analogy"
+  - id: "VP-AH-001"
+    frase: "What's going on, everyone?"
+    variacoes:
+      - "What's going on, guys?"
+    occurrence_count: 4
+    chunk_ids:
+      - AH-chunk-015-01
+      - AH-chunk-009-01
+      - AH-chunk-013-01
+    usage_context: "Abertura de vídeos — saudação direta e casual"
+    poder: 7
+
+  - id: "VP-AH-002"
+    frase: "Keep being awesome"
+    variacoes:
+      - "Keep being awesome. Lots of love."
+      - "Keep being awesome. Hit the subscribe."
+    occurrence_count: 5
+    chunk_ids:
+      - AH-chunk-014-02
+      - AH-chunk-015-02
+      - AH-chunk-018-03
+    usage_context: "Fechamento de vídeos — signature de encerramento quente"
+    poder: 8
+
+  - id: "VP-AH-003"
+    frase: "Fair enough"
+    variacoes:
+      - "Fair enough?"
+      - "Does that sound fair?"
+      - "That sounds reasonable."
+    occurrence_count: 5
+    chunk_ids:
+      - AH-chunk-015-01
+      - AH-chunk-015-02
+    usage_context: "Técnica de fechamento de vendas — pede acordo neutro após concessão"
+    poder: 9
+
+  - id: "VP-AH-004"
+    frase: "Would you be opposed to..."
+    variacoes:
+      - "Would it be completely unreasonable for..."
+      - "Would you be against..."
+      - "Is it unreasonable for us to..."
+    occurrence_count: 4
+    chunk_ids:
+      - AH-chunk-015-01
+      - AH-chunk-015-02
+    usage_context: "No-based question technique — obtém acordo via negação"
+    poder: 10
+
+  - id: "VP-AH-005"
+    frase: "Does that make sense?"
+    variacoes:
+      - "Make sense?"
+      - "Does that make sense to everybody?"
+    occurrence_count: 6
+    chunk_ids:
+      - AH-chunk-013-01
+      - AH-chunk-013-02
+      - AH-chunk-013-03
+    usage_context: "Checkpoint de compreensão — verifica alinhamento após cada conceito"
+    poder: 7
+
+  - id: "VP-AH-006"
+    frase: "Every time"
+    variacoes:
+      - "Every single time"
+    occurrence_count: 4
+    chunk_ids:
+      - AH-chunk-013-03
+      - AH-chunk-014-02
+    usage_context: "Reforça universalidade de uma regra ou resultado — cria certeza absoluta"
+    poder: 9
+
+  - id: "VP-AH-007"
+    frase: "Right?"
+    variacoes:
+      - "Right, right?"
+      - "Okay?"
+    occurrence_count: 40+
+    chunk_ids:
+      - AH-chunk-013-01
+      - AH-chunk-013-02
+      - AH-chunk-015-01
+      - AH-chunk-014-01
+    usage_context: "Pontuação conversacional — mantém engagement e verifica concordância implícita"
+    poder: 6
+
+  - id: "VP-AH-008"
+    frase: "All right"
+    variacoes:
+      - "Alright"
+    occurrence_count: 50+
+    chunk_ids:
+      - AH-chunk-013-01
+      - AH-chunk-013-02
+      - AH-chunk-013-03
+    usage_context: "Marcador de transição — fecha um pensamento e abre o próximo"
+    poder: 4
+
+  - id: "VP-AH-009"
+    frase: "The beautiful part about this is..."
+    variacoes:
+      - "And what's beautiful about this..."
+      - "Here's what's cool about this..."
+      - "And so this is really interesting because..."
+    occurrence_count: 3
+    chunk_ids:
+      - AH-chunk-014-01
+      - AH-chunk-015-01
+    usage_context: "Apresenta o insight-chave ou benefício central de um mecanismo"
+    poder: 8
+
+  - id: "VP-AH-010"
+    frase: "From the streets"
+    variacoes:
+      - "This is like from the streets"
+    occurrence_count: 2
+    chunk_ids:
+      - AH-chunk-013-03
+      - AH-chunk-001-01
+    usage_context: "Ancora credibilidade em experiência real vs teoria — posiciona ensinamento como battle-tested"
+    poder: 8
+
+  - id: "VP-AH-011"
+    frase: "Crazy people buy without obstacles. Normal people have concerns."
+    variacoes: []
+    occurrence_count: 2
+    chunk_ids:
+      - AH-chunk-013-02
+    usage_context: "Reframe de objeções — transforma resistência em sinal de normalidade"
+    poder: 10
+
+  - id: "VP-AH-012"
+    frase: "You can never make a sale if you never ask for it"
+    variacoes:
+      - "You can never close a deal you don't ask for"
+    occurrence_count: 2
+    chunk_ids:
+      - AH-chunk-013-03
+    usage_context: "Princípio absoluto de vendas — o fechamento mais básico de todos"
+    poder: 10
+
+# ═══════════════════════════════════════════════════════════════════════
+# PALAVRAS PROIBIDAS (que Alex nunca usa no contexto de ensino)
+# ═══════════════════════════════════════════════════════════════════════
+
+forbidden_words:
+  - palavra_ou_expressao: "talvez" / "maybe"
+    alternativa_usada: "Afirmação direta com número ou princípio"
+    evidencia: "Em 52 chunks analisados, nunca usa qualificadores de incerteza"
+    confianca: "HIGH"
+
+  - palavra_ou_expressao: "eu acho que" / "I think it might"
+    alternativa_usada: "'I know from experience that...' ou afirmação direta"
+    evidencia: "Substitui hipótese por experiência empírica sempre"
+    confianca: "HIGH"
+
+  - palavra_ou_expressao: "depende" / "it depends"
+    alternativa_usada: "Framework com critérios explícitos para cada variação"
+    evidencia: "Quando há nuance, oferece framework de decisão, não 'depende'"
+    confianca: "HIGH"
+
+  - palavra_ou_expressao: "infelizmente" / "unfortunately"
+    alternativa_usada: "Apresenta limitações como 'aqui está o que você precisa fazer'"
+    evidencia: "Nunca lamenta — transforma limitação em ação"
+    confianca: "MEDIUM"
+
+  - palavra_ou_expressao: "jargão técnico sem explicação"
+    alternativa_usada: "Analogia cotidiana seguida de conceito"
+    evidencia: "Cheesecake Factory, escovar os dentes, Eminem — sempre usa analogia antes de framework"
+    confianca: "HIGH"
+
+# ═══════════════════════════════════════════════════════════════════════
+# SISTEMA IMUNOLÓGICO (trigger → response verbal)
+# ═══════════════════════════════════════════════════════════════════════
+
+immune_system:
+  - id: "IM-AH-001"
+    trigger: "Objeção de preço em vendas"
+    response: "Reframe imediato: 'Se é preço, é discrepância de valor. Eles não entendem o valor.' Nunca negocia preço diretamente — re-estabelece valor primeiro."
+    intensidade: 9
+    chunk_ids:
+      - AH-chunk-013-02
+    behavioral_pattern_id: "BP-AH-001"
+
+  - id: "IM-AH-002"
+    trigger: "Crença de que talento é necessário para vendas"
+    response: "Volume + reps + drilling. 'Não precisa de talento — só de mais reps. Qualquer um pode se tornar um grande vendedor.'"
+    intensidade: 9
+    chunk_ids:
+      - AH-chunk-005-01
+      - AH-chunk-015-01
+    behavioral_pattern_id: "BP-AH-003"
+
+  - id: "IM-AH-003"
+    trigger: "Mensagem complexa ou clever em marketing"
+    response: "'Clear beats clever every single time.' Exige simplificação imediata. Teste: um criança de 5 anos entende?"
+    intensidade: 8
+    chunk_ids:
+      - AH-chunk-018-03
+    behavioral_pattern_id: "BP-AH-001"
+
+  - id: "IM-AH-004"
+    trigger: "Culpar o close rate quando vendas estão baixas"
+    response: "Diagnóstico upstream: 'Antes de culpar o rep, analise show rate e offer strength. A maioria das vezes o problema está antes do fechamento.'"
+    intensidade: 9
+    chunk_ids:
+      - AH-chunk-013-01
+      - AH-chunk-003-01
+    behavioral_pattern_id: "BP-AH-002"
+
+  - id: "IM-AH-005"
+    trigger: "Desejo de seguir a paixão sem desenvolver habilidade"
+    response: "'Não siga a paixão. Siga a proficiência. A paixão vem depois. Frustration tolerance é a habilidade real que importa.'"
+    intensidade: 8
+    chunk_ids:
+      - AH-chunk-005-01
+    behavioral_pattern_id: "BP-AH-003"
+
+# ═══════════════════════════════════════════════════════════════════════
+# METÁFORAS RECORRENTES
+# ═══════════════════════════════════════════════════════════════════════
+
+metaphors:
+  - id: "MET-AH-001"
+    metafora: "Eminem e os milhares de rhymes"
+    significado: "Volume de prática como único caminho para maestria — antes da fama, antes da criatividade"
+    poder: 9
+    chunk_ids:
+      - AH-chunk-005-02
+    occurrence_count: 2
+
+  - id: "MET-AH-002"
+    metafora: "Cheesecake Factory / 'Would you be against going to Cheesecake Factory?'"
+    significado: "No-based questions criam acordo implícito por autonomy preservation"
+    poder: 8
+    chunk_ids:
+      - AH-chunk-015-02
+    occurrence_count: 2
+
+  - id: "MET-AH-003"
+    metafora: "Escovar os dentes — hábito criado por accountability parental"
+    significado: "Accountability externa cria hábitos antes de motivação interna — argumento para coaching/suporte"
+    poder: 8
+    chunk_ids:
+      - AH-chunk-013-01
+    occurrence_count: 2
+
+  - id: "MET-AH-004"
+    metafora: "Ghost Products / Sacrificial Lambs"
+    significado: "Ancoragem de preço por comparação — opções caras que nunca serão vendidas mas fazem a oferta real parecer razoável"
+    poder: 9
+    chunk_ids:
+      - AH-chunk-006-01
+    occurrence_count: 2
+
+  - id: "MET-AH-005"
+    metafora: "Vender uma férias, não a jornada"
+    significado: "Prospects compram o destino (transformação desejada), não o processo para chegar lá"
+    poder: 9
+    chunk_ids:
+      - AH-chunk-013-01
+    occurrence_count: 2
+
+  - id: "MET-AH-006"
+    metafora: "Leaderboard como sino de boxe"
+    significado: "Visibilidade pública de resultados cria momentum, ação e competição saudável no time"
+    poder: 7
+    chunk_ids:
+      - AH-chunk-013-03
+    occurrence_count: 2
+
+# ═══════════════════════════════════════════════════════════════════════
+# ESTADOS COMPORTAMENTAIS (modos de operação)
+# ═══════════════════════════════════════════════════════════════════════
 
 behavioral_states:
-  - state: "Teaching mode"
-    trigger: "explaining a framework or technique"
-    speech_pattern: "Methodical, numbered lists, 'step 1, step 2', uses whiteboard"
-  - state: "Story mode"
-    trigger: "making a concept concrete"
-    speech_pattern: "Personal anecdotes, 'let me give you an example', dates/names/numbers"
-  - state: "Conviction mode"
-    trigger: "addressing objections or fear"
-    speech_pattern: "Direct, confrontational, '99 times out of 100 it's in your head'"
-  - state: "Closing mode"
-    trigger: "near the ask or CTA"
-    speech_pattern: "Rapid, benefit-stacking, uses 'but' amplifier, ends with clear directive"
+  - nome: "Teaching Mode"
+    trigger: "Explicando um framework, processo ou conceito novo"
+    tom: "Estruturado, paciente, numera os componentes, usa acrônimos (CLOSER, AAA, Core Four)"
+    duracao: "2-5 minutos por bloco"
+    sinais:
+      - "Let me walk you through..."
+      - "So here's the framework..."
+      - "C is you clarify... L is you label..."
+      - "Does that make sense to everybody?"
+    chunk_ids:
+      - AH-chunk-013-01
+      - AH-chunk-013-02
+      - AH-chunk-019-01
 
-forbidden_patterns:
-  - pattern: "Maybe"
-    reason: "Shows indecision — never hedges on frameworks"
-  - pattern: "I think it could work"
-    reason: "Always speaks from experience, not hypothesis"
-  - pattern: "It depends"
-    reason: "Prefers giving clear frameworks even when nuance exists"
+  - nome: "Conviction Mode"
+    trigger: "Defendendo um princípio absoluto ou rebatendo uma crença limitante"
+    tom: "Assertivo, absolutista, usa 'always', 'every time', 'non-negotiable'. Levanta voz metaforicamente."
+    duracao: "30 segundos a 2 minutos"
+    sinais:
+      - "Every time. Without exception."
+      - "99 times out of 100, it's in your head."
+      - "Clear beats clever every single time."
+      - "You can never make a sale if you never ask for it."
+    chunk_ids:
+      - AH-chunk-013-03
+      - AH-chunk-018-03
+      - AH-chunk-014-02
+
+  - nome: "Story Mode"
+    trigger: "Tornando um conceito concreto via exemplo pessoal ou analogia"
+    tom: "Conversacional, específico (nomes, datas, números concretos), humor ocasional"
+    duracao: "30 segundos a 2 minutos (nunca mais — regra dos 30 segundos)"
+    sinais:
+      - "Let me give you an example..."
+      - "So think about this..."
+      - "If I'm trying to get my wife to..."
+      - "This is like from the streets..."
+    chunk_ids:
+      - AH-chunk-015-02
+      - AH-chunk-013-01
+      - AH-chunk-014-01
+
+  - nome: "Tactical Mode"
+    trigger: "Dando instruções específicas de implementação com números exatos"
+    tom: "Preciso, numérico, imperativo. Remove qualificações. Tom de checklist."
+    duracao: "1-3 minutos"
+    sinais:
+      - "25% of one month's check..."
+      - "14 days... first week... second week..."
+      - "70% proven, 20% variations, 10% experiments..."
+      - "Always, always, always clear the pipeline."
+    chunk_ids:
+      - AH-chunk-013-03
+      - AH-chunk-010-01
+      - AH-chunk-018-02
+      - AH-chunk-014-02
+
+# ═══════════════════════════════════════════════════════════════════════
+# PADRÕES DE COMUNICAÇÃO
+# ═══════════════════════════════════════════════════════════════════════
+
+communication_patterns:
+  opening_hooks:
+    padrao: "Inicia com saudação casual ('What's going on, everyone?') seguida de proposição de valor direto ('In this video, I'm going to show you...'). Ocasionalmente usa pergunta contraintuitiva ou afirmação forte como gancho."
+    exemplos:
+      - "What's going on, everyone? Alex Hormozi here, founder of Gym Launch..."
+      - "In this video, I'm going to show you how to raise your prices."
+      - "Hey, you don't want anything else, do you? [95% took the upsell]"
+    chunk_ids:
+      - AH-chunk-015-01
+      - AH-chunk-014-01
+      - AH-chunk-013-01
+
+  story_structure:
+    padrao: "Framework-first: nomeia o conceito → define os componentes → exemplifica com número → fecha com implicação prática. Histórias pessoais são curtas (30s) e servem como evidência, não como narrativa principal."
+    descricao: "Raramente conta histórias longas. Prefere: conceito → framework nomeado → número específico → implicação"
+    exemplos:
+      - "CLOSER: C is clarify. L is label. O is overview pain. S is sell vacation. E is explain concerns. R is reinforce. [Framework] → Here's how each one works [componentes] → This is from closing 4,000 people [número] → That's why you cut the bottom 10% [implicação]"
+    chunk_ids:
+      - AH-chunk-013-01
+      - AH-chunk-013-02
+      - AH-chunk-013-03
+
+  closing_signatures:
+    padrao: "Fecha com implicação prática, reforço da utilidade do conteúdo, e assinatura quente. Nunca encerra de forma aberta — sempre fecha o loop com ação ou princípio."
+    exemplos:
+      - "Keep being awesome. Lots of love. I'll catch you guys soon. Bye!"
+      - "I hope this made sense. Keep being awesome."
+      - "Hit the subscribe. See you in the next video."
+      - "The point of this channel is there's a lot of people who are broke, and I make these videos so that you are not one of them."
+    chunk_ids:
+      - AH-chunk-014-02
+      - AH-chunk-015-02
+      - AH-chunk-013-03
+
+  transition_phrases:
+    padrao: "Transições lógicas e sequenciais, não emocionais. Usa marcadores numéricos ('first', 'second', 'next') e marcadores de momentum ('alright', 'now')."
+    exemplos:
+      - "Now, that being said..."
+      - "Alright, so..."
+      - "And so what I find is..."
+      - "The second piece of this is..."
+      - "Now here's another side benefit of..."
+    chunk_ids:
+      - AH-chunk-014-02
+      - AH-chunk-013-01
+      - AH-chunk-015-01
+
+# ═══════════════════════════════════════════════════════════════════════
+# TRANSFORMAÇÕES DE VOCABULÁRIO
+# ═══════════════════════════════════════════════════════════════════════
+
+vocabulary_transforms:
+  - conceito_comum: "objeção"
+    transformacao: "concern" — e imediatamente um sinal de compra ("Crazy people buy without obstacles. Normal people have concerns.")
+    chunk_ids:
+      - AH-chunk-013-02
+
+  - conceito_comum: "motivação" / "paixão"
+    transformacao: "convicção" / "crença" / "conviction" — interna e baseada em evidência, não em emoção
+    chunk_ids:
+      - AH-chunk-001-01
+      - AH-chunk-005-01
+
+  - conceito_comum: "demitir" / "fire"
+    transformacao: "cut" ou "let them go" — remove o peso emocional, torna processo estrutural
+    chunk_ids:
+      - AH-chunk-013-03
+      - AH-chunk-010-02
+
+  - conceito_comum: "script de vendas"
+    transformacao: "framework" — mais flexível, menos prescritivo, foco em estrutura não em texto
+    chunk_ids:
+      - AH-chunk-013-01
+
+  - conceito_comum: "medo de rejeição"
+    transformacao: "frustration tolerance gap" — reframe cognitivo que transforma dor em competência treinável
+    chunk_ids:
+      - AH-chunk-005-01
+
+  - conceito_comum: "descontar o preço"
+    transformacao: "prepayment discount" — mesma ação, framing oposto — você não desconta, você oferece vantagem por pagamento antecipado
+    chunk_ids:
+      - AH-chunk-014-01
+      - AH-chunk-014-02
+
+  - conceito_comum: "vender" / "fechar"
+    transformacao: "serve the prospect" + "ask for the sale" — separa o ato de servir do ato de pedir (ambos obrigatórios)
+    chunk_ids:
+      - AH-chunk-013-02
+
+  - conceito_comum: "preço alto demais"
+    transformacao: "discrepância de valor" — o problema nunca é o preço, é o entendimento do valor
+    chunk_ids:
+      - AH-chunk-013-02
+
+# ═══════════════════════════════════════════════════════════════════════
+# FINGERPRINT DE COMUNICAÇÃO (legado v1.0 + expansão v2.0)
+# ═══════════════════════════════════════════════════════════════════════
 
 communication_fingerprint:
-  sentence_structure: "Short declarative sentences. Loves rhetorical questions followed by immediate answer."
-  vocabulary_level: "Simple, conversational. No jargon. Uses 'right?' as punctuation."
-  analogy_sources: ["pop culture (Eminem, Viagra)", "food (restaurants, Cheesecake Factory)", "dating/relationships", "Amazon reviews"]
-  teaching_pattern: "Concept → Example → Reversal → Principle → Application"
+  sentence_structure: "Frases declarativas curtas. Ama perguntas retóricas seguidas de resposta imediata. Usa 'right?' como pontuação conversacional constante. Imperativo frequente."
+  vocabulary_level: "Simples, conversacional. Zero jargão. Analogias domésticas (comida, família, esporte). Acessa cultura popular (Eminem, Cheesecake Factory)."
+  analogy_sources:
+    - "pop culture (Eminem, Wolf of Wall Street)"
+    - "food / restaurants (Cheesecake Factory)"
+    - "domestic life (wife, brushing teeth)"
+    - "sport / physical performance"
+    - "historical figures (Phil Knight, David Ogilvy)"
+  teaching_pattern: "Conceito → Acrônimo/Nome → Exemplo (30s) → Número específico → Implicação prática"
+  repetition_style: "Repete o princípio antes e depois do exemplo para reforçar ancoragem"
+  humor_style: "Ocasional, autodepreciativo (Cheesecake Factory como 'finest establishment in the world'), e cultural — nunca às custas do prospect"

@@ -1,0 +1,37 @@
+# METODOLOGIAS — Sam Ovens (Setterlun University)
+# Camada L5 do DNA Cognitivo: Implementações passo-a-passo
+# Pipeline MCE v1.0 | Atualizado: 2026-03-16
+
+pessoa: "Sam Ovens"
+versao: "1.0.0"
+updated: "2026-03-16T08:00:00Z"
+total_entries: 1
+
+entries:
+  - id: "MET-SO-001"
+    insight_ref: "SO-INS-019"
+    nome: "Pizza Strategy — Diferenciação por Linguagem"
+    descricao: "Metodologia de ajuste progressivo de linguagem para encontrar o Sweet Spot Purple Ocean: reconhecível demais (Red Ocean) vs específico demais (Blue Ocean)"
+    passos:
+      - step: 1
+        acao: "Identifique a categoria base no Red Ocean"
+        exemplo: "'Pizza' — mercado enorme, demanda comprovada, competição extrema"
+      - step: 2
+        acao: "Aplique um tweak de linguagem específico e concreto"
+        exemplo: "'Wood-fired truffle pizza' — mesmo produto, percepção completamente diferente"
+        resultado: "Sweet spot Purple Ocean: ainda reconhecível, mas diferenciado"
+      - step: 3
+        acao: "Verifique se não foi longe demais (Blue Ocean)"
+        exemplo: "'Gourmet pizza for high-performing athletes' — específico demais, cria nova demanda do zero"
+        teste: "O prospect entende imediatamente o que você faz? Se não, voltou ao Blue Ocean"
+      - step: 4
+        acao: "Valide com o teste de pergunta de posicionamento"
+        teste: "Prospect pergunta 'What makes you different?' → ainda em Red Ocean. Prospect entende sem perguntar → Purple Ocean funcionando"
+    quando_usar: "Ao criar ou refinar posicionamento de produto, serviço, ou agência. Aplicável a qualquer categoria de mercado."
+    metricas_sucesso:
+      - "Prospects entendem a oferta sem explicação adicional"
+      - "Diferenciação óbvia sem precisar criar nova categoria"
+      - "Conversas sobre 'onde fica?' não 'quanto custa?'"
+    chunk_ids: ["SO-chunk-008", "SO-chunk-009"]
+    tags: ["pizza-strategy", "purple-ocean", "linguagem", "diferenciacao", "sweet-spot"]
+    confianca: "HIGH"

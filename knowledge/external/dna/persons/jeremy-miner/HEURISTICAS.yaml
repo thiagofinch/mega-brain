@@ -1,0 +1,223 @@
+# knowledge/external/dna/persons/jeremy-miner/HEURISTICAS.yaml
+# Camada L3 — Regras Práticas e Atalhos Decisórios
+# Gerado: MCE Pipeline 2026-03-16
+
+pessoa: "Jeremy Miner"
+versao: "1.0.0"
+data_extracao: "2026-03-16T10:30:00Z"
+total_elementos: 9
+pipeline: "MCE v1.0"
+
+heuristicas:
+
+  - id: "JM-HEU-001"
+    titulo: "Pattern Interrupt nos Primeiros 7-12 Segundos"
+    enunciado: "O prospect toma decisão inconsciente sobre confiar ou não confiar no vendedor dentro dos primeiros 7-12 segundos — o padrão deve ser quebrado nesse janela."
+    descricao: >
+      O cérebro processa sinais sociais (verbal, não-verbal, linguagem corporal, tonalidade)
+      antes de qualquer palavra de venda ser dita. A ativação do fight-or-flight ocorre
+      instantaneamente quando o prospect reconhece padrões de 'salesperson'. O pattern interrupt
+      — fazer algo inesperado na abertura — é o único lever que previne essa resposta reflexiva.
+    aplicacao: >
+      Na abertura, nunca comece com algo que soe como script de vendas. Use tonalidade
+      curiosa, perguntas neutras, ou enquadramentos de 'estou aqui para entender, não para vender'.
+      O prospect deve sentir algo diferente nos primeiros 7-12 segundos.
+    evidencias:
+      - chunk_id: "JM-chunk_003"
+        quote: "Within the first 7 to 12 seconds, your prospects are already picking up social cues from you — verbal, nonverbal, body language, tonality — that trigger their brain to react."
+        source: "JM-0003"
+      - chunk_id: "JM-chunk_008"
+        quote: "The pattern interrupt happens before the first question. It happens in how you show up."
+        source: "JM-0129"
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    status: "new"
+
+  - id: "JM-HEU-002"
+    titulo: "Expressão Facial como Controle Remoto da Voz"
+    enunciado: "Congruência entre expressão facial e tonalidade vocal é obrigatória — discrepância gera desconfiança inconsciente no prospect."
+    descricao: >
+      A face é literalmente o controle remoto da voz. Se você está tentando soar curioso
+      mas sua expressão é neutra ou tensa, a discrepância é percebida inconscientemente
+      pelo prospect. Para ativar tonalidade genuinamente curiosa, sorria levemente com
+      os olhos antes de fazer a pergunta. Para tonalidade preocupada, deixe a testa relaxar
+      com leve inclinação da cabeça. Face e voz devem ser congruentes.
+    aplicacao: >
+      Antes de ligar ou de uma reunião presencial, prepare a expressão facial para o tom
+      pretendido. Pratique na frente do espelho. Em vídeo, o prospect vê tanto a face quanto
+      ouve a voz — inconsistência é detectada e diminui confiança.
+    evidencias:
+      - chunk_id: "JM-chunk_006"
+        quote: "Your face expressions are the remote control to your tone."
+        source: "JM-0061"
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    status: "new"
+
+  - id: "JM-HEU-003"
+    titulo: "Aparência Não-Ameaçadora Reduz Resistência em 80-90%"
+    enunciado: "Aparecer como consultor confuso e prestativo — não como vendedor confiante — reduz resistência de vendas em 80-90%."
+    descricao: >
+      Vendedores que entram em conversas com total certeza e confiança performática ativam
+      resistência porque soam como 'alguém que quer me vender algo'. A heurística contraintuitiva
+      de Miner: aparecer levemente confuso, buscando entender, humilde — ativa o instinto
+      de ajudar no prospect. Quando você soa como um 'velho confuso', o prospect quer te ajudar.
+      Isso inverte a dinâmica de poder da conversa.
+    aplicacao: >
+      Enquadre perguntas com frases como 'Estou tentando entender...' ou 'Ajuda-me a entender...'
+      Nunca demonstre que você já sabe a resposta. Deixe o prospect ser o especialista
+      em sua própria situação — você é apenas o facilitador que está tentando compreender.
+    evidencias:
+      - chunk_id: "JM-chunk_007"
+        quote: "Just that alone lowered resistance by 80-90%. When you hear a confused old man, what do you want to do? You want to help."
+        source: "JM-0129"
+      - chunk_id: "JM-chunk_008"
+        quote: "The antidote to sales resistance is to never look like a salesperson."
+        source: "JM-0129"
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    status: "new"
+
+  - id: "JM-HEU-004"
+    titulo: "Prova de Conceito via Track Record Específico"
+    enunciado: "Números específicos e verificáveis de resultados pessoais são mais persuasivos que qualquer afirmação sobre metodologia."
+    descricao: >
+      Jeremy Miner usa seu próprio track record ($33M em comissões, ~$279M em produto vendido,
+      18 anos de carreira) não como auto-promoção, mas como prova de que NEPQ funciona no mundo real.
+      A heurística: nunca apresente uma metodologia sem evidência quantificada e específica
+      de que ela funcionou para você primeiro. Números precisos (não arredondados) são
+      mais críveis — '$33M' é mais crível que '$30M ou mais'.
+    aplicacao: >
+      Ao apresentar NEPQ ou qualquer framework, sempre ancora com números concretos de
+      resultados que você ou seus clientes tiveram. Evite afirmações vagas como 'isso funciona' —
+      prefira 'nossos clientes médios aumentaram close rate em X% nos primeiros 90 dias'.
+    evidencias:
+      - chunk_id: "JM-chunk_014"
+        quote: "During my 18-year sales career, I made a bit under $33 million in straight commissions — about $279 million worth of product sold."
+        source: "JM-0061"
+    prioridade: "MEDIUM"
+    confianca: "HIGH"
+    status: "new"
+
+  - id: "JM-HEU-005"
+    titulo: "80% dos Prospects Têm Complexo de Inferioridade"
+    enunciado: "A maioria dos prospects acredita que a transformação funciona para outros, mas não para eles — vender identidade, não produto, é o antídoto."
+    descricao: >
+      Estatisticamente, 80% dos prospects têm algum grau de complexo de inferioridade —
+      acreditam que não merecem, não conseguem, ou não são o tipo de pessoa que tem
+      sucesso com a solução. Isso explica por que prospects que logicamente entendem
+      o valor ainda não compram. A solução não é mais lógica — é vender a eles uma
+      nova identidade ('você é o tipo de pessoa que...') e mostrar pequenas vitórias
+      imediatas que comprovam que a transformação é possível para eles especificamente.
+    aplicacao: >
+      Antes de fechar, garanta que o prospect se vê na transformação. Use perguntas como
+      'Com base no que você me disse, o que você acha que mudaria em 90 dias?' — que
+      os fazem construir mentalmente a nova identidade. Micro-wins durante onboarding
+      confirmam a nova identidade e reduzem churn.
+    evidencias:
+      - chunk_id: "JM-chunk_015"
+        quote: "About 80% of the world — 80% of your clients — have statistically an inferior complex. You are not selling the product, you are selling them a new identity."
+        source: "JM-0034"
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    status: "new"
+
+  - id: "JM-HEU-006"
+    titulo: "Regra 70/30 — Prospect Fala 70%, Vendedor Pergunta 30%"
+    enunciado: "Quando o prospect fala 70% da conversa, ele essencialmente se vende — inversão da proporção é o sinal mais claro de abordagem old model."
+    descricao: >
+      A proporção ideal numa conversa NEPQ é 70% prospect falando, 30% vendedor perguntando.
+      Quando o vendedor fala mais, ele está pitching — e quanto mais pito, mais resistência.
+      A proporção 70/30 garante que o prospect articule seus próprios problemas, consequências
+      e desejos — criando urgência interna. O vendedor que fala 60%+ raramente fecha porque
+      está vendendo para si mesmo, não para o prospect.
+    aplicacao: >
+      Monitor mental: se você perceber que está falando mais que 30% do tempo, pare.
+      Faça uma pergunta. Volte à escuta. Em descoberta, o silêncio é produtivo —
+      deixe o prospect completar o pensamento. Nunca complete a frase do prospect.
+    evidencias:
+      - chunk_id: "JM-chunk_017"
+        quote: "The golden ratio in NEPQ is 70% prospect talking, 30% you asking questions. When the prospect talks 70% of the time, they are essentially selling themselves."
+        source: "JM-0066"
+      - chunk_id: "JM-chunk_018"
+        quote: "If you are talking more than 30% of the time, you are doing old school selling."
+        source: "JM-0066"
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    status: "new"
+
+  - id: "JM-HEU-007"
+    titulo: "Resposta a 'Por que você?' — Não Pitch, Pergunte"
+    enunciado: "Quando questionado 'por que devo escolher você?', nunca liste features — responda com 'você me dirá depois da nossa conversa' e faça perguntas."
+    descricao: >
+      A pergunta 'why you?' é uma armadilha para vendedores old model — eles imediatamente
+      listam features e benefícios, soando iguais a todos os outros. Miner inverte:
+      'Você vai me dizer depois da nossa conversa.' Isso estabelece o vendedor como
+      diagnostician (não como vendedor), gera curiosidade no prospect, e desloca
+      a conversa para descoberta. Ao final da conversa, o prospect diferencia o vendedor
+      automaticamente — porque ninguém mais o entendeu da forma que a conversa permitiu.
+    aplicacao: >
+      Resposta pronta para 'why you?': 'Honestamente, você vai ser a melhor pessoa para
+      me dizer isso depois da nossa conversa — por enquanto, deixa eu entender melhor
+      [situação deles].' Depois, execute NEPQ completo. No fechamento, o prospect articula
+      o diferencial por conta própria.
+    evidencias:
+      - chunk_id: "JM-chunk_016"
+        quote: "Why should I go with you? — The right answer is: 'We'll find out — let me ask you a few questions first.' Or: 'You'll tell me after we finish our conversation.'"
+        source: "JM-0090"
+      - chunk_id: "JM-chunk_004"
+        quote: "When all salespeople sound alike, they compete only on price, and the prospect has no reason to choose you specifically."
+        source: "JM-0008"
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    status: "new"
+
+  - id: "JM-HEU-008"
+    titulo: "Custo da Inação > Custo do Produto"
+    enunciado: "A decisão de compra acontece quando o prospect percebe que o custo de NÃO agir é maior que o custo de agir — nunca venda benefícios, venda escape da dor."
+    descricao: >
+      O prospect não compra pelo ganho esperado — compra para escapar de uma dor presente
+      ou futura. A equação é: custo de inação vs. custo de ação. Enquanto o custo
+      de inação não for percebido como maior, não há urgência real. Consequence questions
+      no NEPQ servem exatamente para amplificar a percepção do custo de inação —
+      não artificialmente, mas fazendo o prospect articular as consequências reais
+      de continuar como está.
+    aplicacao: >
+      Nunca encerre perguntas de problema sem perguntas de consequência. 'E o que acontece
+      se isso não mudar nos próximos 6-12 meses?' 'Como isso está afetando [outras áreas]?'
+      O prospect deve construir a percepção do custo de inação — você apenas faz as perguntas.
+    evidencias:
+      - chunk_id: "JM-chunk_019"
+        quote: "The cost of inaction must be greater than the cost of your product."
+        source: "JM-0054"
+      - chunk_id: "JM-chunk_012"
+        quote: "Prospects don't buy with logic — they buy to escape fear."
+        source: "JM-0026"
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    status: "new"
+
+  - id: "JM-HEU-009"
+    titulo: "Nunca 'Só Dando um Retorno' — Follow-Up sobre Problema Deles"
+    enunciado: "A frase 'just following up' sinaliza necessidade e fraqueza — todo follow-up deve ser enquadrado em torno do problema do prospect, não da sua quota."
+    descricao: >
+      'Just following up' é uma das frases mais prejudiciais em vendas porque imediatamente
+      sinaliza que o vendedor está monitorando seu próprio pipeline, não cuidando do prospect.
+      A heurística de Miner: todo follow-up deve dar ao prospect uma razão para re-engajar
+      baseada em ALGO DELES — um novo dado sobre o problema deles, uma pergunta de consequência,
+      uma insight relevante. Isso repositiona o follow-up de 'eu preciso saber sua decisão'
+      para 'eu estava pensando em algo relevante para você'.
+    aplicacao: >
+      Substitutos para 'just following up': 'Estava pensando na situação que você descreveu —
+      tinha uma pergunta.' 'Encontrei algo que pode ser relevante para o que você estava
+      enfrentando.' Sempre referencia algo específico da conversa anterior sobre a situação deles.
+    evidencias:
+      - chunk_id: "JM-chunk_021"
+        quote: "Never say 'just following up.' It signals weakness and neediness. The key is to give them a reason to re-engage that is about THEM and their problem — not about your follow-up quota."
+        source: "JM-0023"
+      - chunk_id: "JM-chunk_023"
+        quote: "Needy energy triggers the same fight-or-flight response as an aggressive animal cornering prey."
+        source: "JM-0129"
+    prioridade: "MEDIUM"
+    confianca: "HIGH"
+    status: "new"

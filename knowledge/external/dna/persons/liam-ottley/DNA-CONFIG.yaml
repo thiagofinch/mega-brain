@@ -17,21 +17,21 @@ persona:
 dna_layers:
   filosofias:
     file: "FILOSOFIAS.yaml"
-    count: 13
+    count: 14
   modelos_mentais:
     file: "MODELOS-MENTAIS.yaml"
-    count: 9
+    count: 11
   heuristicas:
     file: "HEURISTICAS.yaml"
-    count: 13
+    count: 15
   frameworks:
     file: "FRAMEWORKS.yaml"
-    count: 7
+    count: 10
   metodologias:
     file: "METODOLOGIAS.yaml"
-    count: 5
+    count: 9
 
-total_elements: 47
+total_elements: 59
 
 dna_sources:
   - id: "LO-001"
@@ -63,7 +63,7 @@ statistics:
   total_sources: 3
   extraction_date: "2026-03-13"
   updated: "2026-03-16"
-  version: "1.1.0"
+  version: "1.3.0"
 
 pipeline_run_2:
   date: "2026-03-16"
@@ -72,6 +72,25 @@ pipeline_run_2:
   new_items_added: 6
   reinforcements_applied: 10
   insight_ids: ["INS-LO-024", "INS-LO-025", "INS-LO-026", "INS-LO-027", "INS-LO-028", "INS-LO-029", "INS-LO-030", "INS-LO-031", "INS-LO-032", "INS-LO-033", "INS-LO-034", "INS-LO-035", "INS-LO-036", "INS-LO-037", "INS-LO-038", "INS-LO-039", "INS-LO-040", "INS-LO-041", "INS-LO-042"]
+
+pipeline_run_3:
+  date: "2026-03-16"
+  mode: "autonomous"
+  chunks_processed: "656-690"
+  new_chunks: 35
+  insights_applied: 27
+  new_dna_items_added: 12
+  reinforcements_applied: 15
+  files_changed: ["FILOSOFIAS.yaml (+1)", "MODELOS-MENTAIS.yaml (+2)", "HEURISTICAS.yaml (+2)", "FRAMEWORKS.yaml (+3)", "METODOLOGIAS.yaml (+4)", "VOICE-DNA.yaml (+6 phrases, +3 metaphors, +4 vocab)", "DNA-CONFIG.yaml (counts updated)"]
+  insight_ids: ["LO-001", "LO-002", "LO-003", "LO-004", "LO-005", "LO-006", "LO-007", "LO-008", "LO-009", "LO-010", "LO-011", "LO-012", "LO-013", "LO-014", "LO-015", "LO-016", "LO-017", "LO-018", "LO-019", "LO-020", "LO-021", "LO-022", "LO-023", "LO-024", "LO-025", "TH-AIOS-001", "TH-AIWF-001"]
+
+pipeline_run_4:
+  date: "2026-03-16"
+  mode: "full_autonomous_12_steps"
+  action: "agent_files_regeneration"
+  agent_files_created: ["AGENT.md", "SOUL.md", "MEMORY.md", "DNA-CONFIG.yaml"]
+  dossier_version: "3.1.0"
+  artifacts: "artifacts/mce/liam-ottley/COMPLETION.json"
 
 themes:
   - "AI Operating Systems (AIOS)"
@@ -84,3 +103,7 @@ themes:
   - "Revenue Per Employee"
   - "Agent Architecture"
   - "AI Sales Methodology"
+  - "Authority Flywheel"
+  - "Cold Email Acquisition"
+  - "Agent Handoff Patterns"
+  - "Warm Outreach Formula"

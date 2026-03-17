@@ -1,15 +1,16 @@
 # Layer: HEURISTICAS
 # Person: Jordan Lee
-# Version: 1.0.0
+# Version: 2.0.0
 # Generated: 2026-03-16
-# Source: MCE Pipeline v1.0
+# Updated: 2026-03-16 (MCE Pipeline v4.0 — YouTube batch +3 entries)
+# Source: MCE Pipeline v4.0 — Incremental YouTube update
 
 entries:
   - id: "INS-JL-019"
     nome: "Framework de Consequencias com Metricas"
     descricao: "Abaixo de 70% da meta por 2 meses = warning formal. 3 meses = desligamento. Acima de 100% = double commission. Acima de 150% por 6+ meses = Million Dollar Club."
     quote: "Below 70% target for 2 consecutive months: formal warning. Below 70% for 3 months: termination"
-    chunk_ids: ["chunk_712"]
+    chunk_ids: ["chunk_712", "chunk_JL_017"]
     priority: "HIGH"
     confidence: "HIGH"
 
@@ -17,7 +18,7 @@ entries:
     nome: "Compensacao Agressiva para Top Performers"
     descricao: "Top closers fazem $45-50k/mes com double commission. Top 10% recebe comissao dupla. Closer medio faz $8-12k/mes."
     quote: "Top sales reps can make $45-50k/month. Double commissions, Million-dollar club incentives"
-    chunk_ids: ["chunk_711"]
+    chunk_ids: ["chunk_711", "chunk_JL_033"]
     priority: "HIGH"
     confidence: "HIGH"
 
@@ -25,7 +26,7 @@ entries:
     nome: "300 Calls/Dia com Foco em Qualidade"
     descricao: "300 calls/dia com 70 closers = ~4.3 calls por closer. Foco em qualidade, nao volume bruto."
     quote: "300 sales calls per day capacity with 70 sales reps"
-    chunk_ids: ["chunk_701", "chunk_702"]
+    chunk_ids: ["chunk_701", "chunk_702", "chunk_JL_016"]
     priority: "HIGH"
     confidence: "HIGH"
 
@@ -33,7 +34,7 @@ entries:
     nome: "100% QC com AI"
     descricao: "100% de QC com AI, nao amostragem de 10%. De 2 calls revisadas/semana para 300+. Tempo de feedback de 1 semana para 24h."
     quote: "Created live sales call analyzer + offline transcript analyzer - went from 2 calls/week to every single one"
-    chunk_ids: ["chunk_709"]
+    chunk_ids: ["chunk_709", "chunk_JL_002", "chunk_JL_029"]
     priority: "HIGH"
     confidence: "HIGH"
 
@@ -41,7 +42,7 @@ entries:
     nome: "Sink or Swim 60-90 Dias"
     descricao: "Sink or Swim: 60-90 dias para provar performance. Se nao performa nesse periodo, provavelmente nunca vai."
     quote: "If not consegue performar em 60-90 dias, provavelmente nao vai conseguir nunca"
-    chunk_ids: ["chunk_710"]
+    chunk_ids: ["chunk_710", "chunk_JL_032"]
     priority: "HIGH"
     confidence: "HIGH"
 
@@ -49,7 +50,7 @@ entries:
     nome: "Job Ads como VSL"
     descricao: "Job ads como VSL: Recrute um nivel ACIMA do target. Postar vaga de Director atrai Manager ambicioso que quer subir."
     quote: "Post 'Sales Director' role to attract Sales Managers who want to move up"
-    chunk_ids: ["chunk_704"]
+    chunk_ids: ["chunk_704", "chunk_JL_013"]
     priority: "HIGH"
     confidence: "HIGH"
 
@@ -57,7 +58,7 @@ entries:
     nome: "Rewards Exclusivos para Quem Bate Meta"
     descricao: "Eventos e rewards so para quem bate meta. Quando todo mundo ganha premio, ninguem valoriza. Exclusividade cria status."
     quote: "Events only for target hitters. Double commissions. Million-dollar club incentives"
-    chunk_ids: ["chunk_711"]
+    chunk_ids: ["chunk_711", "chunk_JL_032"]
     priority: "HIGH"
     confidence: "HIGH"
 
@@ -81,7 +82,7 @@ entries:
     nome: "1-2 Contratacoes Mudam o Jogo"
     descricao: "1-2 contratacoes de alta competencia mudam o jogo. Nao precisa de 10, precisa de 1-2 que pensam como founders."
     quote: "You need one or two to change the game here"
-    chunk_ids: ["chunk_738", "chunk_742"]
+    chunk_ids: ["chunk_738", "chunk_742", "chunk_JL_015"]
     priority: "HIGH"
     confidence: "HIGH"
 
@@ -89,7 +90,7 @@ entries:
     nome: "Maior Offer = Menor Esforco"
     descricao: "Maior offer ($25k) = menor esforco de vendas. Sell less to make more. Nichar demais limita crescimento — abrir ICP + nova offer = started printing."
     quote: "Highest revenue offer is $25k (not 5k or 10k) - sell less to make more"
-    chunk_ids: ["chunk_700"]
+    chunk_ids: ["chunk_700", "chunk_JL_008"]
     priority: "HIGH"
     confidence: "HIGH"
 
@@ -99,4 +100,70 @@ entries:
     quote: "once you have the following, you just make an offer and even if it's crap landing page... you'll have so many warm hot viewers"
     chunk_ids: ["chunk_780"]
     priority: "MEDIUM"
+    confidence: "HIGH"
+
+  # === NOVOS ENTRIES (MCE v2.0) ===
+
+  - id: "INS-JL-v2-008"
+    nome: "Best Person on Hardest Problem"
+    descricao: "A pessoa mais talentosa do time deve sempre trabalhar no maior gargalo, nao no delivery rotineiro. Highest leverage = maxima prioridade."
+    quote: "A pessoa mais talentosa do time deve trabalhar no maior gargalo, nao no delivery do dia-a-dia."
+    chunk_ids: ["chunk_JL_005"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-v2-009"
+    nome: "Sell Less, Make More ($25k Offer)"
+    descricao: "Vender MENOS unidades a preco MAIOR gera mais dinheiro com menos esforco. Maior offer = $25k. Nao $5k, nao $10k."
+    quote: "Highest revenue offer is $25k (not 5k or 10k) - sell less to make more."
+    chunk_ids: ["chunk_JL_008"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-v2-010"
+    nome: "Savage nas Prioridades"
+    descricao: "Se X e o maior gargalo, dedique um DIA INTEIRO para isso — nao 1 hora aqui e ali. Prioridades nao se forcam sozinhas."
+    quote: "Se recrutamento e o maior gargalo, por que voce esta fazendo 1 hora aqui e ali? Faca o DIA INTEIRO."
+    chunk_ids: ["chunk_JL_044"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-v2-011"
+    nome: "Reps com Intencao"
+    descricao: "Repeticao sem intencao nao traz progresso. Como ir na academia todo dia mas comer mal — intencao explicita em cada rep e onde esta o crescimento."
+    quote: "Voce vai na academia todo dia. Ve pessoas que estao la ha anos e continuam gordas. Reps com intencao e onde esta o crescimento."
+    chunk_ids: ["chunk_JL_034"]
+    priority: "MEDIUM"
+    confidence: "HIGH"
+
+  - id: "INS-JL-v2-012"
+    nome: "Recrutamento Merece o Mesmo Esforco que Aquisicao de Clientes"
+    descricao: "Em algum momento a prioridade TEM que inverter de aquisicao de clientes para recrutamento. Contratar errado custa mais que perder um deal."
+    quote: "Most founders spend more time prospecting for clients than recruiting talent. And at some stage it has to switch."
+    chunk_ids: ["chunk_JL_015"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-043"
+    nome: "Formula Dois Contratacoes + Ads"
+    descricao: "Closer + Operador + Ads = $100K+/mes de lucro sem fazer nada no negocio. A distancia para o proximo nivel e menor do que parece — sao apenas 2 contratacoes e uma campanha."
+    quote: "You're two hires and ads away from 100k plus a month profit without doing anything in the business."
+    chunk_ids: ["JL-C-009"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-046"
+    nome: "Espelho de Velocidade - Launch in a Week"
+    descricao: "Quando algo esta funcionando para alguem na comunidade, lancamento em 1 semana (nao em meses). Velocidade de espelhamento e vantagem competitiva nao-linear."
+    quote: "If we were in a community or got an insight from someone that that was happening, we would have it launched within a week. That's how to grow quickly."
+    chunk_ids: ["JL-C-009"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-049"
+    nome: "ROAS Formula Previsivel de Ads"
+    descricao: "$3K/mes → 1-2 clientes; $6K → 4 clientes; $9K → 6 clientes. Uma vez calibrado o baseline, escala e linear e previsivel. Elimina o risco de escala."
+    quote: "You know if I put in 3,000 every month, I get one or two clients back. And you can scale the business cuz then you know if you put in 6,000, you're going to get four clients back."
+    chunk_ids: ["JL-C-009"]
+    priority: "HIGH"
     confidence: "HIGH"

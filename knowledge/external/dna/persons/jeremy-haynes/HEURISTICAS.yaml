@@ -1,0 +1,89 @@
+# knowledge/external/dna/persons/jeremy-haynes/HEURISTICAS.yaml
+# Fonte: Pipeline MCE v1.0 | 2026-03-16
+# Insights com tag [HEURISTICA] extraídos de AOBA, MMM, STA, UHTC, LYFC, IC, ST, WK
+
+pessoa: "Jeremy Haynes"
+slug: "jeremy-haynes"
+versao: "1.0.0"
+updated: "2026-03-16T10:50:00Z"
+total_entries: 6
+
+heuristicas:
+
+  - id: "JH-H001"
+    insight_id: "JH-013"
+    titulo: "Regra dos 3 Tiers de PR para Construção de Autoridade"
+    declaracao: "Marketable headline tier rule: free distribution (LinkedIn posts) for brand building, $20-50 for newswire syndication, $1K-5K for Forbes/major publications."
+    quote: "Three tiers: free — LinkedIn and your blog. Twenty to fifty dollars — PRWeb, EIN Presswire, newswire distribution. One thousand to five thousand — Forbes, Inc, guaranteed placement."
+    chunk_ids: ["chunk_666"]
+    fonte: "JH-AOBA"
+    programa: "Agency Owner Black Academy"
+    threshold: "$0 (free) | $20-50 (newswire) | $1K-5K (top publications)"
+    prioridade: "HIGH"
+    aplicacao: "PR strategy, authority building, content distribution"
+    confianca: "HIGH"
+
+  - id: "JH-H002"
+    insight_id: "JH-014"
+    titulo: "Fórmula Authority Hijack: Investimento → Resultado → Publicação → Par"
+    declaracao: "The authority hijack formula: invest $40K in a mentor's program → implement → get results → publish results → teach what you learned → position as peer, not student."
+    quote: "Forty thousand to Grant Cardone. Applied everything. Hit $1.8M/month. Published the results. Became his peer in the market's mind."
+    chunk_ids: ["chunk_657", "chunk_658"]
+    fonte: "JH-AOBA"
+    programa: "Agency Owner Black Academy"
+    threshold: "Investimento alto o suficiente para ser levado a sério → implementação completa → resultado superior à média"
+    prioridade: "HIGH"
+    aplicacao: "Market entry, positioning, mentor selection ROI"
+    confianca: "HIGH"
+
+  - id: "JH-H003"
+    insight_id: "JH-015"
+    titulo: "Threshold do Setter-Closer: 1 em 5 Fechamentos = Hora de Contratar Setter"
+    declaracao: "Setter-Closer model threshold: once you have a consistent offer closing at 20%+, hire a setter to qualify leads before they reach the closer."
+    quote: "When you're closing 1 in 5 consistently — that's your signal. Add a setter. They filter the trash so the closer only sees buyers."
+    chunk_ids: ["chunk_696"]
+    fonte: "JH-STA"
+    programa: "Sales Training Academy"
+    threshold: "Close rate >= 20% (1/5) consistently"
+    prioridade: "HIGH"
+    aplicacao: "Sales team structure, scaling decision"
+    confianca: "HIGH"
+
+  - id: "JH-H004"
+    insight_id: "JH-016"
+    titulo: "QA Mínimo: 2 Calls Por Closer Por Semana (1 Win + 1 Loss)"
+    declaracao: "QA framework minimum: review 2 calls per closer per week — one they won, one they lost. Pattern recognition requires both data points."
+    quote: "Two calls a week minimum — one win, one loss. You learn different things from each. The pattern lives in the contrast."
+    chunk_ids: ["chunk_700"]
+    fonte: "JH-WK"
+    programa: "Weekly Calls"
+    threshold: "2 calls/week minimum (1 win, 1 loss)"
+    prioridade: "HIGH"
+    aplicacao: "Sales team quality assurance, coaching cadence"
+    confianca: "HIGH"
+
+  - id: "JH-H005"
+    insight_id: "JH-017"
+    titulo: "Vídeo Frio de 60-90 Segundos Converte 3-5x Mais Que Texto"
+    declaracao: "Cold video pitch conversion rule: personalized 60-90 second video outperforms text cold outreach by 3-5x for high-ticket B2B offers."
+    quote: "Sixty to ninety seconds. Personalized. Their name, their company, one specific observation. Video converts three to five times better than text at this price point."
+    chunk_ids: ["chunk_673"]
+    fonte: "JH-LYFC"
+    programa: "Lead Your First Client"
+    threshold: "60-90 segundos | personalizado | conversão 3-5x vs texto"
+    prioridade: "HIGH"
+    aplicacao: "Cold outreach, lead generation, first client acquisition"
+    confianca: "MEDIUM"
+
+  - id: "JH-H006"
+    insight_id: "JH-029"
+    titulo: "Pricing ROI 5:1 — Se Entrega $100K de Valor, Cobra $20K"
+    declaracao: "Value-based pricing rationale: never price on hours — price on the economic outcome for the client. If you save them $100K, charge $20K (5:1 ROI guarantee)."
+    quote: "You deliver $100K in value. What's the right price? Twenty thousand? That's a five-to-one ROI. They'd be irrational to say no."
+    chunk_ids: ["chunk_664"]
+    fonte: "JH-AOBA"
+    programa: "Agency Owner Black Academy"
+    threshold: "Preço = Valor gerado / 5 (ROI mínimo 5:1 para o cliente)"
+    prioridade: "HIGH"
+    aplicacao: "Pricing strategy, value-based selling, offer positioning"
+    confianca: "HIGH"

@@ -145,10 +145,26 @@ philosophies:
     raiz: "knowledge/external/inbox/liam-ottley/podcasts/The Biggest Shift in Business Since the Internet Just Happened [youtube.com_watch_v=oC1h922cDoY].txt"
     reinforced_chunks: ["chunk_643"]
 
+  # ---- New from Autonomous Run 2026-03-16, chunks 656-690 ----
+
+  - id: FIL-LO-014
+    name: "AIOS Resolve o Paradoxo do Fundador"
+    description: >
+      O fundador tem a perspectiva máxima do negócio mas o tempo mínimo de execução.
+      O AIOS resolve este paradoxo: multiplica a capacidade de execução enquanto
+      preserva a perspectiva estratégica única que só o fundador possui. O AIOS
+      não substitui o fundador — amplifica sua perspectiva com execução de nível
+      de equipe enterprise.
+    quote: "Not only do I have the most perspective and understanding of the business. I now have a tool that can help me do this rapidly."
+    insight_ref: "TH-AIOS-001"
+    source: "The Biggest Shift in Business Since the Internet Just Happened"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/The Biggest Shift in Business Since the Internet Just Happened [youtube.com_watch_v=oC1h922cDoY].txt"
+    new_chunks: ["chunk_660"]
+
 metadata:
-  total_items: 13
+  total_items: 14
   source_person: "Liam Ottley"
   source_count: 3
   extraction_date: "2026-03-13"
   updated: "2026-03-16"
-  version: "1.1.0"
+  version: "1.2.0"

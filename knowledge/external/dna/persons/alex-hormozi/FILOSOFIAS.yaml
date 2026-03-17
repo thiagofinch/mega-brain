@@ -1,12 +1,14 @@
-version: '1.0'
+version: '2.1'
 person: alex-hormozi
 layer: PHILOSOPHIES
-last_updated: '2026-03-15T20:59:53.216059+00:00'
+updated: '2026-03-16T13:30:00Z'
+pipeline_run: MCE-AH-2026-03-16-R2
+prior_run: MCE-AH-2026-03-16
+total_entries: 14
 entries:
 - id: fil_001
-  name: 4.7 stars/3000 ratings > 5 stars/19. Negative reviews valida
-  description: 4.7 stars/3000 ratings > 5 stars/19. Negative reviews validate positive
-    ones.
+  name: 4.7 stars/3000 ratings > 5 stars/19. Negative reviews validate positive ones.
+  description: 4.7 stars/3000 ratings > 5 stars/19. Negative reviews validate positive ones.
   source_chunks:
   - chunk_631
   confidence: 0.88
@@ -17,4 +19,146 @@ entries:
   source_chunks:
   - chunk_634
   confidence: 0.85
+  priority: MEDIUM
+- id: INS-AH-019
+  name: Conviction is the #1 sales multiplier
+  description: A salesperson's belief in their product creates an electromagnetic transfer
+    of certainty to the prospect. Weak conviction produces weak close rates regardless
+    of technique.
+  quote: "Conviction is the #1 multiplier. If your salesperson doesn't believe in
+    the product, the prospect will feel it. Belief transfers."
+  source_chunks:
+  - AH-chunk-001-01
+  - AH-chunk-003-01
+  source_id: AH-0001
+  confidence: 0.95
+  priority: HIGH
+- id: INS-AH-022
+  name: Passion follows proficiency, not the other way around
+  description: Do not follow your passion — follow your skill. When you get good at
+    something, the enjoyment comes. Chasing passion before competence leads to quitting.
+  quote: "Don't follow your passion. Follow your proficiency. When you get good at
+    something, you start to like it. The passion comes after the skill."
+  source_chunks:
+  - AH-chunk-005-01
+  source_id: AH-0005
+  confidence: 0.95
+  priority: HIGH
+- id: INS-AH-024
+  name: Volume creates mastery (Eminem principle)
+  description: Do the thing in massive volume before trying to be creative or innovative.
+    Eminem wrote thousands of rhymes. Masters of any craft did the foundational work
+    at scale. Creativity comes AFTER mastery of fundamentals.
+  quote: "Eminem wrote thousands and thousands of rhymes before anyone knew who he
+    was. Volume is the path. You don't get to be creative until you've done the thing
+    more than anyone else."
+  source_chunks:
+  - AH-chunk-005-02
+  - AH-chunk-001-02
+  source_id: AH-0005
+  confidence: 0.95
+  priority: HIGH
+- id: INS-AH-028
+  name: Proof Over Promise
+  description: The era of claiming results is over. Real proof (before/after, case
+    studies, documented results) is the only thing that moves sophisticated buyers.
+  quote: "We live in an era where claims don't work. Everyone makes claims. The only
+    thing that works is proof. Documented, verifiable proof from real people."
+  source_chunks:
+  - AH-chunk-018-02
+  source_id: AH-0018
+  confidence: 0.90
+  priority: HIGH
+- id: INS-AH-029
+  name: Clear Over Clever
+  description: In all marketing and messaging, clarity always beats cleverness. If
+    someone has to think to understand what you're selling, you've already lost them.
+  quote: "Clear beats clever every single time. If your message requires someone to
+    be smart to understand it, you've already lost."
+  source_chunks:
+  - AH-chunk-018-03
+  source_id: AH-0018
+  confidence: 0.95
+  priority: HIGH
+- id: INS-AH-031
+  name: Fewer-Better-People principle
+  description: Instead of hiring many salespeople, invest in fewer but exceptional
+    ones with better compensation, support, and development. Revenue-per-rep goes
+    up, management overhead goes down.
+  quote: "Fewer, better people is always the answer. One exceptional rep earning
+    $200k beats three average reps earning $80k each."
+  source_chunks:
+  - AH-chunk-017-02
+  source_id: AH-0017
+  confidence: 0.90
+  priority: HIGH
+- id: INS-AH-049
+  name: Natural salespeople teach by instinct, not process
+  description: The value in formal sales training is breaking down unconsciously competent
+    behaviors into conscious, repeatable processes that anyone can learn.
+  quote: "All the people that I know who teach sales are natural born salesmen. But
+    it doesn't mean that anyone else can't become a great salesman — it just means
+    you might have to have more reps to get there."
+  source_chunks:
+  - AH-chunk-015-01
+  source_id: AH-0015
+  confidence: 0.88
+  priority: MEDIUM
+- id: INS-AH-054
+  name: Scaling Conviction via volume of personal closes
+  description: Alex's 30-minute sales training framework focuses on building conviction
+    as the core skillset — using 4,000+ personal closes as experiential proof that
+    eliminates self-doubt in reps.
+  quote: "I've personally closed 4,000 people in one-on-one sales. From the streets.
+    The experience compounds."
+  source_chunks:
+  - AH-chunk-001-01
+  - AH-chunk-013-03
+  source_id: AH-0001
+  confidence: 0.88
+  priority: MEDIUM
+- id: INS-AH-058
+  name: You can never make a sale if you never ask for it
+  description: The cardinal rule of sales is asking for the close on every call,
+    every time — not hoping the prospect will volunteer to buy.
+  quote: "You can never make a sale if you never ask for it."
+  source_chunks:
+  - AH-chunk-013-03
+  source_id: AH-0013
+  confidence: 0.98
+  priority: HIGH
+- id: INS-AH-060
+  name: Growth businesses must choose who NOT to serve
+  description: Trying to serve everyone dilutes the offer and confuses the market.
+    The most profitable businesses have the clearest 'not for you' criteria.
+  quote: "The clearest brands know exactly who they're NOT for. When you try to serve
+    everyone, you serve no one well."
+  source_chunks:
+  - AH-chunk-019-02
+  source_id: AH-0019
+  confidence: 0.85
+  priority: HIGH
+- id: INS-AH-064
+  name: Content mission — making people not broke
+  description: Hormozi's stated mission is mass wealth creation as a public service.
+    Content is the delivery mechanism for frameworks that eliminate financial struggle
+    at scale.
+  quote: "The point of this channel is there's a lot of people who are broke, and
+    I make these videos so that you are not one of them."
+  source_chunks:
+  - AH-chunk-014-02
+  source_id: AH-0014
+  confidence: 0.99
+  priority: MEDIUM
+- id: INS-AH-067
+  name: Entrepreneurs are more adaptable than employees — accept this gap
+  description: Entrepreneurs must meet people where they are emotionally when implementing
+    change. Founder's adaptability is a feature, not a universal standard.
+  quote: "You're the entrepreneur because you tend to be a little bit more adaptable,
+    a little bit more flexible, a little bit more growth-oriented. But you have to
+    meet people where they're at."
+  source_chunks:
+  - AH-chunk-014-01
+  source_id: AH-0014
+  confidence: 0.88
   priority: MEDIUM

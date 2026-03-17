@@ -1,15 +1,16 @@
 # Layer: FRAMEWORKS
 # Person: Jordan Lee
-# Version: 1.0.0
+# Version: 2.1.0
 # Generated: 2026-03-16
-# Source: MCE Pipeline v1.0
+# Updated: 2026-03-16 (MCE Pipeline v4.0 — YouTube batch +1 entry)
+# Source: MCE Pipeline v4.0 — Incremental YouTube update
 
 entries:
   - id: "INS-JL-029"
     nome: "People, Process, Management"
     descricao: "Framework de diagnostico: Todo problema de negocio cai numa dessas 3 categorias. Diagnostique ANTES de agir. O erro mais comum e mudar processo quando o problema e pessoa."
     quote: "Every business problem falls into one of these 3 categories: People, Process, or Management"
-    chunk_ids: ["chunk_707", "chunk_736", "chunk_740"]
+    chunk_ids: ["chunk_707", "chunk_736", "chunk_740", "chunk_JL_027"]
     priority: "HIGH"
     confidence: "HIGH"
 
@@ -17,7 +18,7 @@ entries:
     nome: "Do, Document, Delegate"
     descricao: "Faca primeiro, documente em SOP/video, depois contrate com playbook pronto. Nunca delegue o que nao documentou."
     quote: "Never delegate what you haven't documented. The chaos comes from delegating without process"
-    chunk_ids: ["chunk_705"]
+    chunk_ids: ["chunk_705", "chunk_JL_014"]
     priority: "HIGH"
     confidence: "HIGH"
 
@@ -25,7 +26,7 @@ entries:
     nome: "Hierarquia de Vendas"
     descricao: "Sales Coach (100% QC) -> Team Leads (com overrides) -> Closers (em squads) -> RevOps (infraestrutura). Estrutura que escala com qualidade."
     quote: "Sales team structure: closers, team leads with overrides, RevOps, sales coach that watches calls"
-    chunk_ids: ["chunk_701", "chunk_702"]
+    chunk_ids: ["chunk_701", "chunk_702", "chunk_JL_002"]
     priority: "HIGH"
     confidence: "HIGH"
 
@@ -33,7 +34,7 @@ entries:
     nome: "Framework de Consequencias"
     descricao: "<70% meta 2 meses = warning, 3 meses = demissao, >100% = double commission, >150% 6+ meses = Million Dollar Club. Sem surpresas, regras claras desde o dia 1."
     quote: "Below 70% for 2 consecutive months: warning. Below 70% for 3 months: termination. Above 100%: double commission"
-    chunk_ids: ["chunk_712"]
+    chunk_ids: ["chunk_712", "chunk_JL_017"]
     priority: "HIGH"
     confidence: "HIGH"
 
@@ -41,6 +42,42 @@ entries:
     nome: "Growth Partner Model"
     descricao: "Setup fee ($5-15k) + Monthly retainer ($5-10k) + Revenue share. Margem 70-80%. Modelo de pricing que alinha incentivos e gera cash flow previsivel."
     quote: "a growth partner model where we charge a fee and a revenue share and really help scale up businesses"
-    chunk_ids: ["chunk_713", "chunk_729"]
+    chunk_ids: ["chunk_713", "chunk_729", "chunk_JL_007"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  # === NOVOS ENTRIES (MCE v2.0) ===
+
+  - id: "INS-JL-v2-013"
+    nome: "PE Readiness Framework"
+    descricao: "Empresa pronta para private equity quando tem: margens altas (70-80%), tech proprietario, receita recorrente, e baixa dependencia do founder (3 insubstituiveis em 240)."
+    quote: "A empresa esta em posicao de PE readiness com margens altas, tech proprietario, e baixa dependencia do fundador."
+    chunk_ids: ["chunk_JL_020", "chunk_JL_048"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-v2-014"
+    nome: "Cultura Auto-Selecionante"
+    descricao: "Expectativas altissimas + rewards exclusivos para top performers = cultura que auto-seleciona. Medianos saem voluntariamente, A-players ficam e trazem outros A-players."
+    quote: "When we switched to more toxic, we just got much better team members."
+    chunk_ids: ["chunk_JL_031", "chunk_JL_032", "chunk_JL_033"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-v2-015"
+    nome: "Outreach Multi-Canal Simultaneo"
+    descricao: "Recrutamento e outreach exigem testar TODOS os canais ao mesmo tempo: LinkedIn ads, recruiters, referral fee, rede, Instagram. Ate encontrar o que funciona."
+    quote: "Nao pode ser 'testamos um pouco aqui e ali.' Tem que ser: todos os canais. Ate encontrar."
+    chunk_ids: ["chunk_JL_015", "chunk_JL_049"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  # === NOVOS ENTRIES (MCE v4.0) ===
+
+  - id: "THM-JL-004"
+    nome: "Liberdade por Design"
+    descricao: "O modelo de agencia AI e construido intencionalmente para 4 horas de trabalho/dia, 70-80% de margem, tudo automatizado. Liberdade nao e sorte — e arquitetura de negocio intencional."
+    quote: "Everything's automated. Life is amazing. Only 4-hour work days."
+    chunk_ids: ["JL-C-009"]
     priority: "HIGH"
     confidence: "HIGH"

@@ -1,0 +1,91 @@
+# DNA-CONFIG — Sam Ovens (Setterlun University)
+# Configuração e contagens do DNA Cognitivo
+# Pipeline MCE v1.0 | Atualizado: 2026-03-16
+
+pessoa: "Sam Ovens"
+slug: "sam-oven"
+bucket: "course"
+corpus: "sam-ovens-knowledge"
+versao: "1.0.0"
+updated: "2026-03-16T08:00:00Z"
+
+sources:
+  - id: "SO001"
+    titulo: "Pricing e Criação de Ofertas"
+    path: "knowledge/external/sources/sam-oven/07-PRICING-OFERTAS.md"
+  - id: "SO002"
+    titulo: "Purple Ocean Method"
+    path: "knowledge/external/sources/sam-oven/PURPLE-OCEAN.md"
+  - id: "SO_INDEX"
+    titulo: "Index de Fontes"
+    path: "knowledge/external/sources/sam-oven/_INDEX.md"
+
+pipeline_mce:
+  versao: "1.0"
+  run_date: "2026-03-16"
+  chunks_total: 14
+  insights_total: 27
+
+dna_layers:
+  L1_filosofias:
+    arquivo: "knowledge/external/dna/persons/sam-oven/FILOSOFIAS.yaml"
+    total_entries: 8
+    ids: ["FIL-SO-001", "FIL-SO-002", "FIL-SO-003", "FIL-SO-004", "FIL-SO-005", "FIL-SO-006", "FIL-SO-007", "FIL-SO-008"]
+  L2_modelos_mentais:
+    arquivo: "knowledge/external/dna/persons/sam-oven/MODELOS-MENTAIS.yaml"
+    total_entries: 6
+    ids: ["MM-SO-001", "MM-SO-002", "MM-SO-003", "MM-SO-004", "MM-SO-005", "MM-SO-006"]
+  L3_heuristicas:
+    arquivo: "knowledge/external/dna/persons/sam-oven/HEURISTICAS.yaml"
+    total_entries: 7
+    ids: ["HEU-SO-001", "HEU-SO-002", "HEU-SO-003", "HEU-SO-004", "HEU-SO-005", "HEU-SO-006", "HEU-SO-007"]
+  L4_frameworks:
+    arquivo: "knowledge/external/dna/persons/sam-oven/FRAMEWORKS.yaml"
+    total_entries: 3
+    ids: ["FW-SO-001", "FW-SO-002", "FW-SO-003"]
+  L5_metodologias:
+    arquivo: "knowledge/external/dna/persons/sam-oven/METODOLOGIAS.yaml"
+    total_entries: 1
+    ids: ["MET-SO-001"]
+
+voice_dna:
+  arquivo: "knowledge/external/dna/persons/sam-oven/VOICE-DNA.yaml"
+  signature_phrases: 6
+  behavioral_states: 4
+  tone_certainty: 9.0
+  tone_authority: 8.5
+  tone_warmth: 3.5
+  tone_directness: 9.5
+
+behavioral_patterns:
+  total: 5
+  ids: ["BP-SO-001", "BP-SO-002", "BP-SO-003", "BP-SO-004", "BP-SO-005"]
+
+identity:
+  value_hierarchy_total: 5
+  tier1_count: 3
+  tier2_count: 2
+  obsessions_total: 2
+  master_obsession: "OBS-SO-001"
+  paradoxes_total: 2
+
+artifacts:
+  chunks_state: "artifacts/mce/sam-oven/CHUNKS-STATE.json"
+  canonical_map: "artifacts/mce/sam-oven/CANONICAL-MAP.json"
+  insights_state: "artifacts/mce/sam-oven/INSIGHTS-STATE.json"
+
+dossier:
+  path: "knowledge/external/dossiers/persons/DOSSIER-SAM-OVEN.md"
+  versao: "3.0"
+
+agent_files:
+  agent_md: "agents/external/sam-oven/AGENT.md"
+  soul_md: "agents/external/sam-oven/SOUL.md"
+  memory_md: "agents/external/sam-oven/MEMORY.md"
+  dna_config: "agents/external/sam-oven/DNA-CONFIG.yaml"
+
+totals:
+  dna_entries_total: 25  # 8+6+7+3+1
+  insights_extracted: 27
+  chunks_processed: 14
+  files_processed: 2

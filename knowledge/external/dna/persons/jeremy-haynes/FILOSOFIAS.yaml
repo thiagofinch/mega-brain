@@ -1,0 +1,83 @@
+# knowledge/external/dna/persons/jeremy-haynes/FILOSOFIAS.yaml
+# Fonte: Pipeline MCE v1.0 | 2026-03-16
+# Insights com tag [FILOSOFIA] extraídos de AOBA, MMM, STA, UHTC, LYFC, IC, ST, WK
+
+pessoa: "Jeremy Haynes"
+slug: "jeremy-haynes"
+versao: "1.0.0"
+updated: "2026-03-16T10:50:00Z"
+total_entries: 6
+
+filosofias:
+
+  - id: "JH-F001"
+    insight_id: "JH-001"
+    titulo: "Vender Resultado, Nunca Tempo"
+    declaracao: "Experts selling time are trapped; selling results at scale requires productizing transformation, not hours."
+    quote: "If you're selling time, you're capping yourself. Clients pay for outcomes. Package the outcome, not the effort."
+    chunk_ids: ["chunk_661"]
+    fonte: "JH-AOBA"
+    programa: "Agency Owner Black Academy"
+    prioridade: "HIGH"
+    aplicacao: "Pricing, offer design, agency business model"
+    confianca: "HIGH"
+
+  - id: "JH-F002"
+    insight_id: "JH-002"
+    titulo: "Autoridade é Hijackada, Não Construída do Zero"
+    declaracao: "Authority is hijacked, not built — attach yourself to a recognized expert's framework, use it, get results, then own the narrative."
+    quote: "I paid $40,000 to learn Grant Cardone's framework. I applied it, made $1.8M/month, then I taught it. Now people pay me what they paid him."
+    chunk_ids: ["chunk_657"]
+    fonte: "JH-AOBA"
+    programa: "Agency Owner Black Academy"
+    prioridade: "HIGH"
+    aplicacao: "Positioning, market entry, authority building"
+    confianca: "HIGH"
+
+  - id: "JH-F003"
+    insight_id: "JH-003"
+    titulo: "Padrões Compõem — O Mínimo Vira Normal"
+    declaracao: "Standards compound over time — the ceiling of your business is the floor of your standards. Raise the minimum, not the maximum."
+    quote: "Your business doesn't rise to your goals. It falls to your standards. Every standard you let slide becomes your new normal."
+    chunk_ids: ["chunk_670"]
+    fonte: "JH-MMM"
+    programa: "Million Money Mindset"
+    prioridade: "HIGH"
+    aplicacao: "Team management, performance culture, quality"
+    confianca: "HIGH"
+
+  - id: "JH-F004"
+    insight_id: "JH-004"
+    titulo: "Cultura como Identidade, Não Regras"
+    declaracao: "Growth culture must be codified with named values that become an identity, not rules. People don't follow policies; they embody identities."
+    quote: "Our four core values: Leadership, Service, Sacrifice, Execution. Not just words on a wall — they are who we are. SQ1."
+    chunk_ids: ["chunk_683"]
+    fonte: "JH-IC"
+    programa: "Inner Circle"
+    prioridade: "HIGH"
+    aplicacao: "Culture building, team leadership, hiring"
+    confianca: "HIGH"
+
+  - id: "JH-F005"
+    insight_id: "JH-005"
+    titulo: "Capital Gains Sobre Income — Construir para o Equity Event"
+    declaracao: "Capital gains beat income in the long game — structure businesses to produce equity events, not just revenue."
+    quote: "Income is taxed at 50%. Capital gains at 25%. The wealthy build companies to sell, not just to operate. I want the equity event."
+    chunk_ids: ["chunk_695"]
+    fonte: "JH-AOBA"
+    programa: "Agency Owner Black Academy"
+    prioridade: "HIGH"
+    aplicacao: "Financial architecture, business structure, exit planning"
+    confianca: "HIGH"
+
+  - id: "JH-F006"
+    insight_id: "JH-006"
+    titulo: "Convicção é a Variável Central de Venda"
+    declaracao: "Conviction is the core selling variable — VAK (Visual, Auditory, Kinesthetic) alignment in your communication triggers belief transfer."
+    quote: "You can't close what you don't believe. VAK — visual, auditory, kinesthetic. Hit all three sensory channels and conviction transfers."
+    chunk_ids: ["chunk_671"]
+    fonte: "JH-STA"
+    programa: "Sales Training Academy"
+    prioridade: "HIGH"
+    aplicacao: "Sales, coaching, leadership"
+    confianca: "HIGH"

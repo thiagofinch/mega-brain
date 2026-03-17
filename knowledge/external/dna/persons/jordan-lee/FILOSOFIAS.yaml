@@ -1,15 +1,16 @@
 # Layer: FILOSOFIAS
 # Person: Jordan Lee
-# Version: 1.0.0
+# Version: 2.0.0
 # Generated: 2026-03-16
-# Source: MCE Pipeline v1.0
+# Updated: 2026-03-16 (MCE Pipeline v4.0 — YouTube batch +3 entries)
+# Source: MCE Pipeline v4.0 — Incremental YouTube update
 
 entries:
   - id: "INS-JL-001"
     nome: "Sistemas sobre Pessoas"
     descricao: "Sistemas brilhantes executados por pessoas competentes > pessoas brilhantes fazendo coisas brilhantes. Quando a pessoa sai, o sistema continua."
     quote: "240 employees total, but only 3 irreplaceable people besides Jacob"
-    chunk_ids: ["chunk_700"]
+    chunk_ids: ["chunk_700", "chunk_JL_001"]
     priority: "HIGH"
     confidence: "HIGH"
 
@@ -17,7 +18,7 @@ entries:
     nome: "Competencia sobre Experiencia"
     descricao: "Competencia > Experiencia na contratacao. Jovem faminto de 22 que aprende rapido supera veterano de 35 cheio de vicios."
     quote: "If you're 40 and you're not rich yet, you either have been working on the wrong thing or you're just shit"
-    chunk_ids: ["chunk_703"]
+    chunk_ids: ["chunk_703", "chunk_JL_011"]
     priority: "HIGH"
     confidence: "HIGH"
 
@@ -25,7 +26,7 @@ entries:
     nome: "Urgencia como Diferencial Competitivo"
     descricao: "Urgencia como diferencial competitivo. Nao e 'vamos marcar reuniao terca', e 'resolvendo agora'. Faz em 1 ano o que outros fazem em 5."
     quote: "Elon Musk, Jeff Bezos have highest urgency. 'We're getting on a call now, solving it now'"
-    chunk_ids: ["chunk_706"]
+    chunk_ids: ["chunk_706", "chunk_JL_026"]
     priority: "HIGH"
     confidence: "HIGH"
 
@@ -33,7 +34,7 @@ entries:
     nome: "Play to Win vs Play Not to Lose"
     descricao: "Sucesso inicial e perigoso — te faz conservador quando deveria ser agressivo. Modo defensivo mata crescimento."
     quote: "Falling into defensive mode at 500-700k/month hurt growth"
-    chunk_ids: ["chunk_708", "chunk_721", "chunk_722"]
+    chunk_ids: ["chunk_708", "chunk_721", "chunk_JL_028"]
     priority: "HIGH"
     confidence: "HIGH"
 
@@ -41,7 +42,7 @@ entries:
     nome: "Cultura Auto-Selecionante de Alta Performance"
     descricao: "High performance nao combina com conforto. Cultura 'toxica' atrai A-players e auto-seleciona: medianos nao aguentam e saem."
     quote: "When we switched to more toxic, we just got much better team members"
-    chunk_ids: ["chunk_710", "chunk_712"]
+    chunk_ids: ["chunk_710", "chunk_712", "chunk_JL_031"]
     priority: "HIGH"
     confidence: "HIGH"
 
@@ -49,7 +50,7 @@ entries:
     nome: "CEOs sao Unreasonable"
     descricao: "CEOs sao pessoas unreasonable. Se voce esta sendo razoavel, nao esta fazendo coisas grandes acontecerem."
     quote: "If we're being unreasonable, good, because CEOs are unreasonable people. Because of that they make things happen"
-    chunk_ids: ["chunk_741"]
+    chunk_ids: ["chunk_741", "chunk_JL_030"]
     priority: "HIGH"
     confidence: "HIGH"
 
@@ -57,7 +58,7 @@ entries:
     nome: "Cair ao Nivel dos Sistemas"
     descricao: "Voce nao sobe ao nivel da sua ambicao, voce CAI ao nivel dos seus sistemas e treinamento."
     quote: "You don't fall to your best, you actually fall to the level of your training. And that's the same in business with systems"
-    chunk_ids: ["chunk_716"]
+    chunk_ids: ["chunk_716", "chunk_JL_034"]
     priority: "HIGH"
     confidence: "HIGH"
 
@@ -65,7 +66,7 @@ entries:
     nome: "AI Business 70-80% Margem"
     descricao: "AI business tem 70-80% de margem liquida vs ecom com 10%. O barco importa mais do que a remada (Warren Buffett)."
     quote: "With AI, you literally have 70 to 80% net margins, profit margins that you can pull out and take as your own money"
-    chunk_ids: ["chunk_747", "chunk_726"]
+    chunk_ids: ["chunk_747", "chunk_726", "chunk_JL_008"]
     priority: "HIGH"
     confidence: "HIGH"
 
@@ -81,7 +82,7 @@ entries:
     nome: "Efetividade Antes de Eficiencia"
     descricao: "Nao precisa de tudo pronto para escalar. Primeiro fique efetivo (mesmo que ineficiente), depois melhore a eficiencia."
     quote: "I'm okay with being inefficient if I can be effective. Then once I'm effective I improve the efficiencies"
-    chunk_ids: ["chunk_734"]
+    chunk_ids: ["chunk_734", "chunk_JL_029"]
     priority: "HIGH"
     confidence: "HIGH"
 
@@ -89,7 +90,7 @@ entries:
     nome: "Doers vs Thinkers"
     descricao: "Quem age rapido ve o resultado e aprende. Quem pensa demais nunca comeca. Tenacidade e persistencia definem quem vence."
     quote: "doers just go and see what happens and it pays off... they're tenacious and they just keep going"
-    chunk_ids: ["chunk_780"]
+    chunk_ids: ["chunk_780", "chunk_JL_035"]
     priority: "HIGH"
     confidence: "HIGH"
 
@@ -99,4 +100,86 @@ entries:
     quote: "50/50 partnership with Jacob Levine - Jordan calls it 'best decision ever made'"
     chunk_ids: ["chunk_700"]
     priority: "HIGH"
+    confidence: "HIGH"
+
+  # === NOVOS ENTRIES (MCE v2.0) ===
+
+  - id: "INS-JL-v2-001"
+    nome: "Enterprise Value sobre Cash Flow"
+    descricao: "Riqueza real vem de possuir ativos que se valorizam, nao so de extrair lucros. O objetivo e construir algo que vale multiplos do faturamento."
+    quote: "Cash flow e necessidade numero 1. Mas riqueza REAL vem de possuir ativos que se valorizam ao longo do tempo."
+    chunk_ids: ["chunk_JL_019"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-v2-002"
+    nome: "Intencionalidade sobre Autopilot"
+    descricao: "98% das pessoas vivem no autopilot. Os 2% que vivem sua verdadeira vida foram intencionais sobre o que queriam e tomaram as acoes certas."
+    quote: "A life worth living is a life worth intentionality."
+    chunk_ids: ["chunk_JL_039"]
+    priority: "MEDIUM"
+    confidence: "HIGH"
+
+  - id: "INS-JL-v2-003"
+    nome: "Habitos como Destino"
+    descricao: "O futuro e a extensao dos habitos que voce faz hoje. Nao precisa prever — so precisa dos habitos certos por periodo consistente."
+    quote: "The future is the extension of the habits that you do."
+    chunk_ids: ["chunk_JL_039"]
+    priority: "MEDIUM"
+    confidence: "HIGH"
+
+  - id: "INS-JL-v2-004"
+    nome: "Turnover de Baixa Performance e Feature"
+    descricao: "Nao tenha medo de perder quem deveria perder. Turnover de baixa performance e feature, nao bug — deixa o time com 100% de A-players."
+    quote: "O turnover de baixa performance e feature, nao bug. Nao tenha medo de perder quem voce deveria perder."
+    chunk_ids: ["chunk_JL_033"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-v2-005"
+    nome: "Identity Shift e Mais Poderoso que Tatica"
+    descricao: "A transicao de sucesso acontece quando voce muda quem decide ser, nao o que faz. Identidade precede resultados."
+    quote: "Nao e sobre o que voce faz — e sobre quem voce decide ser."
+    chunk_ids: ["chunk_JL_035"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-v2-006"
+    nome: "Presenca sobre Pitch Perfeito"
+    descricao: "Pessoas compram pela PRESENCA do vendedor, nao pelo pitch perfeito. Relaxar em vez de recuar, perguntar em vez de perseguir."
+    quote: "People don't buy because you do a perfect sales pitch. They buy because of your presence."
+    chunk_ids: ["chunk_JL_023"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-v2-007"
+    nome: "Operador que Pensa como Founder"
+    descricao: "O que o time precisa nao e mais closers — e um operador que pensa como founder. Resolve problemas antes de voce saber que eles existem."
+    quote: "O que meu time precisa nao e mais closers — e um operador que pense como founder."
+    chunk_ids: ["chunk_JL_004"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-044"
+    nome: "O Barco Importa mais que a Remada"
+    descricao: "O modelo de negocio importa mais do que o esforco individual. Com o modelo certo (AI agency, 70-80% margens), mesmo sem trabalho intenso se ganha muito. Warren Buffett: o barco e mais importante que como voce rema."
+    quote: "Warren Buffett says that it's more important the boat that you're in than how hard you row because this boat is so good. Even if you're not rowing hard, you can still make a lot of money."
+    chunk_ids: ["JL-C-009"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-047"
+    nome: "AI Arbitrage como Janela Geracional"
+    descricao: "AI e uma oportunidade de arbitragem que aparece 1-2 vezes por geracao. A janela nao fica aberta para sempre. Agir agora e a decisao racional, nao emocional."
+    quote: "This opportunity is not going to last forever. It's an arbitrage. Opportunities like this come around maybe once, twice in a lifetime."
+    chunk_ids: ["JL-C-009"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-045"
+    nome: "Crescimento Real = Acao + Reflexao + Recarga"
+    descricao: "Crescimento nao e so grind — e fazer o trabalho E pausar para refletir e recarregar. A pausa e parte do processo, nao fraqueza. Sem ela, nao ha progresso real."
+    quote: "Growth comes from like doing the thing and then taking time to reflect and recharge. That's where you get the progress."
+    chunk_ids: ["JL-C-009"]
+    priority: "MEDIUM"
     confidence: "HIGH"

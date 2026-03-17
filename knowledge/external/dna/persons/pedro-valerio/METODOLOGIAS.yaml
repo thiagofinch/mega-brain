@@ -1,0 +1,54 @@
+# METODOLOGIAS — Pedro Valerio Lopez
+# Camada L5 do DNA Cognitivo
+# Versao: 1.0.0
+# Atualizado: 2026-03-16
+# Insights: 4
+
+version: "1.0.0"
+updated: "2026-03-16"
+person: "Pedro Valério"
+slug: "pedro-valerio"
+layer: "L5-METODOLOGIAS"
+count: 4
+
+metodologias:
+  - id: "MET-PV-001"
+    nome: "9 Fases do Hybrid-Ops"
+    descricao: "Implementação operacional de intenção documentada para processo real. Cada fase com critérios entrada/saída."
+    passos: ["(9 fases detalhadas no SINKRA Cap 14)"]
+    chunks: ["chunk_257", "chunk_258"]
+    source: "SINKRA Cap 14"
+    confianca: "HIGH"
+
+  - id: "MET-PV-002"
+    nome: "Pipeline de Criativos"
+    descricao: "Copy → Filmagem → Edição. Cada fase com checklist e taxonomia própria."
+    passos:
+      - "1. Copy (hooks, storytelling, ângulos)"
+      - "2. Filmagem (figurino, cenário, ação)"
+      - "3. Edição (regra 3s, zoom, elicante, SFX)"
+    chunks: ["chunk_407", "chunk_410"]
+    source: "MEET-0032"
+    confianca: "HIGH"
+
+  - id: "MET-PV-003"
+    nome: "Proporção de Campanha"
+    descricao: "Campanha × Grupos × Criativos. Escala estruturada (1×2×3=6, 1×3×3=9)."
+    passos:
+      - "1. Definir proporção (ex: 1×2×3)"
+      - "2. Gerar nomenclatura automática"
+      - "3. Escalar mantendo rastreabilidade"
+    chunks: ["chunk_415"]
+    source: "MEET-0039"
+    confianca: "HIGH"
+
+  - id: "MET-PV-004"
+    nome: "Expansion Strategy"
+    descricao: "Dominar 1 ICP/mercado → replicar fórmula em LatAm → adicionar adjacências."
+    passos:
+      - "1. Dominar 1 ICP + 1 mercado (2024: Brasil/TikTok)"
+      - "2. Replicar em LatAm (México, Colômbia, Peru, Chile)"
+      - "3. Adicionar adjacências e novos produtos"
+    chunks: ["chunk_411"]
+    source: "MEET-0034"
+    confianca: "HIGH"

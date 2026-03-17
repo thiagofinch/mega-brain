@@ -1,0 +1,145 @@
+# DNA: METODOLOGIAS — Richard Linder
+# Pipeline: MCE Step 10.2 | 2026-03-16
+# Source: RL001 | Version: 1.0.0
+# Total entries: 4
+
+slug: richard-linder
+tag: "[METODOLOGIA]"
+version: "1.0.0"
+updated: "2026-03-16"
+sources:
+  - RL001
+
+entries:
+  - id: MET-RL-001
+    insight_ref: INS-RL-005
+    titulo: "Trust Builder Discovery: Cenários WHO → Extração de Traços"
+    processo: |
+      FASE 1 — Cenários Trust Builder (3 perguntas):
+        (1) A Reunião Produtiva
+            Você participa, fala por último, sai com MAIS energia e confiança no plano.
+            QUEM liderou essa reunião?
+
+        (2) O Go-To GSD (Get Stuff Done)
+            Tarefa urgente + importante aparece de repente.
+            QUEM você entrega isso?
+
+        (3) O Colaborador Confiável
+            Nova ideia de mastermind, você precisa fazer brainstorm.
+            QUEM você liga primeiro?
+
+      FASE 2 — Extração de Traços:
+        → Liste os WHOs para cada cenário
+        → Identifique traços COMUNS entre eles
+        → Estes se tornam seus não-negociáveis de contratação
+
+      EXEMPLO (Richard com Matt Swan):
+        Trust Builders: Batteries included + Conhece seus números +
+        Follow-through + Comunicação proativa
+    quando_usar: "Antes de escrever qualquer JD ou iniciar recrutamento"
+    resultado_esperado: "Lista de 3-5 traços não-negociáveis específicos para o scorecard"
+    chunk_ids: ["RL001_008", "RL001_009"]
+    confianca: HIGH
+    priority: HIGH
+
+  - id: MET-RL-002
+    insight_ref: INS-RL-006
+    titulo: "Trust Breaker Discovery: Cenários Invertidos → Anti-Padrões"
+    processo: |
+      FASE 1 — Cenários Trust Breaker (3 inversões):
+        (1) A Reunião 'Por Que Estamos Aqui?'
+            10 minutos, propósito pouco claro, você assume o controle, sai drenado.
+            QUEM convocou isso?
+
+        (2) 'Vou Fazer Eu Mesmo'
+            Claro quem deveria lidar, mas você escolhe fazer você mesmo porque 'é mais fácil'.
+            QUEM deveria ter lidado mas não deu confiança para delegar?
+
+        (3) O Convite Relutante
+            Nova iniciativa, sentimento de afundamento porque você terá que convidar [aquela pessoa].
+            QUEM é essa pessoa?
+
+      FASE 2 — Extração de Anti-Padrões:
+        → Liste os WHOs de cada cenário negativo
+        → Identifique traços COMUNS
+        → Estes se tornam screening criteria para ELIMINAR
+
+      EXEMPLO (Richard):
+        Trust Breakers: Agenda oculta + Falta de comunicação proativa +
+        Falta de humildade + Comportamento imprevisível + Gossip
+    quando_usar: "Junto com MET-RL-001, antes de construir o scorecard"
+    resultado_esperado: "Lista de 3-5 anti-padrões com critérios de eliminação automática"
+    chunk_ids: ["RL001_011", "RL001_012"]
+    confianca: HIGH
+    priority: HIGH
+
+  - id: MET-RL-003
+    insight_ref: INS-RL-010
+    titulo: "Processo de Entrevista Multi-Estágio (5 Fases)"
+    processo: |
+      FASE 1 — Phone Screen (10 minutos):
+        Confirmar: experiência, entendimento do cargo, faixa salarial, remoto/office, viagem
+        Critério de avanço: AMBOS os lados alinhados em todas as básicas
+        Responsável: HR ou Hiring Manager
+
+      FASE 2 — Entrevista do Hiring Manager:
+        Mergulho profundo em competência técnica
+        Mapeamento inicial de compatibilidade cultural
+
+      FASE 3 — Paid Skills Assessment ($1-2k):
+        Trabalho real em problema real da empresa (4-8 horas)
+        Produz output utilizável + prova competência + ensina sistemas da empresa
+        REGRA: Pague sempre. Nunca peça trabalho gratuito.
+
+      FASE 4 — Painel + Scorecard:
+        Múltiplos membros da equipe que conhecem bem o fundador
+        Todos preenchem o scorecard de compatibilidade
+        Detectam oil/water dynamics que o fundador pode perder
+
+      FASE 5 — Entrevista Final:
+        Reduzido a 1-3 candidatos
+        Um passo da oferta
+        Decisão final via scorecard completo
+
+      REGRA DO SCORECARD:
+        - Sem 7 (remove estruturalmente)
+        - Score mínimo 8+ em non-negotiables
+        - Resultado final: Perfect Fit / Possible Fit (=não) / Not a Fit
+        - Resultado aceitável: CONTRATAR NINGUÉM se Hell Yes não apareceu
+    quando_usar: "Todo processo de contratação para cargos que reportam ao fundador"
+    resultado_esperado: "Hire com Hell Yes score ou decisão explícita de reiniciar"
+    chunk_ids: ["RL001_017", "RL001_018", "RL001_019", "RL001_020"]
+    confianca: HIGH
+    priority: HIGH
+
+  - id: MET-RL-004
+    insight_ref: INS-RL-013
+    titulo: "1-3-1 Escalation Format — Transformação Cultural"
+    processo: |
+      REGRA: Ninguém pode trazer um problema para liderança sem:
+        - 1 problema (claramente definido)
+        - 3 possíveis soluções (você fez pesquisa)
+        - 1 recomendação (sua decisão — o que você faria)
+
+      IMPLEMENTAÇÃO:
+        Step 1: Comunicar o formato em reunião de equipe
+        Step 2: Quando alguém trouxer problema sem 1-3-1, parar e pedir
+        Step 3: Quando 1-3-1 chegar, responder com: qual das 3 e por quê OU alternativa nova
+
+      BENEFÍCIO PRINCIPAL:
+        Transforma founder de lixeira de problemas em teacher.
+        'I think we should go with this one, not yours, because of this' =
+        conhecimento transferido, não apenas decisão tomada.
+
+      EXEMPLO (Richard):
+        'We tried these logical solutions and they illogically failed.'
+        → Founder passes institutional knowledge down, not just decisions.
+
+      ADOÇÃO:
+        Começou via membro do Founders Board, agora é cultura core da Scalable.
+        Se tornou sinal de hiring: contratar pessoas que já pensam em 1-3-1.
+    quando_usar: "Implementar como política cultural obrigatória para todas as escalações"
+    resultado_esperado: "100% de escalações em formato 1-3-1; founder como knowledge transfer hub"
+    chunk_ids: ["RL001_010"]
+    confianca: HIGH
+    priority: HIGH

@@ -1,0 +1,52 @@
+# DNA-CONFIG — Pedro Valerio Lopez
+# Configuração e contadores do DNA Cognitivo
+# Versao: 1.0.0
+# Atualizado: 2026-03-16
+
+version: "1.0.0"
+updated: "2026-03-16"
+person: "Pedro Valério"
+slug: "pedro-valerio"
+
+composition:
+  FILOSOFIAS: 6
+  MODELOS_MENTAIS: 4
+  HEURISTICAS: 4
+  FRAMEWORKS: 5
+  METODOLOGIAS: 4
+  VOICE_DNA: 1
+  total: 24
+
+sources:
+  total: 5
+  files:
+    - id: "SINKRA-Pedro-Valerio-Lopez"
+      type: "doc"
+      title: "SINKRA - Mapeamento de Processos para a Era da Sincronização Humano-IA"
+      words: 107339
+      chunks: 403
+    - id: "MEET-0032"
+      type: "call"
+      title: "Esteira de Criativos com Pedro Valério"
+      chunks: 5
+    - id: "MEET-0033"
+      type: "call"
+      title: "Fábrica de Criativos"
+      chunks: 2
+    - id: "MEET-0034"
+      type: "call"
+      title: "Gestão Lendária com Pedro e Alan"
+      chunks: 4
+    - id: "MEET-0039"
+      type: "call"
+      title: "Onboarding ClickUp com Pedro"
+      chunks: 2
+
+behavioral_patterns: 7
+identity:
+  values: 7
+  obsessions: 3
+  paradoxes: 3
+
+maturidade: "COMPLETO"
+pipeline_version: "MCE-1.0"

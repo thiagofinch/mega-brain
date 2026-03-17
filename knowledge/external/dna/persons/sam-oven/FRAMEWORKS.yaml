@@ -1,0 +1,52 @@
+# FRAMEWORKS — Sam Ovens (Setterlun University)
+# Camada L4 do DNA Cognitivo: Metodologias estruturadas e processos
+# Pipeline MCE v1.0 | Atualizado: 2026-03-16
+
+pessoa: "Sam Ovens"
+versao: "1.0.0"
+updated: "2026-03-16T08:00:00Z"
+total_entries: 3
+
+entries:
+  - id: "FW-SO-001"
+    insight_ref: "SO-INS-004"
+    nome: "Bridge Analogy Framework"
+    descricao: "Framework visual estrutural para construção de ofertas: Current State → Bridge (Oferta) → Desired State, com trolls (objeções) e toll booth (preço)"
+    componentes:
+      - "Current State: onde o cliente está com dor"
+      - "Desired State: onde quer chegar, sem dor"
+      - "Bridge (Oferta): seu produto/serviço como caminho entre os dois"
+      - "Trolls: objeções que surgem no caminho"
+      - "Toll Booth: preço (pedágio para atravessar)"
+      - "Unique Mechanism: por que SUA ponte é melhor que as concorrentes"
+    quando_usar: "Ao estruturar qualquer oferta, produto, ou serviço. Clarifica o posicionamento e elimina features irrelevantes."
+    chunk_ids: ["SO-chunk-002", "SO-chunk-014"]
+    tags: ["bridge-analogy", "oferta", "framework-visual", "current-state", "desired-state"]
+    confianca: "HIGH"
+
+  - id: "FW-SO-002"
+    insight_ref: "SO-INS-008"
+    nome: "3 Business Archetypes Framework (DFY/DWY/DIY)"
+    descricao: "Framework de classificação de modelos de negócio em três arquétipos com trade-offs explícitos de preço, escala e responsabilidade"
+    componentes:
+      - "DFY (Done For You): você executa tudo, máximo preço, mínima escala, risco alto"
+      - "DWY (Done With You): você guia, cliente executa, equilíbrio preço × escala — GOLD STANDARD"
+      - "DIY (Do It Yourself): cliente executa solo, menor preço, máxima escala"
+    quando_usar: "Ao definir ou validar modelo de entrega para agência, consultoria, ou produto. Usar para diagnosticar fit entre expertise, mercado e objetivo de escala."
+    chunk_ids: ["SO-chunk-004", "SO-chunk-013"]
+    tags: ["DFY", "DWY", "DIY", "modelo-entrega", "arquetipo-negocio"]
+    confianca: "HIGH"
+
+  - id: "FW-SO-003"
+    insight_ref: "SO-INS-018"
+    nome: "Purple Ocean Framework"
+    descricao: "Framework de posicionamento que combina Red Ocean (demanda provada) com Blue Ocean (diferenciação única) para criar posição competitiva ideal"
+    componentes:
+      - "Red Ocean: mercado existente com demanda comprovada mas alta competição"
+      - "Blue Ocean: mercado novo único, baixa competição mas precisa criar demanda do zero"
+      - "Purple Ocean: categoria existente + tweak específico = diferenciação em mercado provado"
+      - "Sweet spot: reconhecível suficiente para atrair + diferente suficiente para destacar"
+    quando_usar: "Ao criar ou refinar posicionamento de qualquer negócio. Validação: prospects entendem sem perguntar 'what makes you different?'"
+    chunk_ids: ["SO-chunk-009", "SO-chunk-010", "SO-chunk-011", "SO-chunk-012"]
+    tags: ["purple-ocean", "posicionamento", "red-ocean", "blue-ocean", "diferenciacao"]
+    confianca: "HIGH"

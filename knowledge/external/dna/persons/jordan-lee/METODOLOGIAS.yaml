@@ -1,15 +1,16 @@
 # Layer: METODOLOGIAS
 # Person: Jordan Lee
-# Version: 1.0.0
+# Version: 2.1.0
 # Generated: 2026-03-16
-# Source: MCE Pipeline v1.0
+# Updated: 2026-03-16 (MCE Pipeline v4.0 — YouTube batch +2 entries)
+# Source: MCE Pipeline v4.0 — Incremental YouTube update
 
 entries:
   - id: "INS-JL-034"
     nome: "Escalar com AI SDR + Volume"
     descricao: "Escalar removendo SDR work com AI SDR + 4x volume de email (Instantly) + LinkedIn outreach + ads quando tiver 2+ clientes. Buy back time com automacao."
     quote: "we'll implement the AISDR for you, which will remove this from your day-to-day and buy back time"
-    chunk_ids: ["chunk_718", "chunk_719", "chunk_720"]
+    chunk_ids: ["chunk_718", "chunk_719", "chunk_720", "chunk_JL_049"]
     priority: "HIGH"
     confidence: "HIGH"
 
@@ -17,7 +18,7 @@ entries:
     nome: "Recrutamento Agressivo Multi-Canal"
     descricao: "Recrutamento agressivo: LinkedIn ads + recruiters + referral fees + pedir para network divulgar + testar TODOS os canais. Nao parar ate encontrar."
     quote: "We've spoke to recruiters. We've tried on LinkedIn. We've run LinkedIn ads. We've tested this. We've put a referral fee out"
-    chunk_ids: ["chunk_739"]
+    chunk_ids: ["chunk_739", "chunk_JL_015"]
     priority: "HIGH"
     confidence: "HIGH"
 
@@ -25,7 +26,7 @@ entries:
     nome: "Fire Yourself para Escalar"
     descricao: "Escala via firing yourself: AI + contratacoes removem voce das funcoes operacionais. Business escala quando founder se torna dispensavel."
     quote: "You scale by firing yourself, making yourself redundant from the job that you're doing with AI or new team members"
-    chunk_ids: ["chunk_732"]
+    chunk_ids: ["chunk_732", "chunk_JL_040"]
     priority: "HIGH"
     confidence: "HIGH"
 
@@ -33,7 +34,7 @@ entries:
     nome: "Best Person on Hardest Problem"
     descricao: "A pessoa mais talentosa do time deve trabalhar no maior gargalo, nao no delivery do dia-a-dia. Highest leverage work primeiro."
     quote: "The best person in your business, you're going to put on the hardest problems"
-    chunk_ids: ["chunk_743"]
+    chunk_ids: ["chunk_743", "chunk_JL_005"]
     priority: "HIGH"
     confidence: "HIGH"
 
@@ -41,6 +42,66 @@ entries:
     nome: "Root Cause Analysis com WHY"
     descricao: "Quando problema parece grande e ambiguo, pergunte 'WHY?' e 'WHAT FOR?' ate definir os componentes reais. Decomponha antes de agir."
     quote: "it lacks scale, but why? What for? Because once you start to understand those characteristics, you can start to solve real things"
-    chunk_ids: ["chunk_733"]
+    chunk_ids: ["chunk_733", "chunk_JL_022"]
     priority: "MEDIUM"
+    confidence: "HIGH"
+
+  # === NOVOS ENTRIES (MCE v2.0) ===
+
+  - id: "INS-JL-v2-021"
+    nome: "Coaching: Confronto Direto com Empatia"
+    descricao: "Metodologia de coaching: confrontar com a verdade diretamente MAS sempre ancorando em experiencia pessoal ('eu tambem estava'). Expectativas altissimas + suporte genuino."
+    quote: "Nao suavizo a verdade, mas mostro que ja passei pelo mesmo. Digo 'voce esta errado' mas adiciono 'eu tambem estava.'"
+    chunk_ids: ["chunk_JL_021", "chunk_JL_022"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-v2-022"
+    nome: "Pattern Interrupt de Coaching"
+    descricao: "Quando cliente esta em narrativa autodestrutiva ou de plateau, interromper com frase de impacto antes de aprofundar. Quebrar a cadeia de pensamento primeiro."
+    quote: "You are far too broke to be bored. You're not thinking big enough."
+    chunk_ids: ["chunk_JL_025"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-v2-023"
+    nome: "Job Ad como VSL"
+    descricao: "Tratar anuncio de emprego como Video Sales Letter: vender o sonho e a visao, nao listar requisitos. Os melhores candidatos sao atraidos, nao encontrados."
+    quote: "Job ads should be like VSL — sell the dream, show the vision."
+    chunk_ids: ["chunk_JL_013"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-v2-024"
+    nome: "Deploy Capital para Desbloquear Proximo Nivel"
+    descricao: "Quando tem capital disponivel, a pergunta e: o que posso fazer COM esse cash para desbloquear o proximo nivel de crescimento? Investir heavy no inicio para 10-100x de resultado."
+    quote: "Investimos heavy no inicio e agora nossos negocios sao 10, 20, 50, 100x maiores que os de quem criticou nossos gastos."
+    chunk_ids: ["chunk_JL_030"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "INS-JL-v2-025"
+    nome: "Escalar via AI + Leverage de Time"
+    descricao: "Com AI e time certo, e possivel sair do dia-a-dia operacional e ter o negocio crescendo exponencialmente sem presenca diaria. 1000 ads em 2 horas. Bot que substitui reps humanos."
+    quote: "Com AI, o que eu fazia em uma semana agora faco em uma hora. Ja criei 1000 ads com AI em duas horas."
+    chunk_ids: ["chunk_JL_009", "chunk_JL_040"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  # === NOVOS ENTRIES (MCE v4.0) ===
+
+  - id: "INS-JL-048"
+    nome: "Primeiro Passo Apenas"
+    descricao: "Substitua a renda do emprego — nao precisa saber o plano completo. Cada passo revela o proximo. Clareza vem da acao, nao do planejamento. O passo 1 sempre e: substituir a renda."
+    quote: "I didn't know how our business was going to build to the level that it was today. But I knew my first step was to just replace my income from my job."
+    chunk_ids: ["JL-C-009"]
+    priority: "HIGH"
+    confidence: "HIGH"
+
+  - id: "THM-JL-005"
+    nome: "Escala Previsivel de Ads"
+    descricao: "Uma vez calibrado o CAC base ($3K → 1-2 clientes), a escala e linear e previsivel. $6K → 4 clientes; $9K → 6 clientes. Elimina o risco de escala e viabiliza crescimento sem medo."
+    quote: "You can scale it as high as you want."
+    chunk_ids: ["JL-C-009"]
+    priority: "HIGH"
     confidence: "HIGH"

@@ -1,0 +1,60 @@
+# MODELOS MENTAIS — THE SCALABLE COMPANY / RYAN DEISS
+# Camada L2 do DNA Cognitivo: Frameworks de pensamento e decisão
+# MCE Pipeline: 2026-03-16 | Source: 10 TSC transcripts
+# Version: 1.0.0-mce | Previous pipeline entries: 55 (DNA-CONFIG v1.0.0)
+
+meta:
+  pessoa: "Ryan Deiss"
+  slug: "the-scalable-company"
+  source_code: "TSC"
+  version: "1.0.0-mce"
+  updated: "2026-03-16T10:10:00Z"
+  total_entries_this_run: 4
+  total_entries_previous: 55
+  pipeline: "MCE v1.0.0"
+
+modelos_mentais:
+
+  - id: "TSC-MM-MCE-001"
+    nome: "Business = Computer Operating System"
+    descricao: "A business has the same structure as a computer OS: algorithms (= SOPs/processes), common language (= meeting rhythms/scorecards), desired outputs (= goals). UOS = founder IS the OS (algorithms in their head, language = telephone game, outputs = just don't die). ScalableOS = documented system that replaces the founder's brain."
+    aplicacao: "Use whenever assessing whether a business is founder-dependent. If algorithms are in the founder's head, it's a UOS. ScalableOS replaces the founder."
+    insight_ref: "TSC-INS-001"
+    chunk_refs: ["TSC-CH-001", "TSC-CH-002"]
+    confianca: HIGH
+    evidencia: "The set of algorithms are stuck in your head. Common language is a bad version of the telephone game."
+    source_id: "TSC-0048"
+    tags: ["operating-system", "UOS", "scalableOS", "mental-model"]
+
+  - id: "TSC-MM-MCE-002"
+    nome: "Pirate's Treasure Map — Growth Engine as Lost Map"
+    descricao: "Businesses generate customers (= treasure) but forget how it happened (= lost the map). Over-complicating the business buries the treasure map. The fix is always radical simplification: go back to first principles, document the simple flow. The napkin at the Dallas bar is the archetype."
+    aplicacao: "When a business is declining, ask: have you lost the treasure map? Strip back to how customers happen. Document it on one page. Everything else is a distraction."
+    insight_ref: "TSC-INS-008"
+    chunk_refs: ["TSC-CH-012", "TSC-CH-013"]
+    confianca: HIGH
+    evidencia: "The treasure wasn't gone, I just forgot where it was buried."
+    source_id: "TSC-0062"
+    tags: ["growth-engines", "simplification", "founder-story", "mental-model"]
+
+  - id: "TSC-MM-MCE-003"
+    nome: "Instrument-Rated Entrepreneur — Scorecards as Flight Instruments"
+    descricao: "Without scorecards = VFR pilot (can only fly in good visibility/weather). With scorecards = IFR pilot (instrument-rated, can fly in any conditions). The scorecard doesn't give the founder the answers — it gives them the right questions to ask the right people at the right time. Outcome: business scales without the founder needing to have all the answers."
+    aplicacao: "Use when explaining the transformation from intuition-driven to data-driven leadership. The instrument rating is the goal of implementing scorecards."
+    insight_ref: "TSC-INS-014"
+    chunk_refs: ["TSC-CH-024"]
+    confianca: HIGH
+    evidencia: "You are officially an instrument rated entrepreneur and your business is now able to scale without you needing to have all the answers."
+    source_id: "TSC-0054-09"
+    tags: ["scorecards", "leadership", "founder-freedom", "mental-model"]
+
+  - id: "TSC-MM-MCE-004"
+    nome: "Purpose = Horizon Line (vs. Mountain)"
+    descricao: "Three-year target = a mountain: concrete, conquerable, with a clear endpoint. Company purpose = a horizon line: real, visible, but always moves as you approach. You never want to run out of this fuel. The tension is productive: purpose is never achieved, which is exactly the point — it keeps you going forever."
+    aplicacao: "Use when defining company purpose vs. business objectives. Purpose should not have a deadline. Three-year targets do. Confusing the two produces either uninspiring goals or unachievable purposes."
+    insight_ref: "TSC-INS-018"
+    chunk_refs: ["TSC-CH-033"]
+    confianca: HIGH
+    evidencia: "Think of your company purpose like the horizon line. The closer you get, the further it seems to move away."
+    source_id: "TSC-0029"
+    tags: ["company-purpose", "infinite-game", "horizon-line", "mental-model"]

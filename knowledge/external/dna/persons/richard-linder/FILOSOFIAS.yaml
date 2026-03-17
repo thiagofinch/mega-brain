@@ -1,0 +1,87 @@
+# DNA: FILOSOFIAS — Richard Linder
+# Pipeline: MCE Step 10.2 | 2026-03-16
+# Source: RL001 | Version: 1.0.0
+# Total entries: 6
+
+slug: richard-linder
+tag: "[FILOSOFIA]"
+version: "1.0.0"
+updated: "2026-03-16"
+sources:
+  - RL001
+
+entries:
+  - id: F-RL-001
+    insight_ref: INS-RL-001
+    titulo: "Founder First: Contratação Egoísta é Boa Prática"
+    crenca: |
+      Companies move at the speed of the founder. Hiring for founder compatibility
+      is not selfishness — it's the highest leverage decision a scaling company can make.
+      Team members who energize the founder create an energy surplus that cascades
+      through the entire organization.
+    declaracao_canonica: "Companies move at the speed of the founder."
+    chunk_ids: ["RL001_004"]
+    confianca: HIGH
+    priority: HIGH
+
+  - id: F-RL-002
+    insight_ref: INS-RL-015
+    titulo: "5 Core Values da Scalable Company"
+    crenca: |
+      (1) We Love Entrepreneurs — inovadores, criadores de emprego, assumem riscos.
+      (2) Batteries Included — não precisa de elogio para se apresentar no melhor.
+      (3) We Raise the Bar — sucessos/fracassos passados não definem, melhoramos todo dia.
+      (4) We Do the Dishes — nenhum trabalho está abaixo se serve colegas ou clientes.
+      (5) We Seek the Why — 'É como sempre fizemos' nunca é aceitável.
+    declaracao_canonica: "'It's how we've always done it' is never acceptable, we always ask why."
+    chunk_ids: ["RL001_014"]
+    confianca: HIGH
+    priority: MEDIUM
+
+  - id: F-RL-003
+    insight_ref: INS-RL-016
+    titulo: "Non-Negotiables Pessoais: Batteries Included + Do the Dishes"
+    crenca: |
+      Entitlement ('not my job') = conflito imediato. A forma mais poderosa de servir
+      a equipe é às vezes descobrir todas as tarefas sem habilidade nas listas deles
+      e simplesmente fazê-las. Servant leadership não é conceito — é ação.
+    declaracao_canonica: "Sometimes my best way to serve my team is to figure out all the no-skill things on their list and go do it."
+    chunk_ids: ["RL001_015"]
+    confianca: HIGH
+    priority: MEDIUM
+
+  - id: F-RL-004
+    insight_ref: INS-RL-017
+    titulo: "Batteries Included: Motivação Intrínseca como Não-Negociável"
+    crenca: |
+      Praise and reward are not prerequisites for peak performance. The fundamental
+      requirement is showing up driven from within. Leaders still give recognition —
+      but team members must not REQUIRE it to execute at their best.
+    declaracao_canonica: "Praise and reward aren't required to show up your best self. Doesn't mean we don't give it — but you don't REQUIRE it to perform."
+    chunk_ids: ["RL001_009", "RL001_014"]
+    confianca: HIGH
+    priority: MEDIUM
+
+  - id: F-RL-005
+    insight_ref: INS-RL-022
+    titulo: "Frameworks Nascem do Fracasso, Não da Teoria"
+    crenca: |
+      Nenhum framework tem credibilidade sem a cicatriz que o gerou. Toda metodologia
+      válida emerge de fazer errado, falhar, conversar com outros que falharam, e
+      sistematizar o aprendizado. Teoria sem campo é especulação.
+    declaracao_canonica: "We don't create frameworks because stuff just worked. We did it wrong. We failed. All of our processes were born from failure."
+    chunk_ids: ["RL001_022"]
+    confianca: HIGH
+    priority: LOW
+
+  - id: F-RL-006
+    insight_ref: INS-RL-028
+    titulo: "Legado Cultural: Valores do Fundador Pressionam Para Baixo"
+    crenca: |
+      What energizes you as a founder becomes embedded in the culture you build.
+      This cultural DNA persists long after you move to a board role or exit.
+      You are the source code — what you embody, the company eventually becomes.
+    declaracao_canonica: "Things that energize you press down into the company, leaving a legacy even if you exit or move to the board."
+    chunk_ids: ["RL001_013"]
+    confianca: HIGH
+    priority: MEDIUM

@@ -1,0 +1,99 @@
+# DNA: MODELOS MENTAIS — Richard Linder
+# Pipeline: MCE Step 10.2 | 2026-03-16
+# Source: RL001 | Version: 1.0.0
+# Total entries: 6
+
+slug: richard-linder
+tag: "[MODELO-MENTAL]"
+version: "1.0.0"
+updated: "2026-03-16"
+sources:
+  - RL001
+
+entries:
+  - id: MM-RL-001
+    insight_ref: INS-RL-002
+    titulo: "Competência + Compatibilidade (AMBOS, nunca OU)"
+    modelo: |
+      The hiring decision matrix has two axes, not one:
+      - AXIS 1: Competency — raw skills to do the job
+      - AXIS 2: Compatibility — traits that work with THIS founder
+      A hire must score high on BOTH. Pure competency without compatibility = eventual conflict.
+      Pure compatibility without competency = 'buying friends.'
+      The common mistake is hiring for one axis while ignoring the other.
+    aplicacao: "Rejeite hires puramente técnicos se há conflito de personalidade; rejeite fits culturais puros se incompetentes."
+    chunk_ids: ["RL001_005"]
+    confianca: HIGH
+    priority: HIGH
+
+  - id: MM-RL-002
+    insight_ref: INS-RL-011
+    titulo: "Trust Builders: Extração via WHO, Não via Traits"
+    modelo: |
+      Trust criteria are not discovered through abstract traits lists (integrity, teamwork)
+      but through real WHO scenarios:
+      (1) Productive Meeting — who led it and left you energized?
+      (2) GSD Go-To — who do you hand urgent+important work to?
+      (3) Trusted Collaborator — who do you call to brainstorm new ideas?
+      Extract the COMMON TRAITS across your WHOs. These become your non-negotiables.
+    aplicacao: "Run founder through 3 WHO scenarios BEFORE writing any job description."
+    chunk_ids: ["RL001_008", "RL001_009"]
+    confianca: HIGH
+    priority: HIGH
+
+  - id: MM-RL-003
+    insight_ref: INS-RL-012
+    titulo: "Trust Breakers: Mapeamento por Inversão"
+    modelo: |
+      Identify trust-breaking traits through inverted scenarios:
+      (1) 'Why Are We Here' Meeting — who called the meeting that drained you?
+      (2) 'I'll Do It Myself' Person — who should have handled it but didn't?
+      (3) Reluctant Invite — who gives you a sinking feeling when you must include them?
+      Extract ANTI-PATTERNS from these WHOs. Screen OUT these traits ruthlessly.
+    aplicacao: "Create interview questions that surface trust-breaker traits. One red flag = automatic no."
+    chunk_ids: ["RL001_011", "RL001_012"]
+    confianca: HIGH
+    priority: MEDIUM
+
+  - id: MM-RL-004
+    insight_ref: INS-RL-018
+    titulo: "Os 3 Problemas de Contratação que Todo Fundador Enfrenta"
+    modelo: |
+      Every founder faces three compounding hiring problems:
+      (1) TIME — consuming without a clear process to identify ideal candidates
+      (2) COST — not just money but the hidden cost of bad hires we rationalize accepting
+      (3) OVERWHELM — the cascade where bad hires cause high performers to leave, replaced by underperformers
+      These three are interdependent — solving one partially amplifies the others.
+    aplicacao: "Diagnose which of the three is primary driver before prescribing solution."
+    chunk_ids: ["RL001_001", "RL001_002"]
+    confianca: HIGH
+    priority: HIGH
+
+  - id: MM-RL-005
+    insight_ref: INS-RL-019
+    titulo: "O Ciclo do Overwhelm: Modelo de Sistema Vicioso"
+    modelo: |
+      Bad hires → Founder becomes jaded →
+      Dumps everything on one competent person →
+      That person gets overwhelmed → High performers leave →
+      Replaced with underperformers (can't find good people) →
+      Cycle repeats with worse baseline each iteration.
+      KEY INSIGHT: An inefficient hiring process causes BOTH effects simultaneously —
+      drives out best people AND leaves you unable to replace them.
+    aplicacao: "Break cycle by fixing hiring process BEFORE high performers leave — reactive is too late."
+    chunk_ids: ["RL001_003"]
+    confianca: HIGH
+    priority: HIGH
+
+  - id: MM-RL-006
+    insight_ref: INS-RL-020
+    titulo: "Auto-Engano no Recrutamento: Por Que Ignoramos Red Flags"
+    modelo: |
+      When gut detects a problem with a candidate but we lack a specific, articulable reason,
+      we rationalize: 'they're close enough', 'we can train it out', 'we need someone now.'
+      The scorecard serves as LANGUAGE for gut instinct: 'They're a 6 on proactive
+      communication and that's a non-negotiable 8.' Without the language, the gut loses.
+    aplicacao: "Define specific non-negotiable scores (8+) before seeing any candidates. Articulate rejection reasons before hiring decision."
+    chunk_ids: ["RL001_002"]
+    confianca: HIGH
+    priority: MEDIUM

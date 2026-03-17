@@ -1,0 +1,45 @@
+# MODELOS-MENTAIS — Pedro Valerio Lopez
+# Camada L2 do DNA Cognitivo
+# Versao: 1.0.0
+# Atualizado: 2026-03-16
+# Insights: 4
+
+version: "1.0.0"
+updated: "2026-03-16"
+person: "Pedro Valério"
+slug: "pedro-valerio"
+layer: "L2-MODELOS-MENTAIS"
+count: 4
+
+modelos_mentais:
+  - id: "MM-PV-001"
+    nome: "4 Executores"
+    descricao: "Todo processo tem 4 tipos de executor: Humano (julgamento), Agent (decisão autônoma), Worker (repetição), Clone (expertise). Cada caixa precisa de tipo definido."
+    citacao: "O mundo operou por mais de um século com um único tipo de executor nos seus processos."
+    chunks: ["chunk_36", "chunk_37", "chunk_1"]
+    source: "SINKRA Cap 3"
+    confianca: "HIGH"
+
+  - id: "MM-PV-002"
+    nome: "Hierarquia Composicional"
+    descricao: "Processos são compostos em 6 níveis: Token > Atom > Molecule > Organism > Template > Instance. Problemas ocorrem em nível específico."
+    citacao: "Cada pessoa estava apontando pra um nível diferente do mesmo problema."
+    chunks: ["chunk_59", "chunk_60"]
+    source: "SINKRA Cap 4"
+    confianca: "HIGH"
+
+  - id: "MM-PV-003"
+    nome: "Hook vs Thumb Stopping"
+    descricao: "Hook = gancho narrativo (texto/fala). Thumb Stopping = estímulo sensorial (visual/sonoro/cênico). Categorias separadas, empilháveis."
+    citacao: "Hook está relacionado à narrativa. Thumb Stopping é tudo que eu vou empilhar de atenção."
+    chunks: ["chunk_406"]
+    source: "MEET-0032"
+    confianca: "HIGH"
+
+  - id: "MM-PV-004"
+    nome: "Composite Score"
+    descricao: "Scores compostos para avaliação automatizada. Base 5 com penalidades por critérios negativos. Foque nos top scores."
+    citacao: "A inicial começa em cinco e ele vai tomando penalidades."
+    chunks: ["chunk_411"]
+    source: "MEET-0034"
+    confianca: "HIGH"

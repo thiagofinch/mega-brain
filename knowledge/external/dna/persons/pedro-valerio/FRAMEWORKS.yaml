@@ -1,0 +1,53 @@
+# FRAMEWORKS — Pedro Valerio Lopez
+# Camada L4 do DNA Cognitivo
+# Versao: 1.0.0
+# Atualizado: 2026-03-16
+# Insights: 5
+
+version: "1.0.0"
+updated: "2026-03-16"
+person: "Pedro Valério"
+slug: "pedro-valerio"
+layer: "L4-FRAMEWORKS"
+count: 5
+
+frameworks:
+  - id: "FW-PV-001"
+    nome: "3 Estratégias TikTok"
+    descricao: "1) ParqueEds (credibilidade), 2) TikTok Shop (volume afiliados), 3) Alpha Funnel (sustentação 3 meses)."
+    componentes: ["ParqueEds", "TikTok Shop", "Alpha Funnel"]
+    chunks: ["chunk_404"]
+    source: "MEET-0032"
+    confianca: "HIGH"
+
+  - id: "FW-PV-002"
+    nome: "Empilhamento de Atenção"
+    descricao: "3 categorias empilháveis de Thumb Stopping: Visual (estático), Sonoro (SFX), Cênico (ação)."
+    componentes: ["Visual", "Sonoro", "Cênico"]
+    chunks: ["chunk_406", "chunk_407"]
+    source: "MEET-0032"
+    confianca: "HIGH"
+
+  - id: "FW-PV-003"
+    nome: "Compensação por Multiplicadores"
+    descricao: "3 fatores: Meta receita (agressivo) × NPS (protetor) × Eficiência custo (anti-bloat)."
+    componentes: ["Meta Receita", "NPS/Qualidade", "Eficiência Custo"]
+    chunks: ["chunk_412"]
+    source: "MEET-0034"
+    confianca: "HIGH"
+
+  - id: "FW-PV-004"
+    nome: "ClickUp como OS"
+    descricao: "Projeto → Produto → Campanha com automações N8N. Dashboard-first workflow."
+    componentes: ["Projeto", "Produto", "Campanha", "Automações N8N", "Dashboard"]
+    chunks: ["chunk_409", "chunk_415", "chunk_416"]
+    source: "MEET-0039"
+    confianca: "HIGH"
+
+  - id: "FW-PV-005"
+    nome: "SINKRA Hierarquia Composicional"
+    descricao: "6 níveis de composição: Token > Atom > Molecule > Organism > Template > Instance."
+    componentes: ["Token", "Atom", "Molecule", "Organism", "Template", "Instance"]
+    chunks: ["chunk_59", "chunk_60", "chunk_65", "chunk_98"]
+    source: "SINKRA Cap 4-10"
+    confianca: "HIGH"

@@ -1,0 +1,75 @@
+# knowledge/external/dna/persons/jeremy-miner/MODELOS-MENTAIS.yaml
+# Camada L2 — Frameworks de Pensamento e Decisão
+# Gerado: MCE Pipeline 2026-03-16
+
+pessoa: "Jeremy Miner"
+versao: "1.0.0"
+data_extracao: "2026-03-16T09:55:00Z"
+total_elementos: 3
+pipeline: "MCE v1.0"
+
+modelos_mentais:
+
+  - id: "JM-MM-001"
+    titulo: "Buyers Are Liars — Mas a Culpa é do Vendedor"
+    enunciado: "O prospect mente não por mal caráter, mas porque não confia no vendedor. A causa sempre está na abordagem."
+    descricao: >
+      Quando um prospect diz "estou bem com o fornecedor atual" e depois revela 5 problemas,
+      ele não mentiu — ele respondeu com o que parecia seguro. A presença de perguntas
+      previsíveis e a identidade de 'salesperson' ativam respostas defensivas. Ver isso
+      como "buyer behavior" (não como falha do prospect) muda completamente o diagnóstico.
+    aplicacao: >
+      Toda resposta defensiva ou superficial de um prospect é feedback sobre sua
+      abordagem, não sobre o prospect. Ajuste antes de concluir que o prospect não tem fit.
+    evidencias:
+      - chunk_id: "JM-chunk_002"
+        quote: "You've heard the phrase 'buyers are liars,' but the question is what's causing them to lie? I can tell you first and foremost it is a lack of trust."
+        source: "JM-0003"
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    status: "new"
+
+  - id: "JM-MM-002"
+    titulo: "Surface Answers Refletem Surface Questions"
+    enunciado: "Se o prospect dá respostas superficiais, a causa está nas suas perguntas, não na personalidade dele."
+    descricao: >
+      Um prospect que dá respostas de uma palavra não é fechado por natureza — está
+      respondendo ao nível de profundidade da pergunta. Perguntas previsíveis geram
+      respostas previsíveis (defensivas). Perguntas em camadas geram respostas em camadas.
+      A profundidade da conversa é controlada pelo vendedor, não pelo prospect.
+    aplicacao: >
+      Quando conversa estagna: verifique se sua próxima pergunta vai uma camada mais fundo.
+      "E como isso afetou outras áreas?" → "E há quanto tempo?" → "E o que você tentou?"
+    evidencias:
+      - chunk_id: "JM-chunk_024"
+        quote: "If you ask surface questions, you get surface answers. The real reason they are or aren't buying is almost never what they say in the first 5 minutes."
+        source: "JM-0066"
+      - chunk_id: "JM-chunk_017"
+        quote: "You ask predictable questions — they activate defense mode."
+        source: "JM-0066"
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    status: "new"
+
+  - id: "JM-MM-003"
+    titulo: "Commodity Trap — Diferenciação pelo Diagnóstico, não pelo Produto"
+    enunciado: "Quando todos os vendedores soam igual, a diferenciação só pode vir de como você entende o prospect, não do que você vende."
+    descricao: >
+      O commodity trap acontece quando todos os vendedores descrevem seu produto com
+      os mesmos benefícios genéricos. A saída não é um diferencial de produto mais criativo,
+      mas um processo de diagnóstico tão superior que o prospect sente que só você entende
+      realmente seu problema. Diferenciação via processo, não via feature.
+    aplicacao: >
+      Quando confrontado com "por que você?" — nunca liste features. Pergunte primeiro.
+      O prospect vai diferenciá-lo automaticamente quando sentir que ninguém mais o
+      entendeu dessa forma.
+    evidencias:
+      - chunk_id: "JM-chunk_004"
+        quote: "When all salespeople sound alike, they compete only on price, and the prospect has no reason to choose you specifically."
+        source: "JM-0008"
+      - chunk_id: "JM-chunk_016"
+        quote: "The commodity trap kicks in the moment you start pitching before understanding."
+        source: "JM-0090"
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    status: "new"

@@ -1,0 +1,102 @@
+# FRAMEWORKS — THE SCALABLE COMPANY / RYAN DEISS
+# Camada L4 do DNA Cognitivo: Metodologias estruturadas e processos
+# MCE Pipeline: 2026-03-16 | Source: 10 TSC transcripts
+# Version: 1.0.0-mce | Previous pipeline entries: 44 (DNA-CONFIG v1.0.0)
+
+meta:
+  pessoa: "Ryan Deiss"
+  slug: "the-scalable-company"
+  source_code: "TSC"
+  version: "1.0.0-mce"
+  updated: "2026-03-16T10:15:00Z"
+  total_entries_this_run: 3
+  total_entries_previous: 44
+  pipeline: "MCE v1.0.0"
+
+frameworks:
+
+  - id: "TSC-FW-MCE-001"
+    nome: "Clarity Compass — 4-Element Business Alignment Framework"
+    definicao: "A strategic clarity framework with 4 elements: (1) Three-Year Target (North Star/destination), (2) Company Purpose (fuel/why), (3) Core Values (internal guardrails — keep behavior on track), (4) Strategic Anchors (external guardrails — framework for saying no to ideas/opportunities). Together they provide clarity of direction, purpose, and action."
+    componentes:
+      - elemento: "Three-Year Target"
+        papel: "North Star / Destination"
+        descricao: "Primary business objective everyone drives toward. 3 years chosen as meaningful but not ludicrously long."
+      - elemento: "Company Purpose"
+        papel: "Fuel / The Why"
+        descricao: "Gets people out of bed. Pushes toward target through crappy days. Must be sincere — not cynical."
+      - elemento: "Core Values"
+        papel: "Internal Guardrails"
+        descricao: "Keep internal actions and decisions on track. Ensure goals achieved without sacrificing soul."
+      - elemento: "Strategic Anchors"
+        papel: "External Guardrails / No Framework"
+        descricao: "Framework for saying yes to some, no to most. Keep external decisions aligned as company scales."
+    quando_usar: "Strategic planning sessions (Clarity Day), quarterly sprint kickoffs, onboarding new team members, alignment workshops"
+    evitar: "Using 'mission', 'vision', 'strategy' — terms no one agrees on. Replace all 3 with this framework's specific language."
+    insight_ref: "TSC-INS-002"
+    chunk_refs: ["TSC-CH-003", "TSC-CH-004", "TSC-CH-005", "TSC-CH-006", "TSC-CH-033", "TSC-CH-034"]
+    confianca: HIGH
+    evidencia: "Said another way, the three-year target is the destination. The company purpose is the fuel and the core values and strategic anchors are literally the guardrails that keep the vehicle that is your business between yellow lines."
+    source_id: "TSC-0052"
+    tags: ["clarity", "alignment", "strategy", "planning", "framework"]
+
+  - id: "TSC-FW-MCE-002"
+    nome: "Blue Ocean / Black Swan Meeting Threshold Framework"
+    definicao: "A decision filter for calling special (unscheduled) meetings. Only two event types justify pulling leaders out of their normal cadence: Blue Ocean (unprecedented opportunity that cuts 12+ months off the 3-year plan) and Black Swan (existential threat that could take the business well backwards). Everything else belongs on the B&O list for the next scheduled meeting."
+    componentes:
+      - elemento: "Blue Ocean Event"
+        criterio: "Opportunity that would cut 12+ months off the 3-year plan"
+        acao: "Pull the cord — call special leadership meeting"
+        exemplos: ["Acquisition target appeared", "Major partnership offer", "Market shift creating dominant position opportunity"]
+      - elemento: "Black Swan Event"
+        criterio: "Threat that could take the business well backwards"
+        acao: "Pull the cord — call special leadership meeting"
+        exemplos: ["Key client threatening to leave", "Regulatory change", "Major team departure", "Competitive threat"]
+      - elemento: "Everything Else"
+        criterio: "Anything that doesn't meet Blue Ocean or Black Swan threshold"
+        acao: "Add to B&O (Blue Ocean & Black Swan) list. Discuss at next scheduled meeting."
+        nota: "If unsure whether it qualifies, it doesn't — don't pull the cord"
+    b_and_o_list:
+      definicao: "Standing agenda item at weekly leadership meeting for items that might become Blue Ocean or Black Swan"
+      formato: "Running list maintained between meetings"
+    quando_usar: "Any time someone wants to call a special/emergency meeting outside the normal meeting cadence"
+    insight_ref: "TSC-INS-010"
+    chunk_refs: ["TSC-CH-016", "TSC-CH-017", "TSC-CH-018", "TSC-CH-019"]
+    confianca: HIGH
+    evidencia: "If you're unsure whether it's a blue ocean or a black swan, don't pull that cord."
+    source_id: "TSC-0016"
+    tags: ["meetings", "decision-making", "prioritization", "leadership", "framework"]
+
+  - id: "TSC-FW-MCE-003"
+    nome: "7 Principles of the Modern Meeting (Documentation Architecture)"
+    definicao: "Seven principles governing effective meeting architecture and information management in a scaled organization. Transforms meetings from information dumps into decision and accountability machines."
+    principios:
+      - numero: 1
+        principio: "All meetings need a purpose"
+        descricao: "No meeting exists without a clear defined purpose and expected output"
+      - numero: 2
+        principio: "All meetings need an agenda"
+        descricao: "Pre-distributed agenda allows preparation and signals respect for time"
+      - numero: 3
+        principio: "All meetings need an owner"
+        descricao: "One person is accountable for the meeting running correctly and outcomes being captured"
+      - numero: 4
+        principio: "All decisions need to be captured"
+        descricao: "Decisions made in meetings must be documented and distributed — not left in people's heads"
+      - numero: 5
+        principio: "All action items need an owner and due date"
+        descricao: "Action items without owner + deadline are wishes, not commitments"
+      - numero: 6
+        principio: "Meeting notes need to be distributed within 24 hours"
+        descricao: "Decisions/actions lose value rapidly. 24h distribution ensures memory and accountability"
+      - numero: 7
+        principio: "Meetings need to start and end on time"
+        descricao: "Respect for time signals organizational discipline and trust"
+    relacao_com_3ds: "The 3 Ds (Decide/Discuss/Distribute) operate within these 7 principles as the execution protocol"
+    quando_usar: "Meeting design, meeting culture transformation, onboarding team members on meeting standards"
+    insight_ref: "TSC-INS-011"
+    chunk_refs: ["TSC-CH-020", "TSC-CH-021", "TSC-CH-022"]
+    confianca: HIGH
+    evidencia: "Frameworks from ScalableOS meeting architecture module"
+    source_id: "TSC-0016"
+    tags: ["meetings", "documentation", "systems", "culture", "framework"]

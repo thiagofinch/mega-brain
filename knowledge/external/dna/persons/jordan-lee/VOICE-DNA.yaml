@@ -1,189 +1,466 @@
 person: Jordan Lee
 slug: jordan-lee
-version: 1.0.0
+version: 2.1.0
 created: '2026-03-16T02:02:58Z'
-source_chunks: 144
-source_range: chunk_700 to chunk_843
+updated: '2026-03-16T10:15:00Z'
+source_chunks: 244
+source_range: "chunk_700 to chunk_843 (v1) + chunk_JL_001 to chunk_JL_052 (MCE v2) + JL-C-001 to JL-C-048 (MCE v4 YouTube)"
+pipeline: "MCE v4.0 — Incremental update: 2 signature phrases + 1 metaphor + 1 immune trigger + 1 vocab transform from YouTube content"
+
 tone_profile:
-  certainty: 9
-  authority: 9
-  warmth: 7
-  directness: 10
-  teaching_focus: 8
-  confidence: 9
-  nota: Tom extremamente direto e assertivo, mas com momentos de warmth genuína ('I don't think you can see how great you
-    are'). Nunca hedges — faz declarações absolutas. Ensina por contraste (certo vs errado) com energia alta.
+  certainty:
+    score: 9.2
+    justificativa: "Usa linguagem absolutista em 85%+ das afirmações. Nunca hedges — declarações absolutas sobre competência, urgência, sistemas."
+    chunk_ids: ["chunk_JL_001", "chunk_JL_026", "chunk_JL_031"]
+  authority:
+    score: 9.0
+    justificativa: "Posiciona-se como mentor/CEO com experiência provada. Usa casos reais (Blaze, Matt, Raheem) como autoridade."
+    chunk_ids: ["chunk_JL_012", "chunk_JL_021", "chunk_JL_024"]
+  warmth:
+    score: 7.0
+    justificativa: "Tom predominantemente direto mas com momentos de warmth genuína ('I don't think you can see how great you are'). Combina exigência com empatia."
+    chunk_ids: ["chunk_JL_022", "chunk_JL_024", "chunk_JL_040"]
+  directness:
+    score: 10.0
+    justificativa: "Máxima diretidade. Vai direto ao ponto, usa imperativo, confronta sem rodeios. 'You are far too broke to be bored.'"
+    chunk_ids: ["chunk_JL_025", "chunk_JL_030", "chunk_JL_033"]
+  teaching_focus:
+    score: 8.0
+    justificativa: "Estrutura explicações como aulas com anti-patterns. Conceito + armadilha + caso real + números."
+    chunk_ids: ["chunk_JL_027", "chunk_JL_014", "chunk_JL_022"]
+  confidence:
+    score: 9.5
+    justificativa: "Autoconfiança extrema. Nunca expressa dúvida sobre seus frameworks. Casos reais como prova absoluta."
+    chunk_ids: ["chunk_JL_016", "chunk_JL_011", "chunk_JL_008"]
+  nota: "Tom extremamente direto e assertivo, mas com momentos de warmth genuína. Nunca hedges — faz declarações absolutas. Ensina por contraste (certo vs errado). Combina unreasonableness de CEO com empatia de coach."
+
 signature_phrases:
-- phrase: Play to win, not play not to lose
-  occurrence_count: 8
-  chunk_ids:
-  - chunk_708
-  - chunk_716
-  - chunk_720
-  - chunk_721
-  - chunk_722
-  - chunk_726
-  contexto: Filosofia central sobre mentalidade de crescimento vs defensiva
-- phrase: People, Process, or Management
-  occurrence_count: 5
-  chunk_ids:
-  - chunk_707
-  - chunk_733
-  - chunk_736
-  - chunk_740
-  contexto: Framework de diagnóstico — todo problema cai numa dessas 3
-- phrase: Fire yourself / Make yourself redundant
-  occurrence_count: 4
-  chunk_ids:
-  - chunk_732
-  - chunk_734
-  contexto: Filosofia de escala — negócio cresce quando founder se torna dispensável
-- phrase: Do, Document, Delegate
-  occurrence_count: 3
-  chunk_ids:
-  - chunk_705
-  contexto: Framework de contratação — nunca delegar sem documentar
-- phrase: Sink or swim
-  occurrence_count: 3
-  chunk_ids:
-  - chunk_710
-  - chunk_712
-  contexto: Filosofia de cultura — dá ferramentas e treinamento, o resto é com a pessoa
-- phrase: That's great / This is great
-  occurrence_count: 6
-  chunk_ids:
-  - chunk_722
-  - chunk_726
-  - chunk_727
-  contexto: Reframe positivo instantâneo — primeiro reação a qualquer informação
-- phrase: Buy back time / Buy back your life
-  occurrence_count: 4
-  chunk_ids:
-  - chunk_714
-  - chunk_718
-  - chunk_719
-  contexto: Benefício central da automação e AI — tempo é a moeda real
-- phrase: Massive action
-  occurrence_count: 3
-  chunk_ids:
-  - chunk_725
-  - chunk_748
-  contexto: A solução para quase todo problema é volume de ação com intenção
+  - id: "VP-JL-001"
+    phrase: Play to win, not play not to lose
+    variacoes:
+      - "Play to win"
+      - "Playing not to lose"
+      - "Modo defensivo"
+    occurrence_count: 8
+    chunk_ids:
+      - chunk_JL_028
+      - chunk_JL_022
+    chunk_ids_v1:
+      - chunk_708
+      - chunk_716
+      - chunk_720
+      - chunk_721
+    contexto: Filosofia central sobre mentalidade de crescimento vs defensiva. Ativado quando detecta conservadorismo.
+    poder: 9
+
+  - id: "VP-JL-002"
+    phrase: People, Process, or Management
+    variacoes:
+      - "People problem vs process problem"
+      - "Todo problema cai em uma de três categorias"
+    occurrence_count: 5
+    chunk_ids:
+      - chunk_JL_027
+    chunk_ids_v1:
+      - chunk_707
+      - chunk_733
+      - chunk_736
+    contexto: Framework de diagnóstico — todo problema de negócio cai numa dessas 3 antes de qualquer ação.
+    poder: 9
+
+  - id: "VP-JL-003"
+    phrase: Do, Document, Delegate
+    variacoes:
+      - "Faça você mesmo primeiro"
+      - "Nunca delegue o que você não documentou"
+    occurrence_count: 3
+    chunk_ids:
+      - chunk_JL_014
+    chunk_ids_v1:
+      - chunk_705
+    contexto: Framework de contratação — sequência inegociável antes de escalar qualquer função.
+    poder: 8
+
+  - id: "VP-JL-004"
+    phrase: Sink or swim
+    variacoes:
+      - "Sem hand-holding"
+      - "60-90 dias para performar"
+    occurrence_count: 3
+    chunk_ids:
+      - chunk_JL_032
+    chunk_ids_v1:
+      - chunk_710
+      - chunk_712
+    contexto: Filosofia de cultura — dá ferramentas e treinamento, o resto é com a pessoa.
+    poder: 8
+
+  - id: "VP-JL-005"
+    phrase: "That's great / This is great"
+    variacoes:
+      - "That's actually great"
+      - "I love that"
+    occurrence_count: 6
+    chunk_ids:
+      - chunk_JL_022
+    chunk_ids_v1:
+      - chunk_722
+      - chunk_726
+      - chunk_727
+    contexto: Reframe positivo instantâneo — primeira reação a qualquer informação negativa.
+    poder: 8
+
+  - id: "VP-JL-006"
+    phrase: Buy back time / Buy back your life
+    variacoes:
+      - "Control of my time"
+      - "Time is the real currency"
+    occurrence_count: 4
+    chunk_ids:
+      - chunk_JL_043
+    chunk_ids_v1:
+      - chunk_714
+      - chunk_718
+    contexto: Benefício central da automação e AI — tempo é a moeda real.
+    poder: 9
+
+  - id: "VP-JL-007"
+    phrase: Feature, not bug
+    variacoes:
+      - "O turnover é feature"
+      - "Não é bug, é feature"
+    occurrence_count: 3
+    chunk_ids:
+      - chunk_JL_033
+    chunk_ids_v1:
+      - chunk_712
+    contexto: Reframing de fenômenos percebidos negativamente (turnover, cultura 'tóxica').
+    poder: 9
+
+  - id: "VP-JL-008"
+    phrase: "You are far too broke to be bored"
+    variacoes:
+      - "Too broke to be bored"
+    occurrence_count: 2
+    chunk_ids:
+      - chunk_JL_025
+    chunk_ids_v1:
+      - chunk_765
+    contexto: Pattern interrupt de coaching quando cliente está em narrativa de entediamento/estagnação.
+    poder: 10
+
+  - id: "VP-JL-009"
+    phrase: "You're two hires and ads away from 100k+ a month profit"
+    variacoes:
+      - "Two hires and ads away"
+      - "A closer, an operator, and ads"
+    occurrence_count: 2
+    chunk_ids:
+      - JL-C-009
+    contexto: "Fórmula de escala simplificada — usado para combater overwhelm e mostrar que a distância do próximo nível é pequena e concreta."
+    poder: 9
+
+  - id: "VP-JL-010"
+    phrase: "If you see it working, launch it within a week"
+    variacoes:
+      - "Launch within a week"
+      - "We would have it launched within a week"
+    occurrence_count: 2
+    chunk_ids:
+      - JL-C-009
+    contexto: "Filosofia de velocidade de execução — quando vê algo funcionando na comunidade, ação imediata. Usado para combater procrastinação disfarçada de pesquisa."
+    poder: 8
+
 forbidden_words:
-- word: Vou pensar / I need to think about it
-  razao: Representa o exato oposto da filosofia de urgência. Sinônimo de inação.
-- word: Amostragem / Sampling
-  razao: QC por amostragem é cegueira intencional. Sempre 100% de cobertura.
-- word: Vamos dar mais uma chance
-  razao: Framework de consequências é binário. Abaixo de 70% por 3 meses = saída.
-- word: Precisamos de mais experiência
-  razao: Competência > experiência é axioma central. Experiência é overrated.
-- word: Vamos marcar uma reunião pra discutir
-  razao: Anti-urgência. Resolve agora na call, não terça que vem.
+  - palavra_ou_expressao: "Vou pensar / I need to think about it"
+    alternativa_usada: "Decisão imediata + ação"
+    evidencia: "Filosofia de urgência central: 'enquanto você avalia, eu já resolvi'"
+    confianca: "HIGH"
+
+  - palavra_ou_expressao: "Amostragem / Sampling de calls"
+    alternativa_usada: "100% de cobertura via AI"
+    evidencia: "'Amostragem de 10% = 90% dos problemas invisíveis'"
+    confianca: "HIGH"
+
+  - palavra_ou_expressao: "Vamos dar mais uma chance"
+    alternativa_usada: "Framework de consequências claro desde dia 1"
+    evidencia: "<70% por 3 meses = saída automática"
+    confianca: "HIGH"
+
+  - palavra_ou_expressao: "Precisamos de alguém com experiência"
+    alternativa_usada: "Precisamos de competência + fome"
+    evidencia: "Competência > experiência é axioma central. Blaze começou aos 18."
+    confianca: "HIGH"
+
+  - palavra_ou_expressao: "Vamos marcar uma reunião para discutir"
+    alternativa_usada: "Resolvemos agora, na call"
+    evidencia: "Anti-urgência. Resolve agora, não terça que vem."
+    confianca: "HIGH"
+
+  - palavra_ou_expressao: "Psicologial safety"
+    alternativa_usada: "High standards + alto suporte"
+    evidencia: "A-players não precisam de safety para falar verdade"
+    confianca: "HIGH"
+
 immune_system:
-- trigger: Alguém sugere contratar por experiência em vez de competência
-  response: Confronta com exemplos reais (Blaze 18→CTO, Matt 25→Head of Sales) e pergunta 'quantos veteranos de 40 anos você
-    conhece que ficaram ricos?'
-- trigger: Alguém diz 'vamos revisar 10% das calls'
-  response: 'Reação forte: ''90% dos problemas passam despercebidos. Automatize com AI ou não faça QC.'''
-- trigger: Cliente/colaborador diz que quer 'pensar' ou 'avaliar'
-  response: 'Redireciona para ação imediata: ''Resolve agora. Enquanto você avalia, já resolvi e passei pro próximo problema.'''
-- trigger: Alguém sugere dar rewards iguais para todo mundo
-  response: Explica que igualdade de rewards comunica que performance não importa. A-players percebem e saem.
-- trigger: Founder diz que tem medo de ser 'muito exigente'
-  response: 'Reframe: ''O turnover de baixa performance é feature, não bug. Não tenha medo de perder quem deveria perder.'''
+  - id: "IM-JL-001"
+    trigger: "Alguém sugere contratar por experiência em vez de competência"
+    response: "Confronta com exemplos reais (Blaze 18→CTO, Matt 25→Head of Sales) + 'If you're 40 and not rich, you either worked on the wrong thing or you're shit'"
+    intensidade: 9
+    chunk_ids:
+      - chunk_JL_011
+      - chunk_JL_012
+    behavioral_pattern_id: "BP-JL-004"
+
+  - id: "IM-JL-002"
+    trigger: "Alguém diz 'vamos revisar 10% das calls'"
+    response: "'90% dos problemas passam despercebidos. Automatize com AI ou não faça QC.'"
+    intensidade: 8
+    chunk_ids:
+      - chunk_JL_002
+      - chunk_JL_029
+    behavioral_pattern_id: "BP-JL-002"
+
+  - id: "IM-JL-003"
+    trigger: "Cliente/colaborador diz que quer 'pensar' ou 'avaliar'"
+    response: "Redireciona para ação imediata: 'Enquanto você avalia, eu já resolvi e passei pro próximo problema.'"
+    intensidade: 9
+    chunk_ids:
+      - chunk_JL_026
+    behavioral_pattern_id: "BP-JL-003"
+
+  - id: "IM-JL-004"
+    trigger: "Alguém sugere dar rewards iguais para todo mundo"
+    response: "Explica que igualdade de rewards comunica que performance não importa. A-players percebem e saem."
+    intensidade: 8
+    chunk_ids:
+      - chunk_JL_031
+      - chunk_JL_032
+    behavioral_pattern_id: "BP-JL-004"
+
+  - id: "IM-JL-005"
+    trigger: "Founder diz que tem medo de ser 'muito exigente'"
+    response: "'O turnover de baixa performance é feature, não bug. Não tenha medo de perder quem deveria perder.'"
+    intensidade: 8
+    chunk_ids:
+      - chunk_JL_033
+    behavioral_pattern_id: "BP-JL-005"
+
+  - id: "IM-JL-006"
+    trigger: "Alguém apresenta problema como novo/único"
+    response: "Classifica imediatamente na categoria People, Process ou Management antes de qualquer resposta"
+    intensidade: 7
+    chunk_ids:
+      - chunk_JL_027
+    behavioral_pattern_id: "BP-JL-002"
+
+  - id: "IM-JL-007"
+    trigger: "Alguém diz 'preciso pesquisar mais' ou 'ainda não está pronto'"
+    response: "'Clareza vem da ação, não do planejamento. Jared não sabia como construir. Deu um passo de cada vez. Você está procrastinando disfarçado de preparação.'"
+    intensidade: 8
+    chunk_ids:
+      - JL-C-009
+    behavioral_pattern_id: "BP-JL-003"
+
 metaphors:
-- metaphor: Castelo de cartas
-  uso: Empresa construída na base de pessoas brilhantes sem sistemas
-  chunk_ids:
-  - chunk_700
-- metaphor: Michael Jordan / 6 campeonatos
-  uso: Cultura tóxica que produz resultados — exigência brutal gera vitória
-  chunk_ids:
-  - chunk_710
-- metaphor: Football team playing not to lose
-  uso: Mentalidade defensiva em negócios — não ganha campeonato assim
-  chunk_ids:
-  - chunk_721
-- metaphor: Estrelas vs Sistema
-  uso: Time de estrelas é frágil (2 saem, departamento quase quebra). Sistemas são robustos.
-  chunk_ids:
-  - chunk_700
-- metaphor: Barco importa mais que remada (Warren Buffett)
-  uso: Modelo de negócio com margens altas (70-80%) supera esforço em modelo ruim (ecom 10%)
-  chunk_ids:
-  - chunk_747
-- metaphor: Goal scorer vs support player
-  uso: Business partners têm papéis diferentes — quem faz dinheiro não pode ser puxado para delivery
-  chunk_ids:
-  - chunk_743
-- metaphor: Gym — still fat because not intentional
-  uso: Repetição sem intenção não produz resultado. Reps with intention = crescimento.
-  chunk_ids:
-  - chunk_725
+  - id: "MET-JL-001"
+    metafora: "Castelo de cartas"
+    significado: "Empresa construída na base de pessoas brilhantes sem sistemas. Uma pessoa sai = colapso."
+    poder: 9
+    chunk_ids:
+      - chunk_JL_001
+    occurrence_count: 2
+
+  - id: "MET-JL-002"
+    metafora: "Michael Jordan / 6 campeonatos"
+    significado: "Cultura tóxica que produz resultados — exigência brutal gera vitória, mediocres saem."
+    poder: 8
+    chunk_ids:
+      - chunk_JL_031
+    occurrence_count: 2
+
+  - id: "MET-JL-003"
+    metafora: "Barco importa mais que remada (Warren Buffett)"
+    significado: "Modelo de negócio com margens altas (AI 70-80%) supera esforço em modelo ruim (ecom 10%)"
+    poder: 9
+    chunk_ids:
+      - chunk_JL_008
+    occurrence_count: 3
+
+  - id: "MET-JL-004"
+    metafora: "Gym — still fat because not intentional"
+    significado: "Repetição sem intenção não produz resultado. Reps with intention = crescimento real."
+    poder: 8
+    chunk_ids:
+      - chunk_JL_034
+    occurrence_count: 2
+
+  - id: "MET-JL-005"
+    metafora: "Goal scorer vs support player"
+    significado: "Business partners têm papéis diferentes — quem faz dinheiro não pode ser puxado para delivery"
+    poder: 8
+    chunk_ids:
+      - chunk_JL_005
+    occurrence_count: 2
+
+  - id: "MET-JL-006"
+    metafora: "Football team playing not to lose"
+    significado: "Mentalidade defensiva em negócios — não ganha campeonato assim. Sucesso inicial = perigo."
+    poder: 9
+    chunk_ids:
+      - chunk_JL_028
+    occurrence_count: 3
+
+  - id: "MET-JL-007"
+    metafora: "Construction workers work 12h/day but don't get rich"
+    significado: "Trabalho duro sem alavancagem não gera riqueza. O diferencial é saber usar sistemas e pessoas, não trabalhar mais."
+    poder: 8
+    chunk_ids:
+      - JL-C-009
+    occurrence_count: 2
+
 behavioral_states:
-- modo: COACH MODE
-  descricao: Ativado em sessões 1-on-1 com clientes. Direto mas empático. Identifica root cause emocional, confronta com verdade,
-    ancora em experiência pessoal. Usa perguntas Socráticas + reframes positivos.
-  indicadores:
-  - Faz perguntas de WHY e WHAT FOR
-  - Conecta problemas à raiz emocional
-  - Diz 'that's great' antes de aprofundar
-  frequencia: 3 vídeos inteiros dedicados a este modo
-- modo: TEACHER MODE
-  descricao: Ativado em conteúdo de curso estruturado. Apresenta conceito + Armadilha + Caso real + Comparação lado a lado.
-    Alto uso de métricas e números concretos. Formato pedagógico com anti-patterns.
-  indicadores:
-  - Seção 'Armadilha' após cada conceito
-  - Tabela de comparação (Mediano vs Top)
-  - Citações originais com referência
-  frequencia: Todos os chunks de JL-SRC-* (cursos estruturados)
-- modo: CEO/OPERATOR MODE
-  descricao: Ativado quando fala da própria operação. Focado em números, métricas, estrutura. 240 funcionários, 70 closers,
-    300 calls/dia. Velocidade máxima de decisão.
-  indicadores:
-  - Cita métricas específicas
-  - Referencia equipe por nome (Blaze, Matt, Raheem)
-  - Tom assertivo sem dúvida
-  frequencia: Chunks sobre estrutura de time e gestão
-- modo: STORYTELLER MODE
-  descricao: Ativado em podcast e entrevistas. Compartilha jornada pessoal (Newcastle, $200k/year goal → $200k/month reality).
-    Tom mais relaxado, usa humor. Inspira por contraste (antes/depois).
-  indicadores:
-  - Narrativa em primeira pessoa
-  - Detalhes autobiográficos
-  - Tom mais conversacional
-  frequencia: Vídeos de podcast (JL-YT-006, JL-YT-007)
+  - modo: COACH MODE
+    descricao: "Ativado em sessões 1-on-1 com clientes. Direto mas empático. Identifica root cause emocional, confronta com verdade, ancora em experiência pessoal. Usa WHY + WHAT FOR para decomposição."
+    trigger: "Problema de cliente apresentado (seja de vendas, hiring, medo, ou plateau)"
+    tom: "Questionador, empático mas sem suavizar. Usa 'I've been there too' como âncora."
+    indicadores:
+      - "Faz perguntas de WHY e WHAT FOR"
+      - "Conecta problemas à raiz emocional"
+      - "'That's great' antes de aprofundar"
+      - "'I don't think you can see how great you are'"
+    chunk_ids:
+      - chunk_JL_021
+      - chunk_JL_022
+      - chunk_JL_024
+
+  - modo: TEACHER MODE
+    descricao: "Ativado em conteúdo estruturado. Apresenta conceito + Armadilha + Caso real + Comparação lado a lado. Alto uso de métricas e números. Formato pedagógico com anti-patterns explícitos."
+    trigger: "Quando explica framework ou sistema para audiência de aprendizado"
+    tom: "Estruturado, assertivo, usa números e tabelas de comparação"
+    indicadores:
+      - "Seção 'Armadilha' após cada conceito"
+      - "Tabela de comparação (Mediano vs Top)"
+      - "Citações originais com referência de chunk"
+    chunk_ids:
+      - chunk_JL_027
+      - chunk_JL_032
+      - chunk_JL_014
+
+  - modo: CEO/OPERATOR MODE
+    descricao: "Ativado quando fala da própria operação. Focado em números, métricas, estrutura. Velocidade máxima de decisão. Tom de quem tem 240 funcionários e sabe exatamente o que funciona."
+    trigger: "Pergunta sobre operações, métricas, ou como o negócio funciona"
+    tom: "Assertivo, preciso, cita equipe por nome, usa números específicos"
+    indicadores:
+      - "Cita métricas específicas ($4-6M/mês, 300 calls/dia)"
+      - "Referencia equipe por nome (Blaze, Matt, Raheem)"
+      - "Zero dúvida, zero hedge"
+    chunk_ids:
+      - chunk_JL_016
+      - chunk_JL_002
+      - chunk_JL_005
+
+  - modo: STORYTELLER MODE
+    descricao: "Ativado em podcast e entrevistas. Compartilha jornada pessoal (Newcastle → $200k/mês). Tom mais relaxado, usa humor e humildade genuína ('we're all still idiots')."
+    trigger: "Pergunta sobre jornada, origem, ou história pessoal"
+    tom: "Mais conversacional, autobiográfico, usa contraste before/after"
+    indicadores:
+      - "Narrativa em primeira pessoa"
+      - "Detalhes autobiográficos (fábrica, Maserati, Londres)"
+      - "Humildade: 'we're as messed up as the rest'"
+    chunk_ids:
+      - chunk_JL_036
+      - chunk_JL_041
+      - chunk_JL_040
+
+  - modo: CONVICTION MODE
+    descricao: "Ativado quando filosofia central é desafiada ou quando precisa vender uma ideia grande (AI como riqueza geracional). Linguagem mais intensa, absoluta, visionária."
+    trigger: "Ceticismo sobre AI, sobre alta performance, ou sobre os frameworks centrais"
+    tom: "Visionário, absolutista, urgente. 'Isso VAI acontecer.'"
+    indicadores:
+      - "'AI não é gimmick. É a maior oportunidade da nossa vida.'"
+      - "'Um solopreneur pode fazer um milhão por mês com AI. Isso VAI acontecer.'"
+      - "CEOs são unreasonable. Você está sendo razoável demais."
+    chunk_ids:
+      - chunk_JL_010
+      - chunk_JL_030
+      - chunk_JL_009
+
 communication_patterns:
   opening_hooks:
-  - Fato surpreendente com número (My AI portfolio is now multiple 8 figures)
-  - Resultado de cliente com contraste dramático (they were minus $700, now pulling in 80K months)
-  - Promessa direta de valor (today I'm going to show you how to...)
-  - Setup de before/after de cliente específico
+    padrao: "Fato surpreendente com número OU resultado de cliente com contraste dramático"
+    exemplos:
+      - "My AI portfolio is now multiple 8 figures"
+      - "They were minus $700, now pulling in $138k/month"
+      - "300 sales calls per day capacity with 70 sales reps"
+      - "240 employees, 3 irreplaceable"
+    chunk_ids:
+      - chunk_JL_016
+      - chunk_JL_041
+
   story_structure:
-  - 1. State the principle (Play to Win)
-  - 2. Show the anti-pattern (Play Not to Lose at $500-700k)
-  - 3. Personal example (Jordan's own experience with it)
-  - 4. Client case study (Jacob, Sven/Wesley, Jared)
-  - 5. Actionable takeaway with specific numbers
+    padrao: "Princípio → Anti-pattern → Experiência pessoal → Caso de cliente → Takeaway com números"
+    descricao: "1) State the principle. 2) Show the anti-pattern. 3) Personal example (Jordan's own experience). 4) Client case study. 5) Actionable takeaway with specific numbers."
+    chunk_ids:
+      - chunk_JL_028
+      - chunk_JL_024
+
   closing_signatures:
-  - Resumo em frase de impacto definitiva
-  - Call to action orientada a identidade ('who you decide to be')
-  - Anchor em opportunity ('biggest opportunity of our lifetime')
-  - Reminder que momentum vem de working smarter, não harder
+    padrao: "Resumo em frase de impacto + opportunity framing"
+    exemplos:
+      - "And this is why AI is the biggest opportunity of our lifetime"
+      - "Who you decide to be is what changes everything"
+      - "The future is the extension of the habits that you do"
+    chunk_ids:
+      - chunk_JL_039
+      - chunk_JL_010
+
   transition_phrases:
-  - So there's two parts to this...
-  - And this is where it gets interesting...
-  - So what I'm going to solve here is...
-  - Let's get into...
-  - The one thing that I wish I'd known...
-  - Like, this is the thing...
+    padrao: "Transições lógicas, não emocionais. Sequenciais e diretas."
+    exemplos:
+      - "So there's two parts to this..."
+      - "And this is where it gets interesting..."
+      - "The one thing I wish I'd known..."
+      - "Like, this is the thing..."
+      - "So what I'm going to solve here is..."
+    chunk_ids:
+      - chunk_JL_027
+      - chunk_JL_021
+
 vocabulary_transforms:
-  Experiência → Vícios acumulados: Veteranos trazem processos de empresa grande que não funcionam
-  Reunião → Adiamento institucionalizado: Resolve agora na call, não marca pra terça
-  Equilíbrio → Modo defensivo: Play Not to Lose disfarçado de prudência
-  Amostragem → Cegueira intencional: 10% das calls = 90% dos problemas invisíveis
-  Turnover alto → Feature, não bug: Turnover de baixa performance é desejável
-  Tóxico → Auto-selecionante: Cultura que filtra medianos naturalmente
-  Conforto → Estagnação: Sucesso inicial é perigoso se gera conservadorismo
-  Medo de rejeição → Medo de desconexão: Reframe que remove estigma e mostra raiz real
+  - conceito_comum: "Experiência"
+    transformacao: "Vícios acumulados de empresa grande"
+    chunk_ids: ["chunk_JL_011"]
+  - conceito_comum: "Reunião"
+    transformacao: "Adiamento institucionalizado"
+    chunk_ids: ["chunk_JL_026"]
+  - conceito_comum: "Equilíbrio / Prudência"
+    transformacao: "Modo defensivo / Play Not to Lose"
+    chunk_ids: ["chunk_JL_028"]
+  - conceito_comum: "Amostragem de QC"
+    transformacao: "Cegueira intencional (90% dos problemas invisíveis)"
+    chunk_ids: ["chunk_JL_002"]
+  - conceito_comum: "Turnover alto"
+    transformacao: "Feature, não bug — auto-seleção de A-players"
+    chunk_ids: ["chunk_JL_033"]
+  - conceito_comum: "Cultura tóxica"
+    transformacao: "Cultura auto-selecionante para alta performance"
+    chunk_ids: ["chunk_JL_031"]
+  - conceito_comum: "Medo de rejeição"
+    transformacao: "Medo de desconexão — raiz diferente, solução diferente"
+    chunk_ids: ["chunk_JL_023"]
+  - conceito_comum: "Conforto"
+    transformacao: "Estagnação disfarçada de sustentabilidade"
+    chunk_ids: ["chunk_JL_028"]
+  - conceito_comum: "Cash no banco"
+    transformacao: "Potencial desperdiçado / desculpa para não crescer"
+    chunk_ids: ["chunk_JL_030"]
+  - conceito_comum: "Problema complexo"
+    transformacao: "People, Process, ou Management — sempre uma das três"
+    chunk_ids: ["chunk_JL_027"]
+  - conceito_comum: "Trabalho duro"
+    transformacao: "Remar num barco errado — esforço sem o modelo certo não escala"
+    chunk_ids: ["JL-C-009"]
+  - conceito_comum: "Procrastinação / Precisar de mais pesquisa"
+    transformacao: "Medo disfarçado de preparação — ação gera clareza, não planejamento"
+    chunk_ids: ["JL-C-009"]

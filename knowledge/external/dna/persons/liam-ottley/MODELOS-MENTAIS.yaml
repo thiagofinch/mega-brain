@@ -117,10 +117,40 @@ mental_models:
     raiz: "knowledge/external/inbox/liam-ottley/podcasts/How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE [youtube.com_watch_v=pTTvyQDK_tk].txt"
     reinforced_chunks: ["chunk_650"]
 
+  # ---- New from Autonomous Run 2026-03-16, chunks 656-690 ----
+
+  - id: MM-LO-010
+    name: "Authority Flywheel"
+    description: >
+      Um ciclo auto-reforçador onde: trabalho cria resultados → resultados geram histórias →
+      histórias compartilhadas em LinkedIn/YouTube atraem clientes → novos clientes geram
+      mais resultados. Cada win documentado alimenta o flywheel. O oposto do "claim perfection"
+      — autentica construindo credibilidade progressiva com prova, não promessas.
+    application: "Documentar cada build, resultado e insight como história. Publicar consistentemente. Deixar o flywheel compor."
+    quote: "Every win and every insight is a story worth sharing. Documenting your journey creates a self-reinforcing loop."
+    insight_ref: "LO-020"
+    source: "How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE [youtube.com_watch_v=pTTvyQDK_tk].txt"
+    new_chunks: ["chunk_680"]
+
+  - id: MM-LO-011
+    name: "Skills = Conhecimento Ensinável e Reutilizável"
+    description: >
+      Skills são módulos de documentação de workflow que ensinam o Claude a executar
+      tarefas específicas. O insight mental key: cada skill criada transforma conhecimento
+      tácito (na cabeça do fundador) em conhecimento explícito (reutilizável pelo AI).
+      Uma skill criada uma vez é executável infinitamente — o conhecimento compõe.
+    application: "Para cada nova tarefa ensinada ao Claude, criar um SKILL.md. Nunca re-explicar a mesma coisa duas vezes."
+    quote: "Skills are like little docs that you can get Claude to create which document a workflow. These are a key piece of why this thing is chosen to take off."
+    insight_ref: "LO-012"
+    source: "What Is an AI Operating System (And Why Every Business Will Need One)"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/What Is an AI Operating System (And Why Every Business Will Need One) [youtube.com_watch_v=DXcVT07bQ6g].txt"
+    new_chunks: ["chunk_668"]
+
 metadata:
-  total_items: 9
+  total_items: 11
   source_person: "Liam Ottley"
   source_count: 3
   extraction_date: "2026-03-13"
   updated: "2026-03-16"
-  version: "1.1.0"
+  version: "1.2.0"

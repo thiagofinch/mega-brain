@@ -1,0 +1,59 @@
+# knowledge/external/dna/persons/cole-gordon/FRAMEWORKS.yaml
+# Gerado em: 2026-03-16
+# Fonte: Pipeline MCE v2.0 (INSIGHTS-STATE.json)
+
+pessoa: "Cole Gordon"
+versao: "1.0.0"
+data_atualizacao: "2026-03-16T09:10:00Z"
+total_entries: 5
+
+entries:
+  - id: "FW-CG-001"
+    insight_id: "CG-MCE001-011"
+    titulo: "7 Beliefs Framework — O Mapa Completo de Objeções"
+    descricao: "Todo prospect precisa de 7 crenças para comprar: Pain, Doubt, Cost, Desire, Money, Support (instaladas no Discovery) + Trust (instalada no Pitch). Qualquer objeção mapeia para uma dessas 7. Se objeção aparece no final, uma das beliefs do discovery falhou. Instale via perguntas que fazem o prospect verbalizar (Consistency Bias de Cialdini)."
+    quote: "Any objection you get at the end maps to one of the 7 beliefs. One of them failed upstream."
+    chunk_ids: ["CG-02-02"]
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    categoria: "processo-vendas"
+
+  - id: "FW-CG-002"
+    insight_id: "CG-MCE001-012"
+    titulo: "6-Phase Call Flow — Estrutura Completa de Venda High-Ticket"
+    descricao: "Fase 1 (Introduction: rapport + frame), Fase 2 (Discovery: instalar 6 beliefs + Hell/Heaven + números específicos), Fase 3 (Transition: evitar anvil drop, prospect pede o pitch), Fase 4 (Pitch: 4 pillars + double tie down a cada 45s), Fase 5 (Committing: 3 perguntas específicas), Fase 6 (Objections: raramente chegamos aqui se beliefs instaladas)."
+    quote: "The 6-phase call flow ensures beliefs are installed before you ever talk about price."
+    chunk_ids: ["CG-02-03"]
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    categoria: "processo-vendas"
+
+  - id: "FW-CG-003"
+    insight_id: "CG-MCE001-013"
+    titulo: "4 Pillars Pitch Structure + 3 Tonality Levels"
+    descricao: "Cada pilar usa fórmula: 'Quando a maioria faz X → resulta em Y. Em vez disso, fazemos Z → permite W.' Pillar 1-2 = paradigm shift. Pillar 3-4 = future pacing. Tonalidade: neutral 80-90%, breaking rapport 5-10%, NUNCA seeking rapport."
+    quote: "Pitch is a dialogue, not a monologue. Double tie down every 45 seconds."
+    chunk_ids: ["CG-02-03"]
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    categoria: "processo-vendas"
+
+  - id: "FW-CG-004"
+    insight_id: "CG-MCE001-014"
+    titulo: "Pay-Per-Hire + Churn Guarantee — Modelo Enterprise"
+    descricao: "First hire: ~$4-5K down → depois pay-as-you-go. Churn guarantee: crédito automático ou reembolso se rep sair. Target ideal: empresas com ≥10 reps + ≥10-20 contratações/ano (churn cria demanda recorrente infinita). Remove risco do cliente = unlocks mercado enterprise de alto volume sem lock-in."
+    quote: "Very rare model for recruiting. Transactional high-ticket. No risk for the client."
+    chunk_ids: ["CG-03-01"]
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    categoria: "business-model"
+
+  - id: "FW-CG-005"
+    insight_id: "CG-MCE001-015"
+    titulo: "3 Buckets de Objeções + Scripts Específicos"
+    descricao: "UNCERTAINTY: prova social + cases específicos + garantia. SUPPORT: trazer decisor, 3-way call. FINANCIAL: 3 Data Points Method (money aside want it? → net income/cash/credit → payment plan). Regra: identificar o bucket ANTES de responder. Sempre pedir algo em retorno por melhores payment terms."
+    quote: "Every objection falls into three buckets. Identify the bucket before you respond — different bucket requires different solution."
+    chunk_ids: ["CG-02-07"]
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    categoria: "processo-vendas"

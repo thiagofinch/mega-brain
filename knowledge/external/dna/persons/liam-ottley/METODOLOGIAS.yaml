@@ -182,10 +182,125 @@ methodologies:
     raiz: "knowledge/external/inbox/liam-ottley/podcasts/How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE [youtube.com_watch_v=pTTvyQDK_tk].txt"
     reinforced_chunks: ["chunk_651", "chunk_653"]
 
+  # ---- New from Autonomous Run 2026-03-16, chunks 656-690 ----
+
+  - id: MET-LO-006
+    name: "AI Workforce Monetization Path (4 Stages)"
+    description: >
+      Sequência de monetização para construir negócio de AI workforce do zero.
+      Cada etapa gera fluxo de caixa que financia a próxima.
+    stages:
+      - stage: 1
+        name: "Diagnose"
+        product: "AI Workforce Assessment (audit + relatório)"
+        price: "$2-5K one-time"
+        purpose: "Posicionamento como trusted advisor antes de qualquer implementação"
+      - stage: 2
+        name: "Design & Implement"
+        product: "Single chatbot ($2-5K) or Full Workforce ($10-50K+)"
+        price: "Varia por escopo — 1 agente a departamento inteiro"
+        purpose: "Entrega do produto principal com margem alta"
+      - stage: 3
+        name: "Manage & Scale"
+        product: "Monthly retainer (3-5 agents)"
+        price: "$4.5-15K/mo com 80%+ margin"
+        purpose: "Receita recorrente escalável — base de revenue previsível"
+      - stage: 4
+        name: "Expand"
+        product: "Novos departamentos ou novos clientes via referrals"
+        price: "Upsell interno ou novo cliente com case study da Etapa 1-3"
+        purpose: "Compounding do portfólio de clientes"
+    quote: "Your journey to monetization follows a simple progression. Diagnose, design, deliver, and scale."
+    insight_ref: "LO-017"
+    source: "How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE [youtube.com_watch_v=pTTvyQDK_tk].txt"
+    new_chunks: ["chunk_678"]
+
+  - id: MET-LO-007
+    name: "Cold Email Niche Testing Framework"
+    description: >
+      Metodologia de aquisição de clientes via cold email para agência de AI workforce.
+      Fórmula: 4 nichos × 500 emails × 30 dias → identificar vencedor → dobrar.
+    steps:
+      - step: 1
+        action: "Escolher 4 nichos de serviços (ex: contadores, corretores, clínicas, agências)"
+      - step: 2
+        action: "Escrever 1 email claro e focado em resultados por niche"
+        template: "'I help [niche] replace [specific process] with an AI workforce that runs 24/7 for less than the cost of one employee.'"
+      - step: 3
+        action: "Enviar 500 emails por niche (2000 total)"
+      - step: 4
+        action: "Rastrear por 30 dias: taxa de abertura, respostas, calls agendadas"
+      - step: 5
+        action: "Identificar niche vencedor (melhor performance em todos os 3 metrics)"
+      - step: 6
+        action: "Dobrar down no vencedor — todo esforço de prospecting vai para este niche"
+    success_metrics: "Open rate, reply rate, calls booked"
+    quote: "Choose four service niches, write one clear results-driven email per niche, send 500 emails per niche and track for 30 days."
+    insight_ref: "LO-019"
+    source: "How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE [youtube.com_watch_v=pTTvyQDK_tk].txt"
+    new_chunks: ["chunk_679"]
+
+  - id: MET-LO-008
+    name: "Agent Prompt Structure Formula (6 Steps)"
+    description: >
+      Fórmula para criar prompts de agentes que funcionam consistentemente em produção.
+      Seis componentes obrigatórios que definem identidade, inputs, responsabilidades e outputs.
+    steps:
+      - step: 1
+        name: "Define Role"
+        action: "Quem é o agente e qual é sua função (título, empresa, missão)"
+      - step: 2
+        name: "Define Expected Inputs"
+        action: "O que o agente recebe para processar (formato, canal, tipo de dado)"
+      - step: 3
+        name: "Define Responsibility"
+        action: "O que o agente faz com os inputs e como faz (step-by-step)"
+      - step: 4
+        name: "Add Tools"
+        action: "Adicionar tools via forward slash — quais APIs/integrações o agente pode usar"
+      - step: 5
+        name: "Add Considerations"
+        action: "Edge cases, restrições, regras especiais (o que fazer quando X acontece)"
+      - step: 6
+        name: "Define Output Format"
+        action: "Como e onde o agente deve entregar o resultado"
+    quote: "Define the agents role clearly. Get clear on inputs. Define its responsibility — what it's supposed to do and how. Add tools. Add important considerations. Define output format."
+    insight_ref: "LO-021"
+    source: "How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE [youtube.com_watch_v=pTTvyQDK_tk].txt"
+    new_chunks: ["chunk_673"]
+
+  - id: MET-LO-009
+    name: "Warm Outreach First-Client Formula"
+    description: >
+      Metodologia de aquisição do primeiro cliente via rede warm que minimiza pressão de vendas
+      e maximiza alcance pedindo referrals em vez de vender diretamente.
+    approach: "Não vender diretamente — pedir referrals. Reduz pressão, expande alcance."
+    steps:
+      - step: 1
+        action: "Listar contatos da rede que têm negócios ou conhecem donos de negócios"
+      - step: 2
+        action: "Enviar mensagem personalizada — não pitch, pedido de referral"
+        template: "'Hey [nome], estou construindo sistemas de AI workforce que automatizam [operação específica], oferecendo alguns assessments complementares para construir cases. Você conhece alguém que poderia se beneficiar?'"
+      - step: 3
+        action: "Para cada resposta positiva: oferecer assessment gratuito (complimentary) em troca de case study"
+      - step: 4
+        action: "Executar assessment, entregar resultado real, coletar case study com números"
+      - step: 5
+        action: "Usar case study para fechar próximos clientes pagantes"
+    psychology: "Pedir referral = low pressure + high reach. Complementary assessment = low risk para o cliente, high value para você (case study)."
+    quote: "The key is that you're not selling to them directly. You're asking them for referrals, which essentially lowers the pressure and expands your reach."
+    insight_ref: "LO-025"
+    source: "How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE [youtube.com_watch_v=pTTvyQDK_tk].txt"
+    new_chunks: ["chunk_679"]
+
 metadata:
-  total_items: 5
+  total_items: 9
   source_person: "Liam Ottley"
   source_count: 3
   extraction_date: "2026-03-13"
   updated: "2026-03-16"
-  version: "1.1.0"
+  version: "1.2.0"

@@ -1,0 +1,79 @@
+# HEURISTICAS — Sam Ovens (Setterlun University)
+# Camada L3 do DNA Cognitivo: Regras práticas e atalhos decisórios com threshold
+# Pipeline MCE v1.0 | Atualizado: 2026-03-16
+
+pessoa: "Sam Ovens"
+versao: "1.0.0"
+updated: "2026-03-16T08:00:00Z"
+total_entries: 7
+
+entries:
+  - id: "HEU-SO-001"
+    insight_ref: "SO-INS-006"
+    regra: "80/20: 20% do trabalho gera 80% do resultado"
+    threshold: "Concentrar 80%+ do esforço nos 20% de atividades de alto impacto"
+    declaracao: "Regra 80/20: 20% do trabalho gera 80% do resultado. Foque nas atividades de alto impacto, não em entregar volume. O resto é desperdício de energia."
+    aplicacao: "Priorização de atividades, definição de escopo, alocação de tempo"
+    chunk_ids: ["SO-chunk-003", "SO-chunk-013"]
+    tags: ["80-20", "priorizacao", "leverage", "eficiencia"]
+    confianca: "HIGH"
+
+  - id: "HEU-SO-002"
+    insight_ref: "SO-INS-007"
+    regra: "DWY é o gold standard — equilíbrio liberdade do founder vs responsabilidade pelo resultado"
+    threshold: "Para agências e consultores: DWY antes de DFY ou DIY"
+    declaracao: "DWY (Done With You) = GOLD STANDARD. Você GUIA, cliente EXECUTA. Equilíbrio preço × escala. Cliente tem skin in the game."
+    aplicacao: "Seleção do modelo de entrega para agências/consultores"
+    chunk_ids: ["SO-chunk-004", "SO-chunk-013"]
+    tags: ["DWY", "modelo-de-entrega", "gold-standard"]
+    confianca: "HIGH"
+
+  - id: "HEU-SO-003"
+    insight_ref: "SO-INS-010"
+    regra: "Cobrar 10% do valor lifetime gerado = deal óbvio para o cliente"
+    threshold: "Pricing = ~10% do valor do resultado gerado ao longo da vida do cliente"
+    declaracao: "Se resultado vale $500k ao longo da vida, cobrar $50k é 10% do valor = deal óbvio."
+    aplicacao: "Definição de preço baseado em ROI lifetime"
+    chunk_ids: ["SO-chunk-005"]
+    tags: ["pricing", "university-model", "ROI-lifetime", "10-percent"]
+    confianca: "HIGH"
+
+  - id: "HEU-SO-004"
+    insight_ref: "SO-INS-011"
+    regra: "Net profit mínimo 30-40% da receita"
+    threshold: "Abaixo de 30% = problema de pricing ou custo de entrega"
+    declaracao: "60-70% on fulfillment, 20-30% on marketing/sales, 30-40% net profit. 30% net profit é o mínimo. Menos que isso, você não tem buffer pra erros, sazonalidade, ou investimento."
+    aplicacao: "Validação da saúde financeira do modelo de negócio"
+    chunk_ids: ["SO-chunk-006", "SO-chunk-007"]
+    tags: ["net-profit", "margem", "saude-financeira", "30-percent"]
+    confianca: "HIGH"
+
+  - id: "HEU-SO-005"
+    insight_ref: "SO-INS-012"
+    regra: "Break-even do cliente em 1-3 meses = modelo saudável"
+    threshold: "Acima de 3 meses → problema em pricing ou CAC"
+    declaracao: "Break-even: 1-3 meses para novo cliente. Se demora mais, ajuste pricing ou CAC."
+    aplicacao: "Diagnóstico de viabilidade do modelo de receita"
+    chunk_ids: ["SO-chunk-006"]
+    tags: ["break-even", "CAC", "1-3-meses"]
+    confianca: "HIGH"
+
+  - id: "HEU-SO-006"
+    insight_ref: "SO-INS-021"
+    regra: "Pergunta 'what makes you different?' = diagnóstico de posicionamento com falha"
+    threshold: "Se prospect pergunta isso, posicionamento está em Red Ocean sem diferenciação"
+    declaracao: "Se prospects fazem essa pergunta, você está em Red Ocean sem diferenciação. Quando Purple Ocean funciona, a diferenciação é óbvia. Prospect não pergunta — ele entende."
+    aplicacao: "Validação de posicionamento Purple Ocean"
+    chunk_ids: ["SO-chunk-011", "SO-chunk-012"]
+    tags: ["posicionamento", "red-flag", "purple-ocean", "diagnostico"]
+    confianca: "HIGH"
+
+  - id: "HEU-SO-007"
+    insight_ref: "SO-INS-017"
+    regra: "Padrão de diferenciação: categoria existente + tweak específico"
+    threshold: "100% das grandes diferenciações seguem este padrão (Tesla, iPhone, Amazon, Netflix, Uber)"
+    declaracao: "Padrão: Ninguém reinventou a categoria. Todos fizeram um tweak específico."
+    aplicacao: "Criação de posicionamento Purple Ocean"
+    chunk_ids: ["SO-chunk-009", "SO-chunk-010"]
+    tags: ["tweak", "diferenciacao", "categoria-existente"]
+    confianca: "HIGH"

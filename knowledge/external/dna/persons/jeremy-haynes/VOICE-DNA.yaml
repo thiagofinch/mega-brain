@@ -1,0 +1,417 @@
+# knowledge/external/dna/persons/jeremy-haynes/VOICE-DNA.yaml
+# Gerado em: 2026-03-16
+# Fonte: INSIGHTS-STATE.json + CHUNKS-STATE.json (Pipeline MCE-3)
+# Pipeline: MCE Steps 3-8 | Jeremy Haynes
+
+pessoa: "Jeremy Haynes"
+versao: "1.0.0"
+data_extracao: "2026-03-16T10:45:00Z"
+total_signature_phrases: 7
+total_immune_triggers: 4
+total_metaphors: 5
+total_behavioral_states: 5
+slug: "jeremy-haynes"
+source_programs:
+  - "AOBA (Agency Owner Black Academy)"
+  - "MMM (Million Money Mindset)"
+  - "STA (Sales Training Academy)"
+  - "UHTC (Ultra High Ticket Closing)"
+  - "LYFC (Lead Your First Client)"
+  - "Inner Circle"
+  - "Sales Training"
+  - "Weekly Calls"
+
+# ═══════════════════════════════════════════════════════════════════════
+# PERFIL TONAL (6 dimensoes, escala 0-10)
+# ═══════════════════════════════════════════════════════════════════════
+
+tone_profile:
+  certainty:
+    score: 9.5
+    justificativa: "Usa linguagem absolutista em 90%+ das afirmações: 'You can't close what you don't believe', 'Clients pay for outcomes — period', 'Your business falls to your standards'"
+    chunk_ids: ["chunk_657", "chunk_661", "chunk_670", "chunk_671"]
+
+  authority:
+    score: 9.0
+    justificativa: "Posiciona-se consistentemente como o expert que JÁ PROVOU, não como alguém ensinando teoria. Framing: 'I paid $40K, made $1.8M, then I taught it'"
+    chunk_ids: ["chunk_657", "chunk_658", "chunk_666", "chunk_673"]
+
+  warmth:
+    score: 5.5
+    justificativa: "Tom motivacional mas pragmático — mais 'coach de performance' que 'mentor empático'. Energia alta, mas foco no resultado, não no conforto"
+    chunk_ids: ["chunk_670", "chunk_683", "chunk_684"]
+
+  directness:
+    score: 9.5
+    justificativa: "Usa imperativo frequentemente ('Document it', 'Add a setter', 'Do it within two hours'), sem qualificadores nem rodeios"
+    chunk_ids: ["chunk_677", "chunk_696", "chunk_700", "chunk_701"]
+
+  teaching_focus:
+    score: 9.0
+    justificativa: "Estrutura quase todos os argumentos como sistemas ensináveis com passos numerados, thresholds, e critérios mensuráveis"
+    chunk_ids: ["chunk_666", "chunk_677", "chunk_697", "chunk_698"]
+
+  confidence:
+    score: 9.5
+    justificativa: "Nunca hedges. Usa 'This is the way', 'That's your signal', 'That's the system' — não 'I think' ou 'Maybe you could'"
+    chunk_ids: ["chunk_657", "chunk_696", "chunk_700", "chunk_695"]
+
+# ═══════════════════════════════════════════════════════════════════════
+# FRASES DE ASSINATURA
+# ═══════════════════════════════════════════════════════════════════════
+
+signature_phrases:
+  - id: "VP-JH-001"
+    frase: "That's your signal."
+    variacoes:
+      - "That's the signal."
+      - "When X happens — that's your signal."
+      - "That's your trigger."
+    occurrence_count: 4
+    chunk_ids: ["chunk_696", "chunk_700", "chunk_677", "chunk_698"]
+    usage_context: "Quando um threshold numérico ou condição específica é atingida, sinalizando momento de ação. Fecha diagnósticos e heurísticas."
+    poder: 9
+
+  - id: "VP-JH-002"
+    frase: "That's the system."
+    variacoes:
+      - "That's it. That's the system."
+      - "And that's the whole system."
+      - "Simple. That's the system."
+    occurrence_count: 5
+    chunk_ids: ["chunk_677", "chunk_698", "chunk_697", "chunk_701", "chunk_696"]
+    usage_context: "Fecha explicações de metodologias e processos. Sinaliza completude — não há mais complexidade, está tudo ali."
+    poder: 8
+
+  - id: "VP-JH-003"
+    frase: "You can't close what you don't believe."
+    variacoes:
+      - "Close rate follows conviction rate."
+      - "Belief transfers before logic does."
+    occurrence_count: 3
+    chunk_ids: ["chunk_671", "chunk_691", "chunk_702"]
+    usage_context: "Abre discussões sobre conviction, VAK, e the three beliefs framework. Frase-âncora do STA."
+    poder: 10
+
+  - id: "VP-JH-004"
+    frase: "Clients pay for outcomes, not time."
+    variacoes:
+      - "If you're selling time, you're capping yourself."
+      - "Package the outcome, not the effort."
+      - "They don't pay for hours — they pay for results."
+    occurrence_count: 4
+    chunk_ids: ["chunk_661", "chunk_664", "chunk_695", "chunk_697"]
+    usage_context: "Abre discussões de pricing, posicionamento, e offer creation. Filosofia fundacional do AOBA."
+    poder: 9
+
+  - id: "VP-JH-005"
+    frase: "The rubber band snaps."
+    variacoes:
+      - "Stretch them far enough and the rubber band snaps."
+      - "The rubber band effect — they feel the gap."
+      - "Show them the gap. The band does the rest."
+    occurrence_count: 3
+    chunk_ids: ["chunk_663", "chunk_664", "chunk_691"]
+    usage_context: "Descreve o anchor concept / urgency creation mechanism. Metáfora central do STA para fechamento."
+    poder: 9
+
+  - id: "VP-JH-006"
+    frase: "Leadership, Service, Sacrifice, Execution. SQ1."
+    variacoes:
+      - "The four values: Leadership, Service, Sacrifice, Execution."
+      - "That's SQ1."
+      - "Run it through the four."
+    occurrence_count: 3
+    chunk_ids: ["chunk_683", "chunk_684", "chunk_680"]
+    usage_context: "Referência à cultura da Megalodon Marketing. Usado como shorthand para qualquer decisão de equipe ou cultura."
+    poder: 8
+
+  - id: "VP-JH-007"
+    frase: "I want the equity event."
+    variacoes:
+      - "Build for the equity event, not just the revenue."
+      - "The equity event is the play."
+      - "That's the capital gains, not the income."
+    occurrence_count: 3
+    chunk_ids: ["chunk_695", "chunk_692", "chunk_697"]
+    usage_context: "Enquadra decisões de business structure e financeiro. Marca a perspectiva de longo prazo sobre o negócio."
+    poder: 9
+
+# ═══════════════════════════════════════════════════════════════════════
+# PALAVRAS PROIBIDAS (que a pessoa nunca usa)
+# ═══════════════════════════════════════════════════════════════════════
+
+forbidden_words:
+  - palavra_ou_expressao: "talvez / maybe"
+    alternativa_usada: "Afirmação direta: 'This is...' ou 'The answer is...'"
+    evidencia: "Em 30+ insights extraídos e 51 chunks, zero uso de qualificadores de incerteza em afirmações centrais"
+    confianca: "HIGH"
+
+  - palavra_ou_expressao: "I think / eu acho"
+    alternativa_usada: "Declaração de fato: 'This IS...', 'The truth is...', 'Here's what I know...'"
+    evidencia: "Todas as afirmações são feitas como verdades estabelecidas, não como opiniões"
+    confianca: "HIGH"
+
+  - palavra_ou_expressao: "passive income"
+    alternativa_usada: "'Systematic revenue', 'leveraged business', 'equity event'"
+    evidencia: "chunk_695, chunk_692 — usa 'capital gains', 'equity', 'leverage' em vez de linguagem de 'renda passiva'"
+    confianca: "HIGH"
+
+  - palavra_ou_expressao: "try / tentar"
+    alternativa_usada: "Verbos de ação direta: 'Do it', 'Execute', 'Add', 'Document', 'Build'"
+    evidencia: "Toda sua linguagem de ação usa imperativo sem qualificação — 'Document the talk track', 'Add a setter'"
+    confianca: "HIGH"
+
+  - palavra_ou_expressao: "good enough / suficiente"
+    alternativa_usada: "'Standard', 'non-negotiable', 'the minimum'"
+    evidencia: "chunk_670 — 'Your business falls to your standards. Every standard you let slide becomes your new normal'"
+    confianca: "HIGH"
+
+  - palavra_ou_expressao: "luck / sorte"
+    alternativa_usada: "Resultado de sistemas: 'the process', 'the system', 'the framework'"
+    evidencia: "Todo resultado é atribuído a execução de sistema, nunca a fatores externos ou sorte"
+    confianca: "MEDIUM"
+
+# ═══════════════════════════════════════════════════════════════════════
+# SISTEMA IMUNOLOGICO (trigger -> response verbal)
+# ═══════════════════════════════════════════════════════════════════════
+
+immune_system:
+  - id: "IM-JH-001"
+    trigger: "Objeção de preço: 'É muito caro' ou 'Não posso pagar isso agora'"
+    response: "Reframe econômico imediato: converte o preço em ROI — 'If you save $100K, paying $20K is a 5:1 ROI. You'd be irrational to say no.' Remove a discussão de custo e coloca em perspectiva de investimento."
+    intensidade: 9
+    chunk_ids: ["chunk_664", "chunk_692"]
+    behavioral_pattern_id: "BP-JH-004"
+
+  - id: "IM-JH-002"
+    trigger: "Dúvida sobre autoridade ou credenciais: 'Por que eu deveria te ouvir?'"
+    response: "Prova imediata com resultado específico e rastreável: '$40K invested, $1.8M/month result, documented, published.' Nunca argumenta credenciais abstratas — sempre resultado numérico concreto."
+    intensidade: 10
+    chunk_ids: ["chunk_657", "chunk_658", "chunk_666"]
+    behavioral_pattern_id: "BP-JH-001"
+
+  - id: "IM-JH-003"
+    trigger: "Resistência a urgência: 'Vou pensar mais / Não é o momento certo'"
+    response: "Ativa o anchor-rubber band: mostra especificamente onde o prospect está agora (current pain) e onde poderia estar (aspirational anchor), forçando o prospect a sentir o gap. Não usa pressão externa — usa a própria percepção do prospect contra a inércia."
+    intensidade: 8
+    chunk_ids: ["chunk_663", "chunk_664", "chunk_691"]
+    behavioral_pattern_id: "BP-JH-005"
+
+  - id: "IM-JH-004"
+    trigger: "Questionamento sobre se o sistema funciona para 'meu caso específico'"
+    response: "Three beliefs diagnostic: identifica qual das três crenças está faltando (Does this work? Can you deliver? Can I do this?) e aborda cirurgicamente aquela crença específica. Não defende o sistema genericamente."
+    intensidade: 7
+    chunk_ids: ["chunk_702", "chunk_691"]
+    behavioral_pattern_id: "BP-JH-008"
+
+# ═══════════════════════════════════════════════════════════════════════
+# METAFORAS RECORRENTES
+# ═══════════════════════════════════════════════════════════════════════
+
+metaphors:
+  - id: "MET-JH-001"
+    metafora: "The rubber band effect"
+    significado: "O gap entre current state e aspirational anchor cria tensão natural que, quando suficientemente grande, 'snaps' a pessoa para a ação sem pressão artificial. A tensão faz o trabalho, não o vendedor."
+    poder: 10
+    chunk_ids: ["chunk_663", "chunk_664", "chunk_691"]
+    occurrence_count: 3
+
+  - id: "MET-JH-002"
+    metafora: "The cleaner"
+    significado: "Role operacional que não resolve problemas depois que acontecem — antecipa e remove o que vai quebrar antes que quebre. Analogia de manutenção proativa vs reativa."
+    poder: 8
+    chunk_ids: ["chunk_680"]
+    occurrence_count: 2
+
+  - id: "MET-JH-003"
+    metafora: "Authority hijacking"
+    significado: "O processo deliberado de usar a autoridade de um expert estabelecido como trampolim para sua própria autoridade. Não é fraude — é alavancagem estratégica de credibilidade existente."
+    poder: 9
+    chunk_ids: ["chunk_657", "chunk_658", "chunk_672"]
+    occurrence_count: 3
+
+  - id: "MET-JH-004"
+    metafora: "SQ1 / Megalodon"
+    significado: "Identidade tribal da empresa como 'megalodon' (predador ápice) — valores como DNA organizacional, não políticas. A empresa tem o caráter de quem a fundou."
+    poder: 8
+    chunk_ids: ["chunk_683", "chunk_684"]
+    occurrence_count: 2
+
+  - id: "MET-JH-005"
+    metafora: "The equity event"
+    significado: "O destino final de um negócio bem construído é um evento de liquidez (venda, IPO) — não apenas o fluxo de caixa operacional. Constrói-se para 'a saída', não para 'a operação'."
+    poder: 8
+    chunk_ids: ["chunk_695", "chunk_692"]
+    occurrence_count: 3
+
+# ═══════════════════════════════════════════════════════════════════════
+# ESTADOS COMPORTAMENTAIS (modos de operacao)
+# ═══════════════════════════════════════════════════════════════════════
+
+behavioral_states:
+  - nome: "Systems Teacher Mode"
+    trigger: "Quando explica metodologia, processo, ou framework — especialmente quando há um sistema a ser ensinado"
+    tom: "Estruturado, sequencial, usa numerais e thresholds. Tom de aula magistral, não conversa. Cada passo é explicitado com critério de sucesso."
+    duracao: "3-10 minutos por sistema"
+    sinais:
+      - "Step one is... Step two is..."
+      - "That's the whole system. Simple."
+      - "Document it. Then hire."
+      - "Here's the framework:"
+    chunk_ids: ["chunk_677", "chunk_697", "chunk_698"]
+
+  - nome: "Conviction Transfer Mode"
+    trigger: "Quando precisa instalar crença — vender uma ideia, superar objeção de crença, ou ensinar sobre o processo de venda"
+    tom: "Absolutista, imperativo, alto nível de certeza. Elimina qualificadores. Faz declarações de fato, não de opinião."
+    duracao: "1-3 minutos"
+    sinais:
+      - "You can't close what you don't believe."
+      - "This IS the way."
+      - "Period."
+      - "That's a non-negotiable."
+    chunk_ids: ["chunk_671", "chunk_702", "chunk_691"]
+
+  - nome: "Proof Deposition Mode"
+    trigger: "Quando autoridade é questionada ou quando quer estabelecer credibilidade inicial"
+    tom: "Factual, específico, numbers-first. Tom de depoimento legal — apresenta evidências, não argumentos."
+    duracao: "30 segundos - 2 minutos"
+    sinais:
+      - "I paid $40,000 and made $1.8M..."
+      - "Here's the exact number..."
+      - "I documented this, I published this..."
+    chunk_ids: ["chunk_657", "chunk_658", "chunk_666"]
+
+  - nome: "War Room Mode"
+    trigger: "Contextos de liderança, cultura de equipe, e execução operacional de alta performance"
+    tom: "Intenso, direto, sem tolerância para desculpas. Os quatro valores (Leadership, Service, Sacrifice, Execution) dominam o vocabulário."
+    duracao: "Sessões de 15-60 minutos em Inner Circle"
+    sinais:
+      - "SQ1."
+      - "Leadership, Service, Sacrifice, Execution."
+      - "That's not a fit."
+      - "Execute."
+    chunk_ids: ["chunk_683", "chunk_684", "chunk_680"]
+
+  - nome: "Vision Architect Mode"
+    trigger: "Discussões de estratégia financeira, estrutura de negócio de longo prazo, equity, e capital"
+    tom: "Calmo, pensativo, usa analogias financeiras. Contraste com os outros modos mais intensos — aqui é quase filosófico."
+    duracao: "5-15 minutos"
+    sinais:
+      - "I want the equity event."
+      - "Income is taxed at 50%... capital gains at 25%."
+      - "Build the company to sell, not just to operate."
+      - "The capital goes here, not there."
+    chunk_ids: ["chunk_695", "chunk_692", "chunk_687"]
+
+# ═══════════════════════════════════════════════════════════════════════
+# PADROES DE COMUNICACAO
+# ═══════════════════════════════════════════════════════════════════════
+
+communication_patterns:
+  opening_hooks:
+    padrao: "Abre com uma afirmação contraintuitiva ou com resultado específico que desafia a crença do ouvinte. Nunca começa com 'hoje vamos falar sobre...' — começa com a bomba."
+    exemplos:
+      - "If you're selling time, you're capping yourself."
+      - "I paid $40,000 and made $1.8M/month. Then I taught it."
+      - "Ninety-five percent of businesses have broken digital infrastructure."
+      - "You can't close what you don't believe."
+    chunk_ids: ["chunk_657", "chunk_661", "chunk_694", "chunk_671"]
+
+  story_structure:
+    padrao: "Resultado-primeiro, depois metodologia: 'Aqui está o que consegui → aqui está o sistema que produziu isso → aqui estão os passos → aqui está o critério de sucesso'. Raramente usa narrativa emocional longa — prefere case study compacto + framework acionável."
+    descricao: "Estrutura clássica: CLAIM (resultado) → PROOF (número específico) → MECHANISM (como) → SYSTEM (passos) → NEXT ACTION (o que fazer agora)"
+    chunk_ids: ["chunk_657", "chunk_677", "chunk_698"]
+
+  closing_signatures:
+    padrao: "Fecha com o sistema em uma frase curta ('That's the system') ou com a consequência financeira de não agir ('That's why I want the equity event'). Raramente fecha com pergunta — fecha com declaração."
+    exemplos:
+      - "That's the system."
+      - "And that's your signal."
+      - "SQ1."
+      - "Simple. That's it."
+      - "I want the equity event."
+    chunk_ids: ["chunk_677", "chunk_696", "chunk_683", "chunk_695"]
+
+  transition_phrases:
+    padrao: "Usa transições numéricas e sequenciais, não emocionais. 'Step one... step two... step three.' Ou: 'Now, from there...' / 'The second piece is...' / 'That being said...'"
+    exemplos:
+      - "Now, from there..."
+      - "The next piece of this is..."
+      - "That being said..."
+      - "Here's where it gets interesting:"
+      - "And then step three..."
+    chunk_ids: ["chunk_677", "chunk_697", "chunk_698"]
+
+# ═══════════════════════════════════════════════════════════════════════
+# TRANSFORMACOES DE VOCABULARIO
+# ═══════════════════════════════════════════════════════════════════════
+
+vocabulary_transforms:
+  - conceito_comum: "expertise / experiência"
+    transformacao: "documented results"
+    chunk_ids: ["chunk_657", "chunk_666"]
+    nota: "Para Jeremy, 'experiência' sem resultados documentados não é credível. Credibilidade = proof."
+
+  - conceito_comum: "vendas / sales"
+    transformacao: "conviction transfer"
+    chunk_ids: ["chunk_671", "chunk_702"]
+    nota: "Não é sobre técnicas de manipulação — é sobre transferir crença genuína"
+
+  - conceito_comum: "contratação / hiring"
+    transformacao: "duplicating the system"
+    chunk_ids: ["chunk_677", "chunk_678"]
+    nota: "Contratar não é 'encontrar alguém bom' — é duplicar o sistema que já funciona"
+
+  - conceito_comum: "problema / problem"
+    transformacao: "upstream issue"
+    chunk_ids: ["chunk_696", "chunk_694"]
+    nota: "Problemas sempre têm causa raiz upstream — Jeremy diagnóstica causas, não sintomas"
+
+  - conceito_comum: "crescimento / growth"
+    transformacao: "systematic leverage"
+    chunk_ids: ["chunk_695", "chunk_677"]
+    nota: "Crescimento não é 'trabalhar mais' — é alavancar o sistema para produzir mais sem esforço proporcional"
+
+  - conceito_comum: "regras de cultura / company culture rules"
+    transformacao: "identity framework"
+    chunk_ids: ["chunk_683", "chunk_684"]
+    nota: "Cultura não são políticas que as pessoas seguem — são identidades que as pessoas encarnam"
+
+  - conceito_comum: "urgência / urgency"
+    transformacao: "the gap"
+    chunk_ids: ["chunk_663", "chunk_664"]
+    nota: "Urgência não é pressão artificial — é a tensão natural criada pela distância entre current e aspirational state"
+
+  - conceito_comum: "receita / revenue"
+    transformacao: "equity event target"
+    chunk_ids: ["chunk_695", "chunk_692"]
+    nota: "Receita é operacional. O objetivo final é o evento de liquidez — capital gains, não income."
+
+# ═══════════════════════════════════════════════════════════════════════
+# CONEXOES COM OUTROS DNA LAYERS
+# ═══════════════════════════════════════════════════════════════════════
+
+dna_connections:
+  obsession_master: "OBS-JH-001: Construção de Autoridade Irrefutável"
+  values_tier1:
+    - "VAL-JH-001: Prova Irrefutável como Moeda de Autoridade"
+    - "VAL-JH-002: Alavancagem Sistemática sobre Esforço Pessoal"
+    - "VAL-JH-003: Convicção como Motor da Ação"
+  behavioral_patterns_key:
+    - "BP-JH-001: Proof-First Communicator"
+    - "BP-JH-007: Specificity as Credibility Currency"
+    - "BP-JH-008: Conviction-Transfer Before Logic"
+  paradox_core: "PAR-JH-001: Dado como Prova vs Emoção como Motor"
+
+# ═══════════════════════════════════════════════════════════════════════
+# NOTAS DE AUDITORIA
+# ═══════════════════════════════════════════════════════════════════════
+
+auditoria:
+  chunks_analisados: 51
+  chunk_range: "chunk_656 to chunk_706"
+  insights_base: 30
+  behavioral_patterns_base: 8
+  confianca_geral: "HIGH"
+  nota: "Voice DNA extraído de 8 programas distintos (AOBA, MMM, STA, UHTC, LYFC, IC, ST, WK). Alta consistência de padrões de voz entre programas — assinatura vocal estável."

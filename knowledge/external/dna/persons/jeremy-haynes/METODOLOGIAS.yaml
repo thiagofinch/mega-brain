@@ -1,0 +1,121 @@
+# knowledge/external/dna/persons/jeremy-haynes/METODOLOGIAS.yaml
+# Fonte: Pipeline MCE v1.0 | 2026-03-16
+# Insights com tag [METODOLOGIA] extraídos de AOBA, MMM, STA, UHTC, LYFC, IC, ST, WK
+
+pessoa: "Jeremy Haynes"
+slug: "jeremy-haynes"
+versao: "1.0.0"
+updated: "2026-03-16T10:50:00Z"
+total_entries: 6
+
+metodologias:
+
+  - id: "JH-M001"
+    insight_id: "JH-024"
+    titulo: "Duplication Methodology for Salespeople (5 Steps)"
+    declaracao: "Duplication Methodology for Salespeople: (1) Document your exact talk track, (2) Record 10 of your best calls, (3) Hire someone with conviction, not experience, (4) Shadow calls for 2 weeks, (5) Live calls with feedback loop for 30 days."
+    quote: "To duplicate yourself in sales: document the talk track, record your best calls, hire for conviction not experience, two weeks of shadows, thirty days of live calls with daily feedback. That's the system."
+    chunk_ids: ["chunk_677", "chunk_678"]
+    fonte: "JH-STA"
+    programa: "Sales Training Academy"
+    passos:
+      - "Passo 1: Documentar o talk track exato com objeções e respostas"
+      - "Passo 2: Gravar 10 das melhores calls (mix de wins e losses)"
+      - "Passo 3: Contratar por convicção, não experiência"
+      - "Passo 4: 2 semanas de shadow calls (ouvindo, não falando)"
+      - "Passo 5: 30 dias de live calls com feedback diário"
+    criterio_sucesso: "Novo closer atingindo 15%+ de close rate após 30 dias"
+    prioridade: "HIGH"
+    aplicacao: "Sales team scaling, closer duplication, training"
+    confianca: "HIGH"
+
+  - id: "JH-M002"
+    insight_id: "JH-025"
+    titulo: "Goal Planning Methodology (90-Day System)"
+    declaracao: "Goal Planning Methodology: (1) Set 90-day goal, (2) Reverse-engineer to weekly number, (3) Daily non-negotiables (3 activities that drive the metric), (4) Weekly review against number, (5) Kill or double each activity based on ROI."
+    quote: "Ninety days. Break it to weeks. Three daily non-negotiables. Review weekly. Kill what doesn't work, double what does. That's the system."
+    chunk_ids: ["chunk_698"]
+    fonte: "JH-MMM"
+    programa: "Million Money Mindset"
+    passos:
+      - "Passo 1: Definir meta de 90 dias (específica, numérica)"
+      - "Passo 2: Reverse-engineer para número semanal"
+      - "Passo 3: Identificar 3 atividades diárias não-negociáveis que movem a métrica"
+      - "Passo 4: Review semanal contra o número target"
+      - "Passo 5: Eliminar o que não performa; dobrar o que performa"
+    criterio_sucesso: "Meta de 90 dias atingida OU sistema otimizado para próximo ciclo"
+    prioridade: "HIGH"
+    aplicacao: "Goal setting, performance tracking, agency growth planning"
+    confianca: "HIGH"
+
+  - id: "JH-M003"
+    insight_id: "JH-026"
+    titulo: "Sales Video Strategy Methodology"
+    declaracao: "Sales Video Strategy Methodology: (1) Hook (specific pain), (2) Credibility proof (specific result), (3) Mechanism teaser (how without revealing all), (4) Single CTA (book a call). Run on paid traffic to warm audiences."
+    quote: "Hook on pain. Proof by result. Tease the mechanism. One CTA. That's it. Don't complicate it. The video is a door opener, not a sales pitch."
+    chunk_ids: ["chunk_699"]
+    fonte: "JH-ST"
+    programa: "Sales Training"
+    passos:
+      - "Passo 1: Hook — dor específica do ICP nos primeiros 5 segundos"
+      - "Passo 2: Credibilidade — resultado específico com números"
+      - "Passo 3: Mecanismo — teaser do 'como' sem revelar tudo"
+      - "Passo 4: Single CTA — 'Book a call', nada mais"
+    criterio_sucesso: "CTR > 3% | CTB (click-to-book) > 10%"
+    prioridade: "HIGH"
+    aplicacao: "Paid video ads, organic video content, webinar promotion"
+    confianca: "HIGH"
+
+  - id: "JH-M004"
+    insight_id: "JH-027"
+    titulo: "Cleaner Role Methodology"
+    declaracao: "Cleaner Role Methodology: assign one team member to proactively identify and remove blockers, broken processes, and underperformers before they become systemic problems."
+    quote: "The cleaner doesn't clean up messes after they happen. They identify what's about to break and remove it before it does. Every team needs a cleaner."
+    chunk_ids: ["chunk_680"]
+    fonte: "JH-IC"
+    programa: "Inner Circle"
+    passos:
+      - "Definir o 'cleaner' — membro da equipe com visão sistêmica"
+      - "Atribuir responsabilidade de identificação proativa de riscos"
+      - "Check-in semanal: 'O que está prestes a quebrar?'"
+      - "Autoridade para remover bottlenecks sem aprovação em tempo real"
+    criterio_sucesso: "Redução de problemas reativos; menos 'fires' por semana"
+    prioridade: "MEDIUM"
+    aplicacao: "Ops management, team structure, proactive problem solving"
+    confianca: "HIGH"
+
+  - id: "JH-M005"
+    insight_id: "JH-028"
+    titulo: "Business Partnership Architecture Methodology"
+    declaracao: "Business Partnership Architecture Methodology: structure all partnerships with (1) clear exit provisions, (2) predefined equity milestones, (3) decision authority matrix, (4) 90-day performance gates before permanence."
+    quote: "Every partnership needs an exit. Define it upfront. Equity milestones, not just time-based vesting. Who decides what. And a ninety-day gate before it's real."
+    chunk_ids: ["chunk_687"]
+    fonte: "JH-AOBA"
+    programa: "Agency Owner Black Academy"
+    passos:
+      - "Passo 1: Definir exit provisions antes de qualquer acordo"
+      - "Passo 2: Milestones de equity (performance-based, não time-based)"
+      - "Passo 3: Decision authority matrix — quem decide o quê"
+      - "Passo 4: 90-day performance gate antes de permanência"
+    criterio_sucesso: "Partnership estruturado com todos os 4 elementos antes de assinatura"
+    prioridade: "HIGH"
+    aplicacao: "Partnership formation, equity arrangements, co-founder agreements"
+    confianca: "HIGH"
+
+  - id: "JH-M006"
+    insight_id: "JH-030"
+    titulo: "Anchor-Rubber Band Urgency Creation Methodology"
+    declaracao: "The Anchor-Rubber Band Effect creates urgency without manipulation: show the prospect where they are (current pain), where they could be (aspirational anchor), then let the perceived gap create natural urgency to act."
+    quote: "I don't create urgency artificially. I show them the gap. They feel it. That gap is the urgency. The rubber band effect is real — stretch it far enough and it snaps back."
+    chunk_ids: ["chunk_663", "chunk_664"]
+    fonte: "JH-STA"
+    programa: "Sales Training Academy"
+    passos:
+      - "Passo 1: Mapear current state com especificidade (pain points documentados)"
+      - "Passo 2: Âncora aspiracional — mostrar o 10x version com detalhes concretos"
+      - "Passo 3: Deixar o prospect verbalizar o gap (não você)"
+      - "Passo 4: A tensão cria urgência — não adicionar pressão artificial"
+    criterio_sucesso: "Prospect verbaliza o gap espontaneamente; urgência nasce de dentro"
+    prioridade: "HIGH"
+    aplicacao: "Sales urgency, objection handling, closing, follow-up"
+    confianca: "HIGH"

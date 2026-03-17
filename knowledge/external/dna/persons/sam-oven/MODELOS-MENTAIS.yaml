@@ -1,0 +1,63 @@
+# MODELOS-MENTAIS — Sam Ovens (Setterlun University)
+# Camada L2 do DNA Cognitivo: Frameworks de pensamento e decisão
+# Pipeline MCE v1.0 | Atualizado: 2026-03-16
+
+pessoa: "Sam Ovens"
+versao: "1.0.0"
+updated: "2026-03-16T08:00:00Z"
+total_entries: 6
+
+entries:
+  - id: "MM-SO-001"
+    insight_ref: "SO-INS-002"
+    modelo: "Bridge Analogy — Oferta como Ponte"
+    descricao: "Toda oferta é visualizada como uma ponte entre o Current State do cliente (dor, problema) e o Desired State (transformação, solução). Objeções são trolls debaixo da ponte. O preço é o pedágio. Concorrentes são outras pontes. O Unique Mechanism é por que SUA ponte é a melhor."
+    uso: "Ao estruturar, comunicar ou avaliar qualquer oferta"
+    chunk_ids: ["SO-chunk-001", "SO-chunk-002"]
+    tags: ["oferta", "bridge-analogy", "current-state", "desired-state"]
+    confianca: "HIGH"
+
+  - id: "MM-SO-002"
+    insight_ref: "SO-INS-003"
+    modelo: "Unique Mechanism como Vantagem Competitiva"
+    descricao: "Em mercado com múltiplas 'pontes' disponíveis, o Unique Mechanism é a razão estrutural pela qual SUA ponte é superior. Não é uma feature — é o princípio pelo qual sua solução supera as alternativas."
+    uso: "Ao diferenciare no mercado e ao construir proposta de valor"
+    chunk_ids: ["SO-chunk-002", "SO-chunk-013"]
+    tags: ["unique-mechanism", "diferenciacao", "vantagem-competitiva"]
+    confianca: "HIGH"
+
+  - id: "MM-SO-003"
+    insight_ref: "SO-INS-014"
+    modelo: "Productization como Condição de Escala"
+    descricao: "Escala só existe quando a oferta é repetível sem reinvenção. Customização total = trabalho artesanal. Sistema = empresa. O modelo mental é: 'se não consigo entregar isso da mesma forma para o próximo cliente, não tenho empresa.'"
+    uso: "Ao avaliar se um negócio tem potencial de escala"
+    chunk_ids: ["SO-chunk-007", "SO-chunk-013"]
+    tags: ["productization", "escala", "repeticao"]
+    confianca: "HIGH"
+
+  - id: "MM-SO-004"
+    insight_ref: "SO-INS-016"
+    modelo: "Blue Ocean como Risco, não Oportunidade"
+    descricao: "Blue Ocean (mercado novo) parece atraente mas tem risco oculto: você deve educar todo o mercado antes de vender. Isso consome tempo e capital sem garantia de demanda. O modelo mental inverte a intuição comum — novidade não é vantagem, é custo."
+    uso: "Ao avaliar estratégia de posicionamento e entrada em mercado"
+    chunk_ids: ["SO-chunk-008", "SO-chunk-012"]
+    tags: ["blue-ocean", "risco", "educacao-de-mercado"]
+    confianca: "HIGH"
+
+  - id: "MM-SO-005"
+    insight_ref: "SO-INS-017"
+    modelo: "Padrão Universal: Categoria Existente + Tweak Específico"
+    descricao: "Toda inovação de mercado bem-sucedida segue o padrão: categoria conhecida + tweak específico. Tesla não inventou o carro. iPhone não inventou o celular. Amazon não inventou a loja. O tweak, não a reinvenção, é o mecanismo de diferenciação."
+    uso: "Ao buscar posicionamento e diferenciação de mercado"
+    chunk_ids: ["SO-chunk-009", "SO-chunk-010"]
+    tags: ["tweak", "inovacao", "categoria-existente", "padrao-universal"]
+    confianca: "HIGH"
+
+  - id: "MM-SO-006"
+    insight_ref: "SO-INS-020"
+    modelo: "Pergunta do Prospect como Indicador de Posicionamento"
+    descricao: "A pergunta que o prospect faz revela o posicionamento: 'Quanto custa?' = commodity (Red Ocean). 'Onde fica?' = premium diferenciado (Purple Ocean). 'Isso existe?' = Blue Ocean (demanda incerta). A mudança da pergunta é o indicador de que o posicionamento funcionou."
+    uso: "Ao validar se o posicionamento de mercado está correto"
+    chunk_ids: ["SO-chunk-010", "SO-chunk-011"]
+    tags: ["posicionamento", "diagnostico", "pergunta-do-prospect"]
+    confianca: "HIGH"

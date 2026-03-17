@@ -1,0 +1,106 @@
+# METODOLOGIAS — THE SCALABLE COMPANY / RYAN DEISS
+# Camada L5 do DNA Cognitivo: Implementações passo-a-passo
+# MCE Pipeline: 2026-03-16 | Source: 10 TSC transcripts
+# Version: 1.0.0-mce | Previous pipeline entries: 38 (DNA-CONFIG v1.0.0)
+
+meta:
+  pessoa: "Ryan Deiss"
+  slug: "the-scalable-company"
+  source_code: "TSC"
+  version: "1.0.0-mce"
+  updated: "2026-03-16T10:20:00Z"
+  total_entries_this_run: 3
+  total_entries_previous: 38
+  pipeline: "MCE v1.0.0"
+
+metodologias:
+
+  - id: "TSC-MET-MCE-001"
+    nome: "3 Ds of Documentation — Decide, Discuss, Distribute"
+    definicao: "A meeting outcome documentation methodology that classifies all meeting outputs into 3 categories and assigns clear responsibilities for each. Ensures no decision or action item is lost after a meeting ends."
+    passos:
+      - passo: 1
+        d: "DECIDE"
+        acao: "Capture all decisions made in the meeting. Document: what was decided, who decided it, rationale (if needed), date effective."
+        responsavel: "Meeting owner / scribe"
+      - passo: 2
+        d: "DISCUSS"
+        acao: "Capture all items discussed but not yet decided. Document: topic, key perspectives shared, what additional information is needed, who is responsible for bringing it to next meeting for decision."
+        responsavel: "Meeting owner / scribe"
+      - passo: 3
+        d: "DISTRIBUTE"
+        acao: "Send complete meeting notes (decisions + discussion items + action items with owners/due dates) to all relevant stakeholders within 24 hours of meeting end."
+        responsavel: "Meeting owner"
+    output_format:
+      decisoes: "Clear bullet list with dates"
+      acoes: "Table: Action | Owner | Due Date"
+      proximos_passos: "Open discussion items requiring follow-up decision"
+    timing: "Within 24 hours of meeting completion"
+    insight_ref: "TSC-INS-009"
+    chunk_refs: ["TSC-CH-020", "TSC-CH-021", "TSC-CH-023"]
+    confianca: HIGH
+    evidencia: "ScalableOS meeting documentation protocol — from TSC training material"
+    source_id: "TSC-0016"
+    tags: ["meetings", "documentation", "process", "accountability", "methodology"]
+
+  - id: "TSC-MET-MCE-002"
+    nome: "7-Step Meeting Request Process — Anti-Calendar-Invite Protocol"
+    definicao: "A sequential validation process that must be completed BEFORE sending a calendar invite. Prevents unnecessary meetings by forcing pre-meeting reflection and stakeholder alignment."
+    passos:
+      - passo: 1
+        acao: "Ask: Does this topic actually require a meeting? Define what 'checking the box' looks like."
+        criterio: "Meeting is necessary only if synchronous discussion is required to reach a decision or output"
+      - passo: 2
+        acao: "Identify: Who MUST be in this meeting? (Not who could attend — who is truly required)"
+        criterio: "Minimum viable attendee list. Every additional attendee multiplies cost."
+      - passo: 3
+        acao: "Create the agenda. Write each agenda item with estimated time."
+        output: "Draft agenda document"
+      - passo: 4
+        acao: "Review the agenda and ask again: Does this meeting STILL need to happen? Could the agenda be handled async?"
+        criterio: "Second pass gate — many meetings die here appropriately"
+      - passo: 5
+        acao: "Write the meeting purpose statement AND the definition of success (what does 'good outcome' look like?)"
+        output: "Purpose: [X]. Success = [Y]."
+      - passo: 6
+        acao: "Send the agenda + purpose + success definition to all required stakeholders ASKING: 'Do we need to meet to accomplish this?'"
+        criterio: "If stakeholders agree it can be handled async, cancel the meeting"
+      - passo: 7
+        acao: "Only now, if meeting still necessary: send the calendar invite with agenda attached."
+        output: "Calendar invite with agenda, purpose, success definition, required prep"
+    regra_de_ouro: "The first step is NOT: send Google invite."
+    insight_ref: "TSC-INS-012"
+    chunk_refs: ["TSC-CH-020", "TSC-CH-021"]
+    confianca: HIGH
+    evidencia: "The first step is not: send Google invite."
+    source_id: "TSC-0016"
+    tags: ["meetings", "process", "efficiency", "communication", "methodology"]
+
+  - id: "TSC-MET-MCE-003"
+    nome: "Purpose Formula — 3-Step Company Purpose Discovery Process"
+    definicao: "A structured process for discovering (not inventing) a company's authentic purpose. Moves from survival-mode to mission-driven by connecting the business's real impact on customers' lives."
+    passos:
+      - passo: 1
+        acao: "Identify who your customer is at the most specific level possible (not demographics — psychographics and situation)"
+        output: "Customer identity statement"
+      - passo: 2
+        acao: "Map the transformation: What does the customer's life look like BEFORE your product/service? What does it look like AFTER? Be brutally specific — not 'better' but what specifically changes."
+        output: "Before/After transformation statement"
+      - passo: 3
+        acao: "Extract the higher-order impact: What does this transformation ENABLE in their life? What bigger goal does it serve? This becomes the purpose."
+        output: "Company purpose statement"
+    escala_de_proposito:
+      - nivel: "Small but sincere"
+        exemplo: "Bellroy: design wallets so slim that sitting is comfortable"
+        nota: "Small is fine — sincerity is what matters"
+      - nivel: "Large and ambitious"
+        exemplo: "Tesla: accelerate the world's transition to sustainable energy"
+        nota: "Must be 100% believable — cynicism kills it"
+    teste_de_sinceridade: "Would every person in the company say this with genuine conviction? If anyone rolls their eyes, the purpose fails."
+    quando_revisar: "When team morale is low, when scaling hits friction, when 'mere survival' is the current stated purpose"
+    insight_ref: "TSC-INS-017"
+    chunk_refs: ["TSC-CH-033", "TSC-CH-034", "TSC-CH-035", "TSC-CH-036", "TSC-CH-037"]
+    confianca: HIGH
+    evidencia: "In the early days, that's fine. Appropriate, even. But as your company scales, mere survival won't be enough to inspire your team."
+    source_id: "TSC-0029"
+    tags: ["company-purpose", "culture", "leadership", "process", "methodology"]

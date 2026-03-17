@@ -1,8 +1,8 @@
-version: 1.1.0
+version: 1.2.0
 person: Liam Ottley
 slug: liam-ottley
 generated: '2026-03-14'
-updated: '2026-03-15'
+updated: '2026-03-16'
 source_chunks:
 - chunk_543
 - chunk_544
@@ -110,6 +110,41 @@ source_chunks:
 - chunk_653
 - chunk_654
 - chunk_655
+- chunk_656
+- chunk_657
+- chunk_658
+- chunk_659
+- chunk_660
+- chunk_661
+- chunk_662
+- chunk_663
+- chunk_664
+- chunk_665
+- chunk_666
+- chunk_667
+- chunk_668
+- chunk_669
+- chunk_670
+- chunk_671
+- chunk_672
+- chunk_673
+- chunk_674
+- chunk_675
+- chunk_676
+- chunk_677
+- chunk_678
+- chunk_679
+- chunk_680
+- chunk_681
+- chunk_682
+- chunk_683
+- chunk_684
+- chunk_685
+- chunk_686
+- chunk_687
+- chunk_688
+- chunk_689
+- chunk_690
 dimensional_scores:
   certainty: 9
   authority: 8
@@ -231,6 +266,36 @@ signature_phrases:
   - chunk_647
   - chunk_654
   - chunk_652
+- phrase: diagnose, design, deliver and scale
+  contexto: Sequência de monetização de AI workforces — quatro fases da jornada do consultor
+  frequencia: alta
+  chunks:
+  - chunk_678
+  - chunk_679
+- phrase: specialization, collaboration, coordination
+  contexto: Os três pilares de qualquer AI workforce — estrutura organizacional de agentes
+  frequencia: alta
+  chunks:
+  - chunk_671
+  - chunk_672
+- phrase: you can either be replaced by this or be the one helping businesses adopt it
+  contexto: Frame de escolha binária — urgência de posicionamento no mercado de AI
+  frequencia: média
+  chunks:
+  - chunk_670
+  - chunk_680
+- phrase: the authority flywheel
+  contexto: Ciclo de credibilidade: resultado → história → audiência → cliente → resultado
+  frequencia: média
+  chunks:
+  - chunk_680
+- phrase: your virtual org chart
+  contexto: Estrutura de AI workforce espelhando organograma humano — agentes como funcionários
+  frequencia: média
+  chunks:
+  - chunk_671
+  - chunk_672
+  - chunk_676
 metaphors:
 - metafora: like a co-founder would
   significado: AIOS Context layer aprende negócio com profundidade de sócio
@@ -253,6 +318,21 @@ metaphors:
   chunks:
   - chunk_572
   - chunk_644
+- metafora: virtual org chart of AI agents
+  significado: AI workforce estruturada como organograma humano — cada agente tem papel, hierarquia e handoffs definidos
+  chunks:
+  - chunk_671
+  - chunk_672
+- metafora: bandwidth bar (ITB vs OTB)
+  significado: Visualização do tempo do founder como uma barra dividida entre In The Business vs On The Business — AIOS muda a proporção
+  chunks:
+  - chunk_664
+  - chunk_667
+- metafora: building in layers like a thick onion
+  significado: Cada layer do AIOS adiciona proteção e capacidade — nunca leaps, sempre incremental
+  chunks:
+  - chunk_663
+  - chunk_658
 vocabulary_transforms:
 - conceito_comum: employee
   transformacao: agent / AI workforce
@@ -278,6 +358,23 @@ vocabulary_transforms:
   transformacao: in the operator trap / bandwidth trap
   chunks:
   - chunk_645
+- conceito_comum: salesperson
+  transformacao: SDR / AI SDR workforce
+  chunks:
+  - chunk_675
+- conceito_comum: team member
+  transformacao: agent with a clear role and handoff type
+  chunks:
+  - chunk_671
+  - chunk_673
+- conceito_comum: marketing
+  transformacao: authority flywheel
+  chunks:
+  - chunk_680
+- conceito_comum: consulting engagement
+  transformacao: AI workforce assessment / complimentary workforce assessment
+  chunks:
+  - chunk_679
 behavioral_states:
 - estado: Modo Evangelista
   gatilho: Quando quer convencer sobre importância do AIOS

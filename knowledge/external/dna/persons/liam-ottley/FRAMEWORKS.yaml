@@ -172,10 +172,83 @@ frameworks:
     raiz: "knowledge/external/inbox/liam-ottley/podcasts/How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE [youtube.com_watch_v=pTTvyQDK_tk].txt"
     reinforced_chunks: ["chunk_651"]
 
+  # ---- New from Autonomous Run 2026-03-16, chunks 656-690 ----
+
+  - id: FW-LO-008
+    name: "Agent Components Framework (5 Elements)"
+    description: >
+      Todo agente de IA é composto por 5 elementos que espelham como funcionários reais operam.
+      Cada componente habilita uma camada diferente de capacidade.
+    components:
+      - name: "Prompt"
+        role: "Define o papel, instruções e identidade do agente (quem é e o que faz)"
+      - name: "Resources"
+        role: "Materiais, documentos e dados de referência que o agente pode acessar"
+      - name: "Tools"
+        role: "Integrações com apps externos (Calendar, CRM, email, etc.)"
+      - name: "Knowledge Base"
+        role: "Banco de dados de referência — longa duração, não conversacional"
+      - name: "Memory"
+        role: "Capacidade de lembrar informações passadas entre sessões"
+    quote: "Each agent is powered by a few core components that mirror how real employees work: their prompt, resources, tools, knowledge base, and memory."
+    insight_ref: "LO-016"
+    source: "How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE [youtube.com_watch_v=pTTvyQDK_tk].txt"
+    new_chunks: ["chunk_672"]
+
+  - id: FW-LO-009
+    name: "AI Workforce Handoff Patterns"
+    description: >
+      Dois padrões de passagem de tarefas entre agentes em uma AI workforce.
+      A escolha determina quem controla o fluxo: o orchestrator ou o próximo agente.
+    patterns:
+      - name: "Sub-agent (AI Connection)"
+        trigger: "Orchestrator precisa do output antes de continuar"
+        behavior: "Orchestrator delega, aguarda resultado, incorpora no fluxo principal"
+        use_case: "Quando a resposta do sub-agente afeta o próximo passo do orchestrator"
+      - name: "Next-step"
+        trigger: "Agente anterior completa sua tarefa"
+        behavior: "Agente próximo roda automaticamente sem envolver o orchestrator"
+        use_case: "Tarefas sequenciais onde cada etapa depende apenas da anterior"
+    quote: "For the handoff type, next step means that instead of the orchestrator managing this agent, the next agent runs automatically once the previous one completes."
+    insight_ref: "LO-022"
+    source: "How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE [youtube.com_watch_v=pTTvyQDK_tk].txt"
+    new_chunks: ["chunk_676"]
+
+  - id: FW-LO-010
+    name: "3 KPIs AIOS — Versão Expandida"
+    description: >
+      Refinamento dos 3 KPIs originais (FW-LO-002) com metas específicas e método de teste
+      para cada indicador. Cada KPI é um teste de maturidade do sistema AIOS.
+    kpis:
+      - kpi: 1
+        name: "Away-From-Desk Autonomy"
+        measure: "Capacidade de operar o negócio inteiro pelo celular"
+        target: "100% das operações possíveis via Telegram"
+        test: "Tentar rodar o negócio do celular por um dia completo — o que falta é o que construir a seguir"
+        new_chunks: ["chunk_667"]
+      - kpi: 2
+        name: "Task Automation Percentage"
+        measure: "% de tarefas recorrentes automatizadas ou fortemente aumentadas"
+        target: "60-70% em 30 dias"
+        test: "Task audit — lista de 80+ tarefas categorizadas e cruzadas"
+        new_chunks: ["chunk_666"]
+      - kpi: 3
+        name: "Revenue Per Employee"
+        measure: "Receita total / headcount"
+        target: "Tendência crescente trimestre a trimestre"
+        context: "Substituiu headcount como métrica de prestígio — novo flex da era AI"
+        new_chunks: ["chunk_667"]
+    insight_ref: "LO-004"
+    source: "What Is an AI Operating System (And Why Every Business Will Need One)"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/What Is an AI Operating System (And Why Every Business Will Need One) [youtube.com_watch_v=DXcVT07bQ6g].txt"
+    new_chunks: ["chunk_667"]
+
 metadata:
-  total_items: 7
+  total_items: 10
   source_person: "Liam Ottley"
   source_count: 3
   extraction_date: "2026-03-13"
   updated: "2026-03-16"
-  version: "1.1.0"
+  version: "1.2.0"

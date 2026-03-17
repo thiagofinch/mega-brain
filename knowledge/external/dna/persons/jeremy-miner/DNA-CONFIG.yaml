@@ -1,0 +1,61 @@
+# knowledge/external/dna/persons/jeremy-miner/DNA-CONFIG.yaml
+# Configuração e Contagem do DNA Cognitivo
+# Gerado: MCE Pipeline 2026-03-16
+
+pessoa: "Jeremy Miner"
+slug: "jeremy-miner"
+versao: "2.0.0"
+data_geracao: "2026-03-16T10:30:00Z"
+pipeline: "MCE v1.0"
+
+layers:
+  FILOSOFIAS:
+    arquivo: "FILOSOFIAS.yaml"
+    total_elementos: 10
+    status: "active"
+    ultima_atualizacao: "2026-03-16T10:30:00Z"
+
+  MODELOS-MENTAIS:
+    arquivo: "MODELOS-MENTAIS.yaml"
+    total_elementos: 3
+    status: "active"
+    ultima_atualizacao: "2026-03-16T10:30:00Z"
+
+  HEURISTICAS:
+    arquivo: "HEURISTICAS.yaml"
+    total_elementos: 9
+    status: "active"
+    ultima_atualizacao: "2026-03-16T10:30:00Z"
+
+  FRAMEWORKS:
+    arquivo: "FRAMEWORKS.yaml"
+    total_elementos: 2
+    status: "active"
+    ultima_atualizacao: "2026-03-16T10:30:00Z"
+
+  METODOLOGIAS:
+    arquivo: "METODOLOGIAS.yaml"
+    total_elementos: 5
+    status: "active"
+    ultima_atualizacao: "2026-03-16T10:30:00Z"
+
+  VOICE-DNA:
+    arquivo: "VOICE-DNA.yaml"
+    status: "active"
+    ultima_atualizacao: "2026-03-16T10:30:00Z"
+
+totais:
+  filosofias: 10
+  modelos_mentais: 3
+  heuristicas: 9
+  frameworks: 2
+  metodologias: 5
+  total_dna_elements: 29
+  voice_signature_phrases: 8
+  voice_behavioral_states: 4
+
+fontes:
+  total_sources: 151
+  sources_processadas_mce: 19
+  corpus: "jeremy-miner-sales"
+  bucket: "external"

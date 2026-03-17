@@ -1,13 +1,212 @@
-version: '1.0'
+version: '2.1'
 person: alex-hormozi
 layer: METHODOLOGIES
-last_updated: '2026-03-15T20:59:53.216059+00:00'
+updated: '2026-03-16T13:30:00Z'
+pipeline_run: MCE-AH-2026-03-16-R2
+prior_run: MCE-AH-2026-03-16
+total_entries: 16
 entries:
 - id: met_001
-  name: 'No-based upsell: ''You don''t want anything else?'' = 95% accep'
+  name: 'No-based upsell: ''You don''t want anything else?'' = 95% acceptance rate.'
   description: 'No-based upsell: ''You don''t want anything else?'' = 95% acceptance
     rate.'
   source_chunks:
   - chunk_633
   confidence: 0.93
+  priority: HIGH
+- id: INS-AH-005
+  name: Sales Competition — 6-week cycles in 3-person teams
+  description: Sales competitions run in 6-week cycles with 3-person teams. Teams
+    share best practices, root for each other, maintain momentum without cutthroat
+    dynamics. Prize budget 25% of one month's commission per person.
+  quote: "We found that six weeks works best. We put them in three-man teams, and
+    that tends to work really well because they share best practices. 25% of one
+    month's check is usually the amount per person."
+  source_chunks:
+  - AH-chunk-013-03
+  source_id: AH-0013
+  confidence: 0.90
+  priority: HIGH
+- id: INS-AH-008
+  name: Price Raise Method — home base to anchor above to prepayment discount
+  description: Set anchor 25-50% ABOVE target price. Offer split payment matching
+    prospect's existing comfort price as base. Offer prepayment discount equaling
+    actual target price. Salespeople sell with conviction because they're discounting,
+    not upselling.
+  quote: "If we want to get to three thousand from two thousand, we're actually talking
+    about a four thousand dollar price point, which anchors high. Then when we introduced
+    the prepayment discount — that is actually the number that we're looking for."
+  source_chunks:
+  - AH-chunk-014-01
+  - AH-chunk-014-02
+  source_id: AH-0014
+  confidence: 0.97
+  priority: HIGH
+- id: INS-AH-013
+  name: 10 Steps to First 5 Customers — warm outreach protocol
+  description: List 100 people you know, reach out with highly personalized message
+    referencing specifics about them, make easy-to-say-yes offer, follow up, iterate.
+    Do not start with paid ads.
+  quote: "Write down 100 people. For each person, write one specific thing you know
+    about them. Make the first message about them, not you. The offer should be easy
+    to say yes to."
+  source_chunks:
+  - AH-chunk-008-01
+  - AH-chunk-008-02
+  source_id: AH-0008
+  confidence: 0.93
+  priority: HIGH
+- id: INS-AH-014
+  name: 14-Day Onboarding Ramp for new sales reps
+  description: "Days 1-3: product knowledge. Days 4-7: script mastery. Days 8-14:
+    live calls with coaching. No solo calls until day 8 minimum."
+  quote: "The ramp period for a new rep is 14 days. First week is learning the product
+    and script until they can recite it. Second week is live calls with oversight."
+  source_chunks:
+  - AH-chunk-010-01
+  source_id: AH-0010
+  confidence: 0.90
+  priority: HIGH
+- id: INS-AH-015
+  name: PIP System — Performance Improvement Plan with 30-day tracked activities
+  description: When a rep underperforms, define 3-5 specific measurable activities
+    to track for 30 days. If metrics are not hit, exit immediately. No vague feedback
+    — only tracked behaviors.
+  quote: "Performance Improvement Plan — three to five activities that are tracked.
+    At the end of the 30 days if they haven't hit the activities, you let them go.
+    It's not punitive, it's structural."
+  source_chunks:
+  - AH-chunk-010-02
+  source_id: AH-0010
+  confidence: 0.90
+  priority: HIGH
+- id: INS-AH-021
+  name: Game Tape Review — weekly 1-on-1 with 3 tagged calls
+  description: Have every rep tag 3 calls weekly (best, worst, average). In 1-on-1s,
+    review where they clarified the problem, overviewed pain, asked for the sale,
+    and overcame objections. All 4 must be present in every call.
+  quote: "When you're meeting with them, have them tag you in three calls. Their best
+    call, their worst call, and their average call. Ask them to show you where they
+    clarified the problem, outlined the pain, asked for the sale, overcame objections."
+  source_chunks:
+  - AH-chunk-013-03
+  - AH-chunk-003-03
+  source_id: AH-0013
+  confidence: 0.93
+  priority: HIGH
+- id: INS-AH-025
+  name: Affiliate Growth Strategy — free service for high-credibility referral sources
+  description: Give your service free to high-credibility referral sources in exchange
+    for their endorsement and referral pipeline. One affiliate relationship at the
+    right level beats 100 cold outreach campaigns.
+  quote: "Find the people who already have access to your ideal customer. Give them
+    your product or service for free. In exchange, they refer their audience to you."
+  source_chunks:
+  - AH-chunk-017-01
+  source_id: AH-0017
+  confidence: 0.88
+  priority: HIGH
+- id: INS-AH-034
+  name: Self-Reinforcing Growth System — warm outreach to case studies to content to ads
+  description: Warm outreach builds early customers, early customers create case studies,
+    case studies fuel content and cold outreach, all together bootstrap paid ads.
+    Each phase funds the next without external capital.
+  quote: "Start with warm outreach. Get your first customers. Use those customers
+    to create content. Use that content to do cold outreach more effectively. Then
+    use all of it to inform your paid ads. It's a flywheel, not a launch."
+  source_chunks:
+  - AH-chunk-019-01
+  - AH-chunk-017-01
+  source_id: AH-0019
+  confidence: 0.92
+  priority: HIGH
+- id: INS-AH-038
+  name: Daily Huddle — share 1-3 testimonials to re-anchor the team
+  description: Every day, share 1-3 testimonials or wins from real customers. Re-anchors
+    the sales team on WHY they're doing the work after being hit with rejections.
+    Testimonials are for the rep, not the customer.
+  quote: "The daily huddle is quick. All you do is share testimonials so they remember
+    why they're selling. They get beat up every single day with no's. They need to
+    remember why they're still doing it."
+  source_chunks:
+  - AH-chunk-013-03
+  source_id: AH-0013
+  confidence: 0.90
+  priority: HIGH
+- id: INS-AH-039
+  name: Decision-Making Walkthrough — 4 binary questions close
+  description: Walk the prospect through their own decision-making process. 4 binary
+    questions — Do you like me? Do you like the product? Do you believe we can help
+    you? Do you have access to the funds? Yes to all 4 = close.
+  quote: "Do you like me? Yes or no? Do you like the product? Yes or no? Do you
+    think we'll help you achieve this outcome? Yes or no? Do you have access to this
+    amount of money? Yes or no? Yes? What card do you want to use?"
+  source_chunks:
+  - AH-chunk-013-02
+  source_id: AH-0013
+  confidence: 0.93
+  priority: HIGH
+- id: INS-AH-040
+  name: Post-Sale Reinforcement — 30-second founder video plus physical gesture
+  description: Immediately after closing, send a personalized video from the founder
+    (by name, 30 seconds) welcoming the new customer. Add handwritten card or physical
+    gesture. Buyer's remorse kills LTV — eliminate it immediately.
+  quote: "Immediately afterwards — that's the 30-second video from the founder being
+    like, 'Hey, just saw you sign up. Super excited to have you.' By name. Personalized.
+    Handwritten card, t-shirt, any of those things."
+  source_chunks:
+  - AH-chunk-013-02
+  source_id: AH-0013
+  confidence: 0.92
+  priority: HIGH
+- id: INS-AH-047
+  name: Pain Cycle diagnostic — exhaust all prior failed attempts before presenting solution
+  description: In CLOSER, Overview Pain means cycling through EVERY past attempt
+    and failure before reaching you. You don't stop until they have nothing left.
+    This emotional exhaustion creates openness to your solution.
+  quote: "I'm assuming not the first person you've come to to solve this problem.
+    So what have you done in the past? Why did that not work? You do that until they
+    have nothing left. And then you recap the pain."
+  source_chunks:
+  - AH-chunk-013-01
+  source_id: AH-0013
+  confidence: 0.93
+  priority: HIGH
+- id: INS-AH-052
+  name: Warm Outreach sequence — 100 contacts, personalized, never pitch on first touch
+  description: "(1) List 100 contacts. (2) Sort by relationship strength. (3) Write
+    personalized message referencing something specific. (4) Share what you're building
+    + ask for intro or feedback. (5) Follow up twice. Do NOT pitch on first message."
+  quote: "Start with the 100 people you know. The message has to be about them first.
+    Reference something specific. Then you can mention what you're working on. Never
+    pitch on the first touch."
+  source_chunks:
+  - AH-chunk-008-01
+  source_id: AH-0008
+  confidence: 0.92
+  priority: HIGH
+- id: INS-AH-055
+  name: Label + Problem Identification in CLOSER Framework
+  description: After clarifying why the prospect is there, label their problem explicitly.
+    Creates cognitive closure — the prospect feels understood and stops defending.
+  quote: "You label them with a problem. So what I'm hearing is you've done X, Y,
+    and Z and the missing link has been X. Is that right? Yes. Got it. I now have
+    a problem."
+  source_chunks:
+  - AH-chunk-013-01
+  source_id: AH-0013
+  confidence: 0.93
+  priority: HIGH
+- id: INS-AH-065
+  name: Weekly 1-on-1 cadence — 4 skill checkpoints only
+  description: Review 3 tagged calls (best, worst, average). Focus conversation on
+    4 skill checkpoints only — problem clarification, pain overviewing, asking for
+    the sale, objection handling. Nothing else in the meeting.
+  quote: "When you're meeting with them, have them tag you in three calls — best,
+    worst, average. Ask them to show you where they clarified, overviewed pain, asked
+    for the sale, overcame objections."
+  source_chunks:
+  - AH-chunk-013-03
+  source_id: AH-0013
+  confidence: 0.92
   priority: HIGH

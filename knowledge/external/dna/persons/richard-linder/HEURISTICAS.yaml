@@ -1,0 +1,119 @@
+# DNA: HEURÍSTICAS — Richard Linder
+# Pipeline: MCE Step 10.2 | 2026-03-16
+# Source: RL001 | Version: 1.0.0
+# Total entries: 8
+
+slug: richard-linder
+tag: "[HEURISTICA]"
+version: "1.0.0"
+updated: "2026-03-16"
+sources:
+  - RL001
+
+entries:
+  - id: H-RL-001
+    insight_ref: INS-RL-003
+    titulo: "Hell Yes or No — Nenhuma Decisão de Contratação sem Certeza Absoluta"
+    regra: "Se não é um Hell Yes (9-10), é um não. Não existe 7. Não existe 'provavelmente sim'. Não existe 'vamos tentar'."
+    quando_aplicar: "Toda decisão de contratação — especialmente quando sob pressão de dor/necessidade"
+    por_que_funciona: |
+      Pain creates rationalization. When in desperate need, 6s become 'almost 8s I can train.'
+      Removing the middle option (7) forces honest evaluation of whether you'd regret NOT hiring
+      this person (Hell Yes) or merely feel bad about saying no (6 = no).
+    chunk_ids: ["RL001_006", "RL001_016"]
+    confianca: HIGH
+    priority: HIGH
+
+  - id: H-RL-002
+    insight_ref: INS-RL-007
+    titulo: "Contratar Ninguém é Resultado Aceitável"
+    regra: "An acceptable outcome of an open hire and recruitment cycle is we hire NO ONE. If the Hell Yes didn't appear, restart."
+    quando_aplicar: "Ao final de qualquer ciclo de recrutamento onde nenhum candidato atingiu threshold Hell Yes"
+    por_que_funciona: |
+      The 'best of bad applicants' hire is consistently worse than the vacancy.
+      A bad hire costs more (time, energy, culture damage, high performer departure risk)
+      than staying understaffed while searching. The pain of urgency is temporary;
+      the pain of a wrong hire compounds.
+    chunk_ids: ["RL001_018"]
+    confianca: HIGH
+    priority: HIGH
+
+  - id: H-RL-003
+    insight_ref: INS-RL-008
+    titulo: "Salary Band Upfront — Primeiro Call, Não a Última Pergunta"
+    regra: "Reveal budget range in the first phone screen. Always. No exceptions."
+    quando_aplicar: "Todo processo de recrutamento, no phone screen inicial de 10 minutos"
+    por_que_funciona: |
+      Gap between budget and expectation almost never closes under pressure.
+      If it does (candidate lowers expectation), resentment builds day one.
+      7 interviews + 2 hours of conversation only to discover $200k gap = avoidable waste
+      for both parties. Upfront transparency respects both sides' time.
+    chunk_ids: ["RL001_019"]
+    confianca: HIGH
+    priority: HIGH
+
+  - id: H-RL-004
+    insight_ref: INS-RL-009
+    titulo: "Assessments: Comunicar WHY, Timing Certo, Frame como Cuidado"
+    regra: "Never spring 3 assessments on candidates early. Position them as protecting THEIR risk, not screening for yours."
+    quando_aplicar: "Após várias entrevistas quando investimento de ambos os lados já é alto"
+    por_que_funciona: |
+      Candidate has real risk leaving their current job. Framing assessments as 'let's ensure
+      compatibility so the grass is truly green, not spray-on' shifts from screening tool to
+      care gesture. Candidates who understand WHY are more likely to complete them honestly.
+    chunk_ids: ["RL001_020"]
+    confianca: HIGH
+    priority: HIGH
+
+  - id: H-RL-005
+    insight_ref: INS-RL-014
+    titulo: "Gossip Dies Here — Confrontação Imediata, Nunca Delegada"
+    regra: "When gossip surfaces, immediately bring both parties together. Make the gossiper repeat directly to the subject's face. Work through it."
+    quando_aplicar: "Sempre que gossip for detectado — sem exceções, sem espera"
+    por_que_funciona: |
+      The discomfort of forced confrontation is the mechanism that makes the protocol work.
+      One occurrence makes the social cost of gossip so high that culture self-enforces:
+      'Matt's going to grab you and the person you're talking about, you're going to have a meeting.'
+      Cultural legacy persists even after founder exits.
+    chunk_ids: ["RL001_013"]
+    confianca: HIGH
+    priority: HIGH
+
+  - id: H-RL-006
+    insight_ref: INS-RL-024
+    titulo: "Paid Assessment ($1-2k) — Nunca Trabalho Gratuito"
+    regra: "Pay $1-2k for a real 4-8 hour assignment on an actual company problem. Never ask for free work."
+    quando_aplicar: "Etapa 3 do processo de contratação (pós-entrevista de competência, pré-painel)"
+    por_que_funciona: |
+      Triple win: (1) produces usable output the company can actually use, (2) proves competency
+      under real conditions, (3) teaches candidate your systems before they start.
+      Candidates remember being paid for their time — signals respect and culture.
+    chunk_ids: ["RL001_017"]
+    confianca: HIGH
+    priority: MEDIUM
+
+  - id: H-RL-007
+    insight_ref: INS-RL-025
+    titulo: "Remover o 7 do Scorecard Estruturalmente"
+    regra: "Remove 7 from every hiring scorecard. Not rhetorically — structurally. The option must not exist."
+    quando_aplicar: "Design de qualquer scorecard de contratação ou avaliação"
+    por_que_funciona: |
+      The 7 is where pain-based rationalization lives. 'This is really a 6 but I can train them' =
+      future regret disguised as optimism. Removing the option forces genuine commitment:
+      either you're convinced (8+) or you're not (6-). No cop-out middle ground.
+    chunk_ids: ["RL001_016"]
+    confianca: HIGH
+    priority: HIGH
+
+  - id: H-RL-008
+    insight_ref: INS-RL-026
+    titulo: "Phone Screen de 10 Minutos: Alinhar Básicos Antes de Investir Tempo"
+    regra: "First call: confirm experience match, role understanding, salary band, remote/travel requirements. Both sides aligned BEFORE any deeper investment."
+    quando_aplicar: "Início de todo processo de recrutamento"
+    por_que_funciona: |
+      10-minute phone screen can eliminate 70% of time waste. Basic misalignment (salary gap,
+      travel expectations, remote vs office) discovered at hour 2 of a 7th interview is
+      avoidable. Both parties deserve to know the basics first.
+    chunk_ids: ["RL001_017"]
+    confianca: HIGH
+    priority: MEDIUM

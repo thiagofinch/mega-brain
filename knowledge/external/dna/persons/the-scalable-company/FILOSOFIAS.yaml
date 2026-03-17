@@ -1,0 +1,86 @@
+# FILOSOFIAS — THE SCALABLE COMPANY / RYAN DEISS
+# Camada L1 do DNA Cognitivo: Crenças fundamentais e visão de mundo
+# MCE Pipeline: 2026-03-16 | Source: 10 TSC transcripts
+# Version: 1.0.0-mce | Previous pipeline entries: 75 (DNA-CONFIG v1.0.0)
+
+meta:
+  pessoa: "Ryan Deiss"
+  slug: "the-scalable-company"
+  source_code: "TSC"
+  version: "1.0.0-mce"
+  updated: "2026-03-16T10:10:00Z"
+  total_entries_this_run: 7
+  total_entries_previous: 75
+  pipeline: "MCE v1.0.0"
+
+filosofias:
+
+  - id: "TSC-PHIL-MCE-001"
+    texto: "The goal of every business is to make money — without apology"
+    implicacao: "Entrepreneurs must put business objectives (profit) front and center. Failure to do so is either ignorance, delusion, or bad math. Profit enables the mission — it is not in tension with it."
+    insight_ref: "TSC-INS-003"
+    chunk_refs: ["TSC-CH-004"]
+    confianca: HIGH
+    evidencia: "The goal of your business is to make money. I'm going to say that again because it's both important and yet oddly controversial."
+    source_id: "TSC-0052"
+    tags: ["profit-first", "business-fundamentals", "contrarian"]
+
+  - id: "TSC-PHIL-MCE-002"
+    texto: "When no one agrees on what a word means, that word ceases to be helpful"
+    implicacao: "Proprietary vocabulary (3-Year Target, Company Purpose, Strategic Anchors) always beats contested jargon (mission, vision, strategy). New terms that are precise > familiar terms that mean different things to different people."
+    insight_ref: "TSC-INS-004"
+    chunk_refs: ["TSC-CH-005"]
+    confianca: HIGH
+    evidencia: "When no one agrees on what a word means, that word ceases to be helpful."
+    source_id: "TSC-0052"
+    tags: ["communication", "clarity", "vocabulary", "anti-jargon"]
+
+  - id: "TSC-PHIL-MCE-003"
+    texto: "Annual plans are a joke — too long to be predictable, too short to be meaningful"
+    implicacao: "Five and ten-year goals are ludicrously long for entrepreneurial companies. Annual plans are abandoned by February like New Year's resolutions. The replacement: 3-year cycles, 90-day sprints, weekly measurement."
+    insight_ref: "TSC-INS-005"
+    chunk_refs: ["TSC-CH-007", "TSC-CH-008"]
+    confianca: HIGH
+    evidencia: "Annual plans are a joke. They are too long to be predictable and too short to be meaningful."
+    source_id: "TSC-0054"
+    tags: ["anti-annual-plans", "planning", "contrarian"]
+
+  - id: "TSC-PHIL-MCE-004"
+    texto: "Documenting how customers happen is the highest-leverage business act"
+    implicacao: "Ryan went from $250K debt + near-bankruptcy to $1M revenue, 3 Inc. 500 companies, two 8-figure exits — all traced back to a single napkin documenting how customers happen. The power is in the simplicity of the documentation, not in tools or tactics."
+    insight_ref: "TSC-INS-007"
+    chunk_refs: ["TSC-CH-010", "TSC-CH-011"]
+    confianca: HIGH
+    evidencia: "Never, never underestimate the power of simply documenting how customers happen in your business."
+    source_id: "TSC-0062"
+    tags: ["documentation", "growth-engines", "founder-story"]
+
+  - id: "TSC-PHIL-MCE-005"
+    texto: "It is NOT the leader's job to know HOW to fix the gaps — only to ask the right questions"
+    implicacao: "The shift from expert (having answers) to leader (asking questions) is the central transformation required to scale. If the team is compensated fairly, they own the gap. The leader helps but does not carry the solution."
+    insight_ref: "TSC-INS-013"
+    chunk_refs: ["TSC-CH-023"]
+    confianca: HIGH
+    evidencia: "It is not your job to know how to turn red to yellow and yellow to green. Having the right answers got you where you are today. Asking the right questions will get you where you want to go."
+    source_id: "TSC-0054-09"
+    tags: ["leadership", "delegation", "founder-transformation", "scaling"]
+
+  - id: "TSC-PHIL-MCE-006"
+    texto: "Manual and subjective scorecards are features, not bugs — they build insight and ownership that automation destroys"
+    implicacao: "TSC has invested tens of thousands of dollars in automation multiple times, only to abandon it and return to manual every time. The 'inefficiency' of manual input creates sixth-sense pattern recognition and personal ownership that automated dashboards cannot replicate."
+    insight_ref: "TSC-INS-015"
+    chunk_refs: ["TSC-CH-025", "TSC-CH-026", "TSC-CH-027"]
+    confianca: HIGH
+    evidencia: "On more than one occasion, we've invested many tens of thousands of dollars to automate, only to abandon the supposedly more efficient, more accurate system for the slow manual process."
+    source_id: "TSC-0002"
+    tags: ["manual-scorecards", "automation-critique", "ownership", "insights"]
+
+  - id: "TSC-PHIL-MCE-007"
+    texto: "It is time for your business to serve you — not the other way around"
+    implicacao: "Companies exist to fulfill the needs of customers and shareholders. When founders are fulfilled, they give more. The ScalableOS is built around this inversion: the business is the servant, the founder is the master. Founders who feel trapped are victims of their own success, not failures."
+    insight_ref: "TSC-INS-016"
+    chunk_refs: ["TSC-CH-028", "TSC-CH-030"]
+    confianca: HIGH
+    evidencia: "It is time for your business to serve you, not the other way around."
+    source_id: "TSC-0068"
+    tags: ["founder-freedom", "company-purpose", "scalableOS", "entrepreneurship"]

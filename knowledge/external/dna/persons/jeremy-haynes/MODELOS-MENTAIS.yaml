@@ -1,0 +1,83 @@
+# knowledge/external/dna/persons/jeremy-haynes/MODELOS-MENTAIS.yaml
+# Fonte: Pipeline MCE v1.0 | 2026-03-16
+# Insights com tag [MODELO-MENTAL] extraídos de AOBA, MMM, STA, UHTC, LYFC, IC, ST, WK
+
+pessoa: "Jeremy Haynes"
+slug: "jeremy-haynes"
+versao: "1.0.0"
+updated: "2026-03-16T10:50:00Z"
+total_entries: 6
+
+modelos_mentais:
+
+  - id: "JH-MM001"
+    insight_id: "JH-007"
+    titulo: "Modelo Âncora-Borracha (Urgência Sem Pressão)"
+    declaracao: "The Anchor-Rubber Band Model: pull prospects far above their current reality with aspirational framing, then let conviction snap them to action."
+    quote: "Stretch them. Show them the 10x version. Then the rubber band snaps — they feel the gap so acutely they must act to close it."
+    chunk_ids: ["chunk_663"]
+    fonte: "JH-STA"
+    programa: "Sales Training Academy"
+    prioridade: "HIGH"
+    aplicacao: "Sales urgency creation, objection handling, closing"
+    confianca: "HIGH"
+
+  - id: "JH-MM002"
+    insight_id: "JH-008"
+    titulo: "Percepção Precede Compra"
+    declaracao: "Perception precedes purchase — what prospects believe before they speak to a salesperson determines 80% of the close."
+    quote: "Selective attention means they only hear what confirms what they already believe. Change belief before the call, not during it."
+    chunk_ids: ["chunk_691"]
+    fonte: "JH-UHTC"
+    programa: "Ultra High Ticket Closing"
+    prioridade: "HIGH"
+    aplicacao: "Pre-call belief change, content strategy, sales preparation"
+    confianca: "HIGH"
+
+  - id: "JH-MM003"
+    insight_id: "JH-009"
+    titulo: "Modelagem de Sucesso Colapsa Tempo"
+    declaracao: "Success modeling collapses time: find someone who has what you want, reverse-engineer their exact decisions, and execute without reinventing."
+    quote: "The fastest path from A to B is to find someone already at B and copy their path. Not their tactics — their sequence of decisions."
+    chunk_ids: ["chunk_672"]
+    fonte: "JH-MMM"
+    programa: "Million Money Mindset"
+    prioridade: "HIGH"
+    aplicacao: "Business strategy, mentorship selection, skill acquisition"
+    confianca: "HIGH"
+
+  - id: "JH-MM004"
+    insight_id: "JH-010"
+    titulo: "Erro de Projeção Financeira — Income para Consumo vs Capital"
+    declaracao: "Financial reality projection mistake: people visualize income going to lifestyle, not leverage — this keeps them trapped in a revenue ceiling."
+    quote: "Most agency owners earn more and spend more. They never buy back time. The mistake is projecting income into consumption instead of capital."
+    chunk_ids: ["chunk_692"]
+    fonte: "JH-AOBA"
+    programa: "Agency Owner Black Academy"
+    prioridade: "HIGH"
+    aplicacao: "Financial decision-making, business structure, wealth building"
+    confianca: "HIGH"
+
+  - id: "JH-MM005"
+    insight_id: "JH-011"
+    titulo: "95% de Infraestrutura Digital Quebrada = Oportunidade de Entrada"
+    declaracao: "The 95% broken digital infrastructure opportunity: most businesses have fundamental gaps in CRM, automation, and follow-up — this is the entry point for AI agency services."
+    quote: "95% of businesses have broken infrastructure. They don't need advice — they need someone to fix the pipes. That's the opportunity."
+    chunk_ids: ["chunk_694"]
+    fonte: "JH-AOBA"
+    programa: "Agency Owner Black Academy"
+    prioridade: "HIGH"
+    aplicacao: "Market positioning, agency offer design, ICP selection"
+    confianca: "HIGH"
+
+  - id: "JH-MM006"
+    insight_id: "JH-012"
+    titulo: "As 3 Crenças que Precedem Toda Compra"
+    declaracao: "People buy for 3 core reasons: they believe in the vehicle (mechanism), they believe in you (guide), they believe in themselves (capability). Address all three or close nothing."
+    quote: "Three beliefs before someone buys: Does this work? Can you deliver it? Can I do this? You need all three. Miss one and you lose the deal."
+    chunk_ids: ["chunk_702"]
+    fonte: "JH-STA"
+    programa: "Sales Training Academy"
+    prioridade: "HIGH"
+    aplicacao: "Sales diagnostics, objection handling, coaching"
+    confianca: "HIGH"

@@ -1,0 +1,79 @@
+# DNA: FRAMEWORKS — Richard Linder
+# Pipeline: MCE Step 10.2 | 2026-03-16
+# Source: RL001 | Version: 1.0.0
+# Total entries: 2
+
+slug: richard-linder
+tag: "[FRAMEWORK]"
+version: "1.0.0"
+updated: "2026-03-16"
+sources:
+  - RL001
+
+entries:
+  - id: FR-RL-001
+    insight_ref: INS-RL-004
+    titulo: "Founder First Hiring Scorecard — Trindade de Avaliação de Estilo de Trabalho"
+    framework: |
+      Three complementary work style assessments to prevent hiring clones and ensure
+      well-rounded, complementary team composition:
+
+      DISC (communication style quadrants):
+        - High D: Direct, decisive, results-driven
+        - High I: Influential, enthusiastic, social
+        - High S: Steady, collaborative, supportive
+        - High C: Conscientiousness, analytical, systematic
+        Usage: Identify complementary communication styles; flag potential conflicts
+
+      CliftonStrengths (34 talent themes, 4 domains):
+        - Top 5 strengths: where to play
+        - Bottom 5: what to hire to offset
+        - 4 domains: Executing, Influencing, Relationship, Strategic Thinking
+        Usage: Reveal gaps in founder profile that team must fill
+
+      Working Genius (6 types, 3 categories):
+        - 2 Genius areas: natural energy + skill
+        - 2 Frustration areas: drain (avoid or staff)
+        - 2 Competency areas: can do, but not energizing
+        Usage: Workflow alignment — pair Geniuses that complement each other
+
+      Richard's Profile:
+        - INTJ (rare: two INTJs partnering, Ryan Deiss is also INTJ)
+        - Working Genius: High Discernment + Tenacity
+        - Low Wonderment + Enablement
+
+      Anti-clone rule: "Don't build a team that looks just like you — you'll fight and fire them."
+    quando_aplicar: "All key hires reporting directly to founder; before or during interview process"
+    outputs:
+      - Compatibility map of candidate vs founder + existing team
+      - Identified gaps to fill (not clone)
+    chunk_ids: ["RL001_007"]
+    confianca: HIGH
+    priority: HIGH
+
+  - id: FR-RL-002
+    insight_ref: INS-RL-021
+    titulo: "Os 8 Limitadores de Escala — Framework Diagnóstico Universal"
+    framework: |
+      Every reason businesses get stuck and fail falls into one of eight categories:
+
+      1. LACK OF CLARITY — Uninspiring or unclear vision; team doesn't know where they're going
+      2. INSUFFICIENT DEMAND — Not enough customers; market problem or targeting problem
+      3. BAD STRATEGY — Wrong things at wrong time, wrong timing (too early/too late)
+      4. SYSTEMS — Undocumented processes; value creation black-boxed in brains, not repeatable
+      5. WRONG TEAM — Wrong people OR right people in wrong positions
+      6. POOR COMMUNICATION — No one knows what matters, what success looks like, how to make impact
+      7. INSUFFICIENT CAPITAL — Not enough cash flow to sustain growth (growth is expensive)
+      8. IMPACT MISALIGNMENT — Founder goals ≠ company goals; built a bad job for yourself
+
+      Diagnostic protocol:
+        Step 1: When stuck, categorize the primary constraint into one of 8
+        Step 2: Focus solution energy on that specific constraint
+        Step 3: Verify solution doesn't just shift the constraint to another bucket
+    quando_aplicar: "Business diagnosis; strategic planning; identifying root cause when stuck"
+    outputs:
+      - Primary constraint identified
+      - Prioritized intervention
+    chunk_ids: ["RL001_021"]
+    confianca: HIGH
+    priority: MEDIUM

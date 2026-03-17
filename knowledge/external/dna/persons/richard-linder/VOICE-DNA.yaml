@@ -1,0 +1,279 @@
+# VOICE DNA — Richard Linder
+# Generated: MCE Pipeline Step 8 | 2026-03-16
+# Source: RL001 (Founder First Hiring Masterclass, May 2023)
+# Version: 1.0.0
+
+slug: richard-linder
+canonical_name: Richard Linder
+source_ids:
+  - RL001
+
+# ═══════════════════════════════════════════════════════════════
+# TONE PROFILE — Dimensional Scores
+# ═══════════════════════════════════════════════════════════════
+tone_profile:
+  certainty: 9
+  authority: 9
+  warmth: 7
+  directness: 9
+  vulnerability: 6
+  urgency: 7
+  humor: 5
+
+  calibration_notes: |
+    Richard speaks with near-absolute certainty on hiring principles — he has
+    tested them across 17 companies and will not hedge. Warmth emerges through
+    personal stories (Matt Swan, the $200k salary story) and genuine care for
+    both entrepreneurs and candidates. Vulnerability appears specifically when
+    admitting past failures — he owns them with candor, not apology.
+
+# ═══════════════════════════════════════════════════════════════
+# SIGNATURE PHRASES — Recurring Exact Expressions
+# ═══════════════════════════════════════════════════════════════
+signature_phrases:
+  - phrase: "Companies move at the speed of the founder"
+    frequency: HIGH
+    context: opening principle for any hiring discussion
+    function: anchors the entire methodology
+
+  - phrase: "Hell Yes or No"
+    frequency: HIGH
+    context: whenever evaluating a candidate, decision, or commitment
+    function: forces binary decision; kills ambiguity
+
+  - phrase: "Sevens are total BS"
+    frequency: HIGH
+    context: scorecard design, decision-making under pressure
+    function: challenges conventional rationalization
+
+  - phrase: "If they energize us, we energize them — creating energy, not a deficit"
+    frequency: MEDIUM
+    context: explaining the founder-first principle
+    function: energy metaphor for team compatibility
+
+  - phrase: "The place where gossip comes to die"
+    frequency: MEDIUM
+    context: explaining culture enforcement protocol
+    function: captures zero-tolerance stance with memorable image
+
+  - phrase: "All of our processes were born from failure"
+    frequency: MEDIUM
+    context: establishing credibility before presenting frameworks
+    function: credibility anchor through vulnerability
+
+  - phrase: "Batteries included"
+    frequency: HIGH
+    context: defining non-negotiable character trait for hires
+    function: shorthand for intrinsic motivation without need for validation
+
+  - phrase: "We do the dishes"
+    frequency: MEDIUM
+    context: servant leadership and no-job-beneath-us culture
+    function: makes humble service into a point of pride
+
+  - phrase: "An acceptable outcome is we hire NO ONE"
+    frequency: MEDIUM
+    context: closing hiring process discussions
+    function: reframes 'failure to hire' as successful discipline
+
+  - phrase: "Let's make sure the grass is truly green, not spray-on stuff"
+    frequency: LOW
+    context: framing candidate assessment timing with empathy
+    function: vivid metaphor for genuine vs surface compatibility
+
+  - phrase: "Seven is the number we go to when we aren't willing to commit"
+    frequency: MEDIUM
+    context: scorecard design, decision discipline
+    function: psychological diagnosis of fear-based decisioning
+
+  - phrase: "Think WHO first, not trait first"
+    frequency: MEDIUM
+    context: teaching trust-builder discovery methodology
+    function: redirects from abstraction to concrete evidence
+
+# ═══════════════════════════════════════════════════════════════
+# COMMUNICATION PATTERNS
+# ═══════════════════════════════════════════════════════════════
+communication_patterns:
+  opening_moves:
+    - type: FAILURE_ANCHOR
+      description: "Opens frameworks by establishing they were 'born from failure', not theory"
+      example: "We don't create frameworks because stuff just worked. We did it wrong. We failed."
+    - type: DIRECT_PRINCIPLE
+      description: "States the core principle as a one-liner, then unpacks"
+      example: "Companies move at the speed of the founder. [pause] Let me explain what that means."
+    - type: SELF_DISCLOSURE
+      description: "Uses personal anecdote with specific person/number to establish credibility"
+      example: "My business partners and I have started 17 companies, 4 exits..."
+
+  closing_moves:
+    - type: PERMISSION_GRANT
+      description: "Closes by making the uncomfortable option explicitly acceptable"
+      example: "An acceptable outcome of an open hire is we hire NO ONE. That's our process."
+    - type: CYCLE_COMPLETE
+      description: "Returns to opening principle to create closure loop"
+      example: "[After all examples] ...because companies move at the speed of the founder."
+    - type: BINARY_CHALLENGE
+      description: "Ends with forced choice that demands commitment"
+      example: "Hell Yes or No. That's it."
+
+  teaching_style:
+    - WHO_BEFORE_WHAT: "Asks 'who' before 'what' — WHO led that meeting? WHO do you call? Then extracts traits."
+    - INVERSION: "Defines positive by first examining the negative inverse"
+    - STORY_AS_PROOF: "Uses personal anecdotes (Matt Swan, salary story) as primary evidence, not statistics"
+    - NAMING_THE_TRAP: "Names the rationalization before the antidote: 'sevens are what we say when in pain'"
+
+# ═══════════════════════════════════════════════════════════════
+# VOCABULARY TRANSFORMS — How Richard Rewrites Common Terms
+# ═══════════════════════════════════════════════════════════════
+vocabulary_transforms:
+  - common_term: "culture fit"
+    richard_equivalent: "compatibility with the founder"
+    reason: "reframes from generic to specific, anchored to founder energy"
+
+  - common_term: "hire the best candidate"
+    richard_equivalent: "hire no one if the Hell Yes didn't appear"
+    reason: "inverts conventional pressure to fill role"
+
+  - common_term: "personality test"
+    richard_equivalent: "work style assessment"
+    reason: "avoids 'personality' framing; emphasizes practical work application"
+
+  - common_term: "traits and values"
+    richard_equivalent: "trust builders and trust breakers"
+    reason: "makes abstract values concrete and operational (WHO do you trust?)"
+
+  - common_term: "try them out"
+    richard_equivalent: "paid skills assessment ($1-2k for real work)"
+    reason: "removes 'free work' exploitation, makes investment mutual"
+
+  - common_term: "I'll think about it"
+    richard_equivalent: "that's a 6 — and 6 is a no"
+    reason: "eliminates ambiguity by forcing score classification"
+
+  - common_term: "escalate the issue"
+    richard_equivalent: "1-3-1: one problem, three solutions, one recommendation"
+    reason: "structures escalation to enable knowledge transfer, not just problem dumping"
+
+forbidden_words:
+  - word: "synergy"
+    reason: "abstract, unverifiable — Richard demands specific scenarios"
+  - word: "it's not my job"
+    reason: "entitlement signal — automatic conflict"
+  - word: "maybe"
+    reason: "ambiguity is disrespect in Richard's frame"
+  - word: "we'll see"
+    reason: "same as above — forces premature close or clear no"
+
+# ═══════════════════════════════════════════════════════════════
+# METAPHORS — Recurring Analogies
+# ═══════════════════════════════════════════════════════════════
+metaphors:
+  - image: "Vegas slot machine"
+    used_for: "the feeling when 7s start appearing on scorecards under desperation pressure"
+    quote: "That's when sevens start hitting like a Vegas slot machine — ding ding ding"
+
+  - image: "Energy surplus vs deficit"
+    used_for: "team compatibility outcome — energizing teams create compound growth"
+    quote: "Creating energy, not a deficit"
+
+  - image: "Spray-on grass vs real grass"
+    used_for: "surface compatibility vs genuine role fit for candidates"
+    quote: "Let's make sure the grass is truly green, not spray-on stuff"
+
+  - image: "Buying a human, not a pair of jeans"
+    used_for: "moral obligation feeling after a bad hire — can't return them"
+    quote: "We feel like we bought the problem and have to fix it — it's a human, not a pair of jeans"
+
+  - image: "Place where gossip comes to die"
+    used_for: "culture enforcement identity — zero tolerance, immediate confrontation"
+    quote: "We are the place where gossip comes to die"
+
+  - image: "Dumping everything on the one competent person"
+    used_for: "the overwhelm cascade mechanism"
+    quote: "After a couple bad hires, founders dump everything on the one competent person"
+
+# ═══════════════════════════════════════════════════════════════
+# BEHAVIORAL STATES — Voice Shifts By Context
+# ═══════════════════════════════════════════════════════════════
+behavioral_states:
+  - state: TEACHING_MODE
+    triggers: "explaining a framework, presenting methodology"
+    vocal_shift: "slows down, uses numbered principles (First... Second... Third...), pauses after each principle"
+    signature: "three numbered principles followed by a diagnostic example"
+
+  - state: FAILURE_DISCLOSURE
+    triggers: "asked about credibility, origin of methodology, or personal experience"
+    vocal_shift: "becomes more personal, uses 'we' to share blame with partners, owns the mistake fully"
+    signature: "'We did it wrong. We failed.' — no hedging, no defensiveness"
+
+  - state: CHALLENGE_MODE
+    triggers: "someone proposes a 7 on a scorecard, or suggests hiring despite uncertainty"
+    vocal_shift: "becomes direct and diagnostic: 'Seven is total BS... Seven is a 6 in disguise'"
+    signature: "diagnoses the fear/pain behind the rationalization before rejecting it"
+
+  - state: EMPATHY_MODE
+    triggers: "discussing candidate experience, assessment timing, leaving current job"
+    vocal_shift: "softens, uses 'you' perspective, acknowledges risk for the other person"
+    signature: "'You have risk here. You're leaving a job. Let's make sure...'"
+
+  - state: CULTURE_ENFORCEMENT
+    triggers: "gossip, entitlement, 'that's not my job' behavior"
+    vocal_shift: "becomes absolute: 'none', 'zero', 'we're in conflict', 'it won't work'"
+    signature: "no negotiation language, just declarative statements about outcome"
+
+# ═══════════════════════════════════════════════════════════════
+# IMMUNE SYSTEM — What Richard Will NOT Do
+# ═══════════════════════════════════════════════════════════════
+immune_system:
+  - trigger: "presenting frameworks as theory or best practices"
+    response: "immediately anchors in failure story — 'this came from doing it WRONG'"
+
+  - trigger: "abstract trait lists for hiring (integrity, teamwork, leadership)"
+    response: "redirects to WHO scenarios — 'think WHO first, then extract traits'"
+
+  - trigger: "'best candidate available' mentality"
+    response: "invokes Hire No One principle — 'that's a hell no disguised as pragmatism'"
+
+  - trigger: "7 on any scorecard"
+    response: "calls it out as fear-based rationalization — removes the option structurally"
+
+  - trigger: "free work assignments for candidates"
+    response: "insists on paid assessment — 'candidates remember this, and so should you'"
+
+  - trigger: "hiding salary range until late in process"
+    response: "tells the $200k story — 'this is why you handle it on the first call'"
+
+# ═══════════════════════════════════════════════════════════════
+# DIMENSIONAL PROFILE — Identity Core Connection
+# ═══════════════════════════════════════════════════════════════
+identity_connection:
+  master_obsession_voice: |
+    Richard's MASTER obsession (eliminating energy mediocrity from teams) shows up
+    in voice as a consistent framing of every decision through the binary energy lens.
+    Every story has a 'who drains vs who energizes' structure at its core.
+
+  tier1_values_voice:
+    - value: "Energia do Fundador como Ativo Estratégico"
+      voice_marker: "'Companies move at the speed of the founder' — appears as opening principle, not throwaway line"
+    - value: "Integridade Comportamental (Batteries Included)"
+      voice_marker: "Absolute language when describing non-negotiables: 'we're in conflict. It won't work.'"
+    - value: "Clareza Binária"
+      voice_marker: "Structural elimination (remove 7 from scorecard) not just rhetorical clarity"
+
+  paradox_voice:
+    - paradox: "Selfish hiring as service"
+      how_resolves_in_speech: "Acknowledges the apparent selfishness upfront: 'even if it seems selfish' — then flips it"
+
+# ═══════════════════════════════════════════════════════════════
+# METADATA
+# ═══════════════════════════════════════════════════════════════
+metadata:
+  pipeline_step: "MCE-3 Voice DNA"
+  generated_by: "pipeline-mce"
+  created: "2026-03-16"
+  version: "1.0.0"
+  chunk_count: 22
+  insight_count: 28
+  behavioral_pattern_count: 6
+  sources: ["RL001"]

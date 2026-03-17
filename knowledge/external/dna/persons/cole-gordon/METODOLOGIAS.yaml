@@ -1,0 +1,59 @@
+# knowledge/external/dna/persons/cole-gordon/METODOLOGIAS.yaml
+# Gerado em: 2026-03-16
+# Fonte: Pipeline MCE v2.0 (INSIGHTS-STATE.json)
+
+pessoa: "Cole Gordon"
+versao: "1.0.0"
+data_atualizacao: "2026-03-16T09:10:00Z"
+total_entries: 5
+
+entries:
+  - id: "MET-CG-001"
+    insight_id: "CG-MCE001-016"
+    titulo: "LNS 6-Step Nurture Sequence"
+    descricao: "1) Confirmation call imediata após booking. 2) Reminder 24h com agenda. 3) Reminder 2h confirmando presença. 4) Reminder 10min com link Zoom. 5) Video personalizado para deals $10k+. 6) Call se não confirmou 1h antes. Resultado: show rate de 55% → 82%+. Custo ~$35-50k/ano com ROI imediato."
+    quote: "LNS is the most underrated role in high-ticket sales. Show rate goes from 55% to 82%."
+    chunk_ids: ["CG-01-03"]
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    categoria: "estrutura-time"
+
+  - id: "MET-CG-002"
+    insight_id: "CG-MCE001-017"
+    titulo: "Coaching 1:1 30-Min Framework"
+    descricao: "5 min check-in (como está? o que funciona? o que dificulta?), 15 min call review (1 call específica, segmento crítico, closer auto-avalia primeiro), 10 min ação (UMA coisa para melhorar essa semana com plano de prática e medição). Foco em UMA coisa por semana, nunca sobrecarregar, deixar closer identificar o problema primeiro."
+    quote: "Focus on ONE thing per week. Not three things, not five things. One. Let the closer identify it first."
+    chunk_ids: ["CG-09-04"]
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    categoria: "gestao-vendas"
+
+  - id: "MET-CG-003"
+    insight_id: "CG-MCE001-018"
+    titulo: "Sales Manager Time Allocation 40/25/20/15%"
+    descricao: "40% QA + coaching (2-3 calls/closer/dia, 15-20min feedback individual, role-play), 25% rituals + meetings (standup 15min, weekly 1:1s 30min), 20% pipeline management (deals em risco, manager callbacks, forecast), 15% admin + reporting. 0% closing. Esta distribuição é o padrão de excelência em sales management."
+    quote: "40% of a sales manager's time should be QA and coaching. Not closing."
+    chunk_ids: ["CG-09-03"]
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    categoria: "gestao-vendas"
+
+  - id: "MET-CG-004"
+    insight_id: "CG-MCE001-019"
+    titulo: "Scaling Plan 3 Pilares: Core + Enterprise + Conglomerate"
+    descricao: "Pilar 1 (prioridade): mais e melhor do que já funciona → 200 units/mês B2B → compounding de 18-24 meses dobra empresa sem nada novo. Pilar 2: Enterprise Division ('Broad 2.0') → pay-per-hire para volume >10-20 reps/ano. Pilar 3: Recruiting Conglomerate → mesma tese, múltiplos setores (non-sales). Lição: portfolio random falha, tese unificada escala."
+    quote: "Just more and better at what we're doing. 200 units/month + 1 year = company doubled. Nothing new needed."
+    chunk_ids: ["CG-09-06"]
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    categoria: "scaling"
+
+  - id: "MET-CG-005"
+    insight_id: "CG-MCE001-020"
+    titulo: "Discovery: Atribuição de Números + Hell/Heaven Island"
+    descricao: "Nunca perguntar 'How's business going?' — sempre 'What did you do LAST MONTH, exactly?' Pessoas se identificam com melhor mês, não com média. Scale 1-10 para o que não tem número natural. Hell Island/Heaven Island: clareza na diferença cria tensão interna. Dickens Process: 'O que acontece em 1, 3, 5, 10 anos se nada mudar?'"
+    quote: "Last month exactly. Not 'usually', not 'on average'. EXACTLY. It exposes reality."
+    chunk_ids: ["CG-02-06"]
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    categoria: "processo-vendas"

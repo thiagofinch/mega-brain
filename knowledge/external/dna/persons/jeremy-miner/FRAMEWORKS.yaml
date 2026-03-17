@@ -1,0 +1,94 @@
+# knowledge/external/dna/persons/jeremy-miner/FRAMEWORKS.yaml
+# Camada L4 — Metodologias Estruturadas e Processos
+# Gerado: MCE Pipeline 2026-03-16
+
+pessoa: "Jeremy Miner"
+versao: "1.0.0"
+data_extracao: "2026-03-16T10:30:00Z"
+total_elementos: 2
+pipeline: "MCE v1.0"
+
+frameworks:
+
+  - id: "JM-FW-001"
+    titulo: "4 Modos de Tonalidade NEPQ"
+    enunciado: "Existem 4 tonalidades de voz distintas para vendas, cada uma servindo a um propósito diferente na conversa — a maioria dos vendedores usa apenas 1 (assertiva), que é a menos eficaz."
+    descricao: >
+      Jeremy Miner identifica 4 tonalidades funcionalmente distintas:
+
+      1. CURIOSA: Inflexão levemente ascendente no final. Sinaliza interesse não-julgamental.
+         Ativa o instinto de compartilhar no prospect. Usar em perguntas de descoberta.
+
+      2. CONFUSA: Inflexão levemente descendente, ritmo mais lento. Reduz defensividade.
+         O prospect quer 'ajudar o vendedor a entender'. Usar quando prospect dá resposta
+         superficial ou defensiva.
+
+      3. PREOCUPADA: Tom empático mas sério, com peso emocional. Transmite que você
+         genuinamente se importa com o problema deles. Usar quando explorando consequências
+         e impacto emocional do problema.
+
+      4. ASSERTIVA/DECLARATIVA: Tom plano, sem inflexão ascendente, confiante.
+         Sinaliza certeza. O mais sobreutilizado pelos vendedores. Usar apenas quando
+         fazendo declarações de fato ou conduzindo para fechamento.
+
+      A maioria dos vendedores usa 90% assertiva — exatamente o que ativa resistência.
+    aplicacao: >
+      Mapeamento para NEPQ:
+      - Status Quo Questions → Tonalidade curiosa
+      - Problem Awareness Questions → Tonalidade curiosa/preocupada
+      - Consequence Questions → Tonalidade preocupada
+      - Solution Awareness Questions → Tonalidade curiosa/assertiva (ao confirmar solução)
+      Praticar as 4 tonalidades isoladamente antes de integrar à conversa real.
+    evidencias:
+      - chunk_id: "JM-chunk_022"
+        quote: "Curious tone raises slightly at the end, signals non-judgmental interest. Confused tone drops slightly. Concerned tone is empathetic but serious. Assertive/declarative tone — flat, confident, no rising inflection."
+        source: "JM-0091"
+      - chunk_id: "JM-chunk_005"
+        quote: "Your tonality is how the prospect interprets your intention behind everything you say and ask. You can either trigger them to get defensive or you can trigger their guard to come down simply by shifting your tone."
+        source: "JM-0061"
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    status: "new"
+
+  - id: "JM-FW-002"
+    titulo: "NEPQ — Neuro-Emotional Persuasion Questioning (Framework Mestre)"
+    enunciado: "NEPQ é uma metodologia de vendas baseada em ciência comportamental que usa perguntas para guiar o prospect a auto-descobrir seus problemas e consequências — sem pitch, sem pressão."
+    descricao: >
+      NEPQ (Neuro-Emotional Persuasion Questioning) foi desenvolvido por Jeremy Miner
+      ao longo de 18 anos de experiência em campo, testado empiricamente em múltiplos
+      mercados. É construído sobre neurociência, psicologia social, e teoria comportamental.
+
+      PRINCÍPIO CENTRAL: O cérebro humano resiste ao ser vendido mas é confortável em
+      descobrir soluções por conta própria. NEPQ cria o ambiente onde o prospect faz
+      essa descoberta — guiado pelas perguntas do vendedor.
+
+      DIFERENÇA DO OLD MODEL:
+      - Old Model: Features → Benefits → Close → Overcome Objections
+      - NEPQ: Diagnose → Question → Self-Discovery → Natural Close
+
+      PILARES:
+      1. Tonalidade (como você soa)
+      2. Perguntas em 4 tipos sequenciais
+      3. Proporção de fala (70/30)
+      4. Prevenção de objeções (não tratamento)
+      5. Pattern interrupt na abertura
+
+      RESULTADO ESPERADO: Close rates tipicamente dobram ou triplicam nos primeiros
+      90 dias de implementação consistente.
+    aplicacao: >
+      Implementação em 3 fases:
+      FASE 1 (Semanas 1-2): Dominar tonalidade. Praticar as 4 tonalidades separadamente.
+      FASE 2 (Semanas 3-6): Implementar os 4 tipos de perguntas NEPQ em sequência.
+      FASE 3 (Semanas 7-12): Integrar prevenção de objeções e refinamento de proporção 70/30.
+
+      Não tentar implementar tudo de uma vez. NEPQ é construído em camadas.
+    evidencias:
+      - chunk_id: "JM-chunk_009"
+        quote: "NEPQ uses questions to guide the prospect to self-discover their own problems and the consequences of not solving them. You never pitch. You never push."
+        source: "JM-0008"
+      - chunk_id: "JM-chunk_022"
+        quote: "NEPQ is not a set of sales tricks. It is a behavioral science-based methodology built on neuroscience and social psychology."
+        source: "JM-0008"
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    status: "new"

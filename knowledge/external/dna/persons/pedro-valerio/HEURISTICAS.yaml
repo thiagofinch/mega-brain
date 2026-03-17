@@ -1,0 +1,49 @@
+# HEURISTICAS — Pedro Valerio Lopez
+# Camada L3 do DNA Cognitivo
+# Versao: 1.0.0
+# Atualizado: 2026-03-16
+# Insights: 4
+
+version: "1.0.0"
+updated: "2026-03-16"
+person: "Pedro Valério"
+slug: "pedro-valerio"
+layer: "L3-HEURISTICAS"
+count: 4
+
+heuristicas:
+  - id: "HEU-PV-001"
+    nome: "1 Tarefa = 1 Responsável"
+    descricao: "Se precisam de 2 pessoas, não quebrou o suficiente. Dividir até chegar em tarefa atômica."
+    citacao: "Se precisam de duas pessoas para fazer, é porque não quebrou o suficiente."
+    threshold: "2 pessoas = tarefa precisa ser dividida"
+    chunks: ["chunk_416"]
+    source: "MEET-0039"
+    confianca: "HIGH"
+
+  - id: "HEU-PV-002"
+    nome: "Regra dos 3 Segundos"
+    descricao: "Nos primeiros 3-5 segundos de um criativo, o thumb stopping precisa estar ativo ou o scroll continua."
+    citacao: "Na parte de edição, a regra de 3 segundos."
+    threshold: "3-5 segundos iniciais"
+    chunks: ["chunk_407"]
+    source: "MEET-0032"
+    confianca: "HIGH"
+
+  - id: "HEU-PV-003"
+    nome: "Triple-Triple Growth"
+    descricao: "Crescimento 3x por ano sustentável. Acima de 72M, mercado satura."
+    citacao: "2022 foi um milhão, 2023 três milhões, 2024 nove milhões."
+    threshold: "3x/ano até ~72M"
+    chunks: ["chunk_411"]
+    source: "MEET-0034"
+    confianca: "HIGH"
+
+  - id: "HEU-PV-004"
+    nome: "Custo de Folha Saudável"
+    descricao: "Para tech/marketing, ~15% da receita é referência. Pedro opera com ~2.7%."
+    citacao: "Custo de folha sempre 20 mil. Uma folha saudável é uns 15%."
+    threshold: "≤15% da receita"
+    chunks: ["chunk_411"]
+    source: "MEET-0034"
+    confianca: "MEDIUM"

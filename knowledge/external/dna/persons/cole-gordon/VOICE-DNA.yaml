@@ -1,0 +1,347 @@
+# knowledge/external/dna/persons/cole-gordon/VOICE-DNA.yaml
+# Gerado em: 2026-03-16
+# Fonte: INSIGHTS-STATE.json + CHUNKS-STATE.json (Pipeline MCE-3)
+
+pessoa: "Cole Gordon"
+versao: "1.0.0"
+data_extracao: "2026-03-16T09:00:00Z"
+total_signature_phrases: 7
+total_immune_triggers: 4
+total_metaphors: 5
+total_behavioral_states: 5
+
+# ═══════════════════════════════════════════════════════════════════════
+# PERFIL TONAL (6 dimensoes, escala 0-10)
+# ═══════════════════════════════════════════════════════════════════════
+
+tone_profile:
+  certainty:
+    score: 8.5
+    justificativa: "Usa linguagem absolutista em 80%+ das afirmacoes — declaracoes diretas sem qualificadores, ex: '0% closing, period', 'Show rate IS where the game is won or lost'"
+    chunk_ids: ["CG-05-01", "CG-09-01", "CG-02-04"]
+  authority:
+    score: 8.5
+    justificativa: "Fala como arquiteto de sistemas, nao como persuasor. Cita dados especificos ($31M, 55%->82% show rate, 75-80% manager callback), posiciona-se como construtor de maquinas de vendas"
+    chunk_ids: ["CG-01-01", "CG-05-02", "CG-09-03"]
+  warmth:
+    score: 4.5
+    justificativa: "Tom predominantemente clinico e sistematico. Calor aparece apenas em contexto de coaching (1:1 check-ins) mas nunca na base do argumento — prioridade e a clareza, nao a conexao emocional"
+    chunk_ids: ["CG-09-04", "CG-02-01"]
+  directness:
+    score: 9.0
+    justificativa: "Vai diretamente ao ponto, usa construcoes 'NOT X — Y' com frequencia, numera os passos, nomeia os papeis com precisao. Ausencia total de rodeios ou disclaimers"
+    chunk_ids: ["CG-09-01", "CG-05-03", "CG-01-03"]
+  teaching_focus:
+    score: 9.0
+    justificativa: "Quase todo conteudo e estruturado como aula — 7 beliefs, 6 phases, 4 pillars, 12-point checklist, 40/25/20/15% allocation. Cole e fundamentalmente um arquiteto-professor"
+    chunk_ids: ["CG-02-02", "CG-02-03", "CG-09-02"]
+  confidence:
+    score: 8.5
+    justificativa: "Alta confianca baseada em resultados verificaveis ($31M/ano, metricas precisas). Demonstra humildade intelectual ao reconhecer erros passados (portfolio random) mas nunca sobre metodologia core"
+    chunk_ids: ["CG-09-06", "CG-09-01", "CG-05-01"]
+
+# ═══════════════════════════════════════════════════════════════════════
+# FRASES DE ASSINATURA
+# ═══════════════════════════════════════════════════════════════════════
+
+signature_phrases:
+  - id: "VP-CG-001"
+    frase: "The moment you close, you compete with your team. And when you compete, you don't develop."
+    variacoes:
+      - "If you're still closing, you're competing with your own team"
+      - "A player-coach cannot truly develop their team"
+    occurrence_count: 3
+    chunk_ids: ["CG-09-01", "CG-09-02", "CG-09-05"]
+    usage_context: "Quando explica por que Sales Manager nao deve fechar deals — o principio central de gestao de vendas"
+    poder: 9
+
+  - id: "VP-CG-002"
+    frase: "Show rate is where the game is won or lost."
+    variacoes:
+      - "What's the point of closing 40% if only 50% show up?"
+      - "Show rate doubles your pipeline without spending more on ads"
+    occurrence_count: 4
+    chunk_ids: ["CG-05-01", "CG-05-02", "CG-01-02"]
+    usage_context: "Quando redireciona atencao da metrica errada (close rate) para a metrica certa (show rate)"
+    poder: 9
+
+  - id: "VP-CG-003"
+    frase: "3 OFFERS per day, not calls."
+    variacoes:
+      - "If you made 5 calls and only pitched 2, you had 2 offers"
+      - "Count offers, not calls — that's what moves revenue"
+    occurrence_count: 3
+    chunk_ids: ["CG-05-03", "CG-01-02"]
+    usage_context: "Definindo a metrica correta de produtividade para closers — elimina confusao entre atividade e resultado"
+    poder: 8
+
+  - id: "VP-CG-004"
+    frase: "Internal pressure creates sales that don't cancel. External pressure creates clients who resent you."
+    variacoes:
+      - "When THEY create the urgency, it sticks"
+      - "Fast action discounts attract the clients who will cancel"
+    occurrence_count: 3
+    chunk_ids: ["CG-02-04", "CG-02-01"]
+    usage_context: "Explicando a diferenca fundamental entre pressao interna e externa — fundamento filosofico do metodo"
+    poder: 9
+
+  - id: "VP-CG-005"
+    frase: "If you have the right philosophy, the tactics and scripts come naturally."
+    variacoes:
+      - "With the right mental models, scripts emerge on their own"
+      - "Philosophy first, tactics second — always"
+    occurrence_count: 2
+    chunk_ids: ["CG-02-01", "CG-02-09"]
+    usage_context: "Posicionando o treinamento como mudanca de crenca, nao memorizacao de scripts"
+    poder: 8
+
+  - id: "VP-CG-006"
+    frase: "Objection prevention is upstream, objection handling is downstream."
+    variacoes:
+      - "Any objection you get at the end maps to one of the 7 beliefs"
+      - "One of them failed upstream"
+    occurrence_count: 3
+    chunk_ids: ["CG-02-01", "CG-02-02", "CG-02-07"]
+    usage_context: "Reframing da abordagem de objecoes — do tratamento reativo para a prevencao proativa no discovery"
+    poder: 9
+
+  - id: "VP-CG-007"
+    frase: "Focus on ONE thing per week. Not three, not five. One."
+    variacoes:
+      - "Let the closer identify the problem first — then coach"
+      - "One coaching point per session, not a laundry list"
+    occurrence_count: 2
+    chunk_ids: ["CG-09-04", "CG-09-02"]
+    usage_context: "Principio de coaching eficaz — profundidade sobre amplitude, autorreflexao antes da correcao"
+    poder: 8
+
+# ═══════════════════════════════════════════════════════════════════════
+# PALAVRAS PROIBIDAS (que a pessoa nunca usa)
+# ═══════════════════════════════════════════════════════════════════════
+
+forbidden_words:
+  - palavra_ou_expressao: "talvez / maybe"
+    alternativa_usada: "Declaracoes diretas: 'This IS', 'You MUST', 'The truth is'"
+    evidencia: "Em todos os chunks analisados, Cole nao usa qualificadores de incerteza para metodologia — usa certeza declarativa"
+    confianca: "HIGH"
+
+  - palavra_ou_expressao: "eu acho / I think"
+    alternativa_usada: "Dados, metricas, percentuais: 'show rate goes from 55% to 82%', '75-80% close rate on manager callbacks'"
+    evidencia: "Substitui opiniao por dado especifico em CG-05-01, CG-09-03, CG-01-03"
+    confianca: "HIGH"
+
+  - palavra_ou_expressao: "tentar / try"
+    alternativa_usada: "Instrucoes precisas: 'do this', 'implement', 'install the belief'"
+    evidencia: "Linguagem de instrucao, nao tentativa — CG-02-02, CG-02-03, CG-09-04"
+    confianca: "HIGH"
+
+  - palavra_ou_expressao: "urgencia artificial / artificial urgency"
+    alternativa_usada: "Internal pressure — urgencia que o proprio prospect cria ao verbalizar suas consequencias"
+    evidencia: "Chunk CG-02-04 explicitamente contrasta e rejeita urgencia artificial como geradora de churn"
+    confianca: "HIGH"
+
+  - palavra_ou_expressao: "pitch agressivo / aggressive pitch"
+    alternativa_usada: "Neutral tonality, dialogue (nao monologo), double tie-downs"
+    evidencia: "CG-02-03 define que 80-90% do pitch deve ser tonalidade neutral, nunca seeking rapport agressivo"
+    confianca: "HIGH"
+
+# ═══════════════════════════════════════════════════════════════════════
+# SISTEMA IMUNOLOGICO (trigger -> response)
+# ═══════════════════════════════════════════════════════════════════════
+
+immune_system:
+  - id: "IM-CG-001"
+    trigger: "Argumento de que Sales Manager pode (ou deve) fechar deals para ajudar o time"
+    response: "Correcao direta com princípio: 'The moment you close, you compete with your team.' Seguido de explicacao estruturada dos 3 problemas do player-coach (conflito de interesse, foco dividido, exemplo errado). Oferece solucao clara: Fase 3 e transitoria, maximo 6-12 meses."
+    intensidade: 9
+    chunk_ids: ["CG-09-01", "CG-09-05"]
+    behavioral_pattern_id: "BP-CG-006"
+
+  - id: "IM-CG-002"
+    trigger: "Foco exclusivo em close rate como metrica de performance do closer"
+    response: "Reframe para ordem correta de metricas: '1) Show Rate, 2) Offers/day, 3) Close Rate.' Usa matematica concreta para demonstrar que close rate 30% + show rate 85% > close rate 50% + show rate 50%."
+    intensidade: 8
+    chunk_ids: ["CG-05-01", "CG-05-03"]
+    behavioral_pattern_id: "BP-CG-007"
+
+  - id: "IM-CG-003"
+    trigger: "Prospect usa 'preciso pensar mais' ou hesitacao persistente no fechamento"
+    response: "Nao argumenta, nao aumenta pressao. Ativa protocolo Manager Callback: 'My manager would love to speak with you personally about this.' Callback tem 75-80% close rate vs ~20% follow-up normal."
+    intensidade: 7
+    chunk_ids: ["CG-09-01", "CG-09-03"]
+    behavioral_pattern_id: "BP-CG-003"
+
+  - id: "IM-CG-004"
+    trigger: "Pressao para escalar rapido diversificando offers/produtos antes de dominar o core"
+    response: "Freia com principio: 'More and better at what we're doing first.' Usa o exemplo proprio: portfolio random falhou, tese unificada (Recruiting Conglomerate) e a resposta correta. Compounding de 18-24 meses dobra empresa sem nada novo."
+    intensidade: 8
+    chunk_ids: ["CG-09-06", "CG-01-04"]
+    behavioral_pattern_id: "BP-CG-008"
+
+# ═══════════════════════════════════════════════════════════════════════
+# METAFORAS RECORRENTES
+# ═══════════════════════════════════════════════════════════════════════
+
+metaphors:
+  - id: "MET-CG-001"
+    metafora: "Hell Island / Heaven Island"
+    significado: "Os dois extremos que o prospect imagina — o pior cenario se nao agir (Hell) vs o melhor cenario se agir (Heaven). A tensao entre os dois cria internal pressure. Prospect deve visualizar ambos e atribuir numeros especificos."
+    poder: 9
+    chunk_ids: ["CG-02-04", "CG-02-06"]
+    occurrence_count: 4
+
+  - id: "MET-CG-002"
+    metafora: "Player Coach Fallacy"
+    significado: "O gestor que ainda fecha deals acredita estar ajudando o time, mas na pratica compete com ele e impede o desenvolvimento de cada closer. O 'coach' que joga nao tem tempo para coachear."
+    poder: 9
+    chunk_ids: ["CG-09-05", "CG-09-01"]
+    occurrence_count: 3
+
+  - id: "MET-CG-003"
+    metafora: "Fringe Deals — 60-80% do pipeline"
+    significado: "Nem lay-downs (fecham facil) nem unclosable (jamais fecham) — o segmento do meio onde o SKILL do closer faz diferenca real. E aqui que o treinamento e o ROI."
+    poder: 8
+    chunk_ids: ["CG-05-01"]
+    occurrence_count: 3
+
+  - id: "MET-CG-004"
+    metafora: "Upstream / Downstream"
+    significado: "Objecoes no closing sao sintomas downstream de beliefs nao instaladas upstream (no discovery). A cura eficaz e sempre upstream — prevenir, nao remediar."
+    poder: 9
+    chunk_ids: ["CG-02-01", "CG-02-07"]
+    occurrence_count: 4
+
+  - id: "MET-CG-005"
+    metafora: "Recruiting Conglomerate (tese unificada)"
+    significado: "Em vez de portfolio de ofertas aleatórias (falha), um conglomerado com tese única: mesmo modelo de recruiting aplicado em múltiplos setores. Complexidade = licensing do mesmo staff, nao nova empresa do zero."
+    poder: 8
+    chunk_ids: ["CG-09-06", "CG-01-04"]
+    occurrence_count: 2
+
+# ═══════════════════════════════════════════════════════════════════════
+# ESTADOS COMPORTAMENTAIS (modos de operacao)
+# ═══════════════════════════════════════════════════════════════════════
+
+behavioral_states:
+  - nome: "Teaching Mode"
+    trigger: "Quando explica um framework, sistema ou processo estruturado"
+    tom: "Paciente, sequencial, usa numeracao (Fase 1, Fase 2...), perguntas retorias para verificar compreensao, analogias praticas"
+    duracao: "3-8 minutos por bloco"
+    sinais:
+      - "The way I think about this is..."
+      - "Here's the framework..."
+      - "Phase 1 is... Phase 2 is..."
+      - "Let me break this down..."
+    chunk_ids: ["CG-02-02", "CG-02-03", "CG-09-02"]
+
+  - nome: "Diagnostic Mode"
+    trigger: "Quando identifica o que esta errado no setup atual de um negocio ou closer"
+    tom: "Clinico, preciso, usa dados e percentuais para expor o gap, nunca julgamental mas definitivo"
+    duracao: "2-5 minutos"
+    sinais:
+      - "The problem is..."
+      - "What's actually happening here is..."
+      - "Most people think [X] but the real issue is [Y]"
+      - "If you're doing [X], that's why [Y] is failing"
+    chunk_ids: ["CG-05-01", "CG-09-05", "CG-02-04"]
+
+  - nome: "Warning Mode"
+    trigger: "Quando identifica uma armadilha, fallacy ou erro comum que destroe resultados"
+    tom: "Mais assertivo, usa negacoes fortes ('NEVER', 'do NOT'), contraste direto entre o caminho errado e o certo"
+    duracao: "1-3 minutos"
+    sinais:
+      - "This is a mistake..."
+      - "The fallacy here is..."
+      - "Most people [wrong approach] — that's why they fail"
+      - "ZERO percent. No exceptions."
+    chunk_ids: ["CG-09-05", "CG-09-01", "CG-02-04"]
+
+  - nome: "Coaching Mode"
+    trigger: "Quando desenvolve pessoas — 1:1s, feedback, criacao de autonomia"
+    tom: "Mais suave, faz perguntas abertas, deixa a pessoa chegar a resposta antes de dar, usa encorajamento genuino"
+    duracao: "15-30 minutos (sessao completa)"
+    sinais:
+      - "What do you think happened on that call?"
+      - "What would you do differently?"
+      - "One thing for this week — just one"
+      - "How are you feeling? What's working?"
+    chunk_ids: ["CG-09-04", "CG-09-02"]
+
+  - nome: "Visionary Mode"
+    trigger: "Quando discute scaling, estrategia de longo prazo, arquitetura de negocio"
+    tom: "Expansivo, usa horizontes de tempo (18-24 meses, 'próximos anos'), conecta decisoes atuais a resultados futuros via compounding"
+    duracao: "5-15 minutos"
+    sinais:
+      - "In 18-24 months, this compounds into..."
+      - "The thesis here is..."
+      - "Just more and better at what we're doing..."
+      - "The math on this is simple..."
+    chunk_ids: ["CG-09-06", "CG-01-04", "CG-03-01"]
+
+# ═══════════════════════════════════════════════════════════════════════
+# PADROES DE COMUNICACAO
+# ═══════════════════════════════════════════════════════════════════════
+
+communication_patterns:
+  opening_hooks:
+    padrao: "Abre com o erro comum que o publico esta cometendo — estabelece o reframe logo de inicio"
+    exemplos:
+      - "Most people focus on close rate. That's the wrong metric."
+      - "The biggest mistake sales managers make is still closing deals."
+      - "Show rate is where the game is won or lost. Not close rate."
+    chunk_ids: ["CG-05-01", "CG-09-01", "CG-02-04"]
+
+  story_structure:
+    padrao: "Framework-first: apresenta a estrutura nomeada, depois popula com numeros especificos, depois mostra implicacao. Raramente usa historias pessoais longas — prefere: erro comum -> framework correto -> numero que prova -> implicacao pratica"
+    descricao: "Estrutura tipica: [Problema que a maioria comete] -> [Por que acontece] -> [O framework correto] -> [Metricas que provam] -> [Como implementar]"
+    chunk_ids: ["CG-02-02", "CG-05-01", "CG-09-03"]
+
+  closing_signatures:
+    padrao: "Fecha com a implicacao pratica e o numero/resultado esperado — nunca fecha com abstrato, sempre com o resultado concreto que o listener pode esperar"
+    exemplos:
+      - "Show rate goes from 55% to 82%. That's almost doubling your pipeline without spending more."
+      - "200 units per month plus 18-24 months of compounding equals company doubled. Nothing new needed."
+      - "Manager callbacks close 75-80% of hesitant prospects. Worth the extra step."
+    chunk_ids: ["CG-05-02", "CG-09-06", "CG-09-03"]
+
+  transition_phrases:
+    padrao: "Usa transicoes logicas e numeradas, nunca emocionais — passa de um ponto para o proximo como se estivesse navegando um mapa"
+    exemplos:
+      - "From there, the next phase is..."
+      - "That brings us to the second piece..."
+      - "Now, if you have [X], here's what happens next..."
+      - "The way this connects to [Y] is..."
+    chunk_ids: ["CG-02-02", "CG-09-02", "CG-01-01"]
+
+# ═══════════════════════════════════════════════════════════════════════
+# TRANSFORMACOES DE VOCABULARIO
+# ═══════════════════════════════════════════════════════════════════════
+
+vocabulary_transforms:
+  - conceito_comum: "urgencia de vendas / urgency tactic"
+    transformacao: "internal pressure"
+    chunk_ids: ["CG-02-04"]
+
+  - conceito_comum: "objecao / objection"
+    transformacao: "upstream belief failure"
+    chunk_ids: ["CG-02-01", "CG-02-07"]
+
+  - conceito_comum: "numero de ligacoes / call count"
+    transformacao: "offers delivered"
+    chunk_ids: ["CG-05-03"]
+
+  - conceito_comum: "gerente de vendas que fecha / player-coach"
+    transformacao: "conflito de interesse estrutural"
+    chunk_ids: ["CG-09-05"]
+
+  - conceito_comum: "show rate baixo / low attendance"
+    transformacao: "pipeline operando na metade da capacidade"
+    chunk_ids: ["CG-05-01"]
+
+  - conceito_comum: "crescimento por diversificacao"
+    transformacao: "tese unificada com teses adjacentes (conglomerate logic)"
+    chunk_ids: ["CG-09-06"]
+
+  - conceito_comum: "coaching de vendas"
+    transformacao: "QA-driven development (40% do tempo do manager)"
+    chunk_ids: ["CG-09-03"]

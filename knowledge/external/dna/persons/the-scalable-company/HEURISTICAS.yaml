@@ -1,0 +1,66 @@
+# HEURISTICAS — THE SCALABLE COMPANY / RYAN DEISS
+# Camada L3 do DNA Cognitivo: Regras práticas e atalhos decisórios
+# MCE Pipeline: 2026-03-16 | Source: 10 TSC transcripts
+# Version: 1.0.0-mce | Previous pipeline entries: 95 (DNA-CONFIG v1.0.0)
+
+meta:
+  pessoa: "Ryan Deiss"
+  slug: "the-scalable-company"
+  source_code: "TSC"
+  version: "1.0.0-mce"
+  updated: "2026-03-16T10:10:00Z"
+  total_entries_this_run: 1
+  total_entries_previous: 95
+  pipeline: "MCE v1.0.0"
+
+heuristicas:
+
+  - id: "TSC-HEU-MCE-001"
+    regra: "Simple ≠ Easy — documented algorithms + functioning scorecards = predictable scale"
+    contexto: "When scaling feels impossibly complex, the answer is usually radical simplification. 'Simple' is the goal, not 'easy.' If the algorithms are documented and scorecards are functioning, scaling 'is not a matter of if — it is a matter of when.'"
+    insight_ref: "TSC-INS-006"
+    chunk_refs: ["TSC-CH-009"]
+    metricas_associadas:
+      - parametro: "ScalableOS implementation time"
+        valor: "8-11 weeks"
+        breakdown: "BUILD 6-8w + INSTALL 2-3w"
+      - parametro: "Leadership team check-in frequency"
+        valor: "max 6 days"
+        nota: "Never go more than 6 days without leadership team touching base"
+      - parametro: "Automation investment before returning to manual"
+        valor: "tens of thousands of dollars (multiple times)"
+        nota: "Empirically proven: manual always wins over automated scorecards"
+    confianca: HIGH
+    evidencia: "Note that I didn't say easy. I said simple. If building a business were easy, everyone would do it."
+    source_id: "TSC-0054"
+    tags: ["scaling", "simplicity", "complexity", "heuristic"]
+
+  - id: "TSC-HEU-MCE-002"
+    regra: "Never send a calendar invite as step one — always validate meeting necessity first (7 steps)"
+    contexto: "Meetings are expensive. Every attendee raises the cost. Before scheduling any meeting: (1) Does it check the box? (2) Who MUST be there? (3) Create agenda. (4) Does it STILL need to happen? (5) Write purpose + success definition. (6) Send to stakeholders asking 'do we need to meet?' Only then (7) schedule."
+    insight_ref: "TSC-INS-012"
+    chunk_refs: ["TSC-CH-020", "TSC-CH-021"]
+    confianca: HIGH
+    evidencia: "The first step is not: send Google invite."
+    source_id: "TSC-0016"
+    tags: ["meetings", "efficiency", "communication", "heuristic"]
+
+  - id: "TSC-HEU-MCE-003"
+    regra: "If it's not Blue Ocean or Black Swan level — don't pull the cord"
+    contexto: "Special meetings (outside regular cadence) are justified only for: Blue Ocean (opportunity that would cut 12+ months off 3-year plan) or Black Swan (threat that could take business well backwards). Everything else: add to B&O list, discuss at next scheduled meeting. If unsure, don't call the special meeting."
+    insight_ref: "TSC-INS-010"
+    chunk_refs: ["TSC-CH-016", "TSC-CH-019"]
+    confianca: HIGH
+    evidencia: "If you're unsure whether it's a blue ocean or a black swan, don't pull that cord."
+    source_id: "TSC-0016"
+    tags: ["meetings", "decision-making", "prioritization", "heuristic"]
+
+  - id: "TSC-HEU-MCE-004"
+    regra: "Purpose sincerity test: if it makes people roll their eyes, it fails"
+    contexto: "Company purpose can be any size (Bellroy: slim wallets = comfortable sitting) or massive (Tesla: post-fossil fuel era). The only requirement is that it's 100% sincere. The moment people cynically disbelieve it, it stops working as fuel. Test: would everyone at the company say this with genuine conviction?"
+    insight_ref: "TSC-INS-018"
+    chunk_refs: ["TSC-CH-034", "TSC-CH-036"]
+    confianca: HIGH
+    evidencia: "Whatever you choose for your company purpose, just make sure it's sincere and believable. Don't make people roll their eyes in cynical disbelief."
+    source_id: "TSC-0029"
+    tags: ["company-purpose", "authenticity", "team-alignment", "heuristic"]

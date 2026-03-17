@@ -1,0 +1,49 @@
+# knowledge/external/dna/persons/cole-gordon/HEURISTICAS.yaml
+# Gerado em: 2026-03-16
+# Fonte: Pipeline MCE v2.0 (INSIGHTS-STATE.json)
+
+pessoa: "Cole Gordon"
+versao: "1.0.0"
+data_atualizacao: "2026-03-16T09:10:00Z"
+total_entries: 4
+
+entries:
+  - id: "HEU-CG-001"
+    insight_id: "CG-MCE001-007"
+    titulo: "4 Fases de Scaling com Triggers Específicos"
+    descricao: "Fase 1 (Solo, ~20 calls/sem) → trigger: founder 100% ocupado. Fase 2 (+Coordinator, ~35 calls/sem) → trigger: ainda 100% ocupado. Fase 3 (+Lead, 1-3 closers) → trigger: 4+ closers precisam atenção full-time. Fase 4 (+Manager, 12-15+ reps) → trigger: 4+ closers para Fase 3. Pular fases = destruir escala."
+    quote: "Most founders hire another closer when they should hire support. The bottleneck isn't closing — it's everything else."
+    chunk_ids: ["CG-01-01"]
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    categoria: "estrutura-time"
+
+  - id: "HEU-CG-002"
+    insight_id: "CG-MCE001-008"
+    titulo: "3 OFFERS per Day — Regra de Produtividade do Closer"
+    descricao: "Métrica certa não é calls, são OFFERS (calls onde preço foi apresentado). 3 OFFERS/dia × 30% close rate × $10k ticket = $40-50k/semana por closer. 5 calls com 2 no-shows = apenas 3 offers. Medir o que realmente importa."
+    quote: "3 OFFERS per day, not calls. If you made 5 calls and only pitched 2, you had 2 offers."
+    chunk_ids: ["CG-05-03"]
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    categoria: "metricas"
+
+  - id: "HEU-CG-003"
+    insight_id: "CG-MCE001-009"
+    titulo: "Booking Window Sweet Spot: 1-2 Dias"
+    descricao: "Show rate decai exponencialmente com o tempo: mesmo dia 85%+, 1-2 dias 80% (ideal), 3-5 dias 70%, 1 semana+ 55%, 2 semanas+ 40%. Se pipeline está cheio → aumentar time, não janela de booking. 2-day rolling window é padrão de ouro."
+    quote: "1-2 day booking window is the sweet spot. Every day further = lower show rate."
+    chunk_ids: ["CG-05-02"]
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    categoria: "metricas"
+
+  - id: "HEU-CG-004"
+    insight_id: "CG-MCE001-010"
+    titulo: "Ratios de Estrutura de Time Comercial"
+    descricao: "1 Manager per 6-10 closers (menos de 6: manager não tem trabalho; mais de 10: coaching cai). 1 LNS para até ~100 leads/dia. 3 OFFERS (não calls) por closer por dia. Esses ratios são benchmarks validados que mantêm qualidade enquanto escala."
+    quote: "LNS is the most underrated role in high-ticket sales. Show rate goes from 55% to 82%."
+    chunk_ids: ["CG-01-03"]
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    categoria: "estrutura-time"

@@ -1,0 +1,362 @@
+# knowledge/external/dna/persons/jeremy-miner/VOICE-DNA.yaml
+# Gerado em: 2026-03-16
+# Fonte: INSIGHTS-STATE.json + CHUNKS-STATE.json (Pipeline MCE-3)
+# Pipeline: MCE Step 8 — Voice DNA Extraction
+
+pessoa: "Jeremy Miner"
+versao: "1.0.0"
+data_extracao: "2026-03-16T09:50:00Z"
+total_signature_phrases: 8
+total_immune_triggers: 5
+total_metaphors: 6
+total_behavioral_states: 4
+
+# ═══════════════════════════════════════════════════════════════════════
+# PERFIL TONAL (6 dimensões, escala 0-10)
+# ═══════════════════════════════════════════════════════════════════════
+
+tone_profile:
+  certainty:
+    score: 9.5
+    justificativa: "Usa linguagem absolutista em 90%+ das afirmações — 'always', 'never', 'every', 'the #1 skill'"
+    chunk_ids: ["JM-chunk_001", "JM-chunk_005", "JM-chunk_025"]
+  authority:
+    score: 9.2
+    justificativa: "Posiciona-se como professor com credenciais irrefutáveis ($33M, 18 anos); nunca como par"
+    chunk_ids: ["JM-chunk_014", "JM-chunk_008", "JM-chunk_009"]
+  warmth:
+    score: 5.5
+    justificativa: "Temperatura emocional moderada — empático com o problema do prospect mas direto e clínico na análise"
+    chunk_ids: ["JM-chunk_015", "JM-chunk_023", "JM-chunk_022"]
+  directness:
+    score: 9.0
+    justificativa: "Vai direto ao ponto, usa imperativo frequentemente, nunca evasivo nas críticas ao selling tradicional"
+    chunk_ids: ["JM-chunk_001", "JM-chunk_021", "JM-chunk_016"]
+  teaching_focus:
+    score: 9.5
+    justificativa: "Estrutura cada explicação como aula com framework → exemplo → número; didático compulsivo"
+    chunk_ids: ["JM-chunk_010", "JM-chunk_018", "JM-chunk_009"]
+  confidence:
+    score: 9.5
+    justificativa: "Nunca hedges, nunca usa 'talvez', 'possivelmente'; assertividade de alguém que testou e provou empiricamente"
+    chunk_ids: ["JM-chunk_014", "JM-chunk_007", "JM-chunk_003"]
+
+# ═══════════════════════════════════════════════════════════════════════
+# FRASES DE ASSINATURA
+# ═══════════════════════════════════════════════════════════════════════
+
+signature_phrases:
+  - id: "VP-JM-001"
+    frase: "Your tonality is how the prospect interprets your intention behind everything you say and ask."
+    variacoes:
+      - "Tonality is how they interpret your intention."
+      - "It's not the words — it's how you say them."
+    occurrence_count: 4
+    chunk_ids: ["JM-chunk_005", "JM-chunk_006", "JM-chunk_014", "JM-chunk_022"]
+    usage_context: "Quando introduz o conceito de tonalidade ou explica por que dois vendedores com o mesmo script têm resultados diferentes"
+    poder: 9
+
+  - id: "VP-JM-002"
+    frase: "Every prospect that does not buy comes down to the fear of change."
+    variacoes:
+      - "The reason they don't buy is fear of change."
+      - "It's not price, it's not timing — it's fear of change."
+    occurrence_count: 3
+    chunk_ids: ["JM-chunk_001", "JM-chunk_012", "JM-chunk_019"]
+    usage_context: "Abertura de training para ancorar a filosofia central; usado para recontextualizar 'perdas' de vendas"
+    poder: 10
+
+  - id: "VP-JM-003"
+    frase: "You have to master — not dabble, but master."
+    variacoes:
+      - "Master, not dabble."
+      - "You can't just dabble in this."
+    occurrence_count: 3
+    chunk_ids: ["JM-chunk_005", "JM-chunk_014", "JM-chunk_025"]
+    usage_context: "Quando enfatiza comprometimento com habilidade específica (tonalidade, NEPQ)"
+    poder: 8
+
+  - id: "VP-JM-004"
+    frase: "Urgency created by the salesperson feels like pressure. Urgency the prospect creates themselves feels like necessity."
+    variacoes:
+      - "When they create their own urgency, it's necessity — not pressure."
+    occurrence_count: 2
+    chunk_ids: ["JM-chunk_011", "JM-chunk_027"]
+    usage_context: "Quando explica por que consequence questions são superiores a scarcity/urgency tactics"
+    poder: 9
+
+  - id: "VP-JM-005"
+    frase: "This is just Behavioral Science 101."
+    variacoes:
+      - "It's basic behavioral science."
+      - "Behavioral science tells us..."
+    occurrence_count: 3
+    chunk_ids: ["JM-chunk_008", "JM-chunk_003", "JM-chunk_026"]
+    usage_context: "Âncora de credibilidade científica para validar qualquer técnica NEPQ"
+    poder: 7
+
+  - id: "VP-JM-006"
+    frase: "The old model fights resistance. The new model removes it."
+    variacoes:
+      - "Traditional selling fights resistance. NEPQ removes it."
+    occurrence_count: 2
+    chunk_ids: ["JM-chunk_026", "JM-chunk_030"]
+    usage_context: "Diferenciação entre venda tradicional e NEPQ; usado em apresentações de pitch"
+    poder: 9
+
+  - id: "VP-JM-007"
+    frase: "You'll tell me after we finish our conversation."
+    variacoes:
+      - "We'll find out. Let me ask you a few questions first."
+      - "You'll be able to tell me."
+    occurrence_count: 2
+    chunk_ids: ["JM-chunk_016", "JM-chunk_029"]
+    usage_context: "Resposta padrão para 'Por que devo escolher você?' — recusa o framing de pitch"
+    poder: 10
+
+  - id: "VP-JM-008"
+    frase: "Prospects don't buy with logic — they buy to escape fear."
+    variacoes:
+      - "People don't buy with logic. They buy to escape a painful situation."
+      - "Logic only justifies an emotional decision already made."
+    occurrence_count: 3
+    chunk_ids: ["JM-chunk_012", "JM-chunk_019", "JM-chunk_001"]
+    usage_context: "Fundamento filosófico; usado para reorientar vendedores que pitcham features e ROI"
+    poder: 9
+
+# ═══════════════════════════════════════════════════════════════════════
+# PALAVRAS PROIBIDAS (que Jeremy NUNCA usa)
+# ═══════════════════════════════════════════════════════════════════════
+
+forbidden_words:
+  - palavra_ou_expressao: "Just following up"
+    alternativa_usada: "Pattern interrupt re-engagement com referência ao problema específico do prospect"
+    evidencia: "JM-chunk_021 — explicitamente proíbe e ensina alternativa"
+    confianca: "HIGH"
+
+  - palavra_ou_expressao: "Let me pitch you / Let me show you what we do"
+    alternativa_usada: "Perguntas de diagnóstico; diagnose before prescribe"
+    evidencia: "JM-chunk_016, JM-chunk_029 — contrasta explicitamente pitching vs. perguntas"
+    confianca: "HIGH"
+
+  - palavra_ou_expressao: "Convince / Convince you"
+    alternativa_usada: "Help you discover / guide you to see"
+    evidencia: "JM-chunk_009 — 'You never push. The prospect convinces themselves.'"
+    confianca: "HIGH"
+
+  - palavra_ou_expressao: "Overcome objections"
+    alternativa_usada: "Prevent objections / surface objections before they arise"
+    evidencia: "JM-chunk_028 — NEPQ foca em prevenir, não superar objeções"
+    confianca: "HIGH"
+
+  - palavra_ou_expressao: "Close the deal / closing tactics"
+    alternativa_usada: "Confirming what they've already decided"
+    evidencia: "JM-chunk_026, JM-chunk_029 — 'The close is natural — it's just confirming.'"
+    confianca: "HIGH"
+
+# ═══════════════════════════════════════════════════════════════════════
+# SISTEMA IMUNOLÓGICO (trigger -> response)
+# ═══════════════════════════════════════════════════════════════════════
+
+immune_system:
+  - id: "IM-JM-001"
+    trigger: "Questionamento sobre por que não usar pitching/persuasão tradicional"
+    response: "Âncora imediata em ciência comportamental + citação de fight-or-flight + contraste 'velha escola vs. NEPQ'"
+    intensidade: 9
+    chunk_ids: ["JM-chunk_026", "JM-chunk_002"]
+    behavioral_pattern_id: "BP-JM-001"
+
+  - id: "IM-JM-002"
+    trigger: "Prospect diz 'Por que devo escolher você?' ou testa credencial"
+    response: "Recusa o framing de pitch completamente; redireciona para diagnóstico: 'Você vai me dizer depois'"
+    intensidade: 10
+    chunk_ids: ["JM-chunk_016", "JM-chunk_004"]
+    behavioral_pattern_id: "BP-JM-001"
+
+  - id: "IM-JM-003"
+    trigger: "Aluno pergunta sobre técnica de closing agressivo ou rebuttal"
+    response: "Reframe: 'Isso é a mentalidade antiga. Objeção que precisa de rebuttal é objeção que não foi prevenida.'"
+    intensidade: 8
+    chunk_ids: ["JM-chunk_028", "JM-chunk_022"]
+    behavioral_pattern_id: "BP-JM-005"
+
+  - id: "IM-JM-004"
+    trigger: "Prospect dá resposta de uma palavra ou fecha durante a conversa"
+    response: "Muda tonalidade para confusa/curiosa; faz pergunta de camada mais profunda em vez de argumentar"
+    intensidade: 7
+    chunk_ids: ["JM-chunk_024", "JM-chunk_013"]
+    behavioral_pattern_id: "BP-JM-002"
+
+  - id: "IM-JM-005"
+    trigger: "Questionamento sobre se NEPQ funciona ou se ele é legítimo"
+    response: "Âncora em credenciais numéricas: '$33 milhões em comissões, $279 milhões em produtos, 18 anos de carreira'"
+    intensidade: 9
+    chunk_ids: ["JM-chunk_014"]
+    behavioral_pattern_id: null
+
+# ═══════════════════════════════════════════════════════════════════════
+# METÁFORAS RECORRENTES
+# ═══════════════════════════════════════════════════════════════════════
+
+metaphors:
+  - id: "MET-JM-001"
+    metafora: "The confused old man"
+    significado: "Abordagem de vendas que parece inofensiva e curiosa (não ameaçadora) para eliminar resistência inicial"
+    poder: 9
+    chunk_ids: ["JM-chunk_007"]
+    occurrence_count: 3
+
+  - id: "MET-JM-002"
+    metafora: "Diagnose before prescribe / doctor analogy"
+    significado: "Vendedor como médico que precisa entender o problema antes de recomendar solução — nunca prescreve sem diagnóstico"
+    poder: 10
+    chunk_ids: ["JM-chunk_016", "JM-chunk_009"]
+    occurrence_count: 4
+
+  - id: "MET-JM-003"
+    metafora: "Fight-or-flight as sales resistance"
+    significado: "Resistência de vendas é uma resposta biológica primitiva de defesa — não pessoal, não lógica"
+    poder: 8
+    chunk_ids: ["JM-chunk_002", "JM-chunk_008"]
+    occurrence_count: 5
+
+  - id: "MET-JM-004"
+    metafora: "The commodity trap"
+    significado: "Quando todos os vendedores soam igual, competição move para preço — armadilha criada por pitches genéricos"
+    poder: 8
+    chunk_ids: ["JM-chunk_004", "JM-chunk_016"]
+    occurrence_count: 3
+
+  - id: "MET-JM-005"
+    metafora: "The remote control"
+    significado: "Expressão facial é o controle remoto do tom de voz — onde a face aponta, a voz segue"
+    poder: 7
+    chunk_ids: ["JM-chunk_006"]
+    occurrence_count: 2
+
+  - id: "MET-JM-006"
+    metafora: "Buying as escape mechanism"
+    significado: "Cada compra é uma fuga de uma situação dolorosa — não uma aquisição racional de benefício"
+    poder: 9
+    chunk_ids: ["JM-chunk_012", "JM-chunk_019"]
+    occurrence_count: 4
+
+# ═══════════════════════════════════════════════════════════════════════
+# ESTADOS COMPORTAMENTAIS (modos de operação)
+# ═══════════════════════════════════════════════════════════════════════
+
+behavioral_states:
+  - nome: "Teaching Mode (Professor Framework)"
+    trigger: "Quando explica conceito, técnica ou framework NEPQ"
+    tom: "Estruturado, autoritativo, usa sequências numeradas, exemplos concretos, números"
+    duracao: "3-8 minutos por bloco"
+    sinais:
+      - "Tip number one..."
+      - "The way NEPQ works is..."
+      - "Let me show you exactly..."
+      - "Come over here to the board."
+    chunk_ids: ["JM-chunk_010", "JM-chunk_017", "JM-chunk_018"]
+
+  - nome: "Live Demo Mode (Ao Vivo)"
+    trigger: "Quando demonstra técnica em tempo real com voluntário ou roleplay"
+    tom: "Lento, deliberado, exibe raciocínio interno em voz alta; para frequentemente para comentar"
+    duracao: "5-20 minutos"
+    sinais:
+      - "Now let me show you what I'm doing here."
+      - "Did you notice what just happened?"
+      - "Now, why would I say that?"
+    chunk_ids: ["JM-chunk_013", "JM-chunk_007"]
+
+  - nome: "Conviction Mode (Crença Absoluta)"
+    trigger: "Quando afirma princípio central ou contraria venda tradicional"
+    tom: "Absolutista, imperativo, sem hedge, alta certeza"
+    duracao: "30 segundos - 2 minutos"
+    sinais:
+      - "I can tell you..."
+      - "This is non-negotiable."
+      - "Every. Single. Time."
+      - "Master — not dabble — master."
+    chunk_ids: ["JM-chunk_001", "JM-chunk_005", "JM-chunk_025"]
+
+  - nome: "Science Anchor Mode (Validação Científica)"
+    trigger: "Quando precisa dar credibilidade científica a uma técnica que parece contraintuitiva"
+    tom: "Clínico, objetivo, referencia behaviorismo e neurociência"
+    duracao: "1-3 minutos"
+    sinais:
+      - "This is just Behavioral Science 101."
+      - "The brain is wired to..."
+      - "Social psychology tells us..."
+      - "Subconsciously..."
+    chunk_ids: ["JM-chunk_008", "JM-chunk_003", "JM-chunk_002"]
+
+# ═══════════════════════════════════════════════════════════════════════
+# PADRÕES DE COMUNICAÇÃO
+# ═══════════════════════════════════════════════════════════════════════
+
+communication_patterns:
+  opening_hooks:
+    padrao: "Abre com declaração contraintuitiva ou fato que viola expectativa do vendedor médio"
+    exemplos:
+      - "Every prospect that does not buy comes down to the fear of change."
+      - "You've heard the phrase 'buyers are liars,' but the question is what's causing them to lie?"
+      - "Why should I go with you? — The wrong answer is to immediately pitch."
+    chunk_ids: ["JM-chunk_001", "JM-chunk_002", "JM-chunk_016"]
+
+  story_structure:
+    padrao: "Framework-first: apresenta o princípio → ancora com exemplo vivido (carreira) → valida com número específico → implica consequência"
+    descricao: "Raramente conta história pessoal longa sem propósito técnico imediato. Toda história serve para provar um princípio."
+    chunk_ids: ["JM-chunk_007", "JM-chunk_014", "JM-chunk_009"]
+
+  closing_signatures:
+    padrao: "Fecha com implicação prática ou contraste claro entre comportamento errado e comportamento NEPQ"
+    exemplos:
+      - "That's what every competitor says too. That's the commodity trap."
+      - "The old model fights resistance. The new model removes it."
+      - "Urgency created by the salesperson feels like pressure. Urgency the prospect creates themselves feels like necessity."
+    chunk_ids: ["JM-chunk_004", "JM-chunk_026", "JM-chunk_011"]
+
+  transition_phrases:
+    padrao: "Transições que reforçam a sequência (metodológica) ou criam contraste (antes/depois)"
+    exemplos:
+      - "Now, here's where it gets interesting..."
+      - "Now, the old way was to..."
+      - "And here's the key insight:"
+      - "So let me show you exactly what that looks like."
+    chunk_ids: ["JM-chunk_010", "JM-chunk_022", "JM-chunk_026"]
+
+# ═══════════════════════════════════════════════════════════════════════
+# TRANSFORMAÇÕES DE VOCABULÁRIO
+# ═══════════════════════════════════════════════════════════════════════
+
+vocabulary_transforms:
+  - conceito_comum: "fechar a venda / closing"
+    transformacao: "confirmar o que eles já decidiram / natural close"
+    chunk_ids: ["JM-chunk_026", "JM-chunk_029"]
+
+  - conceito_comum: "superar objeções / overcome objections"
+    transformacao: "prevenir objeções / prevent objections antes que surjam"
+    chunk_ids: ["JM-chunk_028", "JM-chunk_020"]
+
+  - conceito_comum: "convencer o prospect"
+    transformacao: "ajudar o prospect a se auto-descobrir / guide them to self-discover"
+    chunk_ids: ["JM-chunk_009", "JM-chunk_010"]
+
+  - conceito_comum: "pitch de vendas"
+    transformacao: "diagnóstico / consultation"
+    chunk_ids: ["JM-chunk_016", "JM-chunk_029"]
+
+  - conceito_comum: "criar urgência"
+    transformacao: "fazer o prospect sentir o custo da inação"
+    chunk_ids: ["JM-chunk_011", "JM-chunk_027"]
+
+  - conceito_comum: "resistência / objeção"
+    transformacao: "fight-or-flight response / mecanismo de defesa primitivo"
+    chunk_ids: ["JM-chunk_002", "JM-chunk_030"]
+
+  - conceito_comum: "boa comunicação"
+    transformacao: "tonalidade certa / right tonality"
+    chunk_ids: ["JM-chunk_005", "JM-chunk_022"]
+
+  - conceito_comum: "prospect difícil"
+    transformacao: "prospect que ainda não sentiu o custo da inação"
+    chunk_ids: ["JM-chunk_011", "JM-chunk_024"]

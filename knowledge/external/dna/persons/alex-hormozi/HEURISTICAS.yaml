@@ -1,10 +1,13 @@
-version: '1.0'
+version: '2.1'
 person: alex-hormozi
 layer: HEURISTICS
-last_updated: '2026-03-15T20:59:53.216059+00:00'
+updated: '2026-03-16T13:30:00Z'
+pipeline_run: MCE-AH-2026-03-16-R2
+prior_run: MCE-AH-2026-03-16
+total_entries: 21
 entries:
 - id: heu_001
-  name: 'Warning label strategy: warning about adverse effects makes '
+  name: 'Warning label strategy: warning about adverse effects makes positive assumed.'
   description: 'Warning label strategy: warning about adverse effects makes positive
     assumed. Viagra example.'
   source_chunks:
@@ -12,17 +15,239 @@ entries:
   confidence: 0.9
   priority: HIGH
 - id: heu_002
-  name: '''Fair enough'' close: concession + reciprocity. From Jordan B'
+  name: '''Fair enough'' close: concession + reciprocity.'
   description: '''Fair enough'' close: concession + reciprocity. From Jordan Belfort.'
   source_chunks:
   - chunk_632
   confidence: 0.91
   priority: HIGH
 - id: heu_003
-  name: Clear pipeline before price raise. Announce = scarcity/urgen
+  name: Clear pipeline before price raise. Announce = scarcity/urgency + cashflow boost.
   description: Clear pipeline before price raise. Announce = scarcity/urgency + cashflow
     boost.
   source_chunks:
   - chunk_635
   confidence: 0.89
+  priority: HIGH
+- id: INS-AH-002
+  name: Sales script elements must be QUESTIONS only, never paragraphs
+  description: All elements in a sales script should be questions — salespeople can
+    pause on questions but not on copy blocks they try to read.
+  quote: "Everything that's in your framework has to be a question only. Do not put
+    paragraphs. Put statements because they will start reading them. Only put questions."
+  source_chunks:
+  - AH-chunk-013-01
+  source_id: AH-0013
+  confidence: 0.93
+  priority: HIGH
+- id: INS-AH-003
+  name: Only 3 real objections exist in any sales conversation
+  description: "Price (value discrepancy), Stall (need more time), Decision Maker
+    (need to consult someone). Drill scripts for all three \u2014 nothing else matters."
+  quote: "There's only three, by the way, if you don't know. They are: it's price,
+    it's stall, it's decision maker."
+  source_chunks:
+  - AH-chunk-013-02
+  source_id: AH-0013
+  confidence: 0.95
+  priority: HIGH
+- id: INS-AH-004
+  name: Cut bottom 10% regularly for 30% productivity jump
+  description: Cutting the bottom 10% of the sales team consistently produces a 30%
+    productivity jump — even when the team is performing well. Do it regularly, not
+    just when struggling.
+  quote: "Cut the bottom 10%. You do it on a regular basis. Even if the team is going
+    okay, when you cut the bottom, you'll see a 30% jump in productivity. Every time."
+  source_chunks:
+  - AH-chunk-013-03
+  source_id: AH-0013
+  confidence: 0.92
+  priority: HIGH
+- id: INS-AH-006
+  name: No-Based Questions reframe agreement-seeking into opposition questions
+  description: No-Based Questions (from Chris Voss) make closing easier because people
+    feel safer saying 'no' than 'yes'. Reframe agreement-seeking questions as opposition
+    questions.
+  quote: "Would you be opposed to moving forward today? Would it be completely unreasonable
+    for us to get started at the end of this conversation?"
+  source_chunks:
+  - AH-chunk-015-01
+  - AH-chunk-015-02
+  source_id: AH-0015
+  confidence: 0.95
+  priority: HIGH
+- id: INS-AH-009
+  name: Announce price raise in advance — clear the pipeline
+  description: Before raising prices, announce it in advance and clear the pipeline.
+    Creates genuine urgency for fence-sitters, motivates team to close faster, gives
+    cashflow boost.
+  quote: "Always, always, always clear the pipeline. Announce it. Always own your
+    price increases — it's one of the easiest ways to create true scarcity and urgency."
+  source_chunks:
+  - AH-chunk-014-02
+  source_id: AH-0014
+  confidence: 0.92
+  priority: HIGH
+- id: INS-AH-027
+  name: 70-20-10 Content Rule
+  description: 70% proven formats, 20% variations of proven formats, 10% experimental.
+    Apply at every scale — beginners often invert it.
+  quote: "70% of your content should be proven: stuff that works. 20% should be variations
+    of proven stuff. 10% should be experiments. Most creators do it backwards."
+  source_chunks:
+  - AH-chunk-018-02
+  source_id: AH-0018
+  confidence: 0.90
+  priority: HIGH
+- id: INS-AH-030
+  name: Hooks are the most leveraged skill in content
+  description: Getting someone to consume your content is the primary battle. Spend
+    more time on the first 3 seconds than any other part. Great hook + mediocre content
+    beats mediocre hook + great content.
+  quote: "The hook is everything. The first three seconds. If people don't keep watching,
+    the rest doesn't matter. I spend more time on my opening three seconds than I
+    do on anything else."
+  source_chunks:
+  - AH-chunk-018-03
+  source_id: AH-0018
+  confidence: 0.90
+  priority: HIGH
+- id: INS-AH-035
+  name: Sell in Vacuum — never present offer alongside competitors
+  description: Present your offer in isolation, never in comparison to competitors.
+    When people compare, they look for reasons to delay. Isolation creates decisions.
+  quote: "Never compete. Never mention your competition. Comparison creates hesitation.
+    Isolation creates decisions."
+  source_chunks:
+  - AH-chunk-003-04
+  source_id: AH-0003
+  confidence: 0.88
+  priority: HIGH
+- id: INS-AH-037
+  name: Gong is non-negotiable — record every sales call
+  description: Every sales call must be recorded and reviewed. Gong provides compliance,
+    accountability, and coaching material. Without recordings, you're managing blind.
+  quote: "If you're not recording every single call that your people are on, one,
+    you're not compliant. Two, you should do it because then they become more accountable
+    to following the script. Use Gong."
+  source_chunks:
+  - AH-chunk-013-03
+  source_id: AH-0013
+  confidence: 0.90
+  priority: HIGH
+- id: INS-AH-041
+  name: Leaderboard as mandatory infrastructure
+  description: Public, real-time sales leaderboard that every rep sees and gets notified
+    about. When a sale closes, the whole team knows. Creates momentum, social proof,
+    and competitive drive.
+  quote: "You have to have a leaderboard published that they can see every single
+    day, that they get notified when every other guy is making a sale. There's activity,
+    there's action, there's momentum."
+  source_chunks:
+  - AH-chunk-013-03
+  source_id: AH-0013
+  confidence: 0.92
+  priority: HIGH
+- id: INS-AH-042
+  name: Uneven Payment Split preference
+  description: When structuring payments, prefer an uneven split (e.g., 4K + 2K
+    instead of 3K + 3K). More cash upfront for onboarding costs; smaller second payment
+    creates compelling reason to prepay.
+  quote: "I prefer to do uneven splits personally because I want to still keep more
+    cash upfront. I'm gonna have more cost of onboarding. The tiny incremental increase
+    creates a very compelling offer."
+  source_chunks:
+  - AH-chunk-014-02
+  source_id: AH-0014
+  confidence: 0.90
+  priority: HIGH
+- id: INS-AH-044
+  name: 30-Second Story rule — illustrate each concept in 30 seconds
+  description: Each concept in a sales script should be illustrated by a 30-second
+    story. Stories are memorable, relatable, and do not feel like a pitch. Long explanations
+    kill momentum.
+  quote: "You're going to give a short 30-second snippet of why that's important.
+    30-second story. They understand it. Long explanations kill deals."
+  source_chunks:
+  - AH-chunk-013-01
+  source_id: AH-0013
+  confidence: 0.90
+  priority: HIGH
+- id: INS-AH-048
+  name: Sell Vacation with 3 illustrative stories (not product features)
+  description: In CLOSER, 'Sell the Vacation' means salespeople need only 3 illustrative
+    stories tied to 3 core transformation themes — not product features but experiences
+    and outcomes.
+  quote: "This is the only thing that your salespeople have to actually know. There's
+    going to be three stories that you're going to tell them. They're going to be
+    illustrative of the thing you were helping them solve."
+  source_chunks:
+  - AH-chunk-013-01
+  source_id: AH-0013
+  confidence: 0.90
+  priority: HIGH
+- id: INS-AH-050
+  name: Decision Maker objection — implied prior agreement technique
+  description: When faced with 'I need to ask my spouse' — help prospect realize
+    their partner already knows about the problem. Use implied prior agreements to
+    neutralize the objection.
+  quote: "Your partner knows that you're struggling with these things already, right?
+    They know that you're looking for a solution. So why do you think they'd be opposed
+    to you solving the problem?"
+  source_chunks:
+  - AH-chunk-013-02
+  source_id: AH-0013
+  confidence: 0.88
+  priority: HIGH
+- id: INS-AH-053
+  name: Objection drilling — 3 objections to automatic reflex level
+  description: Price, stall, decision maker must be drilled to the point of automatic
+    response — like a reflex, not a thought. No single investment in sales training
+    produces higher ROI.
+  quote: "These have to be drilled. That means flashcards. Price, stall, decision
+    maker. Drill them until the response is automatic. You cannot think your way through
+    an objection in real time."
+  source_chunks:
+  - AH-chunk-013-02
+  source_id: AH-0013
+  confidence: 0.95
+  priority: HIGH
+- id: INS-AH-059
+  name: Reciprocity Trigger for 'Fair Enough' close
+  description: Make a small concession, then use 'fair enough?' as a close. Humans
+    are wired for reciprocity — when you give something, they feel compelled to agree.
+  quote: "'Fair enough' — you make a concession, 'fair enough.' They made a concession
+    and I'm a reciprocal human being. It's very hard for me to deny this request.
+    Then let's move forward."
+  source_chunks:
+  - AH-chunk-015-01
+  source_id: AH-0015
+  confidence: 0.93
+  priority: HIGH
+- id: INS-AH-062
+  name: Sales-CS Review cadence — tie rep results to customer outcomes
+  description: Sales team reviews combine call recordings with customer outcome data.
+    Reps who close customers who don't succeed get flagged — poor qualification harms
+    LTV and creates churn.
+  quote: "You need to tie the sales rep's results not just to close rate, but to
+    customer outcomes. If a rep closes deals that churn in 30 days, that's a qualification
+    problem."
+  source_chunks:
+  - AH-chunk-003-03
+  source_id: AH-0003
+  confidence: 0.85
+  priority: HIGH
+- id: INS-AH-063
+  name: Upfront payment should always be the most attractive option
+  description: When structuring deals, always make upfront payment most attractive.
+    The customer who pays upfront is more committed, less likely to churn, and creates
+    better cashflow for delivery.
+  quote: "The split payment should always be slightly less attractive than paying
+    upfront. You want cash in hand. The customer who pays in full is more invested,
+    more committed."
+  source_chunks:
+  - AH-chunk-014-01
+  - AH-chunk-014-02
+  source_id: AH-0014
+  confidence: 0.92
   priority: HIGH

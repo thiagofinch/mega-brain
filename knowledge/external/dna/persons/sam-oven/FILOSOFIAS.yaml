@@ -1,0 +1,89 @@
+# FILOSOFIAS — Sam Ovens (Setterlun University)
+# Camada L1 do DNA Cognitivo: Crenças fundamentais e visão de mundo
+# Pipeline MCE v1.0 | Atualizado: 2026-03-16
+
+pessoa: "Sam Ovens"
+versao: "1.0.0"
+updated: "2026-03-16T08:00:00Z"
+total_entries: 8
+
+entries:
+  - id: "FIL-SO-001"
+    insight_ref: "SO-INS-001"
+    crenca: "Cliente não compra serviço, compra resultado"
+    declaracao: "Você não vende 'consultoria de marketing'. Vende 'mais clientes'. Você não vende 'coaching de negócios'. Vende 'liberdade financeira'."
+    contexto: "Estruturação de qualquer oferta"
+    prioridade: "HIGH"
+    chunk_ids: ["SO-chunk-001", "SO-chunk-003"]
+    tags: ["oferta", "resultado", "transformacao"]
+    confianca: "HIGH"
+
+  - id: "FIL-SO-002"
+    insight_ref: "SO-INS-005"
+    crenca: "Nunca vender atividade — sempre vender transformação mensurável"
+    declaracao: "Clients don't buy services, they buy RESULTS. Offer must be outcome-driven, scalable, repeatable."
+    contexto: "Comunicação de oferta e proposta de valor"
+    prioridade: "HIGH"
+    chunk_ids: ["SO-chunk-003", "SO-chunk-007"]
+    tags: ["oferta", "outcome-driven", "transformacao"]
+    confianca: "HIGH"
+
+  - id: "FIL-SO-003"
+    insight_ref: "SO-INS-009"
+    crenca: "Pricing baseado no valor do resultado para o cliente, nunca no custo de entrega"
+    declaracao: "PERGUNTA ERRADA: 'Quanto custa pra eu entregar?' PERGUNTA CERTA: 'Quanto vale o resultado pro cliente?' Seu custo é irrelevante pro pricing."
+    contexto: "Definição de preço de qualquer produto/serviço"
+    prioridade: "HIGH"
+    chunk_ids: ["SO-chunk-005", "SO-chunk-007"]
+    tags: ["pricing", "valor", "custo-irrelevante"]
+    confianca: "HIGH"
+
+  - id: "FIL-SO-004"
+    insight_ref: "SO-INS-013"
+    crenca: "Freelancer trap: trabalho 100% customizado = não é empresa, é emprego"
+    declaracao: "Se você precisa customizar tudo para cada cliente, você não tem empresa — tem emprego como freelancer. Productize a oferta."
+    contexto: "Avaliação do modelo de negócio"
+    prioridade: "HIGH"
+    chunk_ids: ["SO-chunk-007", "SO-chunk-013"]
+    tags: ["productization", "freelancer-trap", "empresa-vs-emprego"]
+    confianca: "HIGH"
+
+  - id: "FIL-SO-005"
+    insight_ref: "SO-INS-015"
+    crenca: "Purple Ocean = não diferente demais, diferente o suficiente"
+    declaracao: "Purple Ocean = proven market + unique differentiation. Best of both worlds. Não seja diferente demais. Seja diferente o suficiente."
+    contexto: "Estratégia de posicionamento de mercado"
+    prioridade: "HIGH"
+    chunk_ids: ["SO-chunk-008", "SO-chunk-009"]
+    tags: ["purple-ocean", "posicionamento", "diferenciacao"]
+    confianca: "HIGH"
+
+  - id: "FIL-SO-006"
+    insight_ref: "SO-INS-022"
+    crenca: "Diferenciador que precisa de explicação extensa não é diferenciador"
+    declaracao: "Diferenciador precisa ser específico, concreto, óbvio. Quando Purple Ocean funciona, a diferenciação é óbvia. Prospect não pergunta — ele entende."
+    contexto: "Validação de posicionamento"
+    prioridade: "HIGH"
+    chunk_ids: ["SO-chunk-011", "SO-chunk-012"]
+    tags: ["diferenciador", "clareza", "posicionamento"]
+    confianca: "HIGH"
+
+  - id: "FIL-SO-007"
+    insight_ref: "SO-INS-025"
+    crenca: "High-leverage thinking: só executar o que move a agulha"
+    declaracao: "High-Leverage: Só fazer o que move a agulha. 80/20 aplicado em tudo."
+    contexto: "Priorização operacional e alocação de energia"
+    prioridade: "HIGH"
+    chunk_ids: ["SO-chunk-003", "SO-chunk-013"]
+    tags: ["high-leverage", "80-20", "priorizacao"]
+    confianca: "HIGH"
+
+  - id: "FIL-SO-008"
+    insight_ref: "SO-INS-026"
+    crenca: "Oferta productizable define distinção entre empresa e emprego"
+    declaracao: "Productizable: Oferta escalável e repetível. Se você precisa customizar tudo, você é freelancer, não empresa."
+    contexto: "Estruturação do modelo de negócio"
+    prioridade: "HIGH"
+    chunk_ids: ["SO-chunk-007", "SO-chunk-013"]
+    tags: ["productization", "escala", "empresa"]
+    confianca: "HIGH"

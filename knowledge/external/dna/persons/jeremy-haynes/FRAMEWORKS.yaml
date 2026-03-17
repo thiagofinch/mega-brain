@@ -1,0 +1,112 @@
+# knowledge/external/dna/persons/jeremy-haynes/FRAMEWORKS.yaml
+# Fonte: Pipeline MCE v1.0 | 2026-03-16
+# Insights com tag [FRAMEWORK] extraídos de AOBA, MMM, STA, UHTC, LYFC, IC, ST, WK
+
+pessoa: "Jeremy Haynes"
+slug: "jeremy-haynes"
+versao: "1.0.0"
+updated: "2026-03-16T10:50:00Z"
+total_entries: 6
+
+frameworks:
+
+  - id: "JH-FW001"
+    insight_id: "JH-018"
+    titulo: "Perfect Client Anatomy Framework (3 Axes)"
+    declaracao: "Perfect Client Anatomy Framework: define ideal client on 3 axes — pain specificity (what keeps them up at night), purchasing authority (can sign without approval), and proof proximity (most similar to your existing case studies)."
+    quote: "Three axes: pain they can't ignore, authority to buy today, and similarity to clients you've already won. That's your perfect client."
+    chunk_ids: ["chunk_675"]
+    fonte: "JH-LYFC"
+    programa: "Lead Your First Client"
+    componentes:
+      - "Eixo 1: Pain Specificity — dor que não conseguem ignorar"
+      - "Eixo 2: Purchasing Authority — pode assinar sem aprovação de terceiros"
+      - "Eixo 3: Proof Proximity — mais similar aos clientes que já ganhamos"
+    prioridade: "HIGH"
+    aplicacao: "ICP definition, lead qualification, targeting"
+    confianca: "HIGH"
+
+  - id: "JH-FW002"
+    insight_id: "JH-019"
+    titulo: "Offer Architecture (4 Layers: Front-End, Drop-Sell, Cross-Sell, Back-End)"
+    declaracao: "Offer Architecture Framework: Front-End (acquisition offer, low barrier), Drop-Sell (downsell after rejection), Cross-Sell (complementary service), Back-End (high-ticket ascension)."
+    quote: "Four offer layers: front-end gets them in the door, drop-sell catches the nos, cross-sell expands revenue, back-end is where you make the real money."
+    chunk_ids: ["chunk_697"]
+    fonte: "JH-AOBA"
+    programa: "Agency Owner Black Academy"
+    componentes:
+      - "Front-End: oferta de aquisição, baixa barreira de entrada"
+      - "Drop-Sell: oferta alternativa após rejeição do front-end"
+      - "Cross-Sell: serviço complementar para expandir receita por cliente"
+      - "Back-End: oferta high-ticket de ascensão"
+    prioridade: "HIGH"
+    aplicacao: "Offer design, funnel architecture, revenue maximization"
+    confianca: "HIGH"
+
+  - id: "JH-FW003"
+    insight_id: "JH-020"
+    titulo: "Ultra High-Ticket B2B Closing Framework"
+    declaracao: "Ultra High-Ticket B2B Closing Framework: build credibility stack (case studies + press + social proof), open with research demonstration, pace-then-lead on objections, commit to next step before ending call."
+    quote: "High-ticket B2B is different. They've been burned before. Lead with research, show credibility, pace their objections, and always commit to a next step before you hang up."
+    chunk_ids: ["chunk_685"]
+    fonte: "JH-UHTC"
+    programa: "Ultra High Ticket Closing"
+    componentes:
+      - "Credibility Stack: case studies + press + social proof"
+      - "Research Demonstration: abre com insight específico sobre o prospect"
+      - "Pace-Then-Lead: acompanha objeções antes de redirecionar"
+      - "Next Step Commitment: fecha com micro-compromisso antes de encerrar"
+    prioridade: "HIGH"
+    aplicacao: "B2B closing, enterprise sales, high-ticket deal flow"
+    confianca: "HIGH"
+
+  - id: "JH-FW004"
+    insight_id: "JH-021"
+    titulo: "Megalodon SQ1 Culture Framework (4 Core Values)"
+    declaracao: "Megalodon SQ1 Culture Framework: 4 core values (Leadership, Service, Sacrifice, Execution) operationalized as identity markers, not policies — used in hiring, performance reviews, and firing decisions."
+    quote: "Every decision runs through the four: Leadership, Service, Sacrifice, Execution. If someone violates one consistently, they're not a fit. It's not personal — it's SQ1."
+    chunk_ids: ["chunk_683", "chunk_684"]
+    fonte: "JH-IC"
+    programa: "Inner Circle"
+    componentes:
+      - "Leadership: liderança como identidade, não posição"
+      - "Service: serviço ao cliente e à equipe como prioridade"
+      - "Sacrifice: sacrifício como evidência de comprometimento"
+      - "Execution: execução como único resultado que importa"
+    prioridade: "HIGH"
+    aplicacao: "Culture building, hiring criteria, performance evaluation, offboarding"
+    confianca: "HIGH"
+
+  - id: "JH-FW005"
+    insight_id: "JH-022"
+    titulo: "AI Manipulation Mastery Framework (2025)"
+    declaracao: "AI Manipulation Mastery Framework (2025): use AI to personalize at scale — research prospects, generate personalized hooks, A/B test messaging, and create synthetic social proof loops."
+    quote: "AI doesn't replace selling. It replaces the research. You can now personalize at the scale of mass outreach. That's the manipulation mastery — not manipulation, but precision at scale."
+    chunk_ids: ["chunk_703"]
+    fonte: "JH-WK"
+    programa: "Weekly Calls"
+    componentes:
+      - "Prospect Research: AI para pesquisa profunda antes de outreach"
+      - "Personalized Hooks: hooks gerados por AI baseados em dados do prospect"
+      - "A/B Testing: testar mensagens em escala com AI"
+      - "Social Proof Loops: automação de coleta e publicação de provas sociais"
+    prioridade: "HIGH"
+    aplicacao: "Outreach automation, personalization at scale, 2025 AI strategy"
+    confianca: "HIGH"
+
+  - id: "JH-FW006"
+    insight_id: "JH-023"
+    titulo: "Selfie Follow-Up System"
+    declaracao: "Selfie Follow-Up System: send a personalized 20-30 second selfie video within 2 hours of any call to maintain emotional momentum and differentiate from generic follow-up."
+    quote: "Selfie video, twenty to thirty seconds. Do it within two hours of the call. Nobody does this. You will be the only one they remember."
+    chunk_ids: ["chunk_701"]
+    fonte: "JH-ST"
+    programa: "Sales Training"
+    componentes:
+      - "Formato: selfie video (câmera frontal, informal)"
+      - "Duração: 20-30 segundos"
+      - "Timing: dentro de 2 horas após a call"
+      - "Conteúdo: referência específica a algo da call"
+    prioridade: "MEDIUM"
+    aplicacao: "Follow-up strategy, deal nurturing, differentiation"
+    confianca: "HIGH"

@@ -1,10 +1,13 @@
-version: '1.0'
+version: '2.1'
 person: alex-hormozi
 layer: FRAMEWORKS
-last_updated: '2026-03-15T20:59:53.216059+00:00'
+updated: '2026-03-16T13:30:00Z'
+pipeline_run: MCE-AH-2026-03-16-R2
+prior_run: MCE-AH-2026-03-16
+total_entries: 11
 entries:
 - id: fra_001
-  name: 'Damaging admission: negative-BUT-positive. ''But'' amplifies s'
+  name: 'Damaging admission: negative-BUT-positive. ''But'' amplifies second half.'
   description: 'Damaging admission: negative-BUT-positive. ''But'' amplifies second
     half. Integrity-based persuasion.'
   source_chunks:
@@ -13,7 +16,7 @@ entries:
   confidence: 0.95
   priority: HIGH
 - id: fra_002
-  name: '3 question types: yes-based, neutral, no-based. No-based str'
+  name: '3 question types: yes-based, neutral, no-based. No-based strongest.'
   description: '3 question types: yes-based, neutral, no-based. No-based strongest
     — people feel safe saying no.'
   source_chunks:
@@ -22,11 +25,117 @@ entries:
   confidence: 0.94
   priority: HIGH
 - id: fra_003
-  name: 'Price raising: 1) home base. 2) anchor above. 3) prepayment '
+  name: 'Price raising: 1) home base. 2) anchor above. 3) prepayment = real price.'
   description: 'Price raising: 1) home base. 2) anchor above. 3) prepayment = real
     price. 4) uneven splits.'
   source_chunks:
   - chunk_634
   - chunk_635
   confidence: 0.96
+  priority: HIGH
+- id: INS-AH-001
+  name: CLOSER Framework — 6-component sales conversation structure
+  description: "The CLOSER Framework (C-L-O-S-E-R) manages every sales conversation:
+    Clarify why prospect is there, Label them with a problem, Overview the pain, Sell
+    the vacation, Explain concerns away, Reinforce the decision."
+  quote: "C is you clarify why the person is there. L — label them with a problem.
+    O — overview the pain. S — sell the vacation. E — explain away their concerns.
+    R — reinforce the decision."
+  source_chunks:
+  - AH-chunk-013-01
+  - AH-chunk-013-02
+  source_id: AH-0013
+  confidence: 0.98
+  priority: HIGH
+- id: INS-AH-010
+  name: Ghost Products / Sacrificial Lambs for price anchoring
+  description: Create 2-3 expensive irrelevant options alongside your real offer.
+    Their presence makes prospects anchor high, making your real offer feel like a
+    bargain by comparison.
+  quote: "Ghost products or sacrificial lambs are designed to show the value of your
+    core service by comparison. They're never meant to be sold — they exist to make
+    your real offer look reasonable."
+  source_chunks:
+  - AH-chunk-006-01
+  source_id: AH-0006
+  confidence: 0.93
+  priority: HIGH
+- id: INS-AH-011
+  name: Damaging Admission + 'But' Technique
+  description: Lead with a genuine weakness or limitation of your product upfront.
+    This builds massive credibility, disarms resistance, and everything you say after
+    'but' carries disproportionate weight.
+  quote: "Damaging admission: you say the worst thing about your product upfront.
+    This disarms the prospect. Everything after 'but' carries more weight because
+    you've established honesty."
+  source_chunks:
+  - AH-chunk-009-01
+  source_id: AH-0009
+  confidence: 0.95
+  priority: HIGH
+- id: INS-AH-012
+  name: AAA Reframing — Acknowledge, Associate, Ask
+  description: "Never say 'I understand' in sales — it signals you haven't heard
+    them. Instead: (A) Acknowledge their exact words, (A) Associate with a relatable
+    reference or story, (A) Ask a redirecting question."
+  quote: "AAA: Acknowledge what they said (use their exact words back), Associate
+    (not 'I understand' — use a story or reference they can relate to), then Ask
+    a question that moves toward resolution."
+  source_chunks:
+  - AH-chunk-007-01
+  source_id: AH-0007
+  confidence: 0.93
+  priority: HIGH
+- id: INS-AH-016
+  name: Core Four Lead Generation — the only 4 ways to acquire customers
+  description: Warm Outreach, Cold Outreach, Content (organic), and Paid Ads. Master
+    one completely before adding the next. Everything else is a subset of one of these.
+  quote: "There are only four ways to get customers: warm outreach, cold outreach,
+    content, and paid advertising. The Core Four. Everything else is a subset of
+    one of these."
+  source_chunks:
+  - AH-chunk-019-01
+  - AH-chunk-018-01
+  source_id: AH-0019
+  confidence: 0.95
+  priority: HIGH
+- id: INS-AH-018
+  name: Offer Formula — Value Equation
+  description: "Every offer = Dream Outcome \xD7 Likelihood of achieving it \xD7
+    Time to achievement \xF7 (Effort + Sacrifice). Manipulate numerator up and denominator
+    down."
+  quote: "The value equation: Dream Outcome \xD7 Perceived Likelihood of Achievement
+    / (Time Delay \xD7 Effort & Sacrifice). Increase the top, decrease the bottom.
+    That's all offer creation is."
+  source_chunks:
+  - AH-chunk-019-03
+  source_id: AH-0019
+  confidence: 0.97
+  priority: HIGH
+- id: INS-AH-020
+  name: Sales Multipliers Framework — 3 variables determine revenue
+  description: "Show Rate (how many prospects attend calls), Offer Strength (does
+    it resonate), Close Rate (rep skill). Diagnose which lever to pull before changing
+    anything."
+  quote: "Three things determine your sales output: show rate, offer strength, and
+    close rate. Most people blame close rate when it's actually show rate. Fix the
+    right variable."
+  source_chunks:
+  - AH-chunk-003-01
+  - AH-chunk-003-02
+  source_id: AH-0003
+  confidence: 0.95
+  priority: HIGH
+- id: INS-AH-026
+  name: More-Better-New Growth Sequence
+  description: Before creating new offers or channels, first do MORE of what's working,
+    then make it BETTER, then build something NEW. Jumping to NEW prematurely wastes
+    leverage.
+  quote: "Before you do something new, do more of what works. Before you make something
+    new, make existing things better. The sequence is: More \u2192 Better \u2192
+    New. Most entrepreneurs do it backwards."
+  source_chunks:
+  - AH-chunk-018-01
+  source_id: AH-0018
+  confidence: 0.93
   priority: HIGH

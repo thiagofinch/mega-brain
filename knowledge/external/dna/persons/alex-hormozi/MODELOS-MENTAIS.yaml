@@ -1,12 +1,186 @@
-version: '1.0'
+version: '2.1'
 person: alex-hormozi
 layer: MENTAL-MODELS
-last_updated: '2026-03-15T20:59:53.216059+00:00'
+updated: '2026-03-16T13:30:00Z'
+pipeline_run: MCE-AH-2026-03-16-R2
+prior_run: MCE-AH-2026-03-16
+total_entries: 15
 entries:
 - id: mod_001
-  name: 'Trust has 3 dimensions: self, system, world. All aligned = t'
+  name: 'Trust has 3 dimensions: self, system, world. All aligned = they buy.'
   description: 'Trust has 3 dimensions: self, system, world. All aligned = they buy.'
   source_chunks:
   - chunk_629
   confidence: 0.92
+  priority: HIGH
+- id: INS-AH-007
+  name: 3 question types — yes-based, neutral, no-based
+  description: Three question types for sales conversations. No-based questions are
+    most powerful because they eliminate decision fatigue and feel safe to answer.
+  quote: "A yes-based question would be 'Sound great?' A neutral type would be 'Fair
+    enough?' And the no-based: 'Would you be opposed to moving forward today?'"
+  source_chunks:
+  - AH-chunk-015-01
+  source_id: AH-0015
+  confidence: 0.94
+  priority: HIGH
+- id: INS-AH-017
+  name: LTV Arms Race — whoever spends most to acquire wins
+  description: In any market, the winner is whoever can afford to spend the most
+    to acquire a customer. Increase LTV and you outbid every competitor for the same
+    leads.
+  quote: "Whoever can spend the most to acquire a customer wins. If your LTV is $10k
+    and their LTV is $2k, you can outbid them for every single lead and still be
+    profitable."
+  source_chunks:
+  - AH-chunk-019-02
+  source_id: AH-0019
+  confidence: 0.95
+  priority: HIGH
+- id: INS-AH-023
+  name: Frustration Tolerance as competitive advantage
+  description: The gap between current ability and aspirational goal creates frustration.
+    People who can stay in the gap become masters. Those who can't, quit.
+  quote: "The frustration tolerance gap is the distance between where you are and
+    where you want to be. People who can tolerate that gap longer than everyone else
+    become the best at their craft."
+  source_chunks:
+  - AH-chunk-005-01
+  - AH-chunk-001-02
+  source_id: AH-0005
+  confidence: 0.92
+  priority: HIGH
+- id: INS-AH-032
+  name: Reinforcement vs Reward distinction in sales motivation
+  description: The best salespeople are motivated by reinforcement (seeing results,
+    feeling progress). Reward-based motivation (money only) creates transactional
+    reps who leave for better offers.
+  quote: "The best reps aren't driven by commission — they're driven by reinforcement.
+    They see the prospect succeed, they feel useful, they care about the mission."
+  source_chunks:
+  - AH-chunk-001-03
+  source_id: AH-0001
+  confidence: 0.88
+  priority: MEDIUM
+- id: INS-AH-033
+  name: Pre > Post strategy in marketing (describe problem more than solution)
+  description: Marketing assets should spend more time on BEFORE (problem state)
+    than AFTER (solution state). Prospects only engage when they feel deeply understood
+    in their current pain.
+  quote: "Your content needs to describe their problem better than they can. When
+    someone reads your marketing and thinks 'this is exactly how I feel,' you've won."
+  source_chunks:
+  - AH-chunk-019-01
+  source_id: AH-0019
+  confidence: 0.90
+  priority: HIGH
+- id: INS-AH-036
+  name: Need-to-Believe Minimization
+  description: Reduce the number of things a prospect needs to believe to say yes.
+    Every additional belief required is a point of potential objection. Reduce to
+    one core belief.
+  quote: "The fewer things someone needs to believe to say yes, the higher your conversion
+    rate. Reduce need-to-believes to one: can this work for me?"
+  source_chunks:
+  - AH-chunk-003-04
+  source_id: AH-0003
+  confidence: 0.88
+  priority: HIGH
+- id: INS-AH-043
+  name: Emotional Home Base in Price Negotiation
+  description: Salespeople always revert to the price they're emotionally comfortable
+    with under pressure. A price raise strategy must give the rep a 'home base' to
+    retreat to, making the new higher price feel like a discount.
+  quote: "They're going to have an emotional comfort zone around a certain price.
+    Give them home base — the price they can always fall back to. Then you give them
+    a discount from the new higher anchor."
+  source_chunks:
+  - AH-chunk-014-01
+  source_id: AH-0014
+  confidence: 0.92
+  priority: HIGH
+- id: INS-AH-045
+  name: Compounding business trajectory model
+  description: "Gym Launch \u2192 Prestige Labs \u2192 Allen \u2192 Acquisition.com demonstrates
+    a compounding pattern: master one business, extract the playbook, apply at scale,
+    then hold/invest in others."
+  quote: "I'm Alex Hormozi, founder of Gym Launch, Allen, Prestige Labs, and owner
+    of a couple other companies."
+  source_chunks:
+  - AH-chunk-015-01
+  source_id: AH-0015
+  confidence: 0.85
+  priority: MEDIUM
+- id: INS-AH-046
+  name: Decision Fatigue as a closing variable
+  description: At end of day, people are less likely to say yes to anything. No-based
+    questions are the antidote — they require less cognitive commitment and feel safe
+    to answer.
+  quote: "Even if they're kind of fatigued at the end of the day, a no-based question
+    still gets agreement. It's easier to get because they just have to say 'no, I'm
+    not against it.'"
+  source_chunks:
+  - AH-chunk-015-02
+  source_id: AH-0015
+  confidence: 0.90
+  priority: HIGH
+- id: INS-AH-051
+  name: Price problem is always a value problem in disguise
+  description: When a prospect says the price is too high, they don't understand
+    the value. Never negotiate on price first — re-establish value until the investment
+    feels small relative to the outcome.
+  quote: "If it's price, it's a discrepancy in value. They don't understand the value.
+    Price objection is always a value problem in disguise."
+  source_chunks:
+  - AH-chunk-013-02
+  source_id: AH-0013
+  confidence: 0.95
+  priority: HIGH
+- id: INS-AH-056
+  name: Crazy people buy without obstacles; normal people have concerns
+  description: Never treat objections as rejection — they are buying signals from
+    normal people who need help making a decision.
+  quote: "Crazy people buy without obstacles. Normal people have concerns. When someone
+    objects, they're not saying no — they're asking for help to say yes."
+  source_chunks:
+  - AH-chunk-013-02
+  source_id: AH-0013
+  confidence: 0.95
+  priority: HIGH
+- id: INS-AH-057
+  name: Cheesecake Factory Analogy — autonomy preservation via negative framing
+  description: 'Negative framing creates default agreement through autonomy preservation.
+    ''Babe, would you be against going to Cheesecake Factory?'' works better than
+    ''Want to go?'' because the negative framing feels safe.'
+  quote: "If I switch that and said, 'Babe, would you be against going to Cheesecake
+    Factory?' She's like, well, I'm not against going there. Great, let's go."
+  source_chunks:
+  - AH-chunk-015-02
+  source_id: AH-0015
+  confidence: 0.90
+  priority: MEDIUM
+- id: INS-AH-061
+  name: Brushing Teeth Analogy — external accountability creates internal habit
+  description: Good habits are drilled by consistent external accountability before
+    they become internal. Prospects who need accountability need structure, not motivation.
+  quote: "Did your parents ever tell you to brush your teeth? You hated it. And they
+    kept doing it. And I'll bet you brush your teeth now. You need someone to hold
+    you accountable to create the habit."
+  source_chunks:
+  - AH-chunk-013-01
+  source_id: AH-0013
+  confidence: 0.88
+  priority: MEDIUM
+- id: INS-AH-066
+  name: Inconsistent CAC is a lead quality + management problem
+  description: Most founders blame the wrong variable — they fix the team when they
+    should fix the funnel, or vice versa. Use the Sales Multipliers diagnostic before
+    changing anything.
+  quote: "I thought I was at $1,000 CAC and now I'm at $3,000. My leads are shit.
+    Actually, my leads are amazing. My sales team is underworked. This is the governing
+    framework for how you make the conversation."
+  source_chunks:
+  - AH-chunk-013-01
+  source_id: AH-0013
+  confidence: 0.90
   priority: HIGH

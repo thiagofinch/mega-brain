@@ -1,0 +1,61 @@
+# FILOSOFIAS — Pedro Valerio Lopez
+# Camada L1 do DNA Cognitivo
+# Versao: 1.0.0
+# Atualizado: 2026-03-16
+# Insights: 6
+
+version: "1.0.0"
+updated: "2026-03-16"
+person: "Pedro Valério"
+slug: "pedro-valerio"
+layer: "L1-FILOSOFIAS"
+count: 6
+
+filosofias:
+  - id: "FIL-PV-001"
+    nome: "Modelo Mental Antes de Técnica"
+    descricao: "Processos quebram quando se muda o executor sem mudar o modelo mental. O problema nunca é técnico."
+    citacao: "O problema do Marcos não era técnico. Não era falta de treinamento. O problema era o modelo mental."
+    chunks: ["chunk_1", "chunk_2"]
+    source: "SINKRA Cap 1"
+    confianca: "HIGH"
+
+  - id: "FIL-PV-002"
+    nome: "Fluxograma Não É Processo"
+    descricao: "Fluxograma é representação visual. Processo é mecanismo operacional com estados, transições, validações e responsáveis formais."
+    citacao: "Fluxograma é representação visual. Processo é mecanismo operacional. São coisas completamente diferentes."
+    chunks: ["chunk_258"]
+    source: "SINKRA Cap 14"
+    confianca: "HIGH"
+
+  - id: "FIL-PV-003"
+    nome: "Memória Humana Não É Controle"
+    descricao: "Dependência de memória humana não é controle, é esperança. Processos precisam de auto-validação."
+    citacao: "Dependência de memória humana não é controle, é esperança."
+    chunks: ["chunk_236"]
+    source: "SINKRA Cap 13"
+    confianca: "HIGH"
+
+  - id: "FIL-PV-004"
+    nome: "Task-First"
+    descricao: "Toda atividade deve ser definida pela tarefa, não pelo executor. O QUE antes de QUEM."
+    citacao: "O processo inteiro foi desenhado assumindo que cada caixa seria executada por um humano."
+    chunks: ["chunk_215", "chunk_2"]
+    source: "SINKRA Cap 12"
+    confianca: "HIGH"
+
+  - id: "FIL-PV-005"
+    nome: "Paradigma via Prática"
+    descricao: "Paradigma não se aprende em curso — se internaliza com prática. Clareza operacional é paradigma."
+    citacao: "Paradigma é algo que emerge de dentro pra fora. Você não aprende paradigma num curso."
+    chunks: ["chunk_389"]
+    source: "SINKRA Cap 19"
+    confianca: "HIGH"
+
+  - id: "FIL-PV-006"
+    nome: "Dogfooding Obrigatório"
+    descricao: "Use seus próprios produtos internamente antes de vender. Quem vende sem usar não tem credibilidade."
+    citacao: "Muita gente cria produto pra fora, pra vender, mas não usa os próprios produtos."
+    chunks: ["chunk_410"]
+    source: "MEET-0033"
+    confianca: "HIGH"

@@ -1,0 +1,39 @@
+# knowledge/external/dna/persons/cole-gordon/FILOSOFIAS.yaml
+# Gerado em: 2026-03-16
+# Fonte: Pipeline MCE v2.0 (INSIGHTS-STATE.json)
+
+pessoa: "Cole Gordon"
+versao: "1.0.0"
+data_atualizacao: "2026-03-16T09:10:00Z"
+total_entries: 3
+
+entries:
+  - id: "FIL-CG-001"
+    insight_id: "CG-MCE001-001"
+    titulo: "Filosofia > Táticas"
+    descricao: "Ter os mental models corretos é mais valioso que ter scripts decorados. Com os princípios certos, scripts e técnicas emergem naturalmente. Flexibilidade comportamental supera respostas pré-programadas."
+    quote: "If you have the right philosophy, the tactics and scripts come naturally."
+    chunk_ids: ["CG-02-01"]
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    categoria: "processo-vendas"
+
+  - id: "FIL-CG-002"
+    insight_id: "CG-MCE001-002"
+    titulo: "Internal Pressure Cria Vendas Que Não Cancelam"
+    descricao: "Urgência artificial (fast action discounts, escassez forçada) atrai clientes que compram por pressão externa — exatamente os que vão cancelar. Internal pressure (criada pelo próprio prospect ao verbalizar suas consequências e desejos) cria vendas duradouras com baixo churn e referrals."
+    quote: "Internal pressure creates sales that don't cancel. External pressure creates clients who resent you."
+    chunk_ids: ["CG-02-04"]
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    categoria: "processo-vendas"
+
+  - id: "FIL-CG-003"
+    insight_id: "CG-MCE001-003"
+    titulo: "Sales Manager Não Fecha"
+    descricao: "O momento em que o manager fecha uma venda, ele passa a competir com o time. Competindo, não desenvolve. Sales Manager = 100% coaching, 0% closing. Essa separação é inegociável — o player-coach é sempre um compromisso, nunca um modelo ideal."
+    quote: "The moment you close, you compete with your team. And when you compete, you don't develop."
+    chunk_ids: ["CG-09-01"]
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    categoria: "gestao-vendas"

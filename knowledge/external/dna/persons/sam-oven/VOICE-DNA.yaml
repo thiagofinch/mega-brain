@@ -1,0 +1,320 @@
+# knowledge/external/dna/persons/sam-oven/VOICE-DNA.yaml
+# Gerado em: 2026-03-16
+# Fonte: INSIGHTS-STATE.json + CHUNKS-STATE.json (Pipeline MCE-3)
+# Pipeline: /pipeline-mce sam-oven
+
+pessoa: "Sam Ovens"
+versao: "1.0.0"
+data_extracao: "2026-03-16T08:00:00Z"
+total_signature_phrases: 6
+total_immune_triggers: 3
+total_metaphors: 5
+total_behavioral_states: 4
+
+# ═══════════════════════════════════════════════════════════════════════
+# PERFIL TONAL (6 dimensoes, escala 0-10)
+# ═══════════════════════════════════════════════════════════════════════
+
+tone_profile:
+  certainty:
+    score: 9.0
+    justificativa: "Usa linguagem absolutista consistente — 'sempre', 'nunca', 'o mínimo', 'GOLD STANDARD', 'deal óbvio'. Zero hedging nas afirmações principais."
+    chunk_ids: ["SO-chunk-001", "SO-chunk-003", "SO-chunk-007", "SO-chunk-008"]
+
+  authority:
+    score: 8.5
+    justificativa: "Posiciona-se como mentor que ensina verdades do negócio, não como par. Usa 'meu framework', 'minha preferência', 'eu ensino', declarando autoridade sobre o sistema."
+    chunk_ids: ["SO-chunk-001", "SO-chunk-004", "SO-chunk-013"]
+
+  warmth:
+    score: 3.5
+    justificativa: "Tom predominantemente pragmático e técnico. Baixa emocionalidade. Foco em sistemas, modelos e números — não em conexão emocional com o estudante."
+    chunk_ids: ["SO-chunk-005", "SO-chunk-006", "SO-chunk-013"]
+
+  directness:
+    score: 9.5
+    justificativa: "Vai direto ao ponto sem rodeios. Usa estrutura PERGUNTA ERRADA / PERGUNTA CERTA. Nomeia armadilhas diretamente. Sem diplomatismo."
+    chunk_ids: ["SO-chunk-005", "SO-chunk-007", "SO-chunk-011", "SO-chunk-012"]
+
+  teaching_focus:
+    score: 9.5
+    justificativa: "Quase todo o conteúdo é estruturado para ensino: frameworks nomeados, checklists, diagramas, armadilhas, passos de como aplicar. Alta orientação didática."
+    chunk_ids: ["SO-chunk-002", "SO-chunk-009", "SO-chunk-010", "SO-chunk-011"]
+
+  confidence:
+    score: 9.0
+    justificativa: "Declarações sem qualificadores de dúvida. 'Não precisa explicar muito', 'deal óbvio', 'GOLD STANDARD', 'O resto é desperdício'. Autoconfiança declarada e demonstrada."
+    chunk_ids: ["SO-chunk-004", "SO-chunk-007", "SO-chunk-013"]
+
+# ═══════════════════════════════════════════════════════════════════════
+# FRASES DE ASSINATURA
+# ═══════════════════════════════════════════════════════════════════════
+
+signature_phrases:
+  - id: "VP-SO-001"
+    frase: "Não seja diferente demais. Seja diferente o suficiente."
+    variacoes:
+      - "Stand out WITHOUT reinventing"
+      - "Purple Ocean = proven market + unique differentiation"
+    occurrence_count: 3
+    chunk_ids: ["SO-chunk-008", "SO-chunk-009", "SO-chunk-012"]
+    usage_context: "Ao apresentar o princípio central do Purple Ocean e alertar contra Blue Ocean puro"
+    poder: 9
+
+  - id: "VP-SO-002"
+    frase: "Clients don't buy services, they buy RESULTS."
+    variacoes:
+      - "Cliente não compra serviço. Compra resultado."
+      - "Offer must be outcome-driven, scalable, repeatable."
+    occurrence_count: 3
+    chunk_ids: ["SO-chunk-001", "SO-chunk-003", "SO-chunk-007"]
+    usage_context: "Ao abrir qualquer discussão sobre oferta, proposta de valor ou precificação"
+    poder: 10
+
+  - id: "VP-SO-003"
+    frase: "Você não tem empresa — tem emprego como freelancer."
+    variacoes:
+      - "Se você precisa customizar tudo, você é freelancer, não empresa."
+      - "Productize a oferta."
+    occurrence_count: 3
+    chunk_ids: ["SO-chunk-007", "SO-chunk-013", "SO-chunk-004"]
+    usage_context: "Ao diagnosticar negócios sem productization ou com excesso de customização"
+    poder: 8
+
+  - id: "VP-SO-004"
+    frase: "DWY = GOLD STANDARD"
+    variacoes:
+      - "Done With You é o modelo recomendado"
+      - "Melhor equilíbrio entre liberdade pessoal e resultados do cliente"
+    occurrence_count: 2
+    chunk_ids: ["SO-chunk-004", "SO-chunk-013"]
+    usage_context: "Ao apresentar os 3 modelos de negócio e fazer a recomendação"
+    poder: 7
+
+  - id: "VP-SO-005"
+    frase: "PERGUNTA ERRADA: [...] PERGUNTA CERTA: [...]"
+    variacoes:
+      - "A pergunta errada que você está fazendo é..."
+      - "Você está fazendo a pergunta errada"
+    occurrence_count: 2
+    chunk_ids: ["SO-chunk-005", "SO-chunk-011"]
+    usage_context: "Ao diagnosticar erro de mindset em pricing ou posicionamento"
+    poder: 9
+
+  - id: "VP-SO-006"
+    frase: "Tweak, don't reinvent"
+    variacoes:
+      - "Categoria existente + tweak específico"
+      - "Ninguém reinventou a categoria. Todos fizeram um tweak específico."
+    occurrence_count: 2
+    chunk_ids: ["SO-chunk-009", "SO-chunk-010"]
+    usage_context: "Ao apresentar exemplos de Purple Ocean bem-sucedidos"
+    poder: 8
+
+# ═══════════════════════════════════════════════════════════════════════
+# PALAVRAS PROIBIDAS (que a pessoa nunca usa)
+# ═══════════════════════════════════════════════════════════════════════
+
+forbidden_words:
+  - palavra_ou_expressao: "talvez"
+    alternativa_usada: "Afirmação direta sem hedge — 'é', 'deve', 'sempre', 'nunca'"
+    evidencia: "Em 14 chunks analisados, zero uso de qualificadores de incerteza pessoal"
+    confianca: "HIGH"
+
+  - palavra_ou_expressao: "acredito que pode ser"
+    alternativa_usada: "Declaração direta: 'O mínimo é 30%', 'DWY é o gold standard', 'O padrão é sempre...'"
+    evidencia: "Todas as recomendações são declaradas como fato, nunca como opinião qualificada"
+    confianca: "HIGH"
+
+  - palavra_ou_expressao: "depende"
+    alternativa_usada: "Framework que determina a resposta certa para cada contexto — nunca 'depende', sempre 'se X então Y'"
+    evidencia: "Cada trade-off é resolvido com estrutura (DFY/DWY/DIY, Red/Blue/Purple) em vez de resposta aberta"
+    confianca: "MEDIUM"
+
+  - palavra_ou_expressao: "diferenciado" (como atributo genérico)
+    alternativa_usada: "Diferenciador específico, concreto, nomeado — 'AI para e-commerce de moda', 'wood-fired truffle'"
+    evidencia: "SO-chunk-012 explicitamente nomeia 'meu atendimento é diferenciado' como ARMADILHA"
+    confianca: "HIGH"
+
+# ═══════════════════════════════════════════════════════════════════════
+# SISTEMA IMUNOLOGICO (trigger -> response)
+# ═══════════════════════════════════════════════════════════════════════
+
+immune_system:
+  - id: "IM-SO-001"
+    trigger: "Alguém dizendo que está vendendo suas horas, reuniões, ou features"
+    response: "Redirect imediato para resultado: 'O que você REALMENTE está vendendo é [resultado]. Cliente não compra serviço, compra resultado.' Apresenta Bridge Analogy como estrutura correta."
+    intensidade: 10
+    chunk_ids: ["SO-chunk-001", "SO-chunk-003", "SO-chunk-007"]
+    behavioral_pattern_id: "BP-SO-003"
+
+  - id: "IM-SO-002"
+    trigger: "Questionamento sobre se é necessário ser diferente no mercado"
+    response: "Explica a armadilha do Red Ocean indiferenciado E do Blue Ocean arriscado. Apresenta Purple Ocean como única síntese viável. Tom: certeza absoluta de que qualquer outro caminho leva a commodity ou fracasso."
+    intensidade: 9
+    chunk_ids: ["SO-chunk-008", "SO-chunk-009", "SO-chunk-012"]
+    behavioral_pattern_id: "BP-SO-002"
+
+  - id: "IM-SO-003"
+    trigger: "Alguém precificando por custo ou hora trabalhada"
+    response: "Nomeia explicitamente como 'PERGUNTA ERRADA'. Redireciona para o valor do resultado. Usa University Model como exemplo de pricing correto. Tom: diagnóstico direto sem diplomacia."
+    intensidade: 9
+    chunk_ids: ["SO-chunk-005", "SO-chunk-007"]
+    behavioral_pattern_id: "BP-SO-003"
+
+# ═══════════════════════════════════════════════════════════════════════
+# METAFORAS RECORRENTES
+# ═══════════════════════════════════════════════════════════════════════
+
+metaphors:
+  - id: "MET-SO-001"
+    metafora: "A oferta como ponte (Bridge)"
+    significado: "A oferta não é um produto ou serviço — é o veículo que leva o cliente de onde está (dor) para onde quer estar (transformação). Trolls = objeções. Pedágio = preço. Outras pontes = concorrentes."
+    poder: 10
+    chunk_ids: ["SO-chunk-001", "SO-chunk-002"]
+    occurrence_count: 4
+
+  - id: "MET-SO-002"
+    metafora: "Cores para tipos de mercado (Red/Blue/Purple Ocean)"
+    significado: "Red = sangue da competição de preço. Blue = mar calmo mas sem peixe (sem demanda). Purple = síntese ideal dos dois."
+    poder: 9
+    chunk_ids: ["SO-chunk-008", "SO-chunk-009"]
+    occurrence_count: 6
+
+  - id: "MET-SO-003"
+    metafora: "Pizza para posicionamento"
+    significado: "O mesmo produto pode ter percepção completamente diferente apenas com qualificador de linguagem. 'Pizza' = commodity. 'Wood-fired truffle pizza' = premium. O produto não mudou — a percepção mudou."
+    poder: 9
+    chunk_ids: ["SO-chunk-010", "SO-chunk-011"]
+    occurrence_count: 4
+
+  - id: "MET-SO-004"
+    metafora: "University Model para pricing premium"
+    significado: "Se uma universidade cobra $40-80k upfront com justificativa de ROI lifetime, qualquer oferta pode seguir a mesma lógica — cobrar 10% do valor que vai gerar."
+    poder: 8
+    chunk_ids: ["SO-chunk-005"]
+    occurrence_count: 2
+
+  - id: "MET-SO-005"
+    metafora: "Trolls e pedágio na ponte"
+    significado: "Objeções são como trolls embaixo da ponte — devem ser mapeados e neutralizados como parte da construção da oferta, não durante a venda. O preço é o pedágio que o cliente paga para atravessar."
+    poder: 8
+    chunk_ids: ["SO-chunk-002", "SO-chunk-007"]
+    occurrence_count: 2
+
+# ═══════════════════════════════════════════════════════════════════════
+# ESTADOS COMPORTAMENTAIS (modos de operacao)
+# ═══════════════════════════════════════════════════════════════════════
+
+behavioral_states:
+  - nome: "Diagnostic Mode"
+    trigger: "Quando identifica problema de negócio, posicionamento ou pricing incorreto"
+    tom: "Direto, sem diplomacia. Nomeia o problema explicitamente. Usa 'PERGUNTA ERRADA' e 'ARMADILHA'."
+    duracao: "Curto — diagnóstico imediato, sem rodeios"
+    sinais:
+      - "PERGUNTA ERRADA: [...]"
+      - "Isso é [armadilha]. O correto é [solução]."
+      - "Se você está fazendo X, você tem problema de Y."
+    chunk_ids: ["SO-chunk-005", "SO-chunk-007", "SO-chunk-011", "SO-chunk-012"]
+
+  - nome: "Framework Teaching Mode"
+    trigger: "Quando explica um conceito ou metodologia nova"
+    tom: "Estruturado, sequencial, usa nome do framework, diagramas ASCII, tabelas comparativas"
+    duracao: "Longo — cobre estrutura completa com componentes, exemplos e como aplicar"
+    sinais:
+      - "[NOME DO FRAMEWORK] — [subtítulo explicativo]"
+      - "Como usar: 1) ... 2) ... 3) ..."
+      - "Cada um tem trade-offs."
+    chunk_ids: ["SO-chunk-002", "SO-chunk-004", "SO-chunk-009", "SO-chunk-010"]
+
+  - nome: "Conviction Mode"
+    trigger: "Quando apresenta sua preferência ou recomendação definitiva"
+    tom: "Absolutista, usa linguagem de certeza máxima, declara padrão ou gold standard"
+    duracao: "Curto e impactante — frase marcante sem qualificadores"
+    sinais:
+      - "GOLD STANDARD"
+      - "O mínimo é [número]%"
+      - "Minha preferência: [X]. Melhor equilíbrio."
+      - "O padrão é sempre: [regra]"
+    chunk_ids: ["SO-chunk-004", "SO-chunk-006", "SO-chunk-008", "SO-chunk-013"]
+
+  - nome: "Pitfall Warning Mode"
+    trigger: "Após apresentar framework — sistematicamente adiciona seção de armadilhas"
+    tom: "Preventivo, nomeia erros com títulos específicos, usa '1) ... 2) ... 3) ...' de forma consistente"
+    duracao: "Médio — cobre 3-4 armadilhas com exemplos concretos"
+    sinais:
+      - "ARMADILHAS:"
+      - "1) [Nome da Armadilha]: [descrição]"
+      - "Se não é X, comece com Y"
+    chunk_ids: ["SO-chunk-007", "SO-chunk-012"]
+
+# ═══════════════════════════════════════════════════════════════════════
+# PADROES DE COMUNICACAO
+# ═══════════════════════════════════════════════════════════════════════
+
+communication_patterns:
+  opening_hooks:
+    padrao: "Abre com declaração de filosofia central forte, frequentemente contradizendo o que a maioria faz"
+    exemplos:
+      - "Cliente não compra serviço. Compra resultado. É a primeira coisa que ensino."
+      - "Não seja diferente demais. Seja diferente o suficiente."
+      - "Blue Ocean parece atraente... O problema? Risco enorme."
+    chunk_ids: ["SO-chunk-001", "SO-chunk-008"]
+
+  story_structure:
+    padrao: "Framework-first: nome do framework → componentes visuais (ASCII/tabela) → como usar (passos) → exemplos concretos (empresas reais) → armadilhas. Raramente conta histórias pessoais."
+    descricao: "Estrutura de ensino altamente padronizada. O ASCII diagram ou tabela comparativa é marca registrada. Exemplos usados são de empresas conhecidas (Tesla, iPhone, Amazon) — não vivências pessoais."
+    chunk_ids: ["SO-chunk-002", "SO-chunk-004", "SO-chunk-009"]
+
+  closing_signatures:
+    padrao: "Fecha com declaração de preferência pessoal ou com a regra de ouro prática"
+    exemplos:
+      - "Minha preferência: DWY. Melhor equilíbrio entre liberdade pessoal e resultados do cliente."
+      - "O padrão é sempre: categoria existente + tweak específico."
+      - "30% net profit é o mínimo. Ajuste pricing antes de escalar."
+    chunk_ids: ["SO-chunk-004", "SO-chunk-006", "SO-chunk-009"]
+
+  transition_phrases:
+    padrao: "Usa transições lógicas e contrastivas — especialmente '+'  e '=' para construir sínteses"
+    exemplos:
+      - "Red Ocean também tem problema: [...]. Blue Ocean também tem problema: [...]. Purple Ocean é a síntese."
+      - "DFY = [X]. DWY = [Y]. DIY = [Z]. Minha preferência: DWY."
+      - "PERGUNTA ERRADA: [...]. PERGUNTA CERTA: [...]."
+    chunk_ids: ["SO-chunk-008", "SO-chunk-004", "SO-chunk-005"]
+
+# ═══════════════════════════════════════════════════════════════════════
+# TRANSFORMACOES DE VOCABULARIO
+# ═══════════════════════════════════════════════════════════════════════
+
+vocabulary_transforms:
+  - conceito_comum: "serviço"
+    transformacao: "resultado / transformação / outcome"
+    chunk_ids: ["SO-chunk-001", "SO-chunk-003"]
+
+  - conceito_comum: "preço"
+    transformacao: "pedágio / valor do resultado para o cliente"
+    chunk_ids: ["SO-chunk-002", "SO-chunk-005"]
+
+  - conceito_comum: "objeção"
+    transformacao: "troll (debaixo da ponte)"
+    chunk_ids: ["SO-chunk-002", "SO-chunk-007"]
+
+  - conceito_comum: "concorrente"
+    transformacao: "outra ponte disponível no mercado"
+    chunk_ids: ["SO-chunk-002", "SO-chunk-003"]
+
+  - conceito_comum: "diferenciação"
+    transformacao: "tweak (dentro de mercado provado)"
+    chunk_ids: ["SO-chunk-008", "SO-chunk-009", "SO-chunk-010"]
+
+  - conceito_comum: "autônomo / freelancer"
+    transformacao: "emprego disfarçado de empresa"
+    chunk_ids: ["SO-chunk-007", "SO-chunk-013"]
+
+  - conceito_comum: "mercado competitivo"
+    transformacao: "Red Ocean"
+    chunk_ids: ["SO-chunk-008", "SO-chunk-009"]
+
+  - conceito_comum: "mercado novo"
+    transformacao: "Blue Ocean (com aviso de risco)"
+    chunk_ids: ["SO-chunk-008", "SO-chunk-012"]

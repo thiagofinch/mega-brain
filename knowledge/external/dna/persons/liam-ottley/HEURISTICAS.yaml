@@ -154,10 +154,34 @@ heuristics:
     reinforced_chunks: ["chunk_654"]
     reinforced_by: "INS-LO-042"
 
+  # ---- New from Autonomous Run 2026-03-16, chunks 656-690 ----
+
+  - id: "HEUR-LO-014"
+    name: "Perfil do Cliente Ideal para AI Workforce"
+    heuristic: "Clientes ideais são empresas de serviços ou pequenas empresas com processos claros e repetitivos que atualmente exigem múltiplas pessoas para executar."
+    type: qualitative
+    threshold: "Service company OR small business + repeatable multi-step workflows + can't afford full teams"
+    quote: "The businesses that need AI workforces the most are typically service companies or small businesses drowning in manual processes — they need 24/7 operations, but can't afford full teams."
+    insight_ref: "LO-018"
+    source: "How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE [youtube.com_watch_v=pTTvyQDK_tk].txt"
+    new_chunks: ["chunk_679"]
+
+  - id: "HEUR-LO-015"
+    name: "Teste de Niche de Cold Email"
+    heuristic: "4 nichos × 500 emails × 30 dias → identificar vencedor → dobrar down. O niche com melhor taxa de resposta vira o foco principal."
+    type: numeric
+    threshold: "4 niches × 500 emails = 2000 emails total. 30-day tracking cycle."
+    quote: "Choose four service niches, write one clear results-driven email per niche, send 500 emails per niche and track for 30 days. After 30 days, identify which performed best and double down."
+    insight_ref: "LO-019"
+    source: "How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE"
+    raiz: "knowledge/external/inbox/liam-ottley/podcasts/How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE [youtube.com_watch_v=pTTvyQDK_tk].txt"
+    new_chunks: ["chunk_679"]
+
 metadata:
-  total_items: 13
+  total_items: 15
   source_person: "Liam Ottley"
   source_count: 3
   extraction_date: "2026-03-13"
   updated: "2026-03-16"
-  version: "1.1.0"
+  version: "1.2.0"

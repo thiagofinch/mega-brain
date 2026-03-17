@@ -1,0 +1,198 @@
+# knowledge/external/dna/persons/jeremy-miner/METODOLOGIAS.yaml
+# Camada L5 — Implementações Passo-a-Passo
+# Gerado: MCE Pipeline 2026-03-16
+
+pessoa: "Jeremy Miner"
+versao: "1.0.0"
+data_extracao: "2026-03-16T10:30:00Z"
+total_elementos: 5
+pipeline: "MCE v1.0"
+
+metodologias:
+
+  - id: "JM-MET-001"
+    titulo: "NEPQ 4-Question Sequence — Fluxo Completo"
+    enunciado: "NEPQ usa 4 tipos de perguntas em sequência estrita e não-pulável: Status Quo → Problem Awareness → Consequence → Solution Awareness."
+    descricao: >
+      O fluxo NEPQ é sequencial e cada tipo de pergunta depende das respostas do anterior.
+      Pular etapas elimina a eficácia do método.
+
+      ETAPA 1 — STATUS QUO QUESTIONS:
+      Entender como o prospect opera hoje. Neutras, sem julgamento.
+      Ex: 'Como você está gerenciando [área] atualmente?'
+      Objetivo: Criar baseline e rapport. Tonalidade curiosa.
+
+      ETAPA 2 — PROBLEM AWARENESS QUESTIONS:
+      Ajudar o prospect a articular problemas com a situação atual.
+      Ex: 'O que você sente que está faltando no processo atual?'
+      Objetivo: Prospect nomeia os problemas — não o vendedor. Tonalidade curiosa/preocupada.
+
+      ETAPA 3 — CONSEQUENCE QUESTIONS:
+      Expandir o impacto dos problemas para outras áreas da vida/negócio.
+      Ex: 'Como isso está afetando [outras áreas]?', 'O que acontece se isso não mudar
+      nos próximos 6 meses?'
+      Objetivo: Criar urgência interna. Tonalidade preocupada.
+
+      ETAPA 4 — SOLUTION AWARENESS QUESTIONS:
+      Fazer o prospect articular o que seria diferente com a solução.
+      Ex: 'Se você tivesse [solução], o que mudaria?'
+      Objetivo: Prospect descreve o futuro desejado em suas próprias palavras.
+      Tonalidade curiosa.
+    aplicacao: >
+      Para cada etapa, prepare 3-5 perguntas específicas para o seu contexto.
+      Jamais avance para a próxima etapa sem obter resposta substantiva na atual.
+      Se o prospect dá resposta superficial, use tonalidade confusa + pergunta de
+      aprofundamento antes de avançar.
+    evidencias:
+      - chunk_id: "JM-chunk_010"
+        quote: "NEPQ has 4 question types that flow in sequence. Status Quo Questions, Problem Awareness Questions, Consequence Questions, Solution Awareness Questions."
+        source: "JM-0080"
+      - chunk_id: "JM-chunk_011"
+        quote: "You cannot skip steps. Each type of question builds on the emotional groundwork of the previous one."
+        source: "JM-0080"
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    status: "new"
+
+  - id: "JM-MET-002"
+    titulo: "Técnica de Identidade Negativa — Enquadramento de Abertura"
+    enunciado: "Na abertura, criar psicologicamente o perfil de 'pessoa que ninguém quer ser' para que o prospect se motive a comportar de forma oposta (aberto, não defensivo)."
+    descricao: >
+      Jeremy Miner usa uma técnica de psicologia social na abertura da conversa:
+      descrever (indiretamente) o tipo de pessoa que não se abre, que é difícil de
+      trabalhar, que não resolve seus problemas — e imediatamente o prospect se
+      distancia dessa identidade comportando-se da forma oposta.
+
+      EXEMPLO DE APLICAÇÃO:
+      'Algumas pessoas preferem não entrar em detalhes sobre sua situação até ter
+      mais informações — o que faz total sentido. Mas normalmente as pessoas com quem
+      eu converso descobrem que sendo mais abertos desde o início elas chegam a conclusões
+      melhores mais rapidamente...'
+
+      O prospect inconscientemente quer ser 'as pessoas com quem você conversa' —
+      não 'as pessoas que não se abrem'. Isso abre a conversa de diagnóstico genuíno.
+    aplicacao: >
+      Roteiro de abertura em 3 partes:
+      1. Acknowledge que algumas pessoas não se abrem (identidade negativa)
+      2. Posicionar abertura como o que 'pessoas como você' fazem (identidade positiva)
+      3. Fazer primeira pergunta de Status Quo com tonalidade curiosa
+
+      Não nomear explicitamente a identidade negativa — é sutil. O prospect infere.
+    evidencias:
+      - chunk_id: "JM-chunk_013"
+        quote: "Nobody wants to be the person who can't open up about their problems. I use this in my opening to set the right frame."
+        source: "JM-0019"
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    status: "new"
+
+  - id: "JM-MET-003"
+    titulo: "Prevenção de Objeções Durante a Conversa (não Tratamento no Final)"
+    enunciado: "Objeções devem ser surfadas e endereçadas durante a conversa com perguntas preemptivas — não tratadas como surpresas no final com scripts de resposta."
+    descricao: >
+      O modelo old school espera que o prospect diga 'preciso pensar' ou 'preciso falar
+      com meu parceiro' e então aplica scripts de tratamento de objeção. NEPQ previne
+      isso surfando as objeções potenciais durante a conversa — antes que se tornem
+      barreiras no fechamento.
+
+      METODOLOGIA DE PREVENÇÃO:
+      1. Identifique as 3-5 objeções mais comuns no seu processo de vendas.
+      2. Para cada uma, crie uma pergunta que força o prospect a expressá-la durante
+         a conversa (não no fechamento).
+      3. Endereçe a objeção ao ser surfada — naturalmente, sem script de tratamento.
+
+      EXEMPLO (objeção 'preciso pensar'):
+      Durante a conversa: 'O que você precisaria ver ou entender para sentir que
+      isso seria a decisão certa para você?'
+      → Prospect articula exatamente o que precisa → Você endereça → Objeção dissolvida.
+
+      EXEMPLO (objeção 'é caro'):
+      'Quando você compara investimentos como esse, como você tipicamente avalia
+      se o valor faz sentido?' → Prospect define critério → Você usa o critério deles.
+    aplicacao: >
+      Antes de cada conversa de vendas, identifique as objeções mais prováveis.
+      Para cada uma, prepare 1-2 perguntas para surfar essa objeção durante a
+      etapa de Consequence ou Solution Awareness. Execute antes de chegar ao fechamento.
+    evidencias:
+      - chunk_id: "JM-chunk_028"
+        quote: "Instead of waiting for the prospect to say 'I need to think about it,' ask during the call: 'What would need to be true for this to feel like the right decision for you?' The objection is surfaced and addressed before it becomes a stall."
+        source: "JM-0130"
+      - chunk_id: "JM-chunk_020"
+        quote: "The key is prevention, not treatment. When you address objections before they surface, they don't have power."
+        source: "JM-0130"
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    status: "new"
+
+  - id: "JM-MET-004"
+    titulo: "Criação de Urgência via Consequence Questions (Elimina Follow-Up)"
+    enunciado: "Urgência criada durante a conversa com perguntas de consequência elimina a necessidade de follow-up — prospect fecha na call porque sente a urgência de dentro."
+    descricao: >
+      O modelo old school de follow-up existe porque urgência não foi criada na
+      conversa original. Miner inverte: consequence questions durante a call criam
+      urgência interna (não artificial) que torna o fechamento natural antes do fim
+      da conversa.
+
+      METODOLOGIA:
+      1. Após surfar o problema central, escale com consequence questions:
+         'E como isso afeta [outra área]?'
+         'E há quanto tempo você está lidando com isso?'
+         'O que acontece se daqui a 6 meses isso ainda não tiver mudado?'
+         'Como você se sentirá se estiver na mesma posição no próximo ano?'
+
+      2. Deixe o prospect articular as consequências em suas próprias palavras.
+         NUNCA diga as consequências você mesmo.
+
+      3. Quando o prospect articular consequências suficientemente sérias,
+         a transição para solução é natural: 'Com base no que você descreveu,
+         seria útil explorar como [solução] poderia mudar isso?'
+
+      RESULTADO: Urgência genuína = necessidade = fechamento sem follow-up.
+    aplicacao: >
+      Ter 5-7 consequence questions prontas para o seu contexto específico.
+      Fazer pelo menos 3 consequence questions antes de qualquer menção a solução.
+      Monitor: se o prospect não está articulando impacto emocional e financeiro,
+      você não aprofundou consequence questions o suficiente.
+    evidencias:
+      - chunk_id: "JM-chunk_027"
+        quote: "Most follow-ups happen because urgency wasn't created during the call. Ask: 'What happens if this problem isn't solved in the next 3-6 months?'"
+        source: "JM-0030"
+      - chunk_id: "JM-chunk_011"
+        quote: "Urgency created by the salesperson feels like pressure. Urgency the prospect creates themselves feels like necessity."
+        source: "JM-0080"
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    status: "new"
+
+  - id: "JM-MET-005"
+    titulo: "Prevenção da Objeção do Cônjuge — Pergunta Preemptiva"
+    enunciado: "A objeção 'preciso falar com meu cônjuge/parceiro' é prevenida (não tratada) com uma pergunta específica feita ANTES de pedir a decisão."
+    descricao: >
+      Uma das objeções mais comuns e difíceis de tratar no fechamento é a do
+      terceiro influenciador (cônjuge, sócio, parceiro). NEPQ previne com uma pergunta
+      simples e não-confrontacional feita durante a conversa, antes do fechamento:
+
+      PERGUNTA PREEMPTIVA:
+      'E normalmente quando você considera uma decisão como essa, existe alguém mais
+      que você tipicamente inclui no processo de decisão?'
+
+      SE SIM: 'Faz sentido incluí-los nessa conversa — poderíamos agendar um momento
+      em que todos possam participar?' → Inclua o cônjuge/sócio na próxima call.
+
+      SE NÃO: 'Ótimo, então você é o tomador de decisão aqui.' → Quando chegar o
+      fechamento, eles não podem usar terceiros como escape.
+
+      A pergunta é feita durante Problem Awareness ou Consequence — não no fechamento.
+      Quando é feita no fechamento, soa como manipulação. Antes, soa como cuidado.
+    aplicacao: >
+      Incluir esta pergunta em todo processo de vendas onde o ciclo de decisão
+      pode envolver outras pessoas. Timing ideal: após as primeiras consequence
+      questions, quando já há rapport estabelecido. Se identificado cônjuge/sócio,
+      não avançar para fechamento sem eles presentes.
+    evidencias:
+      - chunk_id: "JM-chunk_020"
+        quote: "Before asking for a decision, preemptively neutralize the spouse objection by asking: 'And is there anyone else you typically include in decisions like this?'"
+        source: "JM-0013"
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    status: "new"

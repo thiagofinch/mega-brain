@@ -1,0 +1,39 @@
+# knowledge/external/dna/persons/cole-gordon/MODELOS-MENTAIS.yaml
+# Gerado em: 2026-03-16
+# Fonte: Pipeline MCE v2.0 (INSIGHTS-STATE.json)
+
+pessoa: "Cole Gordon"
+versao: "1.0.0"
+data_atualizacao: "2026-03-16T09:10:00Z"
+total_entries: 3
+
+entries:
+  - id: "MM-CG-001"
+    insight_id: "CG-MCE001-004"
+    titulo: "Objeções São Sintomas, Não Causas"
+    descricao: "Se você está tratando objeções no final da call, você já perdeu. Objeções no closing são sintoma de beliefs que não foram instaladas no discovery. A cura está upstream, não downstream. O closer que previne objeções é superior ao que sabe superá-las."
+    quote: "Objection prevention is upstream, objection handling is downstream."
+    chunk_ids: ["CG-02-01"]
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    categoria: "processo-vendas"
+
+  - id: "MM-CG-002"
+    insight_id: "CG-MCE001-005"
+    titulo: "Conviction Supera Skill Tático"
+    descricao: "Conviction genuína sobre o produto/solução supera habilidade técnica de fechamento. A função do closer é converter a convicção dele em convicção do prospect. Resolve (calma certainty) cria mais confiança que energia pumped up (Tony Robbins style)."
+    quote: "Conviction beats tactical skill every time. Your conviction needs to overcome their doubt."
+    chunk_ids: ["CG-02-09"]
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    categoria: "inner-game"
+
+  - id: "MM-CG-003"
+    insight_id: "CG-MCE001-006"
+    titulo: "Métricas São Consequência — Otimize na Ordem Certa"
+    descricao: "Maioria dos closers otimiza close rate (errado). A ordem correta é: 1) Show Rate, 2) Offers/day, 3) Close Rate. Um close rate de 30% com show rate 85% produz mais resultado real que close rate 50% com show rate 50%. Otimizar a métrica errada destrói o processo."
+    quote: "Show rate is where the game is won or lost. What's the point of closing 40% if only 50% show up?"
+    chunk_ids: ["CG-05-01"]
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    categoria: "metricas"

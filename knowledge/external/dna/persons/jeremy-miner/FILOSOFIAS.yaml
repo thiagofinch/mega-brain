@@ -1,0 +1,185 @@
+# knowledge/external/dna/persons/jeremy-miner/FILOSOFIAS.yaml
+# Camada L1 — Crenças Fundamentais e Visão de Mundo
+# Gerado: MCE Pipeline 2026-03-16
+# Fonte: 19 source files (JM-0003 to JM-0152), 30 chunks, 30 insights
+
+pessoa: "Jeremy Miner"
+versao: "1.0.0"
+data_extracao: "2026-03-16T09:55:00Z"
+total_elementos: 10
+pipeline: "MCE v1.0"
+
+filosofias:
+
+  - id: "JM-FIL-001"
+    titulo: "Medo da Mudança como Causa Raiz de Toda Não-Venda"
+    enunciado: "Every prospect that does not buy comes down to the fear of change."
+    descricao: >
+      A razão por trás de qualquer não-venda não é preço, timing ou concorrência —
+      é o medo de sair do estado atual. O prospect, mesmo em situação dolorosa, prefere
+      a dor conhecida à incerteza de mudar. O papel do vendedor é ajudar o prospect a
+      superar esse medo, não a pressionar com urgência artificial.
+    evidencias:
+      - chunk_id: "JM-chunk_001"
+        quote: "Every prospect that does not buy comes down to the fear of change."
+        source: "JM-0008"
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    status: "new"
+
+  - id: "JM-FIL-002"
+    titulo: "O Cérebro Resiste à Venda mas Aceita Ajuda à Autodescoberta"
+    enunciado: "Your brain is wired to resist being sold but is comfortable with being helped to discover a solution."
+    descricao: >
+      Há uma assimetria neurológica fundamental em vendas: o mesmo prospect que ativa
+      defesas contra pitch se abre quando a interação parece consulta e autodescoberta.
+      NEPQ explora essa assimetria sistematicamente através de perguntas.
+    evidencias:
+      - chunk_id: "JM-chunk_009"
+        quote: "Your brain is wired to resist being sold but is comfortable with being helped to discover a solution."
+        source: "JM-0008"
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    status: "new"
+
+  - id: "JM-FIL-003"
+    titulo: "Tonalidade como Vetor de Intenção Percebida"
+    enunciado: "Your tonality is how the prospect interprets your intention behind everything you say and ask."
+    descricao: >
+      A tonalidade não é apenas como você soa — é como o prospect interpreta sua intenção.
+      As mesmas palavras ditas em tons diferentes produzem resultados radicalmente diferentes.
+      Tonalidade errada pode destruir a melhor pergunta NEPQ. Tonalidade certa pode salvar
+      a mais banal das frases.
+    evidencias:
+      - chunk_id: "JM-chunk_005"
+        quote: "Your tonality is how the prospect interprets your intention behind everything you say and ask."
+        source: "JM-0061"
+      - chunk_id: "JM-chunk_006"
+        quote: "Your face expressions are the remote control to your tone."
+        source: "JM-0061"
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    status: "new"
+
+  - id: "JM-FIL-004"
+    titulo: "Urgência Criada pelo Vendedor = Pressão; pelo Prospect = Necessidade"
+    enunciado: "Urgency created by the salesperson feels like pressure. Urgency the prospect creates themselves feels like necessity."
+    descricao: >
+      Há uma diferença qualitativa entre urgência imposta externamente e urgência emergida
+      internamente. Urgência artificial (escassez, deadline, desconto) gera compra com
+      arrependimento posterior. Urgência interna (sentir o custo da inação) gera compra
+      comprometida. NEPQ cria a segunda.
+    evidencias:
+      - chunk_id: "JM-chunk_011"
+        quote: "Urgency created by the salesperson feels like pressure. Urgency the prospect creates themselves feels like necessity."
+        source: "JM-0080"
+      - chunk_id: "JM-chunk_027"
+        quote: "Most follow-ups happen because urgency wasn't created during the call."
+        source: "JM-0030"
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    status: "new"
+
+  - id: "JM-FIL-005"
+    titulo: "Prospects Compram para Fugir da Dor, não para Ganhar Benefícios"
+    enunciado: "Prospects don't buy with logic — they buy to escape fear."
+    descricao: >
+      A motivação primária por trás de qualquer compra é emocional — especificamente
+      o desejo de escapar de um estado doloroso ou com medo. Lógica, ROI e features
+      são usados post-hoc para justificar a decisão emocional já tomada. Vendas efetivas
+      acessam o plano emocional primeiro.
+    evidencias:
+      - chunk_id: "JM-chunk_012"
+        quote: "Prospects don't buy with logic — they buy to escape fear."
+        source: "JM-0026"
+      - chunk_id: "JM-chunk_019"
+        quote: "The cost of inaction must be greater than the cost of your product."
+        source: "JM-0054"
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    status: "new"
+
+  - id: "JM-FIL-006"
+    titulo: "Neediness Destrói Vendas — Indiferença Genuína como Estado Correto"
+    enunciado: "When you're genuinely indifferent to whether they buy or not — because you only want it if it's right for them — your energy shifts completely."
+    descricao: >
+      Neediness (necessidade visível do deal) gera o mesmo fight-or-flight que agressividade.
+      O estado correto do vendedor NEPQ é indiferença genuína ao resultado — não postura
+      performática, mas crença real de que só deve fechar se for certo para o prospect.
+      Essa indiferença muda a energia de forma detectável pelo prospect.
+    evidencias:
+      - chunk_id: "JM-chunk_023"
+        quote: "When you're genuinely indifferent to whether they buy or not — because you only want it if it's right for them — your energy shifts completely."
+        source: "JM-0129"
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    status: "new"
+
+  - id: "JM-FIL-007"
+    titulo: "Resistência de Vendas é Sobre a Abordagem, Não o Produto"
+    enunciado: "The moment a prospect identifies you as 'a salesperson trying to sell them something,' their guard goes up automatically."
+    descricao: >
+      Resistência não é sobre o produto — é sobre como o vendedor se apresenta. O momento
+      em que o prospect te identifica como 'vendedor tentando vender', ativa mecanismo de
+      defesa primitivo. A solução não é melhor argumento, mas mudar fundamentalmente como
+      você aparece: como consultor que faz as perguntas certas.
+    evidencias:
+      - chunk_id: "JM-chunk_030"
+        quote: "The moment a prospect identifies you as 'a salesperson trying to sell them something,' their guard goes up automatically."
+        source: "JM-0027"
+      - chunk_id: "JM-chunk_002"
+        quote: "Buyers are liars — because they don't trust you."
+        source: "JM-0003"
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    status: "new"
+
+  - id: "JM-FIL-008"
+    titulo: "Modelo Antigo Luta Contra Resistência; NEPQ a Remove"
+    enunciado: "The old model fights resistance. The new model removes it."
+    descricao: >
+      O paradigma central que distingue NEPQ de vendas tradicionais: o modelo antigo
+      é adversarial — usa rebuttal, closing techniques e scarcity para superar resistência.
+      NEPQ é de eliminação — remove resistência antes que ela exista através de tonalidade
+      certa, perguntas de autodescoberta e framing de consultor.
+    evidencias:
+      - chunk_id: "JM-chunk_026"
+        quote: "The old model fights resistance. The new model removes it."
+        source: "JM-0008"
+      - chunk_id: "JM-chunk_009"
+        quote: "You never pitch. You never push. You never close in the traditional sense."
+        source: "JM-0008"
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    status: "new"
+
+  - id: "JM-FIL-009"
+    titulo: "Crença no Produto como Diferenciador #1 entre Top 1% e os Demais"
+    enunciado: "Prospects buy your belief before they buy your product."
+    descricao: >
+      O que separa o top 1% não é script, produto ou técnica — é crença genuína na
+      transformação que o produto oferece. Se você não acredita que muda vidas, o prospect
+      sente, mesmo com as palavras certas. Autenticidade não é opcional em NEPQ.
+    evidencias:
+      - chunk_id: "JM-chunk_025"
+        quote: "Prospects buy your belief before they buy your product."
+        source: "JM-0005"
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    status: "new"
+
+  - id: "JM-FIL-010"
+    titulo: "Identidade Selling: Vender uma Nova Versão do Prospect, Não um Produto"
+    enunciado: "You are not selling the product, you are selling them a new identity."
+    descricao: >
+      A persuasão mais profunda não é sobre o produto — é sobre a identidade futura do
+      prospect. Quando o vendedor ajuda o prospect a se ver como a pessoa que resolve
+      o problema e atinge a transformação, a compra torna-se um ato de consistência
+      com essa nova identidade, não uma transação.
+    evidencias:
+      - chunk_id: "JM-chunk_015"
+        quote: "You are not selling the product, you are selling them a new identity."
+        source: "JM-0034"
+    prioridade: "HIGH"
+    confianca: "HIGH"
+    status: "new"
