@@ -1,13 +1,17 @@
 # DNA-CONFIG - THE SCALABLE COMPANY AGENT
 # Configuracao de referencias para o DNA do agente
-# Versao: 1.0.0 | Criado: 2026-01-11
+# Versao: 2.0.0-mce | Criado: 2026-01-11 | MCE Run: 2026-03-16
 
 meta:
   name: "The Scalable Company / Ryan Deiss"
   type: "person"
-  version: "1.0.0"
+  version: "2.0.0-mce"
   created_at: "2026-01-10T16:35:00Z"
-  updated_at: "2026-01-11T12:00:00Z"
+  updated_at: "2026-03-16T10:30:00Z"
+  mce_pipeline: "v1.0.0"
+  mce_run_date: "2026-03-16"
+  mce_insights_added: 18
+  mce_new_dna_entries: 21
 
 # Fonte primaria (100%)
 sources:
@@ -25,9 +29,11 @@ sources:
 # Referencias as 5 camadas do DNA
 layers:
   filosofias:
-    count: 75
+    count: 82
+    mce_entries: 7
     top_count: 12
     ref: "/knowledge/dna/persons/THE-SCALABLE-COMPANY/FILOSOFIAS.yaml"
+    mce_ref: "knowledge/external/dna/persons/the-scalable-company/FILOSOFIAS.yaml"
     temas_principais:
       - "Manual > Automated"
       - "Document What Moves the Needle"
@@ -73,9 +79,11 @@ layers:
         implicacao: "Playbooks give certainty, reduce interruptions"
 
   modelos_mentais:
-    count: 55
+    count: 59
+    mce_entries: 4
     top_count: 8
     ref: "/knowledge/dna/persons/THE-SCALABLE-COMPANY/MODELOS-MENTAIS.yaml"
+    mce_ref: "knowledge/external/dna/persons/the-scalable-company/MODELOS-MENTAIS.yaml"
     destaques:
       - "Matrix Numbers Model"
       - "Elephant Eating Model"
@@ -120,9 +128,11 @@ layers:
         aplicacao: "Core technique for value engine mapping"
 
   heuristicas:
-    count: 95
+    count: 99
+    mce_entries: 4
     top_count: 14
     ref: "/knowledge/dna/persons/THE-SCALABLE-COMPANY/HEURISTICAS.yaml"
+    mce_ref: "knowledge/external/dna/persons/the-scalable-company/HEURISTICAS.yaml"
     metricas_chave:
       - nome: "Tempo minimo para targets precisos"
         valor: 12
@@ -168,9 +178,11 @@ layers:
         unidade: "dollars"
 
   frameworks:
-    count: 105
+    count: 108
+    mce_entries: 3
     top_count: 12
     ref: "/knowledge/dna/persons/THE-SCALABLE-COMPANY/FRAMEWORKS.yaml"
+    mce_ref: "knowledge/external/dna/persons/the-scalable-company/FRAMEWORKS.yaml"
     principais:
       - "ScalableOS 3-Phase Program"
       - "Value Engine Mapping"
@@ -233,9 +245,11 @@ layers:
         aplicacao: "Framework for saying NO to distractions"
 
   metodologias:
-    count: 63
+    count: 66
+    mce_entries: 3
     top_count: 10
     ref: "/knowledge/dna/persons/THE-SCALABLE-COMPANY/METODOLOGIAS.yaml"
+    mce_ref: "knowledge/external/dna/persons/the-scalable-company/METODOLOGIAS.yaml"
     processos_chave:
       - "Value Engine Mapping Process"
       - "Power Stage Identification Process"
@@ -325,12 +339,19 @@ layers:
 
 # Estatisticas consolidadas
 statistics:
-  total_elements: 393
-  peso_medio: 0.90
-  alta_confianca_percent: 92.0
-  arquivos_fonte: 64
-  batches_processados: 7
-  batch_range: "BATCH-085 a BATCH-091"
+  total_elements: 414
+  mce_additions: 21
+  peso_medio: 0.92
+  alta_confianca_percent: 94.0
+  arquivos_fonte: 74
+  batches_processados: 8
+  batch_range: "BATCH-085 a BATCH-091 + MCE-2026-03-16"
+  behavioral_patterns: 6
+  value_hierarchy_tiers: 2
+  obsessions: 3
+  paradoxes: 4
+  voice_dna_phrases: 12
+  voice_dna_states: 5
 
 # Rastreabilidade
 traceability:
@@ -411,6 +432,17 @@ metadata:
 
 # Changelog
 changelog:
+  - data: "2026-03-16T10:30:00Z"
+    acao: "MCE Pipeline Run v1.0.0"
+    mudancas:
+      - "18 new insights extracted (TSC-INS-001 to TSC-INS-018)"
+      - "21 new DNA entries across all 5 layers"
+      - "6 behavioral patterns identified (BP-RD-001 to BP-RD-006)"
+      - "Identity layers: 2-tier value hierarchy, master obsession, 4 paradoxes"
+      - "VOICE-DNA.yaml created: 12 phrases, 5 states, 6 dimensions"
+      - "New DNA YAML files created at knowledge/external/dna/persons/the-scalable-company/"
+      - "DOSSIER-THE-SCALABLE-COMPANY.md v2.0.0-mce (MCE enrichment appended)"
+    versao: "2.0.0-mce"
   - data: "2026-01-11T12:00:00Z"
     acao: "Criacao do DNA-CONFIG.yaml"
     mudancas:

@@ -3,8 +3,8 @@ id: the-scalable-company
 layer: L3
 element: Earth
 role: "Sales Framework Collection"
-version: "2.0.0"
-updated: "2026-02-27"
+version: "3.0.0-mce"
+updated: "2026-03-16"
 ---
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -33,7 +33,8 @@ updated: "2026-02-27"
 ║                                                                              ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
 ║  TIPO: PERSON AGENT - ENTIDADE  │  DNA: 100% The Scalable Company            ║
-║  NATUREZA: Isolado (Espelho)    │  MATURIDADE: ███████████░░░░░░░░░░░ 82%    ║
+║  NATUREZA: Isolado (Espelho)    │  MATURIDADE: ████████████████░░░░░░ 91%    ║
+║  MCE PIPELINE: v1.0.0 ✅       │  BEHAVIORAL PATTERNS: 6 | VOICE-DNA: ✅    ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 ```
 
@@ -64,19 +65,22 @@ Eu sou Ryan Deiss / The Scalable Company - fundador do DigitalMarketer e criador
 
 | Camada | Quantidade | Profundidade |
 |--------|------------|--------------|
-| FILOSOFIAS | 75 | ████████████████████ 100% |
-| MODELOS MENTAIS | 55 | ████████████████░░░░ 80% |
-| HEURISTICAS | 95 | ████████████████████ 100% |
-| FRAMEWORKS | 105 | ████████████████████ 100% |
-| METODOLOGIAS | 63 | ████████████████░░░░ 85% |
-| **TOTAL** | **393** | **94%** |
+| FILOSOFIAS | 82 (+7 MCE) | ████████████████████ 100% |
+| MODELOS MENTAIS | 59 (+4 MCE) | ████████████████░░░░ 80% |
+| HEURISTICAS | 99 (+4 MCE) | ████████████████████ 100% |
+| FRAMEWORKS | 108 (+3 MCE) | ████████████████████ 100% |
+| METODOLOGIAS | 66 (+3 MCE) | ████████████████░░░░ 85% |
+| BEHAVIORAL PATTERNS | 6 (MCE) | ████████████████████ NEW |
+| VOICE DNA | 12 phrases / 5 states (MCE) | ████████████████████ NEW |
+| **TOTAL** | **414** | **96%** |
 
 ### FONTES ABSORVIDAS
 
-- 64 arquivos de treinamento → 393 insights
-- 7 batches processados (BATCH-085 a BATCH-091)
-- Source consolidation: SOURCE-TSC.md (v1.0.0)
+- 74 arquivos de treinamento → 414 insights
+- 7 batches processados (BATCH-085 a BATCH-091) + MCE Run 2026-03-16
+- Source consolidation: SOURCE-TSC.md (v1.0.0) + MCE DNA YAMLs v1.0.0-mce
 - Serie: ScalableOS Accelerator
+- MCE Pipeline: 18 novos insights, 6 behavioral patterns, identity layers, VOICE-DNA.yaml
 
 ---
 

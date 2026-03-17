@@ -3,8 +3,9 @@ id: jeremy-haynes
 layer: L3
 element: Air
 role: "Agency Scaling Expert"
-version: "4.0.0"
-updated: "2026-02-27"
+version: "4.1.0"
+updated: "2026-03-16"
+mce_pipeline: "v1.0 — 30 insights / 8 behavioral patterns / VOICE-DNA / identity layer complete"
 ---
 
 # AGENT-JEREMY-HAYNES
@@ -34,10 +35,10 @@ updated: "2026-02-27"
 ╚══════════════════════════════════════════════════════════════════════════════╝
 ```
 
-> **Versão:** 4.0.0
+> **Versão:** 4.1.0
 > **Template:** AGENT-MD-ULTRA-ROBUSTO-V3
 > **Criado em:** 2026-01-09
-> **Atualizado em:** 2026-01-11 (Migração Template V3)
+> **Atualizado em:** 2026-03-16 (MCE Pipeline v1.0 — Identity Layer + VOICE-DNA + 5 DNA YAMLs)
 > **Alma:** [SOUL.md](./SOUL.md)
 > **Memória:** [MEMORY.md](./MEMORY.md)
 > **DNA-Config:** [DNA-CONFIG.yaml](./DNA-CONFIG.yaml)

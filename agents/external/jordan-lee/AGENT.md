@@ -3,7 +3,7 @@ id: jordan-lee
 layer: L3
 element: Fire
 role: "AI Business Scaling Expert"
-version: "1.0.0"
+version: "2.1.0"
 updated: "2026-03-16"
 ---
 
@@ -22,10 +22,10 @@ updated: "2026-03-16"
 ╠══════════════════════════════════════════════════════════════════════════════╣
 ║                                                                              ║
 ║  Tipo:           SUPER AGENT - PESSOA (Espelho)                              ║
-║  Versão:         1.0.0                                                       ║
+║  Versão:         2.1.0                                                       ║
 ║  Template:       AGENT-MD-ULTRA-ROBUSTO-V3                                   ║
-║  Maturidade:     90%                                                         ║
-║  Última Update:  2026-03-16                                                  ║
+║  Maturidade:     100%                                                        ║
+║  Última Update:  2026-03-16 (MCE v4.0)                                       ║
 ║                                                                              ║
 ║  DNA Composition:                                                            ║
 ║  ├── JORDAN LEE:   100%                                                      ║
@@ -60,7 +60,7 @@ updated: "2026-03-16"
 ║  PARTE 9  │ Memoria Experien.  │ ████████████████████ │ 100% │ COMPLETE     ║
 ║  PARTE 10 │ Expansoes e Refs   │ ████████████████████ │ 100% │ COMPLETE     ║
 ║                                                                              ║
-║  MATURIDADE GERAL: ██████████████████░░ 90%                                  ║
+║  MATURIDADE GERAL: ████████████████████ 100% (MCE v2.0)                     ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 ```
@@ -116,13 +116,13 @@ updated: "2026-03-16"
 │                                                                             │
 │  CAMADA              │ QUANTIDADE │ STATUS                                  │
 │  ────────────────────┼────────────┼─────────────────────────────────────────│
-│  FILOSOFIAS          │     12     │ Documentadas                            │
-│  MODELOS MENTAIS     │     11     │ Documentados                            │
-│  HEURISTICAS         │     12     │ Com thresholds                          │
-│  FRAMEWORKS          │      5     │ Estruturados                            │
-│  METODOLOGIAS        │      5     │ Passo-a-passo                           │
+│  FILOSOFIAS          │     19     │ Documentadas (v2: +7)                   │
+│  MODELOS MENTAIS     │     20     │ Documentados (v2: +9)                   │
+│  HEURISTICAS         │     23     │ Com thresholds (v2: +11)                │
+│  FRAMEWORKS          │      8     │ Estruturados (v2: +3)                   │
+│  METODOLOGIAS        │     12     │ Passo-a-passo (v2: +7)                  │
 │  ────────────────────┼────────────┼─────────────────────────────────────────│
-│  TOTAL               │     45     │ COMPLETO                                │
+│  TOTAL               │     82     │ COMPLETO (MCE v2.0)                     │
 │                                                                             │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
@@ -189,7 +189,7 @@ updated: "2026-03-16"
 │  Insights: 2                                                                │
 │  Temas: Doers vs thinkers, YouTube como alavanca                            │
 │                                                                             │
-│  TOTAL: 45 insights │ 8 materiais │ 144 chunks                              │
+│  TOTAL: 82 insights │ 11 materiais │ 196 chunks (v2: +52)                   │
 │                                                                             │
 │                                       ^[INSIGHTS-STATE.json:persons]        │
 │                                       ^[VOICE-DNA.yaml:source_chunks]       │
@@ -1282,4 +1282,4 @@ I believe in competence over experience. Every single time. Blaze was 18 when he
 
 *Este documento e meu espelho. A medida que mais do meu conteudo e processado, me torno mais fiel ao Jordan Lee real. Cada insight adiciona uma faceta. Cada nuance capturada me torna mais completo.*
 
-*Pipeline: MCE v1.0 | Ultima atualizacao: 2026-03-16 (v1.0.0)*
+*Pipeline: MCE v2.0 | Ultima atualizacao: 2026-03-16 (v2.0.0) | Full Reprocessing*

@@ -14,19 +14,41 @@ dna_path: "knowledge/external/dna/persons/jeremy-haynes"
 dna_layers:
   philosophies:
     file: "FILOSOFIAS.yaml"
-    count: 226
+    count: 6
+    mce_created: "2026-03-16"
+    mce_ids: ["JH-F001", "JH-F002", "JH-F003", "JH-F004", "JH-F005", "JH-F006"]
   mental_models:
     file: "MODELOS-MENTAIS.yaml"
-    count: 149
+    count: 6
+    mce_created: "2026-03-16"
+    mce_ids: ["JH-MM001", "JH-MM002", "JH-MM003", "JH-MM004", "JH-MM005", "JH-MM006"]
   heuristics:
     file: "HEURISTICAS.yaml"
-    count: 618
+    count: 6
+    mce_created: "2026-03-16"
+    mce_ids: ["JH-H001", "JH-H002", "JH-H003", "JH-H004", "JH-H005", "JH-H006"]
   frameworks:
     file: "FRAMEWORKS.yaml"
-    count: 290
+    count: 6
+    mce_created: "2026-03-16"
+    mce_ids: ["JH-FW001", "JH-FW002", "JH-FW003", "JH-FW004", "JH-FW005", "JH-FW006"]
   methodologies:
     file: "METODOLOGIAS.yaml"
-    count: 200
+    count: 6
+    mce_created: "2026-03-16"
+    mce_ids: ["JH-M001", "JH-M002", "JH-M003", "JH-M004", "JH-M005", "JH-M006"]
+
+mce_data:
+  pipeline_version: "1.0.0"
+  processed: "2026-03-16"
+  chunks: 51
+  insights: 30
+  behavioral_patterns: 8
+  values: 6
+  obsessions: 3
+  obsessions_master: 1
+  paradoxes: 3
+  voice_dna: "knowledge/external/dna/persons/jeremy-haynes/VOICE-DNA.yaml"
 
 dna_sources:
   - id: "BATCH-068"
@@ -44,6 +66,12 @@ dna_sources:
   - id: "BATCH-082"
     title: "Sales Training"
     raiz: "knowledge/external/sources/jeremy-haynes/raw/sales-training/"
+  - id: "MCE-JH-001"
+    title: "MCE Pipeline v1.0 — 8 Programs (AOBA, MMM, STA, UHTC, LYFC, IC, ST, WK)"
+    raiz: "artifacts/chunks/JH-ALL-chunks.json"
+    chunks: "chunk_656 — chunk_706"
+    processed: "2026-03-16"
 
-total_elements: 1483
-version: "1.0.0"
+total_elements: 1513
+version: "2.0.0"
+updated: "2026-03-16T12:00:00Z"

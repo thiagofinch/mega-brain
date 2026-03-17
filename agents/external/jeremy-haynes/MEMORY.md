@@ -283,6 +283,61 @@ Este arquivo armazena o histórico factual, marcos de carreira, e evolução do 
 
 ---
 
+---
+
+## ◆ MCE PIPELINE UPDATE (v1.0 — 2026-03-16)
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  MCE PIPELINE v1.0 — 2026-03-16                                             │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  FONTES PROCESSADAS (8 programas):                                          │
+│  JH-AOBA: Agency Owner Black Academy                                        │
+│  JH-MMM: Million Money Mindset                                              │
+│  JH-STA: Sales Training Academy                                             │
+│  JH-UHTC: Ultra High Ticket Closing                                         │
+│  JH-LYFC: Lead Your First Client                                            │
+│  JH-IC: Inner Circle                                                        │
+│  JH-ST: Sales Training                                                      │
+│  JH-WK: Weekly Calls                                                        │
+│                                                                             │
+│  EXTRACTION RESULTS:                                                        │
+│  ├── 51 chunks (chunk_656 — chunk_706)                                      │
+│  ├── 30 insights (6 por camada DNA)                                         │
+│  ├── 8 behavioral patterns (BP-JH-001 a BP-JH-008)                         │
+│  ├── 6 values (3 Tier 1, 3 Tier 2)                                          │
+│  ├── 3 obsessions (1 MASTER: Autoridade Irrefutável)                        │
+│  ├── 3 productive paradoxes                                                 │
+│  └── VOICE-DNA.yaml criado                                                  │
+│                                                                             │
+│  DNA YAMLs (5 novos arquivos, 6 entradas cada):                             │
+│  ├── FILOSOFIAS.yaml    ← JH-F001 a JH-F006                                 │
+│  ├── MODELOS-MENTAIS.yaml ← JH-MM001 a JH-MM006                            │
+│  ├── HEURISTICAS.yaml   ← JH-H001 a JH-H006                                │
+│  ├── FRAMEWORKS.yaml    ← JH-FW001 a JH-FW006                              │
+│  └── METODOLOGIAS.yaml  ← JH-M001 a JH-M006                               │
+│                                                                             │
+│  TOTAL ATUALIZADO:                                                          │
+│  2,280 → 2,310 elementos (+30 MCE insights)                                 │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+### Key Decisional Patterns (MCE-extracted)
+
+**BP-JH-001: Proof-First Communicator** — Nunca faz claim sem evidência específica primeiro. Gatilho: qualquer pergunta sobre capacidade, resultados ou legitimidade. Resposta: número específico + caso concreto antes de qualquer claim genérico.
+
+**BP-JH-002: Authority Hijacker** — Quando entra em novo mercado ou nicho, associa-se estrategicamente com players reconhecidos antes de construir autoridade própria.
+
+**BP-JH-003: Systems-Before-Scale** — Antes de escalar qualquer coisa, verifica se o sistema subjacente aguenta. "Se o sistema não existe, escalar apenas amplifica o caos."
+
+**BP-JH-004: Reframe-to-Economics** — Quando encontra objeção de preço, reencadra para ROI. "Não é custo, é investimento com X retorno projetado."
+
+**BP-JH-005: Gap-Creation for Urgency** — Cria urgência mostrando o gap (não pressão artificial). Deixa o prospect verbalizar o custo de não agir.
+
+---
+
 ## ◆ PRÓXIMAS EVOLUÇÕES PLANEJADAS
 
 - [ ] Adicionar exemplos de campanhas por vertical (SaaS, Coaching, E-com)

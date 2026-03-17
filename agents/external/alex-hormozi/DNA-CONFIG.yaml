@@ -14,21 +14,24 @@ dna_path: "knowledge/external/dna/persons/alex-hormozi"
 dna_layers:
   philosophies:
     file: "FILOSOFIAS.yaml"
-    count: 37
+    count: 49
   mental_models:
     file: "MODELOS-MENTAIS.yaml"
-    count: 30
+    count: 44
   heuristics:
     file: "HEURISTICAS.yaml"
-    count: 83
+    count: 101
   frameworks:
     file: "FRAMEWORKS.yaml"
-    count: 63
+    count: 71
   methodologies:
     file: "METODOLOGIAS.yaml"
-    count: 47
+    count: 62
   voice_dna:
     file: "VOICE-DNA.yaml"
+    version: "2.0.0"
+    signature_phrases: 12
+    behavioral_states: 4
 
 dna_sources:
   - id: "AH-SS001"
@@ -46,6 +49,31 @@ dna_sources:
     title: "CLOSER Framework + Team Scaling"
   - id: "BATCH-128"
     title: "No-Based Questions + Core Four + Price Raising"
+  - id: "MCE-AH-2026-03-16"
+    title: "MCE Pipeline Full Extraction — 16 YouTube sources (AH-0001 to AH-0019)"
+    chunks: 52
+    insights: 67
+    behavioral_patterns: 10
+    voice_dna_phrases: 12
+  - id: "MCE-AH-2026-03-16-R2"
+    title: "MCE Pipeline Re-Run (MODO AUTONOMO) — full 12 steps, identity checkpoint auto-approved"
+    chunks: 52
+    insights: 67
+    behavioral_patterns: 10
+    voice_dna_phrases: 12
+    note: "Re-run confirms all R1 extraction. DNA YAMLs v2.1, dossier v9.0.0, MEMORY v4.0.0."
 
-total_elements: 260
-version: "1.0.0"
+identity_core:
+  master_obsession: "Democratização da Riqueza via Sistemas de Vendas Replicáveis"
+  obsession_intensity: 10
+  value_hierarchy_tier1:
+    - "Maestria via Volume (9.8)"
+    - "Convicção como Fundamento Inegociável (9.5)"
+    - "Clareza Acima de Elegância (9.2)"
+    - "Riqueza como Ato de Serviço (9.0)"
+  behavioral_patterns: 10
+  paradoxes: 4
+
+total_elements: 327
+version: "2.1.0"
+updated: "2026-03-16"

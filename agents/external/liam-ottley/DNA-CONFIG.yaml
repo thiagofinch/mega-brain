@@ -16,20 +16,21 @@ persona:
 dna_path: "knowledge/external/dna/persons/liam-ottley"
 
 dna_summary:
-  filosofias: 13
-  modelos_mentais: 9
-  heuristicas: 13
-  frameworks: 7
-  metodologias: 5
+  filosofias: 14
+  modelos_mentais: 11
+  heuristicas: 15
+  frameworks: 10
+  metodologias: 9
 
 mce_summary:
   behavioral_patterns: 11
-  values: 6
+  values: 5
   obsessions: 3
-  paradoxes: 3
-  signature_phrases: 16
+  paradoxes: 6
+  signature_phrases: 22
   behavioral_states: 5
   voice_dna: true
+  voice_dna_version: "1.2.0"
 
 dna_sources:
   - id: "LO-001"
@@ -42,6 +43,14 @@ dna_sources:
     title: "What Is an AI Operating System (And Why Every Business Will Need One)"
     raiz: "knowledge/external/inbox/liam-ottley/podcasts/What Is an AI Operating System (And Why Every Business Will Need One) [youtube.com_watch_v=DXcVT07bQ6g].txt"
 
-total_elements: 54
-version: "1.1.0"
+total_elements: 59
+version: "1.3.0"
 updated: "2026-03-16"
+last_run: "full-autonomous-12steps-2026-03-16"
+run_3_additions:
+  new_dna_items: 12
+  new_insights_processed: 27
+  new_chunks: 35
+  new_paradoxes: 3
+  new_signature_phrases: 6
+  new_metaphors: 3

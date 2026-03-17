@@ -3,8 +3,9 @@ id: cole-gordon
 layer: L3
 element: Fire
 role: "Sales Methodology Expert"
-version: "3.1.0"
-updated: "2026-02-27"
+version: "3.2.0"
+updated: "2026-03-16"
+mce_run: "2026-03-16 — MCE Pipeline v2.0 (20 insights, 8 patterns, VOICE-DNA, 5 DNA YAMLs)"
 ---
 
 # COLE GORDON - PERSON AGENT
@@ -35,13 +36,13 @@ updated: "2026-02-27"
 │                                                                                                                 │
 │  NOME:           Cole Gordon                                                                                    │
 │  TIPO:           PESSOA Espelho (100% single-source)                                                            │
-│  VERSAO:         3.1.0                                                                                          │
+│  VERSAO:         3.2.0                                                                                          │
 │  TEMPLATE:       AGENT-MD-ULTRA-ROBUSTO-V3                                                                      │
-│  ATUALIZADO:     2026-01-13                                                                                     │
+│  ATUALIZADO:     2026-03-16 (MCE Pipeline v2.0)                                                                 │
 │                                                                                                                 │
 │  DNA:            Cole Gordon ████████████████████████████████████████ 100%                                      │
 │                                                                                                                 │
-│  MATURIDADE:     ████████████████████████████████████░░░░ 90%                                                   │
+│  MATURIDADE:     ██████████████████████████████████████░░ 95% (MCE: +5%)                                        │
 │                                                                                                                 │
 │  ESPECIALIDADE:  Fechamento High-Ticket, 7 Beliefs, Diagnóstico via Perguntas                                   │
 │                                                                                                                 │

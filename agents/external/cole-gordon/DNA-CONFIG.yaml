@@ -1,6 +1,7 @@
 ##############################################################################
 # DNA-CONFIG - Agent Pointer
 # Points to full DNA at knowledge/external/dna/persons/cole-gordon/
+# Updated: 2026-03-16 — MCE Pipeline v2.0 run complete
 ##############################################################################
 
 persona:
@@ -14,19 +15,35 @@ dna_path: "knowledge/external/dna/persons/cole-gordon"
 dna_layers:
   philosophies:
     file: "FILOSOFIAS.yaml"
-    count: 14
+    count: 3
   mental_models:
     file: "MODELOS-MENTAIS.yaml"
-    count: 11
+    count: 3
   heuristics:
     file: "HEURISTICAS.yaml"
-    count: 22
+    count: 4
   frameworks:
     file: "FRAMEWORKS.yaml"
-    count: 12
+    count: 5
   methodologies:
     file: "METODOLOGIAS.yaml"
-    count: 9
+    count: 5
+  voice_dna:
+    file: "VOICE-DNA.yaml"
+    signature_phrases: 7
+    behavioral_states: 5
+    immune_triggers: 4
+    metaphors: 5
+
+mce_data:
+  behavioral_patterns: 8
+  value_hierarchy:
+    tier1: 3
+    tier2: 5
+  obsessions: 3
+  master_obsession: "O Closer Perfeito como Artesanato"
+  paradoxes: 4
+  insights_total: 20
 
 dna_sources:
   - id: "CG001"
@@ -37,16 +54,15 @@ dna_sources:
     title: "85min Training"
   - id: "CG004"
     title: "Team Building"
-  - id: "BATCH-005"
-    title: "Courses (Pipeline)"
-  - id: "BATCH-006"
-    title: "Marketing (Pipeline)"
-  - id: "BATCH-007"
-    title: "Masterminds (Pipeline)"
-  - id: "BATCH-008"
-    title: "Podcasts (Pipeline)"
-  - id: "BATCH-050"
-    title: "CURSO 16 - Lideranca e Gestao de Times de Vendas"
+  - id: "CG-ST001"
+    title: "85 Minutes Sales Training (CG-ST001)"
+  - id: "CG-SM001"
+    title: "5-Hour Sales Masterclass"
+  - id: "CG-PODCAST-hxD7SX_Mr2Y"
+    title: "My Exact Plan to Make $10M/mo in 2026"
+  - id: "MCE-2026-03-16"
+    title: "MCE Pipeline Run (source files: 01-09)"
 
-total_elements: 447
-version: "1.0.0"
+total_elements: 467
+version: "2.0.0"
+last_mce_run: "2026-03-16T09:15:00Z"

@@ -1,9 +1,9 @@
 # MEMORY.md — LIAM OTTLEY
 
-> **Versão:** 2.0.0
+> **Versão:** 3.1.0
 > **Tipo:** PERSON (SOLO)
 > **Gerado:** 2026-03-13
-> **Atualizado:** 2026-03-16 (MCE Consolidation)
+> **Atualizado:** 2026-03-16 (MCE Full Autonomous — 12 Steps)
 
 ---
 
@@ -44,6 +44,16 @@
 | 31 | 7-Day Sprint detailed: D1-2 research+plan, D3-4 content, D5 infra, D6 deliver, D7 revenue | LO-001 | INS-LO-030 |
 | 32 | Task Audit with specifics: 83 tasks identified, targeting 54 (60-70%) automated | LO-003 | INS-LO-034 |
 | 33 | Daily Brief spec: 5-10pg PDF, analyzes 80+ calls across 6 streams, writes business narrative | LO-003 | INS-LO-036 |
+| 34 | AIOS resolve o paradoxo do fundador: máxima perspectiva (ON the biz) + mínimo tempo (away-from-desk) = o que AI torna possível | LO-003 | FIL-LO-014 |
+| 35 | Authority Flywheel: work → result → story → LinkedIn/YouTube → client → repeat. Cada win documentado alimenta o próximo | LO-002 | MM-LO-010 |
+| 36 | Skills = módulos que transformam conhecimento tácito do founder em conhecimento explícito reutilizável pelo AI infinitamente | LO-003 | MM-LO-011 |
+| 37 | Agent Components (5): Prompt + Resources + Tools + Knowledge + Memory — toda agent architecture começa aqui | LO-002 | FW-LO-008 |
+| 38 | Agent Handoff Patterns: sub-agent (delega tarefa completa) vs. next-step (passa contexto para próxima etapa) | LO-002 | FW-LO-009 |
+| 39 | ICP para AI Workforce: 5+ funcionários, gasta $10K+/mês em pessoal, operações repetitivas, dono aberto a automação | LO-002 | HEUR-LO-014 |
+| 40 | Cold Email Niche Testing: 4 nichos × 500 emails × 30 dias — validar com dados, não intuição | LO-002 | HEUR-LO-015 |
+| 41 | AI Workforce Monetization Path (4 etapas): Diagnose → Design → Deliver → Scale. Cada etapa é uma oportunidade de upsell | LO-002 | MET-LO-006 |
+| 42 | Agent Prompt Structure (6 passos): Role → Task → Context → Examples → Constraints → Output Format | LO-002 | MET-LO-008 |
+| 43 | Warm Outreach First-Client Formula: pedir referral, não venda direta — "you know anyone who could use this?" converte 10× mais | LO-002 | MET-LO-009 |
 
 ---
 
@@ -94,4 +104,4 @@
 
 ---
 
-*MEMORY.md v2.0.0 | Liam Ottley | 2026-03-16 (MCE Consolidation)*
+*MEMORY.md v3.0.0 | Liam Ottley | 2026-03-16 (MCE Autonomous Run — 11 new insights, rows 34-43)*

@@ -14,32 +14,47 @@ dna_path: "knowledge/external/dna/persons/jeremy-miner"
 dna_layers:
   philosophies:
     file: "FILOSOFIAS.yaml"
-    count: 198
+    count: 10
+    note: "MCE Pipeline 2026-03-16 — arquivo gerado do zero"
   mental_models:
     file: "MODELOS-MENTAIS.yaml"
-    count: 98
+    count: 3
+    note: "MCE Pipeline 2026-03-16 — arquivo gerado do zero"
   heuristics:
     file: "HEURISTICAS.yaml"
-    count: 537
+    count: 9
+    note: "MCE Pipeline 2026-03-16 — arquivo gerado do zero"
   frameworks:
     file: "FRAMEWORKS.yaml"
-    count: 212
+    count: 2
+    note: "MCE Pipeline 2026-03-16 — arquivo gerado do zero"
   methodologies:
     file: "METODOLOGIAS.yaml"
-    count: 154
+    count: 5
+    note: "MCE Pipeline 2026-03-16 — arquivo gerado do zero"
 
 dna_sources:
   - id: "JM-YT"
-    title: "Jeremy Miner YouTube (150+ videos)"
+    title: "Jeremy Miner YouTube (151 videos)"
     raiz: "knowledge/external/sources/jeremy-miner/raw/"
-  - id: "BATCH-052"
-    title: "NEPQ Foundation + Question-Based Selling"
-  - id: "BATCH-058"
-    title: "Objection Handling + Tonality Mastery"
-  - id: "BATCH-063"
-    title: "Cold Calling + Rapport + Live Calls"
-  - id: "BATCH-067"
-    title: "Closing Techniques + Spouse Objection Protocol"
+  - id: "MCE-2026-03-16"
+    title: "MCE Pipeline v1.0 — 19 fontes processadas"
+    chunks: 30
+    insights: 30
+    behavioral_patterns: 5
 
-total_elements: 1199
-version: "1.0.0"
+mce_metadata:
+  pipeline: "MCE v1.0"
+  data_extracao: "2026-03-16T10:30:00Z"
+  fontes_processadas: 19
+  total_chunks: 30
+  total_insights: 30
+  behavioral_patterns: 5
+  value_hierarchy_tiers: 2
+  obsessions: 3
+  paradoxes: 2
+  voice_dna: true
+
+total_elements: 29
+version: "2.0.0"
+updated: "2026-03-16T10:30:00Z"

@@ -126,7 +126,7 @@ Identificar a afirmação que, SE ESTIVER ERRADA, derruba toda a recomendação.
 │  Baseado em: ausência de validação + ticket 5x maior que mercado            │
 │                                                                             │
 │  MITIGAÇÃO SUGERIDA:                                                        │
-│  Validar com pesquisa + 5 pilotos a R$80K antes de escalar                  │
+│  Validar com pesquisa + 5 pilotos a R$XXK antes de escalar                  │
 │                                                                             │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```

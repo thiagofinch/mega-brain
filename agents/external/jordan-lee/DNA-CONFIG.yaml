@@ -16,52 +16,71 @@ nature: ISOLADO
 type: SUPER_AGENT_PESSOA
 layer: L3
 
-source_count: 8
-chunk_count: 144
-chunk_range: chunk_700 to chunk_843
-insight_count: 45
+source_count: 12
+chunk_count: 244
+chunk_range_v1: chunk_700 to chunk_843
+chunk_range_v2: chunk_JL_001 to chunk_JL_052
+chunk_range_v4: JL-C-001 to JL-C-048
+insight_count: 82
 
 dna_layers:
-  filosofias: 12
-  modelos_mentais: 11
-  heuristicas: 12
-  frameworks: 5
-  metodologias: 5
-  total: 45
+  filosofias: 22
+  modelos_mentais: 19
+  heuristicas: 20
+  frameworks: 9
+  metodologias: 12
+  total: 82
 
 voice_dna: true
 voice_dna_path: knowledge/external/dna/persons/jordan-lee/VOICE-DNA.yaml
+voice_dna_version: "2.1.0"
 
-behavioral_patterns: 11
+behavioral_patterns: 6
 value_hierarchy:
   tier_1: 3
-  tier_2: 4
-  total: 7
+  tier_2: 2
+  total: 5
 
 obsessions:
   master: 1
   active: 2
   total: 3
 
-paradoxes: 4
+paradoxes: 3
 
 tone_profile:
-  directness: 10
-  certainty: 9
-  authority: 9
-  warmth: 7
-  teaching_focus: 8
-  confidence: 9
+  directness: 10.0
+  certainty: 9.2
+  authority: 9.0
+  warmth: 7.0
+  teaching_focus: 8.0
+  confidence: 9.5
 
 sources:
   - id: JL-SRC-01
     title: Estrutura de Time
     type: course
     insights: 5
+  - id: JL-SRC-02
+    title: AI Business Model
+    type: course
+    insights: 8
   - id: JL-SRC-03
     title: Contratacao e Hiring
     type: course
-    insights: 3
+    insights: 5
+  - id: JL-SRC-05
+    title: Metricas e Benchmarks
+    type: course
+    insights: 6
+  - id: JL-SRC-06
+    title: Enterprise Value
+    type: course
+    insights: 4
+  - id: JL-SRC-07
+    title: Coaching e Mastermind
+    type: course
+    insights: 7
   - id: JL-SRC-09
     title: Gestao e Lideranca
     type: course
@@ -70,22 +89,25 @@ sources:
     title: Cultura e Performance
     type: course
     insights: 6
-  - id: JL-YT-001
-    title: BUILDING A 20K MO AI BUSINESS
-    type: youtube
-    insights: 11
-  - id: JL-YT-002
-    title: BUILDING A 3000000 AI BUSINESS
-    type: youtube
+  - id: JL-SRC-11
+    title: Lifestyle e Mindset
+    type: course
+    insights: 5
+  - id: JL-YT-v2-NOBODY
+    title: WHAT NOBODY TELLS YOU About Building an AI Business
+    type: youtube_v2
+    chunks: chunk_JL_001 to chunk_JL_030
+    insights: 17
+  - id: JL-YT-v2-20K
+    title: BUILDING A 20K MO AI BUSINESS FROM SCRATCH
+    type: youtube_v2
+    chunks: chunk_JL_031 to chunk_JL_052
+    insights: 15
+  - id: JL-YT-HOW-QUIT-9-5
+    title: HOW HE QUIT HIS 9-5 TO MAKE $45,000 PER MONTH WITH AI
+    type: youtube_v4
+    chunks: JL-C-001 to JL-C-048
     insights: 12
-  - id: JL-YT-003
-    title: HOW HE QUIT HIS 9-5 TO MAKE 45000 PER MONTH WITH AI
-    type: youtube
-    insights: 2
-  - id: JL-YT-006
-    title: 10 MILLIONAIRES REVEAL HOW THEY GOT RICH
-    type: youtube
-    insights: 2
 
 signature_phrases:
   - Play to win, not play not to lose
@@ -96,16 +118,20 @@ signature_phrases:
   - That's great / This is great
   - Buy back time
   - Massive action
+  - Two hires and ads away
+  - The boat matters more than how hard you row
+  - Launch within a week
 
-forbidden_words:
-  - Vou pensar
-  - Amostragem
-  - Vamos dar mais uma chance
+immune_triggers:
+  - Vou pensar / Vamos marcar pra discutir
   - Precisamos de mais experiencia
-  - Vamos marcar reuniao pra discutir
+  - Sampling / Amostragem
+  - Dar mais uma chance
+  - Poderia ser melhor
+  - E complicado
 
-pipeline: MCE v1.0
+pipeline: MCE v4.0
 template: AGENT-MD-ULTRA-ROBUSTO-V3
-version: 1.0.0
+version: 2.1.0
 created: '2026-03-16'
 updated: '2026-03-16'
