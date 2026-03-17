@@ -6,13 +6,13 @@ phases:
     ended: '2026-03-14T23:49:16.135329+00:00'
     duration_seconds: 0.0
   batch_creation:
-    started: '2026-03-14T23:49:22.236811+00:00'
-    ended: '2026-03-14T23:49:22.244879+00:00'
+    started: '2026-03-16T09:38:50.418222+00:00'
+    ended: '2026-03-16T09:38:50.425496+00:00'
     duration_seconds: 0.0
   finalization:
-    started: '2026-03-16T02:43:40.260644+00:00'
-    ended: '2026-03-16T02:43:40.265860+00:00'
-    duration_seconds: 0.0
+    started: '2026-03-16T09:48:25.648353+00:00'
+    ended: '2026-03-16T09:48:27.040407+00:00'
+    duration_seconds: 1.4
 total:
-  duration_seconds: 0.0
+  duration_seconds: 1.4
   phases_completed: 3

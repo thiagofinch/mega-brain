@@ -874,7 +874,7 @@ def main():
 
         # === REGISTRAR SESSÃO ===
         project_dir = get_project_dir()
-        log_path = Path(project_dir) / "logs" / "sessions"
+        log_path = Path(project_dir) / "logs" / "sessions" / "start"
         log_path.mkdir(parents=True, exist_ok=True)
 
         session_log = {

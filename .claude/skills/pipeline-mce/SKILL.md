@@ -50,6 +50,73 @@ After completing each step (3-10), display an inline status panel to the user:
 Do NOT rely on hook feedback for display — hooks are invisible to the user.
 The skill itself must print status after each step completes.
 
+**RULE 3 — QA GATE after every step (MANDATORY).**
+After completing each step (1-11), run the automated QA gate BEFORE proceeding.
+This is NON-NEGOTIABLE. The QA gate verifies that the step actually produced
+what it claims. Without QA, code gets written but never wired (see: gotchas-memory.js
+incident — Epic 9 was coded but never activated because no QA validated the hook).
+
+**Primary method (automated):**
+Run this command after each step N completes:
+```bash
+python3 -c "
+import json
+from core.intelligence.pipeline.mce.qa_gates import validate_step
+result = validate_step({N}, '{SLUG}')
+print(json.dumps(result, indent=2, default=str))
+"
+```
+
+Replace `{N}` with the step number (1-11) and `{SLUG}` with the person slug
+(e.g., `alex-hormozi`). These are the same variables used throughout SKILL.md steps.
+
+Parse the JSON output:
+- If `"passed": true` — proceed to next step
+- If `"passed": false` — check `"blocking_failures"` list
+  - Fix each blocking failure before proceeding
+  - If fix fails 3 times — SURFACE to user with error details
+  - Do NOT proceed to step N+1 until gate passes
+
+**Fallback method (if qa_gates.py not installed):**
+If the automated gate fails with ImportError or ModuleNotFoundError, use this manual
+checklist instead:
+
+| Step | QA Validates |
+|------|-------------|
+| 1 INGEST | File moved to correct bucket? Output JSON has `success: true`? |
+| 2 BATCH | Batches created > 0? Files above threshold? |
+| 3 CHUNK | CHUNKS-STATE.json exists? chunks[] non-empty? All chunk_ids unique? |
+| 4 ENTITY | CANONICAL-MAP.json updated? Source person has entry? |
+| 5 INSIGHT | INSIGHTS-STATE.json has person entry? insights[] non-empty? Each has chunks[]? |
+| 6 BEHAVIORAL | behavioral_patterns field exists? Each pattern has 2+ chunk_ids? |
+| 7 IDENTITY | value_hierarchy has Tier 1? Exactly 1 MASTER obsession? |
+| 8 VOICE | VOICE-DNA.yaml exists? Has signature_phrases + behavioral_states + dimensions? |
+| 9 CHECKPOINT | User explicitly typed APPROVE/1? |
+| 10 CONSOLIDATE | ALL 6 sub-steps ran? Dossier exists? 5/5 DNA YAMLs? Agent files? Cross-ref PASS? |
+| 11 FINALIZE | enrichment.appended > 0? State is complete? Log file written? |
+
+**QA Gate display format (show after each step's Raio-X panel):**
+
+```
+  QA GATE — STEP {N}                    [AUTOMATED]
+  [pass] {check_1_name}: {detail}
+  [pass] {check_2_name}: {detail}
+  [FAIL] {check_3_name}: {detail} <-- BLOCKS PIPELINE
+  Result: PASS ({passed}/{total}) | FAIL ({passed}/{total} — fix before proceeding)
+```
+
+When using the fallback manual checklist, replace `[AUTOMATED]` with `[MANUAL]`
+in the display format above.
+
+**RULE 4 — Chronicler Log accumulates progressively.**
+After each step's QA Gate passes, append the step's metrics to the session log file
+at `logs/mce/{SLUG}/MCE-{TAG}-SESSION-{DATE}.md` using Chronicler Design System
+(120 chars, nested boxes). The log grows incrementally — each step ADDS a section,
+never rewrites previous sections. Use **Write tool with append** or **Edit tool**.
+
+This ensures that even if the pipeline crashes mid-run, all completed steps
+have their visual log preserved.
+
 ### STEP 0: DETECT INPUT
 
 Read the user's message to determine:
@@ -260,8 +327,14 @@ One file grows over time across all pipeline runs.
 
 5. **MERGE** new insights with existing ones:
    - For each person already in `persons`, append new insights to their array.
-   - For new persons, add a new entry to `persons`.
+   - For new persons, add a new entry to `persons` with a `slug` field
+     (kebab-case, e.g. `"slug": "alex-hormozi"`).
    - Dedup by `chunk_id`: skip insights whose `chunk_id` already exists.
+   - **MANDATORY:** Every insight in the flat `insights` array MUST include
+     a `person` field with the display name (e.g. `"person": "Alex Hormozi"`).
+     Every person entry in `persons` MUST include a `slug` field.
+     The memory enricher converts `person` → `person_slug` automatically,
+     but the data must be present.
 
 6. Save MERGED output using the **Write** tool to:
    ```
@@ -651,6 +724,174 @@ After displaying the completion report, OUTPUT this exact block:
   Progress: [========================] 12/12 steps
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
+
+---
+
+## OUTPUT TEMPLATES — DYNAMIC RENDERING RULES
+
+The MCE pipeline has TWO visual layers that work together:
+
+- **Micro-panels** (per-step, automatic): The `mce_step_logger.py` hook fires on every Write
+  to MCE artifacts and renders a PW=62 ASCII panel as hook feedback. These are machine-generated
+  and invisible to the user (hook feedback goes to internal logs only).
+
+- **Output templates** (checkpoint, manual): Claude reads and renders templates from
+  `core/templates/output/MCE-OUTPUT-TEMPLATES.md` at specific checkpoints during the pipeline.
+  These ARE visible — they appear directly in the chat as rendered ASCII panels (RW=72).
+
+### Template Source
+
+```
+core/templates/output/MCE-OUTPUT-TEMPLATES.md
+```
+
+7 templates, 814 lines, RW=72 inner width. Read this file ONCE at pipeline start
+and cache the section boundaries. Each template is inside a fenced code block (```).
+
+### Rendering Rules — WHEN to Show Each Template
+
+| Trigger Point | Template # | Template Name | Condition |
+|---------------|-----------|---------------|-----------|
+| After Step 5 completes | 1 | EXTRACTION SUMMARY | ALWAYS — shows DNA delta, files, top insights |
+| After Step 10.5 (agent files) | 2 | PERSON AGENT | ALWAYS — shows agent card, 11 parts, connections |
+| After Step 10.5 (if cargo enriched) | 3 | CARGO AGENT ENRICHMENT | IF cargo agents were created or enriched |
+| After Step 10.4 (theme dossiers) | 4 | THEME DOSSIER | IF any theme dossier was created or updated |
+| After Step 11 (finalize) | 5 | WORKSPACE SYNC | IF workspace items were synced (enrichment.appended > 0) |
+| After Step 12 (report) | 6 | VALIDATION GATE | ALWAYS — final checklist + resumo da fonte |
+| End of multi-source session | 7 | SESSION CONSOLIDATION | IF 2+ sources processed in same session |
+
+### Rendering Rules — HOW to Fill Templates
+
+**Step 1: Read the template block.**
+Extract the code-fenced block for the target template number from MCE-OUTPUT-TEMPLATES.md.
+
+**Step 2: Collect real data.**
+Read the relevant artifact files to get actual numbers:
+
+| Template | Data Sources |
+|----------|-------------|
+| 1 EXTRACTION SUMMARY | INSIGHTS-STATE.json (counts by tag), CHUNKS-STATE.json (chunk count), DNA YAMLs (element counts) |
+| 2 PERSON AGENT | Agent files (AGENT.md line count, parts), DNA-CONFIG.yaml (composition), AGENT-INDEX.yaml |
+| 3 CARGO ENRICHMENT | AGENT-INDEX.yaml (cargo agents), DNA-CONFIG.yaml (weights before/after) |
+| 4 THEME DOSSIER | Dossier files (section counts before/after), _INDEX.md |
+| 5 WORKSPACE SYNC | orchestrate.py finalize output (enrichment counts, workspace sync counts) |
+| 6 VALIDATION GATE | All artifacts (checklist validation), cumulative metrics |
+| 7 SESSION CONSOLIDATION | All person slugs processed, AGENT-INDEX.yaml, all dossiers |
+
+**Step 3: Replace placeholders.**
+Every `{PLACEHOLDER}` in the template must be replaced with real data. Rules:
+
+- `{BAR_20}` — Generate using: `"█" * int(pct/100*20) + "░" * (20 - int(pct/100*20))`
+- `{BAR_30}` — Same logic with width 30
+- `{N_ANTES}` / `{N_DEPOIS}` — Read from previous state vs current state. If greenfield (first run), ANTES = 0
+- `{DELTA}` — Always show with sign: `+13`, `-2`, or `0`
+- `{%}` — Percentage of that layer relative to total elements
+- `{SLUG_UPPER}` — `slug.upper().replace("-", " ")`
+- `{BUCKET_ICON}` — `📚 EXTERNAL` or `🏢 BUSINESS` or `🧠 PERSONAL`
+- `{HH:MM}` — Current time
+- Progress bar at bottom — Update S00-S12 markers: `●` done, `◉` current, `○` pending
+
+**Step 4: Render in chat.**
+Print the filled template directly. Do NOT wrap in additional code fences.
+The template already uses Unicode box-drawing characters that render correctly in the terminal.
+
+### Rendering Rules — WHAT NEVER TO DO
+
+```
+NEVER skip a template that the trigger condition says ALWAYS
+NEVER show a template with unfilled {PLACEHOLDER} variables
+NEVER abbreviate or summarize a template — show it COMPLETE
+NEVER show Template 7 (SESSION CONSOLIDATION) for single-source runs
+NEVER show templates for steps that were SKIPPED or FAILED
+NEVER wrap the rendered template in markdown code fences (```) — print raw
+```
+
+### Rendering Rules — COEXISTENCE WITH MICRO-PANELS
+
+The hook-generated micro-panels (PW=62) and the output templates (RW=72) serve different purposes:
+
+| Aspect | Micro-Panel (Hook) | Output Template (Skill) |
+|--------|-------------------|------------------------|
+| Width | PW=62 (66 total) | RW=72 (78 total) |
+| Trigger | Every Write to MCE artifact | Specific checkpoint moments |
+| Visibility | Internal (hook feedback log) | User-facing (chat output) |
+| Content | Single-step metrics snapshot | Cross-step summary with deltas |
+| Who renders | `mce_step_logger.py` (Python) | Claude (reads template + fills) |
+
+Both fire independently. The micro-panel logs to JSONL for audit. The output template
+shows in chat for the user. They do NOT conflict — they complement.
+
+### Rendering Rules — STEP-BY-STEP PANEL + TEMPLATE SEQUENCE
+
+During a full pipeline run, the user sees this sequence:
+
+```
+Step 0: DETECT INPUT
+  → Inline status panel (RULE 2)
+
+Step 1: INGEST
+  → Inline status panel
+
+Step 2: BATCH
+  → Inline status panel
+
+Step 3: CHUNK
+  → Inline status panel
+  (hook: micro-panel fires silently on CHUNKS-STATE.json write)
+
+Step 4: ENTITY RESOLUTION
+  → Inline status panel
+  (hook: micro-panel fires silently on CANONICAL-MAP.json write)
+
+Step 5: INSIGHT EXTRACTION
+  → Inline status panel
+  → ★ TEMPLATE 1: EXTRACTION SUMMARY (DNA delta, files, top insights)
+
+Step 6: MCE BEHAVIORAL
+  → Inline status panel
+
+Step 7: MCE IDENTITY
+  → Inline status panel
+
+Step 8: MCE VOICE
+  → Inline status panel
+
+Step 9: IDENTITY CHECKPOINT
+  → PAUSE — show checkpoint display, wait for user
+
+Step 10: CONSOLIDATION (6 sub-steps)
+  → After 10.1-10.3: inline status
+  → After 10.4 (theme dossiers): ★ TEMPLATE 4: THEME DOSSIER (if any created/updated)
+  → After 10.5 (agent files): ★ TEMPLATE 2: PERSON AGENT
+  → After 10.5 (if cargo): ★ TEMPLATE 3: CARGO AGENT ENRICHMENT
+  → After 10.6 (validation): inline status
+  → Consolidation complete panel
+
+Step 11: FINALIZE
+  → Inline status panel
+  → ★ TEMPLATE 5: WORKSPACE SYNC (if enrichment.appended > 0)
+
+Step 12: REPORT
+  → ★ TEMPLATE 6: VALIDATION GATE (always — final checklist)
+  → Completion report
+
+End of Session (if multi-source):
+  → ★ TEMPLATE 7: SESSION CONSOLIDATION
+```
+
+### Template Rendering — Practical Example
+
+After Step 5 completes for slug `pedro-valerio` in bucket `business`:
+
+1. Read `core/templates/output/MCE-OUTPUT-TEMPLATES.md`
+2. Extract Template 1 (EXTRACTION SUMMARY) code block
+3. Read `artifacts/insights/INSIGHTS-STATE.json` — count insights by tag
+4. Read `artifacts/chunks/CHUNKS-STATE.json` — count chunks
+5. Read DNA YAMLs — count elements per layer (before = 0 if greenfield)
+6. Fill all placeholders with real numbers
+7. Print the filled template in chat
+
+The result looks like a rich ASCII dashboard with real metrics, not placeholder text.
 
 ---
 

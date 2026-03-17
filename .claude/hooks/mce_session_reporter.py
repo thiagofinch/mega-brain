@@ -51,7 +51,7 @@ except ImportError:
 
 PROJECT_DIR     = Path(os.environ.get("CLAUDE_PROJECT_DIR", ".")).resolve()
 LOGS_DIR        = PROJECT_DIR / "logs"
-SESSIONS_DIR    = LOGS_DIR / "sessions"
+SESSIONS_DIR    = LOGS_DIR / "sessions" / "reports"
 STEP_LOG        = LOGS_DIR / "mce-step-logger.jsonl"
 ORCHESTRATE_LOG = LOGS_DIR / "mce-orchestrate.jsonl"
 SCOPE_LOG       = LOGS_DIR / "scope-classifier.jsonl"
@@ -464,7 +464,7 @@ def _build_markdown_report(session_ts: str, by_slug: dict, orch_by_slug: dict,
     lines += [
         _div(),
         _row(f"  Relatório gerado em  : {ts_end}"),
-        _row(f"  Salvado em           : logs/sessions/"),
+        _row(f"  Salvado em           : logs/sessions/reports/"),
         _row("  \"Se não foi logado, não foi processado.\"  — JARVIS"),
         _bottom(),
     ]

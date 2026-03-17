@@ -86,6 +86,7 @@ def create_default_state() -> dict[str, Any]:
                 "checkpoint_id": "CP_CANONICAL",
             },
         },
+        "mce_steps": {},
         "last_checkpoint": None,
         "history": [],
         "retry_enabled": True,
@@ -108,6 +109,8 @@ def load_state() -> dict[str, Any]:
                     state["version"] = "1.0.0"
                 if "phases" not in state:
                     state["phases"] = create_default_state()["phases"]
+                if "mce_steps" not in state:
+                    state["mce_steps"] = {}
                 if "retry_enabled" not in state:
                     state["retry_enabled"] = True
                 return state
@@ -194,6 +197,95 @@ def detect_phase_completion(tool_input: dict[str, Any], state: dict[str, Any]) -
                 return phase
 
     return None
+
+
+# =================================
+# MCE STEP MARKER DETECTION
+# =================================
+
+
+MCE_STATE_DIR = PROJECT_DIR / ".claude" / "mission-control" / "mce"
+
+
+def _check_mce_step_markers(tool_input: dict[str, Any]) -> dict[str, Any] | None:
+    """Check for MCE step completion markers written by qa_gates.py.
+
+    Scans .claude/mission-control/mce/*/step_*_complete.json for completions.
+    Reads the slug from the directory name -- never from tool output text (AC5).
+
+    Returns checkpoint data if any completions found, None otherwise.
+    """
+    if not MCE_STATE_DIR.exists():
+        return None
+
+    completions: dict[str, dict[str, Any]] = {}
+
+    try:
+        for slug_dir in MCE_STATE_DIR.iterdir():
+            if not slug_dir.is_dir():
+                continue
+            slug = slug_dir.name
+            for marker in sorted(slug_dir.glob("step_*_complete.json")):
+                try:
+                    data = json.loads(marker.read_text(encoding="utf-8"))
+                    step = data.get("step", 0)
+                    completions[f"{slug}_step_{step}"] = {
+                        "slug": slug,
+                        "step": step,
+                        "passed": data.get("passed", False),
+                        "timestamp": data.get("timestamp", ""),
+                        "marker_path": str(marker),
+                    }
+                except (json.JSONDecodeError, OSError):
+                    continue
+    except OSError:
+        return None
+
+    if not completions:
+        return None
+
+    return {
+        "source": "mce_step_markers",
+        "completions": completions,
+        "total_markers": len(completions),
+    }
+
+
+def _update_state_with_mce_markers(
+    marker_data: dict[str, Any],
+    state: dict[str, Any],
+) -> list[str]:
+    """Merge MCE step marker data into PIPELINE-STATE.json.
+
+    Compares discovered markers against existing mce_steps entries.
+    Only logs NEW completions (ones not already in state).
+
+    Args:
+        marker_data: Output from _check_mce_step_markers.
+        state: Current pipeline state (mutated in place).
+
+    Returns:
+        List of new completion keys that were added.
+    """
+    mce_steps = state.setdefault("mce_steps", {})
+    new_keys: list[str] = []
+
+    for key, info in marker_data.get("completions", {}).items():
+        step_str = str(info["step"])
+        slug = info["slug"]
+        combined_key = f"{slug}:{step_str}"
+
+        if combined_key not in mce_steps:
+            mce_steps[combined_key] = {
+                "step": info["step"],
+                "slug": slug,
+                "passed": info.get("passed", False),
+                "timestamp": info.get("timestamp", ""),
+                "detected_at": datetime.now().isoformat(),
+            }
+            new_keys.append(combined_key)
+
+    return new_keys
 
 
 # =================================
@@ -357,6 +449,11 @@ def get_pipeline_status() -> dict[str, Any]:
     if resume_point:
         status["resume_from"] = resume_point
 
+    # Include MCE step completions
+    mce_steps = state.get("mce_steps", {})
+    if mce_steps:
+        status["mce_steps"] = mce_steps
+
     return status
 
 
@@ -433,6 +530,10 @@ def process_tool_use(tool_input: dict[str, Any]) -> dict[str, Any]:
     """
     Process tool use to detect phase activity.
 
+    Two detection paths run in sequence:
+    1. Path-based detection (original 3-phase: ingest/chunk/canonical)
+    2. MCE step marker detection (reads step_N_complete.json files)
+
     Args:
         tool_input: Tool input data
 
@@ -440,45 +541,76 @@ def process_tool_use(tool_input: dict[str, Any]) -> dict[str, Any]:
         Hook output
     """
     file_path = tool_input.get("file_path", "")
+    feedback_parts: list[str] = []
 
-    # Detect phase from file path
+    # --- Detection Path 1: Original 3-phase path-based detection (CR1) ---
     phase = detect_phase_from_path(file_path)
 
-    if not phase:
-        return {"continue": True, "feedback": None}
+    if phase:
+        state = load_state()
 
-    state = load_state()
+        # Check if phase is in retry mode
+        phase_data = state.get("phases", {}).get(phase, {})
+        if phase_data.get("status") == "retry_pending":
+            # Update to in_progress
+            phase_data["status"] = "in_progress"
+            save_state(state)
+            log_checkpoint({"type": "retry_started", "phase": phase, "file": file_path})
 
-    # Check if phase is in retry mode
-    phase_data = state.get("phases", {}).get(phase, {})
-    if phase_data.get("status") == "retry_pending":
-        # Update to in_progress
-        phase_data["status"] = "in_progress"
-        save_state(state)
-        log_checkpoint({"type": "retry_started", "phase": phase, "file": file_path})
+        # Register file as processed
+        if file_path not in phase_data.get("files", []):
+            save_checkpoint(phase, [file_path], status="in_progress")
 
-    # Register file as processed
-    if file_path not in phase_data.get("files", []):
-        save_checkpoint(phase, [file_path], status="in_progress")
+        # Check if phase completed
+        completed_phase = detect_phase_completion(tool_input, state)
+        if completed_phase:
+            # Validate completion
+            if validate_phase_completion(completed_phase):
+                save_checkpoint(completed_phase, [], status="complete")
+                feedback_parts.append(
+                    f"[JARVIS] Pipeline checkpoint: {completed_phase} phase complete"
+                )
+            else:
+                save_checkpoint(completed_phase, [], status="needs_attention")
+                feedback_parts.append(
+                    f"[JARVIS] Pipeline checkpoint: {completed_phase} needs attention (validation failed)"
+                )
 
-    # Check if phase completed
-    completed_phase = detect_phase_completion(tool_input, state)
-    if completed_phase:
-        # Validate completion
-        if validate_phase_completion(completed_phase):
-            save_checkpoint(completed_phase, [], status="complete")
-            return {
-                "continue": True,
-                "feedback": f"[JARVIS] Pipeline checkpoint: {completed_phase} phase complete",
-            }
-        else:
-            save_checkpoint(completed_phase, [], status="needs_attention")
-            return {
-                "continue": True,
-                "feedback": f"[JARVIS] Pipeline checkpoint: {completed_phase} needs attention (validation failed)",
-            }
+    # --- Detection Path 2: MCE step completion markers (Story 1.8) ---
+    marker_data = _check_mce_step_markers(tool_input)
 
-    return {"continue": True, "feedback": None}
+    if marker_data:
+        state = load_state()
+        new_keys = _update_state_with_mce_markers(marker_data, state)
+
+        if new_keys:
+            save_state(state)
+
+            # Log each new completion to JSONL
+            for key in new_keys:
+                entry = state["mce_steps"][key]
+                log_checkpoint(
+                    {
+                        "type": "mce_step_detected",
+                        "phase": f"mce_step_{entry['step']}",
+                        "slug": entry["slug"],
+                        "step": entry["step"],
+                        "passed": entry.get("passed", False),
+                        "marker_timestamp": entry.get("timestamp", ""),
+                    }
+                )
+
+            # Build feedback summary
+            steps_found = [state["mce_steps"][k]["step"] for k in new_keys]
+            slugs_found = list({state["mce_steps"][k]["slug"] for k in new_keys})
+            feedback_parts.append(
+                f"[JARVIS] MCE step markers detected: "
+                f"steps {steps_found} for {', '.join(slugs_found)}"
+            )
+
+    # Combine feedback from both detection paths
+    combined_feedback = " | ".join(feedback_parts) if feedback_parts else None
+    return {"continue": True, "feedback": combined_feedback}
 
 
 def main():
@@ -505,6 +637,17 @@ def main():
                 print(f"    Status: {phase_data['status']}")
                 print(f"    Files: {phase_data['file_count']}")
                 print(f"    Last Update: {phase_data['timestamp'] or 'Never'}")
+
+            mce_steps = status.get("mce_steps", {})
+            if mce_steps:
+                print("\nMCE Step Completions:")
+                for key, step_data in sorted(mce_steps.items()):
+                    slug = step_data.get("slug", "?")
+                    step = step_data.get("step", "?")
+                    passed = step_data.get("passed", False)
+                    ts = step_data.get("timestamp", "?")
+                    mark = "PASS" if passed else "FAIL"
+                    print(f"  [{mark}] {slug} step {step} ({ts})")
 
             print()
             return

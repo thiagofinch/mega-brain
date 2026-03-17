@@ -51,6 +51,7 @@ class Config:
     # Diretorios
     PROJECT_DIR = Path(os.environ.get("CLAUDE_PROJECT_DIR", "."))
     SESSIONS_DIR = PROJECT_DIR / ".claude" / "sessions"
+    SESSIONS_ARCHIVE_DIR = PROJECT_DIR / "logs" / "sessions" / "autosave"
     MISSION_CONTROL_DIR = PROJECT_DIR / ".claude" / "mission-control"
     LOGS_DIR = PROJECT_DIR / "logs"
     HANDOFFS_DIR = LOGS_DIR / "handoffs"
@@ -64,10 +65,10 @@ class Config:
     # Timings (em segundos)
     AUTO_SAVE_INTERVAL = 1800  # 30 minutos
     PAUSE_DETECTION_THRESHOLD = 600  # 10 minutos
-    MIN_SAVE_INTERVAL = 60  # Minimo 1 minuto entre saves
+    MIN_SAVE_INTERVAL = 300  # Minimo 5 minutos entre saves
 
     # Thresholds
-    MAX_UNSAVED_ACTIONS = 10  # Salva se tiver mais que isso
+    MAX_UNSAVED_ACTIONS = 25  # Salva se tiver mais que isso
     MAX_UNSAVED_FILES = 5  # Salva se modificar mais que isso
 
 
@@ -219,6 +220,7 @@ class SessionManager:
         """Garante que todos os diretorios existam."""
         for directory in [
             Config.SESSIONS_DIR,
+            Config.SESSIONS_ARCHIVE_DIR,
             Config.MISSION_CONTROL_DIR,
             Config.LOGS_DIR,
             Config.HANDOFFS_DIR,
@@ -525,9 +527,9 @@ class SessionManager:
         # Gerar conteudo do arquivo de sessao
         session_content = self._format_session_markdown(trigger)
 
-        # Salvar arquivo da sessao
+        # Salvar arquivo da sessao em logs/sessions/autosave/
         session_filename = f"{self.session.session_id}.md"
-        session_filepath = Config.SESSIONS_DIR / session_filename
+        session_filepath = Config.SESSIONS_ARCHIVE_DIR / session_filename
 
         with open(session_filepath, "w", encoding="utf-8") as f:
             f.write(session_content)

@@ -127,7 +127,7 @@ Prioridade: {next_action.get("priority", "normal")}
 def update_session_log(session_info):
     """Atualiza log da sessão com dados de encerramento."""
     project_dir = get_project_dir()
-    log_path = Path(project_dir) / "logs" / "sessions"
+    log_path = Path(project_dir) / "logs" / "sessions" / "start"
 
     # Encontrar log mais recente
     if log_path.exists():
