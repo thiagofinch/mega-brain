@@ -374,7 +374,12 @@ async function fetchPremiumContent(targetDir, token, spinner) {
   if (!ghOrg) {
     throw new Error('MEGA_BRAIN_GH_ORG não configurado. Configure esta variável de ambiente.');
   }
-  const ghRepo = process.env.MEGA_BRAIN_GH_REPO || 'mega-brain-premium';
+  const ghRepo = process.env.MEGA_BRAIN_GH_REPO;
+  if (!ghRepo) {
+    throw new Error('MEGA_BRAIN_GH_REPO não configurado. Configure esta variável de ambiente.');
+  }
+  // Auth via header would be safer, but git clone requires URL-embedded tokens.
+  // NEVER log this URL — it contains the access token.
   const authUrl = `https://x-access-token:${token}@github.com/${ghOrg}/${ghRepo}.git`;
 
   // --- CLONE ---

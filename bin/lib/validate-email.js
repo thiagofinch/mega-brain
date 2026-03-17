@@ -9,10 +9,10 @@
  * accessing the premium content repository.
  */
 
-// Supabase connection — anon key is safe to embed (protected by RLS).
-// Can be overridden via env vars MEGA_BRAIN_SUPABASE_URL / MEGA_BRAIN_SUPABASE_KEY.
-const SUPABASE_URL = process.env.MEGA_BRAIN_SUPABASE_URL || 'https://lgbzktgbhowxiwppycbi.supabase.co';
-const SUPABASE_ANON_KEY = process.env.MEGA_BRAIN_SUPABASE_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxnYnprdGdiaG93eGl3cHB5Y2JpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE0NjgxMTUsImV4cCI6MjA4NzA0NDExNX0.fyidwl35q6rmj_AqaoW2rN_a1xCaDX2_LuKgwO2nTU4';
+// Supabase connection — configure via env vars.
+// Required: SUPABASE_URL, SUPABASE_ANON_KEY
+const SUPABASE_URL = process.env.SUPABASE_URL || '';
+const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY || '';
 
 const TIMEOUT_MS = 10000;
 const MAX_ATTEMPTS = 3;

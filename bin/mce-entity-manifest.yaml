@@ -1,0 +1,180 @@
+# MCE Entity Manifest — Wave 2 Processing Queue
+# Generated: 2026-03-16
+# Used by: bin/mce-wave-launcher.sh
+#
+# Priority: 1 (highest) → 4 (lowest)
+# Status: pending | processing | complete | failed | skip
+
+tiers:
+  # ---------------------------------------------------------------
+  # TIER 1: Has sources + dossier, needs full MCE (no DNA exists)
+  # ---------------------------------------------------------------
+  - tier: 1
+    description: "Full MCE from scratch (sources + dossier exist, no DNA)"
+    entities:
+      - slug: jeremy-haynes
+        bucket: external
+        sources_count: 306
+        has_dossier: true
+        has_dna: false
+        has_agent: true
+        priority: 1
+        status: pending
+        notes: "Largest source collection. Process in file batches of 3."
+
+      - slug: jeremy-miner
+        bucket: external
+        sources_count: 152
+        has_dossier: true
+        has_dna: false
+        has_agent: true
+        priority: 1
+        status: pending
+        notes: "Second largest. NEPQ methodology specialist."
+
+      - slug: the-scalable-company
+        bucket: external
+        sources_count: 66
+        has_dossier: true
+        has_dna: false
+        has_agent: true
+        priority: 1
+        status: pending
+        notes: "Business operating systems."
+
+      - slug: cole-gordon
+        bucket: external
+        sources_count: 7
+        has_dossier: true
+        has_dna: false
+        has_agent: true
+        priority: 2
+        status: pending
+        notes: "Closing specialist."
+
+      - slug: richard-linder
+        bucket: external
+        sources_count: 7
+        has_dossier: true
+        has_dna: false
+        has_agent: false
+        priority: 2
+        status: pending
+        notes: "Has empty agent placeholder only."
+
+      - slug: sam-oven
+        bucket: external
+        sources_count: 4
+        has_dossier: true
+        has_dna: false
+        has_agent: false
+        priority: 2
+        status: pending
+        notes: "Naming fixed from sam-ovens in Wave 0."
+
+  # ---------------------------------------------------------------
+  # TIER 2: Has DNA, needs MCE delta re-extract
+  # ---------------------------------------------------------------
+  - tier: 2
+    description: "Delta MCE (DNA exists from old pipeline, needs MCE layers)"
+    entities:
+      - slug: alex-hormozi
+        bucket: external
+        sources_count: 29
+        has_dossier: true
+        has_dna: true
+        has_agent: true
+        dna_files: 6
+        priority: 2
+        status: pending
+        notes: "Re-extract: behavioral patterns + identity + voice DNA."
+
+      - slug: jordan-lee
+        bucket: external
+        sources_count: 10
+        has_dossier: true
+        has_dna: true
+        has_agent: true
+        dna_files: 6
+        priority: 2
+        status: pending
+        notes: "Re-extract with MCE. Has 12 inbox items pending."
+
+      - slug: liam-ottley
+        bucket: external
+        sources_count: 9
+        has_dossier: true
+        has_dna: true
+        has_agent: true
+        dna_files: 7
+        priority: 3
+        status: pending
+        notes: "Most complete. Validate MCE compliance, may only need delta."
+
+  # ---------------------------------------------------------------
+  # TIER 3: Sources-only orphans (no dossier, no DNA, no agent)
+  # ---------------------------------------------------------------
+  - tier: 3
+    description: "Orphaned source collections (need entity identification first)"
+    entities:
+      - slug: ead-closer
+        bucket: external
+        sources_count: 69
+        has_dossier: false
+        has_dna: false
+        has_agent: false
+        priority: 3
+        status: pending
+        notes: "Needs entity identification. Likely maps to cole-gordon or closing methodology."
+
+      - slug: 30-day-challenge
+        bucket: external
+        sources_count: 29
+        has_dossier: false
+        has_dna: false
+        has_agent: false
+        priority: 3
+        status: pending
+        notes: "Needs entity identification. Course content."
+
+      - slug: client-accelerator
+        bucket: external
+        sources_count: 27
+        has_dossier: false
+        has_dna: false
+        has_agent: false
+        priority: 3
+        status: pending
+        notes: "Needs entity identification. Course content."
+
+  # ---------------------------------------------------------------
+  # TIER 4: Business entities (post Wave 0 classification)
+  # ---------------------------------------------------------------
+  - tier: 4
+    description: "Business meetings (available after Wave 0 classifies unclassified)"
+    entities: []
+    notes: "Populated dynamically by wave-1 batch creation based on entity accumulation."
+
+# ---------------------------------------------------------------
+# Wave 2 execution batches (max 3 parallel sessions)
+# ---------------------------------------------------------------
+execution_batches:
+  - batch: 1
+    max_parallel: 3
+    entities: [jeremy-haynes, jeremy-miner, the-scalable-company]
+    notes: "Heavy hitters first. Long-running due to source volume."
+
+  - batch: 2
+    max_parallel: 3
+    entities: [cole-gordon, richard-linder, sam-oven]
+    notes: "Smaller sources. Should complete quickly."
+
+  - batch: 3
+    max_parallel: 3
+    entities: [alex-hormozi, jordan-lee, liam-ottley]
+    notes: "Delta re-extract. Existing DNA preserved, MCE layers added."
+
+  - batch: 4
+    max_parallel: 3
+    entities: [ead-closer, 30-day-challenge, client-accelerator]
+    notes: "Orphans. May need manual entity mapping before MCE."

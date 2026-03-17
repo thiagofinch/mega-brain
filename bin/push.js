@@ -17,9 +17,9 @@
  *   mega-brain push --message "x" Commit message (skips prompt)
  *
  * Remotes (configure via git remote):
- *   origin  → <your-github>/mega-brain.git
- *   premium → <your-github>/mega-brain-premium.git
- *   backup  → <your-github>/mega-brain-full.git
+ *   origin  → <your-github>/<community-repo>.git
+ *   premium → <your-github>/<premium-repo>.git
+ *   backup  → <your-github>/<backup-repo>.git
  */
 
 import { readFileSync, existsSync } from 'fs';

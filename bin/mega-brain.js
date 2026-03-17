@@ -45,7 +45,7 @@ async function main() {
   }
 
   // Auto-trigger setup if .env is missing (skip for install/setup/help)
-  const skipEnvCheck = ['install', 'setup', 'push'].includes(command);
+  const skipEnvCheck = ['install', 'setup', 'push', 'validate', 'upgrade', 'status', 'features'].includes(command);
   if (!skipEnvCheck) {
     const projectEnv = resolve(process.cwd(), '.env');
     if (!existsSync(projectEnv)) {
