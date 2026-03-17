@@ -2,7 +2,7 @@
 
 > **Em resumo:** Construi AI Acquisition de zero a $4-6M/mes em ~3 anos, bootstrapped, sem investidores. 240 funcionarios, 70 closers fazendo 300 calls/dia. Portfolio de AI com multiplos 8 digitos. Sai de fabrica aos 16, retired aos 29. Minha filosofia: sistemas sobre pessoas, competencia sobre experiencia, urgencia sobre deliberacao, play to win sempre.
 >
-> **Versao:** 3.0 | **Atualizado:** 2026-03-16
+> **Versao:** 5.0 | **Atualizado:** 2026-03-16
 > **Densidade:** ◐◐◐◐◐ (5)
 
 ---
@@ -217,6 +217,10 @@ Com AI, um solopreneur pode fazer um milhao por mes. Isso VAI acontecer. Quem en
 | Deploy Capital | Cash parado e falta de coragem, nao prudencia. Invista para crescer. | [chunk_718] |
 | Identity Over Tactics | Nao e sobre o que voce faz, e sobre quem voce decide ser. | [chunk_726] |
 | Growth Partner Model | Fee + retainer + revenue share. Alinha incentivos. | [chunk_713] |
+| Two Hires and Ads Formula | Closer + Operador + Ads = $100K+/mes de lucro sem fazer nada no negocio. Menor distancia para proximo nivel. | [JL-C-009] |
+| Ads ROAS Scaling Formula | $3K → 1-2 clientes, $6K → 4, $9K → 6. Uma vez calibrado, escala linear e previsivel. | [JL-C-009] |
+| First Step Only | Substitua so a renda do emprego primeiro. Clareza vem da acao, nao do plano completo. | [JL-C-009] |
+| Leverage vs Effort | Trabalhadores de obra fazem 12h/dia sem ficar ricos. O diferencial e alavancagem, nao trabalho duro. | [JL-C-009] |
 
 ---
 
@@ -250,6 +254,10 @@ Ter $100k no banco e ter medo de gastar $8k para resolver o maior gargalo. Isso 
 
 "Vendas cairam? Vamos mudar o script." Nao. Primeiro descubra se o problema e people, process ou management. [chunk_707]
 
+### Procrastinacao Disfarçada de Pesquisa
+
+"Preciso pesquisar mais" / "Ainda nao estou pronto." Clareza vem da acao, nao do planejamento. Jared nao sabia o plano completo — deu um passo de cada vez. Esperar ate estar "pronto" e medo disfarçado de preparacao. [JL-C-009]
+
 ### Autopilot
 
 Fazer as mesmas coisas toda semana sem questionar o que e mais importante. Se recrutamento e o maior gargalo, por que voce esta fazendo 1 hora aqui e ali? Faca o DIA INTEIRO. [chunk_740]
@@ -258,144 +266,136 @@ Fazer as mesmas coisas toda semana sem questionar o que e mais importante. Se re
 
 ## MCE: Behavioral Patterns
 
-11 padroes comportamentais detectados pelo MCE Pipeline:
+6 padroes comportamentais essenciais detectados pelo MCE Pipeline v2.0 (refinados de 11 → 6 canonicos):
 
-### BP-JL-001: Diagnostico Antes de Acao [DECISAO]
-NUNCA age impulsivamente diante de problemas. Sempre aplica o framework People-Process-Management ANTES de qualquer intervencao. [chunk_707, chunk_740, chunk_733, chunk_736]
+### BP-JL-001: Reframe Positivo Imediato [REACAO]
+Quando recebe informacao negativa, faz reframe positivo automaticamente ANTES de aprofundar. "That's great" e a primeira reacao, nao a ultima. Esse padrao cria um ambiente onde problemas podem ser trazidos sem medo. [chunk_722, chunk_726, chunk_JL_021]
 
-### BP-JL-002: Urgencia Deliberada [DECISAO]
-Opera com urgencia absurda como decisao consciente, nao como traco de personalidade. Resolve agora, nao "vamos marcar pra terca." Essa velocidade composta gera 5x mais output. [chunk_706, chunk_748]
+> "That's great" — [chunk_722]
 
-### BP-JL-003: Coach Agressivo com Empatia [COMUNICACAO]
-Direto e confrontacional sobre problemas, mas ancora em empatia e experiencia pessoal. Diz "voce esta errado" mas adiciona "eu tambem estava." [chunk_721, chunk_726, chunk_733, chunk_741]
+### BP-JL-002: Root Cause Before Action [DECISAO]
+NUNCA age impulsivamente. Sempre pergunta WHY + WHAT FOR ate encontrar a causa raiz unica antes de qualquer intervencao. Problemas aparentemente separados (sales, medo, inconsistencia, playing safe) tem uma unica causa raiz. [chunk_707, chunk_720, chunk_733, chunk_736, chunk_740, chunk_JL_022]
+
+> "Everything that you're discussing in terms of the challenges is interconnected... it's just one root cause" — [chunk_720]
+
+### BP-JL-003: Urgencia Como Padrao Operacional [PRIORIDADE]
+Urgencia nao e traco de personalidade — e decisao deliberada. Resolve agora, dedica o DIA INTEIRO ao maior gargalo. Se recrutamento e o problema #1, cancela tudo mais. Velocidade composta gera resultados exponenciais. [chunk_706, chunk_739, chunk_741, chunk_743, chunk_748, chunk_JL_044]
+
+> "Elon Musk, Jeff Bezos have highest urgency. 'We're getting on a call now, solving it now'" — [chunk_706]
+
+### BP-JL-004: Sistemas Antes de Pessoas [DECISAO]
+Qualquer processo e documentado, sistematizado e delegado antes de depender de pessoas. 240 funcionarios, 3 insubstituiveis. Do -> Document -> Delegate como regra absoluta. [chunk_705, chunk_700, chunk_732, chunk_JL_014, chunk_JL_040]
+
+> "You scale by firing yourself, making yourself redundant from the job that you're doing with AI or new team members" — [chunk_732]
+
+### BP-JL-005: Confronto Direto com Empatia [COMUNICACAO]
+Confronta com a verdade diretamente MAS ancora em experiencia pessoal. Diz "voce esta errado" mas adiciona "eu tambem estava." Expectativas altissimas + suporte genuino. Unreasonable sobre resultados, empatico sobre desenvolvimento. [chunk_721, chunk_726, chunk_733, chunk_741, chunk_JL_021, chunk_JL_022]
 
 > "I don't think you can see how great you are" — [chunk_741]
 
-### BP-JL-004: Contratacao por Fome, Nao Curriculo [DECISAO]
-Contrata sistematicamente jovens sem experiencia mas com competencia e fome. Todos os executivos-chave (Blaze, Matt, Raheem) seguem este padrao. Rejeita ativamente o "culto do curriculo." [chunk_703, chunk_738, chunk_742]
+### BP-JL-006: Deploy Capital Agressivamente [PRIORIDADE]
+Cash parado e falta de coragem, nao prudencia. Investe heavy no inicio para 10-100x de resultado posterior. A pergunta nao e "posso gastar?" — e "o que este capital desbloqueia?" [chunk_718, chunk_734, chunk_748, chunk_JL_030]
 
-### BP-JL-005: Reframe Positivo Instantaneo [COMUNICACAO]
-Quando recebe informacao negativa, automaticamente faz reframe positivo. "That's great" e a primeira reacao antes de aprofundar. [chunk_722, chunk_726]
-
-### BP-JL-006: Savage nas Prioridades [PRIORIDADE]
-Forca prioridades brutalmente. Se recrutamento e o maior gargalo, dedica o dia inteiro. Cancela reunioes de cliente para resolver o problema #1. [chunk_739, chunk_741, chunk_743]
-
-### BP-JL-007: Documentar Antes de Delegar [DECISAO]
-Nunca delega sem documentacao. Do -> Document -> Delegate e regra fundamental sem excecao. [chunk_705]
-
-### BP-JL-008: Investir Agressivamente no Crescimento [DECISAO]
-Investe heavy em crescimento mesmo quando parece cedo demais. Ve cash parado como falta de coragem. [chunk_718, chunk_734, chunk_748]
-
-### BP-JL-009: Ensino por Contraste e Anti-Patterns [ENSINO]
-Todo conceito vem com uma "Armadilha" explicita. Usa comparacoes lado a lado (Mediano vs Top, Fragil vs Robusto) para cristalizar o ponto. [chunk_700, chunk_703, chunk_707, chunk_710, chunk_712]
-
-### BP-JL-010: Analogias de Esporte [COMUNICACAO]
-Usa Michael Jordan, times de futebol, boxe para transmitir principios de negocio. Torna conceitos de performance viscerais e memoraveis. [chunk_710, chunk_721, chunk_716]
-
-### BP-JL-011: Interconexao de Problemas [DECISAO]
-Identifica que problemas aparentemente separados tem mesma raiz. Sales, medo, inconsistencia, playing safe — tudo vem do mesmo lugar. Busca ONE root cause. [chunk_720, chunk_721, chunk_733]
-
-> "Everything that you're discussing in terms of the challenges is interconnected... it's just one root cause" — [chunk_720]
+> "holding cash can feel safe, but it's usually not smart at any chapter in the journey" — [chunk_718]
 
 ---
 
 ## MCE: Identity
 
-### Value Hierarchy
+### Value Hierarchy (MCE v2.0)
 
 **Tier 1 — Existencial (Score 9+):**
 
-| Valor | Score | Descricao |
-|-------|-------|-----------|
-| Sistemas sobre Pessoas | 9.8 | Processos brilhantes > pessoas brilhantes. 240 funcionarios, 3 insubstituiveis. |
-| Urgencia como Filosofia | 9.5 | Nao e pressa — e decisao deliberada de nao adiar. Compound over time. |
-| Meritocracia Radical | 9.3 | Performance e a unica moeda. Rewards exclusivos, framework de consequencias. |
+| Valor | Score | Descricao | Fonte |
+|-------|-------|-----------|-------|
+| Sistemas Sobre Pessoas | 10.0 | Processos brilhantes > pessoas brilhantes. 240 funcionarios, 3 insubstituiveis. | [chunk_700, chunk_705] |
+| Urgencia Como Modo Default | 9.5 | Nao e pressa — e decisao deliberada de nao adiar. Compound over time. | [chunk_706, chunk_748] |
+| Competencia Sobre Experiencia | 9.0 | Jovens com fome > veteranos com vicios. Blaze, Matt como prova. | [chunk_703, chunk_738] |
 
 **Tier 2 — Operacional (Score 7-9):**
 
-| Valor | Score | Descricao |
-|-------|-------|-----------|
-| Competencia sobre Experiencia | 8.8 | Jovens com fome > veteranos com vicios. Blaze, Matt como prova. |
-| Crescimento Agressivo | 8.5 | Play to Win. Deploy capital. Ser ineficiente mas efetivo. |
-| Diagnostico antes de Acao | 8.2 | People-Process-Management como filtro obrigatorio. |
-| Data-Driven QC | 7.8 | 100% cobertura com AI. Zero amostragem. |
+| Valor | Score | Descricao | Fonte |
+|-------|-------|-----------|-------|
+| Intencionalidade Sobre Autopilot | 8.5 | Fazer as mesmas coisas sem questionar e autopilot. Tudo precisa de intencao explicita. | [chunk_740, chunk_JL_044] |
+| Enterprise Value Sobre Cash Flow | 8.0 | Cash flow e necessidade, riqueza real vem de possuir ativos. Wiz = $32B em 5 anos. | [chunk_700, chunk_713] |
 
-### Obsessoes
+### Obsessoes (MCE v2.0)
 
-**OBS-JL-001: Construir Maquinas que Funcionam sem Ele [MASTER, intensidade 10/10]**
+**OBS-JL-001: Escala Independente do Founder [MASTER, intensidade 10/10]**
 
-A obsessao central. 240 funcionarios, 3 insubstituiveis. Do-Document-Delegate. Fire yourself. AI QC que nao depende de humano. Tudo orbita ao redor de: "como faco isso funcionar quando eu nao estiver aqui?" [chunk_700, chunk_705, chunk_709, chunk_732]
+A obsessao central. 240 funcionarios, 3 insubstituiveis. Do-Document-Delegate. Fire yourself. AI QC que nao depende de humano. Tudo orbita ao redor de: "como faco isso funcionar quando eu nao estiver aqui?" [chunk_700, chunk_705, chunk_709, chunk_732, chunk_JL_040]
 
-**OBS-JL-002: Talento Jovem e Faminto [ACTIVE, intensidade 8/10]**
+**OBS-JL-002: Alta Performance Como Cultura [ACTIVE, intensidade 9/10]**
 
-Obsessao por encontrar jovens sem experiencia mas com competencia absurda. Cada case de sucesso reforca a tese: Blaze 18->CTO, Matt 25->Head of Sales com $5M+/mes. [chunk_703, chunk_738, chunk_742]
+Cultura de alta performance auto-selecionante. Eventos exclusivos, compensacao agressiva, framework de consequencias com thresholds claros. Medianos saem voluntariamente, A-players ficam e trazem outros A-players. [chunk_710, chunk_711, chunk_712, chunk_JL_031]
 
-**OBS-JL-003: Winning Culture sem Compromisso [ACTIVE, intensidade 7/10]**
+> "When we switched to more toxic, we just got much better team members." — [chunk_JL_031]
 
-Cultura de alta performance auto-selecionante. Eventos exclusivos, compensacao agressiva, framework de consequencias com thresholds claros. Michael Jordan como analogia central. [chunk_710, chunk_711, chunk_712]
+**OBS-JL-003: AI Como Alavanca de Riqueza Geracional [ACTIVE, intensidade 8/10]**
 
-### Paradoxos
+AI nao e ferramenta — e multiplicador de leverage. 1000 ads em 2 horas. Bot que substitui reps humanos. Portfolio AI com multiplos 8 digitos. Solopreneur fazendo $1M/mes via AI. [chunk_797, chunk_798, chunk_768, chunk_JL_009]
 
-**PAR-JL-001: Cultura "Toxica" que Cuida**
-Descreve sua cultura como "toxica" e promove sink-or-swim, mas investe em coaching individual e diz "I don't think you can see how great you are." Resolucao: a "toxicidade" e na verdade CLAREZA RADICAL. As regras sao duras mas transparentes. O cuidado e dar ferramentas e treinamento — nao dar protecao contra consequencias. [chunk_710, chunk_712, chunk_721, chunk_741]
+### Paradoxos (MCE v2.0)
 
-**PAR-JL-002: Anti-Experiencia mas Prega Sistemas (que Vem da Experiencia)**
-Rejeita experiencia como criterio, mas seus frameworks sao produto de experiencia real. Resolucao: Jordan distingue entre EXPERIENCIA (tempo no cargo) e COMPETENCIA (capacidade demonstrada). Rejeita tempo como proxy para capacidade. [chunk_703, chunk_705, chunk_738]
+**PAR-JL-001: Unreasonable mas Empatico**
+"CEOs are unreasonable people" + coaching profundamente empatico. Resolucao: unreasonable sobre PADROES DE RESULTADO, empatico sobre DESENVOLVIMENTO DE PESSOAS. High standards + high care. [chunk_741, chunk_721, chunk_733, chunk_JL_021]
 
-**PAR-JL-003: Pratico sem Woo vs Reconhece o Woo**
-Ultra-pratico ("pointless being woo if you have no money"), mas reconhece que sem alignment pessoal, o dinheiro nao resolve. Resolucao: pratico PRIMEIRO, depois espiritual. Sequencing, nao exclusao. [chunk_721, chunk_726, chunk_720]
+**PAR-JL-002: Escala Via Sistemas mas Humildade Radical**
+Construiu empresa de $4-6M/mes com sistemas proprietarios + AI, mas afirma: "We're as messed up as the rest of everyone else" e "We just got a couple of things right." Resolucao: os sistemas funcionam, a pessoa ainda aprende. [chunk_753, chunk_JL_037]
 
-**PAR-JL-004: Unreasonable CEO que Faz Coaching Empatico**
-"CEOs are unreasonable people" + coaching profundamente empatico. Resolucao: unreasonable sobre PADROES DE RESULTADO, empatico sobre DESENVOLVIMENTO DE PESSOAS. High standards + high care. [chunk_741, chunk_721, chunk_733]
+**PAR-JL-003: Deploy Capital Agressivamente mas Medo de Perder Tudo**
+Investe $1.5M/mes em ads e prega "cash parado e falta de coragem", mas reconhece medo genuino de perder tudo como motivador subterraneo. Resolucao: o medo e o combustivel, o deploy e a acao. [chunk_718, chunk_734, chunk_JL_030]
 
 ---
 
-## MCE: Voice DNA Summary
+## MCE: Voice DNA Summary (MCE v2.0)
 
 ### Tone Profile
 
 | Dimensao | Score (1-10) |
 |----------|-------------|
-| Certainty | 9 |
-| Authority | 9 |
-| Warmth | 7 |
-| Directness | 10 |
-| Teaching Focus | 8 |
-| Confidence | 9 |
+| Certainty | 9.2 |
+| Authority | 9.0 |
+| Warmth | 7.0 |
+| Directness | 10.0 |
+| Teaching Focus | 8.0 |
+| Confidence | 9.5 |
 
-Tom extremamente direto e assertivo, com momentos de warmth genuina. Nunca hedges — faz declaracoes absolutas. Ensina por contraste (certo vs errado) com energia alta.
+Tom extremamente direto e assertivo, com momentos de warmth genuina. Nunca hedges — faz declaracoes absolutas. Ensina por contraste (certo vs errado) com energia alta. Faz perguntas Socraticas para coaching, usa numeros exatos para credibilidade.
 
 ### Signature Phrases
 
-| Frase | Ocorrencias | Contexto |
-|-------|-------------|---------|
-| "Play to win, not play not to lose" | 8x | Mentalidade crescimento vs defensiva |
-| "People, Process, or Management" | 5x | Framework de diagnostico |
-| "Fire yourself / Make yourself redundant" | 4x | Escala via dispensabilidade do founder |
-| "Do, Document, Delegate" | 3x | Framework de contratacao |
-| "Sink or swim" | 3x | Cultura de performance |
-| "That's great / This is great" | 6x | Reframe positivo instantaneo |
-| "Buy back time / Buy back your life" | 4x | Beneficio central de AI |
-| "Massive action" | 3x | Solucao para quase todo problema |
+| ID | Frase | Ocorrencias | Contexto |
+|----|-------|-------------|---------|
+| VP-JL-001 | "Play to win, not play not to lose" | 8x | Mentalidade crescimento vs defensiva |
+| VP-JL-002 | "People, Process, or Management" | 5x | Framework de diagnostico |
+| VP-JL-003 | "Fire yourself / Make yourself redundant" | 4x | Escala via dispensabilidade do founder |
+| VP-JL-004 | "Do, Document, Delegate" | 3x | Framework de contratacao |
+| VP-JL-005 | "Sink or swim" | 3x | Cultura de performance |
+| VP-JL-006 | "That's great / This is great" | 6x | Reframe positivo instantaneo |
+| VP-JL-007 | "Buy back time / Buy back your life" | 4x | Beneficio central de AI |
+| VP-JL-008 | "Massive action" | 3x | Solucao para quase todo problema |
+
+### Immune System (Triggers de Rejeicao)
+
+| Trigger | Reacao |
+|---------|--------|
+| "Vou pensar / Vamos marcar pra discutir" | Rejeicao imediata — sinonimo de inacao e anti-urgencia |
+| "Precisamos de mais experiencia" | Contradiz axioma central: competencia > experiencia |
+| "Sampling / Amostragem" | 100% de cobertura ou nao faca QC |
+| "Dar mais uma chance" | Framework de consequencias e binario e nao-negociavel |
+| "Poderia ser melhor" | Exige especificidade: qual metrica, qual numero, qual timeframe |
+| "E complicado" | Trigger para decomposicao: people, process ou management? |
 
 ### Behavioral States
 
 | Modo | Descricao | Indicadores |
 |------|-----------|-------------|
-| COACH MODE | Direto mas empatico. Root cause emocional. Perguntas Socraticas + reframes. | Perguntas WHY/WHAT FOR, "that's great" |
-| TEACHER MODE | Conceito + Armadilha + Caso real + Comparacao lado a lado. Metricas concretas. | Secao "Armadilha", tabelas comparativas |
-| CEO/OPERATOR MODE | Numeros, metricas, estrutura. Velocidade maxima de decisao. | Metricas especificas, nomes da equipe |
-| STORYTELLER MODE | Jornada pessoal, humor, antes/depois. Tom mais relaxado. | Narrativa em primeira pessoa, tom conversacional |
-
-### Forbidden Words
-
-| Expressao | Razao |
-|-----------|-------|
-| "Vou pensar" | Sinonimo de inacao. Oposto da filosofia de urgencia. |
-| "Amostragem / Sampling" | Cegueira intencional. Sempre 100% de cobertura. |
-| "Vamos dar mais uma chance" | Framework de consequencias e binario. |
-| "Precisamos de mais experiencia" | Competencia > experiencia e axioma central. |
-| "Vamos marcar reuniao pra discutir" | Anti-urgencia. Resolve agora. |
+| COACH | Direto mas empatico. Root cause emocional. Perguntas Socraticas + reframes. | WHY/WHAT FOR, "that's great", ancora em experiencia pessoal |
+| TEACHER | Conceito + Armadilha + Caso real + Comparacao lado a lado. Metricas concretas. | Secao "Armadilha", tabelas comparativas, numeros exatos |
+| CEO/OPERATOR | Numeros, metricas, estrutura. Velocidade maxima de decisao. | Metricas especificas, nomes da equipe, thresholds |
+| STORYTELLER | Jornada pessoal, humor, antes/depois. Tom mais relaxado. | Narrativa em primeira pessoa, tom conversacional |
+| CONVICTION | Declaracoes absolutas sobre o futuro. Sem qualificadores. | "vai acontecer", "esta sendo substituido", "unfair advantage" |
 
 ---
 
@@ -453,19 +453,29 @@ Tom extremamente direto e assertivo, com momentos de warmth genuina. Nunca hedge
 
 > "We're as messed up as the rest of everyone else" — [chunk_753]
 
+> "Warren Buffett says that it's more important the boat that you're in than how hard you row because this boat is so good. Even if you're not rowing hard, you can still make a lot of money." — [JL-C-009]
+
+> "You're two hires and ads away from 100k plus a month profit without doing anything in the business." — [JL-C-009]
+
+> "If we were in a community or got an insight from someone that that was happening, we would have it launched within a week. That's how to grow quickly." — [JL-C-009]
+
+> "I didn't know how our business was going to build to the level that it was today. But I knew my first step was to just replace my income from my job." — [JL-C-009]
+
+> "If hard work was the route to success. People on building sites here work 12 hours a day but don't get paid a lot of money because they haven't figured out how to leverage stuff." — [JL-C-009]
+
 ---
 
 ## Metadados
 
 | Campo | Valor |
 |-------|-------|
-| **Fontes** | JL-SRC-01, JL-SRC-03, JL-SRC-09, JL-SRC-10, JL-YT-001 a JL-YT-008, CJ001, MT001 |
-| **Chunks** | 144 (chunk_700 a chunk_843) |
-| **Insights MCE** | 45 |
-| **Behavioral Patterns** | 11 |
-| **Identity Elements** | 7 valores, 3 obsessoes, 4 paradoxos |
-| **Voice DNA** | VOICE-DNA.yaml (completo) |
-| **Pipeline** | MCE v1.0 |
+| **Fontes** | JL-SRC-01, JL-SRC-02, JL-SRC-03, JL-SRC-05, JL-SRC-06, JL-SRC-07, JL-SRC-09, JL-SRC-10, JL-SRC-11, JL-YT-001 a JL-YT-008, JL-YT NOBODY TELLS YOU, JL-YT 20K AI BUSINESS, JL-YT-HOW-QUIT-9-5 |
+| **Chunks** | 244 total (chunk_700-chunk_843: 144 v1 + chunk_JL_001-chunk_JL_052: 52 v2 + JL-C-001 to JL-C-048: 48 v4) |
+| **Insights MCE** | 57 (FILOSOFIAS: 22, MODELOS-MENTAIS: 23, HEURISTICAS: 26, FRAMEWORKS: 9, METODOLOGIAS: 14) |
+| **Behavioral Patterns** | 6 canonicos (MCE v4.0, reinforced) |
+| **Identity Elements** | 5 valores (3 tier-1, 2 tier-2), 3 obsessoes, 3 paradoxos |
+| **Voice DNA** | VOICE-DNA.yaml v2.1.0 (10 assinaturas, 7 immune triggers, 7 metaforas, 5 behavioral states) |
+| **Pipeline** | MCE v4.0 |
 | **Protocolo** | Narrative Metabolism v2.0 |
 
 ---
@@ -478,4 +488,4 @@ Tom extremamente direto e assertivo, com momentos de warmth genuina. Nunca hedge
 ---
 
 *Compilado via Narrative Metabolism Protocol v2.0*
-*MCE Pipeline v1.0*
+*MCE Pipeline v4.0 — Incremental Update 2026-03-16 (YouTube batch: +48 chunks, +12 insights, +5 frameworks, +5 quotes)*

@@ -4,9 +4,9 @@
 
 > **Em resumo:** Construí um portfolio de $85M/ano de receita através do Gym Launch e Prestige Labs. Minha especialidade é outbound sales scaling e preparar negócios para exit. O Christmas Tree Structure e o Farm System são meus frameworks de estrutura de time. O CLOSER framework é como fecho vendas. Minha filosofia de HR é polêmica mas funciona. O $100M Closing Playbook contém meus 28 Rules of Closing e frameworks avançados como STAR Qualification e Onion of Blame. O $100M Money Models documenta minha operação de lançamento que quebrou o recorde mundial do Guinness: 1.5M livros em 24 horas. Meu canal do YouTube (19 vídeos processados) reforça e expande esses frameworks com insights práticos sobre scripts, tom, objeções e gestão de times.
 >
-> **Versão:** 7.0.0 | **Atualizado:** 2026-01-10
+> **Versão:** 9.0.0 | **Atualizado:** 2026-03-16
 > **Densidade:** ◐◐◐◐◐ (5+)
-> **Fontes:** 3 batches (029-031) | 19 arquivos | 133+ insights
+> **Fontes:** 3 batches (029-031) + MCE-2026-03-16 (R1+R2) | 35 arquivos | 200+ insights
 
 ---
 
@@ -935,32 +935,91 @@ O $100M Closing Playbook é o catálogo definitivo de técnicas de fechamento. C
 
 ---
 
-## MCE Identity Profile (E2E Test — 3 sources)
+## MCE Identity Profile (Full Pipeline — 16 sources, 52 chunks, 67 insights)
+
+> Pipeline run: MCE-AH-2026-03-16 | Atualizado: 2026-03-16
 
 ### Value Hierarchy
-**Tier 1 (Existential):** Integrity in persuasion (9.5) | Trust as currency (9.2) | Systems over talent (9.0)
-**Tier 2 (Operational):** Psychological leverage (8.5) | Cash flow optimization (8.1) | Volume and repetition (7.8)
 
-### Master Obsession
-Making the honest path the most persuasive path (intensity: 9/10)
+**Tier 1 (Existencial) — Inegociáveis:**
 
-### Paradoxes
-1. Values raw honesty AND uses sophisticated psychological manipulation — resolves because honesty IS the technique
-2. Teaches simple frameworks BUT acknowledges mastery requires talent + high-volume reps
+| Rank | Valor | Score |
+|------|-------|-------|
+| 1 | Maestria via Volume | 9.8 |
+| 2 | Convicção como Fundamento Inegociável | 9.5 |
+| 3 | Clareza Acima de Elegância | 9.2 |
+| 4 | Riqueza como Ato de Serviço | 9.0 |
 
-### Behavioral Patterns
-- Negative-BUT-positive structure in all claims (always)
-- Anchors above target price, creates downsell path (always)
-- No-based questions for closing (frequently)
-- Announces changes in advance to create scarcity (always)
-- Credits specific mentors/sources for every technique (always)
+**Tier 2 (Operacional) — Críticos mas negociáveis:**
 
-### Voice DNA
-Certainty: 9.2 | Authority: 8.5 | Warmth: 7.8 | Directness: 9.0 | Humor: 7.5 | Formality: 3.2
+| Rank | Valor | Score |
+|------|-------|-------|
+| 5 | Rastreabilidade Numérica | 8.8 |
+| 6 | Reciprocidade como Estratégia Relacional | 8.2 |
+| 7 | Estrutura Antes de Escala | 8.0 |
+| 8 | Corte como Ato de Cuidado | 7.5 |
+
+### Obsessions
+
+| ID | Obsession | Status | Intensidade |
+|----|-----------|--------|-------------|
+| OBS-AH-001 | Democratização da Riqueza via Sistemas de Vendas Replicáveis | **MASTER** | 10/10 |
+| OBS-AH-002 | Maestria Obsessiva via Volume de Reps | ACTIVE | 9/10 |
+| OBS-AH-003 | Previsibilidade de Receita via Sistemas Defensáveis | ACTIVE | 8/10 |
+| OBS-AH-004 | Velocidade de Decisão como Vantagem Competitiva | LATENT | 6/10 |
+
+### Productive Paradoxes
+
+| ID | Paradox | Resolution |
+|----|---------|------------|
+| PAR-AH-001 | Cortar Rápido vs Investir em Onboarding | Fase determina qual prevalece |
+| PAR-AH-002 | Simplicidade na Comunicação vs Precisão na Execução | Camadas diferentes (marketing vs ops) |
+| PAR-AH-003 | Foco no Prospect vs Foco no Rep | Prospect é cliente, Rep é sistema |
+| PAR-AH-004 | Paixão Não Existe vs Ensinamento com Paixão | Paixão emerge da proficiência, não precede |
+
+### Behavioral Patterns (10)
+
+| ID | Pattern | Type | Frequency |
+|----|---------|------|-----------|
+| BP-AH-001 | Reframe Antes de Resolver | COMUNICACAO | ~90% |
+| BP-AH-002 | Diagnóstico Antes de Prescrição | DECISAO | ~85% |
+| BP-AH-003 | Volume Como Caminho para Maestria | FILOSOFIA | ~80% |
+| BP-AH-004 | Estrutura Antes de Escala | PRIORIDADE | ~75% |
+| BP-AH-005 | Ensino por Analogia Cotidiana | ENSINO | ~85% |
+| BP-AH-006 | Cortar e Elevar Como Modo Padrão | DECISAO | ~70% |
+| BP-AH-007 | Arquitetura de Incentivos Sistemática | PRIORIDADE | ~65% |
+| BP-AH-008 | Engenharia de Reciprocidade | CONFLITO | ~75% |
+| BP-AH-009 | Número Como Credibilidade | COMUNICACAO | ~90% |
+| BP-AH-010 | Missão como Motor Motivacional | COMUNICACAO | ~60% |
+
+### Voice DNA Summary
+
+| Dimension | Score | Evidence |
+|-----------|-------|---------|
+| Certainty | 9.2/10 | "Every time", "99/100", "Always" |
+| Authority | 8.5/10 | "4,000 closes", specific numbers as credibility |
+| Warmth | 6.5/10 | Cheesecake Factory jokes, "Keep being awesome" |
+| Directness | 9.5/10 | Direct counter-examples, no hedging |
+| Teaching Focus | 9.0/10 | 3-story structures, analogies, walkthroughs |
+| Confidence | 9.5/10 | Never says "I think" or "maybe" |
+
+**Signature Phrases (12):** "Fair enough", "Would you be opposed to...", "Every time", "Keep being awesome", "The point of this channel...", "Would this work for 100 people?", "Volume is vanity, cash collected is sanity", "No killer starts cold and gets good", "Only three objections", "Clear the pipeline", "More-Better-New", "Crazy people buy without obstacles"
 
 ---
 
-*Compilado via JARVIS v3.33.0*
-*MISSION-2026-001 | Phase 5.4 - DOSSIER Update*
-*MCE E2E Test: 2026-03-15*
-*Validado: 2026-01-10*
+## Fontes Relacionadas
+
+- [Agent: ALEX-HORMOZI](../../../agents/external/alex-hormozi/AGENT.md)
+- [DNA: ALEX-HORMOZI](../../../knowledge/external/dna/persons/alex-hormozi/)
+- [Theme: ESTRUTURA-TIME](../themes/DOSSIER-01-ESTRUTURA-TIME.md)
+- [Theme: PROCESSO-VENDAS](../themes/DOSSIER-02-PROCESSO-VENDAS.md)
+- [Theme: CONTRATACAO](../themes/DOSSIER-03-CONTRATACAO.md)
+- [Theme: CLOSER-FRAMEWORK](../themes/DOSSIER-CLOSER-FRAMEWORK.md)
+- [Theme: PRICING](../themes/DOSSIER-07-PRICING.md)
+
+---
+
+*Compilado via MCE Pipeline v2.0*
+*Run R1: MCE-AH-2026-03-16 | 16 sources | 52 chunks | 67 insights | 10 behavioral patterns*
+*Run R2: MCE-AH-2026-03-16-R2 | Re-execution — all 12 steps | Identity checkpoint auto-approved*
+*Versão: 9.0.0 | Atualizado: 2026-03-16*

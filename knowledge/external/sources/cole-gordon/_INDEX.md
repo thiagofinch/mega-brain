@@ -4,7 +4,7 @@
 
 > **Fundador:** Closers.io
 > **Especialidade:** Sales Philosophy, Call Flow, Objection Prevention
-> **Total de Sources:** 4
+> **Total de Sources:** 5 | **MCE Run:** 2026-03-16 (20 insights, 8 behavioral patterns, 4 paradoxes)
 
 ---
 
@@ -63,5 +63,19 @@
 
 ---
 
-*Última atualização: 2025-12-30*
-*Mega Brain System v3.33.0*
+## MCE Pipeline Run (2026-03-16)
+
+| Campo | Valor |
+|-------|-------|
+| Run ID | cole-gordon/2026-03-16 |
+| Insights extraídos | 20 (FILOSOFIA: 3, MODELO-MENTAL: 3, HEURISTICA: 4, FRAMEWORK: 5, METODOLOGIA: 5) |
+| Behavioral Patterns | 8 (BP-CG-001 a BP-CG-008) |
+| Identity Layers | value_hierarchy (3+5 values), obsessions (1 MASTER), paradoxes (4) |
+| Voice DNA | VOICE-DNA.yaml gerado (7 signature phrases, 5 behavioral states) |
+| DNA YAMLs | FILOSOFIAS, MODELOS-MENTAIS, HEURISTICAS, FRAMEWORKS, METODOLOGIAS criados |
+| Status | ✅ MCE Complete |
+
+---
+
+*Última atualização: 2026-03-16*
+*MCE Pipeline v2.0 — Mega Brain System v3.34.0*

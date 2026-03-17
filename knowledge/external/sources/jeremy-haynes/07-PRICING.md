@@ -168,6 +168,26 @@ Preço baixo = cliente não leva a sério = não implementa = não tem resultado
 
 ---
 
+## MCE Pipeline Additions (2026-03-16)
+
+Novos insights extraídos via MCE Pipeline v1.0 (chunks chunk_661, chunk_664, chunk_697):
+
+### Vender Resultado, Nunca Tempo (JH-F001) [chunk_661]
+
+Filosofia central de pricing: "Clients pay for outcomes, not your time. When you sell time, you cap your income. When you sell results, you name your price." Muda completamente a estrutura de proposta — sempre baseada em ROI esperado, nunca em horas.
+
+### Offer Architecture aplicada a Pricing (JH-FW002) [chunk_697]
+
+A arquitetura de oferta em 4 camadas afeta diretamente a percepção de valor e justifica preços mais altos: Core Deliverable + Speed Bonus + Risk Reversal + Identity Upgrade. Cada camada adiciona valor percebido sem custo proporcional.
+
+### Heurística de ROI para Pricing (JH-H006) [chunk_664]
+
+Regra: o cliente deve enxergar pelo menos 5:1 de retorno esperado sobre o investimento. Abaixo de 5:1, resiste. Acima de 10:1, fecha sem negociar.
+
+**Ver também:** [AUTHORITY-HIJACKING.md](./AUTHORITY-HIJACKING.md) — Percepção de valor, [AGENCY-SYSTEMS.md](./AGENCY-SYSTEMS.md) — Capital gains vs income
+
+---
+
 ## Metadados
 
 | Campo | Valor |

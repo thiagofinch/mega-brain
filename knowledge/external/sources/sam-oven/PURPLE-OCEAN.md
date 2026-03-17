@@ -182,16 +182,43 @@ Quando Purple Ocean funciona, a diferenciação é óbvia. Prospect não pergunt
 
 ---
 
+## Camadas MCE (Mental Cognitive Extraction) — v1.0
+
+### Insights por Tema: Posicionamento & Purple Ocean
+
+| ID | Insight | Tag | Prioridade |
+|----|---------|-----|------------|
+| SO-INS-015 | Purple Ocean = mercado provado + diferenciação clara | [FILOSOFIA] | HIGH |
+| SO-INS-016 | Blue Ocean puro = alto risco, educar mercado sem garantia | [MODELO-MENTAL] | HIGH |
+| SO-INS-017 | Padrão universal: categoria + tweak (Tesla, iPhone, Amazon) | [HEURISTICA][MODELO-MENTAL] | HIGH |
+| SO-INS-018 | Purple Ocean Framework: Red + Blue = risco baixo + margem alta | [FRAMEWORK] | HIGH |
+| SO-INS-019 | Pizza Strategy: linguagem específica transforma commodity em premium | [METODOLOGIA] | HIGH |
+| SO-INS-020 | Qualificador específico: pergunta muda de "quanto custa?" para "onde fica?" | [MODELO-MENTAL] | HIGH |
+| SO-INS-021 | "What makes you different?" = diagnóstico Red Ocean sem diferenciação | [HEURISTICA] | HIGH |
+| SO-INS-022 | Diferenciador que precisa de explicação extensa não é diferenciador | [FILOSOFIA] | HIGH |
+| SO-INS-023 | Diferenciador vago sem valor competitivo — precisa ser específico e verificável | [HEURISTICA] | MEDIUM |
+| SO-INS-024 | Nicho hiper-específico pode virar Blue Ocean acidental | [HEURISTICA] | HIGH |
+
+### DNA Layer References
+
+- L1 FILOSOFIAS: FIL-SO-004, FIL-SO-005
+- L2 MODELOS-MENTAIS: MM-SO-005, MM-SO-006
+- L3 HEURISTICAS: HEU-SO-006, HEU-SO-007
+- L4 FRAMEWORKS: FW-SO-003
+- L5 METODOLOGIAS: MET-SO-001
+
+---
+
 ## Metadados
 
 | Campo | Valor |
 |-------|-------|
 | **Fonte** | Sam Ovens (Setterlun University) |
 | **Tema** | PURPLE-OCEAN |
-| **Chunks** | PO-C02, PO-C04 |
-| **Insights** | PU001-PU004 |
-| **Protocolo** | Narrative Metabolism v1.0 |
-| **Última consolidação** | — |
+| **Chunks** | PO-C02, PO-C04, SO-chunk-008..012 |
+| **Insights MCE** | SO-INS-015..024 (10 insights) |
+| **Protocolo** | Narrative Metabolism v1.0 + Pipeline MCE v1.0 |
+| **Última consolidação** | 2026-03-16 |
 
 ---
 

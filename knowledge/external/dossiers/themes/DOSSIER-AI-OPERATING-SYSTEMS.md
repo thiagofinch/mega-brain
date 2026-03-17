@@ -1,9 +1,9 @@
 # DOSSIER: AI OPERATING SYSTEMS (AIOS)
 
-> **Version:** 1.1.0
+> **Version:** 1.2.0
 > **Created:** 2026-03-12
-> **Last Updated:** 2026-03-16 (MCE Consolidation Step 10.4)
-> **Primary Source:** Liam Ottley (LO-001, LO-002, LO-003) — 42 insights, 11 behavioral patterns, 6 values, 3 obsessions
+> **Last Updated:** 2026-03-16 (MCE Autonomous Run Step 10.4)
+> **Primary Source:** Liam Ottley (LO-001, LO-002, LO-003) — 61 insights, 11 behavioral patterns, 5 values, 6 paradoxes, 3 obsessions, Voice DNA v1.2.0
 > **Contributing Sources:** (Pending — cross-reference as more sources are processed)
 
 ---
@@ -202,10 +202,10 @@ agents (CLOSER, CRO, CFO, CMO) serve as the equivalent of Liam's department-leve
 | Dossier Path | `knowledge/external/dossiers/themes/DOSSIER-AI-OPERATING-SYSTEMS.md` |
 | Primary Expert | Liam Ottley |
 | Contributing Experts | (none yet — update as more sources contribute) |
-| Total DNA Elements | 54 (from Liam Ottley) |
-| MCE Elements | 11 BP + 6 VAL + 3 OBS + 3 PAR + Voice DNA |
-| Chunks | 86 total (chunk_543 to chunk_655) |
-| Insights | 42 (23 original + 19 reinforced/new) |
+| Total DNA Elements | 59 (from Liam Ottley) |
+| MCE Elements | 11 BP + 5 VAL + 3 OBS + 6 PAR + Voice DNA v1.2.0 |
+| Chunks | 121 total (chunk_543 to chunk_690) |
+| Insights | 61 (42 prior + 19 new from autonomous run) |
 
 ---
 
@@ -223,7 +223,15 @@ AIOS é a 3ª revolução nos negócios. Construído em 5 camadas que compõem. 
 - AI agency model: Workforce > Custom Dev [chunk_650]
 - Pricing: benchmark vs human cost, 40-60% savings [chunk_653]
 
-**Evidências:** 42 insights, 86 chunks, 11 behavioral patterns
+**Evidências:** 61 insights, 121 chunks, 11 behavioral patterns, 5 values, 3 obsessions, 6 paradoxes, Voice DNA v1.2.0
+
+**Novos conceitos (Autonomous Run 2026-03-16):**
+- Founder Paradox Resolution: máxima perspectiva + mínimo tempo = AIOS resolve o gap [chunk_660]
+- AGI is Here (general intelligence = Claude Code) [chunk_668]
+- Skills = conhecimento ensinável e reutilizável [chunk_668]
+- Authority Flywheel: work→result→story→audience→client [chunk_680]
+- Agent Components Framework: Prompt+Resources+Tools+Knowledge+Memory [chunk_672]
+- Agent Handoff Patterns: sub-agent vs next-step [chunk_676]
 
 **Link:** → [DOSSIER-LIAM-OTTLEY.md](/knowledge/external/dossiers/persons/DOSSIER-LIAM-OTTLEY.md)
 
@@ -247,10 +255,14 @@ AIOS é a 3ª revolução nos negócios. Construído em 5 camadas que compõem. 
 **Adição:** Dossier criado com 5-layer architecture, KPIs, stack mapping, workforce concept.
 **Chunks:** chunk_543 a chunk_628
 
-### 2026-03-16 — NOVO
+### 2026-03-16 (Prior Run)
 **Fonte:** MCE Consolidation Step 10.4
 **Adição:** Atualizado com 42 insights, MCE data (behavioral patterns, identity core, voice DNA). Seções POSIÇÕES POR PESSOA e SOURCES adicionadas. DNA elements atualizados de 27 para 54.
 
+### 2026-03-16 — AUTONOMOUS RUN
+**Fonte:** MCE Autonomous Run — 3 YouTubes (chunks 656-690)
+**Adição:** 19 new insights (LO-001 to LO-025), 12 new DNA items, 3 new paradoxes, VOICE-DNA v1.2.0. New concepts: Founder Paradox Resolution, Authority Flywheel, Agent Components Framework, Agent Handoff Patterns, Cold Email Niche Testing, Warm Outreach Formula.
+
 ---
 
-*Dossier compiled by Pipeline Jarvis | 2026-03-12 | MCE Update 2026-03-16*
+*Dossier compiled by Pipeline Jarvis | 2026-03-12 | MCE Updates 2026-03-16 | Autonomous Run 2026-03-16*

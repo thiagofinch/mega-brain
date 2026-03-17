@@ -271,7 +271,67 @@
 
 ---
 
-> **Versão:** 1.0.0
+---
+
+## MCE ENRICHMENT — 2026-03-16
+
+> **MCE Pipeline Run:** 2026-03-16 | Step 10.1 (Person Dossier Update)
+> **New MCE Data:** Behavioral Patterns, Identity Layers, Voice DNA
+
+### BEHAVIORAL PATTERNS (MCE Extraction)
+
+| ID | Pattern | Type | Confidence |
+|----|---------|------|-----------|
+| BP-RD-001 | Radical Simplification Under Pressure | decisao | 0.97 |
+| BP-RD-002 | Contrarian Stance + Empirical Proof | crenca | 0.96 |
+| BP-RD-003 | Vulnerability-to-Framework Loop | comunicacao | 0.95 |
+| BP-RD-004 | Precision Vocabulary Engineering | comunicacao | 0.94 |
+| BP-RD-005 | Process Before Tool / People Before Systems | decisao | 0.96 |
+| BP-RD-006 | Delegation by Elevation — Ask, Don't Answer | lideranca | 0.94 |
+
+### VALUE HIERARCHY (MCE Extraction)
+
+```
+TIER 1 — EXISTENTIAL:
+  ● Founder Freedom          (10/10) — Business must serve the founder, not vice versa
+  ● Simplicity as Leverage    (9/10) — If you can't explain it on a napkin, it's too complex
+
+TIER 2 — OPERATIONAL:
+  ● Honest Accountability     (8/10) — Manual ownership > automated reporting
+  ● Clarity Over Convention   (8/10) — Precision of language drives precision of action
+  ● Empirical Pragmatism      (8/10) — Re-test every contrarian belief with real money
+  ● Team Ownership as Culture (7/10) — People own numbers by interacting with them
+```
+
+### MASTER OBSESSION
+
+> **"The Business That Runs Without the Founder"** — intensity 10/10
+>
+> Every framework (ScalableOS, Clarity Compass, 12Q, Traffic Light, Manual Scorecards) is
+> an answer to a single question: how do you build a business that runs and scales without
+> you being the operating system?
+
+### PARADOXES
+
+1. **Freedom Requires Structure** — liberation comes from the most rigorous documentation
+2. **Manual > Automated** — the 'slow' process produces more insight and ownership
+3. **Great Leadership = Not Knowing the Answers** — expertise that built the business must be unlearned to scale it
+4. **Profit First to Serve the Mission** — the selfish goal (profit) enables the selfless goal (founder freedom + impact)
+
+### VOICE DNA SUMMARY
+
+```
+Certainty:   9/10   Directness:    9/10   Clarity:       10/10
+Authority:   8/10   Warmth:        8/10   Vulnerability:  9/10
+```
+
+Signature phrase: *"It is not your job to know how to turn red to yellow."*
+Primary emotional offer: **Relief** — "This is solvable. You are not broken. Here is the way out."
+
+---
+
+> **Versão:** 2.0.0-mce
 > **Criado:** 2026-01-10 (BUG #4 Fix - Phase 5 Audit)
-> **Fonte:** 64 arquivos, 7 batches, 393 elementos DNA
+> **MCE Update:** 2026-03-16 (MCE Pipeline Steps 3-10)
+> **Fonte:** 64 arquivos, 7 batches, 393 elementos DNA + 37 MCE chunks, 18 insights
 > **Rastreabilidade:** 100%

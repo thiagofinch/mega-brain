@@ -204,6 +204,38 @@ Preço baseado no valor do outcome, não no custo de entrega.
 
 ---
 
+## Camadas MCE (Mental Cognitive Extraction) — v1.0
+
+### Insights por Tema: Ofertas & Pricing
+
+| ID | Insight | Tag | Prioridade |
+|----|---------|-----|------------|
+| SO-INS-001 | Cliente compra resultado, não serviço | [FILOSOFIA] | HIGH |
+| SO-INS-002 | Bridge Analogy: oferta = ponte Current → Desired State | [MODELO-MENTAL] | HIGH |
+| SO-INS-003 | Unique Mechanism: por que SUA ponte é melhor | [MODELO-MENTAL] | HIGH |
+| SO-INS-004 | Mapeamento sistemático de trolls (objeções) | [FRAMEWORK] | HIGH |
+| SO-INS-005 | Nunca vender atividade — sempre vender transformação | [FILOSOFIA] | HIGH |
+| SO-INS-006 | Regra 80/20 aplicada agressivamente | [HEURISTICA] | HIGH |
+| SO-INS-007 | DWY é gold standard para agências/consultores | [HEURISTICA][FILOSOFIA] | HIGH |
+| SO-INS-008 | Framework dos 3 modelos (DFY/DWY/DIY) | [FRAMEWORK] | HIGH |
+| SO-INS-009 | Pricing baseado no valor do resultado, não no custo | [FILOSOFIA] | HIGH |
+| SO-INS-010 | University Model: cobrar 10% do ROI lifetime | [HEURISTICA] | HIGH |
+| SO-INS-011 | Net profit mínimo 30-40% | [HEURISTICA] | HIGH |
+| SO-INS-012 | Break-even do cliente: 1-3 meses | [HEURISTICA] | HIGH |
+| SO-INS-013 | Freelancer trap: work 100% custom = emprego, não empresa | [FILOSOFIA] | HIGH |
+| SO-INS-014 | Productization como pré-requisito para escala | [MODELO-MENTAL] | HIGH |
+| SO-INS-025 | High-leverage thinking: só executar o que move a agulha | [FILOSOFIA] | HIGH |
+| SO-INS-026 | Oferta productizable define distinção empresa vs emprego | [FILOSOFIA] | HIGH |
+
+### DNA Layer References
+
+- L1 FILOSOFIAS: FIL-SO-001, FIL-SO-002, FIL-SO-003, FIL-SO-005, FIL-SO-006, FIL-SO-007, FIL-SO-008
+- L2 MODELOS-MENTAIS: MM-SO-001, MM-SO-002, MM-SO-003, MM-SO-004
+- L3 HEURISTICAS: HEU-SO-001, HEU-SO-002, HEU-SO-003, HEU-SO-004, HEU-SO-005
+- L4 FRAMEWORKS: FW-SO-001, FW-SO-002
+
+---
+
 ## Metadados
 
 | Campo | Valor |
@@ -211,9 +243,9 @@ Preço baseado no valor do outcome, não no custo de entrega.
 | **Fonte** | Sam Ovens (Setterlun University) |
 | **Tema** | 07-PRICING-OFERTAS |
 | **Chunks** | OC-C02, OC-C04, OC-C08, BD-C02 |
-| **Insights** | OF001-OF003, PC001-PC003, BM001-BM003 |
-| **Protocolo** | Narrative Metabolism v1.0 |
-| **Última consolidação** | — |
+| **Insights MCE** | SO-INS-001..014, SO-INS-025, SO-INS-026 (16 insights) |
+| **Protocolo** | Narrative Metabolism v1.0 + Pipeline MCE v1.0 |
+| **Última consolidação** | 2026-03-16 |
 
 ---
 

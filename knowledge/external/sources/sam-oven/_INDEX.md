@@ -10,10 +10,10 @@
 
 ## Arquivos Disponíveis
 
-| Arquivo | Tema | Densidade |
-|---------|------|-----------|
-| [07-PRICING-OFERTAS](07-PRICING-OFERTAS.md) | Bridge Analogy, Outcome-Driven Offers | ◐◐◐◯◯ (3) |
-| [PURPLE-OCEAN](PURPLE-OCEAN.md) | Purple Ocean Method, Pizza Strategy | ◐◐◐◯◯ (3) |
+| Arquivo | Tema | Densidade | MCE Insights |
+|---------|------|-----------|-------------|
+| [07-PRICING-OFERTAS](07-PRICING-OFERTAS.md) | Bridge Analogy, Outcome-Driven Offers, DFY/DWY/DIY, Pricing | ◐◐◐◐◯ (4) | SO-INS-001..014, 025, 026 (16) |
+| [PURPLE-OCEAN](PURPLE-OCEAN.md) | Purple Ocean Method, Pizza Strategy, Posicionamento | ◐◐◐◐◯ (4) | SO-INS-015..024 (10) |
 
 ---
 
@@ -101,5 +101,17 @@
 
 ---
 
-*Última atualização: 2025-12-30*
-*Mega Brain System v3.33.0*
+## MCE Pipeline Status
+
+| Campo | Valor |
+|-------|-------|
+| **Pipeline MCE** | v1.0 — 2026-03-16 |
+| **Total Chunks** | 14 |
+| **Total Insights** | 27 |
+| **DNA Layers** | 5/5 (25 entries total) |
+| **Dossier** | DOSSIER-SAM-OVEN.md v3.0 |
+
+---
+
+*Última atualização: 2026-03-16*
+*Pipeline MCE v1.0 | Mega Brain System*

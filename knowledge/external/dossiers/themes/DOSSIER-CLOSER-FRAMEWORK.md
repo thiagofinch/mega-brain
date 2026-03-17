@@ -503,6 +503,62 @@ O CLOSER Framework e a espinha dorsal de vendas high-ticket. Nao e uma tecnica -
 
 ---
 
+---
+
+## MCE Update 2026-03-16 — New Techniques (16 sources)
+
+### No-Based Questions [INS-AH-006, INS-AH-007]
+
+Technique from Chris Voss: People feel SAFER saying "no" than "yes". Reframe closing questions from yes-seeking to opposition-seeking.
+
+| Old (Yes-Based) | New (No-Based) |
+|-----------------|----------------|
+| "Are you ready to move forward?" | "Would you be opposed to moving forward today?" |
+| "Does this sound good?" | "Would it be completely unreasonable to get started now?" |
+| "Can we proceed?" | "Would you be against knocking out the paperwork?" |
+
+**Mechanism:** The prospect says "no, I'm not opposed" = agreement with less cognitive commitment.
+
+### Decision-Making Walkthrough Close [INS-AH-039]
+
+4 binary questions that guide the prospect through their own decision:
+
+1. Do you like me? (Yes/No)
+2. Do you like the product? (Yes/No)
+3. Do you believe we can help you achieve this outcome? (Yes/No)
+4. Do you have access to this amount of money? (Yes/No)
+
+4x Yes → "What card do you want to use?"
+
+### Pain Cycle — Exhaust All Prior Attempts [INS-AH-047]
+
+In the **O (Overview Pain)** phase: cycle through EVERY past attempt and failure before presenting your solution. Keep asking "What have you tried? Why didn't it work?" until they have nothing left.
+
+**Effect:** Emotional exhaustion of the "I'll try X instead" option = openness to your solution.
+
+### Post-Sale Reinforcement [INS-AH-040]
+
+Immediately after close:
+- 30-second personalized founder video (by name)
+- Handwritten card OR physical gesture (t-shirt, etc.)
+
+**Why:** Buyer's remorse is predictable. Eliminate it immediately before it can grow.
+
+### Selling Vacation with 3 Stories [INS-AH-048]
+
+In the **S (Sell Vacation)** phase: salespeople need only 3 illustrative stories tied to 3 transformation themes. Not product features — outcome experiences.
+
+### Objection Drills — 3 to Reflex Level [INS-AH-053]
+
+Only 3 real objections: **price, stall, decision maker**. Drill with flashcards until the response is automatic — a reflex, not a thought. Real-time objection responses cannot be improvised.
+
+### New Source References
+
+- Source: Alex Hormozi MCE-AH-2026-03-16 (16 sources, 28 vendas insights)
+- INS-AH-001 through INS-AH-055 (all vendas-tagged)
+
+---
+
 *Dossier gerado por JARVIS v3.33.0*
 *MISSION-2026-001 | Fase 5 - Cascateamento REGRA #22*
-*2026-01-10T15:30:00Z*
+*2026-01-10 | Atualizado: 2026-03-16 (MCE Pipeline v2.0)*

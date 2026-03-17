@@ -1412,18 +1412,55 @@ Se voce esta falando mais que 10-15%, esta perdendo a venda. 85%+ deve ser o pro
 
 ---
 
+## MCE Pipeline — Atualização 2026-03-16
+
+> **MCE v1.0 — Camadas de Identidade e Comportamento Extraídas**
+
+### Padrões Comportamentais (MCE-1)
+
+| ID | Nome | Tipo | Gatilho |
+|----|------|------|---------|
+| BP-JM-001 | Diagnóstico Antes da Prescrição | DECISAO | "Por que você?" / pedido de pitch |
+| BP-JM-002 | Reframe de Resistência via Curiosidade | CONFLITO | Prospect fecha / respostas curtas |
+| BP-JM-003 | Ensino Via Framework+Exemplo+Número | ENSINO | Qualquer explicação de conceito |
+| BP-JM-004 | Priorização de Emoção sobre Lógica | PRIORIDADE | Feature requests / discussões de ROI |
+| BP-JM-005 | Prevenção vs. Tratamento de Objeções | DECISAO | Objeções emergindo na conversa |
+
+### Hierarquia de Valores (MCE-2)
+
+**Tier 1 — Existencial:**
+- Autenticidade e Serviço Genuíno (10.0/10)
+- Maestria Técnica sobre Motivação (9.5/10)
+- Ciência sobre Intuição em Vendas (9.2/10)
+
+**Obsessão Master:** Eliminação da Resistência de Vendas (intensidade 10/10)
+
+### Voice DNA Summary (MCE-3)
+
+| Dimensão | Score |
+|----------|-------|
+| Certainty | 9.5/10 |
+| Authority | 9.2/10 |
+| Teaching Focus | 9.5/10 |
+| Directness | 9.0/10 |
+| Warmth | 5.5/10 |
+
+**Frases proibidas:** "Just following up", "Just checking in", "I wanted to touch base", "To be honest", "Trust me"
+
+---
+
 ## Metadados
 
 | Campo | Valor |
 |-------|-------|
 | **Codigo** | NEPQ-METHODOLOGY |
-| **Fontes** | Jeremy Miner (100%) - ~1,199 elementos |
-| **Batches** | 052-067 (16 batches) |
-| **Insights** | 524+ |
+| **Fontes** | Jeremy Miner (100%) - ~1,199 elementos + 19 MCE |
+| **Batches** | 052-067 (16 batches) + MCE Pipeline 2026-03-16 |
+| **Insights** | 524+ base + 30 MCE |
 | **Temas Relacionados** | Objection Handling, High-Ticket Sales, Tonality, Cold Calling |
-| **Protocolo** | JARVIS v3.33.0 |
+| **Protocolo** | JARVIS v3.33.0 → MCE v1.0 |
 | **Criado** | 2026-01-09 |
-| **Atualizado** | 2026-01-10 |
+| **Atualizado** | 2026-03-16 |
 
 ---
 

@@ -1,12 +1,12 @@
 # DOSSIER: LIAM OTTLEY
 
-> **Versão:** 2.0.0
+> **Versão:** 3.1.0
 > **Gerado:** 2026-03-13
-> **Atualizado:** 2026-03-16 (MCE Consolidation Step 10.1)
-> **Fontes:** 3 podcasts YouTube (24,287 palavras) — 86 chunks, 42 insights
-> **DNA Elements:** 47 (13 FIL + 9 MM + 13 HEUR + 7 FW + 5 MET)
-> **MCE Elements:** 11 behavioral patterns + 6 values + 3 obsessions + 3 paradoxes + 16 signature phrases + 5 behavioral states
-> **Voice DNA:** Dimensional scores + 6 anti-patterns + 5 metaphors + 6 vocabulary transforms
+> **Atualizado:** 2026-03-16 (MCE Pipeline — Full Autonomous Run — Agent Files Regenerated)
+> **Fontes:** 3 podcasts YouTube (24,287 palavras) — 121 chunks (86+35), 61 insights (42+19 new)
+> **DNA Elements:** 59 (14 FIL + 11 MM + 15 HEUR + 10 FW + 9 MET)
+> **MCE Elements:** 11 behavioral patterns + 5 values + 3 obsessions + 6 paradoxes + 22 signature phrases + 5 behavioral states
+> **Voice DNA:** Dimensional scores + 6 anti-patterns + 8 metaphors + 10 vocabulary transforms
 > **Status:** 🟢 Ativo
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -203,12 +203,19 @@ Usa "controle pelo celular" como teste de maturidade do AIOS. Se não consegue o
 | OBS-LO-002 | Evangelismo AIOS | 8/10 | SECONDARY |
 | OBS-LO-003 | AI Workforce como Modelo | 7/10 | ACTIVE |
 
-### Paradoxes
+### Paradoxes (6 total — 3 from prior run + 3 new from 2026-03-16 run)
 | ID | Paradox | Productive? |
 |----|---------|-------------|
 | PAR-LO-001 | Evangelista de Simplicidade com Sistema Complexo | Yes |
 | PAR-LO-002 | Anti-Headcount mas Multi-Company | Yes |
 | PAR-LO-003 | 80% Listening vs 100% Broadcasting | Yes |
+| PAR-LO-004 | Constrói Devagar (Layers) vs. Executa Rápido (7 Dias) | Yes |
+| PAR-LO-005 | Máximo Valor Gratuito vs. Monetização Agressiva | Yes |
+| PAR-LO-006 | Posiciona Para Não-Técnicos vs. Requer Implementação Técnica | Yes |
+
+**PAR-LO-004 Resolution:** Builds infrastructure slowly, executes on top of it at extraordinary speed (7-day sprint).
+**PAR-LO-005 Resolution:** Free content = authority flywheel → lead gen → premium conversion. Both serve the same system.
+**PAR-LO-006 Resolution:** Accessible framing + scaffolded tools = non-technical founders execute technically complex systems.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -228,7 +235,7 @@ Usa "controle pelo celular" como teste de maturidade do AIOS. Se não consegue o
 | Humor | 4/10 |
 | Formality | 3/10 |
 
-### Signature Phrases (17 total)
+### Signature Phrases (22 total)
 Top 5:
 1. "layers, not leaps" — Filosofia core de implementação [alta freq]
 2. "bandwidth / buying back bandwidth" — Recurso do founder como moeda [muito alta freq]
@@ -295,8 +302,18 @@ Liam Ottley é **diretamente relevante** para o Mega Brain porque:
 **Chunks:** chunk_636 a chunk_655
 
 ### 2026-03-16 — NOVO
-**Fonte:** MCE Consolidation Step 10
+**Fonte:** MCE Consolidation Step 10 (prior run)
 **Adição:** Dossier atualizado com seções completas de behavioral patterns, identity core, voice DNA summary. Source docs criados por tema. DNA YAMLs atualizados.
+
+### 2026-03-16 — AUTONOMOUS RUN (Step 10.1)
+**Fonte:** LO-001, LO-002, LO-003 (3 YouTubes — autonomous MCE run)
+**Adição:** 19 new insights (LO-043 to LO-061), 6 behavioral patterns reinforced (BP-LO-001 to BP-LO-006), 3 new paradoxes (PAR-LO-004 to PAR-LO-006), identity layer v3, VOICE-DNA v1.2.0 (+6 signature phrases, +3 metaphors, +4 vocabulary transforms).
+**Chunks:** chunk_656 to chunk_690 (35 new chunks)
+
+### 2026-03-16 — FULL PIPELINE AUTONOMOUS (Step 10.5 — Agent Regen)
+**Fonte:** MCE Pipeline full autonomous run (12 steps)
+**Adição:** Agent files regenerated (AGENT.md v3.1.0, SOUL.md v3.1.0, MEMORY.md v3.1.0, DNA-CONFIG.yaml v3.1.0). Dossier bumped to v3.1.0. All 59 DNA elements verified. Source docs confirmed (9 themes). Agent files restored to agents/external/liam-ottley/.
+**Artifacts:** artifacts/mce/liam-ottley/COMPLETION.json
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -312,6 +329,7 @@ Liam Ottley é **diretamente relevante** para o Mega Brain porque:
 | AI Agency Model | → [06-AI-AGENCY-MODEL.md](/knowledge/external/sources/liam-ottley/06-AI-AGENCY-MODEL.md) | 🟢 |
 | 7-Day Sprint | → [07-7-DAY-SPRINT.md](/knowledge/external/sources/liam-ottley/07-7-DAY-SPRINT.md) | 🟢 |
 | Tools & Stack | → [08-TOOLS-STACK.md](/knowledge/external/sources/liam-ottley/08-TOOLS-STACK.md) | 🟢 |
+| Authority Flywheel | → [09-AUTHORITY-FLYWHEEL.md](/knowledge/external/sources/liam-ottley/09-AUTHORITY-FLYWHEEL.md) | 🟢 |
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
                               FIM DO DOSSIÊ

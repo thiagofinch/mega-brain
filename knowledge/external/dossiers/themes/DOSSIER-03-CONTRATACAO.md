@@ -4,7 +4,7 @@
 
 > **Em resumo:** Competencia > experiencia (Jordan Lee). Farm System para desenvolvimento interno (Hormozi). Job ads como VSL - vende a oportunidade. Do-Document-Delegate antes de contratar. Outbound como base de desenvolvimento: cria resiliencia e 3x close rate. Lei dos 33%: apenas 1/3 dos vendedores sao excelentes. Metodo PTMA para gestao. Onboarding estruturado de 8 semanas. 5-Step Hiring Process. VAK para comunicacao.
 >
-> **Versao:** 3.0.0 | **Atualizado:** 2026-01-10
+> **Versao:** 3.1.0 | **Atualizado:** 2026-03-16
 > **Densidade:** ALTA (5)
 > **Fontes:** Jordan Lee, Alex Hormozi, Cole Gordon, Jeremy Haynes, Full Sales System, G4 Educacao
 
@@ -69,6 +69,56 @@ Multiplas filosofias de contratacao se complementam:
 |  +-- Sistema forte compensa jogadores medios                                |
 |  +-- Reduz dependencia de talentos raros                                    |
 |  +-- Tom Brady Effect: 27% drop quando A-player sai                         |
+|                                                                             |
+|  RICHARD LINDER: Founder First Hiring [RL001]                               |
+|  "Companies move at the speed of the founder"                               |
+|                                                                             |
+|  +-- Competency AND Compatibility (nao OU)                                  |
+|  +-- Hell Yes or No (sem 7 no scorecard)                                    |
+|  +-- Hire No One e resultado aceitavel                                      |
+|  +-- Paid assessment $1-2k (nunca trabalho gratis)                         |
+|  +-- Trust Builder/Breaker WHO scenarios                                    |
+|  +-- Salary band no primeiro phone screen                                   |
+|                                                                             |
++-----------------------------------------------------------------------------+
+```
+
+---
+
+## Richard Linder: Founder First Hiring [RL001]
+
+```
++-----------------------------------------------------------------------------+
+|               FOUNDER FIRST HIRING — Richard Linder                        |
++-----------------------------------------------------------------------------+
+|                                                                             |
+|  PRINCIPIO CENTRAL:                                                         |
+|  "Companies move at the speed of the founder."                              |
+|  Contratacao compativel com fundador = estrategia, nao egoismo              |
+|                                                                             |
+|  FILTRO PRIMARIO: HELL YES OR NO                                            |
+|  +-- Nao existe 7 (= 6 otimista ou 8 pessimista)                           |
+|  +-- Score minimo 8+ em non-negotiables                                     |
+|  +-- Resultado aceitavel: contratar NINGUEM e reiniciar                     |
+|                                                                             |
+|  PROCESSO 5 FASES:                                                          |
+|  1. Phone Screen (10min) — alinhar salary, remoto, viagem, BASICOS          |
+|  2. Entrevista Hiring Manager — competencia + compatibilidade               |
+|  3. Paid Skills Assessment ($1-2k, 4-8h) — trabalho real                  |
+|  4. Painel + Scorecard — multiplos membros, detecta oil/water               |
+|  5. Entrevista Final — 1-3 candidatos, scorecard completo                  |
+|                                                                             |
+|  TRUST BUILDER DISCOVERY (3 cenarios positivos):                           |
+|  → WHO liderou reuniao produtiva?                                           |
+|  → WHO voce entrega tarefa urgente?                                         |
+|  → WHO voce liga para brainstorm?                                           |
+|  Extraia tracos comuns = non-negotiables de contratacao                     |
+|                                                                             |
+|  TRUST BREAKER DISCOVERY (3 cenarios invertidos):                          |
+|  → WHO convocou reuniao sem proposito?                                      |
+|  → WHO nao deu confianca para delegar?                                      |
+|  → WHO te da sentimento de afundamento?                                     |
+|  Extraia anti-padroes = criterios de eliminacao automatica                  |
 |                                                                             |
 +-----------------------------------------------------------------------------+
 ```
@@ -746,17 +796,77 @@ Contratar closer antes de validar que o processo funciona. "Closer quer estabili
 
 ---
 
+## MCE v2.0 — Atualizacoes Jordan Lee (2026-03-16)
+
+Novos insights de Jordan Lee adicionados pelo MCE Pipeline v2.0:
+
+```
++-----------------------------------------------------------------------------+
+|  JORDAN LEE — NOVOS INSIGHTS MCE v2.0 (CONTRATACAO)                        |
++-----------------------------------------------------------------------------+
+|                                                                             |
+|  JOB AD COMO VSL (INS-JL-v2-023):                                          |
+|  "Job ads should be like VSL — sell the dream, show the vision."           |
+|  -> Os melhores candidatos sao atraidos, nao encontrados                   |
+|  -> Requisitos na frente = tira os melhores do inicio                      |
+|                                                                             |
+|  OUTREACH MULTI-CANAL SIMULTANEO (INS-JL-v2-015):                          |
+|  "Nao pode ser 'testamos um pouco aqui e ali.'"                            |
+|  "Tem que ser: todos os canais. Ate encontrar."                            |
+|  -> LinkedIn ads + recruiters + referral fee + rede + Instagram            |
+|                                                                             |
+|  RECRUTAMENTO = AQUISICAO DE CLIENTES (INS-JL-v2-012):                     |
+|  "Most founders spend more time prospecting for clients than                |
+|   recruiting talent. And at some stage it has to switch."                  |
+|  -> Em algum momento a prioridade TEM que inverter                         |
+|  -> Contratar errado custa mais que perder um deal                         |
+|                                                                             |
+|  SINK OR SWIM 60-90 DIAS (INS-JL-023):                                     |
+|  -> Se nao performa em 60-90 dias, provavelmente nunca vai                 |
+|  -> Zero hand-holding. Ferramentas + treinamento + processo = suficiente   |
+|                                                                             |
+|  HIRE CREATIVES, THINKERS, TECH (INS-JL-042):                              |
+|  "I only want to hire now people who are creatives, high level             |
+|   thinkers or tech people. There's actually no need for anyone else."      |
+|  -> AI substitui o resto. Consultores vao ser cada vez mais tecnicos.      |
+|                                                                             |
++-----------------------------------------------------------------------------+
+```
+
+---
+
+## MCE v4.0 — Atualizacoes Jordan Lee (2026-03-16)
+
+Novos insights de Jordan Lee adicionados pelo MCE Pipeline v4.0 (YouTube: HOW HE QUIT HIS 9-5):
+
+```
++-----------------------------------------------------------------------------+
+|  JORDAN LEE — NOVOS INSIGHTS MCE v4.0 (CONTRATACAO)                       |
++-----------------------------------------------------------------------------+
+|                                                                             |
+|  FORMULA DOIS CONTRATACOES + ADS (INS-JL-043):                             |
+|  "You're two hires and ads away from 100k plus a month profit              |
+|   without doing anything in the business."                                 |
+|  -> Closer + Operador (pensa como founder) + Ads = sistema completo        |
+|  -> Nao precisa de 10 contratacoes — precisa das 2 certas                 |
+|  -> O operador resolve problemas antes de voce saber que existem           |
+|                                                                             |
++-----------------------------------------------------------------------------+
+```
+
+---
+
 ## Metadados
 
 | Campo | Valor |
 |-------|-------|
 | **Codigo** | 03-CONTRATACAO |
 | **Fontes** | Jordan Lee, Alex Hormozi, Cole Gordon, Jeremy Haynes, Full Sales System, G4 Educacao |
-| **Insights** | 136+ |
+| **Insights** | 142+ (136 v1 + 5 MCE v2.0 + 1 MCE v4.0) |
 | **Temas Relacionados** | 01-Estrutura Time, 04-Comissionamento, 09-Gestao, SDR, Closer |
 | **Protocolo** | Narrative Metabolism v2.0 |
-| **Ultima consolidacao** | 2026-01-10 |
-| **Batches Fonte** | 050, 074, 080, 097, 098, 117, 120, 121, 127 |
+| **Ultima consolidacao** | 2026-03-16 (MCE v4.0 Jordan Lee) |
+| **Batches Fonte** | 050, 074, 080, 097, 098, 117, 120, 121, 127, MCE-JL-v2, MCE-JL-v4 |
 
 ---
 

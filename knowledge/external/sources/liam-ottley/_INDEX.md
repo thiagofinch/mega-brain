@@ -2,7 +2,7 @@
 
 > **Fundador:** Morningside AI
 > **Especialidade:** AI Operating Systems, AI Agency, AI Workforce, Bandwidth Liberation
-> **Total de Sources:** 8
+> **Total de Sources:** 9 (updated 2026-03-16 — Autonomous Run)
 
 ---
 
@@ -18,8 +18,9 @@
 | [06-AI-AGENCY-MODEL](06-AI-AGENCY-MODEL.md) | Agency sales, pricing, discovery, positioning | 5 | ◐◐◐◐◯ (4) |
 | [07-7-DAY-SPRINT](07-7-DAY-SPRINT.md) | Sprint D1-D7, $1M NZD case study | 3 | ◐◐◐◯◯ (3) |
 | [08-TOOLS-STACK](08-TOOLS-STACK.md) | Claude Code, skills, /explore, non-technical access | 4 | ◐◐◐◯◯ (3) |
+| [09-AUTHORITY-FLYWHEEL](09-AUTHORITY-FLYWHEEL.md) | Content credibility loop, proof > promise, documentary strategy | 1 | ◐◐◐◯◯ (3) |
 
-**Total de Insights:** 42 (INS-LO-001 a INS-LO-042)
+**Total de Insights:** 61 (INS-LO-001 a INS-LO-042 + LO-001 a LO-025 from Autonomous Run)
 
 ---
 
@@ -29,11 +30,11 @@
 
 | ID | Titulo | Tipo | Chunks | Temas Cobertos |
 |----|--------|------|--------|----------------|
-| LO-001 | The Biggest Shift in Business Since the Internet Just Happened | Podcast | chunk_543-chunk_604 | AIOS, Bandwidth, Sprint, Revenue, Tools, Brief |
-| LO-002 | How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE | Course | chunk_636-chunk_655 | Workforce, Agency, Revenue, AIOS, Sprint |
-| LO-003 | What Is an AI Operating System (And Why Every Business Will Need One) | Podcast | chunk_636-chunk_655 | AIOS, Bandwidth, Revenue, Brief, Tools, Sprint |
+| LO-001 | The Biggest Shift in Business Since the Internet Just Happened | Podcast | chunk_543-chunk_604, chunk_656-chunk_662 | AIOS, Bandwidth, Sprint, Revenue, Tools, Brief |
+| LO-002 | How to Build and Sell AI Agent Workforces as a Beginner FULL COURSE | Course | chunk_636-chunk_655, chunk_669-chunk_690 | Workforce, Agency, Revenue, AIOS, Sprint |
+| LO-003 | What Is an AI Operating System (And Why Every Business Will Need One) | Podcast | chunk_636-chunk_655, chunk_663-chunk_668 | AIOS, Bandwidth, Revenue, Brief, Tools, Sprint |
 
-**Total de Chunks:** ~113 (chunk_543 a chunk_655)
+**Total de Chunks:** ~148 (chunk_543 a chunk_690, including Autonomous Run chunks 656-690)
 
 ---
 
@@ -68,12 +69,12 @@
 
 | Arquivo | Camada | Entries |
 |---------|--------|---------|
-| `FILOSOFIAS.yaml` | L1 | 13 |
-| `MODELOS-MENTAIS.yaml` | L2 | 9 |
-| `HEURISTICAS.yaml` | L3 | 13 |
-| `FRAMEWORKS.yaml` | L4 | 7 |
-| `METODOLOGIAS.yaml` | L5 | 5 |
-| `VOICE-DNA.yaml` | Voice | 1 (perfil completo) |
+| `FILOSOFIAS.yaml` | L1 | 14 |
+| `MODELOS-MENTAIS.yaml` | L2 | 11 |
+| `HEURISTICAS.yaml` | L3 | 15 |
+| `FRAMEWORKS.yaml` | L4 | 10 |
+| `METODOLOGIAS.yaml` | L5 | 9 |
+| `VOICE-DNA.yaml` | Voice | 1 (v1.2.0 — 22 phrases, 8 metaphors) |
 
 ---
 
@@ -84,5 +85,14 @@
 
 ---
 
-*Ultima atualizacao: 2026-03-16*
-*MCE Pipeline v1.0*
+- **Authority Flywheel** — Ciclo win → story → audience → client
+- **Agent Components (5)** — Prompt, Resources, Tools, Knowledge, Memory
+- **Agent Handoff Patterns** — sub-agent vs next-step
+- **Cold Email Niche Testing** — 4×500×30d formula
+- **Warm Outreach Formula** — Referral ask, not direct sell
+- **AI Workforce Monetization** — Diagnose→Design→Manage→Expand
+
+---
+
+*Ultima atualizacao: 2026-03-16 (Autonomous Run — chunks 656-690)*
+*MCE Pipeline v1.2.0*

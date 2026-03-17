@@ -1,12 +1,13 @@
-# DOSSIÊ: Sam Oven (Setterlun University)
+# DOSSIÊ: Sam Ovens (Setterlun University)
 
-[[HOME|← Home]] | [[MOC-PESSOAS|👤 Pessoas]] | [[MOC-TEMAS|📚 Temas]] | [[knowledge/dna/persons/SAM-OVEN/CONFIG|⚙️ DNA Config]]
+[[HOME|← Home]] | [[MOC-PESSOAS|👤 Pessoas]] | [[MOC-TEMAS|📚 Temas]] | [[knowledge/external/dna/persons/sam-oven/DNA-CONFIG|⚙️ DNA Config]]
 
 > **Em resumo:** Bridge Analogy para ofertas. Purple Ocean = Red + Blue (diferenciação em mercado provado). DWY é o modelo ideal para agências. Pricing baseado no valor do resultado, não no custo. 80/20 rule aplicada agressivamente.
 >
-> **Versão:** 2.0 | **Atualizado:** 2025-12-20
-> **Densidade:** ◐◐◐◯◯ (3)
-> **Fontes:** SETTERLUN-OC, SETTERLUN-PO, SETTERLUN-BD (25 chunks, 13 insights)
+> **Versão:** 3.0 | **Atualizado:** 2026-03-16
+> **Densidade:** ◐◐◐◐◯ (4)
+> **Fontes:** SETTERLUN-OC, SETTERLUN-PO, SETTERLUN-BD (25+ chunks, 27 insights MCE)
+> **MCE:** v1.0 | Pipeline: /pipeline-mce sam-oven | Data: 2026-03-16
 
 ---
 
@@ -68,6 +69,8 @@ SIM diferencia dentro do provado
 - Tesla = Car + Electric
 - iPhone = Phone + Smart
 - Amazon = Store + Online
+- Netflix = Locadoras + Streaming
+- Uber = Táxis + App
 
 Nenhum desses inventou a categoria. Todos diferenciaram dentro de mercado existente.
 
@@ -79,7 +82,7 @@ Mesmo produto + linguagem diferente = percepção diferente.
 "Pizza"
     → Red Ocean (milhares de concorrentes)
 
-    ↓ tweak
+    ↓ tweak linguagem
 
 "Wood-fired truffle pizza"
     → Purple Ocean (diferenciado, ainda é pizza)
@@ -111,8 +114,6 @@ O sweet spot é o Purple. Reconhecível + diferenciado.
 📍 Equilíbrio entre liberdade do founder e resultados do cliente
 ```
 
-Para agências e consultorias, DWY é o sweet spot. DFY exige muito da sua capacidade de entrega. DIY exige muito volume de clientes.
-
 ---
 
 ## Arsenal Técnico
@@ -132,11 +133,20 @@ Para agências e consultorias, DWY é o sweet spot. DFY exige muito da sua capac
 │  ├─ Justificativa: ROI lifetime                                          │
 │  └─ Break-even: 1-2 anos, paga resto da vida                             │
 │                                                                          │
-│  Pergunta-chave:                                                         │
-│  "Quanto vale pro cliente o resultado que você entrega?"                 │
+│  Se resultado vale $500k ao longo da vida,                               │
+│  cobrar $50k é 10% do valor = deal óbvio                                 │
 │                                                                          │
 └─────────────────────────────────────────────────────────────────────────┘
 ```
+
+### Margens Target
+
+| Componente | % Target |
+|------------|----------|
+| Fulfillment | 60-70% |
+| Marketing/Sales | 20-30% |
+| Net Profit | **30-40% (mínimo)** |
+| Break-even cliente | 1-3 meses |
 
 ### 80/20 Rule (Aplicação Agressiva)
 
@@ -149,19 +159,6 @@ Remaining 80% effort = only 20% incremental
 = Diminishing returns
 = Não vale o tempo
 ```
-
-Aplicação prática: Se você identificar os 20% de atividades que geram 80% do resultado, foque só neles. O resto é desperdício de energia.
-
-### Margens Target
-
-| Componente | % Target |
-|------------|----------|
-| Fulfillment | 60-70% |
-| Marketing/Sales | 20-30% |
-| Net Profit | 30-40% |
-| Break-even cliente | 1-3 meses |
-
-Se sua margem está abaixo de 30%, você tem problema de pricing ou de custo de entrega.
 
 ---
 
@@ -187,6 +184,56 @@ Se sua margem está abaixo de 30%, você tem problema de pricing ou de custo de 
 | Trabalho custom para cada cliente | Freelancer trap, não empresa |
 | Margem <30% | Problema de pricing ou delivery |
 | Prospect não entende a oferta | Comunicação ruim do bridge |
+| "Quanto custa?" (em vez de "Onde fica?") | Posicionamento ainda em Red Ocean |
+
+---
+
+## Camadas MCE (Mental Cognitive Extraction) — v1.0
+
+### Hierarquia de Valores
+
+| Rank | Valor | Tier | Score | Evidência |
+|------|-------|------|-------|-----------|
+| 1 | Resultado sobre Atividade | 1 | 10.0 | EXPLICIT — 3+ chunks |
+| 2 | Liberdade do Founder via Leverage | 1 | 9.5 | EXPLICIT — DWY preference + 80/20 |
+| 3 | Resultado do Cliente como Responsabilidade | 1 | 9.2 | IMPLICIT — pricing + bridge structure |
+| 4 | Validação antes de Diferenciação | 2 | 8.8 | EXPLICIT — Purple Ocean principle |
+| 5 | Clareza e Concretude como Força | 2 | 8.5 | EXPLICIT — diferenciador óbvio |
+
+### Obsessão Master
+
+**Eliminação do Desnecessário para Resultado Máximo** (intensidade: 10/10)
+
+A obsessão central: identificar e eliminar tudo que não gera resultado direto. Features desnecessárias. Atividades de baixo impacto. Modelos que escravizam o founder. Diferenciadores vagos. O motor é a crença de que a maioria está desperdiçando energia no que não importa.
+
+Obsessão Ativa: **Estruturação do Intuitivo** (intensidade: 8/10) — transformar decisões intuitivas em frameworks estruturados e ensináveis.
+
+### Padrões Comportamentais
+
+| ID | Padrão | Tipo | Prioridade |
+|----|--------|------|------------|
+| BP-SO-001 | Framework-First Teaching | ENSINO | HIGH |
+| BP-SO-002 | Eliminação Dicotômica | DECISAO | HIGH |
+| BP-SO-003 | Diagnóstico por Pergunta Reveladora | COMUNICACAO | HIGH |
+| BP-SO-004 | Ancoragem em Analogias Visuais | COMUNICACAO | HIGH |
+| BP-SO-005 | Mapeamento de Armadilhas | ENSINO | HIGH |
+
+### Paradoxos Produtivos
+
+**PAR-SO-001: Liberdade via Responsabilidade** — Quer liberdade do founder (DWY, 80/20) mas precifica pelo valor do resultado gerado (responsabilidade pelo outcome). Resolvido pelo DWY: você guia, cliente executa. Liberdade responsável.
+
+**PAR-SO-002: Simplicidade Específica vs Generalidade Acessível** — Prega diferenciação ultra-específica mas alerta contra nicho demais. Resolvido pelo teste de demanda antes do comprometimento.
+
+### Voice DNA (Perfil Tonal)
+
+| Dimensão | Score | Característica |
+|----------|-------|----------------|
+| Certainty | 9.0/10 | Linguagem absolutista, zero hedging |
+| Authority | 8.5/10 | Mentor, não par — declara gold standards |
+| Warmth | 3.5/10 | Pragmático, pouco emocional |
+| Directness | 9.5/10 | Direto, nomeia erros sem diplomacia |
+| Teaching Focus | 9.5/10 | Estrutura tudo para ensino |
+| Confidence | 9.0/10 | Zero qualificadores de dúvida |
 
 ---
 
@@ -212,13 +259,13 @@ A maioria das pessoas faz 100% das atividades em vez de focar nos 20% que geram 
 
 ## Tensões com Outras Fontes
 
-| Tópico | Sam Oven | Hormozi |
-|--------|----------|---------|
+| Tópico | Sam Ovens | Hormozi |
+|--------|-----------|---------|
 | Modelo preferido | DWY | DFY |
 | Foco | Agências, serviços | Qualquer negócio |
 | Framework oferta | Bridge Analogy | Grand Slam Offer |
 
-**Tipo de tensão:** COMPLEMENTAR - Sam foca em agências, Hormozi é mais amplo.
+**Tipo de tensão:** COMPLEMENTAR — Sam foca em agências/consultores priorizando liberdade do founder, Hormozi maximiza receita com DFY e volume.
 
 ---
 
@@ -233,16 +280,11 @@ A maioria das pessoas faz 100% das atividades em vez de focar nos 20% que geram 
 > "Purple Ocean = proven market + unique differentiation. Best of both worlds."
 > — [SETTERLUN-PO]
 
----
+> "Não seja diferente demais. Seja diferente o suficiente."
+> — [SO-chunk-008]
 
-## Blueprints Disponíveis
-
-| Arquivo | Uso |
-|---------|-----|
-| FULFILLMENT-MODEL-QUIZ.md | Escolher DFY/DWY/DIY |
-| NICHE-EVALUATOR-WORKSHEET.md | Avaliar nicho |
-| OFFER-TYPE-SELECTOR-WORKSHEET.md | Selecionar tipo de oferta |
-| SKILL-INVENTORY-WORKSHEET.md | Inventariar habilidades |
+> "PERGUNTA ERRADA: 'Quanto custa pra eu entregar?' PERGUNTA CERTA: 'Quanto vale o resultado pro cliente?'"
+> — [SO-chunk-005]
 
 ---
 
@@ -250,23 +292,31 @@ A maioria das pessoas faz 100% das atividades em vez de focar nos 20% que geram 
 
 | Campo | Valor |
 |-------|-------|
-| **Fonte** | Sam Oven (Setterlun University) |
+| **Fonte** | Sam Ovens (Setterlun University) |
 | **Cursos** | SETTERLUN-OC, SETTERLUN-PO, SETTERLUN-BD |
-| **Chunks** | 25 |
-| **Insights** | 13 |
+| **Chunks** | 14 (MCE run) + 25 originais |
+| **Insights MCE** | 27 |
+| **Padrões Comportamentais** | 5 |
+| **Valores MCE** | 5 (3 Tier1, 2 Tier2) |
+| **Obsessões MCE** | 2 (1 MASTER, 1 ACTIVE) |
+| **Paradoxos MCE** | 2 (ambos produtivos) |
 | **Temas** | Ofertas, Posicionamento, Modelos de Negócio, Pricing |
-| **Protocolo** | Narrative Metabolism v1.0 |
-| **Última consolidação** | 2025-12-20 |
+| **Protocolo** | Pipeline MCE v1.0 |
+| **Última consolidação** | 2026-03-16 |
 
 ---
 
 ## Fontes Relacionadas
 
-- [Source: Sam Oven - Pricing e Ofertas](../../sources/sam-ovens/07-PRICING-OFERTAS.md)
-- [Source: Sam Oven - Purple Ocean](../../sources/sam-ovens/PURPLE-OCEAN.md)
-- [Tema: Pricing (múltiplas fontes)](../themes/DOSSIER-07-PRICING.md)
+- [Source: Sam Ovens - Pricing e Ofertas](../../sources/sam-oven/07-PRICING-OFERTAS.md)
+- [Source: Sam Ovens - Purple Ocean](../../sources/sam-oven/PURPLE-OCEAN.md)
+- [Voice DNA](../../dna/persons/sam-oven/VOICE-DNA.yaml)
+- [DNA Config](../../dna/persons/sam-oven/DNA-CONFIG.yaml)
+- [Tema: Pricing e Ofertas](../themes/DOSSIER-07-PRICING.md)
+- [Tema: Posicionamento & Purple Ocean](../themes/DOSSIER-POSICIONAMENTO-PURPLE-OCEAN.md)
+- [Agent: Sam Ovens](../../../agents/external/sam-oven/AGENT.md)
 
 ---
 
-*Compilado via Narrative Metabolism Protocol v1.0*
-*Mega Brain System v3.21.0*
+*Compilado via Pipeline MCE v1.0 (2026-03-16)*
+*Mega Brain System — /pipeline-mce sam-oven*

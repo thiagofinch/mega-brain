@@ -180,6 +180,20 @@ Propósito: manter pixel limpo, não gastar em quem já converteu ou não vai co
 
 ---
 
+## MCE Pipeline Additions (2026-03-16)
+
+Novos benchmarks extraídos via MCE Pipeline v1.0 (chunks chunk_664, chunk_673, chunk_700):
+
+| Métrica | Valor | Contexto | Chunk |
+|---------|-------|----------|-------|
+| ROI mínimo para pricing | 5:1 | Ticket deve proporcionar 5x valor percebido | [chunk_664] |
+| Cold video (60-90s) vs long-form | 3-5x mais conversão | Vídeos curtos específicos para ICP | [chunk_673] |
+| QA calls por closer por semana | 2 mínimo | Review semanal com feedback específico | [chunk_700] |
+
+**Ver também:** [SALES-TRAINING.md](./SALES-TRAINING.md) — Métricas de closer development
+
+---
+
 ## Fontes Relacionadas
 
 - [Perfil Jeremy Haynes](../../dossiers/persons/DOSSIER-JEREMY-HAYNES.md)

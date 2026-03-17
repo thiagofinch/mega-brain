@@ -600,11 +600,92 @@ CITAÇÕES:
 |-------|-------|
 | **Código** | 07-PRICING |
 | **Fontes** | Sam Ovens, Jeremy Haynes, Full Sales System, Jordan Lee, Jeremy Miner |
-| **Insights** | 28 |
+| **Insights** | 28 (+16 Sam Ovens MCE) |
+| **Sam Ovens MCE** | SO-INS-001..014, SO-INS-025, SO-INS-026 |
 | **Temas Relacionados** | 02-Processo Vendas, 05-Métricas, 04-Comissionamento, 01-Posicionamento |
-| **Protocolo** | Narrative Metabolism v1.0 |
-| **Última consolidação** | 2026-01-10 |
-| **Versão** | 2.0.0 |
+| **Protocolo** | Narrative Metabolism v1.0 + Pipeline MCE v1.0 |
+| **Última consolidação** | 2026-03-16 |
+| **Versão** | 2.1.0 |
+
+---
+
+## Alex Hormozi — Price Raise Method (MCE-AH-2026-03-16)
+
+### Price Raise Method [INS-AH-008]
+
+**Técnica:** Não anuncie o novo preço diretamente. Ancore ACIMA do seu objetivo, depois ofereça o objetivo como "desconto por pagamento antecipado".
+
+```
+OBJETIVO: aumentar de $2K → $3K
+
+AÇÃO:
+1. Novo preço = $4K (âncora)
+2. Opção split: $2K + $2K em 30 dias (home base do rep)
+3. Desconto antecipado: $3K agora
+
+RESULTADO:
+- Rep vende $3K como desconto, não como aumento
+- Prospect paga exatamente o que você queria
+- CAsh flow melhorado (uneven splits preferidos)
+```
+
+### LTV Arms Race [INS-AH-017]
+
+Quem tem maior LTV vence. Se seu LTV é $10K e o competitor tem $2K, você pode outbid em todos os canais e ainda ser lucrativo.
+
+**Implicação estratégica:** Aumentar LTV (retenção, upsells) é mais poderoso que reduzir CAC.
+
+### Value Equation [INS-AH-018]
+
+```
+             Dream Outcome × Perceived Likelihood
+Value = ─────────────────────────────────────────
+                Time Delay × Effort & Sacrifice
+```
+
+Toda criação de oferta é simplesmente: aumentar numerador, diminuir denominador.
+
+### Quotes
+
+> "If we want to get to three thousand from two thousand, we're actually talking about a four thousand dollar price point, which anchors high. Then when we introduced the prepayment discount — that is actually the number that we're looking for."
+> — Alex Hormozi [INS-AH-008]
+
+> "Whoever can spend the most to acquire a customer wins. If your LTV is $10k and their LTV is $2k, you can outbid them for every single lead."
+> — Alex Hormozi [INS-AH-017]
+
+---
+
+## Jordan Lee — Modelo de Negocio e Escala (MCE v4.0 — 2026-03-16)
+
+Novos insights de Jordan Lee adicionados pelo MCE Pipeline v4.0 (YouTube: HOW HE QUIT HIS 9-5):
+
+```
++-----------------------------------------------------------------------------+
+|  JORDAN LEE — BUSINESS MODEL + ESCALA MCE v4.0                             |
++-----------------------------------------------------------------------------+
+|                                                                             |
+|  O BARCO IMPORTA MAIS QUE A REMADA (INS-JL-044):                           |
+|  "Warren Buffett says the boat is more important than how hard you row."   |
+|  -> AI agency tem 70-80% margem vs ecom 10%                                |
+|  -> Escolha o modelo certo ANTES de otimizar esforco                       |
+|                                                                             |
+|  FORMULA DOIS CONTRATACOES + ADS (INS-JL-043):                             |
+|  "You're two hires and ads away from 100k+ a month profit."               |
+|  -> Closer + Operador (founder mindset) + Ads = escala independente        |
+|  -> Distancia ao proximo nivel e sempre menor que parece                   |
+|                                                                             |
+|  ROAS FORMULA PREVISIVEL (INS-JL-049):                                     |
+|  "$3K/mes → 1-2 clientes; $6K → 4 clientes; $9K → 6 clientes"            |
+|  -> Uma vez calibrado o baseline, escala e linear e sem risco              |
+|  -> Elimina o medo de escalar gasto em ads                                 |
+|                                                                             |
+|  RECEITA RECORRENTE COMPOSTA (INS-JL-052):                                 |
+|  "2-3 deals/mes em recurring revenue compoem para $1M/ano."               |
+|  -> Crescimento nao requer escala agressiva — requer acumulacao recorrente |
+|  -> Modelos de retainer mensais criam efeito composto natural              |
+|                                                                             |
++-----------------------------------------------------------------------------+
+```
 
 ---
 
@@ -613,10 +694,14 @@ CITAÇÕES:
 - [Person: Sam Oven](../persons/DOSSIER-SAM-OVEN.md)
 - [Person: Jeremy Haynes](../persons/DOSSIER-JEREMY-HAYNES.md)
 - [Person: Jeremy Miner](../persons/DOSSIER-JEREMY-MINER.md)
-- [Source: Sam Oven - Pricing](../../sources/sam-ovens/07-PRICING-OFERTAS.md)
+- [Person: Alex Hormozi](../persons/DOSSIER-ALEX-HORMOZI.md)
+- [Person: Jordan Lee](../persons/DOSSIER-JORDAN-LEE.md)
+- [Source: Sam Oven - Pricing](../../sources/sam-oven/07-PRICING-OFERTAS.md)
 - [Source: Jeremy Haynes - Pricing](../../sources/jeremy-haynes/07-PRICING.md)
+- [Source: Alex Hormozi - Pricing](../../sources/alex-hormozi/07-PRICING.md)
+- [Source: Jordan Lee - AI Business Model](../../sources/jordan-lee/02-AI-BUSINESS-MODEL.md)
 
 ---
 
-*Compilado via Narrative Metabolism Protocol v1.0*
-*Mega Brain System v3.33.0*
+*Compilado via Narrative Metabolism Protocol v1.0 + MCE Pipeline v2.0*
+*Mega Brain System v3.33.0 | Atualizado: 2026-03-16*

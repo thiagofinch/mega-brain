@@ -4,7 +4,7 @@
 
 > **Em resumo:** Gestao de vendas combina estrutura organizacional com gestao do estado interno. Stages of Giving Up definem o que largar em cada estagio ($0-1M: fulfillment, $1-10M: selling, $10-30M: marketing, $30M+: leadership). State Management = Physiology + Focus + Meaning. OTE (On Target Earnings) premia esforco real vs mare favoravel. 4 Rituais (Daily, Pipeline, Monthly, One-on-One) garantem ritmo. Perfil Desafiador oferece insights que mudam perspectiva do cliente.
 >
-> **Versao:** 2.0.0 | **Atualizado:** 2026-01-10
+> **Versao:** 2.1.0 | **Atualizado:** 2026-03-16
 > **Densidade:** 4/5
 > **Fontes:** Alex Hormozi, Cole Gordon, G4 Educacao
 
@@ -50,9 +50,18 @@ Gestao de vendas combina estrutura organizacional (Hormozi) com gestao do estado
 |  "Vendas nao e adivinhacao. Vendas e ciencia, e matematica"               |
 |  "Confianca e uma questao de preparo"                                      |
 |                                                                            |
+|  RICHARD LINDER: [RL001]                                                   |
+|  "Companies move at the speed of the founder"                              |
+|  "Impossible to pass knowledge down when solving other people's problems" |
+|                                                                            |
+|  --> 1-3-1 Format transforma founder de lixeira em knowledge teacher       |
+|  --> 8 Scale Constraints: todo travamento cai em 1 de 8 categorias         |
+|  --> Overwhelm Cascade: bad hire -> drena bons -> cascata de perda         |
+|                                                                            |
 |  TODOS CONVERGEM:                                                          |
 |  --> Inner game matters mais do que scripts                                |
 |  --> Disciplina como atleta: dominio vem com tempo e repeticao             |
+|  --> Fundador como arquiteto de sistemas, nao resolvedor de problemas      |
 |                                                                            |
 +---------------------------------------------------------------------------+
 ```
@@ -528,6 +537,108 @@ Indicadores != Metas. Ligacoes e reunioes sao MEIOS, nao FINS.
 
 ---
 
+---
+
+## MCE UPDATE: Ryan Deiss / The Scalable Company (2026-03-16)
+
+> **Insights adicionados:** 6 (TSC-INS-006, TSC-INS-010, TSC-INS-011, TSC-INS-012, TSC-INS-013, TSC-INS-016)
+> **Padrões comportamentais relevantes:** Delegation by Elevation, Contrarian Stance, Vulnerability-to-Framework Loop
+
+### Posição de Ryan Deiss sobre Gestão
+
+Ryan Deiss aborda gestão de forma radicalmente diferente das fontes anteriores. Enquanto Hormozi e Gordon focam em vendas e Gordon em Inner Game, Deiss foca no **sistema operacional** da empresa como um todo. Sua contribuição para este tema:
+
+**Gestão de Reuniões (ScalableOS)**
+
+```
+ARQUITETURA DE REUNIOES (THE SCALABLE COMPANY)
+────────────────────────────────────────────────
+
+FILTRO PARA REUNIAO NAO-PROGRAMADA:
+  Blue Ocean = oportunidade que corta 12+ meses do plano de 3 anos
+  Black Swan = ameaca que leva o negocio significativamente para tras
+  Tudo fora isso → B&O List → proxima reuniao agendada
+
+7 PRINCIPIOS DA REUNIAO MODERNA:
+  1. Toda reuniao tem PURPOSE
+  2. Toda reuniao tem AGENDA
+  3. Toda reuniao tem OWNER
+  4. Decisoes capturadas (3 Ds: Decide / Discuss / Distribute)
+  5. Action items com dono + prazo
+  6. Notas distribuidas em < 24h
+  7. Reunioes comecam e terminam na hora
+
+7-STEP MEETING REQUEST:
+  Passo 1 ≠ "Enviar convite do Google"
+  Validar necessidade ANTES de agendar
+```
+
+**Liderança por Perguntas (Delegation by Elevation)**
+
+```
+CONTRASTE COM ABORDAGEM TRADICIONAL:
+  Lider tradicional:     "Faca isso, isso e isso" (da a resposta)
+  Lider escalavel (TSC): "O que voce precisa para fechar essa lacuna?" (pergunta)
+
+TRAFFIC LIGHT FRAMEWORK:
+  RED   → Faz COM a pessoa (hands-on, ainda aprendendo)
+  YELLOW → Faz JUNTO (coaching, crescendo)
+  GREEN  → A pessoa faz sozinha (ownership completo)
+
+REGRA: Se compenso bem meu time, eles sabem como fechar a lacuna.
+       Meu papel e perguntar, nao responder.
+```
+
+> "It is not your job to know how to turn red to yellow and yellow to green. Having the right answers got you where you are today. Asking the right questions will get you where you want to go."
+> — Ryan Deiss [TSC-CH-023]
+
+**Onde TSC complementa e diverge das fontes existentes:**
+
+| Aspecto | Hormozi | Gordon | TSC (Ryan Deiss) |
+|---------|---------|--------|-----------------|
+| Foco de liderança | Estrutura + escala | Inner game / conviction | Perguntas + sistema operacional |
+| Reuniões | Não abordado | Não abordado | Framework completo (Blue Ocean/Black Swan) |
+| Delegação | Contratar certo e dar ownership | Estado interno do vendedor | Traffic Light + "ask dont answer" |
+| Métricas | Revenue + volume | Call stats + close rate | Scorecard semanal manual + CABs |
+
+---
+
+---
+
+## POSIÇÃO: JEREMY HAYNES (MCE Pipeline v1.0 — 2026-03-16)
+
+**Tese central:** O teto da sua agência é sempre o seu padrão. Não o mercado, não a concorrência, não o produto — o padrão que você, como líder, está disposto a tolerar.
+
+### Padrões Compõem — Standards as Ceiling [chunk_670]
+
+Padrões são compostos. O que você tolera hoje define o teto de amanhã. Líderes que aceitam mediocridade sinalizam ao time que mediocridade é o padrão. A velocidade do time nunca supera a velocidade do líder.
+
+### Cleaner Role — Gestão Proativa [chunk_680]
+
+Designar um membro da equipe com visão sistêmica para identificar O QUE ESTÁ PRESTES A QUEBRAR — não o que já quebrou. Check-in semanal: "O que está prestes a quebrar?" Autoridade para remover bloqueios sem aprovação em tempo real. Critério: menos "fires" por semana, menos tempo do dono em modo reativo.
+
+### SQ1/Megalodon Culture Framework [chunk_683, chunk_684]
+
+Identidade tribal que opera como filtro cultural: nome específico + padrões não-negociáveis definidos pelo líder + rituais (War Room semanal, daily standup, celebração de wins). Resultado: equipe que opera por identidade, não por controle.
+
+### Business Partnership Architecture [chunk_687]
+
+4 elementos obrigatórios antes de qualquer acordo de parceria: (1) Exit provisions definidas upfront, (2) Equity milestones por performance (não por tempo), (3) Decision authority matrix (quem decide o quê), (4) 90-day performance gate antes de permanência.
+
+**Divergências vs outras fontes:**
+| Aspecto | Cole Gordon | Hormozi | Jeremy Haynes |
+|---------|-------------|---------|---------------|
+| Gestão de time | Inner game + conviction | Contratar certo e dar ownership | Padrões como teto + Cleaner Role |
+| Cultura | Reconhecimento visual | High performance = dangerous | Identidade tribal (SQ1/Megalodon) |
+| Parcerias | Não coberto | Equity structures | Architecture com 4 elementos + gate |
+
+**Source:** [AGENCY-SYSTEMS.md](../../sources/jeremy-haynes/AGENCY-SYSTEMS.md)
+
+---
+
 *Compilado via Narrative Metabolism Protocol v2.0*
 *Mega Brain System v3.33.0*
 *Atualizado: 2026-01-10*
+*MCE Update: 2026-03-16 — Cole Gordon MCE pipeline complete (20 insights / 8 patterns / VOICE-DNA.yaml / 5 DNA YAMLs)*
+*MCE Update: 2026-03-16 — Ryan Deiss/TSC MCE pipeline complete (18 insights / 6 patterns / VOICE-DNA.yaml / 5 DNA YAMLs)*
+*MCE Update: 2026-03-16 — Jeremy Haynes MCE pipeline complete (30 insights / 8 patterns / VOICE-DNA.yaml / 5 DNA YAMLs)*

@@ -2,8 +2,8 @@
 
 > **Em resumo:** Dubai, esposa Miss Universe Kenya, sober 5+ anos, turning 30. Nao persigo materialismo — persigo intencionalidade. Problemas que parecem enormes agora vao ser insignificantes em 2 anos. O futuro e a extensao dos habitos que voce faz hoje.
 >
-> **Versao:** 1.0 | **Atualizado:** 2026-03-16
-> **Densidade:** ◐◐◐◯◯ (3)
+> **Versao:** 1.1 | **Atualizado:** 2026-03-16 (MCE v4.0)
+> **Densidade:** ◐◐◐◐◯ (4)
 
 ---
 
@@ -75,6 +75,14 @@ Finalmente resolvi. Antes, eu achava que precisava estar atras do computador o t
 
 ---
 
+## Atualizacao MCE v4.0 — Crescimento Real
+
+### Crescimento Real = Acao + Reflexao + Recarga
+
+Crescimento nao e so grind. E fazer o trabalho E pausar para refletir e recarregar. A pausa e parte do processo, nao fraqueza. Sem ela, nao ha progresso real — voce apenas corre mais rapido em circulos. [JL-C-009] [INS-JL-045]
+
+---
+
 ## Citacoes Originais
 
 > "Naval Ravikant said there's three things to change in your life: where you live, what you do, and who you do it with" — [chunk_759]
@@ -87,6 +95,8 @@ Finalmente resolvi. Antes, eu achava que precisava estar atras do computador o t
 
 > "If I was to just chase materialism and success, I know that I would regret it in late life" — [chunk_753]
 
+> "Growth comes from like doing the thing and then taking time to reflect and recharge. That's where you get the progress." — [JL-C-009]
+
 ---
 
 ## Metadados
@@ -95,11 +105,11 @@ Finalmente resolvi. Antes, eu achava que precisava estar atras do computador o t
 |-------|-------|
 | **Fonte** | Jordan Lee |
 | **Tema** | 11-LIFESTYLE-MINDSET |
-| **Chunks** | chunk_700, chunk_752, chunk_753, chunk_758-chunk_769, chunk_795 |
-| **Insights** | INS-JL-004, INS-JL-007, INS-JL-039, INS-JL-040 |
-| **Pipeline** | MCE v1.0 |
+| **Chunks** | chunk_700, chunk_752, chunk_753, chunk_758-chunk_769, chunk_795, JL-C-009 |
+| **Insights** | INS-JL-004, INS-JL-007, INS-JL-039, INS-JL-040, INS-JL-045 |
+| **Pipeline** | MCE v4.0 |
 
 ---
 
 *Compilado via Narrative Metabolism Protocol v1.0*
-*MCE Pipeline v1.0*
+*MCE Pipeline v4.0*

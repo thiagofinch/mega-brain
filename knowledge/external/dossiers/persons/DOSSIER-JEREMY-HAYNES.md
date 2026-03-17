@@ -4,9 +4,9 @@
 
 > **Em resumo:** Paid media is math, not art. Hydra Strategy para funis paralelos. Andromeda para 50+ criativos/semana. Hammer Strategy para 50-80% show rate. Venus Fly Trap para automação pre-call. Follow-Up Architecture 3-tier recupera 70-80% dos no-closes.
 >
-> **Versão:** 3.0.0 | **Atualizado:** 2026-01-10
+> **Versão:** 3.1.0 | **Atualizado:** 2026-03-16
 > **Densidade:** ◐◐◐◐◐ (5)
-> **Fontes:** 17 batches (068-084) | ~170 arquivos | ~1,483 elementos DNA
+> **Fontes:** 17 batches (068-084) + MCE Pipeline (8 programas, 51 chunks) | ~170 arquivos + MCE | ~1,483 elementos DNA + 30 insights MCE + 8 behavioral patterns
 
 ---
 
@@ -409,6 +409,70 @@ Quando você faz o lead preencher application em uma página e depois ir para ou
 
 ---
 
+---
+
+## MCE Data (Mental Cognitive Extraction — 2026-03-16)
+
+> Extraído via Pipeline MCE v1.0 de 8 programas (AOBA, MMM, STA, UHTC, LYFC, IC, ST, WK) — 295 arquivos fonte, 51 chunks, 30 insights.
+
+### Value Hierarchy
+
+| Tier | ID | Valor | Score | Declaração |
+|------|----|-------|-------|------------|
+| 1 | VAL-JH-001 | Prova Irrefutável como Moeda de Autoridade | 10.0 | "Nenhuma afirmação tem valor sem prova específica e numérica" [chunk_657][chunk_666] |
+| 1 | VAL-JH-002 | Alavancagem Sistemática sobre Esforço Pessoal | 9.5 | "Se você vende tempo, você coloca um teto em si mesmo" [chunk_661][chunk_695] |
+| 1 | VAL-JH-003 | Convicção como Motor da Ação | 9.0 | "You can't close what you don't believe" [chunk_671][chunk_702] |
+| 2 | VAL-JH-004 | Sistemas Antes de Escala | 8.8 | "Document, then hire. Never scale a broken system" [chunk_677][chunk_683] |
+| 2 | VAL-JH-005 | Autoridade Posicionada Estrategicamente | 8.5 | "Authority hijacking: use someone else's credibility to build your own" [chunk_657][chunk_672] |
+| 2 | VAL-JH-006 | Padrões como Teto do Negócio | 7.8 | "Your business falls to your standards, not your goals" [chunk_670] |
+
+### Master Obsession
+
+**OBS-JH-001: Construção de Autoridade Irrefutável** (intensidade: 10/10)
+> A obsessão central é criar posição de autoridade que não pode ser questionada — baseada em resultados documentados, específicos e verificáveis. Tudo orbita em torno da prova. [chunk_657][chunk_658][chunk_666][chunk_672]
+
+### Behavioral Patterns
+
+| ID | Nome | Tipo | Frequência |
+|----|------|------|------------|
+| BP-JH-001 | Proof-First Communicator | COMUNICACAO | ~95% |
+| BP-JH-002 | Authority Hijacker | DECISAO | ~100% em novos mercados |
+| BP-JH-003 | Systems-Before-Scale | PRIORIDADE | ~90% |
+| BP-JH-004 | Reframe-to-Economics | COMUNICACAO | ~90% em vendas |
+| BP-JH-005 | Gap-Creation for Urgency | COMUNICACAO | ~85% fechamentos |
+| BP-JH-006 | Identity-Based Teaching | ENSINO | ~90% cultura/ensino |
+| BP-JH-007 | Specificity as Credibility Currency | COMUNICACAO | ~95% |
+| BP-JH-008 | Conviction-Transfer Before Logic | ENSINO | ~90% fechamentos |
+
+### Productive Paradoxes
+
+- **PAR-JH-001** — Dado como Prova vs Emoção como Motor: usa dados para validar emoção, e emoção para tornar dados relevantes. [produtivo: ✓]
+- **PAR-JH-002** — Copiar Autoridade para Transcendê-la: ensina authority hijacking enquanto constrói a autoridade que outros vão hijack. [produtivo: ✓]
+- **PAR-JH-003** — Princípios Simples, Sistemas Complexos: filosofias de 1 linha, frameworks de 5 passos. [produtivo: ✓]
+
+### Voice DNA Summary
+
+| Dimensão | Score | Assinatura |
+|----------|-------|------------|
+| Certainty | 9.5/10 | "That's the system. Period." |
+| Authority | 9.0/10 | Proof-before-teaching positioning |
+| Warmth | 5.5/10 | Coach-performance, not mentor-empathy |
+| Directness | 9.5/10 | "Do it. Execute. Add a setter." |
+| Teaching Focus | 9.0/10 | Numbered steps, thresholds, criteria |
+| Confidence | 9.5/10 | Never hedges on core principles |
+
+**Signature Phrases:**
+- "That's your signal." [chunk_696][chunk_700]
+- "That's the system." [chunk_677][chunk_698]
+- "You can't close what you don't believe." [chunk_671][chunk_702]
+- "Clients pay for outcomes, not time." [chunk_661][chunk_664]
+- "The rubber band snaps." [chunk_663][chunk_664]
+
+**VOICE-DNA.yaml:** `knowledge/external/dna/persons/jeremy-haynes/VOICE-DNA.yaml`
+
+---
+
 *Compilado via JARVIS v3.33.0*
-*MISSION-2026-001 | Phase 5.4 - Theme Dossiers*
-*Última atualização: 2026-01-10*
+*MCE Pipeline v1.0 — 2026-03-16*
+*MISSION-2026-001 | Phase 5.4 + MCE Pipeline*
+*Última atualização: 2026-03-16*

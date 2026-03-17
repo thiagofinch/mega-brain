@@ -169,16 +169,57 @@ Chegar com solução pronta sem mapear workflows do cliente resulta em agent que
 
 ---
 
+---
+
+## Adições do Run Autônomo 2026-03-16 (chunks 656-690)
+
+### Monetization Path Completo (4 Etapas)
+
+Liam refina o modelo de monetização em 4 etapas que geram fluxo de caixa progressivo: [chunk_678]
+
+| Etapa | Produto | Preço | Propósito |
+|-------|---------|-------|-----------|
+| **Diagnose** | AI Workforce Assessment | $2-5K one-time | Posicionar como trusted advisor antes de implementar |
+| **Design & Implement** | Single agent → Full workforce | $2-5K → $10-50K+ | Entrega principal com margem alta |
+| **Manage & Scale** | Monthly retainer 3-5 agents | $4.5-15K/mo | Receita recorrente escalável |
+| **Expand** | Upsell interno ou novo cliente | Via case study | Compounding do portfólio |
+
+> "Your journey to monetization follows a simple progression. Diagnose, design, deliver, and scale." — [chunk_678] (LO-017)
+
+### Cold Email Niche Testing (30 Days)
+
+Framework de aquisição para quem está começando sem network: [chunk_679]
+
+1. **Escolher 4 nichos** de serviços
+2. **Escrever 1 email** focado em resultado por niche: *"I help [niche] replace [specific process] with an AI workforce that runs 24/7 for less than the cost of one employee."*
+3. **Enviar 500 emails/niche** = 2000 total
+4. **Rastrear 30 dias**: open rate, replies, calls
+5. **Identificar vencedor** e dobrar down
+
+> "After 30 days, you identify which niche and message has performed best, then you double down on that." — [chunk_679] (LO-019)
+
+### Warm Outreach First-Client Formula
+
+Para quem tem network, o caminho mais rápido para o primeiro cliente: [chunk_679]
+
+**Regra:** Não vender diretamente — pedir referrals. Reduz pressão, expande alcance.
+
+**Template:** *"Hey [nome], estou construindo sistemas de AI workforce que automatizam [operação específica], oferecendo alguns assessments complementares para construir cases. Você conhece alguém que poderia se beneficiar?"*
+
+**Lógica:** Complementary assessment = risco zero para o cliente + case study com números reais para você.
+
+> "The key is that you're not selling to them directly. You're asking them for referrals, which essentially lowers the pressure and expands your reach." — [chunk_679] (LO-025)
+
 ## Metadados
 
 | Campo | Valor |
 |-------|-------|
 | **Fonte** | Liam Ottley |
 | **Tema** | 06-AI-AGENCY-MODEL |
-| **Chunks** | chunk_651, chunk_652, chunk_653, chunk_654, chunk_655 |
-| **Insights** | INS-LO-038, INS-LO-039, INS-LO-040, INS-LO-041, INS-LO-042 |
+| **Chunks** | chunk_651, chunk_652, chunk_653, chunk_654, chunk_655, chunk_678, chunk_679 |
+| **Insights** | INS-LO-038, INS-LO-039, INS-LO-040, INS-LO-041, INS-LO-042, LO-017, LO-019, LO-025 |
 | **Protocolo** | Narrative Metabolism v2.0 |
-| **Pipeline** | MCE v1.0 |
+| **Pipeline** | MCE v1.0 → v1.2.0 (Run Autônomo 2026-03-16) |
 
 ---
 

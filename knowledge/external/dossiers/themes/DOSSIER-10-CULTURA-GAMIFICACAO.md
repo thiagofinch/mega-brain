@@ -4,7 +4,7 @@
 
 > **Em resumo:** High performance culture é "dangerous place to work" - low performers não duram, winners amam (Hormozi). "Tóxico" para medíocres = excelente para top performers (Jordan Lee). Employee Experience é pré-requisito para Customer Experience (G4). Stars pagos desproporcionalmente. Secret Shopping é a reforma comportamental mais efetiva (Jeremy Haynes). Reconhecimento visual através de awards e troféus mantém cultura viva (Cole Gordon).
 >
-> **Versão:** 3.0.0 | **Atualizado:** 2026-01-10
+> **Versão:** 3.1.0 | **Atualizado:** 2026-03-16
 > **Densidade:** ◐◐◐◐◐ (5)
 > **Fontes:** Jordan Lee, Alex Hormozi, G4 Educação, Jeremy Haynes, Cole Gordon, Client Accelerator
 
@@ -38,6 +38,16 @@ Cultura de alta performance parece "tóxica" para medíocres - e isso é feature
 │                                                                         │
 │  "Ter uma equipe de vendas é diferente de ter uma equipe que vende"     │
 │  └─ Estrutura ≠ Resultados                                              │
+│                                                                         │
+│  RICHARD LINDER: [RL001]                                                │
+│  "Things that energize you press down into the company"                 │
+│  └─ Cultura = output natural de quem o fundador é                       │
+│                                                                         │
+│  "Batteries Included: praise/reward não são REQUERIDOS para performance" │
+│  └─ Motivação intrínseca é non-negotiable                               │
+│                                                                         │
+│  "Gossip Dies Here: força confronto imediato e desconfortável"          │
+│  └─ Auto-reforço: ninguém gossiped depois da primeira vez              │
 │                                                                         │
 │  JEREMY HAYNES: [BATCH-078]                                             │
 │  "Closers lie. All the time. Never take a closer at their word."        │
@@ -660,17 +670,52 @@ Tratar HR como departamento de satisfação de funcionários. HR serve a empresa
 
 ---
 
+## MCE v2.0 — Atualizações Jordan Lee (2026-03-16)
+
+Novos insights de Jordan Lee adicionados pelo MCE Pipeline v2.0:
+
+```
+┌─────────────────────────────────────────────────────────────────────────┐
+│  JORDAN LEE — NOVOS INSIGHTS MCE v2.0 (CULTURA)                         │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                          │
+│  CULTURA AUTO-SELECIONANTE (INS-JL-v2-014):                              │
+│  "When we switched to more toxic, we just got much better team members." │
+│  → Expectativas altíssimas + rewards exclusivos = medianos saem          │
+│  → A-players ficam e atraem outros A-players automaticamente             │
+│                                                                          │
+│  FRAMEWORK DE CONSEQUÊNCIAS QUANTIFICADO (INS-JL-032):                   │
+│  → <70% meta por 2 meses = warning formal                               │
+│  → <70% por 3 meses = demissão                                          │
+│  → >100% = double commission                                            │
+│  → >150% por 6+ meses = Million Dollar Club                             │
+│  → Regras claras desde o dia 1. Sem surpresas.                          │
+│                                                                          │
+│  TOP PERFORMERS: $45-50K/MÊS (INS-JL-020):                              │
+│  → Double commissions para top 10%                                      │
+│  → Closer médio: $8-12k/mês                                             │
+│  → Eventos EXCLUSIVOS para quem bate meta (não todos)                   │
+│                                                                          │
+│  ALTA PERFORMANCE COMO OBSESSÃO (OBS-JL-002):                            │
+│  → Cultura de performance = obsessão ativa de Jordan Lee                │
+│  → Intensidade 9/10 — segunda maior obsessão identificada               │
+│                                                                          │
+└─────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
 ## Metadados
 
 | Campo | Valor |
 |-------|-------|
 | **Código** | 10-CULTURA-GAMIFICACAO |
 | **Fontes** | Jordan Lee, Alex Hormozi, G4 Educação, Jeremy Haynes, Cole Gordon, Client Accelerator |
-| **Insights** | 45+ |
+| **Insights** | 49+ (45 v1 + 4 MCE v2.0) |
 | **Temas Relacionados** | 01-Estrutura Time, 04-Comissionamento, 09-Gestão |
-| **Protocolo** | Narrative Metabolism v1.0 |
-| **Última consolidação** | 2026-01-10 |
-| **Batches incorporados** | 050, 077, 078, 082, 093, 114 |
+| **Protocolo** | Narrative Metabolism v2.0 |
+| **Última consolidação** | 2026-03-16 (MCE v2.0 Jordan Lee) |
+| **Batches incorporados** | 050, 077, 078, 082, 093, 114, MCE-JL-v2 |
 
 ---
 
@@ -693,3 +738,4 @@ Tratar HR como departamento de satisfação de funcionários. HR serve a empresa
 *Compilado via Narrative Metabolism Protocol v1.0*
 *Mega Brain System v3.33.0*
 *Atualizado: 2026-01-10 por JARVIS*
+*MCE Update: 2026-03-16 — Jeremy Haynes MCE pipeline complete. Novos dados adicionados: SQ1/Megalodon Culture Framework [chunk_683, chunk_684] — identidade tribal com 3 pilares (identidade, padrões não-negociáveis, rituais). Ver: [AGENCY-SYSTEMS.md](../../sources/jeremy-haynes/AGENCY-SYSTEMS.md)*

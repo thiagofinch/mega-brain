@@ -2,10 +2,10 @@
 
 [[HOME|← Home]] | [[MOC-PESSOAS|👤 Pessoas]] | [[MOC-TEMAS|📚 Temas]] | [[knowledge/dna/persons/RICHARD-LINDER/CONFIG|⚙️ DNA Config]]
 
-**Versão:** 1.0.0
-**Última Atualização:** 2025-12-21
+**Versão:** 2.0.0
+**Última Atualização:** 2026-03-16
 **Fontes:** RL001 (Founder First Hiring - May 2023)
-**Densidade:** ◐◐◐◐◯ (Alta - metodologia completa de contratação)
+**Densidade:** ◐◐◐◐◐ (Completa — DNA cognitivo + MCE: padrões comportamentais, hierarquia de valores, obsessões, paradoxos, Voice DNA)
 
 ---
 
@@ -416,3 +416,166 @@ Como Richard coloca:
 ---
 
 **[FONTE: RL001]**
+
+---
+
+## MCE: PADRÕES COMPORTAMENTAIS
+
+> Extraído via MCE Pipeline — 2026-03-16
+
+### BP-RL-001: Reframing pela Energia do Fundador (DECISÃO)
+
+**Gatilho:** Decisão de contratação ou avaliação de candidato
+**Resposta:** Mapeia impacto energético do candidato ANTES de analisar competência técnica
+**Frequência:** ~95% das decisões de contratação
+
+> "If they energize us, we energize them, creating energy not a deficit." [RL001_004]
+
+**Anti-padrão:** Nunca prioriza competência isolada sem verificar compatibilidade energética
+
+---
+
+### BP-RL-002: Pensamento Invertido para Anti-Padrões (DECISÃO)
+
+**Gatilho:** Necessidade de definir critérios de contratação ou avaliação de confiança
+**Resposta:** Cria cenários negativos explícitos para extrair traços tóxicos ANTES de mapear o positivo
+**Frequência:** ~90% ao definir scorecards
+
+> "Don't think trait first — creates cheesy motivational poster words. Think WHO first." [RL001_008]
+
+---
+
+### BP-RL-003: Forçar Decisão Binária Eliminando o Meio-Termo (DECISÃO)
+
+**Gatilho:** Qualquer processo que admite comprometimento ou racionalização sob dor/pressão
+**Resposta:** Remove estruturalmente a opção do meio — o scorecard não tem 7
+**Frequência:** ~100% em processos decisórios que ele cria
+
+> "Sevens are total BS. Seven is the number we go to when we aren't willing to commit. So we've removed it." [RL001_016]
+
+---
+
+### BP-RL-004: Sistemas Nascidos do Fracasso, Não da Teoria (COMUNICAÇÃO)
+
+**Gatilho:** Apresentação de framework ou metodologia
+**Resposta:** Ancora imediatamente em fracasso real antes do aprendizado
+**Frequência:** ~85% ao ensinar metodologia
+
+> "We don't create frameworks because stuff just worked. We did it wrong. We failed. All of our processes were born from failure." [RL001_022]
+
+---
+
+### BP-RL-005: Intervenção Desconfortável Imediata (CONFLITO)
+
+**Gatilho:** Comportamento culturalmente inaceitável (especialmente gossip) detectado na equipe
+**Resposta:** Reúne as partes, expõe explicitamente, trabalha através da situação desconfortável
+**Frequência:** ~100% quando detecta gossip
+
+> "You bring gossip to us, we're going to force you to deal with it. We'll grab that person, the other person, have a chat." [RL001_013]
+
+---
+
+### BP-RL-006: Transparência Total Antecipada (COMUNICAÇÃO)
+
+**Gatilho:** Início de qualquer processo com possível desalinhamento de expectativas
+**Resposta:** Move informações críticas (salário, expectativas, termos) para o INÍCIO, não o final
+**Frequência:** ~100% em processos de contratação
+
+> "Seventh interview. Should have been handled on first phone call." [RL001_019]
+
+---
+
+## MCE: HIERARQUIA DE VALORES
+
+| Tier | Valor | Score | Evidência |
+|------|-------|-------|-----------|
+| **1** | Energia do Fundador como Ativo Estratégico | 10.0 | EXPLÍCITO — principio inviolável, linguagem absolutista [RL001_004, RL001_005, RL001_006] |
+| **1** | Integridade Comportamental — Batteries Included | 9.5 | EXPLÍCITO — personal non-negotiable #1 e #2 declarados [RL001_009, RL001_014, RL001_015] |
+| **1** | Clareza Binária como Ato de Respeito | 9.0 | IMPLÍCITO — manifesto em 3 contextos independentes [RL001_006, RL001_016, RL001_019] |
+| **2** | Frameworks Emergem de Cicatrizes | 8.5 | EXPLÍCITO — princípio epistêmico central da empresa [RL001_022] |
+| **2** | Legado Cultural como Responsabilidade do Fundador | 8.0 | IMPLÍCITO — valores pressionam empresa para baixo [RL001_013, RL001_014] |
+
+---
+
+## MCE: OBSESSÕES
+
+### OBS-RL-001: Eliminar a Mediocridade Energética da Equipe 🔴 MASTER (10/10)
+
+A obsessão central de Richard é construir equipes que amplificam, não drenam. Tudo que ensina — scorecards, Hell Yes, 1-3-1, Gossip Dies Here — serve o mesmo propósito: criar ambientes onde fundadores e equipes se energizam mutuamente. O inimigo é a mediocridade confortável.
+
+**Manifestações:** Hell Yes or No · Scorecard sem 7 · Hire No One como resultado válido · 1-3-1 Format · Gossip Protocol
+
+### OBS-RL-002: Transformar Fracasso em Sistemas Repetíveis (8/10)
+
+Compulsão de transformar dor em processo. 21+ frameworks criados, todos de falhas específicas.
+
+### OBS-RL-003: Clareza Forçada como Ato de Liderança (7/10)
+
+Elimina zonas de cinza estruturalmente: sem 7, salary upfront, Hire No One como oficial.
+
+---
+
+## MCE: PARADOXOS PRODUTIVOS
+
+### PAR-RL-001: Contratação Egoísta Como Serviço
+
+A contratação 'egoísta' (otimizar para o fundador) é, na prática, a escolha mais generosa para toda a organização. Richard resolve explicitamente: "Mesmo que pareça egoísta, é boa prática." O resultado é uma empresa que serve melhor TODOS. [produtivo=true]
+
+### PAR-RL-002: Rigor Binário vs Cuidado com o Candidato
+
+Zero tolerância para ambiguidade nas decisões + profundo cuidado no tratamento das pessoas durante o processo. Paid assessment ($1-2k), "grass is truly green, not spray-on", framing do WHY. A rigidez protege AMBOS os lados. [produtivo=true]
+
+### PAR-RL-003: Escala Global via Compatibilidade Individual
+
+Framework universal (método) + respostas únicas (founder-specific). Richard ensina o COMO, não o QUÊ. Isso é o que torna o sistema escalável a 3.000+ clientes em 47 países. [produtivo=true]
+
+---
+
+## MCE: VOICE DNA SUMMARY
+
+| Dimensão | Score | Notas |
+|----------|-------|-------|
+| Certainty | 9/10 | Fala com certeza absoluta em princípios de hiring |
+| Authority | 9/10 | 17 companies, 4 exits, 3.000+ clientes — credibilidade de campo |
+| Warmth | 7/10 | Emerge via histórias pessoais (Matt Swan, $200k story) |
+| Directness | 9/10 | Linguagem binária, absolutista, sem hedge |
+| Vulnerability | 6/10 | Admite fracassos com candor — não como desculpa, como credencial |
+
+**Frases Signature:** "Companies move at the speed of the founder" · "Hell Yes or No" · "Sevens are total BS" · "Batteries included" · "The place where gossip comes to die" · "All of our processes were born from failure"
+
+**Referência:** `knowledge/external/dna/persons/richard-linder/VOICE-DNA.yaml`
+
+---
+
+## LINKS E REFERÊNCIAS CRUZADAS
+
+### Dossiês de Tema
+
+| Tema | Arquivo | Insights de Richard |
+|------|---------|---------------------|
+| Contratação e Hiring | DOSSIER-03-CONTRATACAO.md | 20 insights |
+| Cultura e Gamificação | DOSSIER-10-CULTURA-GAMIFICACAO.md | 7 insights |
+| Gestão | DOSSIER-09-GESTAO.md | 5 insights |
+
+### Source Docs por Tema
+
+| Tema | Arquivo |
+|------|---------|
+| Hiring | knowledge/external/sources/richard-linder/HIRING.md |
+| Cultura | knowledge/external/sources/richard-linder/CULTURA.md |
+| Liderança | knowledge/external/sources/richard-linder/LIDERANCA.md |
+
+### DNA Files
+
+| Tipo | Arquivo | Entradas |
+|------|---------|---------|
+| Filosofias | knowledge/external/dna/persons/richard-linder/FILOSOFIAS.yaml | 6 |
+| Modelos Mentais | knowledge/external/dna/persons/richard-linder/MODELOS-MENTAIS.yaml | 6 |
+| Heurísticas | knowledge/external/dna/persons/richard-linder/HEURISTICAS.yaml | 8 |
+| Frameworks | knowledge/external/dna/persons/richard-linder/FRAMEWORKS.yaml | 2 |
+| Metodologias | knowledge/external/dna/persons/richard-linder/METODOLOGIAS.yaml | 4 |
+| Voice DNA | knowledge/external/dna/persons/richard-linder/VOICE-DNA.yaml | Completo |
+
+### Agent
+
+- **Mind Clone:** agents/external/richard-linder/AGENT.md

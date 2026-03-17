@@ -2,7 +2,7 @@
 
 > **Fundador:** AI Acquisition
 > **Especialidade:** Scaling, AI-Powered Sales, High-Performance Culture, Coaching
-> **Total de Sources:** 9
+> **Total de Sources:** 9 | **MCE Pipeline:** v4.0
 
 ---
 
@@ -24,22 +24,38 @@
 
 ## Fontes Originais
 
-### Processadas (Curso + YouTube)
+### Processadas (Curso + YouTube) — v1 (144 chunks)
 | ID | Titulo | Chunks | Status |
 |----|--------|--------|--------|
-| JL-SRC-01 | Estrutura de Time (curso) | chunk_700-chunk_702 | Processado |
-| JL-SRC-03 | Contratacao e Hiring (curso) | chunk_703-chunk_705 | Processado |
-| JL-SRC-09 | Gestao e Lideranca (curso) | chunk_706-chunk_709 | Processado |
-| JL-SRC-10 | Cultura e Performance (curso) | chunk_710-chunk_712 | Processado |
-| JL-YT-001 | Building a 20K/mo AI Business for a Stranger | chunk_713-chunk_727 | Processado |
-| JL-YT-002 | Building a 3M AI Business for a Stranger | chunk_728-chunk_743 | Processado |
-| JL-YT-003 | How He Quit His 9-5 to Make $45K/mo with AI | chunk_744-chunk_751 | Processado |
-| JL-YT-004 | How I Built a 10M Business That Runs Without Me | chunk_752-chunk_757 | Processado |
-| JL-YT-005 | POV Building AI Businesses in Dubai with Friends | chunk_758-chunk_763 | Processado |
-| JL-YT-006 | 10 Millionaires Reveal How They Got Rich | chunk_770-chunk_799 | Processado |
-| JL-YT-008 | Wholesome Day in the Life of a Rich Dubai Supercouple | chunk_764-chunk_769 | Processado |
+| JL-SRC-01 | Estrutura de Time (curso) | chunk_700-chunk_702 | Processado v1+v2 |
+| JL-SRC-02 | AI Business Model (curso) | chunk_713-chunk_727 | Processado v2 |
+| JL-SRC-03 | Contratacao e Hiring (curso) | chunk_703-chunk_705 | Processado v1+v2 |
+| JL-SRC-05 | Metricas e Benchmarks (curso) | chunk_700-chunk_712 | Processado v2 |
+| JL-SRC-06 | Enterprise Value (curso) | chunk_728-chunk_743 | Processado v2 |
+| JL-SRC-07 | Coaching e Mastermind (curso) | chunk_715-chunk_726 | Processado v2 |
+| JL-SRC-09 | Gestao e Lideranca (curso) | chunk_706-chunk_709 | Processado v1+v2 |
+| JL-SRC-10 | Cultura e Performance (curso) | chunk_710-chunk_712 | Processado v1+v2 |
+| JL-SRC-11 | Lifestyle e Mindset (curso) | chunk_752-chunk_769 | Processado v2 |
+| JL-YT-001 | Building a 20K/mo AI Business for a Stranger | chunk_713-chunk_727 | Processado v1 |
+| JL-YT-002 | Building a 3M AI Business for a Stranger | chunk_728-chunk_743 | Processado v1 |
+| JL-YT-003 | How He Quit His 9-5 to Make $45K/mo with AI | chunk_744-chunk_751 | Processado v1 |
+| JL-YT-004 | How I Built a 10M Business That Runs Without Me | chunk_752-chunk_757 | Processado v1 |
+| JL-YT-005 | POV Building AI Businesses in Dubai with Friends | chunk_758-chunk_763 | Processado v1 |
+| JL-YT-006 | 10 Millionaires Reveal How They Got Rich | chunk_770-chunk_799 | Processado v1 |
+| JL-YT-008 | Wholesome Day in the Life of a Rich Dubai Supercouple | chunk_764-chunk_769 | Processado v1 |
 
-**Total de Chunks:** 144 (chunk_700 a chunk_843)
+### Processadas — v2 (52 novos chunks MCE v2.0)
+| ID | Titulo | Chunks | Status |
+|----|--------|--------|--------|
+| JL-YT-v2-NOBODY | WHAT NOBODY TELLS YOU About Building an AI Business | chunk_JL_001-chunk_JL_030 | Processado v2 |
+| JL-YT-v2-20K | BUILDING A 20K MO AI BUSINESS FROM SCRATCH | chunk_JL_031-chunk_JL_052 | Processado v2 |
+
+### Processadas — v4 (48 novos chunks MCE v4.0)
+| ID | Titulo | Chunks | Status |
+|----|--------|--------|--------|
+| JL-YT-HOW-QUIT-9-5 | HOW HE QUIT HIS 9-5 TO MAKE $45,000 PER MONTH WITH AI | JL-C-001 to JL-C-048 | Processado v4 |
+
+**Total de Chunks:** 244 (144 v1 + 52 v2 + 48 v4)
 
 ---
 
@@ -68,16 +84,17 @@
 
 ---
 
-## DNA YAMLs
+## DNA YAMLs (MCE v4.0)
 
-| Arquivo | Camada | Entries |
-|---------|--------|---------|
-| `FILOSOFIAS.yaml` | L1 | 12 |
-| `MODELOS-MENTAIS.yaml` | L2 | 11 |
-| `HEURISTICAS.yaml` | L3 | 12 |
-| `FRAMEWORKS.yaml` | L4 | 5 |
-| `METODOLOGIAS.yaml` | L5 | 5 |
-| `VOICE-DNA.yaml` | Voice | 1 (perfil completo) |
+| Arquivo | Camada | Entries v2 | Entries v4 |
+|---------|--------|------------|------------|
+| `FILOSOFIAS.yaml` | L1 | 19 | 22 (+3) |
+| `MODELOS-MENTAIS.yaml` | L2 | 16 | 19 (+3) |
+| `HEURISTICAS.yaml` | L3 | 17 | 20 (+3) |
+| `FRAMEWORKS.yaml` | L4 | 8 | 9 (+1) |
+| `METODOLOGIAS.yaml` | L5 | 10 | 12 (+2) |
+| `VOICE-DNA.yaml` | Voice | v2.0.0 | v2.1.0 (10 phrases, 7 immune, 7 metaphors) |
+| `DNA-CONFIG.yaml` | Config | v2.0.0 | v2.1.0 |
 
 ---
 
@@ -89,4 +106,4 @@
 ---
 
 *Ultima atualizacao: 2026-03-16*
-*MCE Pipeline v1.0*
+*MCE Pipeline v4.0 — YouTube batch (HOW HE QUIT HIS 9-5)*

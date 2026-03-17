@@ -218,6 +218,34 @@ Content Ad Hammer precisa de 25 peças relevantes. Não reutilize os mesmos 3 v�
 
 ---
 
+## MCE Pipeline Additions (2026-03-16)
+
+Novos frameworks extraídos via MCE Pipeline v1.0 (chunks chunk_697, chunk_699, chunk_701, chunk_703):
+
+### Offer Architecture — 4 Layers (JH-FW002)
+
+Estrutura que maximiza valor percebido antes da call:
+- **Layer 1:** Core Deliverable (o que você entrega)
+- **Layer 2:** Speed Bonus (resultado mais rápido)
+- **Layer 3:** Risk Reversal (garantia que remove objeção)
+- **Layer 4:** Identity Upgrade ("você vira quem faz X")
+
+### Sales Video Strategy — Hook, Proof, Mechanism, CTA (JH-M003)
+
+Estrutura para vídeo de vendas em 4 passos: (1) Hook — dor específica do ICP nos primeiros 5 segundos, (2) Prova — resultado específico com números, (3) Mecanismo — teaser do "como" sem revelar tudo, (4) Single CTA — "Book a call", nada mais. CTR alvo: >3% | CTB alvo: >10%.
+
+### Selfie Follow-Up System (JH-FW006) [chunk_701]
+
+Sistema de follow-up via vídeo selfie personalizado: aumenta response rate em prospects que viram show-no-shows. Autenticidade > automação em high-ticket.
+
+### AI Manipulation Mastery 2025 (JH-FW005) [chunk_703]
+
+Framework de integração de IA nos processos de vendas: pesquisa de prospect, personalização de pitch, análise de objections patterns. IA como amplificador de convicção, não substituto.
+
+**Ver também:** [SALES-TRAINING.md](./SALES-TRAINING.md), [AUTHORITY-HIJACKING.md](./AUTHORITY-HIJACKING.md)
+
+---
+
 ## Metadados
 
 | Campo | Valor |

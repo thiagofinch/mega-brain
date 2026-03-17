@@ -4,7 +4,7 @@
 
 > **Em resumo:** Filosofia supera tática. 7 Beliefs instaladas antes do pitch eliminam objeções. Internal pressure > external pressure. Discovery é onde Trust é construída, não no rapport. 6-Phase Call Flow com 4 Pillars Pitch.
 >
-> **Versão:** 3.1.0 | **Atualizado:** 2026-01-10
+> **Versão:** 3.2.0 | **Atualizado:** 2026-03-16
 > **Densidade:** ◐◐◐◐◐ (5)
 > **Fontes:** 30 batches (005-008, 033-051, 109-115) | ~373 DNA elements
 
@@ -582,9 +582,119 @@ Se você não pode dizer isso com convicção → não venda.
 | **Batches** | 005-008, 033-051, 109-115 (30 batches) |
 | **Elementos DNA** | ~373 |
 | **Temas** | Fechamento, 7 Beliefs, Call Flow, Tonalidade, Team Scaling |
-| **Protocolo** | JARVIS v3.33.0 |
+| **Protocolo** | JARVIS v3.33.0 → MCE Pipeline v2.0 |
 | **Missão** | MISSION-2026-001 |
-| **Última consolidação** | 2026-01-10 |
+| **Última consolidação** | 2026-03-16 |
+| **MCE Run** | cole-gordon / 2026-03-16 / 20 insights / 8 patterns / 4 paradoxes |
+
+---
+
+## MCE: Identidade Cognitiva [CG-MCE001]
+
+### Hierarquia de Valores
+
+```
+TIER 1 — EXISTENCIAL:
+  • Sistema > Talento Individual
+    "Talento não escala. Sistema escala." [CG-01-01, CG-09-01]
+  • Crença Primeiro, Script Depois
+    "Scripts são training wheels — necessários no começo, limitantes depois." [CG-02-01]
+  • Coaching é o Multiplicador de Força
+    "O manager que não coaching não tem função. O momento que fecha, compete." [CG-09-01]
+
+TIER 2 — OPERACIONAL:
+  • Métricas Certas na Ordem Certa (Show Rate → Offers/day → Close Rate)
+  • Separação Absoluta de Papéis (Sales Manager ≠ Closer)
+  • Tese Unificada de Scaling (vs portfolio random)
+  • Internal Pressure > External Pressure (sempre)
+  • Prevenção Upstream > Tratamento Downstream
+```
+
+### Obsessão Master
+
+> **O Closer Perfeito como Artesanato** (intensidade: 9.5/10)
+
+Cole Gordon é obcecado com o desenvolvimento e a arte do closer de elite. Tudo que cria — frameworks, systems, métodos de coaching — serve ao objetivo único de criar e refinar o closer perfeito. [CG-02-01, CG-02-02, CG-09-04]
+
+### Paradoxos Produtivos
+
+| # | Paradoxo | Resolução |
+|---|---------|-----------|
+| 1 | O Expert em Vendas que Ensina a Não Vender | Remover pressão → prospect se convence internamente → menor churn |
+| 2 | Manager que Nunca Fecha, Fecha Mais | Zero closing → 100% coaching → team performa no máximo |
+| 3 | Rotina = Liberdade | Consistência → confiança → resultados → liberdade criativa |
+| 4 | Simplicidade Extrema é o Scaling Plan | "Mais e melhor do que já funciona" dobra empresa — sem nada novo |
+
+---
+
+## MCE: Padrões Comportamentais [CG-MCE001]
+
+| ID | Padrão | Tipo | Trigger | Sinal |
+|----|--------|------|---------|-------|
+| BP-CG-001 | Framework Cascade | ENSINO | Qualquer conceito a explicar | "Here's the framework..." |
+| BP-CG-002 | Reframe da Métrica | COMUNICACAO | Foco na métrica errada | "The real game is..." |
+| BP-CG-003 | Manager Callback | DECISAO | Hesitação persistente no deal | "My manager would love to..." |
+| BP-CG-004 | Separação Upstream/Downstream | MODELO-MENTAL | Discussão de objeções | "Objection prevention is upstream..." |
+| BP-CG-005 | Rotina como Sistema | PRIORIDADE | Inconsistência de closers | "Consistency creates trust..." |
+| BP-CG-006 | Correção do Player-Coach | CONFLITO | Argumento de que manager deve fechar | "The moment you close, you compete..." |
+| BP-CG-007 | Ordem de Otimização | DECISAO | Foco em close rate isolado | "Show rate first, offers second, close rate third" |
+| BP-CG-008 | Anti-Diversificação | PRIORIDADE | Pressão para diversificar rápido | "More and better at what we're doing first" |
+
+---
+
+## MCE: Voice DNA [CG-MCE001]
+
+### Perfil Tonal (0-10)
+
+| Dimensão | Score | Característica |
+|----------|-------|----------------|
+| Certeza | 8.5 | Declarações absolutistas sem qualificadores |
+| Autoridade | 8.5 | Arquiteto de sistemas com dados verificáveis |
+| Calor | 4.5 | Clinico e pragmático; calor só no coaching |
+| Diretividade | 9.0 | "NOT X — Y" construções frequentes |
+| Teaching Focus | 9.0 | Conteúdo quase sempre estruturado como aula |
+| Confiança | 8.5 | Alta confiança com humildade sobre erros passados |
+
+### Frases de Assinatura
+
+> "The moment you close, you compete with your team. And when you compete, you don't develop." [VP-CG-001]
+
+> "Show rate is where the game is won or lost." [VP-CG-002]
+
+> "3 OFFERS per day, not calls." [VP-CG-003]
+
+> "Internal pressure creates sales that don't cancel." [VP-CG-004]
+
+> "Objection prevention is upstream, objection handling is downstream." [VP-CG-006]
+
+### Modos de Operação
+
+• **Teaching Mode** — estruturado, sequencial, usa numeração, perguntas retóricas
+• **Diagnostic Mode** — clinico, dados precisos para expor o gap, nunca julgamental
+• **Warning Mode** — assertivo, negações fortes, contraste direto certo/errado
+• **Coaching Mode** — mais suave, perguntas abertas, autonomia antes da correção
+• **Visionary Mode** — expansivo, horizontes de tempo, compounding lógic
+
+---
+
+## Scaling Plan 2026 [CG-PODCAST-hxD7SX_Mr2Y]
+
+### Baseline e Meta
+
+```
+ATUAL (2025): $31M cash collected/ano
+META:         $10M/mês (~$120M/ano)
+```
+
+### 3 Pilares
+
+**Pilar 1 — Prioridade #1:** B2B Core → 200 units/mês → compounding 18-24 meses dobra empresa sem nada novo [CG-09-06]
+
+**Pilar 2 — Prioridade #2:** Enterprise Division ("Broad 2.0") → pay-per-hire (~$4-5K first hire, depois pay-as-you-go) → target empresas com ≥10 reps + ≥10-20 contratações/ano [CG-03-01]
+
+**Pilar 3 — Prioridade #3:** Recruiting Conglomerate → mesma tese de recruiting em múltiplos setores (Healthcare/nurses, Home Service techs, Data Center electricians) — AI-resistant, licenciamento do staff atual [CG-09-06]
+
+**Lição aprendida:** Portfolio de offers random = falha. Tese unificada com complexidade como licensing do mesmo staff = escala.
 
 ---
 

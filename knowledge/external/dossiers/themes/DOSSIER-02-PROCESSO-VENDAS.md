@@ -955,15 +955,58 @@ Se voce esta tratando objecao no final da call, voce ja perdeu. Prevencao de obj
 
 ---
 
+---
+
+## POSIÇÃO: JEREMY HAYNES (MCE Pipeline v1.0 — 2026-03-16)
+
+**Tese central:** Convicção é a variável número 1 em vendas. Script, técnica e framework são secundários. Um closer que acredita 100% no produto fecha 5x mais do que um closer tecnicamente competente sem convicção.
+
+### Authority Hijacking como Pre-Frame de Venda
+
+Antes de entrar na conversa de fechamento, a percepção de autoridade do vendedor já determina 40%+ do outcome. JH usa 3 Tiers de PR para estabelecer credibilidade: T1 Earned (resultados próprios com números), T2 Borrowed (associação com players reconhecidos), T3 Paid (media + ads).
+
+### As 3 Crenças Que Precedem Toda Compra [chunk_702]
+
+Para fechar, as 3 crenças devem estar ativas simultaneamente:
+1. **Crença no Veículo** — "Este método funciona?"
+2. **Crença na Capacidade Própria** — "Eu consigo fazer funcionar para mim?"
+3. **Crença no Timing** — "Agora é o momento certo?"
+
+Diagnóstico de objeção = identificar qual das 3 está quebrada. Isso substitui "handling" genérico por cirurgia específica.
+
+### Anchor-Rubber Band Urgency [chunk_663, chunk_664]
+
+Urgência não é criada artificialmente — é revelada. Mostrar o gap entre current state (dor documentada) e aspirational anchor (10x version) com detalhes concretos. Deixar o prospect verbalizar o gap. A tensão natural gera urgência. Critério: prospect diz espontaneamente "eu preciso disso."
+
+### Perfect Client Anatomy [chunk_675]
+
+Qualificação em 3 eixos: (1) Dor específica ativa com urgência real, (2) Situação atual que permite ação, (3) Capacidade de decidir + budget. Lead que não qualifica nos 3 eixos = não fechar, redirecioná-lo economiza tempo de closer.
+
+**Divergências vs outras fontes:**
+| Aspecto | Cole Gordon | Hormozi | Jeremy Haynes |
+|---------|-------------|---------|---------------|
+| Foco principal | Inner game + 6-phase call flow | CLOSER framework + scripting | Convicção + authority positioning |
+| Urgência | Criada por deadline | Criada por scarcity | Revelada pelo gap natural |
+| Qualificação | Show-rate optimization | Volume + conversion | Perfect client anatomy (3 eixos) |
+
+**Source:** [AUTHORITY-HIJACKING.md](../../sources/jeremy-haynes/AUTHORITY-HIJACKING.md) | [SALES-TRAINING.md](../../sources/jeremy-haynes/SALES-TRAINING.md)
+
+---
+
 ## Fontes Relacionadas
 
 - [Person: Cole Gordon](../persons/DOSSIER-COLE-GORDON.md)
 - [Person: Alex Hormozi](../persons/DOSSIER-ALEX-HORMOZI.md)
+- [Person: Jeremy Haynes](../persons/DOSSIER-JEREMY-HAYNES.md)
 - [Source: Cole Gordon - Processo de Vendas](../../sources/cole-gordon/02-PROCESSO-VENDAS.md)
 - [Source: Alex Hormozi - Processo de Vendas](../../sources/alex-hormozi/02-PROCESSO-VENDAS.md)
+- [Source: Jeremy Haynes - Authority Hijacking](../../sources/jeremy-haynes/AUTHORITY-HIJACKING.md)
+- [Source: Jeremy Haynes - Sales Training](../../sources/jeremy-haynes/SALES-TRAINING.md)
 
 ---
 
 *Compilado via Narrative Metabolism Protocol v2.0*
 *Mega Brain System v3.33.0*
 *Atualizacao: 2026-01-10 por JARVIS*
+*MCE Update: 2026-03-16 — Cole Gordon MCE pipeline complete (20 insights / 8 patterns / VOICE-DNA.yaml / 5 DNA YAMLs)*
+*MCE Update: 2026-03-16 — Jeremy Haynes MCE pipeline complete (30 insights / 8 patterns / VOICE-DNA.yaml / 5 DNA YAMLs). Adicionado: Authority Hijacking, 3 Crenças, Anchor-Rubber Band, Perfect Client Anatomy.*
