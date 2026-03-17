@@ -76,28 +76,19 @@ IGNORE_FOLDERS = [
 VALID_EXTENSIONS = {".txt", ".docx", ".pdf", ".md"}
 
 # Mapeamento de cursos para pastas INBOX
-COURSE_TO_FOLDER = {
-    "FullSales System": "FULL SALES SYSTEM",
-    "Alex Hormozi": "ALEX HORMOZI (ACQUISITION.COM)",
-    "Grupo Silva": "GRUPO SILVA",
-    "Client Accelerator": "CLIENT ACCELERATOR",
-    "EAD de Closer": ["COLE GORDON (CLOSERS.IO)", "EAD CLOSER (G4)"],
-    "G4": "G4 EDUCACAO (GESTAO 4.0)",
-    "Viver de AI": "VIVER DE AI",
-    "Sales Training With Jeremy Haynes": "JEREMY HAYNES",
-    "Inner Circle Mastermind Talks": "JEREMY HAYNES",
-    "Inner Circle Weekly Group Call Recordings": "JEREMY HAYNES",
-    "Ultra High Ticket Closer": "JEREMY HAYNES",
-    "Agency Owners Blueprint Accelerator": "JEREMY HAYNES",
-    "Perfect Cold Video Pitch": "JEREMY HAYNES",
-    "Land Your First Agency Client": "JEREMY HAYNES",
-    "30 Days Challenge": "JEREMY HAYNES",
-    "Scale The Agency": "JEREMY HAYNES",
-    "Marketer Mindset Masterclass": "JEREMY HAYNES",
-    "Jeremy Miner": "JEREMY MINER (7TH LEVEL)",
-    "The Scalable Company": "THE SCALABLE COMPANY",
-    "Programa de Aceleração Fullsales": "FULL SALES SYSTEM",
+COURSE_TO_FOLDER: dict = {
+    # Populate via MEGA_BRAIN_COURSE_MAP env var.
+    # Format JSON: {"Course Name": "FOLDER NAME", ...}
+    # Example: {"Alex Hormozi": "ALEX HORMOZI", "G4": "G4 EDUCACAO"}
 }
+
+# Load user-specific course map from env (JSON format)
+_custom_course_map = os.environ.get("MEGA_BRAIN_COURSE_MAP", "")
+if _custom_course_map:
+    try:
+        COURSE_TO_FOLDER.update(json.loads(_custom_course_map))
+    except (json.JSONDecodeError, TypeError):
+        pass
 
 
 def get_credentials():

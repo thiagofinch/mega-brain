@@ -634,7 +634,7 @@ knowledge/business/inbox/**
 workspace/*.yaml
 workspace/*.json
 workspace/*.md
-workspace/bilhon-central/
+workspace/*-central/
 workspace/team/
 workspace/meetings/
 workspace/businesses/
@@ -659,12 +659,7 @@ reference/IMPLEMENTATION-LOG.md
 reference/templates/phase5/
 
 # Agents — collaborators and founder (not public experts)
-agents/external/alan-nicolas/
-agents/external/pedro-valerio/
-agents/external/thiago-finch/
-knowledge/external/dna/persons/alan-nicolas/
-knowledge/external/dna/persons/pedro-valerio/
-knowledge/external/dna/persons/thiago-finch/
+# Add person-specific entries in .git/info/exclude (local only)
 
 # Skills — removed
 .claude/skills/aios-master/

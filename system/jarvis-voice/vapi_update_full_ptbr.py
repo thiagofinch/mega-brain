@@ -365,7 +365,7 @@ def set_server_url(ngrok_url: str):
         },
         json={
             "serverUrl": full_url,
-            "serverUrlSecret": os.environ.get("VAPI_WEBHOOK_SECRET", "your-webhook-secret-here")
+            "serverUrlSecret": os.environ.get("VAPI_WEBHOOK_SECRET", "")
         }
     )
 

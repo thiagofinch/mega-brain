@@ -18,7 +18,7 @@ mega-brain/
 ├── agents/         -> AI agents (5 categories)
 │   ├── external/       -> Expert mind clones (Hormozi, Cole, etc.)
 │   ├── business/       -> Collaborator clones
-│   ├── personal/       -> Founder clone (thiago-finch)
+│   ├── personal/       -> Founder clone
 │   ├── cargo/          -> Functional roles (Closer, CRO, etc.)
 │   ├── system/         -> Infrastructure (conclave, boardroom)
 │   ├── discovery/      -> Role tracking (auto-generated)

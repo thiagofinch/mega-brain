@@ -66,7 +66,7 @@ _BUSINESS_PATTERNS: list[re.Pattern[str]] = [
     re.compile(p, re.IGNORECASE)
     for p in [
         r"\b(?:meeting|reuni[aã]o|call|chamada)\b",
-        r"\b(?:bilhon|billion)\b",
+        r"\b(?:your-company)\b",
         r"\b(?:team|equipe|time|colaborador)\b",
         r"\b(?:kpi|okr|mrr|arr|cac|ltv|churn)\b",
         r"\b(?:org|organiza[cç][aã]o|departamento|department)\b",

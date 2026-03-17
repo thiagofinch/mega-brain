@@ -105,7 +105,7 @@ External Business Personal       Layer           (clones)    (founder) (hibridos
 ║   ├── dossiers/             <- Dossieres de operacao/temas                   ║
 ║   ├── insights/             <- Insights de reunioes                          ║
 ║   │   ├── by-meeting/           MEET-0001.md, MEET-0002.md, ...              ║
-║   │   ├── by-person/            alan-nicolas.md, ...                         ║
+║   │   ├── by-person/            {person-name}.md, ...                        ║
 ║   │   └── by-theme/             enterprise-strategy.md, ...                  ║
 ║   ├── narratives/           <- Historias conectadas entre eventos             ║
 ║   ├── decisions/            <- Decisoes estrategicas (entrada manual)        ║

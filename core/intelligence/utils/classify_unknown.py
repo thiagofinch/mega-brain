@@ -3,6 +3,7 @@
 Script para classificar e mover arquivos de _UNKNOWN para pastas corretas.
 """
 
+import os
 import re
 import shutil
 import sys
@@ -13,7 +14,7 @@ if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 # Diretórios
-INBOX_BASE = Path(r"c:\Users\thiag\OneDrive\Documentos\Mega Brain\00-INBOX")
+INBOX_BASE = Path(os.environ.get("MEGA_BRAIN_INBOX", ""))
 UNKNOWN_DIR = INBOX_BASE / "_UNKNOWN"
 
 # Pastas de destino

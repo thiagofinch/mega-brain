@@ -39,26 +39,29 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const PROJECT_ROOT = resolve(__dirname, '..');
 
+const GH_ORG = process.env.MEGA_BRAIN_GH_ORG || '<your-org>';
+const GH_REPO = process.env.MEGA_BRAIN_GH_REPO || 'mega-brain';
+
 const LAYER_CONFIG = {
   1: {
     name: 'Community',
     label: 'Layer 1 — Community (publico, npm)',
     remote: 'origin',
-    remoteUrl: 'https://github.com/<your-username>/mega-brain.git',
+    remoteUrl: `https://github.com/${GH_ORG}/${GH_REPO}.git`,
     color: '#6366f1',
   },
   2: {
     name: 'Premium',
     label: 'Layer 2 — Premium (MoneyClub, privado)',
     remote: 'premium',
-    remoteUrl: 'https://github.com/<your-username>/mega-brain-premium.git',
+    remoteUrl: `https://github.com/${GH_ORG}/${GH_REPO}-premium.git`,
     color: '#f59e0b',
   },
   3: {
     name: 'Full Backup',
     label: 'Layer 3 — Full Backup (tudo, privado)',
     remote: 'backup',
-    remoteUrl: 'https://github.com/<your-username>/mega-brain-full.git',
+    remoteUrl: `https://github.com/${GH_ORG}/${GH_REPO}-full.git`,
     color: '#ef4444',
   },
 };

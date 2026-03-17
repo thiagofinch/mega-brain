@@ -80,7 +80,6 @@ docs/validation/
 .claude/skills/council/
 .claude/skills/executor/
 .claude/skills/fase-2-5-tagging/
-# .claude/skills/finance-agent/ (removed)
 .claude/skills/gdrive-transcription-downloader/
 .claude/skills/gemini-fallback/
 .claude/skills/hybrid-source-reading/
@@ -92,7 +91,6 @@ docs/validation/
 .claude/skills/smart-download-tagger/
 .claude/skills/source-sync/
 .claude/skills/sync-docs/
-# .claude/skills/talent-agent/ (removed)
 .claude/skills/verify/
 
 # === MEDIA FILES ===

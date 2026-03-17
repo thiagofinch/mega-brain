@@ -117,21 +117,18 @@ SKIP_NAMES: set[str] = {".DS_Store", "Thumbs.db", ".gitkeep", "__pycache__"}
 # ---------------------------------------------------------------------------
 
 SOURCE_CODE_MAP: dict[str, str] = {
-    "alex-hormozi": "AH",
-    "cole-gordon": "CG",
-    "jeremy-haynes": "JH",
-    "jeremy-miner": "JM",
-    "sam-oven": "SO",
-    "pedro-valerio": "PV",
-    "alan-nicolas": "AN",
-    "richard-linder": "RL",
-    "jordan-lee": "JL",
-    "tallis-gomes": "TG",
-    "g4-educacao": "G4",
-    "the-scalable-company": "TSC",
-    "full-sales-system": "FSS",
-    "thiago-finch": "TF",
+    # Populate via MEGA_BRAIN_SOURCE_CODES env var.
+    # Format: "slug:CODE,slug:CODE"
+    # Example: "alex-hormozi:AH,cole-gordon:CG"
 }
+
+# Load user-specific source codes from env
+_custom_source_codes = os.environ.get("MEGA_BRAIN_SOURCE_CODES", "")
+for _pair in _custom_source_codes.split(","):
+    _pair = _pair.strip()
+    if ":" in _pair:
+        _slug, _code = _pair.split(":", 1)
+        SOURCE_CODE_MAP[_slug.strip()] = _code.strip()
 
 
 # ---------------------------------------------------------------------------

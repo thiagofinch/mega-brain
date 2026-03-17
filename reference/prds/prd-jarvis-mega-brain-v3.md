@@ -578,7 +578,7 @@ CouncilRole = CRITIC | DEVIL_ADVOCATE | RISK_ASSESSOR | FACT_CHECKER | SYNTHESIZ
 - Tom: Entusiasmado, storytelling, exemplos pessoais
 - activation_keywords: brunson, funil, funnel, copy, landing, webinar, lançamento, value ladder, clickfunnels
 
-**PEDRO_VALERIO:**
+**YOUR_COLLABORATOR:**
 - Expertise: Automação, processos, ClickUp, operações
 - Filosofia: Task First, Automação libera tempo, Processo bom roda sem você
 - Frameworks: Task First, Automation Flow, Process Documentation
@@ -1005,7 +1005,7 @@ dna-library/
 │   ├── frameworks/
 │   └── quotes/
 ├── BRUNSON/
-└── PEDRO_VALERIO/
+└── YOUR_COLLABORATOR/
 ```
 
 - [ ] Criar template DNA.md com seções:
