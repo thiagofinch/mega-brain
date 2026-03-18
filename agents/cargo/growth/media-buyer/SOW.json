@@ -1,0 +1,78 @@
+{
+  "role_id": "MEDIA-BUYER",
+  "canonical_name": "Media Buyer",
+  "version": "1.0.0",
+  "generated_at": "2026-02-26T07:20:11.594091+00:00",
+  "ai_config": {
+    "executor_type": "Hybrid",
+    "autonomy_level": 50,
+    "tools_required": [
+      "CRM (HubSpot/Pipedrive)",
+      "Calendar (Calendly)",
+      "Ad Platform (Meta/Google)",
+      "Analytics Dashboard"
+    ],
+    "tasks_assigned": [
+      "Manage ad campaigns",
+      "Optimize ROAS",
+      "Scale winning ads"
+    ],
+    "decision_authority": "Prepara e sugere, humano decide em casos criticos",
+    "escalation_triggers": [
+      "Decisao acima do threshold de autonomia",
+      "Excecao de processo",
+      "Impacto financeiro > threshold",
+      "Conflito entre regras"
+    ]
+  },
+  "human_config": {
+    "job_title": "Media Buyer",
+    "department": "Growth/Marketing",
+    "reports_to": null,
+    "manages": [],
+    "responsibilities": [],
+    "kpis": [
+      "ROAS",
+      "CPA ($)",
+      "Ad spend managed ($)",
+      "Conversion rate (%)"
+    ],
+    "skills_required": [
+      "Paid advertising",
+      "Analytics",
+      "A/B testing",
+      "Negotiation",
+      "Communication",
+      "Objection handling"
+    ]
+  },
+  "shared": {
+    "domains": [
+      "growth",
+      "marketing",
+      "vendas"
+    ],
+    "competencies": [],
+    "frameworks_used": [],
+    "knowledge_sources": [
+      "AH-ML001-chunks",
+      "AH-YT002",
+      "CG-SM001"
+    ]
+  },
+  "executor_decision": {
+    "question_1_predictable": false,
+    "question_2_pure_function": false,
+    "question_3_nlp_required": true,
+    "question_4_error_impact": "HIGH",
+    "question_5_strategic": false,
+    "question_6_ai_assist": true,
+    "result": "Hybrid",
+    "rationale": "Precisa NLP com alto impacto de erro. IA executa, humano valida."
+  },
+  "metadata": {
+    "weighted_score": 28.5,
+    "source_count": 3,
+    "responsibility_count": 0
+  }
+}

@@ -1,0 +1,69 @@
+# L2 MENTAL-MODELS — Liam Ottley
+# Thinking and decision frameworks for AI Operating Systems
+# Version: 1.0.0
+
+mental_models:
+  - id: MM-LO-001
+    name: "The Operator Trap"
+    description: >
+      Most founders are trapped in the operator role. They spend 80% of their time
+      IN the business — firefighting, managing, executing tasks — and only 20% ON
+      the business — strategizing, building systems, creating leverage. The Operator
+      Trap is self-reinforcing: the more you operate, the more dependent the business
+      becomes on you operating, the less time you have to build systems that free you.
+      The AIOS breaks this trap by automating the operator layer. Target state:
+      20% IN the business, 80% ON the business.
+    source: LO-001
+    quote: "You're stuck doing 80% IN the business. The goal is to flip it — 20% IN, 80% ON."
+
+  - id: MM-LO-002
+    name: "The Wrapper Model"
+    description: >
+      Think of your business model as a cube — it has defined edges, processes,
+      inputs, and outputs. An AI Operating System wraps AROUND this cube in 5
+      concentric layers. Layer 1 (Context) is the innermost wrap — the system
+      understands what the business IS. Layer 2 (Data) connects all information
+      sources. Layer 3 (Intelligence) makes sense of the data. Layer 4 (Automate)
+      acts on the intelligence. Layer 5 (Build) creates new capabilities. Each
+      layer wraps tighter around the business model, making it more autonomous.
+      The business model itself does not change — the wrapper changes how it runs.
+    source: LO-001
+    quote: "Think of your business as a cube. AIOS wraps around it in 5 layers. The model stays, the operation transforms."
+
+  - id: MM-LO-003
+    name: "Compounding Automation"
+    description: >
+      Every task you automate is time you never lose again. Unlike hiring (which
+      requires management overhead) or outsourcing (which requires coordination),
+      automation compounds cleanly. Automate 1 hour/day in week 1 = 5 hours saved.
+      Add another hour in week 2 = 10 hours saved. By month 3, you have reclaimed
+      an entire workweek. This compounding effect is why founders who start building
+      their AIOS early develop an insurmountable advantage — the gap widens every week.
+    source: LO-001
+    quote: "Every automated task is time you never lose again. It compounds. Every single week."
+
+  - id: MM-LO-004
+    name: "Build or Enjoy"
+    description: >
+      When the AIOS frees founder bandwidth, there are exactly two productive uses
+      for that bandwidth: BUILD (expand the business, launch new products, enter new
+      markets) or ENJOY (travel, relationships, health, experiences). Both are valid.
+      The key insight is that this is a CHOICE — not a default. Without an AIOS,
+      founders have neither option; they are locked in the Operator Trap. With an
+      AIOS, the freed bandwidth becomes a strategic decision: growth or lifestyle.
+      Most founders, once freed, oscillate between both.
+    source: LO-003
+    quote: "Once the system runs itself, you have a choice: build more, or enjoy more. Both are right."
+
+  - id: MM-LO-005
+    name: "One-Person Billion Dollar Company"
+    description: >
+      Sam Altman predicted the first one-person billion-dollar company will exist
+      soon, enabled by AI. This is not hyperbole — it is the logical endpoint of
+      AI workforces. If one person can deploy AI agents for marketing, sales,
+      operations, finance, and product development, the constraint is no longer
+      labor but imagination and capital allocation. The mental model is: what would
+      you build if headcount was zero and capability was infinite? That thought
+      experiment is becoming a practical business plan.
+    source: LO-002
+    quote: "Sam Altman said the first one-person billion-dollar company is coming. AI workforces make it real."

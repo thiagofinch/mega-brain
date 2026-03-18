@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0f"/>
+      <stop offset="50%" stop-color="#12101a"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="50%" stop-color="#d946ef"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <linearGradient id="purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#d946ef"/>
+    </linearGradient>
+    <linearGradient id="nodeFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.05"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1a1625" stroke-width="0.5"/>
+    </pattern>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="300" fill="url(#bg)"/>
+  <rect width="1200" height="300" fill="url(#grid)" opacity="0.3"/>
+
+  <!-- Neural network - left side -->
+  <g opacity="0.08" stroke="#f59e0b" stroke-width="0.8" fill="none">
+    <!-- Nodes -->
+    <circle cx="60" cy="60" r="4" fill="#f59e0b"/>
+    <circle cx="120" cy="100" r="3" fill="#f59e0b"/>
+    <circle cx="40" cy="150" r="5" fill="#f59e0b"/>
+    <circle cx="130" cy="180" r="3" fill="#f59e0b"/>
+    <circle cx="80" cy="230" r="4" fill="#f59e0b"/>
+    <circle cx="160" cy="140" r="3" fill="#d946ef"/>
+    <circle cx="180" cy="60" r="3" fill="#d946ef"/>
+    <circle cx="200" cy="200" r="4" fill="#8b5cf6"/>
+    <!-- Connections -->
+    <line x1="60" y1="60" x2="120" y2="100"/>
+    <line x1="120" y1="100" x2="40" y2="150"/>
+    <line x1="40" y1="150" x2="130" y2="180"/>
+    <line x1="130" y1="180" x2="80" y2="230"/>
+    <line x1="120" y1="100" x2="160" y2="140"/>
+    <line x1="60" y1="60" x2="180" y2="60"/>
+    <line x1="160" y1="140" x2="200" y2="200"/>
+    <line x1="130" y1="180" x2="200" y2="200"/>
+    <line x1="180" y1="60" x2="160" y2="140"/>
+  </g>
+
+  <!-- Neural network - right side -->
+  <g opacity="0.06" stroke="#8b5cf6" stroke-width="0.8" fill="none">
+    <circle cx="1040" cy="70" r="3" fill="#8b5cf6"/>
+    <circle cx="1100" cy="110" r="4" fill="#8b5cf6"/>
+    <circle cx="1060" cy="170" r="3" fill="#d946ef"/>
+    <circle cx="1140" cy="150" r="5" fill="#d946ef"/>
+    <circle cx="1080" cy="230" r="3" fill="#f59e0b"/>
+    <circle cx="1160" cy="80" r="3" fill="#f59e0b"/>
+    <circle cx="1170" cy="220" r="4" fill="#8b5cf6"/>
+    <line x1="1040" y1="70" x2="1100" y2="110"/>
+    <line x1="1100" y1="110" x2="1060" y2="170"/>
+    <line x1="1060" y1="170" x2="1140" y2="150"/>
+    <line x1="1140" y1="150" x2="1080" y2="230"/>
+    <line x1="1100" y1="110" x2="1160" y2="80"/>
+    <line x1="1140" y1="150" x2="1170" y2="220"/>
+    <line x1="1080" y1="230" x2="1170" y2="220"/>
+  </g>
+
+  <!-- Brain icon / logo mark -->
+  <g transform="translate(418, 68)" filter="url(#glow)">
+    <!-- Outer orbit -->
+    <ellipse cx="32" cy="32" rx="36" ry="36" fill="none" stroke="url(#accent)" stroke-width="1.5" opacity="0.3" stroke-dasharray="4 6"/>
+    <!-- Brain shape (simplified) -->
+    <path d="M 32,8 C 20,8 12,16 12,26 C 12,30 14,34 16,36 C 14,38 12,42 12,46 C 12,54 18,60 26,60 L 32,60" fill="none" stroke="url(#gold)" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 32,8 C 44,8 52,16 52,26 C 52,30 50,34 48,36 C 50,38 52,42 52,46 C 52,54 46,60 38,60 L 32,60" fill="none" stroke="url(#purple)" stroke-width="2" stroke-linecap="round"/>
+    <!-- Center line -->
+    <line x1="32" y1="12" x2="32" y2="56" stroke="#d946ef" stroke-width="1" opacity="0.4"/>
+    <!-- Neural dots on brain -->
+    <circle cx="22" cy="24" r="2" fill="#f59e0b" opacity="0.8"/>
+    <circle cx="42" cy="24" r="2" fill="#8b5cf6" opacity="0.8"/>
+    <circle cx="18" cy="40" r="2" fill="#f59e0b" opacity="0.6"/>
+    <circle cx="46" cy="40" r="2" fill="#8b5cf6" opacity="0.6"/>
+    <circle cx="32" cy="32" r="3" fill="#d946ef" opacity="0.9"/>
+    <!-- Synaptic connections -->
+    <line x1="22" y1="24" x2="32" y2="32" stroke="#f59e0b" stroke-width="0.8" opacity="0.3"/>
+    <line x1="42" y1="24" x2="32" y2="32" stroke="#8b5cf6" stroke-width="0.8" opacity="0.3"/>
+    <line x1="18" y1="40" x2="32" y2="32" stroke="#f59e0b" stroke-width="0.8" opacity="0.3"/>
+    <line x1="46" y1="40" x2="32" y2="32" stroke="#8b5cf6" stroke-width="0.8" opacity="0.3"/>
+    <!-- Orbital particles -->
+    <circle cx="32" cy="-4" r="3" fill="#f59e0b" opacity="0.7"/>
+    <circle cx="68" cy="32" r="3" fill="#8b5cf6" opacity="0.7"/>
+    <circle cx="32" cy="68" r="3" fill="#d946ef" opacity="0.5"/>
+  </g>
+
+  <!-- MEGA text -->
+  <text x="480" y="118" font-family="'Segoe UI', 'SF Pro Display', system-ui, -apple-system, sans-serif" font-size="52" font-weight="800" letter-spacing="6" fill="url(#gold)">MEGA</text>
+
+  <!-- BRAIN text -->
+  <text x="730" y="118" font-family="'Segoe UI', 'SF Pro Display', system-ui, -apple-system, sans-serif" font-size="52" font-weight="300" letter-spacing="6" fill="#e8e0f0">BRAIN</text>
+
+  <!-- Separator line -->
+  <line x1="380" y1="142" x2="820" y2="142" stroke="url(#accent)" stroke-width="1" opacity="0.3"/>
+
+  <!-- Tagline -->
+  <text x="600" y="174" font-family="'Segoe UI', 'SF Pro Display', system-ui, -apple-system, sans-serif" font-size="16" font-weight="400" fill="#9ca3af" text-anchor="middle" letter-spacing="3">COGNITIVE CLONING ENGINE FOR BUSINESS INTELLIGENCE</text>
+
+  <!-- Feature badges -->
+  <g transform="translate(290, 200)">
+    <!-- Badge: 11 AI Agents -->
+    <rect x="0" y="0" width="130" height="30" rx="15" fill="#12101a" stroke="#2a2435" stroke-width="1"/>
+    <circle cx="20" cy="15" r="5" fill="#f59e0b" opacity="0.8"/>
+    <text x="34" y="20" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="500" fill="#d1cad8">11 AI Agents</text>
+
+    <!-- Badge: DNA Cloning -->
+    <rect x="150" y="0" width="130" height="30" rx="15" fill="#12101a" stroke="#2a2435" stroke-width="1"/>
+    <circle cx="170" cy="15" r="5" fill="#d946ef" opacity="0.8"/>
+    <text x="184" y="20" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="500" fill="#d1cad8">DNA Cloning</text>
+
+    <!-- Badge: Conclave -->
+    <rect x="300" y="0" width="120" height="30" rx="15" fill="#12101a" stroke="#2a2435" stroke-width="1"/>
+    <circle cx="320" cy="15" r="5" fill="#8b5cf6" opacity="0.8"/>
+    <text x="334" y="20" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="500" fill="#d1cad8">Conclave</text>
+
+    <!-- Badge: MoneyClub -->
+    <rect x="440" y="0" width="140" height="30" rx="15" fill="#12101a" stroke="#2a2435" stroke-width="1"/>
+    <circle cx="460" cy="15" r="5" fill="#f59e0b" opacity="0.8"/>
+    <text x="474" y="20" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="500" fill="#d1cad8">MoneyClub</text>
+  </g>
+
+  <!-- Bottom accent line -->
+  <rect x="0" y="296" width="1200" height="4" fill="url(#accent)" opacity="0.6"/>
+</svg>

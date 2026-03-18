@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "mega-brain-knowledge": {
+      "command": "python3",
+      "args": ["core/intelligence/rag/mcp_server.py"],
+      "env": {}
+    }
+  }
+}

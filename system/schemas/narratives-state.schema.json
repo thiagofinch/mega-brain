@@ -1,0 +1,150 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "narratives-state.schema.json",
+  "title": "Narratives State",
+  "description": "Schema for NARRATIVES-STATE.json - synthesized strategic narratives",
+  "type": "object",
+  "required": ["narratives_state"],
+  "properties": {
+    "narratives_state": {
+      "type": "object",
+      "required": ["persons", "themes", "version"],
+      "properties": {
+        "persons": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/person_narrative"
+          }
+        },
+        "themes": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/theme_narrative"
+          }
+        },
+        "version": {
+          "type": "string"
+        },
+        "tensions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tension"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "person_narrative": {
+      "type": "object",
+      "required": ["canonical_name", "primary_topics", "core_beliefs", "methodology", "evidence_chain"],
+      "properties": {
+        "canonical_name": {"type": "string"},
+        "aliases": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "primary_topics": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "core_beliefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/belief"
+          }
+        },
+        "methodology": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/method"
+          }
+        },
+        "metrics_mentioned": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/metric"
+          }
+        },
+        "evidence_chain": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "List of chunk_ids supporting this narrative"
+        }
+      }
+    },
+    "theme_narrative": {
+      "type": "object",
+      "required": ["theme_name", "summary", "key_insights", "evidence_chain"],
+      "properties": {
+        "theme_name": {"type": "string"},
+        "summary": {"type": "string"},
+        "key_insights": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "contributors": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "evidence_chain": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      }
+    },
+    "belief": {
+      "type": "object",
+      "required": ["statement", "chunk_ids"],
+      "properties": {
+        "statement": {"type": "string"},
+        "chunk_ids": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "confidence": {"type": "number"}
+      }
+    },
+    "method": {
+      "type": "object",
+      "required": ["name", "description"],
+      "properties": {
+        "name": {"type": "string"},
+        "description": {"type": "string"},
+        "chunk_ids": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      }
+    },
+    "metric": {
+      "type": "object",
+      "required": ["name", "value"],
+      "properties": {
+        "name": {"type": "string"},
+        "value": {"type": "string"},
+        "context": {"type": "string"},
+        "chunk_id": {"type": "string"}
+      }
+    },
+    "tension": {
+      "type": "object",
+      "required": ["topic", "positions"],
+      "properties": {
+        "topic": {"type": "string"},
+        "positions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "person": {"type": "string"},
+              "stance": {"type": "string"},
+              "chunk_id": {"type": "string"}
+            }
+          }
+        },
+        "resolution": {"type": "string"}
+      }
+    }
+  }
+}

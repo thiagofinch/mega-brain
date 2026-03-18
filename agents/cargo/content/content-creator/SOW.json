@@ -1,0 +1,71 @@
+{
+  "role_id": "CONTENT-CREATOR",
+  "canonical_name": "Content Creator",
+  "version": "1.0.0",
+  "generated_at": "2026-02-26T07:20:11.595950+00:00",
+  "ai_config": {
+    "executor_type": "Agent",
+    "autonomy_level": 70,
+    "tools_required": [
+      "Social Media Scheduler",
+      "Design Tool (Canva)"
+    ],
+    "tasks_assigned": [
+      "Create content calendar",
+      "Produce content",
+      "Manage distribution"
+    ],
+    "decision_authority": "Pode decidir dentro de parametros definidos, escala excecoes",
+    "escalation_triggers": [
+      "Confianca < 70%",
+      "Erro repetido 2x",
+      "Caso nao coberto por regras"
+    ]
+  },
+  "human_config": {
+    "job_title": "Content Creator",
+    "department": "Content",
+    "reports_to": null,
+    "manages": [],
+    "responsibilities": [],
+    "kpis": [
+      "Content pieces per week",
+      "Engagement rate (%)",
+      "Follower growth (%)"
+    ],
+    "skills_required": [
+      "Content creation",
+      "Social media management",
+      "Storytelling"
+    ]
+  },
+  "shared": {
+    "domains": [
+      "content",
+      "marketing",
+      "design"
+    ],
+    "competencies": [],
+    "frameworks_used": [],
+    "knowledge_sources": [
+      "AH-YT018",
+      "AH-YT019",
+      "CG-SM001"
+    ]
+  },
+  "executor_decision": {
+    "question_1_predictable": false,
+    "question_2_pure_function": false,
+    "question_3_nlp_required": true,
+    "question_4_error_impact": "MEDIUM",
+    "question_5_strategic": false,
+    "question_6_ai_assist": true,
+    "result": "Agent",
+    "rationale": "Precisa NLP mas impacto de erro e gerenciavel. IA executa com monitoramento."
+  },
+  "metadata": {
+    "weighted_score": 25.5,
+    "source_count": 3,
+    "responsibility_count": 0
+  }
+}

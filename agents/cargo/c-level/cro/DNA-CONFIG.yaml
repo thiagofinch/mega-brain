@@ -1,0 +1,263 @@
+# DNA-CONFIG.yaml - CRO (Chief Revenue Officer)
+# Configuracao de fontes de DNA para este cargo
+#
+# Versao: 2.0.0
+# Data: 2025-12-25
+# Integrado com: AGENT-COGNITION-PROTOCOL (FASE 1.5), AGENT-INTEGRITY-PROTOCOL
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+# REGRA INQUEBRÁVEL: RASTREABILIDADE 100%
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# Todo DNA deve ter paths verificáveis até inbox
+# Cada pessoa/domínio deve ter insight_ids e chunk_ids rastreáveis
+#
+# Navegação: DNA-CONFIG → PESSOA/DNA.yaml → INSIGHTS-STATE.json → CHUNKS → inbox
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+
+cargo: "CRO"
+versao: "3.0.0"
+nivel: "C-LEVEL"
+natureza: "HIBRIDO"
+data_criacao: "2025-12-23"
+ultima_atualizacao: "2026-01-10"
+
+# CHANGELOG:
+# v3.0.0 (2026-01-10): BUG #1 FIX - Cascateamento completo
+#                      - Removido AGG-SCALING.yaml (não existe)
+#                      - Adicionado AGG-OFFERS.yaml (relevante para revenue)
+#                      - Todos paths validados (INTEGRITY CHECK)
+# v2.0.0 (2025-12-25): Integração AGENT-COGNITION-PROTOCOL
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# CONSTITUICAO (Layer 1 - Principios compartilhados)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+constituicao:
+  path: "/agents/CONSTITUTION/BASE-CONSTITUTION.md"
+  descricao: "Princípios éticos e operacionais base para todos os agentes"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# MEMORIA DO CARGO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+memoria:
+  path: "./MEMORY.md"
+  versao: "2.0.0"
+  descricao: "Experiência acumulada deste cargo"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# SOUL DO CARGO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+soul:
+  path: "./SOUL.md"
+  versao: "2.0"
+  descricao: "Identidade e consciência viva do agente"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# FONTES DE DNA - COM RASTREABILIDADE COMPLETA
+# ═══════════════════════════════════════════════════════════════════════════════
+
+dna_sources:
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # FONTES AGREGADAS (multi-pessoa, por tema)
+  # ───────────────────────────────────────────────────────────────────────────
+
+  agregado:
+    - dominio: "vendas"
+      path: "/knowledge/dna/AGGREGATED/AGG-VENDAS.yaml"
+      peso: 0.90
+      quando_usar: "Perguntas gerais sobre vendas"
+      insight_ids:
+        - "insight_vendas_001"
+        - "insight_vendas_002"
+
+    - dominio: "offers"
+      path: "/knowledge/dna/AGGREGATED/AGG-OFFERS.yaml"
+      peso: 0.85
+      quando_usar: "Perguntas sobre construção de ofertas e pricing"
+      insight_ids:
+        - "insight_offers_001"
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # FONTES PRIMÁRIAS (por pessoa)
+  # ───────────────────────────────────────────────────────────────────────────
+
+  primario:
+    - pessoa: "alex-hormozi"
+      path: "/knowledge/dna/persons/alex-hormozi"
+      raiz: "/inbox/alex hormozi/"              # RASTREABILIDADE
+      dominios_usados:
+        - "vendas"
+        - "scaling"
+        - "offers"
+      peso: 0.85
+      quando_usar: "Decisoes de oferta, escala agressiva"
+      insight_ids:                                                    # RASTREABILIDADE
+        - "OF001"
+        - "OF002"
+        - "ES001"
+        - "VE001"
+        - "UE001"
+        - "UE002"
+      chunk_ids:                                                      # RASTREABILIDADE GRANULAR
+        - "chunk_199"
+      materiais_fonte:                                                # RASTREABILIDADE COMPLETA
+        - titulo: "How I Scaled My Sales Team"
+          path_raiz: "/inbox/alex hormozi/MASTERMINDS/HOW I SCALED MY SALES TEAM [TAKI MOORE MASTERMIND].txt"
+          tipo: "masterclass"
+          data_processamento: "2024-12-16"
+        - titulo: "Money Models"
+          path_raiz: "/inbox/alex hormozi/BLUEPRINTS/MONEY MODELS.txt"
+          tipo: "blueprint"
+          data_processamento: "2025-12-16"
+
+    - pessoa: "cole-gordon"
+      path: "/knowledge/dna/persons/cole-gordon"
+      raiz: "/inbox/COLE GORDON/"                    # RASTREABILIDADE
+      dominios_usados:
+        - "vendas"
+        - "compensation"
+        - "hiring"
+      peso: 0.80
+      quando_usar: "Estrutura de time de vendas, compensacao"
+      insight_ids:
+        - "OP001"
+      chunk_ids:
+        - "*pendente CG001*"
+        - "*pendente CG003*"
+      materiais_fonte:
+        - titulo: "Sales Management Progression"
+          path_raiz: "/inbox/COLE GORDON/PODCASTS/SALES MANAGEMENT PROGRESSION.txt"
+          tipo: "podcast"
+          data_processamento: "*aguardando*"
+        - titulo: "Advanced Sales Training"
+          path_raiz: "/inbox/COLE GORDON/COURSES/ADVANCED SALES TRAINING.txt"
+          tipo: "curso"
+          data_processamento: "*aguardando*"
+
+    - pessoa: "SAM-OVEN"
+      path: "/knowledge/dna/persons/SAM-OVEN"
+      raiz: "/inbox/SAM OVENS (SETTERLUN UNIVERSITY)/"            # RASTREABILIDADE
+      dominios_usados:
+        - "scaling"
+        - "operations"
+      peso: 0.75
+      quando_usar: "Sistemas e processos"
+      insight_ids:
+        - "SC001"
+      chunk_ids:
+        - "*pendente SU020*"
+
+    - pessoa: "jeremy-haynes"
+      path: "/knowledge/dna/persons/jeremy-haynes"
+      raiz: "/inbox/JEREMY HAYNES/"                                # RASTREABILIDADE
+      dominios_usados:
+        - "pricing"
+        - "recurring"
+      peso: 0.80
+      quando_usar: "Recurring high-ticket, pricing strategy"
+      insight_ids:
+        - "PR001"
+        - "RHT001"
+        - "RHT002"
+        - "RHT003"
+        - "RHT004"
+        - "RHT005"
+        - "RHT006"
+        - "RHT007"
+      chunk_ids:
+        - "*aguardando JH001 no Pipeline Jarvis*"
+      materiais_fonte:
+        - titulo: "Recurring High Ticket Revenue"
+          path_raiz: "/inbox/JEREMY HAYNES/PODCASTS/RECURRING HIGH TICKET REVENUE.txt"
+          tipo: "podcast"
+          data_processamento: "2025-12-18"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# MAPA DE CONFLITOS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+conflitos:
+  path: "/knowledge/dna/MAPS/MAP-CONFLITOS.yaml"
+  descricao: "Mapa de tensões entre fontes com resoluções documentadas"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# REGRAS DE RESOLUCAO DE CONFLITOS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+resolucao_de_conflitos:
+  regra_geral: |
+    1. Consenso forte (3+ fontes) → usar sem ressalva
+    2. Consenso parcial (2 fontes) → usar com nota de incerteza
+    3. Conflito mapeado → aplicar regra especifica do MAP-CONFLITOS
+    4. Conflito nao mapeado → apresentar ambas posicoes ao usuario
+
+  preferencias_contextuais:
+    - contexto: "startup early-stage"
+      priorizar: "alex-hormozi"
+      razao: "Foco em velocidade e ROI imediato"
+      fonte: "^[insight_id:VE001]"                                    # RASTREABILIDADE
+
+    - contexto: "empresa estabelecida"
+      priorizar: "SAM-OVEN"
+      razao: "Foco em sistemas e sustentabilidade"
+      fonte: "^[insight_id:SC001]"                                    # RASTREABILIDADE
+
+    - contexto: "time de vendas"
+      priorizar: "cole-gordon"
+      razao: "Especialista em operacoes de vendas"
+      fonte: "^[insight_id:OP001]"                                    # RASTREABILIDADE
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# PROTOCOLO DE RACIOCINIO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+raciocinio:
+  path: "/system/protocols/dna/REASONING-MODEL-PROTOCOL.md"
+  descricao: "Como o agente deve raciocinar com o DNA"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# REGRAS ESPECIFICAS DO CARGO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+regras_especificas:
+  foco: "Maximizar revenue de forma sustentavel"
+
+  heuristicas_prioritarias:
+    - heuristica: "Sempre quantificar impacto em revenue"
+      fonte: "^[insight_id:RF001]"                                    # RASTREABILIDADE
+      path_raiz: "/inbox/alex hormozi/BLUEPRINTS/MONEY MODELS.txt"
+
+    - heuristica: "Considerar unit economics em toda recomendacao"
+      fonte: "^[insight_id:UE001]"                                    # RASTREABILIDADE
+      path_raiz: "/inbox/alex hormozi/MASTERMINDS/HOW I SCALED MY SALES TEAM [TAKI MOORE MASTERMIND].txt"
+
+    - heuristica: "Priorizar acoes com ROI mensuravel"
+      fonte: "^[insight_id:SC002]"                                    # RASTREABILIDADE
+
+  restricoes:
+    - restricao: "NAO recomendar acoes que sacrifiquem margem sem justificativa clara"
+      fonte: "^[insight_id:UE002]"                                    # RASTREABILIDADE
+
+    - restricao: "SEMPRE considerar capacidade de entrega antes de escalar vendas"
+      fonte: "^[insight_id:SC001]"                                    # RASTREABILIDADE
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# VALIDAÇÃO DE RASTREABILIDADE
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# CHECKLIST antes de publicar:
+# [✓] Toda fonte primária tem raiz com path para inbox
+# [✓] Insight_ids presentes em fontes primárias
+# [~] Chunk_ids pendentes para algumas fontes (aguardando Pipeline Jarvis)
+# [✓] Heurísticas têm fonte e path_raiz
+# [✓] Preferências contextuais têm fonte
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Fim do DNA-CONFIG.yaml v2.0.0
+# Integrado com AGENT-COGNITION-PROTOCOL (FASE 1.5) e AGENT-INTEGRITY-PROTOCOL

@@ -1,0 +1,109 @@
+# L3 HEURISTICS — Liam Ottley
+# Practical rules and decision shortcuts for AIOS implementation
+# Version: 1.0.0
+
+heuristics:
+  - id: HEUR-LO-001
+    name: "60-70% Automation Target"
+    type: numeric
+    threshold: "60-70%"
+    description: >
+      Within 30 days of starting an AIOS implementation, you should be able to
+      automate 60-70% of your repetitive operational tasks. This is not aspirational —
+      it is the baseline. If you are below 60% after 30 days, your context layer is
+      incomplete or your task audit was not thorough enough. The remaining 30-40%
+      typically requires human judgment, relationship management, or creative decisions
+      that AI cannot yet handle reliably.
+    source: LO-001
+    quote: "Within 30 days you should be automating 60 to 70 percent of your tasks."
+
+  - id: HEUR-LO-002
+    name: "7-Day Sprint Test"
+    type: qualitative
+    description: >
+      If your AIOS is working properly, you should be able to conceive, build,
+      and launch a complete new initiative in 7 days. This is the acid test. Liam
+      demonstrated this by generating $1M NZD in 7 days using his AIOS to research,
+      create content, build infrastructure, deliver, and collect payment. If a new
+      initiative takes longer than 7 days, the system has friction points that need
+      to be identified and automated.
+    source: LO-003
+    quote: "If your system works, you can go from idea to $1M in 7 days. I proved it."
+
+  - id: HEUR-LO-003
+    name: "Away-From-Desk Test"
+    type: qualitative
+    description: >
+      The ultimate test of an AIOS: can you run your entire business from your phone
+      for a full day? No laptop, no desk, no office. If the answer is yes — the system
+      is working. If you need to sit down at a computer to handle operational tasks,
+      there are gaps in your automation layer. The phone becomes the command center,
+      not the workstation. Telegram bots, mobile dashboards, and voice interfaces
+      are the bridges.
+    source: LO-001
+    quote: "Can you run your whole business from your phone for a day? That's the test."
+
+  - id: HEUR-LO-004
+    name: "Context Before Automation"
+    type: qualitative
+    description: >
+      Never automate a task before the system has full context about what the business
+      is, how it operates, and why that task exists. Automation without context creates
+      brittle, incorrect automations that break at the first edge case. The context
+      layer (CLAUDE.md, business rules, operating procedures) MUST be complete before
+      any automation is built. This is the single most common mistake in AIOS
+      implementation — people rush to automate before the system understands them.
+    source: LO-001
+    quote: "Never automate before context. The system needs to know your business fully first."
+
+  - id: HEUR-LO-005
+    name: "Daily Brief As First Milestone"
+    type: qualitative
+    description: >
+      The first milestone of any AIOS implementation should be an automated daily
+      brief. Every morning, the system tells you: what happened yesterday, what is
+      scheduled today, what needs your attention, what metrics changed. This is the
+      "hello world" of AIOS. If you cannot get a daily brief working, you do not
+      have enough context or data integration. It is both the first checkpoint and
+      the diagnostic tool for everything else.
+    source: LO-001
+    quote: "Your first milestone is the daily brief. If you can't get that working, your foundation is broken."
+
+  - id: HEUR-LO-006
+    name: "Task Audit Before Automating"
+    type: qualitative
+    description: >
+      Before building any automation, perform a complete task audit. List every task
+      you do in a week. For each task, categorize: Can AI do this? (YES / PARTIALLY /
+      NO). Then prioritize by bandwidth impact — which tasks consume the most time?
+      Start automating from the top of the list. This prevents the common trap of
+      automating easy but low-impact tasks while ignoring the high-bandwidth bottlenecks.
+    source: LO-001
+    quote: "List every task. Categorize: can AI do it? Prioritize by time consumed. Start from the top."
+
+  - id: HEUR-LO-007
+    name: "15% AI Decisions by 2028"
+    type: numeric
+    threshold: "15%"
+    description: >
+      Gartner predicts that by 2028, 15% of day-to-day work decisions will be made
+      autonomously by agentic AI. This is not futurism — it is a near-term forecast
+      from a conservative research firm. For AIOS builders, this means the market is
+      moving toward you. The businesses that have already built decision-capable AI
+      systems will have a 2-3 year head start over those who wait for 2028.
+    source: LO-002
+    quote: "Gartner says 15% of day-to-day decisions will be made by AI by 2028. We're already there."
+
+  - id: HEUR-LO-008
+    name: "Three KPIs of AIOS"
+    type: qualitative
+    description: >
+      There are exactly three KPIs that measure whether your AIOS is working:
+      (1) Away-from-desk autonomy — can the business run without you physically
+      present? (2) Task automation percentage — what fraction of operational tasks
+      are handled by AI? (3) Revenue per employee — how much output does each
+      human produce with AI leverage? If all three are improving month over month,
+      the system is working. If any is flat or declining, there is a specific layer
+      failure to diagnose.
+    source: LO-001
+    quote: "Three KPIs: away-from-desk autonomy, task automation percentage, revenue per employee."

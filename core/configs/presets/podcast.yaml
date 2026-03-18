@@ -1,0 +1,30 @@
+# Preset: Podcast/Interview Processing
+# Use for: Podcast episodes, interviews, panel discussions
+name: podcast
+description: Processing preset for podcasts and interviews
+version: "1.0"
+
+ingestion:
+  source_type: podcast
+  expected_formats: [".txt", ".mp3", ".mp4"]
+  scope: external
+
+chunking:
+  strategy: topic_based
+  max_tokens: 2500
+  overlap: 250
+  preserve_speakers: true
+
+extraction:
+  mce_enabled: true
+  extract_layers:
+    - heuristics
+    - frameworks
+    - methodologies
+  min_insights_for_agent: 5
+
+output:
+  create_dna: true
+  create_dossier: true
+  create_playbook: false  # Podcasts rarely have enough for playbook
+  batch_size: 4

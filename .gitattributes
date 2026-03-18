@@ -1,0 +1,19 @@
+# Force LF line endings for all text files (cross-platform consistency)
+* text=auto eol=lf
+
+# Explicit LF for critical files
+bin/**/*.js text eol=lf
+bin/templates/* text eol=lf
+scripts/*.sh text eol=lf
+*.md text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.py text eol=lf
+*.json text eol=lf
+
+# Binary files (no conversion)
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary
+*.pdf binary

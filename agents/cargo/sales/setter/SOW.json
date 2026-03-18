@@ -1,0 +1,84 @@
+{
+  "role_id": "SETTER",
+  "canonical_name": "Setter",
+  "version": "1.0.0",
+  "generated_at": "2026-02-26T07:20:11.593621+00:00",
+  "ai_config": {
+    "executor_type": "Hybrid",
+    "autonomy_level": 50,
+    "tools_required": [
+      "CRM (HubSpot/Pipedrive)",
+      "Calendar (Calendly)",
+      "Dialer (JustCall)",
+      "Email Sequencer",
+      "Project Management (ClickUp)",
+      "Reporting Dashboard"
+    ],
+    "tasks_assigned": [
+      "Pre-qualify prospects",
+      "Schedule appointments",
+      "Follow up leads"
+    ],
+    "decision_authority": "Prepara e sugere, humano decide em casos criticos",
+    "escalation_triggers": [
+      "Decisao acima do threshold de autonomia",
+      "Excecao de processo",
+      "Impacto financeiro > threshold",
+      "Conflito entre regras"
+    ]
+  },
+  "human_config": {
+    "job_title": "Setter",
+    "department": "Sales",
+    "reports_to": null,
+    "manages": [],
+    "responsibilities": [],
+    "kpis": [
+      "Appointments set per day",
+      "Show rate (%)",
+      "Qualification accuracy (%)"
+    ],
+    "skills_required": [
+      "Cold calling",
+      "Email outreach",
+      "Lead qualification",
+      "Negotiation",
+      "Communication",
+      "Objection handling"
+    ]
+  },
+  "shared": {
+    "domains": [
+      "outbound",
+      "vendas",
+      "operations"
+    ],
+    "competencies": [],
+    "frameworks_used": [],
+    "knowledge_sources": [
+      "FSS001",
+      "G4001",
+      "AH-YT001",
+      "AH-YT002",
+      "AH-YT003",
+      "UNK",
+      "AH-YT004",
+      "CG-SM001"
+    ]
+  },
+  "executor_decision": {
+    "question_1_predictable": false,
+    "question_2_pure_function": false,
+    "question_3_nlp_required": true,
+    "question_4_error_impact": "HIGH",
+    "question_5_strategic": false,
+    "question_6_ai_assist": true,
+    "result": "Hybrid",
+    "rationale": "Precisa NLP com alto impacto de erro. IA executa, humano valida."
+  },
+  "metadata": {
+    "weighted_score": 175.5,
+    "source_count": 8,
+    "responsibility_count": 0
+  }
+}

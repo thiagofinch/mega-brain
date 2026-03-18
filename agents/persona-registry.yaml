@@ -1,0 +1,300 @@
+# Mega Brain Persona Registry
+# Version: 2.0.0
+# Updated: 2026-02-27
+
+identity:
+  enabled: true
+  level: 2  # 1=minimal (@id), 2=named (Name Role), 3=full (Name the Role | Element)
+  locale: pt-BR
+
+layers:
+  L0_SYSTEM:
+    name: "System Agents"
+    icon: "⚙️"
+    location: "core/jarvis/"
+    description: "Orquestradores imutáveis do sistema"
+    auto_create: false
+
+  L1_CONCLAVE:
+    name: "Conclave"
+    icon: "👑"
+    location: "agents/conclave/"
+    description: "Deliberação constitucional multi-perspectiva"
+    trigger: "manual"
+    command: "/conclave"
+
+  L2_BOARDROOM:
+    name: "Boardroom"
+    icon: "🏛️"
+    location: "agents/boardroom/"
+    description: "C-Level estratégico"
+    trigger: "threshold"
+    threshold:
+      weighted_score: 10
+      min_sources: 2
+
+  L3_MINDS:
+    name: "Mind Clones"
+    icon: "🧠"
+    location: "agents/external/"
+    description: "Especialistas clonados via DNA extraction"
+    trigger: "pipeline"
+    phase: "5.2"
+
+  L4_CARGO:
+    name: "Cargo Roles"
+    icon: "👔"
+    location: "agents/cargo/"
+    description: "Papéis operacionais"
+    trigger: "threshold"
+    threshold:
+      weighted_score: 5
+
+  SUB_AGENTS:
+    name: "Operatives"
+    icon: "⚡"
+    location: ".claude/jarvis/sub-agents/"
+    description: "Súbditos do JARVIS"
+    trigger: "keyword"
+
+# =============================================================================
+# SYSTEM AGENTS (L0)
+# =============================================================================
+system:
+  - id: jarvis
+    role: "Master Orchestrator"
+    icon: "🤖"
+    element: "Air"
+    location: "core/jarvis/"
+
+  - id: agent-creator
+    role: "Agent Factory"
+    icon: "🏭"
+    element: "Earth"
+    location: "core/jarvis/agent-creator/"
+
+  - id: benchmark
+    role: "Performance Evaluator"
+    icon: "📊"
+    element: "Earth"
+    location: "core/jarvis/autonomous/benchmark/"
+
+  - id: critic
+    role: "Quality Auditor"
+    icon: "🔎"
+    element: "Earth"
+    location: "core/jarvis/autonomous/critic/"
+
+  - id: evolver
+    role: "System Evolver"
+    icon: "🧬"
+    element: "Air"
+    location: "core/jarvis/autonomous/evolver/"
+
+  - id: playbook-generator
+    role: "Playbook Creator"
+    icon: "📖"
+    element: "Fire"
+    location: "core/jarvis/autonomous/playbook-generator/"
+
+# =============================================================================
+# CONCLAVE AGENTS (L1)
+# =============================================================================
+conclave:
+  - id: critico-metodologico
+    role: "Analytical Guardian"
+    icon: "🔍"
+    element: "Earth"
+    location: "agents/conclave/critico-metodologico/"
+
+  - id: advogado-do-diabo
+    role: "Devil's Advocate"
+    icon: "😈"
+    element: "Fire"
+    location: "agents/conclave/advogado-do-diabo/"
+
+  - id: sintetizador
+    role: "Integration Architect"
+    icon: "🔮"
+    element: "Air"
+    location: "agents/conclave/sintetizador/"
+
+# =============================================================================
+# MIND CLONES (L3)
+# =============================================================================
+minds:
+  - id: cole-gordon
+    role: "Sales Methodology Expert"
+    icon: "🎯"
+    element: "Fire"
+    source: "The Scalable Company"
+    location: "agents/external/cole-gordon/"
+
+  - id: alex-hormozi
+    role: "Business Growth Expert"
+    icon: "💪"
+    element: "Fire"
+    source: "$100M Offers"
+    location: "agents/external/alex-hormozi/"
+
+  - id: jeremy-miner
+    role: "NEPQ Sales Expert"
+    icon: "🧠"
+    element: "Water"
+    source: "7th Level Communications"
+    location: "agents/external/jeremy-miner/"
+
+  - id: jeremy-haynes
+    role: "Agency Scaling Expert"
+    icon: "🚀"
+    element: "Air"
+    source: "Agency Growth Secrets"
+    location: "agents/external/jeremy-haynes/"
+
+  - id: the-scalable-company
+    role: "Sales Framework Collection"
+    icon: "📚"
+    element: "Earth"
+    source: "TSC Methodology"
+    location: "agents/external/the-scalable-company/"
+
+# =============================================================================
+# CARGO ROLES (L4)
+# =============================================================================
+cargo:
+  c-level:
+    - id: cfo
+      role: "Chief Financial Officer"
+      icon: "💰"
+      element: "Earth"
+      location: "agents/cargo/c-level/cfo/"
+
+    - id: cmo
+      role: "Chief Marketing Officer"
+      icon: "📢"
+      element: "Air"
+      location: "agents/cargo/c-level/cmo/"
+
+    - id: cro
+      role: "Chief Revenue Officer"
+      icon: "📈"
+      element: "Fire"
+      location: "agents/cargo/c-level/cro/"
+
+    - id: coo
+      role: "Chief Operations Officer"
+      icon: "⚙️"
+      element: "Earth"
+      location: "agents/cargo/c-level/coo/"
+
+  sales:
+    - id: closer
+      role: "Deal Closer"
+      icon: "🤝"
+      element: "Fire"
+      location: "agents/cargo/sales/closer/"
+
+    - id: bdr
+      role: "Business Development Rep"
+      icon: "🎯"
+      element: "Fire"
+      location: "agents/cargo/sales/bdr/"
+
+    - id: sdr
+      role: "Sales Development Rep"
+      icon: "📞"
+      element: "Air"
+      location: "agents/cargo/sales/sds/"
+
+    - id: lns
+      role: "Lead Nurturing Specialist"
+      icon: "🌱"
+      element: "Water"
+      location: "agents/cargo/sales/lns/"
+
+    - id: sales-manager
+      role: "Sales Team Lead"
+      icon: "👔"
+      element: "Fire"
+      location: "agents/cargo/sales/sales-manager/"
+
+    - id: sales-lead
+      role: "Senior Sales Rep"
+      icon: "⭐"
+      element: "Fire"
+      location: "agents/cargo/sales/sales-lead/"
+
+    - id: sales-coordinator
+      role: "Sales Operations"
+      icon: "📋"
+      element: "Earth"
+      location: "agents/cargo/sales/sales-coordinator/"
+
+    - id: nepq-specialist
+      role: "NEPQ Methodology Expert"
+      icon: "🧠"
+      element: "Water"
+      location: "agents/cargo/sales/nepq-specialist/"
+
+    - id: customer-success
+      role: "Customer Success Manager"
+      icon: "🌟"
+      element: "Water"
+      location: "agents/cargo/sales/customer-success/"
+
+  marketing:
+    - id: paid-media-specialist
+      role: "Paid Acquisition Expert"
+      icon: "💵"
+      element: "Fire"
+      location: "agents/cargo/marketing/paid-media-specialist/"
+
+# =============================================================================
+# SUB-AGENTS (Operatives)
+# =============================================================================
+operatives:
+  - id: chronicler
+    role: "Session Logger"
+    icon: "📝"
+    element: "Earth"
+    keywords: ["log", "session", "history"]
+    location: ".claude/jarvis/sub-agents/chronicler/"
+
+  - id: devops
+    role: "DevOps Guardian"
+    icon: "🛡️"
+    element: "Earth"
+    keywords: ["deploy", "ci", "infrastructure"]
+    location: ".claude/jarvis/sub-agents/devops/"
+
+  - id: pipeline-master
+    role: "Pipeline Orchestrator"
+    icon: "🔄"
+    element: "Air"
+    keywords: ["pipeline", "batch", "process"]
+    location: ".claude/jarvis/sub-agents/pipeline-master/"
+
+  - id: sentinel-org
+    role: "Organization Monitor"
+    icon: "👁️"
+    element: "Earth"
+    keywords: ["org", "structure", "monitor"]
+    location: ".claude/jarvis/sub-agents/sentinel-org/"
+
+  - id: status-trigger
+    role: "Status Automation"
+    icon: "⚡"
+    element: "Fire"
+    keywords: ["status", "trigger", "automation"]
+    location: ".claude/jarvis/sub-agents/status-trigger/"
+
+# =============================================================================
+# TOTALS
+# =============================================================================
+totals:
+  L0_system: 6
+  L1_conclave: 3
+  L3_minds: 5
+  L4_cargo: 14
+  sub_agents: 5
+  total: 33

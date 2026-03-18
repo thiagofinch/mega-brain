@@ -1,0 +1,77 @@
+{
+  "role_id": "FUNNEL-STRATEGIST",
+  "canonical_name": "Funnel Strategist",
+  "version": "1.0.0",
+  "generated_at": "2026-02-26T07:20:11.594383+00:00",
+  "ai_config": {
+    "executor_type": "Hybrid",
+    "autonomy_level": 50,
+    "tools_required": [
+      "CRM (HubSpot/Pipedrive)",
+      "Calendar (Calendly)",
+      "Google Docs",
+      "Reference Library",
+      "Ad Platform (Meta/Google)",
+      "Analytics Dashboard"
+    ],
+    "tasks_assigned": [],
+    "decision_authority": "Prepara e sugere, humano decide em casos criticos",
+    "escalation_triggers": [
+      "Decisao acima do threshold de autonomia",
+      "Excecao de processo",
+      "Impacto financeiro > threshold",
+      "Conflito entre regras"
+    ]
+  },
+  "human_config": {
+    "job_title": "Funnel Strategist",
+    "department": "Marketing",
+    "reports_to": null,
+    "manages": [],
+    "responsibilities": [],
+    "kpis": [
+      "Target attainment (%)",
+      "Tasks completed on time (%)"
+    ],
+    "skills_required": [
+      "Negotiation",
+      "Communication",
+      "Objection handling",
+      "Persuasive writing",
+      "Research",
+      "Headline crafting",
+      "Paid advertising",
+      "Analytics"
+    ]
+  },
+  "shared": {
+    "domains": [
+      "marketing",
+      "vendas",
+      "copywriting",
+      "growth"
+    ],
+    "competencies": [],
+    "frameworks_used": [],
+    "knowledge_sources": [
+      "AH-ML001-chunks",
+      "AH-YT017",
+      "UNK"
+    ]
+  },
+  "executor_decision": {
+    "question_1_predictable": false,
+    "question_2_pure_function": false,
+    "question_3_nlp_required": true,
+    "question_4_error_impact": "HIGH",
+    "question_5_strategic": false,
+    "question_6_ai_assist": true,
+    "result": "Hybrid",
+    "rationale": "Precisa NLP com alto impacto de erro. IA executa, humano valida."
+  },
+  "metadata": {
+    "weighted_score": 14.0,
+    "source_count": 3,
+    "responsibility_count": 0
+  }
+}

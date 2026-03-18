@@ -1,0 +1,17 @@
+# Phase 3: Hybrid RAG Best-in-Class
+# Core
+voyageai>=0.3.0          # voyage-context-3 embeddings
+PyYAML>=6.0              # YAML parsing (already in stack)
+
+# Vector storage (pick one)
+# supabase>=2.0           # Supabase pgvector (production)
+# psycopg2-binary>=2.9    # PostgreSQL driver
+
+# BM25 (local fallback)
+rank-bm25>=0.2.2         # BM25 scoring
+
+# Reranking
+# zeroentropy             # zerank-2 reranker (when available)
+
+# Evaluation
+# ragas>=0.1              # RAGAS evaluation framework (optional)

@@ -1,0 +1,72 @@
+name: Validate
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Python deps
+        run: pip install pyyaml
+
+      - name: Install Node deps
+        run: npm install
+
+      - name: JSON integrity
+        run: |
+          python3 -c "
+          import json, pathlib
+          errors = []
+          skip = {'.git', 'node_modules'}
+          count = 0
+          for f in pathlib.Path('.').rglob('*.json'):
+              if any(part in skip for part in f.parts):
+                  continue
+              count += 1
+              try:
+                  json.loads(f.read_text())
+              except Exception as e:
+                  errors.append(f'{f}: {e}')
+                  print(f'::error file={f}::{e}')
+          if errors:
+              raise SystemExit(f'{len(errors)} invalid JSON files out of {count}')
+          print(f'Validated {count} JSON files')
+          "
+
+      - name: YAML integrity
+        run: |
+          python3 -c "
+          import yaml, pathlib
+          errors = []
+          skip = {'.git', 'node_modules'}
+          count = 0
+          for pattern in ['*.yaml', '*.yml']:
+              for f in pathlib.Path('.').rglob(pattern):
+                  if any(part in skip for part in f.parts):
+                      continue
+                  count += 1
+                  try:
+                      yaml.safe_load(f.read_text())
+                  except Exception as e:
+                      errors.append(f'{f}: {e}')
+                      print(f'::error file={f}::{e}')
+          if errors:
+              raise SystemExit(f'{len(errors)} invalid YAML files out of {count}')
+          print(f'Validated {count} YAML/YML files')
+          "
+
+      - name: Pre-publish gate
+        run: node bin/pre-publish-gate.js
