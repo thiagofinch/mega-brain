@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/mega-brain-ai"><img src="https://img.shields.io/npm/v/mega-brain-ai.svg?style=for-the-badge" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/@thiagofinch/mega-brain"><img src="https://img.shields.io/npm/v/@thiagofinch/mega-brain.svg?style=for-the-badge" alt="npm version"></a>
   <img src="https://img.shields.io/badge/node-%3E%3D18-brightgreen?style=for-the-badge&logo=node.js" alt="Node">
   <img src="https://img.shields.io/badge/python-3.10%2B-blue?style=for-the-badge&logo=python" alt="Python">
   <img src="https://img.shields.io/badge/claude_code-obrigatório-blueviolet?style=for-the-badge" alt="Claude Code">
@@ -21,7 +21,7 @@
 <h2 align="center">⚡ Instalação</h2>
 
 ```bash
-npx mega-brain-ai install
+npx @thiagofinch/mega-brain install
 ```
 
 <p align="center">
@@ -737,13 +737,13 @@ Ideal para quem quer construir tudo do zero, inserindo seus próprios materiais 
 **Instale o Mega Brain com um único comando:**
 
 ```bash
-npx mega-brain-ai install
+npx @thiagofinch/mega-brain install
 ```
 
 O assistente interativo guia você por todo o processo:
 
 ```
-$ npx mega-brain-ai install meu-brain
+$ npx @thiagofinch/mega-brain install meu-brain
 
   ███╗   ███╗███████╗ ██████╗  █████╗
   ████╗ ████║██╔════╝██╔════╝ ██╔══██╗
@@ -827,7 +827,7 @@ $ npx mega-brain-ai install meu-brain
 ### 🔄 Atualizando uma Instalação Existente
 
 ```bash
-npx mega-brain-ai@latest install
+npx @thiagofinch/mega-brain@latest install
 ```
 
 Isto vai:
@@ -844,17 +844,17 @@ Isto vai:
 Já instalou a versão Community e quer o cérebro ligado?
 
 ```bash
-npx mega-brain-ai upgrade
+npx @thiagofinch/mega-brain upgrade
 ```
 
 Digite seu email de membro quando solicitado. O instalador busca o conteúdo premium e integra à sua instalação existente sem tocar nos seus dados pessoais.
 
 ```bash
 # Verificar status da licença
-npx mega-brain-ai status
+npx @thiagofinch/mega-brain status
 
 # Ver features disponíveis vs bloqueadas
-npx mega-brain-ai features
+npx @thiagofinch/mega-brain features
 ```
 
 <br>
@@ -910,14 +910,14 @@ O assistente guia você em 6 etapas:
 
 ```bash
 # Instalação e Setup
-npx mega-brain-ai install [nome]      # Assistente interativo de instalação
-npx mega-brain-ai setup               # Configurar chaves de API
-npx mega-brain-ai upgrade             # Upgrade Community → Premium
+npx @thiagofinch/mega-brain install [nome]      # Assistente interativo de instalação
+npx @thiagofinch/mega-brain setup               # Configurar chaves de API
+npx @thiagofinch/mega-brain upgrade             # Upgrade Community → Premium
 
 # Licença e Features
-npx mega-brain-ai status              # Status da licença e edição
-npx mega-brain-ai features            # Features disponíveis vs bloqueadas
-npx mega-brain-ai validate <email>    # Revalidar email de membro
+npx @thiagofinch/mega-brain status              # Status da licença e edição
+npx @thiagofinch/mega-brain features            # Features disponíveis vs bloqueadas
+npx @thiagofinch/mega-brain validate <email>    # Revalidar email de membro
 
 # Push (3 camadas)
 mega-brain-push                       # Seleção interativa de camada
@@ -1041,7 +1041,7 @@ mega-brain/
 ├── 📝 logs/                   Registros de sessões
 │
 └── 📦 bin/                    CLI e Instalador
-    ├── cli.js                  Programa principal (mega-brain-ai)
+    ├── cli.js                  Programa principal (@thiagofinch/mega-brain)
     ├── push.js                 Sistema de push 3 camadas (mega-brain-push)
     └── lib/                    Instalador, setup wizard, licença, feature gate
 ```

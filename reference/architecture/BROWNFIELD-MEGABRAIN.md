@@ -10,7 +10,7 @@
 ## 1. DIRECTORY TREE (Annotated)
 
 ```
-mega-brain/                             # Root — npm package "mega-brain-ai" v1.3.0
+mega-brain/                             # Root — npm package "@thiagofinch/mega-brain" v1.3.0
 |
 |-- core/                               # ENGINE (L1 Community — tracked)
 |   |-- tasks/                          # 15 atomic task definitions (.md)
@@ -602,7 +602,7 @@ Each bucket maintains separate RAG indexes to prevent data leakage:
 
 | Command | Binary | Script | Purpose |
 |---------|--------|--------|---------|
-| `npx mega-brain-ai` | mega-brain-ai | bin/cli.js | Main CLI wrapper |
+| `npx @thiagofinch/mega-brain` | @thiagofinch/mega-brain | bin/cli.js | Main CLI wrapper |
 | `npx mega-brain` | mega-brain | bin/mega-brain.js | Alternative entry |
 | `npx mega-brain-push` | mega-brain-push | bin/push.js | Git push helper |
 

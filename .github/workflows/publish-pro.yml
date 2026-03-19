@@ -69,4 +69,4 @@ jobs:
       - name: Verify published version
         run: |
           sleep 10
-          npm view mega-brain-ai versions --json | tail -5
+          npm view @thiagofinch/mega-brain versions --json | tail -5

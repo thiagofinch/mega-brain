@@ -6,7 +6,7 @@ AI-powered system that transforms expert materials (videos, PDFs, transcriptions
 
 ## Quick Start
 
-1. Run `npx mega-brain-ai setup` (auto-triggers on first use if `.env` missing)
+1. Run `npx @thiagofinch/mega-brain setup` (auto-triggers on first use if `.env` missing)
 2. Fill in API keys when prompted (only `OPENAI_API_KEY` is required)
 3. Use `/jarvis-briefing` to see system status
 
@@ -161,7 +161,7 @@ Detailed rules are loaded on-demand via keyword matching from `.claude/rules/`:
 | Problem | Solution |
 |---------|----------|
 | "Hook failed" | Check Python 3 is in PATH |
-| ".env not found" | Run `npx mega-brain-ai setup` |
+| ".env not found" | Run `npx @thiagofinch/mega-brain setup` |
 | "Permission denied on git push" | By design — use branch + PR workflow |
 | Skills not auto-activating | Check `SKILL-INDEX.json` is generated on SessionStart |
 

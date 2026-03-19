@@ -5,13 +5,13 @@
  * CLI Entry Point
  *
  * Usage:
- *   npx mega-brain-ai install [name] - Install Mega Brain (optional project name)
- *   npx mega-brain-ai validate   - Validate MoneyClub email
- *   npx mega-brain-ai push       - Push to Layer 1/2/3 remote
- *   npx mega-brain-ai upgrade    - Upgrade Community to Premium
- *   npx mega-brain-ai status     - Show Pro license status
- *   npx mega-brain-ai features   - List available vs locked features
- *   npx mega-brain-ai --help     - Show help
+ *   npx @thiagofinch/mega-brain install [name] - Install Mega Brain (optional project name)
+ *   npx @thiagofinch/mega-brain validate   - Validate MoneyClub email
+ *   npx @thiagofinch/mega-brain push       - Push to Layer 1/2/3 remote
+ *   npx @thiagofinch/mega-brain upgrade    - Upgrade Community to Premium
+ *   npx @thiagofinch/mega-brain status     - Show Pro license status
+ *   npx @thiagofinch/mega-brain features   - List available vs locked features
+ *   npx @thiagofinch/mega-brain --help     - Show help
  */
 
 import { createRequire } from 'module';
@@ -53,7 +53,7 @@ async function main() {
       console.log(boxen(
         '  First time? Let\'s set up your environment.\n' +
         '  Running setup wizard...\n\n' +
-        '  (You can run this anytime with: npx mega-brain-ai setup)',
+        '  (You can run this anytime with: npx @thiagofinch/mega-brain setup)',
         { padding: 1, borderColor: 'cyan', borderStyle: 'round' }
       ));
       const { runSetup } = await import('./lib/setup-wizard.js');
@@ -123,10 +123,10 @@ function showHelp() {
     Layer 3     Full Backup (pessoal) — tudo incluindo dados sensíveis
 
   Exemplos:
-    npx mega-brain-ai install
-    npx mega-brain-ai install meu-projeto
-    npx mega-brain-ai push --layer 1
-    npx mega-brain-ai push
+    npx @thiagofinch/mega-brain install
+    npx @thiagofinch/mega-brain install meu-projeto
+    npx @thiagofinch/mega-brain push --layer 1
+    npx @thiagofinch/mega-brain push
 `);
 }
 

@@ -5,7 +5,7 @@
  * Interactive first-time configuration guide
  *
  * Usage:
- *   npx mega-brain-ai setup
+ *   npx @thiagofinch/mega-brain setup
  *   node bin/mega-brain.js setup
  */
 
@@ -504,7 +504,7 @@ async function generateEnvAndSummary(keys, validationResults, pythonResult, node
       + chalk.white('  Missing OPENAI_API_KEY:') + '\n'
       + chalk.dim('  - Video/audio transcription will not work') + '\n'
       + chalk.dim('  - Get a key at: https://platform.openai.com/api-keys') + '\n'
-      + chalk.dim('  - Then run: npx mega-brain-ai setup'),
+      + chalk.dim('  - Then run: npx @thiagofinch/mega-brain setup'),
       {
         padding: { top: 0, bottom: 0, left: 1, right: 1 },
         margin: { left: 2 },

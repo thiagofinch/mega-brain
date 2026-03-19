@@ -23,7 +23,7 @@
 
 ### L1 — Community (npm package)
 
-**Purpose:** The open-source engine that powers Mega Brain. Distributed via npm as `mega-brain-ai`. Anyone can install and use this to build their own knowledge management system.
+**Purpose:** The open-source engine that powers Mega Brain. Distributed via npm as `@thiagofinch/mega-brain`. Anyone can install and use this to build their own knowledge management system.
 
 **Git status:** Fully tracked
 **Distribution:** Public — `npm publish`

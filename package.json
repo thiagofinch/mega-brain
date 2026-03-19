@@ -1,10 +1,10 @@
 {
-  "name": "mega-brain-ai",
+  "name": "@thiagofinch/mega-brain",
   "version": "1.4.2",
   "description": "AI Knowledge Management System - Transform expert materials into actionable playbooks",
   "type": "module",
   "bin": {
-    "mega-brain-ai": "bin/cli.js",
+    "@thiagofinch/mega-brain": "bin/cli.js",
     "mega-brain": "bin/cli.js",
     "mega-brain-push": "bin/push.js"
   },
@@ -140,7 +140,7 @@
     "mind-cloning",
     "playbooks"
   ],
-  "author": "MoneyClub",
+  "author": "thiagofinch",
   "license": "UNLICENSED",
   "engines": {
     "node": ">=18.0.0"
