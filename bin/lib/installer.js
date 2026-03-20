@@ -55,6 +55,8 @@ export async function runInstaller(version, projectName) {
   let buyerName = '';
   let buyerEmail = '';
   let premiumToken = null;
+  let premiumGhOrg = null;
+  let premiumGhRepo = null;
 
   if (isPremium) {
     stepHeader(2, 5, 'Validação de Acesso Premium');
@@ -77,6 +79,8 @@ export async function runInstaller(version, projectName) {
         buyerName = result.name || 'Membro';
         buyerEmail = email.trim();
         premiumToken = result.premium_token || null;
+        premiumGhOrg = result.gh_org || null;
+        premiumGhRepo = result.gh_repo || null;
         spinner.succeed(chalk.green(`Bem-vindo, ${chalk.bold(buyerName)}! Acesso PREMIUM confirmado.`));
         if (result.installCount > 1) {
           console.log(chalk.dim(`    (Instalação #${result.installCount})`));
@@ -205,7 +209,7 @@ export async function runInstaller(version, projectName) {
     const premiumSpinner = ora({ text: 'Conectando ao repositório premium...', color: 'magenta' }).start();
 
     try {
-      await fetchPremiumContent(targetDir, premiumToken, premiumSpinner);
+      await fetchPremiumContent(targetDir, premiumToken, premiumSpinner, { ghOrg: premiumGhOrg, ghRepo: premiumGhRepo });
     } catch (err) {
       premiumSpinner.warn(chalk.yellow(`Não foi possível baixar conteúdo premium: ${err.message}`));
       console.log(chalk.dim('  Tente novamente depois com: mega-brain upgrade'));
@@ -265,6 +269,8 @@ export async function runUpgrade(version) {
   resetAttempts();
   let validated = false;
   let premiumToken = null;
+  let upgradeGhOrg = null;
+  let upgradeGhRepo = null;
 
   while (!validated) {
     const { email } = await inquirer.prompt([{
@@ -279,6 +285,8 @@ export async function runUpgrade(version) {
 
     if (result.valid) {
       premiumToken = result.premium_token || null;
+      upgradeGhOrg = result.gh_org || null;
+      upgradeGhRepo = result.gh_repo || null;
       spinner.succeed(chalk.green(`Acesso confirmado, ${result.name || 'Membro'}!`));
 
       writeLicense({
@@ -304,7 +312,7 @@ export async function runUpgrade(version) {
     const targetDir = process.cwd();
     const premiumSpinner = ora({ text: 'Baixando conteudo premium...', color: 'magenta' }).start();
     try {
-      await fetchPremiumContent(targetDir, premiumToken, premiumSpinner);
+      await fetchPremiumContent(targetDir, premiumToken, premiumSpinner, { ghOrg: upgradeGhOrg, ghRepo: upgradeGhRepo });
     } catch (err) {
       premiumSpinner.warn(chalk.yellow(`Erro: ${err.message}`));
     }
@@ -358,7 +366,7 @@ async function selectEdition() {
  *
  *   After copying, the temporary clone is deleted to save disk space.
  */
-async function fetchPremiumContent(targetDir, token, spinner) {
+async function fetchPremiumContent(targetDir, token, spinner, { ghOrg: serverOrg, ghRepo: serverRepo } = {}) {
   const tempDir = join(targetDir, '.layer-sync', 'premium-fetch');
 
   // Safety: ensure tempDir is strictly INSIDE targetDir
@@ -370,10 +378,11 @@ async function fetchPremiumContent(targetDir, token, spinner) {
 
   mkdirSync(join(targetDir, '.layer-sync'), { recursive: true });
 
-  const ghOrg = process.env.MEGA_BRAIN_GH_ORG;
-  const ghRepo = process.env.MEGA_BRAIN_GH_REPO || 'mega-brain-premium';
+  // Priority: env var override > server response > error
+  const ghOrg = process.env.MEGA_BRAIN_GH_ORG || serverOrg || 'thiagofinch';
+  const ghRepo = process.env.MEGA_BRAIN_GH_REPO || serverRepo || 'mega-brain-premium';
   if (!ghOrg) {
-    throw new Error('MEGA_BRAIN_GH_ORG environment variable is required for premium content.');
+    throw new Error('Repositório premium não configurado. Entre em contato com o suporte.');
   }
   const authUrl = `https://x-access-token:${token}@github.com/${ghOrg}/${ghRepo}.git`;
 

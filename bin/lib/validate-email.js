@@ -78,6 +78,8 @@ export async function validateEmail(email) {
       reason: data.reason || null,
       installCount: data.install_count || 0,
       premium_token: data.premium_token || null,
+      gh_org: data.gh_org || null,
+      gh_repo: data.gh_repo || null,
     };
   } catch (err) {
     if (err.name === 'TimeoutError' || err.name === 'AbortError') {
