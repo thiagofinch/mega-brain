@@ -1,0 +1,208 @@
+schema_version: "2.0"
+plan_id: "routing-v2-fixture-20260524-120000"
+created_by: "plan-architect"
+created_at: "2026-05-24T12:00:00.000Z"
+
+demand:
+  raw: "Implementar melhoria de roteamento com testes."
+  parsed:
+    primary_domain: "dev"
+    secondary_domains: ["qa"]
+    task_type: "implement"
+    complexity: "medium"
+    urgency: "normal"
+    business_units: ["megabrain"]
+    implicit_deadline: null
+    confidence: 0.9
+  elicitations: []
+
+discovery:
+  cache_version: "fixture"
+  cache_age_seconds: 0
+  capabilities_scanned:
+    squads: 1
+    agents: 2
+    skills: 0
+    tasks: 0
+    workflows: 1
+  cache_drift_detected: false
+
+selected_capabilities:
+  - id: "code-implementation"
+    type: "agent"
+    score: 0.91
+    score_breakdown:
+      authority_fit: 1
+      capability_fit: 0.9
+      artifact_ownership: 0.8
+      domain_fit: 0.9
+      task_type_fit: 0.9
+      historical_success: null
+      risk_fit: 0.8
+      context_affinity: 0.8
+      availability: null
+      cost_fit: 0.7
+    reason: "Capability de desenvolvimento existente, confirmada pelo RoutingDecision v2."
+    ids_decision: "REUSE"
+    routing_decision_id: "route-fixture-asi51"
+    routing:
+      selected_by: "routing-engine-v2"
+      decision_id: "route-fixture-asi51"
+      persisted_path: "outputs/routing/decisions/route-fixture-asi51.json"
+      primary_executor: "@dev"
+      support_agents: ["@qa"]
+      quality_gate_agent: "@qa"
+      confidence: 0.91
+      confidence_band: "auto_select"
+      score_breakdown:
+        authority_fit: 1
+        capability_fit: 0.9
+        artifact_ownership: 0.8
+        domain_fit: 0.9
+        task_type_fit: 0.9
+        historical_success: null
+        risk_fit: 0.8
+        context_affinity: 0.8
+        availability: null
+        cost_fit: 0.7
+      alternatives:
+        - agent: "@architect"
+          score: 0.62
+          reason: "Pode apoiar desenho tecnico, mas nao e executor primario."
+      hard_gate_results:
+        - id: "agent-exists"
+          status: "pass"
+        - id: "boundary-protected-path"
+          status: "pass"
+      fallback: null
+      decision:
+        schema_version: "2.0"
+        decision_id: "route-fixture-asi51"
+        generated_at: "2026-05-24T12:00:00.000Z"
+        source:
+          kind: "plan_node"
+          ref: "N1"
+        task_intent:
+          domain: "development"
+          task_type: "implementation"
+          artifact_types: ["code", "test"]
+          risk_level: "medium"
+          authority_required: []
+        selected:
+          primary_executor: "@dev"
+          support_agents: ["@qa"]
+          quality_gate_agent: "@qa"
+        confidence:
+          score: 0.91
+          band: "auto_select"
+        score_breakdown:
+          authority_fit: 1
+          capability_fit: 0.9
+          artifact_ownership: 0.8
+          domain_fit: 0.9
+          task_type_fit: 0.9
+          historical_success: null
+          risk_fit: 0.8
+          context_affinity: 0.8
+          availability: null
+          cost_fit: 0.7
+        alternatives:
+          - agent: "@architect"
+            score: 0.62
+            reason: "Pode apoiar desenho tecnico, mas nao e executor primario."
+        hard_gate_results:
+          - id: "agent-exists"
+            status: "pass"
+          - id: "boundary-protected-path"
+            status: "pass"
+        evidence:
+          - type: "fixture"
+            ref: "squads/orquestrador-global/fixtures/plan-routing-v2.yaml"
+        override:
+          required: false
+          reason: null
+          author: null
+          accepted: null
+
+routing_summary:
+  engine: "RoutingDecision-v2"
+  decisions_count: 1
+  decision_ids: ["route-fixture-asi51"]
+  blocked_nodes: []
+  fallback_nodes: []
+  decisions_dir: "outputs/routing/decisions"
+
+dag:
+  nodes:
+    - id: "N1"
+      capability: "code-implementation"
+      capability_type: "agent"
+      label: "Implementar ajuste em package TypeScript com testes unitarios."
+      inputs_required: ["packages/@megabrain/engine-routing/src/index.ts"]
+      outputs_produced: ["codigo", "testes"]
+      estimated_duration_minutes: 90
+      estimated_cost_tokens: 12000
+      model_tier: "sonnet"
+      risk: { severity: 3, occurrence: 3, detectability: 2, rpn: 18 }
+      parallelizable_with: []
+      quality_gate: "@qa"
+      routing_decision_id: "route-fixture-asi51"
+      routing_selected_by: "routing-engine-v2"
+      routing_primary_executor: "@dev"
+      routing_quality_gate_agent: "@qa"
+      routing_confidence: 0.91
+      routing_confidence_band: "auto_select"
+      routing_hard_gates: ["agent-exists:pass", "boundary-protected-path:pass"]
+      routing_blocked: false
+  edges: []
+  parallel_groups: []
+  critical_path: ["N1"]
+  critical_path_duration_minutes: 90
+
+risks:
+  top_risks: []
+  pre_mortem: null
+
+resource_estimate:
+  total_tokens: 12000
+  total_cost_usd: 0.25
+  total_wall_time_estimate_hours: 1.5
+  models_used: ["sonnet"]
+  agents_count: 2
+
+success_criteria:
+  - metric: "RoutingDecision anexada ao plano"
+    threshold: "1 decision por no executavel"
+
+falsifiable_assumptions:
+  - assumption: "O engine v2 esta disponivel durante P3."
+    falsification_test: "Executar npm run orquestrador:routing-plan no fixture."
+
+constitutional_compliance:
+  codeowners_check: "pass"
+  business_isolation_check: "pass"
+  agent_authority_check: "pass"
+  no_invention_check: "pass"
+
+handoff:
+  next_action_suggested: "review-plan"
+  next_action_executor: "@qa"
+  approvals_required: []
+  do_not_execute_until: []
+
+quality_score: 4.5
+quality_breakdown:
+  completeness: 5
+  capability_match: 5
+  parallelization: 4
+  risk_coverage: 4
+  cost_efficiency: 4
+  clarity: 5
+  falsifiability: 4
+
+audit:
+  created_by: "plan-architect"
+  created_at: "2026-05-24T12:00:00.000Z"
+  cache_manifest_hash: "fixture"
+  scoring_config_version: "RoutingDecision-v2"
+  heuristics_applied: ["RoutingDecision-v2", "IDS-G1", "FMEA-RPN"]

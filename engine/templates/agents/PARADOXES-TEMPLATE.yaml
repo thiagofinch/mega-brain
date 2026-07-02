@@ -1,0 +1,92 @@
+# PARADOXES-TEMPLATE.yaml - Template para L10: Paradoxes
+#
+# Versao: 1.0.0
+# Data: 2026-03-27
+# Proposito: Schema padrao para PARADOXES.yaml (Layer 10 - Identity Paradoxes)
+# Integrado com: MCE Pipeline (L6-L10), INSIGHTS-STATE.json paradoxes extraction
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+# REGRA INQUEBRÁVEL: RASTREABILIDADE 100%
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# Cada paradoxo deve ter chunk_ids e insight_ids rastreavéis
+# Navegacao: PARADOXES.yaml → INSIGHTS-STATE.json → CHUNKS → inbox
+#
+# TIPO enum: OPERACIONAL, COMUNICACIONAL, FILOSOFICO
+# Paradoxos produtivos sao "feature, not bug" — tensoes que geram vantagem
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+
+pessoa: "{NOME_DA_PESSOA}"
+versao: "1.0.0"
+data_extracao: "{DATA_ISO8601}"
+layer: "L10"
+layer_name: "Paradoxes"
+total_paradoxes: 0
+source_pipeline_step: "Step 7 - Identity Extraction"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# PARADOXOS
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# Paradoxos sao tensoes internas produtivas entre dois lados aparentemente
+# contraditorios da mesma pessoa. Cada paradoxo tem lado_a, lado_b,
+# descricao da tensao, e resolucao (por que e feature, not bug).
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+
+paradoxes:
+  - id: "PAR-{SLUG}-001"
+    nome: "{Nome descritivo do paradoxo}"
+    lado_a: "{Descricao do lado A da tensao}"
+    lado_b: "{Descricao do lado B da tensao}"
+    descricao_tensao: "{Como os dois lados parecem contraditorios}"
+    resolucao: "{Por que e feature, not bug — como a tensao gera vantagem}"
+    chunk_ids_lado_a:                        # RASTREABILIDADE: chunks do lado A
+      - "{SLUG}-chunk-XXX-YY"
+    chunk_ids_lado_b:                        # RASTREABILIDADE: chunks do lado B
+      - "{SLUG}-chunk-XXX-YY"
+    insight_ids:                             # RASTREABILIDADE: insights fonte
+      - "INS-{SLUG}-XXX"
+    quotes:                                  # Citacoes que evidenciam ambos os lados
+      - "{Citacao lado A}"
+      - "{Citacao lado B}"
+    tipo: "OPERACIONAL"                      # OPERACIONAL | COMUNICACIONAL | FILOSOFICO
+    produtivo: true                          # true = tensao gera vantagem, false = tensao destrutiva
+    confianca: "{HIGH|MEDIUM|LOW} - {Justificativa da confianca}"
+
+  - id: "PAR-{SLUG}-002"
+    nome: "{Nome descritivo do paradoxo}"
+    lado_a: "{Lado A}"
+    lado_b: "{Lado B}"
+    descricao_tensao: "{Tensao}"
+    resolucao: "{Resolucao}"
+    chunk_ids_lado_a:
+      - "{SLUG}-chunk-XXX-YY"
+    chunk_ids_lado_b:
+      - "{SLUG}-chunk-XXX-YY"
+    insight_ids:
+      - "INS-{SLUG}-XXX"
+    quotes:
+      - "{Citacao}"
+    tipo: "FILOSOFICO"
+    produtivo: true
+    confianca: "{HIGH|MEDIUM|LOW} - {Justificativa}"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# VALIDACAO
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# CHECKLIST antes de publicar:
+# [ ] Todos paradoxos tem chunk_ids_lado_a E chunk_ids_lado_b
+# [ ] Todos paradoxos tem insight_ids rastreavéis
+# [ ] IDs seguem formato PAR-{SLUG}-NNN
+# [ ] tipo e um de: OPERACIONAL, COMUNICACIONAL, FILOSOFICO
+# [ ] Cada paradoxo tem resolucao explicando por que e produtivo (ou nao)
+# [ ] lado_a e lado_b descrevem comportamentos concretos, nao abstratos
+# [ ] quotes contem evidencia de ambos os lados quando possivel
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Fim do PARADOXES-TEMPLATE.yaml v1.0.0
+# Layer 10: Identity Paradoxes - MCE Pipeline (L6-L10)

@@ -1,0 +1,29 @@
+# Layer 2 Manifest — populated knowledge content
+# ================================================================
+# Layer 2 = Layer 1 (all base content)
+#         + the knowledge folders listed below, once populated
+#
+# These folders hold the "brain" — the knowledge the buyer ingests
+# and the agents derived from it.
+#
+# RULE: Layer 2 excludes Layer 3 private/runtime data.
+# UPDATED: 2026-06-30
+# ================================================================
+
+# === ADDITIONS (on top of Layer 1) ===
+
+# Knowledge base — external bucket (ingested expert content)
+knowledge/external/dna/
+knowledge/external/dossiers/
+knowledge/external/playbooks/
+knowledge/external/sources/
+
+# === LAYER 3 EXCLUSIONS (never in Layer 2) ===
+# These are stripped from Layer 2:
+#   - knowledge/external/inbox/  (raw uploads)
+#   - logs/                      (session logs)
+#   - .env*                      (API keys)
+#   - .mcp.json                  (MCP secrets)
+#   - .data/                     (RAG indexes)
+#   - .claude/sessions/          (runtime state)
+#   - processing/                (pipeline artifacts)

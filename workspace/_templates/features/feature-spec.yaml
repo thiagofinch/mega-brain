@@ -1,0 +1,100 @@
+# ======================================================================
+# FEATURE SPEC TEMPLATE v1.0.0
+# Schema: workspace/_templates/features/feature-spec.yaml
+# Purpose: Structured source of truth for a single SaaS feature/module.
+# Distinct from offerbook.yaml (product-level commerce) and curriculum.yaml (course pedagogy).
+# ======================================================================
+# Naming convention:
+#   Path:   workspace/businesses/{bu}/features/{feature-slug}/feature-spec.yaml
+#   Narrative: workspace/businesses/{bu}/features/{feature-slug}/FEATURE.md
+# ======================================================================
+
+_meta:
+  schema: "feature-spec.yaml"
+  schema_version: "1.0.0"
+  state: "DRAFT"                    # DRAFT | REVIEW | ACTIVE | DEPRECATED
+  last_updated: null                # YYYY-MM-DD
+  last_updated_by: null             # agent or person
+  confidence: null                  # low | medium | high
+
+identity:
+  feature_name: null                # Human-friendly name
+  feature_slug: null                # kebab-case — MUST match directory name
+  feature_id: null                  # {PRODUCT_PREFIX}-### canonical ID (e.g. CLK-001)
+  parent_product: null              # slug of product that owns this feature
+  category: null                    # funnel | crm | messaging | payments | automation
+                                    # | education | analytics | sales-recovery
+                                    # | ai-core | ai-sales | infra | integrations
+  one_liner: null                   # ≤140 chars — what the feature is
+  tags: []                          # searchable keywords
+
+lifecycle:
+  stage: null                       # planned | in-progress | beta | live | deprecated | sunset
+  first_shipped_at: null            # YYYY-MM-DD — ISO date first user reached GA
+  current_version: null             # semver
+  milestones: []
+  # - version: "1.0"
+  #   date: YYYY-MM-DD
+  #   scope: "first GA release"
+  #   source: "MEET-XXXX"
+
+scope:
+  description: null                 # full paragraph — what the feature does
+  capabilities: []                  # what it CAN do
+  non_goals: []                     # what it explicitly does NOT do (prevent scope creep)
+  user_stories: []
+  # - persona: "marketeiro digital"
+  #   goal: "enviar broadcast segmentado"
+  #   benefit: "aumentar conversao 15%"
+
+composability:
+  standalone: null                  # bool — funciona sozinha sem outras features?
+  depends_on: []                    # list of feature_slugs required
+  composes_with: []                 # list of feature_slugs that enhance this one
+  can_be_micro_offer: null          # bool — pode virar oferta standalone comercial?
+  can_be_bonus: null                # bool — funciona como bonus em outras ofertas?
+  bundle_tiers: []                  # ["core", "pro", "enterprise"] — em quais tiers aparece
+
+technical:
+  stack: []                         # tech used (Grapes.js, postgres, AWS SQS)
+  api_surface: null                 # base path (/v1/send/*)
+  data_ownership: []                # which DB tables/collections are owned
+  ai_powered: null                  # bool — usa IA na feature?
+  ai_components: []                 # names of AI components (see technical/)
+  integrations_internal: []         # other internal product modules it talks to
+  integrations_external: []
+  # - service: "WhatsApp Business API"
+  #   provider: "Meta"
+  #   purpose: "..."
+  #   status: "active | planned | blocked"
+
+ownership:
+  tech_lead: null
+  squad: null
+  product_owner: null
+  designer: null
+  qa_owner: null
+
+metrics:
+  north_star: null                  # nome da metrica primaria
+  targets: {}                       # {adoption_rate: 0.80, retention_d30: 0.65}
+  current: {}                       # {adoption_rate: null}
+  business_impact_targets: []
+  # - metric: "Conversion drop-off reduction"
+  #   target: "25%"
+  #   via: "..."
+  #   source: "MEET-XXXX"
+
+roadmap:
+  next_milestones: []
+  known_issues: []
+  technical_debt: []
+
+evidence:
+  sources: []                       # MEET-XXXX references
+  extracted_from: null              # path to extraction artifact
+  confidence_notes: null            # why confidence level above
+
+# ======================================================================
+# END OF TEMPLATE
+# ======================================================================

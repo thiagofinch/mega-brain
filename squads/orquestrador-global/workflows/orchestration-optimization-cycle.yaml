@@ -1,0 +1,274 @@
+# =============================================================================
+# WORKFLOW: ORCHESTRATION OPTIMIZATION CYCLE
+# =============================================================================
+# Stage 1-to-10: From single-squad to multi-squad orchestration with gates
+# The growth workflow that adds pipelines, parallelism, and quality gates
+# =============================================================================
+
+metadata:
+  name: orchestration-optimization-cycle
+  version: "1.0.0"
+  squad: orquestrador-global
+  maturity_stage: "1_to_10"
+  estimated_time: "2-4 weeks"
+  created_at: "2026-03-11"
+
+description: >
+  Optimization workflow for orchestration systems that have basic routing
+  in place and need to handle multi-squad demands. Adds staged execution
+  pipelines, quality gates between stages, handoff packaging, and audit
+  trails. Takes orchestration from "route to one squad" to "coordinate
+  multiple squads with quality control" in 2-4 weeks.
+
+# =============================================================================
+# TRIGGER
+# =============================================================================
+
+trigger:
+  command: "*optimize-orchestration"
+  aliases:
+    - "*multi-squad-pipeline"
+    - "*staged-execution"
+    - "*add-quality-gates"
+  description: "Start the orchestration optimization cycle"
+
+# =============================================================================
+# PREREQUISITES
+# =============================================================================
+
+prerequisites:
+  - "Basic demand-to-delivery workflow operational"
+  - "At least 10 completed single-squad executions logged"
+  - "3+ squads actively operational"
+  - "Execution logging discipline established"
+
+# =============================================================================
+# INPUT REQUIREMENTS
+# =============================================================================
+
+inputs:
+  required:
+    - name: multi_squad_demand
+      type: object
+      description: "A demand that requires 2-5 squads to fulfill"
+    - name: squad_sequence
+      type: array
+      description: "Ordered list of squads with dependencies"
+  optional:
+    - name: parallel_groups
+      type: array
+      description: "Groups of squads that can run in parallel"
+    - name: auto_approve_threshold
+      type: number
+      description: "Quality score above which gates auto-approve"
+
+# =============================================================================
+# STAGES
+# =============================================================================
+
+stages:
+
+  # --------------------------------------------------------------------------
+  # STAGE 1: Pipeline Design
+  # --------------------------------------------------------------------------
+  - id: 1
+    name: "Pipeline Design"
+    description: >
+      Design the multi-squad execution pipeline: map dependencies,
+      identify parallelizable groups, select the orchestration pattern,
+      and define stage gates. After this stage, we have a complete
+      execution plan.
+    estimated_time: "30-60 minutes"
+
+    tasks:
+      - staged-execution-design
+
+    agents:
+      lead: orquestrador-chief
+      support: []
+
+    actions:
+      - action: analyze_complexity
+        description: "Assess demand using IDS task-scaler for MEDIUM/LARGE"
+        agent: orquestrador-chief
+
+      - action: map_dependencies
+        description: "Map squad sequence and data dependencies"
+        agent: orquestrador-chief
+
+      - action: select_pattern
+        description: "Choose orchestration pattern (Sequential/Fan-Out/Diamond/Loop)"
+        agent: orquestrador-chief
+
+      - action: define_gates
+        description: "Define stage gate criteria between each phase"
+        agent: orquestrador-chief
+
+      - action: create_execution_plan
+        description: "Write master plan with pipeline and gates"
+        agent: orquestrador-chief
+
+    gate:
+      criteria:
+        - "Pipeline pattern matches demand complexity"
+        - "All data dependencies mapped between squads"
+        - "Stage gates have explicit pass/fail criteria"
+        - "Master plan follows execution-logging.md template"
+      approval: manual
+      gate_document: "pipeline-design-review.md"
+
+  # --------------------------------------------------------------------------
+  # STAGE 2: Staged Execution with Gates
+  # --------------------------------------------------------------------------
+  - id: 2
+    name: "Staged Execution with Gates"
+    description: >
+      Execute the pipeline stage by stage. At each gate, verify quality
+      before proceeding. Handle gate failures with revise/escalate/cancel
+      decisions. After this stage, the multi-squad demand is fulfilled
+      with quality verification at each step.
+    estimated_time: "2-8 hours (depends on squad count)"
+    depends_on: [1]
+
+    tasks:
+      - staged-execution-design
+      - gate-review-framework
+
+    agents:
+      lead: orquestrador-chief
+      support: []
+
+    actions:
+      - action: execute_stage_n
+        description: "Execute each pipeline stage with handoff packaging"
+        agent: orquestrador-chief
+
+      - action: run_gate_review
+        description: "Run Tier 1-3 gate checks between stages"
+        agent: orquestrador-chief
+
+      - action: handle_gate_outcome
+        description: "Process gate decision (proceed/revise/escalate/cancel)"
+        agent: orquestrador-chief
+
+      - action: log_audit_trail
+        description: "Append gate decisions to JSONL audit trail"
+        agent: orquestrador-chief
+
+    gate:
+      criteria:
+        - "All pipeline stages completed or explicitly cancelled"
+        - "Gate decisions logged for every transition"
+        - "JSONL audit trail captures all events"
+        - "Any revise/escalate actions documented and resolved"
+      approval: auto
+      auto_criteria: "All stages completed with passing gates"
+
+  # --------------------------------------------------------------------------
+  # STAGE 3: Consolidation and Learning
+  # --------------------------------------------------------------------------
+  - id: 3
+    name: "Consolidation and Learning"
+    description: >
+      Consolidate all squad outputs, write the execution summary, extract
+      lessons learned, and update routing patterns. After this stage,
+      the orchestration system is smarter for the next execution.
+    estimated_time: "30-60 minutes"
+    depends_on: [2]
+
+    tasks:
+      - gate-review-framework
+
+    agents:
+      lead: orquestrador-chief
+      support: []
+
+    actions:
+      - action: consolidate_outputs
+        description: "Merge deliverables from all squads into final output"
+        agent: orquestrador-chief
+
+      - action: write_summary
+        description: "Write 99-execution-summary.md with per-squad results"
+        agent: orquestrador-chief
+
+      - action: extract_lessons
+        description: "Identify what worked, what failed, and why"
+        agent: orquestrador-chief
+
+      - action: update_routing_weights
+        description: "Adjust squad selection weights based on outcomes"
+        agent: orquestrador-chief
+
+      - action: save_to_memory
+        description: "Save execution patterns to SuperMemory"
+        agent: orquestrador-chief
+
+    gate:
+      criteria:
+        - "Execution summary covers all squads with quality scores"
+        - "Lessons learned section is actionable"
+        - "SuperMemory save completed"
+        - "Session scale cleared"
+      approval: auto
+      auto_criteria: "Execution summary file exists"
+
+# =============================================================================
+# MODEL SELECTION
+# =============================================================================
+
+model_selection:
+  default: sonnet
+  per_stage:
+    1: opus
+    2: sonnet
+    3: sonnet
+  rationale: >
+    Pipeline design (Stage 1) requires architectural thinking about
+    dependencies and patterns, warranting Opus. Execution and
+    consolidation (Stages 2-3) are procedural.
+
+# =============================================================================
+# SUCCESS METRICS
+# =============================================================================
+
+success_metrics:
+  - metric: "Pipeline completion rate"
+    target: ">85% of multi-squad pipelines complete all stages"
+  - metric: "Gate pass rate"
+    target: ">75% of gates pass on first attempt"
+  - metric: "Audit trail completeness"
+    target: "100% of gate decisions logged"
+  - metric: "Learning extraction"
+    target: "At least 2 lessons learned per execution"
+  - metric: "Handoff quality"
+    target: "0 cases of squad needing additional context after handoff"
+
+# =============================================================================
+# INTEGRATION
+# =============================================================================
+
+integration:
+  feeds_from:
+    - squad: navigator
+      data: "context assembly for handoff packages"
+    - squad: project-management-clickup
+      data: "task tracking across squads"
+  feeds_to:
+    - squad: project-management-clickup
+      data: "execution status for portfolio tracking"
+  tools_required:
+    - ids-ops.mjs
+    - cost-ops.mjs
+megabrain_validation:
+  last_run: "20260514-validate-deep"
+  validated_at: "2026-05-15T00:00:00Z"
+  validator: mega-brain/megabrain-chief
+  mode: deep
+  squad: orquestrador-global
+  workflow_id: "orchestration-optimization-cycle"
+  status: pass
+  evidence:
+    - workflow_inventory_registered
+    - orchestration_surface_validated
+    - external_execution_not_performed

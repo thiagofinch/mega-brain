@@ -1,0 +1,94 @@
+name: RAG Health Gate
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'engine/intelligence/rag/**'
+      - 'engine/paths.py'
+      - 'engine/intelligence/pipeline/**'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'engine/intelligence/rag/**'
+      - 'engine/paths.py'
+      - 'engine/intelligence/pipeline/**'
+  workflow_dispatch:
+
+jobs:
+  rag-health:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install minimal deps
+        run: pip install pyyaml
+      - name: Validate RAG module imports
+        run: |
+          python3 -c "
+          from engine.intelligence.rag import embedding_config, rebuild, health_check
+          cfg = embedding_config.get_embedding_config()
+          print(f'dim={cfg[\"dimensions\"]} model={cfg[\"model\"]}')
+          "
+      - name: Validate HybridIndex.build_for_bucket exists
+        run: |
+          python3 -c "
+          from engine.intelligence.rag.hybrid_index import HybridIndex
+          assert hasattr(HybridIndex, 'build_for_bucket'), 'S1 regression'
+          print('[OK] build_for_bucket classmethod present')
+          "
+      - name: Validate _openai_embed uses dimensions param
+        run: |
+          python3 -c "
+          import inspect
+          from engine.intelligence.rag import hybrid_index
+          src = inspect.getsource(hybrid_index._openai_embed)
+          assert 'dimensions' in src, 'S2a regression: dimensions param missing'
+          print('[OK] _openai_embed passes dimensions')
+          "
+      - name: Check enforce_pipeline_integrity wired
+        run: |
+          python3 -c "
+          import json
+          d = json.load(open('.claude/settings.json'))
+          hooks = str(d.get('hooks', {}))
+          assert 'enforce_pipeline_integrity' in hooks, 'S3 regression'
+          print('[OK] enforce_pipeline_integrity registered')
+          "
+      - name: Check /rag-search skill exists
+        run: |
+          import os, sys
+          if not os.path.exists('.claude/skills/rag-search/SKILL.md'):
+              print('[FAIL] /rag-search skill missing')
+              sys.exit(1)
+          print('[OK] /rag-search skill exists')
+        shell: python3 {0}
+
+  # STORY-GBA-F0.1 — recall@K eval gate (CI-blocking anti-regression armor).
+  # Replays the frozen qrels gabarito through the gate logic and FAILS the build
+  # if recall@K / first_relevant_hit regress. Retrieval is stubbed in the
+  # characterization test (no index/DB needed in CI), so this gate is the
+  # deterministic proof that the gate BLOCKS on retrieval regressions.
+  eval-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install deps
+        run: pip install pyyaml pytest
+      - name: Validate frozen qrels baseline parses
+        run: |
+          python3 -m engine.intelligence.rag.eval_gate --help >/dev/null
+          python3 -c "
+          from pathlib import Path
+          from engine.intelligence.rag.eval_gate import parse_qrels_file
+          qf = parse_qrels_file(Path('engine/intelligence/rag/qrels-baseline.json').read_text('utf-8'))
+          assert len(qf.queries) >= 30, f'baseline too small: {len(qf.queries)}'
+          print(f'[OK] qrels baseline parses: {len(qf.queries)} queries')
+          "
+      - name: Run recall@K eval gate (characterization — BLOCKING)
+        run: |
+          python3 -m pytest tests/rag/test_eval_gate.py -v --tb=short

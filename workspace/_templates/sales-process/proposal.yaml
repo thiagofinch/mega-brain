@@ -1,0 +1,164 @@
+---
+# PROPOSAL.YAML - Client proposal structure
+# Adapted from mega-brain-stage pattern for Mega Brain workspace context
+
+_meta:
+  version: "1.0.0"
+  owner: "hormozi-chief"
+  target_layer: "L4-operational"
+  state: "TEMPLATE"
+
+metadata:
+  canonical_scope: "workspace/_templates/sales-process/proposal.yaml"
+  owner: "cro"
+  version: "1.0.0"
+  last_updated: "2026-03-23"
+  description: "Client proposal template with scope, deliverables, timeline, pricing, terms, and status"
+
+fields:
+  proposal_id:
+    type: string
+    required: true
+    description: "Unique proposal identifier (e.g., PROP-2026-001)"
+
+  client:
+    type: object
+    required: true
+    description: "Client information"
+    properties:
+      name:
+        type: string
+        required: true
+        description: "Client or company name"
+      contact_person:
+        type: string
+        required: true
+        description: "Primary contact at the client"
+      contact_email:
+        type: string
+        required: false
+        description: "Contact email address"
+
+  proposal_date:
+    type: date
+    required: true
+    description: "Date the proposal was created"
+
+  valid_until:
+    type: date
+    required: true
+    description: "Expiration date of the proposal"
+
+  scope:
+    type: object
+    required: true
+    description: "Project scope definition"
+    properties:
+      summary:
+        type: string
+        required: true
+        description: "High-level description of what is being proposed"
+      objectives:
+        type: list
+        required: true
+        description: "Specific outcomes the project will achieve"
+      in_scope:
+        type: list
+        required: true
+        description: "Explicitly included items and activities"
+      out_of_scope:
+        type: list
+        required: true
+        description: "Explicitly excluded items to set clear expectations"
+
+  deliverables:
+    type: list
+    required: true
+    description: "Concrete outputs to be delivered, each with name, description, and acceptance criteria"
+
+  timeline:
+    type: object
+    required: true
+    description: "Project timeline and milestones"
+    properties:
+      estimated_start:
+        type: date
+        required: true
+        description: "Proposed project start date"
+      estimated_end:
+        type: date
+        required: true
+        description: "Proposed project end date"
+      milestones:
+        type: list
+        required: true
+        description: "Key milestones with dates and deliverables"
+      assumptions:
+        type: list
+        required: false
+        description: "Timeline assumptions (e.g., client response times, access to resources)"
+
+  pricing:
+    type: object
+    required: true
+    description: "Financial terms"
+    properties:
+      pricing_model:
+        type: enum
+        required: true
+        description: "How the project is priced"
+        options: [fixed, hourly, retainer, value-based, milestone-based, hybrid]
+      total_investment:
+        type: string
+        required: true
+        description: "Total price for the project"
+      payment_schedule:
+        type: list
+        required: true
+        description: "Payment milestones with amount and trigger"
+      currency:
+        type: string
+        required: true
+        description: "Currency for all pricing (e.g., BRL, USD)"
+
+  terms:
+    type: object
+    required: true
+    description: "Contractual terms and conditions"
+    properties:
+      payment_terms:
+        type: string
+        required: true
+        description: "Payment due date rules (e.g., net 15, upon receipt)"
+      cancellation_policy:
+        type: string
+        required: false
+        description: "Terms for project cancellation"
+      revision_rounds:
+        type: number
+        required: false
+        description: "Number of revision rounds included"
+      intellectual_property:
+        type: string
+        required: false
+        description: "Who owns the deliverables after payment"
+      confidentiality:
+        type: boolean
+        required: false
+        description: "Whether NDA terms apply"
+
+  status:
+    type: enum
+    required: true
+    description: "Current proposal status"
+    options: [draft, sent, under-review, negotiating, accepted, rejected, expired]
+
+  follow_up_history:
+    type: list
+    required: false
+    description: "Log of follow-up interactions after sending the proposal"
+
+  win_loss_reason:
+    type: string
+    required: false
+    description: "Why the proposal was accepted or rejected (fill after decision)"

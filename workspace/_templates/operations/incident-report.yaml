@@ -1,0 +1,143 @@
+---
+# INCIDENT-REPORT.YAML - Incident documentation and post-mortem
+# Adapted from mega-brain-stage pattern for Mega Brain workspace context
+
+_meta:
+  version: "1.0.0"
+  owner: "coo-orchestrator"
+  target_layer: "L4-operational"
+  state: "TEMPLATE"
+
+metadata:
+  canonical_scope: "workspace/_templates/operations/incident-report.yaml"
+  owner: "coo"
+  version: "1.0.0"
+  last_updated: "2026-03-23"
+  description: "Incident report template with severity, timeline, impact, root cause, resolution, and prevention"
+
+fields:
+  incident_id:
+    type: string
+    required: true
+    description: "Unique identifier (e.g., INC-2026-001)"
+
+  title:
+    type: string
+    required: true
+    description: "Brief descriptive title of the incident"
+
+  severity:
+    type: enum
+    required: true
+    description: "Incident severity level"
+    options: [critical, high, medium, low]
+
+  status:
+    type: enum
+    required: true
+    description: "Current incident status"
+    options: [investigating, identified, mitigated, resolved, post-mortem-complete]
+
+  reported_by:
+    type: string
+    required: true
+    description: "Person or system that first reported the incident"
+
+  reported_at:
+    type: string
+    required: true
+    description: "Timestamp when the incident was first reported (ISO 8601)"
+
+  timeline:
+    type: list
+    required: true
+    description: "Chronological sequence of events from detection to resolution, each entry with timestamp and description"
+
+  impact:
+    type: object
+    required: true
+    description: "Scope and consequences of the incident"
+    properties:
+      affected_systems:
+        type: list
+        required: true
+        description: "Systems, services, or processes affected"
+      affected_users:
+        type: string
+        required: true
+        description: "Number or description of affected users or clients"
+      revenue_impact:
+        type: string
+        required: false
+        description: "Estimated financial impact if applicable"
+      data_loss:
+        type: boolean
+        required: true
+        description: "Whether any data was lost or corrupted"
+      duration:
+        type: string
+        required: true
+        description: "Total time from detection to resolution"
+
+  root_cause:
+    type: object
+    required: true
+    description: "Analysis of why the incident happened"
+    properties:
+      summary:
+        type: string
+        required: true
+        description: "Concise explanation of the root cause"
+      contributing_factors:
+        type: list
+        required: false
+        description: "Additional factors that contributed to the incident"
+      five_whys:
+        type: list
+        required: false
+        description: "Five Whys analysis chain leading to the root cause"
+
+  resolution:
+    type: object
+    required: true
+    description: "How the incident was resolved"
+    properties:
+      immediate_fix:
+        type: string
+        required: true
+        description: "What was done to stop the bleeding"
+      permanent_fix:
+        type: string
+        required: false
+        description: "Long-term fix implemented or planned"
+      resolved_at:
+        type: string
+        required: true
+        description: "Timestamp when the incident was fully resolved"
+      resolved_by:
+        type: string
+        required: true
+        description: "Person or team who resolved the incident"
+
+  prevention:
+    type: object
+    required: true
+    description: "Measures to prevent recurrence"
+    properties:
+      action_items:
+        type: list
+        required: true
+        description: "Preventive actions with owner and deadline"
+      monitoring_changes:
+        type: list
+        required: false
+        description: "New alerts or monitoring to detect this class of issue earlier"
+      process_changes:
+        type: list
+        required: false
+        description: "Process improvements to reduce likelihood of recurrence"
+
+  lessons_learned:
+    type: list
+    required: false
+    description: "Key takeaways from the incident"

@@ -1,0 +1,556 @@
+# =============================================================================
+# WORKFLOW: BLIND SPOT AUDIT CYCLE
+# =============================================================================
+# Ciclo contínuo trimestral de auditoria de pontos cegos para todos os squads
+# Coordenado pelo Maestro (orquestrador-global)
+# =============================================================================
+
+metadata:
+  name: blind-spot-audit-cycle
+  version: "1.0.0"
+  squad: orquestrador-global
+  maturity_stage: "1_to_10"
+  estimated_time: "1-2 semanas por rodada (4 squads em paralelo)"
+  created_at: "2026-03-11"
+
+description: >
+  Workflow de ciclo contínuo que coordena auditorias de pontos cegos em todos
+  os 37 squads do Mega Brain. Opera em rodadas trimestrais, com 4 squads auditados
+  em paralelo por rodada. Cada squad executa a task blind-spot-self-audit no
+  seu próprio domínio. O Maestro coordena o calendário, coleta resultados,
+  identifica padrões cross-squad, e garante que checkpoints aprovados sejam
+  integrados nos processos de cada squad.
+
+# =============================================================================
+# TRIGGER
+# =============================================================================
+
+trigger:
+  command: "*blind-spot-audit"
+  aliases:
+    - "*audit-blind-spots"
+    - "*bsa"
+  description: "Iniciar ou continuar o ciclo de auditoria de pontos cegos"
+
+# =============================================================================
+# PREREQUISITES
+# =============================================================================
+
+prerequisites:
+  - "Framework doc disponível: squads/orquestrador-global/knowledge/BLIND-SPOT-DETECTION-FRAMEWORK.md"
+  - "Task template disponível: squads/orquestrador-global/tasks/blind-spot-self-audit.yaml"
+  - "Squads operacionais com config.yaml, knowledge/ e tasks/ populados"
+  - "Acesso aos scripts ops para Camada 5 (meta-ads-ops, ga4-analytics-ops, etc.)"
+
+# =============================================================================
+# INPUT REQUIREMENTS
+# =============================================================================
+
+inputs:
+  required:
+    - name: ciclo_tipo
+      type: string
+      description: "Tipo do ciclo: 'trimestral' (camadas 2-5) ou 'semestral' (camadas 1-5)"
+      default: "trimestral"
+  optional:
+    - name: squads_alvo
+      type: array
+      description: "Lista específica de squads a auditar. Se omitido, segue o calendário rotativo."
+    - name: foco_global
+      type: string
+      description: "Foco temático para todas as auditorias do ciclo (ex: 'processo de revisão', 'consistency')."
+    - name: rodada
+      type: number
+      description: "Número da rodada (1-10). Se omitido, calcula automaticamente."
+
+# =============================================================================
+# CALENDAR: ROTATION PLAN
+# =============================================================================
+
+calendar:
+  description: >
+    Os 37 squads são distribuídos em 10 rodadas ao longo do trimestre.
+    Cada rodada audita ~4 squads em paralelo, com 1 semana para execução
+    e 1 semana para integração de checkpoints.
+
+  rodadas:
+    - rodada: 1
+      squads: [copywriting, full-stack-dev, data-analytics, content-ecosystem]
+      justificativa: "Squads piloto originais — alta diversidade de domínio"
+
+    - rodada: 2
+      squads: [media-buy, funnel-creator, creative-studio, seo]
+      justificativa: "Marketing + conversion — outputs visuais e de performance"
+
+    - rodada: 3
+      squads: [sales, marketing-automation, deep-scraper, market-research]
+      justificativa: "Revenue + intelligence — dados como insumo e produto"
+
+    - rodada: 4
+      squads: [core-dev, design-system, technical-documentation, navigator]
+      justificativa: "Tech + ops — padrões de código e operação"
+
+    - rodada: 5
+      squads: [youtube-lives, infoproduct-creation, asmr-shorts, video-production]
+      justificativa: "Content creation — produção de mídia"
+
+    - rodada: 6
+      squads: [media-production, traffic-squad, support, project-management-clickup]
+      justificativa: "Production + ops — execução e gerenciamento"
+
+    - rodada: 7
+      squads: [conselho, strategy-example-squad, communication-example-squad, community-example-squad]
+      justificativa: "Strategy + stakeholder — decisão e comunicação"
+
+    - rodada: 8
+      squads: [erico-rocha, hormozi, agora-direct-response]
+      justificativa: "Methodology — frameworks de terceiros adaptados"
+
+    - rodada: 9
+      squads: [squad-creator, skill-tester, academic-research, orquestrador-global]
+      justificativa: "Meta/platform — os squads que criam outros squads"
+
+    - rodada: 10
+      squads: [squad-creator]
+      justificativa: "Rodada residual + consolidação cross-squad"
+
+  cadencia:
+    trimestral:
+      meses: [janeiro, abril, julho, outubro]
+      camadas: [2, 3, 4, 5]
+      duracao_ciclo: "10 semanas (1 rodada por semana)"
+    semestral:
+      meses: [janeiro, julho]
+      camadas: [1, 2, 3, 4, 5]
+      duracao_ciclo: "12 semanas (inclui Camada 1 adicional)"
+
+# =============================================================================
+# STAGES
+# =============================================================================
+
+stages:
+
+  # --------------------------------------------------------------------------
+  # STAGE 1: Kickoff & Planning
+  # --------------------------------------------------------------------------
+  - id: 1
+    name: "Kickoff e Planejamento do Ciclo"
+    description: >
+      Iniciar o ciclo de auditoria: definir quais squads serão auditados,
+      confirmar o calendário, e notificar os chiefs envolvidos na rodada
+      atual. Se é a primeira execução, começar pela Rodada 1. Se é
+      continuação, identificar a próxima rodada pendente.
+    estimated_time: "30 minutos"
+
+    tasks:
+      - blind-spot-self-audit  # referência ao template
+
+    agents:
+      lead: roteador
+      support: [supervisor-sistema]
+
+    actions:
+      - action: determinar_rodada
+        description: |
+          Verificar qual rodada é a próxima:
+          1. Consultar SuperMemory: recall "blind-spot-audit cycle" containerTag: "megabrain-master"
+          2. Verificar relatórios existentes em squads/*/data/blind-spot-audit-*.md
+          3. Determinar a próxima rodada pendente do calendário
+          4. Se input squads_alvo foi fornecido, usar esses squads em vez do calendário
+        agent: roteador
+
+      - action: validar_squads
+        description: |
+          Para cada squad da rodada, verificar:
+          1. config.yaml existe e está atualizado
+          2. knowledge/ tem pelo menos 1 doc
+          3. tasks/ tem pelo menos 1 task
+          Se algum squad não atende os requisitos, substituir por outro
+          da rodada seguinte e registrar o motivo.
+        agent: supervisor-sistema
+
+      - action: preparar_briefing
+        description: |
+          Criar briefing para cada chief:
+          - Quais camadas executar (trimestral: 2-5, semestral: 1-5)
+          - Foco global (se definido)
+          - Path do framework doc
+          - Path da task template
+          - Path do relatório anterior (se existir)
+          - Prazo de entrega (1 semana)
+        agent: roteador
+
+    gate:
+      criteria:
+        - "Rodada identificada e squads confirmados"
+        - "Todos os squads têm config.yaml, knowledge/ e tasks/"
+        - "Briefing preparado para cada chief"
+      approval: auto
+      auto_criteria: "Todos os squads validados"
+
+  # --------------------------------------------------------------------------
+  # STAGE 2: Squad Self-Audits (Parallel)
+  # --------------------------------------------------------------------------
+  - id: 2
+    name: "Execução das Auditorias (Paralelo)"
+    description: >
+      Cada chief executa a task blind-spot-self-audit no seu próprio squad.
+      As auditorias rodam em paralelo (até 4 simultâneas). O Maestro
+      monitora progresso e oferece suporte se necessário.
+    estimated_time: "2-4 horas por squad, 1 semana para a rodada"
+    depends_on: [1]
+
+    tasks:
+      - blind-spot-self-audit
+
+    agents:
+      lead: team-coordinator
+      support: []
+
+    actions:
+      - action: delegar_para_chiefs
+        description: |
+          Para cada squad da rodada, ativar o chief do squad com o briefing:
+
+          Instrução para o chief:
+          1. LER o framework: squads/orquestrador-global/knowledge/BLIND-SPOT-DETECTION-FRAMEWORK.md
+          2. EXECUTAR a task: blind-spot-self-audit com os inputs:
+             - squad_id: {squad_id}
+             - camadas: {lista de camadas do ciclo}
+             - foco: {foco_global ou null}
+             - periodo_dados: last_90d
+             - ciclo_anterior: {path ou null}
+          3. SALVAR o relatório em: squads/{squad_id}/data/blind-spot-audit-{YYYY-MM-DD}.md
+          4. SALVAR achados no SuperMemory: containerTag: "{squad_id}"
+
+          Monitorar: verificar se cada squad produziu o relatório dentro do prazo.
+        agent: team-coordinator
+
+      - action: suporte_sob_demanda
+        description: |
+          Se um chief encontrar dificuldade:
+          - Camada 1 (referência externa): sugerir fontes específicas do domínio
+          - Camada 5 (dados): ajudar com scripts ops corretos
+          - Classificação de defeitos: clarificar a taxonomia D1-D10
+          - Formato do relatório: referenciar o template do framework
+        agent: team-coordinator
+
+    gate:
+      criteria:
+        - "Todos os squads da rodada entregaram relatório"
+        - "Relatórios seguem o formato padronizado"
+        - "Cada relatório tem pelo menos 1 blind spot identificado"
+        - "Checkpoints propostos são específicos e verificáveis"
+      approval: manual
+      gate_document: "rodada-{N}-review.md"
+
+  # --------------------------------------------------------------------------
+  # STAGE 3: Cross-Squad Analysis
+  # --------------------------------------------------------------------------
+  - id: 3
+    name: "Análise Cross-Squad"
+    description: >
+      Analisar os relatórios de todos os squads da rodada para identificar
+      padrões: blind spots comuns, defeitos recorrentes, e oportunidades
+      de melhoria sistêmica que afetam múltiplos squads.
+    estimated_time: "1-2 horas"
+    depends_on: [2]
+
+    tasks: []
+
+    agents:
+      lead: supervisor-sistema
+      support: []
+
+    actions:
+      - action: consolidar_relatorios
+        description: |
+          Ler todos os relatórios da rodada:
+          squads/{squad_id}/data/blind-spot-audit-{YYYY-MM-DD}.md
+
+          Extrair:
+          - Total de blind spots por squad
+          - Distribuição por camada (qual camada encontra mais)
+          - Distribuição por tipo de defeito (D1-D10)
+          - Distribuição por prioridade
+        agent: supervisor-sistema
+
+      - action: identificar_padroes
+        description: |
+          Procurar padrões cross-squad:
+          1. MESMO defeito em 2+ squads -> problema sistêmico (regra ou template)
+          2. MESMA camada é a mais rica em 3+ squads -> essa camada precisa de mais atenção
+          3. Tipo D10 (rastreabilidade) em 2+ squads -> problema de observabilidade do Mega Brain
+          4. Checkpoints similares propostos por squads diferentes -> candidato a regra global
+
+          Para cada padrão encontrado, classificar:
+          - Local (afeta apenas o squad) vs Global (afeta o sistema)
+          - Ação: checkpoint local, nova regra global, nova task, ou novo knowledge doc
+        agent: supervisor-sistema
+
+      - action: gerar_relatorio_consolidado
+        description: |
+          Criar relatório da rodada:
+          .data/executions/blind-spot-cycle/rodada-{N}-consolidado.md
+
+          Conteúdo:
+          - Resumo por squad (tabela)
+          - Padrões cross-squad identificados
+          - Ações sistêmicas propostas
+          - Comparação com rodadas anteriores (se existirem)
+        agent: supervisor-sistema
+
+    gate:
+      criteria:
+        - "Relatório consolidado gerado"
+        - "Padrões cross-squad documentados"
+        - "Ações sistêmicas classificadas (local vs global)"
+      approval: auto
+      auto_criteria: "Relatório consolidado existe"
+
+  # --------------------------------------------------------------------------
+  # STAGE 4: Checkpoint Integration
+  # --------------------------------------------------------------------------
+  - id: 4
+    name: "Integração de Checkpoints"
+    description: >
+      Integrar os checkpoints aprovados nos processos de cada squad.
+      Checkpoints de alta prioridade são testados em 1 output e, se
+      validados, incorporados na task ou workflow relevante.
+    estimated_time: "2-4 horas por squad, 1 semana para a rodada"
+    depends_on: [3]
+
+    tasks: []
+
+    agents:
+      lead: team-coordinator
+      support: []
+
+    actions:
+      - action: priorizar_checkpoints
+        description: |
+          De todos os checkpoints propostos na rodada:
+          1. Separar por prioridade (alta, média, baixa)
+          2. Para cada checkpoint de prioridade ALTA:
+             - Identificar o task ou workflow onde deve ser inserido
+             - Definir a posição exata no fluxo (entre quais steps)
+             - Preparar o texto exato do checkpoint
+          3. Para checkpoints GLOBAIS (padrão cross-squad):
+             - Propor como nova regra em .claude/rules/ ou
+             - Propor como adição ao framework doc
+          4. Checkpoints de prioridade BAIXA: registrar para próximo ciclo
+        agent: team-coordinator
+
+      - action: testar_checkpoints
+        description: |
+          Para cada checkpoint de prioridade alta:
+          1. Pedir ao chief do squad que aplique o checkpoint em 1 output real
+          2. Verificar:
+             - O checkpoint identificou o defeito quando presente?
+             - O checkpoint adicionou atrito desnecessário?
+             - O agente conseguiu executar sem ambiguidade?
+          3. Se PASSOU: marcar como aprovado para integração
+          4. Se FALHOU: refinar o texto e retestar 1 vez
+          5. Se falhou 2x: descartar e registrar motivo
+        agent: team-coordinator
+
+      - action: integrar_nos_squads
+        description: |
+          Para cada checkpoint APROVADO:
+          1. Editar o task ou workflow relevante no squad
+          2. Adicionar o checkpoint como novo step ou sub-step
+          3. Atualizar o knowledge doc relevante se necessário
+          4. Registrar no SuperMemory:
+             containerTag: "{squad_id}"
+             content: "Novo checkpoint integrado: {descrição}"
+             tags: [blind-spot-audit, checkpoint, {data}]
+        agent: team-coordinator
+
+    gate:
+      criteria:
+        - "Checkpoints de alta prioridade testados (todos)"
+        - "Checkpoints aprovados integrados nos tasks/workflows"
+        - "SuperMemory atualizado com checkpoints integrados"
+        - "Checkpoints descartados têm motivo documentado"
+      approval: manual
+      gate_document: "rodada-{N}-integration-review.md"
+
+  # --------------------------------------------------------------------------
+  # STAGE 5: Cycle Closure & Learning
+  # --------------------------------------------------------------------------
+  - id: 5
+    name: "Fechamento do Ciclo e Aprendizados"
+    description: >
+      Fechar a rodada: salvar métricas, atualizar o estado do ciclo,
+      e preparar para a próxima rodada. No final do ciclo completo
+      (rodada 10), gerar relatório executivo consolidado.
+    estimated_time: "30-60 minutos"
+    depends_on: [4]
+
+    tasks: []
+
+    agents:
+      lead: supervisor-sistema
+      support: []
+
+    actions:
+      - action: registrar_metricas
+        description: |
+          Salvar métricas da rodada:
+          - Squads auditados: {lista}
+          - Blind spots totais: {N}
+          - Checkpoints propostos: {N}
+          - Checkpoints aprovados: {N}
+          - Checkpoints descartados: {N}
+          - Padrões cross-squad: {N}
+
+          Destino: SuperMemory containerTag: "megabrain-master"
+          Tags: [blind-spot-audit, rodada-{N}, {data}]
+        agent: supervisor-sistema
+
+      - action: atualizar_estado_ciclo
+        description: |
+          Atualizar o tracking do ciclo:
+          1. Marcar rodada como concluída
+          2. Identificar próxima rodada
+          3. Se rodada 10 foi concluída -> gerar relatório executivo do ciclo completo
+          4. Calcular tendência: mais ou menos blind spots que o ciclo anterior?
+        agent: supervisor-sistema
+
+      - action: relatorio_executivo_ciclo
+        description: |
+          Gerar apenas quando todas as 10 rodadas estiverem concluídas.
+
+          Conteúdo:
+          - Total de blind spots encontrados em todos os 37 squads
+          - Top 10 blind spots por impacto
+          - Tipos de defeito mais comuns (distribuição D1-D10)
+          - Camada mais produtiva (qual encontra mais blind spots)
+          - Checkpoints integrados vs descartados (taxa de aprovação)
+          - Padrões sistêmicos identificados
+          - Recomendações para o próximo ciclo
+          - Comparação com ciclo anterior (se existir)
+
+          Destino: core/reports/blind-spot-audit-cycle-{YYYY-QN}.md
+        agent: supervisor-sistema
+
+      - action: criar_clickup_proximo_ciclo
+        description: |
+          Criar task no ClickUp para a próxima rodada:
+          - Lista: Dev Tasks (CLICKUP_ID)
+          - Nome: "[BSA] Rodada {N+1} — {squads}"
+          - Status: Backlog
+          - Tags: [blind-spot-audit, process:dev]
+          - Due date: data da próxima rodada no calendário
+
+          CLI:
+          node core/scripts/ops/clickup-ops.mjs create-task \
+            --list=CLICKUP_ID \
+            --name="[BSA] Rodada {N+1} — {squads}" \
+            --status="Backlog" \
+            --tags=blind-spot-audit,process:dev
+        agent: supervisor-sistema
+
+    gate:
+      criteria:
+        - "Métricas da rodada salvas no SuperMemory"
+        - "Estado do ciclo atualizado"
+        - "Task do ClickUp criada para próxima rodada"
+        - "Se rodada 10: relatório executivo gerado"
+      approval: auto
+      auto_criteria: "SuperMemory salvo e ClickUp task criada"
+
+# =============================================================================
+# MODEL SELECTION
+# =============================================================================
+
+model_selection:
+  default: sonnet
+  per_stage:
+    1: sonnet
+    2: sonnet
+    3: sonnet
+    4: sonnet
+    5: sonnet
+  rationale: >
+    Todas as stages são procedurais e de coordenação. A análise profunda
+    acontece dentro da task blind-spot-self-audit (executada pelo chief de
+    cada squad). O Maestro apenas coordena, consolida e integra.
+
+# =============================================================================
+# SUCCESS METRICS
+# =============================================================================
+
+success_metrics:
+  - metric: "Cobertura de squads"
+    target: "100% dos squads auditados por ciclo (37/37)"
+  - metric: "Taxa de blind spots por squad"
+    target: "Mínimo 1 blind spot identificado por squad (zero é suspeito)"
+  - metric: "Taxa de aprovação de checkpoints"
+    target: ">60% dos checkpoints propostos são aprovados após teste"
+  - metric: "Padrões cross-squad por ciclo"
+    target: "Pelo menos 2 padrões sistêmicos identificados por ciclo"
+  - metric: "Redução de blind spots recorrentes"
+    target: "Blind spots do ciclo anterior não reaparecem (taxa de recorrência <20%)"
+  - metric: "Tempo por auditoria"
+    target: "2-4 horas por squad (não mais, não menos)"
+
+# =============================================================================
+# INTEGRATION
+# =============================================================================
+
+integration:
+  feeds_from:
+    - squad: todos
+      data: "Relatórios de blind-spot-self-audit de cada squad"
+    - squad: project-management-clickup
+      data: "ClickUp tasks para tracking do ciclo"
+  feeds_to:
+    - squad: todos
+      data: "Checkpoints aprovados integrados nos tasks/workflows"
+    - squad: orquestrador-global
+      data: "Padrões cross-squad para regras globais"
+  tools_required:
+    - clickup-ops.mjs
+    - ids-ops.mjs
+
+# =============================================================================
+# EXECUTION DIRECTORY
+# =============================================================================
+
+execution_directory:
+  base: ".data/executions/blind-spot-cycle/"
+  structure: |
+    blind-spot-cycle/
+    ├── ciclo-{YYYY-QN}/
+    │   ├── rodada-01-consolidado.md
+    │   ├── rodada-02-consolidado.md
+    │   ├── ...
+    │   ├── rodada-10-consolidado.md
+    │   └── ciclo-executivo-{YYYY-QN}.md
+    └── (relatórios individuais ficam em cada squad: squads/{squad}/data/)
+
+# =============================================================================
+# ANTI-PATTERNS
+# =============================================================================
+
+anti_patterns:
+  - "Auditar todos os 37 squads de uma vez — paralizar com volume; 4 por rodada é o máximo"
+  - "Pular a análise cross-squad — os padrões sistêmicos são o maior valor do ciclo"
+  - "Integrar checkpoints sem testar — adiciona atrito sem garantia de valor"
+  - "Não criar task no ClickUp — sem tracking, o próximo ciclo será esquecido"
+  - "Maestro tentar executar a auditoria em vez do chief — o chief conhece o domínio"
+  - "Aceitar relatório com 0 blind spots — pedir ao chief que reexecute com mais profundidade"
+  - "Não comparar com ciclo anterior — sem tendência, sem medida de progresso"
+megabrain_validation:
+  last_run: "20260514-validate-deep"
+  validated_at: "2026-05-15T00:00:00Z"
+  validator: mega-brain/megabrain-chief
+  mode: deep
+  squad: orquestrador-global
+  workflow_id: "blind-spot-audit-cycle"
+  status: pass
+  evidence:
+    - workflow_inventory_registered
+    - orchestration_surface_validated
+    - external_execution_not_performed

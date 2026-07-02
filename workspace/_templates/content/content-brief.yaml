@@ -1,0 +1,117 @@
+---
+# CONTENT-BRIEF.YAML - Content creation brief
+# Adapted from mega-brain-stage pattern for Mega Brain workspace context
+
+_meta:
+  version: "1.0.0"
+  owner: "content-strategist"
+  target_layer: "L2-tactical"
+  state: "TEMPLATE"
+
+metadata:
+  canonical_scope: "workspace/_templates/content/content-brief.yaml"
+  owner: "cmo"
+  version: "1.0.0"
+  last_updated: "2026-03-23"
+  description: "Content brief template with topic, angle, format, target audience, keywords, CTA, and deadline"
+
+fields:
+  brief_title:
+    type: string
+    required: true
+    description: "Working title for the content piece"
+
+  topic:
+    type: string
+    required: true
+    description: "Core subject matter the content addresses"
+
+  angle:
+    type: string
+    required: true
+    description: "Specific perspective or hook that makes this content unique"
+
+  format:
+    type: enum
+    required: true
+    description: "Content format"
+    options: [blog-post, video, podcast, carousel, reel, newsletter, ebook, webinar, case-study, infographic, thread, live-stream]
+
+  target_audience:
+    type: object
+    required: true
+    description: "Who this content is created for"
+    properties:
+      primary_icp:
+        type: string
+        required: true
+        description: "Primary ICP segment this content targets"
+      awareness_level:
+        type: enum
+        required: true
+        description: "Audience awareness level (Eugene Schwartz scale)"
+        options: [unaware, problem-aware, solution-aware, product-aware, most-aware]
+      intent:
+        type: string
+        required: false
+        description: "What the audience is trying to accomplish when they find this content"
+
+  content_pillar:
+    type: string
+    required: false
+    description: "Which content pillar this piece supports"
+
+  key_message:
+    type: string
+    required: true
+    description: "Single most important takeaway the audience should remember"
+
+  keywords:
+    type: list
+    required: false
+    description: "SEO keywords or search terms to target"
+
+  outline:
+    type: list
+    required: false
+    description: "Rough content structure with main sections or talking points"
+
+  sources:
+    type: list
+    required: false
+    description: "Reference materials, data sources, or expert quotes to include"
+
+  cta:
+    type: object
+    required: true
+    description: "Call to action for the content"
+    properties:
+      primary_cta:
+        type: string
+        required: true
+        description: "What the audience should do after consuming this content"
+      cta_destination:
+        type: string
+        required: false
+        description: "Where the CTA leads (URL, page, action)"
+
+  distribution:
+    type: list
+    required: false
+    description: "Platforms where this content will be published"
+
+  deadline:
+    type: date
+    required: true
+    description: "Date the final content must be ready"
+
+  assigned_to:
+    type: string
+    required: false
+    description: "Person or team responsible for creating the content"
+
+  status:
+    type: enum
+    required: true
+    description: "Current status of the content piece"
+    options: [briefed, in-progress, review, approved, published, archived]

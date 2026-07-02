@@ -1,0 +1,148 @@
+# step_rules.yaml -- Declarative Permission Rules for MCE Pipeline
+# =================================================================
+#
+# Externalizes the precondition logic previously hardcoded in qa_gates.py
+# condition functions (can_start_*).  Each rule maps a transition guard
+# to the step validations it requires.
+#
+# The RuleLoader reads this file and evaluates preconditions against
+# current pipeline state.  qa_gates.py delegates to the loader, falling
+# back to its original hardcoded logic if the YAML is missing or invalid.
+#
+# Override per slug: when Config Cascade (MCE2-1.6) is available, a
+# slug-specific override can be placed at:
+#   .claude/mission-control/mce/{slug}/step_rules_override.yaml
+#
+# Version: 1.0.0
+# Story: MCE2-1.5
+# Date: 2026-04-01
+
+version: "1.0.0"
+
+# strict_mode_env: QA_STRICT  -- env var that controls blocking behavior
+# When strict=false (default), failed preconditions log but don't block.
+# When strict=true, failed preconditions prevent the transition.
+
+rules:
+
+  # -----------------------------------------------------------------
+  # can_start_chunking: batching -> chunking
+  # Requires: ingest (step 1) passed
+  # -----------------------------------------------------------------
+  chunking:
+    condition_function: can_start_chunking
+    description: "Ingest step must pass before chunking starts"
+    preconditions:
+      - step: 1
+        step_name: "ingest"
+        status: "passed"
+        blocking: true
+    postconditions: []
+
+  # -----------------------------------------------------------------
+  # can_start_entities: chunking -> entity_resolution
+  # Requires: chunking (step 3) passed
+  # -----------------------------------------------------------------
+  entity_resolution:
+    condition_function: can_start_entities
+    description: "Chunking step must pass before entity resolution starts"
+    preconditions:
+      - step: 3
+        step_name: "chunking"
+        status: "passed"
+        blocking: true
+    postconditions: []
+
+  # -----------------------------------------------------------------
+  # can_start_knowledge: entity_resolution -> insight_extraction
+  # Requires: entity resolution (step 4) passed
+  # -----------------------------------------------------------------
+  insight_extraction:
+    condition_function: can_start_knowledge
+    description: "Entity resolution must pass before knowledge extraction"
+    preconditions:
+      - step: 4
+        step_name: "entity_resolution"
+        status: "passed"
+        blocking: true
+    postconditions: []
+
+  # -----------------------------------------------------------------
+  # can_checkpoint: mce_voice -> identity_checkpoint
+  # Requires: steps 6 (behavioral), 7 (identity), 8 (voice) ALL passed
+  # -----------------------------------------------------------------
+  identity_checkpoint:
+    condition_function: can_checkpoint
+    description: "All MCE extraction phases must pass before checkpoint"
+    preconditions:
+      - step: 6
+        step_name: "behavioral"
+        status: "passed"
+        blocking: true
+      - step: 7
+        step_name: "identity"
+        status: "passed"
+        blocking: true
+      - step: 8
+        step_name: "voice"
+        status: "passed"
+        blocking: true
+    postconditions: []
+
+  # -----------------------------------------------------------------
+  # can_approve: identity_checkpoint -> consolidation
+  # Requires: checkpoint (step 9) passed
+  # -----------------------------------------------------------------
+  consolidation:
+    condition_function: can_approve
+    description: "Identity checkpoint must pass before consolidation"
+    preconditions:
+      - step: 9
+        step_name: "checkpoint"
+        status: "passed"
+        blocking: true
+    extra_kwargs:
+      user_decision: "APPROVE"
+    postconditions: []
+
+  # -----------------------------------------------------------------
+  # can_start_agents: consolidation -> agent_generation
+  # Requires: consolidation (step 10) passed
+  # -----------------------------------------------------------------
+  agent_generation:
+    condition_function: can_start_agents
+    description: "Consolidation must pass before agent generation"
+    preconditions:
+      - step: 10
+        step_name: "consolidation"
+        status: "passed"
+        blocking: true
+    postconditions: []
+
+  # -----------------------------------------------------------------
+  # can_validate: agent_generation -> finalizing
+  # Requires: finalize (step 11) passed
+  # -----------------------------------------------------------------
+  finalizing:
+    condition_function: can_validate
+    description: "Finalize step must pass before validation"
+    preconditions:
+      - step: 11
+        step_name: "finalize"
+        status: "passed"
+        blocking: true
+    postconditions: []
+
+  # -----------------------------------------------------------------
+  # can_finish: reporting -> complete
+  # Requires: report (step 12) passed
+  # -----------------------------------------------------------------
+  complete:
+    condition_function: can_finish
+    description: "Report step must pass before marking complete"
+    preconditions:
+      - step: 12
+        step_name: "report"
+        status: "passed"
+        blocking: true
+    postconditions: []

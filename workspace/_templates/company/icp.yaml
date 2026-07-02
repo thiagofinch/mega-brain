@@ -1,0 +1,166 @@
+---
+# ICP.YAML - Ideal Customer Profile
+# Adapted from mega-brain-stage pattern for Mega Brain workspace context
+
+_meta:
+  version: "1.0.0"
+  owner: "c-level"
+  target_layer: "L1-strategy"
+  state: "TEMPLATE"
+
+metadata:
+  canonical_scope: "workspace/_templates/company/icp.yaml"
+  owner: "cmo"
+  version: "1.0.0"
+  last_updated: "2026-03-23"
+  description: "Ideal Customer Profile with demographics, psychographics, pain points, and goals"
+
+fields:
+  icp_name:
+    type: string
+    required: true
+    description: "Archetype name for this ICP (e.g., The Scaling Founder)"
+
+  one_sentence_definition:
+    type: string
+    required: true
+    description: "Complete sentence defining the ideal customer"
+
+  fit_percentage:
+    type: string
+    required: false
+    description: "What percentage of market this ICP represents"
+
+  demographics:
+    type: object
+    required: true
+    description: "Observable characteristics of the ideal customer"
+    properties:
+      age_range:
+        type: string
+        required: true
+        description: "Primary age range (e.g., 28-45)"
+      gender_split:
+        type: string
+        required: false
+        description: "Gender distribution if relevant"
+      location:
+        type: string
+        required: true
+        description: "Geographic concentration"
+      income_range:
+        type: string
+        required: false
+        description: "Annual income or revenue bracket"
+      education_level:
+        type: string
+        required: false
+        description: "Typical education background"
+      professional_experience:
+        type: string
+        required: false
+        description: "Years in field and career stage"
+      company_size:
+        type: string
+        required: false
+        description: "Size of their company or team if B2B"
+      industry:
+        type: string
+        required: false
+        description: "Industry or sector they operate in"
+
+  psychographics:
+    type: object
+    required: true
+    description: "Internal motivations, beliefs, and behavioral patterns"
+    properties:
+      core_beliefs:
+        type: list
+        required: true
+        description: "Fundamental beliefs that drive their decisions (3-5 items)"
+      dominant_mindset:
+        type: string
+        required: true
+        description: "Primary mental state when seeking solutions"
+      consumption_pattern:
+        type: string
+        required: false
+        description: "How they consume content and make purchase decisions"
+      community_needs:
+        type: list
+        required: false
+        description: "What they seek from communities (validation, accountability, belonging, permission)"
+      values:
+        type: list
+        required: false
+        description: "Personal values that influence buying behavior"
+
+  pain_points:
+    type: object
+    required: true
+    description: "Problem stack organized by depth and visibility"
+    properties:
+      surface_pains:
+        type: list
+        required: true
+        description: "Problems they can easily articulate (3-5 items)"
+      hidden_pains:
+        type: list
+        required: true
+        description: "Deeper problems they feel but struggle to name (3-5 items)"
+      existential_pains:
+        type: list
+        required: false
+        description: "Root fears and identity-level concerns (2-3 items)"
+
+  goals:
+    type: object
+    required: true
+    description: "Desired outcomes at multiple time horizons"
+    properties:
+      immediate_goals:
+        type: list
+        required: true
+        description: "What they want in the next 30-90 days"
+      medium_term_goals:
+        type: list
+        required: true
+        description: "What they want in 6-12 months"
+      aspirational_goals:
+        type: list
+        required: false
+        description: "Dream outcomes beyond 12 months"
+      dream_outcome:
+        type: string
+        required: false
+        description: "The single sentence that captures their ideal future state"
+
+  buying_triggers:
+    type: list
+    required: false
+    description: "Events or situations that trigger them to seek a solution"
+
+  buying_objections:
+    type: list
+    required: false
+    description: "Common reasons they hesitate or say no"
+
+  red_flags:
+    type: list
+    required: false
+    description: "Signals that someone is NOT a good fit (disqualification criteria)"
+
+  green_flags:
+    type: list
+    required: false
+    description: "Signals that someone IS a great fit (qualification criteria)"
+
+  channels:
+    type: list
+    required: false
+    description: "Where this ICP spends time online and offline"
+
+  influencers:
+    type: list
+    required: false
+    description: "People, brands, or publications they trust and follow"

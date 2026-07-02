@@ -1,0 +1,98 @@
+name: obsidian-sync-tests
+
+# CI gate for Epic OBSIDIAN-SYNC (STORY-OS-001 AC16).
+# Runs concurrency, hash canonicalization, redaction corpus, and gitleaks.
+# Blocks merge on any failure.
+#
+# Reference: docs/architecture/roundtable-obsidian-bridge-2026-05-06.md
+
+on:
+  pull_request:
+    paths:
+      - 'engine/intelligence/pipeline/semantic_logger.py'
+      - 'engine/intelligence/pipeline/hashing.py'
+      - 'engine/intelligence/pipeline/ingestion_guard.py'
+      - 'services/obsidian-sync/**'
+      - '.data/obsidian-sync/privacy-policy.yaml'
+      - 'tests/python/test_pipeline/test_semantic_logger_concurrent.py'
+      - 'tests/python/test_pipeline/test_hash_canonicalization.py'
+      - 'tests/python/test_obsidian_sync/**'
+      - '.github/workflows/obsidian-sync-tests.yml'
+  push:
+    branches:
+      - main
+      - 'feat/story-os-*'
+      - 'feat/epic-obsidian-sync*'
+
+jobs:
+  pipeline-tests:
+    name: Pipeline Concurrency + Hash + Redaction
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install minimal deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest pytest-asyncio pytest-timeout jsonschema pyyaml
+
+      - name: Run concurrency tests (semantic_logger flock)
+        run: python -m pytest tests/python/test_pipeline/test_semantic_logger_concurrent.py -v --tb=short
+
+      - name: Run hash canonicalization tests
+        run: python -m pytest tests/python/test_pipeline/test_hash_canonicalization.py -v --tb=short
+
+      - name: Run redaction corpus tests
+        run: python -m pytest tests/python/test_obsidian_sync/ -v --tb=short
+
+      - name: Validate event-v1.json schema
+        run: |
+          python -c "
+          import json, jsonschema
+          with open('services/obsidian-sync/schemas/event-v1.json') as f:
+              schema = json.load(f)
+          # Validate the schema itself is valid Draft 2020-12
+          jsonschema.Draft202012Validator.check_schema(schema)
+          print('event-v1.json is a valid Draft 2020-12 schema')
+          "
+
+      - name: Validate privacy-policy.yaml structure
+        run: |
+          python -c "
+          import yaml
+          with open('.data/obsidian-sync/privacy-policy.yaml') as f:
+              policy = yaml.safe_load(f)
+          assert set(t['name'] for t in policy['tiers']) == {'PUBLIC', 'INTERNAL', 'CONFIDENTIAL', 'SECRET'}
+          print('privacy-policy.yaml has required 4 tiers')
+          "
+
+  secret-scan:
+    name: Gitleaks (block on any secret in obsidian-sync paths)
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    # gitleaks-action Post-step posts a PR comment; without write access it
+    # crashed "Resource not accessible by integration" (not a leak). Grant
+    # minimal perms so the leak-blocking gate runs to completion.
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # Note: gitleaks default config is tuned for this purpose.
+        # Custom config in .gitleaks.toml if needed.
+        continue-on-error: false  # block on any leak

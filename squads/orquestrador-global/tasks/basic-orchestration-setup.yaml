@@ -1,0 +1,148 @@
+# =============================================================================
+# TASK: BASIC ORCHESTRATION SETUP
+# =============================================================================
+# Establish the foundational orchestration patterns and execution logging
+# Stage 0-to-1 | Ontology Layer: Orquestracao
+# =============================================================================
+
+
+task: basic-orchestration-setup
+domain: tactical
+atomic_layer: Molecule
+responsavel_type: Agent
+performance:
+  error_handling: graceful with fallback + retry
+
+megabrain_frontmatter:
+  task_id: "basic-orchestration-setup"
+  name: "basic-orchestration-setup"
+  version: "1.0.0"
+  category: operations
+  squad: orquestrador-global
+  responsavel: "@plan-architect"
+  model: sonnet
+  difficulty: intermediate
+  atomic_layer: Molecule
+
+metadata:
+  name: basic-orchestration-setup
+  version: "1.0.0"
+  squad: orquestrador-global
+  maturity_stage: "0_to_1"
+  ontology_layer: orquestracao
+  model: sonnet
+  estimated_time: "2-3 hours"
+  complexity: medium
+
+description: >
+  Establish the basic orchestration infrastructure: execution directory
+  structure, master plan template, squad input/output logging, and the
+  sequential execution pattern. This creates the discipline of logging
+  every orchestrated execution before attempting advanced patterns.
+
+inputs:
+  required:
+    - name: demand
+      type: object
+      source: "Classified demand from first-squad-routing"
+    - name: target_squad
+      type: string
+      source: "Squad selected by routing decision"
+  optional:
+    - name: execution_template
+      type: string
+      description: "Custom execution plan template override"
+
+outputs:
+  - name: master_plan
+    type: document
+    destination: ".data/executions/{date}_{slug}/00-master-plan.md"
+    description: "Master execution plan following logging rule template"
+  - name: execution_log
+    type: document
+    destination: ".data/executions/{date}_{slug}/99-execution-summary.md"
+    description: "Post-execution summary with results and lessons"
+
+frameworks:
+  - name: "Sequential Execution"
+    application: >
+      At 0-to-1, all orchestration is sequential: one squad at a time.
+      Plan -> Execute Squad 1 -> Log Output -> (optional) Execute Squad 2.
+      No parallel fan-out or diamond patterns yet.
+  - name: "Execution Logging Standard"
+    application: >
+      Every execution creates a directory in .data/executions/
+      with 00-master-plan.md, NN-squad-input.md, NN-squad-output.md, and
+      99-execution-summary.md. See .claude/rules/execution-logging.md.
+
+process:
+  steps:
+    - id: 1
+      name: "Create execution directory"
+      action: >
+        Create the execution directory following naming convention:
+        .data/executions/{YYYY-MM-DD}_{demand-slug}/
+        Write the 00-master-plan.md using the standard template.
+      output: "Execution directory with master plan"
+
+    - id: 2
+      name: "Prepare squad input"
+      action: >
+        Write the {NN}-{squad}-input.md file with the briefing, context
+        files, and expected deliverables. This is the contract between
+        the orchestrator and the executing squad.
+      output: "Squad input document"
+
+    - id: 3
+      name: "Execute squad"
+      action: >
+        Activate the target squad with the prepared input. Monitor
+        execution progress. Capture all outputs and deliverables.
+      output: "Squad execution results"
+
+    - id: 4
+      name: "Log execution output"
+      action: >
+        Write the {NN}-{squad}-output.md with deliverables, decisions
+        made, problems found, and self-evaluation scores. Write the
+        99-execution-summary.md with overall status and lessons learned.
+      output: "Complete execution log"
+
+integration_graph:
+  depends_on:
+    - task: first-squad-routing
+      squad: orquestrador-global
+      data_needed: "routing_decision"
+  feeds_into:
+    - task: staged-execution-design
+      squad: orquestrador-global
+      data_passed: "execution_patterns"
+  collaborates_with: []
+
+quality_gates:
+  - "Execution directory follows YYYY-MM-DD_slug naming convention"
+  - "Master plan contains all required sections per logging rule"
+  - "Squad input document is self-contained (squad can work without asking)"
+  - "Execution summary includes lessons learned section"
+  - "All files use the standard templates from execution-logging.md"
+squad: orquestrador-global
+task_id: basic-orchestration-setup
+version: "3.1.1"
+status: ready
+responsavel: "@plan-architect"
+execution_type: hybrid
+orchestration_boundary:
+  live_routing_performed: false
+  external_dispatch_performed: false
+  workspace_write_performed: false
+megabrain_validation:
+  last_run: "20260514-validate-deep"
+  validated_at: "2026-05-15T00:00:00Z"
+  validator: mega-brain/megabrain-chief
+  mode: deep
+  squad: orquestrador-global
+  status: pass
+  evidence:
+    - schema_contract_normalized
+    - task_boundary_declared
+    - plan_only_orchestration_preserved

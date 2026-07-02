@@ -1,0 +1,112 @@
+---
+# EXECUTIVE-REPORT.YAML - Executive-level business report
+# Adapted from mega-brain-stage pattern for Mega Brain workspace context
+
+_meta:
+  version: "1.0.0"
+  owner: "data-chief"
+  target_layer: "L4-operational"
+  state: "TEMPLATE"
+
+metadata:
+  canonical_scope: "workspace/_templates/analytics/executive-report.yaml"
+  owner: "ceo"
+  version: "1.0.0"
+  last_updated: "2026-03-23"
+  description: "Executive report template with period KPIs, highlights, risks, decisions needed, and trends"
+
+fields:
+  report_title:
+    type: string
+    required: true
+    description: "Report title (e.g., March 2026 Executive Report)"
+
+  period:
+    type: object
+    required: true
+    description: "Reporting period"
+    properties:
+      start_date:
+        type: date
+        required: true
+        description: "Period start"
+      end_date:
+        type: date
+        required: true
+        description: "Period end"
+      type:
+        type: enum
+        required: true
+        description: "Report cadence"
+        options: [weekly, monthly, quarterly, annual]
+
+  prepared_by:
+    type: string
+    required: true
+    description: "Person who prepared this report"
+
+  kpis:
+    type: list
+    required: true
+    description: "Key performance indicators, each with metric name, current value, target, previous period value, and trend"
+
+  financial_summary:
+    type: object
+    required: false
+    description: "Financial performance overview"
+    properties:
+      revenue:
+        type: string
+        required: true
+        description: "Total revenue for the period"
+      revenue_vs_target:
+        type: string
+        required: false
+        description: "Revenue compared to target (over/under)"
+      expenses:
+        type: string
+        required: false
+        description: "Total expenses for the period"
+      profit_margin:
+        type: string
+        required: false
+        description: "Net profit margin percentage"
+      cash_position:
+        type: string
+        required: false
+        description: "Current cash on hand"
+
+  highlights:
+    type: list
+    required: true
+    description: "Top 3-5 wins or achievements during the period"
+
+  risks:
+    type: list
+    required: true
+    description: "Active risks with severity, description, and mitigation status"
+
+  decisions_needed:
+    type: list
+    required: false
+    description: "Decisions that require executive input, each with context, options, and recommendation"
+
+  trends:
+    type: list
+    required: false
+    description: "Notable trends observed with data points and implications"
+
+  department_updates:
+    type: list
+    required: false
+    description: "Brief status update from each department or function"
+
+  strategic_initiatives:
+    type: list
+    required: false
+    description: "Status of ongoing strategic initiatives with progress and blockers"
+
+  next_period_focus:
+    type: list
+    required: true
+    description: "Top priorities for the next reporting period"

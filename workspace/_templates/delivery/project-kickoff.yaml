@@ -1,0 +1,144 @@
+---
+# PROJECT-KICKOFF.YAML - Project kickoff documentation
+# Adapted from mega-brain-stage pattern for Mega Brain workspace context
+
+_meta:
+  version: "1.0.0"
+  owner: "coo-orchestrator"
+  target_layer: "L4-operational"
+  state: "TEMPLATE"
+
+metadata:
+  canonical_scope: "workspace/_templates/delivery/project-kickoff.yaml"
+  owner: "coo"
+  version: "1.0.0"
+  last_updated: "2026-03-23"
+  description: "Project kickoff template with objectives, team, timeline, deliverables, and risks"
+
+fields:
+  project_name:
+    type: string
+    required: true
+    description: "Official name of the project"
+
+  client:
+    type: string
+    required: true
+    description: "Client or stakeholder the project serves"
+
+  kickoff_date:
+    type: date
+    required: true
+    description: "Date of the kickoff meeting"
+
+  project_sponsor:
+    type: string
+    required: false
+    description: "Executive sponsor or budget owner"
+
+  objectives:
+    type: list
+    required: true
+    description: "Specific, measurable objectives the project must achieve"
+
+  success_criteria:
+    type: list
+    required: true
+    description: "How success will be measured at project completion"
+
+  team:
+    type: list
+    required: true
+    description: "Project team members with name, role, and responsibilities"
+
+  timeline:
+    type: object
+    required: true
+    description: "Project schedule"
+    properties:
+      start_date:
+        type: date
+        required: true
+        description: "Project start date"
+      end_date:
+        type: date
+        required: true
+        description: "Target completion date"
+      phases:
+        type: list
+        required: true
+        description: "Project phases with name, start, end, and key deliverables"
+      milestones:
+        type: list
+        required: false
+        description: "Critical milestones with dates and significance"
+
+  deliverables:
+    type: list
+    required: true
+    description: "All project deliverables with name, description, owner, and due date"
+
+  scope_boundaries:
+    type: object
+    required: true
+    description: "Clear scope definition"
+    properties:
+      in_scope:
+        type: list
+        required: true
+        description: "What is included in the project"
+      out_of_scope:
+        type: list
+        required: true
+        description: "What is explicitly excluded"
+
+  risks:
+    type: list
+    required: true
+    description: "Identified risks with likelihood, impact, and mitigation plan"
+
+  dependencies:
+    type: list
+    required: false
+    description: "External dependencies that could affect the project"
+
+  communication_plan:
+    type: object
+    required: false
+    description: "How the team will communicate"
+    properties:
+      standup_cadence:
+        type: string
+        required: false
+        description: "Frequency and format of standups"
+      status_report_cadence:
+        type: string
+        required: false
+        description: "How often status reports are shared"
+      escalation_path:
+        type: string
+        required: false
+        description: "How issues are escalated"
+      tools:
+        type: list
+        required: false
+        description: "Communication tools used (Slack, email, ClickUp, etc.)"
+
+  budget:
+    type: object
+    required: false
+    description: "Project budget"
+    properties:
+      total_budget:
+        type: string
+        required: false
+        description: "Total allocated budget"
+      budget_breakdown:
+        type: list
+        required: false
+        description: "Budget allocation by category"
+
+  assumptions:
+    type: list
+    required: false
+    description: "Assumptions the project plan depends on"

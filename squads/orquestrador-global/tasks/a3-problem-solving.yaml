@@ -1,0 +1,208 @@
+# =============================================================================
+# TASK: A3 PROBLEM SOLVING
+# =============================================================================
+# Framework: Toyota A3 Thinking
+# Todo problema cabe em uma folha A3: problema → análise → contramedida → plano
+# Referência: 01-analyst-research.md §2.2.3
+# =============================================================================
+
+
+task: a3-problem-solving
+domain: strategic
+atomic_layer: Molecule
+responsavel_type: Agent
+performance:
+  error_handling: graceful with fallback + retry
+
+megabrain_frontmatter:
+  task_id: "a3-problem-solving"
+  name: "a3-problem-solving"
+  version: "1.0.0"
+  category: operations
+  squad: orquestrador-global
+  responsavel: "@supervisor-sistema"
+  model: sonnet
+  difficulty: intermediate
+  atomic_layer: Molecule
+
+name: a3-problem-solving
+title: "A3 Problem Solving — Resolução Estruturada em 1 Página"
+description: >
+  Template padronizado para resolução de problemas usando o formato A3 da Toyota.
+  Força clareza e concisão: todo problema deve caber em uma única página com
+  seções estruturadas. Ideal para blind spots, gaps operacionais e issues
+  detectados no gap-detection-cycle que precisam de análise mas não justificam
+  um DMAIC completo.
+
+metadata:
+  created_at: "2026-03-19"
+  updated_at: "2026-03-19"
+  version: "1.0.0"
+  maturity_stage: "1-10"
+  ontology_layer: "melhoria"
+  estimated_time: "1-2 horas"
+  model: sonnet
+  framework_origin: "Toyota A3 Thinking"
+  research_ref: "01-analyst-research.md §2.2.3"
+
+inputs:
+  required:
+    - name: problema
+      type: string
+      description: "Descrição do problema a resolver"
+    - name: squad_afetado
+      type: string
+      description: "Squad principal afetado pelo problema"
+  optional:
+    - name: dados_disponiveis
+      type: object
+      description: "Dados quantitativos já disponíveis sobre o problema"
+    - name: tentativas_anteriores
+      type: array
+      description: "O que já foi tentado para resolver"
+    - name: urgencia
+      type: enum
+      values: [baixa, media, alta, critica]
+      default: media
+
+outputs:
+  primary:
+    - name: a3_report
+      type: document
+      format: markdown
+      destination: "squads/{squad_afetado}/data/a3-{problema-slug}-{YYYY-MM-DD}.md"
+      description: "Relatório A3 completo em formato de 1 página"
+
+steps:
+  - id: 1
+    name: "Lado Esquerdo — Entendimento"
+    description: "Preencher as 4 seções do lado esquerdo do A3."
+    actions:
+      - "1. CONTEXTO: Por que este problema importa agora? Qual o impacto?"
+      - "2. ESTADO ATUAL: O que está acontecendo? Dados quantificados."
+      - "3. ESTADO DESEJADO: Como deveria ser? Métrica target."
+      - "4. ANÁLISE: Root cause (5 Whys ou diagrama de Ishikawa simplificado)"
+
+  - id: 2
+    name: "Lado Direito — Ação"
+    description: "Preencher as 4 seções do lado direito do A3."
+    actions:
+      - "5. CONTRAMEDIDAS: Ações específicas para cada root cause encontrada"
+      - "6. PLANO DE IMPLEMENTAÇÃO: Quem faz o quê, quando, onde"
+      - "7. INDICADORES DE ACOMPANHAMENTO: Como vamos saber se funcionou?"
+      - "8. FOLLOW-UP: Data de revisão, responsável por monitorar"
+
+  - id: 3
+    name: "Validação e Salvamento"
+    actions:
+      - "Validar que o A3 cabe em 1 página conceitual (conciso, sem fluff)"
+      - "Salvar no squad afetado: data/a3-{slug}-{date}.md"
+      - "Se problema cross-squad, registrar como Discovery"
+
+output_template: |
+  # A3 — {problema}
+
+  | **Título:** | {problema} |
+  |:---|:---|
+  | **Owner:** | {squad_afetado} |
+  | **Data:** | {YYYY-MM-DD} |
+  | **Urgência:** | {urgencia} |
+
+  ---
+
+  ## LADO ESQUERDO — ENTENDIMENTO
+
+  ### 1. Contexto
+  {por que importa, impacto no negócio}
+
+  ### 2. Estado Atual
+  {dados quantificados do problema}
+
+  ### 3. Estado Desejado
+  {target numérico, deadline}
+
+  ### 4. Análise de Causa Raiz
+  ```
+  Problema: {X}
+  → Por quê? {resposta 1}
+    → Por quê? {resposta 2}
+      → Por quê? {resposta 3}
+        → Por quê? {resposta 4}
+          → CAUSA RAIZ: {resposta 5}
+  ```
+
+  ---
+
+  ## LADO DIREITO — AÇÃO
+
+  ### 5. Contramedidas
+
+  | # | Causa | Contramedida | Tipo |
+  |---|-------|-------------|------|
+  | 1 | {causa} | {ação} | {preventiva/corretiva} |
+
+  ### 6. Plano de Implementação
+
+  | Ação | Responsável | Prazo | Status |
+  |------|-----------|-------|--------|
+  | {ação} | {quem} | {quando} | [ ] |
+
+  ### 7. Indicadores
+  - **Métrica:** {o que medir}
+  - **Baseline:** {valor atual}
+  - **Target:** {valor desejado}
+  - **Frequência:** {como/quando medir}
+
+  ### 8. Follow-up
+  - **Revisão em:** {data}
+  - **Responsável:** {quem monitora}
+
+quality_gate:
+  checks:
+    - name: "Root cause identificada"
+      severity: CRITICAL
+      criterion: "5 Whys completados com causa raiz clara"
+    - name: "Contramedidas acionáveis"
+      severity: CRITICAL
+      criterion: "Cada causa tem contramedida com responsável e prazo"
+    - name: "Concisão A3"
+      severity: HIGH
+      criterion: "Relatório cabe conceitualmente em 1 página (sem fluff)"
+    - name: "Indicadores definidos"
+      severity: HIGH
+      criterion: "Pelo menos 1 indicador com baseline e target"
+
+integration:
+  triggers_from:
+    - workflow: "gap-detection-cycle"
+      when: "Issue com RPN 50-100 (não justifica DMAIC completo)"
+    - task: "cross-squad-review"
+      when: "Finding que precisa de resolução estruturada"
+    - task: "five-whys-root-cause"
+      when: "Análise de causa raiz precisa de plano de ação"
+  feeds_into:
+    - workflow: "dmaic-correction-pipeline"
+      when: "A3 revela problema mais complexo que necessita DMAIC"
+    - task: "ecosystem-health-report"
+      when: "A3 completados alimentam relatório mensal"
+squad: orquestrador-global
+task_id: a3-problem-solving
+version: "3.1.1"
+status: ready
+responsavel: "@plan-architect"
+execution_type: hybrid
+orchestration_boundary:
+  live_routing_performed: false
+  external_dispatch_performed: false
+  workspace_write_performed: false
+megabrain_validation:
+  last_run: "20260514-validate-deep"
+  validated_at: "2026-05-15T00:00:00Z"
+  validator: mega-brain/megabrain-chief
+  mode: deep
+  squad: orquestrador-global
+  status: pass
+  evidence:
+    - schema_contract_normalized
+    - task_boundary_declared
+    - plan_only_orchestration_preserved

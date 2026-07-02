@@ -1,0 +1,73 @@
+# Framework Pattern Registry — MCE-11.13
+# Maps canonical framework names to regex patterns for chunk-time extraction.
+# Patterns are matched case-insensitively (re.IGNORECASE).
+# Add new entries here — no code changes required.
+#
+# Format:
+#   - name: "Canonical Framework Name"
+#     pattern: "regex pattern (use \b for word boundaries)"
+#
+# Story: STORY-MCE-11.13-chunk-schema-completeness
+
+frameworks:
+  # --- Alex Hormozi Frameworks ---
+  - name: "Value Equation"
+    pattern: "value\\s+equation"
+  - name: "Scale Math"
+    pattern: "scale\\s+math"
+  - name: "Two-Call Close"
+    pattern: "two.call\\s+close"
+  - name: "NEPQ"
+    pattern: "\\bNEPQ\\b"
+  - name: "Hormozi Offer Framework"
+    pattern: "hormozi\\s+offer|offer\\s+framework"
+  - name: "Grand Slam Offer"
+    pattern: "grand\\s+slam\\s+offer"
+  - name: "Dream Outcome"
+    pattern: "dream\\s+outcome"
+  - name: "Perceived Likelihood"
+    pattern: "perceived\\s+likelihood"
+  - name: "Time to Value"
+    pattern: "time\\s+to\\s+value|time\\s+delay"
+  - name: "Effort and Sacrifice"
+    pattern: "effort\\s+and\\s+sacrifice|effort\\s+&\\s+sacrifice"
+  - name: "100 Leads"
+    pattern: "100\\s+leads|100leads"
+  - name: "Closer Framework"
+    pattern: "closer\\s+framework|close\\s+framework"
+
+  # --- Cole Gordon Frameworks ---
+  - name: "Sales Process Framework"
+    pattern: "sales\\s+process\\s+framework"
+  - name: "Remote Closing"
+    pattern: "remote\\s+clos(ing|er)"
+
+  # --- Jeremy Miner Frameworks ---
+  - name: "NEPQ Questions"
+    pattern: "NEPQ\\s+question"
+  - name: "Problem Awareness"
+    pattern: "problem\\s+awareness\\s+question"
+  - name: "Solution Awareness"
+    pattern: "solution\\s+awareness\\s+question"
+  - name: "Consequence Questions"
+    pattern: "consequence\\s+question"
+
+  # --- Generic Sales / Marketing ---
+  - name: "Value Ladder"
+    pattern: "value\\s+ladder"
+  - name: "Lead Magnet"
+    pattern: "lead\\s+magnet"
+  - name: "VSL"
+    pattern: "\\bVSL\\b|video\\s+sales\\s+letter"
+  - name: "Webinar Framework"
+    pattern: "webinar\\s+framework"
+  - name: "High-Ticket Framework"
+    pattern: "high.ticket\\s+framework"
+  - name: "Ascension Model"
+    pattern: "ascension\\s+model"
+  - name: "Constraint Theory"
+    pattern: "theory\\s+of\\s+constraints|constraint\\s+theory"
+  - name: "80/20 Rule"
+    pattern: "80/20|pareto\\s+principle"
+  - name: "SPIN Selling"
+    pattern: "\\bSPIN\\s+sell(ing)?"

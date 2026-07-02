@@ -1,0 +1,187 @@
+{
+  "schema_version": "2.0",
+  "plan_id": "test-launch-curso-20260503-2200",
+  "created_by": "plan-architect",
+  "created_at": "2026-05-03T22:00:00Z",
+  "demand": {
+    "raw": "Lançar curso de IA pra Black Friday",
+    "parsed": {
+      "primary_domain": "edu",
+      "secondary_domains": ["mkt"],
+      "task_type": "launch",
+      "complexity": "high",
+      "urgency": "high",
+      "business_units": ["generico"],
+      "implicit_deadline": "2026-11-29",
+      "confidence": 0.82
+    },
+    "elicitations": []
+  },
+  "discovery": {
+    "cache_version": "2026-05-03T21:00:00Z",
+    "cache_age_seconds": 3600,
+    "capabilities_scanned": {
+      "squads": 61,
+      "agents": 823,
+      "skills": 238,
+      "tasks": 1647,
+      "workflows": 349
+    },
+    "cache_drift_detected": false
+  },
+  "selected_capabilities": [
+    {
+      "id": "course-creator:course-architect",
+      "type": "agent",
+      "score": 0.92,
+      "score_breakdown": { "domain": 0.95, "fit": 0.95, "quality": 0.85, "recency": 0.90, "cost": 0.95 },
+      "reason": "Course architecture entry-point",
+      "ids_decision": "REUSE"
+    },
+    {
+      "id": "copy:copy-chief",
+      "type": "agent",
+      "score": 0.88,
+      "score_breakdown": { "domain": 0.85, "fit": 0.90, "quality": 0.88, "recency": 0.90, "cost": 0.85 },
+      "reason": "Copy strategy lead",
+      "ids_decision": "REUSE"
+    },
+    {
+      "id": "megabrain-ads--pixel-specialist",
+      "type": "agent",
+      "score": 0.86,
+      "score_breakdown": { "domain": 0.80, "fit": 0.92, "quality": 0.85, "recency": 0.85, "cost": 0.85 },
+      "reason": "Tracking and pixel setup",
+      "ids_decision": "REUSE"
+    },
+    {
+      "id": "data:data-chief",
+      "type": "agent",
+      "score": 0.81,
+      "score_breakdown": { "domain": 0.80, "fit": 0.85, "quality": 0.80, "recency": 0.80, "cost": 0.80 },
+      "reason": "Analytics setup",
+      "ids_decision": "REUSE"
+    }
+  ],
+  "dag": {
+    "nodes": [
+      {
+        "id": "n1",
+        "capability": "course-creator:course-architect",
+        "capability_type": "agent",
+        "label": "Draft course outline",
+        "inputs_required": [],
+        "outputs_produced": ["course-outline.md"],
+        "estimated_duration_minutes": 45,
+        "estimated_cost_tokens": 12000,
+        "model_tier": "sonnet",
+        "risk": { "severity": 3, "occurrence": 2, "detectability": 2, "rpn": 12 },
+        "parallelizable_with": [],
+        "quality_gate": "course-outline-checklist"
+      },
+      {
+        "id": "n2",
+        "capability": "copy:copy-chief",
+        "capability_type": "agent",
+        "label": "Write sales page copy",
+        "inputs_required": ["course-outline.md"],
+        "outputs_produced": ["sales-page.md"],
+        "estimated_duration_minutes": 90,
+        "estimated_cost_tokens": 18000,
+        "model_tier": "opus",
+        "risk": { "severity": 5, "occurrence": 3, "detectability": 4, "rpn": 60 },
+        "parallelizable_with": ["n3"],
+        "quality_gate": "copy-review-checklist"
+      },
+      {
+        "id": "n3",
+        "capability": "megabrain-ads--pixel-specialist",
+        "capability_type": "agent",
+        "label": "Setup tracking pixels",
+        "inputs_required": ["course-outline.md"],
+        "outputs_produced": ["pixel-config.yaml"],
+        "estimated_duration_minutes": 20,
+        "estimated_cost_tokens": 4000,
+        "model_tier": "sonnet",
+        "risk": { "severity": 2, "occurrence": 2, "detectability": 1, "rpn": 4 },
+        "parallelizable_with": ["n2"],
+        "quality_gate": "pixel-validation"
+      },
+      {
+        "id": "n4",
+        "capability": "data:data-chief",
+        "capability_type": "agent",
+        "label": "Configure analytics dashboards",
+        "inputs_required": ["pixel-config.yaml", "sales-page.md"],
+        "outputs_produced": [],
+        "estimated_duration_minutes": 30,
+        "estimated_cost_tokens": 6000,
+        "model_tier": "sonnet",
+        "risk": { "severity": 2, "occurrence": 1, "detectability": 1, "rpn": 2 },
+        "parallelizable_with": [],
+        "quality_gate": ""
+      }
+    ],
+    "edges": [
+      { "from": "n1", "to": "n2", "type": "data_dependency", "artifact": "course-outline.md" },
+      { "from": "n1", "to": "n3", "type": "data_dependency", "artifact": "course-outline.md" },
+      { "from": "n2", "to": "n4", "type": "data_dependency", "artifact": "sales-page.md" },
+      { "from": "n3", "to": "n4", "type": "data_dependency", "artifact": "pixel-config.yaml" }
+    ],
+    "parallel_groups": [
+      { "group_id": "g1", "nodes": ["n2", "n3"], "reason": "Both consume n1 output, no shared write" }
+    ],
+    "critical_path": ["n1", "n2", "n4"],
+    "critical_path_duration_minutes": 165
+  },
+  "risks": {
+    "top_risks": [
+      { "rpn": 60, "node": "n2", "description": "Copy quality variance high under deadline pressure", "mitigation": "Roundtable review before publish" }
+    ],
+    "pre_mortem": null
+  },
+  "resource_estimate": {
+    "total_tokens": 40000,
+    "total_cost_usd": 0.22,
+    "total_wall_time_estimate_hours": 2.75,
+    "models_used": ["sonnet", "opus"],
+    "agents_count": 4
+  },
+  "success_criteria": [
+    { "metric": "Course launch by Black Friday", "threshold": "2026-11-29" },
+    { "metric": "Sales page conversion", "threshold": ">=2%" }
+  ],
+  "falsifiable_assumptions": [
+    "course-creator squad covers Brazilian Portuguese curriculum design",
+    "copy-chief alone delivers conversion-grade sales page (no separate VSL needed)"
+  ],
+  "constitutional_compliance": {
+    "codeowners_check": "pass",
+    "business_isolation_check": "pass",
+    "agent_authority_check": "pass",
+    "no_invention_check": "pass"
+  },
+  "handoff": {
+    "next_action_suggested": "/swarm-execute (use plan-to-swarm.js to convert)",
+    "next_action_executor": "@dev",
+    "approvals_required": ["@po"],
+    "do_not_execute_until": ["user approval"]
+  },
+  "quality_score": 4.4,
+  "quality_breakdown": {
+    "completeness": 5,
+    "capability_match": 5,
+    "parallelization": 4,
+    "risk_coverage": 4,
+    "cost_efficiency": 4,
+    "clarity": 5,
+    "falsifiability": 4
+  },
+  "audit": {
+    "created_by": "plan-architect",
+    "created_at": "2026-05-03T22:00:00Z",
+    "cache_manifest_hash": "sha256-test-fixture",
+    "scoring_config_version": "1.0",
+    "heuristics_applied": ["IDS-G1", "CPM", "FMEA-RPN"]
+  }
+}

@@ -1,0 +1,1256 @@
+# ============================================================================
+# D-Score Profile — Squad: orquestrador-global
+# ============================================================================
+# Decomposed by @architect (Aria) — atom/molecule analysis from task files
+# Original: auto-generated 2026-03-23 | Decomposed: 2026-03-24
+# ============================================================================
+
+squad_id: "orquestrador-global"
+version: "2.1.0"
+calibration_date: "2026-03-24"
+calibrator_version: "architect-decomposition-v1"
+
+squad_d_score: 0.56
+squad_d_score_floor: 0.30
+
+tasks:
+
+  # HAIKU TIER — Simple pattern matching, checklist validation (D-Score 0.70-0.90)
+
+  "audit-system":
+    d_score: 0.84
+    d_score_declared: 0.85
+    tier: haiku
+    floor: 0.70
+    ceiling: 0.95
+    maturity: new
+    executions_total: 0
+    last_calibration: "2026-03-24"
+    trend: stable
+    atoms:
+      load_context:
+        d_score: 0.82
+        tier: haiku
+        implementation: script
+        weight: 0.20
+        description: "Load squad knowledge, client data, and task-specific context"
+        validator:
+          type: schema_strict
+        escalation_threshold: null
+      execute_core:
+        d_score: 0.85
+        tier: haiku
+        implementation: llm_structured
+        weight: 0.60
+        description: "Core execution of audit system"
+        validator:
+          type: checklist
+        escalation_threshold: null
+      validate_and_format:
+        d_score: 0.85
+        tier: haiku
+        implementation: script
+        weight: 0.20
+        description: "Validate output quality and format for delivery"
+        validator:
+          type: checklist
+        escalation_threshold: null
+    molecules:
+      preparation:
+        atoms: [load_context]
+        composed_d_score: 0.82
+        ceiling: 0.90
+        execution_pattern: sequential
+      execution_and_delivery:
+        atoms: [execute_core, validate_and_format]
+        composed_d_score: 0.85
+        ceiling: 0.95
+        execution_pattern: sequential
+
+  "basic-orchestration-setup":
+    d_score: 0.78
+    d_score_declared: 0.75
+    tier: haiku
+    floor: 0.60
+    ceiling: 0.90
+    maturity: new
+    executions_total: 0
+    last_calibration: "2026-03-24"
+    trend: stable
+    atoms:
+      load_context:
+        d_score: 0.82
+        tier: haiku
+        implementation: script
+        weight: 0.20
+        description: "Load squad knowledge, client data, and task-specific context"
+        validator:
+          type: schema_strict
+        escalation_threshold: null
+      execute_core:
+        d_score: 0.75
+        tier: haiku
+        implementation: llm_structured
+        weight: 0.60
+        description: "Core execution of basic orchestration setup"
+        validator:
+          type: checklist
+        escalation_threshold: null
+      validate_and_format:
+        d_score: 0.85
+        tier: haiku
+        implementation: script
+        weight: 0.20
+        description: "Validate output quality and format for delivery"
+        validator:
+          type: checklist
+        escalation_threshold: null
+    molecules:
+      preparation:
+        atoms: [load_context]
+        composed_d_score: 0.82
+        ceiling: 0.90
+        execution_pattern: sequential
+      execution_and_delivery:
+        atoms: [execute_core, validate_and_format]
+        composed_d_score: 0.77
+        ceiling: 0.90
+        execution_pattern: sequential
+
+  "gate-review-framework":
+    d_score: 0.84
+    d_score_declared: 0.85
+    tier: haiku
+    floor: 0.70
+    ceiling: 0.95
+    maturity: new
+    executions_total: 0
+    last_calibration: "2026-03-24"
+    trend: stable
+    atoms:
+      load_context:
+        d_score: 0.82
+        tier: haiku
+        implementation: script
+        weight: 0.20
+        description: "Load squad knowledge, client data, and task-specific context"
+        validator:
+          type: schema_strict
+        escalation_threshold: null
+      execute_core:
+        d_score: 0.85
+        tier: haiku
+        implementation: llm_structured
+        weight: 0.60
+        description: "Core execution of gate review framework"
+        validator:
+          type: checklist
+        escalation_threshold: null
+      validate_and_format:
+        d_score: 0.85
+        tier: haiku
+        implementation: script
+        weight: 0.20
+        description: "Validate output quality and format for delivery"
+        validator:
+          type: checklist
+        escalation_threshold: null
+    molecules:
+      preparation:
+        atoms: [load_context]
+        composed_d_score: 0.82
+        ceiling: 0.90
+        execution_pattern: sequential
+      execution_and_delivery:
+        atoms: [execute_core, validate_and_format]
+        composed_d_score: 0.85
+        ceiling: 0.95
+        execution_pattern: sequential
+
+  # =========================================================================
+  # SONNET TIER — Decomposed tasks
+  # =========================================================================
+
+  "cross-squad-review":
+    d_score: 0.46
+    d_score_declared: 0.85
+    tier: sonnet
+    floor: 0.40
+    ceiling: 0.70
+    maturity: new
+    executions_total: 0
+    last_calibration: "2026-03-24"
+    trend: stable
+    atoms:
+      collect_evidence:
+        d_score: 0.70
+        tier: haiku
+        implementation: llm_structured
+        weight: 0.15
+        description: "Read config.yaml, knowledge docs, and 3-5 outputs of audited squad without prior contact"
+        validator: { type: data_presence }
+        escalation_threshold: null
+      audit_by_four_lenses:
+        d_score: 0.45
+        tier: sonnet
+        implementation: llm_freetext
+        weight: 0.25
+        description: "Evaluate completude, operacionalizacao, quality of output, integration — score 1-10 each"
+        validator: { type: count_range, min: 4, max: 4 }
+        escalation_threshold: null
+      identify_blind_spots:
+        d_score: 0.40
+        tier: sonnet
+        implementation: llm_freetext
+        weight: 0.25
+        description: "Apply cross-pollination lens from auditor domain, identify confirmation biases, classify severity"
+        validator: { type: count_range, min: 3 }
+        escalation_threshold: null
+      generate_recommendations:
+        d_score: 0.45
+        tier: sonnet
+        implementation: llm_structured
+        weight: 0.20
+        description: "Consolidate findings into max 10 prioritized recommendations (impact x effort)"
+        validator: { type: count_range, min: 3, max: 10 }
+        escalation_threshold: null
+      feedback_session:
+        d_score: 0.50
+        tier: sonnet
+        implementation: llm_freetext
+        weight: 0.15
+        description: "Present findings, negotiate acceptance/refutation, extract systemic patterns"
+        validator: { type: quality_rubric, min_score: 3 }
+        escalation_threshold: null
+    molecules:
+      evidence_and_audit:
+        atoms: [collect_evidence, audit_by_four_lenses]
+        composed_d_score: 0.58
+        ceiling: 0.68
+        execution_pattern: sequential
+      findings_and_action:
+        atoms: [identify_blind_spots, generate_recommendations, feedback_session]
+        composed_d_score: 0.45
+        ceiling: 0.55
+        execution_pattern: sequential
+
+  "orchestration-architecture":
+    d_score: 0.42
+    d_score_declared: 0.45
+    tier: sonnet
+    floor: 0.30
+    ceiling: 0.60
+    maturity: new
+    executions_total: 0
+    last_calibration: "2026-03-24"
+    trend: stable
+    atoms:
+      analyze_execution_history:
+        d_score: 0.60
+        tier: sonnet
+        implementation: script
+        weight: 0.15
+        description: "Mine execution logs for patterns: demand types, squad combos, times, failure rates"
+        validator: { type: data_presence }
+        escalation_threshold: null
+      design_routing_engine:
+        d_score: 0.35
+        tier: opus
+        implementation: llm_freetext
+        weight: 0.20
+        description: "Design NLP-based intent classification, capability matching, load-aware selection, confidence scoring"
+        validator: { type: quality_rubric, min_score: 4 }
+        escalation_threshold: null
+      design_pipeline_generator:
+        d_score: 0.40
+        tier: sonnet
+        implementation: llm_freetext
+        weight: 0.20
+        description: "Create template library for common patterns, adaptive modification, dynamic gate config"
+        validator: { type: quality_rubric, min_score: 3 }
+        escalation_threshold: null
+      design_execution_monitor:
+        d_score: 0.50
+        tier: sonnet
+        implementation: llm_structured
+        weight: 0.15
+        description: "Build health checks, timeout detection, stall recovery, cost tracking integration"
+        validator: { type: field_presence, fields: [health_checks, timeout, recovery] }
+        escalation_threshold: null
+      design_learning_system:
+        d_score: 0.35
+        tier: opus
+        implementation: llm_freetext
+        weight: 0.15
+        description: "Extract patterns from executions, update routing weights, refine templates"
+        validator: { type: quality_rubric, min_score: 4 }
+        escalation_threshold: null
+      create_implementation_roadmap:
+        d_score: 0.55
+        tier: sonnet
+        implementation: llm_structured
+        weight: 0.15
+        description: "4-phase plan: template pipelines, intelligent routing, predictive allocation, autonomous optimization"
+        validator: { type: count_range, min: 4, max: 4 }
+        escalation_threshold: null
+    molecules:
+      intelligence_layer:
+        atoms: [design_routing_engine, design_pipeline_generator, design_learning_system]
+        composed_d_score: 0.37
+        ceiling: 0.47
+        execution_pattern: sequential
+      operations_layer:
+        atoms: [analyze_execution_history, design_execution_monitor, create_implementation_roadmap]
+        composed_d_score: 0.55
+        ceiling: 0.65
+        execution_pattern: sequential
+
+  "staged-execution-design":
+    d_score: 0.46
+    d_score_declared: 0.45
+    tier: sonnet
+    floor: 0.30
+    ceiling: 0.60
+    maturity: new
+    executions_total: 0
+    last_calibration: "2026-03-24"
+    trend: stable
+    atoms:
+      analyze_demand_complexity:
+        d_score: 0.65
+        tier: sonnet
+        implementation: script
+        weight: 0.15
+        description: "Assess demand via IDS task-scaler (QUICK/SMALL/MEDIUM/LARGE), set session scale"
+        validator: { type: field_presence, fields: [scale, squad_count] }
+        escalation_threshold: null
+      design_execution_pipeline:
+        d_score: 0.40
+        tier: sonnet
+        implementation: llm_freetext
+        weight: 0.25
+        description: "Map squad sequence with dependencies, select orchestration pattern (Sequential/Parallel/Diamond/Loop)"
+        validator: { type: field_presence, fields: [pattern, stages, dependencies] }
+        escalation_threshold: null
+      define_stage_gate_criteria:
+        d_score: 0.55
+        tier: sonnet
+        implementation: llm_structured
+        weight: 0.20
+        description: "Specify per-gate: what to check, quality threshold, decision authority, failure action"
+        validator: { type: count_range, min: 1, per: stage }
+        escalation_threshold: null
+      prepare_handoff_packages:
+        d_score: 0.50
+        tier: sonnet
+        implementation: llm_structured
+        weight: 0.20
+        description: "Create context, expected deliverable format, and constraints per squad transition"
+        validator: { type: completeness, min_fields: 3 }
+        escalation_threshold: null
+      execute_with_gates:
+        d_score: 0.40
+        tier: sonnet
+        implementation: llm_freetext
+        weight: 0.20
+        description: "Execute pipeline stage by stage, evaluate gate criteria, log decisions to JSONL audit"
+        validator: { type: file_exists, format: jsonl }
+        escalation_threshold: null
+    molecules:
+      pipeline_design:
+        atoms: [analyze_demand_complexity, design_execution_pipeline, define_stage_gate_criteria]
+        composed_d_score: 0.52
+        ceiling: 0.62
+        execution_pattern: sequential
+      execution_loop:
+        atoms: [prepare_handoff_packages, execute_with_gates]
+        composed_d_score: 0.45
+        ceiling: 0.55
+        execution_pattern: sequential
+
+  "a3-problem-solving":
+    d_score: 0.53
+    d_score_declared: 0.50
+    tier: sonnet
+    floor: 0.40
+    ceiling: 0.70
+    maturity: new
+    executions_total: 0
+    last_calibration: "2026-03-24"
+    trend: stable
+    atoms:
+      left_side_understanding:
+        d_score: 0.50
+        tier: sonnet
+        implementation: llm_structured
+        weight: 0.40
+        description: "Fill 4 sections: Context (why now), Current State (data), Desired State (target), Root Cause (5 Whys)"
+        validator: { type: field_presence, fields: [context, current_state, desired_state, root_cause] }
+        escalation_threshold: null
+      right_side_action:
+        d_score: 0.50
+        tier: sonnet
+        implementation: llm_structured
+        weight: 0.40
+        description: "Fill 4 sections: Countermeasures, Implementation Plan (who/what/when), Indicators, Follow-up"
+        validator: { type: field_presence, fields: [countermeasures, plan, indicators, followup] }
+        escalation_threshold: null
+      validate_and_save:
+        d_score: 0.75
+        tier: haiku
+        implementation: llm_structured
+        weight: 0.20
+        description: "Validate conciseness (fits 1 page), save to squad data/, register as Discovery if cross-squad"
+        validator: { type: file_exists }
+        escalation_threshold: null
+    molecules:
+      a3_complete:
+        atoms: [left_side_understanding, right_side_action, validate_and_save]
+        composed_d_score: 0.56
+        ceiling: 0.66
+        execution_pattern: sequential
+
+  "five-whys-root-cause":
+    d_score: 0.55
+    d_score_declared: 0.50
+    tier: sonnet
+    floor: 0.45
+    ceiling: 0.75
+    maturity: new
+    executions_total: 0
+    last_calibration: "2026-03-24"
+    trend: stable
+    atoms:
+      define_problem:
+        d_score: 0.70
+        tier: haiku
+        implementation: llm_structured
+        weight: 0.25
+        description: "Describe problem in observable, measurable terms with supporting data"
+        validator: { type: field_presence, fields: [problem, data_evidence] }
+        escalation_threshold: null
+      chain_of_whys:
+        d_score: 0.50
+        tier: sonnet
+        implementation: llm_freetext
+        weight: 0.45
+        description: "Ask 'why?' 5-7 times until actionable root cause; follow most impactful branch"
+        validator: { type: count_range, min: 5, max: 7 }
+        escalation_threshold: null
+      validate_and_countermeasure:
+        d_score: 0.55
+        tier: sonnet
+        implementation: llm_structured
+        weight: 0.30
+        description: "Validate root cause with 'if fixed, does problem stop?' test; propose specific countermeasure"
+        validator: { type: field_presence, fields: [root_cause, countermeasure, type, owner] }
+        escalation_threshold: null
+    molecules:
+      complete_five_whys:
+        atoms: [define_problem, chain_of_whys, validate_and_countermeasure]
+        composed_d_score: 0.57
+        ceiling: 0.67
+        execution_pattern: sequential
+
+  "ecosystem-health-report":
+    d_score: 0.52
+    d_score_declared: 0.55
+    tier: sonnet
+    floor: 0.40
+    ceiling: 0.70
+    maturity: new
+    executions_total: 0
+    last_calibration: "2026-03-24"
+    trend: stable
+    atoms:
+      collect_all_sources:
+        d_score: 0.70
+        tier: haiku
+        implementation: script
+        weight: 0.20
+        description: "Run health-ops, collect maturity scores, gap-detection results, cross-reviews, DMAIC, discoveries"
+        validator: { type: data_presence }
+        escalation_threshold: null
+      score_seven_dimensions:
+        d_score: 0.45
+        tier: sonnet
+        implementation: llm_structured
+        weight: 0.25
+        description: "Score Leadership, Strategy, Customers, Measurement, Operations, Agents, Results 1-10"
+        validator: { type: count_range, min: 7, max: 7 }
+        escalation_threshold: null
+      squad_traffic_light:
+        d_score: 0.65
+        tier: sonnet
+        implementation: llm_structured
+        weight: 0.20
+        description: "Assign GREEN/YELLOW/RED per active squad based on maturity, issues, input metrics"
+        validator: { type: completeness }
+        escalation_threshold: null
+      trends_and_recommendations:
+        d_score: 0.40
+        tier: sonnet
+        implementation: llm_freetext
+        weight: 0.20
+        description: "Compare with previous month, identify top 3 improvements/concerns, generate 3-5 recommendations"
+        validator: { type: count_range, min: 3 }
+        escalation_threshold: null
+      save_and_distribute:
+        d_score: 0.75
+        tier: haiku
+        implementation: script
+        weight: 0.15
+        description: "Save report, register in SuperMemory"
+        validator: { type: file_exists }
+        escalation_threshold: null
+    molecules:
+      data_collection:
+        atoms: [collect_all_sources]
+        composed_d_score: 0.70
+        ceiling: 0.80
+        execution_pattern: sequential
+      analysis:
+        atoms: [score_seven_dimensions, squad_traffic_light, trends_and_recommendations]
+        composed_d_score: 0.49
+        ceiling: 0.59
+        execution_pattern: sequential
+
+  "execute-multi-squad-team":
+    d_score: 0.44
+    d_score_declared: 0.50
+    tier: sonnet
+    floor: 0.30
+    ceiling: 0.60
+    maturity: new
+    executions_total: 0
+    last_calibration: "2026-03-24"
+    trend: stable
+    atoms:
+      validate_squads_and_stages:
+        d_score: 0.70
+        tier: haiku
+        implementation: script
+        weight: 0.10
+        description: "Validate all squads are supported, auto-generate stage definitions if not provided"
+        validator: { type: completeness }
+        escalation_threshold: null
+      consult_chiefs:
+        d_score: 0.50
+        tier: sonnet
+        implementation: llm_freetext
+        weight: 0.15
+        description: "Run consult-chief for each squad with demand context and available inputs"
+        validator: { type: count_range, min: 1, per: squad }
+        escalation_threshold: null
+      generate_master_plan:
+        d_score: 0.45
+        tier: sonnet
+        implementation: llm_structured
+        weight: 0.15
+        description: "Generate staged execution plan with chief reports and gate criteria"
+        validator: { type: field_presence, fields: [stages, gates, squad_reports] }
+        escalation_threshold: null
+      execute_stage_loop:
+        d_score: 0.35
+        tier: sonnet
+        implementation: llm_freetext
+        weight: 0.25
+        description: "Execute squads per stage, prepare context, save outputs, generate handoffs"
+        validator: { type: file_exists }
+        escalation_threshold: null
+      gate_approval_loop:
+        d_score: 0.50
+        tier: sonnet
+        implementation: llm_structured
+        weight: 0.15
+        description: "Present deliverables at gate, process user decisions (approve/revise/modify/pause/cancel)"
+        validator: { type: field_presence, fields: [decision, next_action] }
+        escalation_threshold: null
+      consolidate_final:
+        d_score: 0.60
+        tier: sonnet
+        implementation: llm_structured
+        weight: 0.10
+        description: "Generate execution logs per squad, compile 99-summary, persist to SuperMemory"
+        validator: { type: file_exists }
+        escalation_threshold: null
+      handle_rollbacks:
+        d_score: 0.40
+        tier: sonnet
+        implementation: llm_freetext
+        weight: 0.10
+        description: "Handle squad failure, context loss, gate revision, interruption, plan modification"
+        validator: { type: quality_rubric, min_score: 3 }
+        escalation_threshold: null
+    molecules:
+      planning:
+        atoms: [validate_squads_and_stages, consult_chiefs, generate_master_plan]
+        composed_d_score: 0.55
+        ceiling: 0.65
+        execution_pattern: sequential
+      execution:
+        atoms: [execute_stage_loop, gate_approval_loop, handle_rollbacks]
+        composed_d_score: 0.41
+        ceiling: 0.51
+        execution_pattern: sequential
+
+  "route-request":
+    d_score: 0.57
+    d_score_declared: 0.50
+    tier: sonnet
+    floor: 0.40
+    ceiling: 0.70
+    maturity: new
+    executions_total: 0
+    last_calibration: "2026-03-24"
+    trend: stable
+    atoms:
+      classify_intent:
+        d_score: 0.55
+        tier: sonnet
+        implementation: llm_structured
+        weight: 0.30
+        description: "Extract action, object, domain, specificity; identify entities and keywords with confidence"
+        validator: { type: field_presence, fields: [action, object, domain, confidence] }
+        escalation_threshold: null
+      search_matching_squads:
+        d_score: 0.60
+        tier: sonnet
+        implementation: llm_structured
+        weight: 0.30
+        description: "Score squads by semantic_match(0.4) + capability_coverage(0.3) + historical_success(0.2) + availability(0.1)"
+        validator: { type: count_range, min: 1 }
+        escalation_threshold: null
+      decide_routing:
+        d_score: 0.50
+        tier: sonnet
+        implementation: llm_structured
+        weight: 0.25
+        description: "Apply threshold rules (>=0.8 direct, 0.6-0.8 confirm, 0.4-0.6 options, <0.4 escalate)"
+        validator: { type: field_presence, fields: [decision_type, destination, confidence] }
+        escalation_threshold: null
+      format_response:
+        d_score: 0.70
+        tier: haiku
+        implementation: llm_structured
+        weight: 0.15
+        description: "Format routing result with analysis, decision, justification, and next step"
+        validator: { type: quality_rubric, min_score: 3 }
+        escalation_threshold: null
+    molecules:
+      routing_pipeline:
+        atoms: [classify_intent, search_matching_squads, decide_routing, format_response]
+        composed_d_score: 0.58
+        ceiling: 0.68
+        execution_pattern: sequential
+
+  # --- Remaining tasks (not decomposed) ---
+
+  "consult-chief":
+    d_score: 0.56
+    d_score_declared: 0.50
+    tier: sonnet
+    floor: 0.35
+    ceiling: 0.65
+    maturity: new
+    executions_total: 0
+    last_calibration: "2026-03-24"
+    trend: stable
+    atoms:
+      load_context:
+        d_score: 0.82
+        tier: haiku
+        implementation: script
+        weight: 0.15
+        description: "Load squad knowledge, client data, and task-specific context"
+        validator:
+          type: schema_strict
+        escalation_threshold: null
+      execute_core:
+        d_score: 0.50
+        tier: sonnet
+        implementation: llm_freetext
+        weight: 0.70
+        description: "Core execution of consult chief"
+        validator:
+          type: confidence_check
+        escalation_threshold: 0.50
+      validate_and_format:
+        d_score: 0.85
+        tier: haiku
+        implementation: script
+        weight: 0.15
+        description: "Validate output quality and format for delivery"
+        validator:
+          type: checklist
+        escalation_threshold: null
+    molecules:
+      preparation:
+        atoms: [load_context]
+        composed_d_score: 0.82
+        ceiling: 0.90
+        execution_pattern: sequential
+      execution_and_delivery:
+        atoms: [execute_core, validate_and_format]
+        composed_d_score: 0.56
+        ceiling: 0.65
+        execution_pattern: sequential
+
+  "execute-team":
+    d_score: 0.56
+    d_score_declared: 0.50
+    tier: sonnet
+    floor: 0.35
+    ceiling: 0.65
+    maturity: new
+    executions_total: 0
+    last_calibration: "2026-03-24"
+    trend: stable
+    atoms:
+      load_context:
+        d_score: 0.82
+        tier: haiku
+        implementation: script
+        weight: 0.15
+        description: "Load squad knowledge, client data, and task-specific context"
+        validator:
+          type: schema_strict
+        escalation_threshold: null
+      execute_core:
+        d_score: 0.50
+        tier: sonnet
+        implementation: llm_freetext
+        weight: 0.70
+        description: "Core execution of execute team"
+        validator:
+          type: confidence_check
+        escalation_threshold: 0.50
+      validate_and_format:
+        d_score: 0.85
+        tier: haiku
+        implementation: script
+        weight: 0.15
+        description: "Validate output quality and format for delivery"
+        validator:
+          type: checklist
+        escalation_threshold: null
+    molecules:
+      preparation:
+        atoms: [load_context]
+        composed_d_score: 0.82
+        ceiling: 0.90
+        execution_pattern: sequential
+      execution_and_delivery:
+        atoms: [execute_core, validate_and_format]
+        composed_d_score: 0.56
+        ceiling: 0.65
+        execution_pattern: sequential
+
+  "find-capability":
+    d_score: 0.56
+    d_score_declared: 0.50
+    tier: sonnet
+    floor: 0.35
+    ceiling: 0.65
+    maturity: new
+    executions_total: 0
+    last_calibration: "2026-03-24"
+    trend: stable
+    atoms:
+      load_context:
+        d_score: 0.82
+        tier: haiku
+        implementation: script
+        weight: 0.15
+        description: "Load squad knowledge, client data, and task-specific context"
+        validator:
+          type: schema_strict
+        escalation_threshold: null
+      execute_core:
+        d_score: 0.50
+        tier: sonnet
+        implementation: llm_freetext
+        weight: 0.70
+        description: "Core execution of find capability"
+        validator:
+          type: confidence_check
+        escalation_threshold: 0.50
+      validate_and_format:
+        d_score: 0.85
+        tier: haiku
+        implementation: script
+        weight: 0.15
+        description: "Validate output quality and format for delivery"
+        validator:
+          type: checklist
+        escalation_threshold: null
+    molecules:
+      preparation:
+        atoms: [load_context]
+        composed_d_score: 0.82
+        ceiling: 0.90
+        execution_pattern: sequential
+      execution_and_delivery:
+        atoms: [execute_core, validate_and_format]
+        composed_d_score: 0.56
+        ceiling: 0.65
+        execution_pattern: sequential
+
+  "first-squad-routing":
+    d_score: 0.56
+    d_score_declared: 0.50
+    tier: sonnet
+    floor: 0.35
+    ceiling: 0.65
+    maturity: new
+    executions_total: 0
+    last_calibration: "2026-03-24"
+    trend: stable
+    atoms:
+      load_context:
+        d_score: 0.82
+        tier: haiku
+        implementation: script
+        weight: 0.15
+        description: "Load squad knowledge, client data, and task-specific context"
+        validator:
+          type: schema_strict
+        escalation_threshold: null
+      execute_core:
+        d_score: 0.50
+        tier: sonnet
+        implementation: llm_freetext
+        weight: 0.70
+        description: "Core execution of first squad routing"
+        validator:
+          type: confidence_check
+        escalation_threshold: 0.50
+      validate_and_format:
+        d_score: 0.85
+        tier: haiku
+        implementation: script
+        weight: 0.15
+        description: "Validate output quality and format for delivery"
+        validator:
+          type: checklist
+        escalation_threshold: null
+    molecules:
+      preparation:
+        atoms: [load_context]
+        composed_d_score: 0.82
+        ceiling: 0.90
+        execution_pattern: sequential
+      execution_and_delivery:
+        atoms: [execute_core, validate_and_format]
+        composed_d_score: 0.56
+        ceiling: 0.65
+        execution_pattern: sequential
+
+  "indexar-squad":
+    d_score: 0.56
+    d_score_declared: 0.50
+    tier: sonnet
+    floor: 0.35
+    ceiling: 0.65
+    maturity: new
+    executions_total: 0
+    last_calibration: "2026-03-24"
+    trend: stable
+    atoms:
+      load_context:
+        d_score: 0.82
+        tier: haiku
+        implementation: script
+        weight: 0.15
+        description: "Load squad knowledge, client data, and task-specific context"
+        validator:
+          type: schema_strict
+        escalation_threshold: null
+      execute_core:
+        d_score: 0.50
+        tier: sonnet
+        implementation: llm_freetext
+        weight: 0.70
+        description: "Core execution of indexar squad"
+        validator:
+          type: confidence_check
+        escalation_threshold: 0.50
+      validate_and_format:
+        d_score: 0.85
+        tier: haiku
+        implementation: script
+        weight: 0.15
+        description: "Validate output quality and format for delivery"
+        validator:
+          type: checklist
+        escalation_threshold: null
+    molecules:
+      preparation:
+        atoms: [load_context]
+        composed_d_score: 0.82
+        ceiling: 0.90
+        execution_pattern: sequential
+      execution_and_delivery:
+        atoms: [execute_core, validate_and_format]
+        composed_d_score: 0.56
+        ceiling: 0.65
+        execution_pattern: sequential
+
+  "orchestration-scaling":
+    d_score: 0.56
+    d_score_declared: 0.50
+    tier: sonnet
+    floor: 0.35
+    ceiling: 0.65
+    maturity: new
+    executions_total: 0
+    last_calibration: "2026-03-24"
+    trend: stable
+    atoms:
+      load_context:
+        d_score: 0.82
+        tier: haiku
+        implementation: script
+        weight: 0.15
+        description: "Load squad knowledge, client data, and task-specific context"
+        validator:
+          type: schema_strict
+        escalation_threshold: null
+      execute_core:
+        d_score: 0.50
+        tier: sonnet
+        implementation: llm_freetext
+        weight: 0.70
+        description: "Core execution of orchestration scaling"
+        validator:
+          type: confidence_check
+        escalation_threshold: 0.50
+      validate_and_format:
+        d_score: 0.85
+        tier: haiku
+        implementation: script
+        weight: 0.15
+        description: "Validate output quality and format for delivery"
+        validator:
+          type: checklist
+        escalation_threshold: null
+    molecules:
+      preparation:
+        atoms: [load_context]
+        composed_d_score: 0.82
+        ceiling: 0.90
+        execution_pattern: sequential
+      execution_and_delivery:
+        atoms: [execute_core, validate_and_format]
+        composed_d_score: 0.56
+        ceiling: 0.65
+        execution_pattern: sequential
+
+  "processar-solicitacao":
+    d_score: 0.56
+    d_score_declared: 0.50
+    tier: sonnet
+    floor: 0.35
+    ceiling: 0.65
+    maturity: new
+    executions_total: 0
+    last_calibration: "2026-03-24"
+    trend: stable
+    atoms:
+      load_context:
+        d_score: 0.82
+        tier: haiku
+        implementation: script
+        weight: 0.15
+        description: "Load squad knowledge, client data, and task-specific context"
+        validator:
+          type: schema_strict
+        escalation_threshold: null
+      execute_core:
+        d_score: 0.50
+        tier: sonnet
+        implementation: llm_freetext
+        weight: 0.70
+        description: "Core execution of processar solicitacao"
+        validator:
+          type: confidence_check
+        escalation_threshold: 0.50
+      validate_and_format:
+        d_score: 0.85
+        tier: haiku
+        implementation: script
+        weight: 0.15
+        description: "Validate output quality and format for delivery"
+        validator:
+          type: checklist
+        escalation_threshold: null
+    molecules:
+      preparation:
+        atoms: [load_context]
+        composed_d_score: 0.82
+        ceiling: 0.90
+        execution_pattern: sequential
+      execution_and_delivery:
+        atoms: [execute_core, validate_and_format]
+        composed_d_score: 0.56
+        ceiling: 0.65
+        execution_pattern: sequential
+
+  "request-new-squad":
+    d_score: 0.56
+    d_score_declared: 0.50
+    tier: sonnet
+    floor: 0.35
+    ceiling: 0.65
+    maturity: new
+    executions_total: 0
+    last_calibration: "2026-03-24"
+    trend: stable
+    atoms:
+      load_context:
+        d_score: 0.82
+        tier: haiku
+        implementation: script
+        weight: 0.15
+        description: "Load squad knowledge, client data, and task-specific context"
+        validator:
+          type: schema_strict
+        escalation_threshold: null
+      execute_core:
+        d_score: 0.50
+        tier: sonnet
+        implementation: llm_freetext
+        weight: 0.70
+        description: "Core execution of request new squad"
+        validator:
+          type: confidence_check
+        escalation_threshold: 0.50
+      validate_and_format:
+        d_score: 0.85
+        tier: haiku
+        implementation: script
+        weight: 0.15
+        description: "Validate output quality and format for delivery"
+        validator:
+          type: checklist
+        escalation_threshold: null
+    molecules:
+      preparation:
+        atoms: [load_context]
+        composed_d_score: 0.82
+        ceiling: 0.90
+        execution_pattern: sequential
+      execution_and_delivery:
+        atoms: [execute_core, validate_and_format]
+        composed_d_score: 0.56
+        ceiling: 0.65
+        execution_pattern: sequential
+
+  "team-monitor":
+    d_score: 0.56
+    d_score_declared: 0.50
+    tier: sonnet
+    floor: 0.35
+    ceiling: 0.65
+    maturity: new
+    executions_total: 0
+    last_calibration: "2026-03-24"
+    trend: stable
+    atoms:
+      load_context:
+        d_score: 0.82
+        tier: haiku
+        implementation: script
+        weight: 0.15
+        description: "Load squad knowledge, client data, and task-specific context"
+        validator:
+          type: schema_strict
+        escalation_threshold: null
+      execute_core:
+        d_score: 0.50
+        tier: sonnet
+        implementation: llm_freetext
+        weight: 0.70
+        description: "Core execution of team monitor"
+        validator:
+          type: confidence_check
+        escalation_threshold: 0.50
+      validate_and_format:
+        d_score: 0.85
+        tier: haiku
+        implementation: script
+        weight: 0.15
+        description: "Validate output quality and format for delivery"
+        validator:
+          type: checklist
+        escalation_threshold: null
+    molecules:
+      preparation:
+        atoms: [load_context]
+        composed_d_score: 0.82
+        ceiling: 0.90
+        execution_pattern: sequential
+      execution_and_delivery:
+        atoms: [execute_core, validate_and_format]
+        composed_d_score: 0.56
+        ceiling: 0.65
+        execution_pattern: sequential
+
+  "team-shutdown":
+    d_score: 0.56
+    d_score_declared: 0.50
+    tier: sonnet
+    floor: 0.35
+    ceiling: 0.65
+    maturity: new
+    executions_total: 0
+    last_calibration: "2026-03-24"
+    trend: stable
+    atoms:
+      load_context:
+        d_score: 0.82
+        tier: haiku
+        implementation: script
+        weight: 0.15
+        description: "Load squad knowledge, client data, and task-specific context"
+        validator:
+          type: schema_strict
+        escalation_threshold: null
+      execute_core:
+        d_score: 0.50
+        tier: sonnet
+        implementation: llm_freetext
+        weight: 0.70
+        description: "Core execution of team shutdown"
+        validator:
+          type: confidence_check
+        escalation_threshold: 0.50
+      validate_and_format:
+        d_score: 0.85
+        tier: haiku
+        implementation: script
+        weight: 0.15
+        description: "Validate output quality and format for delivery"
+        validator:
+          type: checklist
+        escalation_threshold: null
+    molecules:
+      preparation:
+        atoms: [load_context]
+        composed_d_score: 0.82
+        ceiling: 0.90
+        execution_pattern: sequential
+      execution_and_delivery:
+        atoms: [execute_core, validate_and_format]
+        composed_d_score: 0.56
+        ceiling: 0.65
+        execution_pattern: sequential
+
+  "team-status":
+    d_score: 0.56
+    d_score_declared: 0.50
+    tier: sonnet
+    floor: 0.35
+    ceiling: 0.65
+    maturity: new
+    executions_total: 0
+    last_calibration: "2026-03-24"
+    trend: stable
+    atoms:
+      load_context:
+        d_score: 0.82
+        tier: haiku
+        implementation: script
+        weight: 0.15
+        description: "Load squad knowledge, client data, and task-specific context"
+        validator:
+          type: schema_strict
+        escalation_threshold: null
+      execute_core:
+        d_score: 0.50
+        tier: sonnet
+        implementation: llm_freetext
+        weight: 0.70
+        description: "Core execution of team status"
+        validator:
+          type: confidence_check
+        escalation_threshold: 0.50
+      validate_and_format:
+        d_score: 0.85
+        tier: haiku
+        implementation: script
+        weight: 0.15
+        description: "Validate output quality and format for delivery"
+        validator:
+          type: checklist
+        escalation_threshold: null
+    molecules:
+      preparation:
+        atoms: [load_context]
+        composed_d_score: 0.82
+        ceiling: 0.90
+        execution_pattern: sequential
+      execution_and_delivery:
+        atoms: [execute_core, validate_and_format]
+        composed_d_score: 0.56
+        ceiling: 0.65
+        execution_pattern: sequential
+
+  "blind-spot-self-audit":
+    d_score: 0.56
+    d_score_declared: 0.50
+    tier: sonnet
+    floor: 0.35
+    ceiling: 0.65
+    maturity: new
+    executions_total: 0
+    last_calibration: "2026-03-24"
+    trend: stable
+    atoms:
+      load_context:
+        d_score: 0.82
+        tier: haiku
+        implementation: script
+        weight: 0.15
+        description: "Load squad knowledge, client data, and task-specific context"
+        validator:
+          type: schema_strict
+        escalation_threshold: null
+      execute_core:
+        d_score: 0.50
+        tier: sonnet
+        implementation: llm_freetext
+        weight: 0.70
+        description: "Core execution of blind spot self audit"
+        validator:
+          type: confidence_check
+        escalation_threshold: 0.50
+      validate_and_format:
+        d_score: 0.85
+        tier: haiku
+        implementation: script
+        weight: 0.15
+        description: "Validate output quality and format for delivery"
+        validator:
+          type: checklist
+        escalation_threshold: null
+    molecules:
+      preparation:
+        atoms: [load_context]
+        composed_d_score: 0.82
+        ceiling: 0.90
+        execution_pattern: sequential
+      execution_and_delivery:
+        atoms: [execute_core, validate_and_format]
+        composed_d_score: 0.56
+        ceiling: 0.65
+        execution_pattern: sequential
+
+# Fallback chain — escalate on quality failure
+fallback:
+  haiku:
+    on_quality_below: 0.85
+    fallback_to: sonnet
+  sonnet:
+    on_quality_below: 0.80
+    fallback_to: opus

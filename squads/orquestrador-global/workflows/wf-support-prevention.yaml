@@ -1,0 +1,268 @@
+# =============================================================================
+# WORKFLOW: SUPPORT TICKET PREVENTION PIPELINE
+# =============================================================================
+# Epic 72 — Story 72.21
+# Cross-Squad Synergy Engine — Section C: Amplifiers
+# Cadence: Monthly | Squads: support → sop-factory + content-ecosystem (fan-out with routing)
+# =============================================================================
+
+metadata:
+  name: wf-support-prevention
+  version: "1.0.0"
+  squad: orquestrador-global
+  story_id: "72.21"
+  epic_id: 72
+  section: "C-amplifiers"
+  cadence: monthly
+  estimated_time: "1-2 hours"
+  created_at: "2026-03-26"
+
+description: >
+  Support ticket prevention pipeline. Monthly, the support squad extracts
+  recurring ticket patterns and classifies them by root cause: process gaps
+  (missing SOP) vs. knowledge gaps (missing content). Process issues are
+  routed to sop-factory for SOP generation. Knowledge issues are routed
+  to content-ecosystem for FAQ/tutorial creation. The goal is to eliminate
+  tickets at the source rather than repeatedly resolving the same issues.
+
+# =============================================================================
+# TRIGGER
+# =============================================================================
+
+trigger:
+  command: "*support-prevention"
+  aliases:
+    - "*ticket-prevention"
+    - "*recurring-tickets"
+  schedule:
+    cron: "0 10 25 * *"  # 25th of each month at 10:00
+    timezone: America/Sao_Paulo
+  description: "Extract recurring tickets and route prevention actions"
+
+# =============================================================================
+# PREREQUISITES
+# =============================================================================
+
+prerequisites:
+  - "support squad configured with ticket data access"
+  - "sop-factory squad configured"
+  - "content-ecosystem squad configured"
+  - "recurring-tickets-report-output.yaml contract defined"
+  - "harness.pipeline_contracts.enabled = true in core-config.yaml"
+
+# =============================================================================
+# INPUT REQUIREMENTS
+# =============================================================================
+
+inputs:
+  required:
+    - name: workspace
+      type: string
+      description: "Active workspace slug (GR-1 mandatory)"
+  optional:
+    - name: period
+      type: string
+      description: "Lookback period for ticket extraction"
+      default: "last_30d"
+    - name: min_recurrence
+      type: integer
+      description: "Minimum occurrences to classify a ticket as recurring"
+      default: 3
+
+# =============================================================================
+# GLOBAL REQUIREMENTS COMPLIANCE
+# =============================================================================
+
+global_requirements:
+  idempotency_key: "wf-support-prevention:{workspace}:{period}"  # GR-7
+  max_iterations: 3  # GR-3
+  convergence_check:
+    min_delta: 2
+    consecutive_flat_cycles: 2
+  escalation:
+    trigger: "max_iterations_reached OR no_ticket_data"
+    target: orquestrador-global
+    channel: whatsapp_central
+    message: "Support prevention pipeline escalated: {reason}"
+
+# =============================================================================
+# STAGES
+# =============================================================================
+
+stages:
+
+  # --------------------------------------------------------------------------
+  # STAGE 1: Extract Recurring Tickets
+  # --------------------------------------------------------------------------
+  - id: 1
+    name: "Extract Recurring Tickets"
+    description: >
+      Support squad analyzes ticket history to identify recurring patterns.
+      Groups tickets by topic, counts recurrence, and classifies each pattern
+      as either a process gap (the team doesn't have a procedure) or a
+      knowledge gap (the customer doesn't have the information). Output is
+      a structured report with classification and frequency data.
+    estimated_time: "15-25 minutes"
+
+    agents:
+      lead: support-chief
+      support: []
+
+    actions:
+      - action: extract_ticket_patterns
+        description: "Group tickets by similarity and count recurrence"
+        agent: support-chief
+
+      - action: classify_root_cause
+        description: "Classify each pattern as 'process' or 'knowledge' gap"
+        agent: support-chief
+
+      - action: rank_by_impact
+        description: "Rank patterns by ticket volume and customer impact"
+        agent: support-chief
+
+      - action: compile_report
+        description: "Generate recurring tickets report with classification"
+        agent: support-chief
+
+    gate:
+      criteria:
+        - "At least 5 recurring patterns identified"
+        - "Each pattern classified as process or knowledge"
+        - "Patterns ranked by impact"
+        - "Report passes contract validation"
+      approval: auto
+      auto_criteria: "Recurring tickets report generated"
+
+    validation_gate:  # GR-5
+      gate_id: QG-orquestrador-global-2  # canonical binding (W8-5) — output_quality QG; min_score 0.75 derives from QG-2 threshold
+      type: contract_schema
+      contract: "recurring-tickets-report-output.yaml"
+      min_score: 0.75
+
+    checkpoint: true  # GR-6
+
+    outputs:
+      - name: recurring_tickets_report
+        type: markdown
+        contract: "recurring-tickets-report-output.yaml"
+
+  # --------------------------------------------------------------------------
+  # STAGE 2: Route by Classification
+  # --------------------------------------------------------------------------
+  - id: 2
+    name: "Route Prevention Actions by Classification"
+    description: >
+      Orquestrador-global routes each recurring pattern to the appropriate
+      squad based on classification:
+      - process gaps → sop-factory (to generate missing SOPs)
+      - knowledge gaps → content-ecosystem (to create FAQ/tutorial content)
+      Patterns with both classifications are sent to both squads.
+    estimated_time: "20-40 minutes"
+    depends_on: [1]
+
+    agents:
+      lead: orquestrador-chief
+      support: []
+
+    actions:
+      - action: route_process_gaps
+        description: "Send process gap patterns to sop-factory for SOP generation"
+        agent: orquestrador-chief
+        target: sop-factory
+        filter: "classification == 'process'"
+        parallel: true
+
+      - action: route_knowledge_gaps
+        description: "Send knowledge gap patterns to content-ecosystem for content creation"
+        agent: orquestrador-chief
+        target: content-ecosystem
+        filter: "classification == 'knowledge'"
+        parallel: true
+
+    gate:
+      criteria:
+        - "All process gaps routed to sop-factory"
+        - "All knowledge gaps routed to content-ecosystem"
+        - "Dual-classified patterns sent to both"
+      approval: auto
+      auto_criteria: "All patterns routed to appropriate squads"
+
+    validation_gate:  # GR-5
+      gate_id: QG-orquestrador-global-2  # canonical binding (W8-5) — output_quality QG; min_score 0.75 derives from QG-2 threshold
+      type: contract_schema
+      contract: "prevention-routing-receipt.yaml"
+      min_score: 0.75
+
+    checkpoint: true  # GR-6
+
+# =============================================================================
+# CONVERGENCE LOGIC
+# =============================================================================
+
+convergence:
+  check_after_stage: 2
+  continue_condition: "recurring_ticket_count_delta >= synergy.convergence_delta"
+  halt_condition: "flat_cycles >= convergence_check.consecutive_flat_cycles"
+  on_halt:
+    action: notify
+    message: "Support prevention converged. Recurring tickets reduced by {delta}%"
+    channel: supermemory
+    tag: support
+
+# =============================================================================
+# MODEL SELECTION
+# =============================================================================
+
+model_selection:
+  default: sonnet
+  per_stage:
+    1: sonnet
+    2: sonnet
+  rationale: >
+    Ticket analysis and routing are procedural tasks.
+    Downstream squads use their own model routing for generation.
+
+# =============================================================================
+# SUCCESS METRICS
+# =============================================================================
+
+success_metrics:
+  - metric: "Recurring ticket reduction"
+    target: ">30% reduction in recurring tickets within 3 cycles"
+  - metric: "SOP generation rate"
+    target: "100% of process gaps result in SOP within 30 days"
+  - metric: "Content creation rate"
+    target: ">80% of knowledge gaps addressed with content within 30 days"
+  - metric: "Prevention coverage"
+    target: "Top 10 recurring patterns all have prevention actions"
+
+# =============================================================================
+# INTEGRATION
+# =============================================================================
+
+integration:
+  feeds_from:
+    - squad: support
+      data: "Recurring ticket patterns and classifications"
+  feeds_to:
+    - squad: sop-factory
+      data: "Process gap patterns for SOP generation"
+    - squad: content-ecosystem
+      data: "Knowledge gap patterns for FAQ/tutorial creation"
+  tools_required:
+    - pipeline-ops.mjs
+    - clickup-ops.mjs
+    - supermemory-ops.mjs
+megabrain_validation:
+  last_run: "20260514-validate-deep"
+  validated_at: "2026-05-15T00:00:00Z"
+  validator: mega-brain/megabrain-chief
+  mode: deep
+  squad: orquestrador-global
+  workflow_id: "wf-support-prevention"
+  status: pass
+  evidence:
+    - workflow_inventory_registered
+    - orchestration_surface_validated
+    - external_execution_not_performed

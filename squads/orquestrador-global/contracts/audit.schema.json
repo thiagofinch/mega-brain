@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://the-hub/squads/orquestrador-global/contracts/audit.schema.json",
+  "title": "Plan-Architect Audit Trail Entry (.data/audit-trail.jsonl)",
+  "description": "JSONL entry schema. Each line in audit-trail.jsonl MUST conform to this schema. Generated 2026-04-30 (W8-3) — closes DEV-OG-004 / M4 partial.",
+  "type": "object",
+  "required": [
+    "timestamp",
+    "actor",
+    "action",
+    "plan_id"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 timestamp of the audit event"
+    },
+    "actor": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Agent or script that emitted the entry (e.g., 'plan-architect', 'audit-plan.js', 'megabrain-example-squad-dispatch.mjs')"
+    },
+    "action": {
+      "type": "string",
+      "enum": [
+        "plan_emitted",
+        "plan_validated",
+        "plan_cost_estimated",
+        "plan_rendered",
+        "plan_persisted",
+        "plan_registry_updated",
+        "dispatch_manifest_emitted",
+        "elicitation_recorded",
+        "constraint_check_performed",
+        "veto_triggered"
+      ]
+    },
+    "plan_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+-[0-9]{8}-[0-9]{6}$",
+      "description": "Plan identifier; matches plan.schema.json plan_id"
+    },
+    "agent_id": {
+      "type": "string",
+      "description": "Specific agent that performed the action (e.g., 'plan-architect', 'dag-architect')"
+    },
+    "model_used": { "type": "string" },
+    "scoring_version": { "type": "string" },
+    "heuristics": { "type": "string" },
+    "cache_hash": { "type": "string" },
+    "result": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "veto_reason": { "type": "string" },
+    "duration_ms": { "type": "integer", "minimum": 0 },
+    "manifest_path": { "type": "string" },
+    "engine_status": { "type": "string" },
+    "dry_run": { "type": "boolean" }
+  }
+}

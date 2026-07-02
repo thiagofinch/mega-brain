@@ -1,0 +1,454 @@
+# =============================================================================
+# WORKFLOW: QUARTERLY SELF-EVOLUTION CYCLE
+# =============================================================================
+# Ciclo trimestral de auto-evolucao do framework Mega Brain.
+# Orquestra as pecas do Epic 78 (audit targets, remediation tracker,
+# improvement proposals, SDC metrics, governance health) em um fluxo
+# coordenado de 6 fases.
+# =============================================================================
+
+metadata:
+  name: self-evolution-cycle
+  version: "1.0.0"
+  squad: orquestrador-global
+  maturity_stage: "1_to_10"
+  estimated_time: "5-6 semanas por ciclo (esforco humano real: ~5 dias)"
+  created_at: "2026-03-27"
+  story: "78.6"
+  epic: 78
+
+description: >
+  Workflow trimestral que coordena a melhoria continua do framework Mega Brain.
+  Integra 5 scripts de metricas e auditoria (Stories 78.1-78.5) em um ciclo
+  de 6 fases: Collect -> Audit -> Prioritize -> Propose -> Review -> Apply.
+  Fases 1 e 4 sao automaticas. Fases 3 e 5 requerem julgamento humano.
+  Principios constitucionais atendidos: VIII (Closed-Loop Learning) e
+  VII (Autonomous by Default).
+
+# =============================================================================
+# TRIGGER
+# =============================================================================
+
+trigger:
+  cadence: quarterly
+  command: "*self-evolution-cycle"
+  aliases:
+    - "*evolution-cycle"
+    - "*sec"
+  description: "Iniciar ou continuar o ciclo trimestral de auto-evolucao"
+
+# =============================================================================
+# PREREQUISITES
+# =============================================================================
+
+prerequisites:
+  - "framework-audit-ops.mjs disponivel em core/scripts/ops/"
+  - "remediation-ops.mjs disponivel em core/scripts/ops/"
+  - "improvement-ops.mjs disponivel em core/scripts/ops/"
+  - "sdc-metrics-ops.mjs disponivel em core/scripts/ops/"
+  - "health-ops.mjs disponivel com governance rules em core/scripts/ops/"
+  - "blind-spot-trigger-ops.mjs disponivel em core/scripts/ops/"
+  - "issue-log-ops.mjs disponivel em core/scripts/ops/"
+
+# =============================================================================
+# INPUT REQUIREMENTS
+# =============================================================================
+
+inputs:
+  required:
+    - name: quarter
+      type: string
+      description: "Trimestre alvo (e.g., 'Q3-2026')"
+    - name: year
+      type: number
+      description: "Ano do ciclo"
+  optional:
+    - name: max_proposals
+      type: number
+      description: "Maximo de proposals a gerar na fase Propose (default: 20)"
+      default: 20
+    - name: skip_phases
+      type: array
+      description: "Fases a pular (para retomar ciclo interrompido)"
+
+# =============================================================================
+# PHASES
+# =============================================================================
+
+phases:
+
+  # --------------------------------------------------------------------------
+  # PHASE 1: Collect Metrics
+  # --------------------------------------------------------------------------
+  - id: collect
+    name: "Collect Metrics"
+    duration: "1 dia"
+    owner: "automatic"
+    risk: LOW
+    description: >
+      Coleta automatica de todas as metricas do trimestre: SDC quality,
+      remediation status, governance health, framework audit status,
+      e historico de blind-spot triggers.
+
+    commands:
+      - "node core/scripts/ops/sdc-metrics-ops.mjs collect --since={quarter_start}"
+      - "node core/scripts/ops/sdc-metrics-ops.mjs dashboard --months=3 --json"
+      - "node core/scripts/ops/remediation-ops.mjs report --format=json"
+      - "node core/scripts/ops/remediation-ops.mjs trend --periods=4 --json"
+      - "node core/scripts/ops/health-ops.mjs check --category=governance --format=json"
+      - "node core/scripts/ops/framework-audit-ops.mjs status --json"
+      - "node core/scripts/ops/blind-spot-trigger-ops.mjs history --days=90 --json"
+
+    outputs:
+      - "sdc-metrics.jsonl (metricas SDC do trimestre)"
+      - "sdc-dashboard.json (KPIs agregados)"
+      - "remediation-status.json (estado de remediacao)"
+      - "remediation-trend.json (tendencia abertas vs fechadas)"
+      - "governance-health.json (saude das regras e constitution)"
+      - "framework-audit-status.json (ultimo resultado por target)"
+      - "blind-spot-triggers.json (dispatches do trimestre)"
+
+    gate:
+      criteria:
+        - "Todos os 7 comandos executaram sem erro"
+        - "sdc-metrics.jsonl tem pelo menos 1 entrada"
+        - "governance-health.json tem resultados parseveis"
+      approval: auto
+      auto_criteria: "Todos os outputs existem e sao JSON valido"
+
+  # --------------------------------------------------------------------------
+  # PHASE 2: Full Audit
+  # --------------------------------------------------------------------------
+  - id: audit
+    name: "Full Audit"
+    duration: "2 semanas"
+    owner: "squad chiefs + @architect"
+    risk: LOW
+    depends_on: [collect]
+    description: >
+      Auditoria completa do framework usando os 7 targets definidos na
+      Story 78.1. Squad chiefs executam blind-spot self-audits nos seus
+      dominios. @architect audita constitution, rules, agents, e synapse.
+
+    commands:
+      - "node core/scripts/ops/framework-audit-ops.mjs audit --all"
+      - "node core/scripts/ops/blind-spot-trigger-ops.mjs evaluate --poll --json"
+
+    actions:
+      - action: audit_framework_targets
+        description: |
+          @architect executa auditoria dos 7 targets:
+          - constitution, rules, agents, sdc_workflow, synapse, hooks, config
+          Resultado salvo em core/reports/framework-audit-{YYYY-QN}.md
+        agent: "@architect"
+
+      - action: audit_squads
+        description: |
+          Cada squad chief executa blind-spot self-audit usando o framework
+          de 5 camadas. Prioridade para squads com blind-spot triggers
+          disparados no trimestre (ver blind-spot-triggers.json da fase 1).
+        agent: "squad chiefs"
+
+    outputs:
+      - "Framework audit report por target"
+      - "Blind-spot audit reports por squad"
+      - "Findings consolidados"
+
+    gate:
+      criteria:
+        - "Framework audit executou para todos os 7 targets"
+        - "Pelo menos 5 squads completaram self-audit"
+        - "Findings documentados com severity e squad"
+      approval: manual
+      gate_document: "self-evolution-{YYYY-QN}-audit-review.md"
+
+  # --------------------------------------------------------------------------
+  # PHASE 3: Prioritize Findings
+  # --------------------------------------------------------------------------
+  - id: prioritize
+    name: "Prioritize Findings"
+    duration: "2 dias"
+    owner: "@pm + conselho"
+    risk: MEDIUM
+    depends_on: [audit]
+    description: >
+      Priorizar os achados do audit usando FMEA (RPN = severity x occurrence
+      x detection). Selecionar top 20 remediacao para o trimestre.
+      Requer julgamento humano para priorizar trade-offs.
+
+    commands:
+      - "node core/scripts/ops/issue-log-ops.mjs list --status=open --sort=severity"
+      - "node core/scripts/ops/issue-log-ops.mjs prioritize"
+      - "node core/scripts/ops/remediation-ops.mjs stale --days=14"
+      - "node core/scripts/ops/remediation-ops.mjs escalations"
+
+    actions:
+      - action: rank_findings
+        description: |
+          @pm e conselho revisam todos os achados e priorizam:
+          1. Issues CRITICAL e HIGH do issue-log (RPN > 200)
+          2. Remediacoes stale (sem update > 14 dias)
+          3. Escalations pendentes
+          4. Novos findings do framework audit
+          Resultado: backlog priorizado de top 20 remediacao.
+        agent: "@pm"
+
+    outputs:
+      - "Backlog priorizado (top 20 remediacoes)"
+      - "Justificativa de priorizacao por item"
+
+    gate:
+      criteria:
+        - "Top 20 remediacoes selecionadas com RPN"
+        - "Cada item tem owner e deadline estimado"
+        - "Conselho aprovou a priorizacao"
+      approval: manual
+      gate_document: "self-evolution-{YYYY-QN}-prioritization.md"
+
+  # --------------------------------------------------------------------------
+  # PHASE 4: Generate Proposals
+  # --------------------------------------------------------------------------
+  - id: propose
+    name: "Generate Proposals"
+    duration: "3 dias"
+    owner: "automatic + @architect"
+    risk: LOW
+    depends_on: [prioritize]
+    description: >
+      Gerar improvement proposals automaticamente para os top 20 findings.
+      improvement-ops.mjs gera YAML proposals com suggested changes,
+      risk assessment, e estimated effort. @architect revisa proposals
+      de alto impacto.
+
+    commands:
+      - "node core/scripts/ops/improvement-ops.mjs batch --severity=critical --max=10"
+      - "node core/scripts/ops/improvement-ops.mjs batch --severity=high --max=10"
+
+    actions:
+      - action: generate_proposals
+        description: |
+          Gerar proposals em batch:
+          1. 10 proposals para findings CRITICAL
+          2. 10 proposals para findings HIGH
+          Cada proposal inclui: finding source, suggested change,
+          affected files, risk, estimated effort.
+        agent: "automatic"
+
+      - action: architect_review
+        description: |
+          @architect revisa proposals que afetam:
+          - Constitution ou regras mandatorias
+          - Architecture do SYNAPSE ou hooks
+          - Patterns de codigo compartilhados
+          Marca proposals como architect-approved ou needs-revision.
+        agent: "@architect"
+
+    outputs:
+      - "Improvement proposals YAML (ate 20)"
+      - "Architect review notes para proposals de alto impacto"
+
+    gate:
+      criteria:
+        - "Pelo menos 10 proposals geradas"
+        - "Proposals de constitution/architecture revisadas por @architect"
+        - "Cada proposal tem risk e effort estimados"
+      approval: auto
+      auto_criteria: "Proposals existem em .data/improvement-proposals/"
+
+  # --------------------------------------------------------------------------
+  # PHASE 5: Review & Approve
+  # --------------------------------------------------------------------------
+  - id: review
+    name: "Review & Approve"
+    duration: "1 semana"
+    owner: "human (owner do squad afetado)"
+    risk: HIGH
+    depends_on: [propose]
+    description: >
+      Humano revisa cada proposal, aprovando ou rejeitando com justificativa.
+      Proposals aprovadas seguem para implementacao. Rejeitadas sao
+      documentadas para referencia futura.
+
+    commands:
+      - "node core/scripts/ops/improvement-ops.mjs list --status=pending"
+
+    actions:
+      - action: human_review
+        description: |
+          Para cada proposal:
+          1. Ler suggested change e risk assessment
+          2. Decidir: approve / reject / defer
+          3. Se approve: confirmar prioridade de implementacao
+          4. Se reject: documentar motivo
+          5. Se defer: mover para proximo ciclo com justificativa
+        agent: "human"
+
+    outputs:
+      - "Proposals aprovadas (lista final)"
+      - "Proposals rejeitadas com motivo"
+      - "Proposals deferidas para proximo ciclo"
+
+    gate:
+      criteria:
+        - "Todas as proposals tem decisao (approve/reject/defer)"
+        - "Proposals rejeitadas tem justificativa"
+        - "Pelo menos 3 proposals aprovadas (senao o ciclo nao gera valor)"
+      approval: manual
+      gate_document: "self-evolution-{YYYY-QN}-approval.md"
+
+  # --------------------------------------------------------------------------
+  # PHASE 6: Apply & Measure
+  # --------------------------------------------------------------------------
+  - id: apply
+    name: "Apply & Measure"
+    duration: "2 semanas"
+    owner: "@dev"
+    risk: MEDIUM
+    depends_on: [review]
+    description: >
+      @dev implementa cada proposal aprovada. Apos implementacao, medir
+      impacto comparando metricas com baseline do inicio do ciclo.
+      Resultado serve como baseline para o proximo ciclo.
+
+    commands:
+      - "node core/scripts/ops/improvement-ops.mjs list --status=approved"
+
+    actions:
+      - action: implement_proposals
+        description: |
+          @dev implementa cada proposal aprovada:
+          1. Criar story se necessario (para mudancas maiores)
+          2. Implementar change conforme suggested_change
+          3. Rodar lint e tests
+          4. Marcar proposal como applied
+        agent: "@dev"
+
+      - action: measure_impact
+        description: |
+          Apos implementacao, coletar metricas novamente:
+          1. node sdc-metrics-ops.mjs dashboard --months=1
+          2. node health-ops.mjs check --category=governance --format=json
+          3. Comparar com metricas da fase 1 (baseline)
+          4. Documentar delta para cada metrica chave
+        agent: "automatic"
+
+      - action: generate_cycle_report
+        description: |
+          Gerar relatorio final do ciclo usando o template:
+          squads/orquestrador-global/templates/self-evolution-report-tmpl.md
+          Salvar em: core/reports/self-evolution-{YYYY-QN}.md
+        agent: "@pm"
+
+    outputs:
+      - "Changes applied"
+      - "Impact measurement (baseline vs post-cycle)"
+      - "Cycle report em core/reports/self-evolution-{YYYY-QN}.md"
+
+    gate:
+      criteria:
+        - "Todas as proposals aprovadas foram implementadas ou deferidas com motivo"
+        - "Metricas pos-ciclo coletadas"
+        - "Relatorio do ciclo gerado"
+        - "Cadence entry atualizada com next_due do proximo trimestre"
+      approval: manual
+      gate_document: "self-evolution-{YYYY-QN}-final.md"
+
+# =============================================================================
+# MODEL SELECTION
+# =============================================================================
+
+model_selection:
+  default: sonnet
+  per_phase:
+    collect: haiku      # Comandos deterministicos, sem LLM
+    audit: sonnet       # Analise de framework, coordenacao
+    prioritize: sonnet  # Trade-offs com julgamento
+    propose: sonnet     # Geracao de proposals
+    review: null        # Humano, sem LLM
+    apply: sonnet       # Implementacao e medicao
+  rationale: >
+    Fase collect e puramente CLI (haiku para eventual parsing).
+    Fases de analise e geracao usam sonnet (custo-beneficio).
+    Fase review nao usa LLM (decisao humana).
+
+# =============================================================================
+# SUCCESS METRICS
+# =============================================================================
+
+success_metrics:
+  - metric: "Taxa de proposals aprovadas"
+    target: ">50% das proposals geradas sao aprovadas"
+  - metric: "Taxa de implementacao"
+    target: ">80% das proposals aprovadas implementadas no ciclo"
+  - metric: "Reducao de issues CRITICAL"
+    target: "Issues CRITICAL reduzem 30%+ entre ciclos"
+  - metric: "Melhoria de governance health"
+    target: "Score governance aumenta entre ciclos"
+  - metric: "SDC quality trend"
+    target: "QA pass rate melhora ou mantem entre ciclos"
+  - metric: "Remediation stale rate"
+    target: "Issues stale (>30d) reduzem entre ciclos"
+
+# =============================================================================
+# INTEGRATION
+# =============================================================================
+
+integration:
+  feeds_from:
+    - script: framework-audit-ops.mjs
+      data: "Audit findings por target (78.1)"
+    - script: remediation-ops.mjs
+      data: "Remediation status e trends (78.2)"
+    - script: improvement-ops.mjs
+      data: "Improvement proposals (78.3)"
+    - script: sdc-metrics-ops.mjs
+      data: "SDC quality metrics (78.4)"
+    - script: health-ops.mjs
+      data: "Governance health (78.5)"
+    - script: blind-spot-trigger-ops.mjs
+      data: "Event-driven triggers (69.15-69.18)"
+    - script: issue-log-ops.mjs
+      data: "Centralized issue log"
+  feeds_to:
+    - target: "core/reports/self-evolution-{YYYY-QN}.md"
+      data: "Cycle report com metricas, auditorias, proposals, e impacto"
+    - target: "cadence-ops.mjs"
+      data: "next_due atualizado para proximo trimestre"
+
+# =============================================================================
+# REPORT STORAGE
+# =============================================================================
+
+report_storage:
+  directory: "core/reports/"
+  naming: "self-evolution-{YYYY-QN}.md"
+  template: "squads/orquestrador-global/templates/self-evolution-report-tmpl.md"
+  examples:
+    - "self-evolution-2026-Q3.md"
+    - "self-evolution-2026-Q4.md"
+    - "self-evolution-2027-Q1.md"
+
+# =============================================================================
+# ANTI-PATTERNS
+# =============================================================================
+
+anti_patterns:
+  - "Pular a fase Collect — sem baseline, nao ha como medir impacto"
+  - "Gerar proposals sem priorizar — volume sem foco dilui esforco"
+  - "Auto-aprovar proposals — decisao humana e insubstituivel em trade-offs"
+  - "Implementar sem medir — fecha o loop sem aprender"
+  - "Nao comparar com ciclo anterior — sem tendencia, sem progresso"
+  - "Rodar tudo em 1 dia — o ciclo precisa de tempo para julgamento humano"
+  - "Ignorar proposals rejeitadas — motivos de rejeicao sao aprendizado"
+megabrain_validation:
+  last_run: "20260514-validate-deep"
+  validated_at: "2026-05-15T00:00:00Z"
+  validator: mega-brain/megabrain-chief
+  mode: deep
+  squad: orquestrador-global
+  workflow_id: "self-evolution-cycle"
+  status: pass
+  evidence:
+    - workflow_inventory_registered
+    - orchestration_surface_validated
+    - external_execution_not_performed

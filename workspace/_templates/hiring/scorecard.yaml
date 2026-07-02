@@ -1,0 +1,111 @@
+---
+# SCORECARD.YAML - Candidate evaluation scorecard
+# Adapted from mega-brain-stage pattern for Mega Brain workspace context
+
+_meta:
+  version: "1.0.0"
+  owner: "people-ops"
+  target_layer: "L4-operational"
+  state: "TEMPLATE"
+
+metadata:
+  canonical_scope: "workspace/_templates/hiring/scorecard.yaml"
+  owner: "coo"
+  version: "1.0.0"
+  last_updated: "2026-03-23"
+  description: "Candidate scorecard with technical, cultural, and communication criteria plus recommendation"
+
+fields:
+  candidate_name:
+    type: string
+    required: true
+    description: "Full name of the candidate"
+
+  position:
+    type: string
+    required: true
+    description: "Job title the candidate is being evaluated for"
+
+  evaluator:
+    type: string
+    required: true
+    description: "Person conducting the evaluation"
+
+  evaluation_date:
+    type: date
+    required: true
+    description: "Date of the evaluation"
+
+  evaluation_stage:
+    type: enum
+    required: true
+    description: "Hiring pipeline stage this evaluation covers"
+    options: [phone-screen, first-interview, technical-interview, assignment-review, final-interview, reference-check]
+
+  technical_criteria:
+    type: list
+    required: true
+    description: "Technical skills evaluated, each with criterion name, score (1-5), and evidence notes"
+
+  cultural_criteria:
+    type: list
+    required: true
+    description: "Cultural fit criteria evaluated, each with criterion name, score (1-5), and evidence notes"
+
+  communication_criteria:
+    type: list
+    required: true
+    description: "Communication skills evaluated, each with criterion name, score (1-5), and evidence notes"
+
+  overall_scores:
+    type: object
+    required: true
+    description: "Aggregate scores"
+    properties:
+      technical_average:
+        type: number
+        required: true
+        description: "Average score across technical criteria (1-5)"
+      cultural_average:
+        type: number
+        required: true
+        description: "Average score across cultural criteria (1-5)"
+      communication_average:
+        type: number
+        required: true
+        description: "Average score across communication criteria (1-5)"
+      total_average:
+        type: number
+        required: true
+        description: "Weighted average of all criteria (1-5)"
+
+  strengths:
+    type: list
+    required: true
+    description: "Candidate top strengths observed during evaluation"
+
+  concerns:
+    type: list
+    required: false
+    description: "Areas of concern or risk"
+
+  questions_for_next_round:
+    type: list
+    required: false
+    description: "Questions to probe in the next evaluation stage"
+
+  recommendation:
+    type: enum
+    required: true
+    description: "Evaluator recommendation"
+    options: [strong-yes, yes, maybe, no, strong-no]
+
+  recommendation_rationale:
+    type: string
+    required: true
+    description: "Brief justification for the recommendation"
+
+  notes:
+    type: string
+    required: false
+    description: "Additional observations or context"

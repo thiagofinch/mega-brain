@@ -1,0 +1,32 @@
+schema_version: '1.0'
+proposal_id: replan-node-status-fixture-20260504-180100-20260504-183000
+status: proposed
+plan_id: node-status-fixture-20260504-180000
+execution_id: node-status-fixture-20260504-180100
+created_at: '2026-05-04T18:30:00Z'
+trigger:
+  type: stalled_node
+  detected_at: '2026-05-04T18:30:00Z'
+  reason: Detected 1 running node(s) past heartbeat timeout.
+classification: needs_replan
+affected_nodes:
+  - node_id: n2
+    status: running
+    elapsed_since_heartbeat_minutes: 24
+    timeout_minutes: 10
+human_gate_required: false
+gate_owner: null
+recommended_actions:
+  - type: inspect_node
+    owner: '@qa'
+    description: Inspect stalled node evidence and confirm whether the worker is still alive.
+  - type: replan_node
+    owner: orquestrador-global--plan-architect
+    description: Emit a revised sidecar/plan proposal for affected nodes only.
+plan_diff:
+  summary: Preserve completed nodes and propose replanning only the stalled running nodes.
+  preserve_nodes: []
+  replace_nodes:
+    - n2
+  add_nodes: []
+  remove_nodes: []

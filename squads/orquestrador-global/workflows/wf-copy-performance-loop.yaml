@@ -1,0 +1,315 @@
+# =============================================================================
+# WORKFLOW: COPY PERFORMANCE FEEDBACK LOOP
+# =============================================================================
+# Epic 72 — Story 72.1
+# Cross-Squad Synergy Engine — Section A: Feedback Loops
+# Cadence: Weekly (Friday) | Squads: data-analytics → copywriting (media-buy data source)
+# =============================================================================
+
+metadata:
+  name: wf-copy-performance-loop
+  version: "1.0.0"
+  squad: orquestrador-global
+  story_id: "72.1"
+  epic_id: 72
+  section: "A-feedback-loops"
+  cadence: weekly
+  cadence_day: friday
+  estimated_time: "30-60 minutes"
+  created_at: "2026-03-26"
+
+description: >
+  Closed-loop feedback between data-analytics and copywriting. Every Friday,
+  data-analytics measures copy performance (CTR, conversion, CPA) from media-buy
+  campaign data, generates a performance digest, and feeds it back to copywriting.
+  The loop continues until performance delta drops below the convergence threshold
+  for consecutive cycles, indicating the copy has reached a local optimum.
+
+# =============================================================================
+# TRIGGER
+# =============================================================================
+
+trigger:
+  command: "*copy-performance-loop"
+  aliases:
+    - "*copy-feedback"
+    - "*copy-perf-loop"
+  schedule:
+    cron: "0 9 * * 5"  # Every Friday at 09:00
+    timezone: America/Sao_Paulo
+  description: "Measure copy performance and feed insights back to copywriting"
+
+# =============================================================================
+# PREREQUISITES
+# =============================================================================
+
+prerequisites:
+  - "data-analytics squad configured with config.yaml and agents"
+  - "copywriting squad configured with config.yaml and agents"
+  - "media-buy campaign data accessible via meta-ads-ops.mjs"
+  - "SuperMemory container 'copywriting' accessible for feedback persistence"
+  - "harness.pipeline_contracts.enabled = true in core-config.yaml"
+
+# =============================================================================
+# INPUT REQUIREMENTS
+# =============================================================================
+
+inputs:
+  required:
+    - name: workspace
+      type: string
+      description: "Active workspace slug (GR-1 mandatory)"
+    - name: period
+      type: string
+      description: "Measurement period (e.g., 'last_7d', 'last_14d')"
+      default: "last_7d"
+  optional:
+    - name: campaign_ids
+      type: array
+      description: "Specific campaign IDs to measure (default: all active)"
+    - name: force_cycle
+      type: boolean
+      description: "Force a new cycle even if convergence was reached"
+      default: false
+
+# =============================================================================
+# GLOBAL REQUIREMENTS COMPLIANCE
+# =============================================================================
+
+global_requirements:
+  idempotency_key: "wf-copy-performance-loop:{workspace}:{period}"  # GR-7
+  max_iterations: 3  # GR-3
+  convergence_check:
+    min_delta: 2          # GR-3: minimum % improvement to justify continuing
+    consecutive_flat_cycles: 2  # GR-3: halt after 2 consecutive cycles below min_delta
+  escalation:
+    trigger: "max_iterations_reached OR data_source_unavailable"
+    target: orquestrador-global
+    channel: whatsapp_central
+    message: "Copy performance loop escalated: {reason}"
+
+# =============================================================================
+# STAGES
+# =============================================================================
+
+stages:
+
+  # --------------------------------------------------------------------------
+  # STAGE 1: Measure Copy Performance
+  # --------------------------------------------------------------------------
+  - id: 1
+    name: "Measure Copy Performance"
+    description: >
+      Pull campaign performance data from Meta Ads and Google Ads via CLI scripts.
+      Compute per-copy metrics: CTR, conversion rate, CPA, ROAS. Rank copy variants
+      by composite score. Output a structured performance dataset.
+    estimated_time: "10-15 minutes"
+
+    agents:
+      lead: data-analytics-chief
+      support: []
+
+    actions:
+      - action: pull_campaign_metrics
+        description: "Extract performance data from meta-ads-ops.mjs and google-ads-ops.mjs"
+        agent: data-analytics-chief
+        tools:
+          - meta-ads-ops.mjs campaign-insights
+          - google-ads-ops.mjs campaigns
+
+      - action: compute_copy_scores
+        description: "Calculate composite performance score per copy variant"
+        agent: data-analytics-chief
+
+      - action: rank_variants
+        description: "Rank copy variants by performance, flag top 3 and bottom 3"
+        agent: data-analytics-chief
+
+    gate:
+      criteria:
+        - "Performance data covers the requested period"
+        - "At least 5 copy variants measured"
+        - "Composite score calculated for each variant"
+      approval: auto
+      auto_criteria: "Performance dataset generated with >= 5 variants"
+
+    checkpoint: true  # GR-6
+
+    outputs:
+      - name: copy_performance_dataset
+        type: json
+        schema: "copy-performance-dataset.schema.json"
+
+  # --------------------------------------------------------------------------
+  # STAGE 2: Generate Copy Feedback Digest
+  # --------------------------------------------------------------------------
+  - id: 2
+    name: "Generate Copy Feedback Digest"
+    description: >
+      Transform raw performance data into an actionable feedback digest for
+      copywriting. Include: top performers with WHY analysis, underperformers
+      with improvement suggestions, pattern detection across variants,
+      and A/B test recommendations for the next cycle.
+    estimated_time: "10-15 minutes"
+    depends_on: [1]
+
+    agents:
+      lead: data-analytics-chief
+      support: []
+
+    actions:
+      - action: analyze_patterns
+        description: "Detect patterns in top/bottom performers (hooks, CTAs, length, tone)"
+        agent: data-analytics-chief
+
+      - action: generate_digest
+        description: "Create structured feedback digest with actionable recommendations"
+        agent: data-analytics-chief
+
+      - action: compute_delta
+        description: "Compare current cycle metrics against previous cycle to check convergence"
+        agent: data-analytics-chief
+
+    gate:
+      criteria:
+        - "Digest includes top 3 and bottom 3 variants with analysis"
+        - "At least 2 actionable recommendations per underperformer"
+        - "Delta computed against previous cycle"
+      approval: auto
+      auto_criteria: "Feedback digest generated with recommendations"
+
+    validation_gate:  # GR-5: contract validation between cross-squad handoff
+      gate_id: QG-orquestrador-global-2  # canonical binding (W8-5) — output_quality QG; min_score 0.75 derives from QG-2 threshold
+      type: contract_schema
+      contract: "copy-feedback-digest-output.yaml"
+      min_score: 0.75
+
+    checkpoint: true  # GR-6
+
+    outputs:
+      - name: copy_feedback_digest
+        type: markdown
+        contract: "copy-feedback-digest-output.yaml"
+
+  # --------------------------------------------------------------------------
+  # STAGE 3: Ingest Performance Feedback
+  # --------------------------------------------------------------------------
+  - id: 3
+    name: "Ingest Performance Feedback"
+    description: >
+      Copywriting squad ingests the feedback digest. Updates VoC bank with
+      winning patterns, retires underperforming copy approaches, and plans
+      new variants for the next cycle based on recommendations.
+    estimated_time: "10-20 minutes"
+    depends_on: [2]
+
+    agents:
+      lead: copy-chief
+      support: []
+
+    actions:
+      - action: ingest_feedback
+        description: "Copy chief reads and processes the performance digest"
+        agent: copy-chief
+
+      - action: update_voc_bank
+        description: "Add winning patterns to VoC bank, flag losing patterns"
+        agent: copy-chief
+        tools:
+          - supermemory-ops.mjs remember --tag=copywriting
+
+      - action: plan_next_variants
+        description: "Draft new copy variants incorporating feedback"
+        agent: copy-chief
+
+      - action: log_cycle_completion
+        description: "Record cycle metrics and delta for convergence tracking"
+        agent: copy-chief
+
+    gate:
+      criteria:
+        - "VoC bank updated with at least 1 new pattern"
+        - "At least 2 new variant directions planned"
+        - "Cycle delta and iteration count logged"
+      approval: auto
+      auto_criteria: "Feedback ingested and next variants planned"
+
+    checkpoint: true  # GR-6
+
+# =============================================================================
+# CONVERGENCE LOGIC
+# =============================================================================
+
+convergence:
+  description: >
+    After Stage 3, check if the performance delta justifies another cycle.
+    If delta >= min_delta (2%), schedule another cycle for next week.
+    If delta < min_delta for consecutive_flat_cycles (2), halt the loop
+    and notify that copy has reached a local optimum.
+  check_after_stage: 3
+  continue_condition: "delta >= synergy.convergence_delta"
+  halt_condition: "flat_cycles >= synergy.max_loop_iterations OR consecutive_flat >= convergence_check.consecutive_flat_cycles"
+  on_halt:
+    action: notify
+    message: "Copy performance loop converged after {cycles} cycles. Best variant: {top_variant}"
+    channel: supermemory
+    tag: copywriting
+
+# =============================================================================
+# MODEL SELECTION
+# =============================================================================
+
+model_selection:
+  default: sonnet
+  per_stage:
+    1: sonnet   # Data extraction and computation
+    2: sonnet   # Pattern analysis
+    3: sonnet   # Feedback ingestion
+  rationale: >
+    All stages are analytical and procedural. Sonnet handles data analysis
+    and pattern detection efficiently.
+
+# =============================================================================
+# SUCCESS METRICS
+# =============================================================================
+
+success_metrics:
+  - metric: "Copy performance improvement"
+    target: ">5% CTR improvement within 4 cycles"
+  - metric: "VoC bank growth"
+    target: ">= 1 new pattern per cycle"
+  - metric: "Feedback ingestion rate"
+    target: "100% of digests processed within 24h"
+  - metric: "Convergence efficiency"
+    target: "Convergence reached within 6 cycles on average"
+
+# =============================================================================
+# INTEGRATION
+# =============================================================================
+
+integration:
+  feeds_from:
+    - squad: media-buy
+      data: "Campaign performance metrics (CTR, CPA, ROAS)"
+    - squad: data-analytics
+      data: "Composite scoring and pattern analysis"
+  feeds_to:
+    - squad: copywriting
+      data: "Performance feedback digest with actionable recommendations"
+  tools_required:
+    - meta-ads-ops.mjs
+    - google-ads-ops.mjs
+    - supermemory-ops.mjs
+    - pipeline-ops.mjs
+megabrain_validation:
+  last_run: "20260514-validate-deep"
+  validated_at: "2026-05-15T00:00:00Z"
+  validator: mega-brain/megabrain-chief
+  mode: deep
+  squad: orquestrador-global
+  workflow_id: "wf-copy-performance-loop"
+  status: pass
+  evidence:
+    - workflow_inventory_registered
+    - orchestration_surface_validated
+    - external_execution_not_performed

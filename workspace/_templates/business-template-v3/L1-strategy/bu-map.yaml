@@ -1,0 +1,11 @@
+# Business Unit Map Template v3.0
+_meta:
+  id: null
+  name: bu-map.yaml
+  layer: L1-strategy
+  state: PLACEHOLDER
+  owner: c-level-squad
+  approver: founder
+  version: "3.0.0"
+
+business_units: null  # list of {bu_id, name, description, owner, status, revenue_share}

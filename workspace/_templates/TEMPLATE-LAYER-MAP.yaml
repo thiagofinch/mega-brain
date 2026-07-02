@@ -1,0 +1,198 @@
+---
+# Template-Layer Mapping
+# Maps template categories to workspace layers for scaffold.py
+#
+# Source of truth for: engine/governance/scaffold.py
+# Reference: .claude/rules/directory-contract.md (Layer System, Section 9)
+#
+# Layer definitions:
+#   L0-identity    (TTL 365d) — Who we are: company DNA, founder DNA, legal, core processes
+#   L1-strategy    (TTL 90d)  — How we compete: ICP, BMC, lean canvas, offerbook, pricing
+#   L2-tactical    (TTL 60d)  — How we execute: brand, campaigns, design system, movement
+#   L3-product     (TTL 30d)  — What we sell: product specs, features, roadmap, curriculum
+#   L4-operational (TTL 7d)   — Day to day: SOPs, meeting notes, sprint reviews, incidents
+#
+# Rules:
+#   - default_layer is used when scaffold.py creates a new BU
+#   - per-file layer overrides take precedence over default_layer
+#   - the reference BU structure is the canonical reference for placement
+
+_meta:
+  version: "1.0.0"
+  last_updated: "2026-04-04"
+  description: "Maps template categories to target workspace layers"
+  total_categories: 10
+  total_templates: 33
+
+mappings:
+
+  # ── AI ──────────────────────────────────────────────────────────────────
+  # AI strategy is a long-term technology bet, not a daily operational doc.
+  # Lives alongside other strategic documents.
+  - category: "ai"
+    default_layer: "L1-strategy"
+    files:
+      - template: "strategy.yaml"
+        layer: "L1-strategy"
+        description: "AI strategy and governance (models, agents, cost limits)"
+
+  # ── Analytics ───────────────────────────────────────────────────────────
+  # Reports are operational artifacts generated periodically.
+  # Executive reports could be L1-strategy but are regenerated frequently,
+  # so they live in L4-operational alongside other recurring reports.
+  - category: "analytics"
+    default_layer: "L4-operational"
+    files:
+      - template: "attribution-report.yaml"
+        layer: "L4-operational"
+        description: "Marketing attribution analysis (periodic)"
+      - template: "cohort-analysis.yaml"
+        layer: "L4-operational"
+        description: "Cohort-based retention and revenue analysis (periodic)"
+      - template: "executive-report.yaml"
+        layer: "L4-operational"
+        description: "Executive-level business report (periodic)"
+      - template: "health-score-report.yaml"
+        layer: "L4-operational"
+        description: "Entity health scoring (periodic)"
+
+  # ── Brand ───────────────────────────────────────────────────────────────
+  # Brand assets are tactical execution documents — how the company
+  # presents itself. Maps to L2-tactical per the reference structure.
+  # Archetype is more foundational but still brand execution, not identity.
+  - category: "brand"
+    default_layer: "L2-tactical"
+    files:
+      - template: "activation-system.yaml"
+        layer: "L2-tactical"
+        description: "Brand activation channels and strategy"
+      - template: "archetype-profile.yaml"
+        layer: "L2-tactical"
+        description: "Brand archetype definition"
+      - template: "brandbook.yaml"
+        layer: "L2-tactical"
+        description: "Comprehensive brand reference"
+
+  # ── Company ─────────────────────────────────────────────────────────────
+  # Mixed category: company-profile is foundational identity (l0),
+  # but ICP and elevator-pitch are strategic positioning (l1),
+  # and brand guidelines straddle l1-l2.
+  - category: "company"
+    default_layer: "L0-identity"
+    files:
+      - template: "company-profile.yaml"
+        layer: "L0-identity"
+        description: "Company identity, mission, vision, values — company-dna.yaml in l0"
+      - template: "icp.yaml"
+        layer: "L1-strategy"
+        description: "Ideal Customer Profile — icp.yaml in L1-strategy"
+      - template: "elevator-pitch.yaml"
+        layer: "L1-strategy"
+        description: "Concise pitch — strategic positioning artifact"
+      - template: "brand.yaml"
+        layer: "L2-tactical"
+        description: "Brand guidelines and identity — tactical execution of brand"
+
+  # ── Content ─────────────────────────────────────────────────────────────
+  # Content briefs and calendars are tactical marketing execution.
+  # Production checklists are operational but the category is tactical.
+  - category: "content"
+    default_layer: "L2-tactical"
+    files:
+      - template: "content-brief.yaml"
+        layer: "L2-tactical"
+        description: "Content creation brief (campaign-level)"
+      - template: "editorial-calendar.yaml"
+        layer: "L2-tactical"
+        description: "Content publishing schedule (campaign-level)"
+      - template: "production-checklist.yaml"
+        layer: "L4-operational"
+        description: "Content production tracking (day-to-day execution)"
+
+  # ── Delivery ────────────────────────────────────────────────────────────
+  # Delivery is operational — project kickoffs, client reports, and
+  # checklists are generated per engagement.
+  - category: "delivery"
+    default_layer: "L4-operational"
+    files:
+      - template: "client-report.yaml"
+        layer: "L4-operational"
+        description: "Periodic client reporting"
+      - template: "deliverable-checklist.yaml"
+        layer: "L4-operational"
+        description: "Deliverable quality assurance"
+      - template: "project-kickoff.yaml"
+        layer: "L4-operational"
+        description: "Project kickoff documentation"
+
+  # ── Hiring ──────────────────────────────────────────────────────────────
+  # Job descriptions are part of the company's core identity/processes.
+  # Scorecards and onboarding checklists are operational per-hire.
+  - category: "hiring"
+    default_layer: "L0-identity"
+    files:
+      - template: "job-description.yaml"
+        layer: "L0-identity"
+        description: "Role definition — part of core-processes (l0)"
+      - template: "scorecard.yaml"
+        layer: "L4-operational"
+        description: "Candidate evaluation — per-hire operational artifact"
+      - template: "onboarding-checklist.yaml"
+        layer: "L4-operational"
+        description: "New hire onboarding — per-hire operational artifact"
+
+  # ── Operations ──────────────────────────────────────────────────────────
+  # SOPs are core processes (l0). Everything else is day-to-day (l4).
+  - category: "operations"
+    default_layer: "L4-operational"
+    files:
+      - template: "process-sop.yaml"
+        layer: "L0-identity"
+        description: "Standard Operating Procedure — core process (core-processes.yaml in l0)"
+      - template: "meeting-notes.yaml"
+        layer: "L4-operational"
+        description: "Structured meeting documentation (per-meeting)"
+      - template: "incident-report.yaml"
+        layer: "L4-operational"
+        description: "Incident documentation and post-mortem (per-incident)"
+      - template: "retrospective.yaml"
+        layer: "L4-operational"
+        description: "Sprint or project retrospective (per-sprint)"
+      - template: "sprint-review.yaml"
+        layer: "L4-operational"
+        description: "Sprint review documentation (per-sprint)"
+
+  # ── Products ────────────────────────────────────────────────────────────
+  # Products are L3-product per the reference structure. Each product gets its
+  # own subdirectory under L3-product/{product-slug}/.
+  - category: "products"
+    default_layer: "L3-product"
+    files:
+      - template: "product-profile.yaml"
+        layer: "L3-product"
+        description: "Product profile v2.0 — offerbook equivalent (L3-product/{slug}/offerbook.yaml)"
+      - template: "curriculum-detail.yaml"
+        layer: "L3-product"
+        description: "Course curriculum tree (L3-product/{slug}/curriculum.yaml)"
+      - template: "launch-campaign.yaml"
+        layer: "L2-tactical"
+        description: "Product launch campaign — tactical execution, not product spec"
+
+  # ── Sales Process ───────────────────────────────────────────────────────
+  # Pipeline stages and lead qualification are strategic sales design (l1).
+  # Proposals and handoffs are per-deal operational artifacts (l4).
+  - category: "sales-process"
+    default_layer: "L1-strategy"
+    files:
+      - template: "pipeline-stage.yaml"
+        layer: "L1-strategy"
+        description: "Sales pipeline stage definition — strategic sales architecture"
+      - template: "lead-qualification.yaml"
+        layer: "L1-strategy"
+        description: "Lead scoring and qualification framework — strategic"
+      - template: "proposal.yaml"
+        layer: "L4-operational"
+        description: "Client proposal — per-deal operational artifact"
+      - template: "client-handoff.yaml"
+        layer: "L4-operational"
+        description: "Sales-to-delivery transition — per-deal operational artifact"

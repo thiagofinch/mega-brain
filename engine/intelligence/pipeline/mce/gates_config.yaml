@@ -1,0 +1,35 @@
+# MCE Pipeline — Feature Gate Defaults
+# Controls which steps, variants, and modes are active.
+# Overridable per-slug via CascadeConfig (env > slug > squad > defaults).
+# See feature_gates.py for resolution logic.
+#
+# Version: 1.0.0
+# Story: MCE2-2.2
+
+version: "1.0.0"
+
+steps:
+  ingest: true
+  batch: true
+  chunking: true
+  entity_resolution: true
+  insight_extraction: true
+  mce_behavioral: true
+  mce_identity: true
+  mce_voice: true
+  identity_checkpoint: true
+  consolidation: true
+  agent_generation: true
+  rag_indexation: true
+  finalize: true
+  report: true
+
+variants:
+  chunk: "v1"
+  entity: "v1"
+
+modes:
+  qa: "warning"
+  parallel: false
+  streaming: false
+  isolation: true

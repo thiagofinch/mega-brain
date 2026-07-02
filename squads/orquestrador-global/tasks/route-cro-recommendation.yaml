@@ -1,0 +1,223 @@
+# =============================================================================
+# TASK: ROUTE CRO RECOMMENDATION (Cross-Squad Synergy — Story 72.2)
+# =============================================================================
+# Decision routing task: receives bottleneck-analysis, routes to appropriate squad.
+# Logic: copy_problem -> copywriting, visual_problem -> creative-studio,
+#        structure_problem -> funnel-creator
+# =============================================================================
+
+task: route-cro-recommendation
+domain: tactical
+atomic_layer: Molecule
+responsavel_type: Agent
+performance:
+  error_handling: graceful with fallback + retry
+
+megabrain_frontmatter:
+  task_id: "route-cro-recommendation"
+  name: "route-cro-recommendation"
+  version: "1.0.0"
+  category: orchestration
+  squad: orquestrador-global
+  responsavel: "@plan-architect"
+  model: haiku
+  difficulty: basic
+  atomic_layer: Molecule
+  story_ref: "72.2"
+
+name: route-cro-recommendation
+title: "Rotear Recomendacao CRO para Squad Operacional Correto"
+description: >
+  Task de roteamento deterministico. Recebe a bottleneck-analysis do
+  data-analytics e roteia para o squad operacional correto baseado na
+  classificacao do gargalo. Nao executa analise — apenas direciona.
+  Segue domain-boundaries.md para delegacao correta.
+
+metadata:
+  created_at: "2026-03-26"
+  updated_at: "2026-03-26"
+  version: "1.0.0"
+  maturity_stage: "1-10"
+  ontology_layer: "orquestracao"
+  estimated_time: "5 minutos"
+  model: haiku
+  framework_origin: "Cross-Squad Synergy Engine (Epic 72)"
+  research_ref: "72.2 — Funnel Conversion Bottleneck Detection"
+
+# =============================================================================
+# INPUTS
+# =============================================================================
+
+inputs:
+  required:
+    - name: bottleneck_analysis
+      type: data
+      format: yaml
+      description: "Output da task identify-funnel-bottleneck do data-analytics"
+      source_task: "identify-funnel-bottleneck"
+      source_squad: "data-analytics"
+    - name: workspace
+      type: string
+      description: "Workspace slug"
+
+# =============================================================================
+# OUTPUTS
+# =============================================================================
+
+outputs:
+  primary:
+    - name: routing_decision
+      type: data
+      format: yaml
+      description: "Decisao de roteamento com squad alvo e task a invocar"
+      schema:
+        workspace: string
+        routed_at: string
+        source_task: string
+        source_squad: string
+        bottleneck_classification: string
+        target_squad: string
+        task_to_invoke: string
+        reason: string
+        handoff_data:
+          bottleneck_stage: string
+          drop_off_rate: number
+          funnel_slug: string
+
+# =============================================================================
+# STEPS
+# =============================================================================
+
+steps:
+  - id: 1
+    name: "Ler classificacao do bottleneck"
+    description: >
+      Extrair classification do bottleneck_analysis.
+    actions:
+      - "Ler bottleneck_analysis.classification"
+      - "Validar que e um dos 3 valores esperados"
+    output: "Classificacao extraida"
+
+  - id: 2
+    name: "Aplicar tabela de roteamento"
+    description: >
+      Mapear classification para target_squad e task_to_invoke.
+    actions:
+      - "Tabela de roteamento:"
+      - "  copy_problem → target_squad: copywriting, task: ingest-performance-feedback"
+      - "  visual_problem → target_squad: creative-studio, task: (ad-hoc creative brief)"
+      - "  structure_problem → target_squad: funnel-creator, task: generate-cro-recommendation"
+      - "Documentar reason baseado na classificacao"
+    output: "Roteamento definido"
+    routing_table:
+      copy_problem:
+        target_squad: "copywriting"
+        task_to_invoke: "ingest-performance-feedback"
+        reason: "Gargalo classificado como problema de copy — rotear para copywriting para revisao de headlines, CTAs e messaging"
+      visual_problem:
+        target_squad: "creative-studio"
+        task_to_invoke: "create-creative-brief"
+        reason: "Gargalo classificado como problema visual — rotear para creative-studio para novos criativos ou layout"
+      structure_problem:
+        target_squad: "funnel-creator"
+        task_to_invoke: "generate-cro-recommendation"
+        reason: "Gargalo classificado como problema estrutural — rotear para funnel-creator para CRO"
+
+  - id: 3
+    name: "Emitir routing_decision"
+    description: >
+      Montar e emitir o artefato de roteamento com dados de handoff.
+    actions:
+      - "Montar routing_decision conforme schema"
+      - "Incluir handoff_data com informacoes essenciais do bottleneck"
+      - "Delegar para o squad alvo via two-step invocation"
+    output: "routing_decision emitido"
+
+# =============================================================================
+# QUALITY GATE
+# =============================================================================
+
+quality_gate:
+  checks:
+    - name: "Target squad valido"
+      severity: CRITICAL
+      criterion: "target_squad e um dos 3 squads mapeados na tabela de roteamento"
+    - name: "Task valida"
+      severity: CRITICAL
+      criterion: "task_to_invoke existe no squad alvo"
+    - name: "Handoff data completo"
+      severity: HIGH
+      criterion: "handoff_data contem bottleneck_stage, drop_off_rate e funnel_slug"
+
+# =============================================================================
+# VALIDATION GATES — Automated checks (Epic 56 Harness)
+# =============================================================================
+
+validation:
+  schema_version: 1
+  when: "post"
+  checks:
+    - id: "valid-target-squad"
+      type: "assertion"
+      expression: "output.data && ['copywriting', 'creative-studio', 'funnel-creator'].includes(output.data.target_squad)"
+      message: "target_squad deve ser copywriting, creative-studio ou funnel-creator"
+      severity: "CRITICAL"
+
+    - id: "has-task-to-invoke"
+      type: "assertion"
+      expression: "output.data && typeof output.data.task_to_invoke === 'string' && output.data.task_to_invoke.length > 0"
+      message: "Deve especificar task_to_invoke"
+      severity: "CRITICAL"
+
+    - id: "has-handoff-data"
+      type: "assertion"
+      expression: "output.data && output.data.handoff_data && output.data.handoff_data.bottleneck_stage"
+      message: "Deve incluir handoff_data com bottleneck_stage"
+      severity: "HIGH"
+
+  on_fail: "retry"
+  max_retries: 1
+  escalate_to: "@plan-architect"
+
+# =============================================================================
+# INTEGRATION POINTS
+# =============================================================================
+
+integration:
+  triggers_from:
+    - task: "identify-funnel-bottleneck"
+      squad: "data-analytics"
+      when: "Sempre — o orquestrador roteia apos identificacao do bottleneck"
+    - contract: "funnel-bottleneck-report-output"
+      when: "Analise validada pelo contrato cross-squad"
+  feeds_into:
+    - task: "generate-cro-recommendation"
+      squad: "funnel-creator"
+      when: "classification = structure_problem"
+    - task: "ingest-performance-feedback"
+      squad: "copywriting"
+      when: "classification = copy_problem"
+    - task: "create-creative-brief"
+      squad: "creative-studio"
+      when: "classification = visual_problem"
+squad: orquestrador-global
+task_id: route-cro-recommendation
+version: "3.1.1"
+status: ready
+responsavel: "@plan-architect"
+execution_type: hybrid
+orchestration_boundary:
+  live_routing_performed: false
+  external_dispatch_performed: false
+  workspace_write_performed: false
+megabrain_validation:
+  last_run: "20260514-validate-deep"
+  validated_at: "2026-05-15T00:00:00Z"
+  validator: mega-brain/megabrain-chief
+  mode: deep
+  squad: orquestrador-global
+  status: pass
+  evidence:
+    - schema_contract_normalized
+    - task_boundary_declared
+    - plan_only_orchestration_preserved

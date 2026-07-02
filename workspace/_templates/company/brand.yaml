@@ -1,0 +1,171 @@
+---
+# BRAND.YAML - Brand guidelines and identity
+# Adapted from mega-brain-stage pattern for Mega Brain workspace context
+
+_meta:
+  version: "1.0.0"
+  owner: "c-level"
+  target_layer: "L2-tactical"
+  state: "TEMPLATE"
+
+metadata:
+  canonical_scope: "workspace/_templates/company/brand.yaml"
+  owner: "cmo"
+  version: "1.0.0"
+  last_updated: "2026-03-23"
+  description: "Brand guidelines covering visual identity, tone of voice, positioning, and tagline"
+
+fields:
+  brand_name:
+    type: string
+    required: true
+    description: "Primary brand name as used publicly"
+
+  tagline:
+    type: string
+    required: true
+    description: "Brand tagline or slogan"
+
+  positioning_statement:
+    type: string
+    required: true
+    description: "For [target] who [need], [brand] is the [category] that [differentiator] because [reason]"
+
+  brand_purpose:
+    type: string
+    required: true
+    description: "Why the brand exists beyond making money"
+
+  brand_essence:
+    type: string
+    required: true
+    description: "Single word or short phrase that captures the brand core"
+
+  visual_identity:
+    type: object
+    required: true
+    description: "Visual brand elements"
+    properties:
+      primary_colors:
+        type: list
+        required: true
+        description: "Primary brand colors with hex codes"
+      secondary_colors:
+        type: list
+        required: false
+        description: "Secondary palette colors with hex codes"
+      typography:
+        type: object
+        required: false
+        description: "Font families and usage rules"
+        properties:
+          heading_font:
+            type: string
+            required: true
+            description: "Font used for headings"
+          body_font:
+            type: string
+            required: true
+            description: "Font used for body text"
+      logo_usage:
+        type: object
+        required: false
+        description: "Logo usage rules"
+        properties:
+          minimum_size:
+            type: string
+            required: false
+            description: "Minimum logo size for legibility"
+          clear_space:
+            type: string
+            required: false
+            description: "Minimum clear space around logo"
+          forbidden_uses:
+            type: list
+            required: false
+            description: "Things you must never do with the logo"
+
+  tone_of_voice:
+    type: object
+    required: true
+    description: "How the brand communicates"
+    properties:
+      primary_tone:
+        type: string
+        required: true
+        description: "Dominant communication tone (e.g., authoritative, conversational)"
+      secondary_tone:
+        type: string
+        required: false
+        description: "Supporting tone used in specific contexts"
+      always_use:
+        type: list
+        required: true
+        description: "Words, phrases, and patterns the brand always uses"
+      never_use:
+        type: list
+        required: true
+        description: "Words, phrases, and patterns the brand never uses"
+      formality_level:
+        type: enum
+        required: true
+        description: "Overall formality of brand communication"
+        options: [casual, conversational, professional, formal, academic]
+
+  brand_personality:
+    type: object
+    required: false
+    description: "Brand character traits"
+    properties:
+      archetype:
+        type: string
+        required: true
+        description: "Primary brand archetype (e.g., The Creator, The Sage)"
+      traits:
+        type: list
+        required: true
+        description: "3-5 personality traits the brand embodies"
+      anti_traits:
+        type: list
+        required: false
+        description: "Traits the brand explicitly rejects"
+
+  brand_story:
+    type: object
+    required: false
+    description: "Narrative structure for telling the brand story"
+    properties:
+      origin:
+        type: string
+        required: false
+        description: "How and why the brand started"
+      conflict:
+        type: string
+        required: false
+        description: "The problem or enemy the brand fights against"
+      resolution:
+        type: string
+        required: false
+        description: "How the brand solves the conflict"
+      impact:
+        type: string
+        required: false
+        description: "The change created in the world"
+
+  competitive_differentiation:
+    type: object
+    required: false
+    description: "What makes the brand different from alternatives"
+    properties:
+      unique_mechanism:
+        type: string
+        required: false
+        description: "The proprietary approach or method"
+      owned_word:
+        type: string
+        required: false
+        description: "The single word or concept the brand wants to own in the market"
+      enemy:
+        type: string
+        required: false
+        description: "What the brand stands against"

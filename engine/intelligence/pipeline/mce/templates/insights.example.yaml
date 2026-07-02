@@ -1,0 +1,51 @@
+# STORY-HGA-F1.3 — Example declarative extraction template (insights stage)
+# =========================================================================
+# OPT-IN. Point MCE_INSIGHTS_TEMPLATE at a copy of this file to compile the
+# insights prompt FROM this schema instead of the hardcoded prompt in
+# orchestrate.py (_INSIGHTS_PROMPT_TEMPLATE). Unset the env var to keep the
+# default hardcoded prompt — nothing here changes the default path.
+#
+# The compiler (template_engine.compile_template) turns the keys below into
+# titled prompt sections and appends the MCE chunk-block placeholders. Sections
+# left empty are OMITTED from the prompt — no fabricated defaults are injected.
+#
+# ADAPT shape: mirrors Hyper-Extract guideline (target / rules_for_entities /
+# rules_for_relations) at 4e333f847f1d:.../parsers/guideline.py.
+
+# REQUIRED. The role/task framing (Hyper-Extract `guideline.target`).
+task: >-
+  You are a Sage-class extractor analyzing transcript chunks to produce
+  STRUCTURED, ACTIONABLE insights about {person_name}.
+
+# Entity (node) types to extract. List, scalar, or key: value mapping.
+entity_types:
+  - "[FILOSOFIA]   — a belief, worldview, axiom"
+  - "[MODELO-MENTAL] — a way of thinking, a conceptual lens"
+  - "[HEURISTICA]  — a practical rule WITH numbers or thresholds"
+  - "[FRAMEWORK]   — a named system with identifiable components"
+  - "[METODOLOGIA] — a step-by-step sequence"
+
+# Relation (edge) types to look for between the extracted nodes.
+relation_types:
+  - "supports — node A provides evidence/justification for node B"
+  - "depends_on — node A requires node B to hold"
+  - "contradicts — node A is in tension with node B"
+
+# Per-insight fields the model must emit.
+fields:
+  id: "short id (e.g. INS-{tag_code}-001)"
+  insight: "a clear, actionable sentence in the chunk's language"
+  quote: "a verbatim quote from the chunk supporting the insight"
+  tag: "ONE of the entity types above"
+  priority: "HIGH | MEDIUM | LOW"
+  confidence: "HIGH | MEDIUM | LOW"
+
+# Free-form extra rules appended as an Extraction Rules section.
+rules:
+  - "Extract 0 to 3 insights per chunk."
+  - "Never summarize — each insight must be an actionable claim."
+
+# Trailing output instruction.
+output_hint: >-
+  Output ONLY valid JSON: {"insights": [ ... ]}. If nothing is extractable,
+  return {"insights": []}.

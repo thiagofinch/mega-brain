@@ -1,0 +1,267 @@
+# =============================================================================
+# WORKFLOW: SEO CONVERSION FEEDBACK LOOP
+# =============================================================================
+# Epic 72 — Story 72.5
+# Cross-Squad Synergy Engine — Section A: Feedback Loops
+# Cadence: Monthly | Squads: data-analytics → seo
+# =============================================================================
+
+metadata:
+  name: wf-seo-conversion-feedback
+  version: "1.0.0"
+  squad: orquestrador-global
+  story_id: "72.5"
+  epic_id: 72
+  section: "A-feedback-loops"
+  cadence: monthly
+  estimated_time: "30-45 minutes"
+  created_at: "2026-03-26"
+
+description: >
+  Simple 2-stage feedback pipeline. Data-analytics pulls keyword-level
+  conversion data from Google Search Console and Hotmart, then SEO squad
+  updates keyword priority list based on which keywords actually drive
+  revenue (not just traffic). This closes the gap between vanity ranking
+  metrics and actual business outcomes.
+
+# =============================================================================
+# TRIGGER
+# =============================================================================
+
+trigger:
+  command: "*seo-conversion-feedback"
+  aliases:
+    - "*seo-feedback"
+    - "*keyword-conversion"
+  schedule:
+    cron: "0 10 10 * *"  # 10th of each month at 10:00
+    timezone: America/Sao_Paulo
+  description: "Report keyword conversion rates and update SEO priority list"
+
+# =============================================================================
+# PREREQUISITES
+# =============================================================================
+
+prerequisites:
+  - "data-analytics squad configured"
+  - "seo squad configured"
+  - "GA4 data accessible via ga4-analytics-ops.mjs"
+  - "Hotmart sales data accessible via hotmart-ops.mjs"
+
+# =============================================================================
+# INPUT REQUIREMENTS
+# =============================================================================
+
+inputs:
+  required:
+    - name: workspace
+      type: string
+      description: "Active workspace slug (GR-1 mandatory)"
+  optional:
+    - name: period
+      type: string
+      description: "Measurement period"
+      default: "last_30d"
+    - name: min_clicks
+      type: integer
+      description: "Minimum clicks for a keyword to be included"
+      default: 50
+
+# =============================================================================
+# GLOBAL REQUIREMENTS COMPLIANCE
+# =============================================================================
+
+global_requirements:
+  idempotency_key: "wf-seo-conversion-feedback:{workspace}:{period}"  # GR-7
+  max_iterations: 3  # GR-3
+  convergence_check:
+    min_delta: 2
+    consecutive_flat_cycles: 2
+  escalation:
+    trigger: "max_iterations_reached OR no_conversion_data"
+    target: orquestrador-global
+    channel: whatsapp_central
+    message: "SEO conversion feedback escalated: {reason}"
+
+# =============================================================================
+# STAGES
+# =============================================================================
+
+stages:
+
+  # --------------------------------------------------------------------------
+  # STAGE 1: Report Keyword Conversion
+  # --------------------------------------------------------------------------
+  - id: 1
+    name: "Report Keyword Conversion"
+    description: >
+      Data-analytics joins Search Console keyword data (impressions, clicks,
+      CTR, position) with GA4 goal completions and Hotmart sales attribution.
+      Produces a keyword-to-revenue mapping showing which keywords actually
+      drive purchases vs. which just drive traffic.
+    estimated_time: "15-20 minutes"
+
+    agents:
+      lead: data-analytics-chief
+      support: []
+
+    actions:
+      - action: pull_search_console_data
+        description: "Extract keyword performance from GA4 Search Console integration"
+        agent: data-analytics-chief
+        tools:
+          - ga4-analytics-ops.mjs run-report
+
+      - action: pull_conversion_data
+        description: "Extract conversion events and revenue attribution from Hotmart"
+        agent: data-analytics-chief
+        tools:
+          - hotmart-ops.mjs sales-history
+
+      - action: join_keyword_revenue
+        description: "Map keywords to revenue via landing page attribution"
+        agent: data-analytics-chief
+
+      - action: rank_by_revenue
+        description: "Rank keywords by revenue contribution, not just traffic"
+        agent: data-analytics-chief
+
+    gate:
+      criteria:
+        - "At least 20 keywords analyzed"
+        - "Revenue attribution computed for top keywords"
+        - "Keywords ranked by revenue, not just clicks"
+      approval: auto
+      auto_criteria: "Keyword conversion report generated"
+
+    validation_gate:  # GR-5
+      gate_id: QG-orquestrador-global-2  # canonical binding (W8-5) — output_quality QG; min_score 0.75 derives from QG-2 threshold
+      type: contract_schema
+      contract: "keyword-conversion-report-output.yaml"
+      min_score: 0.75
+
+    checkpoint: true  # GR-6
+
+    outputs:
+      - name: keyword_conversion_report
+        type: json
+        contract: "keyword-conversion-report-output.yaml"
+
+  # --------------------------------------------------------------------------
+  # STAGE 2: Update Keyword Priority
+  # --------------------------------------------------------------------------
+  - id: 2
+    name: "Update Keyword Priority"
+    description: >
+      SEO squad ingests the keyword-to-revenue mapping. Updates the keyword
+      priority list: promotes high-revenue keywords, demotes high-traffic but
+      low-revenue keywords, and identifies new keyword opportunities based
+      on conversion patterns.
+    estimated_time: "15-20 minutes"
+    depends_on: [1]
+
+    agents:
+      lead: seo-chief
+      support: []
+
+    actions:
+      - action: ingest_conversion_data
+        description: "Process keyword conversion report from data-analytics"
+        agent: seo-chief
+
+      - action: reprioritize_keywords
+        description: "Update keyword priority based on revenue contribution"
+        agent: seo-chief
+
+      - action: identify_opportunities
+        description: "Flag keywords with high conversion but low ranking as opportunities"
+        agent: seo-chief
+
+      - action: update_content_briefs
+        description: "Adjust content briefs to target high-conversion keywords"
+        agent: seo-chief
+
+      - action: persist_priorities
+        description: "Save updated priority list to SuperMemory"
+        agent: seo-chief
+        tools:
+          - supermemory-ops.mjs remember --tag=seo
+
+    gate:
+      criteria:
+        - "Keyword priority list updated with revenue weighting"
+        - "At least 3 new opportunities identified"
+        - "Content briefs adjusted for next cycle"
+      approval: auto
+      auto_criteria: "Keyword priorities updated"
+
+    checkpoint: true  # GR-6
+
+# =============================================================================
+# CONVERGENCE LOGIC
+# =============================================================================
+
+convergence:
+  check_after_stage: 2
+  continue_condition: "revenue_per_keyword_delta >= synergy.convergence_delta"
+  halt_condition: "flat_cycles >= convergence_check.consecutive_flat_cycles"
+  on_halt:
+    action: notify
+    message: "SEO conversion feedback converged. Top keyword revenue: {top_keyword_revenue}"
+    channel: supermemory
+    tag: seo
+
+# =============================================================================
+# MODEL SELECTION
+# =============================================================================
+
+model_selection:
+  default: sonnet
+  per_stage:
+    1: sonnet
+    2: sonnet
+  rationale: >
+    Both stages are data-driven and analytical. Sonnet handles
+    keyword analysis and prioritization efficiently.
+
+# =============================================================================
+# SUCCESS METRICS
+# =============================================================================
+
+success_metrics:
+  - metric: "Revenue-weighted keyword accuracy"
+    target: "Top 10 keywords by priority match top 10 by revenue within 80%"
+  - metric: "New opportunity discovery"
+    target: ">= 3 high-conversion low-ranking keywords per cycle"
+  - metric: "Content brief alignment"
+    target: "100% of new briefs target revenue-weighted keywords"
+
+# =============================================================================
+# INTEGRATION
+# =============================================================================
+
+integration:
+  feeds_from:
+    - squad: data-analytics
+      data: "Keyword-to-revenue mapping"
+  feeds_to:
+    - squad: seo
+      data: "Updated keyword priorities and content brief adjustments"
+    - squad: content-ecosystem
+      data: "Adjusted content topics based on conversion data"
+  tools_required:
+    - ga4-analytics-ops.mjs
+    - hotmart-ops.mjs
+    - supermemory-ops.mjs
+megabrain_validation:
+  last_run: "20260514-validate-deep"
+  validated_at: "2026-05-15T00:00:00Z"
+  validator: mega-brain/megabrain-chief
+  mode: deep
+  squad: orquestrador-global
+  workflow_id: "wf-seo-conversion-feedback"
+  status: pass
+  evidence:
+    - workflow_inventory_registered
+    - orchestration_surface_validated
+    - external_execution_not_performed

@@ -1,0 +1,113 @@
+---
+# ARCHETYPE-PROFILE.YAML - Brand archetype definition
+# Adapted from mega-brain-stage pattern for Mega Brain workspace context
+
+_meta:
+  version: "1.0.0"
+  owner: "cmo-architect"
+  target_layer: "L2-tactical"
+  state: "TEMPLATE"
+
+metadata:
+  canonical_scope: "workspace/_templates/brand/archetype-profile.yaml"
+  owner: "cmo"
+  version: "1.0.0"
+  last_updated: "2026-03-23"
+  description: "Brand archetype profile with primary/shadow archetypes, expression rules, content themes, and restrictions"
+
+fields:
+  brand_name:
+    type: string
+    required: true
+    description: "Brand this archetype profile belongs to"
+
+  primary_archetype:
+    type: object
+    required: true
+    description: "Dominant archetype definition"
+    properties:
+      name:
+        type: string
+        required: true
+        description: "Archetype name (e.g., The Creator, The Sage, The Outlaw)"
+      core_desire:
+        type: string
+        required: true
+        description: "Fundamental motivation of this archetype"
+      core_fear:
+        type: string
+        required: true
+        description: "What this archetype fears most"
+      brand_message:
+        type: string
+        required: true
+        description: "Core message this archetype communicates"
+      percentage:
+        type: number
+        required: false
+        description: "How much this archetype influences the brand (e.g., 70)"
+
+  shadow_archetype:
+    type: object
+    required: false
+    description: "Secondary archetype that adds depth and tension"
+    properties:
+      name:
+        type: string
+        required: true
+        description: "Shadow archetype name"
+      core_desire:
+        type: string
+        required: true
+        description: "Fundamental motivation of this archetype"
+      how_it_manifests:
+        type: string
+        required: true
+        description: "How the shadow archetype shows up in brand expression"
+      percentage:
+        type: number
+        required: false
+        description: "How much this archetype influences the brand (e.g., 30)"
+
+  expression_rules:
+    type: object
+    required: true
+    description: "How the archetype is expressed across communication"
+    properties:
+      verbal:
+        type: list
+        required: true
+        description: "Language patterns, word choices, and speech style"
+      visual:
+        type: list
+        required: true
+        description: "Visual expression patterns (colors, imagery, design style)"
+      behavioral:
+        type: list
+        required: true
+        description: "Brand behaviors and actions consistent with the archetype"
+
+  content_themes:
+    type: list
+    required: true
+    description: "Content themes and topics that align with this archetype"
+
+  forbidden_themes:
+    type: list
+    required: true
+    description: "Content themes and topics that violate the archetype"
+
+  archetype_in_action:
+    type: list
+    required: false
+    description: "Concrete examples of the archetype expressed in real brand touchpoints"
+
+  competitor_archetypes:
+    type: list
+    required: false
+    description: "Archetypes used by competitors (to differentiate)"
+
+  rationale:
+    type: string
+    required: false
+    description: "Why this archetype combination was chosen for this brand"

@@ -1,0 +1,276 @@
+# =============================================================================
+# WORKFLOW: GAP DETECTION CYCLE
+# =============================================================================
+# Ciclo mensal: health-check → issue log → priorização → atribuição → tracking
+# Consolida detecção distribuída em ação coordenada
+# Referência: 01-analyst-research.md §6.2 Fase 1-2
+# =============================================================================
+
+metadata:
+  name: gap-detection-cycle
+  version: "1.0.0"
+  squad: orquestrador-global
+  maturity_stage: "1_to_10"
+  estimated_time: "1 dia por ciclo mensal"
+  created_at: "2026-03-19"
+  framework_origin: "Bridgewater Issue Log + Amazon Mechanisms + Mega Brain health-ops"
+
+description: >
+  Ciclo mensal de detecção de gaps operacionais no ecossistema. Executa
+  health-check automatizado, coleta issues de todas as fontes, prioriza
+  por RPN (Risk Priority Number), atribui aos squads responsáveis, e
+  rastreia resolução. Combina o conceito de Issue Log do Bridgewater
+  com o princípio de Mechanisms da Amazon.
+
+# =============================================================================
+# TRIGGER
+# =============================================================================
+
+trigger:
+  command: "*gap-detection"
+  aliases:
+    - "*detect-gaps"
+    - "*health-cycle"
+    - "*issue-scan"
+  description: "Iniciar o ciclo mensal de detecção de gaps"
+  cadence: "Primeiro dia útil de cada mês"
+
+# =============================================================================
+# PREREQUISITES
+# =============================================================================
+
+prerequisites:
+  - "health-ops.mjs funcional: node core/scripts/ops/health-ops.mjs check"
+  - "Blind Spot Detection Framework disponível"
+  - "Squads operacionais com config.yaml populado"
+  - "Acesso aos CLI scripts de analytics para coleta de dados"
+
+# =============================================================================
+# INPUTS
+# =============================================================================
+
+inputs:
+  required:
+    - name: ciclo_numero
+      type: integer
+      description: "Número sequencial do ciclo (ex: 1, 2, 3...)"
+  optional:
+    - name: foco_especifico
+      type: string
+      description: "Foco específico deste ciclo (ex: 'funil de vendas', 'produção de conteúdo')"
+    - name: ciclo_anterior_report
+      type: string
+      description: "Path do relatório do ciclo anterior para comparação de trends"
+
+# =============================================================================
+# STAGES
+# =============================================================================
+
+stages:
+
+  # --------------------------------------------------------------------------
+  # STAGE 1: Health Check Automatizado
+  # --------------------------------------------------------------------------
+  - id: 1
+    name: "Health Check Automatizado"
+    description: >
+      Executar health-ops.mjs para coleta automatizada do estado de saúde
+      de todos os squads. Detecta stories incompletas, execuções órfãs,
+      vault vazio, locks expirados, config drift, e mais.
+    agent: "@supervisor-sistema"
+    duration: "15 minutos"
+    actions:
+      - action: "Executar health check completo"
+        command: "node core/scripts/ops/health-ops.mjs check --format=json"
+      - action: "Coletar métricas de maturity"
+        command: "cat .data/maturity-history.json | tail -1"
+      - action: "Verificar alertas recentes"
+        command: "ls .data/alerts/"
+      - action: "Coletar discoveries não processadas"
+        command: "node core/scripts/ops/discovery-ops.mjs list --status=active"
+    gate:
+      criterion: "Health check executado com sucesso, JSON gerado"
+      action_on_fail: "Investigar por que health-ops falhou antes de prosseguir"
+
+  # --------------------------------------------------------------------------
+  # STAGE 2: Coleta de Issues de Todas as Fontes
+  # --------------------------------------------------------------------------
+  - id: 2
+    name: "Coleta de Issues"
+    description: >
+      Agregar issues de todas as fontes em um Issue Log unificado.
+      Fontes: health-ops, blind-spot audits, cross-squad reviews,
+      discoveries, backlog, quality gate failures.
+    agent: "@supervisor-sistema"
+    duration: "30 minutos"
+    actions:
+      - action: "Coletar issues do health check (Stage 1)"
+        source: "health-ops output JSON"
+      - action: "Coletar blind spots abertos dos squads"
+        source: "squads/*/data/blind-spot-audit-*.md"
+      - action: "Coletar findings de cross-squad reviews"
+        source: "squads/*/data/cross-review-*.md"
+      - action: "Coletar discoveries ativas"
+        source: ".data/discoveries/"
+      - action: "Coletar tasks do backlog indefinido"
+        command: "node core/scripts/ops/task-backlog-ops.mjs list --status=pending"
+      - action: "Consolidar em lista única com formato padronizado"
+        format: |
+          - id: {ISSUE-YYYY-MM-NNN}
+          - source: {health-ops | blind-spot | cross-review | discovery | backlog}
+          - squad: {squad afetado}
+          - description: {descrição do issue}
+          - severity: {CRITICAL | HIGH | MEDIUM | LOW}
+          - detected_at: {data de detecção}
+    gate:
+      criterion: "Pelo menos 5 issues coletados de 2+ fontes distintas"
+      action_on_fail: "Se zero issues, verificar se as fontes estão acessíveis"
+
+  # --------------------------------------------------------------------------
+  # STAGE 3: Priorização por RPN
+  # --------------------------------------------------------------------------
+  - id: 3
+    name: "Priorização por RPN"
+    description: >
+      Priorizar issues usando Risk Priority Number (FMEA simplificado).
+      RPN = Severidade x Probabilidade x Detectabilidade.
+      Issues com RPN > 100 são tratados como urgentes.
+    agent: "@supervisor-sistema"
+    duration: "45 minutos"
+    actions:
+      - action: "Para cada issue, atribuir scores"
+        scoring:
+          severidade: "1-10: impacto no negócio se não corrigido"
+          probabilidade: "1-10: chance de se agravar/recorrer"
+          detectabilidade: "1-10: dificuldade de detectar antes que cause dano (10 = muito difícil)"
+      - action: "Calcular RPN = S x P x D"
+      - action: "Ordenar por RPN descendente"
+      - action: "Classificar faixas"
+        ranges:
+          urgente: "RPN > 200 — ação imediata"
+          alto: "RPN 100-200 — resolver neste ciclo"
+          medio: "RPN 50-100 — backlog priorizado"
+          baixo: "RPN < 50 — monitorar"
+    gate:
+      criterion: "Todos os issues têm RPN calculado e classificado"
+      action_on_fail: "Refinar scores com dados adicionais"
+
+  # --------------------------------------------------------------------------
+  # STAGE 4: Atribuição aos Squads
+  # --------------------------------------------------------------------------
+  - id: 4
+    name: "Atribuição e Plano de Ação"
+    description: >
+      Atribuir cada issue priorizado ao squad responsável pela resolução.
+      Issues com RPN > 100 recebem deadline e entram no ClickUp.
+    agent: "@supervisor-sistema"
+    duration: "30 minutos"
+    actions:
+      - action: "Para cada issue RPN > 100:"
+        sub_actions:
+          - "Identificar squad responsável (owner natural ou via DSM)"
+          - "Definir deadline baseado na severidade"
+          - "Criar task no ClickUp se ainda não existe"
+          - "Definir abordagem: DMAIC (problema complexo) ou quick-fix (simples)"
+      - action: "Para issues RPN 50-100:"
+        sub_actions:
+          - "Adicionar ao backlog do squad responsável"
+          - "Revisar no próximo ciclo"
+      - action: "Para issues RPN < 50:"
+        sub_actions:
+          - "Documentar e monitorar"
+          - "Verificar se RPN mudou no próximo ciclo"
+      - action: "Comunicar atribuições aos squad chiefs"
+    gate:
+      criterion: "100% dos issues RPN > 100 atribuídos com deadline"
+      action_on_fail: "Escalar issues não atribuíveis ao conselho"
+
+  # --------------------------------------------------------------------------
+  # STAGE 5: Relatório e Trend Analysis
+  # --------------------------------------------------------------------------
+  - id: 5
+    name: "Relatório Mensal de Gaps"
+    description: >
+      Gerar relatório consolidado do ciclo com trends, comparação com
+      ciclo anterior, e recomendações.
+    agent: "@supervisor-sistema"
+    duration: "30 minutos"
+    actions:
+      - action: "Gerar relatório com seções:"
+        sections:
+          - "Resumo executivo: N issues, N urgentes, N resolvidos desde último ciclo"
+          - "Top 10 issues por RPN"
+          - "Distribuição por squad (quais squads têm mais issues)"
+          - "Distribuição por tipo (quais categorias predominam)"
+          - "Trends: issues crescendo ou diminuindo vs ciclo anterior"
+          - "Issues resolvidos desde último ciclo (celebrar)"
+          - "Recomendações para próximo ciclo"
+      - action: "Salvar relatório"
+        destination: ".data/executions/{YYYY-MM-DD}_gap-detection-cycle-{N}/"
+      - action: "Registrar no SuperMemory"
+        container_tag: "megabrain-master"
+    gate:
+      criterion: "Relatório gerado com todas as seções obrigatórias"
+      action_on_fail: "Completar seções faltantes antes de fechar o ciclo"
+
+# =============================================================================
+# OUTPUT TEMPLATE
+# =============================================================================
+
+output_template: |
+  # Gap Detection Cycle #{N} — {YYYY-MM-DD}
+
+  ## Resumo Executivo
+  - **Issues detectados:** {N}
+  - **Urgentes (RPN > 200):** {N}
+  - **Altos (RPN 100-200):** {N}
+  - **Resolvidos desde ciclo anterior:** {N}
+  - **Trend:** {melhorando | estável | piorando}
+
+  ## Top 10 Issues
+
+  | # | Issue | Squad | RPN | Status | Deadline |
+  |---|-------|-------|-----|--------|----------|
+  | 1 | {desc} | {squad} | {rpn} | {novo|em andamento} | {data} |
+
+  ## Distribuição por Squad
+  {gráfico de barras em texto}
+
+  ## Trends vs Ciclo Anterior
+  - Issues novos: {N} (vs {N anterior})
+  - Issues resolvidos: {N}
+  - RPN médio: {N} (vs {N anterior})
+
+  ## Recomendações
+  1. {recomendação}
+
+# =============================================================================
+# INTEGRATION POINTS
+# =============================================================================
+
+integration:
+  triggers:
+    - type: "cadence"
+      frequency: "monthly"
+      day: "first_business_day"
+  feeds_into:
+    - workflow: "dmaic-correction-pipeline"
+      when: "Issues com RPN > 100 e complexidade alta"
+    - workflow: "cross-squad-audit-cycle"
+      when: "Squads com mais issues recebem prioridade na auditoria"
+    - task: "ecosystem-health-report"
+      when: "Resultados do ciclo alimentam o relatório mensal"
+    - task: "bottleneck-detection"
+      when: "Issues concentrados em uma etapa sugerem gargalo"
+megabrain_validation:
+  last_run: "20260514-validate-deep"
+  validated_at: "2026-05-15T00:00:00Z"
+  validator: mega-brain/megabrain-chief
+  mode: deep
+  squad: orquestrador-global
+  workflow_id: "gap-detection-cycle"
+  status: pass
+  evidence:
+    - workflow_inventory_registered
+    - orchestration_surface_validated
+    - external_execution_not_performed

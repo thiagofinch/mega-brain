@@ -1,0 +1,148 @@
+---
+# ATTRIBUTION-REPORT.YAML - Marketing attribution analysis
+# Adapted from mega-brain-stage pattern for Mega Brain workspace context
+
+_meta:
+  version: "1.0.0"
+  owner: "data-chief"
+  target_layer: "L4-operational"
+  state: "TEMPLATE"
+
+metadata:
+  canonical_scope: "workspace/_templates/analytics/attribution-report.yaml"
+  owner: "cmo"
+  version: "1.0.0"
+  last_updated: "2026-03-23"
+  description: "Attribution report template with channel, campaign, touchpoints, conversions, CAC, and ROAS"
+
+fields:
+  report_title:
+    type: string
+    required: true
+    description: "Descriptive title for this attribution report"
+
+  period:
+    type: object
+    required: true
+    description: "Reporting period"
+    properties:
+      start_date:
+        type: date
+        required: true
+        description: "Period start"
+      end_date:
+        type: date
+        required: true
+        description: "Period end"
+
+  attribution_model:
+    type: enum
+    required: true
+    description: "Attribution model used for this analysis"
+    options: [first-touch, last-touch, linear, time-decay, position-based, data-driven, custom]
+
+  channels:
+    type: list
+    required: true
+    description: "Marketing channels analyzed, each with channel name, spend, impressions, clicks, and attributed conversions"
+
+  campaigns:
+    type: list
+    required: false
+    description: "Campaign-level breakdown, each with campaign name, channel, spend, conversions, and CPA"
+
+  touchpoints:
+    type: object
+    required: false
+    description: "Customer journey touchpoint analysis"
+    properties:
+      average_touchpoints_to_conversion:
+        type: number
+        required: false
+        description: "Average number of touchpoints before conversion"
+      most_common_first_touch:
+        type: string
+        required: false
+        description: "Most frequent first interaction channel"
+      most_common_last_touch:
+        type: string
+        required: false
+        description: "Most frequent channel before conversion"
+      common_paths:
+        type: list
+        required: false
+        description: "Most frequent conversion paths (e.g., Social -> Blog -> Email -> Sale)"
+
+  conversions:
+    type: object
+    required: true
+    description: "Conversion summary"
+    properties:
+      total_conversions:
+        type: number
+        required: true
+        description: "Total conversions attributed in the period"
+      conversion_value:
+        type: string
+        required: true
+        description: "Total monetary value of conversions"
+      conversion_rate:
+        type: string
+        required: false
+        description: "Overall conversion rate"
+
+  cac:
+    type: object
+    required: true
+    description: "Customer Acquisition Cost analysis"
+    properties:
+      blended_cac:
+        type: string
+        required: true
+        description: "Blended CAC across all channels"
+      cac_by_channel:
+        type: list
+        required: true
+        description: "CAC per channel, each with channel name and CAC value"
+      cac_trend:
+        type: enum
+        required: false
+        description: "CAC direction compared to previous period"
+        options: [decreasing, stable, increasing]
+
+  roas:
+    type: object
+    required: true
+    description: "Return on Ad Spend analysis"
+    properties:
+      blended_roas:
+        type: string
+        required: true
+        description: "Blended ROAS across all paid channels (revenue / spend)"
+      roas_by_channel:
+        type: list
+        required: true
+        description: "ROAS per channel, each with channel name and ROAS value"
+      total_spend:
+        type: string
+        required: true
+        description: "Total marketing spend in the period"
+      total_revenue_attributed:
+        type: string
+        required: true
+        description: "Total revenue attributed to marketing"
+
+  key_insights:
+    type: list
+    required: true
+    description: "Top findings from the attribution analysis"
+
+  recommended_actions:
+    type: list
+    required: true
+    description: "Budget reallocation or strategy changes based on attribution data"
+
+  data_quality_notes:
+    type: string
+    required: false
+    description: "Notes on data completeness, tracking gaps, or methodology limitations"

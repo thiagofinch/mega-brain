@@ -1,0 +1,215 @@
+# Workflow: wf-plan-demand
+# ADAPT of processar-solicitacao.md (imported via PA-W-1.0); plan-only gates added (PA-6.1)
+# Story: STORY-PA-6.1
+# Consumer: plan-architect.md agent
+# Legacy: processar-solicitacao (alias preserved)
+
+schema_version: "2.0"
+workflow_id: wf-plan-demand
+legacy_aliases: ["processar-solicitacao"]
+title: "Demand → Orchestration Plan (plan-only)"
+mission: |
+  Receber demanda em linguagem natural, descobrir capabilities via cache, montar DAG completo
+  com paralelização e riscos, validar constitutionalmente, persistir e fazer handoff —
+  SEM EXECUTAR NADA. Defesa-em-profundidade via 3 hooks (PA-5.2).
+
+owner_squad: orquestrador-global
+entry_agent: plan-architect
+plan_only: true   # NON-NEGOTIABLE — workflow nunca dispara execution side effects
+
+inputs:
+  required:
+    - name: demand
+      type: string
+      description: "Texto livre em linguagem natural"
+  optional:
+    - name: mode
+      type: enum
+      values: [SIMPLE, STANDARD, COMPLEX, CRITICAL, DRY_RUN]
+      default: STANDARD
+    - name: deterministic
+      type: boolean
+      default: false
+    - name: budget_cap_usd
+      type: float
+      default: null
+
+phases:
+
+  - id: P1-reception
+    name: "Reception (intent + elicitation gate)"
+    agents: [intent-parser]
+    inputs: [demand]
+    outputs: [demand.parsed, demand.elicitations]
+    plan_only_gate: pass
+    sub_steps:
+      - parse intent → confidence
+      - if confidence < threshold (data/intent-taxonomy.yaml) inline elicitation max 3 questions per ELICITATION-FRAMEWORK
+      - re-parse with refined input
+
+  - id: P2-discovery
+    name: "Capability discovery (cache-first)"
+    agents: [capability-cartographer]
+    inputs: [demand.parsed]
+    outputs:
+      - capabilities-ranked
+      - "gap-report?"
+    plan_only_gate: pass
+    sub_steps:
+      - read data/capability-cache.json
+      - if stale invoke scripts/scan-capabilities.js --force
+      - filter by primary_domain + secondary_domains
+      - if no capability covers some sub-objective emit capability-gap-report (template PA-0.2)
+
+  - id: P3-routing-engine-v2
+    name: "Capability ranking + RoutingDecision v2"
+    agents: [roteador]
+    scripts: ["npm run orquestrador:routing-plan"]
+    inputs: [demand.parsed, capabilities-ranked, "plan.dag.nodes?"]
+    outputs: [selected_capabilities, routing_summary, "routing_decision_id per executable node"]
+    plan_only_gate: pass
+    halt_on_fail: true
+    sub_steps:
+      - roteador explains capability ranking and legacy confidence, but does not override RoutingDecision v2 when decision exists
+      - invoke Agent Selection Intelligence Engine v2 for each executable plan node
+      - persist each RoutingDecision under outputs/routing/decisions/{decision_id}.json
+      - attach routing_decision_id, selected_by, confidence, score_breakdown, alternatives and hard_gate_results to selected_capabilities
+      - attach routing_decision_id, routing_confidence_band and routing_blocked to DAG nodes
+      - if any hard gate fails, keep the plan artifact and mark the node as a blocker
+      - if engine is unavailable, use legacy matching only with explicit routing_fallback warning and audit trail
+      - assign IDS decision per selected capability (REUSE/ADAPT/CREATE)
+      - if any CREATE require Prior-Art Search row in plan
+
+  - id: P4-synthesis
+    name: "DAG synthesis + risk + cost"
+    agents: [dag-architect, risk-assessor, cost-estimator]
+    inputs: [demand.parsed, selected_capabilities]
+    outputs: [dag, risks, resource_estimate]
+    plan_only_gate: pass
+    parallel: true
+    sub_steps:
+      - dag-architect (plan_only=true) → DAG + CPM + parallel groups
+      - risk-assessor → FMEA RPN per node (REUSE blind-spot framework)
+      - estimate-cost.js → tokens × pricing-snapshot.yaml
+      - if RPN_max > 300 OR mode=CRITICAL trigger pre-mortem (REUSE wf-blind-spot-audit-cycle)
+
+  - id: P5-validation
+    name: "Validate plan deterministically"
+    scripts: [validate-plan.js]
+    inputs: [plan-yaml]
+    outputs: [validation-result]
+    plan_only_gate: pass
+    halt_on_fail: true
+    sub_steps:
+      - schema check vs templates/orchestration-plan-tmpl.yaml
+      - cycle detection (Kahn topological sort)
+      - routing check (hard gate blockers fail; legacy fallback warns)
+      - constitutional checks (CODEOWNERS, business isolation, agent authority, no-invention)
+      - budget check (if budget_cap_usd provided)
+
+  - id: P6-governance
+    name: "Persist + register + audit-trail"
+    scripts: [audit-plan.js]
+    inputs: [plan-yaml-validated]
+    outputs: ["outputs/plans/{date}_{slug}/", "plan-registry-entry", "audit-trail-line"]
+    plan_only_gate: pass
+    sub_steps:
+      - audit-plan.js orchestrates validate → estimate → render(md+json) → persist → register → trail
+
+  - id: P7-handoff
+    name: "Emit handoff to user/executor"
+    agents: [plan-architect]
+    inputs: [plan-yaml-validated, outputs-paths]
+    outputs: [handoff-summary]
+    plan_only_gate: pass
+    sub_steps:
+      - 3-line executive summary
+      - Mermaid DAG embed
+      - top 3 risks (RPN > threshold)
+      - next_action_suggested (NOT executed)
+      - artifact paths
+      - if mode=COMPLEX/CRITICAL include human approval gate in do_not_execute_until
+
+hooks_active:
+  - name: pre-execution-block.sh
+    phase: PreToolUse
+    purpose: "Block any execution-side-effect tool when MEGABRAIN_ACTIVE_AGENT=plan-architect"
+  - name: post-plan-validate.sh
+    phase: PostToolUse
+    purpose: "Auto-validate plan YAML on write to outputs/plans/"
+  - name: pre-prompt-route.sh
+    phase: UserPromptSubmit
+    purpose: "Optional auto-route to plan-architect (opt-in via MEGABRAIN_AUTO_ROUTE=true)"
+
+final_outputs:
+  - path: outputs/plans/{YYYYMMDD}_{slug}/plan.yaml
+    type: canonical
+    gitignored: true
+  - path: outputs/plans/{YYYYMMDD}_{slug}/plan.md
+    type: narrative-with-mermaid
+    gitignored: true
+  - path: outputs/plans/{YYYYMMDD}_{slug}/plan.json
+    type: canonical-json
+    gitignored: true
+  - path: outputs/plans/{YYYYMMDD}_{slug}/audit.jsonl
+    type: per-plan-provenance
+    committed: true
+  - path: squads/orquestrador-global/data/plan-registry.yaml
+    type: registry-update
+    committed: true
+  - path: .data/audit-trail.jsonl
+    type: hub-audit-trail-append
+    committed: true
+
+quality_gates:
+  - gate: discovery_completeness
+    checklist: checklists/capability-discovery-checklist.md
+    blocking: true
+  - gate: dag_validity
+    checklist: checklists/dag-validation-checklist.md
+    blocking: true
+  - gate: plan_completeness
+    checklist: checklists/plan-completeness-checklist.md
+    blocking: true
+  - gate: constitutional_compliance
+    checklist: checklists/constitutional-compliance-checklist.md
+    blocking: true
+  - gate: pre_handoff
+    checklist: checklists/pre-handoff-checklist.md
+    blocking: true
+
+modes:
+  SIMPLE:
+    skip_phases: ["P4-synthesis.pre-mortem"]
+    target_duration_seconds: 30
+  STANDARD:
+    full_pipeline: true
+  COMPLEX:
+    additional_phases: ["pre-mortem-mandatory"]
+    require_human_signoff: false
+  CRITICAL:
+    additional_phases: ["pre-mortem-mandatory", "roundtable-consensus"]
+    require_human_signoff: true
+  DRY_RUN:
+    skip_phases: ["P6-governance", "P7-handoff"]
+    output_only: stdout
+
+change_log:
+  - date: "2026-05-24"
+    author: "@dev (Dex) / @qa (Quinn)"
+    change: "ASI-5.1: P3 now consumes RoutingDecision v2 via orquestrador:routing-plan; roteador remains explanatory/fallback layer."
+  - date: "2026-04-28"
+    author: "Claude Opus 4.7 (operator session)"
+    change: "ADAPT from processar-solicitacao.md (imported via PA-W-1.0). Added plan-only gates per phase. Added 3 hooks references (PA-5.2). Pipeline references plan-architect agent (PA-6.1) as entry. Per STORY-PA-6.1."
+megabrain_validation:
+  last_run: "20260514-validate-deep"
+  validated_at: "2026-05-15T00:00:00Z"
+  validator: mega-brain/megabrain-chief
+  mode: deep
+  squad: orquestrador-global
+  workflow_id: "wf-plan-demand"
+  status: pass
+  evidence:
+    - workflow_inventory_registered
+    - orchestration_surface_validated
+    - external_execution_not_performed

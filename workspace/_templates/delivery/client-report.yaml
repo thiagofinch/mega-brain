@@ -1,0 +1,118 @@
+---
+# CLIENT-REPORT.YAML - Periodic client reporting
+# Adapted from mega-brain-stage pattern for Mega Brain workspace context
+
+_meta:
+  version: "1.0.0"
+  owner: "coo-orchestrator"
+  target_layer: "L4-operational"
+  state: "TEMPLATE"
+
+metadata:
+  canonical_scope: "workspace/_templates/delivery/client-report.yaml"
+  owner: "coo"
+  version: "1.0.0"
+  last_updated: "2026-03-23"
+  description: "Client report template with period, metrics, highlights, issues, recommendations, and next steps"
+
+fields:
+  client_name:
+    type: string
+    required: true
+    description: "Client or company name"
+
+  project_name:
+    type: string
+    required: true
+    description: "Project this report covers"
+
+  report_period:
+    type: object
+    required: true
+    description: "Time period covered by this report"
+    properties:
+      start_date:
+        type: date
+        required: true
+        description: "Period start date"
+      end_date:
+        type: date
+        required: true
+        description: "Period end date"
+      report_type:
+        type: enum
+        required: true
+        description: "Reporting cadence"
+        options: [weekly, biweekly, monthly, quarterly]
+
+  metrics:
+    type: list
+    required: true
+    description: "Key performance metrics for the period, each with name, value, target, and trend"
+
+  highlights:
+    type: list
+    required: true
+    description: "Top achievements and wins during the period"
+
+  deliverables_status:
+    type: list
+    required: false
+    description: "Status update on contracted deliverables with progress percentage"
+
+  issues:
+    type: list
+    required: false
+    description: "Problems encountered, each with description, impact, and current status"
+
+  risks:
+    type: list
+    required: false
+    description: "Risks identified with likelihood, impact, and mitigation actions"
+
+  recommendations:
+    type: list
+    required: true
+    description: "Strategic recommendations based on the period results"
+
+  next_steps:
+    type: list
+    required: true
+    description: "Planned activities for the next reporting period"
+
+  budget_status:
+    type: object
+    required: false
+    description: "Budget utilization for the period"
+    properties:
+      budget_allocated:
+        type: string
+        required: false
+        description: "Total budget for the period"
+      budget_spent:
+        type: string
+        required: false
+        description: "Amount spent during the period"
+      budget_remaining:
+        type: string
+        required: false
+        description: "Remaining budget"
+      variance_note:
+        type: string
+        required: false
+        description: "Explanation for any significant budget variance"
+
+  client_feedback:
+    type: string
+    required: false
+    description: "Feedback received from the client during the period"
+
+  prepared_by:
+    type: string
+    required: true
+    description: "Person who prepared this report"
+
+  next_review_date:
+    type: date
+    required: false
+    description: "Date of next scheduled review meeting"

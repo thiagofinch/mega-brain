@@ -1,0 +1,67 @@
+process:
+  id: SP-EXTRACT-SESSION-HEURISTICS
+  version: "3.2.0"
+  mode: VALIDAR
+
+pack:
+  name: extract-session-heuristics
+  version: "3.2.0"
+  description: "Extract operational heuristics from work sessions using Pareto ao Cubo"
+  icon: "brain"
+  owner: squad-creator-pro
+
+scope_resolution:
+  default_scope: session
+  valid_scopes:
+    - session
+    - project
+    - global
+  scope_rules:
+    session: "Extract from one target session only."
+    project: "Extract across all eligible sessions from the target project."
+    global: "Extract across all eligible sessions globally."
+  required_runtime_keys:
+    - extraction_scope
+
+owner_resolution:
+  strategy: session-user-first
+  required_runtime_keys:
+    - heuristic_owner_slug
+    - heuristic_owner_handle
+    - heuristic_owner_display_name
+    - heuristic_id_prefix
+  resolution_order:
+    - explicit_user_override
+    - active_session_user
+    - existing_mind_namespace_match
+    - ask_human_once_if_ambiguous
+  family_rules:
+    reuse_existing_extract_family: true
+    default_extract_family_suffix: "KE"
+  owner_profiles:
+    - slug: knowledge-architect
+      handle: "@knowledge-architect"
+      display_name: "Knowledge Architect"
+      default_extract_prefix: "KA_KE"
+    - slug: process-validator
+      handle: "@process-validator"
+      display_name: "Process Validator"
+      default_extract_prefix: "PV_KE"
+
+artifact_contracts:
+  - artifact_id: "decision-cards"
+    template_path: "../../squads/squad-creator-pro/minds/{heuristic_owner_slug}/heuristics/decision-cards.yaml"
+    lifecycle_states: [draft, validated, approved]
+  - artifact_id: "heuristic-doc"
+    template_path: "../../squads/squad-creator-pro/templates/session-heuristic-tmpl.md"
+    lifecycle_states: [draft, validated]
+  - artifact_id: "scope-extraction-report"
+    template_path: "../../squads/squad-creator-pro/templates/scope-extraction-report-tmpl.md"
+    lifecycle_states: [draft, validated]
+
+references:
+  task: "squads/squad-creator-pro/tasks/an-extract-session-heuristics.md"
+  checklist: "squads/squad-creator-pro/checklists/session-heuristics-extraction.md"
+  template: "squads/squad-creator-pro/templates/session-heuristic-tmpl.md"
+  scope_report_template: "squads/squad-creator-pro/templates/scope-extraction-report-tmpl.md"
+  decision_cards: "squads/squad-creator-pro/minds/{heuristic_owner_slug}/heuristics/decision-cards.yaml"

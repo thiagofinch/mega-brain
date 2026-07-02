@@ -1,0 +1,196 @@
+---
+# COMPANY-PROFILE.YAML - Company identity, mission, vision, values
+# Adapted from mega-brain-stage pattern for Mega Brain workspace context
+
+_meta:
+  version: "1.0.0"
+  owner: "c-level"
+  target_layer: "L0-identity"
+  state: "TEMPLATE"
+
+metadata:
+  canonical_scope: "workspace/_templates/company/company-profile.yaml"
+  owner: "ceo"
+  version: "1.0.0"
+  last_updated: "2026-03-23"
+  description: "Company identity template covering foundation, mission, vision, values, and market position"
+
+fields:
+  legal_name:
+    type: string
+    required: true
+    description: "Official registered company name"
+
+  trade_name:
+    type: string
+    required: true
+    description: "Brand name used in market communications"
+
+  year_founded:
+    type: number
+    required: true
+    description: "Year the company was founded"
+
+  headquarters:
+    type: string
+    required: true
+    description: "City and country of primary office"
+
+  industry:
+    type: string
+    required: true
+    description: "Primary industry or sector the company operates in"
+
+  company_size:
+    type: enum
+    required: true
+    description: "Current company size bracket"
+    options: [micro, small, medium, large, enterprise]
+
+  one_liner:
+    type: string
+    required: true
+    description: "Single sentence that captures what the company does and for whom"
+
+  origin_story:
+    type: string
+    required: false
+    description: "Brief narrative of why the company was founded"
+
+  mission:
+    type: object
+    required: true
+    description: "Company mission statement and beneficiaries"
+    properties:
+      statement:
+        type: string
+        required: true
+        description: "What the company exists to do"
+      who_benefits:
+        type: list
+        required: true
+        description: "Primary stakeholders who benefit from the mission"
+      transformation:
+        type: string
+        required: true
+        description: "The before-and-after change the company creates"
+
+  vision:
+    type: object
+    required: true
+    description: "Where the company aims to be in 5-10 years"
+    properties:
+      statement:
+        type: string
+        required: true
+        description: "Aspirational future state"
+      proof_of_traction:
+        type: list
+        required: false
+        description: "Evidence points showing movement toward vision"
+
+  values:
+    type: list
+    required: true
+    description: "Core operating principles, each with name, definition, and how it is lived daily"
+
+  positioning:
+    type: object
+    required: true
+    description: "How the company differentiates in the market"
+    properties:
+      target_market:
+        type: string
+        required: true
+        description: "Who the company is built to serve"
+      unique_angle:
+        type: string
+        required: true
+        description: "What makes the company uniquely positioned"
+      primary_promise:
+        type: string
+        required: true
+        description: "The core promise made to customers"
+      credibility_foundation:
+        type: list
+        required: false
+        description: "Reasons the market should believe the promise"
+
+  products:
+    type: list
+    required: false
+    description: "Product portfolio with name, type, positioning, status, and launch date per item"
+
+  leadership_team:
+    type: list
+    required: false
+    description: "Key people with name, title, role, and background summary"
+
+  team_size:
+    type: object
+    required: false
+    description: "Headcount breakdown"
+    properties:
+      total:
+        type: number
+        required: true
+        description: "Total headcount including contractors"
+      core_team:
+        type: number
+        required: false
+        description: "Full-time permanent staff"
+      contractors:
+        type: number
+        required: false
+        description: "External contractors and freelancers"
+
+  company_stage:
+    type: enum
+    required: true
+    description: "Current growth stage of the company"
+    options: [seed, growth, scale, mature]
+
+  key_metrics:
+    type: object
+    required: false
+    description: "Company-level health metrics"
+    properties:
+      annual_revenue:
+        type: string
+        required: false
+        description: "Current annual revenue"
+      yoy_growth:
+        type: string
+        required: false
+        description: "Year-over-year growth percentage"
+      customer_count:
+        type: number
+        required: false
+        description: "Total active customers"
+      retention_rate:
+        type: string
+        required: false
+        description: "Customer retention rate percentage"
+
+  company_voice:
+    type: object
+    required: false
+    description: "Communication tone and personality"
+    properties:
+      primary_tone:
+        type: string
+        required: true
+        description: "Dominant communication tone"
+      avoid:
+        type: list
+        required: false
+        description: "Words and tones to never use"
+      personality_archetype:
+        type: string
+        required: false
+        description: "Brand personality archetype (e.g., The Mentor, The Strategist)"
+
+  strategic_roadmap:
+    type: list
+    required: false
+    description: "Top 3 strategic priorities for next 12-24 months, each with goal, timeline, and impact"

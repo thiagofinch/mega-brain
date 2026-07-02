@@ -1,0 +1,43 @@
+# =============================================================================
+# PEOPLE-REGISTRY.YAML — Per-Spoke Subset Template v3.0
+# =============================================================================
+# Purpose: People who belong to THIS business (FK to hub people-registry)
+# Guardian: COO / HR
+# Location: workspace/businesses/{slug}/L0-identity/people-registry.yaml
+# Hub reference: mega-brain-core/data/people-registry.yaml
+#
+# Source: ADR-GAP009 Section 6
+# Owner: c-level-squad
+# =============================================================================
+
+_meta:
+  id: null
+  name: people-registry.yaml
+  layer: L0-identity
+  state: PLACEHOLDER
+  owner: c-level-squad
+  approver: founder
+  version: "3.0.0"
+
+metadata:
+  version: "1.0"
+  business: "FILL_THIS"
+  status: "TEMPLATE"
+  last_updated: "FILL_THIS"
+  hub_registry: "mega-brain-core/data/people-registry.yaml"
+
+# Per-spoke subset — references person_ids from hub registry
+# Each entry key MUST match a person_id in the hub people-registry
+people:
+  example-person:
+    person_id: "FILL_THIS"        # Must match hub registry person_id
+    allocation: 1.0               # 0.0-1.0 allocation to this business
+    department: "FILL_THIS"       # e.g. "comercial", "operacoes", "tech"
+    direct_leader: "FILL_THIS"    # person_id of leader in this business
+    roles:
+      - bu_id: "FILL_THIS"       # References bu-map.yaml bu_id
+        title: "FILL_THIS"
+        scope: "FILL_THIS"       # founder | leader | operator | specialist
+        primary: true
+    status: active                # active | inactive
+    start_date: "FILL_THIS"      # YYYY-MM-DD

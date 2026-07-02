@@ -1,0 +1,8 @@
+# Default: maintainer owns everything
+* @maintainer
+
+# Critical paths require explicit review
+.github/ @maintainer
+bin/ @maintainer
+.claude/ @maintainer
+package.json @maintainer

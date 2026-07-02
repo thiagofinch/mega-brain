@@ -1,0 +1,45 @@
+# Layer 3 Manifest — full backup content (private, everything)
+# ================================================================
+# Layer 3 = Layer 1 (all base content)
+#         + Layer 2 (all populated knowledge content)
+#         + backup-only folders listed below
+#
+# This is a COMPLETE backup of the entire working state.
+# The ONLY things excluded are secrets (.env, credentials)
+# and dev artifacts (node_modules, __pycache__, etc.)
+#
+# RULE: Layer 3 excludes ONLY secrets and dev artifacts.
+# ================================================================
+
+# === LAYER 2 CONTENT (populated knowledge) ===
+
+# Knowledge base (ingested expert content)
+knowledge/external/dna/
+knowledge/external/dossiers/
+knowledge/external/playbooks/
+knowledge/external/sources/
+
+# === LAYER 3 ADDITIONS (backup-only) ===
+
+# Raw user uploads (bucket inboxes)
+knowledge/external/inbox/
+
+# Session and batch logs
+logs/
+
+# JARVIS state and runtime
+.claude/jarvis/
+.claude/sessions/
+.claude/mission-control/
+
+# Data indexes (L3 runtime)
+.data/
+
+# === ALWAYS EXCLUDED (secrets + dev artifacts) ===
+# These are NEVER included regardless of layer:
+#   - .env, .env.*, *.key, *.pem, credentials.json, token.json
+#   - .mcp.json, settings.local.json
+#   - node_modules/, __pycache__/, .venv/, dist/, build/
+#   - chroma_db/, .chroma/, *.db, *.sqlite
+#   - .DS_Store, Thumbs.db, .vscode/, .idea/
+#   - *.mp4, *.mp3, *.wav, *.m4a (large media)

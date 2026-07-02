@@ -1,0 +1,98 @@
+---
+# SPRINT-REVIEW.YAML - Sprint review documentation
+# Adapted from mega-brain-stage pattern for Mega Brain workspace context
+
+_meta:
+  version: "1.0.0"
+  owner: "coo-orchestrator"
+  target_layer: "L4-operational"
+  state: "TEMPLATE"
+
+metadata:
+  canonical_scope: "workspace/_templates/operations/sprint-review.yaml"
+  owner: "coo"
+  version: "1.0.0"
+  last_updated: "2026-03-23"
+  description: "Sprint review template with goals, delivered items, metrics, and demo notes"
+
+fields:
+  sprint_number:
+    type: number
+    required: true
+    description: "Sequential sprint identifier"
+
+  sprint_period:
+    type: object
+    required: true
+    description: "Sprint date range"
+    properties:
+      start_date:
+        type: date
+        required: true
+        description: "Sprint start date"
+      end_date:
+        type: date
+        required: true
+        description: "Sprint end date"
+
+  sprint_goals:
+    type: list
+    required: true
+    description: "Goals committed to at sprint planning (verbatim from planning)"
+
+  delivered:
+    type: list
+    required: true
+    description: "Items completed and accepted during the sprint, each with title and acceptance status"
+
+  not_delivered:
+    type: list
+    required: false
+    description: "Items planned but not completed, each with reason for incompletion"
+
+  carried_over:
+    type: list
+    required: false
+    description: "Items moved to next sprint with justification"
+
+  metrics:
+    type: object
+    required: true
+    description: "Quantitative sprint performance"
+    properties:
+      planned_points:
+        type: number
+        required: true
+        description: "Story points or items committed"
+      completed_points:
+        type: number
+        required: true
+        description: "Story points or items delivered"
+      completion_rate:
+        type: string
+        required: true
+        description: "Percentage of planned work completed"
+      velocity_trend:
+        type: string
+        required: false
+        description: "How this sprint velocity compares to the 3-sprint average"
+
+  demo_notes:
+    type: list
+    required: false
+    description: "Notes from the sprint demo, including stakeholder feedback"
+
+  stakeholder_feedback:
+    type: list
+    required: false
+    description: "Feedback received from stakeholders during review"
+
+  risks_identified:
+    type: list
+    required: false
+    description: "New risks discovered during the sprint"
+
+  next_sprint_focus:
+    type: string
+    required: false
+    description: "Preliminary theme or focus for the next sprint"

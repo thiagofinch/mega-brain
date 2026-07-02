@@ -1,0 +1,74 @@
+# ===========================================
+# Mega Brain — .gitignore
+# ===========================================
+
+# --- Secrets (NEVER commit) ---
+.env
+.env.*
+!.env.example
+**/.env
+!**/.env.example
+*.pem
+*.key
+credentials.json
+service-account*.json
+token.json
+.mcp.json
+.claude/settings.local.json
+
+# --- Runtime data / RAG indexes (per-user, not template) ---
+.data/
+processing/
+inbox/*
+!inbox/.gitkeep
+!inbox/README.md
+
+# --- Logs (keep scaffolding only) ---
+logs/*
+!logs/.gitkeep
+!logs/README.md
+!logs/batches/
+!logs/decisions/
+!logs/sessions/
+
+# --- Node ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# --- Build / dist ---
+dist/
+build/
+
+# --- OS / IDE ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.obsidian/
+
+# --- Media / large binaries (ingest your own into inbox/, don't commit) ---
+*.mp4
+*.mov
+*.mkv
+*.webm
+*.mp3
+*.wav
+*.m4a
+*.sqlite
+*.db
+
+# --- Temp / backups ---
+*.bak
+*.tmp
+*_BACKUP_*

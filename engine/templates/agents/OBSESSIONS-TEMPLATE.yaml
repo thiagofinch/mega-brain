@@ -1,0 +1,96 @@
+# OBSESSIONS-TEMPLATE.yaml - Template para L9: Obsessions
+#
+# Versao: 1.0.0
+# Data: 2026-03-27
+# Proposito: Schema padrao para OBSESSIONS.yaml (Layer 9 - Identity Obsessions)
+# Integrado com: MCE Pipeline (L6-L10), INSIGHTS-STATE.json obsessions extraction
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+# REGRA INQUEBRÁVEL: RASTREABILIDADE 100%
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# Cada obsessao deve ter chunk_ids e insight_ids rastreavéis
+# Navegacao: OBSESSIONS.yaml → INSIGHTS-STATE.json → CHUNKS → inbox
+#
+# STATUS enum: MASTER (1 por pessoa), ACTIVE, LATENT
+# MASTER = obsessao que motor central de TUDO que a pessoa faz
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+
+pessoa: "{NOME_DA_PESSOA}"
+versao: "1.0.0"
+data_extracao: "{DATA_ISO8601}"
+layer: "L9"
+layer_name: "Obsessions"
+total_obsessions: 0
+source_pipeline_step: "Step 7 - Identity Extraction"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# OBSESSOES
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# Ordenadas por intensidade (maior primeiro).
+# Exatamente 1 deve ter status: MASTER.
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+
+obsessions:
+  - id: "OBS-{SLUG}-001"
+    nome: "{Nome descritivo da obsessao}"
+    intensidade: 10                          # Escala 1-10
+    status: "MASTER"                         # MASTER | ACTIVE | LATENT
+    descricao: "{Descricao completa de como a obsessao se manifesta e por que e central}"
+    manifestacoes:                            # Como a obsessao aparece na pratica
+      - "{Manifestacao concreta 1}"
+      - "{Manifestacao concreta 2}"
+      - "{Manifestacao concreta 3}"
+    chunk_ids:                               # RASTREABILIDADE: chunks fonte
+      - "{SLUG}-chunk-XXX-YY"
+    insight_ids:                             # RASTREABILIDADE: insights fonte
+      - "INS-{SLUG}-XXX"
+    quotes:                                  # Citacoes diretas que evidenciam
+      - "{Citacao direta 1}"
+      - "{Citacao direta 2}"
+    conecta_valores:                         # IDs de valores relacionados (VALUES-HIERARCHY)
+      - "VAL-{SLUG}-XXX"
+    conecta_padroes:                         # IDs de padroes relacionados (BEHAVIORAL-PATTERNS)
+      - "BP-{SLUG}-XXX"
+    confianca: "{HIGH|MEDIUM|LOW} - {Justificativa da confianca}"
+
+  - id: "OBS-{SLUG}-002"
+    nome: "{Nome descritivo da obsessao}"
+    intensidade: 8
+    status: "ACTIVE"
+    descricao: "{Descricao}"
+    manifestacoes:
+      - "{Manifestacao}"
+    chunk_ids:
+      - "{SLUG}-chunk-XXX-YY"
+    insight_ids:
+      - "INS-{SLUG}-XXX"
+    quotes:
+      - "{Citacao}"
+    conecta_valores:
+      - "VAL-{SLUG}-XXX"
+    conecta_padroes:
+      - "BP-{SLUG}-XXX"
+    confianca: "{HIGH|MEDIUM|LOW} - {Justificativa}"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# VALIDACAO
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# CHECKLIST antes de publicar:
+# [ ] Exatamente 1 obsessao com status MASTER
+# [ ] Todas obsessoes tem chunk_ids rastreavéis
+# [ ] Todas obsessoes tem insight_ids rastreavéis
+# [ ] IDs seguem formato OBS-{SLUG}-NNN
+# [ ] Intensidade entre 1 e 10
+# [ ] Status e um de: MASTER, ACTIVE, LATENT
+# [ ] conecta_valores aponta para IDs validos em VALUES-HIERARCHY.yaml
+# [ ] conecta_padroes aponta para IDs validos em BEHAVIORAL-PATTERNS.yaml
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Fim do OBSESSIONS-TEMPLATE.yaml v1.0.0
+# Layer 9: Identity Obsessions - MCE Pipeline (L6-L10)

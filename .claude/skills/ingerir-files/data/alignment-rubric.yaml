@@ -1,0 +1,34 @@
+version: "1.0"
+# Rubrica genérica de alinhamento de materiais a resultados/ofertas.
+# Adapte os nomes e keywords aos seus próprios programas/ofertas.
+mission_outcomes:
+  tier_1:
+    name: "Oferta Tier 1"
+    keywords: ["tier 1", "entrada", "comunidade", "fundamentos"]
+  tier_2:
+    name: "Oferta Tier 2"
+    keywords: ["tier 2", "intermediario", "programa core"]
+  tier_3:
+    name: "Oferta Tier 3"
+    keywords: ["tier 3", "implementacao", "enterprise"]
+  tier_4:
+    name: "Oferta Tier 4"
+    keywords: ["tier 4", "premium", "high-ticket", "mastermind"]
+q3_decisions:
+  decision_1:
+    name: "Validation Gate"
+    keywords: ["validation gate", "validacao"]
+  decision_2:
+    name: "Naming Validation"
+    keywords: ["naming", "categoria"]
+  decision_3:
+    name: "Workflow Data Capture"
+    keywords: ["workflow data", "captura"]
+    is_critical: true
+  decision_4:
+    name: "Intelligence Layer"
+    keywords: ["intelligence", "defensive build"]
+  decision_5:
+    name: "Cash Bridge"
+    keywords: ["cash bridge", "captacao", "runway"]
+    is_critical: true

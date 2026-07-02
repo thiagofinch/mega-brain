@@ -1,0 +1,295 @@
+# =============================================================================
+# WORKFLOW: DMAIC CORRECTION PIPELINE
+# =============================================================================
+# Framework: Six Sigma DMAIC (Motorola/GE)
+# Define → Measure → Analyze → Improve → Control
+# Referência: 01-analyst-research.md §2.2.2
+# =============================================================================
+
+metadata:
+  name: dmaic-correction-pipeline
+  version: "1.0.0"
+  squad: orquestrador-global
+  maturity_stage: "1_to_10"
+  estimated_time: "1-4 semanas por issue (depende da complexidade)"
+  created_at: "2026-03-19"
+  framework_origin: "Six Sigma DMAIC (Motorola, 1986)"
+
+description: >
+  Pipeline estruturado de correção para gaps, blind spots e problemas
+  identificados no ecossistema. Cada issue com RPN > 100 do gap-detection-cycle
+  passa por 5 fases: Define (delimitar o problema), Measure (medir estado atual),
+  Analyze (root cause analysis), Improve (implementar correção), Control
+  (criar mecanismo de controle para manter o ganho).
+
+# =============================================================================
+# TRIGGER
+# =============================================================================
+
+trigger:
+  command: "*dmaic"
+  aliases:
+    - "*correct-gap"
+    - "*fix-issue"
+    - "*correction-pipeline"
+  description: "Iniciar pipeline DMAIC para um issue específico"
+
+# =============================================================================
+# PREREQUISITES
+# =============================================================================
+
+prerequisites:
+  - "Issue identificado com RPN calculado (preferencialmente > 100)"
+  - "Squad responsável definido"
+  - "Dados de baseline disponíveis ou coletáveis"
+
+# =============================================================================
+# INPUTS
+# =============================================================================
+
+inputs:
+  required:
+    - name: issue_id
+      type: string
+      description: "ID do issue no gap-detection-cycle ou blind-spot log"
+    - name: issue_description
+      type: string
+      description: "Descrição clara do problema"
+    - name: squad_owner
+      type: string
+      description: "Squad responsável pela resolução"
+    - name: rpn
+      type: integer
+      description: "Risk Priority Number do issue"
+  optional:
+    - name: deadline
+      type: string
+      description: "Prazo máximo para resolução"
+    - name: dados_existentes
+      type: object
+      description: "Dados já coletados sobre o problema"
+    - name: hipotese_causa
+      type: string
+      description: "Hipótese inicial da root cause"
+
+# =============================================================================
+# STAGES
+# =============================================================================
+
+stages:
+
+  # --------------------------------------------------------------------------
+  # STAGE 1: DEFINE
+  # --------------------------------------------------------------------------
+  - id: 1
+    name: "Define — Delimitar o Problema"
+    description: >
+      Definir o problema com clareza: o que está acontecendo, qual o impacto,
+      quem é afetado, e qual a métrica de sucesso. Usar formato de Problem
+      Statement: "De X para Y até Z."
+    agent: "@supervisor-sistema"
+    duration: "1-2 horas"
+    actions:
+      - action: "Formular Problem Statement"
+        format: |
+          De: {estado atual com dados}
+          Para: {estado desejado com target numérico}
+          Até: {deadline}
+          Impacto: {o que acontece se não resolver}
+      - action: "Definir escopo"
+        questions:
+          - "Quais squads são afetados?"
+          - "Quais processos estão envolvidos?"
+          - "O que está DENTRO do escopo da correção?"
+          - "O que está FORA do escopo (não mexer agora)?"
+      - action: "Definir métrica de sucesso"
+        criteria: "Numérica, mensurável, com prazo"
+      - action: "Validar que o issue merece DMAIC"
+        rule: "Se resolução é óbvia e leva < 1 hora, não precisa de DMAIC. Just fix it."
+    gate:
+      criterion: "Problem statement claro com De/Para/Até + métrica de sucesso definida"
+      action_on_fail: "Refinar definição com mais dados"
+
+  # --------------------------------------------------------------------------
+  # STAGE 2: MEASURE
+  # --------------------------------------------------------------------------
+  - id: 2
+    name: "Measure — Medir o Estado Atual"
+    description: >
+      Coletar dados reais que quantificam o problema. Sem medição, qualquer
+      melhoria é anedótica. Usar CLI scripts para dados automatizados.
+    agent: "@data-chief"
+    duration: "2-4 horas"
+    actions:
+      - action: "Coletar dados quantitativos do estado atual"
+        sources:
+          - "CLI scripts relevantes (meta-ads-ops, ga4-analytics, hotmart-ops, etc.)"
+          - "health-ops.mjs check para dados de saúde"
+          - "Blind spot audit reports"
+          - "ClickUp task history"
+      - action: "Calcular baseline"
+        metrics:
+          - "Valor atual da métrica-problema"
+          - "Variação nos últimos 30/60/90 dias"
+          - "Benchmark do nicho/indústria (se disponível)"
+      - action: "Visualizar: onde exatamente o problema ocorre?"
+        tools: "Pareto chart (80/20), histograma, timeline"
+    gate:
+      criterion: "Baseline quantificado com dados reais de pelo menos 30 dias"
+      action_on_fail: "Estender período de coleta ou buscar fontes alternativas"
+
+  # --------------------------------------------------------------------------
+  # STAGE 3: ANALYZE
+  # --------------------------------------------------------------------------
+  - id: 3
+    name: "Analyze — Encontrar Root Cause"
+    description: >
+      Identificar a causa raiz do problema (não os sintomas). Usar
+      5 Whys, Ishikawa, ou análise de dados para ir além do óbvio.
+    agent: "@supervisor-sistema"
+    duration: "2-4 horas"
+    actions:
+      - action: "Aplicar 5 Whys"
+        format: |
+          Problema: {descrição}
+          Por que 1? {resposta → novo por quê}
+          Por que 2? {resposta → novo por quê}
+          Por que 3? {resposta → novo por quê}
+          Por que 4? {resposta → novo por quê}
+          Por que 5? {resposta → ROOT CAUSE}
+      - action: "Classificar a root cause"
+        categories:
+          - "Processo: etapa faltante ou inadequada"
+          - "Conhecimento: knowledge doc incompleto ou ausente"
+          - "Mecanismo: checkpoint/gate que não existe"
+          - "Dados: métrica não monitorada"
+          - "Integração: handoff falho entre squads"
+          - "Recurso: capacity insuficiente"
+      - action: "Validar root cause com dados"
+        test: "Se corrigirmos esta causa, o problema REALMENTE será resolvido?"
+      - action: "Identificar causas contribuintes (secundárias)"
+    gate:
+      criterion: "Root cause identificada, classificada, e validada com dados"
+      action_on_fail: "Aprofundar análise, buscar mais dados ou perspectivas"
+
+  # --------------------------------------------------------------------------
+  # STAGE 4: IMPROVE
+  # --------------------------------------------------------------------------
+  - id: 4
+    name: "Improve — Implementar Correção"
+    description: >
+      Implementar a correção direcionada à root cause. Testar em escopo
+      reduzido antes de aplicar em escala. Documentar a mudança.
+    agent: "squad_owner (variável)"
+    duration: "1-5 dias"
+    actions:
+      - action: "Definir ações corretivas"
+        types:
+          - "Knowledge: criar/estender doc com o conhecimento faltante"
+          - "Processo: adicionar etapa ou checkpoint ao workflow/task"
+          - "Mecanismo: criar quality gate, hook, ou validação automática"
+          - "Dados: configurar monitoramento da métrica"
+          - "Integração: criar handoff protocol ou feedback loop"
+      - action: "Implementar em escopo reduzido (piloto)"
+        rule: "Testar a correção em 1-2 outputs reais antes de generalizar"
+      - action: "Medir resultado do piloto"
+        comparison: "Antes vs depois da correção"
+      - action: "Se piloto funcionar, aplicar em escala"
+      - action: "Se piloto falhar, voltar ao Stage 3 (re-analyze)"
+    gate:
+      criterion: "Correção implementada E testada em piloto com melhoria mensurável"
+      action_on_fail: "Voltar ao Stage 3 para re-analisar root cause"
+
+  # --------------------------------------------------------------------------
+  # STAGE 5: CONTROL
+  # --------------------------------------------------------------------------
+  - id: 5
+    name: "Control — Manter o Ganho"
+    description: >
+      Criar mecanismos de controle para garantir que o problema não retorne.
+      Esta é a fase mais negligenciada e a mais importante para sustentabilidade.
+    agent: "@supervisor-sistema"
+    duration: "2-4 horas"
+    actions:
+      - action: "Criar mecanismo de controle (Amazon: 'mechanism over good intentions')"
+        options:
+          - "Quality gate: adicionar check ao squad-quality-gates.md"
+          - "Hook automático: criar validação em .claude/hooks/"
+          - "Alerta: configurar threshold que dispara notificação"
+          - "Cadência: agendar verificação periódica"
+          - "Template: padronizar o processo correto em template"
+      - action: "Documentar a correção"
+        format: |
+          ## Correção DMAIC — {issue_id}
+          - Problema: {descrição}
+          - Root cause: {causa raiz}
+          - Correção: {o que foi feito}
+          - Mecanismo de controle: {como garantimos que não volta}
+          - Resultado: {métrica antes vs depois}
+      - action: "Atualizar registros"
+        updates:
+          - "Fechar issue no gap-detection-cycle"
+          - "Atualizar knowledge doc afetado"
+          - "Registrar no SuperMemory (containerTag: megabrain-master)"
+          - "Registrar como Discovery se aplicável a outros squads"
+      - action: "Agendar revisão em 30 dias"
+        purpose: "Verificar se o ganho se manteve"
+    gate:
+      criterion: "Mecanismo de controle implementado E documentado"
+      action_on_fail: "Definir pelo menos 1 mecanismo antes de fechar"
+
+# =============================================================================
+# QUALITY GATE DO WORKFLOW
+# =============================================================================
+
+quality_gate:
+  checks:
+    - name: "Problem statement claro"
+      severity: CRITICAL
+      criterion: "De/Para/Até com números"
+    - name: "Baseline quantificado"
+      severity: CRITICAL
+      criterion: "Dados reais de pelo menos 30 dias"
+    - name: "Root cause validada"
+      severity: CRITICAL
+      criterion: "5 Whys completados, causa confirmada com dados"
+    - name: "Melhoria mensurável"
+      severity: HIGH
+      criterion: "Piloto mostra melhoria vs baseline"
+    - name: "Mecanismo de controle"
+      severity: HIGH
+      criterion: "Pelo menos 1 mecanismo automático implementado"
+
+# =============================================================================
+# INTEGRATION POINTS
+# =============================================================================
+
+integration:
+  triggers_from:
+    - workflow: "gap-detection-cycle"
+      when: "Issues com RPN > 100"
+    - task: "cross-squad-review"
+      when: "Findings CRITICAL de auditoria cruzada"
+    - task: "bottleneck-detection"
+      when: "Restrição confirmada precisa de correção estruturada"
+  feeds_into:
+    - task: "ecosystem-health-report"
+      when: "Resultados DMAIC alimentam relatório mensal"
+    - workflow: "gap-detection-cycle"
+      when: "Issues resolvidos são marcados no próximo ciclo"
+  supermemory:
+    container_tag: "megabrain-master"
+    save_on_complete: true
+    format: "tipo: dmaic | issue: {id} | root_cause: {causa} | resultado: {antes→depois}"
+megabrain_validation:
+  last_run: "20260514-validate-deep"
+  validated_at: "2026-05-15T00:00:00Z"
+  validator: mega-brain/megabrain-chief
+  mode: deep
+  squad: orquestrador-global
+  workflow_id: "dmaic-correction-pipeline"
+  status: pass
+  evidence:
+    - workflow_inventory_registered
+    - orchestration_surface_validated
+    - external_execution_not_performed

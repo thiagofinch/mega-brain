@@ -1,0 +1,76 @@
+# =============================================================================
+# business.yaml -- Business Identity Card Template v3
+# =============================================================================
+# Purpose: Root identity document for a business in the workspace.
+# Guardian: C-Level Squad
+# Location: workspace/businesses/{slug}/business.yaml
+#
+# Source: WI-T-021-S (Workspace Integrity)
+# Owner: c-level-squad
+# =============================================================================
+
+_meta:
+  id: BIZ-001
+  name: business.yaml
+  layer: root
+  state: PLACEHOLDER
+  owner: c-level-squad
+  approver: founder
+  version: "3.0.0"
+
+# ======================================================================
+# IDENTIDADE
+# ======================================================================
+identity:
+  name: "FILL_THIS"
+  slug: "FILL_THIS"
+  type: "FILL_THIS"           # holding | startup | agency | saas | education
+  status: active
+  founding_date: "FILL_THIS"  # YYYY-MM-DD
+  legal_entity: "FILL_THIS"   # Razao social
+  parent: null                # slug do parent business (se spoke de holding)
+
+# ======================================================================
+# FUNDADORES / SHAREHOLDERS
+# ======================================================================
+founders:
+  - name: "FILL_THIS"
+    role: "FILL_THIS"          # ceo | cto | coo | cfo | co-founder
+    equity_percentage: null
+    active: true
+    contact_email: "FILL_THIS"
+
+# ======================================================================
+# BRANDS / SUB-UNITS
+# ======================================================================
+brands:
+  - slug: "FILL_THIS"
+    name: "FILL_THIS"
+    type: "FILL_THIS"          # tech-brand | education-brand | investment-brand | service-brand
+
+# ======================================================================
+# MODELO DE RECEITA
+# ======================================================================
+revenue_model:
+  primary_model: "FILL_THIS"   # saas | education | services | marketplace | hybrid
+  secondary_models: null
+  currency: BRL
+  shared_products: null
+  upsell_opt_in: null
+
+# ======================================================================
+# CONTATO
+# ======================================================================
+contact:
+  primary_email: "FILL_THIS"
+  website: "FILL_THIS"
+  social_media: null
+
+# ======================================================================
+# ECOSSISTEMA MEGABRAIN
+# ======================================================================
+megabrain_ecosystem:
+  hub_role: spoke              # hub | spoke
+  bu_mapping: null
+  squads_active: null
+  workspace_completeness: null

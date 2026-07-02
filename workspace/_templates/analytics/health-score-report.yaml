@@ -1,0 +1,136 @@
+---
+# HEALTH-SCORE-REPORT.YAML - Entity health scoring
+# Adapted from mega-brain-stage pattern for Mega Brain workspace context
+
+_meta:
+  version: "1.0.0"
+  owner: "data-chief"
+  target_layer: "L4-operational"
+  state: "TEMPLATE"
+
+metadata:
+  canonical_scope: "workspace/_templates/analytics/health-score-report.yaml"
+  owner: "coo"
+  version: "1.0.0"
+  last_updated: "2026-03-23"
+  description: "Health score report for any entity (client, project, product) with multi-dimensional scoring and alerts"
+
+fields:
+  entity_name:
+    type: string
+    required: true
+    description: "Name of the entity being scored"
+
+  entity_type:
+    type: enum
+    required: true
+    description: "Type of entity"
+    options: [client, project, product, team, department, partnership]
+
+  report_date:
+    type: date
+    required: true
+    description: "Date the health score was calculated"
+
+  overall_score:
+    type: object
+    required: true
+    description: "Aggregate health score"
+    properties:
+      score:
+        type: number
+        required: true
+        description: "Overall health score (0-100)"
+      status:
+        type: enum
+        required: true
+        description: "Health status classification"
+        options: [healthy, at-risk, critical]
+      trend:
+        type: enum
+        required: true
+        description: "Score direction compared to previous period"
+        options: [improving, stable, declining]
+
+  dimensions:
+    type: list
+    required: true
+    description: "Individual scoring dimensions, each with dimension name, score (0-100), weight, and status"
+
+  dimension_details:
+    type: object
+    required: false
+    description: "Typical dimensions structure (adapt per entity type)"
+    properties:
+      engagement:
+        type: object
+        required: false
+        description: "How actively the entity is engaged"
+        properties:
+          score:
+            type: number
+            required: true
+            description: "Engagement score (0-100)"
+          indicators:
+            type: list
+            required: true
+            description: "Metrics that compose this score"
+      satisfaction:
+        type: object
+        required: false
+        description: "Satisfaction or sentiment level"
+        properties:
+          score:
+            type: number
+            required: true
+            description: "Satisfaction score (0-100)"
+          indicators:
+            type: list
+            required: true
+            description: "Metrics that compose this score"
+      financial:
+        type: object
+        required: false
+        description: "Financial health of the relationship or entity"
+        properties:
+          score:
+            type: number
+            required: true
+            description: "Financial score (0-100)"
+          indicators:
+            type: list
+            required: true
+            description: "Metrics that compose this score"
+      delivery:
+        type: object
+        required: false
+        description: "Delivery quality and timeliness"
+        properties:
+          score:
+            type: number
+            required: true
+            description: "Delivery score (0-100)"
+          indicators:
+            type: list
+            required: true
+            description: "Metrics that compose this score"
+
+  alerts:
+    type: list
+    required: false
+    description: "Active alerts triggered by threshold breaches, each with dimension, condition, and recommended action"
+
+  history:
+    type: list
+    required: false
+    description: "Historical scores for trend analysis (last 3-6 periods)"
+
+  recommended_actions:
+    type: list
+    required: true
+    description: "Actions to maintain or improve health, each with action, owner, and priority"
+
+  next_review_date:
+    type: date
+    required: false
+    description: "When this health score should be recalculated"

@@ -1,0 +1,140 @@
+---
+# JOB-DESCRIPTION.YAML - Role definition and requirements
+# Adapted from mega-brain-stage pattern for Mega Brain workspace context
+
+_meta:
+  version: "1.0.0"
+  owner: "people-ops"
+  target_layer: "L0-identity"
+  state: "TEMPLATE"
+
+metadata:
+  canonical_scope: "workspace/_templates/hiring/job-description.yaml"
+  owner: "coo"
+  version: "1.0.0"
+  last_updated: "2026-03-23"
+  description: "Job description template with title, department, responsibilities, requirements, and compensation"
+
+fields:
+  job_title:
+    type: string
+    required: true
+    description: "Official job title"
+
+  department:
+    type: string
+    required: true
+    description: "Department or team the role belongs to"
+
+  reports_to:
+    type: string
+    required: true
+    description: "Direct manager title or name"
+
+  location:
+    type: object
+    required: true
+    description: "Work location details"
+    properties:
+      type:
+        type: enum
+        required: true
+        description: "Work arrangement"
+        options: [remote, hybrid, onsite]
+      city:
+        type: string
+        required: false
+        description: "City if hybrid or onsite"
+      timezone:
+        type: string
+        required: false
+        description: "Required timezone overlap"
+
+  role_purpose:
+    type: string
+    required: true
+    description: "Why this role exists in one sentence (outcome-focused, not task-focused)"
+
+  responsibilities:
+    type: list
+    required: true
+    description: "Key responsibilities and expected outcomes (5-8 items, outcome language not task language)"
+
+  requirements:
+    type: object
+    required: true
+    description: "Candidate qualifications"
+    properties:
+      must_have:
+        type: list
+        required: true
+        description: "Non-negotiable skills and experience (reject without these)"
+      nice_to_have:
+        type: list
+        required: false
+        description: "Preferred qualifications that strengthen candidacy"
+      education:
+        type: string
+        required: false
+        description: "Education requirements if any"
+      years_experience:
+        type: string
+        required: false
+        description: "Required years of relevant experience"
+
+  culture_fit:
+    type: list
+    required: false
+    description: "Values and traits the candidate must embody to succeed in the team"
+
+  compensation_range:
+    type: object
+    required: true
+    description: "Compensation package"
+    properties:
+      base_salary_min:
+        type: string
+        required: true
+        description: "Minimum base salary"
+      base_salary_max:
+        type: string
+        required: true
+        description: "Maximum base salary"
+      currency:
+        type: string
+        required: true
+        description: "Salary currency (e.g., BRL, USD)"
+      variable:
+        type: string
+        required: false
+        description: "Variable compensation (bonus, commission) if applicable"
+      benefits:
+        type: list
+        required: false
+        description: "Benefits offered (health, equipment, PTO, etc.)"
+
+  hiring_process:
+    type: list
+    required: false
+    description: "Stages of the hiring process for this role (screening, interview, assignment, offer)"
+
+  ninety_day_success:
+    type: string
+    required: false
+    description: "What success looks like after 90 days (specific, measurable)"
+
+  kpis:
+    type: list
+    required: false
+    description: "Key performance indicators the role will be measured on"
+
+  red_flags:
+    type: list
+    required: false
+    description: "Signals that immediately disqualify a candidate"
+
+  status:
+    type: enum
+    required: true
+    description: "Current status of this position"
+    options: [draft, open, interviewing, offer-extended, filled, on-hold, cancelled]

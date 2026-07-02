@@ -1,0 +1,45 @@
+# =============================================================================
+# ENTITY KEYWORDS — Fallback keyword dictionary for inbox_organizer.py
+# =============================================================================
+# Used by _keyword_fallback() as layer-2 classification when strict entity
+# detection returns None. Maps entity slugs to synonym/alias keyword lists.
+#
+# Rules:
+#   - Each keyword must be >= 5 chars OR a combination of 2+ tokens (enforced
+#     at runtime by _keyword_fallback — see story AC2, risk notes).
+#   - Keywords are matched case-insensitively against the full filename stem
+#     using whole-word boundary matching.
+#   - First keyword match wins. More specific keywords (longer, rarer) should
+#     appear before generic ones within an entity's list.
+#
+# This file ships EMPTY of project-specific entities. Populate it for your own
+# knowledge base by adding entries under `entities:` following the example
+# below. Recommended inference strategy when building your own list:
+#       1. knowledge/external/dna/persons/           (external experts)
+#       2. knowledge/business/inbox/ subdirs         (existing routed entities)
+#       3. agents/external/ + agents/business/       (agent slugs)
+#       4. workspace/businesses/{bu}/L0-identity/people-registry.yaml
+#       5. workspace/businesses/{bu}/L1-strategy/team-registry.yaml
+#
+# Owner: @dev
+# =============================================================================
+
+entities: {}
+
+# ---------------------------------------------------------------------------
+# EXAMPLE (commented out — copy and adapt for your own entities)
+# ---------------------------------------------------------------------------
+#
+# entities:
+#
+#   # External expert (knowledge/external/dna/persons/<slug>/)
+#   example-expert:
+#     keywords: ["example expert", "example-expert"]
+#
+#   # Business unit / company entity (knowledge/business/inbox/<slug>/)
+#   example-company:
+#     keywords: ["example company", "example-company", "weekly example"]
+#
+#   # Team member (workspace/businesses/{bu}/L1-strategy/team-registry.yaml)
+#   example-person:
+#     keywords: ["example person", "example-person"]

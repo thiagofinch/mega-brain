@@ -1,0 +1,348 @@
+# Agent Lenses & Checklists — Mega Brain Roundtable
+# Adapted from mega-brain v2.1.0 + mega-brain local agents
+# Version: 1.0.0
+
+agent_lenses:
+
+  # ═══════════════════════════════════════════════════════════
+  # CORE AGENTS (from mega-brain — available in .claude/agents/)
+  # ═══════════════════════════════════════════════════════════
+
+  - agent_id: "@cso"
+    persona: "Chief Standards Officer"
+    lens: "Governanca, compliance, SOT, registries"
+    checklist:
+      - "12 dimensoes CSO"
+      - "Registry gaps"
+      - "SOT conflicts"
+      - "Agent authority"
+      - "Data governance"
+      - "Layer hierarchy"
+
+  - agent_id: "@architect"
+    persona: "Aria"
+    lens: "Arquitetura, dependencias, packages, breaking changes"
+    checklist:
+      - "Dependency graph"
+      - "Package boundaries"
+      - "Cross-repo coherence"
+      - "Breaking changes"
+      - "Migration path"
+      - "Wave gates"
+
+  - agent_id: "@qa"
+    persona: "Quinn"
+    lens: "Testabilidade, regressao, cobertura"
+    checklist:
+      - "AC testability"
+      - "Testing gaps"
+      - "Regression risk"
+      - "Integration tests"
+      - "E2E coverage"
+      - "CodeRabbit config"
+
+  - agent_id: "@db-sage"
+    persona: "Database Sage"
+    lens: "Schema, pgvector, RLS, data integrity"
+    checklist:
+      - "Migration safety"
+      - "HNSW params"
+      - "RLS isolation"
+      - "Edge functions"
+      - "Data integrity"
+      - "Rollback procedures"
+
+  - agent_id: "@mega-brain-master"
+    persona: "Mega Brain Master"
+    lens: "Framework compliance, Constitution"
+    checklist:
+      - "Story template"
+      - "Agent assignments"
+      - "MEGABRAIN v3.1/v3.2"
+      - "Hub x Spoke compliance"
+      - "Constitution"
+      - "Missing stories"
+
+  - agent_id: "@megabrain-chief"
+    persona: "MEGABRAIN Chief"
+    lens: "Composition rules, tokens, processes"
+    checklist:
+      - "Composition rules"
+      - "Token families"
+      - "Process mapping"
+      - "Organism patterns"
+      - "Flywheel/mission alignment"
+
+  - agent_id: "@po"
+    persona: "Pax"
+    lens: "Stories, ACs, effort, dependencies"
+    checklist:
+      - "10-point validation"
+      - "Effort realism"
+      - "Dependency correctness"
+      - "Executor/QG assignments"
+
+  - agent_id: "@devops"
+    persona: "Gage"
+    lens: "CI/CD, deploy, security"
+    checklist:
+      - "Pipeline integrity"
+      - "Deploy strategy"
+      - "Infra provisioning"
+      - "Security"
+      - "Publish workflows"
+
+  - agent_id: "@infra-chief"
+    persona: "Infra Chief"
+    lens: "Servers, Docker, monitoring"
+    checklist:
+      - "Service catalog"
+      - "Infra provisioning"
+      - "Container orchestration"
+      - "Monitoring"
+      - "Networking"
+
+  - agent_id: "@pm"
+    persona: "Morgan"
+    lens: "Planning, waves, timeline"
+    checklist:
+      - "Wave structure"
+      - "Timeline realism"
+      - "Resource allocation"
+      - "Risk management"
+      - "Dependency graph"
+
+  - agent_id: "@vision-chief"
+    persona: "Vision Chief"
+    lens: "Estrategia, visao, mercado"
+    checklist:
+      - "Strategic alignment"
+      - "Market opportunity"
+      - "Competitive positioning"
+
+  - agent_id: "@coo-orchestrator"
+    persona: "COO"
+    lens: "Operacoes, processos, equipe"
+    checklist:
+      - "Operational feasibility"
+      - "Resource availability"
+      - "Process efficiency"
+
+  # ═══════════════════════════════════════════════════════════
+  # CONCLAVE AGENTS (agents/system/conclave/)
+  # ═══════════════════════════════════════════════════════════
+
+  - agent_id: "@critico"
+    persona: "Critico Metodologico"
+    persona_source: "agents/system/conclave/critico-metodologico/"
+    lens: "Rigor metodologico, qualidade de raciocinio, scoring 0-100"
+    checklist:
+      - "Premissas declaradas explicitamente"
+      - "Evidencias rastreaveis (source_id/chunk_id)"
+      - "Logica consistente (sem non-sequiturs)"
+      - "Cenarios alternativos considerados"
+      - "Conflitos resolvidos per protocol"
+
+  - agent_id: "@advogado-diabo"
+    persona: "Advogado do Diabo"
+    persona_source: "agents/system/conclave/advogado-do-diabo/"
+    lens: "Stress-test, contra-argumentos, riscos nao mencionados, premissa mais fraca"
+    checklist:
+      - "Weakest premise identified"
+      - "Undiscussed risk surfaced"
+      - "12-month regret scenario constructed"
+      - "Ignored alternative proposed"
+
+  - agent_id: "@sintetizador"
+    persona: "Sintetizador"
+    persona_source: "agents/system/conclave/sintetizador/"
+    lens: "Integracao de feedback, calibracao matematica de confianca, resolucao"
+    checklist:
+      - "Critico + advogado outputs integrated"
+      - "Confidence calibrated mathematically"
+      - "Mitigations defined (who/what/when)"
+      - "Reversal criteria set (IF/THEN)"
+      - "Escalation if confidence < 60%"
+
+  # ═══════════════════════════════════════════════════════════
+  # PIPELINE-OPS AGENTS (agents/system/pipeline-ops/)
+  # ═══════════════════════════════════════════════════════════
+
+  - agent_id: "@gate"
+    persona: "Gate"
+    persona_source: "agents/system/pipeline-ops/gate/"
+    lens: "Classificacao de intake, routing, batching"
+    checklist:
+      - "Scope classification correct (external/business/personal)"
+      - "Routing to correct bucket"
+      - "Batch grouping logic"
+      - "Metadata completeness"
+
+  - agent_id: "@parse"
+    persona: "Parse"
+    persona_source: "agents/system/pipeline-ops/parse/"
+    lens: "Chunking semantico"
+    checklist:
+      - "Chunk boundaries respect semantic units"
+      - "Speaker attribution preserved"
+      - "Metadata propagated to chunks"
+      - "Chunk size within limits"
+
+  - agent_id: "@canon"
+    persona: "Canon"
+    persona_source: "agents/system/pipeline-ops/canon/"
+    lens: "Resolucao de entidades, mapa canonico"
+    checklist:
+      - "Entity deduplication correct"
+      - "CANONICAL-MAP merge (not overwrite)"
+      - "Cross-source entity linking"
+      - "Alias resolution"
+
+  - agent_id: "@dig"
+    persona: "Dig"
+    persona_source: "agents/system/pipeline-ops/dig/"
+    lens: "Extracao de insights, DNA L1-L5"
+    checklist:
+      - "Insights classified by DNA layer (L1-L5)"
+      - "Evidence chain traceable"
+      - "Confidence scores assigned"
+      - "No hallucinated insights"
+      - "Cumulative threshold tracking"
+
+  - agent_id: "@behav"
+    persona: "Behav"
+    persona_source: "agents/system/pipeline-ops/behav/"
+    lens: "Padroes comportamentais L6"
+    checklist:
+      - "Behavioral triggers identified"
+      - "Patterns grounded in source material"
+      - "L6 YAML schema compliance"
+
+  - agent_id: "@psych"
+    persona: "Psych"
+    persona_source: "agents/system/pipeline-ops/psych/"
+    lens: "Identidade, valores L7, obsessoes L9, paradoxos L10"
+    checklist:
+      - "Values hierarchy derived from evidence"
+      - "Obsessions recurring across sources"
+      - "Paradoxes genuinely contradictory"
+      - "L7/L9/L10 YAML schema compliance"
+
+  - agent_id: "@voice"
+    persona: "Voice"
+    persona_source: "agents/system/pipeline-ops/voice/"
+    lens: "Voice DNA L8, padroes de fala, vocabulario"
+    checklist:
+      - "Signature phrases extracted verbatim"
+      - "Vocabulary patterns identified"
+      - "Tone/register classified"
+      - "L8 YAML schema compliance"
+
+  - agent_id: "@guard"
+    persona: "Guard"
+    persona_source: "agents/system/pipeline-ops/guard/"
+    lens: "Checkpoint de identidade, validacao humana"
+    checklist:
+      - "Identity coherence across layers"
+      - "Human validation flags raised"
+      - "Quality thresholds met"
+      - "Gate result emitted (not written)"
+
+  - agent_id: "@scribe"
+    persona: "Scribe"
+    persona_source: "agents/system/pipeline-ops/scribe/"
+    lens: "Sintese narrativa, dossies, compilacao de fontes"
+    checklist:
+      - "Dossier completeness"
+      - "Source compilation accuracy"
+      - "Cross-reference integrity"
+      - "Narrative coherence"
+
+  - agent_id: "@weave"
+    persona: "Weave"
+    persona_source: "agents/system/pipeline-ops/weave/"
+    lens: "Assembly DNA YAML 10 camadas"
+    checklist:
+      - "All 10 layers assembled (L1-L10)"
+      - "Tag filtering applied"
+      - "YAML schema valid"
+      - "Source traceability maintained"
+
+  - agent_id: "@clone"
+    persona: "Clone"
+    persona_source: "agents/system/pipeline-ops/clone/"
+    lens: "Geracao de mind-clone agents"
+    checklist:
+      - "Template V3 compliance"
+      - "All 11 mandatory parts present"
+      - "Traceable citations"
+      - "Staging location correct (agents/.staging/)"
+
+  - agent_id: "@index"
+    persona: "Index"
+    persona_source: "agents/system/pipeline-ops/index/"
+    lens: "RAG indexacao, grafo de conhecimento"
+    checklist:
+      - "RAG index rebuilt"
+      - "Knowledge graph enriched"
+      - "Navigation map updated"
+      - "Tag resolver updated"
+
+  - agent_id: "@ops"
+    persona: "Ops"
+    persona_source: "agents/system/pipeline-ops/ops/"
+    lens: "Finalizacao, enriquecimento de memoria, sync"
+    checklist:
+      - "Agent MEMORY.md enriched"
+      - "Workspace sync triggered"
+      - "Pipeline state finalized"
+      - "Metrics logged"
+
+  # ═══════════════════════════════════════════════════════════
+  # KNOWLEDGE-OPS AGENTS (agents/system/knowledge-ops/)
+  # ═══════════════════════════════════════════════════════════
+
+  - agent_id: "@kops-atlas"
+    persona: "Atlas"
+    persona_source: "agents/system/knowledge-ops/atlas/"
+    lens: "Classificacao de conteudo, routing"
+    checklist:
+      - "Content classified to correct bucket"
+      - "Routing decision justified"
+      - "Metadata enriched"
+
+  - agent_id: "@kops-sage"
+    persona: "Sage"
+    persona_source: "agents/system/knowledge-ops/sage/"
+    lens: "Extracao de insights, DNA, entidades"
+    checklist:
+      - "Insights extraction quality"
+      - "Entity detection accuracy"
+      - "DNA layer assignment"
+
+  - agent_id: "@kops-lens"
+    persona: "Lens"
+    persona_source: "agents/system/knowledge-ops/lens/"
+    lens: "Validacao de qualidade de extracao"
+    checklist:
+      - "Extraction accuracy verified"
+      - "Traceability chain intact"
+      - "Quality score above threshold"
+
+  - agent_id: "@kops-forge"
+    persona: "Forge"
+    persona_source: "agents/system/knowledge-ops/forge/"
+    lens: "Compilacao de dossies, DNA YAML"
+    checklist:
+      - "Dossier compilation complete"
+      - "DNA YAML assembly correct"
+      - "Cross-references valid"
+
+  - agent_id: "@kops-echo"
+    persona: "Echo"
+    persona_source: "agents/system/knowledge-ops/echo/"
+    lens: "Clonagem cognitiva, geracao de agentes"
+    checklist:
+      - "Mind clone fidelity"
+      - "Agent template compliance"
+      - "Voice DNA preservation"

@@ -1,0 +1,191 @@
+# =============================================================================
+# TASK: ECOSYSTEM HEALTH REPORT
+# =============================================================================
+# Relatório mensal consolidado de saúde do ecossistema
+# Agrega: health-ops, gap-detection, cross-reviews, DMAIC, input metrics
+# Referência: 01-analyst-research.md §6.2
+# =============================================================================
+
+
+task: ecosystem-health-report
+domain: strategic
+atomic_layer: Molecule
+responsavel_type: Agent
+performance:
+  error_handling: graceful with fallback + retry
+
+megabrain_frontmatter:
+  task_id: "ecosystem-health-report"
+  name: "ecosystem-health-report"
+  version: "1.0.0"
+  category: operations
+  squad: orquestrador-global
+  responsavel: "@supervisor-sistema"
+  model: sonnet
+  difficulty: intermediate
+  atomic_layer: Molecule
+
+name: ecosystem-health-report
+title: "Relatório Mensal de Saúde do Ecossistema"
+description: >
+  Relatório mensal consolidado que agrega todos os sinais de saúde do
+  ecossistema Mega Brain: health-ops, gap-detection-cycle, cross-squad reviews,
+  correções DMAIC, input metrics, maturity scores. Fornece uma visão
+  única de "como estamos?" para tomada de decisão executiva.
+
+metadata:
+  created_at: "2026-03-19"
+  updated_at: "2026-03-19"
+  version: "1.0.0"
+  maturity_stage: "1-10"
+  ontology_layer: "consolidacao"
+  estimated_time: "2-3 horas"
+  model: sonnet
+  framework_origin: "Baldrige Excellence Framework + Netflix Doctor Monkey"
+  research_ref: "01-analyst-research.md §2.4.2, §3.5"
+
+inputs:
+  required:
+    - name: mes_referencia
+      type: string
+      description: "Mês de referência do relatório (ex: 2026-03)"
+  optional:
+    - name: relatorio_anterior
+      type: string
+      description: "Path do relatório do mês anterior para trend analysis"
+
+outputs:
+  primary:
+    - name: health_report
+      type: document
+      format: markdown
+      destination: ".data/executions/{YYYY-MM-DD}_ecosystem-health-report/"
+      description: "Relatório consolidado de saúde com KPIs e recomendações"
+
+steps:
+  - id: 1
+    name: "Coleta de Dados de Todas as Fontes"
+    actions:
+      - "Executar health-ops.mjs check --format=json"
+      - "Coletar maturity scores de maturity-history.json"
+      - "Coletar resultados do gap-detection-cycle do mês"
+      - "Coletar resultados de cross-squad reviews completados"
+      - "Coletar DMAIC em andamento e completados"
+      - "Coletar input metrics vs targets"
+      - "Coletar discoveries do mês"
+      - "Coletar session logs e stats"
+
+  - id: 2
+    name: "Dashboard de Saúde (7 Dimensões)"
+    description: >
+      Avaliar o ecossistema por 7 dimensões (inspirado no Baldrige Framework),
+      cada uma com score 1-10.
+    actions:
+      - "1. LIDERANÇA: Decisões estratégicas tomadas no mês, qualidade"
+      - "2. ESTRATÉGIA: Alinhamento entre squads e objetivos de negócio"
+      - "3. CLIENTES: Métricas de satisfação, NPS, churn, suporte"
+      - "4. MEDIÇÃO: Cobertura de métricas, data quality, gaps de dados"
+      - "5. OPERAÇÕES: Throughput, cycle time, quality gate pass rate"
+      - "6. PESSOAS/AGENTES: Maturity scores, capability coverage"
+      - "7. RESULTADOS: Revenue, growth, key outputs produzidos"
+
+  - id: 3
+    name: "Semáforo por Squad"
+    description: >
+      Para cada squad ativo, atribuir status de semáforo baseado em
+      múltiplos indicadores.
+    actions:
+      - "VERDE: maturity >= 7.0, zero issues CRITICAL, input metrics on track"
+      - "AMARELO: maturity 5.0-6.9 OU issues CRITICAL <= 2 OU input metrics atrasadas"
+      - "VERMELHO: maturity < 5.0 OU issues CRITICAL > 2 OU sem atividade no mês"
+      - "Gerar tabela de semáforos para todos os squads"
+
+  - id: 4
+    name: "Trends e Recomendações"
+    actions:
+      - "Comparar com mês anterior: métricas melhorando ou piorando?"
+      - "Identificar top 3 melhorias do mês (celebrar)"
+      - "Identificar top 3 preocupações (agir)"
+      - "Gerar 3-5 recomendações priorizadas para o próximo mês"
+      - "Salvar relatório e registrar no SuperMemory"
+
+output_template: |
+  # Ecosystem Health Report — {mes_referencia}
+
+  ## Resumo Executivo
+  - **Health Score Geral:** {N}/10
+  - **Squads verdes:** {N} | **Amarelos:** {N} | **Vermelhos:** {N}
+  - **Issues abertos:** {N} (urgentes: {N})
+  - **Correções DMAIC completadas:** {N}
+  - **Trend:** {melhorando | estável | piorando}
+
+  ## Dashboard 7 Dimensões
+
+  | Dimensão | Score | Trend | Nota |
+  |----------|-------|-------|------|
+  | Liderança | {N} | {subindo/descendo/estável} | {obs} |
+  | Estratégia | {N} | ... | ... |
+  | Clientes | {N} | ... | ... |
+  | Medição | {N} | ... | ... |
+  | Operações | {N} | ... | ... |
+  | Agentes | {N} | ... | ... |
+  | Resultados | {N} | ... | ... |
+
+  ## Semáforo por Squad
+  {tabela com semáforo de cada squad}
+
+  ## Top 3 Melhorias do Mês
+  1. {melhoria}
+
+  ## Top 3 Preocupações
+  1. {preocupação}
+
+  ## Recomendações para Próximo Mês
+  1. {recomendação}
+
+quality_gate:
+  checks:
+    - name: "Dados de todas as fontes coletados"
+      severity: CRITICAL
+      criterion: "health-ops + gap-detection + maturity scores presentes"
+    - name: "7 dimensões avaliadas"
+      severity: HIGH
+      criterion: "Score atribuído para cada dimensão"
+    - name: "Semáforo por squad"
+      severity: HIGH
+      criterion: "Todos os squads ativos classificados"
+    - name: "Recomendações acionáveis"
+      severity: MEDIUM
+      criterion: "3-5 recomendações com owner e prazo sugerido"
+
+integration:
+  triggers_from:
+    - workflow: "gap-detection-cycle"
+      when: "Final do ciclo mensal"
+    - cadence: "Último dia útil de cada mês"
+  feeds_into:
+    - task: "pre-mortem-analysis"
+      when: "Preocupações identificadas antes de lançamentos"
+    - workflow: "cross-squad-audit-cycle"
+      when: "Squads vermelhos recebem prioridade na auditoria"
+squad: orquestrador-global
+task_id: ecosystem-health-report
+version: "3.1.1"
+status: ready
+responsavel: "@plan-architect"
+execution_type: hybrid
+orchestration_boundary:
+  live_routing_performed: false
+  external_dispatch_performed: false
+  workspace_write_performed: false
+megabrain_validation:
+  last_run: "20260514-validate-deep"
+  validated_at: "2026-05-15T00:00:00Z"
+  validator: mega-brain/megabrain-chief
+  mode: deep
+  squad: orquestrador-global
+  status: pass
+  evidence:
+    - schema_contract_normalized
+    - task_boundary_declared
+    - plan_only_orchestration_preserved

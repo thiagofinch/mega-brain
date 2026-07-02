@@ -1,0 +1,101 @@
+---
+# MEETING-NOTES.YAML - Structured meeting documentation
+# Adapted from mega-brain-stage pattern for Mega Brain workspace context
+
+_meta:
+  version: "1.0.0"
+  owner: "coo-orchestrator"
+  target_layer: "L4-operational"
+  state: "TEMPLATE"
+
+metadata:
+  canonical_scope: "workspace/_templates/operations/meeting-notes.yaml"
+  owner: "coo"
+  version: "1.0.0"
+  last_updated: "2026-03-23"
+  description: "Meeting notes template with date, participants, agenda, decisions, action items, and follow-up"
+
+fields:
+  meeting_title:
+    type: string
+    required: true
+    description: "Descriptive title for the meeting"
+
+  date:
+    type: date
+    required: true
+    description: "Date the meeting took place (YYYY-MM-DD)"
+
+  time:
+    type: string
+    required: false
+    description: "Start and end time (e.g., 14:00-15:00 BRT)"
+
+  meeting_type:
+    type: enum
+    required: true
+    description: "Category of meeting"
+    options: [standup, planning, review, retrospective, one-on-one, client, strategy, ad-hoc]
+
+  participants:
+    type: list
+    required: true
+    description: "Names and roles of all attendees"
+
+  facilitator:
+    type: string
+    required: false
+    description: "Person leading the meeting"
+
+  recorder:
+    type: string
+    required: false
+    description: "Person responsible for taking notes"
+
+  agenda:
+    type: list
+    required: true
+    description: "Ordered list of topics to be discussed"
+
+  discussion_notes:
+    type: list
+    required: false
+    description: "Key points discussed per agenda item, including context and reasoning"
+
+  decisions:
+    type: list
+    required: true
+    description: "Decisions made during the meeting, each with rationale and who approved"
+
+  action_items:
+    type: list
+    required: true
+    description: "Tasks assigned during the meeting, each with owner, deadline, and priority"
+
+  follow_up:
+    type: object
+    required: false
+    description: "Next steps after the meeting"
+    properties:
+      next_meeting_date:
+        type: date
+        required: false
+        description: "When the next related meeting is scheduled"
+      open_questions:
+        type: list
+        required: false
+        description: "Unresolved questions that need research or external input"
+      dependencies:
+        type: list
+        required: false
+        description: "Blockers that must be resolved before next steps"
+
+  source_recording:
+    type: string
+    required: false
+    description: "Link to meeting recording or transcript file"
+
+  tags:
+    type: list
+    required: false
+    description: "Keywords for categorization and retrieval (e.g., product, hiring, strategy)"

@@ -1,0 +1,162 @@
+# =============================================================================
+# TASK: GATE REVIEW FRAMEWORK
+# =============================================================================
+# Establish the quality gate review process for multi-squad executions
+# Stage 1-to-10 | Ontology Layer: Gate Review + Consolidacao
+# =============================================================================
+
+
+task: gate-review-framework
+domain: tactical
+atomic_layer: Molecule
+responsavel_type: Agent
+performance:
+  error_handling: graceful with fallback + retry
+
+megabrain_frontmatter:
+  task_id: "gate-review-framework"
+  name: "gate-review-framework"
+  version: "1.0.0"
+  category: operations
+  squad: orquestrador-global
+  responsavel: "@supervisor-sistema"
+  model: sonnet
+  difficulty: intermediate
+  atomic_layer: Molecule
+
+metadata:
+  name: gate-review-framework
+  version: "1.0.0"
+  squad: orquestrador-global
+  maturity_stage: "1_to_10"
+  ontology_layer: gate_review
+  model: sonnet
+  estimated_time: "3-5 hours"
+  complexity: high
+
+description: >
+  Design and implement the gate review framework that ensures quality
+  between orchestration stages. Includes automated checks (deliverable
+  existence, format validation), semi-automated checks (quality scoring),
+  and manual review gates (user approval for critical decisions).
+
+inputs:
+  required:
+    - name: pipeline_config
+      type: object
+      source: "Pipeline design from staged-execution-design"
+    - name: squad_outputs
+      type: array
+      source: "Outputs from completed squad stages"
+  optional:
+    - name: auto_approve_threshold
+      type: number
+      description: "Quality score above which gates auto-approve (default: 4/5)"
+
+outputs:
+  - name: gate_review_report
+    type: document
+    destination: ".data/executions/{date}_{slug}/gate-review-{stage}.md"
+    description: "Gate review report with pass/fail decision and reasoning"
+
+frameworks:
+  - name: "Three-Tier Gate System"
+    application: >
+      Tier 1 (Auto): File existence, format checks, word count minimums.
+      Tier 2 (Semi-Auto): Quality scoring, consistency checks, cross-reference
+      validation. Agent evaluates but user can override.
+      Tier 3 (Manual): Strategic decisions, budget approvals, brand alignment.
+      User must explicitly approve.
+  - name: "Gate Decision Matrix"
+    application: >
+      PROCEED: All criteria met, quality >= threshold.
+      REVISE: Some criteria failed, fixable by the same squad.
+      ESCALATE: Quality concerns that need a different squad or approach.
+      CANCEL: Fundamental issues that invalidate the execution.
+
+process:
+  steps:
+    - id: 1
+      name: "Collect stage outputs"
+      action: >
+        Gather all outputs from the completed stage: files generated,
+        decisions documented, self-evaluation scores, and any flagged
+        issues or concerns.
+      output: "Stage output inventory"
+
+    - id: 2
+      name: "Run Tier 1 checks"
+      action: >
+        Automated verification: all expected output files exist, file
+        sizes are above minimum thresholds, required sections are present,
+        naming conventions followed. Report pass/fail per check.
+      output: "Tier 1 check results"
+
+    - id: 3
+      name: "Run Tier 2 evaluation"
+      action: >
+        Semi-automated quality evaluation: content quality scoring (1-5),
+        consistency with upstream outputs, completeness against the
+        original briefing requirements, and cross-reference accuracy.
+      output: "Tier 2 evaluation scores"
+
+    - id: 4
+      name: "Determine gate decision"
+      action: >
+        Apply the gate decision matrix: if all Tier 1 pass and Tier 2
+        average >= threshold, auto-approve (PROCEED). If Tier 1 failures
+        exist, REVISE. If Tier 2 average < 3, ESCALATE. Log the decision
+        to the JSONL audit trail.
+      tools:
+        - "ids-ops.mjs audit-append"
+      output: "Gate decision with reasoning"
+
+    - id: 5
+      name: "Handle gate outcome"
+      action: >
+        Based on decision: PROCEED triggers next stage setup. REVISE
+        sends feedback to the squad with specific fix instructions.
+        ESCALATE notifies user with options. CANCEL terminates the
+        pipeline and logs the reason.
+      output: "Gate outcome executed"
+
+integration_graph:
+  depends_on:
+    - task: staged-execution-design
+      squad: orquestrador-global
+      data_needed: "stage_gate_specs"
+  feeds_into:
+    - task: orchestration-architecture
+      squad: orquestrador-global
+      data_passed: "gate_review_patterns"
+  collaborates_with:
+    - squad: project-management-clickup
+      purpose: "Task status updates based on gate decisions"
+
+quality_gates:
+  - "All three tiers of checks are defined for every gate point"
+  - "Gate decisions are logged to JSONL audit trail"
+  - "REVISE feedback is specific enough for the squad to act on"
+  - "Auto-approve threshold is configurable per pipeline"
+  - "Manual gates clearly indicate what the user needs to decide"
+squad: orquestrador-global
+task_id: gate-review-framework
+version: "3.1.1"
+status: ready
+responsavel: "@plan-architect"
+execution_type: hybrid
+orchestration_boundary:
+  live_routing_performed: false
+  external_dispatch_performed: false
+  workspace_write_performed: false
+megabrain_validation:
+  last_run: "20260514-validate-deep"
+  validated_at: "2026-05-15T00:00:00Z"
+  validator: mega-brain/megabrain-chief
+  mode: deep
+  squad: orquestrador-global
+  status: pass
+  evidence:
+    - schema_contract_normalized
+    - task_boundary_declared
+    - plan_only_orchestration_preserved

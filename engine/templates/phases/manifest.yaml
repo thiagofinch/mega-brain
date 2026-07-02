@@ -1,0 +1,162 @@
+# Phase Templates Manifest Registry
+# ==================================
+# Auto-generated manifest for all MCE pipeline phase templates.
+# Each entry describes one template: its step, inputs, and outputs.
+#
+# Version: 1.0.0
+# Date: 2026-04-01
+# Story: MCE2-2.5
+
+templates:
+
+  - name: "prompt-1.1-chunking"
+    version: "2.1.0"
+    step_id: 3
+    step_name: "CHUNK"
+    description: "Vector Memory Index -- chunking, indexing, and source metadata"
+    input_artifacts:
+      - "source_file"
+    output_artifacts:
+      - "CHUNKS-STATE.json"
+
+  - name: "prompt-1.2-entity-resolution"
+    version: "2.1.0"
+    step_id: 4
+    step_name: "ENTITY RESOLUTION"
+    description: "Entity resolution and canonicalization of persons, products, themes"
+    input_artifacts:
+      - "CHUNKS-STATE.json"
+    output_artifacts:
+      - "CANONICAL-MAP.json"
+
+  - name: "prompt-2.1-insight-extraction"
+    version: "2.1.1"
+    step_id: 5
+    step_name: "INSIGHT EXTRACTION"
+    description: "Contextual insight extraction from chunks into actionable knowledge"
+    input_artifacts:
+      - "CHUNKS-STATE.json"
+      - "CANONICAL-MAP.json"
+    output_artifacts:
+      - "INSIGHTS-STATE.json"
+
+  - name: "prompt-2.1-dna-tags"
+    version: "1.0.0"
+    step_id: 5
+    step_name: "INSIGHT EXTRACTION"
+    description: "DNA tag classification increment for insight extraction"
+    input_artifacts:
+      - "INSIGHTS-STATE.json"
+    output_artifacts:
+      - "INSIGHTS-STATE.json"
+
+  - name: "prompt-mce-behavioral"
+    version: "1.0.0"
+    step_id: 6
+    step_name: "MCE BEHAVIORAL"
+    description: "Behavioral pattern extraction from insights"
+    input_artifacts:
+      - "INSIGHTS-STATE.json"
+      - "CHUNKS-STATE.json"
+    output_artifacts:
+      - "INSIGHTS-STATE.json"
+
+  - name: "prompt-mce-identity"
+    version: "1.0.0"
+    step_id: 7
+    step_name: "MCE IDENTITY"
+    description: "Identity layer extraction -- values, obsessions, paradoxes"
+    input_artifacts:
+      - "INSIGHTS-STATE.json"
+    output_artifacts:
+      - "INSIGHTS-STATE.json"
+
+  - name: "prompt-mce-voice"
+    version: "1.1.0"
+    step_id: 8
+    step_name: "MCE VOICE"
+    description: "Voice DNA extraction -- linguistic patterns, signature phrases"
+    input_artifacts:
+      - "INSIGHTS-STATE.json"
+      - "CHUNKS-STATE.json"
+      - "OBSESSIONS.yaml"
+      - "PARADOXES.yaml"
+    output_artifacts:
+      - "VOICE-DNA.yaml"
+
+  - name: "prompt-3.1-narrative"
+    version: "2.1.0"
+    step_id: 9
+    step_name: "NARRATIVE SYNTHESIS"
+    description: "Strategic narrative synthesis from categorized insights"
+    input_artifacts:
+      - "INSIGHTS-STATE.json"
+    output_artifacts:
+      - "NARRATIVES-STATE.json"
+
+  - name: "narrative-synthesis"
+    version: "1.0.0"
+    step_id: 9
+    step_name: "NARRATIVE SYNTHESIS"
+    description: "Narrative synthesis protocol -- consolidates insights into coherent narratives"
+    input_artifacts:
+      - "INSIGHTS-STATE.json"
+    output_artifacts:
+      - "NARRATIVES-STATE.json"
+
+  - name: "narrative-metabolism"
+    version: "1.0.0"
+    step_id: 9
+    step_name: "NARRATIVE SYNTHESIS"
+    description: "Narrative metabolism protocol -- living document digestion and consolidation"
+    input_artifacts:
+      - "INSIGHTS-STATE.json"
+    output_artifacts:
+      - "NARRATIVES-STATE.json"
+
+  - name: "dossier-compilation"
+    version: "1.6.0"
+    step_id: 10
+    step_name: "CONSOLIDATION"
+    description: "Dossier compilation -- person and theme dossiers with inline traceability"
+    input_artifacts:
+      - "INSIGHTS-STATE.json"
+      - "NARRATIVES-STATE.json"
+      - "CHUNKS-STATE.json"
+      - "CANONICAL-MAP.json"
+    output_artifacts:
+      - "DOSSIER-persons/"
+      - "DOSSIER-THEMES/"
+
+  - name: "sources-compilation"
+    version: "1.1.0"
+    step_id: 10
+    step_name: "CONSOLIDATION"
+    description: "Sources compilation -- per-person per-theme source documents"
+    input_artifacts:
+      - "DOSSIER-persons/"
+      - "INSIGHTS-STATE.json"
+    output_artifacts:
+      - "SOURCES/"
+
+  - name: "prompt-visual-extraction"
+    version: "1.0.0"
+    step_id: 5
+    step_name: "INSIGHT EXTRACTION"
+    description: "Visual extraction from video transcripts with screen descriptions"
+    input_artifacts:
+      - "CHUNKS-STATE.json"
+    output_artifacts:
+      - "visual-extraction.json"
+
+  - name: "phase4-checkpoint"
+    version: "1.1.0"
+    step_id: 9
+    step_name: "IDENTITY CHECKPOINT"
+    description: "Phase 4 verification checkpoint -- integrity validation before finalization"
+    input_artifacts:
+      - "INSIGHTS-STATE.json"
+      - "CHUNKS-STATE.json"
+      - "CANONICAL-MAP.json"
+    output_artifacts:
+      - "checkpoint-report"

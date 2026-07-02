@@ -1,0 +1,50 @@
+%%{init: {'theme': 'base'}}%%
+
+graph TB
+    subgraph Claude[".claude/ Configuration"]
+        direction TB
+        subgraph Agents["agents/"]
+            A1[b2b-sales-expert.md]
+        end
+        subgraph Commands["commands/"]
+            C1[process-video.md]
+            C2[extract-knowledge.md]
+            C3[scan-inbox.md]
+            C4[documentation/...]
+        end
+        subgraph Skills["skills/"]
+            S1[video-processing/]
+            S2[knowledge-extraction/]
+        end
+        SETTINGS[settings.local.json]
+    end
+
+    subgraph Scripts["scripts/"]
+        PY1[transcribe.py]
+        PY2[auto_organize_inbox.py]
+    end
+
+    subgraph Data["Data Folders"]
+        INBOX[(00-INBOX)]
+        KNOWLEDGE[(KNOWLEDGE/)]
+    end
+
+    %% Dependencies
+    C1 --> S1
+    C2 --> S2
+    C2 --> A1
+    C3 --> PY2
+
+    S1 --> PY1
+
+    C1 --> INBOX
+    C2 --> KNOWLEDGE
+    C3 --> INBOX
+
+    SETTINGS -.->|configures| Commands
+    SETTINGS -.->|configures| Skills
+
+    %% Styling
+    style Claude fill:#e3f2fd,stroke:#1976d2
+    style Scripts fill:#fff3e0,stroke:#f57c00
+    style Data fill:#e8f5e9,stroke:#388e3c

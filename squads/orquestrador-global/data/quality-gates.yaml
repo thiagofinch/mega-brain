@@ -1,0 +1,85 @@
+meta:
+  squad_scope: orquestrador-global
+  version: 1.1.0
+  purpose: MEGABRAIN quality gates — 3-state APPROVE/REVIEW/VETO model + numeric thresholds + veto conditions
+  refined_at: "2026-04-30"
+  refined_by: "/megabrain-remediate-squad orquestrador-global --wave 4 W4-02"
+  source_findings:
+    - "outputs/squad-validations/orquestrador-global/20260429-225559/score-card.yaml#D6-quality_gates-finding-5"
+    - "outputs/squad-validations/orquestrador-global/20260429-225559/remediation-plan.yaml#wave_4-W4-02"
+  scale: "0-1 fractional (canonical — see composition-rules.yaml quality_gate_scale)"
+  notes: |
+    v1.0 had only `threshold:` + `veto_conditions:` + `action_on_fail:` (binary
+    pass/veto). v1.1 introduces 3-state model:
+      - approve_score: score at or above this → AUTO-APPROVE (continue pipeline)
+      - review_score:  score in [review_score, approve_score) → MANUAL REVIEW
+                       (request_rework but don't fully veto)
+      - veto_score:    score below this → AUTO-VETO (block_phase_transition)
+
+quality_gates:
+
+- id: QG-orquestrador-global-1
+  name: task_execution
+  phase: execution
+  metric: task_completion_rate
+  threshold: 0.8                  # legacy single-threshold (kept for backwards compat)
+  approve_score: 0.85             # >= APPROVE (continue auto)
+  review_score: 0.7               # [0.7, 0.85) REVIEW (request_rework)
+  veto_score: 0.5                 # < 0.5 VETO (block_phase_transition)
+  veto_conditions:
+    - critical_error_raised
+    - schema_violation
+    - unauthorized_mutation
+  owner: plan-architect
+  action_on_approve: continue_pipeline
+  action_on_review: request_rework
+  action_on_veto: block_phase_transition
+
+- id: QG-orquestrador-global-2
+  name: output_quality
+  phase: post_execution
+  metric: artifact_quality_score
+  threshold: 0.75
+  approve_score: 0.8
+  review_score: 0.6
+  veto_score: 0.4
+  veto_conditions:
+    - missing_required_fields
+    - coherence_below_minimum
+  owner: plan-architect
+  action_on_approve: continue_pipeline
+  action_on_review: request_rework
+  action_on_veto: block_phase_transition
+
+- id: QG-orquestrador-global-3
+  name: handoff_readiness
+  phase: handoff
+  metric: contract_compliance
+  threshold: 0.9
+  approve_score: 0.95
+  review_score: 0.85
+  veto_score: 0.7
+  veto_conditions:
+    - contract_schema_mismatch
+    - pii_leakage_detected
+  owner: plan-architect
+  action_on_approve: emit_handoff
+  action_on_review: request_rework
+  action_on_veto: revert_to_previous_phase
+
+# =============================================================================
+# 3-State Model Documentation (W4-02)
+# =============================================================================
+# Decision matrix:
+#
+#   score >= approve_score  → APPROVE  → continue_pipeline | emit_handoff
+#   score in [review_score, approve_score) → REVIEW → request_rework
+#   score in [veto_score, review_score)    → REVIEW (looser; warns) → request_rework
+#   score < veto_score                     → VETO  → block_phase_transition
+#                                                      | revert_to_previous_phase
+#
+# veto_conditions[] are HARD STOPS (any single condition triggers VETO regardless
+# of score). Score-based VETO is SOFT (low quality vs. structural failure).
+#
+# Fallback: if no Clone+Human review path is wired, REVIEW state escalates
+# to human (escalate_to_human) per error_handling.default in config.yaml.

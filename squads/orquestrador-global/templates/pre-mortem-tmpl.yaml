@@ -1,0 +1,101 @@
+# Consumer: PA-6.1 (plan-architect ativa quando RPN_max > 300 OR complexity == critical), wf-pre-mortem REUSE blind-spot-audit-cycle
+# Purpose: Simula 3 cenários de falha plausíveis ANTES de handoff; produz mitigações
+
+schema_version: "1.0"
+
+pre_mortem_id: ""                # {plan_id}-premortem
+plan_id: ""
+trigger_reason: ""               # ex: "RPN_max=340 (critical risk)"
+created_at: ""
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# RISKS RAW (do plano original)
+# ═══════════════════════════════════════════════════════════════════════════════
+plan_risks_summary:
+  total_nodes: 0
+  rpn_max: 0
+  rpn_avg: 0.0
+  critical_path_nodes: []
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# FAILURE MODES — 3 cenários simulados
+# ═══════════════════════════════════════════════════════════════════════════════
+failure_modes: []
+# Item shape:
+#   - id: "FM-1"
+#     scenario: ""               # narrative do que daria errado
+#     trigger: ""                # condição inicial
+#     cascading_impact: []       # quais nós downstream caem
+#     probability: 0.0           # 0.0-1.0
+#     impact_severity: ""        # low | medium | high | critical
+#     detection_signal: ""       # como saberíamos que está rolando
+#     mitigation: ""             # ação preventiva ou recovery
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# DECISION
+# ═══════════════════════════════════════════════════════════════════════════════
+go_nogo:
+  verdict: ""                    # GO | GO_WITH_MITIGATIONS | NO_GO
+  rationale: ""
+  required_mitigations_before_handoff: []
+  human_signoff_required: false
+
+audit:
+  created_by: "plan-architect"
+  reviewed_by: ""                # operator ou agent
+  reviewed_at: ""
+
+_example:
+  schema_version: "1.0"
+  pre_mortem_id: "afiliados-system-20260428-1700-premortem"
+  plan_id: "afiliados-system-20260428-1700"
+  trigger_reason: "complexity=critical + RPN_max=320 (legal compliance)"
+  created_at: "2026-04-28T17:00:00Z"
+
+  plan_risks_summary:
+    total_nodes: 12
+    rpn_max: 320
+    rpn_avg: 110.5
+    critical_path_nodes: [n1, n3, n7, n10]
+
+  failure_modes:
+    - id: "FM-1"
+      scenario: "Sistema de afiliados lança sem compliance LGPD adequado; PT-BR market regulator notifies"
+      trigger: "Legal review skipped/rushed por pressão de Black Friday deadline"
+      cascading_impact: ["public reputation", "fine 2-4% global revenue", "rollback do system"]
+      probability: 0.15
+      impact_severity: critical
+      detection_signal: "Reclamações de afiliados sobre data handling; CR sentiment drop"
+      mitigation: "Legal squad review obrigatório como gate antes de launch (n7 quality_gate); LGPD checklist completo"
+
+    - id: "FM-2"
+      scenario: "Cálculo de comissões com bug → afiliados recebem valores errados"
+      trigger: "Rollout sem teste paralelo (run new system + legacy spreadsheet em parallel por 2 semanas)"
+      cascading_impact: ["trust loss", "manual reconciliation overhead", "potential fraud allegations"]
+      probability: 0.25
+      impact_severity: high
+      detection_signal: "Discrepância entre new system e legacy spreadsheet > 1%"
+      mitigation: "Shadow mode 2 semanas mandatory; reconciliation diário; AC blocking em n10"
+
+    - id: "FM-3"
+      scenario: "Performance issue no banco com 1000+ afiliados; queries 30s+"
+      trigger: "Schema sem partitioning; queries N+1 não detectadas em load test"
+      cascading_impact: ["UX degraded", "support tickets surge", "rollback"]
+      probability: 0.20
+      impact_severity: medium
+      detection_signal: "p95 latency > 5s em staging com 100+ records"
+      mitigation: "Load test obrigatório com 2000 afiliados sintéticos; @db-sage review schema (n3 gate)"
+
+  go_nogo:
+    verdict: GO_WITH_MITIGATIONS
+    rationale: "FM-1 e FM-2 cobertos por gates extras; FM-3 cobertos por load test. Risk total mitigável."
+    required_mitigations_before_handoff:
+      - "Adicionar legal-review como n7 quality_gate (FM-1)"
+      - "Shadow mode 2 semanas em n10 (FM-2)"
+      - "Load test 2000 afiliados em n3 staging (FM-3)"
+    human_signoff_required: true   # CRITICAL plan exige operator GO
+
+  audit:
+    created_by: "plan-architect"
+    reviewed_by: "operator"
+    reviewed_at: "2026-04-28T17:30:00Z"

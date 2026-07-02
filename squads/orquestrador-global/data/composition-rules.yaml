@@ -1,0 +1,59 @@
+meta:
+  version: 1.0.0
+  squad: orquestrador-global
+fundamental:
+  requirement: DAG enforced — no circular dependencies between levels
+  adjacency: Token → Atom → Molecule → Organism → Template → Instance
+  dag_requirement: true
+containment_matrix:
+  Organism:
+  - Molecule
+  Molecule:
+  - Atom
+  Atom:
+  - Token
+  Template:
+  - Organism
+  - Molecule
+  Instance:
+  - Template
+anti_patterns:
+  AP01_level_skipping: organism containing atoms directly (bypass molecule)
+  AP02_orphan_tasks: task without accountability owner for non-Human executor
+  AP03_circular_deps: level A depends on level B depending on A
+  AP04_artifact_no_template: artifact_contract missing template_path
+  AP05_autovalidation: producer and validator share same executor
+deviation_policy: documented exceptions allowed with errata reference
+
+# =============================================================================
+# QUALITY GATE SCALE — single source of truth (Wave 2 W2-03)
+# =============================================================================
+# All quality_gate thresholds in this squad use the 0-1 fractional scale.
+# Reason: data/quality-gates.yaml defines QG-1=0.8 / QG-2=0.75 / QG-3=0.9 in
+# fractional. Workflows previously used 0-100 raw (min_score: 60) which
+# caused functional gate bypass. As of 2026-04-30 (Wave 2 W2-03), all
+# workflow `min_score` values were normalized to 0-1 fractional.
+#
+# Conversion applied: 60/100 → 0.75 (matches QG-2 output_quality threshold).
+# Canonical scale: 0.0 (worst) → 1.0 (perfect).
+
+quality_gate_scale:
+  canonical: "0-1 fractional"
+  source_of_truth: "data/quality-gates.yaml"
+  workflow_alignment: "all wf-*.yaml workflows must use fractional 0-1 in validation_gates.min_score"
+  conversion_history:
+    - date: "2026-04-30"
+      change: "16 occurrences of min_score: 60 (0-100 raw) → min_score: 0.75 (0-1 fractional)"
+      rationale: "Eliminate scale mismatch + functional gate bypass; align with QG-2 output_quality=0.75"
+      affected_files:
+        - workflows/wf-audience-intelligence-loop.yaml
+        - workflows/wf-competitive-intel-distribution.yaml
+        - workflows/wf-copy-performance-loop.yaml
+        - workflows/wf-cs-digest-distribution.yaml
+        - workflows/wf-fathom-digest-distribution.yaml
+        - workflows/wf-funnel-cro-loop.yaml
+        - workflows/wf-kaizen-audit.yaml
+        - workflows/wf-product-quality-loop.yaml
+        - workflows/wf-seo-conversion-feedback.yaml
+        - workflows/wf-support-prevention.yaml
+      story_ref: "W2-03 from outputs/squad-validations/orquestrador-global/20260429-225559/remediation-plan.yaml"

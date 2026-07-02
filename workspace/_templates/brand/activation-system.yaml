@@ -1,0 +1,121 @@
+---
+# ACTIVATION-SYSTEM.YAML - Brand activation channels and strategy
+# Adapted from mega-brain-stage pattern for Mega Brain workspace context
+
+_meta:
+  version: "1.0.0"
+  owner: "cmo-architect"
+  target_layer: "L2-tactical"
+  state: "TEMPLATE"
+
+metadata:
+  canonical_scope: "workspace/_templates/brand/activation-system.yaml"
+  owner: "cmo"
+  version: "1.0.0"
+  last_updated: "2026-03-23"
+  description: "Brand activation system with channels, content pillars, frequency, KPIs, and audience segments"
+
+fields:
+  brand_name:
+    type: string
+    required: true
+    description: "Brand this activation system belongs to"
+
+  activation_objective:
+    type: string
+    required: true
+    description: "Primary objective of the brand activation system"
+
+  channels:
+    type: list
+    required: true
+    description: "Active brand channels, each with name, purpose, audience overlap, and priority level"
+
+  channel_detail:
+    type: object
+    required: false
+    description: "Structure for each channel entry"
+    properties:
+      name:
+        type: string
+        required: true
+        description: "Channel name (e.g., Instagram, YouTube, LinkedIn, Email)"
+      purpose:
+        type: string
+        required: true
+        description: "Why this channel exists in the activation mix"
+      primary_content_type:
+        type: string
+        required: true
+        description: "Main content format for this channel"
+      audience_segment:
+        type: string
+        required: true
+        description: "Which audience segment this channel primarily reaches"
+      posting_frequency:
+        type: string
+        required: true
+        description: "How often content is published (e.g., 3x/week, daily)"
+      priority:
+        type: enum
+        required: true
+        description: "Channel priority level"
+        options: [primary, secondary, experimental]
+
+  content_pillars:
+    type: list
+    required: true
+    description: "Strategic content pillars that guide content creation, each with name, description, and percentage of content mix"
+
+  audience_segments:
+    type: list
+    required: true
+    description: "Audience segments being activated, each with segment name, description, primary channels, and content preferences"
+
+  frequency_matrix:
+    type: object
+    required: false
+    description: "Content publishing frequency per channel per week"
+    properties:
+      total_pieces_per_week:
+        type: number
+        required: true
+        description: "Total content pieces published per week across all channels"
+      breakdown_by_channel:
+        type: list
+        required: true
+        description: "Pieces per week per channel"
+
+  kpis:
+    type: list
+    required: true
+    description: "Activation KPIs, each with metric name, target, current value, and measurement cadence"
+
+  campaign_calendar:
+    type: list
+    required: false
+    description: "Upcoming campaigns or activations with name, dates, channels, and objectives"
+
+  budget_allocation:
+    type: object
+    required: false
+    description: "Budget distribution across channels"
+    properties:
+      total_monthly_budget:
+        type: string
+        required: true
+        description: "Total monthly activation budget"
+      allocation_by_channel:
+        type: list
+        required: true
+        description: "Budget per channel with amount and percentage"
+
+  review_cadence:
+    type: string
+    required: false
+    description: "How often the activation system is reviewed and optimized"
+
+  success_criteria:
+    type: list
+    required: false
+    description: "What success looks like for the activation system at 30, 60, and 90 days"

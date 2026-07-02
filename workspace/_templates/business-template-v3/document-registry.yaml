@@ -1,0 +1,102 @@
+# =============================================================================
+# document-registry.yaml -- Document Registry Template v3
+# =============================================================================
+# Tracks all workspace documents, their states, and ownership.
+# Template version: 3.0.0
+# =============================================================================
+
+_meta:
+  id: REG-001
+  name: document-registry.yaml
+  layer: root
+  state: PLACEHOLDER
+  owner: c-level-squad
+  approver: founder
+  version: "3.0.0"
+
+# ======================================================================
+# DOCUMENTS
+# ======================================================================
+documents:
+  # Root
+  - id: BIZ-001
+    name: business.yaml
+    layer: root
+    state: PLACEHOLDER
+    owner: c-level-squad
+    path: "business.yaml"
+
+  # L0 - Identity
+  - id: L0-001
+    name: company-dna.yaml
+    layer: L0-identity
+    state: PLACEHOLDER
+    owner: c-level-squad
+    path: "L0-identity/company-dna.yaml"
+
+  - id: L0-002
+    name: founder-dna.yaml
+    layer: L0-identity
+    state: PLACEHOLDER
+    owner: c-level-squad
+    path: "L0-identity/founder-dna.yaml"
+
+  - id: L0-003
+    name: credentials.yaml
+    layer: L0-identity
+    state: PLACEHOLDER
+    owner: c-level-squad
+    path: "L0-identity/credentials.yaml"
+
+  - id: L0-004
+    name: core-processes.yaml
+    layer: L0-identity
+    state: PLACEHOLDER
+    owner: c-level-squad
+    path: "L0-identity/core-processes.yaml"
+
+  # L1 - Strategy
+  - id: L1-001
+    name: icp.yaml
+    layer: L1-strategy
+    state: PLACEHOLDER
+    owner: strategy-squad
+    path: "L1-strategy/icp.yaml"
+
+  - id: L1-002
+    name: bmc.yaml
+    layer: L1-strategy
+    state: PLACEHOLDER
+    owner: strategy-squad
+    path: "L1-strategy/bmc.yaml"
+
+  - id: L1-003
+    name: bu-map.yaml
+    layer: L1-strategy
+    state: PLACEHOLDER
+    owner: c-level-squad
+    path: "L1-strategy/bu-map.yaml"
+
+  - id: L1-004
+    name: team-registry.yaml
+    layer: L1-strategy
+    state: PLACEHOLDER
+    owner: c-level-squad
+    path: "L1-strategy/team-registry.yaml"
+
+  # L3 - Product
+  - id: L3-001
+    name: offerbook.yaml
+    layer: L3-product
+    state: PLACEHOLDER
+    owner: product-squad
+    path: "L3-product/{product_slug}/offerbook.yaml"
+    note: "One per product. 26-section unified template."
+
+  - id: L3-001-C
+    name: curriculum.yaml
+    layer: L3-product
+    state: PLACEHOLDER
+    owner: product-squad
+    path: "L3-product/{product_slug}/curriculum.yaml"
+    note: "Companion to offerbook. For course/mentorship products."

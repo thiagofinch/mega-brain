@@ -1,0 +1,372 @@
+name: orquestrador-global
+version: 3.1.0
+description: >
+  Sistema nervoso central do core. Atua como ponto de entrada central para todas as solicitações, classificando
+  intenções, encontrando o squad/agente mais adequado para cada demanda, e coordenando a criação de novos squads quando
+  necessário.
+squad_type: system
+domain: orchestration
+author: your-org
+license: MIT
+megabrain:
+  minVersion: 2.1.0
+  type: squad
+metadata:
+  created_at: '2026-02-01'
+  updated_at: '2026-04-30'
+  created_by: core
+  status: active
+  differentiator: ORQUESTRADOR - Central nervous system, intent classification, routing, Agent Teams, multi-squad staged execution
+  special_permission: >
+    Este squad é o único autorizado a rotear solicitações para outros squads e a acionar a criação de novos squads via
+    squad-creator.
+  note: >
+    v1.0.0: Initial creation with 4 agents. v2.0.0: Added team-coordinator, Agent Teams integration, staged execution.
+    v2.1.0: Migrated config.yaml -> squad.yaml (Mega Brain 2.1 format). Merged routing, team_execution, workflows, knowledge,
+    commands. v2.2.0 (2026-04-30, W5g): synced post-PA-6.1 with config.yaml — entry_agent moved to plan-architect (THE ONE
+    CREATE per EPIC-PLAN-ARCHITECT); components.agents updated to 7 canonical agents (was 5 pre-rename: classificador-intencao
+    → intent-parser, indexador-squads → capability-cartographer, team-coordinator → dag-architect; added plan-architect
+    + _executor-coverage); activation.command updated to canonical Claude Code projection; aliases preserved as legacy.
+entry_agent: plan-architect              # Synced 2026-04-30 (W5g) — was 'roteador' pre-rename
+slash_prefix: megabrain
+activation:
+  command: '@orquestrador-global--plan-architect'   # Synced 2026-04-30 (W5g) — canonical Claude Code projection
+  legacy_aliases:                                    # Renamed from 'aliases' to clarify these are deprecated
+    - '@plan-architect'
+    - '@orquestrador'
+    - '@megabrain'        # legacy from v2.0
+    - '@central'     # legacy from v2.0
+    - '@help'        # legacy from v2.0
+components:
+  agents:                                  # Synced 2026-04-30 (W5g) — 5 legacy → 7 canonical
+    - plan-architect                       # entry_agent (THE ONE CREATE per EPIC-PLAN-ARCHITECT)
+    - intent-parser                        # was classificador-intencao
+    - capability-cartographer              # was indexador-squads
+    - roteador                             # unchanged
+    - supervisor-sistema                   # unchanged
+    - dag-architect                        # was team-coordinator (rename + plan_only=true)
+    - _executor-coverage                   # added in PA-1.x
+  tasks:
+    - a3-problem-solving
+    - audit-system
+    - basic-orchestration-setup
+    - consult-chief
+    - cross-squad-review
+    - dispatch-to-megabrain-example-squad
+    - ecosystem-health-report
+    - execute-multi-squad-team
+    - execute-team
+    - find-capability
+    - first-squad-routing
+    - five-whys-root-cause
+    - gate-review-framework
+    - indexar-squad
+    - orchestration-architecture
+    - orchestration-scaling
+    - processar-solicitacao
+    - request-new-squad
+    - route-request
+    - staged-execution-design
+    - team-monitor
+    - team-shutdown
+    - team-status
+    - blind-spot-self-audit
+    - route-cro-recommendation
+  workflows:
+    # Resync 2026-04-30 (W5g) — match filesystem (28 total: 20 yaml + 8 md).
+    # Removed phantom 'processar-solicitacao' (no workflow file; only task with same name).
+    # Added wf-eval-plan-architect (PA-6.2) + wf-plan-demand (PA-6.1).
+    - atualizar-indice
+    - auditoria-sistema
+    - auto-discovery
+    - battle-round
+    - creative-production-request
+    - cross-squad-audit-cycle
+    - demand-to-delivery
+    - dmaic-correction-pipeline
+    - executar-com-team
+    - full-funnel-pipeline
+    - gap-detection-cycle
+    - new-deliverable-request
+    - orchestration-optimization-cycle
+    - orchestration-scaling-system
+    - blind-spot-audit-cycle
+    - self-evolution-cycle
+    - wf-audience-intelligence-loop
+    - wf-competitive-intel-distribution
+    - wf-copy-performance-loop
+    - wf-cs-digest-distribution
+    - wf-eval-plan-architect          # added W5g (was missing — PA-6.2)
+    - wf-fathom-digest-distribution
+    - wf-funnel-cro-loop
+    - wf-kaizen-audit
+    - wf-plan-demand                  # added W5g (was missing — PA-6.1)
+    - wf-product-quality-loop
+    - wf-seo-conversion-feedback
+    - wf-support-prevention
+  knowledge:
+    - BATTLE-ADOPTION-GUIDE
+    - BATTLE-CONFIG-SCHEMA
+    - BATTLE-SCORING-FRAMEWORK
+    - BATTLE-TEAM-TEMPLATES
+    - MODEL-STRATEGY
+    - MULTI-SQUAD-PLAYBOOK
+    - ORCHESTRATION-MATURITY-FRAMEWORK
+    - ORCHESTRATION-PLAYBOOK
+    - ORCHESTRATION-PROCESS
+    - SQUAD-REGISTRY
+    - SQUAD-SELECTION-MATRIX
+    - TEAM-PATTERNS
+    - TEAM-REGISTRY
+    - BLIND-SPOT-DETECTION-FRAMEWORK
+    - EXECUTION-ENGINES
+    - INDEX
+    - LGPD-COMPLIANCE-PROTOCOL
+  templates:
+    - intent-classification-tmpl
+    - routing-decision-tmpl
+    - squad-capability-index-tmpl
+    - stage-gate-review-tmpl
+    - stage-summary-tmpl
+    - system-health-report-tmpl
+    - team-context-handoff-tmpl
+    - team-execution-plan-tmpl
+    - team-status-report-tmpl
+  checklists:
+    - indexacao-checklist
+    - roteamento-checklist
+    - system-health-checklist
+    - team-execution-checklist
+  data:
+    - execution-templates
+    - orchestration-metrics-registry
+    - squad-routing-matrix
+    - registry-update-2026-02-07
+    - routing-dry-run-new-squads
+    - routing-dry-run-results
+    - squad-validation-report
+    - team-configs-validation
+    - execution-engine-registry
+  tools: []
+  scripts: []
+commands:
+  - name: '*help'
+    description: Listar todos os squads e suas capacidades
+    routes_to: capability-cartographer
+  - name: '*route'
+    description: Rotear solicitação para squad adequado
+    routes_to: roteador
+  - name: '*status'
+    description: Ver status do ecossistema
+    routes_to: supervisor-sistema
+  - name: '*audit'
+    description: Executar auditoria do sistema
+    routes_to: supervisor-sistema
+  - name: '*find'
+    description: Buscar squad por capacidade
+    routes_to: capability-cartographer
+  - name: '*create-squad'
+    description: Solicitar criação de novo squad
+    routes_to: roteador
+    forwards_to: squad-creator
+  - name: '*execute-team'
+    description: Executar demanda via Agent Teams
+    routes_to: dag-architect
+  - name: '*team-status'
+    description: Status da equipe ativa
+    routes_to: dag-architect
+  - name: '*team-monitor'
+    description: Monitorar execução da equipe
+    routes_to: dag-architect
+  - name: '*team-shutdown'
+    description: Encerrar equipe ativa
+    routes_to: dag-architect
+routing:
+  algorithm: domain_match + problem_match + task_type_match + keywords
+  scoring:
+    domain_match: 0.4
+    problem_match: 0.35
+    task_type_match: 0.15
+    keywords: 0.1
+  thresholds:
+    route_direct: 0.8
+    route_with_confirm: 0.6
+    escalate_to_human: 0.6
+    create_new_squad: <0.6 AND recurring
+  fallback:
+    no_match: Solicitar mais contexto ao usuário
+    low_confidence: Apresentar opções para usuário escolher
+    new_capability: Rotear para squad-creator
+team_execution:
+  enabled: true
+  max_concurrent_teams: 1
+  context_passing:
+    method: file_based
+    output_dir: .data/team-outputs
+    format: markdown
+  execution_logging:
+    enabled: true
+    rule: .claude/rules/execution-logging.md
+    output_dir: .data/executions
+  defaults:
+    max_agents: 5
+    timeout_per_task_minutes: 10
+    timeout_total_minutes: 60
+    auto_shutdown: true
+    require_approval: true
+  models:
+    chief: opus-4-6
+    architect: opus-4-6
+    implementer: sonnet
+    writer: sonnet
+    reviewer: sonnet
+    researcher: haiku
+    classifier: haiku
+    orchestrator: opus-4-6
+  supported_squads:
+    tier_1_full:
+      - full-stack-dev
+      - copywriting
+      - content-ecosystem
+      - deep-scraper
+    tier_2_basic:
+      - design-system
+      - media-buy
+      - youtube-lives
+      - data-analytics
+      - project-management-clickup
+      - creative-studio
+      - funnel-creator
+    tier_3_experimental:
+      - sales
+      - community-example-squad
+      - communication-example-squad
+      - conselho
+      - strategy-example-squad
+      - core-dev
+      - infoproduct-creation
+      - agora-direct-response
+    not_supported:
+      - squad-creator
+      - orquestrador-global
+  staged_execution:
+    enabled: true
+    min_squads_for_stages: 2
+    gate_options:
+      - approve
+      - revise
+      - modify_plan
+      - pause
+      - cancel
+  patterns:
+    pipeline:
+      description: Sequential stages, each agent produces input for next
+      squads:
+        - content-ecosystem
+        - youtube-lives
+        - project-management-clickup
+        - funnel-creator
+        - infoproduct-creation
+    parallel_workers:
+      description: Multiple agents doing similar work on different inputs
+      squads:
+        - copywriting
+        - deep-scraper
+        - media-buy
+        - creative-studio
+    builder_validator:
+      description: One builds, another reviews
+      squads:
+        - full-stack-dev
+        - design-system
+        - core-dev
+    competing_hypotheses:
+      description: Multiple agents tackle same problem from different angles
+      squads:
+        - data-analytics
+        - conselho
+        - strategy-example-squad
+    business_domain:
+      description: Chief coordinates domain-specific agents
+      squads:
+        - sales
+        - community-example-squad
+        - communication-example-squad
+    battle_royale:
+      description: Adversarial competition with voting, debate, and board review
+      squads:
+        - copywriting
+quality_standards:
+  routing:
+    - Tempo de classificação < 2 segundos
+    - Precisão de roteamento > 90%
+    - Taxa de escalação < 10%
+  monitoring:
+    - Health check a cada 5 minutos
+    - Relatório de gaps semanal
+    - Atualização de índice em tempo real
+  fallback:
+    - Sempre oferecer alternativas ao usuário
+    - Nunca deixar solicitação sem resposta
+    - Escalar para humano em caso de dúvida
+metrics:
+  tracked:
+    - requests_total
+    - requests_by_squad
+    - routing_accuracy
+    - routing_latency
+    - escalation_rate
+    - new_squad_requests
+    - unmatched_requests
+  alerts:
+    - condition: routing_accuracy < 85%
+      action: Notificar administrador
+    - condition: unmatched_requests > 20%
+      action: Sugerir criação de novo squad
+integrations:
+  internal_squads:
+    managed:
+      - academic-research
+      - core-dev
+      - communication-example-squad
+      - community-example-squad
+      - conselho
+      - content-ecosystem
+      - copywriting
+      - creative-studio
+      - data-analytics
+      - deep-scraper
+      - design-system
+      - full-stack-dev
+      - funnel-creator
+      - infoproduct-creation
+      - market-research
+      - marketing-automation
+      - media-buy
+      - project-management-clickup
+      - sales
+      - strategy-example-squad
+      - technical-documentation
+      - youtube-lives
+      - agora-direct-response
+    special:
+      - squad: squad-creator
+        trigger: Quando necessário criar novo squad
+        permission: exclusive
+capabilities:
+  core:
+    - Intent classification and request routing
+    - Squad discovery and capability matching
+    - System health monitoring and gap analysis
+    - Squad indexing and registry management
+    - Agent Teams execution and coordination
+    - Multi-squad staged execution with gates
+    - Context passing between squads (file-based)
+    - Execution logging and audit trail
+tags:
+  - orchestration
+  - routing
+  - system
+  - meta
+  - agent-teams
+  - multi-squad

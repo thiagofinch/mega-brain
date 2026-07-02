@@ -1,0 +1,193 @@
+# =============================================================================
+# TASK: ORCHESTRATION ARCHITECTURE
+# =============================================================================
+# Design the enterprise-grade orchestration architecture
+# Stage 10-to-100 | Ontology Layer: Orquestracao + Consolidacao
+# =============================================================================
+
+
+task: orchestration-architecture
+domain: strategic
+atomic_layer: Molecule
+responsavel_type: Agent
+performance:
+  error_handling: graceful with fallback + retry
+
+megabrain_frontmatter:
+  task_id: "orchestration-architecture"
+  name: "orchestration-architecture"
+  version: "1.0.0"
+  category: operations
+  squad: orquestrador-global
+  responsavel: "@plan-architect"
+  model: opus
+  difficulty: intermediate
+  atomic_layer: Molecule
+
+metadata:
+  name: orchestration-architecture
+  version: "1.0.0"
+  squad: orquestrador-global
+  maturity_stage: "10_to_100"
+  ontology_layer: orquestracao
+  model: opus
+  estimated_time: "8-16 hours"
+  complexity: very_high
+
+description: >
+  Design the enterprise orchestration architecture that handles complex
+  multi-squad pipelines with autonomous routing, predictive resource
+  allocation, self-healing execution, and organizational learning.
+  This transforms orchestration from a manual coordination role into
+  an intelligent autonomous system.
+
+inputs:
+  required:
+    - name: execution_history
+      type: object
+      source: "6+ months of execution logs from .data/executions/"
+    - name: squad_registry
+      type: document
+      source: "Complete squad registry with capabilities and performance data"
+    - name: ids_config
+      type: object
+      source: "IDS module configuration (task-scaler, delegation-tracker, cost-tracker)"
+  optional:
+    - name: performance_targets
+      type: object
+      description: "Target SLAs for routing time, execution time, quality scores"
+
+outputs:
+  - name: architecture_blueprint
+    type: document
+    destination: ".data/executions/{date}_{slug}/orchestration-architecture.md"
+    description: "Complete orchestration architecture with system design"
+  - name: capacity_model
+    type: document
+    destination: ".data/executions/{date}_{slug}/capacity-model.md"
+    description: "Capacity planning model for squad resource allocation"
+
+frameworks:
+  - name: "Autonomous Orchestration Engine"
+    application: >
+      The engine handles: demand intake and classification (NLP-based),
+      squad selection (capability matching + load balancing), pipeline
+      generation (template-based + adaptive), execution monitoring
+      (real-time health checks), and post-execution learning (pattern
+      extraction from audit trails).
+  - name: "Predictive Resource Allocation"
+    application: >
+      Based on historical execution data, predict: which squads will
+      be needed for a demand type, expected execution time per squad,
+      optimal parallelization strategy, and resource conflicts with
+      concurrent executions.
+
+process:
+  steps:
+    - id: 1
+      name: "Analyze execution history"
+      action: >
+        Mine the execution logs for patterns: most common demand types,
+        squad combinations, average execution times, gate failure rates,
+        and quality score distributions. Identify the top 10 pipeline
+        templates that cover 80% of demands.
+      output: "Execution pattern analysis"
+
+    - id: 2
+      name: "Design routing engine"
+      action: >
+        Design the intelligent routing engine: NLP-based intent
+        classification, capability-based squad matching, load-aware
+        selection (avoid overloading a squad), and confidence scoring
+        for routing decisions.
+      output: "Routing engine specification"
+
+    - id: 3
+      name: "Design pipeline generator"
+      action: >
+        Create the system that auto-generates execution pipelines:
+        template library for common patterns, adaptive pipeline
+        modification based on context, dynamic gate configuration,
+        and fallback strategies for squad unavailability.
+      output: "Pipeline generator specification"
+
+    - id: 4
+      name: "Design execution monitor"
+      action: >
+        Build the real-time monitoring system: health checks per
+        squad execution, timeout detection, stall recovery, cost
+        tracking integration (IDS-11), and progress reporting.
+      output: "Execution monitor specification"
+
+    - id: 5
+      name: "Design learning system"
+      action: >
+        Create the post-execution learning loop: extract patterns
+        from successful/failed executions, update routing weights,
+        refine pipeline templates, and generate improvement
+        recommendations for squads.
+      output: "Learning system specification"
+
+    - id: 6
+      name: "Create implementation roadmap"
+      action: >
+        Build a phased implementation plan: Phase 1 (template pipelines),
+        Phase 2 (intelligent routing), Phase 3 (predictive allocation),
+        Phase 4 (autonomous optimization).
+      output: "Implementation roadmap"
+
+integration_graph:
+  depends_on:
+    - task: staged-execution-design
+      squad: orquestrador-global
+      data_needed: "pipeline_patterns"
+    - task: gate-review-framework
+      squad: orquestrador-global
+      data_needed: "gate_review_patterns"
+  feeds_into:
+    - task: orchestration-scaling
+      squad: orquestrador-global
+      data_passed: "architecture_blueprint"
+  collaborates_with:
+    - squad: data-analytics
+      purpose: "Execution analytics and pattern mining"
+    - squad: core-dev
+      purpose: "Engine implementation and IDS integration"
+    - squad: navigator
+      purpose: "Context management layer integration"
+
+  cross_squad:
+    - squad: core-dev
+      reason: "Engine de orquestração"
+    - squad: navigator
+      reason: "Routing de tasks entre squads"
+    - squad: project-management-clickup
+      reason: "Tracking de execuções no ClickUp"
+quality_gates:
+  - "Architecture covers all 6 ontology layers"
+  - "Routing engine has defined accuracy targets (>90% correct routing)"
+  - "Pipeline templates cover 80%+ of historical demand types"
+  - "Learning system has clear feedback loops"
+  - "Implementation roadmap has realistic phase timelines"
+  - "IDS integration points are clearly defined"
+squad: orquestrador-global
+task_id: orchestration-architecture
+version: "3.1.1"
+status: ready
+responsavel: "@plan-architect"
+execution_type: hybrid
+orchestration_boundary:
+  live_routing_performed: false
+  external_dispatch_performed: false
+  workspace_write_performed: false
+megabrain_validation:
+  last_run: "20260514-validate-deep"
+  validated_at: "2026-05-15T00:00:00Z"
+  validator: mega-brain/megabrain-chief
+  mode: deep
+  squad: orquestrador-global
+  status: pass
+  evidence:
+    - schema_contract_normalized
+    - task_boundary_declared
+    - plan_only_orchestration_preserved

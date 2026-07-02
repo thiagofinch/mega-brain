@@ -1,0 +1,13 @@
+# Template: team-structure
+# Namespace: operations
+# Status: PLACEHOLDER
+# Criado: 2026-04-05 (Wave 2.1 — Roundtable RT-INV-001)
+#
+# Este template deve ser preenchido com o schema canônico
+# para gerar outputs padronizados no namespace operations.
+
+template_id: "team-structure"
+namespace: operations
+version: "0.1.0"
+status: placeholder
+fields: {}

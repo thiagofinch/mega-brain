@@ -1,0 +1,296 @@
+# Agent Selection Matrix — Mega Brain Roundtable
+# Adapted from mega-brain v2.1.0 + mega-brain specific domains
+# Version: 1.0.0
+#
+# Schema: domain_to_agents
+#   <domain_id>:                   # string — unique domain identifier (kebab-case)
+#     keywords: string[]           # REQUIRED — trigger words matched against topic/files (case-insensitive)
+#     agents: string[]             # REQUIRED — agent refs (@agent-name) assigned when domain matches
+#     auto_include: boolean        # OPTIONAL (default: false) — if true, agent is auto-added to every roundtable
+#   Match logic: if ANY keyword appears in topic/file context, domain agents are included.
+#   Multiple domains can match simultaneously (union of agents).
+
+domain_to_agents:
+
+  # ═══════════════════════════════════════════════════════════
+  # CORE DOMAINS (from mega-brain)
+  # ═══════════════════════════════════════════════════════════
+
+  governance:
+    keywords:
+      - registry
+      - document-registry
+      - file_entity_map
+      - governance
+      - compliance
+      - CSO
+      - "12 dimensoes"
+      - SOT
+    agents:
+      - "@cso"
+    auto_include: true  # auto-adicionado, removivel com -@cso
+
+  megabrain_framework:
+    keywords:
+      - MEGABRAIN
+      - composition-rules
+      - token-registry
+      - process
+      - pipeline
+      - "v3.1"
+      - "v3.2"
+      - organism
+      - molecule
+      - atom
+      - flywheel
+      - mission-pattern
+    agents:
+      - "@megabrain-chief"
+
+  architecture:
+    keywords:
+      - architecture
+      - ADR
+      - package
+      - monorepo
+      - Hub
+      - Spoke
+      - migration
+      - "@megabrain/core"
+      - dependency
+      - exports
+      - build
+    agents:
+      - "@architect"
+
+  infrastructure:
+    keywords:
+      - deploy
+      - CI/CD
+      - Docker
+      - Hetzner
+      - Railway
+      - Vercel
+      - infra
+      - devops
+      - publish
+      - workflow
+      - GitHub Actions
+    agents:
+      - "@devops"
+      - "@infra-chief"
+
+  database:
+    keywords:
+      - DB
+      - schema
+      - migration
+      - pgvector
+      - RLS
+      - Supabase
+      - tables
+      - edge functions
+      - memory system
+      - embedding
+      - vector
+    agents:
+      - "@db-sage"
+
+  framework_compliance:
+    keywords:
+      - Mega Brain
+      - Constitution
+      - agent authority
+      - CLI First
+      - story-driven
+      - template
+      - handoff
+    agents:
+      - "@mega-brain-master"
+
+  quality:
+    keywords:
+      - testing
+      - QA
+      - regression
+      - e2e
+      - quality gate
+      - testability
+      - rollback
+      - CodeRabbit
+    agents:
+      - "@qa"
+
+  product:
+    keywords:
+      - story
+      - epic
+      - AC
+      - acceptance criteria
+      - user story
+      - validation
+      - effort
+      - depends_on
+    agents:
+      - "@po"
+
+  project:
+    keywords:
+      - wave
+      - sprint
+      - backlog
+      - execution order
+      - timeline
+      - dependency graph
+      - critical path
+    agents:
+      - "@pm"
+
+  c_level:
+    keywords:
+      - strategy
+      - vision
+      - OKR
+      - valuation
+      - roadmap
+      - board
+      - investor
+      - revenue
+    agents:
+      - "@vision-chief"
+      - "@coo-orchestrator"
+
+  # ═══════════════════════════════════════════════════════════
+  # MEGA-BRAIN SPECIFIC DOMAINS
+  # ═══════════════════════════════════════════════════════════
+
+  knowledge_management:
+    keywords:
+      - MCE
+      - mega-brain
+      - dossier
+      - DNA
+      - mind-clone
+      - entity-map
+      - knowledge
+      - extraction
+      - transcript
+      - conclave
+      - deliberation
+      - cognitive
+      - voice-dna
+      - behavioral
+      - L1-L10
+      - confidence
+      - calibration
+    agents:
+      - "@critico"
+      - "@advogado-diabo"
+      - "@sintetizador"
+
+  knowledge_extraction:
+    keywords:
+      - entity
+      - canonical-map
+      - insight
+      - chunk
+      - source_id
+      - chunk_id
+      - traceability
+      - evidence
+      - INSIGHTS-STATE
+      - TAG-RESOLVER
+      - NAVIGATION-MAP
+    agents:
+      - "@kops-sage"
+      - "@dig"
+      - "@parse"
+      - "@canon"
+
+  pipeline_ops:
+    keywords:
+      - pipeline
+      - MCE
+      - step
+      - phase
+      - batch
+      - ingest
+      - checkpoint
+      - finalize
+      - orchestrate
+      - scope_classifier
+      - smart_router
+    agents:
+      - "@gate"
+      - "@ops"
+      - "@guard"
+
+  dna_profiling:
+    keywords:
+      - DNA
+      - L1
+      - L2
+      - L3
+      - L4
+      - L5
+      - L6
+      - L7
+      - L8
+      - L9
+      - L10
+      - voice-dna
+      - behavioral
+      - identity
+      - philosophy
+      - heuristic
+      - framework
+      - methodology
+      - PHILOSOPHIES
+      - MENTAL-MODELS
+      - HEURISTICS
+      - FRAMEWORKS
+      - METHODOLOGIES
+      - BEHAVIORAL-PATTERNS
+      - VALUES-HIERARCHY
+      - VOICE-DNA
+      - OBSESSIONS
+      - PARADOXES
+    agents:
+      - "@dig"
+      - "@behav"
+      - "@psych"
+      - "@voice"
+      - "@weave"
+
+  compilation:
+    keywords:
+      - dossier
+      - source
+      - compilation
+      - narrative
+      - agent-gen
+      - mind-clone
+      - AGENT.md
+      - SOUL.md
+      - MEMORY.md
+      - DNA-CONFIG
+      - staging
+    agents:
+      - "@scribe"
+      - "@kops-forge"
+      - "@clone"
+
+  rag_indexation:
+    keywords:
+      - RAG
+      - index
+      - knowledge graph
+      - BM25
+      - hybrid
+      - embeddings
+      - chunker
+      - rag_expert
+      - rag_business
+    agents:
+      - "@index"
+      - "@kops-atlas"

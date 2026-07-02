@@ -1,0 +1,140 @@
+schema_version: "2.0"
+plan_id: "node-status-fixture-20260504-180000"
+created_by: "plan-architect"
+created_at: "2026-05-04T18:00:00Z"
+
+demand:
+  raw: "Validar sidecar de status por node do DAG"
+  parsed:
+    primary_domain: "ops"
+    secondary_domains: ["orchestration"]
+    task_type: "validate"
+    complexity: "low"
+    urgency: "normal"
+    business_units: ["megabrain"]
+    implicit_deadline: null
+    confidence: 0.95
+  elicitations: []
+
+discovery:
+  cache_version: "fixture"
+  cache_age_seconds: 0
+  capabilities_scanned:
+    squads: 1
+    agents: 2
+    skills: 1
+    tasks: 1
+    workflows: 1
+  cache_drift_detected: false
+
+selected_capabilities:
+  - id: "orquestrador-global:plan-architect"
+    type: "agent"
+    score: 0.98
+    score_breakdown:
+      domain: 0.99
+      fit: 0.99
+      quality: 0.95
+      recency: 0.95
+      cost: 0.95
+    reason: "Fixture de contrato runtime para o plan-architect."
+    ids_decision: "REUSE"
+
+dag:
+  nodes:
+    - id: "n1"
+      capability: "orquestrador-global:plan-architect"
+      capability_ref: "orquestrador-global:plan-architect"
+      capability_type: "agent"
+      phase: "discover"
+      label: "Mapear nodes do plano"
+      inputs_required: []
+      outputs_produced: ["node-map.yaml"]
+      estimated_duration_minutes: 5
+      estimated_cost_tokens: 500
+      model_tier: "sonnet"
+      risk:
+        severity: 1
+        occurrence: 1
+        detectability: 1
+        rpn: 1
+      parallelizable_with: []
+      quality_gate: "node-status-contract"
+    - id: "n2"
+      capability: "orquestrador-global:plan-architect"
+      capability_ref: "orquestrador-global:plan-architect"
+      capability_type: "agent"
+      phase: "validate"
+      label: "Validar status sidecar"
+      inputs_required: ["node-map.yaml"]
+      outputs_produced: ["node-status-valid.yaml"]
+      estimated_duration_minutes: 10
+      estimated_cost_tokens: 800
+      model_tier: "sonnet"
+      risk:
+        severity: 2
+        occurrence: 1
+        detectability: 1
+        rpn: 2
+      parallelizable_with: []
+      quality_gate: "validate-node-status"
+  edges:
+    - from: "n1"
+      to: "n2"
+      type: "data_dependency"
+      reason: "O status sidecar depende do mapa de nodes."
+      artifact: "node-map.yaml"
+  parallel_groups: []
+  critical_path: ["n1", "n2"]
+  critical_path_duration_minutes: 15
+
+risks:
+  top_risks: []
+  pre_mortem: null
+
+resource_estimate:
+  total_tokens: 1300
+  total_cost_usd: 0.02
+  total_duration_minutes: 15
+  total_wall_time_estimate_hours: 0.25
+  models_used: ["sonnet"]
+  agents_count: 1
+
+success_criteria:
+  - metric: "node_status_valid"
+    criterion: "Contrato de status por node validado"
+    measurement: "validate-node-status.js retorna valid=true"
+    threshold: "true"
+
+falsifiable_assumptions:
+  - assumption: "Status runtime pode ser sidecar sem mutar o plano canônico."
+    falsification_test: "validate-plan.js deve continuar passando no plano fixture."
+
+constitutional_compliance:
+  codeowners_check: "pass"
+  business_isolation_check: "pass"
+  agent_authority_check: "pass"
+  no_invention_check: "pass"
+
+handoff:
+  next_action_suggested: "Usar o contrato de node status no execution-registry."
+  next_action_executor: "@dev"
+  approvals_required: []
+  do_not_execute_until: []
+
+quality_score: 4.5
+quality_breakdown:
+  completeness: 4
+  capability_match: 5
+  parallelization: 3
+  risk_coverage: 4
+  cost_efficiency: 5
+  clarity: 5
+  falsifiability: 5
+
+audit:
+  created_by: "plan-architect"
+  created_at: "2026-05-04T18:00:00Z"
+  cache_manifest_hash: "fixture"
+  scoring_config_version: "1.0"
+  heuristics_applied: ["IDS-G1", "CPM", "FMEA-RPN"]

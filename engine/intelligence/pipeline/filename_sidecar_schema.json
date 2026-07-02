@@ -1,0 +1,113 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://mega-brain.local/schemas/filename-sidecar-1.1.json",
+  "title": "Filename Sidecar (entity-discovery)",
+  "description": "Sidecar JSON co-written by TWO emitters across the ingestion pipeline. (1) pre_03_inbox_organization writes the NORMALIZER fields (schema_version..bucket + tokens_dropped) BEFORE any destructive filename normalization. (2) /ingest slash orchestrator (scripts/ingest-with-entity-discovery.py) writes the ENTITY DECISION fields (decision, destination, routing_reason, gemini_used) after Speaker Visual Gate + Entity Discovery. Last-writer-wins is SAFE because the two emitters touch disjoint field groups. See STORY-MCE-ROUND-TRIP AC-1 (G4) + AC-5 (G5), workflow-dag-2026-05-13 N1 + N5, composition-engineer sign-off 2026-05-13 (condition C-N5-2 Option A).",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "emitted_at",
+    "emitter",
+    "filename_original",
+    "filename_normalized",
+    "tokens_dropped",
+    "original_path",
+    "bucket"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "description": "Semver of this sidecar shape. Bump on any breaking change. v1.0.0 = normalizer-only fields (N1). v1.1.0 = merged normalizer + entity decision fields (N1 + N5).",
+      "enum": ["1.0.0", "1.1.0"]
+    },
+    "emitted_at": {
+      "type": "string",
+      "description": "ISO 8601 UTC timestamp of when this sidecar was written.",
+      "format": "date-time"
+    },
+    "emitter": {
+      "type": "string",
+      "description": "Logical identifier of the writer (module + symbol). Example: 'engine.intelligence.pipeline.inbox_organizer.organize_inbox'."
+    },
+    "filename_original": {
+      "type": "string",
+      "description": "Verbatim source filename (basename only, including extension). Must be byte-equal to the name as it landed in the inbox before any normalization."
+    },
+    "filename_normalized": {
+      "type": "string",
+      "description": "Filename the organizer/router intends to use after normalization. May equal filename_original when the normalizer is a no-op."
+    },
+    "tokens_dropped": {
+      "type": "array",
+      "description": "Tokens present in filename_original that are NOT present in filename_normalized. Empty list means the normalizer was non-destructive. NEVER null when a normalization step ran — downstream routers must be able to distinguish 'no tokens dropped' from 'we never checked'.",
+      "items": { "type": "string" }
+    },
+    "tokens_kept": {
+      "type": "array",
+      "description": "Cleaned tokens that survived normalization. Optional companion to tokens_dropped for diagnostics.",
+      "items": { "type": "string" }
+    },
+    "entity_candidates": {
+      "type": "array",
+      "description": "Entity slugs the writer believes the file is about (best effort). Routers may use the FIRST element as the explicit entity hint, overriding the legacy first-token heuristic. Empty list means 'no opinion'.",
+      "items": { "type": "string" }
+    },
+    "entity_evidence": {
+      "type": "object",
+      "description": "Optional structured evidence supporting entity_candidates. Free-form: persons/companies/groups from parse_filename_evidence(), confidence, etc.",
+      "additionalProperties": true
+    },
+    "original_path": {
+      "type": "string",
+      "description": "Absolute path of the file at the moment the sidecar was emitted. Diagnostic field for forensic tracing."
+    },
+    "bucket": {
+      "type": "string",
+      "description": "Knowledge bucket the file is currently in (or will be moved to).",
+      "enum": ["external", "business", "personal", "unknown"]
+    },
+    "normalizer_rule": {
+      "type": "string",
+      "description": "Identifier of the normalization rule applied (or 'noop' when no normalization was performed). Allows downstream consumers to audit which rule mutated the filename."
+    },
+    "notes": {
+      "type": "string",
+      "description": "Optional free-form note from the emitter (e.g., 'fail-open: skipped sidecar write because parent dir was read-only')."
+    },
+    "ingested_at": {
+      "type": "string",
+      "description": "[N5 portion] ISO timestamp when /ingest slash orchestrator routed the file. Distinct from emitted_at (N1) which tracks pre_03 sidecar write.",
+      "format": "date-time"
+    },
+    "decision": {
+      "type": "object",
+      "description": "[N5 portion] Output of infer_entities() — full entity-discovery decision after Gemini Speaker Visual Gate (when available) + filename evidence reconciliation. Persisted for audit/replay.",
+      "additionalProperties": true,
+      "properties": {
+        "entity_author": { "type": ["string", "null"] },
+        "entity_subject": { "type": ["string", "null"] },
+        "cross_references": { "type": "array", "items": { "type": "string" } },
+        "confidence": { "type": "string", "enum": ["low", "medium", "high"] },
+        "verdict": { "type": "string", "enum": ["ROUTE", "BLOCK", "DEGRADE"] },
+        "reasoning": { "type": "string" }
+      }
+    },
+    "destination": {
+      "type": "string",
+      "description": "[N5 portion] Absolute path the orchestrator placed the file at. Diagnostic / forensic field."
+    },
+    "routing_reason": {
+      "type": "string",
+      "description": "[N5 portion] Human-readable reason the orchestrator picked destination."
+    },
+    "gemini_used": {
+      "type": "boolean",
+      "description": "[N5 portion] True iff Speaker Visual Gate ran against Gemini and returned a non-null result. False on --skip-gemini, no GEMINI_API_KEY, non-video input, or exception."
+    },
+    "gemini_bypassed_reason": {
+      "type": "string",
+      "description": "[N5 portion] When gemini_used=false, explicit reason. Examples: 'GEMINI_API_KEY absent', '--skip-gemini flag', 'non-video file', 'exception during call'."
+    }
+  }
+}

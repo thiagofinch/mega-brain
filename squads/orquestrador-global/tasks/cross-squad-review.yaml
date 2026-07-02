@@ -1,0 +1,300 @@
+# =============================================================================
+# TASK: CROSS-SQUAD REVIEW (BAR RAISER)
+# =============================================================================
+# Framework: Amazon Bar Raiser — Agente externo audita para manter padrão alto
+# Auditoria inaugural identificou: 97% dos squads sem adversarial review
+# Referência: 01-analyst-research.md §3.2 + §5.2 Gap 3
+# =============================================================================
+
+
+task: cross-squad-review
+domain: tactical
+atomic_layer: Molecule
+responsavel_type: Agent
+performance:
+  error_handling: graceful with fallback + retry
+
+megabrain_frontmatter:
+  task_id: "cross-squad-review"
+  name: "cross-squad-review"
+  version: "1.0.0"
+  category: operations
+  squad: orquestrador-global
+  responsavel: "@supervisor-sistema"
+  model: sonnet
+  difficulty: intermediate
+  atomic_layer: Molecule
+
+name: cross-squad-review
+title: "Cross-Squad Review — Auditoria Cruzada entre Squads"
+description: >
+  Squad A audita os outputs, processos e knowledge de Squad B, trazendo
+  perspectiva externa livre de viés de confirmação. Inspirado no conceito
+  de Bar Raiser da Amazon: alguém de FORA do squad avalia com olhar fresco.
+  Resolve o Gap 3 identificado na pesquisa (97% dos squads sem adversarial review).
+
+metadata:
+  created_at: "2026-03-19"
+  updated_at: "2026-03-19"
+  version: "1.0.0"
+  maturity_stage: "1-10"
+  ontology_layer: "melhoria"
+  estimated_time: "2-3 horas"
+  model: sonnet
+  framework_origin: "Amazon Bar Raiser"
+  research_ref: "01-analyst-research.md §3.2, §5.2 Gap 3"
+
+# =============================================================================
+# INPUTS
+# =============================================================================
+
+inputs:
+  required:
+    - name: squad_auditado
+      type: string
+      description: "ID do squad sendo auditado (ex: copywriting, media-buy)"
+    - name: squad_auditor
+      type: string
+      description: "ID do squad que conduz a auditoria (deve ser de domínio diferente)"
+  optional:
+    - name: foco
+      type: string
+      description: "Área específica a auditar (ex: 'quality gates', 'knowledge completeness', 'output quality')"
+    - name: outputs_amostra
+      type: array
+      description: "Lista de outputs recentes do squad auditado para review (3-5 outputs)"
+    - name: ciclo_anterior
+      type: string
+      description: "Path do relatório de cross-review anterior para comparação"
+
+# =============================================================================
+# OUTPUTS
+# =============================================================================
+
+outputs:
+  primary:
+    - name: cross_review_report
+      type: document
+      format: markdown
+      destination: "squads/{squad_auditado}/data/cross-review-by-{squad_auditor}-{YYYY-MM-DD}.md"
+      description: "Relatório de auditoria cruzada com findings e recomendações"
+  secondary:
+    - name: action_items
+      type: list
+      description: "Lista de ações priorizadas para o squad auditado"
+    - name: patterns_detected
+      type: list
+      description: "Padrões sistêmicos que podem afetar outros squads"
+
+# =============================================================================
+# PAIRING RULES — Quem audita quem
+# =============================================================================
+
+pairing_rules:
+  principle: "Squads de domínios diferentes para maximizar polinização cruzada"
+  pairs_suggested:
+    - auditor: "data-analytics"
+      auditado: "media-buy"
+      rationale: "Analytics valida se métricas de performance estão corretas"
+    - auditor: "copywriting"
+      auditado: "content-ecosystem"
+      rationale: "Copy review de qualidade editorial e persuasão"
+    - auditor: "funnel-creator"
+      auditado: "sales"
+      rationale: "Funil review do pipeline de vendas end-to-end"
+    - auditor: "market-research"
+      auditado: "creative-studio"
+      rationale: "Pesquisa valida se criativos refletem insights de mercado"
+    - auditor: "conselho"
+      auditado: "orquestrador-global"
+      rationale: "Advisory review de processos de orquestração"
+    - auditor: "sales"
+      auditado: "copywriting"
+      rationale: "Vendas valida se copy converte na prática"
+  constraint: "Nenhum squad pode auditar a si mesmo"
+
+# =============================================================================
+# STEPS
+# =============================================================================
+
+steps:
+  - id: 1
+    name: "Preparação — Coleta de Evidências"
+    description: >
+      O auditor lê o config.yaml, knowledge docs e 3-5 outputs recentes
+      do squad auditado sem contato prévio (blind review).
+    actions:
+      - "Ler config.yaml do squad auditado para entender escopo e componentes"
+      - "Ler knowledge/ docs para entender os frameworks e processos documentados"
+      - "Selecionar 3-5 outputs recentes (executions, tasks completadas, deliverables)"
+      - "Revisar quality gates do squad (se existem em squad-quality-gates.md)"
+      - "Anotar primeira impressão SEM comunicar com o squad auditado"
+    output: "Notas de primeira impressão + evidências coletadas"
+
+  - id: 2
+    name: "Auditoria por 4 Lentes"
+    description: >
+      Avaliar o squad por 4 dimensões complementares, cada uma com critérios
+      específicos e escala 1-10.
+    actions:
+      - "Lente 1 — COMPLETUDE: Os knowledge docs cobrem o domínio adequadamente?"
+      - "  - Frameworks de referência presentes?"
+      - "  - Lacunas óbvias de conhecimento?"
+      - "  - Dados/registries populados ou vazios?"
+      - "Lente 2 — OPERACIONALIZAÇÃO: O conhecimento está convertido em mecanismos?"
+      - "  - Knowledge docs têm checkpoints verificáveis?"
+      - "  - Tasks referenciam os knowledge docs?"
+      - "  - Quality gates existem e são acionáveis?"
+      - "Lente 3 — QUALIDADE DE OUTPUT: Os deliverables atendem ao padrão?"
+      - "  - Outputs seguem os templates definidos?"
+      - "  - Erros recorrentes nos outputs?"
+      - "  - Consistência entre outputs diferentes?"
+      - "Lente 4 — INTEGRAÇÃO: O squad se conecta bem com os outros?"
+      - "  - Handoffs claros com squads upstream/downstream?"
+      - "  - Feedback loops existem e funcionam?"
+      - "  - Dependências mapeadas no DSM?"
+    output: "Score 1-10 por lente + findings detalhados"
+
+  - id: 3
+    name: "Identificação de Blind Spots"
+    description: >
+      Usando a perspectiva do domínio do auditor, identificar o que o squad
+      auditado não percebe por estar "dentro da bolha".
+    actions:
+      - "Aplicar Camada 3 (Polinização Cruzada) do Blind Spot Framework"
+      - "Identificar conceitos do domínio do auditor que seriam úteis ao auditado"
+      - "Identificar vieses de confirmação visíveis nos outputs"
+      - "Verificar se o squad monitora métricas negativas (não só positivas)"
+      - "Classificar cada blind spot: severidade (CRITICAL/HIGH/MEDIUM/LOW)"
+    output: "Lista de blind spots com severidade"
+
+  - id: 4
+    name: "Recomendações Priorizadas"
+    description: >
+      Consolidar findings em recomendações acionáveis, priorizadas por
+      impacto e esforço.
+    actions:
+      - "Para cada finding/blind spot, gerar 1 recomendação acionável"
+      - "Classificar por: impacto (1-5) x esforço (1-5)"
+      - "Quick wins (alto impacto, baixo esforço) primeiro"
+      - "Para cada recomendação: ação específica + responsável + prazo sugerido"
+      - "Limite: máximo 10 recomendações (foco > volume)"
+    output: "Lista priorizada de até 10 recomendações"
+
+  - id: 5
+    name: "Sessão de Feedback (opcional)"
+    description: >
+      Apresentar findings ao squad auditado para discussão. O squad pode
+      aceitar, refutar com evidências, ou negociar prazos.
+    actions:
+      - "Apresentar o relatório ao chief do squad auditado"
+      - "Para cada finding: squad aceita, refuta com evidência, ou negocia"
+      - "Findings aceitos viram action items com deadline"
+      - "Findings refutados são documentados com a justificativa"
+      - "Registrar padrões que afetam múltiplos squads"
+    output: "Action items acordados + padrões sistêmicos"
+
+# =============================================================================
+# TEMPLATE DO OUTPUT
+# =============================================================================
+
+output_template: |
+  # Cross-Squad Review — {squad_auditado}
+
+  ## Metadata
+  - **Squad auditado:** {squad_auditado}
+  - **Squad auditor:** {squad_auditor}
+  - **Data:** {YYYY-MM-DD}
+  - **Foco:** {foco ou "auditoria geral"}
+  - **Outputs revisados:** {N} deliverables
+
+  ## Scores por Lente
+
+  | Lente | Score (1-10) | Observação |
+  |-------|-------------|-----------|
+  | Completude | {N} | {obs} |
+  | Operacionalização | {N} | {obs} |
+  | Qualidade de Output | {N} | {obs} |
+  | Integração | {N} | {obs} |
+  | **Média** | **{N}** | |
+
+  ## Findings
+
+  ### Pontos Fortes
+  1. {ponto forte}
+
+  ### Blind Spots Identificados
+
+  | # | Blind Spot | Severidade | Domínio do Auditor |
+  |---|-----------|-----------|-------------------|
+  | 1 | {descrição} | {sev} | {conceito do auditor relevante} |
+
+  ## Recomendações Priorizadas
+
+  | # | Recomendação | Impacto | Esforço | Tipo | Prazo |
+  |---|-------------|---------|---------|------|-------|
+  | 1 | {ação} | {1-5} | {1-5} | Quick Win | {prazo} |
+
+  ## Padrões Sistêmicos
+  - {padrão que afeta múltiplos squads}
+
+# =============================================================================
+# QUALITY GATE
+# =============================================================================
+
+quality_gate:
+  checks:
+    - name: "Squads de domínios diferentes"
+      severity: CRITICAL
+      criterion: "Auditor e auditado são de domínios distintos"
+    - name: "4 lentes avaliadas"
+      severity: CRITICAL
+      criterion: "Scores atribuídos para todas as 4 lentes"
+    - name: "Blind spots identificados"
+      severity: HIGH
+      criterion: "Mínimo 3 blind spots com severidade classificada"
+    - name: "Recomendações acionáveis"
+      severity: HIGH
+      criterion: "Cada recomendação tem ação + responsável + prazo"
+    - name: "Evidências concretas"
+      severity: HIGH
+      criterion: "Findings baseados em outputs reais, não suposições"
+
+# =============================================================================
+# INTEGRATION POINTS
+# =============================================================================
+
+integration:
+  triggers_from:
+    - workflow: "cross-squad-audit-cycle"
+      when: "Cadência trimestral de auditoria cruzada"
+    - workflow: "gap-detection-cycle"
+      when: "Health check identifica squad com score baixo"
+  feeds_into:
+    - task: "a3-problem-solving"
+      when: "Finding CRITICAL requer resolução estruturada"
+    - task: "ecosystem-health-report"
+      when: "Padrões sistêmicos alimentam o relatório mensal"
+    - workflow: "dmaic-correction-pipeline"
+      when: "Finding CRITICAL com RPN > 100 entra no pipeline DMAIC"
+squad: orquestrador-global
+task_id: cross-squad-review
+version: "3.1.1"
+status: ready
+responsavel: "@plan-architect"
+execution_type: hybrid
+orchestration_boundary:
+  live_routing_performed: false
+  external_dispatch_performed: false
+  workspace_write_performed: false
+megabrain_validation:
+  last_run: "20260514-validate-deep"
+  validated_at: "2026-05-15T00:00:00Z"
+  validator: mega-brain/megabrain-chief
+  mode: deep
+  squad: orquestrador-global
+  status: pass
+  evidence:
+    - schema_contract_normalized
+    - task_boundary_declared
+    - plan_only_orchestration_preserved

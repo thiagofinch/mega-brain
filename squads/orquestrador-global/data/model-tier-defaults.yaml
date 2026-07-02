@@ -1,0 +1,108 @@
+# Model tier defaults per mode — consumed by plan-architect (PA-6.1)
+# Story: STORY-PA-6.2 Part C
+# Source: ADR-PA-001 (ACCEPTED 2026-04-28 — empirical evidence from Run #1 Lean)
+# Calibration run: outputs/eval/plan-architect/20260428-215316/
+#
+# NOTE on `risk-assessor` (W5c clarification 2026-04-30):
+# `risk-assessor` is NOT a standalone agent file. It is a sub-operation
+# performed inline by `dag-architect` during L4 PLAN SYNTHESIS phase
+# (FMEA RPN per node — see agents/plan-architect.md:79). The entries
+# below configure which model is used WHEN the FMEA risk-assessment
+# operation runs, not which agent runs it. See data/deviation-registry.yaml
+# DEV-OG-006 for the rationale.
+
+schema_version: "1.0"
+status: accepted
+adr_ref: "docs/adrs/ADR-PA-001-plan-architect-model-defaults.md"
+calibrated_at: "2026-04-28"
+calibration_run: "outputs/eval/plan-architect/20260428-215316/"
+empirical_evidence: "10 plans (5 demands × 2 configs) — H1+H3+H5 confirmed"
+
+# ───────────────────────────────────────────────────────────────────────────────
+# Defaults per mode (tentative — blueprint §12.6 hypothesis)
+# ───────────────────────────────────────────────────────────────────────────────
+modes:
+
+  SIMPLE:
+    notes: "Custo > qualidade marginal — mix haiku/sonnet"
+    agents:
+      dag-architect: sonnet
+      intent-parser: sonnet
+      capability-cartographer: haiku
+      roteador: sonnet
+      risk-assessor: haiku
+    target_cost_per_plan_usd: 0.05   # empirical Run #1 G1-sonnet $0.04, G2-sonnet $0.05 (15x cheaper than DRAFT estimate $0.75)
+    target_duration_seconds: 30
+
+  STANDARD:
+    notes: "Sweet spot custo/qualidade. Run #1.5 confirmed mean 4.567 (G5/G6/G9). Cross-domain demands podem se beneficiar de Opus dag-architect (G9 +0.31 score)."
+    agents:
+      dag-architect: sonnet
+      intent-parser: sonnet
+      capability-cartographer: haiku
+      roteador: sonnet
+      risk-assessor: sonnet
+    target_cost_per_plan_usd: 0.24   # Run #1.5 mean STANDARD sonnet
+    target_duration_seconds: 60
+    # Opt-in tweak (Run #1.5 G9 finding):
+    cross_domain_override:
+      condition: "demand.parsed.secondary_domains.length > 0 (cross-domain)"
+      action: "use opus for dag-architect"
+      evidence: "G9 design+dev opus +0.31 score vs sonnet (cost ratio 2.9x acceptable)"
+      activate_when: "manually opt-in via --cross-domain flag (default: off until BL-N trigger validates)"
+
+  COMPLEX:
+    notes: "Paralelização precisa Opus profundidade (H1 confirmed +0.80 score). Risk em sonnet (H2 evidence weak — só +0.40, não justifica 5x cost)."
+    agents:
+      dag-architect: opus    # H1 CONFIRMED — Opus +0.80 parallelization score
+      intent-parser: sonnet
+      capability-cartographer: sonnet
+      roteador: sonnet
+      risk-assessor: sonnet  # CALIBRATION — was opus em DRAFT; Run #1 H2 weak evidence
+    target_cost_per_plan_usd: 13.80   # empirical Run #1 G3-opus / G7-opus
+    target_duration_seconds: 180
+    additional_phases: [pre-mortem-mandatory]
+
+  CRITICAL:
+    notes: "Erro caro — Opus em todos os high-stakes; sonnet só onde é puro lookup"
+    agents:
+      dag-architect: opus
+      intent-parser: opus    # interpretação cuidadosa em high-stakes
+      capability-cartographer: sonnet
+      roteador: sonnet
+      risk-assessor: opus
+    target_cost_per_plan_usd: 3.50
+    target_duration_seconds: 300
+    additional_phases: [pre-mortem-mandatory, roundtable-consensus]
+    require_human_signoff: true
+
+# ───────────────────────────────────────────────────────────────────────────────
+# Calibration audit — UPDATE after ADR-PA-001 ACCEPTED
+# ───────────────────────────────────────────────────────────────────────────────
+calibration:
+  source: "ADR-PA-001 ACCEPTED (empirical evidence from Run #1 Lean variant)"
+  last_calibrated_at: "2026-04-29"   # Run #1.5 closure
+  next_review_at: "2026-07-29"   # 90 days
+  empirical_evidence: "outputs/eval/plan-architect/20260428-215316/dashboard.md"
+  hypotheses_resolved:
+    H1_opus_parallelization: confirmed   # Run #1+1.5: +0.40 mean (mais conservador com sample 2x)
+    H2_opus_risk_calibration: confirmed   # Run #1.5: +0.40 consistente; weak mas reproducível
+    H3_sonnet_simple_sufficient: confirmed   # SIMPLE 4.50 + STANDARD 4.567 ambos > 4.0
+    H4_opus_drift_reduction: deferred   # requires execution data (Wave 7+)
+    H5_opus_cost_unjustified_simple: confirmed   # SIMPLE Pareto-dominado; STANDARD G5 37x cost reinforces
+  plans_evaluated: 20   # full Golden Set (10 demands × sonnet+opus)
+  golden_set_coverage_percent: 100
+
+# ───────────────────────────────────────────────────────────────────────────────
+# Override mechanism — per-invocation flags
+# ───────────────────────────────────────────────────────────────────────────────
+override_policy: |
+  plan-architect aceita override per-invocation via:
+    --model-tier <agent>=<tier>  (ex: --model-tier dag-architect=opus)
+  Override registrado no audit-trail.jsonl como override_reason.
+
+# ───────────────────────────────────────────────────────────────────────────────
+# Pricing reference (must match data/pricing-snapshot.yaml)
+# ───────────────────────────────────────────────────────────────────────────────
+pricing_snapshot_ref: "data/pricing-snapshot.yaml"
+pricing_snapshot_date: "2026-04-28"

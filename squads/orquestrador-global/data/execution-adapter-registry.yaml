@@ -1,0 +1,120 @@
+metadata:
+  name: "orquestrador-global-execution-adapter-registry"
+  schema_version: "1.0"
+  generated_by: "orquestrador-global-runtime-closure"
+  updated_at: "2026-05-04T18:20:00Z"
+
+adapters:
+  - id: "manual"
+    type: "manual"
+    status: "required"
+    entrypoint:
+      command: null
+      documentation: "docs/stories/epic-orquestrador-global/MASTER-PLAN-OG-RUNTIME-CLOSURE.md"
+    input_schema: null
+    output_schema: null
+    capabilities:
+      - "human_approval"
+      - "manual_execution"
+      - "governance_gate"
+    constraints:
+      - "requires_human_operator"
+      - "no_auto_dispatch"
+    max_concurrent: 1
+    risk_level: "LOW"
+    supports_parallel_nodes: false
+    supports_heartbeat: false
+    supports_replan: true
+    source_components: []
+    selection_notes: "Fallback explicit for approvals, human-only actions and unavailable automated adapters."
+
+  - id: "megabrain-example-squad"
+    type: "sdc_engine"
+    status: "active"
+    entrypoint:
+      cli: "core/core/orchestration/megabrain-example-squad-ops.mjs dispatch"
+      module: "core/core/orchestration/megabrain-example-squad-dispatch.mjs"
+      runtime: "core/core/orchestration/megabrain-example-squad-runtime.mjs"
+    input_schema: "schemas/contracts/megabrain-example-squad-dispatch.schema.json"
+    output_schema: "schemas/contracts/megabrain-example-squad-result.schema.json"
+    capabilities:
+      - "sdc"
+      - "story_dispatch"
+      - "typed_handoff"
+      - "phase_result_validation"
+      - "contract_file_backend"
+      - "agent_command_backend"
+    constraints:
+      - "stories_ready_only"
+      - "dependencies_done"
+      - "simple_or_standard_only"
+      - "no_architecture_review"
+      - "max_concurrent_1"
+    max_concurrent: 1
+    risk_level: "MEDIUM"
+    supports_parallel_nodes: false
+    supports_heartbeat: false
+    supports_replan: false
+    source_components:
+      - "megabrain-example-squad"
+    selection_notes: "Use for one routable SDC story at a time. Do not use as a generic swarm adapter."
+
+  - id: "codex-subagents"
+    type: "codex_subagents"
+    status: "experimental"
+    entrypoint:
+      skill: ".agents/skills/swarm-execute/SKILL.md"
+      claude_projection: ".claude/skills/swarm-execute/SKILL.md"
+      executor: "core/core/orchestration/parallel-executor.js"
+    input_schema: null
+    output_schema: null
+    capabilities:
+      - "spawn_agent_fanout"
+      - "wait_agent_fanin"
+      - "read_parallelism"
+      - "disjoint_write_parallelism"
+      - "phase_parallelism"
+    constraints:
+      - "write_file_sets_must_be_disjoint"
+      - "unknown_write_scope_runs_serial"
+      - "flat_worker_roster"
+      - "no_worker_subspawn"
+    max_concurrent: 3
+    risk_level: "MEDIUM"
+    supports_parallel_nodes: true
+    supports_heartbeat: false
+    supports_replan: false
+    source_components:
+      - "swarm-execute"
+      - "workflow-parallel-executor"
+    selection_notes: "Use for bounded local fan-out where read-only tasks or disjoint write scopes are explicit."
+
+  - id: "ruflo-swarm"
+    type: "external_swarm"
+    status: "backlog"
+    entrypoint:
+      repository: "https://github.com/ruvnet/ruflo"
+      adapter: null
+    input_schema: null
+    output_schema: null
+    capabilities:
+      - "external_swarm"
+      - "distributed_coordination"
+      - "future_federation"
+    constraints:
+      - "not_implemented"
+      - "requires_security_review"
+      - "requires_contract_adapter"
+    max_concurrent: null
+    risk_level: "HIGH"
+    supports_parallel_nodes: true
+    supports_heartbeat: true
+    supports_replan: true
+    source_components: []
+    selection_notes: "Backlog-only placeholder; unavailable adapters must create blockers instead of invented fallbacks."
+
+audit_trail:
+  - timestamp: "2026-05-04T18:20:00Z"
+    actor: "orquestrador-global-runtime-closure"
+    action: "create"
+    rationale: "Create contract-selectable adapter registry for Item 5 runtime closure."

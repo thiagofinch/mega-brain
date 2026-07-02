@@ -1,0 +1,25 @@
+pack:
+  name: vault-graph
+  version: "1.0.0"
+  description: "9-operation interactive graph analysis for the knowledge vault"
+  icon: "VG"
+  type: skill
+  location: .claude/skills/vault-graph/
+
+process:
+  id: SP-VAULT-GRAPH-001
+  mode: ANALISAR
+  megabrain_version: "1.0"
+
+artifact_contracts:
+  - artifact_id: graph-health-report
+    lifecycle_states: [draft]
+  - artifact_id: graph-analysis-findings
+    lifecycle_states: [draft]
+
+supported_modes: [ANALISAR]
+bu_mapping: hub-framework
+
+inter_skill_contracts:
+  invoked_by: []
+  triggers: []

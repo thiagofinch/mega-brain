@@ -1,0 +1,12 @@
+title = "MegaBrain gitleaks config"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Test corpora and didactic security checklists contain FAKE/PLACEHOLDER secrets by design (illustrative examples of what NOT to do)"
+paths = [
+    '''tests/python/test_obsidian_sync/redaction_corpus/.*''',
+    '''tests/python/test_obsidian_sync/test_redaction_corpus\.py''',
+    '''squads/megabrain-mega-brain/tasks/qa-security-checklist\.md''',
+]

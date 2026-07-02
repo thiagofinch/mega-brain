@@ -1,0 +1,165 @@
+---
+# PRODUCTION-CHECKLIST.YAML - Content production tracking
+# Adapted from mega-brain-stage pattern for Mega Brain workspace context
+
+_meta:
+  version: "1.0.0"
+  owner: "content-strategist"
+  target_layer: "L4-operational"
+  state: "TEMPLATE"
+
+metadata:
+  canonical_scope: "workspace/_templates/content/production-checklist.yaml"
+  owner: "cmo"
+  version: "1.0.0"
+  last_updated: "2026-03-23"
+  description: "Production checklist tracking content through script, record, edit, review, and publish stages"
+
+fields:
+  content_piece:
+    type: string
+    required: true
+    description: "Title or identifier of the content piece being produced"
+
+  content_type:
+    type: enum
+    required: true
+    description: "Format of the content"
+    options: [video, podcast, blog-post, carousel, ebook, webinar, case-study, other]
+
+  brief_reference:
+    type: string
+    required: false
+    description: "Path or link to the content brief for this piece"
+
+  target_publish_date:
+    type: date
+    required: true
+    description: "Planned date for publishing"
+
+  stages:
+    type: object
+    required: true
+    description: "Production stages with status tracking"
+    properties:
+      script:
+        type: object
+        required: true
+        description: "Script or outline creation stage"
+        properties:
+          status:
+            type: enum
+            required: true
+            description: "Stage status"
+            options: [not-started, in-progress, done, skipped]
+          owner:
+            type: string
+            required: true
+            description: "Person responsible for this stage"
+          due_date:
+            type: date
+            required: false
+            description: "Deadline for this stage"
+          notes:
+            type: string
+            required: false
+            description: "Stage-specific notes"
+      record:
+        type: object
+        required: true
+        description: "Recording or drafting stage"
+        properties:
+          status:
+            type: enum
+            required: true
+            description: "Stage status"
+            options: [not-started, in-progress, done, skipped]
+          owner:
+            type: string
+            required: true
+            description: "Person responsible for this stage"
+          due_date:
+            type: date
+            required: false
+            description: "Deadline for this stage"
+          notes:
+            type: string
+            required: false
+            description: "Stage-specific notes"
+      edit:
+        type: object
+        required: true
+        description: "Editing and post-production stage"
+        properties:
+          status:
+            type: enum
+            required: true
+            description: "Stage status"
+            options: [not-started, in-progress, done, skipped]
+          owner:
+            type: string
+            required: true
+            description: "Person responsible for this stage"
+          due_date:
+            type: date
+            required: false
+            description: "Deadline for this stage"
+          notes:
+            type: string
+            required: false
+            description: "Stage-specific notes"
+      review:
+        type: object
+        required: true
+        description: "Quality review and approval stage"
+        properties:
+          status:
+            type: enum
+            required: true
+            description: "Stage status"
+            options: [not-started, in-progress, done, skipped]
+          owner:
+            type: string
+            required: true
+            description: "Person responsible for approval"
+          due_date:
+            type: date
+            required: false
+            description: "Deadline for this stage"
+          feedback:
+            type: string
+            required: false
+            description: "Review feedback or revision notes"
+      publish:
+        type: object
+        required: true
+        description: "Publishing and distribution stage"
+        properties:
+          status:
+            type: enum
+            required: true
+            description: "Stage status"
+            options: [not-started, scheduled, published]
+          owner:
+            type: string
+            required: true
+            description: "Person responsible for publishing"
+          published_date:
+            type: date
+            required: false
+            description: "Actual date published"
+          published_url:
+            type: string
+            required: false
+            description: "URL where the content was published"
+
+  overall_status:
+    type: enum
+    required: true
+    description: "Overall production status"
+    options: [not-started, in-progress, review, ready, published, cancelled]
+
+  blockers:
+    type: list
+    required: false
+    description: "Current blockers preventing progress"

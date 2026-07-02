@@ -1,0 +1,87 @@
+---
+# PIPELINE-STAGE.YAML - Sales pipeline stage definition
+# Adapted from mega-brain-stage pattern for Mega Brain workspace context
+
+_meta:
+  version: "1.0.0"
+  owner: "hormozi-chief"
+  target_layer: "L1-strategy"
+  state: "TEMPLATE"
+
+metadata:
+  canonical_scope: "workspace/_templates/sales-process/pipeline-stage.yaml"
+  owner: "cro"
+  version: "1.0.0"
+  last_updated: "2026-03-23"
+  description: "Sales pipeline stage definition with entry criteria, exit criteria, SLA days, and owner role"
+
+fields:
+  stage_name:
+    type: string
+    required: true
+    description: "Name of the pipeline stage (e.g., Discovery, Proposal, Negotiation)"
+
+  stage_order:
+    type: number
+    required: true
+    description: "Position in the pipeline sequence (1 = first stage)"
+
+  stage_description:
+    type: string
+    required: true
+    description: "What happens during this stage and its purpose"
+
+  entry_criteria:
+    type: list
+    required: true
+    description: "Conditions that must be true for a deal to enter this stage"
+
+  exit_criteria:
+    type: list
+    required: true
+    description: "Conditions that must be met before a deal can advance to the next stage"
+
+  sla_days:
+    type: number
+    required: true
+    description: "Maximum number of days a deal should spend in this stage"
+
+  owner_role:
+    type: string
+    required: true
+    description: "Role responsible for advancing deals through this stage (e.g., BDR, Closer, Account Manager)"
+
+  key_activities:
+    type: list
+    required: true
+    description: "Primary activities the owner performs during this stage"
+
+  required_artifacts:
+    type: list
+    required: false
+    description: "Documents or data that must be created or updated during this stage"
+
+  conversion_rate_benchmark:
+    type: string
+    required: false
+    description: "Expected percentage of deals that advance from this stage to the next"
+
+  common_stall_reasons:
+    type: list
+    required: false
+    description: "Typical reasons deals get stuck at this stage"
+
+  stall_recovery_actions:
+    type: list
+    required: false
+    description: "Actions to take when a deal stalls at this stage"
+
+  automation_triggers:
+    type: list
+    required: false
+    description: "Automated actions triggered by stage entry or exit (emails, notifications, tasks)"
+
+  metrics:
+    type: list
+    required: false
+    description: "KPIs tracked for this stage (e.g., average time in stage, conversion rate, deal value)"

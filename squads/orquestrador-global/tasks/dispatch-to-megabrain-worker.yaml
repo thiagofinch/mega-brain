@@ -1,0 +1,163 @@
+# dispatch-to-megabrain-example-squad.yaml — Dispatch stories to Mega Brain example-squad for autonomous SDC execution
+# Story OG-88.8-V2 — Materializar Runtime Direto do Mega Brain example-squad
+
+task: dispatch-to-megabrain-example-squad
+domain: operational
+atomic_layer: Molecule
+responsavel_type: Agent
+performance:
+  error_handling: graceful with fallback + retry
+
+name: dispatch-to-megabrain-example-squad
+description: >
+  Dispatch a story to Mega Brain example-squad for autonomous Story Development Cycle execution.
+  The orquestrador routes stories that meet dispatch criteria (status: Ready,
+  dependencies: Done, complexity: SIMPLE or STANDARD) to Mega Brain example-squad's SDC executor.
+
+trigger: manual  # Called by roteador when criteria are met
+execution_mode: autonomous
+risk_level: MEDIUM
+
+input:
+  story_id:
+    type: string
+    required: true
+    description: "Story identifier (e.g., '42.1')"
+  workspace:
+    type: string
+    required: true
+    description: "Workspace slug"
+  priority:
+    type: string
+    enum: [HIGH, MEDIUM, LOW]
+    default: MEDIUM
+  mode:
+    type: string
+    enum: [interactive, yolo, preflight]
+    default: yolo
+  provider_backend:
+    type: string
+    enum: [contract_file, agent_command]
+    required: false
+    description: "Optional configured phase provider backend"
+  provider_result_dir:
+    type: string
+    required: false
+    description: "Directory containing typed phase-result YAMLs for contract_file or generated outputs for agent_command"
+  provider_command:
+    type: string
+    required: false
+    description: "Executable used by agent_command backend"
+  provider_command_args:
+    type: array
+    required: false
+    description: "Extra args passed to provider_command before runtime-generated args"
+  provider_timeout_ms:
+    type: number
+    required: false
+    description: "Per-phase timeout for agent_command backend"
+
+output:
+  status:
+    type: string
+    enum: [completed, blocked, failed, dry_run]
+  story_id:
+    type: string
+  phases_completed:
+    type: array
+  commit_hash:
+    type: string
+  blockers:
+    type: array
+  cost_usd:
+    type: number
+  run_id:
+    type: string
+
+pre_conditions:
+  - "Story exists in docs/stories/ with status: Ready"
+  - "All story dependencies are Done"
+  - "Story complexity is SIMPLE or STANDARD"
+  - "Story does not have requires_architecture_review: true"
+  - "Daily budget has not been exceeded"
+  - "No other Mega Brain example-squad execution is in progress (max_concurrent: 1)"
+
+post_conditions:
+  - "Dispatch record created in megabrain-example-squad-dispatch-log.jsonl"
+  - "Audit trail entry created"
+  - "Cost tracking entry created (if execution occurred)"
+  - "Result conforms to megabrain-example-squad-result.schema.json"
+
+steps:
+  - id: validate_criteria
+    description: "Verify story meets dispatch criteria"
+    agent: roteador
+    action: |
+      1. Read story file from docs/stories/{story_id}.md
+      2. Verify status is Ready
+      3. Verify all dependencies are Done
+      4. Verify complexity is SIMPLE or STANDARD
+      5. Verify requires_architecture_review is not true
+
+  - id: check_budget
+    description: "Verify daily budget has not been exceeded"
+    agent: roteador
+    action: |
+      Call getDailySpend() and compare with megabrain_worker.daily_budget_usd
+
+  - id: dispatch
+    description: "Dispatch to Mega Brain example-squad"
+    agent: roteador
+    action: |
+      import { dispatchToWorker } from 'core/core/orchestration/megabrain-example-squad-dispatch.mjs';
+      const result = await dispatchToWorker({
+        story_id, workspace,
+        caller_agent: 'orquestrador-global',
+        priority, mode,
+        provider_backend,
+        provider_result_dir,
+        provider_command,
+        provider_command_args,
+        provider_timeout_ms
+      });
+
+  - id: handle_result
+    description: "Process dispatch result"
+    agent: roteador
+    action: |
+      - completed: Log success in audit trail
+      - blocked: Create action queue entry for human approval
+      - failed: Log failure, notify if failure_notify: true
+      - dry_run: Display summary without side effects
+
+module: core/core/orchestration/megabrain-example-squad-dispatch.mjs
+schemas:
+  input: schemas/contracts/megabrain-example-squad-dispatch.schema.json
+  output: schemas/contracts/megabrain-example-squad-result.schema.json
+  phase_result: schemas/contracts/megabrain-example-squad-phase-result.schema.json
+
+references:
+  - squads/orquestrador-global/knowledge/EXECUTION-ENGINES.md
+  - squads/orquestrador-global/data/execution-engine-registry.yaml
+  - .claude/rules/on-demand/delegation-protocol.md
+squad: orquestrador-global
+task_id: dispatch-to-megabrain-example-squad
+version: "3.1.1"
+status: ready
+responsavel: "@plan-architect"
+execution_type: hybrid
+orchestration_boundary:
+  live_routing_performed: false
+  external_dispatch_performed: false
+  workspace_write_performed: false
+megabrain_validation:
+  last_run: "20260514-validate-deep"
+  validated_at: "2026-05-15T00:00:00Z"
+  validator: mega-brain/megabrain-chief
+  mode: deep
+  squad: orquestrador-global
+  status: pass
+  evidence:
+    - schema_contract_normalized
+    - task_boundary_declared
+    - plan_only_orchestration_preserved

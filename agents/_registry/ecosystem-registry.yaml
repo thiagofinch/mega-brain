@@ -1,0 +1,61 @@
+registry:
+  version: "2.0.0"
+  last_updated: "2026-06-30T00:00:00Z"
+  generator: "manual sync — V2 clean repo"
+  schema_version: "1"
+  changelog:
+    - "2.0.0: Rebuilt registry to reflect only agents present in the repository (system/conclave). Removed entries pointing to paths not shipped in this distribution."
+
+agents:
+  # -- system ------------------------------------------------------
+
+  - id: business-chief
+    category: system
+    path: agents/system/business-chief/agent.md
+    profile: null
+    status: placeholder
+    capabilities: []
+    tags: []
+
+  - id: external-chief
+    category: system
+    path: agents/system/external-chief/agent.md
+    profile: null
+    status: placeholder
+    capabilities: []
+    tags: []
+
+  - id: workspace-chief
+    category: system
+    path: agents/system/workspace-chief/agent.md
+    profile: null
+    status: placeholder
+    capabilities: ["workspace-governance", "l0-l4-hierarchy"]
+    tags: []
+
+  # -- system/conclave ---------------------------------------------
+  # The Conclave council — the hero multi-agent deliberation feature.
+
+  - id: advogado-do-diabo
+    category: system/conclave
+    path: agents/system/conclave/advogado-do-diabo/agent.md
+    profile: null
+    status: active
+    capabilities: ["devils-advocate", "deliberation"]
+    tags: []
+
+  - id: critico-metodologico
+    category: system/conclave
+    path: agents/system/conclave/critico-metodologico/agent.md
+    profile: null
+    status: active
+    capabilities: ["methodological-critique", "deliberation"]
+    tags: []
+
+  - id: sintetizador
+    category: system/conclave
+    path: agents/system/conclave/sintetizador/agent.md
+    profile: null
+    status: active
+    capabilities: ["synthesis", "deliberation"]
+    tags: []

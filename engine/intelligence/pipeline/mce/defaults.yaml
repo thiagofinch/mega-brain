@@ -1,0 +1,12 @@
+# MCE Pipeline — Default Configuration (Level 5)
+# Lowest precedence. Overridden by squad > slug > env > CLI.
+# See config_cascade.py for full cascade documentation.
+
+model: "gemini-1.5-pro"
+qa_mode: "warning"
+parallel: false
+streaming: false
+isolation: true
+max_parallel: 3
+context_budget_pct: 0.8
+circuit_breaker_max: 3

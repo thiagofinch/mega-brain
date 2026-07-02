@@ -1,0 +1,163 @@
+---
+# LEAD-QUALIFICATION.YAML - Lead scoring and qualification framework
+# Adapted from mega-brain-stage pattern for Mega Brain workspace context
+
+_meta:
+  version: "1.0.0"
+  owner: "hormozi-chief"
+  target_layer: "L1-strategy"
+  state: "TEMPLATE"
+
+metadata:
+  canonical_scope: "workspace/_templates/sales-process/lead-qualification.yaml"
+  owner: "cro"
+  version: "1.0.0"
+  last_updated: "2026-03-23"
+  description: "Lead qualification template using BANT framework with scoring criteria"
+
+fields:
+  lead_name:
+    type: string
+    required: true
+    description: "Full name of the lead"
+
+  company:
+    type: string
+    required: false
+    description: "Lead company or organization name"
+
+  source:
+    type: enum
+    required: true
+    description: "How the lead entered the pipeline"
+    options: [inbound, outbound, referral, event, social-media, paid-ads, organic, partner]
+
+  source_detail:
+    type: string
+    required: false
+    description: "Specific source detail (e.g., which ad campaign, which referrer)"
+
+  first_contact_date:
+    type: date
+    required: true
+    description: "Date of first interaction with the lead"
+
+  budget:
+    type: object
+    required: true
+    description: "BANT - Budget assessment"
+    properties:
+      has_budget:
+        type: boolean
+        required: true
+        description: "Whether the lead has budget allocated for this type of solution"
+      budget_range:
+        type: string
+        required: false
+        description: "Estimated budget range if known"
+      budget_timeline:
+        type: string
+        required: false
+        description: "When budget becomes available if not now"
+      score:
+        type: number
+        required: true
+        description: "Budget score from 1-10"
+
+  authority:
+    type: object
+    required: true
+    description: "BANT - Authority assessment"
+    properties:
+      is_decision_maker:
+        type: boolean
+        required: true
+        description: "Whether the lead can make the buying decision"
+      decision_maker_name:
+        type: string
+        required: false
+        description: "Name of the actual decision maker if different from lead"
+      buying_committee:
+        type: list
+        required: false
+        description: "Other people involved in the buying decision"
+      score:
+        type: number
+        required: true
+        description: "Authority score from 1-10"
+
+  need:
+    type: object
+    required: true
+    description: "BANT - Need assessment"
+    properties:
+      primary_pain:
+        type: string
+        required: true
+        description: "Main problem the lead is trying to solve"
+      urgency_level:
+        type: enum
+        required: true
+        description: "How urgently they need a solution"
+        options: [critical, high, medium, low, exploring]
+      current_solution:
+        type: string
+        required: false
+        description: "What they are currently using to address the problem"
+      why_change_now:
+        type: string
+        required: false
+        description: "What triggered them to seek a new solution"
+      score:
+        type: number
+        required: true
+        description: "Need score from 1-10"
+
+  timeline:
+    type: object
+    required: true
+    description: "BANT - Timeline assessment"
+    properties:
+      decision_timeframe:
+        type: string
+        required: true
+        description: "When they expect to make a decision"
+      implementation_urgency:
+        type: enum
+        required: false
+        description: "How quickly they need to implement"
+        options: [immediate, this-quarter, this-half, this-year, no-rush]
+      blocking_events:
+        type: list
+        required: false
+        description: "Events or deadlines driving the timeline"
+      score:
+        type: number
+        required: true
+        description: "Timeline score from 1-10"
+
+  total_score:
+    type: number
+    required: true
+    description: "Combined BANT score (sum of 4 sub-scores, max 40)"
+
+  qualification_status:
+    type: enum
+    required: true
+    description: "Lead qualification verdict"
+    options: [hot, warm, cold, disqualified, nurture]
+
+  next_action:
+    type: string
+    required: true
+    description: "Specific next step with this lead"
+
+  assigned_to:
+    type: string
+    required: false
+    description: "Sales rep or closer assigned to this lead"
+
+  notes:
+    type: string
+    required: false
+    description: "Additional context or observations about the lead"

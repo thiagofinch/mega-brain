@@ -1,0 +1,9 @@
+SESSION CONTEXT (re-injected after compaction):
+- Project: your active engagement — see project docs for scope
+- Workspace: configured per your organization
+- IDs: see config files referenced by the active service
+- State: output/{service}/implementation-state.json (source of truth)
+- Credentials: load from .env (never hardcode)
+- Services: services/ (per active integrations)
+- Backlog: memory/backlog.md
+- Core rule: memory/regra-fundamental.md

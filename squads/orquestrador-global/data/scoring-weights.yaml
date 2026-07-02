@@ -1,0 +1,54 @@
+# Scoring weights — capability ranking config
+# Consumer: dag-architect.md (PA-4.1), estimate-cost.js (PA-4.2 opt)
+# NOT consumed by roteador.md (roteador uses its own scheme — REUSE puro)
+# Source: blueprint §5 L3 ranking
+# Story: STORY-PA-3.1
+# Calibration target: PA-6.2 (Golden Set eval may adjust weights)
+
+schema_version: "1.0"
+
+# ───────────────────────────────────────────────────────────────────────────────
+# Pesos canônicos para ranking de capabilities — blueprint §5 L3
+# Sum invariant: weights values somam 1.0
+# ───────────────────────────────────────────────────────────────────────────────
+weights:
+  domain_fit: 0.40         # quanto a capability cobre o domínio da demanda
+  capability_match: 0.35   # quanto a capability resolve o sub-objetivo específico
+  quality_score: 0.10      # score de qualidade do squad/agent (history)
+  recency: 0.05            # quão recente foi a última edição/uso
+  cost: 0.10               # custo estimado (token, latência, USD)
+
+_sum_check: 1.0            # invariant — soma dos pesos = 1.0
+
+# ───────────────────────────────────────────────────────────────────────────────
+# Threshold de seleção
+# ───────────────────────────────────────────────────────────────────────────────
+selection_thresholds:
+  auto_select: 0.80        # score >= → escolha direta sem confirmação
+  human_confirm: 0.60      # 0.60-0.79 → escolha com gate humano
+  escalate_or_create: 0.59 # < 0.60 → escalation ou request-new-capability
+
+# ───────────────────────────────────────────────────────────────────────────────
+# Recency decay (para o componente recency)
+# ───────────────────────────────────────────────────────────────────────────────
+recency_decay:
+  fresh_days: 30           # < 30 dias = score 1.0
+  stale_days: 180          # > 180 dias = score 0.0
+  decay_function: linear   # linear|exp|step
+
+# ───────────────────────────────────────────────────────────────────────────────
+# Cost normalization
+# ───────────────────────────────────────────────────────────────────────────────
+cost_buckets:
+  low_cost_token_threshold: 5000     # nodes com tokens < 5k → cost score 1.0
+  high_cost_token_threshold: 50000   # > 50k → cost score 0.0
+  pricing_model: tier_aware          # opus = 5x sonnet = 18x haiku
+
+# ───────────────────────────────────────────────────────────────────────────────
+# Calibration audit — atualizar quando PA-6.2 produzir ADR-PA-001
+# ───────────────────────────────────────────────────────────────────────────────
+calibration:
+  last_calibrated_at: null
+  calibration_source: "blueprint §5 L3 (default initial values)"
+  calibration_target_story: "PA-6.2"
+  calibration_adr: null    # ADR-PA-001 quando publicado

@@ -1,0 +1,328 @@
+# =============================================================================
+# WORKFLOW: COMPETITIVE INTEL DISTRIBUTION
+# =============================================================================
+# Epic 72 — Story 72.7
+# Cross-Squad Synergy Engine — Section B: Intel Digest Distribution
+# Cadence: Biweekly | Producer: spy | Consumers: copywriting, creative-studio, media-buy, content-ecosystem
+# =============================================================================
+
+metadata:
+  name: wf-competitive-intel-distribution
+  version: "1.0.0"
+  squad: orquestrador-global
+  story_id: "72.7"
+  epic_id: 72
+  section: "B-intel-digest-distribution"
+  cadence: biweekly
+  estimated_time: "45-90 minutes"
+  created_at: "2026-03-26"
+
+description: >
+  Competitive intelligence distribution workflow. The spy squad produces a
+  biweekly competitive intel digest: competitor campaign analysis, content
+  strategy changes, pricing moves, and creative trends. The digest is
+  validated and distributed in parallel to 4 consumer squads, each extracting
+  domain-relevant competitive insights.
+
+# =============================================================================
+# TRIGGER
+# =============================================================================
+
+trigger:
+  command: "*competitive-intel"
+  aliases:
+    - "*spy-digest"
+    - "*competitor-report"
+  schedule:
+    cron: "0 10 1,15 * *"  # 1st and 15th of each month at 10:00
+    timezone: America/Sao_Paulo
+  description: "Generate competitive intel digest and distribute to consumer squads"
+
+# =============================================================================
+# PREREQUISITES
+# =============================================================================
+
+prerequisites:
+  - "spy squad configured with competitive intelligence capabilities"
+  - "copywriting, creative-studio, media-buy, content-ecosystem squads configured"
+  - "competitive-intel-digest-output.yaml contract defined"
+  - "harness.pipeline_contracts.enabled = true in core-config.yaml"
+
+# =============================================================================
+# INPUT REQUIREMENTS
+# =============================================================================
+
+inputs:
+  required:
+    - name: workspace
+      type: string
+      description: "Active workspace slug (GR-1 mandatory)"
+  optional:
+    - name: competitors
+      type: array
+      description: "Specific competitors to analyze (default: all tracked)"
+    - name: period
+      type: string
+      description: "Lookback period"
+      default: "last_14d"
+
+# =============================================================================
+# GLOBAL REQUIREMENTS COMPLIANCE
+# =============================================================================
+
+global_requirements:
+  idempotency_key: "wf-competitive-intel-distribution:{workspace}:{period}"  # GR-7
+  max_iterations: 3  # GR-3
+  convergence_check:
+    min_delta: 2
+    consecutive_flat_cycles: 2
+  escalation:
+    trigger: "contract_validation_failed_3x OR no_competitor_data"
+    target: orquestrador-global
+    channel: whatsapp_central
+    message: "Competitive intel distribution escalated: {reason}"
+
+# =============================================================================
+# STAGES
+# =============================================================================
+
+stages:
+
+  # --------------------------------------------------------------------------
+  # STAGE 1: Generate Competitive Intel Digest
+  # --------------------------------------------------------------------------
+  - id: 1
+    name: "Generate Competitive Intel Digest"
+    description: >
+      Spy squad analyzes competitor activities across channels: ad creatives
+      (Meta Ad Library), content strategy (YouTube, Instagram, blog),
+      pricing changes (sales pages), and market positioning shifts.
+      Produces a structured digest with scoring and trend analysis.
+    estimated_time: "20-30 minutes"
+
+    agents:
+      lead: spy-chief
+      support: []
+
+    actions:
+      - action: scan_competitor_ads
+        description: "Analyze competitor ad creatives from Meta Ad Library"
+        agent: spy-chief
+
+      - action: scan_competitor_content
+        description: "Review competitor content strategy across channels"
+        agent: spy-chief
+
+      - action: scan_pricing_changes
+        description: "Check for pricing or offer structure changes"
+        agent: spy-chief
+
+      - action: score_and_trend
+        description: "Apply benchmark scoring and identify trends"
+        agent: spy-chief
+
+      - action: compile_digest
+        description: "Assemble competitive intel digest with all sections"
+        agent: spy-chief
+
+    gate:
+      criteria:
+        - "At least 3 competitors analyzed"
+        - "Ad creative analysis included"
+        - "Content strategy analysis included"
+        - "Trend direction identified (growing, stable, declining)"
+      approval: auto
+      auto_criteria: "Competitive intel digest generated"
+
+    checkpoint: true  # GR-6
+
+    outputs:
+      - name: competitive_intel_digest
+        type: markdown
+        contract: "competitive-intel-digest-output.yaml"
+
+  # --------------------------------------------------------------------------
+  # STAGE 2: Validate Contract
+  # --------------------------------------------------------------------------
+  - id: 2
+    name: "Validate Digest Contract"
+    description: >
+      Validate the digest against the competitive-intel-digest-output.yaml
+      contract schema before distribution.
+    estimated_time: "2-5 minutes"
+    depends_on: [1]
+
+    agents:
+      lead: orquestrador-chief
+      support: []
+
+    actions:
+      - action: validate_contract
+        description: "Run contract validation"
+        agent: orquestrador-chief
+
+    gate:
+      criteria:
+        - "Contract validation score >= 0.75"
+        - "All required sections present"
+      approval: auto
+      auto_criteria: "Contract validation passed"
+
+    validation_gate:  # GR-5
+      gate_id: QG-orquestrador-global-2  # canonical binding (W8-5) — output_quality QG; min_score 0.75 derives from QG-2 threshold
+      type: contract_schema
+      contract: "competitive-intel-digest-output.yaml"
+      min_score: 0.75
+
+    checkpoint: true  # GR-6
+
+  # --------------------------------------------------------------------------
+  # STAGE 3: Distribute to Consumer Squads (fan-out)
+  # --------------------------------------------------------------------------
+  - id: 3
+    name: "Distribute to Consumer Squads"
+    description: >
+      Fan-out distribution to 4 consumer squads in parallel:
+      - copywriting: competitor messaging, hooks, CTAs, positioning angles
+      - creative-studio: competitor visual trends, creative formats, design patterns
+      - media-buy: competitor ad spend patterns, audience targeting, platform mix
+      - content-ecosystem: competitor content topics, formats, distribution channels
+    estimated_time: "10-20 minutes"
+    depends_on: [2]
+
+    agents:
+      lead: orquestrador-chief
+      support: []
+
+    actions:
+      - action: distribute_to_copywriting
+        description: "Deliver intel to copywriting with messaging insights"
+        agent: orquestrador-chief
+        target: copywriting
+        parallel: true
+
+      - action: distribute_to_creative_studio
+        description: "Deliver intel to creative-studio with visual trends"
+        agent: orquestrador-chief
+        target: creative-studio
+        parallel: true
+
+      - action: distribute_to_media_buy
+        description: "Deliver intel to media-buy with spend and targeting patterns"
+        agent: orquestrador-chief
+        target: media-buy
+        parallel: true
+
+      - action: distribute_to_content_ecosystem
+        description: "Deliver intel to content-ecosystem with content strategy insights"
+        agent: orquestrador-chief
+        target: content-ecosystem
+        parallel: true
+
+    gate:
+      criteria:
+        - "All 4 consumer squads received the digest"
+        - "Each delivery tagged with relevant sections"
+      approval: auto
+      auto_criteria: "Distribution complete to all consumers"
+
+    validation_gate:  # GR-5
+      gate_id: QG-orquestrador-global-2  # canonical binding (W8-5) — output_quality QG; min_score 0.75 derives from QG-2 threshold
+      type: contract_schema
+      contract: "digest-distribution-receipt.yaml"
+      min_score: 0.75
+
+    checkpoint: true  # GR-6
+
+  # --------------------------------------------------------------------------
+  # STAGE 4: Log Consumption Tracking
+  # --------------------------------------------------------------------------
+  - id: 4
+    name: "Log Consumption Tracking"
+    description: >
+      Track consumption and action rates per consumer squad.
+    estimated_time: "5 minutes"
+    depends_on: [3]
+
+    agents:
+      lead: orquestrador-chief
+      support: []
+
+    actions:
+      - action: log_consumption
+        description: "Record consumption status per squad"
+        agent: orquestrador-chief
+
+      - action: check_timeout
+        description: "Flag non-consumers past timeout threshold"
+        agent: orquestrador-chief
+
+    gate:
+      criteria:
+        - "Consumption logged for all consumers"
+      approval: auto
+      auto_criteria: "Tracking complete"
+
+    checkpoint: true  # GR-6
+
+# =============================================================================
+# MODEL SELECTION
+# =============================================================================
+
+model_selection:
+  default: sonnet
+  per_stage:
+    1: sonnet
+    2: sonnet
+    3: sonnet
+    4: sonnet
+  rationale: >
+    Competitive analysis is data-driven. Distribution is procedural.
+    Spy squad may use its own model routing for deep analysis.
+
+# =============================================================================
+# SUCCESS METRICS
+# =============================================================================
+
+success_metrics:
+  - metric: "Intel freshness"
+    target: "Digest reflects data from last 14 days"
+  - metric: "Distribution rate"
+    target: "100% of consumers receive digest within 1 hour"
+  - metric: "Consumption rate"
+    target: ">80% of consumers extract insights within 7 days"
+  - metric: "Actionability"
+    target: ">50% of intel items lead to concrete actions"
+
+# =============================================================================
+# INTEGRATION
+# =============================================================================
+
+integration:
+  feeds_from:
+    - squad: spy
+      data: "Competitive intelligence analysis and scoring"
+  feeds_to:
+    - squad: copywriting
+      data: "Competitor messaging and positioning angles"
+    - squad: creative-studio
+      data: "Competitor visual trends and creative formats"
+    - squad: media-buy
+      data: "Competitor ad spend and targeting patterns"
+    - squad: content-ecosystem
+      data: "Competitor content strategy and distribution"
+  tools_required:
+    - pipeline-ops.mjs
+    - supermemory-ops.mjs
+megabrain_validation:
+  last_run: "20260514-validate-deep"
+  validated_at: "2026-05-15T00:00:00Z"
+  validator: mega-brain/megabrain-chief
+  mode: deep
+  squad: orquestrador-global
+  workflow_id: "wf-competitive-intel-distribution"
+  status: pass
+  evidence:
+    - workflow_inventory_registered
+    - orchestration_surface_validated
+    - external_execution_not_performed

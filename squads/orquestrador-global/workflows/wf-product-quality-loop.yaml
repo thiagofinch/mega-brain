@@ -1,0 +1,317 @@
+# =============================================================================
+# WORKFLOW: PRODUCT QUALITY FEEDBACK LOOP
+# =============================================================================
+# Epic 72 — Story 72.4
+# Cross-Squad Synergy Engine — Section A: Feedback Loops
+# Cadence: Monthly | Squads: customer-success → infoproduct-creation + content-ecosystem (fan-out)
+# =============================================================================
+
+metadata:
+  name: wf-product-quality-loop
+  version: "1.0.0"
+  squad: orquestrador-global
+  story_id: "72.4"
+  epic_id: 72
+  section: "A-feedback-loops"
+  cadence: monthly
+  estimated_time: "1-2 hours"
+  created_at: "2026-03-26"
+
+description: >
+  Product quality feedback loop. Customer-success extracts churn signals
+  (cancellation reasons, support tickets, NPS scores, completion rates).
+  The signals are fan-out to two squads in parallel: infoproduct-creation
+  generates a product improvement spec, and content-ecosystem generates
+  preventive content (FAQs, tutorials, engagement posts) to address the
+  issues before they cause churn.
+
+# =============================================================================
+# TRIGGER
+# =============================================================================
+
+trigger:
+  command: "*product-quality-loop"
+  aliases:
+    - "*churn-feedback"
+    - "*product-improvement"
+  schedule:
+    cron: "0 10 5 * *"  # 5th of each month at 10:00
+    timezone: America/Sao_Paulo
+  description: "Extract churn signals, generate product improvements and preventive content"
+
+# =============================================================================
+# PREREQUISITES
+# =============================================================================
+
+prerequisites:
+  - "customer-success squad configured with data access"
+  - "infoproduct-creation squad configured"
+  - "content-ecosystem squad configured"
+  - "Hotmart subscription data accessible via hotmart-ops.mjs"
+  - "Support ticket data accessible (ClickUp or Chatwoot)"
+
+# =============================================================================
+# INPUT REQUIREMENTS
+# =============================================================================
+
+inputs:
+  required:
+    - name: workspace
+      type: string
+      description: "Active workspace slug (GR-1 mandatory)"
+  optional:
+    - name: period
+      type: string
+      description: "Lookback period for churn signal extraction"
+      default: "last_30d"
+    - name: product_sigla
+      type: string
+      description: "Specific product to analyze (default: all)"
+
+# =============================================================================
+# GLOBAL REQUIREMENTS COMPLIANCE
+# =============================================================================
+
+global_requirements:
+  idempotency_key: "wf-product-quality-loop:{workspace}:{period}"  # GR-7
+  max_iterations: 3  # GR-3
+  convergence_check:
+    min_delta: 2
+    consecutive_flat_cycles: 2
+  escalation:
+    trigger: "max_iterations_reached OR data_source_unavailable"
+    target: orquestrador-global
+    channel: whatsapp_central
+    message: "Product quality loop escalated for {workspace}: {reason}"
+
+# =============================================================================
+# STAGES
+# =============================================================================
+
+stages:
+
+  # --------------------------------------------------------------------------
+  # STAGE 1: Extract Churn Signals
+  # --------------------------------------------------------------------------
+  - id: 1
+    name: "Extract Churn Signals"
+    description: >
+      Customer-success pulls churn data from Hotmart (cancellations, refunds,
+      subscription pauses), support tickets (recurring complaints), and
+      engagement metrics (completion rates, login frequency). Categorizes
+      signals by root cause: content quality, technical issues, expectation
+      mismatch, pricing, or external factors.
+    estimated_time: "15-20 minutes"
+
+    agents:
+      lead: customer-success-chief
+      support: []
+
+    actions:
+      - action: pull_churn_data
+        description: "Extract cancellation and refund data from Hotmart"
+        agent: customer-success-chief
+        tools:
+          - hotmart-ops.mjs subscriptions
+          - hotmart-ops.mjs sales-history
+
+      - action: pull_support_signals
+        description: "Extract recurring ticket patterns from support system"
+        agent: customer-success-chief
+
+      - action: categorize_signals
+        description: "Classify churn signals by root cause category"
+        agent: customer-success-chief
+
+      - action: check_data_availability
+        description: "Verify sufficient data exists; abort with DATA_SOURCE_UNAVAILABLE if not"
+        agent: customer-success-chief
+
+    gate:
+      criteria:
+        - "At least 10 churn signals extracted"
+        - "Signals categorized by root cause"
+        - "Top 3 churn reasons identified with frequency"
+      approval: auto
+      auto_criteria: "Churn signals extracted and categorized"
+
+    pre_condition:
+      check: "DATA_SOURCE_UNAVAILABLE"
+      on_fail: "abort_with_notification"
+      message: "Insufficient churn data for {workspace}. Skipping this cycle."
+
+    checkpoint: true  # GR-6
+
+    outputs:
+      - name: churn_signals_report
+        type: json
+        schema: "churn-signals.schema.json"
+
+  # --------------------------------------------------------------------------
+  # STAGE 2a: Generate Product Improvement Spec (parallel)
+  # --------------------------------------------------------------------------
+  - id: "2a"
+    name: "Generate Product Improvement Spec"
+    description: >
+      Infoproduct-creation receives churn signals related to content quality
+      and expectation mismatch. Generates a product improvement spec with
+      specific module changes, new content additions, or restructuring
+      recommendations.
+    estimated_time: "20-30 minutes"
+    depends_on: [1]
+    parallel_group: "fan-out-2"
+
+    agents:
+      lead: infoproduct-creation-chief
+      support: []
+
+    actions:
+      - action: analyze_product_gaps
+        description: "Map churn signals to specific product modules and lessons"
+        agent: infoproduct-creation-chief
+
+      - action: generate_improvement_spec
+        description: "Create actionable improvement spec with priority ranking"
+        agent: infoproduct-creation-chief
+
+    gate:
+      criteria:
+        - "At least 2 specific improvements identified"
+        - "Each improvement linked to a churn signal"
+        - "Priority and estimated effort assigned"
+      approval: auto
+      auto_criteria: "Product improvement spec generated"
+
+    validation_gate:  # GR-5
+      gate_id: QG-orquestrador-global-2  # canonical binding (W8-5) — output_quality QG; min_score 0.75 derives from QG-2 threshold
+      type: contract_schema
+      contract: "product-improvement-spec-output.yaml"
+      min_score: 0.75
+
+    checkpoint: true  # GR-6
+
+    outputs:
+      - name: product_improvement_spec
+        type: markdown
+        contract: "product-improvement-spec-output.yaml"
+
+  # --------------------------------------------------------------------------
+  # STAGE 2b: Generate Preventive Content (parallel)
+  # --------------------------------------------------------------------------
+  - id: "2b"
+    name: "Generate Preventive Content"
+    description: >
+      Content-ecosystem receives churn signals related to knowledge gaps
+      and engagement drop. Generates preventive content: FAQ updates,
+      how-to tutorials, re-engagement email topics, and community posts
+      designed to address the issues proactively.
+    estimated_time: "20-30 minutes"
+    depends_on: [1]
+    parallel_group: "fan-out-2"
+
+    agents:
+      lead: content-ecosystem-chief
+      support: []
+
+    actions:
+      - action: analyze_content_gaps
+        description: "Map churn signals to missing content topics"
+        agent: content-ecosystem-chief
+
+      - action: generate_preventive_plan
+        description: "Create content plan with FAQ, tutorials, and engagement posts"
+        agent: content-ecosystem-chief
+
+    gate:
+      criteria:
+        - "At least 3 content pieces planned"
+        - "Each piece linked to a churn signal"
+        - "Distribution channels identified for each piece"
+      approval: auto
+      auto_criteria: "Preventive content plan generated"
+
+    validation_gate:  # GR-5
+      gate_id: QG-orquestrador-global-2  # canonical binding (W8-5) — output_quality QG; min_score 0.75 derives from QG-2 threshold
+      type: contract_schema
+      contract: "preventive-content-plan-output.yaml"
+      min_score: 0.75
+
+    checkpoint: true  # GR-6
+
+    outputs:
+      - name: preventive_content_plan
+        type: markdown
+        contract: "preventive-content-plan-output.yaml"
+
+# =============================================================================
+# CONVERGENCE LOGIC
+# =============================================================================
+
+convergence:
+  check_after_stage: "2a,2b"
+  continue_condition: "churn_rate_delta >= synergy.convergence_delta"
+  halt_condition: "flat_cycles >= convergence_check.consecutive_flat_cycles"
+  on_halt:
+    action: notify
+    message: "Product quality loop converged. Churn rate change: {delta}%"
+    channel: supermemory
+    tag: infoproduct-creation
+
+# =============================================================================
+# MODEL SELECTION
+# =============================================================================
+
+model_selection:
+  default: sonnet
+  per_stage:
+    1: sonnet
+    "2a": sonnet
+    "2b": sonnet
+  rationale: >
+    All stages are analytical. Parallel fan-out does not require opus.
+    Executing squads may use their own model routing internally.
+
+# =============================================================================
+# SUCCESS METRICS
+# =============================================================================
+
+success_metrics:
+  - metric: "Churn rate reduction"
+    target: ">5% churn reduction within 3 cycles"
+  - metric: "Product improvement implementation"
+    target: "80% of specs implemented within 30 days"
+  - metric: "Preventive content reach"
+    target: "Preventive content reaches 50% of at-risk segment"
+  - metric: "Signal extraction quality"
+    target: "Top 3 reasons account for >60% of churn"
+
+# =============================================================================
+# INTEGRATION
+# =============================================================================
+
+integration:
+  feeds_from:
+    - squad: customer-success
+      data: "Churn signals, NPS scores, support ticket patterns"
+  feeds_to:
+    - squad: infoproduct-creation
+      data: "Product improvement specs"
+    - squad: content-ecosystem
+      data: "Preventive content plans"
+  tools_required:
+    - hotmart-ops.mjs
+    - clickup-ops.mjs
+    - supermemory-ops.mjs
+    - pipeline-ops.mjs
+megabrain_validation:
+  last_run: "20260514-validate-deep"
+  validated_at: "2026-05-15T00:00:00Z"
+  validator: mega-brain/megabrain-chief
+  mode: deep
+  squad: orquestrador-global
+  workflow_id: "wf-product-quality-loop"
+  status: pass
+  evidence:
+    - workflow_inventory_registered
+    - orchestration_surface_validated
+    - external_execution_not_performed

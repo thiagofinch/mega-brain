@@ -1,0 +1,49 @@
+# Execution Engine Registry — orquestrador-global
+# Registry of autonomous execution engines that the orchestrator can dispatch to.
+# Story OG-88.8-V2 — Materializar Runtime Direto do Mega Brain example-squad
+#
+# IMPORTANT (W8 clarification 2026-05-01):
+# Wave 8 added executable v1 stubs. The 2026-05-02 pass upgraded the dispatch
+# boundary to validated_stub_v2: input schema, story discovery, dependency/status/
+# complexity constraints, dry-run preview, manifest emission, audit logging,
+# runtime handoffs, phase-result validation, contract_file backend execution and
+# agent_command backend execution are real. Direct @example-squad SDK invocation remains
+# a planned follow-up.
+# See data/deviation-registry.yaml DEV-OG-007 closure for rationale.
+#
+# Broader ecosystem note:
+# This file only lists execution engines. The full orchestration boundary also
+# includes swarm primitives, SYNAPSE context, memory and learning services.
+# See squads/orquestrador-global/data/orchestration-ecosystem-registry.yaml.
+
+engines:
+  - id: megabrain-example-squad
+    name: "Mega Brain example-squad"
+    type: agent
+    entry: megabrain-example-squad-ops.mjs
+    dispatch_module: megabrain-example-squad-dispatch.mjs
+    dispatch_path: core/core/orchestration/megabrain-example-squad-dispatch.mjs
+    squad_ref: squads/example-squad/                  # planned/absent in this branch
+    capabilities:
+      - sdc
+      - routing
+      - compound_learning
+      - resume
+    session_isolation: "per-phase (Option B)"
+    status: validated_stub_v2                 # compatibility status; contract_file and agent_command can complete the SDC loop
+    status_note: "validated_stub_v2 exists at core/core/orchestration/megabrain-example-squad-dispatch.mjs with runtime state machine core/core/orchestration/megabrain-example-squad-runtime.mjs: validates input, resolves docs/stories, enforces Ready/dependencies/SIMPLE-or-STANDARD complexity/architecture constraints, supports dry-run, emits dispatch manifests/audit entries, persists runtime state + per-phase handoffs, renders provider request/prompt, validates phase-result contracts, enforces single-thread lock, completes create/validate/implement/qa_gate through --provider-backend contract_file or --provider-backend agent_command, and blocks safely with WORKER_PROVIDER_BACKEND_UNCONFIGURED when no backend is configured."
+    workspace_filter: []  # empty = all workspaces
+    max_concurrent: 1
+    risk_level: MEDIUM
+    input_schema: schemas/contracts/megabrain-example-squad-dispatch.schema.json
+    output_schema: schemas/contracts/megabrain-example-squad-result.schema.json
+    phase_result_schema: schemas/contracts/megabrain-example-squad-phase-result.schema.json
+    config_section: megabrain_worker  # Section in core-config.yaml
+    constraints:
+      - "Single-threaded: 1 story at a time"
+      - "Stories must have status: Ready"
+      - "All dependencies must be Done"
+      - "Complexity must be SIMPLE or STANDARD"
+      - "No requires_architecture_review: true"
+    documentation: squads/orquestrador-global/knowledge/EXECUTION-ENGINES.md
+    follow_up_story: "docs/stories/epic-orquestrador-global/STORY-OG-88.8-V2-Mega Brain-example-squad-RUNTIME.md"

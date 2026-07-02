@@ -1,0 +1,267 @@
+# =============================================================================
+# WORKFLOW: DEMAND TO DELIVERY
+# =============================================================================
+# Stage 0-to-1: From raw demand to single-squad delivery
+# The foundational workflow that establishes orchestration discipline
+# =============================================================================
+
+metadata:
+  name: demand-to-delivery
+  version: "1.0.0"
+  squad: orquestrador-global
+  maturity_stage: "0_to_1"
+  estimated_time: "1-4 hours per demand"
+  created_at: "2026-03-11"
+
+description: >
+  End-to-end workflow for the simplest orchestration case: receive a demand,
+  classify it, route to a single squad, log the execution, and deliver the
+  result. This workflow establishes the logging discipline and routing
+  accuracy that all advanced orchestration builds upon.
+
+# =============================================================================
+# TRIGGER
+# =============================================================================
+
+trigger:
+  command: "*demand-to-delivery"
+  aliases:
+    - "*process-demand"
+    - "*route-and-execute"
+    - "*first-orchestration"
+  description: "Process a single demand through the orchestration pipeline"
+
+# =============================================================================
+# PREREQUISITES
+# =============================================================================
+
+prerequisites:
+  - "At least 5 squads configured with config.yaml and agents"
+  - "Execution logging directory exists (.data/executions/)"
+  - "Execution logging rule loaded (.claude/rules/execution-logging.md)"
+
+# =============================================================================
+# INPUT REQUIREMENTS
+# =============================================================================
+
+inputs:
+  required:
+    - name: demand_text
+      type: string
+      description: "User's raw demand or request in natural language"
+    - name: requester
+      type: string
+      description: "Who is making the request"
+  optional:
+    - name: urgency
+      type: string
+      options: [low, normal, high, critical]
+    - name: preferred_squad
+      type: string
+      description: "If user already knows which squad should handle it"
+    - name: context_files
+      type: array
+      description: "Reference files relevant to the demand"
+
+# =============================================================================
+# STAGES
+# =============================================================================
+
+stages:
+
+  # --------------------------------------------------------------------------
+  # STAGE 1: Demand Intake
+  # --------------------------------------------------------------------------
+  - id: 1
+    name: "Demand Intake and Classification"
+    description: >
+      Receive the raw demand, parse it into a structured format, classify
+      its intent and domain, and select the target squad. After this stage,
+      we know exactly what is being asked and who should do it.
+    estimated_time: "5-15 minutes"
+
+    tasks:
+      - first-squad-routing
+
+    agents:
+      lead: orquestrador-chief
+      support: []
+
+    actions:
+      - action: parse_demand
+        description: "Extract intent, domain, deliverable type, and urgency"
+        agent: orquestrador-chief
+
+      - action: classify_intent
+        description: "Match demand against intent classification framework"
+        agent: orquestrador-chief
+
+      - action: select_squad
+        description: "Choose the single best squad with documented reasoning"
+        agent: orquestrador-chief
+
+      - action: assess_scale
+        description: "Use IDS task-scaler to determine execution scale"
+        agent: orquestrador-chief
+
+    gate:
+      criteria:
+        - "Demand parsed into structured format"
+        - "At least 2 candidate squads evaluated"
+        - "Routing reasoning documented"
+        - "Scale assessment completed (QUICK/SMALL/MEDIUM)"
+      approval: auto
+      auto_criteria: "Demand classified and squad selected"
+
+  # --------------------------------------------------------------------------
+  # STAGE 2: Execution Setup
+  # --------------------------------------------------------------------------
+  - id: 2
+    name: "Execution Setup"
+    description: >
+      Create the execution directory, write the master plan, prepare the
+      squad input package. After this stage, everything is documented
+      and the squad can start working.
+    estimated_time: "10-20 minutes"
+    depends_on: [1]
+
+    tasks:
+      - basic-orchestration-setup
+
+    agents:
+      lead: orquestrador-chief
+      support: []
+
+    actions:
+      - action: create_execution_dir
+        description: "Create YYYY-MM-DD_slug/ directory with master plan"
+        agent: orquestrador-chief
+
+      - action: write_master_plan
+        description: "Write 00-master-plan.md with all required sections"
+        agent: orquestrador-chief
+
+      - action: prepare_squad_input
+        description: "Write NN-squad-input.md with briefing and context"
+        agent: orquestrador-chief
+
+      - action: set_session_scale
+        description: "Set IDS session scale for delegation limits"
+        agent: orquestrador-chief
+
+    gate:
+      criteria:
+        - "Execution directory follows naming convention"
+        - "Master plan contains all required sections"
+        - "Squad input is self-contained (no missing context)"
+        - "Session scale set via IDS"
+      approval: auto
+      auto_criteria: "Master plan and squad input files exist"
+
+  # --------------------------------------------------------------------------
+  # STAGE 3: Squad Execution
+  # --------------------------------------------------------------------------
+  - id: 3
+    name: "Squad Execution"
+    description: >
+      Activate the target squad, monitor execution, capture outputs,
+      and log the results. After this stage, the demand is fulfilled
+      and the execution is fully documented.
+    estimated_time: "30 minutes to 4 hours"
+    depends_on: [2]
+
+    tasks:
+      - basic-orchestration-setup
+
+    agents:
+      lead: orquestrador-chief
+      support: []
+
+    actions:
+      - action: activate_squad
+        description: "Hand off the input package to the target squad"
+        agent: orquestrador-chief
+
+      - action: monitor_execution
+        description: "Track progress and handle any issues"
+        agent: orquestrador-chief
+
+      - action: capture_outputs
+        description: "Collect all deliverables from the squad"
+        agent: orquestrador-chief
+
+      - action: write_squad_output
+        description: "Write NN-squad-output.md with deliverables and scores"
+        agent: orquestrador-chief
+
+      - action: write_execution_summary
+        description: "Write 99-execution-summary.md with overall results"
+        agent: orquestrador-chief
+
+      - action: clear_session_scale
+        description: "Clear IDS session scale"
+        agent: orquestrador-chief
+
+    gate:
+      criteria:
+        - "Squad output document exists with all required sections"
+        - "Execution summary exists with lessons learned"
+        - "All deliverables tracked with file paths"
+        - "Session scale cleared"
+      approval: auto
+      auto_criteria: "Execution summary file exists"
+
+# =============================================================================
+# MODEL SELECTION
+# =============================================================================
+
+model_selection:
+  default: sonnet
+  per_stage:
+    1: sonnet
+    2: sonnet
+    3: sonnet
+  rationale: >
+    Single-squad orchestration is primarily procedural: classify, route,
+    log. Sonnet handles this efficiently. The executing squad may use
+    its own model selection (Opus for complex tasks).
+
+# =============================================================================
+# SUCCESS METRICS
+# =============================================================================
+
+success_metrics:
+  - metric: "Routing accuracy"
+    target: ">90% of demands routed to correct squad"
+  - metric: "Logging completeness"
+    target: "100% of executions have master plan + output + summary"
+  - metric: "Time to first response"
+    target: "Squad activation within 15 minutes of demand"
+  - metric: "Delivery completion"
+    target: "95%+ of demands result in delivered output"
+
+# =============================================================================
+# INTEGRATION
+# =============================================================================
+
+integration:
+  feeds_from:
+    - squad: navigator
+      data: "user context for demand classification"
+  feeds_to:
+    - squad: project-management-clickup
+      data: "execution tracking data"
+  tools_required:
+    - ids-ops.mjs
+megabrain_validation:
+  last_run: "20260514-validate-deep"
+  validated_at: "2026-05-15T00:00:00Z"
+  validator: mega-brain/megabrain-chief
+  mode: deep
+  squad: orquestrador-global
+  workflow_id: "demand-to-delivery"
+  status: pass
+  evidence:
+    - workflow_inventory_registered
+    - orchestration_surface_validated
+    - external_execution_not_performed

@@ -1,0 +1,170 @@
+# =============================================================================
+# WORKFLOW: CROSS-SQUAD AUDIT CYCLE
+# =============================================================================
+# Ciclo trimestral de auditoria cruzada entre squads
+# Squad A audita Squad B (Amazon Bar Raiser adaptado)
+# Referência: 01-analyst-research.md §3.2 + §5.2 Gap 3
+# =============================================================================
+
+metadata:
+  name: cross-squad-audit-cycle
+  version: "1.0.0"
+  squad: orquestrador-global
+  maturity_stage: "1_to_10"
+  estimated_time: "2-3 semanas por ciclo trimestral"
+  created_at: "2026-03-19"
+  framework_origin: "Amazon Bar Raiser + Netflix Conformity Monkey"
+
+description: >
+  Ciclo trimestral de auditoria cruzada: squads de domínios diferentes
+  auditam uns aos outros, trazendo perspectiva externa e eliminando
+  viés de confirmação. Cada squad é auditado uma vez por ciclo. O
+  Maestro coordena os pareamentos, a cadência, e consolida findings
+  cross-squad em padrões sistêmicos.
+
+trigger:
+  command: "*cross-audit"
+  aliases:
+    - "*bar-raiser"
+    - "*audit-cross"
+  description: "Iniciar ciclo trimestral de auditoria cruzada"
+  cadence: "Primeiro mês de cada trimestre"
+
+prerequisites:
+  - "Task cross-squad-review.yaml disponível"
+  - "Squads operacionais com outputs recentes"
+  - "Pelo menos 10 squads ativos para pareamento"
+
+inputs:
+  required:
+    - name: ciclo_numero
+      type: integer
+      description: "Número sequencial do ciclo trimestral"
+  optional:
+    - name: squads_prioridade
+      type: array
+      description: "Squads com prioridade (ex: squads 'vermelhos' do ecosystem-health-report)"
+    - name: pareamentos_custom
+      type: array
+      description: "Pareamentos específicos em vez de automáticos"
+
+stages:
+  - id: 1
+    name: "Planejamento de Pareamentos"
+    description: >
+      Definir quais squads auditam quais. Regra: domínios diferentes,
+      squads vermelhos/amarelos recebem prioridade.
+    agent: "@supervisor-sistema"
+    duration: "1 hora"
+    actions:
+      - "Listar squads ativos (node squad-discovery-ops.mjs scan)"
+      - "Consultar semáforos do ecosystem-health-report"
+      - "Priorizar squads vermelhos/amarelos como auditados"
+      - "Parear squads de domínios diferentes"
+      - "Distribuir em 3-4 rodadas (4 pares por rodada)"
+      - "Gerar calendário do ciclo"
+    gate:
+      criterion: "Todos os squads pareados, calendário definido"
+
+  - id: 2
+    name: "Execução das Auditorias (Rodadas)"
+    description: >
+      Cada rodada executa 4 cross-squad reviews em paralelo.
+      Cada review usa a task cross-squad-review.yaml.
+    agent: "squad chiefs (variável)"
+    duration: "1-2 semanas"
+    actions:
+      - "Rodada 1: 4 pares executam cross-squad-review em paralelo"
+      - "Rodada 2: próximos 4 pares (1 semana depois)"
+      - "Rodada 3: últimos pares"
+      - "Cada par executa a task cross-squad-review.yaml completa"
+      - "Relatórios salvos em squads/{auditado}/data/cross-review-*.md"
+    gate:
+      criterion: "100% das auditorias completadas com relatório"
+      action_on_fail: "Reagendar pares não completados para a próxima semana"
+
+  - id: 3
+    name: "Consolidação de Padrões Sistêmicos"
+    description: >
+      Agregar findings de todas as auditorias para identificar padrões
+      que afetam múltiplos squads (problemas sistêmicos vs isolados).
+    agent: "@supervisor-sistema"
+    duration: "2-3 horas"
+    actions:
+      - "Ler todos os relatórios de cross-review do ciclo"
+      - "Identificar findings que aparecem em 3+ squads (sistêmico)"
+      - "Classificar padrões sistêmicos por severidade e abrangência"
+      - "Para cada padrão sistêmico: propor ação coordenada"
+      - "Comparar com padrões do ciclo anterior: melhorou?"
+    gate:
+      criterion: "Padrões sistêmicos identificados e classificados"
+
+  - id: 4
+    name: "Relatório do Ciclo e Follow-up"
+    description: "Gerar relatório consolidado e definir follow-up."
+    agent: "@supervisor-sistema"
+    duration: "2 horas"
+    actions:
+      - "Gerar relatório consolidado do ciclo com:"
+      - "  - Scores médios por lente (completude, operacionalização, qualidade, integração)"
+      - "  - Top 10 findings cross-squad"
+      - "  - Padrões sistêmicos e ações coordenadas"
+      - "  - Squads com mais melhorias desde o ciclo anterior"
+      - "  - Squads que precisam de atenção especial"
+      - "Criar action items para padrões sistêmicos"
+      - "Alimentar gap-detection-cycle com findings"
+      - "Registrar no SuperMemory (containerTag: megabrain-master)"
+    gate:
+      criterion: "Relatório consolidado completo"
+
+output_template: |
+  # Cross-Squad Audit Cycle #{N} — {trimestre}
+
+  ## Resumo
+  - **Pares auditados:** {N}
+  - **Findings totais:** {N}
+  - **Padrões sistêmicos:** {N}
+  - **Score médio de saúde:** {N}/10
+
+  ## Scores por Lente (média cross-squad)
+
+  | Lente | Média | Melhor Squad | Pior Squad |
+  |-------|-------|-------------|-----------|
+  | Completude | {N} | {squad} | {squad} |
+  | Operacionalização | {N} | {squad} | {squad} |
+  | Qualidade Output | {N} | {squad} | {squad} |
+  | Integração | {N} | {squad} | {squad} |
+
+  ## Padrões Sistêmicos
+
+  | Padrão | Squads Afetados | Severidade | Ação Proposta |
+  |--------|----------------|-----------|---------------|
+  | {padrão} | {N squads} | {sev} | {ação} |
+
+  ## Top Melhorias desde Ciclo Anterior
+  1. {melhoria}
+
+integration:
+  triggers:
+    - type: "cadence"
+      frequency: "quarterly"
+      month: "first_of_quarter"
+  feeds_into:
+    - workflow: "gap-detection-cycle"
+      when: "Findings alimentam o ciclo mensal"
+    - workflow: "dmaic-correction-pipeline"
+      when: "Padrões sistêmicos com alta severidade"
+    - task: "ecosystem-health-report"
+      when: "Resultados do ciclo alimentam relatório mensal"
+megabrain_validation:
+  last_run: "20260514-validate-deep"
+  validated_at: "2026-05-15T00:00:00Z"
+  validator: mega-brain/megabrain-chief
+  mode: deep
+  squad: orquestrador-global
+  workflow_id: "cross-squad-audit-cycle"
+  status: pass
+  evidence:
+    - workflow_inventory_registered
+    - orchestration_surface_validated
+    - external_execution_not_performed

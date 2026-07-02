@@ -1,0 +1,128 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "insights-state.schema.json",
+  "title": "Insights State",
+  "description": "Schema for INSIGHTS-STATE.json - extracted actionable insights",
+  "$comment": "schema_version 1.3.0 (2026-05-22) — Phase 1 MCE-6.0: added unmapped_observations escape hatch to surface novel LLM-observed patterns that do not map cleanly to L1-L10 DNA layers. Field is optional, additive, backwards-compatible. Audit classification: cognitive-output (written by cmd_insights via LLM batched extraction).",
+  "type": "object",
+  "required": ["insights_state"],
+  "properties": {
+    "insights_state": {
+      "type": "object",
+      "required": ["persons", "themes", "version", "change_log"],
+      "properties": {
+        "persons": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/insight"
+            }
+          }
+        },
+        "themes": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/insight"
+            }
+          }
+        },
+        "version": {
+          "type": "string"
+        },
+        "change_log": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/change_entry"
+          }
+        },
+        "unmapped_observations": {
+          "type": "array",
+          "maxItems": 3,
+          "default": [],
+          "description": "Novel LLM-observed patterns that do not map to L1-L10 DNA layers. Populated by cmd_insights when classification_pressure yields no matching layer. chunk_id is mandatory (provenance anchor). Cap at 3 items. unmapped_ratio > 0.20 triggers QUALITY-WARNING via jarvis-chief.",
+          "items": {
+            "type": "object",
+            "required": ["type", "content", "confidence", "chunk_id"],
+            "properties": {
+              "type": {"type": "string"},
+              "content": {"type": "string"},
+              "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+              "chunk_id": {"type": "string"}
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "insight": {
+      "type": "object",
+      "required": ["chunk_id", "insight", "priority", "scope", "corpus", "source", "confidence", "status"],
+      "properties": {
+        "chunk_id": {
+          "type": "string",
+          "pattern": "^[A-Z]{2,4}\\d{3}-\\d{3}$"
+        },
+        "insight": {
+          "type": "string",
+          "minLength": 10,
+          "description": "Actionable insight text"
+        },
+        "priority": {
+          "type": "string",
+          "enum": ["high", "medium", "low"]
+        },
+        "scope": {
+          "type": "string",
+          "enum": ["company", "personal", "course"]
+        },
+        "corpus": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/definitions/source_ref"
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "status": {
+          "type": "string",
+          "enum": ["new", "updated", "contradiction", "reinforced"]
+        }
+      }
+    },
+    "source_ref": {
+      "type": "object",
+      "required": ["source_type", "source_id", "source_title"],
+      "properties": {
+        "source_type": {"type": "string"},
+        "source_id": {"type": "string"},
+        "source_title": {"type": "string"},
+        "source_path": {"type": "string"},
+        "source_datetime": {"type": "string"}
+      }
+    },
+    "change_entry": {
+      "type": "object",
+      "required": ["entity", "key", "chunk_id", "change"],
+      "properties": {
+        "entity": {
+          "type": "string",
+          "enum": ["person", "theme"]
+        },
+        "key": {"type": "string"},
+        "chunk_id": {"type": "string"},
+        "change": {
+          "type": "string",
+          "enum": ["new", "update", "contradiction", "reinforced"]
+        },
+        "note": {"type": "string"}
+      }
+    }
+  }
+}

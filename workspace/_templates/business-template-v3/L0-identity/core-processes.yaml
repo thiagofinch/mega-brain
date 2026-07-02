@@ -1,0 +1,11 @@
+# Core Processes Template v3.0
+_meta:
+  id: null
+  name: core-processes.yaml
+  layer: L0-identity
+  state: PLACEHOLDER
+  owner: c-level-squad
+  approver: founder
+  version: "3.0.0"
+
+processes: null  # list of {process_name, description, owner, frequency, status}

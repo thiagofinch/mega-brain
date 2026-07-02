@@ -1,0 +1,200 @@
+version: "1.0.0"
+description: >
+  Registry contract for all 24 Chronicler templates.
+  Every emitter that writes to PHASE-STREAM.jsonl MUST have a corresponding entry here.
+  Missing entry = hook chronicler_registry_guard.py blocks the commit (AC-8).
+story: STORY-MCE-6.0
+phase: 4
+
+templates:
+  - id: ingestion_guard
+    emitter_fn: engine.intelligence.pipeline.mce.log_emitters.emit_ingestion_guard
+    renderer_fn: .claude.skills.chronicler.renderers.render_ingestion_guard
+    schema: engine/schemas/ingestion-guard.schema.json
+    phase_idx: 0
+    required: true
+    description: Ingestion dedup verdict (NEW / SKIP / INCREMENTAL)
+
+  - id: ingest_report
+    emitter_fn: engine.intelligence.pipeline.mce.log_emitters.emit_ingest_report
+    renderer_fn: .claude.skills.chronicler.renderers.render_ingest_report
+    schema: null
+    phase_idx: 1
+    required: true
+    description: Post-ingest file count and slot report
+
+  - id: batch_log
+    emitter_fn: engine.intelligence.pipeline.mce.log_emitters.emit_batch_log
+    renderer_fn: .claude.skills.chronicler.renderers.render_batch_log
+    schema: null
+    phase_idx: 2
+    required: true
+    description: Batch creation log (slugs, file counts)
+
+  - id: execution_chunks
+    emitter_fn: engine.intelligence.pipeline.mce.log_emitters.emit_execution_report
+    renderer_fn: .claude.skills.chronicler.renderers.render_execution_chunks
+    schema: null
+    phase_idx: 3
+    required: true
+    description: Execution report — chunks box
+
+  - id: execution_embeddings
+    emitter_fn: engine.intelligence.pipeline.mce.log_emitters.emit_execution_report
+    renderer_fn: .claude.skills.chronicler.renderers.render_execution_embeddings
+    schema: null
+    phase_idx: 4
+    required: true
+    description: Execution report — embeddings box
+
+  - id: rag_indexation
+    emitter_fn: engine.intelligence.pipeline.mce.log_emitters.emit_rag_indexation
+    renderer_fn: .claude.skills.chronicler.renderers.render_rag_indexation
+    schema: null
+    phase_idx: 5
+    required: true
+    description: RAG indexation result (BM25 + vector rebuild)
+
+  - id: execution_insights
+    emitter_fn: engine.intelligence.pipeline.mce.log_emitters.emit_execution_report
+    renderer_fn: .claude.skills.chronicler.renderers.render_execution_insights
+    schema: engine/schemas/insights-state.schema.json
+    phase_idx: 6
+    required: true
+    description: Execution report — insights extraction box
+
+  - id: execution_behavioral
+    emitter_fn: engine.intelligence.pipeline.mce.log_emitters.emit_execution_report
+    renderer_fn: .claude.skills.chronicler.renderers.render_execution_behavioral
+    schema: null
+    phase_idx: 7
+    required: true
+    description: Execution report — behavioral patterns box
+
+  - id: execution_voice
+    emitter_fn: engine.intelligence.pipeline.mce.log_emitters.emit_execution_report
+    renderer_fn: .claude.skills.chronicler.renderers.render_execution_voice
+    schema: null
+    phase_idx: 8
+    required: true
+    description: Execution report — voice DNA box
+
+  - id: execution_identity
+    emitter_fn: engine.intelligence.pipeline.mce.orchestrate.cmd_identity
+    renderer_fn: .claude.skills.chronicler.renderers.render_execution_identity
+    schema: null
+    phase_idx: 9
+    required: true
+    description: Identity extraction output
+
+  - id: identity_checkpoint
+    emitter_fn: engine.intelligence.pipeline.mce.log_emitters.emit_identity_checkpoint_log
+    renderer_fn: .claude.skills.chronicler.renderers.render_identity_checkpoint
+    schema: null
+    phase_idx: 10
+    required: true
+    description: Identity checkpoint gate (APPROVE / REVIEW / REJECT)
+
+  - id: contradictions
+    emitter_fn: engine.intelligence.pipeline.mce.log_emitters.emit_contradictions_log
+    renderer_fn: .claude.skills.chronicler.renderers.render_contradictions
+    schema: null
+    phase_idx: 11
+    required: false
+    description: Contradiction detection log
+
+  - id: narrative_metabolism
+    emitter_fn: engine.intelligence.pipeline.mce.log_emitters.emit_narrative_metabolism
+    renderer_fn: .claude.skills.chronicler.renderers.render_narrative_metabolism
+    schema: engine/schemas/narratives-state.schema.json
+    phase_idx: 12
+    required: true
+    description: Narrative generation log
+
+  - id: sources_compilation
+    emitter_fn: engine.intelligence.pipeline.mce.log_emitters.emit_sources_compilation
+    renderer_fn: .claude.skills.chronicler.renderers.render_sources_compilation
+    schema: null
+    phase_idx: 13
+    required: true
+    description: Sources compilation (books, videos, transcripts)
+
+  - id: domain_aggregator
+    emitter_fn: engine.intelligence.pipeline.mce.log_emitters.emit_domain_aggregator
+    renderer_fn: .claude.skills.chronicler.renderers.render_domain_aggregator
+    schema: null
+    phase_idx: 14
+    required: false
+    description: Domain-level aggregation log
+
+  - id: agent_state
+    emitter_fn: engine.intelligence.pipeline.mce.log_emitters.emit_agent_state_log
+    renderer_fn: .claude.skills.chronicler.renderers.render_agent_state
+    schema: null
+    phase_idx: 15
+    required: true
+    description: Agent promotion state
+
+  - id: phase8_gate
+    emitter_fn: engine.intelligence.pipeline.mce.log_emitters.emit_phase8_gate_log
+    renderer_fn: .claude.skills.chronicler.renderers.render_phase8_gate
+    schema: null
+    phase_idx: 16
+    required: true
+    description: Phase 8 quality gate (7 checks)
+
+  - id: workspace_sync
+    emitter_fn: engine.intelligence.pipeline.mce.log_emitters.emit_workspace_sync
+    renderer_fn: .claude.skills.chronicler.renderers.render_workspace_sync
+    schema: null
+    phase_idx: 17
+    required: false
+    description: Workspace sync result
+
+  - id: full_pipeline_report
+    emitter_fn: engine.intelligence.pipeline.mce.log_emitters.emit_full_pipeline_report
+    renderer_fn: .claude.skills.chronicler.renderers.render_full_pipeline_report
+    schema: null
+    phase_idx: 18
+    required: true
+    description: Full pipeline finalize report
+
+  - id: llm_cost
+    emitter_fn: engine.intelligence.pipeline.mce.log_emitters.emit_llm_cost_log
+    renderer_fn: .claude.skills.chronicler.renderers.render_llm_cost
+    schema: null
+    phase_idx: 19
+    required: true
+    description: LLM cost log (tokens + USD estimate)
+
+  - id: auto_advance_trigger
+    emitter_fn: engine.intelligence.pipeline.mce.orchestrate.cmd_auto_advance
+    renderer_fn: .claude.skills.chronicler.renderers.render_auto_advance_trigger
+    schema: null
+    phase_idx: 20
+    required: false
+    description: Auto-advance trigger (CLASSIFIED → S3)
+
+  - id: squad_activation
+    emitter_fn: engine.intelligence.pipeline.mce.log_emitters.emit_squad_activation
+    renderer_fn: .claude.skills.chronicler.renderers.render_squad_activation
+    schema: null
+    phase_idx: 21
+    required: false
+    description: Squad activation log
+
+  - id: pipeline_recover
+    emitter_fn: engine.intelligence.pipeline.mce.orchestrate.cmd_recover
+    renderer_fn: .claude.skills.chronicler.renderers.render_pipeline_recover
+    schema: null
+    phase_idx: null
+    required: false
+    description: Pipeline recovery event (on failure/resume)
+
+  - id: chronicler_audit
+    emitter_fn: engine.intelligence.pipeline.jarvis_chief.run_chronicler_audit
+    renderer_fn: .claude.skills.chronicler.renderers.render_chronicler_audit
+    schema: null
+    phase_idx: 22
+    required: true
+    description: Post-finalize Chronicler audit (coverage%, missing templates, schema mismatches)

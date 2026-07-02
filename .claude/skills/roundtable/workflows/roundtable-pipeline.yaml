@@ -1,0 +1,202 @@
+# =============================================================================
+# Roundtable Consensus Pipeline — Workflow YAML
+# Source: .claude/skills/roundtable/SKILL.md (v1.1)
+# Phase 4 — MEGABRAIN Skills Compliance Roadmap
+# =============================================================================
+
+workflow:
+  id: "WF-ROUNDTABLE-001"
+  skill_ref: "roundtable"
+  process_ref: "SP-ROUNDTABLE"
+  version: "1.0.0"
+  molecules: 4
+  atoms: 9
+
+  state_machine: "IDLE -> ANALYZING -> INDIVIDUAL -> DEBATING -> [LOOP?] -> CONSOLIDATING -> COMPLETE | ERROR | CANCELLED | ESCALATED"
+
+  # ---------------------------------------------------------------------------
+  # MOL-RT-001: Context Analysis & Agent Selection
+  # Pattern: ATM-001 -> ATM-002 -> [GATE: user confirms]
+  # ---------------------------------------------------------------------------
+
+  steps:
+    - id: 1
+      atom_ref: "ATM-RT-001"
+      molecule_ref: "MOL-RT-001"
+      name: "Extract Context"
+      executor: "Worker"
+      inputs:
+        - "Skill argument (file path, directory, or none)"
+        - "Current session context"
+        - "Mode flag (--mode review|decision|gap_analysis|investigation|strategic|audit)"
+      outputs:
+        - "Structured summary: domains, scope, artifacts, decisions pending, mode detected"
+      on_success: 2
+      on_failure: "escalate"
+      gate: null
+      timeout: null
+      notes: "Auto-detects mode from input type if not specified (ADR -> decision, EPIC -> review, etc.)."
+
+    - id: 2
+      atom_ref: "ATM-RT-002"
+      molecule_ref: "MOL-RT-001"
+      name: "Select Agents"
+      executor: "Worker"
+      inputs:
+        - "Context summary (from ATM-RT-001)"
+        - "Flags: --agents, --preset, --fast, --extended, --no-confirm"
+      outputs:
+        - "Confirmed agent list with lenses and rationale"
+      on_success: 3
+      on_failure: "escalate"
+      gate: "User confirms agent list (skip with --no-confirm)"
+      timeout: null
+      token_refs:
+        - "TK-RT-002 (min_agents: 3, 2 for --fast)"
+        - "TK-RT-003 (max_agents: 7, 12 for --extended)"
+      notes: "@cso auto-included (mandatory for audit/decision with governance keywords). User can adjust with +@agent / -@agent."
+
+  # ---------------------------------------------------------------------------
+  # MOL-RT-002: Individual Analysis
+  # Pattern: ATM-003 (parallel fan-out, all agents simultaneously)
+  # ---------------------------------------------------------------------------
+
+    - id: 3
+      atom_ref: "ATM-RT-003"
+      molecule_ref: "MOL-RT-002"
+      name: "Launch Individual Agents"
+      executor: "Agent"
+      inputs:
+        - "Confirmed agent list (from ATM-RT-002)"
+        - "Context + mode + directive (TK-RT-010)"
+        - "Files to review (max TK-RT-008 per agent)"
+      outputs:
+        - "Individual review outputs (one per agent, structured by mode)"
+      on_success: 4
+      on_failure: "escalate"
+      gate: "Minimum 2 agents completed for valid verdict"
+      timeout: "5min per agent"
+      token_refs:
+        - "TK-RT-008 (max_files_per_agent: 30)"
+        - "TK-RT-009 (mode)"
+        - "TK-RT-010 (directive)"
+      notes: "All agents launched in PARALLEL (run_in_background: true). Each works ISOLATED — no agent sees others' output. Timed-out agents excluded from verdict."
+
+  # ---------------------------------------------------------------------------
+  # MOL-RT-003: Debate & Consensus
+  # Pattern: ATM-004 -> ATM-005 -> [ATM-006 loop -> ATM-005] (max 3 iterations)
+  # Fast Path: If --fast and zero conflicts in ATM-004, skip to MOL-RT-004.
+  # ---------------------------------------------------------------------------
+
+    - id: 4
+      atom_ref: "ATM-RT-004"
+      molecule_ref: "MOL-RT-003"
+      name: "Consolidate Individual Reviews"
+      executor: "Worker"
+      inputs:
+        - "All individual agent outputs (from ATM-RT-003)"
+      outputs:
+        - "Consensus findings (2+ agents agree)"
+        - "Conflict findings (agents diverge)"
+        - "Unique findings (1 agent only)"
+        - "Verdict tally (APPROVE / APPROVE_WITH_CONDITIONS / REQUEST_CHANGES counts)"
+      on_success: 5
+      on_failure: "escalate"
+      gate: null
+      timeout: null
+      notes: "Deduplicates findings by severity (BLOCKER > CRITICAL > HIGH > MEDIUM > LOW). Fast Path: zero conflicts + --fast -> skip to step 7."
+
+    - id: 5
+      atom_ref: "ATM-RT-005"
+      molecule_ref: "MOL-RT-003"
+      name: "Debate Round"
+      executor: "Worker"
+      inputs:
+        - "Consolidated findings with conflicts (from ATM-RT-004 or ATM-RT-006)"
+      outputs:
+        - "Resolved conflicts with justification"
+        - "Unresolved conflicts (if any)"
+      on_success: 7
+      on_failure: 6
+      gate: "Zero unresolved conflicts"
+      timeout: null
+      notes: "Analyzes conflicts against Constitution, MEGABRAIN composition rules, ADRs, precedents. If zero conflicts at entry: skip to step 7."
+
+    - id: 6
+      atom_ref: "ATM-RT-006"
+      molecule_ref: "MOL-RT-003"
+      name: "Loop — Back to Individual"
+      executor: "Agent"
+      inputs:
+        - "Unresolved conflicts (from ATM-RT-005)"
+        - "Original positions of conflicting agents"
+      outputs:
+        - "Revised agent positions on specific conflict points"
+      on_success: 5
+      on_failure: "escalate"
+      gate: null
+      timeout: null
+      loop:
+        target_step: 5
+        max_iterations: 3
+        token_ref: "TK-RT-006 (max_debate_rounds: 3)"
+        on_max: "Escalate to user with both positions + recommendation. State -> ESCALATED."
+      notes: "Re-launches ONLY conflicting agents with focused prompt. After max iterations, unresolved conflicts escalated to user."
+
+  # ---------------------------------------------------------------------------
+  # MOL-RT-004: Verdict & Report
+  # Pattern: ATM-007 -> ATM-008 -> ATM-009
+  # ---------------------------------------------------------------------------
+
+    - id: 7
+      atom_ref: "ATM-RT-007"
+      molecule_ref: "MOL-RT-004"
+      name: "Generate Verdict"
+      executor: "Worker"
+      inputs:
+        - "Consolidated findings (conflicts resolved or escalated)"
+      outputs:
+        - "Verdict (mode-specific: APPROVE/DECIDED/GAPS_IDENTIFIED/etc.)"
+        - "Score (weighted average: APPROVE=10, WITH_CONDITIONS=7.5, REQUEST_CHANGES=4)"
+      on_success: 8
+      on_failure: "escalate"
+      gate: null
+      timeout: null
+      token_refs:
+        - "TK-RT-004 (consensus_threshold: 0.6)"
+        - "TK-RT-005 (quality_gate_score: 7.0)"
+      notes: "Verdict model varies by mode (review/decision/gap_analysis/investigation/strategic/audit)."
+
+    - id: 8
+      atom_ref: "ATM-RT-008"
+      molecule_ref: "MOL-RT-004"
+      name: "Generate Report"
+      executor: "Worker"
+      inputs:
+        - "Verdict + all consolidated findings"
+        - "Mode-specific template"
+      outputs:
+        - "Complete roundtable report (Markdown)"
+      on_success: 9
+      on_failure: "escalate"
+      gate: null
+      timeout: null
+      token_refs:
+        - "TK-RT-007 (report_ttl_days: 90)"
+      notes: "Report template adapts to mode. Artifact lifecycle: draft -> validated -> approved -> stale (after 90d) -> archived. On failure: generate minimal report with verdict only."
+
+    - id: 9
+      atom_ref: "ATM-RT-009"
+      molecule_ref: "MOL-RT-004"
+      name: "Persist & Notify"
+      executor: "Worker"
+      inputs:
+        - "Report markdown + verdict"
+      outputs:
+        - "Persisted report file (path depends on subject type)"
+        - "User notification with verdict summary"
+      on_success: "COMPLETE"
+      on_failure: "escalate"
+      gate: null
+      timeout: null
+      notes: "Save paths: epic -> docs/stories/{epic}/ROUNDTABLE-REPORT-{date}.md, ADR -> docs/architecture/roundtable-{subject}-{date}.md, audit -> docs/audits/roundtable-{subject}-{date}.md, generic -> docs/sessions/{YYYY-MM}/{date}-roundtable.md. On failure: present report inline."

@@ -1,0 +1,367 @@
+# =============================================================================
+# WORKFLOW: KAIZEN AUDIT CYCLE
+# =============================================================================
+# Epic 72 — Story 72.11
+# Cross-Squad Synergy Engine — Section C: Amplifiers
+# Cadence: Monthly (rotates through target squads)
+# Squads: kaizen + target_squad + issue-log (3+ squads → orquestrador)
+# =============================================================================
+
+metadata:
+  name: wf-kaizen-audit
+  version: "1.0.0"
+  squad: orquestrador-global
+  story_id: "72.11"
+  epic_id: 72
+  section: "C-amplifiers"
+  cadence: monthly
+  cadence_rotation: true
+  estimated_time: "1-3 hours"
+  created_at: "2026-03-26"
+
+description: >
+  Monthly Kaizen audit cycle. The kaizen squad performs a Gemba walk on a
+  rotating target squad, identifying waste (muda/mura/muri), process gaps,
+  and improvement opportunities. Findings are logged in the centralized
+  issue-log and assigned to the target squad for remediation. Escalation
+  triggers if issues are not resolved within SLA.
+
+# =============================================================================
+# TRIGGER
+# =============================================================================
+
+trigger:
+  command: "*kaizen-audit"
+  aliases:
+    - "*gemba-walk"
+    - "*continuous-improvement"
+  schedule:
+    cron: "0 10 1 * *"  # 1st of each month at 10:00
+    timezone: America/Sao_Paulo
+  description: "Run Kaizen Gemba walk on the next squad in rotation"
+
+# =============================================================================
+# PREREQUISITES
+# =============================================================================
+
+prerequisites:
+  - "kaizen squad configured with audit capabilities"
+  - "Target squad has config.yaml, agents, tasks, and workflows"
+  - "issue-log-ops.mjs available for issue registration"
+  - "cadence-ops.mjs available for audit scheduling"
+  - "harness.pipeline_contracts.enabled = true in core-config.yaml"
+
+# =============================================================================
+# INPUT REQUIREMENTS
+# =============================================================================
+
+inputs:
+  required:
+    - name: workspace
+      type: string
+      description: "Active workspace slug (GR-1 mandatory)"
+  optional:
+    - name: target_squad
+      type: string
+      description: "Specific squad to audit (default: next in rotation)"
+    - name: focus_area
+      type: string
+      description: "Specific area to focus the audit on"
+      options: [waste, process, quality, speed, cost]
+
+# =============================================================================
+# GLOBAL REQUIREMENTS COMPLIANCE
+# =============================================================================
+
+global_requirements:
+  idempotency_key: "wf-kaizen-audit:{workspace}:{target_squad}:{month}"  # GR-7
+  max_iterations: 3  # GR-3
+  convergence_check:
+    min_delta: 2
+    consecutive_flat_cycles: 2
+  escalation:
+    trigger: "issue_not_resolved_within_sla OR max_iterations_reached"
+    target: orquestrador-global
+    channel: whatsapp_central
+    message: "Kaizen audit escalated for {target_squad}: {reason}"
+
+# =============================================================================
+# STAGES
+# =============================================================================
+
+stages:
+
+  # --------------------------------------------------------------------------
+  # STAGE 1: Select Audit Target
+  # --------------------------------------------------------------------------
+  - id: 1
+    name: "Select Audit Target"
+    description: >
+      Select the target squad for this month's audit. If not specified,
+      rotate to the next squad in the predefined rotation list. Check
+      cadence-ops to ensure this squad hasn't been audited recently.
+    estimated_time: "5-10 minutes"
+
+    agents:
+      lead: kaizen-chief
+      support: []
+
+    actions:
+      - action: determine_target
+        description: "Select target squad from rotation or explicit input"
+        agent: kaizen-chief
+
+      - action: check_cadence
+        description: "Verify target hasn't been audited within cooldown period"
+        agent: kaizen-chief
+        tools:
+          - cadence-ops.mjs check
+
+      - action: load_squad_context
+        description: "Read target squad config.yaml, recent executions, and health data"
+        agent: kaizen-chief
+
+    gate:
+      criteria:
+        - "Target squad selected and not in cooldown"
+        - "Squad context loaded (config, recent activity, health)"
+      approval: auto
+      auto_criteria: "Audit target selected"
+
+    checkpoint: true  # GR-6
+
+  # --------------------------------------------------------------------------
+  # STAGE 2: Run Kaizen Gemba Walk
+  # --------------------------------------------------------------------------
+  - id: 2
+    name: "Run Kaizen Gemba Walk"
+    description: >
+      Kaizen squad performs a virtual Gemba walk: examines the target squad's
+      recent outputs, workflow execution logs, task completion patterns,
+      and quality gate results. Applies 5S digital assessment and identifies
+      muda (waste), mura (unevenness), and muri (overburden).
+    estimated_time: "30-60 minutes"
+    depends_on: [1]
+
+    agents:
+      lead: kaizen-chief
+      support: []
+
+    actions:
+      - action: review_outputs
+        description: "Examine recent squad outputs for quality and efficiency"
+        agent: kaizen-chief
+
+      - action: analyze_workflow_efficiency
+        description: "Check workflow execution times, bottlenecks, and waste"
+        agent: kaizen-chief
+
+      - action: assess_5s_digital
+        description: "Apply 5S framework: Sort, Set in order, Shine, Standardize, Sustain"
+        agent: kaizen-chief
+
+      - action: identify_improvements
+        description: "List specific improvement opportunities with expected impact"
+        agent: kaizen-chief
+
+    gate:
+      criteria:
+        - "At least 5 observations documented"
+        - "Waste categories (muda/mura/muri) classified"
+        - "5S score computed"
+        - "At least 2 improvement opportunities identified"
+      approval: auto
+      auto_criteria: "Gemba walk complete with findings"
+
+    checkpoint: true  # GR-6
+
+    outputs:
+      - name: gemba_walk_report
+        type: markdown
+
+  # --------------------------------------------------------------------------
+  # STAGE 3: Generate Improvement Proposal
+  # --------------------------------------------------------------------------
+  - id: 3
+    name: "Generate Kaizen Improvement Proposal"
+    description: >
+      Transform Gemba walk findings into a formal improvement proposal
+      with specific, measurable changes. Each proposal item includes:
+      current state, target state, proposed change, expected impact,
+      effort estimate, and responsible party.
+    estimated_time: "15-20 minutes"
+    depends_on: [2]
+
+    agents:
+      lead: kaizen-chief
+      support: []
+
+    actions:
+      - action: draft_proposals
+        description: "Create structured improvement proposals from findings"
+        agent: kaizen-chief
+
+      - action: prioritize_by_impact
+        description: "Rank proposals by impact-to-effort ratio"
+        agent: kaizen-chief
+
+    gate:
+      criteria:
+        - "At least 2 improvement proposals with full structure"
+        - "Each proposal has current state, target state, and expected impact"
+        - "Proposals prioritized by impact-to-effort"
+      approval: auto
+      auto_criteria: "Improvement proposals generated"
+
+    validation_gate:  # GR-5
+      gate_id: QG-orquestrador-global-2  # canonical binding (W8-5) — output_quality QG; min_score 0.75 derives from QG-2 threshold
+      type: contract_schema
+      contract: "kaizen-improvement-proposal-output.yaml"
+      min_score: 0.75
+
+    checkpoint: true  # GR-6
+
+    outputs:
+      - name: improvement_proposals
+        type: markdown
+        contract: "kaizen-improvement-proposal-output.yaml"
+
+  # --------------------------------------------------------------------------
+  # STAGE 4: Assign Improvements
+  # --------------------------------------------------------------------------
+  - id: 4
+    name: "Assign Kaizen Improvements"
+    description: >
+      Register improvement items in the centralized issue-log via
+      issue-log-ops.mjs. Assign to the target squad with SLA based
+      on severity. Set up cadence tracking for follow-up.
+    estimated_time: "10-15 minutes"
+    depends_on: [3]
+
+    agents:
+      lead: orquestrador-chief
+      support: []
+
+    actions:
+      - action: register_in_issue_log
+        description: "Add each improvement to the centralized issue-log"
+        agent: orquestrador-chief
+        tools:
+          - issue-log-ops.mjs add
+
+      - action: assign_to_squad
+        description: "Assign issues to target squad with SLA"
+        agent: orquestrador-chief
+        tools:
+          - issue-log-ops.mjs assign
+
+      - action: schedule_followup
+        description: "Set cadence for follow-up audit to verify implementation"
+        agent: orquestrador-chief
+        tools:
+          - cadence-ops.mjs schedule
+
+      - action: mark_audit_complete
+        description: "Record audit completion in cadence tracking"
+        agent: orquestrador-chief
+        tools:
+          - cadence-ops.mjs complete
+
+    gate:
+      criteria:
+        - "All improvements registered in issue-log"
+        - "SLA assigned based on severity"
+        - "Follow-up audit scheduled"
+        - "Audit marked complete in cadence"
+      approval: auto
+      auto_criteria: "Improvements assigned and tracked"
+
+    checkpoint: true  # GR-6
+
+# =============================================================================
+# ROTATION LIST
+# =============================================================================
+
+rotation:
+  description: >
+    Default rotation through operational squads. Strategic/advisory squads
+    are audited less frequently. Rotation resets after completing the full list.
+  primary_rotation:
+    - copywriting
+    - media-buy
+    - content-ecosystem
+    - funnel-creator
+    - creative-studio
+    - sales
+    - marketing-automation
+    - data-analytics
+    - youtube-lives
+    - support
+  secondary_rotation:
+    - seo
+    - infoproduct-creation
+    - video-production
+    - asmr-shorts
+    - customer-success
+
+# =============================================================================
+# MODEL SELECTION
+# =============================================================================
+
+model_selection:
+  default: sonnet
+  per_stage:
+    1: sonnet
+    2: sonnet
+    3: sonnet
+    4: sonnet
+  rationale: >
+    Kaizen analysis is systematic and procedural. Gemba walks follow
+    a structured framework that sonnet handles efficiently.
+
+# =============================================================================
+# SUCCESS METRICS
+# =============================================================================
+
+success_metrics:
+  - metric: "Audit coverage"
+    target: "All primary rotation squads audited within 12 months"
+  - metric: "Issue resolution rate"
+    target: ">80% of issues resolved within SLA"
+  - metric: "5S score improvement"
+    target: "Average 5S score improves by 10% year-over-year"
+  - metric: "Waste reduction"
+    target: ">3 waste items eliminated per quarter"
+
+# =============================================================================
+# INTEGRATION
+# =============================================================================
+
+integration:
+  feeds_from:
+    - squad: kaizen
+      data: "Gemba walk observations, 5S assessments"
+    - squad: "{target_squad}"
+      data: "Squad outputs, execution logs, quality gate results"
+  feeds_to:
+    - squad: "{target_squad}"
+      data: "Improvement proposals with SLA"
+    - squad: orquestrador-global
+      data: "Issue-log entries for tracking"
+  tools_required:
+    - issue-log-ops.mjs
+    - cadence-ops.mjs
+    - health-ops.mjs
+    - pipeline-ops.mjs
+megabrain_validation:
+  last_run: "20260514-validate-deep"
+  validated_at: "2026-05-15T00:00:00Z"
+  validator: mega-brain/megabrain-chief
+  mode: deep
+  squad: orquestrador-global
+  workflow_id: "wf-kaizen-audit"
+  status: pass
+  evidence:
+    - workflow_inventory_registered
+    - orchestration_surface_validated
+    - external_execution_not_performed

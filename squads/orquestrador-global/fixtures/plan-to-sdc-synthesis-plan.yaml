@@ -1,0 +1,229 @@
+schema_version: "2.0"
+plan_id: "campaign-synthesis-20260504-235000"
+created_by: "plan-architect"
+created_at: "2026-05-04T23:50:00Z"
+
+demand:
+  raw: "Criar copy da landing page, configurar tracking e preparar campanha paga"
+  parsed:
+    primary_domain: "marketing"
+    secondary_domains: ["copy", "tracking", "paid-media"]
+    task_type: "launch"
+    complexity: "high"
+    urgency: "normal"
+    business_units: ["megabrain"]
+    implicit_deadline: null
+    confidence: 0.91
+  elicitations: []
+
+discovery:
+  cache_version: "fixture"
+  cache_age_seconds: 0
+  capabilities_scanned:
+    squads: 3
+    agents: 6
+    skills: 2
+    tasks: 3
+    workflows: 3
+  cache_drift_detected: false
+
+selected_capabilities:
+  - id: "copy:write-landing-page-copy"
+    type: "task"
+    score: 0.92
+    score_breakdown:
+      domain: 0.95
+      fit: 0.93
+      quality: 0.90
+      recency: 0.90
+      cost: 0.90
+    reason: "Copy task cobre headline, body e CTA da landing page."
+    ids_decision: "REUSE"
+  - id: "copy:wf-landing-page-copy"
+    type: "workflow"
+    score: 0.88
+    score_breakdown:
+      domain: 0.90
+      fit: 0.88
+      quality: 0.88
+      recency: 0.88
+      cost: 0.86
+    reason: "Workflow de origem da task de copy."
+    ids_decision: "REUSE"
+  - id: "analytics:configure-tracking"
+    type: "task"
+    score: 0.89
+    score_breakdown:
+      domain: 0.91
+      fit: 0.90
+      quality: 0.87
+      recency: 0.88
+      cost: 0.89
+    reason: "Task cobre pixel, UTM e verificação de eventos."
+    ids_decision: "REUSE"
+  - id: "analytics:wf-tracking-setup"
+    type: "workflow"
+    score: 0.87
+    score_breakdown:
+      domain: 0.90
+      fit: 0.86
+      quality: 0.86
+      recency: 0.86
+      cost: 0.87
+    reason: "Workflow de origem da task de tracking."
+    ids_decision: "REUSE"
+  - id: "megabrain-ads:prepare-campaign"
+    type: "task"
+    score: 0.90
+    score_breakdown:
+      domain: 0.93
+      fit: 0.91
+      quality: 0.88
+      recency: 0.88
+      cost: 0.90
+    reason: "Task cobre estrutura de campanha e criativos prontos para aprovação."
+    ids_decision: "REUSE"
+  - id: "megabrain-ads:wf-campaign-launch"
+    type: "workflow"
+    score: 0.89
+    score_breakdown:
+      domain: 0.93
+      fit: 0.89
+      quality: 0.87
+      recency: 0.87
+      cost: 0.88
+    reason: "Workflow de origem do lançamento de campanha."
+    ids_decision: "REUSE"
+
+dag:
+  nodes:
+    - id: "n1"
+      capability: "copy:write-landing-page-copy"
+      capability_ref: "copy:write-landing-page-copy"
+      source_workflow: "copy:wf-landing-page-copy"
+      capability_type: "task"
+      phase: "copy"
+      label: "Escrever copy da landing page"
+      inputs_required: ["brief.md"]
+      outputs_produced: ["landing-page-copy.md"]
+      estimated_duration_minutes: 45
+      estimated_cost_tokens: 12000
+      model_tier: "sonnet"
+      risk:
+        severity: 3
+        occurrence: 2
+        detectability: 2
+        rpn: 12
+      parallelizable_with: ["n2"]
+      quality_gate: "copy-review"
+    - id: "n2"
+      capability: "analytics:configure-tracking"
+      capability_ref: "analytics:configure-tracking"
+      source_workflow: "analytics:wf-tracking-setup"
+      capability_type: "task"
+      phase: "tracking"
+      label: "Configurar tracking e UTMs"
+      inputs_required: ["destination-url"]
+      outputs_produced: ["tracking-map.md"]
+      estimated_duration_minutes: 35
+      estimated_cost_tokens: 6000
+      model_tier: "sonnet"
+      risk:
+        severity: 4
+        occurrence: 2
+        detectability: 3
+        rpn: 24
+      parallelizable_with: ["n1"]
+      quality_gate: "tracking-qa"
+    - id: "n3"
+      capability: "megabrain-ads:prepare-campaign"
+      capability_ref: "megabrain-ads:prepare-campaign"
+      source_workflow: "megabrain-ads:wf-campaign-launch"
+      capability_type: "task"
+      phase: "campaign"
+      label: "Preparar campanha paga para aprovação"
+      inputs_required: ["landing-page-copy.md", "tracking-map.md"]
+      outputs_produced: ["campaign-draft.md"]
+      estimated_duration_minutes: 50
+      estimated_cost_tokens: 9000
+      model_tier: "sonnet"
+      risk:
+        severity: 4
+        occurrence: 2
+        detectability: 2
+        rpn: 16
+      parallelizable_with: []
+      quality_gate: "campaign-approval"
+  edges:
+    - from: "n1"
+      to: "n3"
+      type: "data_dependency"
+      reason: "A campanha depende da copy aprovada."
+      artifact: "landing-page-copy.md"
+    - from: "n2"
+      to: "n3"
+      type: "data_dependency"
+      reason: "A campanha depende do mapa de tracking."
+      artifact: "tracking-map.md"
+  parallel_groups:
+    - group_id: "g1"
+      nodes: ["n1", "n2"]
+      reason: "Copy e tracking podem iniciar em paralelo a partir do brief."
+  critical_path: ["n1", "n3"]
+  critical_path_duration_minutes: 95
+
+risks:
+  top_risks:
+    - rpn: 24
+      node: "n2"
+      description: "Tracking incorreto compromete mensuração de campanha."
+      mitigation: "Bloquear ativação até tracking QA passar."
+  pre_mortem: null
+
+resource_estimate:
+  total_tokens: 27000
+  total_cost_usd: 0.35
+  total_duration_minutes: 130
+  total_wall_time_estimate_hours: 1.58
+  models_used: ["sonnet"]
+  agents_count: 3
+
+success_criteria:
+  - metric: "sdc_package_valid"
+    criterion: "Pacote SDC valida contra schema."
+    measurement: "validate-sdc-package.js retorna valid=true"
+    threshold: "true"
+
+falsifiable_assumptions:
+  - assumption: "Tasks de workflows distintos podem virar stories SDC draft sem executar downstream."
+    falsification_test: "O pacote gerado deve manter auto_execute=false e dependências explícitas."
+
+constitutional_compliance:
+  codeowners_check: "pass"
+  business_isolation_check: "pass"
+  agent_authority_check: "pass"
+  no_invention_check: "pass"
+
+handoff:
+  next_action_suggested: "Materializar pacote SDC draft para revisão PO."
+  next_action_executor: "@dev"
+  approvals_required: ["@po"]
+  do_not_execute_until:
+    - "PO aprovar pacote SDC materializado"
+
+quality_score: 4.4
+quality_breakdown:
+  completeness: 4
+  capability_match: 5
+  parallelization: 4
+  risk_coverage: 4
+  cost_efficiency: 4
+  clarity: 5
+  falsifiability: 5
+
+audit:
+  created_by: "plan-architect"
+  created_at: "2026-05-04T23:50:00Z"
+  cache_manifest_hash: "fixture"
+  scoring_config_version: "1.0"
+  heuristics_applied: ["IDS-G1", "CPM", "FMEA-RPN", "PLAN-TO-SDC"]

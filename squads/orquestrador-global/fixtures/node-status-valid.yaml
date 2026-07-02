@@ -1,0 +1,99 @@
+schema_version: "1.0"
+execution_id: "node-status-fixture-20260504-180100"
+plan_id: "node-status-fixture-20260504-180000"
+plan_version: "2.0"
+source_plan_path: "squads/orquestrador-global/fixtures/node-status-plan.yaml"
+mutation_policy: "sidecar_append_only"
+created_at: "2026-05-04T18:01:00Z"
+updated_at: "2026-05-04T18:06:00Z"
+status_aggregate: "in_progress"
+
+nodes:
+  - node_id: "n1"
+    plan_node_ref: "n1"
+    status: "succeeded"
+    executor_engine: "manual"
+    executor_ref: "@analyst"
+    attempt: 1
+    started_at: "2026-05-04T18:01:00Z"
+    heartbeat_at: "2026-05-04T18:03:00Z"
+    finished_at: "2026-05-04T18:04:00Z"
+    blockers: []
+    evidence:
+      - type: "artifact"
+        path: "outputs/plans/node-status-fixture/node-map.yaml"
+        description: "Mapa de nodes produzido para validar o sidecar."
+        captured_at: "2026-05-04T18:04:00Z"
+    artifact_paths:
+      - "outputs/plans/node-status-fixture/node-map.yaml"
+    last_event_type: "succeeded"
+    history:
+      - event_id: "evt-n1-planned"
+        event_type: "planned"
+        status: "planned"
+        at: "2026-05-04T18:01:00Z"
+        actor: "orquestrador-global"
+        message: "Node planejado a partir do DAG."
+        evidence: []
+      - event_id: "evt-n1-started"
+        event_type: "started"
+        status: "running"
+        at: "2026-05-04T18:02:00Z"
+        actor: "@analyst"
+        message: "Execução iniciada."
+        evidence: []
+      - event_id: "evt-n1-succeeded"
+        event_type: "succeeded"
+        status: "succeeded"
+        at: "2026-05-04T18:04:00Z"
+        actor: "@analyst"
+        message: "Node concluído com evidência."
+        evidence:
+          - type: "artifact"
+            path: "outputs/plans/node-status-fixture/node-map.yaml"
+            description: "Mapa de nodes produzido para validar o sidecar."
+            captured_at: "2026-05-04T18:04:00Z"
+
+  - node_id: "n2"
+    plan_node_ref: "n2"
+    status: "running"
+    executor_engine: "manual"
+    executor_ref: "@qa"
+    attempt: 1
+    started_at: "2026-05-04T18:05:00Z"
+    heartbeat_at: "2026-05-04T18:06:00Z"
+    finished_at: null
+    blockers: []
+    evidence:
+      - type: "log"
+        path: ".data/audit-trail.jsonl"
+        description: "Execução em andamento registrada em trilha append-only."
+        captured_at: "2026-05-04T18:06:00Z"
+    artifact_paths: []
+    last_event_type: "heartbeat"
+    history:
+      - event_id: "evt-n2-planned"
+        event_type: "planned"
+        status: "planned"
+        at: "2026-05-04T18:01:00Z"
+        actor: "orquestrador-global"
+        message: "Node planejado a partir do DAG."
+        evidence: []
+      - event_id: "evt-n2-started"
+        event_type: "started"
+        status: "running"
+        at: "2026-05-04T18:05:00Z"
+        actor: "@qa"
+        message: "Validação iniciada."
+        evidence: []
+      - event_id: "evt-n2-heartbeat"
+        event_type: "heartbeat"
+        status: "running"
+        at: "2026-05-04T18:06:00Z"
+        actor: "@qa"
+        message: "Node ainda em execução."
+        evidence:
+          - type: "log"
+            path: ".data/audit-trail.jsonl"
+            description: "Execução em andamento registrada em trilha append-only."
+            captured_at: "2026-05-04T18:06:00Z"

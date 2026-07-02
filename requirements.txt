@@ -1,0 +1,31 @@
+# Mega Brain - Python Dependencies
+# Hooks in .claude/hooks/ use only stdlib + PyYAML
+# Scripts in scripts/ may require additional packages (dev-only, not distributed)
+PyYAML>=6.0
+
+# === MCE PIPELINE STATE MACHINE (engine/intelligence/pipeline/mce/state_machine.py) ===
+# `from transitions import Machine` — required for pipeline state transitions + tests
+transitions>=0.9.0
+
+# === SPEAKER DIARIZATION (core/intelligence/speakers/) ===
+# Install: pip install -r requirements.txt
+# Note: pyannote.audio requires HuggingFace model license:
+#   https://huggingface.co/pyannote/speaker-diarization
+# Cloud fallbacks (no GPU): ASSEMBLYAI_API_KEY or DEEPGRAM_API_KEY in .env
+pyannote.audio>=3.1.0
+torch>=2.0.0
+torchaudio>=2.0.0
+numpy>=1.24.0
+scipy>=1.10.0
+assemblyai>=0.28.0
+
+# === STORY-TIL-21: OTel GenAI drift detection (PIONEER) ===
+# OpenTelemetry SDK is optional for the tracer — the file exporter is
+# implemented in pure stdlib at engine/intelligence/metrics/otel_capability_tracer.py.
+# When the SDK IS installed, downstream consumers (Phoenix, Langfuse, OTLP
+# collectors) can ingest the same JSONL traces. Fail-open per AC1.
+# Drift scripts: scripts/detect_capability_drift.py + scripts/audit_tool_selection.py
+opentelemetry-sdk>=1.25
+# Optional — install only when running the LLM-as-judge auditor (AC7)
+# anthropic>=0.40.0
+# scikit-learn>=1.4.0  # required by detect_capability_drift.py for k-means clustering

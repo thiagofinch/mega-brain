@@ -1,0 +1,284 @@
+# =============================================================================
+# WORKFLOW: ORCHESTRATION SCALING SYSTEM
+# =============================================================================
+# Stage 10-to-100: From manual orchestration to autonomous engine
+# The scaling workflow for enterprise-grade autonomous orchestration
+# =============================================================================
+
+metadata:
+  name: orchestration-scaling-system
+  version: "1.0.0"
+  squad: orquestrador-global
+  maturity_stage: "10_to_100"
+  estimated_time: "6-10 weeks"
+  created_at: "2026-03-11"
+
+description: >
+  Scaling workflow for orchestration systems ready to become autonomous.
+  Orchestrates the design of intelligent routing, predictive resource
+  allocation, self-healing execution, and organizational learning.
+  Takes orchestration from "human-coordinated pipelines" to "autonomous
+  orchestration engine" in 6-10 weeks.
+
+# =============================================================================
+# TRIGGER
+# =============================================================================
+
+trigger:
+  command: "*scale-orchestration"
+  aliases:
+    - "*autonomous-orchestration"
+    - "*orchestration-engine"
+    - "*enterprise-orchestration"
+  description: "Start the orchestration scaling system"
+
+# =============================================================================
+# PREREQUISITES
+# =============================================================================
+
+prerequisites:
+  - "Multi-squad orchestration operational with gate reviews"
+  - "At least 50 completed executions in the log"
+  - "6+ months of execution history data"
+  - "IDS modules (task-scaler, cost-tracker, delegation-tracker) active"
+  - "Audit trail (JSONL) established for all executions"
+
+# =============================================================================
+# INPUT REQUIREMENTS
+# =============================================================================
+
+inputs:
+  required:
+    - name: execution_history
+      type: object
+      description: "6+ months of execution logs from .data/executions/"
+    - name: squad_registry
+      type: document
+      description: "Complete squad registry with capabilities"
+    - name: ids_config
+      type: object
+      description: "IDS module configuration"
+  optional:
+    - name: performance_targets
+      type: object
+      description: "Target SLAs for routing, execution, quality"
+    - name: cost_budget
+      type: number
+      description: "Monthly budget ceiling for orchestration compute"
+
+# =============================================================================
+# STAGES
+# =============================================================================
+
+stages:
+
+  # --------------------------------------------------------------------------
+  # STAGE 1: Architecture Design
+  # --------------------------------------------------------------------------
+  - id: 1
+    name: "Orchestration Architecture Design"
+    description: >
+      Design the enterprise orchestration architecture: intelligent routing
+      engine, pipeline generator, execution monitor, and learning system.
+      After this stage, we have a complete blueprint for autonomous
+      orchestration.
+    estimated_time: "8-16 hours"
+
+    tasks:
+      - orchestration-architecture
+
+    agents:
+      lead: orquestrador-chief
+      support: []
+
+    actions:
+      - action: analyze_execution_history
+        description: "Mine patterns from historical execution logs"
+        agent: orquestrador-chief
+
+      - action: design_routing_engine
+        description: "Design NLP-based intent routing with load balancing"
+        agent: orquestrador-chief
+
+      - action: design_pipeline_generator
+        description: "Create template-based pipeline auto-generation"
+        agent: orquestrador-chief
+
+      - action: design_execution_monitor
+        description: "Build real-time health monitoring for executions"
+        agent: orquestrador-chief
+
+      - action: design_learning_system
+        description: "Create post-execution pattern extraction"
+        agent: orquestrador-chief
+
+    gate:
+      criteria:
+        - "Architecture covers all 6 ontology layers"
+        - "Routing engine has >90% accuracy target"
+        - "Pipeline templates cover 80%+ of historical demand types"
+        - "Learning system has defined feedback loops"
+        - "IDS integration points clearly defined"
+      approval: manual
+      gate_document: "architecture-review.md"
+
+  # --------------------------------------------------------------------------
+  # STAGE 2: Scaling Implementation
+  # --------------------------------------------------------------------------
+  - id: 2
+    name: "Scaling Implementation"
+    description: >
+      Implement the scaling features: concurrency management, priority
+      queuing, cost optimization, and self-healing. After this stage,
+      the system can handle multiple concurrent executions efficiently.
+    estimated_time: "6-10 hours"
+    depends_on: [1]
+
+    tasks:
+      - orchestration-scaling
+
+    agents:
+      lead: orquestrador-chief
+      support: []
+
+    actions:
+      - action: implement_concurrency
+        description: "Build resource locking and priority queuing"
+        agent: orquestrador-chief
+
+      - action: implement_cost_optimization
+        description: "Build cost-aware model selection and budget tracking"
+        agent: orquestrador-chief
+
+      - action: implement_self_healing
+        description: "Build automatic retry and squad substitution"
+        agent: orquestrador-chief
+
+      - action: implement_improvement_engine
+        description: "Build automated retrospective and trend analysis"
+        agent: orquestrador-chief
+
+    gate:
+      criteria:
+        - "Concurrency handles 5+ simultaneous executions"
+        - "Priority system has clear preemption rules"
+        - "Cost optimization respects budget ceilings"
+        - "Self-healing covers top 5 failure modes"
+      approval: manual
+      gate_document: "scaling-review.md"
+
+  # --------------------------------------------------------------------------
+  # STAGE 3: Autonomous Operation
+  # --------------------------------------------------------------------------
+  - id: 3
+    name: "Autonomous Operation Validation"
+    description: >
+      Validate the autonomous system by running it under controlled
+      conditions: process a batch of diverse demands, verify routing
+      accuracy, test self-healing, and measure cost efficiency. After
+      this stage, the orchestration engine is validated for production.
+    estimated_time: "1-2 weeks"
+    depends_on: [1, 2]
+
+    tasks:
+      - orchestration-architecture
+      - orchestration-scaling
+
+    agents:
+      lead: orquestrador-chief
+      support: []
+
+    actions:
+      - action: prepare_test_batch
+        description: "Select 20+ diverse historical demands for replay"
+        agent: orquestrador-chief
+
+      - action: run_autonomous_batch
+        description: "Process test batch with autonomous routing and execution"
+        agent: orquestrador-chief
+
+      - action: measure_performance
+        description: "Compare autonomous results to human-orchestrated baselines"
+        agent: orquestrador-chief
+
+      - action: tune_and_optimize
+        description: "Adjust weights and thresholds based on results"
+        agent: orquestrador-chief
+
+      - action: document_operational_manual
+        description: "Write the operational manual for autonomous orchestration"
+        agent: orquestrador-chief
+
+    gate:
+      criteria:
+        - "Routing accuracy >= 90% on test batch"
+        - "Self-healing recovered from at least 2 simulated failures"
+        - "Cost within 20% of human-orchestrated baseline"
+        - "Operational manual covers all failure modes"
+        - "Improvement engine produced recommendations"
+      approval: manual
+      gate_document: "autonomous-validation.md"
+
+# =============================================================================
+# MODEL SELECTION
+# =============================================================================
+
+model_selection:
+  default: opus
+  per_stage:
+    1: opus
+    2: opus
+    3: sonnet
+  rationale: >
+    Architecture design and scaling implementation require deep systems
+    thinking and complex decision-making, warranting Opus. Validation
+    (Stage 3) is primarily execution and measurement, suitable for Sonnet.
+
+# =============================================================================
+# SUCCESS METRICS
+# =============================================================================
+
+success_metrics:
+  - metric: "Autonomous routing accuracy"
+    target: ">90% correct on diverse demand set"
+  - metric: "Concurrent execution capacity"
+    target: "5+ simultaneous executions without conflict"
+  - metric: "Self-healing success rate"
+    target: ">80% of recoverable failures auto-resolved"
+  - metric: "Cost efficiency"
+    target: "Within 20% of human-orchestrated baseline"
+  - metric: "Learning velocity"
+    target: "Measurable improvement in routing accuracy month-over-month"
+
+# =============================================================================
+# INTEGRATION
+# =============================================================================
+
+integration:
+  feeds_from:
+    - squad: data-analytics
+      data: "execution analytics and pattern mining"
+    - squad: core-dev
+      data: "IDS module configuration and enhancements"
+    - squad: navigator
+      data: "context management layer"
+  feeds_to:
+    - squad: project-management-clickup
+      data: "portfolio-level orchestration data"
+  tools_required:
+    - ids-ops.mjs
+    - cost-ops.mjs
+    - task-lock-ops.mjs
+    - session-ops.mjs
+megabrain_validation:
+  last_run: "20260514-validate-deep"
+  validated_at: "2026-05-15T00:00:00Z"
+  validator: mega-brain/megabrain-chief
+  mode: deep
+  squad: orquestrador-global
+  workflow_id: "orchestration-scaling-system"
+  status: pass
+  evidence:
+    - workflow_inventory_registered
+    - orchestration_surface_validated
+    - external_execution_not_performed

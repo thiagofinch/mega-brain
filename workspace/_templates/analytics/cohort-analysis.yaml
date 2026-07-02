@@ -1,0 +1,119 @@
+---
+# COHORT-ANALYSIS.YAML - Cohort-based retention and revenue analysis
+# Adapted from mega-brain-stage pattern for Mega Brain workspace context
+
+_meta:
+  version: "1.0.0"
+  owner: "data-chief"
+  target_layer: "L4-operational"
+  state: "TEMPLATE"
+
+metadata:
+  canonical_scope: "workspace/_templates/analytics/cohort-analysis.yaml"
+  owner: "cfo"
+  version: "1.0.0"
+  last_updated: "2026-03-23"
+  description: "Cohort analysis template with definition, period, retention metrics, revenue, engagement, and segments"
+
+fields:
+  analysis_title:
+    type: string
+    required: true
+    description: "Descriptive title for this analysis"
+
+  analysis_date:
+    type: date
+    required: true
+    description: "Date the analysis was performed"
+
+  analyst:
+    type: string
+    required: false
+    description: "Person who prepared this analysis"
+
+  cohort_definition:
+    type: object
+    required: true
+    description: "How cohorts are defined and segmented"
+    properties:
+      type:
+        type: enum
+        required: true
+        description: "Basis for cohort grouping"
+        options: [signup, first-purchase, activation, onboarding-complete, campaign, referral]
+      period:
+        type: enum
+        required: true
+        description: "Time granularity for cohorts"
+        options: [weekly, monthly, quarterly]
+      date_range:
+        type: object
+        required: true
+        description: "Date range of cohorts analyzed"
+        properties:
+          start:
+            type: date
+            required: true
+            description: "Earliest cohort start date"
+          end:
+            type: date
+            required: true
+            description: "Latest cohort start date"
+
+  retention_metrics:
+    type: list
+    required: true
+    description: "Retention data per cohort, each with cohort_id, initial_size, and retention percentages per period"
+
+  revenue_metrics:
+    type: list
+    required: false
+    description: "Revenue data per cohort, each with cohort_id, average_clv, median_clv, and revenue distribution"
+
+  engagement_metrics:
+    type: list
+    required: false
+    description: "Engagement data per cohort, each with cohort_id and engagement indicators (logins, actions, completions)"
+
+  segments:
+    type: list
+    required: false
+    description: "Sub-segments within cohorts (e.g., by channel, plan, geography) with comparative metrics"
+
+  cohort_comparison:
+    type: object
+    required: true
+    description: "Cross-cohort comparison summary"
+    properties:
+      best_performing_cohort:
+        type: string
+        required: true
+        description: "Cohort ID with highest retention or revenue"
+      worst_performing_cohort:
+        type: string
+        required: true
+        description: "Cohort ID with lowest retention or revenue"
+      average_retention_period_1:
+        type: string
+        required: false
+        description: "Average first-period retention across all cohorts"
+      trend:
+        type: enum
+        required: false
+        description: "Overall cohort quality trend"
+        options: [improving, stable, declining]
+
+  key_insight:
+    type: string
+    required: true
+    description: "Single most important finding from the analysis"
+
+  recommended_actions:
+    type: list
+    required: true
+    description: "Data-driven actions to improve cohort performance"
+
+  methodology_notes:
+    type: string
+    required: false
+    description: "Notes on data sources, exclusions, or calculation methodology"

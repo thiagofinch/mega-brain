@@ -1,0 +1,143 @@
+# =============================================================================
+# TASK: FIRST SQUAD ROUTING
+# =============================================================================
+# Set up the first demand-to-squad routing flow
+# Stage 0-to-1 | Ontology Layer: Demanda + Classificacao
+# =============================================================================
+
+
+task: first-squad-routing
+domain: tactical
+atomic_layer: Molecule
+responsavel_type: Agent
+performance:
+  error_handling: graceful with fallback + retry
+
+megabrain_frontmatter:
+  task_id: "first-squad-routing"
+  name: "first-squad-routing"
+  version: "1.0.0"
+  category: operations
+  squad: orquestrador-global
+  responsavel: "@roteador"
+  model: sonnet
+  difficulty: intermediate
+  atomic_layer: Molecule
+
+metadata:
+  name: first-squad-routing
+  version: "1.0.0"
+  squad: orquestrador-global
+  maturity_stage: "0_to_1"
+  ontology_layer: demanda
+  model: sonnet
+  estimated_time: "1-2 hours"
+  complexity: low
+
+description: >
+  Set up the foundational demand intake and squad routing capability. This is
+  the minimum viable orchestration: receive a user demand, classify its type,
+  and route it to the correct squad. No multi-squad coordination yet — just
+  accurate single-squad routing with clear handoff.
+
+inputs:
+  required:
+    - name: demand_text
+      type: string
+      source: "User's raw demand or request"
+    - name: squad_registry
+      type: document
+      source: "squads/ directory listing with config.yaml per squad"
+  optional:
+    - name: user_context
+      type: object
+      description: "Previous session context, active projects, recent history"
+
+outputs:
+  - name: routing_decision
+    type: document
+    destination: ".data/executions/{date}_{slug}/routing-decision.md"
+    description: "Routing decision with squad selection and reasoning"
+
+frameworks:
+  - name: "Intent Classification"
+    application: >
+      Classify demand into: content_creation, technical_development,
+      marketing_analytics, sales_operations, strategic_advisory,
+      infrastructure_ops, research_analysis. Each maps to 1-3 candidate squads.
+  - name: "Single Best Squad"
+    application: >
+      At 0-to-1 stage, always route to exactly one squad. If demand spans
+      multiple squads, pick the primary one and note the secondary need
+      for future follow-up.
+
+process:
+  steps:
+    - id: 1
+      name: "Parse demand"
+      action: >
+        Extract from the raw demand: primary intent, subject domain, expected
+        deliverable type, urgency level, and any explicit squad or agent
+        references. Normalize the request into a structured format.
+      output: "Parsed demand object"
+
+    - id: 2
+      name: "Classify intent"
+      action: >
+        Match the parsed demand against the intent classification framework.
+        Identify the top 1-3 candidate squads by reading their config.yaml
+        descriptions and agent capabilities.
+      output: "Intent classification with candidate squads"
+
+    - id: 3
+      name: "Select squad"
+      action: >
+        Choose the single best squad based on: domain match, agent
+        availability, and deliverable type alignment. Document the
+        reasoning for the selection.
+      output: "Squad selection with reasoning"
+
+    - id: 4
+      name: "Package handoff"
+      action: >
+        Create the handoff package for the selected squad: briefing text,
+        relevant context files, expected deliverable format, and any
+        constraints from the original demand.
+      output: "Handoff package ready for squad activation"
+
+integration_graph:
+  depends_on: []
+  feeds_into:
+    - task: basic-orchestration-setup
+      squad: orquestrador-global
+      data_passed: "routing_patterns"
+  collaborates_with:
+    - squad: navigator
+      purpose: "Context assembly for routing decisions"
+
+quality_gates:
+  - "Demand is parsed into structured format before routing"
+  - "At least 2 candidate squads evaluated before selection"
+  - "Routing reasoning is documented (not just the result)"
+  - "Handoff package contains all context the target squad needs"
+squad: orquestrador-global
+task_id: first-squad-routing
+version: "3.1.1"
+status: ready
+responsavel: "@plan-architect"
+execution_type: hybrid
+orchestration_boundary:
+  live_routing_performed: false
+  external_dispatch_performed: false
+  workspace_write_performed: false
+megabrain_validation:
+  last_run: "20260514-validate-deep"
+  validated_at: "2026-05-15T00:00:00Z"
+  validator: mega-brain/megabrain-chief
+  mode: deep
+  squad: orquestrador-global
+  status: pass
+  evidence:
+    - schema_contract_normalized
+    - task_boundary_declared
+    - plan_only_orchestration_preserved

@@ -1,0 +1,479 @@
+{
+  "schema_version": 1,
+  "_description": "Retrieval benchmark gabarito (régua), regenerated 2026-06-27 from the live 34004-chunk index (.data/rag_index/chunks.json) by deterministic name-anchor join (tests/rag/regenerate_qrels.py). 13 reverse-joined from the original alex-hormozi gabarito + 30 forward-generated across 10 other persons (heuristicas/frameworks). Each relevant_chunk_id is a REAL live chunk_id whose `name` matches the query anchor; answer_text is that chunk's text. NO fabricated mappings; unresolved/ambiguous anchors DROPPED + logged (Art. IV + extraction-no-fallbacks). See docs/stories/epic-RETRIEVAL-BENCHMARK/STORY-RBM-QRELS-REBUILD.md.",
+  "queries": [
+    {
+      "query_id": "q001",
+      "query": "Explain the Warning label strategy strategy and how it works.",
+      "relevant_chunk_ids": [
+        "heu_001"
+      ],
+      "first_relevant_chunk_id": "heu_001",
+      "answer_text": "ID: heu_001\nname: Warning label strategy: warning about adverse effects makes positive assumed.\ndescription: Warning label strategy: warning about adverse effects makes positive assumed. Viagra example.\nsource_chunks: chunk_631\npriority: HIGH",
+      "label": "alex-hormozi/heuristicas",
+      "source": "reverse-join"
+    },
+    {
+      "query_id": "q002",
+      "query": "What is the principle behind: Clear pipeline before price raise. Announce = scarcity/urgency + cashflow boost?",
+      "relevant_chunk_ids": [
+        "heu_003"
+      ],
+      "first_relevant_chunk_id": "heu_003",
+      "answer_text": "ID: heu_003\nname: Clear pipeline before price raise. Announce = scarcity/urgency + cashflow boost.\ndescription: Clear pipeline before price raise. Announce = scarcity/urgency + cashflow boost.\nsource_chunks: chunk_635\npriority: HIGH",
+      "label": "alex-hormozi/heuristicas",
+      "source": "reverse-join"
+    },
+    {
+      "query_id": "q003",
+      "query": "What is the specific metric or threshold for: Only 3 real objections exist in any sales conversation?",
+      "relevant_chunk_ids": [
+        "INS-AH-003"
+      ],
+      "first_relevant_chunk_id": "INS-AH-003",
+      "answer_text": "ID: INS-AH-003\nname: Only 3 real objections exist in any sales conversation\ndescription: Price (value discrepancy), Stall (need more time), Decision Maker (need to consult someone). Drill scripts for all three — nothing else matters.\nquote: There's only three, by the way, if you don't know. They are: it's price, it's stall, it's decision maker.\nsource_chunks: AH-chunk-013-02\nsource_id: AH-0013\npriority: HIGH",
+      "label": "alex-hormozi/heuristicas",
+      "source": "reverse-join"
+    },
+    {
+      "query_id": "q005",
+      "query": "What is the specific metric or threshold for: 70-20-10 Content Rule?",
+      "relevant_chunk_ids": [
+        "INS-AH-027"
+      ],
+      "first_relevant_chunk_id": "INS-AH-027",
+      "answer_text": "ID: INS-AH-027\nname: 70-20-10 Content Rule\ndescription: 70% proven formats, 20% variations of proven formats, 10% experimental. Apply at every scale — beginners often invert it.\nquote: 70% of your content should be proven: stuff that works. 20% should be variations of proven stuff. 10% should be experiments. Most creators do it backwards.\nsource_chunks: AH-chunk-018-02\nsource_id: AH-0018\npriority: HIGH",
+      "label": "alex-hormozi/heuristicas",
+      "source": "reverse-join"
+    },
+    {
+      "query_id": "q008",
+      "query": "What is the specific metric or threshold for: 30-Second Story rule — illustrate each concept in 30 seconds?",
+      "relevant_chunk_ids": [
+        "INS-AH-044"
+      ],
+      "first_relevant_chunk_id": "INS-AH-044",
+      "answer_text": "ID: INS-AH-044\nname: 30-Second Story rule — illustrate each concept in 30 seconds\ndescription: Each concept in a sales script should be illustrated by a 30-second story. Stories are memorable, relatable, and do not feel like a pitch. Long explanations kill momentum.\nquote: You're going to give a short 30-second snippet of why that's important. 30-second story. They understand it. Long explanations kill deals.\nsource_chunks: AH-chunk-013-01\nsource_id: AH-0013\npriority: HIGH",
+      "label": "alex-hormozi/heuristicas",
+      "source": "reverse-join"
+    },
+    {
+      "query_id": "q012",
+      "query": "What is the specific metric or threshold for: Promote in first 30 days — give them something to call mom about?",
+      "relevant_chunk_ids": [
+        "INS-AH-073"
+      ],
+      "first_relevant_chunk_id": "INS-AH-073",
+      "answer_text": "ID: INS-AH-073\nname: Promote in first 30 days — give them something to call mom about\ndescription: New hires should receive their first meaningful promotion or title upgrade within the first 30 days. Early wins create emotional investment and retention. People need something to be proud of quickly — a reason to call home.\nquote: Promote them in the first 30 days. Give them something to call mom about. That emotional buy-in in the first month is what keeps them.\nsource_chunks: AH-chunk-020-04\nsource_id: AH-0020\npriority: HIGH",
+      "label": "alex-hormozi/heuristicas",
+      "source": "reverse-join"
+    },
+    {
+      "query_id": "q014",
+      "query": "What is the specific metric or threshold for: Price raising: 1) home base. 2) anchor above. 3) prepayment = real price?",
+      "relevant_chunk_ids": [
+        "fra_003"
+      ],
+      "first_relevant_chunk_id": "fra_003",
+      "answer_text": "ID: fra_003\nname: Price raising: 1) home base. 2) anchor above. 3) prepayment = real price.\ndescription: Price raising: 1) home base. 2) anchor above. 3) prepayment = real price. 4) uneven splits.\nsource_chunks: chunk_634, chunk_635\npriority: HIGH",
+      "label": "alex-hormozi/frameworks",
+      "source": "reverse-join"
+    },
+    {
+      "query_id": "q019",
+      "query": "What is the specific metric or threshold for: Weekly 1-on-1 structure — Personal then Short-term then Long-term?",
+      "relevant_chunk_ids": [
+        "INS-AH-071"
+      ],
+      "first_relevant_chunk_id": "INS-AH-071",
+      "answer_text": "ID: INS-AH-071\nname: Weekly 1-on-1 structure — Personal then Short-term then Long-term\ndescription: Weekly 1-on-1 meetings with reps follow a 3-part structure. Start with personal check-in (how are you doing as a human), then short-term performance (this week's numbers and call reviews), then long-term development (career path and skill gaps). Order matters — personal first builds trust.\nquote: Start personal. Then short-term — what happened this week. Then long-term — where are you going. Always in that order. Personal first builds the trust.\nsource_chunks: AH-chunk-020-03\nsource_id: AH-0020\npriority: HIGH",
+      "label": "alex-hormozi/frameworks",
+      "source": "reverse-join"
+    },
+    {
+      "query_id": "q020",
+      "query": "What is the specific metric or threshold for: No-based upsell: 'You don't want anything else?' = 95% acceptance rate?",
+      "relevant_chunk_ids": [
+        "met_001"
+      ],
+      "first_relevant_chunk_id": "met_001",
+      "answer_text": "ID: met_001\nname: No-based upsell: 'You don't want anything else?' = 95% acceptance rate.\ndescription: No-based upsell: 'You don't want anything else?' = 95% acceptance rate.\nsource_chunks: chunk_633\npriority: HIGH",
+      "label": "alex-hormozi/metodologias",
+      "source": "reverse-join"
+    },
+    {
+      "query_id": "q022",
+      "query": "What is the specific metric or threshold for: 14-Day Onboarding Ramp for new sales reps?",
+      "relevant_chunk_ids": [
+        "INS-AH-014"
+      ],
+      "first_relevant_chunk_id": "INS-AH-014",
+      "answer_text": "ID: INS-AH-014\nname: 14-Day Onboarding Ramp for new sales reps\ndescription: Days 1-3: product knowledge. Days 4-7: script mastery. Days 8-14: live calls with coaching. No solo calls until day 8 minimum.\nquote: The ramp period for a new rep is 14 days. First week is learning the product and script until they can recite it. Second week is live calls with oversight.\nsource_chunks: AH-chunk-010-01\nsource_id: AH-0010\npriority: HIGH",
+      "label": "alex-hormozi/metodologias",
+      "source": "reverse-join"
+    },
+    {
+      "query_id": "q029",
+      "query": "What is the specific metric or threshold for: 2-week onramp with 3 milestones (script then recaps then close/objection)?",
+      "relevant_chunk_ids": [
+        "INS-AH-077"
+      ],
+      "first_relevant_chunk_id": "INS-AH-077",
+      "answer_text": "ID: INS-AH-077\nname: 2-week onramp with 3 milestones (script then recaps then close/objection)\ndescription: New sales rep onboarding runs exactly 2 weeks with 3 clear milestones. Week 1 milestone — pass script recitation test. Week 1.5 milestone — demonstrate proper call recaps. Week 2 milestone — pass close and objection handling drill. Each milestone is binary pass/fail with no partial credit.\nquote: Two weeks. Three milestones. First, recite the script cold. Second, show me proper recaps. Third, close me and handle my objections. Pass or fail. No gray area.\nsource_chunks: AH-chunk-020-04, AH-chunk-020-05\nsource_id: AH-0020\npriority: HIGH",
+      "label": "alex-hormozi/metodologias",
+      "source": "reverse-join"
+    },
+    {
+      "query_id": "q030",
+      "query": "What is the specific metric or threshold for: 3 question types — yes-based, neutral, no-based?",
+      "relevant_chunk_ids": [
+        "INS-AH-007"
+      ],
+      "first_relevant_chunk_id": "INS-AH-007",
+      "answer_text": "ID: INS-AH-007\nname: 3 question types — yes-based, neutral, no-based\ndescription: Three question types for sales conversations. No-based questions are most powerful because they eliminate decision fatigue and feel safe to answer.\nquote: A yes-based question would be 'Sound great?' A neutral type would be 'Fair enough?' And the no-based: 'Would you be opposed to moving forward today?'\nsource_chunks: AH-chunk-015-01\nsource_id: AH-0015\npriority: HIGH",
+      "label": "alex-hormozi/modelos-mentais",
+      "source": "reverse-join"
+    },
+    {
+      "query_id": "q038",
+      "query": "What is the specific metric or threshold for: 99/100 pricing fear is in your head, not the market?",
+      "relevant_chunk_ids": [
+        "fil_002"
+      ],
+      "first_relevant_chunk_id": "fil_002",
+      "answer_text": "ID: fil_002\nname: 99/100 pricing fear is in your head, not the market.\ndescription: 99/100 pricing fear is in your head, not the market.\nsource_chunks: chunk_634\npriority: MEDIUM",
+      "label": "alex-hormozi/filosofias",
+      "source": "reverse-join"
+    },
+    {
+      "query_id": "fwd-liam-ottley-001",
+      "query": "How does 'Liam Ottley points out a massive market gap where only 12% of workers have received any AI training, presenting a significant opportunity for those who acquire these skills.' work in practice?",
+      "relevant_chunk_ids": [
+        "heu_002"
+      ],
+      "first_relevant_chunk_id": "heu_002",
+      "answer_text": "ID: heu_002\nname: Liam Ottley points out a massive market gap where only 12% of workers have received any AI training, presenting a significant opportunity for those who acquire these skills.\ndescription: Liam Ottley points out a massive market gap where only 12% of workers have received any AI training, presenting a significant opportunity for those who acquire these skills.\nsource_insight_ids: INS-LO-B01-009\nchunk_refs: chunk_4\nlast_updated: 2026-06-01T20:49:50Z",
+      "label": "liam-ottley/heuristicas",
+      "source": "forward-gen"
+    },
+    {
+      "query_id": "fwd-liam-ottley-002",
+      "query": "How does 'Providing an AI agent with access to specific external knowledge can enhance its ability to perform specialized tasks.' work in practice?",
+      "relevant_chunk_ids": [
+        "heu_004"
+      ],
+      "first_relevant_chunk_id": "heu_004",
+      "answer_text": "ID: heu_004\nname: Providing an AI agent with access to specific external knowledge can enhance its ability to perform specialized tasks.\ndescription: Providing an AI agent with access to specific external knowledge can enhance its ability to perform specialized tasks.\nsource_insight_ids: INS-LO-B02-003\nchunk_refs: chunk_5\nlast_updated: 2026-06-01T20:49:50Z",
+      "label": "liam-ottley/heuristicas",
+      "source": "forward-gen"
+    },
+    {
+      "query_id": "fwd-liam-ottley-003",
+      "query": "How does 'Use pre-made integrations and custom-made tools to expand the functionality of AI agents effectively.' work in practice?",
+      "relevant_chunk_ids": [
+        "heu_005"
+      ],
+      "first_relevant_chunk_id": "heu_005",
+      "answer_text": "ID: heu_005\nname: Use pre-made integrations and custom-made tools to expand the functionality of AI agents effectively.\ndescription: Use pre-made integrations and custom-made tools to expand the functionality of AI agents effectively.\nsource_insight_ids: INS-LO-B03-002\nchunk_refs: chunk_3\nlast_updated: 2026-06-01T20:49:50Z",
+      "label": "liam-ottley/heuristicas",
+      "source": "forward-gen"
+    },
+    {
+      "query_id": "fwd-jeremy-haynes-004",
+      "query": "How does 'Mastering cold paid advertising is essential for significantly increasing revenue.' work in practice?",
+      "relevant_chunk_ids": [
+        "heu_006"
+      ],
+      "first_relevant_chunk_id": "heu_006",
+      "answer_text": "ID: heu_006\nname: Mastering cold paid advertising is essential for significantly increasing revenue.\ndescription: Mastering cold paid advertising is essential for significantly increasing revenue.\nsource_insight_ids: INS-JH-B07-001\nchunk_refs: chunk_1\nlast_updated: 2026-06-01T02:36:43Z",
+      "label": "jeremy-haynes/heuristicas",
+      "source": "forward-gen"
+    },
+    {
+      "query_id": "fwd-jeremy-haynes-005",
+      "query": "How does 'Refunds are issued based on belief in the client's potential; if belief wavers, it may lead to a refund or reassignment to a lower-tier program.' work in practice?",
+      "relevant_chunk_ids": [
+        "heu_007"
+      ],
+      "first_relevant_chunk_id": "heu_007",
+      "answer_text": "ID: heu_007\nname: Refunds are issued based on belief in the client's potential; if belief wavers, it may lead to a refund or reassignment to a lower-tier program.\ndescription: Refunds are issued based on belief in the client's potential; if belief wavers, it may lead to a refund or reassignment to a lower-tier program.\nsource_insight_ids: INS-JH-B08-002\nchunk_refs: chunk_2\nlast_updated: 2026-06-01T02:36:43Z",
+      "label": "jeremy-haynes/heuristicas",
+      "source": "forward-gen"
+    },
+    {
+      "query_id": "fwd-jeremy-haynes-006",
+      "query": "How does 'Stay updated with evolving paid advertising techniques to remain competitive.' work in practice?",
+      "relevant_chunk_ids": [
+        "heu_008"
+      ],
+      "first_relevant_chunk_id": "heu_008",
+      "answer_text": "ID: heu_008\nname: Stay updated with evolving paid advertising techniques to remain competitive.\ndescription: Stay updated with evolving paid advertising techniques to remain competitive.\nsource_insight_ids: INS-JH-B09-001\nchunk_refs: chunk_1\nlast_updated: 2026-06-01T02:36:43Z",
+      "label": "jeremy-haynes/heuristicas",
+      "source": "forward-gen"
+    },
+    {
+      "query_id": "fwd-cole-gordon-007",
+      "query": "How does 'Intervening to reset a prospect's low goals demonstrates active listening and presence, which fosters greater honesty and candidness throughout the sales conversation.' work in practice?",
+      "relevant_chunk_ids": [
+        "heu_009"
+      ],
+      "first_relevant_chunk_id": "heu_009",
+      "answer_text": "ID: heu_009\nname: Intervening to reset a prospect's low goals demonstrates active listening and presence, which fosters greater honesty and candidness throughout the sales conversation.\ndescription: Intervening to reset a prospect's low goals demonstrates active listening and presence, which fosters greater honesty and candidness throughout the sales conversation.\nsource_insight_ids: INS-CG-B02-007\nchunk_refs: chunk_4\nlast_updated: 2026-05-29T22:10:15Z",
+      "label": "cole-gordon/heuristicas",
+      "source": "forward-gen"
+    },
+    {
+      "query_id": "fwd-cole-gordon-008",
+      "query": "How does 'Be prepared to challenge inflated or generalized claims from prospects, such as revenue figures, by asking for specific, recent data to uncover the true situation.' work in practice?",
+      "relevant_chunk_ids": [
+        "heu_010"
+      ],
+      "first_relevant_chunk_id": "heu_010",
+      "answer_text": "ID: heu_010\nname: Be prepared to challenge inflated or generalized claims from prospects, such as revenue figures, by asking for specific, recent data to uncover the true situation.\ndescription: Be prepared to challenge inflated or generalized claims from prospects, such as revenue figures, by asking for specific, recent data to uncover the true situation.\nsource_insight_ids: INS-CG-B02-009\nchunk_refs: chunk_5\nlast_updated: 2026-05-29T22:10:15Z",
+      "label": "cole-gordon/heuristicas",
+      "source": "forward-gen"
+    },
+    {
+      "query_id": "fwd-cole-gordon-009",
+      "query": "How does 'Prevent objections by creating a dynamic where prospects feel compelled to be honest and cannot mislead you, rather than relying on memorized rebuttals.' work in practice?",
+      "relevant_chunk_ids": [
+        "heu_011"
+      ],
+      "first_relevant_chunk_id": "heu_011",
+      "answer_text": "ID: heu_011\nname: Prevent objections by creating a dynamic where prospects feel compelled to be honest and cannot mislead you, rather than relying on memorized rebuttals.\ndescription: Prevent objections by creating a dynamic where prospects feel compelled to be honest and cannot mislead you, rather than relying on memorized rebuttals.\nsource_insight_ids: INS-CG-B02-011\nchunk_refs: chunk_6\nlast_updated: 2026-05-29T22:10:15Z",
+      "label": "cole-gordon/heuristicas",
+      "source": "forward-gen"
+    },
+    {
+      "query_id": "fwd-jordan-lee-010",
+      "query": "How does 'Framework de Consequencias com Metricas' work in practice?",
+      "relevant_chunk_ids": [
+        "INS-JL-019"
+      ],
+      "first_relevant_chunk_id": "INS-JL-019",
+      "answer_text": "ID: INS-JL-019\nnome: Framework de Consequencias com Metricas\ndescricao: Abaixo de 70% da meta por 2 meses = warning formal. 3 meses = desligamento. Acima de 100% = double commission. Acima de 150% por 6+ meses = Million Dollar Club.\nquote: Below 70% target for 2 consecutive months: formal warning. Below 70% for 3 months: termination\nchunk_ids: chunk_712, chunk_JL_017\npriority: HIGH\nconfidence: HIGH",
+      "label": "jordan-lee/heuristicas",
+      "source": "forward-gen"
+    },
+    {
+      "query_id": "fwd-jordan-lee-011",
+      "query": "How does 'Compensacao Agressiva para Top Performers' work in practice?",
+      "relevant_chunk_ids": [
+        "INS-JL-020"
+      ],
+      "first_relevant_chunk_id": "INS-JL-020",
+      "answer_text": "ID: INS-JL-020\nnome: Compensacao Agressiva para Top Performers\ndescricao: Top closers fazem $45-50k/mes com double commission. Top 10% recebe comissao dupla. Closer medio faz $8-12k/mes.\nquote: Top sales reps can make $45-50k/month. Double commissions, Million-dollar club incentives\nchunk_ids: chunk_711, chunk_JL_033\npriority: HIGH\nconfidence: HIGH",
+      "label": "jordan-lee/heuristicas",
+      "source": "forward-gen"
+    },
+    {
+      "query_id": "fwd-jordan-lee-012",
+      "query": "How does '300 Calls/Dia com Foco em Qualidade' work in practice?",
+      "relevant_chunk_ids": [
+        "INS-JL-021"
+      ],
+      "first_relevant_chunk_id": "INS-JL-021",
+      "answer_text": "ID: INS-JL-021\nnome: 300 Calls/Dia com Foco em Qualidade\ndescricao: 300 calls/dia com 70 closers = ~4.3 calls por closer. Foco em qualidade, nao volume bruto.\nquote: 300 sales calls per day capacity with 70 sales reps\nchunk_ids: chunk_701, chunk_702, chunk_JL_016\npriority: HIGH\nconfidence: HIGH",
+      "label": "jordan-lee/heuristicas",
+      "source": "forward-gen"
+    },
+    {
+      "query_id": "fwd-kai-bax-013",
+      "query": "How does 'Longer job ads can attract more qualified candidates, so consider expanding your ad copy.' work in practice?",
+      "relevant_chunk_ids": [
+        "heu_012"
+      ],
+      "first_relevant_chunk_id": "heu_012",
+      "answer_text": "ID: heu_012\nname: Longer job ads can attract more qualified candidates, so consider expanding your ad copy.\ndescription: Longer job ads can attract more qualified candidates, so consider expanding your ad copy.\nsource_insight_ids: INS-KB-B08-002\nchunk_refs: chunk_1\nlast_updated: 2026-06-05T01:39:45Z",
+      "label": "kai-bax/heuristicas",
+      "source": "forward-gen"
+    },
+    {
+      "query_id": "fwd-kai-bax-014",
+      "query": "How does 'A signing bonus can be an effective strategy to attract candidates who are undecided about joining.' work in practice?",
+      "relevant_chunk_ids": [
+        "heu_013"
+      ],
+      "first_relevant_chunk_id": "heu_013",
+      "answer_text": "ID: heu_013\nname: A signing bonus can be an effective strategy to attract candidates who are undecided about joining.\ndescription: A signing bonus can be an effective strategy to attract candidates who are undecided about joining.\nsource_insight_ids: INS-KB-B08-005\nchunk_refs: chunk_4\nlast_updated: 2026-06-05T01:39:45Z",
+      "label": "kai-bax/heuristicas",
+      "source": "forward-gen"
+    },
+    {
+      "query_id": "fwd-kai-bax-015",
+      "query": "How does 'Utilize multiple sourcing channels for job advertisements to maximize visibility and candidate volume.' work in practice?",
+      "relevant_chunk_ids": [
+        "heu_014"
+      ],
+      "first_relevant_chunk_id": "heu_014",
+      "answer_text": "ID: heu_014\nname: Utilize multiple sourcing channels for job advertisements to maximize visibility and candidate volume.\ndescription: Utilize multiple sourcing channels for job advertisements to maximize visibility and candidate volume.\nsource_insight_ids: INS-KB-B09-001\nchunk_refs: chunk_?, chunk_?, chunk_?\nlast_updated: 2026-06-05T01:39:45Z",
+      "label": "kai-bax/heuristicas",
+      "source": "forward-gen"
+    },
+    {
+      "query_id": "fwd-benchmarking-acme-016",
+      "query": "How does 'An outreach 'playbook' should stop as soon as a prospect responds (yes, no, or neutral) to avoid being perceived as a spammer.' work in practice?",
+      "relevant_chunk_ids": [
+        "heu_015"
+      ],
+      "first_relevant_chunk_id": "heu_015",
+      "answer_text": "ID: heu_015\nname: An outreach 'playbook' should stop as soon as a prospect responds (yes, no, or neutral) to avoid being perceived as a spammer.\ndescription: An outreach 'playbook' should stop as soon as a prospect responds (yes, no, or neutral) to avoid being perceived as a spammer.\nsource_insight_ids: INS-BB-B06-002\nchunk_refs: chunk_1\nlast_updated: 2026-06-12T04:11:42Z",
+      "label": "benchmarking-acme/heuristicas",
+      "source": "forward-gen"
+    },
+    {
+      "query_id": "fwd-benchmarking-acme-017",
+      "query": "How does 'An automated outreach playbook should immediately stop once a response is received, regardless of the response type, to optimize effort and avoid spamming.' work in practice?",
+      "relevant_chunk_ids": [
+        "heu_016"
+      ],
+      "first_relevant_chunk_id": "heu_016",
+      "answer_text": "ID: heu_016\nname: An automated outreach playbook should immediately stop once a response is received, regardless of the response type, to optimize effort and avoid spamming.\ndescription: An automated outreach playbook should immediately stop once a response is received, regardless of the response type, to optimize effort and avoid spamming.\nsource_insight_ids: INS-BB-B06-004\nchunk_refs: chunk_2\nlast_updated: 2026-06-12T04:11:42Z",
+      "label": "benchmarking-acme/heuristicas",
+      "source": "forward-gen"
+    },
+    {
+      "query_id": "fwd-benchmarking-acme-018",
+      "query": "How does 'The team uses 'BAMs' (presumably Qualified Call Bookings) as a key metric to measure the success of their outreach efforts.' work in practice?",
+      "relevant_chunk_ids": [
+        "heu_017"
+      ],
+      "first_relevant_chunk_id": "heu_017",
+      "answer_text": "ID: heu_017\nname: The team uses 'BAMs' (presumably Qualified Call Bookings) as a key metric to measure the success of their outreach efforts.\ndescription: The team uses 'BAMs' (presumably Qualified Call Bookings) as a key metric to measure the success of their outreach efforts.\nsource_insight_ids: INS-BB-B06-008\nchunk_refs: chunk_3\nlast_updated: 2026-06-12T04:11:42Z",
+      "label": "benchmarking-acme/heuristicas",
+      "source": "forward-gen"
+    },
+    {
+      "query_id": "fwd-jake-van-clief-019",
+      "query": "How does 'You should automate your prompt processes to streamline outputs and reduce manual input.' work in practice?",
+      "relevant_chunk_ids": [
+        "heu_018"
+      ],
+      "first_relevant_chunk_id": "heu_018",
+      "answer_text": "ID: heu_018\nname: You should automate your prompt processes to streamline outputs and reduce manual input.\ndescription: You should automate your prompt processes to streamline outputs and reduce manual input.\nsource_insight_ids: INS-JV-B43-001\nchunk_refs: chunk_?\nlast_updated: 2026-06-23T17:53:57Z",
+      "label": "jake-van-clief/heuristicas",
+      "source": "forward-gen"
+    },
+    {
+      "query_id": "fwd-jake-van-clief-020",
+      "query": "How does 'Utilize structured prompts to streamline the research and writing process for content creation.' work in practice?",
+      "relevant_chunk_ids": [
+        "heu_019"
+      ],
+      "first_relevant_chunk_id": "heu_019",
+      "answer_text": "ID: heu_019\nname: Utilize structured prompts to streamline the research and writing process for content creation.\ndescription: Utilize structured prompts to streamline the research and writing process for content creation.\nsource_insight_ids: INS-JV-B44-001\nchunk_refs: chunk_1\nlast_updated: 2026-06-23T17:53:57Z",
+      "label": "jake-van-clief/heuristicas",
+      "source": "forward-gen"
+    },
+    {
+      "query_id": "fwd-jake-van-clief-021",
+      "query": "How does 'Leverage the Interpretable Context Methodology (ICM) to streamline interactions with AI agents and improve control over workflows.' work in practice?",
+      "relevant_chunk_ids": [
+        "fra_001"
+      ],
+      "first_relevant_chunk_id": "fra_001",
+      "answer_text": "ID: fra_001\nname: Leverage the Interpretable Context Methodology (ICM) to streamline interactions with AI agents and improve control over workflows.\ndescription: Leverage the Interpretable Context Methodology (ICM) to streamline interactions with AI agents and improve control over workflows.\nsource_insight_ids: INS-JV-B01-002\nchunk_refs: chunk_?\nlast_updated: 2026-06-23T17:53:57Z",
+      "label": "jake-van-clief/frameworks",
+      "source": "forward-gen"
+    },
+    {
+      "query_id": "fwd-ux-unicórnio-022",
+      "query": "How does 'Manter a integridade da página durante a alteração do produto é crucial para evitar bugs e perda de configurações.' work in practice?",
+      "relevant_chunk_ids": [
+        "heu_020"
+      ],
+      "first_relevant_chunk_id": "heu_020",
+      "answer_text": "ID: heu_020\nname: Manter a integridade da página durante a alteração do produto é crucial para evitar bugs e perda de configurações.\ndescription: Manter a integridade da página durante a alteração do produto é crucial para evitar bugs e perda de configurações.\nsource_insight_ids: INS-UU-B18-001\nchunk_refs: chunk_1\nlast_updated: 2026-06-17T03:15:11Z",
+      "label": "ux-unicórnio/heuristicas",
+      "source": "forward-gen"
+    },
+    {
+      "query_id": "fwd-ux-unicórnio-023",
+      "query": "How does 'Melhore a usabilidade eliminando etapas intermediárias para acessar componentes diretamente na mesma tela.' work in practice?",
+      "relevant_chunk_ids": [
+        "heu_021"
+      ],
+      "first_relevant_chunk_id": "heu_021",
+      "answer_text": "ID: heu_021\nname: Melhore a usabilidade eliminando etapas intermediárias para acessar componentes diretamente na mesma tela.\ndescription: Melhore a usabilidade eliminando etapas intermediárias para acessar componentes diretamente na mesma tela.\nsource_insight_ids: INS-UU-B20-001\nchunk_refs: chunk_?\nlast_updated: 2026-06-17T03:15:11Z",
+      "label": "ux-unicórnio/heuristicas",
+      "source": "forward-gen"
+    },
+    {
+      "query_id": "fwd-ux-unicórnio-024",
+      "query": "How does 'Para a gestão eficaz do inventário de produtos físicos, é crucial manter informações detalhadas sobre frete e disponibilidade.' work in practice?",
+      "relevant_chunk_ids": [
+        "heu_022"
+      ],
+      "first_relevant_chunk_id": "heu_022",
+      "answer_text": "ID: heu_022\nname: Para a gestão eficaz do inventário de produtos físicos, é crucial manter informações detalhadas sobre frete e disponibilidade.\ndescription: Para a gestão eficaz do inventário de produtos físicos, é crucial manter informações detalhadas sobre frete e disponibilidade.\nsource_insight_ids: INS-UU-B21-002\nchunk_refs: chunk_2\nlast_updated: 2026-06-17T03:15:11Z",
+      "label": "ux-unicórnio/heuristicas",
+      "source": "forward-gen"
+    },
+    {
+      "query_id": "fwd-process-architect-025",
+      "query": "How does '1 Tarefa = 1 Responsável' work in practice?",
+      "relevant_chunk_ids": [
+        "HEU-PV-001"
+      ],
+      "first_relevant_chunk_id": "HEU-PV-001",
+      "answer_text": "ID: HEU-PV-001\nnome: 1 Tarefa = 1 Responsável\ndescricao: Se precisam de 2 pessoas, não quebrou o suficiente. Dividir até chegar em tarefa atômica.\ncitacao: Se precisam de duas pessoas para fazer, é porque não quebrou o suficiente.\nthreshold: 2 pessoas = tarefa precisa ser dividida\nchunks: chunk_416\nsource: MEET-0039\nconfianca: HIGH",
+      "label": "process-architect/heuristicas",
+      "source": "forward-gen"
+    },
+    {
+      "query_id": "fwd-process-architect-026",
+      "query": "How does 'Regra dos 3 Segundos' work in practice?",
+      "relevant_chunk_ids": [
+        "HEU-PV-002"
+      ],
+      "first_relevant_chunk_id": "HEU-PV-002",
+      "answer_text": "ID: HEU-PV-002\nnome: Regra dos 3 Segundos\ndescricao: Nos primeiros 3-5 segundos de um criativo, o thumb stopping precisa estar ativo ou o scroll continua.\ncitacao: Na parte de edição, a regra de 3 segundos.\nthreshold: 3-5 segundos iniciais\nchunks: chunk_407\nsource: MEET-0032\nconfianca: HIGH",
+      "label": "process-architect/heuristicas",
+      "source": "forward-gen"
+    },
+    {
+      "query_id": "fwd-process-architect-027",
+      "query": "How does 'Triple-Triple Growth' work in practice?",
+      "relevant_chunk_ids": [
+        "HEU-PV-003"
+      ],
+      "first_relevant_chunk_id": "HEU-PV-003",
+      "answer_text": "ID: HEU-PV-003\nnome: Triple-Triple Growth\ndescricao: Crescimento 3x por ano sustentável. Acima de 72M, mercado satura.\ncitacao: 2022 foi um milhão, 2023 três milhões, 2024 nove milhões.\nthreshold: 3x/ano até ~72M\nchunks: chunk_411\nsource: MEET-0034\nconfianca: HIGH",
+      "label": "process-architect/heuristicas",
+      "source": "forward-gen"
+    },
+    {
+      "query_id": "fwd-ryan-deiss-028",
+      "query": "How does 'A 'growth engine' is defined as a visual representation of the entire customer acquisition process, from initial awareness to final sale.' work in practice?",
+      "relevant_chunk_ids": [
+        "fra_002"
+      ],
+      "first_relevant_chunk_id": "fra_002",
+      "answer_text": "ID: fra_002\nname: A 'growth engine' is defined as a visual representation of the entire customer acquisition process, from initial awareness to final sale.\ndescription: A 'growth engine' is defined as a visual representation of the entire customer acquisition process, from initial awareness to final sale.\nsource_insight_ids: INS-RD-B01-006\nchunk_refs: chunk_3\nlast_updated: 2026-05-29T13:31:40Z",
+      "label": "ryan-deiss/frameworks",
+      "source": "forward-gen"
+    },
+    {
+      "query_id": "fwd-ryan-deiss-029",
+      "query": "How does 'Design a 'growth engine' around a specific flagship offer, utilizing multiple advertising channels (e.g., Facebook, Google, radio) to generate inbound leads for that particular offer.' work in practice?",
+      "relevant_chunk_ids": [
+        "fra_004"
+      ],
+      "first_relevant_chunk_id": "fra_004",
+      "answer_text": "ID: fra_004\nname: Design a 'growth engine' around a specific flagship offer, utilizing multiple advertising channels (e.g., Facebook, Google, radio) to generate inbound leads for that particular offer.\ndescription: Design a 'growth engine' around a specific flagship offer, utilizing multiple advertising channels (e.g., Facebook, Google, radio) to generate inbound leads for that particular offer.\nsource_insight_ids: INS-RD-B03-006\nchunk_refs: chunk_?\nlast_updated: 2026-05-29T13:31:40Z",
+      "label": "ryan-deiss/frameworks",
+      "source": "forward-gen"
+    },
+    {
+      "query_id": "fwd-ryan-deiss-030",
+      "query": "How does 'The complete customer journey can be conceptualized as a 'growth engine' (acquisition) that transitions into a 'fulfillment engine' (delivery and retention).' work in practice?",
+      "relevant_chunk_ids": [
+        "fra_005"
+      ],
+      "first_relevant_chunk_id": "fra_005",
+      "answer_text": "ID: fra_005\nname: The complete customer journey can be conceptualized as a 'growth engine' (acquisition) that transitions into a 'fulfillment engine' (delivery and retention).\ndescription: The complete customer journey can be conceptualized as a 'growth engine' (acquisition) that transitions into a 'fulfillment engine' (delivery and retention).\nsource_insight_ids: INS-RD-B04-006\nchunk_refs: chunk_?\nlast_updated: 2026-05-29T13:31:40Z",
+      "label": "ryan-deiss/frameworks",
+      "source": "forward-gen"
+    }
+  ]
+}

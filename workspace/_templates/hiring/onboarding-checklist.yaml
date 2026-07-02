@@ -1,0 +1,119 @@
+---
+# ONBOARDING-CHECKLIST.YAML - New hire onboarding plan
+# Adapted from mega-brain-stage pattern for Mega Brain workspace context
+
+_meta:
+  version: "1.0.0"
+  owner: "people-ops"
+  target_layer: "L4-operational"
+  state: "TEMPLATE"
+
+metadata:
+  canonical_scope: "workspace/_templates/hiring/onboarding-checklist.yaml"
+  owner: "coo"
+  version: "1.0.0"
+  last_updated: "2026-03-23"
+  description: "Onboarding checklist with day 1, week 1, and month 1 tasks, tools access, and mentor assignment"
+
+fields:
+  new_hire_name:
+    type: string
+    required: true
+    description: "Name of the new hire"
+
+  role:
+    type: string
+    required: true
+    description: "Job title of the new hire"
+
+  department:
+    type: string
+    required: true
+    description: "Department the new hire is joining"
+
+  start_date:
+    type: date
+    required: true
+    description: "First day of work"
+
+  manager:
+    type: string
+    required: true
+    description: "Direct manager name"
+
+  mentor:
+    type: object
+    required: false
+    description: "Assigned onboarding buddy or mentor"
+    properties:
+      name:
+        type: string
+        required: true
+        description: "Mentor name"
+      role:
+        type: string
+        required: true
+        description: "Mentor role in the organization"
+      check_in_cadence:
+        type: string
+        required: false
+        description: "How often mentor and new hire meet (e.g., daily first week, weekly after)"
+
+  day_1_tasks:
+    type: list
+    required: true
+    description: "Tasks to complete on day 1 (e.g., sign docs, setup workstation, meet team, first standup)"
+
+  week_1_tasks:
+    type: list
+    required: true
+    description: "Tasks to complete by end of week 1 (e.g., complete orientation, read SOPs, shadow colleagues)"
+
+  month_1_tasks:
+    type: list
+    required: true
+    description: "Tasks to complete by end of month 1 (e.g., complete first deliverable, 1:1 with key stakeholders)"
+
+  tools_access:
+    type: list
+    required: true
+    description: "Systems and tools the new hire needs access to, each with tool name, access level, and provisioned status"
+
+  training_plan:
+    type: list
+    required: false
+    description: "Training sessions or materials the new hire should complete, with topic and deadline"
+
+  key_meetings:
+    type: list
+    required: false
+    description: "Important meetings to schedule in the first 30 days (1:1s, team introductions, stakeholder meet-and-greets)"
+
+  success_milestones:
+    type: object
+    required: false
+    description: "Clear expectations for the onboarding period"
+    properties:
+      day_30:
+        type: string
+        required: true
+        description: "What success looks like at 30 days"
+      day_60:
+        type: string
+        required: false
+        description: "What success looks like at 60 days"
+      day_90:
+        type: string
+        required: true
+        description: "What success looks like at 90 days"
+
+  feedback_checkpoints:
+    type: list
+    required: false
+    description: "Scheduled feedback sessions during onboarding (dates and format)"
+
+  onboarding_status:
+    type: enum
+    required: true
+    description: "Overall onboarding progress"
+    options: [not-started, in-progress, complete]

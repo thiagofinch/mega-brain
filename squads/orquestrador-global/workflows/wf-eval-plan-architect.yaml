@@ -1,0 +1,133 @@
+# Workflow: wf-eval-plan-architect
+# Story: STORY-PA-6.2 (Part A — Framework Setup)
+# Orchestration shim — delegates to skill-tester squad agents (REUSE per Prior-Art FOUND_ALREADY_DONE)
+# Consumer: operator (manual invocation), wf-plan-quality-loop (BL-2 backlog)
+
+schema_version: "1.0"
+workflow_id: wf-eval-plan-architect
+title: "Eval plan-architect via Golden Set + skill-tester REUSE"
+mission: |
+  Avalia qualidade dos planos emitidos pelo plan-architect contra o Golden Set
+  (10 demands G1-G10) usando rubric de 7 dim. Cross-eval automatizado +
+  human eval operator. Resolve Opus vs Sonnet defaults via ADR-PA-001.
+
+owner_squad: orquestrador-global
+delegates_to: skill-tester
+plan_only: false   # eval EXECUTES real model calls — gated by budget caps
+
+# ───────────────────────────────────────────────────────────────────────────────
+# PRE-FLIGHT GATES (cumulative — todos blocking)
+# ───────────────────────────────────────────────────────────────────────────────
+preflight_gates:
+  - id: PG1
+    name: "skill-tester active"
+    check: "squads/skill-tester/config.yaml status = active (não deprecated/refactoring/migrating)"
+    blocking: true
+  - id: PG2
+    name: "plan-architect operational"
+    check: "PA-6.1 Done; agents/plan-architect.md exists; entry_agent: plan-architect in config.yaml"
+    blocking: true
+  - id: PG3
+    name: "PoC G2 success"
+    check: "docs/stories/epic-plan-architect/poc-evidence/PA-6.2-skill-tester-reuse-poc.md committed"
+    blocking: true
+  - id: PG4
+    name: "Cost pre-flight < $150 (B1)"
+    check: "estimate-cost.js sum across 30+24 plans < 150 USD with current pricing-snapshot.yaml"
+    blocking: true
+  - id: PG5
+    name: "operator GO Part B (B3)"
+    check: "explicit text approval from operator in story comment or handoff"
+    blocking: true
+
+# ───────────────────────────────────────────────────────────────────────────────
+# PARTS
+# ───────────────────────────────────────────────────────────────────────────────
+parts:
+
+  - id: A
+    name: "Framework Setup"
+    status: complete   # delivered as part of STORY-PA-6.2 inline implementation
+    deliverables:
+      - data/golden-set.yaml (10 demands G1-G10)
+      - knowledge/PLAN-QUALITY-RUBRIC.md (7 dimensions)
+      - workflows/wf-eval-plan-architect.yaml (this file)
+    delegates_to_skill_tester: false
+
+  - id: B
+    name: "Run Golden Set (Opus vs Sonnet)"
+    status: blocked_pending_approval
+    blocking_gate: PG5
+    delegates_to_skill_tester: true
+    sub_steps:
+      - skill-tester/eval-chief receives golden-set + rubric
+      - skill-tester/test-runner executes 10 × 3 configs = 30 plans
+      - variance test 4 critical demands × 2 models × 3 seeds = 24 extra plans
+      - skill-tester/quality-judge cross-eval (sonnet→opus, opus→sonnet, opus→hybrid)
+      - kill-switch B2 enforced ($200 ceiling)
+    estimated_cost_usd: ~110-130
+    estimated_duration_hours: 1-2 (model calls + ~3h human eval operator)
+
+  - id: C
+    name: "ADR-PA-001 publish"
+    status: blocked_pending_part_b
+    blocking_gate: part_b_complete
+    delegates_to_skill_tester: false
+    deliverables:
+      - docs/adrs/ADR-PA-001-plan-architect-model-defaults.md (decision record)
+      - data/model-tier-defaults.yaml (final defaults per mode)
+      - data/scoring-weights.yaml updated (calibrated post-eval)
+    sub_steps:
+      - resolve hypotheses H1-H5 from eval-framework.md §2
+      - publish Pareto chart (cost × quality)
+      - publish variance analysis
+      - publish auto-bias detection results
+
+# ───────────────────────────────────────────────────────────────────────────────
+# BUDGET CAPS (B1-B4)
+# ───────────────────────────────────────────────────────────────────────────────
+budget_caps:
+  B1_pre_flight_estimate_usd: 150
+  B2_kill_switch_usd: 200
+  B3_rafael_go_required: true
+  B4_pricing_snapshot_required: true
+
+# ───────────────────────────────────────────────────────────────────────────────
+# SKILL-TESTER REUSE CONTRACT (FOUND_ALREADY_DONE per Prior-Art)
+# ───────────────────────────────────────────────────────────────────────────────
+skill_tester_agents_used:
+  - id: skill-tester/eval-chief
+    role: "Entry-point — receives Golden Set + rubric, orchestrates execution"
+  - id: skill-tester/test-runner
+    role: "Execute 10 demands × 3 configs = 30 plans + variance test 24 extra"
+  - id: skill-tester/quality-judge
+    role: "Cross-eval scoring (sonnet→opus, opus→sonnet, opus→hybrid) + auto-bias detection"
+
+# ───────────────────────────────────────────────────────────────────────────────
+# OUTPUTS (Part B, when authorized)
+# ───────────────────────────────────────────────────────────────────────────────
+outputs_part_b:
+  - path: outputs/eval/plan-architect/{date}/G{i}-{config}.yaml
+    type: per-demand-per-config
+    count: 30 + 24 = 54
+  - path: outputs/eval/plan-architect/{date}/dashboard.md
+    type: aggregate-dashboard
+  - path: outputs/eval/plan-architect/{date}/human-eval-operator.yaml
+    type: human-scores
+
+outputs_part_c:
+  - path: docs/adrs/ADR-PA-001-plan-architect-model-defaults.md
+  - path: squads/orquestrador-global/data/model-tier-defaults.yaml
+  - path: squads/orquestrador-global/data/scoring-weights.yaml (UPDATE)
+megabrain_validation:
+  last_run: "20260514-validate-deep"
+  validated_at: "2026-05-15T00:00:00Z"
+  validator: mega-brain/megabrain-chief
+  mode: deep
+  squad: orquestrador-global
+  workflow_id: "wf-eval-plan-architect"
+  status: pass
+  evidence:
+    - workflow_inventory_registered
+    - orchestration_surface_validated
+    - external_execution_not_performed

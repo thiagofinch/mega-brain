@@ -1,0 +1,186 @@
+# Presets — Mega Brain Roundtable
+# Adapted from mega-brain v2.1.0 + mega-brain specific presets
+# Version: 1.0.0
+#
+# Schema: presets
+#   <preset_id>:                   # string — unique preset identifier (snake_case)
+#     agents: string[]             # REQUIRED — ordered list of agent refs (@agent-name) for this preset
+#     suggested_mode: string       # REQUIRED — one of: review | decision | gap_analysis | investigation | strategic | audit
+#     flags: string[]              # OPTIONAL — CLI-style flags (e.g., "--extended", "--fast") that modify behavior
+#     description: string          # OPTIONAL — human-readable description
+
+presets:
+
+  # ═══════════════════════════════════════════════════════════
+  # CORE PRESETS (from mega-brain)
+  # ═══════════════════════════════════════════════════════════
+
+  full_technical:
+    agents:
+      - "@architect"
+      - "@cso"
+      - "@qa"
+      - "@db-sage"
+      - "@mega-brain-master"
+    suggested_mode: review
+
+  governance_review:
+    agents:
+      - "@cso"
+      - "@mega-brain-master"
+      - "@megabrain-chief"
+    suggested_mode: review
+
+  architecture_review:
+    agents:
+      - "@architect"
+      - "@devops"
+      - "@infra-chief"
+      - "@cso"
+    suggested_mode: review
+
+  story_review:
+    agents:
+      - "@po"
+      - "@qa"
+      - "@cso"
+    suggested_mode: review
+
+  epic_review:
+    agents:
+      - "@architect"
+      - "@cso"
+      - "@qa"
+      - "@db-sage"
+      - "@mega-brain-master"
+    suggested_mode: review
+
+  final_approval:
+    agents:
+      - "@cso"
+      - "@vision-chief"
+      - "@coo"
+      - "@cto"
+      - "@megabrain-chief"
+      - "@squad-chief"
+      - "@architect"
+      - "@devops"
+      - "@infra-chief"
+      - "@mega-brain-master"
+    suggested_mode: review
+    flags:
+      - "--extended"
+
+  architecture_decision:
+    agents:
+      - "@architect"
+      - "@cso"
+      - "@devops"
+      - "@infra-chief"
+      - "@megabrain-chief"
+    suggested_mode: decision
+
+  gap_discovery:
+    agents:
+      - "@squad-chief"
+      - "@megabrain-chief"
+      - "@cso"
+      - "@coo"
+      - "@architect"
+    suggested_mode: gap_analysis
+
+  state_investigation:
+    agents:
+      - "@cso"
+      - "@architect"
+      - "@qa"
+      - "@db-sage"
+      - "@mega-brain-master"
+      - "@megabrain-chief"
+    suggested_mode: investigation
+
+  strategic_planning:
+    agents:
+      - "@vision-chief"
+      - "@cso"
+      - "@coo"
+      - "@cto"
+      - "@pm"
+      - "@architect"
+    suggested_mode: strategic
+
+  quick_decision:
+    agents:
+      - "@cso"
+      - "@architect"
+    suggested_mode: decision
+    flags:
+      - "--fast"
+
+  # ═══════════════════════════════════════════════════════════
+  # MEGA-BRAIN SPECIFIC PRESETS
+  # ═══════════════════════════════════════════════════════════
+
+  knowledge_review:
+    agents:
+      - "@critico"
+      - "@kops-sage"
+      - "@kops-forge"
+      - "@scribe"
+      - "@guard"
+    suggested_mode: review
+    description: "Review extraction/synthesis quality of knowledge artifacts"
+
+  conclave_deliberation:
+    agents:
+      - "@critico"
+      - "@advogado-diabo"
+      - "@sintetizador"
+    suggested_mode: decision
+    description: "Resolve contradictions via structured conclave debate"
+
+  dna_quality_audit:
+    agents:
+      - "@critico"
+      - "@advogado-diabo"
+      - "@sintetizador"
+      - "@kops-sage"
+      - "@dig"
+      - "@voice"
+      - "@weave"
+      - "@guard"
+    suggested_mode: audit
+    flags:
+      - "--extended"
+    description: "Full DNA quality audit before mind-clone generation"
+
+  pipeline_investigation:
+    agents:
+      - "@gate"
+      - "@kops-sage"
+      - "@kops-forge"
+      - "@ops"
+      - "@guard"
+    suggested_mode: investigation
+    description: "Investigate pipeline failures, state issues, or stalled batches"
+
+  extraction_gap_analysis:
+    agents:
+      - "@kops-sage"
+      - "@dig"
+      - "@behav"
+      - "@psych"
+      - "@voice"
+      - "@critico"
+    suggested_mode: gap_analysis
+    description: "Find gaps in extracted knowledge across DNA layers L1-L10"
+
+  mind_clone_review:
+    agents:
+      - "@critico"
+      - "@advogado-diabo"
+      - "@sintetizador"
+      - "@clone"
+      - "@weave"
+    suggested_mode: review
+    description: "Review generated mind-clone agent before deployment to agents/external/"

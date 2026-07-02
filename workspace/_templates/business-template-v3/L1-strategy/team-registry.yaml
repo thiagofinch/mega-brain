@@ -1,0 +1,43 @@
+# =============================================================================
+# TEAM-REGISTRY.YAML — Per-Spoke Team Structure Template v3.0
+# =============================================================================
+# Purpose: Teams and their composition for THIS business
+# Members reference person_ids from people-registry.yaml (FK)
+# Guardian: COO / HR
+# Location: workspace/businesses/{slug}/L1-strategy/team-registry.yaml
+# Depends on: L0-identity/people-registry.yaml (person_ids)
+#
+# Source: ADR-GAP009 Section 7
+# Owner: c-level-squad
+# =============================================================================
+
+_meta:
+  id: null
+  name: team-registry.yaml
+  layer: L1-strategy
+  state: PLACEHOLDER
+  owner: c-level-squad
+  approver: founder
+  version: "3.0.0"
+
+metadata:
+  version: "1.0"
+  business: "FILL_THIS"
+  status: "TEMPLATE"
+  last_updated: "FILL_THIS"
+
+# Teams organized by department/function
+# Each member references a person_id from people-registry.yaml
+teams:
+  example-team:
+    team_id: "FILL_THIS"
+    name: "FILL_THIS"
+    department: "FILL_THIS"         # e.g. "comercial", "operacoes", "tech"
+    bu_id: "FILL_THIS"             # References bu-map.yaml
+    lead: "FILL_THIS"             # person_id of team lead
+    members:
+      - person_id: "FILL_THIS"    # FK to people-registry.yaml
+        role: "FILL_THIS"         # Role within this team
+        allocation: 1.0           # 0.0-1.0 allocation to this team
+    status: active                 # active | inactive | restructuring
+    created_at: "FILL_THIS"       # YYYY-MM-DD

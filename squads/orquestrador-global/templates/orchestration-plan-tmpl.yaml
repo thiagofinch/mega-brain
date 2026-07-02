@@ -1,0 +1,348 @@
+# Consumer: PA-4.2 (validate-plan.js, estimate-cost.js, render-plan.js), PA-6.1 (plan-architect agent), PA-5.1 (audit-plan.js)
+# Schema: blueprint §6 — canonical contract for plan-architect output
+# Version: 2.0 — Hub canonical (spoke had informal v1.x; this signals plan-only architectural shift)
+
+schema_version: "2.0"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# IDENTIDADE DO PLANO
+# ═══════════════════════════════════════════════════════════════════════════════
+plan_id: ""                       # {slug}-{YYYYMMDD-HHmmss}
+created_by: "plan-architect"
+created_at: ""                    # ISO-8601
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# DEMANDA — entrada do usuário + parser estruturado
+# ═══════════════════════════════════════════════════════════════════════════════
+demand:
+  raw: ""                         # texto original
+  parsed:
+    primary_domain: ""            # ex: dev, ops, edu, mkt
+    secondary_domains: []
+    task_type: ""                 # ex: launch, audit, refactor, research
+    complexity: ""                # low | medium | high | critical
+    urgency: ""                   # low | normal | high | critical
+    business_units: []            # ex: [megabrain, sua-empresa]
+    implicit_deadline: null       # ISO date ou null
+    confidence: 0.0               # 0.0 - 1.0
+  elicitations: []                # [{q, a, dimension, info_gain}]
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# DISCOVERY — varredura do filesystem
+# ═══════════════════════════════════════════════════════════════════════════════
+discovery:
+  cache_version: ""
+  cache_age_seconds: 0
+  capabilities_scanned:
+    squads: 0
+    agents: 0
+    skills: 0
+    tasks: 0
+    workflows: 0
+  cache_drift_detected: false
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# CAPABILITIES SELECIONADAS — ranking + decisão IDS
+# ═══════════════════════════════════════════════════════════════════════════════
+selected_capabilities: []
+# Item shape:
+#   - id: ""
+#     type: squad | agent | skill | task | workflow
+#     score: 0.0
+#     score_breakdown: {domain: 0.0, fit: 0.0, quality: 0.0, recency: 0.0, cost: 0.0}
+#     reason: ""
+#     ids_decision: REUSE | ADAPT | CREATE
+#     routing_decision_id: ""     # route-* quando engine v2 decidiu
+#     routing:
+#       selected_by: routing-engine-v2 | legacy-fallback
+#       decision_id: ""
+#       persisted_path: "outputs/routing/decisions/{decision_id}.json"
+#       primary_executor: "@dev"
+#       support_agents: []
+#       quality_gate_agent: "@qa"
+#       confidence: 0.0
+#       confidence_band: auto_select | confirm_if_override | human_confirm | escalate | blocked | fallback
+#       score_breakdown: {}       # RoutingDecision.score_breakdown, não apenas string match
+#       alternatives: []          # RoutingDecision.alternatives para revisão humana
+#       hard_gate_results: []     # RoutingDecision.hard_gate_results
+#       fallback: null            # objeto obrigatório quando selected_by=legacy-fallback
+#       decision: {}              # inline compact RoutingDecision v2, opcional quando persisted_path existe
+
+routing_summary:
+  engine: "RoutingDecision-v2"
+  decisions_count: 0
+  decision_ids: []
+  blocked_nodes: []
+  fallback_nodes: []
+  decisions_dir: "outputs/routing/decisions"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# DAG — grafo dirigido acíclico
+# ═══════════════════════════════════════════════════════════════════════════════
+dag:
+  nodes: []
+  # Item shape:
+  #   - id: ""
+  #     capability: ""              # ref id em selected_capabilities
+  #     capability_type: ""
+  #     label: ""
+  #     inputs_required: []         # nomes de artefatos
+  #     outputs_produced: []
+  #     estimated_duration_minutes: 0
+  #     estimated_cost_tokens: 0
+  #     model_tier: ""              # opus | sonnet | haiku
+  #     risk: {severity: 0, occurrence: 0, detectability: 0, rpn: 0}
+  #     parallelizable_with: []
+  #     quality_gate: ""
+  #     routing_decision_id: ""
+  #     routing_selected_by: routing-engine-v2 | legacy-fallback
+  #     routing_primary_executor: "@dev"
+  #     routing_quality_gate_agent: "@qa"
+  #     routing_confidence: 0.0
+  #     routing_confidence_band: auto_select | confirm_if_override | human_confirm | escalate | blocked | fallback
+  #     routing_hard_gates: []
+  #     routing_blocked: false
+  #     routing_fallback: null
+  edges: []
+  # Item shape:
+  #   - from: ""
+  #     to: ""
+  #     type: data_dependency | sequence | gate
+  #     artifact: ""
+  parallel_groups: []
+  # Item shape:
+  #   - group_id: ""
+  #     nodes: []
+  #     reason: ""
+  critical_path: []
+  critical_path_duration_minutes: 0
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# RISKS — FMEA + pre-mortem opcional
+# ═══════════════════════════════════════════════════════════════════════════════
+risks:
+  top_risks: []
+  # Item shape:
+  #   - rpn: 0
+  #     node: ""
+  #     description: ""
+  #     mitigation: ""
+  pre_mortem: null               # null se não-ativado; objeto se RPN_max > 300
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# RESOURCE ESTIMATE
+# ═══════════════════════════════════════════════════════════════════════════════
+resource_estimate:
+  total_tokens: 0
+  total_cost_usd: 0.0
+  total_wall_time_estimate_hours: 0.0
+  models_used: []
+  agents_count: 0
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# SUCCESS CRITERIA — métricas de sucesso testáveis
+# ═══════════════════════════════════════════════════════════════════════════════
+success_criteria: []
+# Item shape:
+#   - metric: ""
+#     threshold: ""
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# FALSIFIABLE ASSUMPTIONS — hipóteses refutáveis
+# ═══════════════════════════════════════════════════════════════════════════════
+falsifiable_assumptions: []
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# CONSTITUTIONAL COMPLIANCE — gates não-negociáveis
+# ═══════════════════════════════════════════════════════════════════════════════
+constitutional_compliance:
+  codeowners_check: ""           # pass | fail
+  business_isolation_check: ""
+  agent_authority_check: ""
+  no_invention_check: ""
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# HANDOFF — próxima ação sugerida (NÃO executada pelo plan-architect)
+# ═══════════════════════════════════════════════════════════════════════════════
+handoff:
+  next_action_suggested: ""
+  next_action_executor: ""
+  approvals_required: []
+  do_not_execute_until: []
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# QUALITY SCORE — rubric 7 dimensões (PA-6.2 framework)
+# ═══════════════════════════════════════════════════════════════════════════════
+quality_score: 0.0               # 1-5 média
+quality_breakdown:
+  completeness: 0
+  capability_match: 0
+  parallelization: 0
+  risk_coverage: 0
+  cost_efficiency: 0
+  clarity: 0
+  falsifiability: 0
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# AUDIT — proveniência rastreável
+# ═══════════════════════════════════════════════════════════════════════════════
+audit:
+  created_by: "plan-architect"
+  created_at: ""
+  cache_manifest_hash: ""
+  scoring_config_version: ""
+  heuristics_applied: []         # ex: [IDS-G1, CPM, FMEA-RPN]
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# _EXAMPLE — payload completo G2 (Criar SOP onboarding cliente novo)
+# ═══════════════════════════════════════════════════════════════════════════════
+_example:
+  schema_version: "2.0"
+  plan_id: "sop-onboarding-cliente-20260428-1500"
+  created_by: "plan-architect"
+  created_at: "2026-04-28T15:00:00Z"
+
+  demand:
+    raw: "Criar SOP de onboarding cliente novo"
+    parsed:
+      primary_domain: "ops"
+      secondary_domains: ["governance"]
+      task_type: "create"
+      complexity: "low"
+      urgency: "normal"
+      business_units: ["generico"]
+      implicit_deadline: null
+      confidence: 0.85
+    elicitations: []
+
+  discovery:
+    cache_version: "2026-04-28T14:00:00Z"
+    cache_age_seconds: 1200
+    capabilities_scanned:
+      squads: 67
+      agents: 287
+      skills: 124
+      tasks: 615
+      workflows: 89
+    cache_drift_detected: false
+
+  selected_capabilities:
+    - id: "megabrain-sop"
+      type: squad
+      score: 0.91
+      score_breakdown:
+        domain: 0.95
+        fit: 0.92
+        quality: 0.85
+        recency: 0.90
+        cost: 0.95
+      reason: "Squad especializado em SOP creation; sop-creator agent + sop-template já existentes"
+      ids_decision: REUSE
+    - id: "megabrain-sop:sop-creator"
+      type: agent
+      score: 0.93
+      score_breakdown:
+        domain: 0.95
+        fit: 0.95
+        quality: 0.85
+        recency: 0.90
+        cost: 0.95
+      reason: "Entry-point para criação direta de SOP"
+      ids_decision: REUSE
+
+  dag:
+    nodes:
+      - id: "n1"
+        capability: "megabrain-sop:sop-creator"
+        capability_type: agent
+        label: "Draft SOP"
+        inputs_required: []
+        outputs_produced: ["sop-draft.md"]
+        estimated_duration_minutes: 30
+        estimated_cost_tokens: 8000
+        model_tier: "sonnet"
+        risk:
+          severity: 3
+          occurrence: 2
+          detectability: 2
+          rpn: 12
+        parallelizable_with: []
+        quality_gate: "sop-completeness-checklist"
+      - id: "n2"
+        capability: "megabrain-sop:sop-auditor"
+        capability_type: agent
+        label: "Audit SOP draft"
+        inputs_required: ["sop-draft.md"]
+        outputs_produced: ["sop-audit.md", "sop-final.md"]
+        estimated_duration_minutes: 20
+        estimated_cost_tokens: 5000
+        model_tier: "sonnet"
+        risk:
+          severity: 3
+          occurrence: 2
+          detectability: 1
+          rpn: 6
+        parallelizable_with: []
+        quality_gate: "sop-audit-checklist"
+    edges:
+      - from: n1
+        to: n2
+        type: data_dependency
+        artifact: sop-draft.md
+    parallel_groups: []
+    critical_path: [n1, n2]
+    critical_path_duration_minutes: 50
+
+  risks:
+    top_risks:
+      - rpn: 12
+        node: n1
+        description: "Draft pode faltar contexto específico do business sua-empresa"
+        mitigation: "sop-creator lê L0-identity + L1-strategy do business antes de gerar"
+    pre_mortem: null
+
+  resource_estimate:
+    total_tokens: 13000
+    total_cost_usd: 0.05
+    total_wall_time_estimate_hours: 0.83
+    models_used: ["sonnet"]
+    agents_count: 2
+
+  success_criteria:
+    - metric: "SOP aprovado por @po (sua-empresa)"
+      threshold: "pass"
+    - metric: "Onboarding ramp-up time"
+      threshold: "≤ 4h até cliente operacional"
+
+  falsifiable_assumptions:
+    - "megabrain-sop squad cobre domain ops (não só compliance)"
+    - "Template padrão de SOP é adequado para sua-empresa (não precisa custom)"
+
+  constitutional_compliance:
+    codeowners_check: "pass"
+    business_isolation_check: "pass"
+    agent_authority_check: "pass"
+    no_invention_check: "pass"
+
+  handoff:
+    next_action_suggested: "/swarm-execute megabrain-sop:sop-creator"
+    next_action_executor: "@dev"
+    approvals_required: []
+    do_not_execute_until: ["user approval"]
+
+  quality_score: 4.6
+  quality_breakdown:
+    completeness: 5
+    capability_match: 5
+    parallelization: 3      # serial — single workflow
+    risk_coverage: 4
+    cost_efficiency: 5
+    clarity: 5
+    falsifiability: 5
+
+  audit:
+    created_by: "plan-architect"
+    created_at: "2026-04-28T15:00:00Z"
+    cache_manifest_hash: "a1b2c3d4..."
+    scoring_config_version: "1.0"
+    heuristics_applied: ["IDS-G1", "CPM"]

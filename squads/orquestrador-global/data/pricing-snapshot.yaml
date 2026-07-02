@@ -1,0 +1,37 @@
+# Anthropic API pricing snapshot — Story PA-4.2
+# Consumer: estimate-cost.js
+# IMPORTANT: Re-snapshot before PA-6.2 eval run for ADR-PA-001 reproducibility (B4)
+
+snapshot_date: "2026-04-28"
+anthropic_pricing_url_archive: "https://docs.claude.com/en/docs/build-with-claude/pricing"
+notes: |
+  Approximate pricing as of 2026-04-28. Confirm current values at the URL above
+  before executing any cost-bearing run (especially PA-6.2 Golden Set).
+  Re-snapshot policy: refresh quarterly OR before any eval >= $50 estimate.
+
+models:
+  sonnet:
+    full_id: "claude-sonnet-4-6"
+    input_per_1k_tokens: 0.003   # $3 / Mtok
+    output_per_1k_tokens: 0.015  # $15 / Mtok
+    context_window: 200000
+
+  opus:
+    full_id: "claude-opus-4-7"
+    input_per_1k_tokens: 0.015   # $15 / Mtok
+    output_per_1k_tokens: 0.075  # $75 / Mtok
+    context_window: 200000
+    notes: "1M context variant available; same per-token price"
+
+  haiku:
+    full_id: "claude-haiku-4-5-20251001"
+    input_per_1k_tokens: 0.0008  # $0.80 / Mtok
+    output_per_1k_tokens: 0.004  # $4 / Mtok
+    context_window: 200000
+
+# Multipliers (for quick relative reasoning)
+relative_cost:
+  haiku_baseline: 1.0
+  sonnet_vs_haiku: 3.75       # sonnet input is ~3.75x haiku input
+  opus_vs_sonnet: 5.0         # opus input is 5x sonnet input
+  opus_vs_haiku: 18.75        # opus is ~18.75x haiku

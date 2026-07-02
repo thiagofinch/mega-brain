@@ -1,0 +1,412 @@
+# =============================================================================
+# TASK: BLIND SPOT SELF-AUDIT
+# =============================================================================
+# Auto-auditoria de pontos cegos executável por qualquer squad chief
+# Aplica as 5 camadas do framework de detecção
+# =============================================================================
+
+
+task: blind-spot-self-audit
+domain: strategic
+atomic_layer: Molecule
+responsavel_type: Agent
+performance:
+  error_handling: graceful with fallback + retry
+
+megabrain_frontmatter:
+  task_id: "blind-spot-self-audit"
+  name: "blind-spot-self-audit"
+  version: "1.0.0"
+  category: operations
+  squad: orquestrador-global
+  responsavel: "@supervisor-sistema"
+  model: sonnet
+  difficulty: intermediate
+  atomic_layer: Molecule
+
+metadata:
+  name: blind-spot-self-audit
+  version: "1.0.0"
+  squad: orquestrador-global
+  maturity_stage: "1_to_10"
+  ontology_layer: melhoria
+  model: sonnet
+  estimated_time: "2-4 horas por squad"
+  complexity: medium
+
+description: >
+  Task universal de auto-auditoria de pontos cegos. Qualquer squad chief pode
+  executar esta task no seu próprio squad para identificar lacunas invisíveis
+  nos processos, tasks e knowledge docs. Segue o framework de 5 camadas:
+  Referência Externa, Post-Mortem de Falhas, Polinização Cruzada, Revisão
+  Adversarial, e Mineração de Dados Reais.
+
+inputs:
+  required:
+    - name: squad_id
+      type: string
+      description: "ID do squad a ser auditado (ex: copywriting, full-stack-dev)"
+    - name: camadas
+      type: array
+      description: "Quais camadas executar neste ciclo (ex: [2,3,4]). Default: [2,3,4,5] no trimestral, [1,2,3,4,5] no semestral."
+      default: [2, 3, 4, 5]
+  optional:
+    - name: foco
+      type: string
+      description: "Foco específico da auditoria (ex: 'processo de revisão', 'task de criação'). Se omitido, audita todo o squad."
+    - name: periodo_dados
+      type: string
+      description: "Período para coleta de dados na Camada 5 (ex: last_30d, last_90d). Default: last_90d"
+      default: "last_90d"
+    - name: disciplinas_adjacentes
+      type: array
+      description: "Disciplinas específicas para Camada 3. Se omitido, usa a Matriz de Polinização do framework."
+    - name: ciclo_anterior
+      type: string
+      description: "Path do relatório do ciclo anterior para comparação."
+
+outputs:
+  primary:
+    - name: blind_spot_report
+      type: document
+      format: markdown
+      destination: "squads/{squad_id}/data/blind-spot-audit-{YYYY-MM-DD}.md"
+      description: "Relatório completo seguindo o formato padronizado do framework"
+      template: |
+        # Auditoria de Pontos Cegos — {squad_id} — {data}
+
+        ## Metadata
+        - **Squad:** {squad_id}
+        - **Executado por:** {agente}
+        - **Data:** {YYYY-MM-DD}
+        - **Ciclo:** {trimestral N / semestral N}
+        - **Camadas executadas:** {lista}
+
+        ## Resumo Executivo
+        - **Pontos cegos identificados:** {N}
+        - **Prioridade alta:** {N}
+        - **Prioridade média:** {N}
+        - **Prioridade baixa:** {N}
+        - **Checkpoints propostos:** {N}
+
+        ## Pontos Cegos Encontrados
+
+        ### BS-{squad}-001: {Título}
+        - **Camada:** {N} — {nome}
+        - **Defeito:** {código} — {descrição}
+        - **Evidência:** {como foi detectado}
+        - **Impacto:** {consequência}
+        - **Prioridade:** alta | média | baixa
+
+        **Checkpoint Proposto:**
+        > {instrução exata}
+
+        **Posição no fluxo:** {step X, entre ação Y e Z}
+        **Teste em:** {output alvo}
+        **Status:** proposto
+
+        ---
+
+        {repetir para cada blind spot}
+
+        ## Matriz Consolidada
+        | # | Blind Spot | Camada | Defeito | Prioridade | Status |
+        |---|-----------|--------|---------|------------|--------|
+
+        ## Próximo Ciclo
+        - **Data prevista:** {YYYY-MM-DD}
+        - **Camadas a executar:** {lista}
+        - **Pendências deste ciclo:** {lista}
+
+  secondary:
+    - name: checkpoint_proposals
+      type: list
+      description: "Lista de checkpoints propostos em formato YAML para integração em tasks"
+    - name: supermemory_save
+      type: memory
+      description: "Salvar achados no SuperMemory do squad para recall futuro"
+
+frameworks:
+  - name: "5 Camadas de Detecção de Pontos Cegos"
+    source: "squads/orquestrador-global/knowledge/BLIND-SPOT-DETECTION-FRAMEWORK.md"
+    application: "Framework central. Ler ANTES de executar qualquer step."
+  - name: "Taxonomia Universal de Defeitos"
+    source: "Seção do framework doc acima"
+    application: "Usar para classificar cada blind spot encontrado (D1-D10)"
+
+process:
+  steps:
+    - id: 0
+      name: "Preparação — Carregar contexto do squad"
+      action: |
+        Antes de qualquer camada, carregar o contexto completo do squad:
+
+        1. LER o framework de detecção:
+           squads/orquestrador-global/knowledge/BLIND-SPOT-DETECTION-FRAMEWORK.md
+
+        2. LER o config do squad:
+           squads/{squad_id}/config.yaml
+
+        3. LISTAR todos os knowledge docs do squad:
+           squads/{squad_id}/knowledge/*.md
+
+        4. LISTAR todos os tasks do squad:
+           squads/{squad_id}/tasks/*.yaml
+
+        5. LISTAR todos os workflows do squad:
+           squads/{squad_id}/workflows/*.yaml
+
+        6. SE existir relatório de ciclo anterior, LER para comparação.
+
+        7. IDENTIFICAR o tipo de squad (produção, técnico, analítico, operacional,
+           estratégico, metodologia, meta/plataforma) para aplicar as adaptações
+           corretas do framework.
+      output: "Inventário de artefatos do squad + tipo identificado"
+
+    - id: 1
+      name: "Camada 1 — Referência Externa"
+      condition: "Executar apenas se camada 1 está na lista de camadas solicitadas"
+      action: |
+        Objetivo: Identificar conceitos que existem na literatura do domínio mas
+        não estão catalogados nos knowledge docs do squad.
+
+        PASSO 1: Listar as disciplinas cobertas pelo squad.
+        Basear-se na descrição do config.yaml e nos knowledge docs existentes.
+
+        PASSO 2: Para cada disciplina, identificar os 5-10 frameworks/modelos
+        mais citados na literatura. Consultar a tabela "Fontes Recomendadas por
+        Domínio" no framework doc.
+
+        PASSO 3: Para cada modelo, verificar se está presente nos knowledge docs
+        do squad. Classificar como:
+        - AUSENTE (não mencionado em nenhum doc)
+        - PARCIAL (mencionado mas sem checkpoint/verificação)
+        - PRESENTE (catalogado e com checkpoint)
+        - DESCARTADO (avaliado e considerado irrelevante — registrar motivo)
+
+        PASSO 4: Produzir a tabela de gaps com prioridade.
+
+        PERGUNTA-GATILHO: "Quais são os 10 conceitos mais importantes da
+        disciplina X que um profissional sênior aplicaria? Quantos deles
+        estão explicitamente nos meus knowledge docs?"
+      output: "Tabela de referências externas com gaps identificados"
+
+    - id: 2
+      name: "Camada 2 — Post-Mortem de Falhas"
+      condition: "Executar apenas se camada 2 está na lista de camadas solicitadas"
+      action: |
+        Objetivo: Analisar outputs que falharam, classificar o tipo de defeito,
+        e verificar se existe checkpoint para cada tipo.
+
+        PASSO 1: Coletar casos de falha. Fontes:
+        - SuperMemory: recall de feedbacks negativos e rework
+          containerTag: "{squad_id}"
+          query: "falha OR rejeição OR rework OR problema OR feedback negativo"
+        - Dados de performance (se Camada 5 também for executada)
+        - Knowledge docs que mencionem "erros comuns" ou "anti-padrões"
+
+        PASSO 2: Para cada falha encontrada, classificar usando a Taxonomia
+        Universal de Defeitos do framework (D1 a D10). Instanciar o subtipo
+        para o domínio do squad.
+
+        PASSO 3: Para cada tipo de defeito, verificar nos tasks do squad:
+        - Existe algum step que deveria pegar este defeito?
+        - Se existe, por que falhou? (vago, mal posicionado, nunca executado)
+        - Se não existe, é um blind spot real.
+
+        PASSO 4: Priorizar pela frequência e pelo impacto.
+
+        PERGUNTA-GATILHO: "Dos últimos 10 outputs, quantos tiveram algum
+        problema? Qual foi o TIPO de problema em cada caso?"
+
+        Se não houver dados históricos de falha, REGISTRAR isso como blind spot
+        de rastreabilidade (D10) — "o squad não tem mecanismo de registro de falhas".
+      output: "Post-mortem consolidado com defeitos classificados"
+
+    - id: 3
+      name: "Camada 3 — Polinização Cruzada"
+      condition: "Executar apenas se camada 3 está na lista de camadas solicitadas"
+      action: |
+        Objetivo: Importar conhecimento de disciplinas adjacentes que iluminam
+        aspectos que o squad nunca considerou.
+
+        PASSO 1: Consultar a Matriz de Polinização Cruzada no framework doc.
+        Identificar as disciplinas adjacentes prioritárias para o domínio do squad.
+
+        PASSO 2: Selecionar 2-3 disciplinas para este ciclo (não tentar cobrir
+        todas). Se o input incluiu disciplinas_adjacentes, usar essas.
+
+        PASSO 3: Para cada disciplina selecionada, perguntar:
+        "O que um profissional de {disciplina} diria sobre a qualidade
+        do meu output? O que ele verificaria que eu não verifico?"
+
+        PASSO 4: Identificar técnicas transplantáveis — práticas que funcionam
+        no domínio adjacente e podem ser adaptadas para o squad.
+
+        PASSO 5: Avaliar custo-benefício: esforço de integração vs ganho
+        de qualidade. Classificar como: vale (checkpoint), não vale (registrar
+        motivo), precisa testar (propor experimento).
+
+        PERGUNTA-GATILHO: "Se um {profissional de área adjacente} revisasse
+        meu output, o que ele criticaria que eu nunca pensei em verificar?"
+      output: "Insights de polinização com técnicas transplantáveis"
+
+    - id: 4
+      name: "Camada 4 — Revisão Adversarial"
+      condition: "Executar apenas se camada 4 está na lista de camadas solicitadas"
+      action: |
+        Objetivo: Assumir a perspectiva de adversários e identificar formas
+        de ataque ou falha do output.
+
+        PASSO 1: Definir os 3 adversários arquetípicos para o domínio do squad
+        (ver tabela "Adversários por Domínio" no framework doc):
+        - Crítico Técnico
+        - Competidor
+        - Usuário Frustrado
+
+        PASSO 2: Para cada adversário, gerar 5-10 ataques específicos
+        ao output típico do squad. Ser concreto, não genérico.
+
+        Exemplos de ataques concretos (adaptar para o squad):
+        - "Esta estatística tem fonte?" (Crítico Técnico)
+        - "O concorrente faz isso de forma mais simples" (Competidor)
+        - "Não entendi como usar isso na prática" (Usuário Frustrado)
+
+        PASSO 3: Para cada ataque, verificar se o processo atual previne.
+        Se previne, como? Se não previne, qual checkpoint é necessário?
+
+        PASSO 4: Classificar por probabilidade x severidade:
+        - ALTO x ALTO = prioridade máxima (checkpoint imediato)
+        - ALTO x BAIXO ou BAIXO x ALTO = prioridade média
+        - BAIXO x BAIXO = registrar para próximo ciclo
+
+        PERGUNTA-GATILHO: "Se alguém quisesse destruir a credibilidade
+        deste output em 3 frases, quais frases usaria?"
+      output: "Mapa de vulnerabilidades com checkpoints propostos"
+
+    - id: 5
+      name: "Camada 5 — Mineração de Dados Reais"
+      condition: "Executar apenas se camada 5 está na lista de camadas solicitadas"
+      action: |
+        Objetivo: Comparar premissas do squad com dados de performance reais.
+
+        PASSO 1: Identificar as métricas-chave do squad. Consultar a tabela
+        "Métricas-Chave por Domínio" no framework doc.
+
+        PASSO 2: Coletar dados do período solicitado usando os scripts ops:
+        - Marketing/Ads: meta-ads-ops.mjs, google-ads-ops.mjs
+        - Copy/Email: activecampaign-ops.mjs
+        - Content: youtube-analytics-ops.mjs, instagram-ops.mjs
+        - Funnel: ga4-analytics-ops.mjs
+        - Dev: git log, CI/CD logs
+        - SEO: ga4-analytics-ops.mjs
+
+        Se o squad não tem métricas automatizadas, REGISTRAR como blind spot
+        de rastreabilidade (D10) e prosseguir com dados qualitativos disponíveis.
+
+        PASSO 3: Comparar com as premissas do squad:
+        - O que o squad assume que funciona, realmente funciona?
+        - Há algum output considerado fraco que performa bem?
+        - Há algum output considerado forte que performa mal?
+
+        PASSO 4: Cada divergência entre premissa e dados é um blind spot
+        potencial. Catalogar com evidência numérica.
+
+        PERGUNTA-GATILHO: "Quais são as 3 maiores surpresas quando comparo
+        o que acho que funciona com o que os dados realmente mostram?"
+      output: "Análise de divergências premissa vs realidade"
+
+    - id: 6
+      name: "Compilar Relatório e Propor Checkpoints"
+      action: |
+        PASSO 1: Consolidar todos os blind spots encontrados nas camadas
+        executadas. Atribuir um ID sequencial: BS-{squad}-001, BS-{squad}-002, etc.
+
+        PASSO 2: Para cada blind spot, classificar:
+        - Código de defeito (D1-D10 + subtipo do domínio)
+        - Prioridade (alta, média, baixa)
+        - Camada de origem (1-5)
+
+        PASSO 3: Para cada blind spot de prioridade alta e média, propor
+        um checkpoint seguindo o formato do framework:
+        - Texto exato da verificação
+        - Posição no fluxo (step X, entre ação Y e Z)
+        - Tipo (verificação, pergunta, comparação, medição)
+        - Tempo estimado (1-5 minutos)
+
+        PASSO 4: Gerar o relatório final seguindo o template de output
+        definido acima.
+
+        PASSO 5: Salvar achados no SuperMemory:
+        containerTag: "{squad_id}"
+        content: resumo dos blind spots encontrados, checkpoints propostos
+        tags: [blind-spot-audit, {data}]
+
+        PASSO 6: Se existir ciclo anterior, comparar:
+        - Quantos blind spots do ciclo anterior foram resolvidos?
+        - Há blind spots recorrentes?
+        - A tendência é de melhoria ou piora?
+      output: "Relatório final + checkpoints propostos + SuperMemory salvo"
+
+integration_graph:
+  depends_on:
+    - task: null
+      squad: null
+      data_needed: "Nenhuma dependência — task autocontida"
+  feeds_into:
+    - description: "Checkpoints aprovados são integrados nos tasks do squad auditado"
+      squad: "{squad_id}"
+      data_passed: "checkpoint_proposals"
+    - description: "Relatório alimenta o workflow de ciclo contínuo"
+      squad: orquestrador-global
+      data_passed: "blind_spot_report"
+  collaborates_with:
+    - squad: "{squad_id}"
+      purpose: "O chief do squad executa a auditoria no próprio squad"
+
+quality_gates:
+  - "Todas as camadas solicitadas foram executadas (nenhuma pulada)"
+  - "Cada blind spot tem ID único, código de defeito, e prioridade"
+  - "Checkpoints propostos são específicos e verificáveis (não subjetivos)"
+  - "Relatório segue o formato padronizado do framework"
+  - "SuperMemory salvo com achados do ciclo"
+  - "Se ciclo anterior existe, comparação foi feita"
+
+anti_patterns:
+  - "Executar sem ler o framework doc primeiro — garante inconsistência"
+  - "Reportar 'nenhum blind spot encontrado' — todo squad tem lacunas; se não encontrou, não procurou direito"
+  - "Criar checkpoints subjetivos como 'melhore a qualidade' — checkpoint deve ser sim/não"
+  - "Pular a Camada 5 por 'não ter dados' — registrar a ausência de dados como blind spot D10"
+  - "Chief auditar sozinho sem questionar premissas — viés de confirmação é o problema que estamos combatendo"
+  - "Propor 20+ checkpoints de uma vez — priorizar 3-5 de alta prioridade para teste"
+
+cadence:
+  recommended:
+    - "Trimestral: Camadas 2, 3, 4, 5 (ciclo padrão)"
+    - "Semestral: Todas as 5 camadas (ciclo completo com referência externa)"
+  triggers:
+    - "Falha crítica em output de alto impacto"
+    - "Novo squad criado (auditoria inaugural após 30 dias de operação)"
+    - "Mudança significativa de escopo ou equipe do squad"
+    - "3 ou mais feedbacks negativos no mesmo trimestre"
+squad: orquestrador-global
+task_id: blind-spot-self-audit
+version: "3.1.1"
+status: ready
+responsavel: "@plan-architect"
+execution_type: hybrid
+orchestration_boundary:
+  live_routing_performed: false
+  external_dispatch_performed: false
+  workspace_write_performed: false
+megabrain_validation:
+  last_run: "20260514-validate-deep"
+  validated_at: "2026-05-15T00:00:00Z"
+  validator: mega-brain/megabrain-chief
+  mode: deep
+  squad: orquestrador-global
+  status: pass
+  evidence:
+    - schema_contract_normalized
+    - task_boundary_declared
+    - plan_only_orchestration_preserved

@@ -1,0 +1,129 @@
+# Intent taxonomy — vocabulário canônico para intent-parser (PA-2.1)
+# Consumer: agents/intent-parser.md
+# Story: STORY-PA-2.1
+
+schema_version: "1.0"
+
+# ───────────────────────────────────────────────────────────────────────────────
+# Threshold de elicitação — gate para perguntar ao usuário ou prosseguir
+# ───────────────────────────────────────────────────────────────────────────────
+confidence_threshold: 0.7
+max_elicitation_questions: 3
+
+# ───────────────────────────────────────────────────────────────────────────────
+# Domains — taxonomia primária do Hub ecosystem
+# ───────────────────────────────────────────────────────────────────────────────
+primary_domains:
+  - id: dev
+    label: "Desenvolvimento de software"
+    keywords: [code, refactor, bug, feature, deploy, api, frontend, backend]
+  - id: ops
+    label: "Operações e processos"
+    keywords: [sop, processo, onboarding, runbook, automação]
+  - id: edu
+    label: "Educação e formação"
+    keywords: [curso, módulo, aula, ementa, syllabus, didática]
+  - id: mkt
+    label: "Marketing e crescimento"
+    keywords: [campanha, lançamento, conteúdo, copy, growth, funil]
+  - id: sales
+    label: "Vendas"
+    keywords: [pipeline, lead, conversão, fechamento, comercial, pricing]
+  - id: research
+    label: "Pesquisa"
+    keywords: [análise, mercado, concorrente, estudo, pesquisa]
+  - id: arch
+    label: "Arquitetura técnica"
+    keywords: [arquitetura, design, sistema, padrão, integração]
+  - id: governance
+    label: "Governança e auditoria"
+    keywords: [auditoria, compliance, política, validação]
+  - id: legal
+    label: "Jurídico"
+    keywords: [contrato, lgpd, termos, política, advogado]
+  - id: design
+    label: "Design e UX"
+    keywords: [ui, ux, design, layout, brand, visual]
+  - id: data
+    label: "Dados e analytics"
+    keywords: [métrica, dashboard, kpi, etl, sql, banco]
+  - id: sec
+    label: "Segurança"
+    keywords: [segurança, vulnerabilidade, incidente, pentest]
+  - id: infra
+    label: "Infraestrutura"
+    keywords: [deploy, docker, ci, vercel, supabase, hetzner]
+  - id: brand
+    label: "Marca"
+    keywords: [marca, posicionamento, identidade, naming]
+  - id: content
+    label: "Conteúdo"
+    keywords: [post, instagram, reels, vídeo, podcast, blog]
+
+# ───────────────────────────────────────────────────────────────────────────────
+# Task types — tipo da ação primária
+# ───────────────────────────────────────────────────────────────────────────────
+task_types:
+  - id: create
+    keywords: [criar, gerar, montar, construir, novo]
+  - id: optimize
+    keywords: [otimizar, melhorar, refatorar, ajustar]
+  - id: audit
+    keywords: [auditar, verificar, revisar, validar, conferir]
+  - id: research
+    keywords: [pesquisar, investigar, analisar, estudar]
+  - id: design
+    keywords: [desenhar, projetar, design]
+  - id: launch
+    keywords: [lançar, lançamento, publicar, deploy]
+  - id: fix
+    keywords: [corrigir, fix, bug, resolver, consertar]
+  - id: migrate
+    keywords: [migrar, mover, transferir, importar]
+  - id: document
+    keywords: [documentar, escrever, sop, manual, guia]
+  - id: integrate
+    keywords: [integrar, conectar, plugar, sincronizar]
+
+# ───────────────────────────────────────────────────────────────────────────────
+# Complexity — escala estruturada per blueprint §9
+# ───────────────────────────────────────────────────────────────────────────────
+complexity_levels:
+  - id: low
+    label: SIMPLE
+    indicators: ["single squad", "single BU", "< 4h estimate", "no novel tech", "reversível"]
+  - id: medium
+    label: STANDARD
+    indicators: ["single BU", "1-2 dias", "padrão conhecido", "gates standard"]
+  - id: high
+    label: COMPLEX
+    indicators: ["multi-BU OR multi-domain", "> 3 dias", "novel patterns", "pre-mortem desejável"]
+  - id: critical
+    label: CRITICAL
+    indicators: ["cross-BU + legal/compliance", "> 1 semana", "irreversibilidade alta", "RPN_max > 300"]
+
+# ───────────────────────────────────────────────────────────────────────────────
+# Urgency — pressão temporal
+# ───────────────────────────────────────────────────────────────────────────────
+urgency_levels:
+  - id: low
+    label: "Sem urgência específica"
+  - id: normal
+    label: "Prazo padrão"
+  - id: high
+    label: "Janela apertada (< 7d)"
+  - id: critical
+    label: "Imediato (< 24h) ou incidente em produção"
+
+# ───────────────────────────────────────────────────────────────────────────────
+# Business Units — Hub config
+# ───────────────────────────────────────────────────────────────────────────────
+business_units:
+  - id: megabrain
+    label: "Mega Brain"
+  - id: generico
+    label: "sua-empresa"
+  - id: sua-organizacao
+    label: "sua-organizacao"
+  - id: empresa-g
+    label: "empresa-g"

@@ -1,0 +1,28 @@
+name: Security — Gitleaks Secret Scanner
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  gitleaks:
+    runs-on: ubuntu-latest
+    # gitleaks-action Post-step posts a PR summary comment; without write
+    # access it crashed "Resource not accessible by integration". gitleaks
+    # itself already passed (0 leaks). Grant minimal perms for the comment.
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run Gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        with:
+          config-path: .gitleaks.toml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

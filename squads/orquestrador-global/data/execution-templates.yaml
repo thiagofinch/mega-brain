@@ -1,0 +1,1526 @@
+# Execution Templates — orquestrador-global
+# Templates for common multi-squad execution patterns
+# Version: 2.0.0 | Created: 2026-03-11 | Updated: 2026-04-04
+# Post-absorption: 12 templates covering 76 squads
+
+# ─────────────────────────────────────────────────────────────────────────────
+# USAGE
+# ─────────────────────────────────────────────────────────────────────────────
+# 1. Find the template matching your demand type
+# 2. Copy the template and fill in the variables
+# 3. Create execution log: .data/executions/{YYYY-MM-DD}_{slug}/
+# 4. Write 00-master-plan.md using the template structure
+# 5. Follow wave sequence, applying stage gates at each wave boundary
+# ─────────────────────────────────────────────────────────────────────────────
+
+templates:
+
+  # ─────────────────────────────────────────────────────────────────────────
+  # TEMPLATE 1: CONTENT PIPELINE
+  # Use when: Single piece of content or content batch production
+  # Examples: "Cria VSL para MPG", "Escreve sequencia de emails de lancamento"
+  # ─────────────────────────────────────────────────────────────────────────
+  content_pipeline:
+    name: "Content Production Pipeline"
+    description: "Single-type content production — copy, video, email, or social"
+    scale: "SMALL"
+    estimated_duration: "2-4 hours"
+    stage_gate_required: false
+    log_required: false  # Single-squad demands below 4 hours skip logging
+
+    squads_involved:
+      wave_1:
+        squads:
+          - id: "copy"
+            condition: "if demand is copy (VSL, email, ad copy, landing page)"
+          - id: "content-ecosystem"
+            condition: "if demand is organic content (posts, YouTube scripts)"
+          - id: "video-production"
+            condition: "if demand is video asset"
+        parallel: false
+        gate_after: false
+
+    handoffs:
+      - from: "user"
+        to: "primary_squad"
+        required_inputs:
+          - "product (which of the 11 products)"
+          - "format (VSL, email, post, video, etc.)"
+          - "audience (cold, warm, hot)"
+          - "deadline"
+
+    success_criteria:
+      - "Content matches brief requirements"
+      - "Portuguese accent compliance verified"
+      - "Naming convention applied"
+      - "Copy consistency review passed (if applicable)"
+
+    deliverables_location: "Delivered inline or as .md file in context"
+
+  # ─────────────────────────────────────────────────────────────────────────
+  # TEMPLATE 2: FUNNEL CREATION
+  # Use when: Full funnel needs to be built or rebuilt
+  # Examples: "Cria funil completo para GPO", "Rebuild MPG funnel with new design"
+  # ─────────────────────────────────────────────────────────────────────────
+  funnel_creation:
+    name: "Funnel Creation Pipeline"
+    description: "Full funnel: copy + design + visual assets"
+    scale: "MEDIUM"
+    estimated_duration: "6-12 hours"
+    stage_gate_required: true
+    log_required: true
+    log_dir_pattern: "{YYYY-MM-DD}_funil-{sigla}"
+
+    squads_involved:
+      wave_1:
+        name: "Brief + Copy"
+        squads:
+          - id: "copy"
+            tasks:
+              - "Landing page copy (headline, subheadline, body, CTAs)"
+              - "Upsell/downsell copy (if applicable)"
+              - "Thank-you page copy"
+              - "OTO copy (if applicable)"
+        parallel: false
+        gate_after: true
+        gate_description: "Review copy before building HTML"
+
+      wave_2:
+        name: "Design + Build"
+        squads:
+          - id: "funnel-creator"
+            tasks:
+              - "HTML landing page"
+              - "Upsell/OTO page"
+              - "Thank-you page"
+            depends_on: ["copy"]
+          - id: "creative-studio"
+            tasks:
+              - "Hero image"
+              - "Product mockup"
+              - "CTA button graphics (if custom)"
+            depends_on: ["copy"]  # needs headlines
+        parallel: true
+        gate_after: true
+        gate_description: "Review full funnel before connecting to traffic"
+
+      wave_3:
+        name: "Tracking + Launch"
+        squads:
+          - id: "traffic-squad"
+            tasks:
+              - "UTM parameter configuration"
+              - "Pixel firing verification"
+              - "Preview deploy check"
+            depends_on: ["funnel-creator", "creative-studio"]
+        parallel: false
+        gate_after: false
+
+    handoffs:
+      - from: "user"
+        to: "copy"
+        required_inputs:
+          - "product (sigla, price, Hotmart offer ID)"
+          - "target audience segment"
+          - "funnel structure (FE + OTO? FE only? with downsell?)"
+          - "campaign context (cold traffic? launch? retargeting?)"
+      - from: "copy"
+        to: "funnel-creator"
+        required_outputs:
+          - "Complete copy for all pages"
+          - "CTA button text for each page"
+          - "Page structure notes"
+      - from: "copy"
+        to: "creative-studio"
+        required_outputs:
+          - "Headline and sub-headline"
+          - "Brand tone direction"
+          - "Visual concept notes"
+
+    success_criteria:
+      - "All pages render correctly on mobile and desktop"
+      - "Hotmart checkout link is correct for the offer"
+      - "UTM parameters are configured"
+      - "Portuguese accent compliance on all pages"
+      - "Copy consistency review passed (no price discrepancies)"
+      - "Preview deployed and user-approved before traffic"
+
+    deliverables_location: "docs/funil-{sigla}/"
+
+  # ─────────────────────────────────────────────────────────────────────────
+  # TEMPLATE 3: CAMPAIGN LAUNCH
+  # Use when: Launching or reactivating a paid media campaign
+  # Examples: "Launch Meta Ads for MPG", "Start Google Ads campaign for GPO"
+  # ─────────────────────────────────────────────────────────────────────────
+  campaign_launch:
+    name: "Paid Campaign Launch Pipeline"
+    description: "Ad copy + creatives + campaign setup + tracking verification"
+    scale: "MEDIUM"
+    estimated_duration: "4-8 hours"
+    stage_gate_required: true
+    log_required: true
+    log_dir_pattern: "{YYYY-MM-DD}_campanha-{sigla}-{platform}"
+
+    squads_involved:
+      wave_1:
+        name: "Strategy + Brief"
+        squads:
+          - id: "traffic-squad"
+            tasks:
+              - "Campaign objective selection"
+              - "Audience strategy"
+              - "Budget recommendation"
+              - "Creative brief for creative-studio"
+          - id: "conselho"
+            condition: "optional — for campaigns > R$5000/month or strategic decisions"
+            tasks:
+              - "Campaign strategy review"
+        parallel: true
+        gate_after: true
+        gate_description: "Confirm strategy before investing in creative production"
+
+      wave_2:
+        name: "Copy + Creative Production"
+        squads:
+          - id: "copy"
+            tasks:
+              - "Primary text (3-5 variants)"
+              - "Headlines (3-5 variants)"
+              - "Descriptions"
+            depends_on: ["traffic-squad"]
+          - id: "creative-studio"
+            tasks:
+              - "Static ad images (3-5 concepts)"
+              - "Stories variants"
+              - "Carousel (if applicable)"
+            depends_on: ["copy"]  # needs headlines and CTAs
+        parallel: false  # copy first, then creative
+        gate_after: true
+        gate_description: "User approval of creatives before upload"
+
+      wave_3:
+        name: "Campaign Setup + QA"
+        squads:
+          - id: "megabrain-ads"
+            tasks:
+              - "Campaign structure setup (PAUSED)"
+              - "Ad set targeting configuration"
+              - "Creative upload and association"
+              - "Pixel and tracking verification"
+              - "UTM parameter setup"
+            depends_on: ["copy", "creative-studio"]
+        parallel: false
+        gate_after: true
+        gate_description: "Final review before campaign activation"
+
+      wave_4:
+        name: "Activation"
+        squads:
+          - id: "megabrain-ads"
+            tasks:
+              - "Campaign activation (ads -> ad sets -> campaigns)"
+              - "First 24h monitoring setup"
+        parallel: false
+        gate_after: false
+
+    handoffs:
+      - from: "user"
+        to: "traffic-squad"
+        required_inputs:
+          - "product (sigla + Hotmart offer)"
+          - "campaign objective (ROAS? CPA? CPL?)"
+          - "monthly budget"
+          - "target audience segment"
+          - "destination URL (funnel page)"
+      - from: "traffic-squad"
+        to: "copy"
+        required_outputs:
+          - "Campaign objective and funnel stage"
+          - "Target audience profile"
+          - "Key messages to emphasize"
+          - "CTA direction"
+      - from: "copy"
+        to: "creative-studio"
+        required_outputs:
+          - "All copy variants"
+          - "Visual direction notes"
+          - "Placement specifications"
+
+    success_criteria:
+      - "Campaign created in PAUSED status initially"
+      - "All tracking pixels firing correctly"
+      - "UTM parameters following naming convention"
+      - "At least 3 ad variants per ad set"
+      - "Budget set at correct daily amount (in centavos for API)"
+      - "User approved creatives before launch"
+
+    deliverables_location: "Campaign live in ads platform + copy files in context"
+
+  # ─────────────────────────────────────────────────────────────────────────
+  # TEMPLATE 4: PRODUCT LAUNCH
+  # Use when: Full product launch campaign (7-14 day launch cycle)
+  # Examples: "Launch MCPM with CPL + VSL", "Mini-launch for new GPO price"
+  # ─────────────────────────────────────────────────────────────────────────
+  product_launch:
+    name: "Product Launch Campaign"
+    description: "Full launch: strategy + content + funnel + email + ads + live events"
+    scale: "LARGE"
+    estimated_duration: "2-5 days"
+    stage_gate_required: true
+    log_required: true
+    log_dir_pattern: "{YYYY-MM-DD}_lancamento-{sigla}"
+
+    squads_involved:
+      wave_1:
+        name: "Strategy + Planning"
+        squads:
+          - id: "conselho"
+            tasks:
+              - "Launch strategy review"
+              - "Positioning recommendation"
+              - "Offer analysis"
+          - id: "erico-rocha"
+            tasks:
+              - "CPL structure design"
+              - "Launch sequence planning"
+              - "Webinar/live strategy"
+        parallel: true
+        gate_after: true
+        gate_description: "Strategy gate — confirm launch plan before execution"
+
+      wave_2:
+        name: "Core Asset Production"
+        squads:
+          - id: "copy"
+            tasks:
+              - "VSL script"
+              - "Launch email sequence (7-10 emails)"
+              - "Landing page copy"
+              - "Upsell/downsell copy"
+              - "WhatsApp launch sequence"
+            depends_on: ["conselho", "erico-rocha"]
+          - id: "infoproduct-creation"
+            condition: "if new or updated product content is needed"
+            tasks:
+              - "Course module updates"
+              - "New bonus content"
+            depends_on: []
+        parallel: true
+        gate_after: false
+
+      wave_3:
+        name: "Visual + Technical Production"
+        squads:
+          - id: "creative-studio"
+            tasks:
+              - "Launch creatives (ads, social, email headers)"
+              - "VSL cover image"
+              - "Bonus product mockups"
+            depends_on: ["copy"]
+          - id: "funnel-creator"
+            tasks:
+              - "Launch landing page"
+              - "Checkout page"
+              - "Upsell page"
+              - "Thank-you/members page"
+            depends_on: ["copy"]
+          - id: "marketing-automation"
+            tasks:
+              - "Email sequence setup in ActiveCampaign"
+              - "WhatsApp sequence setup in n8n/WAHA"
+              - "Tag-based automation flows"
+            depends_on: ["copy"]
+        parallel: true
+        gate_after: true
+        gate_description: "Pre-launch QA gate — all assets ready?"
+
+      wave_4:
+        name: "Pre-Launch Setup"
+        squads:
+          - id: "megabrain-ads"
+            tasks:
+              - "Paid campaign structure setup"
+              - "Retargeting campaign setup"
+              - "Tracking verification"
+            depends_on: ["creative-studio", "funnel-creator"]
+          - id: "youtube-lives"
+            tasks:
+              - "Live event briefing"
+              - "StreamYard/platform setup"
+              - "Notification scheduling"
+            depends_on: ["copy"]
+          - id: "content-ecosystem"
+            tasks:
+              - "Launch organic content calendar"
+              - "Social posts (pre-launch + launch week)"
+            depends_on: ["copy"]
+        parallel: true
+        gate_after: true
+        gate_description: "Launch readiness gate — confirm all systems go"
+
+      wave_5:
+        name: "Launch Execution + Monitoring"
+        squads:
+          - id: "megabrain-ads"
+            tasks:
+              - "Campaign activation"
+              - "Daily performance monitoring"
+              - "Bid and budget optimization"
+          - id: "data-analytics"
+            tasks:
+              - "Daily launch report"
+              - "Conversion tracking validation"
+        parallel: true
+        gate_after: false
+
+    success_criteria:
+      - "All assets QA'd and approved before launch"
+      - "Email sequence live and tested (test send sent)"
+      - "Landing page preview-deployed and approved"
+      - "Paid campaigns in PAUSED status, ready to activate"
+      - "YouTube live briefing complete"
+      - "Tracking and pixels verified"
+      - "Launch day runbook exists"
+
+    deliverables_location: "docs/funil-{sigla}/ + campaign in ads platform + sequences in AC"
+
+  # ─────────────────────────────────────────────────────────────────────────
+  # TEMPLATE 5: STRATEGIC REVIEW
+  # Use when: Major decisions, quarterly reviews, positioning analysis
+  # Examples: "Review which products to prioritize for Q2", "Analyze if we should enter TikTok"
+  # ─────────────────────────────────────────────────────────────────────────
+  strategic_review:
+    name: "Strategic Review Session"
+    description: "Analysis + advisory for major business decisions"
+    scale: "SMALL"
+    estimated_duration: "2-4 hours"
+    stage_gate_required: false
+    log_required: true
+    log_dir_pattern: "{YYYY-MM-DD}_revisao-estrategica-{topic}"
+
+    squads_involved:
+      wave_1:
+        name: "Research + Data"
+        squads:
+          - id: "market-research"
+            tasks:
+              - "Market landscape analysis"
+              - "Competitive positioning review"
+          - id: "data-analytics"
+            tasks:
+              - "Performance data synthesis"
+              - "KPI trend analysis"
+          - id: "deep-scraper"
+            condition: "if competitive intelligence needed"
+            tasks:
+              - "Competitor analysis"
+        parallel: true
+        gate_after: false
+
+      wave_2:
+        name: "Advisory"
+        squads:
+          - id: "conselho"
+            tasks:
+              - "Strategic question analysis"
+              - "Advisory board perspectives"
+              - "Recommendation synthesis"
+            depends_on: ["market-research", "data-analytics"]
+        parallel: false
+        gate_after: false
+
+    success_criteria:
+      - "Decision question clearly answered"
+      - "Recommendation includes rationale"
+      - "Next action items identified"
+      - "Session saved to SuperMemory (containerTag: conselho)"
+
+    deliverables_location: ".data/executions/{dir}/99-execution-summary.md"
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # NEW TEMPLATES (6-12) — Added 2026-04-04 for Epic 110
+  # ═══════════════════════════════════════════════════════════════════════════
+
+  # ─────────────────────────────────────────────────────────────────────────
+  # TEMPLATE 6: BRAND CREATION
+  # Use when: Creating a brand from scratch for a new business/workspace
+  # Examples: "Criar marca para clinica de estetica", "Brand nova para skincare natural"
+  # Ref: squad-collaboration-scenarios.md Scenario 2
+  # ─────────────────────────────────────────────────────────────────────────
+  brand_creation:
+    name: "Brand Creation Pipeline"
+    description: "Full brand creation: discovery, naming, identity, visual system, go-to-market"
+    scale: "LARGE"
+    estimated_duration: "3-7 days"
+    stage_gate_required: true
+    log_required: true
+    log_dir_pattern: "{YYYY-MM-DD}_brand-{slug}"
+
+    squads_involved:
+      wave_1:
+        name: "Discovery + Intelligence"
+        squads:
+          - id: "c-level"
+            tasks:
+              - "Founder vision elicitation"
+              - "Business model canvas"
+              - "Target market definition"
+          - id: "mega-brain"
+            tasks:
+              - "Founder DNA extraction (MCE pipeline)"
+              - "Knowledge graph of expertise"
+          - id: "market-research"
+            tasks:
+              - "TAM/SAM analysis"
+              - "Blue Ocean Canvas"
+              - "ICP definition"
+          - id: "deep-scraper"
+            tasks:
+              - "Competitor scraping (pricing, positioning, messaging)"
+              - "Market landscape data"
+        parallel: true
+        gate_after: true
+        gate_description: "Discovery gate — validate market opportunity before brand investment"
+
+      wave_2:
+        name: "Brand Foundation"
+        squads:
+          - id: "brand"
+            tasks:
+              - "Brand naming (SNP process)"
+              - "Verbal identity (E/Faz/Fala)"
+              - "Brand positioning statement"
+              - "Brand archetype selection"
+            depends_on: ["c-level", "mega-brain", "market-research"]
+          - id: "movement"
+            tasks:
+              - "Ideological marketing N1-N4"
+              - "Brand phenomenon design"
+              - "Community narrative"
+            depends_on: ["c-level", "mega-brain"]
+          - id: "storytelling"
+            tasks:
+              - "Brand origin story"
+              - "Story of Self/Us/Now"
+              - "Monomito adaptation"
+            depends_on: ["c-level", "mega-brain"]
+          - id: "advisory-board"
+            tasks:
+              - "Strategic validation (Munger, Thiel perspectives)"
+              - "Risk assessment of positioning"
+            depends_on: ["market-research"]
+        parallel: true
+        gate_after: true
+        gate_description: "Brand identity gate — approve name, positioning, narrative before visual design"
+
+      wave_3:
+        name: "Visual Identity"
+        squads:
+          - id: "design-system"
+            tasks:
+              - "Brand tokens (colors, typography, spacing)"
+              - "Brandbook generation"
+              - "Component system foundation"
+            depends_on: ["brand"]
+          - id: "face-forge"
+            tasks:
+              - "Brand avatar/mascot generation"
+              - "Founder portrait suite"
+              - "Style DNA extraction"
+            depends_on: ["brand"]
+          - id: "visual-knowledge-squad"
+            tasks:
+              - "Brand canvas"
+              - "Experience map"
+              - "Visual identity map"
+            depends_on: ["brand", "storytelling"]
+          - id: "creative-studio"
+            tasks:
+              - "Social media templates"
+              - "Ad creative templates"
+              - "Packaging concepts (if applicable)"
+            depends_on: ["design-system"]
+        parallel: true
+        gate_after: true
+        gate_description: "Visual identity gate — approve brandbook and assets before go-to-market"
+
+      wave_4:
+        name: "Go-to-Market Preparation"
+        squads:
+          - id: "client-strategy"
+            tasks:
+              - "Launch roadmap"
+              - "OKR definition"
+              - "First 90-day plan"
+            depends_on: ["brand", "market-research"]
+          - id: "funnel-creator"
+            tasks:
+              - "Entry funnel architecture (quiz/tripwire)"
+              - "Page wireframes"
+            depends_on: ["brand", "design-system"]
+          - id: "copy"
+            tasks:
+              - "Messaging guide"
+              - "Headlines and taglines bank"
+              - "Email welcome sequence"
+            depends_on: ["brand", "storytelling"]
+          - id: "seo"
+            tasks:
+              - "Domain authority foundation"
+              - "Keyword strategy"
+              - "Meta content templates"
+            depends_on: ["brand", "copy"]
+          - id: "legal"
+            tasks:
+              - "Brand trademark registration"
+              - "Terms of service draft"
+              - "LGPD privacy policy"
+            depends_on: ["brand"]
+        parallel: true
+        gate_after: false
+
+    handoffs:
+      - from: "user"
+        to: "c-level"
+        required_inputs:
+          - "Business type and niche"
+          - "Founder background and expertise"
+          - "Target market vision"
+          - "Budget range"
+      - from: "brand"
+        to: "design-system"
+        required_outputs:
+          - "Brand name and tagline"
+          - "Brand archetype"
+          - "Color mood direction"
+          - "Verbal identity guide"
+      - from: "design-system"
+        to: "creative-studio"
+        required_outputs:
+          - "Complete brandbook"
+          - "Token system (CSS vars)"
+          - "Typography selections"
+
+    success_criteria:
+      - "Brand name validated (domain available, no trademark conflicts)"
+      - "Brandbook complete with tokens, typography, color system"
+      - "Visual assets for all primary channels created"
+      - "Messaging guide with 10+ approved headlines"
+      - "Entry funnel wireframed and copy-ready"
+      - "LGPD privacy policy drafted"
+      - "All assets saved to SuperMemory (containerTag: brand)"
+
+    deliverables_location: "outputs/brand/{slug}/ + workspace/businesses/{slug}/L1-strategy/"
+
+  # ─────────────────────────────────────────────────────────────────────────
+  # TEMPLATE 7: COURSE CREATION
+  # Use when: Transforming expert knowledge into a complete online course
+  # Examples: "Curso de drenagem linfatica", "Programa completo de um nicho de saúde"
+  # Ref: squad-collaboration-scenarios.md Scenario 4
+  # ─────────────────────────────────────────────────────────────────────────
+  course_creation:
+    name: "Course Creation Pipeline"
+    description: "Full course: knowledge extraction, instructional design, production, platform, sales"
+    scale: "LARGE"
+    estimated_duration: "5-14 days"
+    stage_gate_required: true
+    log_required: true
+    log_dir_pattern: "{YYYY-MM-DD}_curso-{slug}"
+
+    squads_involved:
+      wave_1:
+        name: "Knowledge Extraction"
+        squads:
+          - id: "mega-brain"
+            tasks:
+              - "MCE pipeline: transcriptions -> 10-layer DNA"
+              - "Knowledge graph construction"
+              - "Expert mental model extraction"
+          - id: "kb"
+            tasks:
+              - "Mind mapping: 9 cognitive layers"
+              - "Capture expert decision patterns"
+          - id: "fathom-analysis"
+            tasks:
+              - "Student call analysis -> gaps, doubts, language"
+              - "VoC bank from existing students"
+          - id: "etl-ops"
+            tasks:
+              - "Video transcription pipeline"
+              - "PDF/document processing"
+              - "Content chunking and indexing"
+          - id: "academic-research"
+            tasks:
+              - "Scientific validation of course content"
+              - "Evidence base for methodology claims"
+        parallel: true
+        gate_after: true
+        gate_description: "Knowledge gate — validate extraction completeness before design"
+
+      wave_2:
+        name: "Instructional Design"
+        squads:
+          - id: "course-creator"
+            tasks:
+              - "Module structure and learning paths"
+              - "Assessment design (quizzes, practical exercises)"
+              - "Gamification elements"
+              - "Learning outcome mapping"
+            depends_on: ["mega-brain", "kb", "fathom-analysis"]
+          - id: "infoproduct-creation"
+            tasks:
+              - "Product stack design (tiers, pricing, bonuses)"
+              - "Student success metrics"
+              - "Community structure"
+            depends_on: ["mega-brain"]
+          - id: "sop-factory"
+            tasks:
+              - "SOPs for processes taught in the course"
+              - "Step-by-step guides (dual output: human + AI)"
+            depends_on: ["mega-brain", "kb"]
+          - id: "tools-squad"
+            tasks:
+              - "Student frameworks and checklists"
+              - "Decision tools for practical application"
+            depends_on: ["mega-brain"]
+        parallel: true
+        gate_after: true
+        gate_description: "Design gate — approve module structure and product stack before production"
+
+      wave_3:
+        name: "Content Production"
+        squads:
+          - id: "content-ecosystem"
+            tasks:
+              - "Lesson scripts"
+              - "Complementary content (blog posts, social)"
+            depends_on: ["course-creator"]
+          - id: "video-production"
+            tasks:
+              - "AI video generation for lessons"
+              - "Editing, subtitles, effects"
+            depends_on: ["course-creator", "content-ecosystem"]
+          - id: "slides-creator"
+            tasks:
+              - "Lesson slides (andragogic design)"
+              - "Summary slides per module"
+            depends_on: ["course-creator"]
+          - id: "visual-knowledge-squad"
+            tasks:
+              - "Visual learning maps"
+              - "Canvas per module"
+              - "Infographics"
+            depends_on: ["course-creator"]
+          - id: "design-system"
+            tasks:
+              - "Course visual identity"
+              - "Consistent branding across materials"
+            depends_on: ["infoproduct-creation"]
+          - id: "translate"
+            condition: "if multilanguage version required"
+            tasks:
+              - "Spanish/English translation"
+              - "Cultural adaptation"
+            depends_on: ["content-ecosystem"]
+        parallel: true
+        gate_after: true
+        gate_description: "Production gate — review all content quality before platform setup"
+
+      wave_4:
+        name: "Platform + Sales"
+        squads:
+          - id: "full-stack-dev"
+            tasks:
+              - "Members area setup"
+              - "Quiz/diagnostic integration"
+              - "Progress tracking"
+            depends_on: ["course-creator", "design-system"]
+          - id: "funnel-creator"
+            tasks:
+              - "Sales funnel architecture"
+              - "Landing page and checkout"
+            depends_on: ["infoproduct-creation"]
+          - id: "copy"
+            tasks:
+              - "Sales page copy"
+              - "Email launch sequence"
+              - "WhatsApp nurturing"
+            depends_on: ["infoproduct-creation", "fathom-analysis"]
+          - id: "hormozi"
+            tasks:
+              - "Offer stack validation (Grand Slam Offer)"
+              - "Pricing strategy"
+              - "Guarantee design"
+            depends_on: ["infoproduct-creation"]
+        parallel: true
+        gate_after: false
+
+    handoffs:
+      - from: "user"
+        to: "mega-brain"
+        required_inputs:
+          - "Expert name and domain"
+          - "Source materials (videos, books, transcripts)"
+          - "Target student profile"
+          - "Course scope and depth"
+      - from: "course-creator"
+        to: "content-ecosystem"
+        required_outputs:
+          - "Complete module structure"
+          - "Learning outcomes per lesson"
+          - "Content type per lesson (video, text, exercise)"
+      - from: "infoproduct-creation"
+        to: "copy"
+        required_outputs:
+          - "Product name and positioning"
+          - "Pricing tiers"
+          - "Bonus descriptions"
+          - "Target student pain points"
+
+    success_criteria:
+      - "All modules have complete content (video + slides + exercises)"
+      - "Assessments validate learning outcomes"
+      - "Members area functional and tested"
+      - "Sales funnel live with correct checkout links"
+      - "Scientific claims validated with sources"
+      - "Portuguese accents correct in all materials"
+      - "Student onboarding sequence configured"
+
+    deliverables_location: "Members area + docs/funil-{sigla}/ + outputs/course-creator/{slug}/"
+
+  # ─────────────────────────────────────────────────────────────────────────
+  # TEMPLATE 8: CLIENT ONBOARDING
+  # Use when: New client/workspace needs full setup from scratch
+  # Examples: "Novo cliente: clinica de estetica", "Setup completo para novo workspace"
+  # Ref: squad-collaboration-scenarios.md Scenario 5
+  # ─────────────────────────────────────────────────────────────────────────
+  client_onboarding:
+    name: "Client Onboarding Pipeline"
+    description: "Full workspace setup: elicitation, foundation, infrastructure, activation"
+    scale: "LARGE"
+    estimated_duration: "14-30 days"
+    stage_gate_required: true
+    log_required: true
+    log_dir_pattern: "{YYYY-MM-DD}_onboarding-{workspace-slug}"
+
+    squads_involved:
+      wave_1:
+        name: "Elicitation (Day 1-3)"
+        squads:
+          - id: "c-level"
+            tasks:
+              - "Bootstrap workspace"
+              - "Deep elicitation (vision, model, goals)"
+              - "Business canvas"
+          - id: "mega-brain"
+            tasks:
+              - "Founder DNA extraction"
+              - "Knowledge graph of business domain"
+          - id: "kb"
+            tasks:
+              - "Mind clone of founder/expert"
+              - "Cognitive model mapping"
+          - id: "brand"
+            tasks:
+              - "Existing brand diagnostic"
+              - "Brand gap analysis"
+          - id: "fathom-analysis"
+            tasks:
+              - "Initial calls/interviews analysis"
+              - "VoC extraction from existing clients"
+        parallel: true
+        gate_after: true
+        gate_description: "Elicitation gate — validate understanding of client business before proceeding"
+
+      wave_2:
+        name: "Foundation (Day 3-7)"
+        squads:
+          - id: "client-strategy"
+            tasks:
+              - "OKR definition"
+              - "Strategic roadmap"
+              - "Competitive positioning"
+            depends_on: ["c-level", "mega-brain"]
+          - id: "market-research"
+            tasks:
+              - "ICP validation"
+              - "Market opportunity sizing"
+              - "Competitor landscape"
+            depends_on: ["c-level"]
+          - id: "legal"
+            tasks:
+              - "LGPD compliance setup"
+              - "Service contracts"
+              - "Terms of service"
+            depends_on: ["c-level"]
+          - id: "contabilidade"
+            tasks:
+              - "Fiscal setup (MEI/ME selection)"
+              - "Tax regime recommendation"
+              - "Invoice configuration"
+            depends_on: ["c-level"]
+          - id: "sop-factory"
+            tasks:
+              - "SOPs for client core processes"
+              - "Workflow documentation"
+            depends_on: ["c-level", "mega-brain"]
+          - id: "process-excellence-squad"
+            tasks:
+              - "Process mapping (MEGABRAIN)"
+              - "Bottleneck identification"
+            depends_on: ["c-level"]
+        parallel: true
+        gate_after: true
+        gate_description: "Foundation gate — strategy and legal framework approved before infrastructure"
+
+      wave_3:
+        name: "Infrastructure (Day 7-14)"
+        squads:
+          - id: "marketing-automation"
+            tasks:
+              - "ActiveCampaign setup (tags, lists, automations)"
+              - "Webhooks and n8n flows"
+              - "Welcome sequence"
+            depends_on: ["client-strategy"]
+          - id: "funnel-creator"
+            tasks:
+              - "Entry funnel (quiz diagnostic)"
+              - "Lead capture pages"
+            depends_on: ["client-strategy", "brand"]
+          - id: "design-system"
+            tasks:
+              - "Brand tokens"
+              - "Visual component system"
+              - "Brandbook generation"
+            depends_on: ["brand"]
+          - id: "full-stack-dev"
+            tasks:
+              - "Landing pages deployment"
+              - "Members area setup (if needed)"
+            depends_on: ["design-system", "funnel-creator"]
+          - id: "project-management-clickup"
+            tasks:
+              - "ClickUp workspace structure"
+              - "Mission Control lists"
+              - "Automation rules"
+            depends_on: ["client-strategy"]
+        parallel: true
+        gate_after: true
+        gate_description: "Infrastructure gate — all systems functional before activation"
+
+      wave_4:
+        name: "Activation (Day 14-30)"
+        squads:
+          - id: "content-ecosystem"
+            tasks:
+              - "Editorial calendar (first 30 days)"
+              - "First batch of posts"
+            depends_on: ["client-strategy", "brand"]
+          - id: "copy"
+            tasks:
+              - "Messaging guide"
+              - "Headlines bank"
+              - "Email sequences"
+            depends_on: ["client-strategy", "brand"]
+          - id: "megabrain-ads"
+            tasks:
+              - "First campaign (awareness)"
+              - "Pixel and tracking setup"
+            depends_on: ["funnel-creator", "creative-studio"]
+          - id: "customer-success"
+            tasks:
+              - "Onboarding flow for end clients"
+              - "Health score metrics definition"
+            depends_on: ["client-strategy"]
+          - id: "client-communication"
+            tasks:
+              - "Communication templates"
+              - "Tone of voice guide"
+              - "Channel strategy"
+            depends_on: ["brand", "copy"]
+        parallel: true
+        gate_after: false
+
+    handoffs:
+      - from: "user"
+        to: "c-level"
+        required_inputs:
+          - "Business name and niche"
+          - "Founder/owner details"
+          - "Current state (greenfield or existing business)"
+          - "Goals and timeline"
+          - "Budget range"
+      - from: "c-level"
+        to: "client-strategy"
+        required_outputs:
+          - "Complete business canvas"
+          - "Workspace configuration"
+          - "Priority areas"
+
+    success_criteria:
+      - "Workspace fully configured with vault, client data, and squad mappings"
+      - "Brand identity established (name, tokens, brandbook)"
+      - "Marketing automation operational (AC + n8n)"
+      - "Entry funnel live and capturing leads"
+      - "First paid campaign running"
+      - "ClickUp project structure configured"
+      - "30-day content calendar filled"
+      - "LGPD compliance verified"
+
+    deliverables_location: "workspace/businesses/{slug}/ + docs/funil-{sigla}/"
+
+  # ─────────────────────────────────────────────────────────────────────────
+  # TEMPLATE 9: SECURITY HARDENING
+  # Use when: Full security audit and IP protection cycle
+  # Examples: "Auditoria de seguranca do Mega Brain", "Hardening pos-incidente"
+  # Ref: squad-collaboration-scenarios.md Scenario 6
+  # ─────────────────────────────────────────────────────────────────────────
+  security_hardening:
+    name: "Security Hardening Pipeline"
+    description: "Full security cycle: assessment, remediation, protection, governance"
+    scale: "MEDIUM"
+    estimated_duration: "2-5 days"
+    stage_gate_required: true
+    log_required: true
+    log_dir_pattern: "{YYYY-MM-DD}_security-hardening"
+
+    squads_involved:
+      wave_1:
+        name: "Assessment"
+        squads:
+          - id: "cybersecurity"
+            tasks:
+              - "Pentest (web, network, API)"
+              - "OWASP Top 10 assessment"
+              - "Shannon autonomous scanning"
+          - id: "ip-shield-squad"
+            tasks:
+              - "IP exposure analysis"
+              - "Prompt defense audit"
+              - "Knowledge leakage detection"
+          - id: "domain-decoder"
+            tasks:
+              - "Business rules extraction from exposed code"
+              - "Bounded context vulnerability mapping"
+          - id: "cognitive-auditor"
+            tasks:
+              - "Agent cognitive failure detection"
+              - "Bias analysis in decision-making agents"
+        parallel: true
+        gate_after: true
+        gate_description: "Assessment gate — review all findings before remediation"
+
+      wave_2:
+        name: "Remediation"
+        squads:
+          - id: "full-stack-dev"
+            tasks:
+              - "Fix OWASP vulnerabilities"
+              - "Input validation hardening"
+              - "Authentication/authorization fixes"
+            depends_on: ["cybersecurity"]
+          - id: "infra-ops"
+            tasks:
+              - "Server hardening (firewall, SSH, Docker)"
+              - "TLS configuration"
+              - "Network segmentation"
+            depends_on: ["cybersecurity"]
+          - id: "legal"
+            tasks:
+              - "LGPD audit"
+              - "Privacy policy update"
+              - "Data processing agreement review"
+            depends_on: ["cybersecurity", "ip-shield-squad"]
+          - id: "core-dev"
+            tasks:
+              - "Hook security audit"
+              - "Secrets management hardening"
+              - "Permission model review"
+            depends_on: ["cybersecurity", "ip-shield-squad"]
+        parallel: true
+        gate_after: true
+        gate_description: "Remediation gate — verify all critical fixes applied"
+
+      wave_3:
+        name: "Protection"
+        squads:
+          - id: "ip-shield-squad"
+            tasks:
+              - "Deploy canary tokens"
+              - "Prompt obfuscation layer"
+              - "Deception network setup"
+            depends_on: ["full-stack-dev", "core-dev"]
+          - id: "cybersecurity"
+            tasks:
+              - "Continuous monitoring setup"
+              - "Incident response playbook"
+              - "Re-test after remediation"
+            depends_on: ["full-stack-dev", "infra-ops"]
+          - id: "claude-code-mastery"
+            tasks:
+              - "Hook permission audit"
+              - "MCP security review"
+              - "settings.local.json hygiene check"
+            depends_on: ["core-dev"]
+          - id: "monitor"
+            tasks:
+              - "Security alert configuration"
+              - "Health check endpoints"
+              - "SLA monitoring for security metrics"
+            depends_on: ["cybersecurity"]
+        parallel: true
+        gate_after: false
+
+      wave_4:
+        name: "Governance"
+        squads:
+          - id: "sop-factory"
+            tasks:
+              - "Security SOPs (incident response, access control)"
+              - "Rotation schedule for credentials"
+            depends_on: ["cybersecurity"]
+          - id: "technical-documentation"
+            tasks:
+              - "Security architecture documentation"
+              - "Policy documentation"
+            depends_on: ["cybersecurity", "legal"]
+          - id: "agent-autonomy"
+            tasks:
+              - "Agent autonomy security audit"
+              - "Permission escalation review"
+            depends_on: ["cognitive-auditor"]
+        parallel: true
+        gate_after: false
+
+    handoffs:
+      - from: "user"
+        to: "cybersecurity"
+        required_inputs:
+          - "Scope (full system, specific service, post-incident)"
+          - "Previous audit findings (if any)"
+          - "Known vulnerabilities"
+          - "Compliance requirements (LGPD, etc.)"
+
+    success_criteria:
+      - "Zero critical vulnerabilities remaining"
+      - "All OWASP Top 10 items addressed"
+      - "Canary tokens deployed in sensitive areas"
+      - "Incident response playbook documented and tested"
+      - "LGPD compliance verified"
+      - "Monitoring and alerts operational"
+      - "All findings logged in security audit report"
+
+    deliverables_location: "outputs/cybersecurity/{date}-hardening/"
+
+  # ─────────────────────────────────────────────────────────────────────────
+  # TEMPLATE 10: FRANCHISE EXPANSION
+  # Use when: Client wants to franchise their business
+  # Examples: "Franquear clinica de um nicho de saúde", "Modelo de franquia para estetica"
+  # Ref: squad-collaboration-scenarios.md Scenario 7
+  # ─────────────────────────────────────────────────────────────────────────
+  franchise_expansion:
+    name: "Franchise Expansion Pipeline"
+    description: "Full franchise creation: diagnosis, systematization, legal, go-to-market"
+    scale: "LARGE"
+    estimated_duration: "30-60 days"
+    stage_gate_required: true
+    log_required: true
+    log_dir_pattern: "{YYYY-MM-DD}_franquia-{slug}"
+
+    squads_involved:
+      wave_1:
+        name: "Franchisability Diagnosis"
+        squads:
+          - id: "franchise"
+            tasks:
+              - "E-Factor assessment (Gerber method)"
+              - "Franchisability scorecard"
+              - "Unit economics baseline"
+            depends_on: []
+          - id: "process-excellence-squad"
+            tasks:
+              - "Core process mapping (VSM)"
+              - "Constraint analysis (TOC)"
+            depends_on: []
+          - id: "mega-brain"
+            tasks:
+              - "Process tokenization (Organism -> Molecule -> Atom)"
+              - "Replication readiness assessment"
+            depends_on: []
+          - id: "advisory-board"
+            tasks:
+              - "Strategic validation of franchise model"
+              - "Market timing assessment"
+            depends_on: []
+          - id: "conselho"
+            tasks:
+              - "Go/no-go decision"
+              - "Risk scenario analysis"
+            depends_on: []
+        parallel: true
+        gate_after: true
+        gate_description: "Franchisability gate — go/no-go decision before major investment"
+
+      wave_2:
+        name: "Systematization"
+        squads:
+          - id: "sop-factory"
+            tasks:
+              - "Operational SOPs (dual output: human + AI)"
+              - "Training manuals"
+              - "Quality control checklists"
+            depends_on: ["process-excellence-squad", "mega-brain"]
+          - id: "tools-squad"
+            tasks:
+              - "Franchisee management frameworks"
+              - "Decision tools for daily operations"
+            depends_on: ["mega-brain"]
+          - id: "course-creator"
+            tasks:
+              - "Franchisee training program"
+              - "Certification assessments"
+            depends_on: ["sop-factory"]
+          - id: "slides-creator"
+            tasks:
+              - "Training materials"
+              - "Onboarding presentations"
+            depends_on: ["course-creator"]
+          - id: "visual-knowledge-squad"
+            tasks:
+              - "Visual process manuals"
+              - "Flowcharts and decision trees"
+            depends_on: ["sop-factory"]
+        parallel: true
+        gate_after: true
+        gate_description: "Systematization gate — all SOPs and training validated before legal"
+
+      wave_3:
+        name: "Legal + Financial"
+        squads:
+          - id: "legal"
+            tasks:
+              - "COF (Circular de Oferta de Franquia — 23 sections)"
+              - "Franchise agreement"
+              - "Lei 13.966/2019 compliance"
+            depends_on: ["franchise", "sop-factory"]
+          - id: "contabilidade"
+            tasks:
+              - "Unit economics model"
+              - "Franchisee financial projections"
+              - "Tax implications"
+            depends_on: ["franchise"]
+          - id: "finops"
+            tasks:
+              - "ROI projections"
+              - "Break-even analysis"
+              - "Cost structure per unit"
+            depends_on: ["franchise", "contabilidade"]
+          - id: "franchise"
+            tasks:
+              - "Franchisee scorecard finalization"
+              - "Territory mapping"
+              - "Fee structure"
+            depends_on: ["legal", "contabilidade"]
+        parallel: true
+        gate_after: true
+        gate_description: "Legal gate — COF and contracts approved before go-to-market"
+
+      wave_4:
+        name: "Go-to-Market"
+        squads:
+          - id: "brand"
+            tasks:
+              - "Franchise brand identity (sub-brand)"
+              - "Franchisee brand guidelines"
+            depends_on: ["franchise"]
+          - id: "pitch-deck"
+            tasks:
+              - "Investor/franchisee presentation deck"
+              - "Financial highlights slides"
+            depends_on: ["finops", "franchise"]
+          - id: "sales"
+            tasks:
+              - "Franchisee sales script"
+              - "Objection handling playbook"
+            depends_on: ["franchise", "legal"]
+          - id: "copy"
+            tasks:
+              - "Franchisee recruitment copy"
+              - "Landing page for franchise inquiry"
+              - "Email nurturing sequence"
+            depends_on: ["brand", "franchise"]
+          - id: "marketing-automation"
+            tasks:
+              - "Franchisee pipeline in AC"
+              - "Nurturing workflow"
+            depends_on: ["copy"]
+        parallel: true
+        gate_after: false
+
+    handoffs:
+      - from: "user"
+        to: "franchise"
+        required_inputs:
+          - "Business type and current operations"
+          - "Number of existing units"
+          - "Geographic expansion goals"
+          - "Investment range for franchisees"
+          - "Timeline expectations"
+
+    success_criteria:
+      - "Franchisability score > 7/10"
+      - "Complete COF (23 sections) legally reviewed"
+      - "Training program with certification ready"
+      - "All SOPs documented and validated"
+      - "Financial model with 3-year projection"
+      - "Franchisee recruitment pipeline operational"
+      - "Brand guidelines for franchise network ready"
+
+    deliverables_location: "outputs/franchise/{slug}/"
+
+  # ─────────────────────────────────────────────────────────────────────────
+  # TEMPLATE 11: MIND CLONE CREATION
+  # Use when: Creating an AI mind clone of a specific expert
+  # Examples: "Clone de um especialista", "Mind clone de um cliente sobre um nicho"
+  # Ref: squad-collaboration-scenarios.md Scenario 8
+  # ─────────────────────────────────────────────────────────────────────────
+  mind_clone_creation:
+    name: "Mind Clone Creation Pipeline"
+    description: "Expert mind clone: extraction, cognitive mapping, testing, deployment"
+    scale: "MEDIUM"
+    estimated_duration: "1-3 days"
+    stage_gate_required: true
+    log_required: true
+    log_dir_pattern: "{YYYY-MM-DD}_mind-clone-{expert-slug}"
+
+    squads_involved:
+      wave_1:
+        name: "Knowledge Extraction"
+        squads:
+          - id: "mega-brain"
+            tasks:
+              - "MCE pipeline: ingest books/podcasts/transcripts"
+              - "10-layer DNA extraction"
+              - "Knowledge graph construction"
+              - "Expertise domain mapping"
+        parallel: false
+        gate_after: true
+        gate_description: "Extraction gate — validate DNA completeness (10 layers populated)"
+
+      wave_2:
+        name: "Cognitive Mapping"
+        squads:
+          - id: "kb"
+            tasks:
+              - "9-layer cognitive model"
+              - "System prompt generation"
+              - "Voice DNA capture"
+              - "Decision pattern extraction"
+            depends_on: ["mega-brain"]
+        parallel: false
+        gate_after: true
+        gate_description: "Clone gate — validate clone fidelity against known outputs of the expert"
+
+      wave_3:
+        name: "Testing + Integration"
+        squads:
+          - id: "agent-autonomy"
+            tasks:
+              - "Autonomy level assessment (L1-L3)"
+              - "ReAct/Reflexion capability test"
+            depends_on: ["kb"]
+          - id: "skill-tester"
+            tasks:
+              - "Golden input/output tests"
+              - "Domain skill validation"
+            depends_on: ["kb"]
+          - id: "squad-creator"
+            tasks:
+              - "Integrate clone into squad structure"
+              - "Config.yaml and context.yaml setup"
+            depends_on: ["kb"]
+          - id: "cognitive-auditor"
+            tasks:
+              - "Bias detection in clone outputs"
+              - "Cognitive failure analysis"
+            depends_on: ["kb"]
+        parallel: true
+        gate_after: true
+        gate_description: "Quality gate — all tests pass, no critical biases detected"
+
+      wave_4:
+        name: "Deployment + Monitoring"
+        squads:
+          - id: "runner-ops"
+            tasks:
+              - "Headless runner governance setup"
+              - "Lifecycle management configuration"
+            depends_on: ["squad-creator"]
+          - id: "monitor"
+            tasks:
+              - "Health check setup"
+              - "Performance baseline"
+              - "Alert configuration"
+            depends_on: ["squad-creator"]
+          - id: "kaizen"
+            tasks:
+              - "Improvement feedback loop design"
+              - "PDCA cycle for clone quality"
+            depends_on: ["skill-tester"]
+        parallel: true
+        gate_after: false
+
+    handoffs:
+      - from: "user"
+        to: "mega-brain"
+        required_inputs:
+          - "Expert name and domain"
+          - "Source materials (books, videos, podcasts, interviews)"
+          - "Target use cases for the clone"
+          - "Quality expectations"
+      - from: "mega-brain"
+        to: "kb"
+        required_outputs:
+          - "Complete 10-layer DNA"
+          - "Knowledge graph"
+          - "Expert vocabulary bank"
+
+    success_criteria:
+      - "10-layer DNA extraction complete"
+      - "Clone passes golden test suite (>80% fidelity)"
+      - "No critical cognitive biases detected"
+      - "Squad integration complete (config.yaml, context.yaml)"
+      - "Health monitoring operational"
+      - "Clone saved to SuperMemory and Qdrant"
+
+    deliverables_location: "outputs/minds/{expert-slug}/ + squads/{squad-name}/"
+
+  # ─────────────────────────────────────────────────────────────────────────
+  # TEMPLATE 12: COMPETITIVE INTELLIGENCE
+  # Use when: Deep analysis of competitors for strategic decisions
+  # Examples: "Analisar 5 maiores concorrentes", "Intel sobre novo player no mercado"
+  # Ref: squad-collaboration-scenarios.md Scenario 11
+  # ─────────────────────────────────────────────────────────────────────────
+  competitive_intelligence:
+    name: "Competitive Intelligence Pipeline"
+    description: "Deep competitor analysis: multi-source collection, analysis, strategic action"
+    scale: "MEDIUM"
+    estimated_duration: "1-3 days"
+    stage_gate_required: true
+    log_required: true
+    log_dir_pattern: "{YYYY-MM-DD}_intel-competitiva-{slug}"
+
+    squads_involved:
+      wave_1:
+        name: "Multi-Source Collection"
+        squads:
+          - id: "spy"
+            tasks:
+              - "Framework benchmarking"
+              - "Competitor scoring methodology"
+              - "Product/pricing matrix"
+          - id: "deep-scraper"
+            tasks:
+              - "Website scraping (pricing, offers, messaging)"
+              - "Social media presence analysis"
+          - id: "deep-research"
+            tasks:
+              - "OSINT investigation"
+              - "Systematic review of competitor strategies"
+          - id: "market-research"
+            tasks:
+              - "TAM/SAM positioning"
+              - "Win/loss analysis"
+              - "Market share estimation"
+          - id: "academic-research"
+            tasks:
+              - "Papers/patents relevant to competitors"
+              - "Technology trend analysis"
+          - id: "content-ecosystem"
+            tasks:
+              - "Competitor content analysis (YouTube/Instagram)"
+              - "Content strategy reverse-engineering"
+        parallel: true
+        gate_after: true
+        gate_description: "Collection gate — sufficient data quality before analysis"
+
+      wave_2:
+        name: "Analysis + Synthesis"
+        squads:
+          - id: "data-analytics"
+            tasks:
+              - "Comparative dashboard"
+              - "KPI benchmarking"
+              - "Trend visualization"
+            depends_on: ["spy", "deep-scraper", "market-research"]
+          - id: "fathom-analysis"
+            tasks:
+              - "Competitor customer reviews analysis"
+              - "Sentiment analysis"
+              - "Unmet needs detection"
+            depends_on: ["deep-scraper"]
+          - id: "mega-brain"
+            tasks:
+              - "Competitor dossier compilation"
+              - "Strategic insight extraction"
+            depends_on: ["spy", "deep-research"]
+          - id: "advisory-board"
+            tasks:
+              - "Strategic interpretation"
+              - "Opportunity identification"
+              - "Threat assessment"
+            depends_on: ["data-analytics", "mega-brain"]
+        parallel: true
+        gate_after: true
+        gate_description: "Analysis gate — insights validated before action recommendations"
+
+      wave_3:
+        name: "Action Planning"
+        squads:
+          - id: "client-strategy"
+            tasks:
+              - "Repositioning recommendations"
+              - "Competitive advantage enhancement plan"
+            depends_on: ["advisory-board"]
+          - id: "copy"
+            tasks:
+              - "Counter-messaging guide"
+              - "Differentiation headlines"
+            depends_on: ["advisory-board", "fathom-analysis"]
+          - id: "megabrain-ads"
+            tasks:
+              - "Audience adjustment recommendations"
+              - "Creative differentiation strategy"
+            depends_on: ["spy", "data-analytics"]
+          - id: "visual-knowledge-squad"
+            tasks:
+              - "Competitive landscape canvas"
+              - "Strategic positioning map"
+            depends_on: ["data-analytics", "advisory-board"]
+        parallel: true
+        gate_after: false
+
+    handoffs:
+      - from: "user"
+        to: "spy"
+        required_inputs:
+          - "Competitor list (names, URLs)"
+          - "Analysis dimensions (pricing, content, ads, product)"
+          - "Strategic questions to answer"
+          - "Decision context (why now?)"
+      - from: "spy"
+        to: "data-analytics"
+        required_outputs:
+          - "Raw competitor data"
+          - "Scoring matrices"
+          - "Collection methodology"
+
+    success_criteria:
+      - "All target competitors profiled with scoring"
+      - "Comparative dashboard with KPIs"
+      - "Strategic recommendations with rationale"
+      - "Counter-messaging guide ready for copy"
+      - "Action items assigned to operational squads"
+      - "Intelligence saved to SuperMemory (containerTag: spy)"
+
+    deliverables_location: "outputs/spy/{slug}/ + .data/executions/{dir}/"

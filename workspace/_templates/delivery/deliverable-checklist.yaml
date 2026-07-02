@@ -1,0 +1,101 @@
+---
+# DELIVERABLE-CHECKLIST.YAML - Deliverable quality assurance
+# Adapted from mega-brain-stage pattern for Mega Brain workspace context
+
+_meta:
+  version: "1.0.0"
+  owner: "coo-orchestrator"
+  target_layer: "L4-operational"
+  state: "TEMPLATE"
+
+metadata:
+  canonical_scope: "workspace/_templates/delivery/deliverable-checklist.yaml"
+  owner: "coo"
+  version: "1.0.0"
+  last_updated: "2026-03-23"
+  description: "Deliverable checklist with specs, QA criteria, approval flow, and deadline"
+
+fields:
+  deliverable_name:
+    type: string
+    required: true
+    description: "Name of the deliverable"
+
+  project_name:
+    type: string
+    required: true
+    description: "Parent project this deliverable belongs to"
+
+  deliverable_type:
+    type: enum
+    required: true
+    description: "Category of deliverable"
+    options: [document, design, code, campaign, report, presentation, training, asset, other]
+
+  description:
+    type: string
+    required: true
+    description: "What this deliverable is and what it contains"
+
+  specs:
+    type: object
+    required: true
+    description: "Technical specifications or requirements"
+    properties:
+      format:
+        type: string
+        required: true
+        description: "Expected format (e.g., PDF, Figma, MP4, Google Doc)"
+      dimensions:
+        type: string
+        required: false
+        description: "Size, resolution, or length requirements if applicable"
+      brand_compliance:
+        type: boolean
+        required: false
+        description: "Whether the deliverable must follow brand guidelines"
+      reference_files:
+        type: list
+        required: false
+        description: "Files or templates the deliverable should reference"
+
+  qa_criteria:
+    type: list
+    required: true
+    description: "Quality criteria that must be met before approval, each checkable"
+
+  approval_flow:
+    type: list
+    required: true
+    description: "Ordered list of approvers with name, role, and approval status"
+
+  deadline:
+    type: date
+    required: true
+    description: "Date the deliverable must be completed and approved"
+
+  owner:
+    type: string
+    required: true
+    description: "Person responsible for producing the deliverable"
+
+  reviewer:
+    type: string
+    required: true
+    description: "Person responsible for quality review"
+
+  status:
+    type: enum
+    required: true
+    description: "Current deliverable status"
+    options: [not-started, in-progress, review, revision, approved, delivered]
+
+  revision_log:
+    type: list
+    required: false
+    description: "History of revision requests with date, requester, and feedback"
+
+  delivery_method:
+    type: string
+    required: false
+    description: "How the deliverable will be handed to the client (email, drive, portal)"

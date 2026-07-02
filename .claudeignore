@@ -1,0 +1,9 @@
+_import/
+_IMPORT/
+archive/
+inbox/**/*.mp4
+inbox/**/*.mp3
+inbox/**/*.wav
+inbox/**/*.m4a
+logs/sessions/
+logs/batches/

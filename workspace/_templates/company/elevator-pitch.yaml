@@ -1,0 +1,113 @@
+---
+# ELEVATOR-PITCH.YAML - Concise pitch structure
+# Adapted from mega-brain-stage pattern for Mega Brain workspace context
+
+_meta:
+  version: "1.0.0"
+  owner: "c-level"
+  target_layer: "L1-strategy"
+  state: "TEMPLATE"
+
+metadata:
+  canonical_scope: "workspace/_templates/company/elevator-pitch.yaml"
+  owner: "ceo"
+  version: "1.0.0"
+  last_updated: "2026-03-23"
+  description: "Elevator pitch template with one-liner, problem, solution, differentiator, and CTA"
+
+fields:
+  one_liner:
+    type: string
+    required: true
+    description: "Single sentence that explains what the company does (under 15 words)"
+
+  target_audience:
+    type: string
+    required: true
+    description: "Who this pitch is designed for"
+
+  problem:
+    type: object
+    required: true
+    description: "The problem being solved"
+    properties:
+      statement:
+        type: string
+        required: true
+        description: "Clear articulation of the pain point in the audience language"
+      consequence:
+        type: string
+        required: true
+        description: "What happens if the problem goes unsolved"
+      prevalence:
+        type: string
+        required: false
+        description: "How widespread the problem is (credibility anchor)"
+
+  solution:
+    type: object
+    required: true
+    description: "How the company solves the problem"
+    properties:
+      statement:
+        type: string
+        required: true
+        description: "What the company offers as the solution"
+      mechanism:
+        type: string
+        required: true
+        description: "How the solution works (the method or approach)"
+      proof_point:
+        type: string
+        required: false
+        description: "One concrete result or metric that validates the solution"
+
+  differentiator:
+    type: object
+    required: true
+    description: "Why this solution is different from alternatives"
+    properties:
+      unique_angle:
+        type: string
+        required: true
+        description: "What makes this approach fundamentally different"
+      competitor_gap:
+        type: string
+        required: false
+        description: "What competitors miss that this solution addresses"
+
+  cta:
+    type: object
+    required: true
+    description: "Call to action"
+    properties:
+      primary_cta:
+        type: string
+        required: true
+        description: "The specific next step being asked for"
+      urgency_hook:
+        type: string
+        required: false
+        description: "Why the audience should act now rather than later"
+
+  pitch_versions:
+    type: object
+    required: false
+    description: "Pitch adapted for different contexts"
+    properties:
+      ten_second:
+        type: string
+        required: false
+        description: "Ultra-short version for casual encounters"
+      thirty_second:
+        type: string
+        required: false
+        description: "Standard elevator pitch length"
+      sixty_second:
+        type: string
+        required: false
+        description: "Extended version with proof and CTA"
+      written:
+        type: string
+        required: false
+        description: "Version optimized for email or messaging"

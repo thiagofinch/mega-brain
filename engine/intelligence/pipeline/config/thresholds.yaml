@@ -1,0 +1,97 @@
+# thresholds.yaml — Pipeline MCE Central Threshold Registry
+# Story: STORY-MCE-11.19
+# Source-of-truth for all behavioral thresholds that govern automatic pipeline decisions.
+# Edit this file to tune pipeline behavior without touching Python code.
+#
+# Usage:
+#   python3 -m engine.intelligence.pipeline.mce.orchestrate thresholds --show
+#   python3 -m engine.intelligence.pipeline.mce.orchestrate thresholds --set <key> <value>
+#
+# All numeric values are the DEFAULT. Runtime overrides via --set do NOT persist.
+# To make permanent changes: edit values here and redeploy.
+
+thresholds:
+
+  # T1 — Role Tracker (MCE-11.8)
+  # Threshold de menções para criação automática de cargo agent
+  role_creation:
+    critical: 10       # menções → auto-create agent (Phase 7.2 + 8.6.1)
+    important: 5       # menções → monitor / highlight
+    track: 1           # menções → rastrear no role index
+    status: not_implemented
+    pending_story: "STORY-MCE-11.8"
+    source: "orchestrate.py Phase 7.2 + 8.6.1 (story not yet implemented)"
+    description: "Threshold de menções para criação automática de cargo agent via role tracker"
+
+  # T2 — DNA Auto-Create Density
+  # Densidade mínima do dossier (out of 5) para trigger de criação automática de DNA YAMLs
+  dna_auto_create:
+    min_density: 3     # de 5 — densidade mínima para criar DNA
+    max_density: 5     # escala máxima (constante)
+    source: "engine/intelligence/density.py:42 (TRIGGER_DENSITY)"
+    description: "Densidade mínima do dossier para trigger de criação automática de DNA"
+
+  # T3 — DNA Consolidation Density
+  # Densidade para trigger de consolidação narrativa (Narrative Metabolism / reescrever vs só anexar)
+  dna_consolidation:
+    min_density: 4     # de 5 — densidade para consolidação narrativa profunda
+    max_density: 5
+    status: not_implemented
+    note: "density.py TRIGGER_DENSITY=3 cobre T2. Consolidation at 4/5 is documented in OLD doc §10.3 but not yet enforced separately."
+    source: "orchestrate.py Phase 8.1.8 (not yet separated from dna_auto_create trigger)"
+    description: "Densidade para trigger de consolidação narrativa — reescrever (consolidar) vs só anexar material novo"
+
+  # T4 — Entity Resolution: Merge Confidence
+  # Confidence para merge automático de entidades canonicais
+  entity_resolution:
+    auto_merge_threshold: 0.95   # confidence >= this → merge automático (sem revisão humana)
+    fuzzy_threshold: 0.85        # confidence >= this AND < auto_merge → fila de revisão humana
+    separated_threshold: 0.85    # confidence < this → entidades tratadas como distintas (sem merge)
+    source: "engine/intelligence/entities/entity_normalizer.py:44-45"
+    description: "Thresholds de confiança (cosine sim) para fusão de entidades canonicais no CANONICAL-MAP"
+    note: "OLD doc §10.4 documentava merge>=0.85 / review 0.50-0.84 / separated<0.50. NEW implementou auto_merge=0.95 / fuzzy=0.85. Valores do NEW prevalecem."
+
+  # T5 — Cross-Batch Anomaly Detection
+  # Desvio percentual que aciona flag de anomalia cross-batch
+  anomaly_detection:
+    desvio_pct: 25     # % de desvio da média dos últimos N batches
+    window: 5          # número de batches para calcular média móvel
+    status: not_implemented
+    source: "orchestrate.py Phase 8.7 (not yet implemented in NEW)"
+    description: "Desvio percentual cross-batch que aciona flag de anomalia — previne extração instável"
+
+  # T6 — DE-PARA Match Rate
+  # Taxa de match na reconciliação DE-PARA planilha/filesystem
+  depara_match_rate:
+    ok_threshold: 80     # % — taxa OK, prosseguir normalmente
+    warn_threshold: 50   # % — taxa WARNING, prosseguir com ressalva no log
+    halt_threshold: 0    # % — abaixo de warn_threshold = HALT (< 50% = parar pipeline)
+    status: not_implemented
+    source: "engine/intelligence/validation/de_para_completo.py:586 (match_rate calculado mas sem OK/WARN/HALT enforcement)"
+    description: "Taxa de match na reconciliação DE-PARA planilha ↔ filesystem. Sem enforcement atualmente — só reporting."
+
+  # T7 — INBOX Age Alert
+  # Idade de arquivo em INBOX para alertas de urgência
+  inbox_age:
+    urgent_days: 3     # dias para marcar como urgente (OLD doc §10.7 diz 7 — NEW usa 3)
+    normal_days: 1     # dias para marcar como normal
+    source: ".claude/hooks/inbox_age_alert.py:35 (MAX_AGE_DAYS)"
+    description: "Idade de arquivo em INBOX para alertas de urgência na sessão Claude"
+    note: "OLD doc §10.7 documentava urgent_days=7. NEW implementou MAX_AGE_DAYS=3. Valor do NEW (3) preservado como canônico."
+
+  # T8 — Token Checkpoint
+  # Heurística de tokens para observabilidade do pipeline
+  token_checkpoint:
+    heuristic_only: true
+    status: observational
+    source: "engine/intelligence/pipeline/mce/ (token_monitor — observational)"
+    description: "Heurística de tokens — sem threshold público explícito. Sistema observacional, não de enforcement."
+
+  # T9 — Template Evolution
+  # Critérios para trigger de proposta de nova parte/subseção no template de agente
+  template_evolution:
+    min_insights: 3    # insights mínimos para trigger de nova subseção
+    min_frameworks: 1  # frameworks mínimos para trigger de nova parte
+    status: not_implemented
+    source: "Phase 7.5 TEMPLATE-EVOLUTION-PROTOCOL (not yet implemented in NEW)"
+    description: "Critérios para trigger de proposta de nova parte/subseção no template de agente conforme material acumula"

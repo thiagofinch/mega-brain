@@ -1,0 +1,45 @@
+pack:
+  name: roundtable
+  version: "2.1.0"
+  description: "Orchestrates multi-agent consensus reviews with parallel individual analysis, debate rounds, and conflict resolution loops until unified verdict"
+  icon: "RT"
+  type: skill
+  location: .claude/skills/roundtable/
+
+process:
+  id: SP-ROUNDTABLE
+  mode: VALIDAR
+  megabrain_version: "1.2"
+  organism: ORG-RT-001
+  molecules: 4
+  atoms: 9
+
+artifact_contracts:
+  - artifact_id: roundtable-report
+    template_path: templates/report-review.md
+    lifecycle_states: [draft, validated, approved, stale, archived]
+  - artifact_id: roundtable-decisions
+    template_path: templates/report-decision.md
+    lifecycle_states: [draft, decided]
+  - artifact_id: roundtable-gap-analysis
+    template_path: templates/report-gap-analysis.md
+    lifecycle_states: [draft, gaps_identified]
+
+supported_modes: [VALIDAR, EXPLORAR, PLANEJAR, ENTENDER]
+bu_mapping: hub-framework
+
+token_count: 12
+token_families: [Identity, Threshold, Time, Capacity, Context, Executor]
+
+checklist_refs:
+  - checklists/agent-lenses.yaml
+
+data_refs:
+  - data/agent-selection-matrix.yaml
+  - data/presets.yaml
+
+inter_skill_contracts:
+  invoked_by:
+    - skill: wave-execute
+      at_atom: ATM-WE-011
+      provides: "roundtable-report.md"

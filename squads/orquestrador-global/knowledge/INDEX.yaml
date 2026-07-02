@@ -1,0 +1,1946 @@
+version: '1.0'
+squad: orquestrador-global
+generated_at: '2026-03-12T14:31:58.520Z'
+total_files: 16
+total_lines: 7908
+total_tokens: 10557
+files:
+  - path: BLOCKER-RESOLUTION-PROTOCOL.md
+    lines: 171
+    tokens: 718
+    hash: 956742ccbbff
+    topics:
+      - blocker
+      - resolution
+      - external
+      - service
+      - approval
+      - capability
+      - workaround
+      - credential
+    sections:
+      - name: '# Blocker Resolution Protocol'
+        lines: 1-2
+        tokens: 4
+  - path: BATTLE-ADOPTION-GUIDE.md
+    lines: 486
+    tokens: 632
+    hash: e71b15b1aee8
+    topics:
+      - battle
+      - adoption
+      - guide
+      - ativar
+      - royale
+      - seu
+      - squad
+      - pré
+      - requisitos
+      - checklist
+      - passo
+      - definir
+      - composição
+      - equipes
+      - identificar
+    sections:
+      - name: '# Battle Adoption Guide'
+        lines: 1-2
+        tokens: 2
+      - name: '## Como Ativar o Battle Royale no Seu Squad'
+        lines: 3-14
+        tokens: 15
+      - name: '## Pré-requisitos'
+        lines: 15-26
+        tokens: 15
+      - name: '### Checklist de Pré-requisitos'
+        lines: 27-36
+        tokens: 12
+      - name: '## Passo 1: Definir Composição de Equipes'
+        lines: 37-38
+        tokens: 2
+      - name: '### 1.1 Identificar Ângulos'
+        lines: 39-48
+        tokens: 12
+      - name: '### 1.2 Selecionar Board de Revisão'
+        lines: 49-57
+        tokens: 11
+      - name: '### 1.3 Documentar no knowledge/'
+        lines: 58-62
+        tokens: 6
+      - name: '# Battle Teams Configuration — {Seu Squad}'
+        lines: 63-64
+        tokens: 2
+      - name: '## Configuração Padrão: {tipo-de-battle}'
+        lines: 65-66
+        tokens: 2
+      - name: '### Equipes'
+        lines: 67-73
+        tokens: 8
+      - name: '### Board de Revisão'
+        lines: 74-79
+        tokens: 7
+      - name: '### Reservas'
+        lines: 80-83
+        tokens: 4
+      - name: '### 1.4 Template por Tamanho'
+        lines: 84-95
+        tokens: 15
+      - name: '## Passo 2: Definir Critérios de Votação'
+        lines: 96-97
+        tokens: 2
+      - name: '### 2.1 Escolher Critérios'
+        lines: 98-107
+        tokens: 12
+      - name: '### 2.2 Escrever Rubricas'
+        lines: 108-119
+        tokens: 15
+      - name: '### 2.3 Documentar no knowledge/'
+        lines: 120-124
+        tokens: 6
+      - name: '# Battle Scoring Criteria — {Seu Squad}'
+        lines: 125-126
+        tokens: 2
+      - name: '## Critérios de Votação'
+        lines: 127-134
+        tokens: 10
+      - name: '## Rubrica Detalhada'
+        lines: 135-136
+        tokens: 2
+      - name: '### Critério 1: {nome} (Peso: 0.XX)'
+        lines: 137-146
+        tokens: 12
+      - name: '## Passo 3: Definir Board de Revisão'
+        lines: 147-148
+        tokens: 2
+      - name: '### 3.1 Configurar Frameworks'
+        lines: 149-157
+        tokens: 11
+      - name: '### 3.2 Definir Gate de Aprovação'
+        lines: 158-164
+        tokens: 8
+      - name: '### 3.3 Definir Escalação'
+        lines: 165-173
+        tokens: 11
+      - name: '## Passo 4: Criar Workflow Especializado'
+        lines: 174-175
+        tokens: 2
+      - name: '### 4.1 Copiar Template'
+        lines: 176-184
+        tokens: 11
+      - name: '### 4.2 Adaptar Configuração'
+        lines: 185-213
+        tokens: 37
+      - name: '### 4.3 Personalizar Fases'
+        lines: 214-225
+        tokens: 15
+      - name: '### 4.4 Criar Tasks Especializadas'
+        lines: 226-238
+        tokens: 16
+      - name: '## Passo 5: Registrar Comando *battle no squad.yaml'
+        lines: 239-240
+        tokens: 2
+      - name: '### 5.1 Adicionar Seção de Comandos'
+        lines: 241-263
+        tokens: 29
+      - name: '### 5.2 Adicionar Seção Battle'
+        lines: 264-280
+        tokens: 21
+      - name: '### 5.3 Registrar nos Componentes'
+        lines: 281-303
+        tokens: 29
+      - name: '## Passo 6: Registrar no TEAM-REGISTRY.md'
+        lines: 304-308
+        tokens: 6
+      - name: '### {seu-squad}'
+        lines: 309-326
+        tokens: 23
+      - name: '## Exemplos Completos Pré-Configurados'
+        lines: 327-328
+        tokens: 2
+      - name: '### Exemplo 1: Creative Studio — Criativos Visuais para Ads'
+        lines: 329-363
+        tokens: 45
+      - name: '### Exemplo 2: Content Ecosystem — Roteiros de Vídeo'
+        lines: 364-397
+        tokens: 43
+      - name: '### Exemplo 3: Vídeo Production — Storyboards/Roteiros de Vídeo'
+        lines: 398-435
+        tokens: 49
+      - name: '## Quando NÃO Usar Battle'
+        lines: 436-439
+        tokens: 4
+      - name: '### Não use quando:'
+        lines: 440-450
+        tokens: 13
+      - name: '### Use quando:'
+        lines: 451-461
+        tokens: 13
+      - name: '## Checklist Final de Implementação'
+        lines: 462-477
+        tokens: 20
+      - name: '## Metadata'
+        lines: 478-486
+        tokens: 11
+  - path: BATTLE-CONFIG-SCHEMA.md
+    lines: 588
+    tokens: 765
+    hash: e59f0851cea4
+    topics:
+      - battle
+      - configuration
+      - schema
+      - overview
+      - specification
+      - teams
+      - scoring
+      - debate
+      - board
+      - model
+      - strategy
+      - field
+      - reference
+      - table
+      - example
+    sections:
+      - name: '# Battle Configuration Schema'
+        lines: 1-2
+        tokens: 2
+      - name: '## Overview'
+        lines: 3-22
+        tokens: 25
+      - name: '## Schema Specification'
+        lines: 23-24
+        tokens: 2
+      - name: '### 1. Teams'
+        lines: 25-50
+        tokens: 33
+      - name: '### 2. Scoring'
+        lines: 51-75
+        tokens: 32
+      - name: '### 3. Debate'
+        lines: 76-104
+        tokens: 37
+      - name: '### 4. Board'
+        lines: 105-131
+        tokens: 34
+      - name: '## Model Strategy'
+        lines: 132-150
+        tokens: 24
+      - name: '## Field Reference Table'
+        lines: 151-196
+        tokens: 59
+      - name: '## Example 1 — Copywriting (Carta de Vendas)'
+        lines: 197-315
+        tokens: 154
+      - name: '## Example 2 — Creative Studio (Criativos Visuais)'
+        lines: 316-419
+        tokens: 134
+      - name: '## Example 3 — Content Ecosystem (Roteiros)'
+        lines: 420-519
+        tokens: 129
+      - name: '## Default Values'
+        lines: 520-561
+        tokens: 54
+      - name: '## Validation Checklist'
+        lines: 562-579
+        tokens: 23
+      - name: '## Metadata'
+        lines: 580-588
+        tokens: 11
+  - path: BATTLE-SCORING-FRAMEWORK.md
+    lines: 343
+    tokens: 446
+    hash: 8d35b10ba811
+    topics:
+      - battle
+      - scoring
+      - framework
+      - extensível
+      - battles
+      - categorias
+      - genéricas
+      - quality
+      - qualidade
+      - técnica
+      - originality
+      - diferenciação
+      - criatividade
+      - effectiveness
+      - capacidade
+    sections:
+      - name: '# Battle Scoring Framework'
+        lines: 1-2
+        tokens: 2
+      - name: '## Framework Extensível de Scoring para Battles'
+        lines: 3-13
+        tokens: 13
+      - name: '## 5 Categorias Genéricas de Scoring'
+        lines: 14-17
+        tokens: 4
+      - name: '### 1. Quality (Qualidade Técnica)'
+        lines: 18-36
+        tokens: 24
+      - name: '### 2. Originality (Diferenciação e Criatividade)'
+        lines: 37-55
+        tokens: 24
+      - name: '### 3. Effectiveness (Capacidade de Atingir o Objetivo)'
+        lines: 56-74
+        tokens: 24
+      - name: '### 4. Clarity (Clareza e Compreensibilidade)'
+        lines: 75-93
+        tokens: 24
+      - name: '### 5. Completeness (Cobertura dos Requisitos)'
+        lines: 94-114
+        tokens: 26
+      - name: '## Guia de Personalização'
+        lines: 115-116
+        tokens: 2
+      - name: '### Como Adicionar/Remover Critérios'
+        lines: 117-129
+        tokens: 16
+      - name: '### Como Definir Pesos'
+        lines: 130-145
+        tokens: 20
+      - name: '### Como Escrever Rubricas 1-10'
+        lines: 146-150
+        tokens: 6
+      - name: '### {Nome do Critério} (Peso: 0.XX)'
+        lines: 151-169
+        tokens: 24
+      - name: '## Exemplos de Adaptação por Domínio'
+        lines: 170-171
+        tokens: 2
+      - name: '### 1. Copywriting (9 critérios)'
+        lines: 172-191
+        tokens: 25
+      - name: '### 2. Design Visual (6 critérios)'
+        lines: 192-210
+        tokens: 24
+      - name: '### 3. Roteiros de Vídeo (5 critérios)'
+        lines: 211-229
+        tokens: 24
+      - name: '### 4. Estratégia de Mídia (7 critérios)'
+        lines: 230-248
+        tokens: 24
+      - name: '### 5. Análise de Dados (6 critérios)'
+        lines: 249-266
+        tokens: 23
+      - name: '## Template YAML para Configuração de Critérios'
+        lines: 267-318
+        tokens: 67
+      - name: '## Validação de Critérios'
+        lines: 319-334
+        tokens: 20
+      - name: '## Metadata'
+        lines: 335-343
+        tokens: 11
+  - path: BATTLE-TEAM-TEMPLATES.md
+    lines: 348
+    tokens: 453
+    hash: 4a37257f3249
+    topics:
+      - battle
+      - team
+      - templates
+      - divisão
+      - equipes
+      - tipo
+      - tamanho
+      - squad
+      - regras
+      - universais
+      - composição
+      - obrigatórias
+      - equilíbrio
+      - definição
+      - agente
+    sections:
+      - name: '# Battle Team Templates'
+        lines: 1-2
+        tokens: 2
+      - name: '## Templates de Divisão de Equipes por Tipo e Tamanho de Squad'
+        lines: 3-13
+        tokens: 13
+      - name: '## Regras Universais de Composição'
+        lines: 14-15
+        tokens: 2
+      - name: '### Regras Obrigatórias'
+        lines: 16-25
+        tokens: 12
+      - name: '### Regras de Equilíbrio'
+        lines: 26-34
+        tokens: 11
+      - name: '### Definição de Agente "Sênior"'
+        lines: 35-44
+        tokens: 12
+      - name: '## Template A: Squad Pequeno (6-8 agentes)'
+        lines: 45-46
+        tokens: 2
+      - name: '### Configuração: 2 equipes + 2 board'
+        lines: 47-55
+        tokens: 11
+      - name: '### Vantagens e Limitações'
+        lines: 56-65
+        tokens: 12
+      - name: '### Template YAML'
+        lines: 66-95
+        tokens: 38
+      - name: '### Variante: 2×2 + 2 board (squad de 6)'
+        lines: 96-106
+        tokens: 13
+      - name: '## Template B: Squad Médio (9-12 agentes)'
+        lines: 107-108
+        tokens: 2
+      - name: '### Configuração: 3 equipes + 2-3 board'
+        lines: 109-118
+        tokens: 12
+      - name: '### Vantagens e Limitações'
+        lines: 119-128
+        tokens: 12
+      - name: '### Template YAML (9 produtores + 3 board = 12)'
+        lines: 129-165
+        tokens: 47
+      - name: '### Variante: 3×2 + 2 board (squad de 8)'
+        lines: 166-177
+        tokens: 15
+      - name: '## Template C: Squad Grande (13+ agentes)'
+        lines: 178-179
+        tokens: 2
+      - name: '### Configuração: 3-4 equipes + 3-4 board'
+        lines: 180-190
+        tokens: 13
+      - name: '### Vantagens e Limitações'
+        lines: 191-200
+        tokens: 12
+      - name: '### Template YAML — 3 equipes de 4 + 3 board (15 agentes)'
+        lines: 201-237
+        tokens: 47
+      - name: '### Template YAML — 4 equipes de 3 + 3 board (15 agentes)'
+        lines: 238-283
+        tokens: 59
+      - name: '## Guia de Seleção'
+        lines: 284-285
+        tokens: 2
+      - name: '### Decisão: Quantas Equipes?'
+        lines: 286-296
+        tokens: 13
+      - name: '### Decisão: Board de 2 ou 3?'
+        lines: 297-306
+        tokens: 12
+      - name: '### Decisão: Unanimidade ou Maioria?'
+        lines: 307-315
+        tokens: 11
+      - name: '## Anti-Patterns a Evitar'
+        lines: 316-329
+        tokens: 17
+      - name: '## Referência Rápida: Exemplos Reais'
+        lines: 330-339
+        tokens: 12
+      - name: '## Metadata'
+        lines: 340-348
+        tokens: 11
+  - path: BLIND-SPOT-DETECTION-FRAMEWORK.md
+    lines: 600
+    tokens: 780
+    hash: de0c10172850
+    topics:
+      - framework
+      - detecao
+      - pontos
+      - cegos
+      - auditoria
+      - sistematica
+      - squads
+      - megabrain
+      - visao
+      - geral
+      - camadas
+      - detecção
+      - camada
+      - referência
+      - externa
+    sections:
+      - name: '# Framework de Detecao de Pontos Cegos — Auditoria Sistematica para Squads Mega Brain'
+        lines: 1-2
+        tokens: 2
+      - name: '## Visao Geral'
+        lines: 3-12
+        tokens: 12
+      - name: '## As 5 Camadas de Detecção'
+        lines: 13-42
+        tokens: 38
+      - name: '## Camada 1: Referência Externa'
+        lines: 43-44
+        tokens: 2
+      - name: '### Objetivo'
+        lines: 45-48
+        tokens: 4
+      - name: '### Protocolo de Execução'
+        lines: 49-61
+        tokens: 16
+      - name: '### Fontes Recomendadas por Domínio'
+        lines: 62-74
+        tokens: 16
+      - name: '### Pergunta-Gatilho'
+        lines: 75-78
+        tokens: 4
+      - name: '### Output Esperado'
+        lines: 79-81
+        tokens: 3
+      - name: '## Referência Externa — {Squad}'
+        lines: 82-83
+        tokens: 2
+      - name: '### Disciplina: {nome}'
+        lines: 84-94
+        tokens: 13
+      - name: '## Camada 2: Post-Mortem de Falhas'
+        lines: 95-96
+        tokens: 2
+      - name: '### Objetivo'
+        lines: 97-100
+        tokens: 4
+      - name: '### Protocolo de Execução'
+        lines: 101-113
+        tokens: 16
+      - name: '### Pergunta-Gatilho'
+        lines: 114-117
+        tokens: 4
+      - name: '### Output Esperado'
+        lines: 118-120
+        tokens: 3
+      - name: '## Post-Mortem de Falhas — {Squad}'
+        lines: 121-122
+        tokens: 2
+      - name: '### Caso: {descrição do output}'
+        lines: 123-130
+        tokens: 10
+      - name: '### Padrão Detectado'
+        lines: 131-138
+        tokens: 10
+      - name: '## Camada 3: Polinização Cruzada'
+        lines: 139-140
+        tokens: 2
+      - name: '### Objetivo'
+        lines: 141-144
+        tokens: 4
+      - name: '### Protocolo de Execução'
+        lines: 145-154
+        tokens: 12
+      - name: '### Pergunta-Gatilho'
+        lines: 155-158
+        tokens: 4
+      - name: '### Output Esperado'
+        lines: 159-161
+        tokens: 3
+      - name: '## Polinização Cruzada — {Squad}'
+        lines: 162-163
+        tokens: 2
+      - name: '### Disciplina Adjacente: {nome}'
+        lines: 164-171
+        tokens: 10
+      - name: '## Camada 4: Revisão Adversarial'
+        lines: 172-173
+        tokens: 2
+      - name: '### Objetivo'
+        lines: 174-177
+        tokens: 4
+      - name: '### Protocolo de Execução'
+        lines: 178-192
+        tokens: 19
+      - name: '### Adversários por Domínio'
+        lines: 193-202
+        tokens: 12
+      - name: '### Pergunta-Gatilho'
+        lines: 203-206
+        tokens: 4
+      - name: '### Output Esperado'
+        lines: 207-209
+        tokens: 3
+      - name: '## Revisão Adversarial — {Squad}'
+        lines: 210-211
+        tokens: 2
+      - name: '### Adversário: {arquétipo}'
+        lines: 212-219
+        tokens: 10
+      - name: '## Camada 5: Mineração de Dados Reais'
+        lines: 220-221
+        tokens: 2
+      - name: '### Objetivo'
+        lines: 222-225
+        tokens: 4
+      - name: '### Protocolo de Execução'
+        lines: 226-238
+        tokens: 16
+      - name: '### Métricas-Chave por Domínio'
+        lines: 239-249
+        tokens: 13
+      - name: '### Pergunta-Gatilho'
+        lines: 250-253
+        tokens: 4
+      - name: '### Output Esperado'
+        lines: 254-256
+        tokens: 3
+      - name: '## Mineração de Dados Reais — {Squad}'
+        lines: 257-258
+        tokens: 2
+      - name: '### Premissa vs Realidade'
+        lines: 259-263
+        tokens: 6
+      - name: '### Ações Derivadas'
+        lines: 264-271
+        tokens: 10
+      - name: '## Taxonomia Universal de Defeitos'
+        lines: 272-275
+        tokens: 4
+      - name: '### Categorias Principais'
+        lines: 276-290
+        tokens: 19
+      - name: '### Instanciação por Domínio'
+        lines: 291-336
+        tokens: 59
+      - name: '## Matriz de Polinização Cruzada'
+        lines: 337-340
+        tokens: 4
+      - name: '### Mapa de Domínios'
+        lines: 341-354
+        tokens: 17
+      - name: '### Como Usar a Matriz'
+        lines: 355-361
+        tokens: 8
+      - name: '### Exemplos Concretos de Transplantes Bem-Sucedidos'
+        lines: 362-374
+        tokens: 16
+      - name: '## Cadência Recomendada'
+        lines: 375-384
+        tokens: 12
+      - name: '### Ciclo Trimestral Completo'
+        lines: 385-399
+        tokens: 19
+      - name: '## Meta-Processo: Do Ponto Cego ao Checkpoint'
+        lines: 400-417
+        tokens: 23
+      - name: '### Detalhamento'
+        lines: 418-437
+        tokens: 25
+      - name: '### Formato de Proposta de Checkpoint'
+        lines: 438-460
+        tokens: 29
+      - name: '## Formato de Relatório Final'
+        lines: 461-465
+        tokens: 6
+      - name: '# Auditoria de Pontos Cegos — {Squad} — {Data}'
+        lines: 466-467
+        tokens: 2
+      - name: '## Metadata'
+        lines: 468-474
+        tokens: 8
+      - name: '## Resumo Executivo'
+        lines: 475-481
+        tokens: 8
+      - name: '## Pontos Cegos Encontrados'
+        lines: 482-483
+        tokens: 2
+      - name: '### BS-{squad}-001: {Título}'
+        lines: 484-499
+        tokens: 20
+      - name: '## Matriz Consolidada'
+        lines: 500-505
+        tokens: 7
+      - name: '## Próximo Ciclo'
+        lines: 506-513
+        tokens: 10
+      - name: '## Adaptações por Tipo de Squad'
+        lines: 514-515
+        tokens: 2
+      - name: >-
+          ### Squads de Produção (copywriting, creative-studio, content-ecosystem, funnel-creator, media-production,
+          vídeo-production)
+        lines: 516-522
+        tokens: 8
+      - name: '### Squads Técnicos (full-stack-dev, core-dev, design-system, technical-documentation)'
+        lines: 523-529
+        tokens: 8
+      - name: '### Squads Analíticos (data-analytics, deep-scraper, market-research, seo)'
+        lines: 530-536
+        tokens: 8
+      - name: '### Squads Operacionais (project-management-clickup, orquestrador-global, navigator, support)'
+        lines: 537-543
+        tokens: 8
+      - name: '### Squads Estratégicos (conselho, strategy-example-squad, communication, community)'
+        lines: 544-550
+        tokens: 8
+      - name: '### Squads de Metodologia (erico-rocha, hormozi, agora-direct-response)'
+        lines: 551-557
+        tokens: 8
+      - name: '### Squads Meta/Plataforma (squad-creator, skill-tester, academic-research)'
+        lines: 558-566
+        tokens: 11
+      - name: '## Anti-Padrões'
+        lines: 567-583
+        tokens: 21
+      - name: '## Glossário'
+        lines: 584-600
+        tokens: 21
+  - path: LGPD-COMPLIANCE-PROTOCOL.md
+    lines: 333
+    tokens: 433
+    hash: b0a8c7df74d0
+    topics:
+      - lgpd
+      - compliance
+      - protocol
+      - transversal
+      - todos
+      - squads
+      - megabrain
+      - propósito
+      - classificação
+      - dados
+      - tipo
+      - princípios
+      - aplicados
+      - regras
+      - operação
+    sections:
+      - name: '# LGPD Compliance Protocol — Transversal para Todos os Squads Mega Brain'
+        lines: 1-2
+        tokens: 2
+      - name: '## Propósito'
+        lines: 3-12
+        tokens: 12
+      - name: '## 1. Classificação de Dados por Tipo'
+        lines: 13-30
+        tokens: 23
+      - name: '## 2. Princípios LGPD Aplicados ao Mega Brain'
+        lines: 31-49
+        tokens: 24
+      - name: '## 3. Regras por Operação'
+        lines: 50-51
+        tokens: 2
+      - name: '### 3.1 Coleta de Dados (Formulários, Landing Pages, Quizzes)'
+        lines: 52-70
+        tokens: 24
+      - name: '### 3.2 Armazenamento e Persistência'
+        lines: 71-89
+        tokens: 24
+      - name: '### 3.3 Uso em Automações e Sequências'
+        lines: 90-108
+        tokens: 24
+      - name: '### 3.4 Compartilhamento com Terceiros'
+        lines: 109-133
+        tokens: 32
+      - name: '### 3.5 Direitos do Titular e Exclusão'
+        lines: 134-164
+        tokens: 39
+      - name: '## 4. Checklist por Grupo de Squads'
+        lines: 165-166
+        tokens: 2
+      - name: '### Squads de Marketing e Funis'
+        lines: 167-181
+        tokens: 19
+      - name: '### Squads de Automação e Vendas'
+        lines: 182-195
+        tokens: 17
+      - name: '### Squads de Analytics e Pesquisa'
+        lines: 196-209
+        tokens: 17
+      - name: '### Squads de Conteúdo e Comunidade'
+        lines: 210-224
+        tokens: 19
+      - name: '### Squads Advisory e Estratégia'
+        lines: 225-236
+        tokens: 15
+      - name: '### Squads de Operação e Infraestrutura'
+        lines: 237-252
+        tokens: 20
+      - name: '## 5. Plataformas Usadas e Suas Bases Legais'
+        lines: 253-267
+        tokens: 19
+      - name: '## 6. O Que Fazer Ao Encontrar um Problema de Privacidade'
+        lines: 268-269
+        tokens: 2
+      - name: '### Escala de Severidade'
+        lines: 270-281
+        tokens: 15
+      - name: '### Processo de Notificação Interno'
+        lines: 282-292
+        tokens: 13
+      - name: '## 7. Enforcement e Quality Gate'
+        lines: 293-296
+        tokens: 4
+      - name: '### Regras de Enforcement'
+        lines: 297-303
+        tokens: 8
+      - name: '### Squads Prioritários para Remediação (2026-03-11)'
+        lines: 304-316
+        tokens: 16
+      - name: '## 8. Referências'
+        lines: 317-333
+        tokens: 21
+  - path: MODEL-STRATEGY.md
+    lines: 318
+    tokens: 414
+    hash: 2679ccb47a58
+    topics:
+      - model
+      - strategy
+      - assignment
+      - guide
+      - megabrain
+      - core
+      - agent
+      - teams
+      - overview
+      - principles
+      - default
+      - orchestrator
+      - sessions
+      - use
+      - opus
+    sections:
+      - name: '# MODEL Strategy'
+        lines: 1-1
+        tokens: 0
+      - name: '## Model Assignment Guide for core Agent Teams'
+        lines: 2-5
+        tokens: 4
+      - name: '## Overview'
+        lines: 6-17
+        tokens: 15
+      - name: '## Model Assignment Principles'
+        lines: 18-19
+        tokens: 2
+      - name: '### Default Model for Orchestrator Sessions'
+        lines: 20-25
+        tokens: 7
+      - name: '### When to Use Opus'
+        lines: 26-31
+        tokens: 7
+      - name: '### When to Use Sonnet'
+        lines: 32-37
+        tokens: 7
+      - name: '### When to Use Haiku'
+        lines: 38-45
+        tokens: 10
+      - name: '## Per-Squad Model Breakdown'
+        lines: 46-47
+        tokens: 2
+      - name: '### Tier 1 Squads (Full Support)'
+        lines: 48-95
+        tokens: 62
+      - name: '### Tier 2 Squads (Basic Support)'
+        lines: 96-158
+        tokens: 81
+      - name: '### Tier 3 Squads (Experimental)'
+        lines: 159-230
+        tokens: 93
+      - name: '## Cost Optimization Guidelines'
+        lines: 231-232
+        tokens: 2
+      - name: '### 1. Minimize Opus Usage'
+        lines: 233-237
+        tokens: 6
+      - name: '### 2. Maximize Haiku for Volume Work'
+        lines: 238-242
+        tokens: 6
+      - name: '### 3. Sonnet as Default'
+        lines: 243-247
+        tokens: 6
+      - name: '### 4. Batch Size Awareness'
+        lines: 248-252
+        tokens: 6
+      - name: '### 5. Cost Estimation Fórmula'
+        lines: 253-268
+        tokens: 20
+      - name: '## When to Override Defaults'
+        lines: 269-270
+        tokens: 2
+      - name: '### Upgrade to Higher Model'
+        lines: 271-276
+        tokens: 7
+      - name: '### Downgrade to Lower Model'
+        lines: 277-282
+        tokens: 7
+      - name: '### Override Decision Process'
+        lines: 283-291
+        tokens: 11
+      - name: '## Model ID Reference'
+        lines: 292-299
+        tokens: 10
+      - name: '### How to Apply Model in Current Session'
+        lines: 300-309
+        tokens: 12
+      - name: '## Metadata'
+        lines: 310-318
+        tokens: 11
+  - path: MULTI-SQUAD-PLAYBOOK.md
+    lines: 283
+    tokens: 368
+    hash: 6cf84d54a3ef
+    topics:
+      - multi
+      - squad
+      - playbook
+      - overview
+      - selection
+      - framework
+      - decision
+      - matrix
+      - compatibility
+      - pipeline
+      - templates
+      - common
+      - demands
+      - template
+      - product
+    sections:
+      - name: '# MULTI-SQUAD PLAYBOOK'
+        lines: 1-2
+        tokens: 2
+      - name: '## Overview'
+        lines: 3-8
+        tokens: 7
+      - name: '## Squad Selection Framework'
+        lines: 9-10
+        tokens: 2
+      - name: '### Decision Matrix: Which Squad for What?'
+        lines: 11-28
+        tokens: 23
+      - name: '### Squad Compatibility Matrix'
+        lines: 29-43
+        tokens: 19
+      - name: '## Pipeline Templates for Common Demands'
+        lines: 44-45
+        tokens: 2
+      - name: '### Template 1: Product Launch Pipeline'
+        lines: 46-74
+        tokens: 37
+      - name: '### Template 2: Content Batch Production'
+        lines: 75-93
+        tokens: 24
+      - name: '### Template 3: Performance Optimization Cycle'
+        lines: 94-113
+        tokens: 25
+      - name: '### Template 4: Full Funnel Build'
+        lines: 114-151
+        tokens: 49
+      - name: '## Handoff Protocol'
+        lines: 152-153
+        tokens: 2
+      - name: '### Structured Handoff Format'
+        lines: 154-158
+        tokens: 6
+      - name: '## Handoff: {Source Squad} -> {Target Squad}'
+        lines: 159-160
+        tokens: 2
+      - name: '### Context'
+        lines: 161-163
+        tokens: 3
+      - name: '### Deliverables from {Source Squad}'
+        lines: 164-166
+        tokens: 3
+      - name: '### What {Target Squad} Needs to Do'
+        lines: 167-169
+        tokens: 3
+      - name: '### Constraints'
+        lines: 170-174
+        tokens: 6
+      - name: '### Reference Materials'
+        lines: 175-178
+        tokens: 4
+      - name: '### Handoff Quality Checklist'
+        lines: 179-191
+        tokens: 16
+      - name: '## Stage Gate Framework'
+        lines: 192-193
+        tokens: 2
+      - name: '### Gate Levels by Scale'
+        lines: 194-204
+        tokens: 13
+      - name: '### Gate Review Template'
+        lines: 205-207
+        tokens: 3
+      - name: '## Stage Gate Review: {Stage Name}'
+        lines: 208-209
+        tokens: 2
+      - name: '### Status: [PASS / FAIL / CONDITIONAL]'
+        lines: 210-211
+        tokens: 2
+      - name: '### Deliverables Reviewed'
+        lines: 212-216
+        tokens: 6
+      - name: '### Gate Criteria'
+        lines: 217-220
+        tokens: 4
+      - name: '### Decision'
+        lines: 221-223
+        tokens: 3
+      - name: '### Revision Notes (if applicable)'
+        lines: 224-229
+        tokens: 7
+      - name: '## Resource Management'
+        lines: 230-231
+        tokens: 2
+      - name: '### Agent Allocation Per Scale'
+        lines: 232-242
+        tokens: 13
+      - name: '### Cost Awareness Protocol'
+        lines: 243-254
+        tokens: 15
+      - name: '## Conflict Resolution'
+        lines: 255-266
+        tokens: 15
+      - name: '## Performance Tracking'
+        lines: 267-268
+        tokens: 2
+      - name: '### Orchestration Metrics'
+        lines: 269-283
+        tokens: 19
+  - path: ORCHESTRATION-MATURITY-FRAMEWORK.md
+    lines: 325
+    tokens: 423
+    hash: 32ebe57fa901
+    topics:
+      - orchestration
+      - maturity
+      - framework
+      - overview
+      - ontological
+      - spine
+      - layer
+      - definitions
+      - stage
+      - single
+      - router
+      - first
+      - squad
+      - routing
+      - profile
+    sections:
+      - name: '# ORCHESTRATION MATURITY FRAMEWORK'
+        lines: 1-2
+        tokens: 2
+      - name: '## Overview'
+        lines: 3-10
+        tokens: 10
+      - name: '## The Ontological Spine'
+        lines: 11-22
+        tokens: 15
+      - name: '### Layer Definitions'
+        lines: 23-35
+        tokens: 16
+      - name: '## Stage 0-to-1: Single Router (First Squad Routing)'
+        lines: 36-37
+        tokens: 2
+      - name: '### Profile'
+        lines: 38-41
+        tokens: 4
+      - name: '### Characteristics'
+        lines: 42-49
+        tokens: 10
+      - name: '### Demanda at 0-to-1'
+        lines: 50-63
+        tokens: 17
+      - name: '### Classificação at 0-to-1'
+        lines: 64-72
+        tokens: 11
+      - name: '### Orquestracao at 0-to-1'
+        lines: 73-81
+        tokens: 11
+      - name: '### Gate Review at 0-to-1'
+        lines: 82-85
+        tokens: 4
+      - name: '### Consolidacao at 0-to-1'
+        lines: 86-89
+        tokens: 4
+      - name: '### Melhoria at 0-to-1'
+        lines: 90-97
+        tokens: 10
+      - name: '### 0-to-1 Success Metrics'
+        lines: 98-108
+        tokens: 13
+      - name: '## Stage 1-to-10: Pipeline Orchestrator (Multi-Squad Coordination)'
+        lines: 109-110
+        tokens: 2
+      - name: '### Profile'
+        lines: 111-114
+        tokens: 4
+      - name: '### Characteristics'
+        lines: 115-122
+        tokens: 10
+      - name: '### Demanda at 1-to-10'
+        lines: 123-133
+        tokens: 13
+      - name: '### Classificação at 1-to-10'
+        lines: 134-143
+        tokens: 12
+      - name: '### Orquestracao at 1-to-10'
+        lines: 144-162
+        tokens: 24
+      - name: '### Gate Review at 1-to-10'
+        lines: 163-171
+        tokens: 11
+      - name: '### Consolidacao at 1-to-10'
+        lines: 172-180
+        tokens: 11
+      - name: '### Melhoria at 1-to-10'
+        lines: 181-189
+        tokens: 11
+      - name: '### 1-to-10 Success Metrics'
+        lines: 190-202
+        tokens: 16
+      - name: '## Stage 10-to-100: Autonomous Orchestration Engine'
+        lines: 203-204
+        tokens: 2
+      - name: '### Profile'
+        lines: 205-208
+        tokens: 4
+      - name: '### Characteristics'
+        lines: 209-216
+        tokens: 10
+      - name: '### Demanda at 10-to-100'
+        lines: 217-225
+        tokens: 11
+      - name: '### Classificação at 10-to-100'
+        lines: 226-235
+        tokens: 12
+      - name: '### Orquestracao at 10-to-100'
+        lines: 236-246
+        tokens: 13
+      - name: '### Gate Review at 10-to-100'
+        lines: 247-255
+        tokens: 11
+      - name: '### Consolidacao at 10-to-100'
+        lines: 256-265
+        tokens: 12
+      - name: '### Melhoria at 10-to-100'
+        lines: 266-275
+        tokens: 12
+      - name: '### 10-to-100 Success Metrics'
+        lines: 276-288
+        tokens: 16
+      - name: '## Integration Graph'
+        lines: 289-310
+        tokens: 28
+      - name: '## Maturity Assessment Protocol'
+        lines: 311-325
+        tokens: 19
+  - path: ORCHESTRATION-PLAYBOOK.md
+    lines: 428
+    tokens: 557
+    hash: 0626f54bef07
+    topics:
+      - orchestration
+      - playbook
+      - multi
+      - squad
+      - execution
+      - purpose
+      - demand
+      - classification
+      - framework
+      - decision
+      - tree
+      - selection
+      - criteria
+      - primary
+      - routing
+    sections:
+      - name: '# Orchestration Playbook — Multi-Squad Execution'
+        lines: 1-8
+        tokens: 10
+      - name: '## Purpose'
+        lines: 9-16
+        tokens: 10
+      - name: '## 1. Demand Classification'
+        lines: 17-18
+        tokens: 2
+      - name: '### 1.1 Classification Framework'
+        lines: 19-48
+        tokens: 38
+      - name: '### 1.2 Classification Decision Tree'
+        lines: 49-74
+        tokens: 33
+      - name: '## 2. Squad Selection Criteria'
+        lines: 75-76
+        tokens: 2
+      - name: '### 2.1 Primary Squad Routing Rules'
+        lines: 77-108
+        tokens: 41
+      - name: '### 2.2 Multi-Squad Demand Examples'
+        lines: 109-140
+        tokens: 41
+      - name: '## 3. Dependency Mapping'
+        lines: 141-142
+        tokens: 2
+      - name: '### 3.1 Types of Dependencies'
+        lines: 143-151
+        tokens: 11
+      - name: '### 3.2 Common Dependency Patterns'
+        lines: 152-168
+        tokens: 21
+      - name: '### 3.3 Dependency Map Format'
+        lines: 169-171
+        tokens: 3
+      - name: '# Example: Full Funnel Demand'
+        lines: 172-197
+        tokens: 33
+      - name: '## 4. Parallel Execution Patterns'
+        lines: 198-199
+        tokens: 2
+      - name: '### 4.1 When to Parallelize'
+        lines: 200-211
+        tokens: 15
+      - name: '### 4.2 Parallel Execution Coordination Protocol'
+        lines: 212-225
+        tokens: 17
+      - name: '### 4.3 Wave-Based Execution'
+        lines: 226-248
+        tokens: 29
+      - name: '## 5. Stage Gate Protocols'
+        lines: 249-250
+        tokens: 2
+      - name: '### 5.1 What Is a Stage Gate?'
+        lines: 251-261
+        tokens: 13
+      - name: '### 5.2 Gate Configuration by Demand Scale'
+        lines: 262-271
+        tokens: 12
+      - name: '### 5.3 Gate Review Format'
+        lines: 272-276
+        tokens: 6
+      - name: '## Stage Gate Review — {Demand Title}'
+        lines: 277-282
+        tokens: 7
+      - name: '### Deliverables Produced'
+        lines: 283-286
+        tokens: 4
+      - name: '### Files Generated'
+        lines: 287-290
+        tokens: 4
+      - name: '### Recommendation'
+        lines: 291-293
+        tokens: 3
+      - name: '### Gate Question'
+        lines: 294-303
+        tokens: 12
+      - name: '## 6. Conflict Resolution'
+        lines: 304-305
+        tokens: 2
+      - name: '### 6.1 Types of Conflicts'
+        lines: 306-320
+        tokens: 19
+      - name: '### 6.2 Escalation Path'
+        lines: 321-337
+        tokens: 21
+      - name: '## 7. Execution Logging Best Practices'
+        lines: 338-339
+        tokens: 2
+      - name: '### 7.1 Mandatory Logging Events'
+        lines: 340-351
+        tokens: 15
+      - name: '### 7.2 Audit Trail Commands'
+        lines: 352-354
+        tokens: 3
+      - name: '# Set execution scale at start'
+        lines: 355-357
+        tokens: 3
+      - name: '# Log squad start'
+        lines: 358-364
+        tokens: 8
+      - name: '# Log stage gate'
+        lines: 365-371
+        tokens: 8
+      - name: '# Log completion'
+        lines: 372-379
+        tokens: 10
+      - name: '### 7.3 SuperMemory Backup'
+        lines: 380-397
+        tokens: 23
+      - name: '## 8. Performance Metrics for Orchestration'
+        lines: 398-399
+        tokens: 2
+      - name: '### 8.1 Orchestration KPIs'
+        lines: 400-411
+        tokens: 15
+      - name: '### 8.2 Continuous Improvement'
+        lines: 412-428
+        tokens: 21
+  - path: ORCHESTRATION-PROCESS.md
+    lines: 254
+    tokens: 331
+    hash: f2eb299749d4
+    topics:
+      - orchestration
+      - process
+      - overview
+      - pipeline
+      - phase
+      - receive
+      - demand
+      - classify
+      - plan
+      - execution
+      - title
+      - squads
+      - flow
+      - gates
+      - estimated
+    sections:
+      - name: '# ORCHESTRATION PROCESS'
+        lines: 1-2
+        tokens: 2
+      - name: '## Overview'
+        lines: 3-8
+        tokens: 7
+      - name: '## The Orchestration Pipeline'
+        lines: 9-19
+        tokens: 13
+      - name: '### Phase 1: Receive Demand'
+        lines: 20-37
+        tokens: 23
+      - name: '### Phase 2: Classify'
+        lines: 38-71
+        tokens: 43
+      - name: '### Phase 3: Plan Execution'
+        lines: 72-77
+        tokens: 7
+      - name: '# Execution Plan: {Title}'
+        lines: 78-79
+        tokens: 2
+      - name: '## Demand'
+        lines: 80-82
+        tokens: 3
+      - name: '## Squads'
+        lines: 83-88
+        tokens: 7
+      - name: '## Execution Flow'
+        lines: 89-91
+        tokens: 3
+      - name: '## Gates'
+        lines: 92-95
+        tokens: 4
+      - name: '## Estimated Duration'
+        lines: 96-104
+        tokens: 11
+      - name: '### Phase 4: Execute'
+        lines: 105-125
+        tokens: 26
+      - name: '## Briefing for {Squad}'
+        lines: 126-127
+        tokens: 2
+      - name: '### What to Do'
+        lines: 128-130
+        tokens: 3
+      - name: '### Context'
+        lines: 131-133
+        tokens: 3
+      - name: '### Inputs'
+        lines: 134-136
+        tokens: 3
+      - name: '### Constraints'
+        lines: 137-139
+        tokens: 3
+      - name: '### Expected Output'
+        lines: 140-142
+        tokens: 3
+      - name: '### Deadline'
+        lines: 143-146
+        tokens: 4
+      - name: '### Phase 5: Gate Review'
+        lines: 147-164
+        tokens: 23
+      - name: '### Phase 6: Deliver'
+        lines: 165-176
+        tokens: 15
+      - name: '## Orchestration Patterns'
+        lines: 177-178
+        tokens: 2
+      - name: '### Pattern 1: Sequential Pipeline'
+        lines: 179-187
+        tokens: 11
+      - name: '### Pattern 2: Parallel Fan-Out'
+        lines: 188-198
+        tokens: 13
+      - name: '### Pattern 3: Diamond (Fan-Out + Fan-In)'
+        lines: 199-209
+        tokens: 13
+      - name: '### Pattern 4: Iterative Loop'
+        lines: 210-221
+        tokens: 15
+      - name: '## Error Handling'
+        lines: 222-234
+        tokens: 16
+      - name: '## Execution Logging Standard'
+        lines: 235-254
+        tokens: 25
+  - path: SQUAD-REGISTRY.md
+    lines: 1588
+    tokens: 2065
+    hash: 28b91a25b866
+    topics:
+      - squad
+      - registry
+      - índice
+      - centralizado
+      - squads
+      - megabrain
+      - core
+      - visão
+      - geral
+      - estatísticas
+      - tipo
+      - registrados
+      - dev
+      - communication
+      - um cliente
+    sections:
+      - name: '# SQUAD Registry'
+        lines: 1-1
+        tokens: 0
+      - name: '## Índice Centralizado de Squads do core'
+        lines: 2-5
+        tokens: 4
+      - name: '## 📊 Visão Geral'
+        lines: 6-17
+        tokens: 15
+      - name: '## 📈 Estatísticas por Tipo'
+        lines: 18-33
+        tokens: 20
+      - name: '## 🗂️ Squads Registrados'
+        lines: 34-35
+        tokens: 2
+      - name: '### core-dev'
+        lines: 36-76
+        tokens: 52
+      - name: '### communication-example-squad'
+        lines: 77-116
+        tokens: 51
+      - name: '### community-example-squad'
+        lines: 117-156
+        tokens: 51
+      - name: '### conselho'
+        lines: 157-206
+        tokens: 64
+      - name: '### content-ecosystem'
+        lines: 207-262
+        tokens: 72
+      - name: '### seo'
+        lines: 263-305
+        tokens: 55
+      - name: '### copywriting'
+        lines: 306-358
+        tokens: 68
+      - name: '### creative-studio'
+        lines: 359-402
+        tokens: 56
+      - name: '### data-analytics'
+        lines: 403-449
+        tokens: 60
+      - name: '### deep-scraper'
+        lines: 450-502
+        tokens: 68
+      - name: '### design-system'
+        lines: 503-547
+        tokens: 58
+      - name: '### full-stack-dev'
+        lines: 548-594
+        tokens: 60
+      - name: '### funnel-creator'
+        lines: 595-640
+        tokens: 59
+      - name: '### infoproduct-creation'
+        lines: 641-690
+        tokens: 64
+      - name: '### media-buy'
+        lines: 691-734
+        tokens: 56
+      - name: '### media-production'
+        lines: 735-773
+        tokens: 50
+      - name: '### orquestrador-global'
+        lines: 774-815
+        tokens: 54
+      - name: '### project-management-clickup'
+        lines: 816-860
+        tokens: 58
+      - name: '### sales'
+        lines: 861-907
+        tokens: 60
+      - name: '### skill-tester'
+        lines: 908-945
+        tokens: 49
+      - name: '### squad-creator'
+        lines: 946-984
+        tokens: 50
+      - name: '### strategy-example-squad'
+        lines: 985-1031
+        tokens: 60
+      - name: '### youtube-lives'
+        lines: 1032-1077
+        tokens: 59
+      - name: '### academic-research'
+        lines: 1078-1120
+        tokens: 55
+      - name: '### market-research'
+        lines: 1121-1163
+        tokens: 55
+      - name: '### marketing-automation'
+        lines: 1164-1206
+        tokens: 55
+      - name: '### traffic-squad'
+        lines: 1207-1253
+        tokens: 60
+      - name: '### technical-documentation'
+        lines: 1254-1296
+        tokens: 55
+      - name: '## 🔍 Índice de Capacidades'
+        lines: 1297-1298
+        tokens: 2
+      - name: '### Por Domínio'
+        lines: 1299-1332
+        tokens: 43
+      - name: '### Capacidades Especiais'
+        lines: 1333-1342
+        tokens: 12
+      - name: '### support'
+        lines: 1343-1384
+        tokens: 54
+      - name: '### erico-rocha'
+        lines: 1385-1427
+        tokens: 55
+      - name: '## 📝 Notas de Atualização'
+        lines: 1428-1429
+        tokens: 2
+      - name: '### agora-direct-response'
+        lines: 1430-1477
+        tokens: 62
+      - name: '## 📜 Changelog'
+        lines: 1478-1479
+        tokens: 2
+      - name: '### 2026-02-11 (v5.0.0) - Mega Brain 2.1 Migration'
+        lines: 1480-1492
+        tokens: 16
+      - name: '### 2026-02-09 (v4.1.0)'
+        lines: 1493-1496
+        tokens: 4
+      - name: '### 2026-02-08 (v4.0.0) - Squad Analysis Restructure'
+        lines: 1497-1510
+        tokens: 17
+      - name: '### 2026-02-08 (v3.3.0)'
+        lines: 1511-1518
+        tokens: 10
+      - name: '### 2026-02-08 (v3.2.0)'
+        lines: 1519-1529
+        tokens: 13
+      - name: '### 2026-02-07 (v3.1.0)'
+        lines: 1530-1540
+        tokens: 13
+      - name: '### 2026-02-06 (v3.0.0)'
+        lines: 1541-1559
+        tokens: 24
+      - name: '### 2026-02-06 (v2.1.0)'
+        lines: 1560-1564
+        tokens: 6
+      - name: '### 2026-02-04 (v2.0.0)'
+        lines: 1565-1572
+        tokens: 10
+      - name: '### 2026-02-01 (v1.0.0)'
+        lines: 1573-1578
+        tokens: 7
+      - name: '## 🏷️ Metadados'
+        lines: 1579-1588
+        tokens: 12
+  - path: SQUAD-SELECTION-MATRIX.md
+    lines: 328
+    tokens: 427
+    hash: e005f6089428
+    topics:
+      - squad
+      - selection
+      - matrix
+      - purpose
+      - demand
+      - taxonomy
+      - level
+      - domain
+      - categories
+      - sub
+      - types
+      - capability
+      - map
+      - full
+      - directory
+    sections:
+      - name: '# Squad Selection Matrix'
+        lines: 1-8
+        tokens: 10
+      - name: '## Purpose'
+        lines: 9-14
+        tokens: 7
+      - name: '## 1. Demand Taxonomy'
+        lines: 15-16
+        tokens: 2
+      - name: '### 1.1 Level 1: Domain Categories'
+        lines: 17-31
+        tokens: 19
+      - name: '### 1.2 Level 2: Sub-Types'
+        lines: 32-63
+        tokens: 41
+      - name: '## 2. Squad Capability Map'
+        lines: 64-65
+        tokens: 2
+      - name: '### 2.1 Full Squad Directory (37 squads)'
+        lines: 66-119
+        tokens: 69
+      - name: '### 2.2 Capability Exclusivity Rules'
+        lines: 120-135
+        tokens: 20
+      - name: '## 3. Selection Decision Matrix'
+        lines: 136-137
+        tokens: 2
+      - name: '### 3.1 Quick Reference by Demand'
+        lines: 138-161
+        tokens: 30
+      - name: '### 3.2 Product-Specific Routing'
+        lines: 162-176
+        tokens: 19
+      - name: '## 4. Load Balancing Rules'
+        lines: 177-178
+        tokens: 2
+      - name: '### 4.1 Checking Squad Availability'
+        lines: 179-183
+        tokens: 6
+      - name: '# Check active tasks in ClickUp for a squad'
+        lines: 184-197
+        tokens: 17
+      - name: '### 4.2 Backup Squad Routing'
+        lines: 198-210
+        tokens: 16
+      - name: '### 4.3 Priority Queue Rules'
+        lines: 211-224
+        tokens: 17
+      - name: '## 5. Collaboration Patterns'
+        lines: 225-226
+        tokens: 2
+      - name: '### 5.1 Standard Squad Pairs'
+        lines: 227-260
+        tokens: 43
+      - name: '### 5.2 Anti-Patterns to Avoid'
+        lines: 261-270
+        tokens: 12
+      - name: '### 5.3 Communication Protocol Between Squads'
+        lines: 271-275
+        tokens: 6
+      - name: '## Squad Handoff — {From Squad} → {To Squad}'
+        lines: 276-282
+        tokens: 8
+      - name: '### What Was Delivered (From Squad)'
+        lines: 283-286
+        tokens: 4
+      - name: '### What Is Needed (To Squad)'
+        lines: 287-290
+        tokens: 4
+      - name: '### Context and Constraints'
+        lines: 291-295
+        tokens: 6
+      - name: '### Success Criteria'
+        lines: 296-301
+        tokens: 7
+      - name: '## 6. example-squad Context for Routing'
+        lines: 302-303
+        tokens: 2
+      - name: '### 6.1 Business Context That Affects Routing Decisions'
+        lines: 304-314
+        tokens: 13
+      - name: '### 6.2 Product Tier Routing Guide'
+        lines: 315-328
+        tokens: 17
+  - path: TEAM-PATTERNS.md
+    lines: 993
+    tokens: 1291
+    hash: c1875ad46aee
+    topics:
+      - team
+      - patterns
+      - agent
+      - teams
+      - orchestration
+      - megabrain
+      - core
+      - overview
+      - pattern
+      - pipeline
+      - use
+      - squad
+      - mapping
+      - task
+      - dependency
+    sections:
+      - name: '# TEAM Patterns'
+        lines: 1-1
+        tokens: 0
+      - name: '## Agent Teams Orchestration Patterns for core'
+        lines: 2-5
+        tokens: 4
+      - name: '## Overview'
+        lines: 6-20
+        tokens: 19
+      - name: '## Pattern 1: Pipeline'
+        lines: 21-22
+        tokens: 2
+      - name: '### When to Use'
+        lines: 23-27
+        tokens: 6
+      - name: '### Squad Mapping'
+        lines: 28-35
+        tokens: 10
+      - name: '### Task Dependency Structure'
+        lines: 36-52
+        tokens: 21
+      - name: '### Communication Flow'
+        lines: 53-58
+        tokens: 7
+      - name: '### Implementation'
+        lines: 59-126
+        tokens: 88
+      - name: '## Pattern 2: Parallel Workers'
+        lines: 127-128
+        tokens: 2
+      - name: '### When to Use'
+        lines: 129-133
+        tokens: 6
+      - name: '### Squad Mapping'
+        lines: 134-140
+        tokens: 8
+      - name: '### Task Dependency Structure'
+        lines: 141-153
+        tokens: 16
+      - name: '### Communication Flow'
+        lines: 154-159
+        tokens: 7
+      - name: '### Implementation'
+        lines: 160-214
+        tokens: 71
+      - name: '## Pattern 3: Builder-Validator'
+        lines: 215-216
+        tokens: 2
+      - name: '### When to Use'
+        lines: 217-222
+        tokens: 7
+      - name: '### Squad Mapping'
+        lines: 223-228
+        tokens: 7
+      - name: '### Task Dependency Structure'
+        lines: 229-250
+        tokens: 28
+      - name: '### Communication Flow'
+        lines: 251-257
+        tokens: 8
+      - name: '### Implementation'
+        lines: 258-321
+        tokens: 82
+      - name: '## Pattern 4: Competing Hypotheses'
+        lines: 322-323
+        tokens: 2
+      - name: '### When to Use'
+        lines: 324-329
+        tokens: 7
+      - name: '### Squad Mapping'
+        lines: 330-336
+        tokens: 8
+      - name: '### Task Dependency Structure'
+        lines: 337-349
+        tokens: 16
+      - name: '### Communication Flow'
+        lines: 350-355
+        tokens: 7
+      - name: '### Implementation'
+        lines: 356-411
+        tokens: 72
+      - name: '## Pattern 5: Business Domain'
+        lines: 412-413
+        tokens: 2
+      - name: '### When to Use'
+        lines: 414-419
+        tokens: 7
+      - name: '### Squad Mapping'
+        lines: 420-428
+        tokens: 11
+      - name: '### Task Dependency Structure'
+        lines: 429-441
+        tokens: 16
+      - name: '### Communication Flow'
+        lines: 442-448
+        tokens: 8
+      - name: '### Implementation'
+        lines: 449-506
+        tokens: 75
+      - name: '## Pattern 6: Battle Royale'
+        lines: 507-508
+        tokens: 2
+      - name: '### When to Use'
+        lines: 509-515
+        tokens: 8
+      - name: '### Squad Mapping'
+        lines: 516-522
+        tokens: 8
+      - name: '### Task Dependency Structure'
+        lines: 523-583
+        tokens: 78
+      - name: '### Communication Flow'
+        lines: 584-591
+        tokens: 10
+      - name: '### Implementation'
+        lines: 592-830
+        tokens: 310
+      - name: '### Battle Configuration YAML'
+        lines: 831-835
+        tokens: 6
+      - name: '# Minimal Battle configuration for a squad'
+        lines: 836-836
+        tokens: 0
+      - name: '# Full schema: BATTLE-CONFIG-SCHEMA.md'
+        lines: 837-911
+        tokens: 97
+      - name: '### Battle Royale vs Competing Hypotheses'
+        lines: 912-932
+        tokens: 26
+      - name: '## Pattern Selection Guide'
+        lines: 933-962
+        tokens: 38
+      - name: '## Common Configuration'
+        lines: 963-964
+        tokens: 2
+      - name: '### Team Naming Convention'
+        lines: 965-969
+        tokens: 6
+      - name: '### Agent Lifecycle'
+        lines: 970-975
+        tokens: 7
+      - name: '### Error Handling'
+        lines: 976-982
+        tokens: 8
+      - name: '## Metadata'
+        lines: 983-993
+        tokens: 13
+  - path: TEAM-REGISTRY.md
+    lines: 680
+    tokens: 884
+    hash: 2631fb52da18
+    topics:
+      - team
+      - registry
+      - agent
+      - teams
+      - configuration
+      - megabrain
+      - core
+      - squads
+      - overview
+      - support
+      - tiers
+      - master
+      - table
+      - detailed
+      - squad
+    sections:
+      - name: '# TEAM Registry'
+        lines: 1-1
+        tokens: 0
+      - name: '## Agent Teams Configuration for core Squads'
+        lines: 2-5
+        tokens: 4
+      - name: '## Overview'
+        lines: 6-20
+        tokens: 19
+      - name: '## Support Tiers'
+        lines: 21-31
+        tokens: 13
+      - name: '## Master Configuration Table'
+        lines: 32-62
+        tokens: 39
+      - name: '## Detailed Squad Team Configurations'
+        lines: 63-64
+        tokens: 2
+      - name: '### full-stack-dev'
+        lines: 65-91
+        tokens: 34
+      - name: '### design-system'
+        lines: 92-116
+        tokens: 32
+      - name: '### core-dev'
+        lines: 117-143
+        tokens: 34
+      - name: '### copywriting'
+        lines: 144-168
+        tokens: 32
+      - name: '### deep-scraper'
+        lines: 169-195
+        tokens: 34
+      - name: '### media-buy'
+        lines: 196-219
+        tokens: 30
+      - name: '### creative-studio'
+        lines: 220-244
+        tokens: 32
+      - name: '### content-ecosystem'
+        lines: 245-273
+        tokens: 37
+      - name: '### youtube-lives'
+        lines: 274-301
+        tokens: 36
+      - name: '### content-marketing'
+        lines: 302-327
+        tokens: 33
+      - name: '### funnel-creator'
+        lines: 328-353
+        tokens: 33
+      - name: '### infoproduct-creation'
+        lines: 354-379
+        tokens: 33
+      - name: '### project-management'
+        lines: 380-405
+        tokens: 33
+      - name: '### data-analytics'
+        lines: 406-430
+        tokens: 32
+      - name: '### conselho'
+        lines: 431-456
+        tokens: 33
+      - name: '### strategy'
+        lines: 457-481
+        tokens: 32
+      - name: '### community'
+        lines: 482-505
+        tokens: 30
+      - name: '### communication'
+        lines: 506-529
+        tokens: 30
+      - name: '### sales'
+        lines: 530-554
+        tokens: 32
+      - name: '### social-publisher'
+        lines: 555-578
+        tokens: 30
+      - name: '### squad-creator'
+        lines: 579-592
+        tokens: 17
+      - name: '### orquestrador-global'
+        lines: 593-606
+        tokens: 17
+      - name: '## Battle-Enabled Squads'
+        lines: 607-617
+        tokens: 13
+      - name: '### copywriting'
+        lines: 618-643
+        tokens: 33
+      - name: '## Statistics Summary'
+        lines: 644-658
+        tokens: 19
+      - name: '### By Support Tier'
+        lines: 659-669
+        tokens: 13
+      - name: '## Metadata'
+        lines: 670-680
+        tokens: 13

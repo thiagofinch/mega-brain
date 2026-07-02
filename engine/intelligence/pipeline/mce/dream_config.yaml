@@ -1,0 +1,36 @@
+# dream_config.yaml -- Default Configuration for DreamTask
+# ========================================================
+#
+# Proactive background agent that consolidates session memory
+# during idle time.  Loaded via CascadeConfig at level 5 (defaults).
+#
+# Override via:
+#   - Per-slug config:  .claude/mission-control/mce/{slug}/config.yaml
+#   - Environment vars: MCE_DREAM_ENABLED=true
+#   - CLI args:         --dream-enabled
+#
+# Version: 1.0.0
+# Date: 2026-04-01
+# Story: MCE21-3.1
+
+# Master toggle -- opt-in by default.  No dream runs unless explicit.
+enabled: false
+
+# Minimum hours since last dream run before triggering again.
+time_gate_hours: 24
+
+# Minimum sessions since last dream run before triggering.
+session_gate_count: 5
+
+# Maximum cost per single dream execution in USD.
+# Budget check runs BEFORE execution -- if current pipeline spend
+# plus this amount would exceed the budget, dream is skipped.
+max_budget_usd: 0.50
+
+# Lock file path (relative to .claude/mission-control/mce/{slug}/).
+# Prevents concurrent dream executions for the same slug.
+lock_file: ".dream.lock"
+
+# Circuit breaker: max consecutive dream failures before giving up.
+# Reuses CircuitBreaker from context_compactor.py.
+circuit_breaker_max_failures: 3

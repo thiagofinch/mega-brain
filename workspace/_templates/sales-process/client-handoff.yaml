@@ -1,0 +1,159 @@
+---
+# CLIENT-HANDOFF.YAML - Sales-to-delivery transition
+# Adapted from mega-brain-stage pattern for Mega Brain workspace context
+
+_meta:
+  version: "1.0.0"
+  owner: "hormozi-chief"
+  target_layer: "L4-operational"
+  state: "TEMPLATE"
+
+metadata:
+  canonical_scope: "workspace/_templates/sales-process/client-handoff.yaml"
+  owner: "cro"
+  version: "1.0.0"
+  last_updated: "2026-03-23"
+  description: "Client handoff template for transitioning from sales to delivery with contacts, deliverables, and onboarding"
+
+fields:
+  client_name:
+    type: string
+    required: true
+    description: "Client or company name"
+
+  project_name:
+    type: string
+    required: true
+    description: "Name of the project or engagement being handed off"
+
+  handoff_date:
+    type: date
+    required: true
+    description: "Date the handoff occurs"
+
+  sales_owner:
+    type: string
+    required: true
+    description: "Sales rep who closed the deal"
+
+  delivery_owner:
+    type: string
+    required: true
+    description: "Project manager or delivery lead receiving the client"
+
+  contacts:
+    type: object
+    required: true
+    description: "Key contacts on both sides"
+    properties:
+      client_primary:
+        type: object
+        required: true
+        description: "Primary client contact"
+        properties:
+          name:
+            type: string
+            required: true
+            description: "Contact name"
+          role:
+            type: string
+            required: true
+            description: "Contact role or title"
+          email:
+            type: string
+            required: true
+            description: "Contact email"
+          phone:
+            type: string
+            required: false
+            description: "Contact phone number"
+      client_secondary:
+        type: object
+        required: false
+        description: "Secondary client contact"
+        properties:
+          name:
+            type: string
+            required: true
+            description: "Contact name"
+          role:
+            type: string
+            required: true
+            description: "Contact role"
+          email:
+            type: string
+            required: true
+            description: "Contact email"
+      internal_team:
+        type: list
+        required: true
+        description: "Internal team members assigned to the project with name and role"
+
+  deal_context:
+    type: object
+    required: true
+    description: "Context from the sales process that delivery needs to know"
+    properties:
+      client_goals:
+        type: list
+        required: true
+        description: "What the client expects to achieve"
+      pain_points:
+        type: list
+        required: true
+        description: "Key problems the client mentioned during sales"
+      promises_made:
+        type: list
+        required: true
+        description: "Specific commitments made during the sales process"
+      red_flags:
+        type: list
+        required: false
+        description: "Potential issues or concerns flagged during sales"
+      competitor_context:
+        type: string
+        required: false
+        description: "Alternatives the client considered and why they chose us"
+
+  deliverables:
+    type: list
+    required: true
+    description: "Contracted deliverables with description, deadline, and acceptance criteria"
+
+  sla:
+    type: object
+    required: false
+    description: "Service level agreements"
+    properties:
+      response_time:
+        type: string
+        required: false
+        description: "Maximum response time for client requests"
+      delivery_cadence:
+        type: string
+        required: false
+        description: "Frequency of deliverable reviews or check-ins"
+      escalation_path:
+        type: string
+        required: false
+        description: "How the client escalates issues"
+
+  onboarding_checklist:
+    type: list
+    required: true
+    description: "Step-by-step onboarding tasks with owner and deadline"
+
+  access_and_credentials:
+    type: list
+    required: false
+    description: "Systems, tools, or accounts the delivery team needs access to (never store actual credentials)"
+
+  contract_reference:
+    type: string
+    required: false
+    description: "Link or path to the signed contract or proposal"
+
+  kickoff_meeting_date:
+    type: date
+    required: false
+    description: "Date of the project kickoff meeting with the client"

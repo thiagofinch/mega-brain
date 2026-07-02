@@ -1,0 +1,425 @@
+---
+# LAUNCH-CAMPAIGN.YAML — Ficha de Lancamento/Campanha
+# Uma instancia por lancamento. Vinculada ao product-profile do produto.
+#
+# Diferenca do product-profile:
+#   product-profile = o que o produto EH (permanente, enriquecido pelo pipeline)
+#   launch-campaign = como estamos vendendo AGORA (efemero, por evento)
+#
+# Resultados do lancamento retroalimentam o product-profile:
+#   - Angulo validado -> product-profile.ads.validated_angles
+#   - Depoimento novo -> product-profile.testimonials.client_results
+#   - Objecao recorrente -> product-profile.objections.common_objections
+#
+# Filesystem:
+#   workspace/businesses/{brand}/products/campaigns/YYYY-MM-{tipo}.md
+
+_meta:
+  version: "1.0.0"
+  owner: "pm"
+  target_layer: "L2-tactical"
+  state: "TEMPLATE"
+
+metadata:
+  canonical_scope: "workspace/_templates/products/launch-campaign.yaml"
+  owner: "cmo"
+  version: "1.0.0"
+  last_updated: "2026-03-24"
+  description: "Campanha/lancamento especifico de um produto com orcamento, cronograma, metas e resultados"
+
+fields:
+
+  # =====================================================================
+  # SECAO 1: IDENTIDADE DA CAMPANHA
+  # =====================================================================
+
+  campaign:
+    description: "Dados fundamentais da campanha"
+    fields:
+      campaign_name:
+        type: string
+        required: true
+        description: "Nome interno da campanha (ex: Challenge Mar/2026)"
+
+      product_ref:
+        type: string
+        required: true
+        description: "Slug do produto — aponta para o product-profile correspondente"
+
+      campaign_proposal:
+        type: string
+        required: true
+        description: "Proposta da campanha em 1-2 frases — o que queremos alcançar"
+
+      campaign_type:
+        type: enum
+        required: true
+        description: "Tipo de lancamento"
+        options:
+          - challenge
+          - webinar
+          - launch
+          - evergreen
+          - flash-sale
+          - relaunch
+          - partnership
+          - event
+          - presencial
+
+      target_funnel_stage:
+        type: enum
+        required: true
+        description: "Etapa do funil que esta campanha ataca"
+        options: [top, middle, bottom, full-funnel]
+
+      status:
+        type: enum
+        required: true
+        description: "Status atual da campanha"
+        options: [planning, pre-launch, live, post-launch, closed, cancelled]
+
+      start_date:
+        type: date
+        required: true
+        description: "Data de inicio da campanha"
+
+      end_date:
+        type: date
+        required: false
+        description: "Data de encerramento (null se evergreen)"
+
+  # =====================================================================
+  # SECAO 2: OFERTA DA CAMPANHA
+  # =====================================================================
+
+  campaign_offer:
+    description: "Precos e condicoes especificas desta campanha (pode diferir do padrao)"
+    fields:
+      campaign_price:
+        type: string
+        required: false
+        description: "Preco especifico da campanha (se diferente do padrao do produto)"
+
+      early_bird:
+        type: object
+        required: false
+        description: "Condicao early-bird se aplicavel"
+        properties:
+          price:
+            type: string
+          deadline:
+            type: date
+          slots:
+            type: number
+            description: "Vagas limitadas se aplicavel"
+
+      special_conditions:
+        type: list
+        required: false
+        description: "Condicoes especiais desta campanha (bonus exclusivo, parcelamento especial)"
+
+      payment_methods:
+        type: list
+        required: false
+        description: "Formas de pagamento ativas para esta campanha com configuracao"
+        item_schema:
+          method:
+            type: string
+            description: "Metodo (cartao, boleto, pix)"
+          config:
+            type: string
+            description: "Configuracao (parcelamento, gateway, etc.)"
+
+  # =====================================================================
+  # SECAO 3: ORCAMENTO DE TRAFEGO
+  # =====================================================================
+
+  budget:
+    description: "Investimento planejado em trafego e midia"
+    fields:
+      total_budget:
+        type: string
+        required: true
+        description: "Orcamento total da campanha"
+
+      channel_split:
+        type: list
+        required: false
+        description: "Divisao do orcamento por canal"
+        item_schema:
+          channel:
+            type: string
+            description: "Canal (Meta Ads, Google Ads, YouTube, TikTok, etc.)"
+          budget:
+            type: string
+            description: "Valor alocado"
+          objective:
+            type: string
+            description: "Objetivo primario nesse canal (awareness, captacao, retargeting)"
+
+      estimated_cpl:
+        type: string
+        required: false
+        description: "Custo estimado por lead"
+
+      estimated_cpa:
+        type: string
+        required: false
+        description: "Custo estimado por venda"
+
+  # =====================================================================
+  # SECAO 4: ANUNCIOS DA CAMPANHA
+  # =====================================================================
+
+  ads:
+    description: "Plano de anuncios especifico da campanha"
+    fields:
+      ad_plan:
+        type: list
+        required: false
+        description: "Plano de anuncios por canal"
+        item_schema:
+          channel:
+            type: enum
+            options: [meta, google, youtube, tiktok, linkedin, twitter, native, other]
+          ad_count:
+            type: number
+            description: "Quantidade de anuncios planejados"
+          objective:
+            type: enum
+            options: [awareness, capture, retargeting, conversion, lookalike]
+          formats:
+            type: list
+            description: "Formatos (video, carrossel, imagem, texto)"
+
+      production_notes:
+        type: object
+        required: false
+        description: "Pontos de atencao para producao dos criativos desta campanha"
+        properties:
+          filming_quality:
+            type: string
+            description: "Padrao de qualidade esperado"
+          special_actions:
+            type: list
+            description: "Acoes diferenciadas (participacao especial, narrativas unicas)"
+          references:
+            type: list
+            description: "Referencias visuais ou de estilo"
+
+  # =====================================================================
+  # SECAO 5: CRONOGRAMA DE EXECUCAO
+  # =====================================================================
+
+  timeline:
+    description: "Fases da campanha com datas"
+    fields:
+      phases:
+        type: list
+        required: true
+        description: "Fases sequenciais da campanha"
+        item_schema:
+          phase_name:
+            type: string
+            description: "Nome da fase (Captura, Lives CPL, Abertura Carrinho, etc.)"
+          activity:
+            type: string
+            description: "Atividade principal da fase"
+          start_date:
+            type: date
+          end_date:
+            type: date
+          status:
+            type: enum
+            options: [pending, in-progress, completed, skipped]
+          notes:
+            type: string
+
+  # =====================================================================
+  # SECAO 6: METAS ESPERADAS
+  # =====================================================================
+
+  targets:
+    description: "Metas quantitativas da campanha"
+    fields:
+      leads_target:
+        type: number
+        required: false
+        description: "Meta de leads captados"
+
+      revenue_target:
+        type: string
+        required: false
+        description: "Meta de faturamento"
+
+      sales_target:
+        type: number
+        required: false
+        description: "Meta de vendas (unidades)"
+
+      roi_target:
+        type: string
+        required: false
+        description: "Meta de ROI do lancamento"
+
+  # =====================================================================
+  # SECAO 7: RESULTADOS REAIS
+  # =====================================================================
+
+  results:
+    description: "Resultados reais pos-campanha — preenchido durante e apos o lancamento"
+    fields:
+      leads_actual:
+        type: number
+        required: false
+        description: "Leads reais captados"
+
+      revenue_actual:
+        type: string
+        required: false
+        description: "Faturamento real"
+
+      sales_actual:
+        type: number
+        required: false
+        description: "Vendas reais (unidades)"
+
+      roi_actual:
+        type: string
+        required: false
+        description: "ROI real do lancamento"
+
+      cpl_actual:
+        type: string
+        required: false
+        description: "Custo real por lead"
+
+      cpa_actual:
+        type: string
+        required: false
+        description: "Custo real por venda"
+
+      post_mortem:
+        type: string
+        required: false
+        description: "Analise pos-lancamento: o que funcionou, o que nao, licoes aprendidas"
+
+      retroalimentacao:
+        type: object
+        required: false
+        description: "Dados que devem voltar para o product-profile"
+        properties:
+          validated_angles:
+            type: list
+            description: "Angulos que performaram — promover para product-profile.ads"
+          failed_angles:
+            type: list
+            description: "Angulos que falharam — registrar para nao repetir"
+          new_testimonials:
+            type: list
+            description: "Depoimentos coletados — promover para product-profile.testimonials"
+          new_objections:
+            type: list
+            description: "Objecoes novas — promover para product-profile.objections"
+          icp_refinements:
+            type: list
+            description: "Descobertas sobre o ICP — promover para product-profile.icp"
+
+  # =====================================================================
+  # SECAO 8: EQUIPE DO LANCAMENTO
+  # =====================================================================
+
+  team:
+    description: "Equipe alocada especificamente para esta campanha"
+    fields:
+      roles:
+        type: list
+        required: false
+        description: "Funcoes e responsaveis"
+        item_schema:
+          role:
+            type: string
+            description: "Funcao (Estrategia, Copywriter, Trafego, Video, Design, Suporte, Produto)"
+          responsible:
+            type: string
+            description: "Nome do responsavel"
+          tasks:
+            type: list
+            description: "Tarefas especificas desta pessoa na campanha"
+
+  # =====================================================================
+  # SECAO 9: KPIs DA CAMPANHA
+  # =====================================================================
+
+  kpis:
+    description: "Metricas monitoradas durante a campanha"
+    fields:
+      metrics:
+        type: list
+        required: false
+        description: "KPIs com dono, meta e resultado"
+        item_schema:
+          kpi_name:
+            type: string
+            description: "Nome da KPI"
+          owner:
+            type: string
+            description: "Dono da metrica"
+          target:
+            type: string
+            description: "Meta definida"
+          actual:
+            type: string
+            description: "Valor atingido"
+          status:
+            type: enum
+            options: [on-track, at-risk, missed, exceeded]
+
+  # =====================================================================
+  # SECAO 10: COLABORACOES E PARCERIAS
+  # =====================================================================
+
+  partnerships:
+    description: "Colaboracoes especificas desta campanha"
+    fields:
+      collaborations:
+        type: list
+        required: false
+        description: "Parceiros e plataformas envolvidos"
+        item_schema:
+          partner:
+            type: string
+            description: "Nome do parceiro/plataforma"
+          objective:
+            type: string
+            description: "Objetivo da parceria nesta campanha"
+          contact:
+            type: string
+            description: "Contato principal"
+
+  # =====================================================================
+  # SECAO 11: REUNIOES DA CAMPANHA
+  # =====================================================================
+
+  meetings:
+    description: "Log de reunioes relacionadas a esta campanha"
+    fields:
+      meeting_log:
+        type: list
+        required: false
+        description: "Reunioes com data e referencia"
+        item_schema:
+          title:
+            type: string
+            description: "Titulo da reuniao"
+          date:
+            type: date
+          meet_ref:
+            type: string
+            description: "MEET-XXXX reference se processado pelo pipeline"
+          link:
+            type: string
+            description: "Link para gravacao ou ata"
+          key_decisions:
+            type: list
+            description: "Decisoes tomadas nessa reuniao"

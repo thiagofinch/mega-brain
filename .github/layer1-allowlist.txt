@@ -1,0 +1,76 @@
+# Repository Manifest — Mega Brain
+# ==============================================================
+# Mega Brain is distributed as a single private repository. The
+# buyer clones this repo and ingests their own material. There is
+# no community/premium split — the cloned repo IS the full product.
+#
+# This file lists the paths that ship with the repository.
+# AUDITED: 2026-06-30
+# ==============================================================
+
+# --- Claude Code integration ---
+.claude/CLAUDE.md
+.claude/agents.yaml
+.claude/commands/
+.claude/hooks/
+.claude/package.json
+.claude/rules/
+.claude/scripts/
+.claude/settings.json
+.claude/skills/
+.claude/templates/
+
+# --- .claudeignore ---
+.claudeignore
+
+# --- .env.example ---
+.env.example
+
+# --- .gitattributes ---
+.gitattributes
+
+# --- GitHub integration ---
+.github/CODEOWNERS
+.github/ISSUE_TEMPLATE/
+.github/PULL_REQUEST_TEMPLATE.md
+.github/assets/
+.github/layer1-allowlist.txt
+.github/workflows/
+
+# --- .gitignore ---
+.gitignore
+
+# --- .gitleaks.toml ---
+.gitleaks.toml
+
+# --- QUICK-START.md ---
+QUICK-START.md
+
+# --- README.md ---
+README.md
+
+# --- Agent system ---
+agents/_registry/
+agents/_templates/
+agents/system/
+
+# --- CLI tools ---
+bin/
+
+# --- Core engine ---
+engine/
+
+# --- Documentation ---
+docs/
+
+# --- Knowledge scaffolding ---
+knowledge/
+
+# --- Workspace templates ---
+workspace/
+
+# --- package.json ---
+package.json
+
+# --- requirements.txt ---
+requirements.txt

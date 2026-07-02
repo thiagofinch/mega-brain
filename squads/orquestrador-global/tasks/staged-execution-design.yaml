@@ -1,0 +1,172 @@
+# =============================================================================
+# TASK: STAGED EXECUTION DESIGN
+# =============================================================================
+# Design multi-squad execution pipelines with stage gates
+# Stage 1-to-10 | Ontology Layer: Orquestracao + Gate Review
+# =============================================================================
+
+
+task: staged-execution-design
+domain: strategic
+atomic_layer: Molecule
+responsavel_type: Agent
+performance:
+  error_handling: graceful with fallback + retry
+
+megabrain_frontmatter:
+  task_id: "staged-execution-design"
+  name: "staged-execution-design"
+  version: "1.0.0"
+  category: operations
+  squad: orquestrador-global
+  responsavel: "@plan-architect"
+  model: sonnet
+  difficulty: intermediate
+  atomic_layer: Molecule
+
+metadata:
+  name: staged-execution-design
+  version: "1.0.0"
+  squad: orquestrador-global
+  maturity_stage: "1_to_10"
+  ontology_layer: orquestracao
+  model: sonnet
+  estimated_time: "4-6 hours"
+  complexity: high
+
+description: >
+  Design multi-squad execution pipelines that coordinate 2-5 squads in
+  sequence or parallel. Introduces stage gates between squads where quality
+  is verified before proceeding. Includes the four orchestration patterns:
+  Sequential, Parallel Fan-Out, Diamond, and Iterative Loop.
+
+inputs:
+  required:
+    - name: demand
+      type: object
+      source: "Classified multi-squad demand"
+    - name: squad_sequence
+      type: array
+      source: "Ordered list of squads with dependencies"
+  optional:
+    - name: parallel_groups
+      type: array
+      description: "Groups of squads that can execute in parallel"
+    - name: max_iterations
+      type: number
+      description: "Maximum iterations for loop patterns (default: 3)"
+
+outputs:
+  - name: execution_plan
+    type: document
+    destination: ".data/executions/{date}_{slug}/00-master-plan.md"
+    description: "Multi-squad execution plan with stage gates"
+  - name: audit_trail
+    type: file
+    destination: ".data/executions/{date}_{slug}/audit.jsonl"
+    description: "Machine-readable JSONL audit trail"
+
+frameworks:
+  - name: "Orchestration Patterns"
+    application: >
+      Sequential: A -> B -> C (most common, lowest risk).
+      Parallel Fan-Out: A -> [B, C, D] -> merge (fastest for independent work).
+      Diamond: A -> [B, C] -> D (fan-out then converge).
+      Iterative Loop: A -> B -> review -> (iterate or proceed).
+  - name: "Stage Gate Protocol"
+    application: >
+      Between each stage, verify: deliverable completeness (all expected
+      outputs exist), quality threshold (self-eval >= 3/5), dependency
+      satisfaction (downstream squad has what it needs). Gate decisions:
+      proceed, revise, pause, cancel.
+
+process:
+  steps:
+    - id: 1
+      name: "Analyze demand complexity"
+      action: >
+        Assess the demand using IDS task-scaler: QUICK (1 squad),
+        SMALL (2 squads), MEDIUM (3-4 squads), LARGE (5+ squads).
+        Set the session scale accordingly.
+      tools:
+        - "ids-ops.mjs assess"
+        - "ids-ops.mjs set-scale"
+      output: "Scale assessment with squad count"
+
+    - id: 2
+      name: "Design execution pipeline"
+      action: >
+        Map the squad sequence with dependencies. Identify which squads
+        can run in parallel (no data dependencies between them). Select
+        the appropriate orchestration pattern. Define stage gates between
+        each phase.
+      output: "Pipeline design document"
+
+    - id: 3
+      name: "Define stage gate criteria"
+      action: >
+        For each gate point, specify: what to check, minimum quality
+        threshold, who decides (auto vs. user), and what happens on
+        failure (revise, skip, or cancel).
+      output: "Stage gate specifications"
+
+    - id: 4
+      name: "Prepare handoff packages"
+      action: >
+        For each squad transition, create the handoff package: output
+        from previous squad, additional context, expected deliverable
+        format, and constraints. Use the handoff packaging protocol.
+      output: "Handoff packages per transition"
+
+    - id: 5
+      name: "Execute with gates"
+      action: >
+        Execute the pipeline stage by stage. At each gate, evaluate
+        criteria. Log gate decisions to the JSONL audit trail. If a
+        gate fails, apply the defined failure action.
+      tools:
+        - "ids-ops.mjs audit-append"
+      output: "Executed pipeline with audit trail"
+
+integration_graph:
+  depends_on:
+    - task: basic-orchestration-setup
+      squad: orquestrador-global
+      data_needed: "execution_patterns"
+  feeds_into:
+    - task: orchestration-architecture
+      squad: orquestrador-global
+      data_passed: "pipeline_patterns"
+  collaborates_with:
+    - squad: navigator
+      purpose: "Context assembly for handoff packages"
+    - squad: project-management-clickup
+      purpose: "Task tracking across squads"
+
+quality_gates:
+  - "Pipeline pattern matches demand complexity (no over-engineering)"
+  - "All stage gates have explicit pass/fail criteria"
+  - "Handoff packages are self-contained per squad"
+  - "JSONL audit trail captures all gate decisions"
+  - "Parallel groups have no hidden data dependencies"
+squad: orquestrador-global
+task_id: staged-execution-design
+version: "3.1.1"
+status: ready
+responsavel: "@plan-architect"
+execution_type: hybrid
+orchestration_boundary:
+  live_routing_performed: false
+  external_dispatch_performed: false
+  workspace_write_performed: false
+megabrain_validation:
+  last_run: "20260514-validate-deep"
+  validated_at: "2026-05-15T00:00:00Z"
+  validator: mega-brain/megabrain-chief
+  mode: deep
+  squad: orquestrador-global
+  status: pass
+  evidence:
+    - schema_contract_normalized
+    - task_boundary_declared
+    - plan_only_orchestration_preserved

@@ -1,0 +1,46 @@
+version: "1.0"
+name: orquestrador-global
+extends: base
+description: "Contexto para o Maestro (orquestrador multi-squad)"
+
+sources:
+  # Orchestration knowledge — selected sections
+  - type: file
+    path: knowledge/TEAM-REGISTRY.md
+    priority: required
+
+  - type: file
+    path: knowledge/TEAM-PATTERNS.md
+    sections:
+      - "## Pipeline"
+      - "## Parallel Workers"
+      - "## Stage Gate"
+    priority: required
+
+  - type: file
+    path: knowledge/MODEL-STRATEGY.md
+    priority: required
+
+  # Execution logging rules
+  - type: rules
+    include:
+      - execution-logging.md
+      - clickup-tracking.md
+    priority: required
+
+  # Full vault — Maestro needs to route to any service
+  - type: file
+    path: core/vault/services.yaml
+    priority: required
+
+  # Squad registry for routing
+  - type: file
+    path: .data/entity-registry.yaml
+    sections:
+      - "## squads"
+    priority: required
+
+# Research Context Generator integration
+research_context:
+  task_type: classification
+  enabled: true

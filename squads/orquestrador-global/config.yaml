@@ -1,0 +1,526 @@
+name: orquestrador-global
+version: 3.1.1
+description: 'Sistema nervoso central do core. Atua como ponto de entrada central
+  para todas as solicitacoes, classificando intencoes, encontrando o squad/agente
+  mais adequado para cada demanda, e coordenando a criacao de novos squads quando
+  necessario. Ontological maturity framework: Demanda -> Classificacao -> Orquestracao
+  -> Gate Review -> Consolidacao -> Melhoria across 3 stages (0-to-1, 1-to-10, 10-to-100).'
+squad_type: hub                  # Canonicalized 2026-04-30 (workspace-awareness-fix Opt B); was 'system' (non-canonical). orquestrador-global is hub-behaving meta-squad — operates across all businesses (intent classification, routing, multi-squad orchestration). Per workspace-layer-binding.yaml Rule 12 (hub-any).
+domain: orchestration
+author: your-org
+license: MIT
+megabrain:
+  minVersion: 2.1.0
+  type: squad
+metadata:
+  created_at: '2026-02-01'
+  updated_at: '2026-05-15'
+  status: active
+  maturity: production
+  ontology_spine:
+  - demanda
+  - classificacao
+  - orquestracao
+  - gate_review
+  - consolidacao
+  - melhoria
+  version: '3.1.1'
+  score: 98.2
+  last_deep_validation: '20260514-validate-deep'
+entry_agent: plan-architect  # materialized in PA-6.1 (agents/plan-architect.md); ADR-PA-001 ACCEPTED
+slash_prefix: megabrain
+activation:
+  command: '@orquestrador-global--plan-architect'  # canonical Claude Code projection
+  legacy_aliases: ['@plan-architect', '@orquestrador']
+tested: false
+tested_scope:
+  validation_type: structural_deep
+  last_run: '20260514-validate-deep'
+  executed_by: mega-brain/megabrain-chief
+  live_routing_performed: false
+  external_dispatch_performed: false
+  n8n_webhook_called: false
+  workspace_write_performed: false
+  reason: 'Validação profunda estrutural; execução externa e roteamento produtivo fora do escopo.'
+tips_keywords:
+- orquestracao
+- multi-squad
+- coordenacao
+- plano-master
+- execucao
+agents:
+  - id: plan-architect
+    file: agents/plan-architect.md
+    tier: orchestrator
+    plan_only: true
+    note: "The ONE CREATE of EPIC-PLAN-ARCHITECT — entry-point único do squad post PA-6.1"
+  - id: intent-parser
+    file: agents/intent-parser.md
+    tier: tier_0
+  - id: capability-cartographer
+    file: agents/capability-cartographer.md
+    tier: tier_0
+  - id: roteador
+    file: agents/roteador.md
+    tier: tier_1
+  - id: supervisor-sistema
+    file: agents/supervisor-sistema.md
+    tier: tier_1
+  - id: dag-architect
+    file: agents/dag-architect.md
+    tier: tier_2
+  - id: _executor-coverage
+    file: agents/_executor-coverage.md
+    tier: tier_2
+components:
+  # Aligned with agents:[] block (W3-02) — was missing plan-architect (entry_agent)
+  # and _executor-coverage. 2026-04-30 (Wave 3 W3-02).
+  agents:
+  - plan-architect          # entry_agent (THE ONE CREATE per EPIC-PLAN-ARCHITECT)
+  - intent-parser
+  - capability-cartographer
+  - roteador
+  - supervisor-sistema
+  - dag-architect
+  - _executor-coverage
+  tasks:
+  - a3-problem-solving
+  - audit-system
+  - basic-orchestration-setup
+  - consult-chief
+  - cross-squad-review
+  - dispatch-to-megabrain-example-squad
+  - ecosystem-health-report
+  - execute-multi-squad-team
+  - execute-team
+  - find-capability
+  - first-squad-routing
+  - five-whys-root-cause
+  - gate-review-framework
+  - indexar-squad
+  - orchestration-architecture
+  - orchestration-scaling
+  - processar-solicitacao
+  - request-new-squad
+  - route-request
+  - staged-execution-design
+  - team-monitor
+  - team-shutdown
+  - team-status
+  - blind-spot-self-audit
+  - route-cro-recommendation
+  workflows:
+  # Resync 2026-04-30 (W5d) — match filesystem (28 total: 20 yaml + 8 md).
+  # Removed phantom 'processar-solicitacao' (no workflow file exists; only task with same name).
+  # Added wf-eval-plan-architect (PA-6.2) + wf-plan-demand (PA-6.1).
+  - atualizar-indice
+  - auditoria-sistema
+  - auto-discovery
+  - battle-round
+  - creative-production-request
+  - cross-squad-audit-cycle
+  - demand-to-delivery
+  - dmaic-correction-pipeline
+  - executar-com-team
+  - full-funnel-pipeline
+  - gap-detection-cycle
+  - new-deliverable-request
+  - orchestration-optimization-cycle
+  - orchestration-scaling-system
+  - blind-spot-audit-cycle
+  - self-evolution-cycle
+  - wf-audience-intelligence-loop
+  - wf-competitive-intel-distribution
+  - wf-copy-performance-loop
+  - wf-cs-digest-distribution
+  - wf-eval-plan-architect          # added W5d (was missing — PA-6.2)
+  - wf-fathom-digest-distribution
+  - wf-funnel-cro-loop
+  - wf-kaizen-audit
+  - wf-plan-demand                  # added W5d (was missing — PA-6.1)
+  - wf-product-quality-loop
+  - wf-seo-conversion-feedback
+  - wf-support-prevention
+  knowledge:
+  - BATTLE-ADOPTION-GUIDE
+  - BATTLE-CONFIG-SCHEMA
+  - BATTLE-SCORING-FRAMEWORK
+  - BATTLE-TEAM-TEMPLATES
+  - MODEL-STRATEGY
+  - MULTI-SQUAD-PLAYBOOK
+  - ORCHESTRATION-MATURITY-FRAMEWORK
+  - ORCHESTRATION-PLAYBOOK
+  - ORCHESTRATION-PROCESS
+  - SQUAD-REGISTRY
+  - SQUAD-SELECTION-MATRIX
+  - TEAM-PATTERNS
+  - TEAM-REGISTRY
+  - BLIND-SPOT-DETECTION-FRAMEWORK
+  - EXECUTION-ENGINES
+  - INDEX
+  - LGPD-COMPLIANCE-PROTOCOL
+  templates:
+  - intent-classification-tmpl
+  - routing-decision-tmpl
+  - squad-capability-index-tmpl
+  - stage-gate-review-tmpl
+  - stage-summary-tmpl
+  - system-health-report-tmpl
+  - team-context-handoff-tmpl
+  - team-execution-plan-tmpl
+  - team-status-report-tmpl
+  checklists:
+  - indexacao-checklist
+  - roteamento-checklist
+  - system-health-checklist
+  - team-execution-checklist
+  data:
+  - execution-templates
+  - orchestration-metrics-registry
+  - squad-routing-matrix
+  - registry-update-2026-02-07
+  - routing-dry-run-new-squads
+  - routing-dry-run-results
+  - squad-validation-report
+  - team-configs-validation
+  - execution-engine-registry
+execution_engines:
+- megabrain-example-squad
+quality_gates:
+  agent_min_lines: 300
+  task_min_lines: 100
+  workflow_min_lines: 500
+  knowledge_required: true
+  readme_required: true
+stats:
+  # Reconciled from filesystem 2026-04-30 (Wave 3 W3-01).
+  # Single source of truth: filesystem. Future CI should auto-regen this block
+  # via scripts/reconcile-stats.js (deferred backlog item).
+  agents: 7
+  tasks: 25         # 12 .md + 13 .yaml
+  workflows: 28     # 20 .yaml + 8 .md
+  knowledge: 42
+  data: 16
+  templates: 22
+  checklists: 9
+  scripts: 8
+  source: filesystem (squads/orquestrador-global/)
+  reconciled_at: "2026-04-30"
+  reconciled_by: "/megabrain-remediate-squad orquestrador-global --wave 3 W3-01"
+quality:
+  score: 8.4
+autonomy:
+  enabled: true
+  maturity_threshold: 6
+  risk_default: medium
+  tools:
+    read_only_default: true
+    allowlist:
+    - health-ops:check
+    - supermemory-ops:search
+  schedules:
+  - id: orquestrador-global-audit-system-weekly
+    cron: 0 8 * * 1
+    task: audit-system
+    risk: low
+    description: Weekly audit-system for orquestrador-global
+  - id: orquestrador-global-blind-spot-self-audit-weekly
+    cron: 0 8 * * 1
+    task: blind-spot-self-audit
+    risk: low
+    description: Weekly blind-spot-self-audit for orquestrador-global
+  - id: orquestrador-global-cross-squad-review-weekly
+    cron: 0 8 * * 1
+    task: cross-squad-review
+    risk: low
+    description: Weekly cross-squad-review for orquestrador-global
+  - id: orquestrador-global-ecosystem-health-report-daily
+    cron: 0 7 * * *
+    task: ecosystem-health-report
+    risk: low
+    description: Daily ecosystem-health-report for orquestrador-global
+  - id: orquestrador-global-gate-review-framework-weekly
+    cron: 0 8 * * 1
+    task: gate-review-framework
+    risk: low
+    description: Weekly gate-review-framework for orquestrador-global
+  - id: orquestrador-global-team-monitor-hourly
+    cron: 0 */4 * * *
+    task: team-monitor
+    risk: low
+    description: Periodic team-monitor for orquestrador-global
+  outcomes: []
+  quality_gate_ref: squad-quality-gates
+model_routing:
+  default_tier: high
+workspace_integration:
+  level: read_write
+  reads: []
+  produces: []
+  read_paths:
+    - workspace/businesses/{business}/L0-identity/company-dna.yaml
+    - workspace/businesses/{business}/L1-strategy/icp.yaml
+  write_paths:
+    - outputs/orquestrador-global/{business}/
+  allowed_layers: [L0-identity, L1-strategy, L2-tactical, L3-product, L4-operational]
+  readiness_owner: orquestrador-global
+  readiness_resolver: workspace-layer-resolver
+  fallback: halt-with-missing-context
+  canonical_outputs_root: outputs/orquestrador-global/{business}/
+artifact_contracts: []
+megabrain_extensions:
+  artifact_contracts: []
+  artifact_contracts_rationale: "Sem artifact contracts template-bound neste bloco; outputs transitórios são governados por workspace_integration."
+  executor_ref: squads/mega-brain/data/composition-rules.yaml
+pack:
+  name: orquestrador-global
+  title: orquestrador-global
+  version: 3.1.1
+  author: your-org
+  description: Sistema nervoso central do core. Atua como ponto de entrada central
+    para todas as solicitacoes, classificando intencoes, encontrando o squad/agente
+    mais adequado para cada demanda, e coordenan...
+  icon: ''
+  slash_prefix: megabrain
+domain_model:
+  Strategic:
+    label: Estratégico
+    scope: Evolução e governança do domínio orchestration
+  Tactical:
+    label: Tático
+    scope: Orquestração de workflows e decisões de design do orchestration
+  Operational:
+    label: Operacional
+    scope: Execução de tasks, geração de artefatos e validação de entregas
+composition_mapping:
+  # Reconciled from filesystem 2026-04-30 (Wave 3 W3-01).
+  # Counts match `stats:` block above. Future CI should auto-regen.
+  Token:
+    source: data/token-registry.yaml
+    count: 12               # 9 MEGABRAIN families + 3 orchestration-specific SLAs (routing_latency_p99_ms, max_concurrent_engines, plan_approval_window_min) — refined v1.1.0 W4-01; resync W5d
+  Atom:
+    source: agents/*.md
+    count: 7                # all 7 agents (intent-parser, capability-cartographer, dag-architect, plan-architect, roteador, supervisor-sistema, _executor-coverage)
+  Molecule:
+    source: tasks/*
+    count: 25               # 12 .md + 13 .yaml
+  Organism:
+    source: workflows/*
+    count: 28               # 20 .yaml + 8 .md
+  Template:
+    source: templates/**/*
+    count: 22
+  Instance:
+    source: outputs/plans/*  # canonical output instances (gitignored)
+    count: 0                 # populated at runtime
+domains:
+  strategic:
+  - diagnosis
+  - planning
+  - research
+  tactical:
+  - coordination
+  - review
+  - orchestration
+  operational:
+  - execution
+  - production
+  - delivery
+logging:
+  enabled: true
+  level: info
+  audit_trail: true
+error_behavior:
+  on_error: log_and_retry
+  max_retries: 3
+  fallback: graceful_degradation
+metrics:
+  tracking_enabled: true
+  kpis:
+  - name: task_completion_rate
+    target: 0.9
+  - name: avg_execution_latency_ms
+    target: 60000
+  - name: quality_gate_pass_rate
+    target: 0.85
+anti_pattern_policy:
+  deviations_documented: true
+  exception_handling: logged_and_reviewed
+  errata_path: docs/errata.md
+error_handling:
+  default: graceful_fallback
+  on_fail: escalate_to_human
+accountability_owner: plan-architect
+
+# MEGABRAIN deep validation schema backfill (20260514-validate-deep)
+capabilities:
+  - intent-classification
+  - capability-discovery
+  - squad-routing
+  - multi-squad-planning
+  - dag-execution-design
+  - system-health-audit
+  - blind-spot-audit
+  - plan-quality-validation
+  - execution-registry-validation
+  - cross-squad-orchestration
+  - support-prevention
+  - feedback-loop-distribution
+workflows:
+  atualizar-indice:
+    file: workflows/atualizar-indice.md
+    type: markdown
+    status: ready
+    validation: deep-structural-pass
+  auditoria-sistema:
+    file: workflows/auditoria-sistema.md
+    type: markdown
+    status: ready
+    validation: deep-structural-pass
+  auto-discovery:
+    file: workflows/auto-discovery.md
+    type: markdown
+    status: ready
+    validation: deep-structural-pass
+  battle-round:
+    file: workflows/battle-round.md
+    type: markdown
+    status: ready
+    validation: deep-structural-pass
+  blind-spot-audit-cycle:
+    file: workflows/blind-spot-audit-cycle.yaml
+    type: yaml
+    status: ready
+    validation: deep-structural-pass
+  creative-production-request:
+    file: workflows/creative-production-request.md
+    type: markdown
+    status: ready
+    validation: deep-structural-pass
+  cross-squad-audit-cycle:
+    file: workflows/cross-squad-audit-cycle.yaml
+    type: yaml
+    status: ready
+    validation: deep-structural-pass
+  demand-to-delivery:
+    file: workflows/demand-to-delivery.yaml
+    type: yaml
+    status: ready
+    validation: deep-structural-pass
+  dmaic-correction-pipeline:
+    file: workflows/dmaic-correction-pipeline.yaml
+    type: yaml
+    status: ready
+    validation: deep-structural-pass
+  executar-com-team:
+    file: workflows/executar-com-team.md
+    type: markdown
+    status: ready
+    validation: deep-structural-pass
+  full-funnel-pipeline:
+    file: workflows/full-funnel-pipeline.md
+    type: markdown
+    status: ready
+    validation: deep-structural-pass
+  gap-detection-cycle:
+    file: workflows/gap-detection-cycle.yaml
+    type: yaml
+    status: ready
+    validation: deep-structural-pass
+  "n8n/whatsapp-orquestrador-incoming":
+    file: workflows/n8n/whatsapp-orquestrador-incoming.json
+    type: n8n-json
+    status: ready
+    validation: deep-structural-pass
+  new-deliverable-request:
+    file: workflows/new-deliverable-request.md
+    type: markdown
+    status: ready
+    validation: deep-structural-pass
+  orchestration-optimization-cycle:
+    file: workflows/orchestration-optimization-cycle.yaml
+    type: yaml
+    status: ready
+    validation: deep-structural-pass
+  orchestration-scaling-system:
+    file: workflows/orchestration-scaling-system.yaml
+    type: yaml
+    status: ready
+    validation: deep-structural-pass
+  self-evolution-cycle:
+    file: workflows/self-evolution-cycle.yaml
+    type: yaml
+    status: ready
+    validation: deep-structural-pass
+  setup-whatsapp-webhook:
+    file: workflows/setup-whatsapp-webhook.sh
+    type: shell
+    status: ready
+    validation: deep-structural-pass
+  wf-audience-intelligence-loop:
+    file: workflows/wf-audience-intelligence-loop.yaml
+    type: yaml
+    status: ready
+    validation: deep-structural-pass
+  wf-competitive-intel-distribution:
+    file: workflows/wf-competitive-intel-distribution.yaml
+    type: yaml
+    status: ready
+    validation: deep-structural-pass
+  wf-copy-performance-loop:
+    file: workflows/wf-copy-performance-loop.yaml
+    type: yaml
+    status: ready
+    validation: deep-structural-pass
+  wf-cs-digest-distribution:
+    file: workflows/wf-cs-digest-distribution.yaml
+    type: yaml
+    status: ready
+    validation: deep-structural-pass
+  wf-eval-plan-architect:
+    file: workflows/wf-eval-plan-architect.yaml
+    type: yaml
+    status: ready
+    validation: deep-structural-pass
+  wf-fathom-digest-distribution:
+    file: workflows/wf-fathom-digest-distribution.yaml
+    type: yaml
+    status: ready
+    validation: deep-structural-pass
+  wf-funnel-cro-loop:
+    file: workflows/wf-funnel-cro-loop.yaml
+    type: yaml
+    status: ready
+    validation: deep-structural-pass
+  wf-kaizen-audit:
+    file: workflows/wf-kaizen-audit.yaml
+    type: yaml
+    status: ready
+    validation: deep-structural-pass
+  wf-plan-demand:
+    file: workflows/wf-plan-demand.yaml
+    type: yaml
+    status: ready
+    validation: deep-structural-pass
+  wf-product-quality-loop:
+    file: workflows/wf-product-quality-loop.yaml
+    type: yaml
+    status: ready
+    validation: deep-structural-pass
+  wf-seo-conversion-feedback:
+    file: workflows/wf-seo-conversion-feedback.yaml
+    type: yaml
+    status: ready
+    validation: deep-structural-pass
+  wf-support-prevention:
+    file: workflows/wf-support-prevention.yaml
+    type: yaml
+    status: ready
+    validation: deep-structural-pass
+validation:
+  last_run: '20260514-validate-deep'
+  validated_at: '2026-05-15T00:00:00Z'
+  validator: mega-brain/megabrain-chief
+  mode: deep
+  score: 98.2
+  status: pass

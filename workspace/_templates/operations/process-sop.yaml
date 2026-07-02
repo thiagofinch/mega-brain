@@ -1,0 +1,111 @@
+---
+# PROCESS-SOP.YAML - Standard Operating Procedure
+# Adapted from mega-brain-stage pattern for Mega Brain workspace context
+
+_meta:
+  version: "1.0.0"
+  owner: "coo-orchestrator"
+  target_layer: "L0-identity"
+  state: "TEMPLATE"
+
+metadata:
+  canonical_scope: "workspace/_templates/operations/process-sop.yaml"
+  owner: "coo"
+  version: "1.0.0"
+  last_updated: "2026-03-23"
+  description: "Standard Operating Procedure template with process steps, inputs, outputs, frequency, and tools"
+
+fields:
+  process_name:
+    type: string
+    required: true
+    description: "Name of the process or procedure"
+
+  process_id:
+    type: string
+    required: false
+    description: "Unique identifier (e.g., SOP-OPS-001)"
+
+  purpose:
+    type: string
+    required: true
+    description: "Why this process exists and what outcome it ensures"
+
+  owner:
+    type: string
+    required: true
+    description: "Person or role responsible for this process"
+
+  department:
+    type: string
+    required: false
+    description: "Department or team that executes this process"
+
+  frequency:
+    type: enum
+    required: true
+    description: "How often this process is executed"
+    options: [on-demand, daily, weekly, biweekly, monthly, quarterly, annually, event-triggered]
+
+  trigger:
+    type: string
+    required: false
+    description: "What event or condition initiates this process"
+
+  inputs:
+    type: list
+    required: true
+    description: "What is needed before the process can start (documents, data, approvals)"
+
+  outputs:
+    type: list
+    required: true
+    description: "What the process produces when complete (deliverables, artifacts, state changes)"
+
+  steps:
+    type: list
+    required: true
+    description: "Ordered list of steps, each with step number, action description, responsible person, and expected duration"
+
+  tools_required:
+    type: list
+    required: false
+    description: "Software, platforms, or physical tools needed to execute this process"
+
+  quality_criteria:
+    type: list
+    required: false
+    description: "How to verify the process was executed correctly"
+
+  exceptions:
+    type: list
+    required: false
+    description: "Known edge cases and how to handle them"
+
+  escalation:
+    type: object
+    required: false
+    description: "What to do when the process fails or blocks"
+    properties:
+      escalation_trigger:
+        type: string
+        required: true
+        description: "Condition that triggers escalation"
+      escalation_contact:
+        type: string
+        required: true
+        description: "Person or role to escalate to"
+      escalation_sla:
+        type: string
+        required: false
+        description: "Maximum time before escalation is required"
+
+  related_sops:
+    type: list
+    required: false
+    description: "Other SOPs that this process depends on or feeds into"
+
+  revision_history:
+    type: list
+    required: false
+    description: "Change log with date, author, and description of changes"

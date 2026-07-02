@@ -1,0 +1,315 @@
+# =============================================================================
+# WORKFLOW: AUDIENCE INTELLIGENCE FEEDBACK LOOP
+# =============================================================================
+# Epic 72 — Story 72.3
+# Cross-Squad Synergy Engine — Section A: Feedback Loops
+# Cadence: Monthly | Squads: media-buy → market-research → client-strategy
+# =============================================================================
+
+metadata:
+  name: wf-audience-intelligence-loop
+  version: "1.0.0"
+  squad: orquestrador-global
+  story_id: "72.3"
+  epic_id: 72
+  section: "A-feedback-loops"
+  cadence: monthly
+  estimated_time: "1-2 hours"
+  created_at: "2026-03-26"
+
+description: >
+  Monthly audience intelligence loop. Media-buy extracts top-performing audience
+  segments from campaign data. Market-research validates those segments against
+  the canonical ICP (Ideal Customer Profile). If ICP drift is detected (divergence
+  above threshold), client-strategy recalibrates the ICP and propagates updates
+  to all downstream squads. Delegation depth is exactly 3 (max allowed).
+
+# =============================================================================
+# TRIGGER
+# =============================================================================
+
+trigger:
+  command: "*audience-intelligence-loop"
+  aliases:
+    - "*audience-loop"
+    - "*icp-validation"
+  schedule:
+    cron: "0 10 1 * *"  # 1st of each month at 10:00
+    timezone: America/Sao_Paulo
+  description: "Extract audience segments, validate ICP alignment, recalibrate if drifted"
+
+# =============================================================================
+# PREREQUISITES
+# =============================================================================
+
+prerequisites:
+  - "media-buy squad configured with campaign data access"
+  - "market-research squad configured with ICP knowledge"
+  - "client-strategy squad configured with ICP ownership"
+  - "ICP definition in .data/clients/{workspace}/"
+  - "synergy.icp_divergence_threshold set in core-config.yaml"
+  - "synergy.min_sample_size set in core-config.yaml"
+
+# =============================================================================
+# INPUT REQUIREMENTS
+# =============================================================================
+
+inputs:
+  required:
+    - name: workspace
+      type: string
+      description: "Active workspace slug (GR-1 mandatory)"
+  optional:
+    - name: period
+      type: string
+      description: "Lookback period for audience extraction"
+      default: "last_30d"
+    - name: min_sample_size
+      type: integer
+      description: "Minimum conversions per segment to be statistically relevant"
+      default: 500  # from core-config synergy.min_sample_size
+
+# =============================================================================
+# GLOBAL REQUIREMENTS COMPLIANCE
+# =============================================================================
+
+global_requirements:
+  idempotency_key: "wf-audience-intelligence-loop:{workspace}:{period}"  # GR-7
+  max_iterations: 3  # GR-3
+  convergence_check:
+    min_delta: 2
+    consecutive_flat_cycles: 2
+  escalation:
+    trigger: "max_iterations_reached OR insufficient_sample_size"
+    target: orquestrador-global
+    channel: whatsapp_central
+    message: "Audience intelligence loop escalated for {workspace}: {reason}"
+
+# =============================================================================
+# STAGES
+# =============================================================================
+
+stages:
+
+  # --------------------------------------------------------------------------
+  # STAGE 1: Extract Top Audience Segments
+  # --------------------------------------------------------------------------
+  - id: 1
+    name: "Extract Top Audience Segments"
+    description: >
+      Media-buy pulls audience segment performance from Meta Ads and Google Ads.
+      Identifies the top 5 converting segments by demographics, interests, and
+      behavioral signals. Computes a segment profile with age, gender, location,
+      interests, and device breakdown.
+    estimated_time: "15-20 minutes"
+
+    agents:
+      lead: media-buy-chief
+      support: []
+
+    actions:
+      - action: pull_audience_data
+        description: "Extract audience breakdown from Meta Ads and Google Ads"
+        agent: media-buy-chief
+        tools:
+          - meta-ads-ops.mjs delivery-insights
+          - google-ads-ops.mjs audience
+
+      - action: rank_segments
+        description: "Rank audience segments by conversion rate and ROAS"
+        agent: media-buy-chief
+
+      - action: build_segment_profiles
+        description: "Create structured profiles for top 5 segments"
+        agent: media-buy-chief
+
+    gate:
+      criteria:
+        - "At least 5 audience segments extracted"
+        - "Each segment has >= min_sample_size conversions"
+        - "Segment profiles include demographics and interests"
+      approval: auto
+      auto_criteria: "Top segments extracted with sufficient sample size"
+
+    checkpoint: true  # GR-6
+
+    outputs:
+      - name: audience_segments
+        type: json
+        schema: "audience-segments.schema.json"
+
+  # --------------------------------------------------------------------------
+  # STAGE 2: Validate ICP Alignment
+  # --------------------------------------------------------------------------
+  - id: 2
+    name: "Validate ICP Alignment"
+    description: >
+      Market-research compares the extracted audience segments against the
+      canonical ICP definition. Computes a divergence score (0-100) across
+      key dimensions: age range, gender split, location, interests, and
+      pain points. Flags ICP_DRIFT_DETECTED if divergence exceeds threshold.
+    estimated_time: "15-20 minutes"
+    depends_on: [1]
+
+    agents:
+      lead: market-research-chief
+      support: []
+
+    actions:
+      - action: load_canonical_icp
+        description: "Read ICP definition from workspace client data"
+        agent: market-research-chief
+
+      - action: compute_divergence
+        description: "Calculate divergence score between audience segments and ICP"
+        agent: market-research-chief
+
+      - action: classify_drift
+        description: "Flag ICP_DRIFT_DETECTED if divergence > synergy.icp_divergence_threshold"
+        agent: market-research-chief
+
+    gate:
+      criteria:
+        - "Divergence score computed for each ICP dimension"
+        - "Overall divergence score calculated"
+        - "Drift classification issued (ALIGNED / MINOR_DRIFT / ICP_DRIFT_DETECTED)"
+      approval: auto
+      auto_criteria: "ICP alignment validation complete"
+
+    validation_gate:  # GR-5
+      gate_id: QG-orquestrador-global-2  # canonical binding (W8-5) — output_quality QG; min_score 0.75 derives from QG-2 threshold
+      type: contract_schema
+      contract: "icp-alignment-report-output.yaml"
+      min_score: 0.75
+
+    checkpoint: true  # GR-6
+
+    outputs:
+      - name: icp_alignment_report
+        type: markdown
+        contract: "icp-alignment-report-output.yaml"
+
+  # --------------------------------------------------------------------------
+  # STAGE 3: Recalibrate ICP (conditional)
+  # --------------------------------------------------------------------------
+  - id: 3
+    name: "Recalibrate ICP"
+    description: >
+      Triggered ONLY if Stage 2 flags ICP_DRIFT_DETECTED. Client-strategy
+      reviews the divergence data, decides whether to update the ICP (expand,
+      narrow, or split into segments), and propagates the updated ICP to all
+      downstream squads that reference it.
+    estimated_time: "20-30 minutes"
+    depends_on: [2]
+    condition: "stage_2.drift_classification == 'ICP_DRIFT_DETECTED'"
+
+    agents:
+      lead: client-strategy-chief
+      support: []
+
+    actions:
+      - action: review_divergence
+        description: "Analyze which ICP dimensions drifted and why"
+        agent: client-strategy-chief
+
+      - action: decide_recalibration
+        description: "Decide: expand ICP, narrow ICP, or split into sub-segments"
+        agent: client-strategy-chief
+
+      - action: update_icp_definition
+        description: "Update the canonical ICP in workspace client data"
+        agent: client-strategy-chief
+
+      - action: propagate_updates
+        description: "Notify downstream squads of ICP changes via SuperMemory"
+        agent: client-strategy-chief
+        tools:
+          - supermemory-ops.mjs remember --tag=example-squad
+
+    gate:
+      criteria:
+        - "Recalibration decision documented with rationale"
+        - "ICP definition updated in client data"
+        - "At least 3 downstream squads notified"
+      approval: auto
+      auto_criteria: "ICP recalibrated and propagated"
+
+    checkpoint: true  # GR-6
+
+# =============================================================================
+# CONVERGENCE LOGIC
+# =============================================================================
+
+convergence:
+  check_after_stage: 2
+  continue_condition: "drift_classification == 'ICP_DRIFT_DETECTED'"
+  halt_condition: "drift_classification == 'ALIGNED' OR flat_cycles >= convergence_check.consecutive_flat_cycles"
+  on_halt:
+    action: notify
+    message: "Audience intelligence loop: ICP is {drift_classification}. Divergence score: {divergence_score}%"
+    channel: supermemory
+    tag: example-squad
+
+# =============================================================================
+# MODEL SELECTION
+# =============================================================================
+
+model_selection:
+  default: sonnet
+  per_stage:
+    1: sonnet
+    2: sonnet
+    3: sonnet
+  rationale: >
+    Audience extraction and ICP comparison are analytical tasks.
+    Client-strategy recalibration benefits from sonnet's reasoning
+    but does not require opus-level depth.
+
+# =============================================================================
+# SUCCESS METRICS
+# =============================================================================
+
+success_metrics:
+  - metric: "ICP alignment accuracy"
+    target: "Divergence score < 30% after recalibration"
+  - metric: "Drift detection rate"
+    target: "100% of significant drifts detected"
+  - metric: "Propagation completeness"
+    target: "All downstream squads updated within 24h"
+  - metric: "Audience segment quality"
+    target: "Top segments have >= min_sample_size conversions"
+
+# =============================================================================
+# INTEGRATION
+# =============================================================================
+
+integration:
+  feeds_from:
+    - squad: media-buy
+      data: "Audience segment performance data"
+  feeds_to:
+    - squad: market-research
+      data: "Segment profiles for ICP validation"
+    - squad: client-strategy
+      data: "Divergence report for recalibration"
+    - squad: copywriting
+      data: "Updated ICP for messaging alignment"
+    - squad: creative-studio
+      data: "Updated ICP for visual targeting"
+  tools_required:
+    - meta-ads-ops.mjs
+    - google-ads-ops.mjs
+    - supermemory-ops.mjs
+    - pipeline-ops.mjs
+megabrain_validation:
+  last_run: "20260514-validate-deep"
+  validated_at: "2026-05-15T00:00:00Z"
+  validator: mega-brain/megabrain-chief
+  mode: deep
+  squad: orquestrador-global
+  workflow_id: "wf-audience-intelligence-loop"
+  status: pass
+  evidence:
+    - workflow_inventory_registered
+    - orchestration_surface_validated
+    - external_execution_not_performed

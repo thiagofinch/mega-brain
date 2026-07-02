@@ -1,0 +1,167 @@
+---
+# STRATEGY.YAML - AI strategy and governance
+# Adapted from mega-brain-stage pattern for Mega Brain workspace context
+
+_meta:
+  version: "1.0.0"
+  owner: "caio-architect"
+  target_layer: "L1-strategy"
+  state: "TEMPLATE"
+
+metadata:
+  canonical_scope: "workspace/_templates/ai/strategy.yaml"
+  owner: "cto"
+  version: "1.0.0"
+  last_updated: "2026-03-23"
+  description: "AI strategy template with models in use, agent registry, orchestration rules, cost limits, and quality gates"
+
+fields:
+  company_name:
+    type: string
+    required: true
+    description: "Company this AI strategy belongs to"
+
+  strategy_scope:
+    type: object
+    required: true
+    description: "Strategic boundaries for AI usage"
+    properties:
+      primary_objectives:
+        type: list
+        required: true
+        description: "Top 3-5 business objectives AI is being used to achieve"
+      target_capabilities:
+        type: list
+        required: true
+        description: "AI capabilities being developed or deployed"
+      autonomy_level:
+        type: enum
+        required: true
+        description: "Overall AI autonomy target"
+        options: [low, medium, high, full]
+      constraints:
+        type: list
+        required: false
+        description: "Hard constraints on AI usage (compliance, ethics, data residency)"
+
+  models_in_use:
+    type: list
+    required: true
+    description: "AI models currently deployed, each with model name, provider, use case, and monthly cost estimate"
+
+  model_policy:
+    type: object
+    required: true
+    description: "Model selection and governance rules"
+    properties:
+      preferred_provider:
+        type: string
+        required: true
+        description: "Default AI provider (e.g., Anthropic, OpenAI, Google)"
+      default_model:
+        type: string
+        required: true
+        description: "Default model for general tasks"
+      fallback_model:
+        type: string
+        required: false
+        description: "Fallback model when primary is unavailable"
+      selection_rules:
+        type: object
+        required: false
+        description: "Model selection criteria by task type"
+        properties:
+          complex_reasoning:
+            type: string
+            required: false
+            description: "Model for complex reasoning tasks"
+          high_volume:
+            type: string
+            required: false
+            description: "Model for high-volume, lower-complexity tasks"
+          structured_output:
+            type: string
+            required: false
+            description: "Model for structured data extraction"
+          multimodal:
+            type: string
+            required: false
+            description: "Model for image, audio, or video tasks"
+
+  agent_registry:
+    type: list
+    required: false
+    description: "Active AI agents, each with agent name, purpose, model used, and owner"
+
+  orchestration_rules:
+    type: object
+    required: false
+    description: "Rules for how agents interact and delegate"
+    properties:
+      orchestration_pattern:
+        type: string
+        required: true
+        description: "Architecture pattern (e.g., hub-and-spoke, pipeline, swarm)"
+      escalation_rules:
+        type: list
+        required: false
+        description: "When and how agents escalate to humans"
+      human_in_the_loop:
+        type: string
+        required: true
+        description: "Policy for human oversight (always, high-risk only, never)"
+
+  cost_limits:
+    type: object
+    required: true
+    description: "Financial guardrails for AI usage"
+    properties:
+      monthly_budget:
+        type: string
+        required: true
+        description: "Maximum monthly AI spend"
+      per_task_limit:
+        type: string
+        required: false
+        description: "Maximum cost per individual AI task"
+      alert_threshold:
+        type: string
+        required: false
+        description: "Spending level that triggers an alert"
+      cost_tracking_tool:
+        type: string
+        required: false
+        description: "Tool or method used to track AI costs"
+
+  quality_gates:
+    type: list
+    required: true
+    description: "Quality assurance checkpoints for AI outputs, each with gate name, criteria, and action on failure"
+
+  operations:
+    type: object
+    required: false
+    description: "Operational standards for AI usage"
+    properties:
+      prompting_standards:
+        type: list
+        required: false
+        description: "Prompt engineering guidelines and best practices"
+      logging_policy:
+        type: string
+        required: false
+        description: "What AI interactions are logged and where"
+      incident_response:
+        type: string
+        required: false
+        description: "Process for handling AI failures or harmful outputs"
+
+  use_cases:
+    type: list
+    required: false
+    description: "Prioritized AI use cases, each with name, description, success metric, owner, and status"
+
+  review_cadence:
+    type: string
+    required: false
+    description: "How often the AI strategy is reviewed and updated"

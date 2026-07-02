@@ -1,0 +1,505 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/session_start.py\"",
+            "timeout": 10000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/skill_indexer.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/inbox_age_alert.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/session_index.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/memory_persistence.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/startup_health.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/hook_auditor.py\"",
+            "timeout": 10000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/cleanup_expired_review_queue.py\"",
+            "timeout": 10000
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/synapse-engine.js\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/skill_router.py\"",
+            "timeout": 10000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/quality_watchdog.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/user_prompt_submit.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/enforce_plan_mode.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/pending_tracker.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/capability_hint_injector.py\"",
+            "timeout": 3000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/canon_hint_injector.py\"",
+            "timeout": 3000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/enforce_pipeline_integrity.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/personal_access_logger.py\"",
+            "timeout": 3000
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/enforcement_guard.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/claude_md_guard.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/creation_validator.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/directory_contract_guard.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/pre_commit_audit.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/agent_deprecation_guard.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/pipeline_merge_guard.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/structure-validation.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/workspace_contract_guard.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/constitution_gate.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/bucket_isolation_guard.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/validate_product_registry.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/validate_insights_state_schema.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/chronicler_registry_guard.py\"",
+            "timeout": 5000
+          }
+        ]
+      },
+      {
+        "matcher": "Bash|Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/capability_enforcement.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/enforce-git-push-authority.sh\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/enforce-story-reference.sh\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/enforce-quality-first.sh\"",
+            "timeout": 5000
+          }
+        ]
+      },
+      {
+        "matcher": "WebSearch|WebFetch",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/brain_first_lookup.py\"",
+            "timeout": 10000
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/post_tool_use.py\"",
+            "timeout": 10000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/enforce_dual_location.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/agent_creation_trigger.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/epistemic_validator.py\"",
+            "timeout": 3000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/checkpoint_observer.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/agent_index_updater.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/claude_md_agent_sync.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/agent_memory_persister.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/post_batch_cascading.py\"",
+            "timeout": 10000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/pipeline_phase_gate.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/pipeline_orchestrator.py\"",
+            "timeout": 10000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/mce_step_logger.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/pipeline_manifest_watcher.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/product-completeness.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/rag_rebuild_trigger.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/governance_auto_update.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/canon_index_rebuilder.py\"",
+            "timeout": 10000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/invalidate_capability_embeddings.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/env_change_detector.py\"",
+            "timeout": 10000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/claude_md_audit.py\""
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/refresh_navigation_map.py\"",
+            "timeout": 30
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/density_trigger.py\"",
+            "timeout": 10
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/dossier_frontmatter_validator.py\"",
+            "timeout": 3000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/deliberation_gate.py\"",
+            "timeout": 15000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/deliberation_convergence.py\"",
+            "timeout": 10000
+          }
+        ]
+      },
+      {
+        "matcher": "Write|Edit|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/rag_post_rebuild_validator.py",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/promotion_detector_hook.py\"",
+            "timeout": 8000
+          }
+        ]
+      },
+      {
+        "matcher": "Read|Grep|Glob",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/audit_log_cross_bucket.py\"",
+            "timeout": 5000
+          }
+        ]
+      },
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/post-edit-lint.sh\"",
+            "timeout": 10000
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/precompact-session-digest.js\"",
+            "timeout": 10000
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/delivery_guardian.py\"",
+            "timeout": 30000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/stop_hook_completeness.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/session_end.py\"",
+            "timeout": 10000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/ralph_wiggum.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/session_index.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/mce_session_reporter.py\"",
+            "timeout": 10000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/stop_workspace_audit.py\"",
+            "timeout": 10000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/memory_persistence.py\"",
+            "timeout": 10000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/quiet_hours_gate.py\"",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/post_task_suggester.py\"",
+            "timeout": 10000
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/chronicler_emission_backstop.py\"",
+            "timeout": 10000
+          }
+        ]
+      },
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pyrun.sh\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/mce_log_autodump.py\"",
+            "timeout": 15000
+          }
+        ]
+      }
+    ]
+  },
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
+  "permissions": {
+    "deny": [
+      "Bash(rm:-rf *)",
+      "Bash(rm -rf *)",
+      "Bash(curl:*)",
+      "Bash(wget:*)",
+      "Bash(git push --force*)",
+      "Bash(git push -f *)",
+      "Bash(*--no-verify*)",
+      "Bash(git reset --hard*)",
+      "Bash(git clean -f*)",
+      "Bash(git checkout -- .)",
+      "Bash(git restore .)",
+      "Read(*.env)",
+      "Write(*.env)",
+      "Edit(*.env)",
+      "Read(*/.env)",
+      "Write(*/.env)",
+      "Edit(*/.env)",
+      "Read(~/.ssh/*)",
+      "Write(~/.ssh/*)",
+      "Edit(~/.ssh/*)",
+      "Read(./private/**)"
+    ]
+  },
+  "deliberation_gate": {
+    "budget_cap": 25000,
+    "adjustment_weights": {
+      "corroborate": 12,
+      "contradict": -12
+    }
+  }
+}

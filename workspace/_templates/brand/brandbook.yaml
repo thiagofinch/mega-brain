@@ -1,0 +1,176 @@
+---
+# BRANDBOOK.YAML - Comprehensive brand reference
+# Adapted from mega-brain-stage pattern for Mega Brain workspace context
+
+_meta:
+  version: "1.0.0"
+  owner: "cmo-architect"
+  target_layer: "L2-tactical"
+  state: "TEMPLATE"
+
+metadata:
+  canonical_scope: "workspace/_templates/brand/brandbook.yaml"
+  owner: "cmo"
+  version: "1.0.0"
+  last_updated: "2026-03-23"
+  description: "Brandbook template with name, mission, values, personality, visual identity, tone of voice, and brand rules"
+
+fields:
+  brand_name:
+    type: string
+    required: true
+    description: "Official brand name"
+
+  brand_slug:
+    type: string
+    required: false
+    description: "URL-safe brand identifier (lowercase, hyphens)"
+
+  mission:
+    type: string
+    required: true
+    description: "Brand mission statement"
+
+  vision:
+    type: string
+    required: false
+    description: "Brand vision statement"
+
+  values:
+    type: list
+    required: true
+    description: "Core brand values, each with name and definition"
+
+  brand_purpose:
+    type: string
+    required: true
+    description: "Why the brand exists beyond commercial goals"
+
+  brand_essence:
+    type: string
+    required: true
+    description: "Single word or phrase that captures the heart of the brand"
+
+  personality:
+    type: object
+    required: true
+    description: "Brand character definition"
+    properties:
+      primary_archetype:
+        type: string
+        required: true
+        description: "Dominant brand archetype"
+      secondary_archetype:
+        type: string
+        required: false
+        description: "Supporting archetype that adds nuance"
+      traits:
+        type: list
+        required: true
+        description: "3-5 personality traits the brand consistently expresses"
+      human_comparison:
+        type: string
+        required: false
+        description: "If the brand were a person, who would they be?"
+
+  visual_identity:
+    type: object
+    required: true
+    description: "Visual brand standards"
+    properties:
+      primary_colors:
+        type: list
+        required: true
+        description: "Primary brand colors with hex, RGB, and usage context"
+      secondary_colors:
+        type: list
+        required: false
+        description: "Secondary palette with hex and usage"
+      typography:
+        type: object
+        required: true
+        description: "Font system"
+        properties:
+          heading:
+            type: string
+            required: true
+            description: "Heading font family"
+          body:
+            type: string
+            required: true
+            description: "Body text font family"
+          accent:
+            type: string
+            required: false
+            description: "Accent or display font"
+      logo:
+        type: object
+        required: false
+        description: "Logo specifications"
+        properties:
+          primary_version:
+            type: string
+            required: true
+            description: "Primary logo file reference"
+          variations:
+            type: list
+            required: false
+            description: "Logo variations (horizontal, stacked, icon-only)"
+          minimum_size:
+            type: string
+            required: false
+            description: "Minimum reproduction size"
+      imagery_style:
+        type: string
+        required: false
+        description: "Photography and illustration style guidelines"
+
+  tone_of_voice:
+    type: object
+    required: true
+    description: "How the brand speaks"
+    properties:
+      voice_attributes:
+        type: list
+        required: true
+        description: "3-4 adjectives that define the brand voice"
+      always_do:
+        type: list
+        required: true
+        description: "Communication behaviors the brand always follows"
+      never_do:
+        type: list
+        required: true
+        description: "Communication behaviors the brand never exhibits"
+      vocabulary:
+        type: object
+        required: false
+        description: "Brand vocabulary guidelines"
+        properties:
+          signature_terms:
+            type: list
+            required: false
+            description: "Words and phrases the brand owns"
+          forbidden_terms:
+            type: list
+            required: false
+            description: "Words and phrases to never use"
+
+  brand_dos_and_donts:
+    type: object
+    required: false
+    description: "Quick reference for brand application"
+    properties:
+      do:
+        type: list
+        required: true
+        description: "Correct brand applications and behaviors"
+      dont:
+        type: list
+        required: true
+        description: "Incorrect brand applications to avoid"
+
+  applications:
+    type: list
+    required: false
+    description: "Examples of how the brand is applied across touchpoints (website, social, print, email)"

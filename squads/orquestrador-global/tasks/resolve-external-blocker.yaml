@@ -1,0 +1,143 @@
+# =============================================================================
+# TASK: RESOLVE EXTERNAL BLOCKER
+# =============================================================================
+# Resolve access/tool/service/capability blockers before returning to user.
+# =============================================================================
+
+task: resolve-external-blocker
+domain: orchestration
+atomic_layer: Molecule
+responsavel_type: Agent
+
+megabrain_frontmatter:
+  task_id: "resolve-external-blocker"
+  name: "resolve-external-blocker"
+  version: "1.0.0"
+  category: operations
+  squad: orquestrador-global
+  responsavel: "@orquestrador-global"
+  model: sonnet
+  difficulty: intermediate
+  atomic_layer: Molecule
+
+metadata:
+  name: resolve-external-blocker
+  version: "1.0.0"
+  squad: orquestrador-global
+  maturity_stage: "1_to_10"
+  ontology_layer: orquestracao
+  estimated_time: "15-60 min"
+  complexity: medium
+
+description: >
+  Quando uma demanda encontra bloqueio externo, esta task transforma o bloqueio
+  em resolução ativa: evidência, workaround local, busca de capability existente,
+  opções de serviço externo, recomendação e gate de aprovação quando necessário.
+
+inputs:
+  required:
+    - name: blocker
+      type: object
+      description: "Erro/status que impede avanço."
+    - name: demand_context
+      type: object
+      description: "Demanda, objetivo e artefatos já disponíveis."
+  optional:
+    - name: approved_sources
+      type: array
+      description: "URLs, arquivos, exports ou credenciais já aprovadas."
+    - name: max_cost_usd
+      type: number
+      description: "Custo máximo sem nova aprovação."
+
+outputs:
+  - name: blocker_resolution_report
+    type: markdown
+    destination: "outputs/eval/{run}/blocker-resolution-report.md"
+  - name: capability_gap_entry
+    type: markdown
+    destination: "outputs/eval/{run}/capability-gap-report.md"
+    optional: true
+  - name: approval_request
+    type: markdown
+    destination: "chat"
+    optional: true
+
+process:
+  steps:
+    - id: 1
+      name: "Confirm blocker with evidence"
+      action: >
+        Registrar comando/URL, erro, status, artifacts existentes e exatamente
+        qual subobjetivo está bloqueado.
+      output: "blocker_evidence"
+
+    - id: 2
+      name: "Try local no-approval workaround"
+      action: >
+        Procurar e tentar ferramentas locais ou pacotes já instalados que não
+        exigem credencial, pagamento ou login. Exemplos: yt-dlp, ffmpeg,
+        whisper, scripts do repo, arquivos fornecidos pelo usuário.
+      output: "local_workaround_result"
+
+    - id: 3
+      name: "Search existing capabilities"
+      action: >
+        Buscar squads, tasks, workflows, skills, services e packages existentes
+        que possam resolver o blocker. Não criar capability sem prior-art search.
+      output: "capability_search_result"
+
+    - id: 4
+      name: "Rank external service options"
+      action: >
+        Se o blocker persistir, ranquear serviços externos por fit, credencial
+        necessária, custo, risco de plataforma, latência e complexidade.
+      output: "service_options_ranked"
+
+    - id: 5
+      name: "Recommend or request approval"
+      action: >
+        Se houver caminho sem aprovação, executar ou handoff. Se exigir token,
+        custo, cookies, login ou risco, pedir aprovação específica com a opção
+        recomendada e fallback.
+      output: "recommendation_or_approval_request"
+
+    - id: 6
+      name: "Persist blocker resolution report"
+      action: >
+        Emitir relatório com evidência, tentativas, opções e status atual.
+      output: "blocker-resolution-report.md"
+
+quality_gates:
+  - "Não retornar apenas 'não consigo'."
+  - "Pelo menos um workaround local foi tentado ou descartado com evidência."
+  - "Busca de capability existente foi feita antes de sugerir CREATE."
+  - "Serviço externo recomendado tem credential/cost/risk explícitos."
+  - "Aprovação é solicitada apenas quando necessária."
+  - "Nenhuma fonte inacessível é analisada como se tivesse sido acessada."
+
+handoff:
+  next_if_resolved: "Retomar stage bloqueado com os artifacts obtidos."
+  next_if_approval_required: "Aguardar aprovação explícita e credencial/token necessário."
+  next_if_no_solution: "Abrir capability gap ou request-new-squad com evidência."
+squad: orquestrador-global
+task_id: resolve-external-blocker
+version: "3.1.1"
+status: ready
+responsavel: "@plan-architect"
+execution_type: hybrid
+orchestration_boundary:
+  live_routing_performed: false
+  external_dispatch_performed: false
+  workspace_write_performed: false
+megabrain_validation:
+  last_run: "20260514-validate-deep"
+  validated_at: "2026-05-15T00:00:00Z"
+  validator: mega-brain/megabrain-chief
+  mode: deep
+  squad: orquestrador-global
+  status: pass
+  evidence:
+    - schema_contract_normalized
+    - task_boundary_declared
+    - plan_only_orchestration_preserved

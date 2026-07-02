@@ -1,0 +1,162 @@
+{
+  "schema_version": "2.0",
+  "plan_id": "test-routing-v2-20260524-1800",
+  "created_by": "plan-architect",
+  "created_at": "2026-05-24T18:00:00Z",
+  "demand": {
+    "raw": "Implementar adapter que consome RoutingDecision v2.",
+    "parsed": {
+      "primary_domain": "engineering",
+      "secondary_domains": ["quality"],
+      "task_type": "implement",
+      "complexity": "medium",
+      "urgency": "normal",
+      "business_units": ["megabrain"],
+      "implicit_deadline": null,
+      "confidence": 0.9
+    },
+    "elicitations": []
+  },
+  "discovery": {
+    "cache_version": "fixture",
+    "cache_age_seconds": 0,
+    "capabilities_scanned": {
+      "squads": 1,
+      "agents": 2,
+      "skills": 0,
+      "tasks": 0,
+      "workflows": 1
+    },
+    "cache_drift_detected": false
+  },
+  "selected_capabilities": [
+    {
+      "id": "legacy-code-capability",
+      "type": "agent",
+      "score": 0.72,
+      "score_breakdown": { "domain": 0.7, "fit": 0.72, "quality": 0.7, "recency": 0.7, "cost": 0.8 },
+      "reason": "Legacy capability kept for migration comparison.",
+      "ids_decision": "REUSE",
+      "routing_decision_id": "route-inline-v2",
+      "routing": {
+        "selected_by": "routing-engine-v2",
+        "decision_id": "route-inline-v2",
+        "primary_executor": "@dev",
+        "support_agents": ["@architect"],
+        "quality_gate_agent": "@qa",
+        "confidence": 0.91,
+        "confidence_band": "auto_select",
+        "hard_gate_results": [
+          { "id": "agent-exists", "status": "pass" },
+          { "id": "boundary-protected-path", "status": "pass" }
+        ],
+        "decision": {
+          "schema_version": "2.0",
+          "decision_id": "route-inline-v2",
+          "generated_at": "2026-05-24T18:00:00.000Z",
+          "source": { "kind": "plan_node", "ref": "n1" },
+          "task_intent": {
+            "domain": "engineering",
+            "task_type": "implement",
+            "artifact_types": ["script", "test"],
+            "risk_level": "medium",
+            "authority_required": []
+          },
+          "selected": {
+            "primary_executor": "@dev",
+            "support_agents": ["@architect"],
+            "quality_gate_agent": "@qa"
+          },
+          "confidence": { "score": 0.91, "band": "auto_select" },
+          "score_breakdown": {
+            "authority_fit": 1,
+            "capability_fit": 0.9,
+            "artifact_ownership": 0.9,
+            "domain_fit": 1,
+            "task_type_fit": 1,
+            "historical_success": null,
+            "risk_fit": 0.8,
+            "context_affinity": 0.8,
+            "availability": null,
+            "cost_fit": null
+          },
+          "alternatives": [
+            { "agent": "@architect", "score": 0.62, "reason": "Useful support, not primary executor." }
+          ],
+          "hard_gate_results": [
+            { "id": "agent-exists", "status": "pass" },
+            { "id": "boundary-protected-path", "status": "pass" }
+          ],
+          "evidence": [{ "type": "fixture", "ref": "plan-routing-v2.json" }],
+          "override": { "required": false, "reason": null, "author": null, "accepted": null }
+        }
+      }
+    }
+  ],
+  "routing_summary": {
+    "engine": "RoutingDecision-v2",
+    "decisions_count": 1,
+    "decision_ids": ["route-inline-v2"],
+    "blocked_nodes": [],
+    "fallback_nodes": [],
+    "decisions_dir": "outputs/routing/decisions"
+  },
+  "dag": {
+    "nodes": [
+      {
+        "id": "n1",
+        "capability": "legacy-code-capability",
+        "capability_type": "agent",
+        "label": "Implement routing-aware swarm adapter.",
+        "inputs_required": ["squads/orquestrador-global/scripts/plan-to-swarm.js"],
+        "outputs_produced": ["squads/orquestrador-global/scripts/plan-to-swarm.js"],
+        "estimated_duration_minutes": 45,
+        "estimated_cost_tokens": 12000,
+        "model_tier": "sonnet",
+        "risk": { "severity": 3, "occurrence": 2, "detectability": 2, "rpn": 12 },
+        "parallelizable_with": [],
+        "quality_gate": "plan-to-swarm-routing-checklist",
+        "routing_decision_id": "route-inline-v2",
+        "routing_blocked": false
+      }
+    ],
+    "edges": [],
+    "parallel_groups": [],
+    "critical_path": ["n1"],
+    "critical_path_duration_minutes": 45
+  },
+  "risks": { "top_risks": [], "pre_mortem": null },
+  "resource_estimate": {
+    "total_tokens": 12000,
+    "total_cost_usd": 0.25,
+    "total_wall_time_estimate_hours": 0.75,
+    "models_used": ["sonnet"],
+    "agents_count": 2
+  },
+  "success_criteria": [
+    { "metric": "Swarm task uses RoutingDecision executor", "threshold": "agent == dev" }
+  ],
+  "falsifiable_assumptions": [
+    "Decision inline is enough for adapter handoff."
+  ],
+  "constitutional_compliance": {
+    "codeowners_check": "pass",
+    "business_isolation_check": "pass",
+    "agent_authority_check": "pass",
+    "no_invention_check": "pass"
+  },
+  "handoff": {
+    "next_action_suggested": "/swarm-execute",
+    "next_action_executor": "@dev",
+    "approvals_required": [],
+    "do_not_execute_until": []
+  },
+  "quality_score": 4.5,
+  "audit": {
+    "created_by": "plan-architect",
+    "created_at": "2026-05-24T18:00:00.000Z",
+    "cache_manifest_hash": "fixture",
+    "scoring_config_version": "RoutingDecision-v2",
+    "heuristics_applied": ["RoutingDecision-v2"]
+  }
+}

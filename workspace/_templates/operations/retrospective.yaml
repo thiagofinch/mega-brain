@@ -1,0 +1,87 @@
+---
+# RETROSPECTIVE.YAML - Sprint or project retrospective
+# Adapted from mega-brain-stage pattern for Mega Brain workspace context
+
+_meta:
+  version: "1.0.0"
+  owner: "coo-orchestrator"
+  target_layer: "L4-operational"
+  state: "TEMPLATE"
+
+metadata:
+  canonical_scope: "workspace/_templates/operations/retrospective.yaml"
+  owner: "coo"
+  version: "1.0.0"
+  last_updated: "2026-03-23"
+  description: "Retrospective template capturing what went well, what did not, action items, and team mood"
+
+fields:
+  sprint_or_period:
+    type: string
+    required: true
+    description: "Sprint number or time period this retrospective covers"
+
+  date:
+    type: date
+    required: true
+    description: "Date the retrospective was held"
+
+  facilitator:
+    type: string
+    required: false
+    description: "Person who facilitated the retrospective"
+
+  participants:
+    type: list
+    required: true
+    description: "Team members who participated"
+
+  what_went_well:
+    type: list
+    required: true
+    description: "Practices, decisions, and outcomes that should be continued"
+
+  what_did_not_go_well:
+    type: list
+    required: true
+    description: "Problems, friction points, and failures to learn from"
+
+  what_to_try:
+    type: list
+    required: false
+    description: "Experiments or new approaches the team wants to try next sprint"
+
+  action_items:
+    type: list
+    required: true
+    description: "Concrete improvements to implement, each with owner and deadline"
+
+  mood_score:
+    type: object
+    required: false
+    description: "Team sentiment measurement"
+    properties:
+      average_score:
+        type: number
+        required: true
+        description: "Team mood on a 1-5 scale (1=frustrated, 5=energized)"
+      trend:
+        type: enum
+        required: false
+        description: "Mood direction compared to last retrospective"
+        options: [improving, stable, declining]
+
+  recurring_themes:
+    type: list
+    required: false
+    description: "Issues that have appeared in multiple retrospectives (signals systemic problems)"
+
+  previous_action_items_status:
+    type: list
+    required: false
+    description: "Status of action items from the previous retrospective (done, in-progress, dropped)"
+
+  key_insight:
+    type: string
+    required: false
+    description: "Single most important learning from this retrospective"

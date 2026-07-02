@@ -1,0 +1,386 @@
+---
+# CURRICULUM-DETAIL.YAML — Grade Curricular Detalhada (Arquivo Companion)
+# Arvore completa: Course > Module > Lesson
+#
+# Cada produto educacional tem 1 product-profile (inline summary)
+# + 1 curriculum-detail (este arquivo, com dados de lesson-level)
+#
+# Filesystem:
+#   workspace/businesses/{brand}/products/curriculum/{product-slug}-curriculum.yaml
+#
+# Relacao com product-profile:
+#   product-profile.curriculum.curriculum_ref aponta para este arquivo
+#   product-profile.curriculum.totals sao calculados a partir deste arquivo
+#   product-profile.curriculum.courses[] eh o indice resumido deste arquivo
+#
+# Write protection segue o mesmo modelo do product-profile:
+#   auto_fill:    Pipeline escreve livremente (duracao, instrutor, contagens)
+#   auto_suggest: Pipeline escreve mas marca como draft (descricoes, objectives)
+#   human_only:   Pipeline NUNCA escreve (estrutura, nomes, status, pre-requisitos)
+
+_meta:
+  version: "1.0.0"
+  owner: "pm"
+  target_layer: "L3-product"
+  state: "TEMPLATE"
+
+metadata:
+  canonical_scope: "workspace/_templates/products/curriculum-detail.yaml"
+  owner: "cmo"
+  version: "1.0.0"
+  last_updated: "2026-03-25"
+  description: "Schema companion para dados detalhados de curriculum (course > module > lesson)"
+  parent_template: "workspace/_templates/products/product-profile.yaml"
+
+fields:
+
+  product_ref:
+    type: string
+    required: true
+    description: "Slug do produto — aponta para o product-profile correspondente"
+    write_protection: human_only
+
+  platform:
+    type: string
+    required: false
+    description: "Plataforma atual (Circle.so, Hotmart, etc.)"
+    write_protection: human_only
+
+  extraction_source:
+    type: enum
+    required: false
+    description: "Como os dados foram extraidos"
+    options: [manual, api, spreadsheet, hybrid]
+    write_protection: auto_fill
+
+  # =====================================================================
+  # CURSOS
+  # =====================================================================
+
+  courses:
+    type: list
+    required: true
+    description: "Lista de cursos do produto"
+    write_protection: human_only
+    item_schema:
+
+      course_name:
+        type: string
+        required: true
+        description: "Nome do curso"
+        write_protection: human_only
+
+      course_slug:
+        type: string
+        required: true
+        description: "Slug canonico (kebab-case, unico por produto)"
+        write_protection: human_only
+
+      status:
+        type: enum
+        required: true
+        description: "Status do curso"
+        options: [active, legacy, draft, retired]
+        write_protection: human_only
+
+      description:
+        type: string
+        required: false
+        description: "Descricao do curso (1-2 frases)"
+        write_protection: auto_suggest
+
+      difficulty:
+        type: enum
+        required: false
+        options: [beginner, intermediate, advanced, mixed]
+        write_protection: auto_suggest
+
+      category:
+        type: list
+        required: false
+        description: "Dominios tematicos (max 2)"
+        write_protection: auto_suggest
+
+      primary_instructor:
+        type: string
+        required: false
+        description: "Instrutor principal do curso"
+        write_protection: human_only
+
+      learning_objectives:
+        type: list
+        required: false
+        description: "Ao final deste curso o aluno sera capaz de [verbo] [objeto]"
+        write_protection: auto_suggest
+        pipeline_logic: "Extrair da aula 1/onboarding + ultimas aulas de cada modulo. Padroes: 'voce vai aprender a...', 'ao final...', 'o objetivo eh...'. Tambem inferir dos titulos dos modulos."
+
+      prerequisites:
+        type: list
+        required: false
+        description: "Pre-requisitos (outros cursos ou conhecimentos)"
+        write_protection: auto_suggest
+        pipeline_logic: "Detectar em transcricoes: 'voce precisa ter feito...', 'antes de comecar...', 'pre-requisito...', mencoes a outros cursos como base necessaria."
+
+      total_duration_minutes:
+        type: number
+        required: false
+        description: "Duracao total em minutos (calculado da soma das aulas)"
+        write_protection: auto_fill
+
+      content_validated_date:
+        type: date
+        required: false
+        description: "Data da ultima validacao de freshness do conteudo"
+        write_protection: human_only
+
+      deprecation_flag:
+        type: boolean
+        required: false
+        description: "Se o curso contem taticas que nao funcionam mais"
+        write_protection: human_only
+
+      deprecation_note:
+        type: string
+        required: false
+        description: "O que mudou que tornou parte do conteudo obsoleto"
+        write_protection: human_only
+
+      # --- RETENTION FIELDS (per course) ---
+
+      first_win_lesson:
+        type: string
+        required: false
+        description: "Slug da aula onde o aluno tem o primeiro resultado tangivel"
+        write_protection: auto_suggest
+        pipeline_logic: "Detectar padrao: 'sua primeira...', 'criando do zero', exercicios com output concreto"
+
+      dropout_cliff_lesson:
+        type: string
+        required: false
+        description: "Slug da aula onde completion rate cai >20%"
+        write_protection: auto_fill
+
+      community_trigger_lesson:
+        type: string
+        required: false
+        description: "Slug da aula apos a qual empurrar para comunidade"
+        write_protection: auto_suggest
+        pipeline_logic: "Detectar mencoes a comunidade/grupo nas transcricoes"
+
+      # =================================================================
+      # MODULOS (dentro de cada curso)
+      # =================================================================
+
+      modules:
+        type: list
+        required: false
+        description: "Modulos do curso (para curriculum_format: structured ou hybrid)"
+        write_protection: human_only
+        item_schema:
+
+          module_name:
+            type: string
+            required: true
+            description: "Nome do modulo"
+            write_protection: human_only
+
+          module_slug:
+            type: string
+            required: true
+            description: "Slug do modulo (kebab-case)"
+            write_protection: human_only
+
+          position:
+            type: number
+            required: true
+            description: "Ordem sequencial no curso"
+            write_protection: human_only
+
+          description:
+            type: string
+            required: false
+            description: "Descricao do modulo"
+            write_protection: auto_suggest
+
+          learning_objective:
+            type: string
+            required: false
+            description: "Ao final deste modulo o aluno sera capaz de [verbo] [objeto] [condicao]"
+            write_protection: auto_suggest
+            pipeline_logic: "Extrair da primeira aula do modulo. Padroes: 'neste modulo...', 'vamos aprender a...'. Se nao encontrar, inferir do titulo do modulo + titulos das aulas."
+
+          instructor:
+            type: string
+            required: false
+            description: "Instrutor do modulo (se diferente do curso)"
+            write_protection: human_only
+
+          total_duration_minutes:
+            type: number
+            required: false
+            description: "Duracao total do modulo em minutos"
+            write_protection: auto_fill
+
+          # =============================================================
+          # AULAS (dentro de cada modulo)
+          # =============================================================
+
+          lessons:
+            type: list
+            required: false
+            description: "Aulas do modulo"
+            write_protection: human_only
+            item_schema:
+
+              lesson_title:
+                type: string
+                required: true
+                description: "Titulo da aula"
+                write_protection: human_only
+
+              lesson_slug:
+                type: string
+                required: true
+                description: "Slug da aula (kebab-case)"
+                write_protection: human_only
+
+              position:
+                type: number
+                required: true
+                description: "Ordem sequencial no modulo"
+                write_protection: auto_fill
+
+              synopsis:
+                type: string
+                required: false
+                description: "Sinopse da aula em ate 280 chars — o que o aluno vai aprender"
+                max_chars: 280
+                write_protection: auto_suggest
+
+              duration_minutes:
+                type: number
+                required: false
+                description: "Duracao em minutos (nullable — ~60% nao tem)"
+                write_protection: auto_fill
+
+              format:
+                type: enum
+                required: false
+                description: "Formato da aula"
+                options:
+                  - video_produced    # Video editado e produzido
+                  - video_live        # Gravacao de live/mentoria
+                  - screencast        # Compartilhamento de tela
+                  - tutorial          # Passo a passo pratico
+                  - talk              # Palestra/apresentacao
+                  - exercise          # Exercicio pratico
+                  - download          # Material para download
+                write_protection: auto_suggest
+
+              instructor:
+                type: string
+                required: false
+                description: "Instrutor (se diferente do modulo/curso)"
+                write_protection: auto_fill
+
+              link:
+                type: string
+                required: false
+                description: "URL direta para a aula na plataforma"
+                write_protection: auto_fill
+
+              lesson_status:
+                type: enum
+                required: false
+                description: "Status da aula"
+                options: [published, draft, legacy, needs_rerecord]
+                write_protection: human_only
+
+              materials:
+                type: list
+                required: false
+                description: "Materiais complementares (ate 5 por aula)"
+                write_protection: auto_fill
+                item_schema:
+                  name:
+                    type: string
+                    description: "Nome do material"
+                  type:
+                    type: enum
+                    options: [pdf, template, workbook, spreadsheet, checklist, video, external_link, other]
+                  url:
+                    type: string
+                    description: "URL ou path do material"
+
+              key_concepts:
+                type: list
+                required: false
+                description: "Top 3-5 conceitos chave da aula (para deteccao de duplicacao)"
+                max_items: 5
+                write_protection: auto_suggest
+
+      # =================================================================
+      # AULAS AVULSAS (para formato compilado)
+      # =================================================================
+
+      loose_lessons:
+        type: list
+        required: false
+        description: "Aulas sem modulo — para curriculum_format: compilado ou hybrid"
+        write_protection: human_only
+        item_schema:
+
+          lesson_title:
+            type: string
+            required: true
+            write_protection: human_only
+
+          lesson_slug:
+            type: string
+            required: true
+            write_protection: human_only
+
+          position:
+            type: number
+            required: false
+            write_protection: auto_fill
+
+          synopsis:
+            type: string
+            required: false
+            max_chars: 280
+            write_protection: auto_suggest
+
+          duration_minutes:
+            type: number
+            required: false
+            write_protection: auto_fill
+
+          format:
+            type: enum
+            required: false
+            options: [video_produced, video_live, screencast, tutorial, talk, exercise, download]
+            write_protection: auto_suggest
+
+          instructor:
+            type: string
+            required: false
+            write_protection: auto_fill
+
+          link:
+            type: string
+            required: false
+            write_protection: auto_fill
+
+          materials:
+            type: list
+            required: false
+            write_protection: auto_fill
+            item_schema:
+              name:
+                type: string
+              type:
+                type: enum
+                options: [pdf, template, workbook, spreadsheet, checklist, video, external_link, other]
+              url:
+                type: string

@@ -1,0 +1,129 @@
+# Domain-File Contract Registry
+# ================================
+# Maps business domains to deterministic file paths.
+# When a query matches a domain contract, these files are read DIRECTLY
+# (no RAG, no vector search). If no contract matches, fall through to hybrid.
+#
+# ADDING A NEW CONTRACT:
+#   1. Pick a unique domain key (kebab-case)
+#   2. Add keywords (PT + EN) that indicate this domain
+#   3. List files under always_read (relative to project root)
+#   4. Set fallback (usually hybrid_search)
+#
+# Paths use forward slashes, relative to project root.
+# The contract_resolver resolves them against core.paths.ROOT at runtime.
+#
+# Version: 1.0.0
+# Date: 2026-03-25
+
+version: "1.0"
+
+contracts:
+  comercial:
+    description: "Sales, closing, pipeline, commission, objection handling"
+    keywords:
+      # Portuguese
+      - "vendas"
+      - "closer"
+      - "comissao"
+      - "comissão"
+      - "close rate"
+      - "objecao"
+      - "objeção"
+      - "pipeline de vendas"
+      - "taxa de conversao"
+      - "ticket medio"
+      - "script de vendas"
+      - "setter"
+      - "sdr"
+      - "prospeccao"
+      - "prospecção"
+      # English
+      - "sales"
+      - "closing"
+      - "commission"
+      - "objection handling"
+      - "close rate"
+      - "sales pipeline"
+      - "conversion rate"
+      - "average ticket"
+      - "sales script"
+      - "cold calling"
+      - "discovery call"
+    always_read:
+      - "knowledge/external/dna/persons/cole-gordon/FRAMEWORKS.yaml"
+      - "knowledge/external/dna/persons/cole-gordon/HEURISTICAS.yaml"
+      - "knowledge/external/dna/persons/cole-gordon/METODOLOGIAS.yaml"
+      - "knowledge/external/dna/persons/alex-hormozi/FRAMEWORKS.yaml"
+      - "knowledge/external/dna/persons/jeremy-miner/FRAMEWORKS.yaml"
+      - "knowledge/external/dna/persons/jeremy-miner/HEURISTICAS.yaml"
+      - "knowledge/external/dossiers/persons/DOSSIER-COLE-GORDON.md"
+      - "agents/cargo/sales/closer/MEMORY.md"
+    fallback: hybrid_search
+
+  marketing-growth:
+    description: "Paid traffic, funnels, ads, creatives, audience, ROAS, CAC"
+    keywords:
+      # Portuguese
+      - "trafego pago"
+      - "tráfego pago"
+      - "anuncio"
+      - "anúncio"
+      - "criativo"
+      - "funil"
+      - "audiencia"
+      - "audiência"
+      - "roas"
+      - "cac"
+      - "custo por lead"
+      - "cpl"
+      - "escala de campanha"
+      - "copy de anuncio"
+      # English
+      - "paid traffic"
+      - "ads"
+      - "creative"
+      - "funnel"
+      - "audience"
+      - "ad copy"
+      - "campaign scaling"
+      - "cost per lead"
+      - "media buying"
+      - "landing page"
+    always_read:
+      - "knowledge/external/dna/persons/jeremy-haynes/FRAMEWORKS.yaml"
+      - "knowledge/external/dna/persons/jeremy-haynes/HEURISTICAS.yaml"
+      - "knowledge/external/dna/persons/jeremy-haynes/METODOLOGIAS.yaml"
+      - "knowledge/external/dna/persons/richard-linder/FRAMEWORKS.yaml"
+      - "knowledge/external/dna/persons/richard-linder/HEURISTICAS.yaml"
+      - "knowledge/external/dossiers/persons/DOSSIER-JEREMY-HAYNES.md"
+      - "knowledge/external/dossiers/persons/DOSSIER-RICHARD-LINDER.md"
+    fallback: hybrid_search
+
+  offer-pricing:
+    description: "Offer creation, pricing, value equation, guarantees, packaging"
+    keywords:
+      # Portuguese
+      - "oferta"
+      - "precificacao"
+      - "precificação"
+      - "garantia"
+      - "valor percebido"
+      - "empacotamento"
+      - "grand slam offer"
+      - "equacao de valor"
+      - "equação de valor"
+      # English
+      - "offer"
+      - "pricing"
+      - "guarantee"
+      - "perceived value"
+      - "packaging"
+      - "value equation"
+      - "irresistible offer"
+    always_read:
+      - "knowledge/external/dna/persons/alex-hormozi/FRAMEWORKS.yaml"
+      - "knowledge/external/dna/persons/alex-hormozi/HEURISTICAS.yaml"
+      - "knowledge/external/dna/persons/alex-hormozi/METODOLOGIAS.yaml"
+      - "knowledge/external/dossiers/persons/DOSSIER-ALEX-HORMOZI.md"
+    fallback: hybrid_search

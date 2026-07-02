@@ -1,0 +1,324 @@
+# =============================================================================
+# WORKFLOW: CUSTOMER SUCCESS DIGEST DISTRIBUTION
+# =============================================================================
+# Epic 72 — Story 72.10
+# Cross-Squad Synergy Engine — Section B: Intel Digest Distribution
+# Cadence: Monthly | Producer: customer-success
+# Consumers: copywriting (objections), content-ecosystem (FAQs), funnel-creator (onboarding friction)
+# =============================================================================
+
+metadata:
+  name: wf-cs-digest-distribution
+  version: "1.0.0"
+  squad: orquestrador-global
+  story_id: "72.10"
+  epic_id: 72
+  section: "B-intel-digest-distribution"
+  cadence: monthly
+  estimated_time: "30-60 minutes"
+  created_at: "2026-03-26"
+
+description: >
+  Customer success prevention digest distribution. Monthly, customer-success
+  compiles a digest of customer pain points organized by section: objections
+  (for copywriting), FAQs (for content-ecosystem), and onboarding friction
+  (for funnel-creator). Unlike other digests, routing is section-based:
+  each section of the digest goes to a different consumer squad.
+
+# =============================================================================
+# TRIGGER
+# =============================================================================
+
+trigger:
+  command: "*cs-digest"
+  aliases:
+    - "*cs-distribution"
+    - "*prevention-digest"
+  schedule:
+    cron: "0 10 20 * *"  # 20th of each month at 10:00
+    timezone: America/Sao_Paulo
+  description: "Generate CS prevention digest and route sections to squads"
+
+# =============================================================================
+# PREREQUISITES
+# =============================================================================
+
+prerequisites:
+  - "customer-success squad configured with support data access"
+  - "copywriting, content-ecosystem, funnel-creator squads configured"
+  - "cs-prevention-digest-output.yaml contract defined"
+  - "harness.pipeline_contracts.enabled = true in core-config.yaml"
+
+# =============================================================================
+# INPUT REQUIREMENTS
+# =============================================================================
+
+inputs:
+  required:
+    - name: workspace
+      type: string
+      description: "Active workspace slug (GR-1 mandatory)"
+  optional:
+    - name: period
+      type: string
+      description: "Lookback period for ticket extraction"
+      default: "last_30d"
+
+# =============================================================================
+# GLOBAL REQUIREMENTS COMPLIANCE
+# =============================================================================
+
+global_requirements:
+  idempotency_key: "wf-cs-digest-distribution:{workspace}:{period}"  # GR-7
+  max_iterations: 3  # GR-3
+  convergence_check:
+    min_delta: 2
+    consecutive_flat_cycles: 2
+  escalation:
+    trigger: "contract_validation_failed_3x OR no_ticket_data"
+    target: orquestrador-global
+    channel: whatsapp_central
+    message: "CS digest distribution escalated: {reason}"
+
+# =============================================================================
+# STAGES
+# =============================================================================
+
+stages:
+
+  # --------------------------------------------------------------------------
+  # STAGE 1: Generate CS Prevention Digest
+  # --------------------------------------------------------------------------
+  - id: 1
+    name: "Generate CS Prevention Digest"
+    description: >
+      Customer-success analyzes support tickets, NPS responses, and churn
+      indicators to produce a structured digest with three sections:
+      1) Objections — common pre-sale and post-sale objections with frequency
+      2) FAQs — recurring questions that could be answered with content
+      3) Onboarding friction — points where new customers get stuck
+    estimated_time: "15-25 minutes"
+
+    agents:
+      lead: customer-success-chief
+      support: []
+
+    actions:
+      - action: analyze_tickets
+        description: "Categorize support tickets by type and frequency"
+        agent: customer-success-chief
+
+      - action: extract_objections
+        description: "Identify recurring objections from tickets and cancellations"
+        agent: customer-success-chief
+
+      - action: extract_faqs
+        description: "Compile frequently asked questions from support interactions"
+        agent: customer-success-chief
+
+      - action: extract_friction_points
+        description: "Identify onboarding steps where customers report difficulty"
+        agent: customer-success-chief
+
+      - action: compile_digest
+        description: "Assemble 3-section digest with frequency and severity"
+        agent: customer-success-chief
+
+    gate:
+      criteria:
+        - "Objections section has >= 5 objections with frequency"
+        - "FAQ section has >= 5 questions"
+        - "Friction section has >= 3 friction points"
+        - "All sections include severity and recurrence data"
+      approval: auto
+      auto_criteria: "CS prevention digest generated with all 3 sections"
+
+    checkpoint: true  # GR-6
+
+    outputs:
+      - name: cs_prevention_digest
+        type: markdown
+        contract: "cs-prevention-digest-output.yaml"
+
+  # --------------------------------------------------------------------------
+  # STAGE 2: Validate Contract
+  # --------------------------------------------------------------------------
+  - id: 2
+    name: "Validate Digest Contract"
+    description: >
+      Validate the digest against cs-prevention-digest-output.yaml contract.
+    estimated_time: "2-5 minutes"
+    depends_on: [1]
+
+    agents:
+      lead: orquestrador-chief
+      support: []
+
+    actions:
+      - action: validate_contract
+        description: "Run contract validation"
+        agent: orquestrador-chief
+
+    gate:
+      criteria:
+        - "Contract validation score >= 0.75"
+        - "All 3 sections present and populated"
+      approval: auto
+      auto_criteria: "Contract validation passed"
+
+    validation_gate:  # GR-5
+      gate_id: QG-orquestrador-global-2  # canonical binding (W8-5) — output_quality QG; min_score 0.75 derives from QG-2 threshold
+      type: contract_schema
+      contract: "cs-prevention-digest-output.yaml"
+      min_score: 0.75
+
+    checkpoint: true  # GR-6
+
+  # --------------------------------------------------------------------------
+  # STAGE 3: Route Sections to Consumer Squads
+  # --------------------------------------------------------------------------
+  - id: 3
+    name: "Route Sections to Consumer Squads"
+    description: >
+      Unlike full-digest distribution, each SECTION routes to a different
+      consumer:
+      - Objections section → copywriting (for objection-handling copy)
+      - FAQs section → content-ecosystem (for FAQ content creation)
+      - Onboarding friction section → funnel-creator (for UX improvements)
+    estimated_time: "10-15 minutes"
+    depends_on: [2]
+
+    agents:
+      lead: orquestrador-chief
+      support: []
+
+    actions:
+      - action: route_objections_to_copywriting
+        description: "Send objections section to copywriting"
+        agent: orquestrador-chief
+        target: copywriting
+        section: objections
+        parallel: true
+
+      - action: route_faqs_to_content
+        description: "Send FAQs section to content-ecosystem"
+        agent: orquestrador-chief
+        target: content-ecosystem
+        section: faqs
+        parallel: true
+
+      - action: route_friction_to_funnel
+        description: "Send onboarding friction section to funnel-creator"
+        agent: orquestrador-chief
+        target: funnel-creator
+        section: onboarding_friction
+        parallel: true
+
+    gate:
+      criteria:
+        - "All 3 sections routed to correct consumers"
+        - "Each consumer received only their relevant section"
+      approval: auto
+      auto_criteria: "Section routing complete"
+
+    validation_gate:  # GR-5
+      gate_id: QG-orquestrador-global-2  # canonical binding (W8-5) — output_quality QG; min_score 0.75 derives from QG-2 threshold
+      type: contract_schema
+      contract: "digest-section-routing-receipt.yaml"
+      min_score: 0.75
+
+    checkpoint: true  # GR-6
+
+  # --------------------------------------------------------------------------
+  # STAGE 4: Log Consumption Tracking
+  # --------------------------------------------------------------------------
+  - id: 4
+    name: "Log Consumption Tracking"
+    description: >
+      Track consumption and action rates per consumer squad.
+    estimated_time: "5 minutes"
+    depends_on: [3]
+
+    agents:
+      lead: orquestrador-chief
+      support: []
+
+    actions:
+      - action: log_consumption
+        description: "Record consumption status per squad"
+        agent: orquestrador-chief
+
+      - action: check_timeout
+        description: "Flag non-consumers past timeout threshold"
+        agent: orquestrador-chief
+
+    gate:
+      criteria:
+        - "Consumption logged for all 3 consumers"
+      approval: auto
+      auto_criteria: "Tracking complete"
+
+    checkpoint: true  # GR-6
+
+# =============================================================================
+# MODEL SELECTION
+# =============================================================================
+
+model_selection:
+  default: sonnet
+  per_stage:
+    1: sonnet
+    2: sonnet
+    3: sonnet
+    4: sonnet
+  rationale: >
+    Ticket analysis and routing are procedural.
+    Customer-success may use its own model for deep analysis.
+
+# =============================================================================
+# SUCCESS METRICS
+# =============================================================================
+
+success_metrics:
+  - metric: "Digest completeness"
+    target: "All 3 sections populated with >= minimum items"
+  - metric: "Routing accuracy"
+    target: "100% of sections routed to correct consumer"
+  - metric: "Objection coverage"
+    target: ">80% of objections addressed in next copy cycle"
+  - metric: "FAQ coverage"
+    target: ">80% of FAQs answered in new content within 30 days"
+  - metric: "Friction reduction"
+    target: ">50% of friction points addressed in next funnel iteration"
+
+# =============================================================================
+# INTEGRATION
+# =============================================================================
+
+integration:
+  feeds_from:
+    - squad: customer-success
+      data: "Support ticket analysis, NPS data, churn indicators"
+  feeds_to:
+    - squad: copywriting
+      data: "Objection patterns for objection-handling copy"
+    - squad: content-ecosystem
+      data: "FAQ topics for content creation"
+    - squad: funnel-creator
+      data: "Onboarding friction points for UX improvement"
+  tools_required:
+    - pipeline-ops.mjs
+    - supermemory-ops.mjs
+    - clickup-ops.mjs
+megabrain_validation:
+  last_run: "20260514-validate-deep"
+  validated_at: "2026-05-15T00:00:00Z"
+  validator: mega-brain/megabrain-chief
+  mode: deep
+  squad: orquestrador-global
+  workflow_id: "wf-cs-digest-distribution"
+  status: pass
+  evidence:
+    - workflow_inventory_registered
+    - orchestration_surface_validated
+    - external_execution_not_performed

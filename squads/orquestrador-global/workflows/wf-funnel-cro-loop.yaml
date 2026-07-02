@@ -1,0 +1,341 @@
+# =============================================================================
+# WORKFLOW: FUNNEL CRO FEEDBACK LOOP
+# =============================================================================
+# Epic 72 — Story 72.2
+# Cross-Squad Synergy Engine — Section A: Feedback Loops
+# Cadence: Biweekly | Squads: data-analytics → orquestrador (routing) → {copywriting|creative-studio|funnel-creator}
+# =============================================================================
+
+metadata:
+  name: wf-funnel-cro-loop
+  version: "1.0.0"
+  squad: orquestrador-global
+  story_id: "72.2"
+  epic_id: 72
+  section: "A-feedback-loops"
+  cadence: biweekly
+  estimated_time: "1-2 hours"
+  created_at: "2026-03-26"
+
+description: >
+  Conversion Rate Optimization feedback loop. Every two weeks, data-analytics
+  measures funnel conversion at each stage, identifies the primary bottleneck,
+  and orquestrador-global routes the CRO recommendation to the responsible squad:
+  copywriting (if headline/CTA issue), creative-studio (if visual issue), or
+  funnel-creator (if structural/UX issue). The targeted squad executes the
+  recommendation and the next cycle measures improvement.
+
+# =============================================================================
+# TRIGGER
+# =============================================================================
+
+trigger:
+  command: "*funnel-cro-loop"
+  aliases:
+    - "*cro-loop"
+    - "*funnel-optimization"
+  schedule:
+    cron: "0 10 1,15 * *"  # 1st and 15th of each month at 10:00
+    timezone: America/Sao_Paulo
+  description: "Measure funnel conversion, identify bottleneck, route CRO fix"
+
+# =============================================================================
+# PREREQUISITES
+# =============================================================================
+
+prerequisites:
+  - "data-analytics squad configured with agents"
+  - "copywriting, creative-studio, funnel-creator squads configured"
+  - "GA4 and Hotmart data accessible via ga4-analytics-ops.mjs and hotmart-ops.mjs"
+  - "harness.pipeline_contracts.enabled = true in core-config.yaml"
+
+# =============================================================================
+# INPUT REQUIREMENTS
+# =============================================================================
+
+inputs:
+  required:
+    - name: workspace
+      type: string
+      description: "Active workspace slug (GR-1 mandatory)"
+    - name: funnel_slug
+      type: string
+      description: "Funnel to optimize (e.g., 'funil-mpg', 'funil-gpo')"
+  optional:
+    - name: period
+      type: string
+      description: "Measurement period"
+      default: "last_14d"
+    - name: min_traffic
+      type: integer
+      description: "Minimum sessions to consider a stage measurable"
+      default: 100
+
+# =============================================================================
+# GLOBAL REQUIREMENTS COMPLIANCE
+# =============================================================================
+
+global_requirements:
+  idempotency_key: "wf-funnel-cro-loop:{workspace}:{funnel_slug}:{period}"  # GR-7
+  max_iterations: 3  # GR-3
+  convergence_check:
+    min_delta: 2
+    consecutive_flat_cycles: 2
+  escalation:
+    trigger: "max_iterations_reached OR no_traffic_data"
+    target: orquestrador-global
+    channel: whatsapp_central
+    message: "Funnel CRO loop escalated for {funnel_slug}: {reason}"
+
+# =============================================================================
+# STAGES
+# =============================================================================
+
+stages:
+
+  # --------------------------------------------------------------------------
+  # STAGE 1: Measure Funnel Conversion
+  # --------------------------------------------------------------------------
+  - id: 1
+    name: "Measure Funnel Conversion"
+    description: >
+      Pull funnel stage data from GA4 (page views, events) and Hotmart (sales).
+      Compute conversion rate at each stage: landing → quiz/form → checkout → purchase.
+      Identify the stage with the largest drop-off as the primary bottleneck.
+    estimated_time: "15-20 minutes"
+
+    agents:
+      lead: data-analytics-chief
+      support: []
+
+    actions:
+      - action: pull_funnel_data
+        description: "Extract page-level and event-level data from GA4 and Hotmart"
+        agent: data-analytics-chief
+        tools:
+          - ga4-analytics-ops.mjs run-report
+          - hotmart-ops.mjs sales-history
+
+      - action: compute_stage_conversion
+        description: "Calculate conversion rate per funnel stage"
+        agent: data-analytics-chief
+
+      - action: identify_bottleneck
+        description: "Flag the stage with the largest absolute drop-off"
+        agent: data-analytics-chief
+
+    gate:
+      criteria:
+        - "At least 3 funnel stages measured"
+        - "Each stage has >= min_traffic sessions"
+        - "Primary bottleneck identified with drop-off percentage"
+      approval: auto
+      auto_criteria: "Funnel measurement complete with bottleneck identified"
+
+    checkpoint: true  # GR-6
+
+    outputs:
+      - name: funnel_measurement
+        type: json
+        schema: "funnel-measurement.schema.json"
+
+  # --------------------------------------------------------------------------
+  # STAGE 2: Identify Funnel Bottleneck
+  # --------------------------------------------------------------------------
+  - id: 2
+    name: "Identify Funnel Bottleneck"
+    description: >
+      Classify the bottleneck by root cause category: copy (headline, CTA,
+      objection handling), visual (design, imagery, layout), or structural
+      (page flow, form fields, load time, UX friction). This classification
+      determines which squad receives the CRO recommendation.
+    estimated_time: "10-15 minutes"
+    depends_on: [1]
+
+    agents:
+      lead: data-analytics-chief
+      support: []
+
+    actions:
+      - action: classify_bottleneck
+        description: "Determine if bottleneck is copy, visual, or structural"
+        agent: data-analytics-chief
+
+      - action: generate_recommendation
+        description: "Create specific CRO recommendation with expected impact"
+        agent: data-analytics-chief
+
+    gate:
+      criteria:
+        - "Bottleneck classified into exactly one category"
+        - "CRO recommendation is specific and actionable"
+        - "Expected impact quantified (e.g., +X% conversion)"
+      approval: auto
+      auto_criteria: "Bottleneck classified and recommendation generated"
+
+    validation_gate:  # GR-5
+      gate_id: QG-orquestrador-global-2  # canonical binding (W8-5) — output_quality QG; min_score 0.75 derives from QG-2 threshold
+      type: contract_schema
+      contract: "funnel-cro-recommendation-output.yaml"
+      min_score: 0.75
+
+    checkpoint: true  # GR-6
+
+    outputs:
+      - name: cro_recommendation
+        type: markdown
+        contract: "funnel-cro-recommendation-output.yaml"
+
+  # --------------------------------------------------------------------------
+  # STAGE 3: Route CRO Recommendation
+  # --------------------------------------------------------------------------
+  - id: 3
+    name: "Route CRO Recommendation"
+    description: >
+      Orquestrador-global routes the recommendation to the appropriate squad
+      based on bottleneck classification. Copy issues go to copywriting,
+      visual issues go to creative-studio, structural issues go to funnel-creator.
+    estimated_time: "5 minutes"
+    depends_on: [2]
+
+    agents:
+      lead: orquestrador-chief
+      support: []
+
+    actions:
+      - action: route_to_squad
+        description: "Select target squad based on bottleneck category"
+        agent: orquestrador-chief
+        routing:
+          copy: copywriting
+          visual: creative-studio
+          structural: funnel-creator
+
+    gate:
+      criteria:
+        - "Target squad identified and matches bottleneck category"
+        - "Recommendation package prepared for target squad"
+      approval: auto
+      auto_criteria: "Routing decision made"
+
+    validation_gate:  # GR-5
+      gate_id: QG-orquestrador-global-2  # canonical binding (W8-5) — output_quality QG; min_score 0.75 derives from QG-2 threshold
+      type: contract_schema
+      contract: "cro-handoff-contract.yaml"
+      min_score: 0.75
+
+    checkpoint: true  # GR-6
+
+  # --------------------------------------------------------------------------
+  # STAGE 4: Execute Recommendation
+  # --------------------------------------------------------------------------
+  - id: 4
+    name: "Execute CRO Recommendation"
+    description: >
+      The routed squad implements the CRO recommendation. Copywriting rewrites
+      headlines/CTAs. Creative-studio redesigns visual elements. Funnel-creator
+      restructures page flow. Changes are deployed to staging for validation.
+    estimated_time: "30-60 minutes"
+    depends_on: [3]
+
+    agents:
+      lead: "{routed_squad_chief}"
+      support: []
+
+    actions:
+      - action: implement_recommendation
+        description: "Execute the specific CRO change recommended"
+        agent: "{routed_squad_chief}"
+
+      - action: validate_implementation
+        description: "Verify the change was correctly applied"
+        agent: "{routed_squad_chief}"
+
+      - action: log_cycle
+        description: "Record cycle completion, changes made, and expected impact"
+        agent: "{routed_squad_chief}"
+
+    gate:
+      criteria:
+        - "CRO change implemented and deployed to staging"
+        - "Change matches the recommendation"
+        - "Cycle logged for next measurement"
+      approval: auto
+      auto_criteria: "Implementation complete and logged"
+
+    checkpoint: true  # GR-6
+
+# =============================================================================
+# CONVERGENCE LOGIC
+# =============================================================================
+
+convergence:
+  check_after_stage: 4
+  continue_condition: "delta >= synergy.convergence_delta"
+  halt_condition: "flat_cycles >= convergence_check.consecutive_flat_cycles"
+  on_halt:
+    action: notify
+    message: "Funnel CRO loop for {funnel_slug} converged after {cycles} cycles. Best stage improvement: {best_delta}%"
+    channel: supermemory
+    tag: funnel-creator
+
+# =============================================================================
+# MODEL SELECTION
+# =============================================================================
+
+model_selection:
+  default: sonnet
+  per_stage:
+    1: sonnet
+    2: sonnet
+    3: sonnet
+    4: sonnet
+  rationale: >
+    Analytical and routing stages are procedural. The executing squad
+    may internally use its own model routing for creative work.
+
+# =============================================================================
+# SUCCESS METRICS
+# =============================================================================
+
+success_metrics:
+  - metric: "Funnel conversion improvement"
+    target: ">10% improvement at bottleneck stage within 3 cycles"
+  - metric: "Routing accuracy"
+    target: ">90% of recommendations routed to correct squad"
+  - metric: "Implementation rate"
+    target: "100% of recommendations implemented within 48h"
+  - metric: "Cycle completion"
+    target: "100% of cycles complete the full 4-stage pipeline"
+
+# =============================================================================
+# INTEGRATION
+# =============================================================================
+
+integration:
+  feeds_from:
+    - squad: data-analytics
+      data: "Funnel stage metrics, bottleneck analysis"
+  feeds_to:
+    - squad: copywriting
+      data: "Copy-specific CRO recommendations"
+    - squad: creative-studio
+      data: "Visual CRO recommendations"
+    - squad: funnel-creator
+      data: "Structural CRO recommendations"
+  tools_required:
+    - ga4-analytics-ops.mjs
+    - hotmart-ops.mjs
+    - pipeline-ops.mjs
+megabrain_validation:
+  last_run: "20260514-validate-deep"
+  validated_at: "2026-05-15T00:00:00Z"
+  validator: mega-brain/megabrain-chief
+  mode: deep
+  squad: orquestrador-global
+  workflow_id: "wf-funnel-cro-loop"
+  status: pass
+  evidence:
+    - workflow_inventory_registered
+    - orchestration_surface_validated
+    - external_execution_not_performed

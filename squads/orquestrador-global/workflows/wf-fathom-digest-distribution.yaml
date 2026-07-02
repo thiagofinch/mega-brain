@@ -1,0 +1,345 @@
+# =============================================================================
+# WORKFLOW: FATHOM DIGEST DISTRIBUTION
+# =============================================================================
+# Epic 72 — Story 72.6
+# Cross-Squad Synergy Engine — Section B: Intel Digest Distribution
+# Cadence: Weekly batch or event-driven post-session
+# Producer: fathom-analysis | Consumers: copywriting, funnel-creator, media-buy, sales (fan-out)
+# =============================================================================
+
+metadata:
+  name: wf-fathom-digest-distribution
+  version: "1.0.0"
+  squad: orquestrador-global
+  story_id: "72.6"
+  epic_id: 72
+  section: "B-intel-digest-distribution"
+  cadence: weekly
+  estimated_time: "30-60 minutes"
+  created_at: "2026-03-26"
+
+description: >
+  Intel digest distribution workflow. Fathom-analysis generates a digest from
+  recent customer/prospect call transcriptions: persona matches, copy goldmine
+  extractions, awareness level classifications, and value equation signals.
+  The digest is validated against a contract schema, then distributed in parallel
+  to 4 consumer squads. Each consumer extracts the sections relevant to their
+  domain and logs consumption for tracking.
+
+# =============================================================================
+# TRIGGER
+# =============================================================================
+
+trigger:
+  command: "*fathom-digest"
+  aliases:
+    - "*fathom-distribution"
+    - "*call-intel"
+  schedule:
+    cron: "0 14 * * 1"  # Every Monday at 14:00
+    timezone: America/Sao_Paulo
+  event_driven:
+    trigger_on: "fathom_session_processed"
+    min_batch_size: 3
+    description: "Also triggered when 3+ Fathom sessions are processed"
+  description: "Generate Fathom digest and distribute to consumer squads"
+
+# =============================================================================
+# PREREQUISITES
+# =============================================================================
+
+prerequisites:
+  - "fathom-analysis squad configured with call transcription access"
+  - "copywriting, funnel-creator, media-buy, sales squads configured"
+  - "fathom-digest-output.yaml contract defined"
+  - "harness.pipeline_contracts.enabled = true in core-config.yaml"
+
+# =============================================================================
+# INPUT REQUIREMENTS
+# =============================================================================
+
+inputs:
+  required:
+    - name: workspace
+      type: string
+      description: "Active workspace slug (GR-1 mandatory)"
+  optional:
+    - name: session_ids
+      type: array
+      description: "Specific Fathom session IDs to include (default: last week)"
+    - name: period
+      type: string
+      description: "Lookback period for batch mode"
+      default: "last_7d"
+
+# =============================================================================
+# GLOBAL REQUIREMENTS COMPLIANCE
+# =============================================================================
+
+global_requirements:
+  idempotency_key: "wf-fathom-digest-distribution:{workspace}:{period}"  # GR-7
+  max_iterations: 3  # GR-3 (for digest regeneration if contract fails)
+  convergence_check:
+    min_delta: 2
+    consecutive_flat_cycles: 2
+  escalation:
+    trigger: "contract_validation_failed_3x OR no_sessions_available"
+    target: orquestrador-global
+    channel: whatsapp_central
+    message: "Fathom digest distribution escalated: {reason}"
+
+# =============================================================================
+# STAGES
+# =============================================================================
+
+stages:
+
+  # --------------------------------------------------------------------------
+  # STAGE 1: Generate Fathom Digest
+  # --------------------------------------------------------------------------
+  - id: 1
+    name: "Generate Fathom Digest"
+    description: >
+      Fathom-analysis processes recent call transcriptions and generates a
+      structured digest with: persona archetype matches (10 archetypes),
+      copy goldmine extractions (exact customer language), Schwartz awareness
+      level classification, Hormozi value equation signals (dream outcome,
+      perceived likelihood, time delay, effort/sacrifice), and UMP/UMS
+      signal detection.
+    estimated_time: "15-25 minutes"
+
+    agents:
+      lead: fathom-analysis-chief
+      support: []
+
+    actions:
+      - action: process_transcriptions
+        description: "Analyze recent call transcriptions through Fathom framework"
+        agent: fathom-analysis-chief
+
+      - action: extract_persona_matches
+        description: "Match speakers against 10 customer archetypes"
+        agent: fathom-analysis-chief
+
+      - action: extract_copy_goldmine
+        description: "Extract exact customer phrases for copy use"
+        agent: fathom-analysis-chief
+
+      - action: classify_awareness_levels
+        description: "Apply Schwartz awareness classification"
+        agent: fathom-analysis-chief
+
+      - action: detect_value_signals
+        description: "Extract Hormozi value equation signals and UMP/UMS"
+        agent: fathom-analysis-chief
+
+      - action: compile_digest
+        description: "Assemble all extractions into structured digest"
+        agent: fathom-analysis-chief
+
+    gate:
+      criteria:
+        - "At least 3 sessions analyzed"
+        - "Persona matches identified for each session"
+        - "Copy goldmine contains >= 10 exact customer phrases"
+        - "Awareness level classified for each prospect"
+      approval: auto
+      auto_criteria: "Fathom digest generated with all sections"
+
+    checkpoint: true  # GR-6
+
+    outputs:
+      - name: fathom_digest
+        type: markdown
+        contract: "fathom-digest-output.yaml"
+
+  # --------------------------------------------------------------------------
+  # STAGE 2: Validate Contract
+  # --------------------------------------------------------------------------
+  - id: 2
+    name: "Validate Digest Contract"
+    description: >
+      Validate the generated digest against the fathom-digest-output.yaml
+      contract schema. Ensure all required sections are present and meet
+      minimum quality thresholds before distributing to consumers.
+    estimated_time: "2-5 minutes"
+    depends_on: [1]
+
+    agents:
+      lead: orquestrador-chief
+      support: []
+
+    actions:
+      - action: validate_contract
+        description: "Run contract validation against fathom-digest-output.yaml"
+        agent: orquestrador-chief
+
+    gate:
+      criteria:
+        - "Contract validation score >= 0.75"
+        - "All required sections present"
+      approval: auto
+      auto_criteria: "Contract validation passed"
+
+    validation_gate:  # GR-5
+      gate_id: QG-orquestrador-global-2  # canonical binding (W8-5) — output_quality QG; min_score 0.75 derives from QG-2 threshold
+      type: contract_schema
+      contract: "fathom-digest-output.yaml"
+      min_score: 0.75
+
+    checkpoint: true  # GR-6
+
+  # --------------------------------------------------------------------------
+  # STAGE 3: Distribute to Consumer Squads (fan-out)
+  # --------------------------------------------------------------------------
+  - id: 3
+    name: "Distribute to Consumer Squads"
+    description: >
+      Fan-out distribution to 4 consumer squads in parallel. Each consumer
+      receives the full digest but extracts only their relevant sections:
+      - copywriting: copy goldmine, awareness levels, objections
+      - funnel-creator: awareness levels, conversion signals, friction points
+      - media-buy: persona archetypes, audience signals, targeting insights
+      - sales: objections, value signals, UMP/UMS, closing triggers
+    estimated_time: "10-20 minutes"
+    depends_on: [2]
+
+    agents:
+      lead: orquestrador-chief
+      support: []
+
+    actions:
+      - action: distribute_to_copywriting
+        description: "Deliver digest to copywriting with relevant section markers"
+        agent: orquestrador-chief
+        target: copywriting
+        parallel: true
+
+      - action: distribute_to_funnel_creator
+        description: "Deliver digest to funnel-creator with relevant section markers"
+        agent: orquestrador-chief
+        target: funnel-creator
+        parallel: true
+
+      - action: distribute_to_media_buy
+        description: "Deliver digest to media-buy with relevant section markers"
+        agent: orquestrador-chief
+        target: media-buy
+        parallel: true
+
+      - action: distribute_to_sales
+        description: "Deliver digest to sales with relevant section markers"
+        agent: orquestrador-chief
+        target: sales
+        parallel: true
+
+    gate:
+      criteria:
+        - "All 4 consumer squads received the digest"
+        - "Delivery logged for each consumer"
+      approval: auto
+      auto_criteria: "Distribution complete to all consumers"
+
+    validation_gate:  # GR-5 per consumer handoff
+      gate_id: QG-orquestrador-global-2  # canonical binding (W8-5) — output_quality QG; min_score 0.75 derives from QG-2 threshold
+      type: contract_schema
+      contract: "digest-distribution-receipt.yaml"
+      min_score: 0.75
+
+    checkpoint: true  # GR-6
+
+  # --------------------------------------------------------------------------
+  # STAGE 4: Log Consumption Tracking
+  # --------------------------------------------------------------------------
+  - id: 4
+    name: "Log Consumption Tracking"
+    description: >
+      Track which squads consumed the digest, which sections they extracted,
+      and whether they acted on the insights. This data feeds back into
+      digest quality improvement for future cycles.
+    estimated_time: "5 minutes"
+    depends_on: [3]
+
+    agents:
+      lead: orquestrador-chief
+      support: []
+
+    actions:
+      - action: log_consumption
+        description: "Record consumption status per squad with timestamp"
+        agent: orquestrador-chief
+
+      - action: check_timeout
+        description: "Flag squads that haven't consumed within synergy.digest_consumption_timeout_days"
+        agent: orquestrador-chief
+
+    gate:
+      criteria:
+        - "Consumption logged for all 4 consumers"
+        - "Timeout check completed"
+      approval: auto
+      auto_criteria: "Consumption tracking complete"
+
+    checkpoint: true  # GR-6
+
+# =============================================================================
+# MODEL SELECTION
+# =============================================================================
+
+model_selection:
+  default: sonnet
+  per_stage:
+    1: sonnet
+    2: sonnet
+    3: sonnet
+    4: sonnet
+  rationale: >
+    Digest generation is analytical. Distribution and tracking are procedural.
+    Fathom-analysis may internally use its own model routing for deep analysis.
+
+# =============================================================================
+# SUCCESS METRICS
+# =============================================================================
+
+success_metrics:
+  - metric: "Digest completeness"
+    target: "100% of digests pass contract validation"
+  - metric: "Distribution rate"
+    target: "100% of consumers receive digest within 1 hour"
+  - metric: "Consumption rate"
+    target: ">80% of consumers act on digest within 7 days"
+  - metric: "Copy goldmine utilization"
+    target: ">50% of extracted phrases used in next copy cycle"
+
+# =============================================================================
+# INTEGRATION
+# =============================================================================
+
+integration:
+  feeds_from:
+    - squad: fathom-analysis
+      data: "Call transcription analysis, persona matches, copy goldmine"
+  feeds_to:
+    - squad: copywriting
+      data: "Copy goldmine, awareness levels, objection patterns"
+    - squad: funnel-creator
+      data: "Awareness levels, conversion signals, friction points"
+    - squad: media-buy
+      data: "Persona archetypes, audience targeting insights"
+    - squad: sales
+      data: "Objections, value signals, closing triggers"
+  tools_required:
+    - pipeline-ops.mjs
+    - supermemory-ops.mjs
+megabrain_validation:
+  last_run: "20260514-validate-deep"
+  validated_at: "2026-05-15T00:00:00Z"
+  validator: mega-brain/megabrain-chief
+  mode: deep
+  squad: orquestrador-global
+  workflow_id: "wf-fathom-digest-distribution"
+  status: pass
+  evidence:
+    - workflow_inventory_registered
+    - orchestration_surface_validated
+    - external_execution_not_performed

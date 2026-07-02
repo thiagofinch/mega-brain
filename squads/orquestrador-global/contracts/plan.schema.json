@@ -1,0 +1,324 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://the-hub/squads/orquestrador-global/contracts/plan.schema.json",
+  "title": "Plan-Architect Output (plan.yaml)",
+  "description": "Canonical contract for plan-architect output. Generated 2026-04-30 (W8-3) from squads/orquestrador-global/templates/orchestration-plan-tmpl.yaml schema_version 2.0. Closes DEV-OG-004 / M4 (Output schema validado).",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "plan_id",
+    "created_by",
+    "created_at",
+    "demand",
+    "discovery",
+    "selected_capabilities",
+    "dag",
+    "risks",
+    "resource_estimate",
+    "success_criteria",
+    "falsifiable_assumptions",
+    "constitutional_compliance",
+    "handoff",
+    "quality_score",
+    "audit"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "2.0",
+      "description": "Hub canonical schema version (post-PA-6.1)."
+    },
+    "plan_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+-[0-9]{8}-[0-9]{6}$",
+      "description": "Format: {slug}-{YYYYMMDD-HHmmss}"
+    },
+    "created_by": {
+      "type": "string",
+      "const": "plan-architect"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 timestamp"
+    },
+    "demand": {
+      "type": "object",
+      "required": ["raw", "parsed"],
+      "additionalProperties": false,
+      "properties": {
+        "raw": { "type": "string", "minLength": 1 },
+        "parsed": {
+          "type": "object",
+          "required": ["primary_domain", "task_type", "complexity", "urgency", "confidence"],
+          "additionalProperties": true,
+          "properties": {
+            "primary_domain": { "type": "string", "minLength": 1 },
+            "secondary_domains": { "type": "array", "items": { "type": "string" } },
+            "task_type": { "type": "string", "minLength": 1 },
+            "complexity": { "type": "string", "enum": ["low", "medium", "high", "critical"] },
+            "urgency": { "type": "string", "enum": ["low", "normal", "high", "critical"] },
+            "business_units": { "type": "array", "items": { "type": "string" } },
+            "implicit_deadline": { "type": ["string", "null"], "format": "date" },
+            "confidence": { "type": "number", "minimum": 0.0, "maximum": 1.0 }
+          }
+        },
+        "elicitations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["q", "a", "dimension"],
+            "properties": {
+              "q": { "type": "string" },
+              "a": { "type": "string" },
+              "dimension": { "type": "string" },
+              "info_gain": { "type": "number" }
+            }
+          }
+        }
+      }
+    },
+    "discovery": {
+      "type": "object",
+      "required": ["cache_version", "capabilities_scanned"],
+      "additionalProperties": false,
+      "properties": {
+        "cache_version": { "type": "string" },
+        "cache_age_seconds": { "type": "integer", "minimum": 0 },
+        "capabilities_scanned": {
+          "type": "object",
+          "required": ["squads", "agents", "skills", "tasks", "workflows"],
+          "additionalProperties": false,
+          "properties": {
+            "squads": { "type": "integer", "minimum": 0 },
+            "agents": { "type": "integer", "minimum": 0 },
+            "skills": { "type": "integer", "minimum": 0 },
+            "tasks": { "type": "integer", "minimum": 0 },
+            "workflows": { "type": "integer", "minimum": 0 }
+          }
+        },
+        "cache_drift_detected": { "type": "boolean" }
+      }
+    },
+    "selected_capabilities": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "score", "reason", "ids_decision"],
+        "additionalProperties": true,
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "type": { "type": "string", "enum": ["squad", "agent", "skill", "task", "workflow"] },
+          "score": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+          "score_breakdown": {
+            "type": "object",
+            "additionalProperties": { "type": "number" }
+          },
+          "reason": { "type": "string", "minLength": 1 },
+          "ids_decision": { "type": "string", "enum": ["REUSE", "ADAPT", "CREATE"] }
+        }
+      }
+    },
+    "routing_summary": {
+      "type": "object",
+      "required": ["engine", "decisions_count", "decision_ids", "blocked_nodes", "fallback_nodes"],
+      "additionalProperties": true,
+      "properties": {
+        "engine": { "type": "string", "const": "RoutingDecision-v2" },
+        "decisions_count": { "type": "integer", "minimum": 0 },
+        "decision_ids": { "type": "array", "items": { "type": "string" } },
+        "blocked_nodes": { "type": "array", "items": { "type": "string" } },
+        "fallback_nodes": { "type": "array", "items": { "type": "string" } },
+        "decisions_dir": { "type": "string" }
+      }
+    },
+    "dag": {
+      "type": "object",
+      "required": ["nodes", "edges"],
+      "additionalProperties": true,
+      "properties": {
+        "nodes": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["id", "capability_ref", "phase", "estimated_duration_minutes"],
+            "additionalProperties": true,
+            "properties": {
+              "id": { "type": "string" },
+              "capability_ref": { "type": "string" },
+              "phase": { "type": "string" },
+              "estimated_duration_minutes": { "type": "number", "minimum": 0 },
+              "parallelizable_with": { "type": "array", "items": { "type": "string" } },
+              "critical_path": { "type": "boolean" },
+              "earliest_start": { "type": "number" },
+              "latest_finish": { "type": "number" },
+              "slack": { "type": "number" },
+              "depends_on": { "type": "array", "items": { "type": "string" } },
+              "execution_kind": {
+                "type": "string",
+                "enum": ["single", "loop"],
+                "default": "single",
+                "description": "STORY-LC-3 / ADR-LC-002: 'loop' nodes route to the loop-compiler instead of a single swarm task."
+              },
+              "loop_hint": {
+                "type": "object",
+                "description": "Required iff execution_kind == 'loop'. Consumed by plan-to-swarm.js to invoke /loop-compiler.",
+                "required": ["task", "termination_hint"],
+                "additionalProperties": false,
+                "properties": {
+                  "task": { "type": "string" },
+                  "complexity": { "type": "string", "enum": ["low", "medium", "high"] },
+                  "verification": { "type": "string", "enum": ["low", "important", "critical"] },
+                  "parallelizable": { "type": "string", "enum": ["no", "partial", "yes"] },
+                  "recurring": { "type": "boolean" },
+                  "termination_hint": { "type": "string", "enum": ["until-dod", "until-dry", "until-budget"] },
+                  "budget_tokens": { "type": ["integer", "null"], "minimum": 1 }
+                },
+                "allOf": [
+                  {
+                    "if": { "required": ["termination_hint"], "properties": { "termination_hint": { "const": "until-budget" } } },
+                    "then": { "required": ["budget_tokens"], "properties": { "budget_tokens": { "type": "integer", "minimum": 1 } } }
+                  }
+                ]
+              }
+            },
+            "allOf": [
+              {
+                "if": { "required": ["execution_kind"], "properties": { "execution_kind": { "const": "loop" } } },
+                "then": { "required": ["loop_hint"] },
+                "else": { "not": { "required": ["loop_hint"] } }
+              }
+            ]
+          }
+        },
+        "edges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["from", "to"],
+            "additionalProperties": false,
+            "properties": {
+              "from": { "type": "string" },
+              "to": { "type": "string" },
+              "reason": { "type": "string" }
+            }
+          }
+        },
+        "critical_path": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "critical_path_duration_minutes": { "type": "number", "minimum": 0 }
+      }
+    },
+    "risks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["node_id", "severity", "occurrence", "detectability", "rpn"],
+        "additionalProperties": true,
+        "properties": {
+          "node_id": { "type": "string" },
+          "severity": { "type": "integer", "minimum": 1, "maximum": 10 },
+          "occurrence": { "type": "integer", "minimum": 1, "maximum": 10 },
+          "detectability": { "type": "integer", "minimum": 1, "maximum": 10 },
+          "rpn": { "type": "integer", "minimum": 1, "maximum": 1000 },
+          "description": { "type": "string" },
+          "mitigation": { "type": "string" }
+        }
+      }
+    },
+    "resource_estimate": {
+      "type": "object",
+      "required": ["total_cost_usd", "total_duration_minutes"],
+      "additionalProperties": true,
+      "properties": {
+        "total_cost_usd": { "type": "number", "minimum": 0 },
+        "total_duration_minutes": { "type": "number", "minimum": 0 },
+        "model_distribution": {
+          "type": "object",
+          "additionalProperties": { "type": "integer" }
+        },
+        "budget_cap_usd": { "type": "number", "minimum": 0 }
+      }
+    },
+    "success_criteria": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["criterion", "measurement"],
+        "properties": {
+          "criterion": { "type": "string" },
+          "measurement": { "type": "string" },
+          "threshold": { "type": ["string", "number"] }
+        }
+      }
+    },
+    "falsifiable_assumptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["assumption", "falsification_test"],
+        "properties": {
+          "assumption": { "type": "string" },
+          "falsification_test": { "type": "string" }
+        }
+      }
+    },
+    "constitutional_compliance": {
+      "type": "object",
+      "required": ["codeowners", "business_isolation", "agent_authority", "no_invention"],
+      "additionalProperties": false,
+      "properties": {
+        "codeowners": { "type": "string", "enum": ["PASS", "FAIL", "NA"] },
+        "business_isolation": { "type": "string", "enum": ["PASS", "FAIL", "NA"] },
+        "agent_authority": { "type": "string", "enum": ["PASS", "FAIL", "NA"] },
+        "no_invention": { "type": "string", "enum": ["PASS", "FAIL", "NA"] },
+        "notes": { "type": "string" }
+      }
+    },
+    "handoff": {
+      "type": "object",
+      "required": ["summary", "next_action_suggested"],
+      "additionalProperties": true,
+      "properties": {
+        "summary": { "type": "string", "minLength": 1, "description": "3-line executive summary" },
+        "mermaid_dag": { "type": "string" },
+        "top_risks": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "next_action_suggested": { "type": "string", "minLength": 1 }
+      }
+    },
+    "quality_score": {
+      "type": "object",
+      "required": ["overall", "dimensions"],
+      "additionalProperties": false,
+      "properties": {
+        "overall": { "type": "number", "minimum": 0.0, "maximum": 5.0 },
+        "dimensions": {
+          "type": "object",
+          "additionalProperties": { "type": "number", "minimum": 0.0, "maximum": 5.0 }
+        }
+      }
+    },
+    "audit": {
+      "type": "object",
+      "required": ["scoring_version", "heuristics", "agent_id"],
+      "additionalProperties": true,
+      "properties": {
+        "scoring_version": { "type": "string" },
+        "heuristics": { "type": "string" },
+        "agent_id": { "type": "string" },
+        "cache_hash": { "type": "string" },
+        "model_used": { "type": "string" },
+        "deterministic": { "type": "boolean" }
+      }
+    }
+  }
+}

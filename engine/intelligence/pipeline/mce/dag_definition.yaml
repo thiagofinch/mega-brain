@@ -1,0 +1,53 @@
+# dag_definition.yaml -- MCE Pipeline Step Dependency Graph
+# =========================================================
+#
+# Defines the execution order of all MCE pipeline steps as a DAG.
+# Each step maps to a list of dependencies (steps that must complete first).
+# An empty list [] means the step has no dependencies (entry point).
+#
+# The DAGEngine loads this file and computes:
+#   - Topological sort (safe execution order)
+#   - Parallel groups (steps at the same level)
+#   - Critical path (longest dependency chain)
+#   - Ready steps (next runnable given current completion state)
+#
+# Parallel Groups (identified by DAGEngine):
+#   - DNA Extraction: mce_behavioral, mce_identity, mce_voice
+#     (all depend only on insight_extraction, can run simultaneously)
+#   - Future: consolidation sub-steps when split (dossier, sources, dna_yaml)
+#
+# Version: 1.0.0
+# Date: 2026-04-01
+# Story: MCE2-3.1 -- DAG Engine + Refatorar Orchestrate
+
+version: "1.0.0"
+
+steps:
+  ingesting: []
+  batching: [ingesting]
+  chunking: [batching]
+  entity_resolution: [chunking]
+  insight_extraction: [entity_resolution]
+
+  # --- DNA Extraction Fan-Out (parallel group 1) ---
+  mce_behavioral: [insight_extraction]
+  mce_identity: [insight_extraction]
+  mce_voice: [insight_extraction]
+
+  # --- Fan-In: checkpoint requires all 3 DNA extractions ---
+  identity_checkpoint: [mce_behavioral, mce_identity, mce_voice]
+
+  # --- Compilation (future parallel group 2) ---
+  consolidation: [identity_checkpoint]
+
+  agent_generation: [consolidation]
+  finalizing: [agent_generation]
+  reporting: [finalizing]
+
+parallel_groups:
+  - name: "DNA Extraction"
+    steps: [mce_behavioral, mce_identity, mce_voice]
+    description: "Three MCE extraction layers that can run simultaneously"
+  - name: "Compilation"
+    steps: [consolidation]
+    description: "Future: dossier + sources + dna_yaml when consolidation is split"

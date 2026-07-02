@@ -1,0 +1,1783 @@
+---
+# PRODUCT-PROFILE.YAML — Ficha Viva de Produto v2.0
+# Preenchida incrementalmente pelo pipeline MCE a partir de calls,
+# documentos e inputs humanos.
+#
+# Cada campo tem write_protection: auto_fill | auto_suggest | human_only
+# - auto_fill:    Pipeline escreve livremente se campo vazio
+# - auto_suggest: Pipeline escreve mas marca como draft (precisa confirmacao)
+# - human_only:   Pipeline NUNCA escreve, apenas cria alerta em .staging/
+#
+# Campos preenchidos pelo pipeline carregam _meta com sources e confidence.
+# Modelo de enriquecimento: 3 camadas (staging -> draft -> confirmed)
+#
+# Relacionamento: 1 product-profile por produto (permanente)
+#                 N launch-campaign por produto (por evento/lancamento)
+#
+# v2.0 additions (2026-03-27):
+# Sections 16-23 for SaaS/software products. Conditional via applies_when.
+# Infoproduct YAMLs (product_type: course) skip sections 16-20, 22-23.
+# Section 21 (modules) applies to ALL product types (L8 decomposition).
+
+_meta:
+  version: "1.0.0"
+  owner: "pm"
+  target_layer: "L3-product"
+  state: "TEMPLATE"
+
+metadata:
+  canonical_scope: "workspace/_templates/products/product-profile.yaml"
+  owner: "cmo"
+  version: "2.0.0"
+  last_updated: "2026-03-27"
+  description: "Ficha completa de produto com enriquecimento incremental via pipeline MCE. v2.0 adds SaaS sections."
+  enrichment_model: "3-layer (staging -> draft -> confirmed)"
+  applies_when_rules:
+    sections_16_to_20: "product_type in [saas, marketplace, community]"
+    section_21_modules: "ALL product_types (L8 decomposition is universal)"
+    section_22_usage: "product_type in [saas]"
+    section_23_decisions: "ALL product_types"
+  thresholds:
+    identity: 1
+    icp_traits: 3
+    pain_points: 3
+    objections: 2
+    testimonials: 1
+    pricing: null       # NUNCA automatico
+    metrics: null       # NUNCA automatico
+    funnel_stages: 2
+    ad_angles: 1
+    positioning: null   # NUNCA automatico
+    delivery: null      # NUNCA automatico
+    payment: null       # NUNCA automatico
+    curriculum: null    # Estrutura eh human_only — pipeline nunca cria cursos/modulos
+    curriculum_descriptions: 5  # Auto-promote lesson descriptions apos 5 fontes
+
+# =======================================================================
+# SECAO 1: IDENTIDADE DO PRODUTO
+# =======================================================================
+
+fields:
+
+  identity:
+    write_protection: auto_fill
+    description: "Dados fundamentais que definem o produto"
+    fields:
+      product_name:
+        type: string
+        required: true
+        description: "Nome oficial do produto"
+        write_protection: human_only
+
+      product_slug:
+        type: string
+        required: true
+        description: "Slug canonico para paths e references (kebab-case)"
+        write_protection: human_only
+
+      business_unit:
+        type: string
+        required: true
+        description: "Empresa dona do produto (slug da business unit)"
+        write_protection: human_only
+
+      product_type:
+        type: enum
+        required: true
+        description: "Categoria principal do produto"
+        options:
+          - saas
+          - info-product
+          - community
+          - service
+          - mentorship
+          - course
+          - event
+          - marketplace
+          - physical
+        write_protection: auto_suggest
+
+      product_stage:
+        type: enum
+        required: true
+        description: "Estagio atual no ciclo de vida do produto"
+        options:
+          - ideation         # Ideia discutida mas sem validacao. launch_date: null
+          - designing        # Em design/planejamento. Definindo escopo, ICP, oferta. launch_date: null
+          - building         # Em construcao ativa. Equipe trabalhando. launch_date: estimada
+          - beta             # Versao beta com usuarios limitados. launch_date: estimada ou real
+          - launched         # Lancado no mercado. Primeiras vendas. launch_date: real
+          - growing          # Crescendo com metricas positivas. launch_date: real
+          - scaling          # Escalando com sistemas e processos. launch_date: real
+          - mature           # Produto estavel, receita previsivel. launch_date: real
+          - declining        # Metricas caindo, precisa de decisao. launch_date: real
+          - sunset           # Descontinuado ou em fase de encerramento. launch_date: real
+        write_protection: human_only
+
+      launch_date:
+        type: date
+        required: false
+        description: "Data de lancamento real ou estimada. null se ideation/designing."
+        write_protection: human_only
+
+      launch_date_type:
+        type: enum
+        required: false
+        options: [estimated, confirmed, real]
+        description: "Se a data eh estimativa, confirmada ou real (pos-lancamento)"
+        write_protection: human_only
+
+      ownership:
+        type: object
+        required: true
+        description: "Propriedade do produto — holding, founder, entidade juridica"
+        write_protection: human_only
+        properties:
+          holding:
+            type: string
+            required: true
+            description: "Holding que possui este produto (slug da holding)"
+          founder:
+            type: string
+            required: true
+            description: "Founder principal responsavel pelo produto"
+          entity:
+            type: string
+            description: "Entidade juridica se diferente da holding"
+          partnership:
+            type: string
+            description: "Se joint venture, descrever parceria (ex: SCP entre duas holdings)"
+
+          co_owners:
+            type: list
+            required: false
+            description: "Co-owners for SCP/JV products (e.g., partner-a, partner-b)"
+            write_protection: human_only
+
+          ownership_type:
+            type: enum
+            required: false
+            options: [sole, scp, joint-venture, franchise, licensing]
+            description: "Type of ownership structure for this product"
+            write_protection: human_only
+
+      one_liner:
+        type: string
+        required: true
+        description: "Uma frase que explica o produto para alguem que nunca ouviu falar"
+        write_protection: auto_suggest
+
+      origin_story:
+        type: string
+        required: false
+        description: "Por que o produto foi criado — a dor original que motivou"
+        write_protection: auto_suggest
+
+      launch_date:
+        type: date
+        required: false
+        description: "Data de lancamento ou primeira venda"
+        write_protection: human_only
+
+      product_owner:
+        type: string
+        required: true
+        description: "Pessoa responsavel pelo produto"
+        write_protection: human_only
+
+      tags:
+        type: list
+        required: false
+        description: "Tags para busca e classificacao"
+        write_protection: auto_fill
+
+  # =====================================================================
+  # SECAO 2: ICP DO PRODUTO (Ideal Customer Profile)
+  # =====================================================================
+
+  icp:
+    write_protection: auto_suggest
+    description: "Perfil do cliente ideal especifico deste produto"
+    fields:
+      icp_name:
+        type: string
+        required: true
+        description: "Arquetipo do cliente ideal deste produto (ex: O Marketeiro Escalador)"
+        write_protection: auto_suggest
+
+      one_sentence:
+        type: string
+        required: true
+        description: "Frase completa definindo o cliente ideal"
+        write_protection: auto_suggest
+
+      demographics:
+        type: object
+        required: true
+        description: "Caracteristicas observaveis"
+        write_protection: auto_suggest
+        properties:
+          age_range:
+            type: string
+            description: "Faixa etaria principal"
+          gender_split:
+            type: string
+            description: "Distribuicao de genero se relevante"
+          location:
+            type: string
+            description: "Concentracao geografica"
+          income_range:
+            type: string
+            description: "Faixa de renda ou faturamento"
+          company_size:
+            type: string
+            description: "Tamanho da empresa/equipe (se B2B)"
+          industry:
+            type: string
+            description: "Setor de atuacao"
+          experience_level:
+            type: string
+            description: "Nivel de experiencia na area"
+
+      psychographics:
+        type: object
+        required: true
+        description: "Motivacoes internas e padroes de comportamento"
+        write_protection: auto_suggest
+        properties:
+          core_beliefs:
+            type: list
+            description: "Crencas fundamentais que guiam decisoes (3-5)"
+          dominant_mindset:
+            type: string
+            description: "Estado mental dominante quando busca solucoes"
+          consumption_pattern:
+            type: string
+            description: "Como consome conteudo e toma decisoes de compra"
+          values:
+            type: list
+            description: "Valores pessoais que influenciam a compra"
+          identity_statement:
+            type: string
+            description: "Como essa pessoa se define (ex: sou empreendedor digital)"
+
+      pain_points:
+        type: object
+        required: true
+        description: "Pilha de problemas por profundidade"
+        write_protection: auto_suggest
+        properties:
+          surface_pains:
+            type: list
+            description: "Problemas que articulam facilmente (3-5)"
+          hidden_pains:
+            type: list
+            description: "Problemas que sentem mas nao nomeiam (3-5)"
+          existential_pains:
+            type: list
+            description: "Medos profundos e questoes de identidade (2-3)"
+
+      goals:
+        type: object
+        required: true
+        description: "Resultados desejados por horizonte temporal"
+        write_protection: auto_suggest
+        properties:
+          immediate:
+            type: list
+            description: "O que querem nos proximos 30-90 dias"
+          medium_term:
+            type: list
+            description: "O que querem em 6-12 meses"
+          dream_outcome:
+            type: string
+            description: "O resultado dos sonhos em uma frase"
+
+      buying_triggers:
+        type: list
+        required: false
+        description: "Eventos que fazem a pessoa buscar solucao agora"
+        write_protection: auto_suggest
+
+      red_flags:
+        type: list
+        required: false
+        description: "Sinais de que NAO eh fit (desqualificacao)"
+        write_protection: auto_suggest
+
+      green_flags:
+        type: list
+        required: false
+        description: "Sinais de que EH fit (qualificacao)"
+        write_protection: auto_suggest
+
+  # =====================================================================
+  # SECAO 3: OFERTA
+  # =====================================================================
+
+  offer:
+    write_protection: human_only
+    description: "Estrutura da oferta, pricing e composicao"
+    fields:
+      offer_name:
+        type: string
+        required: true
+        description: "Nome da oferta como apresentada ao mercado"
+        write_protection: human_only
+
+      offer_type:
+        type: enum
+        required: true
+        description: "Modelo de monetizacao"
+        options:
+          - subscription
+          - one-time
+          - tiered
+          - freemium
+          - pay-per-use
+          - hybrid
+          - free-plus-shipping
+          - high-ticket
+          - low-ticket
+        write_protection: human_only
+
+      pricing:
+        type: object
+        required: true
+        description: "Estrutura de precos"
+        write_protection: human_only
+        properties:
+          base_price:
+            type: string
+            description: "Preco principal"
+          currency:
+            type: string
+            description: "Moeda (BRL, USD)"
+          billing_cycle:
+            type: enum
+            description: "Ciclo de cobranca"
+            options: [monthly, quarterly, semi-annual, annual, one-time, per-event]
+          tiers:
+            type: list
+            description: "Se tiered: lista de tiers com nome, preco, features incluidas"
+          discount_rules:
+            type: list
+            description: "Regras de desconto (anual, early-bird, bundle)"
+
+      mifge:
+        type: string
+        required: false
+        description: "Minimum Irresistible Free Gift Entry — entrada gratuita irresistivel que inicia o funil"
+        write_protection: auto_suggest
+
+      order_bump:
+        type: object
+        required: false
+        description: "Produto adicionado no checkout (impulso)"
+        write_protection: human_only
+        properties:
+          name:
+            type: string
+            description: "Nome do order bump"
+          price:
+            type: string
+            description: "Preco do order bump"
+          description:
+            type: string
+            description: "O que o cliente recebe"
+
+      bumps:
+        type: list
+        required: false
+        description: "Bumps adicionais alem do order bump principal"
+        write_protection: human_only
+
+      guarantee:
+        type: object
+        required: false
+        description: "Garantia oferecida"
+        write_protection: human_only
+        properties:
+          type:
+            type: enum
+            options: [money-back, conditional, performance, none]
+          duration:
+            type: string
+            description: "Prazo da garantia"
+          conditions:
+            type: string
+            description: "Condicoes para acionar"
+
+      bonuses:
+        type: list
+        required: false
+        description: "Bonus incluidos na oferta, cada um com nome, valor percebido, descricao"
+        write_protection: human_only
+
+      unique_mechanism:
+        type: string
+        required: false
+        description: "O metodo proprietario que faz a solucao funcionar (Todd Brown concept)"
+        write_protection: auto_suggest
+
+      big_idea:
+        type: string
+        required: false
+        description: "A ideia central que diferencia esta oferta de todas as outras"
+        write_protection: auto_suggest
+
+      value_equation:
+        type: object
+        required: false
+        description: "Hormozi Value Equation: Dream Outcome x Perceived Likelihood / Time x Effort"
+        write_protection: auto_suggest
+        properties:
+          dream_outcome:
+            type: string
+          perceived_likelihood:
+            type: string
+          time_delay:
+            type: string
+          effort_sacrifice:
+            type: string
+
+  # =====================================================================
+  # SECAO 4: DELIVERY (Entrega do Produto)
+  # =====================================================================
+
+  delivery:
+    write_protection: human_only
+    description: "Como o produto eh entregue, acessado e estruturado juridicamente"
+    fields:
+      format:
+        type: enum
+        required: true
+        description: "Formato de entrega do produto"
+        options:
+          - course
+          - mentorship
+          - community
+          - saas-platform
+          - live-event
+          - hybrid
+          - physical
+          - done-for-you
+        write_protection: human_only
+
+      access_method:
+        type: string
+        required: true
+        description: "Como o cliente acessa (area de membros, app, link, plataforma)"
+        write_protection: human_only
+
+      access_duration:
+        type: string
+        required: false
+        description: "Tempo de acesso (vitalicio, 12 meses, enquanto assinante)"
+        write_protection: human_only
+
+      onboarding_flow:
+        type: string
+        required: false
+        description: "Descricao do fluxo de ativacao pos-compra"
+        write_protection: auto_suggest
+
+      legal_structure:
+        type: object
+        required: false
+        description: "Aspectos juridicos e contabeis do produto"
+        write_protection: human_only
+        properties:
+          contract_type:
+            type: string
+            description: "Tipo de contrato (adesao, prestacao de servico, licenca de uso)"
+          refund_policy:
+            type: string
+            description: "Politica de reembolso (7 dias CDC, condicional, sem reembolso)"
+          compliance_notes:
+            type: string
+            description: "Notas de compliance (CDC, termos especificos do segmento)"
+
+  # =====================================================================
+  # SECAO 5: PAYMENT (Pagamento Padrao)
+  # =====================================================================
+
+  payment:
+    write_protection: human_only
+    description: "Gateways e formas de pagamento padrao do produto"
+    fields:
+      gateways:
+        type: list
+        required: false
+        description: "Gateways de pagamento ativos para este produto"
+        write_protection: human_only
+        item_schema:
+          name:
+            type: string
+            description: "Nome do gateway (Hotmart, Stripe, Asaas, PagSeguro, etc.)"
+          status:
+            type: enum
+            options: [active, backup, deprecated]
+
+      installment_options:
+        type: list
+        required: false
+        description: "Opcoes de parcelamento padrao"
+        write_protection: human_only
+        item_schema:
+          method:
+            type: string
+            description: "Metodo (cartao de credito, boleto, pix)"
+          max_installments:
+            type: number
+            description: "Numero maximo de parcelas"
+          notes:
+            type: string
+            description: "Observacoes (com juros, sem juros, etc.)"
+
+      payment_split:
+        type: list
+        required: false
+        description: "Split de pagamento entre partes (co-producoes, afiliados)"
+        write_protection: human_only
+
+  # =====================================================================
+  # SECAO 6: FUNIL
+  # =====================================================================
+
+  funnel:
+    write_protection: auto_suggest
+    description: "Estrutura de funil padrao do produto"
+    fields:
+      funnel_type:
+        type: enum
+        required: true
+        description: "Tipo principal de funil"
+        options:
+          - webinar
+          - vsl
+          - challenge
+          - quiz
+          - application
+          - free-plus-shipping
+          - tripwire
+          - direct-to-offer
+          - content-to-call
+          - book-funnel
+          - summit
+          - waitlist
+        write_protection: auto_suggest
+
+      funnel_definitions:
+        type: object
+        required: false
+        description: "O que significa topo/meio/fundo PARA ESTE PRODUTO especificamente"
+        write_protection: auto_suggest
+        properties:
+          top_of_funnel:
+            type: string
+            description: "Definicao de topo no contexto deste produto"
+          middle_of_funnel:
+            type: string
+            description: "Definicao de meio no contexto deste produto"
+          bottom_of_funnel:
+            type: string
+            description: "Definicao de fundo no contexto deste produto"
+
+      stages:
+        type: list
+        required: true
+        description: "Etapas do funil em ordem sequencial"
+        write_protection: auto_suggest
+        item_schema:
+          stage_name:
+            type: string
+            description: "Nome da etapa (ex: Lead Magnet, Webinar, Sales Page, Checkout)"
+          stage_type:
+            type: enum
+            options: [awareness, capture, nurture, presentation, close, upsell, onboarding]
+          channel:
+            type: string
+            description: "Onde acontece (Instagram, YouTube, Email, WhatsApp, Call)"
+          asset:
+            type: string
+            description: "Ativo usado nessa etapa (nome do VSL, landing page URL, etc.)"
+          conversion_rate:
+            type: string
+            description: "Taxa de conversao dessa etapa"
+            write_protection: human_only
+          notes:
+            type: string
+            description: "Observacoes sobre essa etapa"
+
+      traffic_sources:
+        type: list
+        required: false
+        description: "Fontes de trafego que alimentam o topo do funil"
+        write_protection: auto_suggest
+        item_schema:
+          source:
+            type: string
+            description: "Nome da fonte (Meta Ads, Google, Organico, YouTube, etc.)"
+          percentage:
+            type: string
+            description: "Porcentagem do trafego total"
+          cac:
+            type: string
+            description: "CAC por fonte"
+            write_protection: human_only
+
+      automation_stack:
+        type: list
+        required: false
+        description: "Ferramentas usadas no funil (CRM, email tool, checkout, etc.)"
+        write_protection: auto_fill
+
+  # =====================================================================
+  # SECAO 7: ANUNCIOS E CRIATIVOS
+  # =====================================================================
+
+  ads:
+    write_protection: auto_suggest
+    description: "Historico de anuncios, angulos validados e guidelines de producao"
+    fields:
+      validated_angles:
+        type: list
+        required: false
+        description: "Angulos de anuncio que ja foram testados e validados"
+        write_protection: auto_suggest
+        item_schema:
+          angle_name:
+            type: string
+            description: "Nome do angulo (ex: Dor do Churn, Resultado Rapido, Autoridade)"
+          hook:
+            type: string
+            description: "Frase de hook usada"
+          platform:
+            type: string
+            description: "Onde foi veiculado (Meta, Google, YouTube, TikTok)"
+          performance:
+            type: string
+            description: "Performance resumida (CTR, CPA, ROAS)"
+            write_protection: human_only
+          status:
+            type: enum
+            options: [testing, winning, fatigued, retired]
+            write_protection: human_only
+
+      failed_angles:
+        type: list
+        required: false
+        description: "Angulos testados que NAO funcionaram (para nao repetir)"
+        write_protection: auto_suggest
+
+      creative_library:
+        type: list
+        required: false
+        description: "Pecas criativas ativas"
+        write_protection: auto_fill
+        item_schema:
+          creative_name:
+            type: string
+          format:
+            type: enum
+            options: [video, image, carousel, text, ugc, ai-generated]
+          status:
+            type: enum
+            options: [active, paused, retired]
+
+      production_guidelines:
+        type: object
+        required: false
+        description: "Pontos de atencao para producao de criativos deste produto"
+        write_protection: auto_suggest
+        properties:
+          filming_quality:
+            type: string
+            description: "Padrao de qualidade de filmagem esperado"
+          differentiated_actions:
+            type: list
+            description: "Acoes diferenciadas (participacao especial, narrativas unicas)"
+          mandatory_elements:
+            type: list
+            description: "Elementos obrigatorios em qualquer criativo deste produto"
+          forbidden_elements:
+            type: list
+            description: "Elementos proibidos em criativos deste produto"
+
+      brand_guidelines_ref:
+        type: string
+        required: false
+        description: "Path para o brandbook do produto"
+        write_protection: auto_fill
+
+  # =====================================================================
+  # SECAO 8: DEPOIMENTOS E RESULTADOS
+  # =====================================================================
+
+  testimonials:
+    write_protection: auto_suggest
+    description: "Resultados de clientes e prova social"
+    fields:
+      client_results:
+        type: list
+        required: false
+        description: "Resultados documentados de clientes"
+        write_protection: auto_suggest
+        item_schema:
+          client_name:
+            type: string
+            description: "Nome do cliente (ou anonimizado)"
+          result:
+            type: string
+            description: "Resultado alcancado em linguagem especifica"
+          metric:
+            type: string
+            description: "Metrica concreta se disponivel (ex: +340% ROAS)"
+          timeframe:
+            type: string
+            description: "Em quanto tempo alcancou o resultado"
+          quote:
+            type: string
+            description: "Citacao direta do cliente"
+          source:
+            type: string
+            description: "De onde veio (call, video, email, review)"
+          date:
+            type: date
+            description: "Data do depoimento"
+          permission:
+            type: enum
+            description: "Permissao para uso publico"
+            options: [public, internal-only, pending]
+            write_protection: human_only
+
+      case_studies:
+        type: list
+        required: false
+        description: "Cases completos com before/after"
+        write_protection: auto_suggest
+        item_schema:
+          title:
+            type: string
+          before:
+            type: string
+            description: "Situacao antes do produto"
+          after:
+            type: string
+            description: "Situacao depois"
+          transformation_time:
+            type: string
+          key_actions:
+            type: list
+            description: "O que o cliente fez de diferente"
+
+      social_proof_stats:
+        type: object
+        required: false
+        description: "Numeros agregados de prova social"
+        write_protection: human_only
+        properties:
+          total_customers:
+            type: number
+          total_revenue_generated:
+            type: string
+          average_result:
+            type: string
+          nps_score:
+            type: number
+
+  # =====================================================================
+  # SECAO 9: OBJECOES
+  # =====================================================================
+
+  objections:
+    write_protection: auto_suggest
+    description: "Objecoes extraidas de calls de vendas e rebuttals validados"
+    fields:
+      common_objections:
+        type: list
+        required: false
+        description: "Objecoes mais frequentes"
+        write_protection: auto_suggest
+        item_schema:
+          objection:
+            type: string
+            description: "A objecao como o lead fala"
+          category:
+            type: enum
+            options: [price, timing, trust, authority, need, competition, inertia]
+          frequency:
+            type: enum
+            description: "Frequencia relativa"
+            options: [very-common, common, occasional, rare]
+          rebuttal:
+            type: string
+            description: "Melhor resposta validada"
+            write_protection: auto_suggest
+          rebuttal_source:
+            type: string
+            description: "Quem deu essa resposta e em qual call"
+
+      buying_objections_summary:
+        type: string
+        required: false
+        description: "Resumo dos 3 maiores bloqueios de compra"
+        write_protection: auto_suggest
+
+  # =====================================================================
+  # SECAO 10: COPY E MESSAGING
+  # =====================================================================
+
+  messaging:
+    write_protection: auto_suggest
+    description: "Posicionamento, mensagens-chave e padroes de linguagem"
+    fields:
+      positioning_statement:
+        type: string
+        required: false
+        description: "Para [target] que [need], [product] eh o [category] que [diff] porque [reason]"
+        write_protection: human_only
+
+      elevator_pitch:
+        type: object
+        required: false
+        description: "Versoes do pitch em diferentes duracao"
+        write_protection: human_only
+        properties:
+          ten_second:
+            type: string
+          thirty_second:
+            type: string
+          written:
+            type: string
+
+      key_messages:
+        type: list
+        required: false
+        description: "Mensagens-chave que sempre devem ser comunicadas sobre este produto"
+        write_protection: auto_suggest
+
+      forbidden_claims:
+        type: list
+        required: false
+        description: "Claims que NAO podem ser feitos (legal, compliance, verdade)"
+        write_protection: human_only
+
+      language_patterns:
+        type: object
+        required: false
+        description: "Padroes de linguagem especificos do produto"
+        write_protection: auto_suggest
+        properties:
+          words_we_use:
+            type: list
+            description: "Vocabulario aprovado"
+          words_we_avoid:
+            type: list
+            description: "Palavras proibidas"
+          tone:
+            type: string
+            description: "Tom de comunicacao"
+
+  # =====================================================================
+  # SECAO 11: METRICAS
+  # =====================================================================
+
+  metrics:
+    write_protection: human_only
+    description: "Metricas financeiras e de performance — somente humano atualiza"
+    fields:
+      revenue:
+        type: object
+        required: false
+        description: "Metricas de receita"
+        properties:
+          mrr:
+            type: string
+            description: "Monthly Recurring Revenue"
+          arr:
+            type: string
+            description: "Annual Recurring Revenue"
+          average_ticket:
+            type: string
+            description: "Ticket medio"
+          ltv:
+            type: string
+            description: "Lifetime Value"
+
+      acquisition:
+        type: object
+        required: false
+        description: "Metricas de aquisicao"
+        properties:
+          cac:
+            type: string
+            description: "Customer Acquisition Cost"
+          cpl:
+            type: string
+            description: "Cost Per Lead"
+          conversion_rate:
+            type: string
+            description: "Taxa de conversao geral"
+          roas:
+            type: string
+            description: "Return on Ad Spend"
+
+      retention:
+        type: object
+        required: false
+        description: "Metricas de retencao"
+        properties:
+          churn_rate:
+            type: string
+            description: "Taxa de churn mensal"
+          retention_rate:
+            type: string
+            description: "Taxa de retencao"
+          nps:
+            type: number
+            description: "Net Promoter Score"
+
+      last_updated:
+        type: date
+        required: true
+        description: "Data da ultima atualizacao de metricas"
+
+  # =====================================================================
+  # SECAO 12: COMPETIDORES
+  # =====================================================================
+
+  competitors:
+    write_protection: auto_suggest
+    description: "Landscape competitivo especifico deste produto"
+    fields:
+      direct_competitors:
+        type: list
+        required: false
+        description: "Concorrentes diretos"
+        write_protection: auto_suggest
+        item_schema:
+          name:
+            type: string
+          url:
+            type: string
+          pricing:
+            type: string
+          key_differentiator:
+            type: string
+          weakness:
+            type: string
+
+      indirect_competitors:
+        type: list
+        required: false
+        description: "Alternativas indiretas (inclusive nao fazer nada)"
+        write_protection: auto_suggest
+
+      competitive_advantage:
+        type: string
+        required: false
+        description: "Por que o cliente escolhe este produto e nao o concorrente"
+        write_protection: auto_suggest
+
+  # =====================================================================
+  # SECAO 13: EQUIPE DO PRODUTO
+  # =====================================================================
+
+  team:
+    write_protection: auto_fill
+    description: "Equipe permanente alocada ao produto"
+    fields:
+      product_owner:
+        type: string
+        required: false
+        description: "Responsavel pela estrategia do produto"
+        write_protection: human_only
+
+      team_members:
+        type: list
+        required: false
+        description: "Membros da equipe permanente com nome e funcao"
+        write_protection: auto_fill
+
+      external_partners:
+        type: list
+        required: false
+        description: "Parceiros e fornecedores externos permanentes"
+        write_protection: auto_fill
+
+  # =====================================================================
+  # SECAO 14: RELACIONAMENTOS NO ECOSSISTEMA
+  # =====================================================================
+
+  ecosystem:
+    write_protection: auto_suggest
+    description: "Posicao do produto na value ladder e relacoes com outros produtos"
+    fields:
+      upsell_to:
+        type: list
+        required: false
+        description: "Produtos para os quais este produto faz upsell"
+        write_protection: auto_suggest
+
+      downsell_from:
+        type: list
+        required: false
+        description: "Produtos dos quais este eh downsell/alternativa"
+        write_protection: auto_suggest
+
+      cross_sell:
+        type: list
+        required: false
+        description: "Produtos complementares vendidos juntos"
+        write_protection: auto_suggest
+
+      value_ladder_position:
+        type: string
+        required: false
+        description: "Posicao na value ladder (entry, core, premium, ultra-premium)"
+        write_protection: human_only
+
+      feeds_into:
+        type: list
+        required: false
+        description: "Quais produtos este alimenta no flywheel"
+        write_protection: auto_suggest
+
+  # =====================================================================
+  # SECAO 15: CURRICULUM (Curso / Infoproduto / Comunidade)
+  # =====================================================================
+  # Ativada quando product_type in [course, info-product, community, mentorship]
+  # Dados de lesson-level vivem em arquivo externo referenciado por curriculum_ref.
+  # Esta secao contem o indice, agregados, e campos de retencao.
+  #
+  # Relacao: 1 product-profile (permanente) -> 1 curriculum-detail (companion)
+  # Path: workspace/businesses/{brand}/products/curriculum/{slug}-curriculum.yaml
+
+  curriculum:
+    write_protection: human_only
+    description: "Grade curricular do produto — ativo para course/info-product/community/mentorship"
+    applies_when:
+      product_type: [course, info-product, community, mentorship]
+    fields:
+
+      transformation_promise:
+        type: string
+        required: true
+        description: "Before/After — quem entra como X e sai como Y. Ancora todo o curriculum"
+        format: "Antes: [perfil]. Depois: [transformacao]"
+        write_protection: auto_suggest
+        pipeline_logic: "Extrair dos primeiros 3 minutos da aula 1/onboarding — instrutor tipicamente diz 'neste curso voce vai...', 'ao final voce sera capaz de...'"
+
+      curriculum_format:
+        type: enum
+        required: true
+        description: "Formato da grade curricular"
+        options:
+          - structured        # Curso > Modulos > Aulas com sequencia definida
+          - compilado         # Colecao de conteudos sem sequencia rigida
+          - hybrid            # Mix de modulos estruturados + conteudo avulso
+        write_protection: human_only
+
+      difficulty:
+        type: enum
+        required: false
+        description: "Nivel de dificuldade geral do produto"
+        options: [beginner, intermediate, advanced, mixed]
+        write_protection: auto_suggest
+
+      category:
+        type: list
+        required: false
+        description: "Taxonomia tematica — max 1 primary + 1 secondary"
+        write_protection: auto_suggest
+        taxonomy:
+          domains:
+            - marketing        # content_strategy, social_media, email_marketing, paid_traffic, seo
+            - sales            # copywriting, sales_funnels, objection_handling, offer_design, closing
+            - brand            # personal_branding, visual_identity, brand_voice, positioning
+            - ai_tools         # ai_content, ai_automation, ai_strategy, tools_stack
+            - mindset          # entrepreneurial_mindset, productivity, team_leadership
+            - operations       # processes, team_building, finance_basics, client_management
+
+      platform:
+        type: object
+        required: false
+        description: "Plataforma de hospedagem do conteudo"
+        write_protection: human_only
+        properties:
+          name:
+            type: string
+            description: "Nome da plataforma (Circle.so, Hotmart, Kajabi, etc.)"
+          url:
+            type: string
+            description: "URL da area de membros"
+
+      prerequisites:
+        type: list
+        required: false
+        description: "Pre-requisitos para acompanhar o conteudo (cursos, conhecimentos, ferramentas)"
+        write_protection: human_only
+
+      assumed_knowledge:
+        type: list
+        required: false
+        description: "O que o aluno ja deve saber fazer (sem gating, apenas orientacao)"
+        write_protection: auto_suggest
+
+      instructor_roster:
+        type: list
+        required: false
+        description: "Instrutores que aparecem no conteudo"
+        write_protection: auto_fill
+        item_schema:
+          name:
+            type: string
+            description: "Nome do instrutor"
+          role:
+            type: enum
+            description: "Papel (titular, convidado, co-instrutor)"
+            options: [titular, convidado, co-instrutor]
+          courses_count:
+            type: number
+            description: "Quantidade de cursos em que aparece"
+          lessons_count:
+            type: number
+            description: "Quantidade de aulas em que aparece"
+
+      # ----- AGREGADOS (calculados do arquivo companion) -----
+
+      totals:
+        type: object
+        required: false
+        description: "Metricas agregadas do curriculum — auto calculadas"
+        write_protection: auto_fill
+        properties:
+          total_courses:
+            type: number
+            description: "Total de cursos/espacos"
+          total_modules:
+            type: number
+            description: "Total de modulos"
+          total_lessons:
+            type: number
+            description: "Total de aulas"
+          total_duration_hours:
+            type: number
+            description: "Duracao total em horas (apenas aulas com duracao conhecida)"
+          lessons_with_duration:
+            type: number
+            description: "Aulas com duracao registrada"
+          lessons_without_duration:
+            type: number
+            description: "Aulas sem duracao (gap de completeness)"
+          total_materials:
+            type: number
+            description: "Total de materiais complementares"
+
+      # ----- INDICE DE CURSOS (resumo inline) -----
+
+      courses:
+        type: list
+        required: false
+        description: "Indice resumido de cada curso — detalhes no arquivo companion"
+        write_protection: human_only
+        item_schema:
+          course_name:
+            type: string
+            description: "Nome do curso"
+          course_slug:
+            type: string
+            description: "Slug canonico (kebab-case)"
+          status:
+            type: enum
+            description: "Status do curso"
+            options: [active, legacy, draft, retired]
+            write_protection: human_only
+          modules_count:
+            type: number
+            write_protection: auto_fill
+          lessons_count:
+            type: number
+            write_protection: auto_fill
+          total_duration:
+            type: string
+            description: "Duracao total (ex: 12h30min)"
+            write_protection: auto_fill
+          difficulty:
+            type: enum
+            options: [beginner, intermediate, advanced, mixed]
+            write_protection: auto_suggest
+          primary_instructor:
+            type: string
+            write_protection: auto_fill
+          description:
+            type: string
+            description: "Descricao curta do curso (1-2 frases)"
+            write_protection: auto_suggest
+
+      # ----- TRILHAS DE APRENDIZADO -----
+
+      learning_paths:
+        type: list
+        required: false
+        description: "Trilhas de aprendizado — sequencias recomendadas entre cursos"
+        write_protection: human_only
+        item_schema:
+          path_name:
+            type: string
+            description: "Nome da trilha"
+          target_profile:
+            type: string
+            description: "Para quem eh essa trilha"
+          sequence:
+            type: list
+            description: "Lista ordenada de course_slugs"
+          estimated_weeks:
+            type: string
+            description: "Tempo estimado para completar"
+
+      # ----- CAMPOS DE RETENCAO -----
+
+      retention:
+        type: object
+        required: false
+        description: "Campos que CAUSAM retencao — tracked e otimizados"
+        write_protection: auto_suggest
+        properties:
+
+          first_win_lesson:
+            type: string
+            description: "Aula onde o aluno tem o primeiro resultado tangivel e aplicavel"
+            write_protection: auto_suggest
+            pipeline_logic: "Detectar padrao em titulos/transcricoes: 'Criando sua primeira...', 'Subindo sua primeira...', 'Montando seu primeiro...' — verbos de acao + 'primeiro/primeira'. Tambem detectar exercicios praticos com output concreto."
+
+          first_win_type:
+            type: enum
+            description: "Tipo do primeiro resultado"
+            options: [conceptual, tactical, financial, social]
+            write_protection: auto_suggest
+
+          dropout_cliff_lesson:
+            type: string
+            description: "Aula onde completion rate cai >20% vs anterior — o penhasco"
+            write_protection: auto_fill
+
+          dropout_fix_deployed:
+            type: boolean
+            description: "Se ja foi aplicada correcao no penhasco"
+            write_protection: human_only
+
+          community_trigger_lesson:
+            type: string
+            description: "Aula apos a qual o aluno deve ser empurrado para a comunidade"
+            write_protection: auto_suggest
+            pipeline_logic: "Detectar em transcricoes: 'poste no grupo', 'compartilhe no #wins', 'mande para feedback', 'entre na comunidade'. Primeira ocorrencia = trigger lesson."
+
+          community_trigger_copy:
+            type: string
+            description: "Texto exato do push para comunidade (contextual, nao generico)"
+            write_protection: auto_suggest
+            pipeline_logic: "Extrair a frase exata do instrutor quando menciona a comunidade. Se nao encontrar, gerar sugestao contextual baseada no conteudo da aula trigger."
+
+          re_engagement_trigger_days:
+            type: number
+            description: "Dias de inatividade antes de disparar re-engagement"
+            write_protection: human_only
+
+          content_review_cadence:
+            type: enum
+            description: "Frequencia de revisao de freshness do conteudo"
+            options: [monthly, quarterly, semi-annual, annual]
+            write_protection: human_only
+
+          last_content_review:
+            type: date
+            description: "Data da ultima revisao de freshness"
+            write_protection: human_only
+
+      # ----- VALUE LADDER TRIGGERS -----
+
+      value_ladder_triggers:
+        type: list
+        required: false
+        description: "Eventos comportamentais que disparam oferta do proximo produto"
+        write_protection: auto_suggest
+        pipeline_logic: "Detectar em transcricoes/materiais: mencoes a outros produtos ('se voce gostou do X, conheca o Y'), links para outros produtos em PDFs, CTAs de upsell no final de modulos."
+        item_schema:
+          trigger_event:
+            type: string
+            description: "Evento que dispara (ex: 2_courses_completed + community_post)"
+          next_product:
+            type: string
+            description: "Slug do produto alvo do upsell"
+          delay_days:
+            type: number
+            description: "Dias minimos apos trigger antes de ofertar"
+          offer_type:
+            type: enum
+            description: "Tipo da oferta"
+            options: [upsell, cross-sell, upgrade, high-ticket]
+
+      # ----- REFERENCIA PARA ARQUIVO COMPANION -----
+
+      curriculum_ref:
+        type: string
+        required: false
+        description: "Path relativo ao arquivo de curriculum detalhado (course > module > lesson)"
+        write_protection: auto_fill
+        example: "curriculum/{slug}-curriculum.yaml"
+
+  # =====================================================================
+  # SECAO 16: META (Controle do Pipeline)
+  # =====================================================================
+
+  _enrichment:
+    description: "Metadados de controle do pipeline — NAO eh conteudo do produto"
+    fields:
+      completeness:
+        total:
+          type: number
+          description: "Porcentagem total de preenchimento (0-100)"
+        by_section:
+          type: object
+          description: "Porcentagem por secao"
+          properties:
+            identity: { type: number }
+            icp: { type: number }
+            offer: { type: number }
+            delivery: { type: number }
+            payment: { type: number }
+            funnel: { type: number }
+            ads: { type: number }
+            testimonials: { type: number }
+            objections: { type: number }
+            messaging: { type: number }
+            metrics: { type: number }
+            competitors: { type: number }
+            team: { type: number }
+            ecosystem: { type: number }
+            curriculum: { type: number }
+        next_priority:
+          type: string
+          description: "Secao mais vazia com dados disponiveis em staging"
+
+      curriculum_enrichment:
+        type: object
+        description: "Tracking especifico para enriquecimento do curriculum"
+        properties:
+          courses_indexed:
+            type: number
+            description: "Cursos com pelo menos nome e status preenchidos"
+          courses_total:
+            type: number
+            description: "Total de cursos conhecidos"
+          lessons_with_description:
+            type: number
+            description: "Aulas com descricao (auto_suggest via pipeline MCE)"
+          lessons_total:
+            type: number
+            description: "Total de aulas"
+          lessons_with_duration:
+            type: number
+            description: "Aulas com duracao extraida"
+          last_platform_sync:
+            type: date
+            description: "Ultima vez que dados foram sincronizados da plataforma"
+
+      staging_queue:
+        pending_insights:
+          type: number
+          description: "Insights aguardando promocao"
+        conflicts:
+          type: number
+          description: "Insights que contradizem dados confirmed"
+        last_staging_update:
+          type: date
+
+      history:
+        created:
+          type: date
+        last_pipeline_update:
+          type: date
+        last_human_update:
+          type: date
+        total_sources_processed:
+          type: number
+        sources_list:
+          type: list
+          description: "Lista de MEET-XXXX e outros sources ja processados"
+
+  # =====================================================================
+  # SECAO 16: FEATURES REGISTRY (v2.0 — SaaS/marketplace/community)
+  # applies_when: product_type in [saas, marketplace, community]
+  # =====================================================================
+
+  features_registry:
+    write_protection: auto_suggest
+    description: "Catalogo vivo de features do produto — decomponiveis em micro-ofertas, bonus e bundles (L4/L8)"
+    applies_when:
+      product_type: [saas, marketplace, community]
+    fields:
+      total_features:
+        type: number
+        description: "Contagem total de features registradas"
+        write_protection: auto_fill
+      features:
+        type: list
+        required: true
+        description: "Lista completa de features com decomposicao atomica"
+        write_protection: auto_suggest
+        item_schema:
+          feature_id:
+            type: string
+            required: true
+            description: "ID unico (ex: FUR-001, CLK-042)"
+          name:
+            type: string
+            required: true
+            description: "Nome da feature como usuario ve"
+          description:
+            type: string
+            required: true
+            description: "O que essa feature faz em uma frase"
+          category:
+            type: string
+            description: "Agrupamento funcional (core-engine, billing, crm, messaging, etc.)"
+          status:
+            type: enum
+            required: true
+            options: [planned, in-progress, beta, live, deprecated, removed]
+            write_protection: auto_suggest
+          tier_availability:
+            type: list
+            description: "Em quais tiers/planos esta feature esta disponivel"
+            write_protection: human_only
+          composability_flag:
+            type: boolean
+            description: "L4/L8: Esta feature pode ser extraida como modulo independente?"
+            write_protection: auto_suggest
+          can_be_bonus:
+            type: boolean
+            description: "L4: Pode ser oferecida como bonus em outro produto?"
+            write_protection: auto_suggest
+          can_be_micro_offer:
+            type: boolean
+            description: "L4: Pode ser vendida isoladamente como micro-oferta?"
+            write_protection: auto_suggest
+          ai_powered:
+            type: boolean
+            description: "L12: Esta feature usa IA? Se false em SaaS, flag como gap."
+            write_protection: auto_suggest
+          dependencies:
+            type: list
+            description: "Outras features que esta depende (feature_ids)"
+          launched_at:
+            type: date
+            description: "Data de lancamento"
+          notes:
+            type: string
+          source:
+            type: string
+            description: "MEET-XXXX ou documento de onde foi extraida"
+
+  # =====================================================================
+  # SECAO 17: TECHNICAL ARCHITECTURE (v2.0 — SaaS/marketplace)
+  # applies_when: product_type in [saas, marketplace]
+  # =====================================================================
+
+  technical_architecture:
+    write_protection: human_only
+    description: "Stack tecnica, integracoes, APIs e infraestrutura do produto"
+    applies_when:
+      product_type: [saas, marketplace]
+    fields:
+      stack:
+        type: object
+        description: "Stack tecnica principal"
+        write_protection: human_only
+        properties:
+          frontend:
+            type: string
+          backend:
+            type: string
+          database:
+            type: string
+          hosting:
+            type: string
+          cdn:
+            type: string
+      integrations:
+        type: list
+        description: "Integracoes externas ativas"
+        write_protection: auto_suggest
+        item_schema:
+          service:
+            type: string
+          purpose:
+            type: string
+          status:
+            type: enum
+            options: [active, planned, deprecated, blocked]
+          api_type:
+            type: enum
+            options: [rest, graphql, webhook, sdk, oauth]
+      api_surface:
+        type: object
+        write_protection: human_only
+        properties:
+          public_api:
+            type: boolean
+          api_docs_url:
+            type: string
+          rate_limits:
+            type: string
+      ai_components:
+        type: list
+        description: "L12: Componentes de IA do produto"
+        write_protection: auto_suggest
+        item_schema:
+          component_name:
+            type: string
+          model_provider:
+            type: string
+          purpose:
+            type: string
+          cost_model:
+            type: string
+          status:
+            type: enum
+            options: [live, planned, deprecated]
+
+  # =====================================================================
+  # SECAO 18: ROADMAP (v2.0 — SaaS/marketplace/community)
+  # =====================================================================
+
+  roadmap:
+    write_protection: auto_suggest
+    description: "Features planejadas, em progresso e lancadas recentemente"
+    applies_when:
+      product_type: [saas, marketplace, community]
+    fields:
+      planned:
+        type: list
+        write_protection: auto_suggest
+        item_schema:
+          feature_ref:
+            type: string
+          name:
+            type: string
+          priority:
+            type: enum
+            options: [p0-critical, p1-high, p2-medium, p3-low]
+          target_date:
+            type: string
+          source:
+            type: string
+            write_protection: auto_fill
+          notes:
+            type: string
+      in_progress:
+        type: list
+        write_protection: auto_suggest
+        item_schema:
+          feature_ref:
+            type: string
+          name:
+            type: string
+          started_at:
+            type: date
+          assigned_to:
+            type: string
+          estimated_completion:
+            type: string
+      recently_shipped:
+        type: list
+        write_protection: auto_fill
+        item_schema:
+          feature_ref:
+            type: string
+          name:
+            type: string
+          shipped_at:
+            type: date
+          release_version:
+            type: string
+
+  # =====================================================================
+  # SECAO 19: RELEASE HISTORY (v2.0 — SaaS/marketplace)
+  # =====================================================================
+
+  release_history:
+    write_protection: auto_fill
+    description: "Historico de versoes e changelog"
+    applies_when:
+      product_type: [saas, marketplace]
+    fields:
+      current_version:
+        type: string
+        write_protection: human_only
+      releases:
+        type: list
+        write_protection: auto_fill
+        item_schema:
+          version:
+            type: string
+          date:
+            type: date
+          title:
+            type: string
+          changes:
+            type: list
+          source:
+            type: string
+
+  # =====================================================================
+  # SECAO 20: MODULES / COMPONENTS (v2.0 — ALL product types, L8)
+  # applies_when: ALL (L8 decomposition is universal)
+  # =====================================================================
+
+  modules:
+    write_protection: auto_suggest
+    description: "L8: Modulos atomicos que podem ser recombinados entre produtos"
+    fields:
+      components:
+        type: list
+        write_protection: auto_suggest
+        item_schema:
+          module_id:
+            type: string
+            required: true
+            description: "ID unico (ex: MOD-FUR-001)"
+          name:
+            type: string
+            required: true
+          description:
+            type: string
+          type:
+            type: enum
+            options: [feature-module, content-module, service-module, integration-module]
+          is_standalone:
+            type: boolean
+            description: "Pode funcionar independente do produto pai?"
+          reused_in:
+            type: list
+            description: "L8: Outros produtos que reutilizam este modulo"
+          estimated_time:
+            type: string
+            description: "L4: Tempo estimado de consumo/implementacao"
+          has_template:
+            type: boolean
+          has_checklist:
+            type: boolean
+
+  # =====================================================================
+  # SECAO 21: INTEGRATION MAP (v2.0 — cross-product connections)
+  # =====================================================================
+
+  integration_map:
+    write_protection: auto_suggest
+    description: "Mapa tecnico de como este produto conecta com outros do ecossistema"
+    fields:
+      technical_connections:
+        type: list
+        write_protection: auto_suggest
+        item_schema:
+          target_product:
+            type: string
+            description: "Slug do produto conectado"
+          connection_type:
+            type: enum
+            options: [api, sso, data-share, embed, redirect, webhook, manual]
+          direction:
+            type: enum
+            options: [outbound, inbound, bidirectional]
+          purpose:
+            type: string
+          status:
+            type: enum
+            options: [active, planned, broken, deprecated]
+      downsell_technical:
+        type: list
+        description: "L10: Downsell paths com implementacao tecnica"
+        write_protection: auto_suggest
+        item_schema:
+          from_product:
+            type: string
+          to_product:
+            type: string
+          trigger:
+            type: string
+          mechanism:
+            type: string
+
+  # =====================================================================
+  # SECAO 22: USAGE / CREDITS MODEL (v2.0 — SaaS only)
+  # applies_when: product_type in [saas]
+  # =====================================================================
+
+  usage_model:
+    write_protection: human_only
+    description: "Modelo de consumo para SaaS com creditos, API calls, seats, etc."
+    applies_when:
+      product_type: [saas]
+    fields:
+      model_type:
+        type: enum
+        options: [credits, api-calls, seats, storage, bandwidth, hybrid]
+        write_protection: human_only
+      credit_system:
+        type: object
+        write_protection: human_only
+        properties:
+          credit_name:
+            type: string
+          credit_unit:
+            type: string
+          tiers:
+            type: list
+            item_schema:
+              tier_name:
+                type: string
+              credits_included:
+                type: number
+              overage_price:
+                type: string
+          cost_per_credit:
+            type: string
+          margin_per_credit:
+            type: string
+      consumption_metrics:
+        type: object
+        write_protection: human_only
+        properties:
+          avg_monthly_usage:
+            type: string
+          peak_usage:
+            type: string
+          utilization_rate:
+            type: string
+
+  # =====================================================================
+  # SECAO 23: KEY DECISIONS (v2.0 — ALL product types)
+  # =====================================================================
+
+  decisions:
+    write_protection: auto_suggest
+    description: "Log de decisoes estrategicas sobre o produto com datas e fontes"
+    fields:
+      entries:
+        type: list
+        write_protection: auto_suggest
+        item_schema:
+          decision:
+            type: string
+            required: true
+          rationale:
+            type: string
+          date:
+            type: date
+          source:
+            type: string
+            description: "MEET-XXXX ou documento de referencia"

@@ -1,0 +1,105 @@
+# policies.yaml -- Default Policy Limits for MCE Pipeline
+# ========================================================
+#
+# Controls which actions each pipeline step is allowed to perform.
+# The PolicyLimiter loads this file and checks every step/action pair
+# before execution.
+#
+# Schema:
+#   mode: "whitelist" | "blacklist"
+#     - whitelist: only explicitly listed actions are allowed (default)
+#     - blacklist: all actions allowed except those explicitly listed
+#
+#   defaults:
+#     allowed_actions: list of actions allowed for ALL steps (whitelist mode)
+#     denied_actions: list of actions denied for ALL steps (blacklist mode)
+#
+#   steps:
+#     {step_id}:
+#       allowed_actions: [...]   (whitelist mode: only these are allowed)
+#       denied_actions: [...]    (blacklist mode: these are blocked)
+#       max_calls: int           (optional: max invocations per run)
+#
+#   overrides:
+#     {slug}:
+#       mode: "whitelist" | "blacklist"  (optional: override global mode)
+#       steps:
+#         {step_id}:
+#           allowed_actions: [...]
+#           denied_actions: [...]
+#
+# Version: 1.0.0
+# Date: 2026-04-01
+# Story: MCE21-1.1
+
+mode: "whitelist"
+
+defaults:
+  allowed_actions:
+    - "read_file"
+    - "write_file"
+    - "llm_call"
+    - "emit_hook"
+    - "log"
+    - "cache_read"
+    - "cache_write"
+
+steps:
+  mce_ingest:
+    allowed_actions:
+      - "read_file"
+      - "write_file"
+      - "llm_call"
+      - "emit_hook"
+      - "log"
+      - "cache_read"
+      - "cache_write"
+
+  mce_behavioral:
+    allowed_actions:
+      - "read_file"
+      - "llm_call"
+      - "emit_hook"
+      - "log"
+      - "cache_read"
+      - "cache_write"
+
+  mce_structural:
+    allowed_actions:
+      - "read_file"
+      - "llm_call"
+      - "emit_hook"
+      - "log"
+      - "cache_read"
+      - "cache_write"
+
+  mce_entity:
+    allowed_actions:
+      - "read_file"
+      - "llm_call"
+      - "emit_hook"
+      - "log"
+      - "cache_read"
+      - "cache_write"
+
+  chunking:
+    allowed_actions:
+      - "read_file"
+      - "write_file"
+      - "emit_hook"
+      - "log"
+      - "cache_read"
+      - "cache_write"
+
+  finalize:
+    allowed_actions:
+      - "read_file"
+      - "write_file"
+      - "llm_call"
+      - "emit_hook"
+      - "log"
+      - "cache_read"
+      - "cache_write"
+
+# Per-slug overrides (empty by default -- extend as needed)
+overrides: {}

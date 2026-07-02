@@ -1,0 +1,123 @@
+# extract-knowledge — MEGABRAIN Config
+# SP-EXTRACT-KNOWLEDGE | Mode: CRIAR | Tier: 2
+
+pack:
+  name: extract-knowledge
+  version: "1.0.0"
+  description: "Extrai conhecimento estruturado de qualquer fonte textual usando pipeline híbrido (regex + LLM)"
+  icon: "🧠"
+
+process_id: SP-EXTRACT-KNOWLEDGE
+mode: CRIAR
+
+# Skill execution config
+execution:
+  context: inline
+  agent: general-purpose
+  estimated_time: "5-30 min"
+
+# Input adapters
+adapters:
+  pdf:
+    module: "services/etl/lib/pdf-parser.js"
+    class: PdfParser
+    scanned_threshold: 100  # chars/page below = scanned PDF
+  session:
+    method: inline  # reads current conversation context
+  markdown:
+    method: direct  # read file, strip frontmatter
+  youtube:
+    mcp: scrapling
+    tool: stealthy_fetch
+  batch:
+    supported_extensions: [".pdf", ".md", ".txt"]
+    default_limit: 0  # 0 = all
+
+# Pipeline modules (REUSE from services/etl/)
+pipeline:
+  candidate_detection:
+    module: "services/etl/lib/enrichment/regex-extractor.js"
+    function: extractCandidateWindows
+    window_size: 800
+    min_candidates: 3
+  classification:
+    categories:
+      - { id: framework, prefix: FW }
+      - { id: heuristic, prefix: HE }
+      - { id: algorithm, prefix: AL }
+      - { id: concept, prefix: CO }
+      - { id: methodology, prefix: ME }
+      - { id: code_snippet, prefix: CS }
+    pareto_enabled: false  # override with --pareto flag
+  enrichment:
+    module: "services/etl/lib/enrichment/llm-extractor.js"
+    function: extract
+    model: claude-sonnet-4-6
+    batch_size: 5
+    max_retries: 3
+    fallback: llm_pending
+  dedup:
+    module: "services/etl/lib/dedup-engine.js"
+    class: DedupEngine
+    cosine_threshold: 0.85
+    tags_overlap_threshold: 0.70
+  quality_gate:
+    module: "services/etl/lib/quality-gate.js"
+    min_confidence: 0.70
+    min_content_length: 200
+    min_tags: 2
+    min_name_words: 3
+    min_pass_rate: 0.50
+
+# Output config
+output:
+  # CRITICAL: Write to approved/ (source). NEVER write to knowledge-base/ (derived).
+  # Pipeline: approved/ → finalize-etl.js (dedup+QG) → build-kb-index.js → knowledge-base/
+  default_dir: "data/etl/approved"
+  naming: "DS_KE_{PREFIX}_{NNN}.md"
+  organize_by_category: false  # FLAT in approved/ — build-kb-index creates subdirs in knowledge-base/
+  finalize_script: "services/etl/bin/finalize-etl.js"  # dedup + quality gate + merge + renumber
+  index_builder: "services/etl/bin/build-kb-index.js"   # copies approved/ → knowledge-base/ + rebuilds index
+  decision_cards: false  # override with --decision-cards flag
+
+# Post-extraction pipeline (MANDATORY — run in this order)
+post_extraction:
+  - step: finalize
+    command: "node services/etl/bin/finalize-etl.js --input data/etl/approved"
+    description: "Dedup (3 strategies) + Quality Gate (7 rules) + Merge + Renumber"
+    mandatory: true
+  - step: rebuild_index
+    command: "node services/etl/bin/build-kb-index.js"
+    description: "Copy approved/ + gold-standard/ → knowledge-base/ + rebuild index.yaml"
+    mandatory: true
+
+# Artifact contracts (MEGABRAIN v3.1)
+artifact_contracts:
+  - artifact_id: "knowledge-entity"
+    template_path: "assets/entity-template.md"
+    lifecycle_states: [draft, validated, approved]
+  - artifact_id: "extraction-report"
+    template_path: null  # inline report at end of execution
+    lifecycle_states: [generated]
+
+# Tokens
+tokens:
+  - { id: TKN-EK-THR-001, family: threshold, value: 200, unit: chars, description: "Min chars após conversão" }
+  - { id: TKN-EK-THR-002, family: threshold, value: 3, unit: count, description: "Min candidatos brutos" }
+  - { id: TKN-EK-THR-003, family: threshold, value: 0.70, unit: ratio, description: "Default min confidence" }
+  - { id: TKN-EK-THR-004, family: threshold, value: 0.85, unit: ratio, description: "Confidence para squad injection" }
+  - { id: TKN-EK-THR-005, family: threshold, value: 0.85, unit: ratio, description: "Cosine similarity dedup" }
+  - { id: TKN-EK-THR-006, family: threshold, value: 0.70, unit: ratio, description: "Tags overlap dedup" }
+  - { id: TKN-EK-THR-007, family: threshold, value: 0.50, unit: ratio, description: "Min pass rate quality gate" }
+  - { id: TKN-EK-BEH-001, family: behavior, value: 5, unit: count, description: "LLM batch size" }
+  - { id: TKN-EK-BEH-002, family: behavior, value: 3, unit: count, description: "LLM max retries" }
+  - { id: TKN-EK-BEH-003, family: behavior, value: 800, unit: chars, description: "Candidate window size" }
+
+# Veto conditions
+veto_conditions:
+  - { id: VETO-EK-001, trigger: "input < 200 chars", action: abort }
+  - { id: VETO-EK-002, trigger: "< 3 candidatos", action: warn }
+  - { id: VETO-EK-003, trigger: "confidence < min", action: reject }
+  - { id: VETO-EK-004, trigger: "heuristic sem SOURCE", action: reject }
+  - { id: VETO-EK-005, trigger: "duplicata sem evidência nova", action: skip }
+  - { id: VETO-EK-006, trigger: "PDF scanned", action: skip_warn }

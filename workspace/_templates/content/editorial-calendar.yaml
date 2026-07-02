@@ -1,0 +1,108 @@
+---
+# EDITORIAL-CALENDAR.YAML - Content publishing schedule
+# Adapted from mega-brain-stage pattern for Mega Brain workspace context
+
+_meta:
+  version: "1.0.0"
+  owner: "content-strategist"
+  target_layer: "L2-tactical"
+  state: "TEMPLATE"
+
+metadata:
+  canonical_scope: "workspace/_templates/content/editorial-calendar.yaml"
+  owner: "cmo"
+  version: "1.0.0"
+  last_updated: "2026-03-23"
+  description: "Editorial calendar template tracking weekly content by platform, type, status, and responsible"
+
+fields:
+  calendar_period:
+    type: string
+    required: true
+    description: "Time period this calendar covers (e.g., 2026-Q2, March 2026)"
+
+  content_pillars:
+    type: list
+    required: false
+    description: "Strategic content pillars that guide all content creation"
+
+  entries:
+    type: list
+    required: true
+    description: "Calendar entries, each containing the fields below"
+
+  entry:
+    type: object
+    required: true
+    description: "Single calendar entry structure"
+    properties:
+      week:
+        type: string
+        required: true
+        description: "Week identifier (e.g., W12, March 17-23)"
+      publish_date:
+        type: date
+        required: true
+        description: "Planned publish date"
+      platform:
+        type: enum
+        required: true
+        description: "Target platform"
+        options: [instagram, youtube, linkedin, twitter, tiktok, blog, newsletter, podcast, other]
+      content_type:
+        type: enum
+        required: true
+        description: "Format of the content"
+        options: [post, reel, carousel, story, video, article, newsletter, podcast-episode, thread, live]
+      title_or_topic:
+        type: string
+        required: true
+        description: "Working title or topic of the content piece"
+      content_pillar:
+        type: string
+        required: false
+        description: "Which content pillar this entry supports"
+      status:
+        type: enum
+        required: true
+        description: "Production status"
+        options: [planned, briefed, in-production, review, scheduled, published, cancelled]
+      responsible:
+        type: string
+        required: true
+        description: "Person responsible for this content piece"
+      notes:
+        type: string
+        required: false
+        description: "Additional context, links, or instructions"
+
+  publishing_cadence:
+    type: object
+    required: false
+    description: "Default publishing frequency per platform"
+    properties:
+      instagram:
+        type: string
+        required: false
+        description: "Posts per week on Instagram"
+      youtube:
+        type: string
+        required: false
+        description: "Videos per week on YouTube"
+      linkedin:
+        type: string
+        required: false
+        description: "Posts per week on LinkedIn"
+      newsletter:
+        type: string
+        required: false
+        description: "Newsletters per month"
+      podcast:
+        type: string
+        required: false
+        description: "Episodes per month"
+
+  review_cadence:
+    type: string
+    required: false
+    description: "How often the editorial calendar is reviewed and updated"
