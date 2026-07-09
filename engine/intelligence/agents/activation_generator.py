@@ -95,13 +95,13 @@ OFFICIAL_NICKNAMES: dict[str, dict[str, str]] = {
         "archetype": "Builder",
         "tagline": "Founder-first hiring",
     },
-    "sales-methodology": {
-        "name": "SVS",
+    "full-sales-system": {
+        "name": "FSS",
         "icon": "\U0001f4cb",
         "archetype": "Guardian",
         "tagline": "Full sales methodology",
     },
-    "education-methodologao": {
+    "g4-educacao": {
         "name": "G4",
         "icon": "\U0001f393",
         "archetype": "Visionary",
@@ -489,6 +489,11 @@ def _generate_activation_yaml(
     if not category_path or category_path == _relative_to_root(agent_dir):
         category_path = category
 
+    # Mirror the namespaced command path used by generate_activation step 2.
+    _claude_ns = {"external": "external", "business": "business", "personal": "personal"}.get(
+        category.split("/")[0], "agents"
+    )
+
     return {
         "version": "1.0.0",
         "generated_at": now,
@@ -540,7 +545,7 @@ def _generate_activation_yaml(
             "dna_config": _relative_to_root(agent_dir / "DNA-CONFIG.yaml"),
         },
         "ide_registration": {
-            "claude": f".claude/commands/agents/{slug}.md",
+            "claude": f".claude/commands/{_claude_ns}/{slug}.md",
             "cursor": ".cursor/agents.yaml",
             "windsurf": ".windsurf/agents.yaml",
             "gemini": f".gemini/agents/{slug}.md",
@@ -864,7 +869,15 @@ def generate_activation(
     logger.info("[CREATED] %s", rel_activation)
 
     # 2. Generate Claude Code slash command
-    claude_cmd_dir = COMMANDS / "agents"
+    #    Namespaced by level-1 bucket so the IDE command becomes
+    #    ``/{business|external|personal}:{slug}``. cargo/system fall back to
+    #    the legacy flat ``agents`` namespace. The ``.split('/')[0]`` is
+    #    defensive: ``category`` normally arrives as a shorthand
+    #    ('external'|'business'|'personal'|'cargo'|'system') but may also be a
+    #    multi-level path ('business/people') in some callers.
+    _NS = {"external": "external", "business": "business", "personal": "personal"}
+    ns = _NS.get(category.split("/")[0], "agents")
+    claude_cmd_dir = COMMANDS / ns
     claude_cmd_dir.mkdir(parents=True, exist_ok=True)
     claude_cmd_path = claude_cmd_dir / f"{slug}.md"
     claude_content = _generate_claude_command(slug, nickname_data, title, agent_dir, category)

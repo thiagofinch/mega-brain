@@ -1,21 +1,28 @@
 #!/usr/bin/env python3
 """
-sync_capability_status.py -- Sync provider status fields in capability-registry.yaml
+sync_capability_status.py -- Sync provider status fields no SOT unificado de capabilities
 
-Modes:
-    (default)   -- updates capability-registry.yaml in-place
-    --check     -- read-only, exit 1 if any status diverges from reality
-    --dry-run   -- shows what would change without writing
+Story 212.W1.1 (ADR-ONTOLOGIA-OPERACIONAL D1): opera sobre o SOT
+(agents/_registry/capability-sot.yaml), NÃO mais sobre a vista TIL. Atualiza o campo
+`status` de cada provider do eixo TIL (capabilities.<id>.til.providers[]) conforme a
+realidade de env/MCP e, em seguida, delega a REGENERAÇÃO das 2 vistas ao gerador
+determinístico (scripts/generate-capability-views.js --write). Assim o js-yaml continua
+sendo o ÚNICO formatador canônico do SOT + vistas (sem ping-pong cross-lib).
+
+Modos:
+    (default)   -- edita os status no SOT (line-level, preserva formatação) + regenera vistas
+    --check     -- read-only, exit 1 se algum status divergir da realidade (env/MCP)
+    --dry-run   -- mostra o que mudaria, sem escrever
 
 Exit codes:
-    0 -- changes applied successfully
+    0 -- changes applied successfully  (ou --check em sincronia / --dry-run com mudanças)
     1 -- parse/runtime error
     2 -- no changes needed (already in sync)
     3 -- invalid argument
 
 Security: NEVER logs env var values -- only key names and boolean availability.
 
-Part of the Tool Intelligence Layer (MegaBrain Python-first architecture).
+Ported from: Megabrain EPIC-127 (STORY-127.2). Re-targeted ao SOT em 212.W1.1.
 """
 
 import json
@@ -31,8 +38,9 @@ except ImportError:
     sys.exit(1)
 
 PROJECT_ROOT = Path(os.environ.get("CLAUDE_PROJECT_DIR", ".")).resolve()
-REGISTRY_PATH = PROJECT_ROOT / "agents" / "_registry" / "capability-registry.yaml"
+SOT_PATH = PROJECT_ROOT / "agents" / "_registry" / "capability-sot.yaml"
 MCP_JSON_PATH = PROJECT_ROOT / ".mcp.json"
+GENERATOR = PROJECT_ROOT / "scripts" / "generate-capability-views.js"
 
 
 def _ensure_env():
@@ -90,6 +98,47 @@ def resolve_status(provider: dict, mcp_keys: set) -> str:
     return provider.get("status", "unknown")
 
 
+def regenerate_views() -> bool:
+    """Delega a regeneração das 2 vistas ao gerador determinístico (js-yaml)."""
+    import subprocess
+
+    try:
+        result = subprocess.run(
+            ["node", str(GENERATOR), "--write"],
+            cwd=str(PROJECT_ROOT),
+            capture_output=True,
+            timeout=30,
+            text=True,
+        )
+        if result.returncode != 0:
+            print(
+                f"Error: gerador de vistas falhou (exit {result.returncode}):\n{result.stderr}",
+                file=sys.stderr,
+            )
+            return False
+        return True
+    except Exception as e:
+        print(f"Error: falha ao invocar o gerador de vistas: {e}", file=sys.stderr)
+        return False
+
+
+def rebuild_keyword_index():
+    try:
+        import subprocess
+
+        subprocess.run(
+            [
+                sys.executable,
+                str(PROJECT_ROOT / ".claude" / "hooks" / "build_capability_keyword_index.py"),
+            ],
+            cwd=str(PROJECT_ROOT),
+            capture_output=True,
+            timeout=10,
+        )
+    except Exception:
+        pass
+
+
 def main():
     args = sys.argv[1:]
     valid_flags = {"--check", "--dry-run"}
@@ -109,30 +158,38 @@ def main():
 
     _ensure_env()
 
-    # Load registry
+    # Load SOT
     try:
-        raw_yaml = REGISTRY_PATH.read_text(encoding="utf-8")
+        raw_yaml = SOT_PATH.read_text(encoding="utf-8")
     except FileNotFoundError:
-        print(f"Error: Registry not found: {REGISTRY_PATH}", file=sys.stderr)
+        print(f"Error: SOT not found: {SOT_PATH}", file=sys.stderr)
         sys.exit(1)
 
     try:
-        registry = yaml.safe_load(raw_yaml)
+        sot = yaml.safe_load(raw_yaml)
     except yaml.YAMLError as e:
         print(f"Error: YAML parse failed: {e}", file=sys.stderr)
         sys.exit(1)
 
-    if not registry or not registry.get("capabilities"):
-        print("Error: No 'capabilities' key found in registry.", file=sys.stderr)
+    if not sot or not sot.get("capabilities"):
+        print("Error: No 'capabilities' key found in SOT.", file=sys.stderr)
         sys.exit(1)
 
     mcp_keys = load_mcp_keys()
 
     changes = []
     total_providers = 0
+    til_cap_ids = set()
 
-    for cap_id, cap in registry["capabilities"].items():
-        providers = cap.get("providers")
+    # Itera SOMENTE o eixo TIL de cada capability (capabilities.<id>.til.providers[]).
+    for cap_id, entry in sot["capabilities"].items():
+        if not isinstance(entry, dict):
+            continue
+        til = entry.get("til")
+        if not isinstance(til, dict):
+            continue
+        til_cap_ids.add(cap_id)
+        providers = til.get("providers")
         if not providers or not isinstance(providers, list):
             continue
         for provider in providers:
@@ -148,13 +205,13 @@ def main():
                         "to": expected,
                     }
                 )
-                provider["status"] = expected
 
     # Report
     print("")
-    print("Capability Status Sync")
-    print("=" * 22)
-    print(f"Providers checked: {total_providers}")
+    print("Capability Status Sync (SOT)")
+    print("=" * 28)
+    print(f"SOT:               {SOT_PATH.relative_to(PROJECT_ROOT)}")
+    print(f"TIL providers:     {total_providers}")
     print(f"Already correct:   {total_providers - len(changes)}")
     print(f"Updated:           {len(changes)}")
 
@@ -165,9 +222,9 @@ def main():
 
     if check_mode:
         if changes:
-            print("DRIFT DETECTED: Registry status does not match environment.")
+            print("DRIFT DETECTED: SOT status does not match environment.")
             sys.exit(1)
-        print("OK: Registry status matches environment.")
+        print("OK: SOT status matches environment.")
         sys.exit(0)
 
     if dry_run_mode:
@@ -177,36 +234,32 @@ def main():
             print("Dry run complete. No files modified.")
         sys.exit(0 if changes else 2)
 
-    # Default mode -- write
+    # Default mode -- write status into the SOT (line-level, preserva formatação),
+    # depois regenera as vistas via gerador determinístico.
     if not changes:
         print("Already in sync. No file modified.")
         sys.exit(2)
 
-    # Line-level replacement to preserve YAML formatting.
-    # Strategy: find each "- id: X" block and replace status within that block only.
-    # We process line-by-line to avoid cross-block regex issues with duplicate provider IDs.
     lines = raw_yaml.split("\n")
-    change_map = {}  # (capability, provider_id) -> to_status
+    change_map = {}  # (capability, provider_id) -> (from, to)
     for c in changes:
-        key = (c["capability"], c["provider_id"])
-        change_map[key] = (c["from"], c["to"])
+        change_map[(c["capability"], c["provider_id"])] = (c["from"], c["to"])
 
-    # Walk lines: track current capability and current provider
+    # Walk lines. current_cap só é atualizado para chaves de 2 espaços que sejam
+    # capability ids CONHECIDOS do eixo TIL (desambigua de til_view/resolver_view).
     current_cap = None
     current_provider_id = None
     updated_lines = []
     for line in lines:
-        # Detect capability block (2-space indent, key followed by colon)
-        cap_match = re.match(r"^  (\w+):$", line)
-        if cap_match:
+        cap_match = re.match(r"^  ([\w-]+):$", line)
+        if cap_match and cap_match.group(1) in til_cap_ids:
             current_cap = cap_match.group(1)
+            current_provider_id = None
 
-        # Detect provider id (6 spaces + "- id:")
         id_match = re.match(r"^(\s+)- id: (.+)$", line)
         if id_match:
             current_provider_id = id_match.group(2).strip()
 
-        # Detect status line and replace if needed
         status_match = re.match(r"^(\s+status: )(.+)$", line)
         if status_match and current_cap and current_provider_id:
             key = (current_cap, current_provider_id)
@@ -219,31 +272,33 @@ def main():
 
         updated_lines.append(line)
 
+    if change_map:
+        # Algum status esperado não foi encontrado na linha esperada — aborta LOUD
+        # em vez de escrever um SOT parcialmente sincronizado.
+        print(
+            f"Error: {len(change_map)} status change(s) não localizados no SOT "
+            f"(formato inesperado): {list(change_map.keys())}",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+
     updated_yaml = "\n".join(updated_lines)
 
     try:
-        REGISTRY_PATH.write_text(updated_yaml, encoding="utf-8")
+        SOT_PATH.write_text(updated_yaml, encoding="utf-8")
     except Exception as e:
-        print(f"Error: Failed to write registry: {e}", file=sys.stderr)
+        print(f"Error: Failed to write SOT: {e}", file=sys.stderr)
         sys.exit(1)
 
-    print(f"Registry updated: {REGISTRY_PATH}")
+    print(f"SOT updated: {SOT_PATH}")
 
-    # Rebuild keyword index
-    try:
-        import subprocess
+    # Regenera as 2 vistas a partir do SOT atualizado (js-yaml determinístico).
+    if not regenerate_views():
+        sys.exit(1)
+    print("Views regenerated from SOT.")
 
-        subprocess.run(
-            [
-                sys.executable,
-                str(PROJECT_ROOT / ".claude" / "hooks" / "build_capability_keyword_index.py"),
-            ],
-            cwd=str(PROJECT_ROOT),
-            capture_output=True,
-            timeout=10,
-        )
-    except Exception:
-        pass
+    # Rebuild keyword index (lê a vista TIL regenerada)
+    rebuild_keyword_index()
 
     sys.exit(0)
 

@@ -117,7 +117,6 @@ tokens:
   description: Domain anchor for squad artifacts (was "default")
   consumed_by:
     - data/intent-taxonomy.yaml
-    - data/squad-routing-matrix.yaml
 
 - token_name: retry_behavior
   family: Behavior

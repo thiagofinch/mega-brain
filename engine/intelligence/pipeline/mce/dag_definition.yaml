@@ -1,6 +1,15 @@
 # dag_definition.yaml -- MCE Pipeline Step Dependency Graph
 # =========================================================
 #
+# *** AUTHORITATIVE SOT of MCE phase order (STORY-214.W5.1 / Epic 214 / GR4). ***
+# This file is the SINGLE source of truth for the order the MCE runner executes.
+# Under MCE_DAG_DRIVEN=1, orchestrate.cmd_full CONSUMES this file
+# (via resolve_mce_phase_order -> DAGEngine.topological_sort) to GENERATE its
+# phase order. Editing the order here changes what the runner does. The FSM
+# (state_machine.py, AUTHORITATIVE_FOR_ORDER=False) and the hardcoded mirror
+# (_MCE_CANONICAL_PHASE_ORDER, fallback only) are DEMOTED to non-authoritative.
+# Gate: probe_ingest_to_dna.py (byte-comparable ingest->DNA).
+#
 # Defines the execution order of all MCE pipeline steps as a DAG.
 # Each step maps to a list of dependencies (steps that must complete first).
 # An empty list [] means the step has no dependencies (entry point).

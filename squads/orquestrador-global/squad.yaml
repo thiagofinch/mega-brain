@@ -22,7 +22,7 @@ metadata:
     squad-creator.
   note: >
     v1.0.0: Initial creation with 4 agents. v2.0.0: Added team-coordinator, Agent Teams integration, staged execution.
-    v2.1.0: Migrated config.yaml -> squad.yaml (Mega Brain 2.1 format). Merged routing, team_execution, workflows, knowledge,
+    v2.1.0: Migrated config.yaml -> squad.yaml (MEGABRAIN 2.1 format). Merged routing, team_execution, workflows, knowledge,
     commands. v2.2.0 (2026-04-30, W5g): synced post-PA-6.1 with config.yaml — entry_agent moved to plan-architect (THE ONE
     CREATE per EPIC-PLAN-ARCHITECT); components.agents updated to 7 canonical agents (was 5 pre-rename: classificador-intencao
     → intent-parser, indexador-squads → capability-cartographer, team-coordinator → dag-architect; added plan-architect
@@ -140,7 +140,6 @@ components:
   data:
     - execution-templates
     - orchestration-metrics-registry
-    - squad-routing-matrix
     - registry-update-2026-02-07
     - routing-dry-run-new-squads
     - routing-dry-run-results

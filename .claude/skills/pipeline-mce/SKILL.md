@@ -381,3 +381,24 @@ without any code changes to the renderer.
 
 **Note:** `render_briefing` is deprecated. If called, it emits a
 `DeprecationWarning` and forwards to `render_pipeline_audit`.
+
+## RULE 3 — Programmatic QA Gates (`validate_step` + fallback)
+
+Phase transitions are gated in code, not by convention. The state-machine
+condition functions in `engine/intelligence/pipeline/mce/qa_gates.py`
+(`can_start_chunking`, `can_start_entities`, `can_checkpoint`, …) each delegate
+to `validate_step(step, slug)`, which verifies the required artifacts exist on
+disk for that step before the transition is allowed. A step whose
+`validate_step` result is not PASS silently blocks the transition (the
+`transitions` library skips it; state is unchanged) — e.g. `start_chunking`
+stays at `batching` until step 1 (ingest) artifacts are present.
+
+**Fallback:** gate conditions are rule-driven via the rule loader. If the rule
+loader errors or a rule is unavailable, the condition falls back to the
+built-in `validate_step` check (fail-open on loader error, fail-closed on a
+real missing artifact) so a misconfigured rule file never silently disables the
+gate. When artifact evidence is ambiguous, `validate_step` also applies a
+manual-checklist fallback scan (batch_logs / chunks globs) before deciding.
+
+This RULE 3 wiring is what makes the pipeline's quality gates enforceable rather
+than advisory — see `validate_step` and the `can_*` condition functions.

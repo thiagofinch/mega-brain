@@ -129,8 +129,13 @@ class MigrationRunner:
             module_name = file_path.stem  # e.g., "001_legacy_states"
 
             try:
-                # Build the full module path for importlib
-                package = "core.intelligence.pipeline.mce.migrations"
+                # Build the full module path for importlib.
+                # NOTE: this package was renamed core/ -> engine/ long ago; the
+                # stale "core." literal here made importlib.import_module raise
+                # ModuleNotFoundError, silently swallowed by the except below, so
+                # _discover() returned ZERO migrations in production (legacy state
+                # renames never ran). Corrected to the real package root.
+                package = "engine.intelligence.pipeline.mce.migrations"
                 spec_name = f"{package}.{module_name}"
                 module = importlib.import_module(spec_name)
 

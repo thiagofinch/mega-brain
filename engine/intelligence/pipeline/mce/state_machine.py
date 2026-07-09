@@ -70,6 +70,18 @@ logger = logging.getLogger("mce.state_machine")
 # State & Transition Definitions (v2 -- 16 operational + failed + paused)
 # ---------------------------------------------------------------------------
 
+# ---------------------------------------------------------------------------
+# NON-AUTHORITATIVE for phase ORDER (STORY-214.W5.1 / Epic 214 / GR4 / AC3)
+# ---------------------------------------------------------------------------
+# The SINGLE SOT of MCE phase EXECUTION ORDER is ``dag_definition.yaml`` (consumed
+# by ``orchestrate.resolve_mce_phase_order`` under ``MCE_DAG_DRIVEN``). This FSM
+# tracks per-slug lifecycle STATE (for resume/persistence) — it is NOT the
+# authoritative source of "what runs next". Census E1 flagged 3 parallel order
+# definitions (hardcoded cmd_full chain, this FSM, and the DAG); GR4 elected the
+# DAG and DEMOTED the other two. The STATES/TRANSITIONS below are a lifecycle
+# mirror and MUST NOT be used to drive execution order.
+AUTHORITATIVE_FOR_ORDER: bool = False  # DAG (dag_definition.yaml) is the order SOT.
+
 STATES: list[str] = [
     "init",
     "ingesting",

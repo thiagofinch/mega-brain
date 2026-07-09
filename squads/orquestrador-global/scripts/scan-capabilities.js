@@ -71,6 +71,34 @@ function* walk(dir, maxDepth = 3, depth = 0) {
 }
 
 // ── Scanners (one per capability category) ─────────────────────────────────────
+
+// Routing Semantics v1 (STORY-FT-W2.1): entries deixam de ser name-only quando a
+// fonte declara routing:. Pré-check barato por string; YAML parse só quando presente.
+let _yaml=null;
+function extractRouting(absPath, kind){
+  try{
+    const text=fs.readFileSync(absPath,'utf8');
+    if(!text.includes('routing:')) return null;
+    if(!_yaml) _yaml=require('js-yaml');
+    let doc=null;
+    if(kind==='yaml'){ doc=_yaml.load(text); }
+    else if(kind==='frontmatter'){ const m=text.match(/^---\n([\s\S]*?)\n---/); if(m) doc=_yaml.load(m[1]); }
+    else if(kind==='yamlblock'){ const m=text.match(/```yaml\n([\s\S]*?)```/); if(m) doc=_yaml.load(m[1]); }
+    const r=doc&&doc.routing;
+    if(!r||typeof r!=='object') return null;
+    const arr=(v)=>Array.isArray(v)?v.map(String):[];
+    return {
+      power_summary:r.power_summary?String(r.power_summary).slice(0,1200):null,
+      taxonomy:r.taxonomy?{domain:r.taxonomy.domain?String(r.taxonomy.domain):null,subdomains:arr(r.taxonomy.subdomains)}:null,
+      semantic_aliases:arr(r.semantic_aliases),
+      verbs:arr(r.verbs),
+      use_when:r.use_when?String(r.use_when):null,
+      not_use_when:r.not_use_when?String(r.not_use_when):null,
+      ontology:r.ontology?{entity_type:r.ontology.entity_type?String(r.ontology.entity_type):null,acts_on:arr(r.ontology.acts_on),produces:arr(r.ontology.produces)}:null,
+    };
+  }catch{return null;}
+}
+
 function scanSquads(rootSquads) {
   const out = [];
   for (const squad of listDir(rootSquads)) {
@@ -78,14 +106,17 @@ function scanSquads(rootSquads) {
     const cfg = path.join(rootSquads, squad, 'config.yaml');
     const st = safeStat(cfg);
     if (!st) continue;
-    out.push({
+    const entry = {
       type: 'squad',
       name: squad,
       squad: squad,
       path: path.relative(REPO_ROOT, cfg),
       mtime: st.mtimeMs,
       hash: md5(cfg),
-    });
+    };
+    const routing = extractRouting(cfg, 'yaml');
+    if (routing) entry.routing = routing;
+    out.push(entry);
   }
   return out;
 }
@@ -186,14 +217,17 @@ function scanSkills(claudeDir) {
     const skillFile = path.join(skillsDir, skill, 'SKILL.md');
     const st = safeStat(skillFile);
     if (!st) continue;
-    out.push({
+    const entry = {
       type: 'skill',
       name: skill,
       squad: null,
       path: path.relative(REPO_ROOT, skillFile),
       mtime: st.mtimeMs,
       hash: md5(skillFile),
-    });
+    };
+    const routing = extractRouting(skillFile, 'frontmatter');
+    if (routing) entry.routing = routing;
+    out.push(entry);
   }
   return out;
 }

@@ -114,8 +114,18 @@ def _normalize(text: str) -> str:
 # ---------------------------------------------------------------------------
 # DNA Loading
 # ---------------------------------------------------------------------------
-def _load_entries_from_yaml(path: Path, person_slug: str) -> list[DNAEntry]:
-    """Load DNA entries from a single YAML file."""
+def _load_entries_from_yaml(
+    path: Path, person_slug: str, layer_label: str | None = None
+) -> list[DNAEntry]:
+    """Load DNA entries from a single YAML file.
+
+    ``layer_label`` is the canonical (uppercase) DNA layer name to record on
+    each entry. It is passed explicitly because the on-disk filename is
+    lowercase (heuristicas.yaml) while the canonical layer label is uppercase
+    (HEURISTICAS); deriving it from ``path.stem`` would leak the lowercase
+    filename casing into the entry's ``layer`` field. Falls back to
+    ``path.stem.upper()`` when not provided (backward-compatible).
+    """
     if not path.exists():
         return []
 
@@ -128,7 +138,7 @@ def _load_entries_from_yaml(path: Path, person_slug: str) -> list[DNAEntry]:
     if not data or not isinstance(data, dict):
         return []
 
-    layer_name = path.stem  # e.g. HEURISTICAS, FRAMEWORKS
+    layer_name = layer_label if layer_label is not None else path.stem.upper()
 
     # Handle both YAML structures:
     #   Old: { entries: [...] }            (Hormozi)
@@ -185,8 +195,16 @@ def load_person_dna(person_slug: str) -> list[DNAEntry]:
             continue
 
         for layer_name in DNA_LAYERS:
-            yaml_path = dna_dir / f"{layer_name}.yaml"
-            all_entries.extend(_load_entries_from_yaml(yaml_path, person_slug))
+            # DNA layer files are stored lowercase (heuristicas.yaml,
+            # frameworks.yaml, ...); DNA_LAYERS is uppercase. Building the path
+            # with the uppercase name resolved on case-INSENSITIVE macOS but
+            # silently missed on case-SENSITIVE Linux (and in the CI runner) —
+            # load_person_dna returned zero entries in prod on Linux. Lowercase
+            # the layer to match the on-disk canonical filename.
+            yaml_path = dna_dir / f"{layer_name.lower()}.yaml"
+            all_entries.extend(
+                _load_entries_from_yaml(yaml_path, person_slug, layer_label=layer_name)
+            )
 
     return all_entries
 
@@ -420,7 +438,12 @@ def discover_dossiers(person_filter: str | None = None) -> list[Path]:
         if not persons_dir.is_dir():
             continue
 
-        for md_file in sorted(persons_dir.glob("DOSSIER-*.md")):
+        # Case-insensitive glob: dossiers were renamed to lowercase
+        # (dossier-*.md) per the repo lowercase-folder convention, but this
+        # pattern stayed uppercase — pathlib glob patterns are case-sensitive,
+        # so discovery silently returned ZERO dossiers in production. The
+        # [Dd] class matches both the legacy and current casing.
+        for md_file in sorted(persons_dir.glob("[Dd]ossier-*.md")):
             # Skip example files
             if "EXAMPLE" in md_file.stem.upper():
                 continue

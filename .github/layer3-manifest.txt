@@ -1,8 +1,8 @@
-# Layer 3 Manifest — full backup content (private, everything)
+# Layer 3 Manifest - FULL BACKUP content (private, everything)
 # ================================================================
-# Layer 3 = Layer 1 (all base content)
-#         + Layer 2 (all populated knowledge content)
-#         + backup-only folders listed below
+# Layer 3 = Layer 1 (all public content)
+#         + Layer 2 (all premium content)
+#         + BACKUP-ONLY folders listed below
 #
 # This is a COMPLETE backup of the entire working state.
 # The ONLY things excluded are secrets (.env, credentials)
@@ -11,29 +11,117 @@
 # RULE: Layer 3 excludes ONLY secrets and dev artifacts.
 # ================================================================
 
-# === LAYER 2 CONTENT (populated knowledge) ===
+# === LAYER 2 CONTENT (premium) ===
 
-# Knowledge base (ingested expert content)
-knowledge/external/dna/
-knowledge/external/dossiers/
-knowledge/external/playbooks/
-knowledge/external/sources/
+# Knowledge base (pre-digested expert content)
+knowledge/dossiers/
+knowledge/playbooks/
+knowledge/dna/
+knowledge/sources/
+
+# Expert agents (cloned minds)
+agents/external/
+
+# Cargo agents (C-level, sales, marketing roles)
+agents/cargo/
+
+# Processed content
+artifacts/
 
 # === LAYER 3 ADDITIONS (backup-only) ===
 
+# Company agents (org structure, roles, JDs)
+agents/sua-empresa/
+agents/business/
+agents/personal/
+
+# Shared agent memory
+agents/shared-memory/
+
+# Agent archive and discovery
+agents/archive/
+agents/discovery/
+
+# Boardroom outputs
+agents/boardroom/outputs/
+
+# Squads (synced from MEGABRAIN-Stage — 57 squad definitions)
+squads/
+
+# Infrastructure services (local runtime — 15 services)
+infrastructure/
+
 # Raw user uploads (bucket inboxes)
 knowledge/external/inbox/
+knowledge/business/inbox/
+knowledge/personal/inbox/
 
 # Session and batch logs
 logs/
 
-# JARVIS state and runtime
+# Knowledge extras
+knowledge/_legacy/
+knowledge/company/
+knowledge/personal/
+knowledge/TAG-RESOLVER.json
+
+# JARVIS state and memory
 .claude/jarvis/
 .claude/sessions/
 .claude/mission-control/
+.claude/agent-memory/
+.claude/megabrain/
+.claude/monitoring/
+.claude/learning-system/
+.claude/agents/
+.claude/guides/
+.claude/handoffs/
+.claude/plans/
+.claude/temp/
+.claude/worktrees/
 
-# Data indexes (L3 runtime)
+# Sync-injected skills (squad IDE projections)
+.claude/skills/megabrain-ads/
+.claude/skills/megabrain-sop/
+.claude/skills/jarvis-workspace/
+.claude/skills/compound/
+.claude/skills/contabilidade/
+.claude/skills/conteudo/
+.claude/skills/course-creator/
+.claude/skills/customer-success/
+.claude/skills/finops/
+.claude/skills/gerador-pop/
+.claude/skills/hybrid-ops-squad/
+.claude/skills/legal/
+.claude/skills/me-guia/
+.claude/skills/monitor/
+.claude/skills/ontology-tech/
+.claude/skills/romantasia/
+.claude/skills/slides-creator/
+.claude/skills/tools/
+.claude/skills/translate/
+.claude/skills/video-loops/
+.claude/skills/x-research/
+
+# System state
+system/backups/
+system/registry/
+system/memory/
+system/traces/
+system/archive/
+system/checkpoints/
+system/moc/
+system/temp/
+system/jarvis-voice/
+system/user-preferences.json
+system/SESSION-STATE.md
+system/JARVIS-STATE.json
+system/database/
+
+# Data indexes, research, apps (L3 runtime)
 .data/
+research/
+apps/
 
 # === ALWAYS EXCLUDED (secrets + dev artifacts) ===
 # These are NEVER included regardless of layer:
@@ -43,3 +131,4 @@ logs/
 #   - chroma_db/, .chroma/, *.db, *.sqlite
 #   - .DS_Store, Thumbs.db, .vscode/, .idea/
 #   - *.mp4, *.mp3, *.wav, *.m4a (large media)
+#   - .megabrain-core/ (legacy, gitignored)

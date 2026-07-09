@@ -46,27 +46,117 @@ jobs:
           print(f'Validated {count} JSON files')
           "
 
-      - name: YAML integrity
+      - name: YAML integrity (structural contracts only)
         run: |
           python3 -c "
-          import yaml, pathlib
+          import yaml, pathlib, re, fnmatch
+          # Scope: validate ONLY YAML the system loads programmatically (structural
+          # contracts). Hand-authored content/DNA/templates are NOT strict YAML by
+          # design and MUST NOT gate CI. Only fail on YAML the system parses at runtime.
+          # Directories never scanned (build/vendor/trash/nested worktrees).
+          SKIP_DIRS = {'.git', 'node_modules', '.data', 'logs', 'processing',
+                       'artifacts', '.venv', 'venv', '__pycache__', 'trash', 'worktrees'}
+          # Hard-skip path segments that WIN over the keep allowlist (trash, nested
+          # worktrees, ANY templates dir, prose handoffs, tool description docs).
+          HARD_SKIP = ('.claude/trash/', '.claude/worktrees/', '/templates/',
+                       '.megabrain/handoffs/', 'infrastructure/tools/')
+          # Content segments anywhere in the path -> skip (hand-authored, not loaded strictly)
+          SKIP_SEGMENTS = ('/templates/', '/data/', '/minds/', '/voice/', '/frameworks/',
+                           '/docs/sops/', '/catalogs/', '/outputs/', '/workflows/')
+          SKIP_PREFIX = ('agents/', 'knowledge/', 'workspace/businesses/', 'outputs/', 'docs/qa/')
+          # Structural contracts -> ALWAYS validate (allowlist wins over content skip)
+          KEEP_PATTERNS = ('squads/*/config.yaml', '.github/*', '.github/**',
+                           'engine/*', 'engine/**', '.claude/*', '.claude/**',
+                           'services/*', 'services/**')
+          REGISTRY_RE = re.compile(r'.*registr.*\.ya?ml\$', re.I)
+          DUPE_RE = re.compile(r' \d+\.(ya?ml)\$')
+          def is_dupe(p): return ' 2.' in p or DUPE_RE.search(p)
+          def is_tmpl(p): return '.tmpl.' in p or '-template.' in p or p.split('/')[-1].endswith('-template.yaml')
+          def keep(p):
+              # hard skip (trash, worktrees, templates, handoffs, tool docs) beats everything
+              if any(h in ('/'+p) for h in HARD_SKIP):
+                  return False
+              if is_dupe(p) or is_tmpl(p):
+                  return False
+              base = p.split('/')[-1]
+              for pat in KEEP_PATTERNS:
+                  if fnmatch.fnmatch(p, pat):
+                      return True
+              # system contract registries (NOT squad /data/ or /workflows/ registries)
+              if REGISTRY_RE.match(p) and '/data/' not in ('/'+p) and '/workflows/' not in ('/'+p):
+                  return True
+              if '/' not in p and base.endswith(('.yaml', '.yml')):
+                  return True  # root config
+              if p.startswith(SKIP_PREFIX):
+                  return False
+              if any(seg in ('/'+p) for seg in SKIP_SEGMENTS):
+                  return False
+              return True  # default: it's a contract -> validate
           errors = []
-          skip = {'.git', 'node_modules'}
           count = 0
+          skipped = 0
           for pattern in ['*.yaml', '*.yml']:
               for f in pathlib.Path('.').rglob(pattern):
-                  if any(part in skip for part in f.parts):
+                  if any(part in SKIP_DIRS for part in f.parts):
+                      continue
+                  rel = f.as_posix()
+                  if rel.startswith('./'):
+                      rel = rel[2:]
+                  if not keep(rel):
+                      skipped += 1
                       continue
                   count += 1
                   try:
-                      yaml.safe_load(f.read_text())
+                      yaml.safe_load(f.read_text(encoding='utf-8'))
                   except Exception as e:
-                      errors.append(f'{f}: {e}')
-                      print(f'::error file={f}::{e}')
+                      errors.append(f'{rel}: {e}')
+                      print(f'::error file={rel}::{e}')
           if errors:
-              raise SystemExit(f'{len(errors)} invalid YAML files out of {count}')
-          print(f'Validated {count} YAML/YML files')
+              raise SystemExit(f'{len(errors)} invalid YAML files out of {count} structural contracts (skipped {skipped} content/DNA/template files)')
+          print(f'Validated {count} structural-contract YAML files (skipped {skipped} content/DNA/template files)')
           "
 
-      - name: Pre-publish gate
-        run: node bin/pre-publish-gate.js
+      - name: Capability views anti-drift (SOT -> 2 vistas geradas, fail-closed)
+        # Story 212.W1.1 / ADR-ONTOLOGIA-OPERACIONAL D1. Gate estrutural: prova que as
+        # 2 vistas geradas (agents/_registry/capability-registry.yaml + services/
+        # tool-capability-registry.yaml) continuam idênticas ao SOT-projetado
+        # (agents/_registry/capability-sot.yaml). Divergência => exit != 0 (bloqueia merge).
+        # Roda tambem a prova negativa/positiva do proprio gate.
+        run: npm run validate:capability-views
+
+      - name: Skill typed refs FK + lifecycle (SOT FK, fail-closed new / advisory legacy)
+        # Story 212.W2.2 / ADR-ONTOLOGIA-OPERACIONAL D3. Espelha o gate capability-views:
+        # uma skill NOVA (fora de .claude/skills/skill-typed-refs-baseline.yaml) DEVE declarar
+        # typed refs que resolvem por FK contra capability-sot.yaml (capabilities.<id>) + UAE
+        # task ids, e lifecycle_state DEVE ser membro do STATE_ORDER do motor CSO (engine/
+        # governance). Violação => exit 1 (bloqueia merge). Skills legadas no baseline seguem
+        # advisory (TK-RG-004 faseado). --check é env-estável (baseline grandfather-a as 177
+        # legadas → 0 errors hoje). Wire revisado + aprovado por @devops (autoridade de CI).
+        run: npm run validate:skill-typed-refs
+
+      - name: Forge-provenance gate (created_by fail-closed, git-diff-scoped — GR3/D11)
+        # Story 214.W3.1 / ADR-REFACTOR-ONTOLOGICO RD2 (cisão D11). Todo artefato NOVO
+        # (git-diff-scoped) de tipo governado blocking (Story/Epic) DEVE carregar created_by
+        # válido (forja) ou o escape `manual` rotulado; ausência => exit 1 (bloqueia merge).
+        # Legados (442 stories sem stamp) grandfathered — a torneira fecha na origem (RISK-7).
+        # As 13 entidades SOT-INDEX ficam advisory (stamp per-instance aspiracional). Roda também
+        # as provas negativas/positivas do próprio gate. Contrato: scripts/lib/provenance-contract.js.
+        # Em CI o base é origin/main (three-dot diff). Wire de enforcement aprovado por @devops
+        # (autoridade Art. II — RISK-7 PR próprio, close @devops).
+        run: git fetch origin main --depth=1 || true; npm run validate:provenance
+
+      - name: UAE task gate (task NOVA fora do canon fail-closed, git-diff-scoped — RD11 CI-tap)
+        # Story 214.W4.1 / ADR-REFACTOR-ONTOLOGICO RD11. Promove validate:tasks-uae a BLOQUEANTE
+        # de task NOVA, git-diff-scoped (mesmo padrão grandfather da W3.1/provenance). Uma task NOVA
+        # (fora do baseline de ~2164 legadas) adicionada/modificada no diff do PR fora do canon UAE
+        # => exit 1 (bloqueia merge; torneira estancada na VALIDAÇÃO — par da forja W3.1 que estanca
+        # a CRIAÇÃO). As 2552 legadas ficam advisory e NUNCA são escaneadas fora do diff — não tornam
+        # o CI vermelho retroativamente (AC3, senão nenhum PR mergeia). depends_on schema interno W2.2
+        # (schemas/uae/, RISK-4). Em CI o base é origin/main (three-dot diff). Wire de enforcement
+        # aprovado por @devops (Art. II — RISK-7 PR próprio, close @devops).
+        run: git fetch origin main --depth=1 || true; npm run validate:tasks-uae:ci
+
+      # NOTE: the npm pre-publish security gate (bin/pre-publish-gate.js) is NOT run
+      # here. It validates the published npm PACKAGE (npm pack contents: secret scan +
+      # L1-only layer check), not PR code quality, so it does not belong on the PR gate.
+      # It still runs automatically at real publish time via package.json "prepublishOnly".

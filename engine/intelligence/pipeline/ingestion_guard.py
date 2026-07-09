@@ -146,6 +146,10 @@ class RegistryEntry:
     batch_id: str | None = None
     slug: str | None = None
     chunks_generated: int = 0
+    # Tier-3 near-dup fingerprint (Story DEDUP-SOURCE-IDENTITY). None for legacy
+    # entries persisted before tier-3 existed — they simply don't participate in
+    # the near-dup index until re-registered. Additive: never read by tiers 1/2.
+    simhash: int | None = None
 
     def to_dict(self) -> dict[str, Any]:
         return {
@@ -160,6 +164,7 @@ class RegistryEntry:
             "batch_id": self.batch_id,
             "slug": self.slug,
             "chunks_generated": self.chunks_generated,
+            "simhash": self.simhash,
         }
 
     @classmethod
@@ -176,6 +181,7 @@ class RegistryEntry:
             batch_id=d.get("batch_id"),
             slug=d.get("slug"),
             chunks_generated=d.get("chunks_generated", 0),
+            simhash=d.get("simhash"),
         )
 
 
@@ -256,6 +262,112 @@ def _hash_body(body: str) -> str:
 
 
 # ---------------------------------------------------------------------------
+# Tier-3 near-dup fingerprint (SimHash) — Story DEDUP-SOURCE-IDENTITY (Parte A)
+# ---------------------------------------------------------------------------
+# A content-similarity fingerprint that survives the Fireflies re-sync churn
+# (different Transcript ID, different MEET-id, a few different words) which
+# defeats tier-1 (exact identity) and tier-2 (exact body hash). This is a LOCAL
+# function — it deliberately does NOT touch hashing.py (the SOT of the EXACT
+# hash, tiers 1/2). The normalization + SimHash here are byte-compatible with
+# scripts/dedup_business_calls.py (Parte B hygiene), so the guard's near-dup
+# decision lands in the SAME fingerprint space the hygiene clustering uses.
+#
+# Pure stdlib (hashlib.md5 per shingle), 100% deterministic, zero network/API.
+
+_SIMHASH_BITS = 64
+_SIMHASH_SHINGLE_SIZE = 3  # 3-word shingles
+NEAR_DUP_MAX_HAMMING = 3  # joelho da curva, FP≈0 (evidência empírica — ver story)
+# Content gate: bodies under this many normalized words do NOT participate in the
+# near-dup layer. Empirically (business corpus, 2026-06) bodyless stubs normalize
+# to "" -> simhash=0 -> every empty body collides at Hamming=0, collapsing
+# DISTINCT meetings into one false giant cluster. Mirrors the TOO_SMALL semantics.
+_NEAR_DUP_MIN_WORDS = 50
+
+# Header metadata lines excluded from the near-dup normalized body.
+_NEAR_DUP_META_LINE = re.compile(
+    r"^\s*(title|date|duration|participants|source|transcript\s*id|meeting\s*transcript)\b",
+    re.IGNORECASE,
+)
+# MEET-id token (varies between re-syncs of the same call) — stripped.
+_NEAR_DUP_MEET_ID = re.compile(r"\[?\bMEET[-_]?\d+\]?", re.IGNORECASE)
+# Dates/times (ISO, GMT offsets, HH:MM, timestamps) — stripped.
+_NEAR_DUP_DATETIME = re.compile(
+    r"\d{4}[-/]\d{1,2}[-/]\d{1,2}"  # 2026-05-27
+    r"|\d{1,2}:\d{2}(?::\d{2})?"  # 09:54 / 00:00:00
+    r"|gmt[-+]?\d{0,2}(?::\d{2})?"  # GMT-3 / GMT-03:00
+)
+# Separator line ===…===
+_NEAR_DUP_SEP = re.compile(r"^=+\s*$")
+
+
+def _normalize_for_simhash(body: str) -> str:
+    """Normalize a body for the near-dup fingerprint (deterministic).
+
+    Drops metadata/separator lines, MEET-id tokens and dates/times; lowercases;
+    keeps only letters (incl. accented) + spaces; collapses whitespace. Mirrors
+    scripts/dedup_business_calls.py::normalize_body exactly so the guard and the
+    Parte B hygiene share the SAME fingerprint space.
+    """
+    out_lines: list[str] = []
+    for raw in body.splitlines():
+        line = raw.strip()
+        if not line:
+            continue
+        if _NEAR_DUP_SEP.match(line):
+            continue
+        if _NEAR_DUP_META_LINE.match(line):
+            continue
+        out_lines.append(line)
+
+    joined = " ".join(out_lines)
+    joined = _NEAR_DUP_MEET_ID.sub(" ", joined)
+    joined = _NEAR_DUP_DATETIME.sub(" ", joined.lower())
+    joined = re.sub(r"[^a-zà-ÿ\s]", " ", joined)
+    joined = re.sub(r"\s+", " ", joined).strip()
+    return joined
+
+
+def _simhash_body(body: str) -> int:
+    """SimHash 64-bit over 3-word shingles of the normalized body.
+
+    md5 per shingle, pure stdlib. Returns a 64-bit integer fingerprint. Empty
+    body -> 0. Same input always yields the same value (determinism — AC-A1).
+    """
+    normalized = _normalize_for_simhash(body)
+    words = normalized.split()
+    if not words:
+        return 0
+    if len(words) < _SIMHASH_SHINGLE_SIZE:
+        shingles = [" ".join(words)]
+    else:
+        shingles = [
+            " ".join(words[i : i + _SIMHASH_SHINGLE_SIZE])
+            for i in range(len(words) - _SIMHASH_SHINGLE_SIZE + 1)
+        ]
+
+    vector = [0] * _SIMHASH_BITS
+    for sh in shingles:
+        digest = hashlib.md5(sh.encode("utf-8")).digest()  # dedup fingerprint, not security
+        h = int.from_bytes(digest[:8], "big")  # first 64 bits
+        for bit in range(_SIMHASH_BITS):
+            if (h >> bit) & 1:
+                vector[bit] += 1
+            else:
+                vector[bit] -= 1
+
+    fingerprint = 0
+    for bit in range(_SIMHASH_BITS):
+        if vector[bit] > 0:
+            fingerprint |= 1 << bit
+    return fingerprint
+
+
+def _hamming(a: int, b: int) -> int:
+    """Hamming distance between two integer fingerprints (popcount of XOR)."""
+    return bin(a ^ b).count("1")
+
+
+# ---------------------------------------------------------------------------
 # Registry
 # ---------------------------------------------------------------------------
 
@@ -270,6 +382,11 @@ class IngestionRegistry:
         # SAME body arriving via a DIFFERENT path/identity is detected as a
         # cross-path duplicate. Built on load, maintained on register.
         self._body_hash_index: dict[str, str] = {}
+        # Story DEDUP-SOURCE-IDENTITY (tier-3): in-memory near-dup index
+        # simhash(int) -> identity_key (first-wins). Built on load alongside the
+        # body_hash index, populated in register, zeroed in reset. Lets the guard
+        # detect near-dups (Hamming <= NEAR_DUP_MAX_HAMMING) across ingestions.
+        self._simhash_index: dict[int, str] = {}
         self._load()
 
     def _load(self) -> None:
@@ -291,11 +408,38 @@ class IngestionRegistry:
         SKIP), the winning identity_key is stable across reloads.
         """
         index: dict[str, str] = {}
+        sim_index: dict[int, str] = {}
         for ident, raw in self._entries.items():
             bh = raw.get("body_hash")
             if bh and bh not in index:
                 index[bh] = ident
+            # Story DEDUP-SOURCE-IDENTITY: rebuild the near-dup index on boot
+            # (AC-A5). first-wins, same determinism as the body_hash index.
+            sh = raw.get("simhash")
+            if isinstance(sh, int) and sh not in sim_index:
+                sim_index[sh] = ident
         self._body_hash_index = index
+        self._simhash_index = sim_index
+
+    def lookup_near_dup(
+        self, simhash: int, max_hamming: int = NEAR_DUP_MAX_HAMMING
+    ) -> RegistryEntry | None:
+        """Story DEDUP-SOURCE-IDENTITY (tier-3): return the FIRST registered entry
+        whose simhash is within *max_hamming* bits of *simhash*.
+
+        Deterministic: iterates the index in insertion order (first-wins, same as
+        the body_hash index) and returns the first hit. A simhash of 0 (empty
+        normalized body) is never matched — the caller content-gates short bodies
+        out before this point, but we guard here too for safety.
+        """
+        if not simhash:
+            return None
+        for cand_sim, ident in self._simhash_index.items():
+            if not cand_sim:
+                continue
+            if _hamming(simhash, cand_sim) <= max_hamming:
+                return self.lookup(ident)
+        return None
 
     def lookup_by_body_hash(self, body_hash: str) -> RegistryEntry | None:
         """STORY-A3: return the FIRST-registered entry carrying *body_hash*.
@@ -336,6 +480,13 @@ class IngestionRegistry:
         # owner if not already claimed by an earlier identity_key.
         if entry.body_hash and entry.body_hash not in self._body_hash_index:
             self._body_hash_index[entry.body_hash] = entry.identity_key
+        # Story DEDUP-SOURCE-IDENTITY: maintain the near-dup index first-wins.
+        if (
+            isinstance(entry.simhash, int)
+            and entry.simhash
+            and entry.simhash not in self._simhash_index
+        ):
+            self._simhash_index[entry.simhash] = entry.identity_key
         self._save()
 
     def update_after_processing(
@@ -395,6 +546,7 @@ class IngestionRegistry:
     def reset(self) -> None:
         self._entries = {}
         self._body_hash_index = {}
+        self._simhash_index = {}
         self._save()
 
 
@@ -500,6 +652,7 @@ class DbIngestionRegistry:
                             batch_id=meta.get("batch_id"),
                             slug=meta.get("slug"),
                             chunks_generated=meta.get("chunks_generated", 0),
+                            simhash=meta.get("simhash"),
                         )
             except Exception as exc:
                 logger.warning("DbIngestionRegistry.lookup DB error: %s, falling back to JSON", exc)
@@ -542,6 +695,7 @@ class DbIngestionRegistry:
                             batch_id=meta.get("batch_id"),
                             slug=meta.get("slug"),
                             chunks_generated=meta.get("chunks_generated", 0),
+                            simhash=meta.get("simhash"),
                         )
             except Exception as exc:
                 logger.warning(
@@ -549,6 +703,19 @@ class DbIngestionRegistry:
                     exc,
                 )
         return self._json.lookup_by_body_hash(body_hash)
+
+    def lookup_near_dup(
+        self, simhash: int, max_hamming: int = NEAR_DUP_MAX_HAMMING
+    ) -> RegistryEntry | None:
+        """Story DEDUP-SOURCE-IDENTITY (tier-3): near-dup lookup by simhash.
+
+        Hamming search is a bitwise scan that SQL cannot express portably as an
+        index seek, so we delegate to the JSON store's in-memory simhash index
+        (which is always kept in sync via dual-write ``register``). This keeps the
+        tier-3 layer DB-agnostic and free of DDL — the DB merely persists
+        ``metadata.simhash`` for durability; the matching runs in-process.
+        """
+        return self._json.lookup_near_dup(simhash, max_hamming=max_hamming)
 
     def register(self, entry: RegistryEntry) -> None:
         """Register in both DB and JSON (dual-write during transition)."""
@@ -566,6 +733,10 @@ class DbIngestionRegistry:
                     "slug": entry.slug,
                     "batch_id": entry.batch_id,
                     "chunks_generated": entry.chunks_generated,
+                    # Story DEDUP-SOURCE-IDENTITY: persist the near-dup fingerprint
+                    # inside the EXISTING metadata jsonb — no DDL (same pattern as
+                    # mark_fully_propagated). NULL for legacy entries.
+                    "simhash": entry.simhash,
                     "origin": "ingestion-guard",
                 }
                 with self._conn.cursor() as cur:
@@ -755,6 +926,9 @@ def guard_ingest(
     header = _parse_header(text)
     body = _extract_body(text)
     body_hash = _hash_body(body)
+    # Story DEDUP-SOURCE-IDENTITY (tier-3): content-similarity fingerprint.
+    # Computed once here; consumed only in the NEW branch (after tiers 1/2 fail).
+    simhash = _simhash_body(body)
     word_count = len(body.split())
     identity_key = _compute_identity_key(header)
 
@@ -795,6 +969,34 @@ def guard_ingest(
                 previous_word_count=cross.word_count,
             )
 
+    # Story DEDUP-SOURCE-IDENTITY (TIER 3): near-dup detection.
+    # Fires ONLY after tier-1 (exact identity) and tier-2 (exact cross-path
+    # body_hash) have both failed — i.e. identity is new AND no byte-identical
+    # body exists. Looks up a previously registered simhash within
+    # NEAR_DUP_MAX_HAMMING bits. A hit under a DIFFERENT identity_key means the
+    # SAME meeting was re-synced (different Transcript ID / MEET-id / a few
+    # words) — skip it as a benign duplicate (first-wins, mirroring tier-2 RN-1).
+    # Content-gated: bodies under _NEAR_DUP_MIN_WORDS never participate (empty /
+    # near-empty bodies normalize to "" -> simhash 0 -> false collisions). Lives
+    # ONLY in this `existing is None` branch so the 6 same-identity verdicts stay
+    # byte-for-byte unchanged (AC-A3 / RNF-1).
+    if existing is None and word_count >= _NEAR_DUP_MIN_WORDS and simhash:
+        _lookup_nd = getattr(reg, "lookup_near_dup", None)
+        near = _lookup_nd(simhash, max_hamming=NEAR_DUP_MAX_HAMMING) if callable(_lookup_nd) else None
+        if near is not None and near.identity_key != identity_key:
+            _dist = _hamming(simhash, near.simhash) if isinstance(near.simhash, int) else -1
+            return IngestVerdict(
+                action="skip",
+                reason=(
+                    f"exact duplicate (near-dup SimHash, Hamming={_dist}; "
+                    f"first-seen identity={near.identity_key})"
+                ),
+                identity_key=identity_key,
+                body_hash=body_hash,
+                word_count=word_count,
+                previous_word_count=near.word_count,
+            )
+
     if existing is None:
         # NEW — never seen before
         reg.register(
@@ -806,6 +1008,7 @@ def guard_ingest(
                 source_id=header.get("source_id"),
                 title=header.get("title"),
                 date=header.get("date"),
+                simhash=simhash,
             )
         )
         return IngestVerdict(
@@ -843,6 +1046,7 @@ def guard_ingest(
                 batch_id=existing.batch_id,
                 slug=existing.slug,
                 chunks_generated=existing.chunks_generated,
+                simhash=simhash,
             )
         )
         return IngestVerdict(
@@ -882,6 +1086,7 @@ def guard_ingest(
             source_id=header.get("source_id") or existing.source_id,
             title=header.get("title") or existing.title,
             date=header.get("date") or existing.date,
+            simhash=simhash,
         )
     )
     return IngestVerdict(

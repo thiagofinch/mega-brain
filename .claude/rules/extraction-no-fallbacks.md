@@ -1,6 +1,6 @@
 ---
 paths:
-  - "squads/design-ops/**"
+  - "squads/design-system/runners/**"
   - "engine/intelligence/pipeline/**"
   - "engine/intelligence/extract/**"
   - "engine/intelligence/rag/**"
@@ -12,14 +12,14 @@ paths:
 
 ## Rule
 
-**Extractors and extract-side builders (`squads/design-ops/scripts/extract-from-url/**`) MUST NOT emit fixed/hardcoded fallback values when extraction yields no signal.** They emit `null  # extraction_gap(...)` markers OR derived-from-brand-signals values, never universal defaults.
+**Extractors and extract-side builders (`squads/design-system/runners/extract-from-url/**`) MUST NOT emit fixed/hardcoded fallback values when extraction yields no signal.** They emit `null  # extraction_gap(...)` markers OR derived-from-brand-signals values, never universal defaults.
 
 **Coverage from fallbacks is FALSE COVERAGE — it produces false positives downstream.**
 
 ## Why
 
 1. **False positives corrupt data.** A scaffold showing `nav-height: "64px"` when the brand never declared a nav height is a lie. Consumers read it as authoritative and propagate the lie.
-2. **Fallbacks belong to the application/render layer, not the extraction layer.** `apps/design`, `apps/mega-brain-squad-design`, render contracts — those are the right places for "if value missing, use shadcn-ui baseline 64px". The extractor's job is to record what was *actually* on the page.
+2. **Fallbacks belong to the application/render layer, not the extraction layer.** `apps/design`, `apps/mega-brain-design`, render contracts — those are the right places for "if value missing, use shadcn-ui baseline 64px". The extractor's job is to record what was *actually* on the page.
 3. **Structured extraction gaps are honest.** `null  # extraction_gap(...)` tells the consumer (human or LLM) "this slot is unfilled — decide". A fixed default tells the consumer "this is the brand's value" and that's wrong.
 4. **Coverage % is a quality signal, not a vanity metric.** Inflating coverage with fallbacks makes the metric meaningless. We can no longer distinguish "well-extracted brand" from "brand that just got generic shadcn defaults stamped on it."
 

@@ -43,7 +43,7 @@ CHUNK_OVERLAP = 150  # ~10% overlap
 MIN_CHUNK_SIZE = 100  # Skip chunks smaller than this
 
 # ---------------------------------------------------------------------------
-# SEMANTIC CHUNKING (STORY-GBA-F3.5 — PORT LITERAL from gbrain 4ee530f:
+# SEMANTIC CHUNKING (STORY-GBA-F3.5 — PORT LITERAL from refbrain REDACTED:
 #   src/core/chunkers/semantic.ts)
 # ---------------------------------------------------------------------------
 # Topic-boundary chunking: embed sentences, compute adjacent cosine similarity,
@@ -52,7 +52,7 @@ MIN_CHUNK_SIZE = 100  # Skip chunks smaller than this
 # Falls back to the recursive (size-based) splitter whenever the semantic path
 # can't converge — short/homogeneous docs, too-few sentences, or any failure.
 #
-# The Savitzky-Golay parameters are PORTED LITERALLY from gbrain's
+# The Savitzky-Golay parameters are PORTED LITERALLY from refbrain's
 # findBoundariesSavGol: window=5, polyorder=3, deriv=1. We compute the 1st
 # derivative of the (cosine) similarity series and mark a local minimum at every
 # zero-crossing of that derivative going negative→positive — identical to the TS
@@ -60,7 +60,7 @@ MIN_CHUNK_SIZE = 100  # Skip chunks smaller than this
 SEMANTIC_CHUNKING_DEFAULT = True  # semantic is the default (size-based via config)
 
 # ---------------------------------------------------------------------------
-# INGEST-PATH SEMANTIC TOGGLE (STORY-ENABLE-GBRAIN-FULL — feature A)
+# INGEST-PATH SEMANTIC TOGGLE (STORY-ENABLE-REFBRAIN-FULL — feature A)
 # ---------------------------------------------------------------------------
 # The per-document API (``split_text`` / ``chunk_markdown``) already defaults to
 # semantic (``SEMANTIC_CHUNKING_DEFAULT``). The FULL-INDEX / ingest path
@@ -101,16 +101,16 @@ def ingest_path_semantic_enabled() -> bool:
         return True  # default ON
     return raw.strip().lower() in _TRUTHY
 
-# gbrain SemanticChunkOptions defaults (semantic.ts): chunkSize=300 (words),
+# refbrain SemanticChunkOptions defaults (semantic.ts): chunkSize=300 (words),
 # chunkOverlap=50 (words). The recursive fallback inside the mega-brain operates
 # on CHARS, so word-size limits are converted at the call boundary only.
-SG_WINDOW = 5  # Savitzky-Golay window length (gbrain literal)
-SG_POLYORDER = 3  # Savitzky-Golay polynomial order (gbrain literal)
-SG_DERIV = 1  # 1st derivative — find minima via zero-crossings (gbrain literal)
-SEMANTIC_MIN_SENTENCES = 4  # gbrain: `sentences.length <= 3` → recursive fallback
-SEMANTIC_LOW_SIM_PERCENTILE = 0.2  # gbrain: keep minima below 20th-pct similarity
-SEMANTIC_MIN_BOUNDARY_DISTANCE = 2  # gbrain: enforceMinDistance(..., 2)
-SEMANTIC_OVERSIZE_FACTOR = 1.5  # gbrain: wordCount > chunkSize * 1.5 → sub-split
+SG_WINDOW = 5  # Savitzky-Golay window length (refbrain literal)
+SG_POLYORDER = 3  # Savitzky-Golay polynomial order (refbrain literal)
+SG_DERIV = 1  # 1st derivative — find minima via zero-crossings (refbrain literal)
+SEMANTIC_MIN_SENTENCES = 4  # refbrain: `sentences.length <= 3` → recursive fallback
+SEMANTIC_LOW_SIM_PERCENTILE = 0.2  # refbrain: keep minima below 20th-pct similarity
+SEMANTIC_MIN_BOUNDARY_DISTANCE = 2  # refbrain: enforceMinDistance(..., 2)
+SEMANTIC_OVERSIZE_FACTOR = 1.5  # refbrain: wordCount > chunkSize * 1.5 → sub-split
 
 # 5-level recursive delimiter hierarchy (ordered highest to lowest)
 # Sentence-end delimiters (L4) use a regex pattern to split *after* punctuation
@@ -132,7 +132,7 @@ INDEX_SOURCES = {
     "dna": BASE_DIR / "knowledge" / "external" / "dna" / "persons",
     # STORY-EXTERNAL-CONSOLIDATION: programs/orgs/systems re-modeled out of the
     # persons namespace live here. Still bucket=external; indexed so their DNA
-    # (e.g. a benchmarking program ~621 chunks) stays retrievable, just not as a person.
+    # (e.g. benckmarking-sua-organizacao ~621 chunks) stays retrievable, just not as a person.
     "dna_themes": BASE_DIR / "knowledge" / "external" / "dna" / "themes",
     "dossiers_persons": BASE_DIR / "knowledge" / "external" / "dossiers" / "persons",
     "dossiers_themes": BASE_DIR / "knowledge" / "external" / "dossiers" / "themes",
@@ -231,7 +231,7 @@ SOURCE_BUCKET: dict[str, str] = {
     # Raw transcript artifacts default to external (the common case — expert
     # videos). The TRUE bucket is resolved per-slug at runtime via
     # ``person_paths.resolve_bucket`` inside ``chunk_all`` (a slug like
-    # ``acme`` may route to personal/business). This static entry is the
+    # ``sua-organizacao`` may route to personal/business). This static entry is the
     # fallback/default only — Art. XIII isolation is honored by the per-slug
     # resolver, not by this map.
     "artifacts_chunks": "external",
@@ -265,6 +265,281 @@ def content_sha(text: str) -> str:
     Ref: STORY-MCE-INCREMENTAL-RAG-INDEX section 3.
     """
     return hashlib.sha256(text[:EMBED_TRUNCATE_CHARS].encode("utf-8")).hexdigest()[:16]
+
+
+# ---------------------------------------------------------------------------
+# BOUNDARY CACHE — skip re-chunking unchanged source files (RAG rebuild fix)
+# ---------------------------------------------------------------------------
+# ROOT CAUSE (architect + faulthandler, 2026-06-28): chunk_all() RE-CHUNKS every
+# file on every rebuild. With MCE_SEMANTIC_CHUNK_ENABLED on (default), the
+# semantic splitter embeds each file SENTENCE-BY-SENTENCE through the OpenAI API
+# just to decide chunk boundaries — tens of thousands of sequential POSTs across
+# ~1987 business files, taking hours / hanging cmd_finalize (CPU ~0,
+# network-bound). The existing ``incremental=True`` only reuses the FINAL vectors
+# by content_sha AFTER chunk_all already paid for every boundary embed.
+#
+# FIX (skip-unchanged boundary cache, risk LOW): when a source file's content is
+# unchanged versus the persisted index, REUSE the chunks that already exist in
+# that index VERBATIM (same text/offsets) — ZERO boundary embeddings. Only new or
+# changed files (e.g. a newly-ingested entity) go through ``_semantic_split``.
+#
+# This is NOT a fabricated fallback (`.claude/rules/extraction-no-fallbacks.md`):
+# the reused chunks are REAL chunks previously computed by this same chunker over
+# this same file. We re-emit observed truth, never an invented default. On ANY
+# divergence — file content drift, missing/corrupt cache, signature/mode mismatch,
+# or read error — we re-chunk that file (current behavior, bit-for-bit), so the
+# cache can only make an unchanged file faster, never change WHAT is indexed.
+#
+# Invalidation (3 conditions, ALL must hold to reuse a file's prior chunks):
+#   1. content_sha(source_file_text) == content_sha of the SAME file at index time
+#      (file unchanged). Computed with the SAME utf-8 read used to chunk it
+#      (``Path.read_text(encoding="utf-8")``) so the sha matches bit-for-bit.
+#   2. The active embedding signature == the prior index's signature (no model/dim
+#      swap — boundaries from a different embedding space are not reusable).
+#   3. The active semantic mode == the prior index's mode (semantic vs recursive
+#      produce different boundaries; mixing regimes is internally inconsistent).
+# A None signature/mode (cache built without that provenance) is treated as
+# "cannot prove same space/mode" → re-chunk (conservative, never reuse blind).
+
+
+class _BoundaryCache:
+    """Reuse-or-rechunk decisions for unchanged source files during chunk_all.
+
+    Seeded from a prior index's ``chunks.json`` (grouped by ``source_file``) plus
+    the prior embedding ``signature`` and ``semantic`` mode. ``reuse_for(path)``
+    returns the prior chunk dicts for *path* iff the live file is byte-identical to
+    the indexed version AND the active signature/mode match the prior index;
+    otherwise ``None`` (caller re-chunks). Fail-safe by construction: every error
+    path returns ``None``.
+    """
+
+    __slots__ = (
+        "_active_semantic",
+        "_active_signature",
+        "_compatible",
+        "_prior_fingerprint",
+        "prior_chunks_by_source",
+    )
+
+    def __init__(
+        self,
+        prior_chunks_by_source: dict[str, list[dict]] | None,
+        *,
+        prior_signature: str | None = None,
+        prior_semantic: bool | None = None,
+        active_signature: str | None = None,
+        active_semantic: bool | None = None,
+    ) -> None:
+        self.prior_chunks_by_source: dict[str, list[dict]] = (
+            prior_chunks_by_source or {}
+        )
+        self._active_signature = active_signature
+        self._active_semantic = (
+            active_semantic
+            if active_semantic is not None
+            else ingest_path_semantic_enabled()
+        )
+        # Global compatibility gate (conditions 2 + 3). If the prior index was
+        # built in a different embedding space OR a different chunking mode, the
+        # WHOLE cache is unusable — every reuse_for() returns None. A missing
+        # (None) prior signature/mode cannot be proven compatible → treat as
+        # incompatible (conservative; re-chunk everything, current behavior).
+        sig_ok = (
+            prior_signature is not None
+            and active_signature is not None
+            and prior_signature == active_signature
+        )
+        mode_ok = prior_semantic is not None and prior_semantic == self._active_semantic
+        self._compatible = bool(self.prior_chunks_by_source) and sig_ok and mode_ok
+        # Lazily-computed {source_file -> content_sha(file_text)} of the indexed
+        # version, derived ON DEMAND from the live file at reuse time (so a file
+        # deleted/changed since indexing simply misses). We DON'T precompute a
+        # whole-corpus fingerprint up front; the per-file read happens once at the
+        # decision point. Cache is keyed by source_file to avoid double reads.
+        self._prior_fingerprint: dict[str, str] = {}
+
+    @property
+    def active(self) -> bool:
+        """True when the cache is eligible to serve ANY reuse (compat gate passed)."""
+        return self._compatible
+
+    def reuse_for(self, source_file: str, file_text: str) -> list[dict] | None:
+        """Prior chunk dicts for *source_file* iff its content is unchanged.
+
+        ``file_text`` is the live ``Path.read_text(encoding="utf-8")`` content the
+        caller already loaded (single read; the caller would read it to chunk it
+        anyway). Returns the prior chunk dicts (verbatim) on an unchanged file, or
+        ``None`` when changed/absent/incompatible (caller re-chunks).
+        """
+        if not self._compatible:
+            return None
+        prior = self.prior_chunks_by_source.get(source_file)
+        if not prior:
+            return None
+        try:
+            live_fp = content_sha(file_text)
+        except Exception:  # pragma: no cover — defensive: never block chunking
+            return None
+        # The prior index does NOT persist a per-file fingerprint, so we derive it
+        # from the prior chunks' reconstructed source text. The reconstruction must
+        # equal the live file for an UNCHANGED file: chunk_all writes chunk texts
+        # by concatenating split_text() outputs per section (no lossy transform on
+        # the recursive/semantic JOIN beyond the splitter's own ` `-join), so a
+        # robust, transform-agnostic equality test is to compare the live file's
+        # fingerprint against the fingerprint we recorded for the same path when
+        # the cache was seeded from disk. See seed_boundary_cache(): it records the
+        # indexed file's fingerprint by reading the on-disk source ONCE.
+        prior_fp = self._prior_fingerprint.get(source_file)
+        if prior_fp is None:
+            return None
+        if prior_fp != live_fp:
+            return None
+        return prior
+
+    def set_prior_fingerprint(self, source_file: str, fingerprint: str) -> None:
+        """Record the indexed file's content fingerprint (set at seed time)."""
+        self._prior_fingerprint[source_file] = fingerprint
+
+
+def seed_boundary_cache(
+    prior_chunks: list[dict] | None,
+    *,
+    prior_signature: str | None = None,
+    prior_semantic: bool | None = None,
+    active_signature: str | None = None,
+    active_semantic: bool | None = None,
+) -> "_BoundaryCache":
+    """Build a :class:`_BoundaryCache` from a prior index's ``chunks.json`` list.
+
+    Groups *prior_chunks* by ``source_file`` and, for each source file that still
+    exists on disk, reads it ONCE to record the indexed-content fingerprint
+    (``content_sha(file_text)``). At chunk_all() time, an unchanged file matches
+    this fingerprint and its prior chunks are reused verbatim (zero boundary
+    embeddings); a changed/new file misses and is re-chunked.
+
+    FAIL-SAFE: a chunk dict without ``source_file``/``text`` is ignored; a file
+    that can't be read at seed time simply has no fingerprint (=> never reused =>
+    re-chunked). Passing ``prior_chunks=None`` yields an inert cache (``active``
+    False) so callers get current full-rebuild behavior bit-for-bit.
+
+    NOTE on the fingerprint join (transform-agnostic): we DON'T trust a stored
+    per-chunk sha to reconstruct the file. We compute the fingerprint of the LIVE
+    on-disk file at seed time; the same function runs on the live file at reuse
+    time. If the file is byte-identical between seed and chunk passes (the common
+    case in a single rebuild), the two fingerprints match and reuse is sound. The
+    only thing the prior chunks supply is the REUSED OUTPUT (their verbatim text/
+    offsets), never the equality decision.
+    """
+    cache = _BoundaryCache(
+        None,
+        prior_signature=prior_signature,
+        prior_semantic=prior_semantic,
+        active_signature=active_signature,
+        active_semantic=active_semantic,
+    )
+    if not prior_chunks:
+        return cache
+
+    grouped: dict[str, list[dict]] = {}
+    for ch in prior_chunks:
+        if not isinstance(ch, dict):
+            continue
+        sf = ch.get("source_file")
+        if not isinstance(sf, str) or not sf:
+            continue
+        grouped.setdefault(sf, []).append(ch)
+    cache.prior_chunks_by_source = grouped
+
+    # Re-evaluate the compat gate now that we have grouped chunks (the __init__
+    # gate ran against an empty group set because we passed None above).
+    sig_ok = (
+        prior_signature is not None
+        and active_signature is not None
+        and prior_signature == active_signature
+    )
+    mode_ok = (
+        prior_semantic is not None and prior_semantic == cache._active_semantic
+    )
+    cache._compatible = bool(grouped) and sig_ok and mode_ok
+
+    if not cache._compatible:
+        # No point reading 2k+ files off disk if the cache can't serve anyway.
+        return cache
+
+    # Record the indexed-content fingerprint by reading each source file ONCE.
+    # Pure disk I/O (no network) — seconds for ~2k files, not the hours the
+    # per-sentence boundary embeds cost. A read error → no fingerprint → re-chunk.
+    for sf in grouped:
+        try:
+            file_text = (BASE_DIR / sf).read_text(encoding="utf-8")
+        except (OSError, UnicodeDecodeError):
+            continue  # file gone/binary/moved → never reuse → re-chunk (fail-safe)
+        try:
+            cache.set_prior_fingerprint(sf, content_sha(file_text))
+        except Exception:  # pragma: no cover — defensive
+            continue
+
+    return cache
+
+
+# Process-local boundary cache, set by chunk_all(boundary_cache=...) and consumed
+# by the text-file chunk helper. Threaded as an explicit arg through chunk_all →
+# _chunk_text_like_file would touch many call-sites; a module-scoped handle keeps
+# the change surgical and the default (None) preserves bit-for-bit behavior.
+_ACTIVE_BOUNDARY_CACHE: "_BoundaryCache | None" = None
+
+
+def _reuse_or_none(
+    filepath: Path, person: str = "", domain: str = "", layer: str = ""
+) -> "list[Chunk] | None":
+    """If the active boundary cache has unchanged prior chunks for *filepath*,
+    rebuild ``Chunk`` objects from them (verbatim) and return them; else ``None``.
+
+    Reads *filepath* once (utf-8) to fingerprint it — the SAME read the chunker
+    would do — so a hit avoids the expensive ``_semantic_split`` entirely while a
+    miss falls through to the normal chunker (which reads the file again; that
+    extra read only happens on the rare changed/new file).
+    """
+    cache = _ACTIVE_BOUNDARY_CACHE
+    if cache is None or not cache.active:
+        return None
+    try:
+        rel_path = str(filepath.relative_to(BASE_DIR))
+    except ValueError:
+        return None
+    try:
+        file_text = filepath.read_text(encoding="utf-8")
+    except (OSError, UnicodeDecodeError):
+        return None
+    prior = cache.reuse_for(rel_path, file_text)
+    if not prior:
+        return None
+    # Rebuild Chunk objects from the prior dicts verbatim. We keep text/offsets/
+    # section EXACTLY as indexed; person/domain/layer come from THIS pass's
+    # routing (they are metadata the caller assigns, not part of the chunk text,
+    # so honoring the live routing keeps attribution correct without altering the
+    # reused content or its content_sha).
+    rebuilt: list[Chunk] = []
+    for ch in prior:
+        text = ch.get("text")
+        if not isinstance(text, str) or not text:
+            # A prior chunk without text can't be reused soundly → abort reuse for
+            # this file and let the caller re-chunk (fail-safe, no partial reuse).
+            return None
+        rebuilt.append(
+            Chunk(
+                text=text,
+                source_file=rel_path,
+                person=person or ch.get("person", ""),
+                domain=domain or ch.get("domain", ""),
+                layer=layer or ch.get("layer", ""),
+                section=ch.get("section", ""),
+                start_char=ch.get("start_char", 0),
+                end_char=ch.get("end_char", 0),
+                metadata=ch.get("metadata", {}) or {},
+            )
+        )
+    return rebuilt
 
 
 # ---------------------------------------------------------------------------
@@ -314,6 +589,10 @@ class Chunk:
         "layer",
         "metadata",
         "person",
+        # relevance_score is written by rag.relevance_scorer.score_chunks(); it
+        # was absent from __slots__, so score_chunks() raised AttributeError on
+        # every real Chunk — dead-on-arrival in production, not just under test.
+        "relevance_score",
         "section",
         "source_file",
         "start_char",
@@ -331,6 +610,8 @@ class Chunk:
         self.start_char = kwargs.get("start_char", 0)
         self.end_char = kwargs.get("end_char", 0)
         self.metadata = kwargs.get("metadata", {})
+        # Optional; assigned later by relevance_scorer. None == not yet scored.
+        self.relevance_score = kwargs.get("relevance_score", None)
         # Generate deterministic chunk_id
         content_hash = hashlib.md5(
             f"{source_file}:{self.start_char}:{text[:100]}".encode()
@@ -658,7 +939,7 @@ def _recursive_split(
 
 # ---------------------------------------------------------------------------
 # SEMANTIC SPLITTING (STORY-GBA-F3.5)
-# Port of gbrain 4ee530f:src/core/chunkers/semantic.ts — Savitzky-Golay
+# Port of refbrain REDACTED:src/core/chunkers/semantic.ts — Savitzky-Golay
 # topic-boundary detection with recursive fallback.
 # ---------------------------------------------------------------------------
 
@@ -680,7 +961,7 @@ def _default_embed_fn(sentences: list[str]) -> list[list[float]]:
 
 
 def _split_sentences(text: str) -> list[str]:
-    """Split text into sentences (gbrain splitSentences).
+    """Split text into sentences (refbrain splitSentences).
 
     Splits on sentence-ending punctuation (``.!?``) followed by whitespace,
     keeping the punctuation with the preceding sentence (lookbehind). Mirrors
@@ -691,7 +972,7 @@ def _split_sentences(text: str) -> list[str]:
 
 
 def _cosine_similarity(a: Sequence[float], b: Sequence[float]) -> float:
-    """Cosine similarity of two vectors (gbrain cosineSimilarity).
+    """Cosine similarity of two vectors (refbrain cosineSimilarity).
 
     Returns 0.0 when either vector has zero magnitude (matches the TS
     ``denom === 0 ? 0`` guard) instead of dividing by zero.
@@ -710,7 +991,7 @@ def _cosine_similarity(a: Sequence[float], b: Sequence[float]) -> float:
 def _adjacent_similarities(embeddings: list[Sequence[float]]) -> list[float]:
     """Cosine similarity of each adjacent embedding pair.
 
-    Returns a series of length ``len(embeddings) - 1`` (gbrain
+    Returns a series of length ``len(embeddings) - 1`` (refbrain
     computeAdjacentSimilarities).
     """
     return [
@@ -720,7 +1001,7 @@ def _adjacent_similarities(embeddings: list[Sequence[float]]) -> list[float]:
 
 
 def _percentile(values: Sequence[float], p: float) -> float:
-    """Nearest-rank percentile (gbrain percentile).
+    """Nearest-rank percentile (refbrain percentile).
 
     Sorts ascending and indexes at ``floor(p * len)``, clamped to the last
     element — identical to the TS implementation (NOT linear interpolation).
@@ -735,7 +1016,7 @@ def _percentile(values: Sequence[float], p: float) -> float:
 def _enforce_min_distance(boundaries: list[int], min_dist: int) -> list[int]:
     """Drop boundaries closer than ``min_dist`` to the previous kept one.
 
-    Greedy left-to-right pass (gbrain enforceMinDistance).
+    Greedy left-to-right pass (refbrain enforceMinDistance).
     """
     if len(boundaries) <= 1:
         return list(boundaries)
@@ -747,7 +1028,7 @@ def _enforce_min_distance(boundaries: list[int], min_dist: int) -> list[int]:
 
 
 def _find_boundaries_percentile(similarities: list[float]) -> list[int]:
-    """Percentile-only boundary detection (gbrain findBoundariesPercentile).
+    """Percentile-only boundary detection (refbrain findBoundariesPercentile).
 
     Fallback used when the series is too short for Savitzky-Golay or the SG
     pass raises. A boundary is placed AFTER any position whose similarity is
@@ -761,9 +1042,9 @@ def _find_boundaries_percentile(similarities: list[float]) -> list[int]:
 
 
 def _find_boundaries_savgol(similarities: list[float]) -> list[int]:
-    """Savitzky-Golay boundary detection (gbrain findBoundariesSavGol).
+    """Savitzky-Golay boundary detection (refbrain findBoundariesSavGol).
 
-    PORT LITERAL of the gbrain parameters: ``savgol_filter(sims, window=5,
+    PORT LITERAL of the refbrain parameters: ``savgol_filter(sims, window=5,
     polyorder=3, deriv=1)`` produces the smoothed 1st derivative of the
     adjacent-similarity curve. A local MINIMUM is a zero-crossing of that
     derivative going negative→positive (``deriv[i-1] < 0 and deriv[i] >= 0``).
@@ -793,7 +1074,7 @@ def _find_boundaries_savgol(similarities: list[float]) -> list[int]:
 
 
 def _find_boundaries(similarities: list[float]) -> list[int]:
-    """Topic boundaries from the adjacent-similarity series (gbrain findBoundaries).
+    """Topic boundaries from the adjacent-similarity series (refbrain findBoundaries).
 
     Uses Savitzky-Golay when the series is long enough (>= window), otherwise
     the percentile fallback; any SG failure also degrades to percentile.
@@ -807,7 +1088,7 @@ def _find_boundaries(similarities: list[float]) -> list[int]:
 
 
 def _group_at_boundaries(sentences: list[str], boundaries: list[int]) -> list[list[str]]:
-    """Slice sentences into groups at the boundary indices (gbrain groupAtBoundaries).
+    """Slice sentences into groups at the boundary indices (refbrain groupAtBoundaries).
 
     Each boundary ``b`` cuts BEFORE sentence ``b``; the final group runs to the
     end. Returns ``[sentences]`` (one group) when no usable boundary exists.
@@ -830,7 +1111,7 @@ def _semantic_split(
     max_size: int = CHUNK_SIZE,
     overlap: int = CHUNK_OVERLAP,
 ) -> list[str]:
-    """Split *text* into topic-coherent chunks (gbrain chunkTextSemantic).
+    """Split *text* into topic-coherent chunks (refbrain chunkTextSemantic).
 
     Pipeline (PORT LITERAL of semantic.ts):
       1. Split into sentences. ``<= 3`` sentences → recursive fallback.
@@ -845,10 +1126,10 @@ def _semantic_split(
     to the recursive size-based splitter — semantic chunking can only improve
     cohesion, never break ingestion (fail-safe, mirrors the TS ``catch``).
 
-    Note on units: gbrain measures group size in WORDS (chunkSize=300); the
+    Note on units: refbrain measures group size in WORDS (chunkSize=300); the
     mega-brain recursive splitter operates in CHARS. We keep the mega-brain's
     char-based ``max_size`` so the fallback path is identical to the legacy
-    behaviour, and apply the gbrain ``* 1.5`` oversize rule on that same scale.
+    behaviour, and apply the refbrain ``* 1.5`` oversize rule on that same scale.
     """
     fn = embed_fn or _default_embed_fn
 
@@ -1066,43 +1347,130 @@ INGEST_PATH_CHUNK_STRATEGY = ingest_path_chunk_strategy()
 
 
 def _chunk_text_like_file(
-    filepath: Path, person: str = "", domain: str = "", layer: str = ""
+    filepath: Path,
+    person: str = "",
+    domain: str = "",
+    layer: str = "",
+    *,
+    semantic: bool | None = None,
 ) -> list[Chunk]:
     """Send markdown and plain-text files through the same chunker path.
 
-    The ingest/full-index path now resolves its chunking mode from
-    ``ingest_path_semantic_enabled()`` (feature A — STORY-ENABLE-GBRAIN-FULL).
+    The ingest/full-index path resolves its chunking mode from
+    ``ingest_path_semantic_enabled()`` (feature A — STORY-ENABLE-REFBRAIN-FULL).
     Default is SEMANTIC (Savitzky-Golay topic boundaries); set
     ``MCE_SEMANTIC_CHUNK_ENABLED=0`` to restore the legacy size-based recursive
     splitter.
+
+    ``semantic`` override (FU-1 — network gate under skip_vectors):
+      * ``None`` (default) → resolve from ``ingest_path_semantic_enabled()``
+        (the env-var contract — unchanged behaviour).
+      * ``False`` → FORCE the recursive size-based splitter, regardless of the
+        env var. Callers pass this when the run must NOT touch the network. A
+        local graph+vault rebuild (``rebuild(skip_vectors=True)``) promises not
+        to embed, yet semantic chunking embeds sentences via OpenAI to place its
+        topic boundaries — so without this gate a "local" rebuild would still
+        make network calls. ``skip_vectors=True`` therefore implies semantic OFF
+        for that rebuild (no reliance on the env var).
+      * ``True`` → force semantic (symmetric with ``False``; rarely needed).
 
     FAIL-SAFE: ``chunk_markdown`` → ``split_text`` → ``_semantic_split`` degrades
     to the recursive splitter when there is no embedding key, on any embedding
     provider error, for short/homogeneous docs (< SEMANTIC_MIN_SENTENCES), or any
     exception. Flipping the default never breaks ingestion (offline runs simply
     fall back to recursive, exactly as before).
+
+    BOUNDARY CACHE (RAG rebuild fix): when an active ``_BoundaryCache`` holds
+    unchanged prior chunks for this file, they are reused verbatim — skipping the
+    per-sentence boundary embeds entirely. A miss (new/changed file, no cache,
+    incompatible signature/mode) falls through to the normal semantic chunker.
     """
+    # BOUNDARY CACHE (#71): a cache hit returns the prior chunks verbatim,
+    # skipping BOTH the semantic-mode resolution and the (network-bound) semantic
+    # split entirely. Checked FIRST so an unchanged file costs zero embeds.
+    reused = _reuse_or_none(filepath, person=person, domain=domain, layer=layer)
+    if reused is not None:
+        return reused
+    # FU-1 network gate (main): resolve the effective semantic mode. ``None`` →
+    # env-var contract (ingest_path_semantic_enabled); ``False`` forces the
+    # deterministic recursive splitter (no network); ``True`` forces semantic.
+    resolved = ingest_path_semantic_enabled() if semantic is None else semantic
     return chunk_markdown(
         filepath,
         person=person,
         domain=domain,
         layer=layer,
-        semantic=ingest_path_semantic_enabled(),
+        semantic=resolved,
     )
 
 
 # ---------------------------------------------------------------------------
 # FULL INDEX
 # ---------------------------------------------------------------------------
-def chunk_all(sources: dict[str, Path | list[str]] | None = None) -> list[Chunk]:
+def chunk_all(
+    sources: dict[str, Path | list[str]] | None = None,
+    *,
+    semantic: bool | None = None,
+    boundary_cache: "_BoundaryCache | None" = None,
+) -> list[Chunk]:
     """Chunk all knowledge base files across 3 buckets.
 
     Returns list of all chunks with metadata.
     Constitution Art. XIII: each chunk carries its bucket origin.
+
+    Args:
+        sources: Index source map (defaults to ``INDEX_SOURCES``).
+        semantic: Chunking-mode override threaded to every text-file chunk call
+            (FU-1 — network gate under skip_vectors):
+              * ``None`` (default) → each file resolves its own mode from
+                ``ingest_path_semantic_enabled()`` (env-var contract — unchanged).
+              * ``False`` → FORCE the recursive size-based splitter for the WHOLE
+                sweep, so NO network call is made. Callers pass this for a local
+                graph+vault rebuild (``skip_vectors=True``): semantic chunking
+                embeds sentences via OpenAI to place boundaries, so a "local"
+                rebuild must not use it. YAML chunks are already offline and are
+                unaffected.
+              * ``True`` → force semantic for the whole sweep.
+        boundary_cache: Optional :class:`_BoundaryCache` seeded from a prior
+            index. When provided AND compatible, unchanged source files reuse
+            their prior chunks verbatim (skipping the per-sentence boundary
+            embeds — the RAG rebuild hang fix). ``None`` (default) =
+            current full re-chunk behavior, bit-for-bit (the cache is the only
+            thing that can change runtime, never output for an unchanged corpus).
+
+    ``semantic`` and ``boundary_cache`` are ORTHOGONAL: ``semantic`` selects the
+    chunking mode for files that ARE (re-)chunked; ``boundary_cache`` decides
+    WHICH files skip chunking entirely (unchanged → reuse). A cached file is
+    reused verbatim regardless of ``semantic``; a non-cached file is chunked
+    under ``semantic``.
     """
     if sources is None:
         sources = INDEX_SOURCES
 
+    # Activate the boundary cache for the duration of this call. _chunk_text_like_file
+    # reads the module handle (threading it through every chunk helper call-site
+    # would be far more invasive). Restored in `finally` so concurrent/repeat calls
+    # without a cache see the default (None) behavior.
+    global _ACTIVE_BOUNDARY_CACHE
+    _prev_cache = _ACTIVE_BOUNDARY_CACHE
+    _ACTIVE_BOUNDARY_CACHE = boundary_cache
+
+    try:
+        return _chunk_all_impl(sources, semantic=semantic)
+    finally:
+        _ACTIVE_BOUNDARY_CACHE = _prev_cache
+
+
+def _chunk_all_impl(
+    sources: dict[str, Path | list[str]], *, semantic: bool | None = None
+) -> list[Chunk]:
+    """Body of :func:`chunk_all` (boundary cache already activated by caller).
+
+    ``semantic`` is threaded from ``chunk_all`` to every ``_chunk_text_like_file``
+    call so the FU-1 network gate (main) survives the boundary-cache refactor
+    (#71): a cache MISS still honors the caller's semantic-mode override, while a
+    cache HIT reuses prior chunks verbatim before ``semantic`` is even consulted.
+    """
     all_chunks: list[Chunk] = []
 
     # ----------------------------------------------------------------
@@ -1148,7 +1516,9 @@ def chunk_all(sources: dict[str, Path | list[str]] | None = None) -> list[Chunk]
         for pattern in ("DOSSIER-*.md", "DOSSIER-*.txt"):
             for md_file in sorted(persons_dir.glob(pattern)):
                 person = _person_from_filename(md_file.stem)
-                chunks = _chunk_text_like_file(md_file, person=person, layer="dossier")
+                chunks = _chunk_text_like_file(
+                    md_file, person=person, layer="dossier", semantic=semantic
+                )
                 for c in chunks:
                     c.bucket = "external"
                 all_chunks.extend(chunks)
@@ -1159,7 +1529,9 @@ def chunk_all(sources: dict[str, Path | list[str]] | None = None) -> list[Chunk]
         for pattern in ("DOSSIER-*.md", "DOSSIER-*.txt"):
             for md_file in sorted(themes_dir.glob(pattern)):
                 domain = _domain_from_theme(md_file.stem)
-                chunks = _chunk_text_like_file(md_file, domain=domain, layer="theme")
+                chunks = _chunk_text_like_file(
+                    md_file, domain=domain, layer="theme", semantic=semantic
+                )
                 for c in chunks:
                     c.bucket = "external"
                 all_chunks.extend(chunks)
@@ -1169,7 +1541,9 @@ def chunk_all(sources: dict[str, Path | list[str]] | None = None) -> list[Chunk]
     if playbooks_dir and playbooks_dir.exists():
         for pattern in ("*.md", "*.txt"):
             for md_file in sorted(playbooks_dir.glob(pattern)):
-                chunks = _chunk_text_like_file(md_file, layer="playbook")
+                chunks = _chunk_text_like_file(
+                    md_file, layer="playbook", semantic=semantic
+                )
                 for c in chunks:
                     c.bucket = "external"
                 all_chunks.extend(chunks)
@@ -1219,9 +1593,13 @@ def chunk_all(sources: dict[str, Path | list[str]] | None = None) -> list[Chunk]
         if workspace_file.suffix in (".yaml", ".yml"):
             chunks = chunk_yaml(workspace_file, layer="workspace")
             if not chunks:
-                chunks = _chunk_text_like_file(workspace_file, layer="workspace")
+                chunks = _chunk_text_like_file(
+                    workspace_file, layer="workspace", semantic=semantic
+                )
         else:
-            chunks = _chunk_text_like_file(workspace_file, layer="workspace")
+            chunks = _chunk_text_like_file(
+                workspace_file, layer="workspace", semantic=semantic
+            )
         for c in chunks:
             c.bucket = "business"
         all_chunks.extend(chunks)
@@ -1264,7 +1642,9 @@ def chunk_all(sources: dict[str, Path | list[str]] | None = None) -> list[Chunk]
                     _person = _business_person_from_path(md_file, _biz_dir)
                 elif "/dossiers/persons/" in md_file.as_posix():
                     _person = _business_dossier_person(md_file)
-                chunks = _chunk_text_like_file(md_file, person=_person, layer=_layer)
+                chunks = _chunk_text_like_file(
+                    md_file, person=_person, layer=_layer, semantic=semantic
+                )
                 for c in chunks:
                     c.bucket = "business"
                 all_chunks.extend(chunks)
@@ -1280,7 +1660,9 @@ def chunk_all(sources: dict[str, Path | list[str]] | None = None) -> list[Chunk]
             for md_file in sorted(personal_cognitive_dir.rglob(pattern)):
                 if md_file.name.startswith(("_", ".")):
                     continue
-                chunks = _chunk_text_like_file(md_file, layer="cognitive")
+                chunks = _chunk_text_like_file(
+                    md_file, layer="cognitive", semantic=semantic
+                )
                 for c in chunks:
                     c.bucket = "personal"
                 all_chunks.extend(chunks)

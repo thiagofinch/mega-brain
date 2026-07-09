@@ -9,7 +9,8 @@ Usage:
     from capability_resolver import resolve
     result = resolve('supabase_query')
 
-Part of the Tool Intelligence Layer (MegaBrain Python-first architecture).
+Ported from: Megabrain EPIC-127 (STORY-127.3) capability resolver engine
+Adapted for: MegaBrain Python-first architecture
 
 TIL-21 addition:
     Each successful resolve() call emits an OTel GenAI span via

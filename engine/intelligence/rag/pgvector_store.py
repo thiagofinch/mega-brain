@@ -33,7 +33,7 @@ CREATE. Delegation gives identical behavior with one source of SQL truth, while
 
 Constitution Art. XIII: bucket isolation is enforced at query time via the
 ``bucket`` filter — on BOTH paths. Never pass a widening filter unless you are an
-explicitly authorized cross-bucket agent (the knowledge oracle).
+explicitly authorized cross-bucket agent (sua-organizacao-oracle).
 
 Constitution Art. VI (no secrets in code): the SQL path's DSN comes from
 ``DATABASE_URL``; the REST path's credentials come from ``SUPABASE_URL`` /
@@ -138,7 +138,10 @@ class PgVectorStore(VectorStore):
             sql_store.add(chunk_id, text, embedding, metadata)
             return
 
-        # Legacy Supabase PostgREST path (unchanged).
+        # Legacy Supabase PostgREST path. Etiquetagem (completude-total.S1):
+        # source_type/quality_tier come from the caller's metadata dict (derived
+        # by engine/intelligence/rag/tagging.py). ``None`` → JSON null → SQL NULL
+        # (honest extraction_gap, never a fabricated default).
         client = self._get_client()
         record = {
             "chunk_id": chunk_id,
@@ -151,6 +154,15 @@ class PgVectorStore(VectorStore):
             "layer": (metadata or {}).get("layer", ""),
             "section": (metadata or {}).get("section", ""),
             "metadata": metadata or {},
+            "source_type": (metadata or {}).get("source_type"),
+            "quality_tier": (metadata or {}).get("quality_tier"),
+            # Ontology payload (STORY-F1-15 / 12a): promoted to first-class columns
+            # for the typed filter. None → JSON null → SQL NULL (honest gap; the
+            # column exists and filters, the DATA lands with the graph wiring).
+            # Mirrors the two SQL write sites in postgres_store.py in lock-step.
+            "entity_type": (metadata or {}).get("entity_type"),
+            "graph_id": (metadata or {}).get("graph_id"),
+            "community_id": (metadata or {}).get("community_id"),
         }
         client.upsert("rag_chunks", record, on_conflict="chunk_id")
 
@@ -185,6 +197,13 @@ class PgVectorStore(VectorStore):
                 "layer": meta.get("layer", ""),
                 "section": meta.get("section", ""),
                 "metadata": meta,
+                # Etiquetagem (completude-total.S1): None → SQL NULL (extraction_gap).
+                "source_type": meta.get("source_type"),
+                "quality_tier": meta.get("quality_tier"),
+                # Ontology payload (STORY-F1-15 / 12a): None → SQL NULL (honest gap).
+                "entity_type": meta.get("entity_type"),
+                "graph_id": meta.get("graph_id"),
+                "community_id": meta.get("community_id"),
             }
             for cid, text, emb, meta in zip(chunk_ids, texts, embeddings, metadatas)
         ]
@@ -199,6 +218,7 @@ class PgVectorStore(VectorStore):
         query_embedding: list[float],
         top_k: int = 30,
         bucket_filter: str | None = "SELF",  # SELF = use self.bucket
+        filters: dict | None = None,
     ) -> list[SearchResult]:
         """Similarity search.
 
@@ -212,15 +232,30 @@ class PgVectorStore(VectorStore):
             bucket_filter: Override bucket filter.
                           ``"SELF"`` (default) = use ``self.bucket``.
                           ``None`` = all buckets (cross-bucket, restricted).
+            filters: Optional ontology / metadata pre-filter (STORY-F1-15 / 12b).
+                On the portable SQL path it is a true WHERE PUSHDOWN
+                (btree/GIN-indexed) delegated to ``PostgresStore.search``. On the
+                legacy PostgREST / RPC path the server-side ``match_rag_chunks``
+                returns a fixed column set, so the SAME filter is applied
+                in-memory over the returned ``SearchResult.metadata`` (which
+                merges the JSONB blob) via the shared ``apply_metadata_filters``
+                — identical semantics, so the ONE filter behaves the same across
+                both backends. Default (``None``/empty) is byte-identical to the
+                pre-12b query.
         """
         sql_store = self._get_sql_store()
         if sql_store is not None:
-            # Portable path: SELECT ... ORDER BY embedding <=> query LIMIT (F1.1).
+            # Portable path: SELECT ... ORDER BY embedding <=> query LIMIT (F1.1),
+            # with the 12b composite WHERE pushed down into the store.
             return sql_store.search(
-                query_embedding, top_k=top_k, bucket_filter=bucket_filter
+                query_embedding,
+                top_k=top_k,
+                bucket_filter=bucket_filter,
+                filters=filters,
             )
 
-        # Legacy Supabase PostgREST / RPC path (unchanged).
+        # Legacy Supabase PostgREST / RPC path (unchanged retrieval; 12b filter
+        # applied in-memory below since the RPC has no filter parameter).
         client = self._get_client()
 
         # Resolve bucket filter
@@ -246,7 +281,7 @@ class PgVectorStore(VectorStore):
         if not rows:
             return []
 
-        return [
+        results = [
             SearchResult(
                 chunk_id=row["chunk_id"],
                 text=row["chunk_text"],
@@ -256,22 +291,32 @@ class PgVectorStore(VectorStore):
                     "person": row.get("person", ""),
                     "layer": row.get("layer", ""),
                     "section": row.get("section", ""),
+                    # Surface the ontology payload; the RPC's fixed SELECT omits the
+                    # columns, so they resolve from the JSONB blob when present.
+                    "entity_type": row.get("entity_type"),
+                    "graph_id": row.get("graph_id"),
+                    "community_id": row.get("community_id"),
                     **(row.get("metadata") or {}),
                 },
                 score=float(row["similarity"]),
             )
             for row in rows
         ]
+        if filters:
+            from .postgres_store import apply_metadata_filters
+
+            results = apply_metadata_filters(results, filters)
+        return results
 
     def get_embeddings_by_chunk_ids(
         self,
         chunk_ids: list[str],
-        column: str = "embedding",
+        column: str = "embedding_halfvec",
     ) -> dict[str, list[float]]:
         """Hydrate stored embeddings for the given chunk_ids from the ACTIVE column.
 
-        Ported from gbrain ``BrainEngine.getEmbeddingsByChunkIds`` (hybrid.ts,
-        SHA 4ee530f, hydration at :1932). The cosine re-score (F2.3) must compare
+        Ported from refbrain ``BrainEngine.getEmbeddingsByChunkIds`` (hybrid.ts,
+        SHA REDACTED, hydration at :1932). The cosine re-score (F2.3) must compare
         the query embedding against the SAME vector space the dense retrieval
         ranked in. We therefore READ the already-stored vector from the active
         column — we never recompute it. Recomputing could (pre-F0.2) place the
@@ -286,7 +331,7 @@ class PgVectorStore(VectorStore):
         Returns:
             Mapping ``{chunk_id: embedding}``. Chunks with no stored vector are
             omitted. Returns ``{}`` on any DB error (fail-open: caller degrades
-            to plain RRF order, exactly like gbrain's ``catch → return results``).
+            to plain RRF order, exactly like refbrain's ``catch → return results``).
         """
         if not chunk_ids:
             return {}
@@ -297,7 +342,7 @@ class PgVectorStore(VectorStore):
         # query string with no guard — an arbitrary column would allow injection.
         # Mirror PostgresStore's fail-open behavior (warn + empty mapping → caller
         # degrades to plain RRF order) for both paths so the contract is uniform.
-        if column not in {"embedding"}:
+        if column not in {"embedding_halfvec", "embedding"}:
             warnings.warn(
                 f"[PgVectorStore] refusing unknown embedding column: {column!r}",
                 stacklevel=2,

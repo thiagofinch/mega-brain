@@ -25,8 +25,18 @@ import time
 from collections import Counter
 from pathlib import Path
 
-from .chunker import Chunk, chunk_all, content_sha
-from .embedding_config import get_embedding_config
+from .chunker import (
+    Chunk,
+    chunk_all,
+    content_sha,
+    ingest_path_semantic_enabled,
+    seed_boundary_cache,
+)
+from .embedding_config import (
+    get_artifact_signature,
+    get_embedding_config,
+    get_embedding_signature,  # noqa: F401 — kept for existing callers/tests
+)
 
 
 # Dense vector backend — resolved by env via store_resolver (STORY-GBA-F1.2).
@@ -184,13 +194,16 @@ def _openai_embed(
 ) -> list[list[float]]:
     """Call OpenAI Embeddings API. Returns list of embedding vectors.
 
-    S2a fix (2026-04-24, DECISION-F1):
+    S2a fix (2026-04-24, DECISION-F1) + STORY-RAG-VM-M1 (2026-06-29):
     text-embedding-3-large defaults to 3072d. We explicitly pass `dimensions`
-    from canonical config (1536d) to produce reduced-dim vectors matching
-    metadata.json and Supabase pgvector schema. Without this param, API emits
-    3072d vectors while metadata/Supabase expect 1536/1024 → silent mismatch
-    that breaks cosine similarity.
-    Ref: docs/stories/epic-rag-integrity-recovery/DECISION-F1.md
+    from canonical config (``EMBEDDING_DIM``, now 3072d — the model's native
+    maximum, raised from 1536 by STORY-RAG-VM-M1) so every call resolves the
+    SAME dim as the gateway. The explicit param still matters: it pins the dim
+    to the config value so a future config change (or a partial provider default)
+    can never silently land vectors in a different space than the pgvector schema
+    expects → cosine corruption. Ref:
+    docs/stories/epic-rag-integrity-recovery/DECISION-F1.md +
+    docs/stories/epic-rag-vector-migration/STORY-RAG-VM-M1-embedding-config-3072.md
 
     Timeout fix (2026-06-01, liam-ottley ingest):
     Migrated from urllib.request.urlopen → requests.post with separate
@@ -614,6 +627,74 @@ class HybridIndex:
         self.vector = VectorIndex()
         self.built: bool = False
 
+    @staticmethod
+    def _seed_boundary_cache(index_dir: Path | None):
+        """Seed a chunker ``_BoundaryCache`` from a bucket's persisted index.
+
+        Reads ``<index_dir>/chunks.json`` (prior chunks, grouped by source_file by
+        the seeder) and ``<index_dir>/vectors.json`` (for the prior embedding
+        ``signature`` so a model/dim swap invalidates the WHOLE cache). The active
+        embedding signature + semantic mode are read live; reuse only happens when
+        BOTH match the prior index (plus the per-file content fingerprint).
+
+        FAIL-SAFE: any read/parse error or a missing index yields an inert cache
+        (``active`` False) → chunk_all re-chunks everything (current behavior).
+        NEVER raises — the rebuild must not be blocked by cache seeding.
+        """
+        if index_dir is None:
+            return seed_boundary_cache(None)
+
+        chunks_path = index_dir / "chunks.json"
+        vectors_path = index_dir / "vectors.json"
+
+        prior_chunks: list | None = None
+        prior_signature: str | None = None
+        prior_semantic: bool | None = None
+
+        try:
+            if chunks_path.exists():
+                with open(chunks_path, encoding="utf-8") as f:
+                    loaded = json.load(f)
+                if isinstance(loaded, list):
+                    prior_chunks = loaded
+        except (OSError, json.JSONDecodeError):
+            prior_chunks = None
+
+        # Prior embedding signature lives in vectors.json (written by save()).
+        try:
+            if vectors_path.exists():
+                with open(vectors_path, encoding="utf-8") as f:
+                    vec_data = json.load(f)
+                if isinstance(vec_data, dict):
+                    prior_signature = vec_data.get("signature")
+                    # Prior semantic mode: persisted if available; else assume the
+                    # index was built under the same default-semantic regime the
+                    # ingest path uses today (the only regime that produced the
+                    # current corpus). Treated as a hint — the per-file fingerprint
+                    # is the hard guard, and a mode mismatch only costs a re-chunk.
+                    prior_semantic = vec_data.get("semantic")
+        except (OSError, json.JSONDecodeError):
+            prior_signature = None
+
+        if prior_semantic is None:
+            # No persisted mode flag (legacy vectors.json). The live corpus was
+            # produced by the active ingest-path mode, so assume parity; the file
+            # fingerprint still guards correctness and a wrong assumption only
+            # forfeits reuse (re-chunk), never corrupts output.
+            prior_semantic = ingest_path_semantic_enabled()
+
+        # IMPORTANT: vectors.json stamps the ``model:dim`` artifact signature
+        # (get_artifact_signature, e.g. "text-embedding-3-large:1536"), NOT the
+        # wider provider:model:dim. Compare like-for-like or the cache would
+        # ALWAYS invalidate (provider:model:dim != model:dim) and never reuse.
+        return seed_boundary_cache(
+            prior_chunks,
+            prior_signature=prior_signature,
+            prior_semantic=prior_semantic,
+            active_signature=get_artifact_signature(),
+            active_semantic=ingest_path_semantic_enabled(),
+        )
+
     @classmethod
     def build_for_bucket(
         cls,
@@ -648,7 +729,34 @@ class HybridIndex:
         if bucket not in ("external", "business", "personal"):
             raise ValueError(f"Invalid bucket '{bucket}'. Must be: external | business | personal")
 
-        all_chunks = chunk_all()
+        # FU-1 (main): gate the chunker's network under skip_vectors. Semantic
+        # chunking embeds sentences via OpenAI to place topic boundaries — a
+        # network call INDEPENDENT of vector-index embedding. A local graph+vault
+        # rebuild (skip_vectors=True) promises not to touch the network, so it
+        # must force the deterministic recursive splitter (semantic=False).
+        # skip_vectors=False (real ingestion) leaves semantic=None so the env-var
+        # contract (ingest_path_semantic_enabled / MCE_SEMANTIC_CHUNK_ENABLED)
+        # decides per file, exactly as before.
+        chunk_semantic = False if skip_vectors else None
+
+        # BOUNDARY CACHE (#71 — RAG rebuild fix): on an incremental rebuild, seed
+        # a boundary cache from the bucket's persisted chunks.json so chunk_all()
+        # REUSES the prior chunks of every UNCHANGED source file verbatim,
+        # skipping the per-sentence semantic boundary embeds that were hanging
+        # cmd_finalize. Only new/changed files (e.g. a freshly-ingested entity)
+        # re-chunk. A full rebuild (incremental=False) gets no cache → bit-for-bit
+        # current behavior. See chunker.seed_boundary_cache / _BoundaryCache.
+        #
+        # ORTHOGONAL by construction: ``semantic`` picks the chunking mode for the
+        # files that ARE re-chunked; ``boundary_cache`` picks WHICH files skip
+        # chunking (unchanged → reuse). If a mode mismatch ever makes the cache
+        # incompatible, _BoundaryCache fails safe (re-chunk under ``semantic``) —
+        # never corruption. Both are passed through in a single chunk_all() call.
+        boundary_cache = (
+            cls._seed_boundary_cache(index_dir) if incremental else None
+        )
+
+        all_chunks = chunk_all(semantic=chunk_semantic, boundary_cache=boundary_cache)
         filtered = [c for c in all_chunks if c.bucket == bucket]
 
         if not filtered:
@@ -696,7 +804,11 @@ class HybridIndex:
         Returns stats dict.
         """
         if chunks is None:
-            chunks = chunk_all()
+            # FU-1: same network gate as build_for_bucket for the whole-KB path
+            # (CLI ``idx.build(skip_vectors=...)``). Under skip_vectors force the
+            # deterministic recursive splitter so no OpenAI call is made; leave
+            # the env-var contract intact when vectors WILL be built.
+            chunks = chunk_all(semantic=False if skip_vectors else None)
 
         # ---- STORY-A1: content_sha write-gate (deterministic keep-first dedup) --
         # The builder used to map chunks 1:1 into `texts`/`self.chunks` with zero

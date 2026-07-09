@@ -18,7 +18,16 @@ jobs:
           python-version: '3.12'
 
       - name: Install dependencies
-        run: pip install ruff pyyaml pytest transitions
+        # fastapi + uvicorn are required by tests/python/test_api/* (agent
+        # server, conclave service) and test_side_query.py. langgraph is
+        # required by engine/conclave (Conclave v2, #92) and tests/python/
+        # test_conclave/*. Without these the respective packages error at
+        # collection. pytest-timeout guards against tests that would otherwise
+        # hang on an unmocked network call (thread-safe wall-clock ceiling).
+        # pytest-asyncio is required to run the async tests in test_pipeline/
+        # (test_concurrency_safety, test_parallel_execution) — without it pytest
+        # reports "async def functions are not natively supported" and fails them.
+        run: pip install ruff pyyaml pytest transitions fastapi uvicorn langgraph pytest-timeout pytest-asyncio
 
       # path corrected core/ -> engine/ (core/ renamed long ago). Non-blocking
       # to surface pre-existing engine/ lint debt without forcing a mass
@@ -51,24 +60,76 @@ jobs:
           print(f'Validated {count} JSON files')
           "
 
-      - name: YAML integrity
+      # Scoped to structural contracts only — mirrors validate.yml (#90).
+      # Over-broad YAML validation gated CI on hand-authored content/DNA/
+      # template files that are intentionally NOT strict YAML. Only fail on
+      # YAML the system parses programmatically at runtime.
+      - name: YAML integrity (structural contracts only)
         run: |
           python3 -c "
-          import yaml, pathlib
+          import yaml, pathlib, re, fnmatch
+          # Scope: validate ONLY YAML the system loads programmatically (structural
+          # contracts). Hand-authored content/DNA/templates are NOT strict YAML by
+          # design and MUST NOT gate CI. Only fail on YAML the system parses at runtime.
+          # Directories never scanned (build/vendor/trash/nested worktrees).
+          SKIP_DIRS = {'.git', 'node_modules', '.data', 'logs', 'processing',
+                       'artifacts', '.venv', 'venv', '__pycache__', 'trash', 'worktrees'}
+          # Hard-skip path segments that WIN over the keep allowlist (trash, nested
+          # worktrees, ANY templates dir, prose handoffs, tool description docs).
+          HARD_SKIP = ('.claude/trash/', '.claude/worktrees/', '/templates/',
+                       '.megabrain/handoffs/', 'infrastructure/tools/')
+          # Content segments anywhere in the path -> skip (hand-authored, not loaded strictly)
+          SKIP_SEGMENTS = ('/templates/', '/data/', '/minds/', '/voice/', '/frameworks/',
+                           '/docs/sops/', '/catalogs/', '/outputs/', '/workflows/')
+          SKIP_PREFIX = ('agents/', 'knowledge/', 'workspace/businesses/', 'outputs/', 'docs/qa/')
+          # Structural contracts -> ALWAYS validate (allowlist wins over content skip)
+          KEEP_PATTERNS = ('squads/*/config.yaml', '.github/*', '.github/**',
+                           'engine/*', 'engine/**', '.claude/*', '.claude/**',
+                           'services/*', 'services/**')
+          REGISTRY_RE = re.compile(r'.*registr.*\.ya?ml\$', re.I)
+          DUPE_RE = re.compile(r' \d+\.(ya?ml)\$')
+          def is_dupe(p): return ' 2.' in p or DUPE_RE.search(p)
+          def is_tmpl(p): return '.tmpl.' in p or '-template.' in p or p.split('/')[-1].endswith('-template.yaml')
+          def keep(p):
+              # hard skip (trash, worktrees, templates, handoffs, tool docs) beats everything
+              if any(h in ('/'+p) for h in HARD_SKIP):
+                  return False
+              if is_dupe(p) or is_tmpl(p):
+                  return False
+              base = p.split('/')[-1]
+              for pat in KEEP_PATTERNS:
+                  if fnmatch.fnmatch(p, pat):
+                      return True
+              # system contract registries (NOT squad /data/ or /workflows/ registries)
+              if REGISTRY_RE.match(p) and '/data/' not in ('/'+p) and '/workflows/' not in ('/'+p):
+                  return True
+              if '/' not in p and base.endswith(('.yaml', '.yml')):
+                  return True  # root config
+              if p.startswith(SKIP_PREFIX):
+                  return False
+              if any(seg in ('/'+p) for seg in SKIP_SEGMENTS):
+                  return False
+              return True  # default: it's a contract -> validate
           errors = []
-          skip = {'.git', 'node_modules'}
           count = 0
+          skipped = 0
           for pattern in ['*.yaml', '*.yml']:
               for f in pathlib.Path('.').rglob(pattern):
-                  if any(part in skip for part in f.parts):
+                  if any(part in SKIP_DIRS for part in f.parts):
+                      continue
+                  rel = f.as_posix()
+                  if rel.startswith('./'):
+                      rel = rel[2:]
+                  if not keep(rel):
+                      skipped += 1
                       continue
                   count += 1
                   try:
-                      yaml.safe_load(f.read_text())
+                      yaml.safe_load(f.read_text(encoding='utf-8'))
                   except Exception as e:
-                      errors.append(f'{f}: {e}')
-                      print(f'::error file={f}::{e}')
+                      errors.append(f'{rel}: {e}')
+                      print(f'::error file={rel}::{e}')
           if errors:
-              raise SystemExit(f'{len(errors)} invalid YAML files out of {count}')
-          print(f'Validated {count} YAML/YML files')
+              raise SystemExit(f'{len(errors)} invalid YAML files out of {count} structural contracts (skipped {skipped} content/DNA/template files)')
+          print(f'Validated {count} structural-contract YAML files (skipped {skipped} content/DNA/template files)')
           "

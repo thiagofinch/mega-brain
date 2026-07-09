@@ -25,8 +25,15 @@ from .hybrid_index import HybridIndex, get_index, get_index_for_bucket
 
 
 # S5: pgvector-backed RRF retrieval (primary path when Supabase is configured)
-def _try_rrf_retrieve(query: str, bucket: str, top_k: int) -> list | None:
-    """Attempt RRF retrieval via pgvector. Returns None if unavailable."""
+def _try_rrf_retrieve(
+    query: str, bucket: str, top_k: int, filters: dict | None = None
+) -> list | None:
+    """Attempt RRF retrieval via pgvector. Returns None if unavailable.
+
+    ``filters`` (STORY-F1-15 / 12b) is forwarded to ``rrf_retrieve`` so the store
+    pushes the composite WHERE down into the dense arm. ``hybrid_search`` still
+    re-applies the filter over the fused result (authoritative).
+    """
     try:
         from engine.providers.supabase_client import is_enabled
 
@@ -34,7 +41,7 @@ def _try_rrf_retrieve(query: str, bucket: str, top_k: int) -> list | None:
             return None
         from .rrf_retrieval import rrf_retrieve
 
-        results = rrf_retrieve(query, bucket=bucket, top_k=top_k)
+        results = rrf_retrieve(query, bucket=bucket, top_k=top_k, filters=filters)
         return results if results else None
     except Exception:
         return None
@@ -51,17 +58,17 @@ RERANK_CANDIDATES = 50  # Max candidates for reranking
 
 # ---------------------------------------------------------------------------
 # RERANKER (zerank-2 cross-encoder) — STORY-GBA-F2.2
-# Ported from gbrain src/core/search/rerank.ts (SHA 4ee530f).
+# Ported from refbrain src/core/search/rerank.ts (SHA REDACTED).
 # ---------------------------------------------------------------------------
-# Default cross-encoder model. Matches gbrain DEFAULT_RERANKER_MODEL
-# (gateway.ts:114, SHA 4ee530f). The provider:model string is passed through
+# Default cross-encoder model. Matches refbrain DEFAULT_RERANKER_MODEL
+# (gateway.ts:114, SHA REDACTED). The provider:model string is passed through
 # to the reranker client; the API key is read from the env at call time.
 DEFAULT_RERANKER_MODEL = "zeroentropyai:zerank-2"
 # How many of the top RRF candidates to send to the cross-encoder. The
 # un-reranked tail past this index keeps its original RRF order — this is the
-# recall-preserving tail (gbrain rerank.ts:130 ``opts.topNIn``, default 30).
+# recall-preserving tail (refbrain rerank.ts:130 ``opts.topNIn``, default 30).
 RERANKER_TOP_N_IN = 30
-# Per-call timeout (seconds). gbrain default is 5000ms (gateway.ts
+# Per-call timeout (seconds). refbrain default is 5000ms (gateway.ts
 # DEFAULT_RERANK_TIMEOUT_MS). Search hot path — long stalls degrade UX.
 RERANKER_TIMEOUT_S = 5.0
 # Env var holding the zerank-2 API key. Absent/empty ⇒ reranker is
@@ -101,8 +108,9 @@ _FALSY = frozenset({"0", "false", "off", "no", ""})
 # RERANKER PROVIDER SELECTION — STORY-CIH-RERANKER-PROVIDER
 # ---------------------------------------------------------------------------
 # Two live cross-encoders are wired: ``zeroentropy`` (zerank-2) and ``cohere``
-# (rerank-v3.5). The provider is chosen DELIBERATELY via env (no code edit, no
-# accidental default on key rotation). Each provider reads its OWN API key.
+# (rerank-v4.0-pro by default). The provider is chosen DELIBERATELY via env (no
+# code edit, no accidental default on key rotation). Each provider reads its OWN
+# API key.
 RERANKER_PROVIDER_ENV = "MCE_RERANKER_PROVIDER"
 _VALID_PROVIDERS = frozenset({"zeroentropy", "cohere"})
 _DEFAULT_PROVIDER = "zeroentropy"
@@ -111,7 +119,16 @@ _DEFAULT_PROVIDER = "zeroentropy"
 # client validated in epic-RETRIEVAL-BENCHMARK RBM-2). PT-BR SOTA per research.
 COHERE_API_KEY_ENV = "COHERE_API_KEY"
 COHERE_RERANK_URL = "https://api.cohere.com/v2/rerank"
-COHERE_DEFAULT_MODEL = "rerank-v3.5"
+# Rerank 4 Pro (``rerank-v4.0-pro``) — swapped in per STORY-F1-3. Same provider,
+# same endpoint (v2/rerank), same client: a VERSION bump (not a new dep). Ranks
+# #2 on the neutral Agentset leaderboard (1629 ELO, +178 vs the superseded
+# rerank-v3.5). Model id confirmed verbatim against the OFFICIAL Cohere docs
+# (docs.cohere.com/docs/models + /docs/rerank-overview + /reference/rerank,
+# consulted 2026-07-07) — No-Invention: never hardcode an unverified id.
+# A/B-reversible by env: ``COHERE_RERANK_MODEL=rerank-v3.5`` reverts to baseline
+# without a code edit (see ``cohere_rerank_model``).
+COHERE_MODEL_ENV = "COHERE_RERANK_MODEL"
+COHERE_DEFAULT_MODEL = "rerank-v4.0-pro"
 COHERE_MAX_RETRIES = 6  # trial keys cap at ~10 calls/min
 COHERE_RETRY_BACKOFF_S = 7.0
 
@@ -129,6 +146,18 @@ def reranker_provider() -> str:
 def _provider_key_env(provider: str) -> str:
     """Env var holding the API key for the given provider."""
     return COHERE_API_KEY_ENV if provider == "cohere" else RERANKER_API_KEY_ENV
+
+
+def cohere_rerank_model() -> str:
+    """Resolve the active Cohere rerank model id (``rerank-v4.0-pro`` = Rerank
+    4 Pro by default).
+
+    Read at call time (like ``reranker_provider``) so an A/B flip takes effect
+    on the NEXT query with NO code edit: set ``COHERE_RERANK_MODEL=rerank-v3.5``
+    to fall back to the superseded baseline (reversible-by-env, STORY-F1-3).
+    Unset/blank ⇒ ``COHERE_DEFAULT_MODEL``.
+    """
+    return os.environ.get(COHERE_MODEL_ENV, "").strip() or COHERE_DEFAULT_MODEL
 
 
 def _parse_flag(raw: str | None) -> bool | None:
@@ -178,7 +207,7 @@ def reranker_enabled() -> bool:
 
 
 class RerankError(Exception):
-    """Reranker failure with a classified reason (ported from gbrain
+    """Reranker failure with a classified reason (ported from refbrain
     gateway.ts ``RerankError``). ``reason`` is one of: auth, rate_limit,
     network, timeout, payload_too_large, unknown.
 
@@ -193,7 +222,7 @@ class RerankError(Exception):
 
 def _hash_query(query: str) -> str:
     """SHA-256 prefix (8 hex chars) of the query — privacy-preserving audit
-    key (gbrain rerank.ts ``hashQuery``). Never logs the raw query text."""
+    key (refbrain rerank.ts ``hashQuery``). Never logs the raw query text."""
     return hashlib.sha256(query.encode("utf-8")).hexdigest()[:8]
 
 
@@ -205,7 +234,7 @@ def _zeroentropy_rerank(
     timeout_s: float,
 ) -> list[tuple[int, float]]:
     """ZeroEntropy zerank-2 client. Raises ``RerankError`` so the caller
-    fail-opens to RRF order. Mirrors gbrain ``gateway.rerank`` reason table."""
+    fail-opens to RRF order. Mirrors refbrain ``gateway.rerank`` reason table."""
     api_key = os.environ.get(RERANKER_API_KEY_ENV, "").strip()
     if not api_key:
         raise RerankError(
@@ -216,7 +245,7 @@ def _zeroentropy_rerank(
         import urllib.error
         import urllib.request
 
-        # provider:model → modelId (gbrain resolveRecipe splits on ":").
+        # provider:model → modelId (refbrain resolveRecipe splits on ":").
         model_id = model.split(":", 1)[1] if ":" in model else model
         body = json.dumps(
             {"model": model_id, "query": query, "documents": documents}
@@ -267,9 +296,11 @@ def _cohere_rerank(
     *,
     timeout_s: float,
 ) -> list[tuple[int, float]]:
-    """Cohere rerank-v3.5 client (ported from tests/rag/reranker_clients.py,
-    validated in RBM-2). Bounded 429 retry for trial keys. Raises
-    ``RerankError`` on failure so the caller fail-opens to RRF order."""
+    """Cohere rerank client (Rerank 4 Pro / ``rerank-v4.0-pro`` by default,
+    resolved by ``cohere_rerank_model`` — env-overridable for A/B; ported from
+    tests/rag/reranker_clients.py, validated in RBM-2). Bounded 429 retry for
+    trial keys. Raises ``RerankError`` on failure so the caller fail-opens to
+    RRF order."""
     api_key = os.environ.get(COHERE_API_KEY_ENV, "").strip()
     if not api_key:
         raise RerankError(
@@ -280,7 +311,7 @@ def _cohere_rerank(
     import urllib.request
 
     body = json.dumps(
-        {"model": COHERE_DEFAULT_MODEL, "query": query, "documents": documents}
+        {"model": cohere_rerank_model(), "query": query, "documents": documents}
     ).encode("utf-8")
     req = urllib.request.Request(
         COHERE_RERANK_URL,
@@ -349,7 +380,7 @@ def _default_reranker_fn(
     return _zeroentropy_rerank(query, documents, model=model, timeout_s=timeout_s)
 
 
-# Type of the injectable reranker seam (mirrors gbrain ``opts.rerankerFn``).
+# Type of the injectable reranker seam (mirrors refbrain ``opts.rerankerFn``).
 RerankerFn = Callable[..., list[tuple[int, float]]]
 
 
@@ -365,7 +396,7 @@ def apply_reranker(
 ) -> list[tuple[int, float]]:
     """Reorder the top ``top_n_in`` candidates by cross-encoder relevance.
 
-    LITERAL PORT of gbrain ``applyReranker`` (rerank.ts:58, SHA 4ee530f):
+    LITERAL PORT of refbrain ``applyReranker`` (rerank.ts:58, SHA REDACTED):
 
       * Split candidates into ``head`` (top ``top_n_in``) and ``tail``.
       * Send ``head`` document texts to the reranker; reorder ``head`` by the
@@ -403,7 +434,7 @@ def apply_reranker(
     tail = candidates[top_n_in:]
 
     # Document text for the head. Fall back to other text fields then empty
-    # (defensive — gbrain falls back to title). Empty docs are still sent; the
+    # (defensive — refbrain falls back to title). Empty docs are still sent; the
     # upstream model decides.
     documents: list[str] = []
     for doc_idx, _score in head:
@@ -435,7 +466,7 @@ def apply_reranker(
             pass
         return candidates  # original RRF order, unchanged
 
-    # Defensive: malformed shape ⇒ pass through (gbrain same guard).
+    # Defensive: malformed shape ⇒ pass through (refbrain same guard).
     if not isinstance(reranked, list) or len(reranked) == 0:
         return candidates
 
@@ -465,7 +496,7 @@ def apply_reranker(
             reordered_head.append((doc_idx, rel))
 
     # Head items the reranker dropped (rare) keep their original position at the
-    # END of the head section — recall preserved, gbrain rerank.ts:128-130.
+    # END of the head section — recall preserved, refbrain rerank.ts:128-130.
     for i in range(len(head)):
         if i not in seen:
             reordered_head.append(head[i])
@@ -595,7 +626,7 @@ def rerank(
     STORY-GBA-F2.2 — the previous body was dedup+truncate only ("RRF scores
     are already high quality", ZERO cross-encoder). A real cross-encoder
     (zerank-2) now reorders the deduped candidates BEFORE truncation, via
-    ``apply_reranker`` (ported from gbrain rerank.ts, SHA 4ee530f).
+    ``apply_reranker`` (ported from refbrain rerank.ts, SHA REDACTED).
 
     Pipeline position (CRITICAL — RNF-1): this runs at the chunk-ranking stage,
     strictly BEFORE the HHEM gate. The HHEM gate is a separate, later stage
@@ -685,6 +716,10 @@ class QueryResult:
         self.person = chunk.get("person", "")
         self.domain = chunk.get("domain", "")
         self.section = chunk.get("section", "")
+        # S4 etiquetagem tags — resolved top-level OR from nested metadata so both
+        # backends (local BM25 chunk, pgvector RRFResult) expose them uniformly.
+        self.source_type = _chunk_tag_value(chunk, "source_type")
+        self.quality_tier = _chunk_tag_value(chunk, "quality_tier")
 
     def to_dict(self) -> dict:
         return {
@@ -696,6 +731,10 @@ class QueryResult:
             "domain": self.domain,
             "section": self.section,
             "text_preview": self.text[:200],
+            # Surfaced so the graph fusion layer (and any caller) can post-filter
+            # by tag without re-hitting the index. ``None`` = extraction_gap.
+            "source_type": self.source_type,
+            "quality_tier": self.quality_tier,
         }
 
 
@@ -713,7 +752,13 @@ def hybrid_search(
         query: Search query
         top_k: Number of results
         index: HybridIndex instance (uses singleton if None)
-        filters: Optional {"person": str, "domain": str, "layer": str}
+        filters: Optional metadata filter. Legacy keys ``{"person","domain",
+            "layer"}`` plus S4 tag keys ``{"source_type","quality_tier"}``. A row
+            is kept only when EVERY active (truthy-valued) key matches. Default
+            (``None``/empty) includes EVERYTHING — the filter restricts the
+            query result, it NEVER excludes data from the index (founder rule
+            "etiquetar + filtrar, NÃO excluir"). Applied on BOTH the pgvector RRF
+            path and the local BM25 fallback.
         use_strategic_order: Apply lost-in-the-middle mitigation
 
     Returns:
@@ -728,8 +773,19 @@ def hybrid_search(
     t0 = time.time()
 
     # -- Primary: pgvector RRF (S5) --
-    rrf_results = _try_rrf_retrieve(query, bucket=bucket, top_k=top_k)
+    # 12b: forward filters so the store pushes the WHERE composite into the dense
+    # arm; the post-retrieval _matches_filters below stays the authority. Pass the
+    # kwarg ONLY when a filter is active so the default (unfiltered) call signature
+    # is byte-identical to the pre-12b path (backward-compat for callers/stubs).
+    _rrf_kwargs = {"filters": filters} if filters else {}
+    rrf_results = _try_rrf_retrieve(query, bucket=bucket, top_k=top_k, **_rrf_kwargs)
     if rrf_results:
+        # S4 tag filter on the RRF path (was BM25-only before). Post-retrieval,
+        # over ``RRFResult.metadata`` (where S1 wrote source_type/quality_tier) —
+        # NOT inside the ranker. No filter → identity (backward-compat); active tag
+        # filter → subset. RNF-1: order preserved, walker/ranker untouched.
+        if filters:
+            rrf_results = [r for r in rrf_results if _matches_filters(r.metadata, filters)]
         latency = (time.time() - t0) * 1000
         results = [
             QueryResult(
@@ -741,6 +797,10 @@ def hybrid_search(
                     "domain": "",
                     "section": r.section,
                     "bucket": r.bucket,
+                    # Carry the S4 tags forward so downstream layers (graph_search
+                    # fusion) can filter the hybrid component without re-querying.
+                    "source_type": (r.metadata or {}).get("source_type"),
+                    "quality_tier": (r.metadata or {}).get("quality_tier"),
                 },
                 r.score,
                 rank + 1,
@@ -822,25 +882,96 @@ def hybrid_search(
     }
 
 
+# ---------------------------------------------------------------------------
+# TAG / METADATA FILTER (S4 — TAG+FILTER transversal, owner)
+# ---------------------------------------------------------------------------
+# S4 owns the query-layer filter. Callers pass ``filters`` = a dict of
+# {key: wanted_value}; a result is kept only when EVERY key matches. The two S4
+# tags (``source_type`` / ``quality_tier``, written by S1's dual-write) plug in
+# with ZERO structural change because the matcher is key-generic (ADAPT < 30%,
+# IDS). Default (no filter) includes EVERYTHING — the founder rule is
+# "etiquetar + filtrar, NÃO excluir": raw/workspace material is in the brain and
+# only restricted on demand, never dropped from the index.
+
+
+def _chunk_tag_value(chunk: dict, key: str) -> str | None:
+    """Resolve a filter key from a chunk/result dict, top-level OR nested metadata.
+
+    The etiquetagem tags live top-level on the local BM25 chunks
+    (``chunk["source_type"]``) but under ``metadata`` on the pgvector-backed
+    results (``RRFResult.metadata["source_type"]``, since ``rebuild`` writes them
+    into ``metadata``). Looking in both makes the ONE filter work across BOTH
+    retrieval backends without the caller knowing which path produced the row.
+
+    Returns the raw value (may be ``None`` — a legitimate extraction_gap row).
+    Never raises: an absent key is ``None``, not a crash (the pre-S4 bug was
+    ``chunk.get(key, "").lower()`` blowing up on a ``None``-valued key — the exact
+    shape of an extraction_gap row from S1).
+    """
+    if key in chunk:
+        return chunk.get(key)
+    meta = chunk.get("metadata")
+    if isinstance(meta, dict) and key in meta:
+        return meta.get(key)
+    return None
+
+
+def _matches_filters(chunk: dict, filters: dict | None) -> bool:
+    """True when the chunk/result satisfies EVERY active filter key.
+
+    An active filter key has a truthy wanted value; a falsy/``None`` wanted value
+    is inert (does not restrict — default-includes-all). Comparison is
+    case-insensitive on strings. A row whose tag is ``None`` (extraction_gap) is
+    EXCLUDED by an active tag filter — honest: the row cannot prove the requested
+    tag, so a restrictive query does not surface it. Without a filter, the same
+    row is fully visible (it IS in the brain).
+    """
+    if not filters:
+        return True
+    for key, wanted in filters.items():
+        if not wanted:
+            continue  # inert key — never restricts
+        actual = _chunk_tag_value(chunk, key)
+        if actual is None:
+            return False  # extraction_gap row cannot satisfy an active tag filter
+        if str(actual).lower() != str(wanted).lower():
+            return False
+    return True
+
+
 def _apply_filters(
     results: list[tuple[int, float]],
     chunks: list[dict],
     filters: dict,
 ) -> list[tuple[int, float]]:
-    """Filter results by metadata."""
+    """Filter (doc_idx, score) results by chunk metadata (BM25/local path).
+
+    Guard-hardened (S4): delegates each row to ``_matches_filters``, which is
+    ``None``-safe — the pre-S4 ``chunk.get(key, "").lower()`` crashed on a
+    ``None``-valued tag key (every extraction_gap row from S1). Behaviour for the
+    legacy keys (person/domain/layer) is unchanged; the guard only stops the crash
+    and adds top-level+metadata resolution.
+    """
     filtered = []
     for doc_idx, score in results:
         if doc_idx >= len(chunks):
             continue
-        chunk = chunks[doc_idx]
-        match = True
-        for key, value in filters.items():
-            if value and chunk.get(key, "").lower() != value.lower():
-                match = False
-                break
-        if match:
+        if _matches_filters(chunks[doc_idx], filters):
             filtered.append((doc_idx, score))
     return filtered
+
+
+def _filter_result_dicts(results: list[dict], filters: dict | None) -> list[dict]:
+    """Filter a list of result DICTS (RRF / graph paths) by tag, preserving order.
+
+    The RRF and graph paths carry result *dicts* (not index/score tuples), so they
+    use this sibling of ``_apply_filters``. Same semantics: no filter → identity
+    (backward-compat), active tag filter → subset, extraction_gap rows excluded by
+    an active tag filter. Order is preserved (post-filter, never re-ranks — RNF-1).
+    """
+    if not filters:
+        return results
+    return [r for r in results if _matches_filters(r, filters)]
 
 
 # ---------------------------------------------------------------------------

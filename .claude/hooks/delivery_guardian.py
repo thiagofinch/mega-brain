@@ -151,8 +151,14 @@ def validate_slug(slug: str) -> dict:
     checks.append(dna_check)
 
     # 2. Dossier exists (blocking for all — the partner deliverable IS the dossier)
+    # Case-insensitive match: legacy dossiers are UPPERCASE (DOSSIER-sua-organizacao-TEAM.md)
+    # while slugs are lowercase — Path.glob is case-sensitive and misses them.
     dossier_dir = kb_root / "dossiers" / "persons"
-    dossier_found = any(dossier_dir.glob(f"*{slug}*")) if dossier_dir.exists() else False
+    dossier_found = (
+        any(slug.lower() in f.name.lower() for f in dossier_dir.iterdir() if f.is_file())
+        if dossier_dir.exists()
+        else False
+    )
     checks.append(
         {
             "name": "dossier_exists",

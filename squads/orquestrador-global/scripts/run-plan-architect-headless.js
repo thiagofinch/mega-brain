@@ -116,7 +116,27 @@ Normalize an existing raw model output:
 
 function ensureCache(skipScan) {
   const exists = fs.existsSync(CACHE_PATH);
-  if (exists || skipScan) return loadCache();
+
+  // Wave1 N2 — staleness guard EM CÓDIGO (SOT R2): a prosa TTL do cartographer
+  // nunca disparou em 64 dias; aqui o guard é mecânico. Cache com idade > TTL
+  // é tratado como AUSENTE (regen forçada), a menos que skipScan peça o stale
+  // explicitamente (fail-open consciente com WARN, nunca silencioso).
+  let stale = false;
+  if (exists) {
+    try {
+      const meta = JSON.parse(fs.readFileSync(CACHE_PATH, 'utf8'));
+      const ttl = Number(meta.ttl_seconds) > 0 ? Number(meta.ttl_seconds) : 3600;
+      const ageSec = (Date.now() - new Date(meta.generated_at || 0).getTime()) / 1000;
+      stale = ageSec > ttl;
+      if (stale && skipScan) {
+        console.error(`[staleness-guard] WARN: capability-cache ${Math.round(ageSec / 3600)}h velho (TTL ${ttl}s) e --skip-scan ativo — usando STALE conscientemente`);
+      }
+    } catch {
+      stale = true;
+    }
+  }
+
+  if ((exists && !stale) || skipScan) return loadCache();
 
   const res = spawnSync(process.execPath, [SCAN_SCRIPT, '--force'], {
     cwd: REPO_ROOT,

@@ -130,7 +130,7 @@ class Insight:
         person_slug: Kebab-case person identifier (e.g., 'alex-hormozi').
         chunk_id: Unique chunk identifier for dedup (e.g., 'chunk_199').
         insight_id: Optional insight identifier (e.g., 'CF001').
-        tag: Source tag (e.g., 'AH-SRC001').
+        tag: Source tag (e.g., 'AH-SS001').
         title: Short description of the insight.
         content: Full insight text.
         priority: Priority level ('HIGH', 'MEDIUM', 'LOW').
@@ -326,20 +326,24 @@ def _find_target_agents(person_slug: str) -> list[Path]:
 def _is_duplicate(memory_text: str, chunk_id: str) -> bool:
     """Check if a chunk_id already appears in the MEMORY.md text.
 
-    Simple string search -- if the chunk_id string is present anywhere
-    in the file, we consider it a duplicate. This handles both table rows
-    and inline references.
+    Word-boundary search -- the chunk_id must occur as a standalone token, not
+    as a substring of a longer id. A naive ``chunk_id in memory_text`` treats
+    ``chunk_1`` as present inside ``chunk_10``/``chunk_100``, producing false
+    "duplicate" verdicts that silently drop legitimately-new chunks. We anchor
+    with lookarounds that exclude adjacent id characters (word chars + hyphen),
+    since chunk ids use ``[A-Za-z0-9_-]``.
 
     Args:
         memory_text: Full text content of MEMORY.md.
         chunk_id: The chunk identifier to search for.
 
     Returns:
-        True if chunk_id is already present in the text.
+        True if chunk_id is already present in the text as a whole token.
     """
     if not chunk_id:
         return False
-    return chunk_id in memory_text
+    pattern = rf"(?<![\w-]){re.escape(chunk_id)}(?![\w-])"
+    return re.search(pattern, memory_text) is not None
 
 
 # ---------------------------------------------------------------------------

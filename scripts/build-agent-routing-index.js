@@ -9,6 +9,73 @@
 const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml');
+
+// ── Ontology bridge (SCP.W1.3): knowledge_domain DERIVADO no rebuild ─────────
+// Retrofit sem edição em massa: task/candidate com taxonomy.domain ganha o
+// carimbo derivado via ponte; declarado na fonte (A2 novo) tem precedência.
+const BRIDGE_PATH = path.join(process.cwd(), 'squads', 'orquestrador-global', 'data', 'ontology-bridge.yaml');
+let _bridgeCache = null;
+function loadOntologyBridge() {
+  if (_bridgeCache) return _bridgeCache;
+  try {
+    _bridgeCache = yaml.load(fs.readFileSync(BRIDGE_PATH, 'utf8')) || {};
+  } catch { _bridgeCache = {}; }
+  return _bridgeCache;
+}
+let _squadDomainCache = null;
+function squadDomainMap() {
+  // squad → taxonomy.domain, lido dos config.yaml (mesma fonte dos candidates).
+  // Herança ontológica: task part_of squad => herda o domínio da squad quando
+  // não declara o próprio (regra de nascimento invertida — o lar define o domínio).
+  if (_squadDomainCache) return _squadDomainCache;
+  _squadDomainCache = {};
+  const squadsDir = path.join(process.cwd(), 'squads');
+  for (const name of fs.readdirSync(squadsDir)) {
+    if (name.startsWith('_') || name.startsWith('.')) continue;
+    const cfg = path.join(squadsDir, name, 'config.yaml');
+    if (!fs.existsSync(cfg)) continue;
+    try {
+      const doc = yaml.load(fs.readFileSync(cfg, 'utf8')) || {};
+      const dom = doc.routing && doc.routing.taxonomy && doc.routing.taxonomy.domain;
+      if (dom) _squadDomainCache[name] = String(dom);
+    } catch { /* config inválido: sem herança */ }
+  }
+  return _squadDomainCache;
+}
+
+function stampKnowledgeDomain(routing, squadName) {
+  // routing null + squad com domínio => cria bloco mínimo herdado (a task
+  // sem crachá ainda ganha endereço ontológico — part_of squad define o lar)
+  if (!routing) {
+    const dom = squadName ? squadDomainMap()[squadName] : null;
+    if (!dom) return routing;
+    const b = (loadOntologyBridge().bridge || {})[dom];
+    if (!b) return routing;
+    return {
+      version: 1,
+      knowledge_domain: b.knowledge_domain,
+      autonomy_dimension: b.autonomy_dimension === undefined ? null : b.autonomy_dimension,
+      ontology_role: b.ontology_role || null,
+      kd_source: 'inherited',
+    };
+  }
+  const declared = routing.knowledge_domain;
+  if (declared) { routing.kd_source = 'declared'; return routing; }
+  // precedência: taxonomy.domain próprio > domínio herdado da squad
+  let dom = routing.taxonomy && routing.taxonomy.domain;
+  let source = 'derived';
+  if (!dom && squadName) {
+    dom = squadDomainMap()[squadName];
+    source = 'inherited';
+  }
+  if (!dom) return routing;
+  const b = (loadOntologyBridge().bridge || {})[dom];
+  if (!b) return routing; // fora do mapa: NUNCA chutar (No Invention)
+  routing.knowledge_domain = b.knowledge_domain;
+  routing.autonomy_dimension = b.autonomy_dimension === undefined ? null : b.autonomy_dimension;
+  routing.kd_source = source;
+  return routing;
+}
 const Ajv2020 = require('ajv/dist/2020');
 
 let addFormats = null;
@@ -208,6 +275,235 @@ function collectSkills() {
   }
 
   return { all, byAgent, byName };
+}
+
+const TASK_REQUIRED_FIELDS = ['id', 'name', 'verb', 'executor', 'acceptance_criteria', 'status_machine'];
+// SCP.W5.2: allowlist EN+PT (red team A2: 63% verb:null com 41 verbos só-inglês)
+const TASK_FILENAME_VERB_HINTS = new Set([
+  // EN (originais + os que faltavam: update/delete/setup/send/etc.)
+  'analyze', 'apply', 'audit', 'build', 'calculate', 'capture', 'check', 'classify', 'compile', 'compose',
+  'create', 'define', 'design', 'detect', 'diagnose', 'draft', 'evaluate', 'execute', 'extract', 'generate',
+  'map', 'migrate', 'monitor', 'optimize', 'plan', 'publish', 'rank', 'refine', 'render', 'research',
+  'review', 'run', 'scan', 'score', 'sync', 'test', 'track', 'transform', 'translate', 'validate', 'write',
+  'update', 'delete', 'setup', 'send', 'import', 'export', 'configure', 'install', 'deploy', 'merge',
+  'clean', 'archive', 'register', 'resolve', 'assess', 'process', 'convert', 'fetch', 'load', 'index',
+  // PT (mesma família dos default_verbs do detector + verbos reais dos filenames)
+  'aplicar', 'auditar', 'analisar', 'atualizar', 'avaliar', 'calcular', 'capturar', 'classificar',
+  'compilar', 'configurar', 'construir', 'criar', 'decidir', 'definir', 'desenhar', 'detectar',
+  'diagnosticar', 'elaborar', 'escrever', 'executar', 'extrair', 'gerar', 'importar', 'exportar',
+  'mapear', 'medir', 'migrar', 'monitorar', 'otimizar', 'planejar', 'publicar', 'qualificar',
+  'validar', 'verificar', 'traduzir', 'transformar', 'testar', 'sincronizar', 'revisar', 'registrar',
+]);
+
+function firstHeading(text) {
+  const match = text.match(/^#\s+(.+)$/m);
+  return match ? match[1].trim() : null;
+}
+
+function purposeExcerpt(text, maxChars = 280) {
+  const match = text.match(/^##\s+Purpose\s*\n+([\s\S]*?)(?=\n##\s|\n---|$)/m);
+  if (!match) return null;
+  const excerpt = match[1].replace(/\s+/g, ' ').trim();
+  return excerpt ? excerpt.slice(0, maxChars) : null;
+}
+
+function signatureFromItems(items) {
+  if (!Array.isArray(items)) return [];
+  return items
+    .filter((item) => item && typeof item === 'object')
+    .map((item) => {
+      const signature = {};
+      if (item.id !== undefined) signature.id = String(item.id);
+      if (item.type !== undefined) signature.type = String(item.type);
+      if (item.ref !== undefined) signature.ref = String(item.ref);
+      return signature;
+    })
+    .filter((signature) => Object.keys(signature).length > 0);
+}
+
+// Routing Semantics v1 (STORY-FT-W2.1 — docs/reference/routing-semantics-spec.md):
+// a fonte declara COMO quer ser encontrada. Whitelist de campos, retrocompatível
+// (fonte sem routing => null, entry indexada como antes).
+function normalizeRouting(raw) {
+  if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return null;
+  const asStrings = (v) => (Array.isArray(v) ? v.map(String).filter(Boolean) : []);
+  const out = {
+    version: Number(raw.version) || 1,
+    // Proveniência de geração automática (STORY-W0 fix 3 — red-team 2026-07-07:
+    // a whitelist apagava needs_curation, tornando o rótulo cosmético; agora a
+    // flag SOBREVIVE ao índice e a query demota não-curadas).
+    generated: raw.generated === true ? true : undefined,
+    needs_curation: raw.needs_curation === true ? true : undefined,
+    knowledge_domain: raw.knowledge_domain ? String(raw.knowledge_domain) : undefined,
+    autonomy_dimension: raw.autonomy_dimension ? String(raw.autonomy_dimension) : undefined,
+    ontology_role: raw.ontology_role ? String(raw.ontology_role) : undefined,
+    generated_by: raw.generated_by ? String(raw.generated_by) : undefined,
+    curated_by: raw.curated_by ? String(raw.curated_by) : undefined,
+    curated_at: raw.curated_at ? String(raw.curated_at) : undefined,
+    power_summary: raw.power_summary ? String(raw.power_summary).slice(0, 1200) : null,
+    taxonomy: raw.taxonomy && typeof raw.taxonomy === 'object'
+      ? { domain: raw.taxonomy.domain ? String(raw.taxonomy.domain) : null, subdomains: asStrings(raw.taxonomy.subdomains) }
+      : null,
+    semantic_aliases: asStrings(raw.semantic_aliases),
+    verbs: asStrings(raw.verbs),
+    use_when: raw.use_when ? String(raw.use_when) : null,
+    not_use_when: raw.not_use_when ? String(raw.not_use_when) : null,
+    ontology: raw.ontology && typeof raw.ontology === 'object'
+      ? {
+          entity_type: raw.ontology.entity_type ? String(raw.ontology.entity_type) : null,
+          acts_on: asStrings(raw.ontology.acts_on),
+          produces: asStrings(raw.ontology.produces),
+          relates_to: Array.isArray(raw.ontology.relates_to)
+            ? raw.ontology.relates_to
+                .filter((r) => r && typeof r === 'object' && r.rel && r.target)
+                .map((r) => ({ rel: String(r.rel), target: String(r.target) }))
+            : [],
+        }
+      : null,
+  };
+  const hasContent = out.power_summary || out.semantic_aliases.length || out.verbs.length || out.use_when || out.taxonomy || out.ontology;
+  return hasContent ? out : null;
+}
+
+function collectTasks() {
+  const tasks = [];
+  const seenIds = new Set();
+
+  const taskFiles = walkFiles(paths.squads, (fullPath, name) => {
+    if (!name.endsWith('.md') && !name.endsWith('.yaml') && !name.endsWith('.yml')) return false;
+    if (/ \d+\.md$/.test(name)) return false; // sync duplicates ("task 2.md")
+    const relPath = rel(fullPath);
+    if (!/^squads\/[^/]+\/tasks\//.test(relPath)) return false;
+    if (relPath.startsWith('squads/_')) return false;
+    return true;
+  });
+
+  for (const taskPath of taskFiles) {
+    const relPath = rel(taskPath);
+    const squad = relPath.split('/')[1];
+    const isYamlFile = /\.(yaml|yml)$/.test(taskPath);
+    const slug = path.basename(taskPath).replace(/\.(md|yaml|yml)$/, '');
+    const text = readText(taskPath) || '';
+    const anatomy = isYamlFile ? (readYaml(taskPath) || {}) : extractFirstYamlBlock(taskPath);
+    const hasAnatomy = anatomy && typeof anatomy === 'object' && !Array.isArray(anatomy);
+    const canonical = hasAnatomy && TASK_REQUIRED_FIELDS.every((field) => anatomy[field] !== undefined && anatomy[field] !== null);
+
+    let taskId = canonical ? String(anatomy.id) : `task_${slug.replaceAll(/[^a-z0-9]+/gi, '_').toLowerCase()}`;
+    if (seenIds.has(`${squad}:${taskId}`)) continue;
+    seenIds.add(`${squad}:${taskId}`);
+
+    const filenameVerb = slug.split(/[-_]/)[0].toLowerCase();
+    const executor = canonical && anatomy.executor && typeof anatomy.executor === 'object'
+      ? {
+          type: anatomy.executor.type ? String(anatomy.executor.type) : null,
+          role: anatomy.executor.role ? String(anatomy.executor.role) : null,
+          id: anatomy.executor.id ? String(anatomy.executor.id) : null,
+        }
+      : null;
+
+    tasks.push({
+      task_id: taskId,
+      name: (canonical && anatomy.name ? String(anatomy.name) : firstHeading(text)) || slug,
+      squad,
+      source_path: relPath,
+      grade: canonical ? 'canonical' : 'legacy',
+      verb: canonical && anatomy.verb
+        ? String(anatomy.verb)
+        : (TASK_FILENAME_VERB_HINTS.has(filenameVerb) ? filenameVerb
+          // SCP.W5.2 fallback 2: primeira palavra do H1/name (ex.: "Audit Landing Page")
+          : (() => {
+              const nameVerb = String((firstHeading(text) || '')).toLowerCase().split(/[\s:—-]+/)[0];
+              return TASK_FILENAME_VERB_HINTS.has(nameVerb) ? nameVerb : null;
+            })()),
+      description: purposeExcerpt(text),
+      executor,
+      inputs_signature: canonical ? signatureFromItems(anatomy.inputs) : [],
+      outputs_signature: canonical ? signatureFromItems(anatomy.outputs) : [],
+      acceptance_criteria_count: canonical && Array.isArray(anatomy.acceptance_criteria) ? anatomy.acceptance_criteria.length : 0,
+      depends_on: canonical && Array.isArray(anatomy.depends_on) ? anatomy.depends_on.map(String) : [],
+      routing: stampKnowledgeDomain(normalizeRouting(anatomy.routing), squad),
+      quality_signals: {
+        has_anatomy_block: Boolean(hasAnatomy),
+        has_pre_checklist: Boolean(canonical && Array.isArray(anatomy.pre_checklist) && anatomy.pre_checklist.length > 0),
+        has_post_checklist: Boolean(canonical && Array.isArray(anatomy.post_checklist) && anatomy.post_checklist.length > 0),
+        has_failure_handling: Boolean(canonical && anatomy.failure_handling),
+        has_artifact_template: Boolean(canonical && anatomy.artifact_template),
+        has_purpose_section: Boolean(purposeExcerpt(text)),
+      },
+    });
+  }
+
+  tasks.sort((a, b) => `${a.squad}/${a.task_id}`.localeCompare(`${b.squad}/${b.task_id}`));
+
+  // STORY-MB-011 AC3: twin-flag para pares divergentes copy/megabrain-copy (mesma slug,
+  // conteúdo diferente — dedup silencioso seria desonesto; flag para curadoria).
+  const TWIN_SQUADS = [['copy', 'megabrain-copy']];
+  for (const [a, b] of TWIN_SQUADS) {
+    const bySlug = new Map();
+    for (const task of tasks) {
+      if (task.squad !== a && task.squad !== b) continue;
+      const slug = path.basename(task.source_path).replace(/\.(md|yaml|yml)$/, '');
+      if (!bySlug.has(slug)) bySlug.set(slug, []);
+      bySlug.get(slug).push(task);
+    }
+    for (const group of bySlug.values()) {
+      if (group.length > 1) {
+        for (const task of group) {
+          task.twin_of = group.filter((g) => g !== task).map((g) => `${g.squad}/${g.task_id}`);
+        }
+      }
+    }
+  }
+  return tasks;
+}
+
+
+// STORY-MB-011 AC1 (SOT R3): tools no closed-world do índice.
+// Fonte 1: services/tool-capability-registry.yaml (26 capabilities semânticas → tool oficial)
+// Fonte 2: .mcp.json (servers MCP registrados)
+function collectTools() {
+  const tools = [];
+  const registryPath = path.join(repoRoot, 'services', 'tool-capability-registry.yaml');
+  const reg = readYaml(registryPath);
+  if (reg && reg.capabilities) {
+    for (const [id, cap] of Object.entries(reg.capabilities)) {
+      tools.push({
+        tool_id: `capability:${id}`,
+        kind: 'tool_capability',
+        name: id,
+        official: cap.official || null,
+        description: cap.description || null,
+        source_path: 'services/tool-capability-registry.yaml',
+        routing: normalizeRouting({
+          semantic_aliases: cap.semantic_aliases || [],
+          use_when: cap.description || null,
+          taxonomy: { domain: 'tools', subdomains: [] },
+          ontology: { entity_type: 'tool_capability', acts_on: [], produces: [] },
+        }),
+        providers: Object.keys(cap.providers || {}),
+      });
+    }
+  }
+  const mcpPath = path.join(repoRoot, '.mcp.json');
+  if (fs.existsSync(mcpPath)) {
+    try {
+      const mcp = JSON.parse(fs.readFileSync(mcpPath, 'utf8'));
+      for (const server of Object.keys(mcp.mcpServers || {})) {
+        tools.push({
+          tool_id: `mcp:${server}`,
+          kind: 'mcp_server',
+          name: server,
+          official: server,
+          description: null,
+          source_path: '.mcp.json',
+          routing: null,
+          providers: [],
+        });
+      }
+    } catch (_) { /* mcp.json ilegível => sem tools mcp */ }
+  }
+  tools.sort((a, b) => a.tool_id.localeCompare(b.tool_id));
+  return tools;
 }
 
 function collectSquads() {
@@ -492,6 +788,7 @@ function buildCandidate({
       secondary: uniqueSorted([config?.metadata?.category, config?.pack?.name].filter(Boolean)),
     },
     description: descriptionPlaceholder ? null : String(description),
+    routing: stampKnowledgeDomain(normalizeRouting((config && config.routing) || (visibleSkill && visibleSkill.frontmatter && visibleSkill.frontmatter.routing) || null), null),
     supported_modes: supportedModes,
     user_invocable: userInvocable || sourceKind === 'core',
     visibility_status: visibilityStatus,
@@ -520,6 +817,8 @@ function buildIndex(generatedAt) {
   const squads = collectSquads();
   const chiefs = collectChiefs();
   const agentRegistry = collectAgentRegistry();
+  const tasks = collectTasks();
+  const tools = collectTools();
   const candidates = [];
   const seen = new Set();
 
@@ -608,8 +907,12 @@ function buildIndex(generatedAt) {
       chief_registry: chiefs.count,
       agent_registry: agentRegistry.count,
       codex_agents: walkFiles(path.join(repoRoot, '.codex', 'agents'), (_, name) => name.endsWith('.toml')).length,
+      task_definitions: tasks.length,
+      tool_entries: tools.length,
     },
     candidates,
+    tasks,
+    tools,
   };
 }
 
@@ -751,7 +1054,8 @@ function main() {
   fs.mkdirSync(path.dirname(paths.catalog), { recursive: true });
   fs.writeFileSync(paths.output, indexText);
   fs.writeFileSync(paths.catalog, catalogText);
-  console.log(`Wrote ${rel(paths.output)} (${index.candidates.length} candidates)`);
+  const canonicalTasks = index.tasks.filter((task) => task.grade === 'canonical').length;
+  console.log(`Wrote ${rel(paths.output)} (${index.candidates.length} candidates, ${index.tasks.length} tasks [${canonicalTasks} canonical])`);
   console.log(`Wrote ${rel(paths.catalog)}`);
 }
 

@@ -8,10 +8,6 @@
 # 3. Pode atualizar CLAUDE.md se solicitado
 #
 # Referência: Boris Cherny GitHub Action for Claude Code
-#
-# SEGURANÇA (CWE-94): dados de evento (comment/title/body/branch) NUNCA são
-# interpolados via ${{ }} dentro de run:/script:. São passados por env: e lidos
-# como "$VAR" / process.env.VAR. O job só roda para autor confiável.
 
 name: Claude Code PR Assistant
 
@@ -23,14 +19,26 @@ on:
 
 # Only run when comment contains @.claude or @claude
 jobs:
+  # Gate: skip (not fail) when ANTHROPIC_API_KEY is absent. `secrets` is not allowed
+  # in a job-level `if:`, so it is surfaced here as a job output.
+  gate:
+    runs-on: ubuntu-latest
+    outputs:
+      has_key: ${{ steps.check.outputs.has_key }}
+    steps:
+      - name: Check for ANTHROPIC_API_KEY
+        id: check
+        env:
+          HAS_KEY: ${{ secrets.ANTHROPIC_API_KEY != '' }}
+        run: echo "has_key=$HAS_KEY" >> "$GITHUB_OUTPUT"
+
   claude-pr-assistant:
-    # Only run on PR comments containing @.claude or @claude — AND from a trusted author
+    needs: gate
+    # Only run on PR comments containing @.claude or @claude (and only if key is set)
     if: |
+      needs.gate.outputs.has_key == 'true' &&
       (github.event.issue.pull_request || github.event.pull_request) &&
-      (contains(github.event.comment.body, '@.claude') || contains(github.event.comment.body, '@claude')) &&
-      (github.event.comment.author_association == 'OWNER' ||
-       github.event.comment.author_association == 'MEMBER' ||
-       github.event.comment.author_association == 'COLLABORATOR')
+      (contains(github.event.comment.body, '@.claude') || contains(github.event.comment.body, '@claude'))
 
     runs-on: ubuntu-latest
     permissions:
@@ -85,14 +93,13 @@ jobs:
 
       - name: Parse Claude command
         id: parse-command
-        # M2: comentário não confiável entra por env, nunca por ${{ }} em run:
-        env:
-          COMMENT: ${{ fromJson(steps.pr-details.outputs.result).comment }}
         run: |
-          # Extract command after @.claude or @claude (printf %s não avalia o conteúdo)
-          COMMAND="$(printf '%s' "$COMMENT" | sed -n 's/.*@\.claude[[:space:]]*\(.*\)/\1/p' | head -1)"
+          COMMENT="${{ fromJson(steps.pr-details.outputs.result).comment }}"
+
+          # Extract command after @.claude or @claude
+          COMMAND=$(echo "$COMMENT" | sed -n 's/.*@\.claude\s*\(.*\)/\1/p' | head -1)
           if [ -z "$COMMAND" ]; then
-            COMMAND="$(printf '%s' "$COMMENT" | sed -n 's/.*@claude[[:space:]]*\(.*\)/\1/p' | head -1)"
+            COMMAND=$(echo "$COMMENT" | sed -n 's/.*@claude\s*\(.*\)/\1/p' | head -1)
           fi
 
           # Default to "review" if no specific command
@@ -100,7 +107,7 @@ jobs:
             COMMAND="review this PR"
           fi
 
-          echo "command=$COMMAND" >> "$GITHUB_OUTPUT"
+          echo "command=$COMMAND" >> $GITHUB_OUTPUT
 
       - name: Install Claude Code CLI
         run: |
@@ -110,30 +117,28 @@ jobs:
 
       - name: Run Claude analysis
         id: claude-analysis
-        # M3: title/body/branch/base/files/author/command entram por env; o contexto
-        # é montado com printf '%s' (não avalia $(...)/backticks/${{ }}).
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          PR_TITLE: ${{ fromJson(steps.pr-details.outputs.result).title }}
-          PR_BODY: ${{ fromJson(steps.pr-details.outputs.result).body }}
-          PR_BRANCH: ${{ fromJson(steps.pr-details.outputs.result).branch }}
-          PR_BASE: ${{ fromJson(steps.pr-details.outputs.result).base }}
-          PR_FILES: ${{ toJson(fromJson(steps.pr-details.outputs.result).files) }}
-          PR_COMMENT_AUTHOR: ${{ fromJson(steps.pr-details.outputs.result).comment_author }}
-          CLAUDE_COMMAND: ${{ steps.parse-command.outputs.command }}
         run: |
-          # Build context file (safe): printf '%s' trata tudo como texto literal
-          {
-            printf '# PR Context\n\n'
-            printf '## PR: %s\n\n' "$PR_TITLE"
-            printf '**Branch:** %s -> %s\n\n' "$PR_BRANCH" "$PR_BASE"
-            printf '**Files Changed:**\n%s\n\n' "$PR_FILES"
-            printf '**PR Description:**\n%s\n\n' "$PR_BODY"
-            printf '## User Request\n\n'
-            printf '@%s asked:\n%s\n' "$PR_COMMENT_AUTHOR" "$CLAUDE_COMMAND"
-          } > /tmp/pr_context.md
+          # Create context file
+          cat > /tmp/pr_context.md << 'EOF'
+          # PR Context
 
-          # Run Claude (o conteúdo do arquivo é passado como argumento literal)
+          ## PR: ${{ fromJson(steps.pr-details.outputs.result).title }}
+
+          **Branch:** ${{ fromJson(steps.pr-details.outputs.result).branch }} -> ${{ fromJson(steps.pr-details.outputs.result).base }}
+
+          **Files Changed:**
+          ${{ toJson(fromJson(steps.pr-details.outputs.result).files) }}
+
+          **PR Description:**
+          ${{ fromJson(steps.pr-details.outputs.result).body }}
+
+          ## User Request
+
+          @${{ fromJson(steps.pr-details.outputs.result).comment_author }} asked:
+          ${{ steps.parse-command.outputs.command }}
+          EOF
+
+          # Run Claude
           RESPONSE=$(claude --print "$(cat /tmp/pr_context.md)" 2>&1 || echo "Error running Claude")
 
           # Save response for next step
@@ -145,65 +150,64 @@ jobs:
           fi
 
           # Set output
-          echo "response<<CLAUDE_RESPONSE_EOF" >> "$GITHUB_OUTPUT"
-          echo "$RESPONSE" >> "$GITHUB_OUTPUT"
-          echo "CLAUDE_RESPONSE_EOF" >> "$GITHUB_OUTPUT"
+          echo "response<<EOF" >> $GITHUB_OUTPUT
+          echo "$RESPONSE" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
       - name: Post response as comment
         uses: actions/github-script@v7
-        # M4: resposta e autor entram por env; lidos via process.env, nunca ${{ }} no script
-        env:
-          RESPONSE: ${{ steps.claude-analysis.outputs.response }}
-          COMMENT_AUTHOR: ${{ fromJson(steps.pr-details.outputs.result).comment_author }}
         with:
           script: |
-            const response = process.env.RESPONSE || '';
-            const commentAuthor = process.env.COMMENT_AUTHOR || '';
+            const response = `${{ steps.claude-analysis.outputs.response }}`;
             const prNumber = context.issue?.number || context.payload.pull_request?.number;
 
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: prNumber,
-              body: `## Claude Code Response\n\n${response}\n\n---\n*Triggered by @${commentAuthor}'s comment*`
+              body: `## Claude Code Response
+
+            ${response}
+
+            ---
+            *Triggered by @${{ fromJson(steps.pr-details.outputs.result).comment_author }}'s comment*`
             });
 
       - name: Check if CLAUDE.md update requested
         id: check-update
-        # M4: comando (derivado de dado não confiável) entra por env
-        env:
-          COMMAND: ${{ steps.parse-command.outputs.command }}
         run: |
-          if printf '%s' "$COMMAND" | grep -qi "update.*claude.md\|atualizar.*claude.md\|add.*rule\|adicionar.*regra"; then
-            echo "update_requested=true" >> "$GITHUB_OUTPUT"
+          COMMAND="${{ steps.parse-command.outputs.command }}"
+          if echo "$COMMAND" | grep -qi "update.*claude.md\|atualizar.*claude.md\|add.*rule\|adicionar.*regra"; then
+            echo "update_requested=true" >> $GITHUB_OUTPUT
           else
-            echo "update_requested=false" >> "$GITHUB_OUTPUT"
+            echo "update_requested=false" >> $GITHUB_OUTPUT
           fi
 
       - name: Update CLAUDE.md if requested
         if: steps.check-update.outputs.update_requested == 'true'
-        # M4: comando/autor/número entram por env; nada de ${{ }} de dado de evento em run:
-        env:
-          COMMAND: ${{ steps.parse-command.outputs.command }}
-          COMMENT_AUTHOR: ${{ fromJson(steps.pr-details.outputs.result).comment_author }}
-          PR_NUMBER: ${{ github.event.issue.number || github.event.pull_request.number }}
         run: |
           # Create a new branch for the update
           git config user.name "Claude Code Bot"
           git config user.email "claude-code-bot@users.noreply.github.com"
 
           BRANCH="claude-update-$(date +%s)"
-          git checkout -b "$BRANCH"
+          git checkout -b $BRANCH
 
-          # Append context to CLAUDE.md (printf '%s' — sem avaliação)
-          {
-            printf '\n## Auto-generated from PR #%s\n\n' "$PR_NUMBER"
-            printf 'Request: %s\n\n' "$COMMAND"
-          } >> CLAUDE.md
+          # Append context to CLAUDE.md
+          echo "" >> CLAUDE.md
+          echo "## Auto-generated from PR #${{ github.event.issue.number || github.event.pull_request.number }}" >> CLAUDE.md
+          echo "" >> CLAUDE.md
+          echo "Request: ${{ steps.parse-command.outputs.command }}" >> CLAUDE.md
+          echo "" >> CLAUDE.md
 
           git add CLAUDE.md
-          git commit -m "docs: Update CLAUDE.md from PR comment (PR #${PR_NUMBER}, by @${COMMENT_AUTHOR})"
+          git commit -m "docs: Update CLAUDE.md from PR comment
 
-          git push origin "$BRANCH"
+          Triggered by @${{ fromJson(steps.pr-details.outputs.result).comment_author }}
+          PR: #${{ github.event.issue.number || github.event.pull_request.number }}"
+
+          git push origin $BRANCH
 
           echo "Created update branch: $BRANCH"

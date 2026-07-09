@@ -26,7 +26,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 import webbrowser
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 
 from engine.intelligence.pipeline.read_ai_config import load_config
@@ -60,9 +60,24 @@ def _generate_pkce() -> tuple[str, str]:
 
 
 def _save_tokens(tokens: dict) -> None:
-    """Save tokens to secure location."""
+    """Save tokens to secure location.
+
+    Records ``saved_at`` and, when ``expires_in`` is present, an absolute
+    ``expires_at`` (ISO-8601, Z suffix) so downstream expiry checks have a
+    concrete deadline to compare against. Previously only ``saved_at`` was
+    written, leaving no absolute expiry to check — a latent gap in the
+    auto-refresh path.
+    """
     TOKENS_PATH.parent.mkdir(parents=True, exist_ok=True)
-    tokens["saved_at"] = datetime.now(UTC).isoformat() + "Z"
+    now = datetime.now(UTC)
+    tokens["saved_at"] = now.isoformat() + "Z"
+    expires_in = tokens.get("expires_in")
+    if expires_in is not None:
+        expires_at = now + timedelta(seconds=int(expires_in))
+        # Emit a naive-UTC ISO string with a bare Z suffix (no +00:00 offset),
+        # so downstream parsers doing `.replace("Z", "+00:00")` get a single,
+        # valid offset rather than a doubled one.
+        tokens["expires_at"] = expires_at.strftime("%Y-%m-%dT%H:%M:%S.%f") + "Z"
     with open(TOKENS_PATH, "w") as f:
         json.dump(tokens, f, indent=2)
 

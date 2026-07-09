@@ -213,9 +213,9 @@ def _humanize_source_name(entity_slug: str) -> str:
 # ---------------------------------------------------------------------------
 #
 # The pipeline previously inferred entity from filename token #0 ALONE. That
-# enabled silent misclassification (e.g. "Acme-Widget-Jane-Doe.mp4" became
-# entity=acme, when in reality the AUTHOR is jane-doe and the SUBJECT is
-# widget, with acme being a cross-reference / co-host).
+# enabled silent misclassification (e.g. "sua-organizacao-Widget-Operator-example.mp4"
+# became entity=sua-organizacao, when in reality the AUTHOR is operator-example and the
+# SUBJECT is widget, with sua-organizacao being a cross-reference / co-host).
 #
 # Entity Discovery Dual fixes this with three passes:
 #   PASS 1: parse_filename_evidence  — deterministic, no LLM
@@ -281,7 +281,7 @@ def parse_filename_evidence(filename: str) -> dict:
         1. STRONG SPLIT on -, +, _, parentheses, commas — produces "groups"
         2. WITHIN each group, split on space → tokens
         3. Per-group classification:
-            - 2-3 Title-Case tokens consecutive → person (e.g. "Jane Doe")
+            - 2-3 Title-Case tokens consecutive → person (e.g. "um especialista")
             - 1 Title-Case token alone → company
             - Tokens after a person separated by 2+ spaces → separate company
         4. Filter noise (resolution, codec, container, hashes, numbers)
@@ -492,8 +492,8 @@ def parse_content_evidence(gemini_result: dict | None) -> dict:
 def _slugify(name: str) -> str:
     """Convert a Title-Case name to kebab-case slug.
 
-    'Jane Doe' -> 'jane-doe'
-    'Acme' -> 'acme'
+    'um especialista' -> 'operator-example'
+    'Widget' -> 'widget'
     """
     import re as _re
 
@@ -509,15 +509,7 @@ def _slugify(name: str) -> str:
 # Used by infer_entities to recover bucket signal for non-video files when
 # Gemini Speaker Visual Gate is bypassed.
 
-# Host/founder email domains. Sourced from internal_people.FOUNDER_DOMAINS
-# (configured via MEGA_BRAIN_FOUNDER_DOMAINS); falls back to empty so the
-# engine ships free of any organization-specific identity.
-try:
-    from engine.intelligence.pipeline.internal_people import FOUNDER_DOMAINS as _FOUNDER_DOMAINS
-
-    _HOST_DOMAINS = set(_FOUNDER_DOMAINS)
-except Exception:
-    _HOST_DOMAINS = set()
+_HOST_DOMAINS = {"sua-organizacao.com", "sua-organizacao.com", "sua-organizacao.com.br", "empresa-e.com"}
 
 
 def parse_local_content_evidence(
@@ -619,21 +611,8 @@ def parse_local_content_evidence(
     # 3. Consult FIREFLIES-STATE.json (AC-7) if transcript_id present
     if result["transcript_id"]:
         try:
-            import os as _os
-
             from engine.paths import MISSION_CONTROL
-
-            # Generic state file is always checked. Per-account state files
-            # (FIREFLIES-STATE-<account>.json) are opt-in via env var.
-            _accounts = [
-                a.strip()
-                for a in _os.environ.get("MEGA_BRAIN_FIREFLIES_ACCOUNTS", "").split(",")
-                if a.strip()
-            ]
-            _state_names = ["FIREFLIES-STATE.json"] + [
-                f"FIREFLIES-STATE-{a}.json" for a in _accounts
-            ]
-            for state_name in _state_names:
+            for state_name in ("FIREFLIES-STATE.json", "FIREFLIES-STATE-org.json", "FIREFLIES-STATE-sua-organizacao.json"):
                 state_path = MISSION_CONTROL / state_name
                 if not state_path.exists():
                     continue
@@ -663,11 +642,10 @@ def parse_local_content_evidence(
 
 
 # STORY-MCE-FOUNDER-ROUTING (2026-06-09)
-# Founder-in-call detection. When the founder (the configured owner / any
-# @<founder-domain> email / a name matching a people-registry) is a
-# PARTICIPANT, the call is a BUSINESS relationship, NOT an external expert —
-# even if the filename carries a person token that the legacy heuristic would
-# route to external.
+# Founder-in-call detection. When the founder (o fundador / any @sua-organizacao.com
+# email / a name matching a people-registry) is a PARTICIPANT, the call is a
+# BUSINESS relationship, NOT an external expert — even if the filename carries
+# a person token that the legacy heuristic would route to external.
 
 
 def detect_internal_party(
@@ -783,7 +761,7 @@ def detect_internal_party(
     # person who is NOT the internal party, else a non-internal speaker.
     #
     # Robustness: a filename person blob may glue a name to a host/company
-    # token ("Jane Doe Acme"). We try the full string AND progressive
+    # token ("Jane Doe sua-organizacao"). We try the full string AND progressive
     # sub-spans (dropping trailing tokens) so a registered collaborator inside
     # the blob is still detected. The first sub-span that classifies internal
     # (and is NOT the primary internal party) wins as a collaborator
@@ -856,7 +834,7 @@ def infer_entities(
 
     Returns:
         Dict with:
-          - entity_author: str | None — slug of the presenter (Jane Doe -> jane-doe)
+          - entity_author: str | None — slug of the presenter (um especialista -> operator-example)
           - entity_subject: str | None — slug of the main subject (Widget -> widget)
           - cross_references: list[str] — other entities mentioned (not author/subject)
           - confidence: "high" | "medium" | "low"
@@ -930,10 +908,10 @@ def infer_entities(
     elif fn_evidence["companies"]:
         # FILENAME-ONLY HEURISTIC for subject discovery:
         # When the filename has multiple companies, the REPEATED token is
-        # usually a tag/cross-ref/host (e.g. "Acme" repeated 2x = the host
+        # usually a tag/cross-ref/host (e.g. "sua-organizacao" repeated 2x = the host
         # company), and the UNIQUE token is the actual subject.
-        # Example: "Acme + Widget - ... - Acme" → subject=Widget
-        # because Acme appears 2x (host tag) and Widget 1x (real topic).
+        # Example: "sua-organizacao + Widget - ... - sua-organizacao" → subject=Widget
+        # because sua-organizacao appears 2x (host tag) and Widget 1x (real topic).
 
         # Use stem to count raw occurrences (case-insensitive)
         stem_lower = fn_evidence["raw_stem"].lower()
@@ -1117,10 +1095,10 @@ def validate_entity_classification(
 ) -> dict:
     """Cross-validate that filenames agree with the parent directory's entity slug.
 
-    Entity Discovery (Phase 2): When a file lives in
-    `inbox/business/acme/misc/Acme-Widget-Parte1.txt`, the parent slug
-    is "acme" — but the FILENAME suggests the subject is actually Widget
-    (and possibly the author is Jane Doe). This function detects that
+    Entity Discovery (Phase 2, 2026-05-12): When a file lives in
+    `inbox/business/sua-organizacao/misc/sua-organizacao-Widget-Parte1.txt`, the parent slug
+    is "sua-organizacao" — but the FILENAME suggests the subject is actually Widget
+    (and possibly the author is um especialista). This function detects that
     divergence.
 
     Args:
@@ -1419,6 +1397,13 @@ def _is_file_batched(registry: dict, file_path: Path) -> bool:
     # ARTIFACTS is module-level (engine.paths or fallback) — always safe to use.
     batches_root = ARTIFACTS / "batches"
     candidates: list[Path] = [
+        # Canonical write location: write_batch_json() emits the batch JSON to
+        # BATCH_JSON_DIR (mission-control/batch-logs). MCE-13.8 originally only
+        # checked ARTIFACTS/batches, where scan_and_create copies the *source*
+        # files (not the batch JSON) — so the cross-check never matched and
+        # dedup silently failed, re-batching already-processed files. Check the
+        # real write location first.
+        BATCH_JSON_DIR / f"{batch_id}.json",
         batches_root / source_name / f"{batch_id}.json",
         batches_root / f"{batch_id}.json",
     ]
@@ -1710,7 +1695,7 @@ def copy_batch_files_to_artifacts(
     Inbox source is never modified — this is a one-way copy.
 
     Args:
-        entity_slug: Person/source slug (e.g. ``"jane-doe"``).
+        entity_slug: Person/source slug (e.g. ``"operator-example"``).
         file_paths: Absolute paths of files originally batched (from the
             knowledge/external/inbox/{slug}/ tree).
 
@@ -2021,11 +2006,11 @@ def scan_and_create(
                     result.files_below_threshold[entity_slug] = len(unprocessed)
                 continue
 
-            # ENTITY VALIDATION (Phase 2): cross-check that the parent
-            # directory slug matches what the filenames suggest. If filenames
-            # consistently disagree (e.g. parent=acme but all filenames
-            # mention widget), log a misclassification warning so cascade can
-            # flag for review instead of routing blindly.
+            # ENTITY VALIDATION (Phase 2, 2026-05-12): cross-check that the
+            # parent directory slug matches what the filenames suggest. If
+            # filenames consistently disagree (e.g. parent=sua-organizacao but all
+            # filenames mention widget), log a misclassification warning
+            # so cascade can flag for review instead of routing blindly.
             validation = validate_entity_classification(entity_slug, unprocessed)
             if validation["divergence_detected"]:
                 logger.warning(

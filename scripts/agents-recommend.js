@@ -147,7 +147,7 @@ const DOMAIN_RULES = [
   },
   {
     // Autonomia de agente — gate de fidelidade, ciclo autônomo, auditoria de agente, freios anti-delírio.
-    // Camada de autonomia do bundle de autonomia (autonomy-gate, pipeline-cycle, agent-autonomy squad).
+    // Camada de autonomia do bundle Operator (autonomy-gate, pipeline-cycle, agent-autonomy squad).
     id: 'agent-autonomy',
     triggers: [
       'autonomia', 'autonomia de agente', 'autonomy', 'gate de autonomia', 'autonomy-gate',
@@ -190,6 +190,22 @@ const DOMAIN_RULES = [
     prefer: ['ip-shield-squad/shield-chief'],
     fallback: '@architect',
     reason: 'Demanda envolve proteção de propriedade intelectual ou sistemas de IA.',
+  },
+  {
+    // Inteligência de ecossistema — topologia de squads, grafo de conexões/acoplamento,
+    // saúde estrutural, carga cognitiva, gargalos, performance, custos, tech radar (squad kaizen).
+    id: 'ecosystem-intelligence',
+    triggers: [
+      'topologia', 'topology', 'acoplamento', 'coupling', 'grafo de conexões', 'grafo de conexoes',
+      'connection graph', 'quem lê', 'quem le', 'quem escreve', 'who reads', 'who writes',
+      'saúde do ecossistema', 'saude do ecossistema', 'ecosystem health', 'carga cognitiva',
+      'cognitive load', 'gargalo', 'bottleneck', 'tech radar', 'radar tecnológico', 'radar tecnologico',
+      'kaizen', 'auditoria estrutural', 'structural audit', 'mapa de capabilities', 'capability map',
+      'performance de squads', 'squad performance', 'custo de squads', 'dora',
+    ],
+    prefer: ['kaizen/kaizen-chief'],
+    fallback: '@architect',
+    reason: 'Demanda envolve inteligência de ecossistema — topologia de squads, grafo de conexões/acoplamento (quem lê/quem escreve), saúde estrutural, carga cognitiva, gargalos, performance, custos ou tech radar. kaizen-chief orquestra os 6 especialistas de análise.',
   },
 ];
 
@@ -370,7 +386,14 @@ function scoreCandidate(candidate, context) {
     reasons.push(`Modos compatíveis: ${modeMatches.join(', ')}.`);
   }
 
-  const tokenMatches = queryTokens.filter((token) => text.includes(token));
+  // Tokens < 3 chars (e.g. "ia", "os") must NOT substring-match: a 2-letter token
+  // hits inside unrelated words (estrateg-IA, mid-IA), inflating hasRelevance and
+  // producing false-positive routing. Require an exact word-boundary token match for
+  // those; tokens >= 3 chars keep substring behaviour unchanged. [Story ROUTING-1.1]
+  const candidateTokens = new Set(tokenize(candidateText(candidate)));
+  const tokenMatches = queryTokens.filter((token) => (
+    token.length >= 3 ? text.includes(token) : candidateTokens.has(token)
+  ));
   if (tokenMatches.length > 0) {
     hasRelevance = true;
     score += Math.min(20, tokenMatches.length * 4);

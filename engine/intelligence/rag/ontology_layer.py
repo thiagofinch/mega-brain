@@ -17,19 +17,74 @@ Versao: 1.0.0
 Data: 2026-03-01
 """
 
+import os
+
 from .graph_builder import KnowledgeGraph, get_graph
+from .typed_schema import load_schema
 
 # ---------------------------------------------------------------------------
 # ONTOLOGY CONFIG
 # ---------------------------------------------------------------------------
-# Layer hierarchy (top to bottom)
-LAYER_HIERARCHY = [
+# STORY-F1-17 — hot-path expansion kill-switch (default OFF).
+# Mirrors the MCE_GRAPHRAG_ENABLED posture: a process-level env var read at
+# import time (LAYER_HIERARCHY below) and at call time (query_orchestrator
+# routing). OFF (default) == byte-identical legacy behavior (the 5-type
+# traversal, AC4). ON == the 12 Object Types of typed_schema.yaml are recognized.
+_HOTPATH_TRUTHY = ("1", "true", "yes", "on")
+
+
+def ontology_hotpath_enabled() -> bool:
+    """Return True when the F1-17 ontology hot-path expansion is enabled.
+
+    Kill-switch env var ``ONTOLOGY_HOTPATH_ENABLED`` (default OFF). Follows the
+    same opt-in-via-env pattern as ``MCE_GRAPHRAG_ENABLED``.
+    """
+    return os.environ.get("ONTOLOGY_HOTPATH_ENABLED", "0").strip().lower() in _HOTPATH_TRUTHY
+
+
+# The 5 DNA-chain types the traversal recognized BEFORE F1-17. Kept verbatim so
+# the OFF path is provably byte-identical to the pre-F1-17 constant (AC4).
+_LAYER_HIERARCHY_LEGACY = [
     "filosofia",
     "modelo_mental",
     "heuristica",
     "framework",
     "metodologia",
 ]
+
+
+def _build_layer_hierarchy(enabled: bool | None = None) -> list[str]:
+    """Build the recognized-layer list, consuming typed_schema (No-Invention).
+
+    OFF (default): the exact 5 legacy DNA-chain types — byte-identical to the
+    pre-F1-17 constant (AC4). ON: the Object Types declared in
+    ``typed_schema.yaml`` (F0-13, the schema-fonte), legacy-5-first so the
+    generative-chain indices used by ``_get_layer_index``/direction logic are
+    preserved, then the remaining Object Types in schema order. Node-events
+    (hyperedge/fonte/documento/workspace_doc) are NEVER added — they are
+    "ignored by traversal by design" (schema scope_note). Fail-safe: any schema
+    read error falls back to the 5 legacy types (module import must never break).
+    """
+    if enabled is None:
+        enabled = ontology_hotpath_enabled()
+    if not enabled:
+        return list(_LAYER_HIERARCHY_LEGACY)
+    try:
+        schema = load_schema()
+        names = [ot["name"] for ot in schema.get("object_types", []) if ot.get("name")]
+    except Exception:
+        return list(_LAYER_HIERARCHY_LEGACY)
+    if not names:
+        return list(_LAYER_HIERARCHY_LEGACY)
+    ordered = [t for t in _LAYER_HIERARCHY_LEGACY if t in names]
+    ordered += [t for t in names if t not in ordered]
+    return ordered
+
+
+# Layer hierarchy (top to bottom). F1-17: consumes typed_schema when the
+# ONTOLOGY_HOTPATH_ENABLED kill-switch is ON (12 Object Types); the 5 legacy
+# DNA-chain types when OFF (default). Resolved once at import (process-level env).
+LAYER_HIERARCHY = _build_layer_hierarchy()
 
 # Relationship types that connect layers downward
 DOWNWARD_RELS = ["GERA", "PRODUZ", "MATERIALIZA", "IMPLEMENTA"]

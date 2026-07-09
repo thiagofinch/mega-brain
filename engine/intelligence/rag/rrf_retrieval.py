@@ -79,16 +79,16 @@ def _rrf_fuse(
     Returns: [(chunk_id, rrf_score), ...] sorted descending, scores in [0, 1].
 
     STORY-GBA-F2.1: scores are normalized to [0, 1] after summation, ported
-    literally from gbrain's ``rrfFusionWeighted`` (hybrid.ts, SHA 4ee530f).
-    The gbrain divides every accumulated score by ``maxScore`` so the top
+    literally from refbrain's ``rrfFusionWeighted`` (hybrid.ts, SHA REDACTED).
+    The refbrain divides every accumulated score by ``maxScore`` so the top
     result lands at 1.0 and the rest scale proportionally. This is a strictly
     monotonic transform (all raw scores are positive, divided by the same
     positive ``maxScore``) — it ONLY rescales, it NEVER reorders. The
     normalized range is the pre-requisite for the cosine re-score blend
     (F2.3: ``0.7·rrf + 0.3·cosine``) which needs both terms in [0, 1].
 
-    Note: gbrain's ``compiled_truth`` boost is intentionally NOT ported — that
-    is gbrain-specific page-type logic with no equivalent in mega-brain, and
+    Note: refbrain's ``compiled_truth`` boost is intentionally NOT ported — that
+    is refbrain-specific page-type logic with no equivalent in mega-brain, and
     inventing it would violate Constitution Art. IV (No Invention).
     """
     scores: dict[str, float] = {}
@@ -99,8 +99,8 @@ def _rrf_fuse(
     if not scores:
         return []
 
-    # Normalize to [0, 1] by dividing by the max score (gbrain hybrid.ts:1847).
-    # Monotonic: preserves order, only rescales. Guard maxScore > 0 like gbrain.
+    # Normalize to [0, 1] by dividing by the max score (refbrain hybrid.ts:1847).
+    # Monotonic: preserves order, only rescales. Guard maxScore > 0 like refbrain.
     max_score = max(scores.values())
     if max_score > 0:
         scores = {cid: s / max_score for cid, s in scores.items()}
@@ -111,14 +111,14 @@ def _rrf_fuse(
 # ---------------------------------------------------------------------------
 # COSINE RE-SCORE (STORY-GBA-F2.3) — blend 0.7·rrf + 0.3·cosine, same space
 # ---------------------------------------------------------------------------
-COSINE_RRF_WEIGHT = 0.7  # gbrain hybrid.ts:1949 — weight on normalized RRF
-COSINE_SIM_WEIGHT = 0.3  # gbrain hybrid.ts:1949 — weight on cosine similarity
+COSINE_RRF_WEIGHT = 0.7  # refbrain hybrid.ts:1949 — weight on normalized RRF
+COSINE_SIM_WEIGHT = 0.3  # refbrain hybrid.ts:1949 — weight on cosine similarity
 
 
 def cosine_similarity(a: list[float], b: list[float]) -> float:
     """Cosine similarity of two equal-length vectors.
 
-    Ported VERBATIM from gbrain ``cosineSimilarity`` (hybrid.ts, SHA 4ee530f):
+    Ported VERBATIM from refbrain ``cosineSimilarity`` (hybrid.ts, SHA REDACTED):
     single pass accumulating dot product and both magnitudes, with a
     zero-magnitude guard returning 0.0 (never NaN). Vectors MUST share the same
     embedding space (same dimension) — guaranteed here because both the query
@@ -144,13 +144,13 @@ def _cosine_rescore(
 ) -> list[tuple[str, float]]:
     """Blend ``0.7·rrf_norm + 0.3·cosine`` and re-sort, in the ACTIVE space.
 
-    Ported from gbrain ``cosineReScore`` (hybrid.ts:1949, SHA 4ee530f). Runs on
+    Ported from refbrain ``cosineReScore`` (hybrid.ts:1949, SHA REDACTED). Runs on
     the fused (already RRF-normalized by F2.1) candidates BEFORE the top_k cut,
     so a semantically closer chunk can climb above a lexically-favored one and
-    survive truncation — gbrain's "runs before dedup so semantically better
+    survive truncation — refbrain's "runs before dedup so semantically better
     chunks survive".
 
-    Fail-open contract (gbrain parity):
+    Fail-open contract (refbrain parity):
       - empty ``query_vec`` or empty ``embedding_map`` → return ``fused``
         untouched (no blend, original RRF order preserved).
       - a candidate with no hydrated embedding keeps its pure RRF score.
@@ -168,7 +168,7 @@ def _cosine_rescore(
     if not query_vec or not embedding_map:
         return fused
 
-    # Re-normalize RRF locally against the observed max (gbrain re-divides by
+    # Re-normalize RRF locally against the observed max (refbrain re-divides by
     # maxRrf inside cosineReScore). Idempotent here since F2.1 already put the
     # top at 1.0, but ported literally to preserve the contract.
     max_rrf = max((score for _, score in fused), default=0.0)
@@ -177,7 +177,7 @@ def _cosine_rescore(
     for chunk_id, rrf_score in fused:
         chunk_emb = embedding_map.get(chunk_id)
         if chunk_emb is None:
-            # No hydrated vector → keep pure RRF score (gbrain: return r).
+            # No hydrated vector → keep pure RRF score (refbrain: return r).
             rescored.append((chunk_id, rrf_score))
             continue
         cosine = cosine_similarity(query_vec, chunk_emb)
@@ -273,6 +273,7 @@ def rrf_retrieve(
     top_k: int = 30,
     k: int = RRF_K,
     use_cache: bool = True,
+    filters: dict | None = None,
 ) -> list[RRFResult]:
     """Hybrid RRF retrieval: pgvector dense + BM25 sparse.
 
@@ -284,9 +285,25 @@ def rrf_retrieve(
         top_k: Number of final results.
         k: RRF constant (default 60).
         use_cache: Return cached results if available.
+        filters: Optional ontology / metadata pre-filter (STORY-F1-15 / 12b).
+            Pushed down into the DENSE arm's ``pgstore.search`` so the vector
+            store returns a filtered candidate set (btree/GIN-indexed WHERE
+            composite), then RRF-fused with the sparse arm. The query-layer
+            (``hybrid_query.hybrid_search``) applies the SAME filter over the
+            fused result as the authoritative belt-and-suspenders, so a chunk
+            entering only via BM25 that does not match is still dropped. Default
+            (``None``/empty) is byte-identical to the pre-12b retrieval. A filtered
+            query BYPASSES the RRF cache (below) — the cache is keyed on
+            (query, bucket) only and must never serve an unfiltered hit to a
+            filtered request (or vice-versa).
 
     Returns: List of RRFResult, sorted by RRF score descending.
     """
+    # A filtered query never touches the (query,bucket)-keyed cache: neither read
+    # (would serve an unfiltered result) nor write (would pollute it).
+    if filters:
+        use_cache = False
+
     # Cache check
     if use_cache:
         cached = _cache_get(query, bucket)
@@ -308,7 +325,15 @@ def rrf_retrieve(
             # SUPABASE_URL → PgVectorStore). On no-backend the resolver raises and
             # this except falls back to dense_map = {} (BM25-only retrieval).
             pgstore = get_vector_store(bucket=bucket)
-            dense_results = pgstore.search(query_vec, top_k=DENSE_TOP)
+            # 12b pushdown: the store applies the composite WHERE (indexed) so the
+            # dense candidate set is pre-filtered before RRF fusion. The kwarg is
+            # passed ONLY when a filter is active, so the default call signature to
+            # ``store.search`` is byte-identical to the pre-12b path (a store
+            # backend/stub predating ``filters`` keeps working unfiltered).
+            _search_kwargs = {"filters": filters} if filters else {}
+            dense_results = pgstore.search(
+                query_vec, top_k=DENSE_TOP, **_search_kwargs
+            )
             dense_ranking = [(r.chunk_id, r.score) for r in dense_results]
             # Build chunk_id → SearchResult map for text retrieval
             dense_map: dict[str, SearchResult] = {r.chunk_id: r for r in dense_results}

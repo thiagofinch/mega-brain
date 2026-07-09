@@ -19,6 +19,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { withLock, writeFileAtomic } = require('./atomic-file');
 
 const SCRIPT_DIR = __dirname;
 const LOG_PATH = path.resolve(SCRIPT_DIR, '../data/pipeline-execution-log.yaml');
@@ -89,7 +90,8 @@ Exit codes:
 function validateArgs(args) {
   const errors = [];
   if (!args.plan_id) errors.push("--plan-id is required");
-  if (!/^[a-z0-9-]+-\d{8}-\d{6}$/.test(args.plan_id || '')) errors.push(`--plan-id must match pattern '{slug}-{YYYYMMDD-HHmmss}'; got '${args.plan_id}'`);
+  // R6 fix (STORY-MB-011): aceita AMBOS os formatos reais — legado '{slug}-{YYYYMMDD-HHmmss}' e forca-total '{YYYY-MM-DD}_{slug}'
+  if (!/^[a-z0-9-]+-\d{8}-\d{6}$/.test(args.plan_id || '') && !/^\d{4}-\d{2}-\d{2}_[a-z0-9-]+$/.test(args.plan_id || '')) errors.push(`--plan-id must match '{slug}-{YYYYMMDD-HHmmss}' OR '{YYYY-MM-DD}_{slug}'; got '${args.plan_id}'`);
   if (!['SIMPLE', 'STANDARD', 'COMPLEX', 'CRITICAL', 'DRY-RUN'].includes(args.mode)) errors.push(`--mode must be SIMPLE|STANDARD|COMPLEX|CRITICAL|DRY-RUN; got '${args.mode}'`);
   if (typeof args.duration_seconds !== 'number' || args.duration_seconds < 0) errors.push(`--duration must be positive integer; got '${args.duration_seconds}'`);
   if (typeof args.cost_actual_usd !== 'number' || args.cost_actual_usd < 0) errors.push(`--cost must be non-negative number; got '${args.cost_actual_usd}'`);
@@ -185,7 +187,7 @@ function appendToLog(entry, dryRun) {
     return;
   }
 
-  fs.writeFileSync(LOG_PATH, newContent, 'utf8');
+  writeFileAtomic(LOG_PATH, newContent); // STORY-W0 fix 2
   console.log(`Entry appended: plan_id=${entry.plan_id} mode=${entry.mode} → ${LOG_PATH}`);
 }
 
@@ -197,7 +199,8 @@ function main() {
     process.exit(1);
   }
   const entry = buildEntry(args);
-  appendToLog(entry, args.dryRun);
+  // STORY-W0 fix 2: lock — appends concorrentes não se sobrescrevem
+  withLock(LOG_PATH, () => appendToLog(entry, args.dryRun));
   process.exit(0);
 }
 

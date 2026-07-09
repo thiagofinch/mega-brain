@@ -5,7 +5,7 @@ QUERY ORCHESTRATOR — Cross-Bucket RAG Search
 Infrastructure layer that receives natural language queries and searches
 across knowledge buckets (external, business, personal) using BM25.
 
-This is a LIBRARY FUNCTION, not an agent. Agents like the knowledge oracle
+This is a LIBRARY FUNCTION, not an agent. Agents like sua-organizacao-oracle
 consume this as a tool.
 
 Architecture (from RT-AUDIT-2026-04-06, Q6):
@@ -17,7 +17,7 @@ Architecture (from RT-AUDIT-2026-04-06, Q6):
       -> Merges and ranks results cross-bucket
       -> Returns top-K with source attribution
 
-    knowledge oracle (agent layer)
+    sua-organizacao-oracle (agent layer)
       -> Uses Query Orchestrator as a TOOL
       -> Applies business reasoning to results
 
@@ -28,6 +28,7 @@ Ref: docs/architecture/roundtable-mega-brain-audit-decisions-2026-04-06.md (Q6)
 
 from __future__ import annotations
 
+import os
 import sys
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -109,10 +110,15 @@ def _search_single_bucket(
     bucket_name: str,
     index_dir: Path,
     top_k: int,
+    filters: dict | None = None,
 ) -> list[SearchResult]:
     """Search a single bucket's BM25 index. Returns typed SearchResult list.
 
     Gracefully returns empty list if index missing or load fails.
+
+    ``filters`` (STORY-F1-15 / 12b) is forwarded to ``hybrid_search`` so the
+    ontology / metadata pre-filter propagates the whole read chain
+    (store WHERE composite + query-layer filter). Default ``None`` = no filter.
     """
     if not _index_exists(index_dir):
         return []
@@ -130,7 +136,7 @@ def _search_single_bucket(
     # local HybridIndex was loaded — causing bucket/source_file mismatch
     # in SearchResult (bucket label says "business" but source_file is
     # knowledge/external/...). Ref: docs/stories/epic-rag-integrity-recovery/
-    raw = hybrid_search(question, top_k=top_k, index=idx, bucket=bucket_name)
+    raw = hybrid_search(question, top_k=top_k, index=idx, bucket=bucket_name, filters=filters)
     if "error" in raw:
         return []
 
@@ -169,6 +175,7 @@ def query(
     text: str,
     buckets: list[str] | None = None,
     top_k: int = 10,
+    filters: dict | None = None,
 ) -> list[SearchResult]:
     """Search across knowledge buckets and return ranked results.
 
@@ -177,12 +184,15 @@ def query(
         buckets: Which buckets to search. None = all 3.
             Valid values: "external", "business", "personal".
         top_k: Number of results to return.
+        filters: Optional ontology / metadata pre-filter (STORY-F1-15 / 12b) —
+            a dict of ``{person|domain|layer|source_type|quality_tier|entity_type|
+            community_id|graph_id: value}`` propagated the whole read chain.
 
     Returns:
         List of SearchResult sorted by score descending, with source
         attribution (bucket + file + score).
     """
-    response = query_full(text, buckets=buckets, top_k=top_k)
+    response = query_full(text, buckets=buckets, top_k=top_k, filters=filters)
     return response.results
 
 
@@ -240,10 +250,86 @@ def _route_cross_expert(text: str, top_k: int) -> list[SearchResult] | None:
     return results[:top_k]
 
 
+def _ontology_hotpath_enabled() -> bool:
+    """Kill-switch for the F1-17 ontology hot-path routing (default OFF).
+
+    Local mirror of ``ontology_layer.ontology_hotpath_enabled`` — kept inline so
+    the OFF hot-path never imports ``ontology_layer`` (zero new import cost when
+    the flag is absent, preserving AC4 byte-identical routing). Same env var:
+    ``ONTOLOGY_HOTPATH_ENABLED``.
+    """
+    return os.environ.get("ONTOLOGY_HOTPATH_ENABLED", "0").strip().lower() in (
+        "1",
+        "true",
+        "yes",
+        "on",
+    )
+
+
+def _route_ontological(text: str, top_k: int) -> list[SearchResult] | None:
+    """Route an ontological/hierarchical query through the ontology LAYER traversal.
+
+    STORY-F1-17: env-gated (``ONTOLOGY_HOTPATH_ENABLED``, default OFF). Dispatches
+    the per-layer traversal (``ontology_layer.query_by_layer``) across the
+    recognized ``LAYER_HIERARCHY`` (5 legacy types OFF / 12 Object Types ON)
+    instead of the default associative/PPR path (AC2). We REUSE the traversal
+    black box unchanged — it is CALLED, never modified. Only reached when the flag
+    is ON (see ``query_full``), so the OFF path stays import-free.
+
+    Returns:
+        A list of ``SearchResult`` mapped from the ontology entities, or ``None``
+        to signal FALL BACK to the existing cross-expert/BM25 path. Fail-open: any
+        failure OR an empty traversal degrades to the legacy path (no empty
+        regression, search never breaks).
+
+    Nuance (F0-13 QA-3 dormancy): the traversal SPINE rels
+    (GERA/PRODUZ/MATERIALIZA/IMPLEMENTA/RELACIONADA_COM) are 0-live today, so this
+    surfaces per-layer entities (including the 7 newly-recognized Object Types
+    when ON) but not multi-hop chains — real chain value awaits edge population
+    ([7b]/F2). The expansion delivers a traversal that is READY, not fabricated
+    edges.
+    """
+    try:
+        from . import ontology_layer as ol
+    except Exception:
+        return None  # ontology layer unavailable -> fall back to the legacy path
+
+    try:
+        collected: list = []
+        for layer in ol.LAYER_HIERARCHY:
+            collected.extend(ol.query_by_layer(layer))
+    except Exception:
+        return None  # any traversal failure -> fail-open to the legacy path
+
+    if not collected:
+        # Graph not built / no entities -> let the caller use the legacy path so
+        # the ontological query still returns SOMETHING (no empty regression).
+        return None
+
+    collected.sort(key=lambda r: -r.score)
+
+    results: list[SearchResult] = []
+    for r in collected[:top_k]:
+        results.append(
+            SearchResult(
+                text=r.label,
+                source_file="",  # ontology atoms are graph nodes, not chunks
+                bucket="external",  # DNA ontology lives in the external bucket
+                score=float(r.score),
+                chunk_id=r.entity_id,
+                person=r.person,
+                domain="",
+                section=r.entity_type,  # surface the recognized layer/type
+            )
+        )
+    return results
+
+
 def query_full(
     text: str,
     buckets: list[str] | None = None,
     top_k: int = 10,
+    filters: dict | None = None,
 ) -> QueryResponse:
     """Full query with metadata (latency, errors, buckets searched).
 
@@ -253,6 +339,14 @@ def query_full(
     are routed through the graph/PPR pipeline (HYBRID_GRAPH) so the REST path
     reaches HippoRAG-2 Personalized PageRank. Factual single-expert queries
     stay on the per-bucket BM25 path (unchanged latency + behavior).
+
+    Filtered retrieval (STORY-F1-15 / 12b): when ``filters`` is provided the
+    graph/PPR and ontology fast-routes are BYPASSED — those paths surface graph
+    nodes / associative fusions that do not carry the per-chunk ontology payload
+    (entity_type/source_type/…), so they cannot honour a typed pre-filter. A
+    typed query therefore takes the filterable per-bucket hybrid path, where the
+    filter propagates all the way to the store WHERE composite. ``filters=None``
+    (default) preserves the pre-12b routing byte-for-byte.
     """
     t0 = time.time()
 
@@ -269,13 +363,47 @@ def query_full(
     # graph path when external is in scope (preserves bucket isolation, Art.
     # XIII — a business/personal-only query is never answered with external
     # graph hits). Classification REUSES adaptive_router.classify_intent.
-    if "external" in target_buckets:
+    # 12b: a typed pre-filter (`filters`) forces the filterable hybrid path — the
+    # graph/ontology routes below do not carry the ontology payload to filter on.
+    if "external" in target_buckets and not filters:
         try:
             from .adaptive_router import classify_intent
 
             intent = classify_intent(text)
         except Exception:
             intent = "factual_simple"
+
+        # ----- ONTOLOGICAL ROUTING (layer traversal) — STORY-F1-17 -----------
+        # Env-gated (ONTOLOGY_HOTPATH_ENABLED, default OFF). When ON, an
+        # ontological/hierarchical query dispatches the ontology LAYER traversal
+        # (query_by_layer) instead of the default associative/PPR path (AC2). Flag
+        # OFF => this branch short-circuits on the env read => routing is
+        # byte-identical to today (AC4 — hierarchical still falls through to
+        # _route_cross_expert below). Fail-open: _route_ontological returns None on
+        # failure/empty => fall through to the cross-expert/BM25 path.
+        if _ontology_hotpath_enabled() and intent == "hierarchical":
+            onto_results = _route_ontological(text, top_k)
+            if onto_results is not None:
+                latency_ms = (time.time() - t0) * 1000
+                response = QueryResponse(
+                    query=text,
+                    results=onto_results,
+                    buckets_searched=["external"],
+                    latency_ms=latency_ms,
+                    strategy="ontology_traversal",
+                )
+                try:
+                    from engine.intelligence.pipeline.consultation_logger import (
+                        log_query_response,
+                    )
+
+                    log_query_response(
+                        querying_agent="query_orchestrator", response=response
+                    )
+                except Exception:
+                    pass
+                return response
+            # ontology path yielded nothing -> fall through to cross-expert/BM25.
 
         if intent in GRAPH_ROUTED_INTENTS:
             graph_results = _route_cross_expert(text, top_k)
@@ -311,7 +439,9 @@ def query_full(
             index_dir = BUCKET_INDEX_DIRS.get(bucket_name)
             if index_dir is None:
                 continue
-            future = executor.submit(_search_single_bucket, text, bucket_name, index_dir, top_k)
+            future = executor.submit(
+                _search_single_bucket, text, bucket_name, index_dir, top_k, filters
+            )
             futures[future] = bucket_name
 
         for future in as_completed(futures):
@@ -359,19 +489,50 @@ def query_full(
 # ---------------------------------------------------------------------------
 # CONVENIENCE FUNCTIONS
 # ---------------------------------------------------------------------------
-def search_external(text: str, top_k: int = 10) -> list[SearchResult]:
-    """Search only the external (expert) knowledge bucket."""
-    return query(text, buckets=["external"], top_k=top_k)
+def search_external(
+    text: str, top_k: int = 10, filters: dict | None = None
+) -> list[SearchResult]:
+    """Search only the external (expert) knowledge bucket.
+
+    ``filters`` (STORY-F1-15 / 12b): optional ontology / metadata pre-filter,
+    e.g. ``{"entity_type": "heuristica", "person": "cole-gordon"}``.
+    """
+    return query(text, buckets=["external"], top_k=top_k, filters=filters)
 
 
-def search_business(text: str, top_k: int = 10) -> list[SearchResult]:
+def search_business(
+    text: str, top_k: int = 10, filters: dict | None = None
+) -> list[SearchResult]:
     """Search only the business (meetings, calls, ops) bucket."""
-    return query(text, buckets=["business"], top_k=top_k)
+    return query(text, buckets=["business"], top_k=top_k, filters=filters)
 
 
-def search_personal(text: str, top_k: int = 10) -> list[SearchResult]:
+def search_personal(
+    text: str, top_k: int = 10, filters: dict | None = None
+) -> list[SearchResult]:
     """Search only the personal (founder cognitive) bucket."""
-    return query(text, buckets=["personal"], top_k=top_k)
+    return query(text, buckets=["personal"], top_k=top_k, filters=filters)
+
+
+def parse_filters_arg(raw: str | None) -> dict | None:
+    """Parse a CLI/MCP ``key=value,key2=value2`` filter string → dict | None.
+
+    STORY-F1-15 / 12b. Blank / malformed pairs are skipped (never a crash); an
+    empty result is returned as ``None`` so an empty filter string is identical to
+    "no filter" (backward-compat). Keys/values are trimmed; the store layer
+    whitelists the keys (unknown keys are inert), so this parser stays permissive.
+    """
+    if not raw:
+        return None
+    out: dict[str, str] = {}
+    for pair in raw.split(","):
+        if "=" not in pair:
+            continue
+        key, _, value = pair.partition("=")
+        key, value = key.strip(), value.strip()
+        if key and value:
+            out[key] = value
+    return out or None
 
 
 def available_buckets() -> dict[str, dict]:
@@ -408,7 +569,8 @@ def main() -> None:
     """CLI entry point for query orchestrator."""
     if len(sys.argv) < 2:
         print(
-            "Usage: python3 -m engine.intelligence.rag.query_orchestrator <query> [bucket1,bucket2]"
+            "Usage: python3 -m engine.intelligence.rag.query_orchestrator "
+            "<query> [bucket1,bucket2] [--filter key=value,key2=value2]"
         )
         print()
         print("Examples:")
@@ -417,6 +579,13 @@ def main() -> None:
             '  python3 -m engine.intelligence.rag.query_orchestrator "team meeting notes" business'
         )
         print('  python3 -m engine.intelligence.rag.query_orchestrator "closing" external,business')
+        print(
+            '  python3 -m engine.intelligence.rag.query_orchestrator "closing" external '
+            '--filter entity_type=heuristica,person=cole-gordon'
+        )
+        print()
+        print("Filter keys (12b): person, domain, layer, source_type, quality_tier,")
+        print("                   entity_type, community_id, graph_id")
         print()
 
         # Show bucket status
@@ -429,21 +598,42 @@ def main() -> None:
 
     question = sys.argv[1]
 
+    # Parse remaining args: an optional bucket list (comma-separated buckets) and
+    # an optional `--filter key=value,...` flag (12b). Order-independent for the
+    # filter flag; the first non-flag positional is treated as the bucket list.
+    rest = sys.argv[2:]
+    filter_raw: str | None = None
+    bucket_raw: str | None = None
+    i = 0
+    while i < len(rest):
+        tok = rest[i]
+        if tok == "--filter" and i + 1 < len(rest):
+            filter_raw = rest[i + 1]
+            i += 2
+            continue
+        if bucket_raw is None:
+            bucket_raw = tok
+        i += 1
+
     # Parse optional bucket filter
     target_buckets: list[str] | None = None
-    if len(sys.argv) >= 3:
-        target_buckets = [b.strip() for b in sys.argv[2].split(",") if b.strip() in VALID_BUCKETS]
+    if bucket_raw:
+        target_buckets = [b.strip() for b in bucket_raw.split(",") if b.strip() in VALID_BUCKETS]
         if not target_buckets:
             target_buckets = None
+
+    filters = parse_filters_arg(filter_raw)
 
     print(f"\n{'=' * 60}")
     print("QUERY ORCHESTRATOR")
     print(f"{'=' * 60}")
     print(f"Query:   {question}")
     print(f"Buckets: {target_buckets or 'all'}")
+    if filters:
+        print(f"Filters: {filters}")
     print()
 
-    response = query_full(question, buckets=target_buckets)
+    response = query_full(question, buckets=target_buckets, filters=filters)
 
     print(f"Searched: {', '.join(response.buckets_searched)}")
     print(f"Results:  {len(response.results)}  ({response.latency_ms:.1f}ms)")

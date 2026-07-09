@@ -22,8 +22,12 @@ import sys
 import time
 
 from .associative_memory import associative_search
-from .graph_builder import KnowledgeGraph, detect_communities, get_graph
-from .hybrid_query import hybrid_search
+from .graph_builder import (
+    KnowledgeGraph,
+    get_graph,
+    get_graph_for_bucket,
+)
+from .hybrid_query import _filter_result_dicts, hybrid_search
 from .ontology_layer import (
     LAYER_HIERARCHY,
     query_by_layer,
@@ -86,7 +90,11 @@ def classify_query(query: str) -> str:
 # ---------------------------------------------------------------------------
 def _query_global(query: str, graph: KnowledgeGraph, top_k: int) -> list[dict]:
     """Global query: find community summaries across experts."""
-    communities = detect_communities(graph)
+    # STORY-F1-7A — prefer the communities persisted at save() over recomputing them
+    # on every query. ``get_communities`` returns the persisted list when present and
+    # falls back to ``detect_communities`` only for legacy graphs saved without the
+    # ``communities`` key (backward-compat, AC2). Same algorithm/params either way (AC3).
+    communities = graph.get_communities()
 
     # Extract domain from query
     query_lower = query.lower()
@@ -233,6 +241,8 @@ def graph_search(
     strategy: str | None = None,
     graph: KnowledgeGraph | None = None,
     include_hybrid: bool = True,
+    bucket: str = "external",
+    filters: dict | None = None,
 ) -> dict:
     """Execute a graph-enhanced search query.
 
@@ -240,8 +250,21 @@ def graph_search(
         query: Natural language query
         top_k: Number of results
         strategy: Force a specific strategy (auto-classifies if None)
-        graph: KnowledgeGraph instance
+        graph: KnowledgeGraph instance. If None, the bucket-aware loader resolves
+            ``graph-{bucket}.json`` (STORY-RAG-VM-G2).
         include_hybrid: Also run hybrid search and fuse results
+        bucket: Target knowledge bucket (``external`` | ``business`` | ``personal``).
+            Selects WHICH graph the PPR/walker runs over — Art. XIII isolation. The
+            walker itself is never modified (RNF-1): only the graph fed to it changes.
+            Default ``external`` preserves the pre-G2 behavior at every call-site.
+        filters: Optional S4 tag filter (source_type/quality_tier). Applied
+            **post-PPR, NEVER inside the walker** (RNF-1): the graph strategy runs
+            untouched, then the entity results, the hybrid component and the fused
+            list are restricted by tag. The hybrid component receives ``filters``
+            directly (its chunks carry the tag); the entity component is
+            post-filtered — an entity that cannot prove the requested tag is
+            excluded by an active filter (honest), fully visible without it.
+            ``None`` (default) = no restriction.
 
     Returns:
         {
@@ -254,9 +277,14 @@ def graph_search(
         }
     """
     t0 = time.time()
-    g = graph or get_graph()
+    # Bucket-aware graph load is the SEAM (Dev Notes): resolve the right bucket's
+    # graph here and pass it to the walker via ``graph=`` — associative_memory.py
+    # stays untouched. An explicit ``graph`` injection (tests) still wins.
+    g = graph or get_graph_for_bucket(bucket)
 
     if not g.built:
+        # Fail-open: an unbuilt/absent bucket graph (e.g. personal with no DNA) is
+        # not an error for the caller — the adaptive router falls back to BM25/hybrid.
         return {"query": query, "error": "Graph not built. Run graph_builder.py first."}
 
     # Classify query
@@ -272,16 +300,28 @@ def graph_search(
     }
 
     strategy_fn = strategies.get(query_type, _query_associative)
+    # The walker runs UNFILTERED (RNF-1) — filtering the graph before the PPR would
+    # change the walk topology. We filter the ENTITY RESULTS afterwards instead.
     graph_results = strategy_fn(query, g, top_k * 2)  # Get more for fusion
 
-    # Hybrid search
+    # Hybrid search — thread the S4 filter (chunks carry the tag) AND the bucket so
+    # the hybrid component stays inside the same isolated bucket as the graph.
     hybrid_results = []
     if include_hybrid:
-        hybrid_output = hybrid_search(query, top_k=top_k)
+        hybrid_output = hybrid_search(query, top_k=top_k, bucket=bucket, filters=filters)
         hybrid_results = hybrid_output.get("results", [])
 
-    # Fuse results
+    # -- S4 post-PPR tag filter (RNF-1: after the walker, never inside it) --------
+    # Restrict the entity results by tag. Entities only carry a tag when the graph
+    # builder attached one; an active tag filter excludes entities that cannot prove
+    # it (honest — the same posture as an extraction_gap chunk). No filter → identity.
+    graph_results = _filter_result_dicts(graph_results, filters)
+
+    # Fuse results (both components already tag-restricted).
     fused = _fuse_graph_and_hybrid(graph_results, hybrid_results, top_k)
+    # Defensive: the fused dicts may re-expose rows via the graph key; re-apply the
+    # filter so the fused list can never leak an off-tag row (idempotent when clean).
+    fused = _filter_result_dicts(fused, filters)
 
     latency = (time.time() - t0) * 1000
 

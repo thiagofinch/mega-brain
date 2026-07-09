@@ -20,11 +20,35 @@ Data: 2026-03-28
 """
 
 import json
+import logging
+import os
 import time
 from collections import defaultdict
 from pathlib import Path
 
 import yaml
+
+try:  # sibling module — package import in all real usage; fallback for direct-script run
+    from . import derivational_edges as _derivational
+except ImportError:  # pragma: no cover - direct ``python graph_builder.py`` execution
+    import derivational_edges as _derivational  # type: ignore
+
+logger = logging.getLogger(__name__)
+
+# STORY-213.W1.2 — the derivational spine (GERA/PRODUZ/MATERIALIZA/IMPLEMENTA +
+# PERTENCE_A via entity.domains) is env-gated, default OFF, so the DEFAULT build stays
+# byte-identical to today (the golden PPR + structural characterizations hold, AC4/AC5)
+# and W4.2's conclave A/B can compare braço A (spine OFF) vs braço B (spine ON).
+# Mirrors the ONTOLOGY_HOTPATH_ENABLED kill-switch convention.
+_DERIVATIONAL_TRUTHY = ("1", "true", "yes", "on")
+
+
+def derivational_edges_enabled() -> bool:
+    """Kill-switch ``MB_DERIVATIONAL_EDGES_ENABLED`` (default OFF — STORY-213.W1.2)."""
+    return (
+        os.environ.get("MB_DERIVATIONAL_EDGES_ENABLED", "0").strip().lower()
+        in _DERIVATIONAL_TRUTHY
+    )
 
 # ---------------------------------------------------------------------------
 # CONFIG
@@ -32,10 +56,31 @@ import yaml
 BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
 DNA_DIR = BASE_DIR / "knowledge" / "external" / "dna" / "persons"
 GRAPH_DIR = BASE_DIR / ".data" / "knowledge_graph"
-GRAPH_FILE = GRAPH_DIR / "graph.json"
+
+# STORY-RAG-VM-G2: one graph file per bucket (Art. XIII isolation is STRUCTURAL —
+# separate files, never merged in runtime). The external bucket keeps the legacy
+# default ``GRAPH_FILE`` pointing at ``graph-external.json``; ``graph.json`` is kept
+# as an ALIAS (cheap copy on save) for ONE release so read-only stats readers that
+# still hardcode ``graph.json`` (health_check, mcp_tools, log_generator) don't break.
+LEGACY_GRAPH_FILE = GRAPH_DIR / "graph.json"
+
+
+def graph_file_for_bucket(bucket: str = "external") -> Path:
+    """Resolve the on-disk graph path for a bucket → ``graph-{bucket}.json``.
+
+    The single seam that maps ``bucket`` → file. Callers (rebuild, enrich, the PPR
+    loader) go through this so the naming contract lives in ONE place.
+    """
+    return GRAPH_DIR / f"graph-{bucket}.json"
+
+
+# Default file = external bucket. Kept named ``GRAPH_FILE`` so every existing
+# importer (rag_integration, hyperedge_materializer, CLI) keeps working unchanged
+# while now resolving to ``graph-external.json`` instead of ``graph.json``.
+GRAPH_FILE = graph_file_for_bucket("external")
 # Durable hyperedge sidecar (STORY-HGA-F2.2 / constraint R1). build_graph() replays
-# it at the end, so materialized hyperedges survive rebuild.py:97-98's wholesale
-# graph.json overwrite. Absent/empty = no-op → legacy graph.json byte-identical.
+# it at the end (business bucket only — STORY-RAG-VM-G2), so materialized hyperedges
+# survive the per-bucket overwrite. Absent/empty = no-op → byte-identical graph.
 OVERLAY_FILE = GRAPH_DIR / "he-overlay.json"
 
 # DNA layer file → top-level key mapping
@@ -90,6 +135,67 @@ MCE_LAYER_KEYS = {
     },
 }
 
+# ---------------------------------------------------------------------------
+# STORY-S3 (completude-total): MULTI-SOURCE ROUTING
+# ---------------------------------------------------------------------------
+# Founder decision (locked 2026-06-30): INCLUDE EVERYTHING. Every source in the
+# table enters the graph — never excluded, only TAGGED (source_type + quality_tier)
+# so downstream query (S4) can FILTER noise without losing it from the brain.
+#
+# Each entry maps ``bucket → on-disk source dir`` and the provenance tags every
+# node from that dir carries. ``quality_tier``:
+#   curated     — human/LLM-distilled, structured authoring (dossier, playbook, insight)
+#   structured  — has frontmatter/schema but mechanically produced (source, advisory-board)
+#   raw         — unprocessed capture (inbox, meeting refs)
+#
+# Art. XIII isolation is STRUCTURAL: a bucket only ever reads its OWN dirs here,
+# so a business source can never land in the external graph (and vice-versa).
+# ``recursive`` walks subdirs (sorted) for honest determinism.
+SOURCE_ROUTING: dict[str, list[dict]] = {
+    "external": [
+        {"dir": "dossiers", "source_type": "dossier", "quality_tier": "curated"},
+        {"dir": "playbooks", "source_type": "playbook", "quality_tier": "curated"},
+        {"dir": "sources", "source_type": "source", "quality_tier": "structured"},
+        {"dir": "inbox", "source_type": "inbox", "quality_tier": "raw"},
+    ],
+    "business": [
+        {"dir": "advisory-board", "source_type": "advisory-board", "quality_tier": "structured"},
+        {"dir": "the-machine", "source_type": "the-machine", "quality_tier": "curated"},
+        {"dir": "insights", "source_type": "insight", "quality_tier": "curated"},
+        {"dir": "dossiers", "source_type": "dossier", "quality_tier": "curated"},
+        {"dir": "sources", "source_type": "source", "quality_tier": "structured"},
+        {"dir": "inbox", "source_type": "inbox", "quality_tier": "raw"},
+    ],
+    "personal": [
+        {"dir": "dossiers", "source_type": "dossier", "quality_tier": "curated"},
+        {"dir": "cognitive", "source_type": "personal", "quality_tier": "curated"},
+        {"dir": "inbox", "source_type": "inbox", "quality_tier": "raw"},
+    ],
+}
+
+# Workspace TTL → bucket routing (Art. XIV layer hierarchy). Workspace is BUSINESS
+# data (per-BU L0-L4) → routes to the BUSINESS graph only (Art. XIII: never external/
+# personal). Each layer carries a TTL; nodes from short-TTL layers are VOLATILE and
+# tagged so the prune pass (and S4) can treat churn explicitly without deleting them.
+# TTLs mirror CLAUDE.md "Workspace (L0-L4)".
+WORKSPACE_BUCKET = "business"
+WORKSPACE_LAYER_TTL_DAYS = {
+    "L0-identity": 365,
+    "L1-strategy": 90,
+    "L2-tactical": 60,
+    "L3-product": 30,
+    "L4-operational": 7,
+}
+# A layer is VOLATILE when its TTL is short enough that the doc is expected to churn
+# between rebuilds. L3/L4 (≤30d) are volatile; L0-L2 are durable. Volatile nodes are
+# NEVER pruned for being volatile — the tag is a filter signal, not a delete trigger.
+WORKSPACE_VOLATILE_TTL_THRESHOLD_DAYS = 30
+
+# File extensions an honest text adapter can open. PDFs/binaries are recorded as a
+# document node by FILENAME only (no fabricated body) — extraction_gap on content.
+_TEXT_SUFFIXES = {".md", ".yaml", ".yml"}
+_DOC_SUFFIXES = _TEXT_SUFFIXES | {".pdf", ".txt", ".json"}
+
 # Entity types
 ENTITY_TYPES = [
     "pessoa",
@@ -110,6 +216,16 @@ ENTITY_TYPES = [
     # probability *through* it (2-hop) between co-participants. Ignored by the
     # ontology layer (type not in LAYER_HIERARCHY).
     "hyperedge",
+    # STORY-S3 (completude-total): multi-source graph. ``fonte`` is the synthetic
+    # anchor node-event for a non-DNA source family (one per source_type); ``documento``
+    # is a single ingested file (dossier/playbook/source/inbox/meeting/insight/
+    # advisory-board/the-machine/personal); ``workspace_doc`` is a workspace L0-L4
+    # artifact (volatile per TTL). These live in a component DISJOINT from the DNA
+    # subgraph — no edge touches a DNA-built node — so PPR over DNA seeds is unmoved
+    # (AC4/RNF-1). All ignored by the ontology layer (types not in LAYER_HIERARCHY).
+    "fonte",
+    "documento",
+    "workspace_doc",
 ]
 
 # Relationship types
@@ -137,6 +253,11 @@ REL_TYPES = [
     # ontology traverse accepts it (:157), which would leak H into trace_hierarchy.
     # "PARTICIPA" is in neither DOWNWARD_RELS nor CROSS_RELS → F4 doubly-guarded.
     "PARTICIPA",  # hyperedge-node H → member (and reverse, via add_edge)
+    # STORY-S3 (completude-total): a non-DNA source document belongs to its source
+    # family anchor (``FONTE:{source_type}`` → ``DOC:...``). Deliberately NOT a
+    # cross/downward ontology rel — keeps the multi-source component disjoint from
+    # the DNA ontology so PPR over DNA seeds never reaches it (AC4/RNF-1).
+    "CONTEM",  # fonte anchor → documento (and reverse, via add_edge)
 ]
 
 
@@ -153,6 +274,8 @@ class Entity:
         "layer",
         "metadata",
         "person",
+        "quality_tier",
+        "source_type",
         "type",
         "weight",
     )
@@ -166,9 +289,19 @@ class Entity:
         self.layer = kwargs.get("layer", "")
         self.weight = kwargs.get("weight", 1.0)
         self.metadata = kwargs.get("metadata", {})
+        # STORY-S3 (completude-total): provenance tags. ``None`` sentinel (NOT "")
+        # so untagged nodes — every DNA/MCE node built before S3 added per-source
+        # tagging — serialize byte-identically (omit-when-None in ``to_dict``,
+        # mirroring ``Edge.t_start``). AC7/No-Invention: an absent tag is a real
+        # extraction gap (``null``), never a fabricated default.
+        #   source_type  ∈ {dna, dossier, playbook, source, inbox, meeting,
+        #                    workspace, insight, advisory-board, the-machine, personal}
+        #   quality_tier ∈ {curated, structured, raw}
+        self.source_type = kwargs.get("source_type")  # default None (sentinel)
+        self.quality_tier = kwargs.get("quality_tier")  # default None (sentinel)
 
     def to_dict(self) -> dict:
-        return {
+        d = {
             "id": self.id,
             "type": self.type,
             "label": self.label,
@@ -177,6 +310,15 @@ class Entity:
             "layer": self.layer,
             "weight": self.weight,
         }
+        # Omit-when-None (mirrors Edge.t_start): a node without a provenance tag —
+        # every node produced before S3 wired per-source tagging — serializes
+        # byte-identically to the pre-S3 graph. CRITICAL for AC4/RNF-1
+        # (graph-external.json DNA subset must not move byte-a-byte).
+        if self.source_type is not None:
+            d["source_type"] = self.source_type
+        if self.quality_tier is not None:
+            d["quality_tier"] = self.quality_tier
+        return d
 
 
 class Edge:
@@ -326,6 +468,14 @@ class KnowledgeGraph:
         self.edges: list[Edge] = []
         self.adj: dict[str, list[tuple[str, str, float]]] = defaultdict(list)
         self.built = False
+        # STORY-F1-7A — persisted communities (``detect_communities`` output).
+        # ``None`` is the "not persisted / unknown" sentinel: a fresh graph, or a
+        # legacy graph saved before F1-7A (no ``communities`` key on disk), leaves
+        # this None so ``get_communities`` recomputes (backward-compat, AC2). A
+        # list (possibly ``[]``) means the value was persisted by ``save()`` /
+        # hydrated by ``load()`` — an empty list is an HONEST "no community" (AC4),
+        # never recomputed away nor fabricated.
+        self.communities: list[dict] | None = None
 
     def add_entity(self, entity: Entity) -> None:
         self.entities[entity.id] = entity
@@ -545,18 +695,54 @@ class KnowledgeGraph:
             "edges_by_type": dict(rel_counts),
         }
 
+    def get_communities(self, min_community_size: int = 3) -> list[dict]:
+        """Return persisted communities when available (STORY-F1-7A), else recompute.
+
+        ``self.communities is not None`` means the list was persisted by ``save()``
+        / hydrated by ``load()`` — return it as-is. An empty list is an HONEST "no
+        community >= min_community_size" (AC4), returned verbatim and NEVER recomputed
+        away. ``None`` means a legacy graph saved before F1-7A carried no
+        ``communities`` key — recompute on the fly (backward-compat, AC2). The
+        recompute path uses the same algorithm and default ``min_community_size`` as
+        ``save()``, so persisted and recomputed lists are identical (AC3).
+        """
+        if self.communities is not None:
+            return self.communities
+        return detect_communities(self, min_community_size=min_community_size)
+
     def save(self, filepath: Path | None = None) -> None:
         p = filepath or GRAPH_FILE
         p.parent.mkdir(parents=True, exist_ok=True)
+
+        # STORY-F1-7A — persist the communities ``detect_communities`` already computes
+        # instead of throwing them away (they were computed and discarded on every save,
+        # forcing ``graph_query`` to recompute on every query). Recompute fresh here so
+        # the persisted list is always current with the graph at save time (mitigates
+        # stale communities); an empty graph yields ``[]`` (honest, AC4 — never a
+        # fabricated community). Cache on the instance so an in-process query after a
+        # save reads the persisted list rather than recomputing.
+        self.communities = detect_communities(self)
 
         data = {
             "entities": {k: v.to_dict() for k, v in self.entities.items()},
             "edges": [e.to_dict() for e in self.edges],
             "stats": self.stats,
+            "communities": self.communities,
         }
 
+        payload = json.dumps(data, indent=2, ensure_ascii=False)
         with open(p, "w", encoding="utf-8") as f:
-            json.dump(data, f, indent=2, ensure_ascii=False)
+            f.write(payload)
+
+        # STORY-RAG-VM-G2 — legacy alias: when the external graph is written, also
+        # mirror it to ``graph.json`` for ONE release so read-only stats readers
+        # that still hardcode ``graph.json`` (health_check, mcp_tools, log_generator)
+        # keep returning external stats. Business/personal graphs do NOT touch the
+        # alias (Art. XIII — the alias is external-only). Cheap (~2MB copy); removed
+        # once those readers migrate to ``graph-external.json``.
+        if p == GRAPH_FILE and p != LEGACY_GRAPH_FILE:
+            with open(LEGACY_GRAPH_FILE, "w", encoding="utf-8") as f:
+                f.write(payload)
 
     def load(self, filepath: Path | None = None) -> bool:
         p = filepath or GRAPH_FILE
@@ -566,7 +752,24 @@ class KnowledgeGraph:
         with open(p, encoding="utf-8") as f:
             data = json.load(f)
 
-        for eid, edata in data.get("entities", {}).items():
+        # Schema tolerance (STORY-RAG-VM-G1): the canonical on-disk schema is a
+        # DICT ({id: entity}), written by ``save()``. A divergent writer
+        # (``rag_integration.py::enrich_knowledge_graph``) historically wrote
+        # ``entities`` as a LIST, which a dict-only loader could not read
+        # (``AttributeError: 'list' object has no attribute 'items'``) — the
+        # silent root cause of empty PPR / associative search. Accept both:
+        # normalize a list into the canonical ``{id: entity}`` dict (key = the
+        # entity's own ``id``), and warn so the legacy format never masks itself.
+        raw_entities = data.get("entities", {})
+        if isinstance(raw_entities, list):
+            logger.warning(
+                "graph load: entities veio como lista (schema legado) — "
+                "normalizando para dict (%d entidades)",
+                len(raw_entities),
+            )
+            raw_entities = {e["id"]: e for e in raw_entities}
+
+        for eid, edata in raw_entities.items():
             self.entities[eid] = Entity(
                 entity_id=edata["id"],
                 entity_type=edata["type"],
@@ -575,6 +778,10 @@ class KnowledgeGraph:
                 domains=edata.get("domains", []),
                 layer=edata.get("layer", ""),
                 weight=edata.get("weight", 1.0),
+                # STORY-S3 provenance tags: read when present, fall back to the
+                # None sentinel when absent (legacy nodes / DNA nodes omit them).
+                source_type=edata.get("source_type"),
+                quality_tier=edata.get("quality_tier"),
             )
 
         for edata in data.get("edges", []):
@@ -595,6 +802,12 @@ class KnowledgeGraph:
             self.adj[edge.source].append((edge.target, edge.rel_type, edge.weight))
             self.adj[edge.target].append((edge.source, edge.rel_type, edge.weight))
 
+        # STORY-F1-7A — hydrate persisted communities. A graph saved by F1-7A+ carries
+        # a ``communities`` list (possibly ``[]`` honest); a legacy graph saved before
+        # F1-7A has no such key → ``None`` sentinel = "not persisted" → ``get_communities``
+        # recomputes on demand (backward-compat, AC2 — legacy graphs still load).
+        self.communities = data.get("communities")
+
         self.built = True
         return True
 
@@ -602,22 +815,65 @@ class KnowledgeGraph:
 # ---------------------------------------------------------------------------
 # GRAPH BUILDER
 # ---------------------------------------------------------------------------
-def build_graph(dna_dir: Path | None = None) -> KnowledgeGraph:
-    """Build knowledge graph from all DNA YAML files.
+def build_graph(
+    dna_dir: Path | None = None,
+    *,
+    bucket: str = "external",
+    derivational: bool | None = None,
+) -> KnowledgeGraph:
+    """Build a knowledge graph for ONE bucket from its DNA YAML files.
 
-    Extracts:
-    - Person entities
-    - Domain entities
-    - DNA entries (5 layers) as entities
-    - Cross-layer relationships
-    - Person-to-person relationships from CONFIG.yaml
+    STORY-RAG-VM-G2 — multi-bucket isolation (Art. XIII). The builder now scopes to
+    a single ``bucket`` (``external`` | ``business`` | ``personal``):
+
+    - the DNA dir is derived as ``knowledge/{bucket}/dna/persons`` (override with an
+      explicit ``dna_dir`` for tests);
+    - the hyperedge overlay (meeting participants) replays ONLY for the business
+      bucket — those participants live in the business bucket, so injecting them into
+      the external graph was the leakage AC5 removes;
+    - a deterministic stale-pruning pass runs at the end (see ``_prune_stale_persons``).
+
+    Extracts: person / domain / DNA entries (5 layers) / cross-layer relationships /
+    person-to-person relationships from CONFIG.yaml.
+
+    A missing DNA dir (e.g. ``knowledge/personal/dna/persons`` does not exist yet) is
+    a GRACEFUL no-op: an empty, built=True graph is returned and saved — never a crash
+    (AC1 / Risk R6).
+
+    ``derivational`` (STORY-213.W1.2) overrides the ``MB_DERIVATIONAL_EDGES_ENABLED``
+    kill-switch: ``None`` → read the env var (default OFF); ``True``/``False`` →
+    force. When enabled, the dormant DNA spine (GERA/PRODUZ/MATERIALIZA/IMPLEMENTA +
+    PERTENCE_A via ``entity.domains``) is populated from REAL shared provenance; when
+    disabled the build is byte-identical to pre-W1.2.
     """
-    d = dna_dir or DNA_DIR
+    d = dna_dir or (BASE_DIR / "knowledge" / bucket / "dna" / "persons")
     graph = KnowledgeGraph()
     all_domains: set[str] = set()
 
+    # STORY-213.W1.2 — derivational spine (default OFF; see ``derivational_edges_enabled``).
+    # When OFF, EVERY line below behaves exactly as pre-W1.2 (byte-identical build).
+    deriv_on = derivational_edges_enabled() if derivational is None else bool(derivational)
+    # {person: {atom_type: [(entity_id, provenance_set), ...]}} — populated only when ON,
+    # so the derivation runs on real per-person provenance after the full DNA build.
+    atoms_prov: dict[str, dict[str, list[tuple[str, set[str]]]]] = {}
+
     if not d.exists():
-        print(f"[GraphBuilder] DNA dir not found: {d}")
+        print(f"[GraphBuilder] DNA dir not found for bucket '{bucket}': {d} (no DNA)")
+        # Graceful no-op for the DNA portion. STORY-S3: a bucket with no DNA dir can
+        # STILL have non-DNA sources (business workspace + advisory-board exist even
+        # with zero DNA persons; personal has dossiers without DNA). Founder decision:
+        # include everything — so still ingest multi-source before returning. Gated to
+        # the DEFAULT real-corpus path (``dna_dir`` not overridden) so a test that
+        # passes an explicit non-existent ``dna_dir`` keeps a clean empty graph.
+        if dna_dir is None:
+            ms_counts = _ingest_multi_source(graph, bucket)
+            if ms_counts:
+                total = sum(ms_counts.values())
+                print(
+                    f"[GraphBuilder] S3 multi-source ({bucket}, no DNA): +{total} "
+                    f"nodes from {len(ms_counts)} source(s): {ms_counts}"
+                )
+        graph.built = True
         return graph
 
     # Process each person
@@ -668,9 +924,17 @@ def build_graph(dna_dir: Path | None = None) -> KnowledgeGraph:
                 if isinstance(label, str) and len(label) > 100:
                     label = label[:100] + "..."
 
-                domains = entry.get("dominios", [])
-                if isinstance(domains, str):
-                    domains = [domains]
+                # STORY-213.W1.2 — when the spine is ON, widen the domain source to the
+                # REAL fields the corpus actually populates (dominios + categoria + tags)
+                # so PERTENCE_A fires from ``entity.domains`` (issue #141). NULL honesto:
+                # an atom with none of those fields yields ``[]`` → no PERTENCE_A edge.
+                # OFF = the original behavior (``dominios`` only), byte-identical.
+                if deriv_on:
+                    domains = _derivational.extract_domains(entry)
+                else:
+                    domains = entry.get("dominios", [])
+                    if isinstance(domains, str):
+                        domains = [domains]
                 weight = entry.get("peso", 1.0)
                 if not isinstance(weight, int | float):
                     weight = 1.0
@@ -709,6 +973,14 @@ def build_graph(dna_dir: Path | None = None) -> KnowledgeGraph:
                 # Cross-layer references
                 _add_cross_layer_edges(graph, entry, entry_id, layer)
 
+                # STORY-213.W1.2 — capture the atom's REAL provenance so the derivational
+                # spine can be derived per-person after the full DNA build (No-Invention:
+                # only real, specific, non-gap source units — see derivational_edges).
+                if deriv_on:
+                    atoms_prov.setdefault(person, {}).setdefault(entity_type, []).append(
+                        (entry_id, _derivational.extract_provenance(entry))
+                    )
+
         # Process MCE files (behavioral patterns, values, voice DNA)
         _process_mce_files(graph, person_dir, person, person_id)
 
@@ -720,14 +992,119 @@ def build_graph(dna_dir: Path | None = None) -> KnowledgeGraph:
             f"backlinks ({iron_law_report['total_edges_after']} total edges)"
         )
 
+    # STORY-213.W1.2 — derive the derivational spine (GERA/PRODUZ/MATERIALIZA/IMPLEMENTA)
+    # from shared SPECIFIC provenance between adjacent-layer atoms of the SAME person.
+    # Added AFTER enforce_iron_law (like the directional CONTEM edges added by S3 below),
+    # so a generative edge stays FORWARD-only (filosofia→modelo_mental) and respects the
+    # schema domain/range — no reverse "modelo_mental GERA filosofia". ``add_edge`` still
+    # makes ``adj`` bidirectional, so PPR/community reads are unaffected in direction.
+    # Every edge carries its lastro in ``metadata.via`` (No-Invention — the audit trail).
+    # NULL honesto: a verb with no real shared-provenance pair contributes 0 edges.
+    if deriv_on:
+        deriv_specs = _derivational.derive_edges(atoms_prov)
+        for spec in deriv_specs:
+            graph.add_edge(
+                Edge(
+                    spec["source"],
+                    spec["target"],
+                    spec["rel_type"],
+                    metadata={"derivation": "shared_provenance", "via": spec["via"]},
+                )
+            )
+        if deriv_specs:
+            print(
+                f"[GraphBuilder] W1.2 derivational spine ({bucket}): "
+                f"+{len(deriv_specs)} edges {_derivational.count_by_verb(deriv_specs)}"
+            )
+
     # Durability replay (STORY-HGA-F2.2 / constraint R1): re-apply materialized
-    # hyperedges from the sidecar so they survive rebuild.py:97-98's overwrite.
-    # MUST run AFTER node construction (participants must exist for add_hyperedge's
-    # strict consistency) and BEFORE built=True. No-op when overlay absent/empty.
-    _replay_hyperedge_overlay(graph)
+    # hyperedges from the sidecar so they survive the per-bucket overwrite. MUST run
+    # AFTER node construction (participants must exist for add_hyperedge's strict
+    # consistency) and BEFORE built=True. No-op when overlay absent/empty.
+    #
+    # STORY-RAG-VM-G2 (AC5): the overlay carries MEETING participants, which belong to
+    # the BUSINESS bucket. Replaying it into the external graph was the source of the
+    # 18 phantom dotted-name nodes. Gate the replay to the business bucket so external
+    # never gains them and business gets the legitimate meeting hyperedges.
+    if bucket == "business":
+        _replay_hyperedge_overlay(graph)
+
+    # STORY-RAG-VM-G2 (AC4): deterministic stale prune. Runs AFTER overlay replay so a
+    # node sustained by a LIVE hyperedge is never pruned; runs BEFORE built=True so the
+    # persisted graph is already clean.
+    #
+    # STORY-S3: the prune sees ONLY the finalized DNA subgraph here — multi-source
+    # ingestion runs AFTER it, so the prune's double-negative criterion never touches
+    # a (non-pessoa) document/workspace node, and a volatile workspace node can never
+    # be mistaken for a stale person (it isn't even built yet).
+    _prune_stale_persons(graph, d)
+
+    # STORY-S3 (completude-total) — AC1: ingest ALL non-DNA sources for this bucket
+    # (dossiers, playbooks, sources, inbox, advisory-board, the-machine, insights,
+    # personal, AND workspace L0-L4). Founder decision (locked 2026-06-30): include
+    # everything, control noise by TAG not omission. Runs LAST so it is purely
+    # additive in a component DISJOINT from the finalized DNA subgraph — PPR over DNA
+    # seeds is provably unmoved (AC4/RNF-1). Art. XIII: only this bucket's own dirs.
+    #
+    # Gated to the DEFAULT real-corpus path (``dna_dir is None``): a caller that pins
+    # an explicit ``dna_dir`` (tests, narrow DNA-only rebuilds) gets a PURE DNA graph,
+    # which keeps the multi-source pass from coupling to an unrelated DNA fixture and
+    # makes the AC4 characterization (DNA-only vs full) a clean A/B.
+    if dna_dir is None:
+        ms_counts = _ingest_multi_source(graph, bucket)
+        if ms_counts:
+            total = sum(ms_counts.values())
+            # ``stats`` is a computed property — the new ``documento``/``workspace_doc``/
+            # ``fonte`` types already surface in ``entities_by_type``. Just log the
+            # per-source breakdown for the rebuild observability trail.
+            print(
+                f"[GraphBuilder] S3 multi-source ({bucket}): +{total} nodes "
+                f"from {len(ms_counts)} source(s): {ms_counts}"
+            )
 
     graph.built = True
     return graph
+
+
+def _prune_stale_persons(graph: KnowledgeGraph, dna_dir: Path) -> int:
+    """Remove stale ``pessoa`` nodes — the double-negative criterion (AC4).
+
+    A ``pessoa`` node is pruned **only if BOTH** hold:
+
+      1. it has NO DNA dir on disk under this bucket (``dna_dir/{person}`` absent), AND
+      2. it has NO active edge sustaining it (no entry in ``graph.adj`` after this
+         build — i.e. no ``TEM``/``PARTICIPA``/etc. touches it).
+
+    This is the safety net the story demands: NEVER a blind "person without DNA"
+    deletion (that would kill a legitimate meeting participant, Risk R3). A meeting
+    participant lives WITHOUT a DNA dir but WITH a live ``PARTICIPA`` edge from the
+    overlay replay → condition (2) is false → it survives. A residual phantom (DNA dir
+    gone AND no live edge) → both true → pruned.
+
+    For the external bucket the overlay no longer replays, so any leftover dotted-name
+    participant is now edge-less and gets pruned here as defense-in-depth.
+
+    Deterministic: iterates a sorted snapshot, mutates ``entities`` only. Returns the
+    number pruned.
+    """
+    to_prune: list[str] = []
+    for eid in sorted(graph.entities):
+        ent = graph.entities[eid]
+        if ent.type != "pessoa":
+            continue
+        person = ent.person or (eid.split(":", 1)[1] if ":" in eid else eid)
+        has_dna = (dna_dir / person).is_dir()
+        has_live_edge = bool(graph.adj.get(eid))
+        # Double-negative: prune ONLY when there is neither DNA nor a live edge.
+        if not has_dna and not has_live_edge:
+            to_prune.append(eid)
+
+    for eid in to_prune:
+        graph.entities.pop(eid, None)
+
+    if to_prune:
+        print(f"[GraphBuilder] pruned {len(to_prune)} stale pessoa node(s): {to_prune}")
+    return len(to_prune)
 
 
 def _replay_hyperedge_overlay(
@@ -824,6 +1201,282 @@ def _load_yaml_entries(filepath: Path, expected_key: str) -> list[dict]:
         return data
 
     return []
+
+
+# ---------------------------------------------------------------------------
+# STORY-S3 (completude-total): MULTI-SOURCE NODE ADAPTERS
+# ---------------------------------------------------------------------------
+# Honest extraction (No Invention / extraction-no-fallbacks.md): pull the REAL
+# identity of each file (frontmatter slug/title, first Markdown ``# H1``). When a
+# field is absent it stays ``None`` — a real extraction gap — never a fabricated
+# default. The node is still created from what DOES exist (the path/stem is always
+# real). PDFs/binaries become FILENAME-only document nodes (body unread, no fake
+# content).
+
+
+def _read_frontmatter(filepath: Path) -> dict:
+    """Parse a leading ``---`` YAML frontmatter block. Empty dict when absent/invalid.
+
+    Honest: returns only what the file actually declares. No defaults injected.
+    """
+    try:
+        with open(filepath, encoding="utf-8") as f:
+            head = f.read(8192)
+    except OSError:
+        return {}
+    if not head.startswith("---"):
+        return {}
+    end = head.find("\n---", 3)
+    if end == -1:
+        return {}
+    block = head[3:end]
+    try:
+        data = yaml.safe_load(block)
+    except yaml.YAMLError:
+        return {}
+    return data if isinstance(data, dict) else {}
+
+
+def _first_markdown_h1(filepath: Path) -> str | None:
+    """Return the first ``# Heading`` text, or ``None`` (extraction gap) if none."""
+    if filepath.suffix.lower() not in _TEXT_SUFFIXES:
+        return None
+    try:
+        with open(filepath, encoding="utf-8") as f:
+            for _ in range(200):  # bounded scan — honest, cheap
+                line = f.readline()
+                if not line:
+                    break
+                s = line.strip()
+                if s.startswith("# "):
+                    return s[2:].strip() or None
+    except OSError:
+        return None
+    return None
+
+
+def _extract_document_node(
+    filepath: Path, root: Path, *, source_type: str, quality_tier: str
+) -> tuple[str, str, str | None, dict] | None:
+    """Build (entity_id, label, person, metadata) for ONE source file. Honest.
+
+    Identity precedence (all REAL signals, never fabricated):
+      id     = frontmatter ``id``/``slug`` → else ``DOC:{source_type}:{relpath}``
+      label  = frontmatter ``title``/``nome`` → first ``# H1`` → else the file stem
+      person = frontmatter ``pessoa_id``/``author``/``owner`` → else None (gap)
+    ``metadata`` records the relpath + which fields were extracted vs. gapped, so a
+    consumer can see provenance + honesty at a glance. Returns ``None`` to skip a
+    file that is not an ingestable document (e.g. an index sidecar we choose to skip).
+    """
+    suffix = filepath.suffix.lower()
+    if suffix not in _DOC_SUFFIXES:
+        return None  # unknown binary type — skip, never fabricate a node
+    try:
+        relpath = filepath.relative_to(root).as_posix()
+    except ValueError:
+        relpath = filepath.name
+
+    fm = _read_frontmatter(filepath) if suffix in _TEXT_SUFFIXES else {}
+
+    raw_id = fm.get("id") or fm.get("slug")
+    entity_id = (
+        f"DOC:{source_type}:{raw_id}" if raw_id else f"DOC:{source_type}:{relpath}"
+    )
+    label = (
+        fm.get("title")
+        or fm.get("nome")
+        or _first_markdown_h1(filepath)
+        or filepath.stem
+    )
+    if isinstance(label, str) and len(label) > 100:
+        label = label[:100] + "..."
+    person = fm.get("pessoa_id") or fm.get("author") or fm.get("owner") or None
+
+    metadata: dict = {"relpath": relpath}
+    gaps = []
+    if not raw_id:
+        gaps.append("id")  # extraction_gap — id derived from path, not declared
+    if person is None:
+        gaps.append("person")  # extraction_gap — no author declared
+    if gaps:
+        metadata["extraction_gaps"] = gaps
+    return entity_id, label, person, metadata
+
+
+def _iter_source_files(base: Path) -> list[Path]:
+    """Deterministic sorted walk of ingestable files under ``base`` (AC6).
+
+    Skips dotfiles (``.DS_Store``, ``.gitkeep``) and ``_``-prefixed index sidecars
+    (``_INDEX.md``) — those are scaffolding, not knowledge documents.
+    """
+    if not base.exists():
+        return []
+    out: list[Path] = []
+    for p in sorted(base.rglob("*")):
+        if not p.is_file():
+            continue
+        name = p.name
+        if name.startswith((".", "_")):
+            continue
+        if p.suffix.lower() not in _DOC_SUFFIXES:
+            continue
+        out.append(p)
+    return out
+
+
+def _ingest_source_dir(
+    graph: KnowledgeGraph,
+    base: Path,
+    *,
+    source_type: str,
+    quality_tier: str,
+) -> int:
+    """Ingest every document under ``base`` as a tagged node in its OWN component.
+
+    Each node hangs off a synthetic ``FONTE:{source_type}`` anchor (CONTEM edge) —
+    NEVER linked to a DNA-built node — so PPR over DNA seeds is untouched (AC4).
+    Returns the number of document nodes added. Idempotent on re-run (AC6): same
+    files → same ids → same graph (``add_entity`` overwrites by id; sorted walk).
+    """
+    files = _iter_source_files(base)
+    if not files:
+        return 0
+
+    anchor_id = f"FONTE:{source_type}"
+    if anchor_id not in graph.entities:
+        graph.add_entity(
+            Entity(
+                entity_id=anchor_id,
+                entity_type="fonte",
+                label=source_type.replace("-", " ").title(),
+                source_type=source_type,
+                quality_tier=quality_tier,
+            )
+        )
+
+    added = 0
+    for fp in files:
+        node = _extract_document_node(
+            fp, base, source_type=source_type, quality_tier=quality_tier
+        )
+        if node is None:
+            continue
+        entity_id, label, person, metadata = node
+        graph.add_entity(
+            Entity(
+                entity_id=entity_id,
+                entity_type="documento",
+                label=label,
+                person=person or "",
+                source_type=source_type,
+                quality_tier=quality_tier,
+                metadata=metadata,
+            )
+        )
+        graph.add_edge(Edge(anchor_id, entity_id, "CONTEM"))
+        added += 1
+    return added
+
+
+def _ingest_workspace(graph: KnowledgeGraph, bucket: str) -> int:
+    """Ingest workspace L0-L4 docs (Art. XIV) — BUSINESS bucket only (Art. XIII).
+
+    Workspace is per-BU business data, so it routes EXCLUSIVELY to the business
+    graph. Each doc node carries its TTL layer + a ``volatile`` flag (L3/L4 churn)
+    so the prune pass and S4 can treat volatility explicitly WITHOUT excluding it.
+    Nodes hang off ``FONTE:workspace`` — disjoint from DNA (AC4). Returns count.
+    """
+    if bucket != WORKSPACE_BUCKET:
+        return 0
+    ws_root = BASE_DIR / "workspace" / "businesses"
+    if not ws_root.exists():
+        return 0
+
+    anchor_id = "FONTE:workspace"
+    if anchor_id not in graph.entities:
+        graph.add_entity(
+            Entity(
+                entity_id=anchor_id,
+                entity_type="fonte",
+                label="Workspace",
+                source_type="workspace",
+                quality_tier="structured",
+            )
+        )
+
+    added = 0
+    for bu_dir in sorted(ws_root.iterdir()):
+        if not bu_dir.is_dir() or bu_dir.name.startswith((".", "_")):
+            continue
+        bu = bu_dir.name
+        for fp in _iter_source_files(bu_dir):
+            try:
+                relpath = fp.relative_to(ws_root).as_posix()
+            except ValueError:
+                relpath = fp.name
+            # Layer = first path segment matching an L0-L4 dir (honest; None if none).
+            layer = None
+            for part in fp.relative_to(bu_dir).parts:
+                if part in WORKSPACE_LAYER_TTL_DAYS:
+                    layer = part
+                    break
+            ttl = WORKSPACE_LAYER_TTL_DAYS.get(layer) if layer else None
+            volatile = ttl is not None and ttl <= WORKSPACE_VOLATILE_TTL_THRESHOLD_DAYS
+
+            fm = _read_frontmatter(fp) if fp.suffix.lower() in _TEXT_SUFFIXES else {}
+            label = fm.get("title") or fm.get("nome") or _first_markdown_h1(fp) or fp.stem
+            if isinstance(label, str) and len(label) > 100:
+                label = label[:100] + "..."
+
+            metadata: dict = {"relpath": relpath, "bu": bu, "volatile": volatile}
+            if layer:
+                metadata["ttl_layer"] = layer
+                metadata["ttl_days"] = ttl
+            else:
+                metadata["extraction_gaps"] = ["ttl_layer"]  # not under an L0-L4 dir
+
+            entity_id = f"DOC:workspace:{relpath}"
+            graph.add_entity(
+                Entity(
+                    entity_id=entity_id,
+                    entity_type="workspace_doc",
+                    label=label,
+                    source_type="workspace",
+                    # Volatile docs are tagged ``raw`` (filterable churn); durable
+                    # L0-L2 docs are ``structured``. Never excluded — only tagged.
+                    quality_tier="raw" if volatile else "structured",
+                    metadata=metadata,
+                )
+            )
+            graph.add_edge(Edge(anchor_id, entity_id, "CONTEM"))
+            added += 1
+    return added
+
+
+def _ingest_multi_source(graph: KnowledgeGraph, bucket: str) -> dict[str, int]:
+    """STORY-S3 entrypoint: ingest ALL non-DNA sources for ``bucket`` (AC1).
+
+    Runs AFTER the DNA build + iron-law + overlay + prune are final, so every node
+    it adds is purely additive in a component disjoint from the finalized DNA
+    subgraph. Deterministic (sorted routing + sorted walk → AC6). Art. XIII: only
+    this bucket's own dirs + (for business) workspace are read. Returns per-source
+    counts for the rebuild stats / log.
+    """
+    counts: dict[str, int] = {}
+    for entry in SOURCE_ROUTING.get(bucket, []):
+        base = BASE_DIR / "knowledge" / bucket / entry["dir"]
+        n = _ingest_source_dir(
+            graph,
+            base,
+            source_type=entry["source_type"],
+            quality_tier=entry["quality_tier"],
+        )
+        if n:
+            counts[f"{bucket}/{entry['dir']}"] = n
+    ws = _ingest_workspace(graph, bucket)
+    if ws:
+        counts["workspace"] = ws
+    return counts
 
 
 def _layer_to_type(layer: str) -> str:
@@ -987,11 +1640,15 @@ def _process_behavioral_patterns(
             if not entry_id:
                 continue
 
+        # STORY-RAG-VM-G2: ``description`` may be null or a non-string in DNA — only
+        # slice a real string, else fall through (``None[:100]`` / ``dict[:100]`` raised).
+        _desc = entry.get("description")
+        _desc_label = _desc[:100] if isinstance(_desc, str) else ""
         label = (
             entry.get("nome")
             or entry.get("name")
             or entry.get("pattern")
-            or entry.get("description", "")[:100]
+            or _desc_label
             or entry_id
         )
         if isinstance(label, str) and len(label) > 100:
@@ -1191,11 +1848,16 @@ def _process_paradoxes(
             if not entry_id:
                 continue
 
+        # STORY-RAG-VM-G2: ``tension`` may be a STRING (legacy) or a structured DICT
+        # ({side_a, side_b}) — business DNA uses the dict shape. ``dict[:100]`` raised.
+        # Only slice when it is actually a string; otherwise fall through to entry_id.
+        _tension = entry.get("tension")
+        _tension_label = _tension[:100] if isinstance(_tension, str) else ""
         label = (
             entry.get("nome")
             or entry.get("name")
             or entry.get("paradox")
-            or entry.get("tension", "")[:100]
+            or _tension_label
             or entry_id
         )
         if isinstance(label, str) and len(label) > 100:
@@ -1446,14 +2108,54 @@ _graph: KnowledgeGraph | None = None
 
 
 def get_graph() -> KnowledgeGraph:
-    """Get or create the knowledge graph singleton."""
+    """Get or create the knowledge graph singleton (EXTERNAL bucket).
+
+    Unchanged contract: the process-wide singleton is the EXTERNAL graph (loads
+    ``graph-external.json``, or builds+saves it on a cold cache). Every existing
+    consumer that calls ``get_graph()`` keeps getting external — RNF-1 preserved.
+    """
     global _graph
     if _graph is None:
         _graph = KnowledgeGraph()
         if not _graph.load():
-            _graph = build_graph()
+            _graph = build_graph(bucket="external")
             _graph.save()
     return _graph
+
+
+# STORY-RAG-VM-G2 — per-bucket graph cache, SEPARATE from the external singleton.
+_bucket_graphs: dict[str, KnowledgeGraph] = {}
+
+
+def get_graph_for_bucket(bucket: str = "external") -> KnowledgeGraph:
+    """Load the KnowledgeGraph for ``bucket`` (Art. XIII bucket-aware PPR loader).
+
+    This is the seam the PPR caller uses to feed the walker the RIGHT bucket's graph
+    WITHOUT touching ``associative_memory.py`` (RNF-1): the walker still receives a
+    ``KnowledgeGraph`` via its ``graph=`` param; only WHICH graph changes here.
+
+    Behavior:
+    - ``external`` → delegates to ``get_graph()`` so external keeps its singleton and
+      cold-build/save semantics (backward-compat, AC8);
+    - other buckets → load ``graph-{bucket}.json`` (cached). If the file does not
+      exist (e.g. personal with no DNA yet), returns an empty, ``built=False`` graph so
+      the caller FAILS OPEN to BM25 (``graph_search`` returns its "Graph not built"
+      branch) instead of crashing or leaking another bucket.
+
+    NEVER builds a non-external graph on demand (that is rebuild.py's job) — a missing
+    bucket file means "no graph for this bucket yet", not "build it now".
+    """
+    if bucket == "external":
+        return get_graph()
+
+    cached = _bucket_graphs.get(bucket)
+    if cached is not None:
+        return cached
+
+    g = KnowledgeGraph()
+    g.load(graph_file_for_bucket(bucket))  # built stays False if file is absent
+    _bucket_graphs[bucket] = g
+    return g
 
 
 # ---------------------------------------------------------------------------

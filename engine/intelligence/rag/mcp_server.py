@@ -88,6 +88,33 @@ TOOLS = [
                     "type": "string",
                     "description": "Filter by domain (e.g. 'vendas')",
                 },
+                "entity_type": {
+                    "type": "string",
+                    "description": (
+                        "Ontology pre-filter (STORY-F1-15): the chunk's Object "
+                        "Type, e.g. 'heuristica', 'framework', 'metodologia'"
+                    ),
+                },
+                "community_id": {
+                    "type": "string",
+                    "description": "Ontology pre-filter: knowledge-graph community id",
+                },
+                "source_type": {
+                    "type": "string",
+                    "description": "Filter by source type (e.g. 'dna', 'dossier')",
+                },
+                "quality_tier": {
+                    "type": "string",
+                    "description": "Filter by quality tier (curated|structured|raw)",
+                },
+                "layer": {
+                    "type": "string",
+                    "description": "Filter by DNA layer (e.g. 'heuristicas')",
+                },
+                "graph_id": {
+                    "type": "string",
+                    "description": "Filter by knowledge-graph node id",
+                },
             },
             "required": ["query"],
         },
@@ -189,27 +216,46 @@ TOOLS = [
 # TOOL HANDLERS
 # ---------------------------------------------------------------------------
 def handle_search_knowledge(params: dict) -> dict:
-    """Handle search_knowledge tool call."""
+    """Handle search_knowledge tool call.
+
+    Ontology / metadata filters (STORY-F1-15 / 12b) are applied over the returned
+    result dicts using the SAME query-layer matcher the store WHERE composite
+    mirrors (``hybrid_query._matches_filters``): an exact, case-insensitive,
+    None-excluding match per active key. The tag lives top-level on local results
+    and under ``metadata`` on pgvector-backed results — the matcher resolves both.
+    """
     from .adaptive_router import Pipeline, route_query
+    from .hybrid_query import _matches_filters
 
     query = params.get("query", "")
     top_k = params.get("top_k", 10)
-    person = params.get("person")
-    domain = params.get("domain")
+
+    # Collect the 12b filter set from the flat tool params (only truthy ones
+    # restrict; the matcher whitelists the keys, unknown keys are inert).
+    filter_keys = (
+        "person",
+        "domain",
+        "layer",
+        "source_type",
+        "quality_tier",
+        "entity_type",
+        "community_id",
+        "graph_id",
+    )
+    filters = {k: params[k] for k in filter_keys if params.get(k)}
 
     # Use hybrid pipeline
     result = route_query(query, pipeline=Pipeline.HYBRID)
 
-    # Apply filters
+    # Apply the composite filter (exact match, None-excluding) over the results.
     results = result.get("results", [])
-    if person:
-        results = [r for r in results if person.lower() in r.get("person", "").lower()]
-    if domain:
-        results = [r for r in results if domain.lower() in r.get("domain", "").lower()]
+    if filters:
+        results = [r for r in results if _matches_filters(r, filters)]
 
     return {
         "query": query,
         "results": results[:top_k],
+        "filters": filters or None,
         "context": result.get("context", ""),
         "sources": result.get("sources", [])[:top_k],
         "latency_ms": result.get("latency_ms", 0),
@@ -313,6 +359,35 @@ TOOL_HANDLERS = {
     "get_agent_context": handle_get_agent_context,
     "resolve_chunk": handle_resolve_chunk,
 }
+
+
+# ---------------------------------------------------------------------------
+# EXTENDED + REPO TOOLS (Story 200.W1.1)
+# ---------------------------------------------------------------------------
+# Knowledge graph / agents / dossiers (mcp_tools.py) + code lens (repo_tools.py).
+# Registered here so the single MCP server serves BOTH lenses:
+#   knowledge (RAG)  +  code/structure (versioned files via ripgrep).
+# Import failures are logged to stderr (NOT stdout — stdout is the MCP protocol
+# channel) and degrade gracefully rather than crashing the server.
+def _register_optional_tools() -> None:
+    try:
+        from .mcp_tools import EXTENDED_TOOL_HANDLERS, EXTENDED_TOOLS
+
+        TOOLS.extend(EXTENDED_TOOLS)
+        TOOL_HANDLERS.update(EXTENDED_TOOL_HANDLERS)
+    except Exception as exc:
+        sys.stderr.write(f"[mcp] extended tools unavailable: {exc}\n")
+
+    try:
+        from .repo_tools import REPO_TOOL_HANDLERS, REPO_TOOLS
+
+        TOOLS.extend(REPO_TOOLS)
+        TOOL_HANDLERS.update(REPO_TOOL_HANDLERS)
+    except Exception as exc:
+        sys.stderr.write(f"[mcp] repo lens unavailable: {exc}\n")
+
+
+_register_optional_tools()
 
 
 # ---------------------------------------------------------------------------

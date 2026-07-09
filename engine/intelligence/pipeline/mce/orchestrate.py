@@ -314,7 +314,7 @@ def infer_source_person(source_id: str, slug: str | None = None) -> str:
             "CG": "cole-gordon",
             "JM": "jeremy-miner",
             "JL": "jordan-lee",
-            "PA": "process-architect",
+            "PV": "process-architect",
             "LO": "liam-ottley",
             "TF": "founder",
         }
@@ -406,7 +406,7 @@ def _derive_source_code(slug: str) -> str:
     Examples::
 
         alex-hormozi  -> AH
-        process-architect -> PA
+        process-architect -> PV
         cole-gordon   -> CG
         jeremy-miner  -> JM
         single        -> SI
@@ -1760,7 +1760,7 @@ def _resolve_batch_documents(batch_id: str, slug: str) -> list[str]:
     Args:
         batch_id: Batch identifier, possibly without source suffix
                   (e.g. ``"BATCH-12621"`` or ``"BATCH-12621-B"``).
-        slug: Person/source slug (e.g. ``"acme"``).
+        slug: Person/source slug (e.g. ``"sua-organizacao"``).
 
     Returns:
         List of absolute path strings — exactly the documents in the batch.
@@ -1825,6 +1825,32 @@ def _resolve_batch_documents(batch_id: str, slug: str) -> list[str]:
         )
 
     return resolved
+
+
+def _embedding_dim_for_log() -> int:
+    """Resolved embedding dimension for batch-log metrics (config SOT).
+
+    Reads from the canonical embedding gateway (3072d since STORY-RAG-VM-M1) so
+    the emitted log reflects the REAL dimension of the vectors produced, never a
+    hardcoded value. Best-effort: a config import failure falls back to 0 (logged
+    as unknown) so a logging path never breaks the pipeline (Art. XII).
+    """
+    try:
+        from engine.intelligence.rag.embedding_config import get_embedding_dimensions
+
+        return get_embedding_dimensions()
+    except Exception:  # pragma: no cover — logging must never break the pipeline
+        return 0
+
+
+def _embedding_model_for_log() -> str:
+    """Resolved embedding model id for batch-log metrics (config SOT)."""
+    try:
+        from engine.intelligence.rag.embedding_config import get_embedding_model
+
+        return get_embedding_model()
+    except Exception:  # pragma: no cover
+        return "text-embedding-3-large"
 
 
 def cmd_process_batch(
@@ -1980,9 +2006,9 @@ def cmd_process_batch(
             # STORY-MCE-SPEAKER-AWARE-EXTRACTION: for a multi-speaker transcript
             # routed to a single person slug, keep ONLY that person's turns before
             # chunking. Otherwise every speaker's words land in the slug's chunks
-            # and the DNA extractor attributes the whole call to the slug (a
-            # guest call — dominated by the founder — leaked the founder's pitch
-            # into the guest's DNA). Single-speaker sources are a no-op; an
+            # and the DNA extractor attributes the whole call to the slug (the
+            # a guest call — dominated by o fundador — leaked the founder's pitch
+            # into guest's DNA). Single-speaker sources are a no-op; an
             # unmatched target falls back to the full transcript (never drops data).
             chunk_document = _import_chunker()
             from engine.intelligence.pipeline.mce.speaker_filter import (
@@ -2257,8 +2283,8 @@ def cmd_process_batch(
             status="ok",
             metrics={
                 "chunks_embedded": embeddings_count,
-                "model": "text-embedding-3-large",
-                "dimensions": 1536,
+                "model": _embedding_model_for_log(),
+                "dimensions": _embedding_dim_for_log(),
                 "tokens_used": embeddings_count * 300,  # approx: ~300 tokens/chunk
                 "cost_usd": round(embeddings_count * 300 * 0.00000013, 6),  # ~$0.13/1M
                 "duration_ms": elapsed,
@@ -2350,7 +2376,7 @@ def _resolve_chunks_for_slug(slug: str) -> list[dict[str, Any]]:
             flat_dir = ARTIFACTS / "chunks"
             # Tier 3: hyphen variant — AH-YT001-chunks.json
             candidates.extend(sorted(flat_dir.glob(f"{source_code}-*-chunks.json")))
-            # Tier 4: dot variant — AH-SRC005.chunks.json
+            # Tier 4: dot variant — AH-HR001.chunks.json
             candidates.extend(sorted(flat_dir.glob(f"{source_code}-*.chunks.json")))
 
     # MCE-2.5 policy (permanent): the legacy global CHUNKS-STATE.json mixes
@@ -3778,7 +3804,7 @@ def _collect_insights_for_slug(slug: str) -> list[dict[str, Any]]:
 
 
 def _slug_code(slug: str) -> str:
-    """Derive 2-char uppercase code (``jane-doe`` -> ``JD``)."""
+    """Derive 2-char uppercase code (``operator-example`` -> ``RT``)."""
     parts = [p for p in slug.split("-") if p]  # ignora vazios (slug "[meet-N]-...")
     if len(parts) >= 2:
         return (parts[0][0] + parts[1][0]).upper()
@@ -4018,6 +4044,9 @@ def _derive_obsessions_from_insights(
         "there",
         "gente",
         "você",
+        "operator",
+        "example",
+        "widget",
     }
 
     all_text = " ".join(
@@ -6569,6 +6598,30 @@ def cmd_rag_index(slug: str) -> dict[str, Any]:
             gate_bypassed = True
             gate_bypass_reason = "RAG_GATE_ALLOW_REGRESSION=1"
 
+    # Step 5b: Fan-out parity gate (completude-total.S4 — AC2/AC3).
+    # The S4 fan-out formalizes vector+graph+vault as ONE coherent pass. If a bucket
+    # was routed through the BM25/vector index but SKIPPED in the graph (or vice
+    # versa) — the lateral-door drift this story closes — ``fanout.parity_ok`` is
+    # False. A PRIMARY-index gap (vector or graph) BLOCKS the Art. XV gate (AC3
+    # fail-loud, gap named). A vault-only gap does NOT block (Art. XII: vault is a
+    # secondary output). Missing ``fanout`` key (older rebuild) is a no-op.
+    fanout = rebuild_result.get("fanout")
+    fanout_parity_ok = True
+    fanout_gaps: list = []
+    if isinstance(fanout, dict):
+        for gap in fanout.get("gaps", []):
+            missing = gap.get("missing", [])
+            if "vector" in missing or "graph" in missing:
+                fanout_gaps.append(gap)
+        fanout_parity_ok = not fanout_gaps
+        if not fanout_parity_ok:
+            gate_passed = False
+            logger.error(
+                "[S4] fan-out parity FAILED — a bucket is missing from a primary "
+                "index (vector/graph). Art. XV gate BLOCKS. gaps=%s",
+                fanout_gaps,
+            )
+
     # Update FSM
     sm = PipelineStateMachine(slug)
     if sm.state == "consolidation":
@@ -6599,8 +6652,12 @@ def cmd_rag_index(slug: str) -> dict[str, Any]:
         gate_tolerance=gate_tolerance,
         gate_bypassed=gate_bypassed,
         gate_bypass_reason=gate_bypass_reason,
+        fanout_parity_ok=fanout_parity_ok,
+        fanout_gaps=fanout_gaps,
         gate_reason=(
-            "OK: chunk count stable or increased"
+            f"BLOCKED (S4 fan-out parity): primary-index gap {fanout_gaps}"
+            if not fanout_parity_ok
+            else "OK: chunk count stable or increased"
             if chunks_delta >= 0
             else (
                 f"BYPASSED (MCE-13.9): chunk count regressed but "
@@ -6677,11 +6734,20 @@ def cmd_rag_index(slug: str) -> dict[str, Any]:
 
 
 def cmd_graphrag_index(slug: str) -> dict[str, Any]:
-    """Phase 5b — Build GraphRAG community summaries (ON by default; opt-out via MCE_GRAPHRAG_ENABLED=0).
+    """Phase 5b — Build GraphRAG community layer (ON by default; opt-out via MCE_GRAPHRAG_ENABLED=0).
 
-    Skipped by default (MCE_GRAPHRAG_ENABLED absent or =0).  When enabled,
-    builds a KnowledgeGraph from the full DNA corpus and detects cross-person
-    communities (e.g. Jordan ↔ Hormozi on "delegação").
+    Default is ON: runs when MCE_GRAPHRAG_ENABLED is unset or =1; opt-OUT with
+    =0 (kill-switch).  When active, builds a KnowledgeGraph from the full DNA
+    corpus and detects cross-person communities (e.g. Jordan ↔ Hormozi on
+    "delegação") via connected-components over domain subgraphs — NO LLM calls.
+
+    Cost note (STORY-S5): the wall-clock cost scales with the graph size
+    (``entities_total``), NOT with LLM tokens (``detect_communities`` is a pure
+    graph algorithm).  The ``logger.info`` line below reports
+    entities/communities/duration so the cost is observable on every real run
+    (grep ``phase 5b GraphRAG`` in pipeline logs).  If the graph grows so large
+    (e.g. post cross-source tagging, +thousands of nodes) that this phase becomes
+    prohibitive, the documented kill-switch is ``MCE_GRAPHRAG_ENABLED=0``.
 
     Args:
         slug: Person/source slug.  Used only for logging; graph_builder
@@ -6690,13 +6756,13 @@ def cmd_graphrag_index(slug: str) -> dict[str, Any]:
     Returns:
         dict with one of:
         - {"skipped": True, "reason": str}   — when opted out (=0) OR deps missing
-        - {"slug": str, "graphrag_enabled": True,
-           "communities_built": int, "duration_ms": float}  — on success
+        - {"slug": str, "graphrag_enabled": True, "communities_built": int,
+           "entities_total": int, "duration_ms": float, "llm_calls": int}  — on success
         - {"error": str, "graphrag_enabled": True}          — on failure
     """
     import os
 
-    # STORY-ENABLE-GBRAIN-FULL: default flipped "0" → "1" (GraphRAG ON by
+    # STORY-ENABLE-REFBRAIN-FULL: default flipped "0" → "1" (GraphRAG ON by
     # default). Opt-OUT via MCE_GRAPHRAG_ENABLED=0. Fail-safe is preserved below:
     # missing deps → ImportError → skip; any other error → error dict (caller in
     # cmd_full treats both as non-blocking, Art. XII).
@@ -6707,16 +6773,34 @@ def cmd_graphrag_index(slug: str) -> dict[str, Any]:
     try:
         from engine.intelligence.rag.graph_builder import build_graph, detect_communities
 
-        graph = build_graph()
+        # STORY-RAG-VM-G2: build/save EXPLICITLY the external bucket here so phase 5b
+        # community detection never clobbers ``graph-business.json`` /
+        # ``graph-personal.json`` (Art. XIII isolation). ``save()`` (no arg) writes the
+        # external graph + the legacy ``graph.json`` alias — the other buckets are owned
+        # by ``rebuild.py``'s per-bucket loop, not by this opt-in GraphRAG step.
+        graph = build_graph(bucket="external")
         communities = detect_communities(graph)
         graph.save()
         duration_ms = (time.monotonic() - start) * 1000
+        # STORY-S5 cost instrumentation: make phase 5b cost observable without
+        # a dedicated dashboard. No LLM calls happen here (pure graph algorithm),
+        # so the meaningful cost signals are graph size + wall-clock. Read this
+        # line in pipeline logs to size the run before scaling the graph further.
+        logger.info(
+            "phase 5b GraphRAG (slug=%s): entities_total=%d communities_built=%d "
+            "duration_ms=%.1f llm_calls=0 (kill-switch: MCE_GRAPHRAG_ENABLED=0)",
+            slug,
+            len(graph.entities),
+            len(communities),
+            duration_ms,
+        )
         return {
             "slug": slug,
             "graphrag_enabled": True,
             "communities_built": len(communities),
             "entities_total": len(graph.entities),
             "duration_ms": round(duration_ms, 1),
+            "llm_calls": 0,
         }
     except ImportError as e:
         return {"skipped": True, "reason": f"graph_builder import failed: {e}"}
@@ -7246,6 +7330,7 @@ def cmd_promote_agent(slug: str) -> dict[str, Any]:
         }
 
     # Advance FSM to agent_generation if promotion succeeded
+    publish: dict[str, Any] = {"command": None, "registry": None}
     if promotion_result.get("promoted"):
         sm = PipelineStateMachine(slug)
         for trigger_name in ("start_rag_index", "start_agents"):
@@ -7259,6 +7344,41 @@ def cmd_promote_agent(slug: str) -> dict[str, Any]:
                         trigger_name,
                         sm.state,
                     )
+
+        # --- Publication (fail-open, Art. XII) -----------------------------
+        # The agent files now exist; publish it so the IDE gets a namespaced
+        # slash command (/{bucket}:{slug}) and the ecosystem-registry lists it.
+        # Each step is isolated in try/except: a publication failure logs WARN
+        # and is recorded in the result, but NEVER aborts the pipeline.
+        # (a) IDE command + ACTIVATION.yaml via the activation generator.
+        try:
+            from engine.intelligence.agents.activation_generator import generate_activation
+
+            # force=True: the generator refuses to overwrite an existing
+            # ACTIVATION.yaml, but Phase 5 re-runs idempotently — we want a
+            # fresh regen each promotion.
+            gen = generate_activation(slug, bucket, force=True)
+            publish["command"] = gen
+            if gen.get("errors"):
+                logger.warning(
+                    "generate_activation reported errors for %s: %s",
+                    slug,
+                    gen["errors"],
+                )
+        except Exception as exc:
+            logger.warning("generate_activation failed for %s: %s", slug, exc)
+            publish["command"] = {"error": str(exc)}
+
+        # (b) Ecosystem registry entry (separate registry from the master
+        #     registry that generate_activation already touches).
+        try:
+            from engine.intelligence.agents.registry_publisher import upsert_agent_entry
+
+            reg = upsert_agent_entry(slug, bucket, _PROJECT_ROOT)
+            publish["registry"] = reg
+        except Exception as exc:
+            logger.warning("upsert_agent_entry failed for %s: %s", slug, exc)
+            publish["registry"] = {"error": str(exc)}
 
     elapsed = (time.monotonic() - t0) * 1000
 
@@ -7285,6 +7405,7 @@ def cmd_promote_agent(slug: str) -> dict[str, Any]:
         total_insights=promotion_result.get("total_insights", 0),
         dna_layers=promotion_result.get("dna_layers", 0),
         llm_used=promotion_result.get("llm_used", False),
+        publish=publish,
     )
     _append_jsonl(result)
     emit_phase_payload(
@@ -8257,6 +8378,171 @@ def _mark_slug_fully_propagated(slug: str) -> int:
     return marked
 
 
+def _resolve_batch_count_for_slug(slug: str) -> int | None:
+    """Best-effort count of batch dirs produced for ``slug``.
+
+    Reads ``.data/artifacts/batches/{slug}/`` (the canonical batch dir, see
+    line ~1810). Returns ``None`` (not 0) when the dir is absent so the
+    COMPLETION.json marker records a genuine gap rather than a fake zero.
+    """
+    try:
+        batch_root = _PROJECT_ROOT / ".data" / "artifacts" / "batches" / slug
+        if not batch_root.exists():
+            return None
+        return sum(1 for d in batch_root.iterdir() if d.is_dir())
+    except Exception:  # pragma: no cover - defensive, never fatal
+        return None
+
+
+def _resolve_dossier_path_for_slug(slug: str, bucket: str) -> str | None:
+    """Best-effort path to the person dossier produced for ``slug``.
+
+    Looks under ``knowledge/{bucket}/dossiers/persons/`` for a
+    ``DOSSIER-{SLUG}.md`` (case-insensitive). Returns a repo-relative path
+    string, or ``None`` when no dossier exists (honest gap, never invented).
+    """
+    try:
+        persons_dir = (
+            _PROJECT_ROOT / "knowledge" / bucket / "dossiers" / "persons"
+        )
+        if not persons_dir.exists():
+            return None
+        target = f"dossier-{slug}.md".lower()
+        for f in persons_dir.iterdir():
+            if f.is_file() and f.name.lower() == target:
+                return str(f.relative_to(_PROJECT_ROOT))
+        # Fallback: any dossier file mentioning the slug token.
+        token = slug.replace("-", "").lower()
+        for f in persons_dir.iterdir():
+            if f.is_file() and f.name.lower().endswith(".md") and token in f.name.replace("-", "").lower():
+                return str(f.relative_to(_PROJECT_ROOT))
+        return None
+    except Exception:  # pragma: no cover - defensive, never fatal
+        return None
+
+
+def write_completion_marker(
+    slug: str,
+    bucket: str | None = None,
+    *,
+    chunks: int | None = None,
+    batches: int | None = None,
+    dossier_path: str | None = None,
+    state: str = "complete",
+) -> dict[str, Any]:
+    """Write ``.data/artifacts/mce/{slug}/COMPLETION.json`` — the truth signal.
+
+    This is the marker the cockpit reconciler
+    (:mod:`engine.intelligence.pipeline.cockpit_reconcile_ingested`) reads to
+    decide whether a call/source counts as ``ingested``. Until this writer
+    existed, NO pipeline step ever produced the file, so nothing ever showed
+    as ingested even with a finished dossier (BUG-1).
+
+    Contract:
+        * Path parity — computed from ``_PROJECT_ROOT`` exactly like the
+          reconciler (``.data/artifacts/mce/{slug}/COMPLETION.json``).
+        * Atomic — tmp file + ``os.replace`` (same pattern the reconciler
+          uses for ``dashboard-calls.json``).
+        * Idempotent — re-running overwrites without error.
+        * FAIL-OPEN (Constitution Art. XII) — ANY exception is logged and
+          swallowed; it never crashes ``cmd_finalize`` nor fails the pipeline.
+        * Honest gaps — unknown numeric/path fields are written as ``null``,
+          never invented (``.claude/rules/extraction-no-fallbacks.md``).
+        * ``st_size > 2`` — indented JSON is always well over 2 bytes, so the
+          reconciler's size guard passes.
+
+    Args:
+        slug: Person/source slug (the dir name under ``.data/artifacts/mce/``).
+        bucket: ``external`` | ``business`` (auto-detected if omitted).
+        chunks: Chunk count if known (else auto-resolved, else ``None``).
+        batches: Batch count if known (else auto-resolved, else ``None``).
+        dossier_path: Dossier path if known (else auto-resolved, else ``None``).
+        state: Pipeline terminal state (default ``"complete"``).
+
+    Returns:
+        ``{"written": bool, "path": str|None, "error": str|None}``.
+    """
+    try:
+        if bucket is None:
+            try:
+                bucket = _detect_bucket_for_slug(slug)
+            except Exception:
+                bucket = None
+
+        if chunks is None:
+            try:
+                chunks = len(_resolve_chunks_for_slug(slug))
+            except Exception:
+                chunks = None
+        if batches is None:
+            batches = _resolve_batch_count_for_slug(slug)
+        if dossier_path is None and bucket:
+            dossier_path = _resolve_dossier_path_for_slug(slug, bucket)
+
+        payload = {
+            "slug": slug,
+            "bucket": bucket,
+            "completed_at": datetime.now(UTC).isoformat(),
+            "chunks": chunks,
+            "batches": batches,
+            "dossier_path": dossier_path,
+            "state": state,
+        }
+
+        comp_dir = _PROJECT_ROOT / ".data" / "artifacts" / "mce" / slug
+        comp_dir.mkdir(parents=True, exist_ok=True)
+        comp_path = comp_dir / "COMPLETION.json"
+
+        tmp = comp_path.with_suffix(".json.tmp")
+        tmp.write_text(
+            json.dumps(payload, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+        os.replace(tmp, comp_path)  # atomic on POSIX
+
+        logger.info(
+            "COMPLETION.json written for %s (bucket=%s chunks=%s batches=%s) -> %s",
+            slug,
+            bucket,
+            chunks,
+            batches,
+            comp_path,
+        )
+        return {"written": True, "path": str(comp_path), "error": None}
+    except Exception as exc:  # FAIL-OPEN per Art. XII — never crash finalize
+        logger.warning(
+            "write_completion_marker failed (non-fatal) for %s: %s", slug, exc
+        )
+        return {"written": False, "path": None, "error": str(exc)}
+
+
+def _run_lifecycle_governance_safe(slug: str, bucket: str) -> dict[str, Any]:
+    """PRE-teardown hook: run the CSO lifecycle motor on the MCE output signal.
+
+    Drives the governance state-machine (``engine.governance``) from the MCE
+    finalize signal — auto-promote L2-L4 docs POPULATED→VALIDATED (L0/L1 pending
+    human sign-off), the gap-zero output gate, and the on-write stale cascade
+    [Story 211.W4.1 / 211.W4.2].
+
+    NON-FATAL per Art. XII (Pipeline Integrity > Observability): any failure is
+    logged and swallowed so a governance defect can never crash cmd_finalize —
+    the same contract as the ``log_generator`` wiring above. Rollback = flip the
+    ``MCE_*`` kill-switches; the promoted data never corrupts (AC5).
+    """
+    try:
+        from engine.governance.mce_lifecycle import run_lifecycle_governance
+
+        return run_lifecycle_governance(slug=slug, bucket=bucket)
+    except Exception as exc:  # governance must never crash the pipeline (Art. XII)
+        logger.warning(
+            "lifecycle governance wiring failed (non-fatal) for %s: %s",
+            slug,
+            exc,
+            exc_info=True,
+        )
+        return {"error": str(exc)}
+
+
 def cmd_finalize(slug: str) -> dict[str, Any]:
     """Post-extraction finalization.
 
@@ -8651,6 +8937,22 @@ def cmd_finalize(slug: str) -> dict[str, Any]:
         except Exception as exc:
             logger.warning("DNA L1-L5 regeneration failed for %s: %s", slug, exc)
             dna_regen_result = {"error": str(exc), "success": False}
+
+        # SCP.W2.1 — emit ADITIVO pós-DNA-regen (encaixe R1: o caminho DNA não
+        # passa pelo hook_bus; este emit é a ÚNICA ligação com a task factory).
+        # Fail-open 4 camadas: thread daemon + _safe_run + este try + flag OFF.
+        try:
+            from engine.intelligence.pipeline.mce.hook_bus import get_hook_bus
+            from engine.intelligence.pipeline.mce import task_factory_hook
+            task_factory_hook.register()
+            get_hook_bus().emit("post_step", {
+                "step_id": "dna_regen_5_65",
+                "slug": slug,
+                "bucket": bucket,
+                "dna_regen_result": dna_regen_result,
+            })
+        except Exception as exc:  # noqa: BLE001 — fábrica NUNCA derruba o ingest
+            logger.debug("task_factory emit skipped: %s", exc)
     else:
         dna_regen_result = {"skipped": f"bucket={bucket} not external/business"}
 
@@ -9857,6 +10159,30 @@ def cmd_finalize(slug: str) -> dict[str, Any]:
     result["log_path"] = log_path
     result["log_error"] = log_error
 
+    # ───────────────────────────────────────────────────────────────────────
+    # BUG-1 FIX — write the COMPLETION.json truth marker.
+    # The cockpit reconciler uses the EXISTENCE of this file (st_size > 2) as
+    # the authority for the dashboard `ingested` flag. No pipeline step ever
+    # wrote it, so nothing ever showed as ingested. We write it HERE — after
+    # the MCE-13.11 checkpoint advanced the FSM to `complete` and after all
+    # finalize steps ran — so the marker reflects a genuinely finished run.
+    # FAIL-OPEN (Art. XII): write_completion_marker never raises; a failure is
+    # logged and recorded in the result, but cmd_finalize still returns ok.
+    # Applies to BOTH buckets (external + business) — the gap affected both.
+    # ───────────────────────────────────────────────────────────────────────
+    completion_marker = write_completion_marker(slug, bucket, state=sm.state)
+    result["completion_marker"] = completion_marker
+
+    # ───────────────────────────────────────────────────────────────────────
+    # STORY 211.W4.1 / 211.W4.2 — MCE-driven lifecycle motor (PRE-teardown).
+    # The extraction signal is complete: docs are populated, logs written,
+    # completion marked. NOW the CSO governance state-machine advances itself —
+    # auto-promote L2-L4 → VALIDATED (L0/L1 stay pending sign-off), the gap-zero
+    # output gate, and the on-write stale cascade. Coupled here (PRE-teardown)
+    # per PLANO §A.2. NON-FATAL (Art. XII) — the helper never raises.
+    # ───────────────────────────────────────────────────────────────────────
+    result["lifecycle_governance"] = _run_lifecycle_governance_safe(slug, bucket)
+
     return result
 
 
@@ -10301,7 +10627,7 @@ def cmd_status(slug: str | None = None) -> dict[str, Any]:
 
 
 # ---------------------------------------------------------------------------
-# DURABLE JOB QUEUE — cmd_full crash-recovery wiring (STORY-ENABLE-GBRAIN-FULL B)
+# DURABLE JOB QUEUE — cmd_full crash-recovery wiring (STORY-ENABLE-REFBRAIN-FULL B)
 # ---------------------------------------------------------------------------
 # Minimal, NON-BLOCKING integration of the token-fenced durable queue
 # (``mce.job_queue``) into the synchronous ``cmd_full`` path. Until now only
@@ -10319,7 +10645,7 @@ def cmd_status(slug: str | None = None) -> dict[str, Any]:
 #
 # DEFAULT-ON + FAIL-OPEN (never perturb a working pipeline):
 #   * Gated by ``MCE_DURABLE_QUEUE`` (the same flag the autonomous processor
-#     reads). STORY-ENABLE-GBRAIN-FULL: THIS cmd_full reader defaults ON; opt-OUT
+#     reads). STORY-ENABLE-REFBRAIN-FULL: THIS cmd_full reader defaults ON; opt-OUT
 #     via =0.
 #   * NOTE: the autonomous_processor's own default stays OFF deliberately — its
 #     pop() SWITCHES the queue backend (durable DB ↔ JSON FIFO) when the flag is
@@ -10337,7 +10663,7 @@ def cmd_status(slug: str | None = None) -> dict[str, Any]:
 
 
 def _durable_queue_enabled() -> bool:
-    """Durable cmd_full job recording. STORY-ENABLE-GBRAIN-FULL: default flipped
+    """Durable cmd_full job recording. STORY-ENABLE-REFBRAIN-FULL: default flipped
     ON (default "1"); opt-OUT via MCE_DURABLE_QUEUE=0. Mirrors the
     autonomous_processor flag so both honor one switch. Fully fail-open: with no
     reachable Postgres the acquire returns None and cmd_full runs inline."""
@@ -10429,6 +10755,406 @@ def _durable_lease_release(lease: Any | None, *, success: bool, error: str = "")
 
 
 # ---------------------------------------------------------------------------
+# STORY-214.W5.1 (Epic 214 / GR4) — DAG as the SOT of MCE phase order
+# ---------------------------------------------------------------------------
+#
+# Census E1: the MCE phase order existed 3× — (a) the hardcoded chain in
+# ``cmd_full`` (the REAL runner), (b) the FSM ``state_machine.py``, and (c) the
+# DAG ``dag_definition.yaml``. Two were projections that "lied" (never drove
+# runtime). GR4 elects ``dag_definition.yaml`` as the single SOT and makes the
+# runner CONSUME it. Env-gated (``MCE_DAG_DRIVEN``, default OFF) so the hot path
+# stays byte-identical until the probe-gated flip (Onda-1 pattern). The FSM and
+# the hardcoded mirror are demoted to non-authoritative (AC3). Probe that gates
+# this change: ``probe_ingest_to_dna.py`` (byte-comparable ingest→DNA).
+
+# DAG step_id -> cmd_full phases-dict key. Only NAMES are translated here; the
+# authoritative ORDER is derived from the DAG topological sort. DAG nodes with no
+# mapping (e.g. future extra nodes) are skipped — cmd_full only drives phases it
+# owns.
+_DAG_STEP_TO_PHASE: dict[str, str] = {
+    "ingesting": "ingest",
+    "batching": "batch",
+    "chunking": "process_batch",
+    "entity_resolution": "entity_resolution",
+    "insight_extraction": "insights",
+    "mce_behavioral": "behavioral",
+    "mce_identity": "identity",
+    "mce_voice": "voice",
+    "identity_checkpoint": "identity_checkpoint",
+    "consolidation": "consolidate",
+    "agent_generation": "promote_agent",
+    "finalizing": "finalize",
+    "reporting": "reporting",
+}
+
+# NON-AUTHORITATIVE mirror of the core phase order — fallback ONLY (DAG
+# unreadable OR MCE_DAG_DRIVEN OFF). The authority is dag_definition.yaml. If this
+# list and the DAG ever diverge, the DAG WINS (that is the point of GR4). Do NOT
+# treat this constant as a second SOT.
+_MCE_CANONICAL_PHASE_ORDER: list[str] = [
+    "ingest",
+    "batch",
+    "process_batch",
+    "entity_resolution",
+    "insights",
+    "behavioral",
+    "identity",
+    "voice",
+    "identity_checkpoint",
+    "consolidate",
+    "promote_agent",
+    "finalize",
+    "reporting",
+]
+
+
+def resolve_mce_phase_order(dag_driven: bool | None = None) -> list[str]:
+    """Return the ordered list of cmd_full core phase keys.
+
+    Args:
+        dag_driven: True  -> derive order from ``dag_definition.yaml`` (the SOT).
+                    False -> the non-authoritative canonical mirror (fallback).
+                    None  -> read ``MCE_DAG_DRIVEN`` env (default OFF).
+
+    Fail-closed conformance (RD5 safety): when DAG-driven, the derived phase SET
+    must equal the canonical SET (no dropped/renamed core phase); the ORDER is
+    free — reordering the DAG genuinely reorders execution (that IS the SOT's
+    job). A DAG that drops/renames a core phase raises ``ValueError`` so cmd_full
+    HALTs rather than silently following a broken SOT.
+    """
+    if dag_driven is None:
+        dag_driven = os.getenv("MCE_DAG_DRIVEN", "0") == "1"
+    if not dag_driven:
+        return list(_MCE_CANONICAL_PHASE_ORDER)
+
+    from engine.intelligence.pipeline.mce.dag import DAGEngine, load_dag_definition
+
+    dag_path = os.getenv("MCE_DAG_DEFINITION_PATH") or None
+    deps = load_dag_definition(dag_path)
+    topo = DAGEngine(deps).topological_sort()
+    order: list[str] = [
+        _DAG_STEP_TO_PHASE[s] for s in topo if s in _DAG_STEP_TO_PHASE
+    ]
+    if set(order) != set(_MCE_CANONICAL_PHASE_ORDER):
+        missing = sorted(set(_MCE_CANONICAL_PHASE_ORDER) - set(order))
+        extra = sorted(set(order) - set(_MCE_CANONICAL_PHASE_ORDER))
+        raise ValueError(
+            "DAG-driven phase order is non-conformant "
+            f"(missing={missing}, extra={extra}); the DAG SOT must cover "
+            "exactly the cmd_full core phases"
+        )
+    return order
+
+
+def _cmd_full_dag_driven(file_path: str) -> dict[str, Any]:
+    """DAG-driven twin of ``cmd_full`` (STORY-214.W5.1 / GR4).
+
+    Behavior-preserving: the phase ORDER is GENERATED from ``dag_definition.yaml``
+    (the SOT) instead of being hardcoded. Every step reuses the SAME ``cmd_*`` /
+    aux / enforcement-gate calls as ``cmd_full`` in the SAME sub-order, so with
+    real step callables the DNA output is byte-identical by construction. Only
+    active under ``MCE_DAG_DRIVEN=1``; the default ``cmd_full`` body is untouched.
+    Permuting the DAG reorders execution here (AC1). Short-circuit / durable-lease
+    / ``failed_phase`` semantics preserved (AC4).
+
+    Observability note (Art. XII: integrity > observability): the ASCII report
+    tail is emitted best-effort and leaner than the OFF path — it never touches
+    the ``phases`` dict, so DNA byte-comparability is unaffected.
+    """
+    t0 = time.monotonic()
+    phases: dict[str, Any] = {}
+    ctx: dict[str, Any] = {"slug": "", "lease": None}
+
+    def _fail(reason: str, failed_phase: str) -> dict[str, Any]:
+        _durable_lease_release(ctx["lease"], success=False, error=reason)
+        elapsed_ms = (time.monotonic() - t0) * 1000
+        out = _build_result(
+            "full",
+            success=False,
+            error=reason,
+            failed_phase=failed_phase,
+            duration_ms=elapsed_ms,
+            phases=phases,
+        )
+        _append_jsonl(out)
+        return out
+
+    # --- per-phase runners: EXACT mirror of the cmd_full blocking chain -----
+    def _run_ingest() -> dict[str, Any] | None:
+        ingest_result = cmd_ingest(file_path)
+        phases["ingest"] = ingest_result
+        if not ingest_result.get("success"):
+            return _fail("ingest step failed", "ingest")
+        slug = ingest_result.get("slug", "")
+        if not slug:
+            return _fail("ingest succeeded but slug missing", "ingest")
+        ctx["slug"] = slug
+        ctx["lease"] = _durable_lease_acquire(slug)
+        try:
+            from engine.intelligence.pipeline.mce.enforcement import (
+                enforce_classification_before_chunking,
+            )
+
+            phases["enforcement_r1"] = dataclasses.asdict(
+                enforce_classification_before_chunking(slug)
+            )
+        except Exception as _r1_exc:
+            logger.debug("cmd_full(dag): enforcement R1 check failed non-fatally: %s", _r1_exc)
+        return None
+
+    def _run_batch() -> dict[str, Any] | None:
+        batch_result = cmd_batch(ctx["slug"], single_file=True)
+        phases["batch"] = batch_result
+        if not batch_result.get("success", True):
+            return _fail("batch step failed", "batch")
+        return None
+
+    def _run_process_batch() -> dict[str, Any] | None:
+        batch_result = phases.get("batch", {})
+        batch_ids = batch_result.get("batch_ids") or []
+        if not batch_ids and isinstance(batch_result.get("batches"), list):
+            batch_ids = [b.get("batch_id") for b in batch_result["batches"] if b.get("batch_id")]
+        if not batch_ids and isinstance(batch_result.get("batches_for_slug"), list):
+            batch_ids = [
+                b.get("batch_id")
+                for b in batch_result["batches_for_slug"]
+                if b.get("batch_id")
+            ]
+        process_results: list[dict[str, Any]] = []
+        for batch_id in batch_ids:
+            pr = cmd_process_batch(batch_id=batch_id, slug=ctx["slug"])
+            process_results.append(pr)
+            if not pr.get("success", False):
+                phases["process_batch"] = process_results
+                return _fail(f"process_batch failed on {batch_id}", "process_batch")
+        phases["process_batch"] = process_results
+        try:
+            from engine.intelligence.pipeline.mce.enforcement import (
+                enforce_chunks_indexed_before_insights,
+            )
+
+            phases["enforcement_r2"] = dataclasses.asdict(
+                enforce_chunks_indexed_before_insights(ctx["slug"])
+            )
+        except Exception as _r2_exc:
+            logger.debug("cmd_full(dag): enforcement R2 check failed non-fatally: %s", _r2_exc)
+        return None
+
+    def _run_entity_resolution() -> dict[str, Any] | None:
+        slug = ctx["slug"]
+        try:
+            resolve_result = cmd_resolve_entities(slug)
+            phases["entity_resolution"] = resolve_result
+        except Exception as _resolve_exc:
+            logger.warning(
+                "cmd_full(dag): cmd_resolve_entities failed non-blocking for %s: %s",
+                slug,
+                _resolve_exc,
+            )
+            phases["entity_resolution"] = {"error": str(_resolve_exc), "skipped": True}
+        try:
+            atlas_result = cmd_atlas_classify(slug)
+            phases["atlas_classification"] = atlas_result
+        except Exception as _atlas_exc:
+            logger.warning(
+                "cmd_full(dag): cmd_atlas_classify failed non-blocking for %s: %s",
+                slug,
+                _atlas_exc,
+            )
+            phases["atlas_classification"] = {"error": str(_atlas_exc), "skipped": True}
+        return None
+
+    def _run_insights() -> dict[str, Any] | None:
+        insights_result = cmd_insights(ctx["slug"])
+        phases["insights"] = insights_result
+        if not insights_result.get("success", True):
+            return _fail("insights step failed", "insights")
+        entities_result = cmd_entities(ctx["slug"])
+        phases["entities"] = entities_result
+        return None
+
+    def _run_behavioral() -> dict[str, Any] | None:
+        behavioral_result = cmd_behavioral(ctx["slug"])
+        phases["behavioral"] = behavioral_result
+        if not behavioral_result.get("success", True):
+            return _fail("behavioral step failed", "behavioral")
+        return None
+
+    def _run_identity() -> dict[str, Any] | None:
+        identity_result = cmd_identity(ctx["slug"])
+        phases["identity"] = identity_result
+        if not identity_result.get("success", True):
+            return _fail("identity step failed", "identity")
+        return None
+
+    def _run_voice() -> dict[str, Any] | None:
+        voice_result = cmd_voice(ctx["slug"])
+        phases["voice"] = voice_result
+        if not voice_result.get("success", True):
+            return _fail("voice step failed", "voice")
+        return None
+
+    def _run_identity_checkpoint() -> dict[str, Any] | None:
+        slug = ctx["slug"]
+        checkpoint_result = cmd_identity_checkpoint(slug)
+        phases["identity_checkpoint"] = checkpoint_result
+        try:
+            narrative_result = cmd_narrative(slug)
+            phases["narrative"] = narrative_result
+        except Exception as _narrative_exc:
+            logger.warning(
+                "cmd_full(dag): cmd_narrative failed non-blocking for %s: %s",
+                slug,
+                _narrative_exc,
+            )
+            phases["narrative"] = {"error": str(_narrative_exc), "skipped": True}
+        return None
+
+    def _run_consolidate() -> dict[str, Any] | None:
+        consolidate_result = cmd_consolidate(ctx["slug"])
+        phases["consolidate"] = consolidate_result
+        if not consolidate_result.get("success", True):
+            return _fail("consolidate step failed", "consolidate")
+        return None
+
+    def _run_promote_agent() -> dict[str, Any] | None:
+        slug = ctx["slug"]
+        promote_result = cmd_promote_agent(slug)
+        phases["promote_agent"] = promote_result
+        try:
+            sources_result_full = cmd_sources(slug)
+            phases["sources"] = sources_result_full
+        except Exception as _sources_exc:
+            logger.warning(
+                "cmd_full(dag): cmd_sources failed non-blocking for %s: %s",
+                slug,
+                _sources_exc,
+            )
+            phases["sources"] = {"error": str(_sources_exc), "skipped": True}
+        try:
+            from engine.intelligence.pipeline.mce.enforcement import (
+                enforce_insight_chunk_traceability,
+            )
+
+            phases["enforcement_r3"] = dataclasses.asdict(
+                enforce_insight_chunk_traceability(slug)
+            )
+        except Exception as _r3_exc:
+            logger.debug("cmd_full(dag): enforcement R3 check failed non-fatally: %s", _r3_exc)
+        return None
+
+    def _run_finalize() -> dict[str, Any] | None:
+        slug = ctx["slug"]
+        finalize_result = cmd_finalize(slug)
+        phases["finalize"] = finalize_result
+        try:
+            from engine.intelligence.pipeline.mce.rag_integration import (
+                enrich_knowledge_graph,
+            )
+
+            graph_enrich_result = enrich_knowledge_graph(slug)
+            phases["graph_enrichment"] = graph_enrich_result
+        except Exception as _graph_exc:
+            logger.warning(
+                "cmd_full(dag): enrich_knowledge_graph failed non-blocking for %s: %s",
+                slug,
+                _graph_exc,
+            )
+            phases["graph_enrichment"] = {"error": str(_graph_exc), "skipped": True}
+        # MCE-LOG-AUTO-RENDER safety dump (mirror cmd_full; fail-open Art. XII).
+        try:
+            _fr_log_path = (
+                finalize_result.get("log_path") if isinstance(finalize_result, dict) else None
+            )
+            if not _fr_log_path:
+                from engine.intelligence.pipeline.mce.log_generator import (
+                    generate_mce_log as _gen_log,
+                )
+
+                _retry = _gen_log(slug=slug)
+                if isinstance(_retry, dict):
+                    _fr_log_path = _retry.get("log_path")
+            if _fr_log_path:
+                _fr_log_p = Path(_fr_log_path)
+                if _fr_log_p.exists():
+                    _fr_content = _fr_log_p.read_text(encoding="utf-8")
+                    _fr_bar = "━" * 79
+                    print(_fr_bar)
+                    print(f"MCE PIPELINE LOG · {slug}  ·  cmd_full(dag) safety dump")
+                    print(_fr_bar)
+                    print(_fr_content)
+                    print(_fr_bar)
+                    print(f"END · path: {_fr_log_path}")
+                    print(_fr_bar + "\n", flush=True)
+        except Exception as _safety_exc:
+            logger.warning("MCE-LOG-AUTO-RENDER cmd_full(dag) safety dump failed: %s", _safety_exc)
+        return None
+
+    def _run_reporting() -> dict[str, Any] | None:
+        # Reporting is emitted after the loop (order-insensitive observability).
+        return None
+
+    runners: dict[str, Any] = {
+        "ingest": _run_ingest,
+        "batch": _run_batch,
+        "process_batch": _run_process_batch,
+        "entity_resolution": _run_entity_resolution,
+        "insights": _run_insights,
+        "behavioral": _run_behavioral,
+        "identity": _run_identity,
+        "voice": _run_voice,
+        "identity_checkpoint": _run_identity_checkpoint,
+        "consolidate": _run_consolidate,
+        "promote_agent": _run_promote_agent,
+        "finalize": _run_finalize,
+        "reporting": _run_reporting,
+    }
+
+    # Order GENERATED from the DAG (the SOT). Fail-closed on a non-conformant DAG.
+    try:
+        order = resolve_mce_phase_order(dag_driven=True)
+    except Exception as exc:
+        return _fail(f"dag order resolution failed: {exc}", "dag_order")
+
+    for phase in order:
+        runner = runners.get(phase)
+        if runner is None:
+            continue
+        outcome = runner()
+        if outcome is not None:
+            return outcome  # blocking failure short-circuits (AC4)
+
+    elapsed = (time.monotonic() - t0) * 1000
+    combined = _build_result(
+        "full",
+        success=True,
+        slug=ctx["slug"],
+        duration_ms=elapsed,
+        phases=phases,
+    )
+    _append_jsonl(combined)
+
+    # Best-effort observability tail (leaner than OFF; never touches phases).
+    try:
+        from engine.intelligence.pipeline.mce.log_emitters import (
+            emit_full_pipeline_report,
+        )
+
+        report = emit_full_pipeline_report(
+            slug=ctx["slug"],
+            phases=phases,
+            total_duration_s=elapsed / 1000.0,
+            success=True,
+        )
+        print(report, flush=True)
+    except Exception as _report_exc:
+        logger.debug("cmd_full(dag): report emit failed non-fatally: %s", _report_exc)
+
+    _durable_lease_release(ctx["lease"], success=True)
+    return combined
+
+
+# ---------------------------------------------------------------------------
 # Command: full
 # ---------------------------------------------------------------------------
 
@@ -10454,6 +11180,13 @@ def cmd_full(file_path: str) -> dict[str, Any]:
         Combined result dict with per-phase entries and ``success`` plus
         ``failed_phase`` (when applicable).
     """
+    # STORY-214.W5.1 (GR4): when MCE_DAG_DRIVEN=1 the phase order is GENERATED
+    # from dag_definition.yaml (the elected SOT) instead of this hardcoded chain.
+    # Default OFF -> the body below runs unchanged (byte-identical). See
+    # resolve_mce_phase_order() + _cmd_full_dag_driven().
+    if os.getenv("MCE_DAG_DRIVEN", "0") == "1":
+        return _cmd_full_dag_driven(file_path)
+
     t0 = time.monotonic()
     phases: dict[str, Any] = {}
     # Durable-queue lease for crash recovery (feature B). Acquired AFTER slug
@@ -10932,9 +11665,9 @@ Commands:
 Examples:
   python -m core.intelligence.pipeline.mce.orchestrate ingest "workspace/inbox/file.txt"
   python -m core.intelligence.pipeline.mce.orchestrate batch alex-hormozi --single-file
-  python -m core.intelligence.pipeline.mce.orchestrate behavioral jane-doe
-  python -m core.intelligence.pipeline.mce.orchestrate identity jane-doe
-  python -m core.intelligence.pipeline.mce.orchestrate voice jane-doe
+  python -m core.intelligence.pipeline.mce.orchestrate behavioral operator-example
+  python -m core.intelligence.pipeline.mce.orchestrate identity operator-example
+  python -m core.intelligence.pipeline.mce.orchestrate voice operator-example
   python -m core.intelligence.pipeline.mce.orchestrate recover alex-hormozi
   python -m core.intelligence.pipeline.mce.orchestrate cleanup --retention-days 7 --dry-run
   python -m core.intelligence.pipeline.mce.orchestrate report alex-hormozi

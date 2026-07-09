@@ -177,7 +177,6 @@ components:
   data:
   - execution-templates
   - orchestration-metrics-registry
-  - squad-routing-matrix
   - registry-update-2026-02-07
   - routing-dry-run-new-squads
   - routing-dry-run-results
@@ -524,3 +523,71 @@ validation:
   mode: deep
   score: 98.2
   status: pass
+
+# ── Routing Semantics v1 (STORY-FT-W2.1 — como esta squad quer ser encontrada) ──
+routing:
+  version: 1
+  power_summary: >-
+    Squad-motor da orquestração global: recebe demanda em linguagem natural e produz plano de execução
+    versionado (plan-state.json) com discovery de capabilities, DAG com critical path, riscos FMEA, 2 gates
+    humanos e Fase R de pesquisa com replan. 7 agentes de pipeline (intent-parser, capability-cartographer,
+    roteador, dag-architect, plan-architect, supervisor) + 24 scripts determinísticos (query, validação
+    closed-world, conversor de execução, resolver de ferramentas). Plan-only: nunca executa.
+  taxonomy:
+    domain: governance
+    subdomains:
+      - orchestration
+      - planning
+      - routing
+      - dag
+      - capability-discovery
+  semantic_aliases:
+    - orquestração
+    - plano de execução
+    - força total
+    - forca-total
+    - DAG
+    - roteamento
+    - discovery de capabilities
+    - planejar demanda
+    - decompor demanda
+    - plan-architect
+    - plano versionado
+    - gates de aprovação
+    - replan
+  verbs:
+    - orquestrar
+    - planejar
+    - rotear
+    - decompor
+    - descobrir
+    - orchestrate
+    - plan
+    - route
+    - decompose
+  use_when: >-
+    transformar demanda complexa em plano executável multi-agente, descobrir quem faz o quê, compor DAG com
+    dependências e riscos
+  not_use_when: tarefa trivial de 1 passo ou agente já conhecido — o overhead de planejamento não compensa
+  ontology:
+    entity_type: squad
+    acts_on:
+      - demanda
+      - plano
+      - dag
+      - capability
+      - risco
+    produces:
+      - plan-state
+      - plan-json
+      - execution-batches
+      - risk-assessment
+    relates_to:
+      - rel: consumes
+        target: catalog:agent-routing-index
+      - rel: consumes
+        target: catalog:capability-cache
+      - rel: feeds
+        target: skill:swarm-execute
+      - rel: contains
+        target: agent:plan-architect
