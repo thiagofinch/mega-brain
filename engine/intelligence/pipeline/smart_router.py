@@ -42,7 +42,6 @@ What It Does NOT Do:
 
 Version: 1.0.0
 Date: 2026-03-10
-Spec: docs/plans/epic1-phase1.3-smart-router-spec.md
 Depends On: Phase 1.1 (scope_classifier.py) -- COMPLETE
 """
 

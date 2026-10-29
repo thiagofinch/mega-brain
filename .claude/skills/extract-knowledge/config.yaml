@@ -19,7 +19,6 @@ execution:
 # Input adapters
 adapters:
   pdf:
-    module: "services/etl/lib/pdf-parser.js"
     class: PdfParser
     scanned_threshold: 100  # chars/page below = scanned PDF
   session:
@@ -33,10 +32,9 @@ adapters:
     supported_extensions: [".pdf", ".md", ".txt"]
     default_limit: 0  # 0 = all
 
-# Pipeline modules (REUSE from services/etl/)
+# Pipeline parameters (os modulos do ETL em JS nao fazem parte da release publica)
 pipeline:
   candidate_detection:
-    module: "services/etl/lib/enrichment/regex-extractor.js"
     function: extractCandidateWindows
     window_size: 800
     min_candidates: 3
@@ -50,19 +48,16 @@ pipeline:
       - { id: code_snippet, prefix: CS }
     pareto_enabled: false  # override with --pareto flag
   enrichment:
-    module: "services/etl/lib/enrichment/llm-extractor.js"
     function: extract
     model: claude-sonnet-4-6
     batch_size: 5
     max_retries: 3
     fallback: llm_pending
   dedup:
-    module: "services/etl/lib/dedup-engine.js"
     class: DedupEngine
     cosine_threshold: 0.85
     tags_overlap_threshold: 0.70
   quality_gate:
-    module: "services/etl/lib/quality-gate.js"
     min_confidence: 0.70
     min_content_length: 200
     min_tags: 2
@@ -72,24 +67,11 @@ pipeline:
 # Output config
 output:
   # CRITICAL: Write to approved/ (source). NEVER write to knowledge-base/ (derived).
-  # Pipeline: approved/ → finalize-etl.js (dedup+QG) → build-kb-index.js → knowledge-base/
+  # Pipeline: approved/ → dedup + quality gate → knowledge-base/ (etapas de finalizacao nao distribuidas)
   default_dir: "data/etl/approved"
   naming: "DS_KE_{PREFIX}_{NNN}.md"
-  organize_by_category: false  # FLAT in approved/ — build-kb-index creates subdirs in knowledge-base/
-  finalize_script: "services/etl/bin/finalize-etl.js"  # dedup + quality gate + merge + renumber
-  index_builder: "services/etl/bin/build-kb-index.js"   # copies approved/ → knowledge-base/ + rebuilds index
+  organize_by_category: false  # FLAT in approved/
   decision_cards: false  # override with --decision-cards flag
-
-# Post-extraction pipeline (MANDATORY — run in this order)
-post_extraction:
-  - step: finalize
-    command: "node services/etl/bin/finalize-etl.js --input data/etl/approved"
-    description: "Dedup (3 strategies) + Quality Gate (7 rules) + Merge + Renumber"
-    mandatory: true
-  - step: rebuild_index
-    command: "node services/etl/bin/build-kb-index.js"
-    description: "Copy approved/ + gold-standard/ → knowledge-base/ + rebuild index.yaml"
-    mandatory: true
 
 # Artifact contracts (MEGABRAIN v3.1)
 artifact_contracts:

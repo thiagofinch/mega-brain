@@ -407,20 +407,6 @@ test('T13 runner scripts contain no semantic classification/generation', () => {
 });
 
 // ================================================================
-// T14 — example file exists and is committed
-// ================================================================
-
-test('T14 active-operator.example.yaml exists and parses', () => {
-  const examplePath = path.join(REPO_ROOT, '.mega-brain/active-operator.example.yaml');
-  assertTruthy(fs.existsSync(examplePath), 'example file must exist');
-  const yaml = require('js-yaml');
-  const data = yaml.load(fs.readFileSync(examplePath, 'utf-8'));
-  assertTruthy(data.schema_version, 'schema_version should be present');
-  assertTruthy(data.operator, 'operator block should be present');
-  assertTruthy(data.operator.slug, 'operator.slug should be present');
-});
-
-// ================================================================
 // T15 — canonical yaml is gitignored
 // ================================================================
 
@@ -433,40 +419,6 @@ test('T15 active-operator.yaml is gitignored', () => {
     // exit 0 means it IS ignored
   } catch (err) {
     throw new Error('.mega-brain/active-operator.yaml should be gitignored (git check-ignore returned non-zero)');
-  }
-});
-
-// ================================================================
-// T16 — example yaml is NOT gitignored
-// ================================================================
-
-test('T16 active-operator.example.yaml is NOT gitignored', () => {
-  try {
-    execSync('git check-ignore .mega-brain/active-operator.example.yaml', {
-      cwd: REPO_ROOT,
-      stdio: 'pipe',
-    });
-    throw new Error('.mega-brain/active-operator.example.yaml should NOT be gitignored');
-  } catch (err) {
-    // git check-ignore returns non-zero when NOT ignored → this is what we want
-    if (err.message.includes('should NOT be gitignored')) throw err;
-  }
-});
-
-// ================================================================
-// T17 — megabrain-operator npm script works
-// ================================================================
-
-test('T17 npm run megabrain:operator -- list works', () => {
-  try {
-    const stdout = execSync('npm run megabrain:operator -- list 2>&1', {
-      cwd: REPO_ROOT,
-      encoding: 'utf-8',
-    });
-    assertContains(stdout, 'knowledge-architect', 'list should mention knowledge-architect');
-    assertContains(stdout, 'active', 'list should mark one as active');
-  } catch (err) {
-    throw new Error(`npm run megabrain:operator -- list failed: ${err.message}`);
   }
 });
 

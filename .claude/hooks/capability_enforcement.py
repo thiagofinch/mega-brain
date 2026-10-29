@@ -18,8 +18,9 @@ Enforcement tiers:
 
 Override: BYPASS_CAPABILITY_ENFORCEMENT=true -> PERMIT + audit log
 
-Config: mega-brain-core/core-config.yaml -> capability_enforcement block
-    enabled: false  (opt-in OFF by default -- founder must flip)
+Config: defaults below (the external core-config file is not part of the public
+distribution, so enforcement stays OFF and the hook is a silent no-op)
+    enabled: false  (opt-in OFF by default)
     confidence_block: 0.85
     confidence_warn: 0.60
     discovery_threshold_count: 5
@@ -67,7 +68,6 @@ if _SCRIPTS_PATH not in sys.path:
 DATA_DIR = PROJECT_ROOT / ".data"
 METRICS_PATH = DATA_DIR / "capability-hints-metrics.jsonl"
 DISCOVERY_QUEUE = DATA_DIR / "capability-discovery-queue.jsonl"
-CORE_CONFIG_PATH = PROJECT_ROOT / "mega-brain-core" / "core-config.yaml"
 
 HOOK_TAG = "[capability_enforcement]"
 
@@ -160,25 +160,15 @@ def _append_discovery(entry: dict) -> None:
 
 def _load_config() -> dict:
     """
-    Load capability_enforcement config from core-config.yaml.
+    Return the capability_enforcement config (defaults only in this distribution).
     Session-scoped cache: NO reload intra-session by design (D2 in decision-log).
-    If block absent or file missing -> returns defaults (enabled=False -> no-op).
+    Defaults have enabled=False -> no-op.
     """
     global _CONFIG_CACHE
     if _CONFIG_CACHE is not None:
         return _CONFIG_CACHE
 
     config = dict(_DEFAULT_CONFIG)
-    try:
-        import yaml
-
-        raw = yaml.safe_load(CORE_CONFIG_PATH.read_text(encoding="utf-8")) or {}
-        block = raw.get("capability_enforcement") or {}
-        if isinstance(block, dict):
-            config.update({k: v for k, v in block.items() if k in config})
-    except Exception:
-        pass  # Fail-open: use defaults (enabled=False -> no-op)
-
     _CONFIG_CACHE = config
     return config
 

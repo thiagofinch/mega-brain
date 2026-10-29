@@ -324,8 +324,7 @@ class PostgresStore(VectorStore):
 
         Etiquetagem (completude-total.S1): ``source_type`` and ``quality_tier``
         come from the SAME metadata dict the caller already populates. The
-        derivation lives in ``engine/intelligence/rag/tagging.py`` and is invoked
-        by the CALLER (e.g. rebuild.py) — persistence stays dumb. When the caller
+        derivation is the CALLER's job (e.g. rebuild.py) — persistence stays dumb. When the caller
         supplied no tag (legacy caller, or an honest ``extraction_gap``) the value
         is ``None`` → the column is written NULL, never a fabricated default
         (No Invention — ``.claude/rules/extraction-no-fallbacks.md``).

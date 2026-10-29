@@ -117,7 +117,6 @@ This separation keeps:
 - Adapter source: `squads/orquestrador-global/scripts/plan-to-swarm.js`
 - Adapter tests: `squads/orquestrador-global/scripts/__tests__/plan-to-swarm.test.js` (54 tests)
 - Plan schema: `squads/orquestrador-global/templates/orchestration-plan-tmpl.yaml` (schema_version 2.0)
-- Swarm-execute SKILL: `.claude/skills/swarm-execute/SKILL.md`
 - Plan-architect agent: `squads/orquestrador-global/agents/plan-architect.md`
 - ADR: `docs/adrs/ADR-PA-001-plan-architect-model-defaults.md`
 

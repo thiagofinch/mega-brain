@@ -13,8 +13,6 @@ paths:
 
 # Concurrent-Writer Atomic Write
 
-> Stub for auto-load. Full content: `minds/knowledge_architect/heuristics/AN_KE_163.md`
-
 ## Principle
 
 If you are about to make **≥2 Edits in the same file** AND that file is under a linter, prettier, hot-reload, or any process that may rewrite it between your operations, **STOP using sequential Edits — use a single Write with the final desired content**.

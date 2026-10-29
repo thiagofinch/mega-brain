@@ -21,15 +21,15 @@ Tabela de resultados deve ser impressa antes de qualquer outro output. Se servic
 
 ### Fontes de Credenciais (ordem de prioridade)
 
-1. `.claude/credentials-map.md` — mapa canonico de tokens (consultar PRIMEIRO)
-2. `~/Projects/mega-brain/.env` — tokens raw
+1. `.claude/credentials-map.md` — mapa local de tokens, se voce mantiver um (nao vem na distribuicao; quando existir, consultar PRIMEIRO)
+2. `.env` na raiz do repositorio — tokens raw
 3. `.credentials/google-sa-*.json` — Service Accounts Google
 
 Nao fazer grep no `.env` para informacoes ja documentadas em credentials-map.
 
 ### IDs Fixos
 
-Tabela canonica em `.claude/credentials-map.md` secao "IDs Fixos (referencia rapida)". Consultar antes de redescobrir empiricamente:
+Quando existir, a tabela em `.claude/credentials-map.md` secao "IDs Fixos (referencia rapida)". Consultar antes de redescobrir empiricamente:
 
 - Supabase project ref, profile
 - N8N base URL + header format
@@ -50,7 +50,7 @@ Para cada handoff pendente:
 
 ### Tool/SaaS Routing
 
-Antes de interagir com SaaS externo, consultar `workspace/domains/tech/saas-api-readiness.yaml` para classificar como CONNECTED/AVAILABLE/NO_API. Referencia: `.claude/rules/saas-tool-routing.md`.
+Antes de interagir com SaaS externo, classificar como CONNECTED/AVAILABLE/NO_API conforme o roteamento em `.claude/rules/saas-tool-routing.md`.
 
 ## Comunicacao Estruturada
 
@@ -65,9 +65,9 @@ Antes de interagir com SaaS externo, consultar `workspace/domains/tech/saas-api-
 
 1. Pular preflight em sessoes "rapidas" — todo trabalho operacional depende de servicos
 2. Bloquear sessao se preflight falhar — sempre WARN, nunca BLOCK (exit 0)
-3. Pedir credencial ao usuario antes de consultar `credentials-map.md`
+3. Pedir credencial ao usuario antes de consultar o `.env` e o `credentials-map.md` local (se existir)
 4. Fazer grep no `.env` para descobrir valor ja documentado em "IDs Fixos"
-5. Tentar API externa antes de classificar via `saas-api-readiness.yaml`
+5. Tentar API externa antes de classificar o SaaS (CONNECTED/AVAILABLE/NO_API)
 
 ## Quando NAO Aplicar
 

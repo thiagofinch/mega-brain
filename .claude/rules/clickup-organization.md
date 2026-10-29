@@ -70,7 +70,7 @@ Antes de @clickup-chief materializar qualquer nova estrutura:
 - [ ] Space de guests é read-only (sem automações de criação)? (H11)
 - [ ] Status workflow definido e aprovado?
 - [ ] Custom Fields listados e dentro do limite do plano?
-- [ ] SuperAgent decisão: precisa de SA? Se sim, registrado no superagent-registry.yaml?
+- [ ] SuperAgent decisão: precisa de SA?
 - [ ] Rollback plan documentado?
 
 ## IDS Aplicado a ClickUp

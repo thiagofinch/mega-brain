@@ -10,12 +10,15 @@ RULE ENFORCEMENT:
 - Empty folders → WARN (non-blocking)
 
 Installation:
-  cp workspace/.claude/hooks/structure-validation.py .git/hooks/pre-commit
+  cp .claude/hooks/structure-validation.py .git/hooks/pre-commit
   chmod +x .git/hooks/pre-commit
 
 Usage:
   Runs automatically on: git commit, git push
-  Manual run: python workspace/.claude/hooks/structure-validation.py
+  Manual run: python .claude/hooks/structure-validation.py
+
+Sem o manifesto workspace.yaml (nao distribuido nesta release) nao ha regras de
+governanca para validar: o hook sai silenciosamente com codigo 0.
 
 Author: @architect (The Architect)
 Date: 2026-02-14
@@ -35,10 +38,10 @@ class WorkspaceValidator:
     """Validate workspace structure against governance rules"""
 
     def __init__(self):
-        self.workspace_root = self._find_workspace_root()
-        self.config = self._load_config()
         self.errors = []
         self.warnings = []
+        self.workspace_root = self._find_workspace_root()
+        self.config = self._load_config()
 
     def _find_workspace_root(self) -> str:
         """Find workspace/ directory"""
@@ -57,8 +60,7 @@ class WorkspaceValidator:
         config_path = Path(self.workspace_root) / "workspace.yaml"
 
         if not config_path.exists():
-            self.errors.append(f"❌ workspace.yaml not found at {config_path}")
-            return {}
+            return {}  # sem workspace.yaml nao ha governanca a validar
 
         try:
             with open(config_path) as f:
@@ -71,8 +73,7 @@ class WorkspaceValidator:
     def validate(self) -> bool:
         """Run all validations. Return True if all pass."""
         if not self.config:
-            print("⚠️  Could not load governance config. Skipping validation.")
-            return True
+            return True  # sem config de governanca: nada a validar (silencioso)
 
         print("🔍 Validating workspace structure...")
 
@@ -312,8 +313,6 @@ class WorkspaceValidator:
         for i, error in enumerate(self.errors, 1):
             print(f"{i}. {error}\n")
 
-        print("=" * 70)
-        print("For help, see: workspace/STRUCTURE.md")
         print("=" * 70)
 
     def _print_warnings(self):

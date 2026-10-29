@@ -3,7 +3,6 @@
 > **Status:** ACCEPTED — calibrated with empirical evidence from Run #1 + Run #1.5 (Full Golden Set)
 > **Date:** 2026-04-28 (Run #1) / 2026-04-29 (Run #1.5 closure)
 > **Story:** STORY-PA-6.2 Part C
-> **Empirical evidence:** `outputs/eval/plan-architect/20260428-215316/dashboard.md`
 > **Plans evaluated:** **20 total** — full Golden Set (10 demands × 2 configs sonnet+opus)
 > **Demand variants Run #1.5:** G6 (advocacia → frameworks IA), G8 (afiliados → OaaS plan-architect monetization). Per operator 2026-04-29.
 
@@ -170,12 +169,8 @@ This ADR is calibrated to:
 
 ## References
 
-- Blueprint: `docs/architecture/plan-architect-blueprint.md` v1.1 §12 (eval strategy)
-- Eval framework: `docs/architecture/plan-architect-eval-framework.md`
-- Story: `docs/stories/epic-plan-architect/STORY-PA-6.2-EVAL-FRAMEWORK-GOLDEN-SET-ADR.md`
-- Golden Set: `squads/orquestrador-global/data/golden-set.yaml`
 - Rubric: `squads/orquestrador-global/knowledge/PLAN-QUALITY-RUBRIC.md`
 - Workflow: `squads/orquestrador-global/workflows/wf-eval-plan-architect.yaml`
 - Defaults config: `squads/orquestrador-global/data/model-tier-defaults.yaml` (UPDATED post ACCEPTED)
-- Run #1 dashboard: `outputs/eval/plan-architect/20260428-215316/dashboard.md`
-- Run #1 plans: `outputs/eval/plan-architect/20260428-215316/G*-{sonnet,opus}.yaml`
+
+> Nota: o blueprint, o framework de eval, a story, o Golden Set e os resultados dos runs (dashboard e planos) que sustentam este ADR não acompanham esta distribuição. Os números citados acima são o registro da calibração.

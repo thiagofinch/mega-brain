@@ -10,7 +10,7 @@ templates:
   - id: ingestion_guard
     emitter_fn: engine.intelligence.pipeline.mce.log_emitters.emit_ingestion_guard
     renderer_fn: .claude.skills.chronicler.renderers.render_ingestion_guard
-    schema: engine/schemas/ingestion-guard.schema.json
+    schema: null
     phase_idx: 0
     required: true
     description: Ingestion dedup verdict (NEW / SKIP / INCREMENTAL)

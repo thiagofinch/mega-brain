@@ -32,8 +32,6 @@ The Mega Brain Constitution applies. 14 non-negotiable principles:
 | XIII | Knowledge Bucket Isolation | MUST |
 | XIV | Workspace Layer Hierarchy | MUST |
 
-Reference: `mega-brain-core/constitution.md`
-
 ## Governance Hierarchy
 
 ```
@@ -51,7 +49,6 @@ Constitution (immutable law — Articles I-XIV)
 
 ```
 mega-brain/
-├── mega-brain-core/         → Mega Brain framework (constitution, agents, tasks, workflows)
 ├── engine/             → Mega Brain engine (pipeline, RAG, speakers, dossier, jarvis)
 ├── infrastructure/     → CI/CD, deploy configs, integrations
 ├── .claude/            → Claude Code integration (hooks, skills, rules, settings)
@@ -80,7 +77,7 @@ How agents boot (5-step activation sequence):
 
 Navigation chain: AGENT → SOUL → MEMORY → DNA → INSIGHTS → CHUNKS → SOURCE
 
-> **Naming:** arquivos de agente external/business/personal sao lowercase (`agent.md`, `soul.md`, `memory.md`, `dna-config.yaml`). Cargo agents (`agents/external/cargo/`) mantêm convencao legada UPPERCASE (`MEMORY.md`). Spec completa: `docs/architecture/knowledge-agent-architecture.md`.
+> **Naming:** arquivos de agente external/business/personal sao lowercase (`agent.md`, `soul.md`, `memory.md`, `dna-config.yaml`). Cargo agents (`agents/external/cargo/`) mantêm convencao legada UPPERCASE (`MEMORY.md`).
 
 ### Dossiers de tema — retrieve-on-demand (NAO entram no boot)
 
@@ -98,7 +95,7 @@ Dossiers de tema (`knowledge/external/dossiers/themes/*.md`) NAO sao carregados 
 @conclave roundtable "filosofia operacional" → modera retrieve cross-pessoa
 ```
 
-**Implementacao:** ver `engine/intelligence/rag/searcher.py` para retrieve via bucket external; ver `engine/intelligence/pipeline/mce/theme_router.py` para resolucao de tema.
+**Implementacao:** ver `engine/intelligence/rag/query_orchestrator.py` (`search_external`) para retrieve via bucket external; ver `engine/intelligence/pipeline/mce/theme_router.py` para resolucao de tema.
 
 ## Pipeline MCE
 
@@ -175,9 +172,7 @@ Golden Rule: L0 > L1 > L2 > L3 > L4 (higher layers override lower).
 
 Token → Atom → Molecule → Organism → Template → Instance
 
-Canonical refs: `squads/mega-brain/data/composition-rules.yaml` | `token-registry.yaml`
-
-> **Nota de aplicabilidade:** MEGABRAIN Composition aplica-se EXCLUSIVAMENTE a squads em `squads/`. Agentes de conhecimento (`agents/external/`, `agents/cargo/`, `agents/business/`, `agents/personal/`) seguem o **Kernel Session Layer (KSL)** — ver `docs/architecture/knowledge-agent-architecture.md` para spec completa.
+> **Nota de aplicabilidade:** MEGABRAIN Composition aplica-se EXCLUSIVAMENTE a squads em `squads/`. Agentes de conhecimento (`agents/external/`, `agents/cargo/`, `agents/business/`, `agents/personal/`) seguem o **Kernel Session Layer (KSL)**.
 
 ## Atom Rules (lazy-loaded by keyword)
 
@@ -316,19 +311,9 @@ Full reference: `.claude/skills/teaching/SKILL.md`
 | "Permission denied on git push" | By design — use branch + PR workflow |
 | Skills not auto-activating | Check `SKILL-INDEX.json` is generated on SessionStart |
 
-## Service-Capability Contract (ENFORCED)
-
-Todo novo diretório criado em `services/` DEVE ter uma entry correspondente em `agents/_registry/capability-registry.yaml` antes de ser considerado operacional.
-
-**Regra:** Sem capability declarada → service não existe para o Tool Intelligence Layer.
-
-Verificar gaps: `CLAUDE_PROJECT_DIR=$(pwd) python3 .claude/hooks/discover_capability_gaps.py`
-Registrar novo service: adicionar entry em `agents/_registry/capability-registry.yaml` + rodar `python3 .claude/hooks/sync_capability_status.py`
-
 ## Supabase Role (2026-05-28)
 
 Supabase = reactive mirror parcial do filesystem (NAO source of truth). Filesystem e SOT absoluto.
-Doc canonico: `docs/architecture/supabase-role.md`
 
 ## CLAUDE.md Policy
 

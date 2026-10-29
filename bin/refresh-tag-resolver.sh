@@ -9,4 +9,5 @@ set -euo pipefail
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$PROJECT_ROOT"
 
-python3 scripts/create-tag-resolver.py "$@"
+# O gerador do tag-resolver nao faz parte desta distribuicao: nada a gerar.
+echo "[refresh-tag-resolver] o gerador do tag-resolver nao existe nesta distribuicao; nada a gerar."

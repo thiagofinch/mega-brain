@@ -31,7 +31,7 @@ workflow:
       steps:
         - execute:
             command: "load_constitution"
-            file: "agents/constitution/CONSTITUTION.md"
+            file: "engine/jarvis/protocols/CONSTITUTION.md"
         - execute:
             command: "display_principles"
       checkpoint:
@@ -65,7 +65,7 @@ workflow:
       steps:
         - execute:
             command: "invoke_critic"
-            agent: "agents/conclave/CRITIC/AGENT.md"
+            agent: "agents/system/conclave/critic.md"
         - execute:
             command: "evaluate_process"
         - execute:
@@ -83,7 +83,7 @@ workflow:
       steps:
         - execute:
             command: "invoke_advocate"
-            agent: "agents/conclave/ADVOCATE/AGENT.md"
+            agent: "agents/system/conclave/devils-advocate.md"
         - execute:
             command: "challenge_premises"
         - execute:
@@ -101,7 +101,7 @@ workflow:
       steps:
         - execute:
             command: "invoke_synthesizer"
-            agent: "agents/conclave/SYNTHESIZER/AGENT.md"
+            agent: "agents/system/conclave/synthesizer.md"
         - execute:
             command: "integrate_perspectives"
         - execute:

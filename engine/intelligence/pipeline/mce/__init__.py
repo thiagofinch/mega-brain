@@ -40,12 +40,6 @@ from engine.intelligence.pipeline.mce.transaction import (
     pipeline_transaction,
 )
 
-try:
-    from engine.intelligence.pipeline.mce.pipeline_audit_renderer import (
-        render_pipeline_audit,
-    )
-except ImportError:
-    render_pipeline_audit = None  # type: ignore[assignment,misc]
 from engine.intelligence.pipeline.mce.agent_identity import (
     AgentIdentity,
     IdentityFilter,
@@ -204,7 +198,6 @@ __all__ = [
     "peek_inbox",
     "pipeline_transaction",
     "read_inbox",
-    "render_pipeline_audit",
     "require_identity",
     "reset_peer_messaging",
     "select_agent",

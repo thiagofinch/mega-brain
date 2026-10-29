@@ -18,7 +18,6 @@ SPOT_CHECKS = [
     ("core/tasks/HO-TP-001.md", "L1", "Core task file"),
     ("bin/cli.js", "L1", "CLI entry point"),
     (".claude/CLAUDE.md", "L1", "Claude integration"),
-    ("docs/audit/AUDIT-REPORT.md", "L1", "Documentation"),
     # L1 — Root project files
     ("package.json", "L1", "NPM package config"),
     ("package-lock.json", "L1", "NPM lockfile"),
@@ -32,7 +31,6 @@ SPOT_CHECKS = [
     (".gitattributes", "L1", "Git attributes"),
     (".gitleaks.toml", "L1", "Secret scanning config"),
     # L1 — GitHub
-    (".github/workflows/publish.yml", "L1", "CI publish workflow"),
     (".github/CODEOWNERS", "L1", "Code ownership"),
     (".github/ISSUE_TEMPLATE/bug.md", "L1", "Issue template"),
     # L1 — Planning

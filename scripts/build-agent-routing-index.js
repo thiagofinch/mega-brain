@@ -321,7 +321,7 @@ function signatureFromItems(items) {
     .filter((signature) => Object.keys(signature).length > 0);
 }
 
-// Routing Semantics v1 (STORY-FT-W2.1 — docs/reference/routing-semantics-spec.md):
+// Routing Semantics v1 (STORY-FT-W2.1):
 // a fonte declara COMO quer ser encontrada. Whitelist de campos, retrocompatível
 // (fonte sem routing => null, entry indexada como antes).
 function normalizeRouting(raw) {
@@ -459,31 +459,9 @@ function collectTasks() {
 
 
 // STORY-MB-011 AC1 (SOT R3): tools no closed-world do índice.
-// Fonte 1: services/tool-capability-registry.yaml (26 capabilities semânticas → tool oficial)
-// Fonte 2: .mcp.json (servers MCP registrados)
+// Fonte: .mcp.json (servers MCP registrados)
 function collectTools() {
   const tools = [];
-  const registryPath = path.join(repoRoot, 'services', 'tool-capability-registry.yaml');
-  const reg = readYaml(registryPath);
-  if (reg && reg.capabilities) {
-    for (const [id, cap] of Object.entries(reg.capabilities)) {
-      tools.push({
-        tool_id: `capability:${id}`,
-        kind: 'tool_capability',
-        name: id,
-        official: cap.official || null,
-        description: cap.description || null,
-        source_path: 'services/tool-capability-registry.yaml',
-        routing: normalizeRouting({
-          semantic_aliases: cap.semantic_aliases || [],
-          use_when: cap.description || null,
-          taxonomy: { domain: 'tools', subdomains: [] },
-          ontology: { entity_type: 'tool_capability', acts_on: [], produces: [] },
-        }),
-        providers: Object.keys(cap.providers || {}),
-      });
-    }
-  }
   const mcpPath = path.join(repoRoot, '.mcp.json');
   if (fs.existsSync(mcpPath)) {
     try {

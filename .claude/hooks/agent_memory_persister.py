@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-# STUB — W1-001.6 (2026-04-16): Logic consolidated into engine/memory_manager.py
+# STUB — W1-001.6 (2026-04-16): Logic consolidated into engine/intelligence/memory_manager.py
 # Archive: .claude/hooks/_archived/agent_memory_persister.py
 """
-Agent Memory Persister Hook — stub delegate to engine/memory_manager.py
+Agent Memory Persister Hook — stub delegate to engine/intelligence/memory_manager.py
 
 Persists session learnings to the active agent's memory file at session end.
 LIFECYCLE:

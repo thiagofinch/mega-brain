@@ -13,7 +13,7 @@ phases:
     name: "VALIDATION"
     steps:
       - execute:
-          task: "core/jarvis/agent-creator/tasks/create-agent.md"
+          task: "engine/jarvis/agent-creator/tasks/create-agent.md"
           phase: "Phase 1: Validation"
       - validate:
           - layer in [L0, L1, L2, L3, L4, SUB]
@@ -30,13 +30,13 @@ phases:
     name: "GENERATION"
     steps:
       - execute:
-          task: "core/jarvis/agent-creator/tasks/create-agent.md"
+          task: "engine/jarvis/agent-creator/tasks/create-agent.md"
           phase: "Phase 2: Generate Files"
       - create:
           - path: "{layer_folder}/{id}/AGENT.md"
-            template: "agents/_templates/TEMPLATE-AGENT-V3.md"
+            template: "agents/_templates/TEMPLATE-AGENT-MD-ULTRA-ROBUSTO-V3.md"
           - path: "{layer_folder}/{id}/SOUL.md"
-            template: "agents/protocols/SOUL-TEMPLATE.md"
+            template: "engine/templates/agents/soul-template.md"
     checkpoint:
       id: CP_FILES
       blocking: true
@@ -48,13 +48,13 @@ phases:
     name: "REGISTRATION"
     steps:
       - execute:
-          task: "core/jarvis/agent-creator/tasks/create-agent.md"
+          task: "engine/jarvis/agent-creator/tasks/create-agent.md"
           phase: "Phase 3 & 4"
       - create:
           - path: ".claude/commands/{id}.md"
             template: "inline"
       - update:
-          - file: "agents/persona-registry.yaml"
+          - file: "agents/_registry/ecosystem-registry.yaml"
             action: "append"
     checkpoint:
       id: CP_REGISTRY
@@ -67,7 +67,7 @@ phases:
     name: "SYNC"
     steps:
       - execute:
-          task: "core/jarvis/agent-creator/tasks/sync-agents.md"
+          task: "engine/jarvis/agent-creator/tasks/sync-agents.md"
     checkpoint:
       id: CP_SYNC
       blocking: false

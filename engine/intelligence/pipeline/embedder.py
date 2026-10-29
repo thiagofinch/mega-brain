@@ -1,13 +1,13 @@
 """C-18 shim (2026-05-12): adapter for orchestrate.py process-batch.
 
 orchestrate.py imports ``embed_chunks`` from
-``engine.intelligence.pipeline.embedder`` — actual embedder lives in
-``services/local-rag/embedder.py`` (Ollama-based) with a different signature.
+``engine.intelligence.pipeline.embedder``.
 
 This shim provides ``embed_chunks(chunks)`` using the canonical OpenAI
 text-embedding-3-large @ 1536d path (per the post-compare architecture
-decisions in CLAUDE.md). Falls back to Ollama via services/local-rag if
-OPENAI_API_KEY is missing.
+decisions in CLAUDE.md). The optional Ollama fallback is used only when a
+local embedder module is available (it is not shipped in the public release);
+without it, a missing OPENAI_API_KEY raises ``EmbeddingFailedError``.
 """
 
 from __future__ import annotations
@@ -228,7 +228,7 @@ def embed_chunks(chunks: list[dict[str, Any]]) -> list[dict[str, Any]]:
           wrapped in a 5-attempt 429 backoff loop with ±30% jitter and Retry-After
           floor (STORY-GBA-W2.2). Transient rate-limits no longer drop ingestion on
           the first retry the way the old SDK ``max_retries=2`` shim did.
-        - Fallback: Ollama via services/local-rag/embedder.py
+        - Fallback: Ollama, only when a local embedder module is available (not shipped in the public release)
         - On TOTAL failure (no path produced any vector, incl. 429 surviving all
           5 attempts): raises
           :class:`EmbeddingFailedError` so the caller's pipeline_transaction
@@ -333,11 +333,14 @@ def embed_chunks(chunks: list[dict[str, Any]]) -> list[dict[str, Any]]:
         except Exception as e:
             logger.error(f"OpenAI embed failed: {type(e).__name__}: {str(e)[:200]}")
 
-    # Fallback: services/local-rag/embedder
+    # Optional fallback: Ollama embedder (not shipped in the public release).
     try:
         import sys
 
-        sys.path.insert(0, str(Path(__file__).resolve().parents[3] / "services" / "local-rag"))
+        _local_rag = Path(__file__).resolve().parents[3] / "services" / "local-rag"
+        if not _local_rag.is_dir():
+            raise ModuleNotFoundError("Ollama embedder not available in this install")
+        sys.path.insert(0, str(_local_rag))
         from embedder import get_embeddings_batch  # type: ignore
 
         miss_embeddings = get_embeddings_batch(miss_texts)
@@ -358,7 +361,10 @@ def embed_chunks(chunks: list[dict[str, Any]]) -> list[dict[str, Any]]:
         logger.info(f"Embedded {len(to_embed_idx)} chunks via Ollama (fallback)")
         return chunks
     except Exception as e:
-        logger.error(f"Ollama fallback also failed: {type(e).__name__}: {e}")
+        if isinstance(e, ModuleNotFoundError):
+            logger.info(f"Ollama fallback skipped: {e}")
+        else:
+            logger.error(f"Ollama fallback also failed: {type(e).__name__}: {e}")
 
     # STORY-GBA-W2.1: TOTAL failure for the chunks that still NEEDED embedding.
     # Previously this did ``return chunks`` (silent degrade) — chunks without

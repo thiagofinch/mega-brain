@@ -9,8 +9,9 @@ Hook events:
   Stop → flush buffer to Supabase observations table
   SessionStart → load recent observations as context hints
 
-Feature flag: MEMORY_SUPABASE_ENABLED=true in .env
-Graceful degradation: if Supabase unavailable, silently skips.
+O provider Supabase de memoria nao faz parte desta distribuicao: os handlers
+Stop e SessionStart sao um no-op silencioso (sem saida). A API de buffer local
+(``buffer_observation``) continua disponivel para outros hooks.
 
 Story: RT-MEM-2026-04-11
 """
@@ -24,13 +25,6 @@ from pathlib import Path
 PROJECT_DIR = os.environ.get("CLAUDE_PROJECT_DIR", os.getcwd())
 BUFFER_PATH = Path(PROJECT_DIR) / ".data" / "memory_buffer.jsonl"
 STATE_PATH = Path(PROJECT_DIR) / ".claude" / "hooks" / ".memory-persistence-state.json"
-
-
-def _add_engine_to_path():
-    """Add project root to sys.path so engine imports work."""
-    root = Path(PROJECT_DIR)
-    if str(root) not in sys.path:
-        sys.path.insert(0, str(root))
 
 
 def _load_state() -> dict:
@@ -71,55 +65,13 @@ def _clear_buffer():
 
 
 def handle_stop(hook_input: dict) -> dict:
-    """Stop hook: flush buffered observations to Supabase."""
-    _add_engine_to_path()
-
-    try:
-        from engine.providers.memory_supabase import is_enabled, save_observations_batch
-
-        if not is_enabled():
-            return {"result": "skip", "reason": "MEMORY_SUPABASE_ENABLED != true"}
-
-        buffer = _read_buffer()
-        if not buffer:
-            return {"result": "skip", "reason": "empty buffer"}
-
-        saved = save_observations_batch(buffer)
-        if saved > 0:
-            _clear_buffer()
-            state = _load_state()
-            state["last_flush"] = time.time()
-            state["total_saved"] += saved
-            state["sessions"] += 1
-            _save_state(state)
-
-        return {"result": "success", "flushed": saved, "buffered": len(buffer)}
-
-    except Exception as e:
-        return {"result": "error", "error": str(e)}
+    """Stop hook: sem provider de persistencia nesta distribuicao, nao faz nada."""
+    return {"result": "skip", "reason": "provider de memoria Supabase nao distribuido"}
 
 
 def handle_session_start(hook_input: dict) -> dict:
-    """SessionStart hook: report memory system status."""
-    _add_engine_to_path()
-
-    try:
-        from engine.providers.memory_supabase import health_check, is_enabled
-
-        if not is_enabled():
-            return {"result": "skip"}
-
-        health = health_check()
-        state = _load_state()
-
-        status = "OK" if health["ok"] else "DEGRADED"
-        msg = f"[Memory] {status} | {state['total_saved']} obs saved across {state['sessions']} sessions"
-
-        print(json.dumps({"message": msg}))
-        return {"result": "success", "status": status}
-
-    except Exception as e:
-        return {"result": "error", "error": str(e)}
+    """SessionStart hook: sem provider de persistencia nesta distribuicao, nao faz nada."""
+    return {"result": "skip", "reason": "provider de memoria Supabase nao distribuido"}
 
 
 # ---------------------------------------------------------------------------
@@ -179,7 +131,8 @@ def main():
         # Called directly — assume stop (flush)
         result = handle_stop(hook_input)
 
-    print(json.dumps(result))
+    if result.get("result") != "skip":
+        print(json.dumps(result))
     sys.exit(0)
 
 

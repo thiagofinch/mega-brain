@@ -10,6 +10,10 @@ argument-hint: "[session context, project context, global scan or handoff path]"
 
 Extrai heurísticas operacionais de sessões de trabalho reais. Diferente de extração de experts (pessoas) — esta extrai de **execução** (o que aprendemos fazendo).
 
+> **Nesta distribuição:** `squads/squad-creator-pro/` (tasks, checklists, templates e
+> `minds/`) não é distribuído. Sem ele, a skill não resolve o operador sozinha e as
+> tasks citadas abaixo não existem.
+
 ## Activation
 
 ```

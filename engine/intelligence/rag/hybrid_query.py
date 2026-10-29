@@ -35,9 +35,9 @@ def _try_rrf_retrieve(
     re-applies the filter over the fused result (authoritative).
     """
     try:
-        from engine.providers.supabase_client import is_enabled
+        from .store_resolver import is_any_backend_configured
 
-        if not is_enabled():
+        if not is_any_backend_configured():
             return None
         from .rrf_retrieval import rrf_retrieve
 
@@ -115,8 +115,8 @@ RERANKER_PROVIDER_ENV = "MCE_RERANKER_PROVIDER"
 _VALID_PROVIDERS = frozenset({"zeroentropy", "cohere"})
 _DEFAULT_PROVIDER = "zeroentropy"
 
-# Cohere v2 rerank seam (ported from tests/rag/reranker_clients.py — the real
-# client validated in epic-RETRIEVAL-BENCHMARK RBM-2). PT-BR SOTA per research.
+# Cohere v2 rerank seam (client validated in epic-RETRIEVAL-BENCHMARK RBM-2).
+# PT-BR SOTA per research.
 COHERE_API_KEY_ENV = "COHERE_API_KEY"
 COHERE_RERANK_URL = "https://api.cohere.com/v2/rerank"
 # Rerank 4 Pro (``rerank-v4.0-pro``) — swapped in per STORY-F1-3. Same provider,
@@ -297,8 +297,8 @@ def _cohere_rerank(
     timeout_s: float,
 ) -> list[tuple[int, float]]:
     """Cohere rerank client (Rerank 4 Pro / ``rerank-v4.0-pro`` by default,
-    resolved by ``cohere_rerank_model`` — env-overridable for A/B; ported from
-    tests/rag/reranker_clients.py, validated in RBM-2). Bounded 429 retry for
+    resolved by ``cohere_rerank_model`` — env-overridable for A/B; validated
+    in RBM-2). Bounded 429 retry for
     trial keys. Raises ``RerankError`` on failure so the caller fail-opens to
     RRF order."""
     api_key = os.environ.get(COHERE_API_KEY_ENV, "").strip()

@@ -1,7 +1,7 @@
 """
 theme_agent_map.py -- Deterministic theme/framework → cargo agent mapping
 =========================================================================
-Loads engine/config/theme-to-agents.yaml and exposes resolve functions
+Loads an optional theme-to-agents YAML and exposes resolve functions
 used by cascading.py as the SECOND lookup mechanism (complement to the
 DNA-CONFIG reverse lookup which is mechanism 1).
 
@@ -27,8 +27,8 @@ import yaml
 
 logger = logging.getLogger("mce.theme_agent_map")
 
-# Canonical path for the mapping config.
-_CONFIG_PATH: Path = Path(__file__).parent.parent.parent.parent / "config" / "theme-to-agents.yaml"
+# The public release ships no mapping config: deterministic routing is off
+# unless a ``config_path`` is passed explicitly.
 
 
 # ---------------------------------------------------------------------------
@@ -43,9 +43,8 @@ class ThemeAgentMap:
     and cached (see load_theme_agent_map()).
 
     Args:
-        config_path: Path to theme-to-agents.yaml.  Defaults to
-            engine/config/theme-to-agents.yaml resolved relative to this
-            module's location.
+        config_path: Path to a theme-to-agents YAML.  None (default) leaves
+            deterministic routing disabled.
         agents_cargo_root: Root of cargo agents tree used for slug validation.
             When None, validation is skipped (useful in tests).
     """
@@ -55,7 +54,7 @@ class ThemeAgentMap:
         config_path: Path | None = None,
         agents_cargo_root: Path | None = None,
     ) -> None:
-        self._config_path: Path = config_path or _CONFIG_PATH
+        self._config_path: Path | None = config_path
         self._agents_cargo_root: Path | None = agents_cargo_root
         self._theme_map: dict[str, list[str]] = {}
         self._framework_map: dict[str, list[str]] = {}
@@ -68,6 +67,9 @@ class ThemeAgentMap:
 
     def _load(self) -> None:
         """Parse YAML and populate internal maps.  Non-fatal on errors."""
+        if self._config_path is None:
+            logger.debug("theme_agent_map: no config given — deterministic routing disabled")
+            return
         if not self._config_path.exists():
             logger.warning(
                 "theme_agent_map: config not found at %s — deterministic routing disabled",
@@ -258,7 +260,7 @@ def _cached_map(config_path: str) -> ThemeAgentMap:
     from engine.paths import AGENTS_CARGO  # imported lazily to avoid circular
 
     return ThemeAgentMap(
-        config_path=Path(config_path),
+        config_path=Path(config_path) if config_path else None,
         agents_cargo_root=AGENTS_CARGO,
     )
 
@@ -267,10 +269,10 @@ def load_theme_agent_map(config_path: Path | None = None) -> ThemeAgentMap:
     """Return the cached ThemeAgentMap singleton.
 
     Args:
-        config_path: Override path.  None uses engine/config/theme-to-agents.yaml.
+        config_path: Path to a mapping YAML.  None leaves deterministic routing disabled.
 
     Returns:
         ThemeAgentMap instance (loaded once, reused on subsequent calls).
     """
-    path = str(config_path or _CONFIG_PATH)
+    path = str(config_path) if config_path else ""
     return _cached_map(path)

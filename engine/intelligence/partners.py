@@ -1,7 +1,8 @@
 """Partners Registry — CLI + library for external partners catalog.
 
-Reads/writes ``workspace/_system/partners-registry.yaml`` (single source
-of truth for parceiros, prestadores, vendors that are NOT your own BUs).
+Reads/writes ``workspace/_system/partners-registry.yaml`` (created on the
+first ``add``; single source of truth for parceiros, prestadores, vendors
+that are NOT your own BUs).
 
 Used by:
     - scripts/ingest-with-entity-discovery.py::decide_destination (AC-3)

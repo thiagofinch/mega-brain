@@ -1,10 +1,9 @@
 # =============================================================================
 # PEOPLE-REGISTRY.YAML — Per-Spoke Subset Template v3.0
 # =============================================================================
-# Purpose: People who belong to THIS business (FK to hub people-registry)
+# Purpose: People who belong to THIS business
 # Guardian: COO / HR
 # Location: workspace/businesses/{slug}/L0-identity/people-registry.yaml
-# Hub reference: mega-brain-core/data/people-registry.yaml
 #
 # Source: ADR-GAP009 Section 6
 # Owner: c-level-squad
@@ -24,13 +23,12 @@ metadata:
   business: "FILL_THIS"
   status: "TEMPLATE"
   last_updated: "FILL_THIS"
-  hub_registry: "mega-brain-core/data/people-registry.yaml"
 
-# Per-spoke subset — references person_ids from hub registry
-# Each entry key MUST match a person_id in the hub people-registry
+# Per-spoke subset — person_ids of this business
+# Each entry key MUST be unique person_id of this business
 people:
   example-person:
-    person_id: "FILL_THIS"        # Must match hub registry person_id
+    person_id: "FILL_THIS"        # Unique person_id
     allocation: 1.0               # 0.0-1.0 allocation to this business
     department: "FILL_THIS"       # e.g. "comercial", "operacoes", "tech"
     direct_leader: "FILL_THIS"    # person_id of leader in this business

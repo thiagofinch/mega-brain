@@ -57,8 +57,6 @@ Orquestrar a criação automática e consistente de agentes no Mega Brain, garan
 |------|------|-------------|
 | TSK-101 | `tasks/create-agent.md` | Criar novo agente |
 | TSK-102 | `tasks/sync-agents.md` | Sincronizar entre IDEs |
-| TSK-103 | `tasks/update-registry.md` | Atualizar persona-registry |
-| TSK-104 | `tasks/validate-agent.md` | Validar estrutura do agente |
 
 ---
 
@@ -91,7 +89,7 @@ agent_request:
 agent_created:
   path: string     # Full path to agent folder
   files: array     # List of created files
-  registry: bool   # Added to persona-registry.yaml
+  registry: bool   # Added to agents/_registry/ecosystem-registry.yaml
   synced: array    # IDEs synchronized
 ```
 
@@ -101,8 +99,8 @@ agent_created:
 
 | Component | Path | Purpose |
 |-----------|------|---------|
-| persona-registry.yaml | `agents/` | Central registry |
-| role_detector.py | `SCRIPTS/` | Layer detection |
+| ecosystem-registry.yaml | `agents/_registry/` | Central registry |
+| role_detector.py | `engine/intelligence/entities/` | Layer detection |
 | skill_router.py | `.claude/hooks/` | Routing integration |
 | process-jarvis | `.claude/skills/` | Pipeline trigger |
 
@@ -145,7 +143,7 @@ agents/{layer-folder}/{agent-id}/
 │  ───────                        ──────────────                  ────────   │
 │                                                                             │
 │  role_detector.py ──┐                                                       │
-│                     ├──► wf-create-agent.yaml ──► persona-registry.yaml    │
+│                     ├──► wf-create-agent.yaml ──► ecosystem-registry.yaml  │
 │  Phase 5.2 ─────────┘           │                                          │
 │                                 │                                          │
 │                                 ├──► agents/{layer}/{id}/AGENT.md          │

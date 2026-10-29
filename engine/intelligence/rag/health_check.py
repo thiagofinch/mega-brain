@@ -4,7 +4,7 @@ RAG HEALTH CHECK - BrainHealth 6-Metric Contract
 ====================================================================
 Unified health metrics for all RAG buckets. Absorbs staleness detection
 (formerly in staleness_checker.py) and exports a BrainHealth dataclass
-with 6 canonical metrics consumed by engine/doctor.py and /rag-health.
+with 6 canonical metrics consumed by /rag-health.
 
 Skill activation:  /rag-health
 CLI:               python3 -m engine.intelligence.rag.health_check
@@ -46,7 +46,7 @@ from engine.paths import (
 class BrainHealth:
     """Canonical 6-metric health contract for the RAG subsystem.
 
-    Consumed by engine/doctor.py (Wave 1) and /rag-health skill.
+    Consumed by the /rag-health skill.
 
     Attributes:
         index_count: Total number of indexed documents (chunks) across all buckets.

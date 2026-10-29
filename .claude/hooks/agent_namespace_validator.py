@@ -114,7 +114,7 @@ def validate(path: str, content: str) -> tuple[bool, list[str]]:
     if not m:
         errors.append(
             f"Filename '{filename}' não bate com padrão {{squad}}--{{agent}}.md "
-            f"(ex: visual-knowledge-squad--funnel-cartographer.md). "
+            f"(ex: orquestrador-global--dag-architect.md). "
             f"Use kebab-case, double-dash separator."
         )
         return False, errors
@@ -192,7 +192,7 @@ def main():
             for err in errors:
                 print(f"   - {err}", file=sys.stderr)
             print(
-                "   Exemplo válido: .claude/agents/visual-knowledge-squad--funnel-cartographer.md",
+                "   Exemplo válido: .claude/agents/orquestrador-global--dag-architect.md",
                 file=sys.stderr,
             )
             sys.exit(2)

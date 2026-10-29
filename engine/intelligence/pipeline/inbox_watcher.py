@@ -23,7 +23,6 @@ Usage::
 
 Version: 1.0.0
 Date: 2026-03-10
-Spec: docs/plans/epic1-phase1.2-inbox-watcher-spec.md
 """
 
 from __future__ import annotations

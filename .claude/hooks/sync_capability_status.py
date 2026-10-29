@@ -3,10 +3,10 @@
 sync_capability_status.py -- Sync provider status fields no SOT unificado de capabilities
 
 Story 212.W1.1 (ADR-ONTOLOGIA-OPERACIONAL D1): opera sobre o SOT
-(agents/_registry/capability-sot.yaml), NÃO mais sobre a vista TIL. Atualiza o campo
+(SOT de capabilities em agents/_registry/, opcional e fora da distribuicao publica), NÃO mais sobre a vista TIL. Atualiza o campo
 `status` de cada provider do eixo TIL (capabilities.<id>.til.providers[]) conforme a
 realidade de env/MCP e, em seguida, delega a REGENERAÇÃO das 2 vistas ao gerador
-determinístico (scripts/generate-capability-views.js --write). Assim o js-yaml continua
+determinístico de vistas (script Node opcional, fora da distribuicao publica; --write). Assim o js-yaml continua
 sendo o ÚNICO formatador canônico do SOT + vistas (sem ping-pong cross-lib).
 
 Modos:

@@ -15,7 +15,6 @@ Integration model:
 
 Version: 1.0.0
 Date: 2026-03-10
-Spec: docs/plans/epic1-phase1.1-scope-classifier-spec.md
 """
 
 from __future__ import annotations
@@ -27,7 +26,6 @@ import re
 import time
 import unicodedata
 from dataclasses import dataclass, field
-from pathlib import Path
 
 import yaml
 
@@ -41,11 +39,10 @@ from engine.paths import (
 logger = logging.getLogger(__name__)
 
 # ---------------------------------------------------------------------------
-# SIGNAL WEIGHT LOADING (from YAML, with hardcoded fallback)
+# SIGNAL WEIGHT LOADING (built-in defaults)
 # ---------------------------------------------------------------------------
 
-# Default weights -- used as fallback if YAML is missing or malformed.
-# These MUST stay in sync with scripts/scope_classifier_weights.yaml.
+# Default signal weights.
 _DEFAULT_WEIGHTS: dict = {
     "path": {"inbox_weight": 10, "workspace_weight": 8},
     "participant": {
@@ -63,62 +60,21 @@ _DEFAULT_WEIGHTS: dict = {
     "thresholds": {"cascade_threshold": 5, "text_sample_size": 5000},
 }
 
-_WEIGHTS_YAML_PATH = (
-    Path(__file__).resolve().parents[3] / "scripts" / "scope_classifier_weights.yaml"
-)
-
 
 def _load_weights() -> dict:
-    """Load classification weights from YAML file.
-
-    Falls back to ``_DEFAULT_WEIGHTS`` with a warning if the YAML file
-    is missing or cannot be parsed. Individual missing keys are also
-    filled from defaults so partial YAML files degrade gracefully.
+    """Return the classification weights (built-in defaults).
 
     Returns:
-        Merged weights dict.
+        A copy of ``_DEFAULT_WEIGHTS``.
     """
-    if not _WEIGHTS_YAML_PATH.exists():
-        logger.warning(
-            "Weights YAML not found at %s; using hardcoded defaults",
-            _WEIGHTS_YAML_PATH,
-        )
-        return _DEFAULT_WEIGHTS.copy()
-
-    try:
-        with open(_WEIGHTS_YAML_PATH, encoding="utf-8") as f:
-            loaded = yaml.safe_load(f)
-
-        if not isinstance(loaded, dict):
-            logger.warning("Weights YAML is not a dict; using hardcoded defaults")
-            return _DEFAULT_WEIGHTS.copy()
-
-        # Deep-merge: use loaded values, fill gaps from defaults
-        merged: dict = {}
-        for section, defaults in _DEFAULT_WEIGHTS.items():
-            if section not in loaded:
-                merged[section] = defaults
-                continue
-            if isinstance(defaults, dict) and isinstance(loaded[section], dict):
-                merged[section] = {**defaults, **loaded[section]}
-            else:
-                merged[section] = loaded[section]
-        return merged
-
-    except Exception:
-        logger.warning(
-            "Failed to parse weights YAML at %s; using hardcoded defaults",
-            _WEIGHTS_YAML_PATH,
-            exc_info=True,
-        )
-        return _DEFAULT_WEIGHTS.copy()
+    return {k: (dict(v) if isinstance(v, dict) else v) for k, v in _DEFAULT_WEIGHTS.items()}
 
 
 # Load once at import time (module-level cache)
 _W = _load_weights()
 
 # ---------------------------------------------------------------------------
-# SIGNAL WEIGHT CONSTANTS (resolved from YAML or defaults)
+# SIGNAL WEIGHT CONSTANTS (resolved from defaults)
 # ---------------------------------------------------------------------------
 
 # Signal 1: Path Analysis

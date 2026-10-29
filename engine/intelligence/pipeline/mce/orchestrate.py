@@ -5080,8 +5080,7 @@ def cmd_narrative(slug: str) -> dict[str, Any]:
     if state.get("schema_version") != _NARRATIVES_SCHEMA_VERSION:
         logger.warning(
             "cmd_narrative: NARRATIVES-STATE schema_version=%s, expected %s — "
-            "applying inline migration. Run scripts/migrate_narratives_state_v310.py "
-            "for a full migration.",
+            "applying inline migration.",
             state.get("schema_version"),
             _NARRATIVES_SCHEMA_VERSION,
         )
@@ -7330,7 +7329,7 @@ def cmd_promote_agent(slug: str) -> dict[str, Any]:
         }
 
     # Advance FSM to agent_generation if promotion succeeded
-    publish: dict[str, Any] = {"command": None, "registry": None}
+    publish: dict[str, Any] = {"command": None}
     if promotion_result.get("promoted"):
         sm = PipelineStateMachine(slug)
         for trigger_name in ("start_rag_index", "start_agents"):
@@ -7368,17 +7367,6 @@ def cmd_promote_agent(slug: str) -> dict[str, Any]:
         except Exception as exc:
             logger.warning("generate_activation failed for %s: %s", slug, exc)
             publish["command"] = {"error": str(exc)}
-
-        # (b) Ecosystem registry entry (separate registry from the master
-        #     registry that generate_activation already touches).
-        try:
-            from engine.intelligence.agents.registry_publisher import upsert_agent_entry
-
-            reg = upsert_agent_entry(slug, bucket, _PROJECT_ROOT)
-            publish["registry"] = reg
-        except Exception as exc:
-            logger.warning("upsert_agent_entry failed for %s: %s", slug, exc)
-            publish["registry"] = {"error": str(exc)}
 
     elapsed = (time.monotonic() - t0) * 1000
 
@@ -8514,33 +8502,6 @@ def write_completion_marker(
             "write_completion_marker failed (non-fatal) for %s: %s", slug, exc
         )
         return {"written": False, "path": None, "error": str(exc)}
-
-
-def _run_lifecycle_governance_safe(slug: str, bucket: str) -> dict[str, Any]:
-    """PRE-teardown hook: run the CSO lifecycle motor on the MCE output signal.
-
-    Drives the governance state-machine (``engine.governance``) from the MCE
-    finalize signal — auto-promote L2-L4 docs POPULATED→VALIDATED (L0/L1 pending
-    human sign-off), the gap-zero output gate, and the on-write stale cascade
-    [Story 211.W4.1 / 211.W4.2].
-
-    NON-FATAL per Art. XII (Pipeline Integrity > Observability): any failure is
-    logged and swallowed so a governance defect can never crash cmd_finalize —
-    the same contract as the ``log_generator`` wiring above. Rollback = flip the
-    ``MCE_*`` kill-switches; the promoted data never corrupts (AC5).
-    """
-    try:
-        from engine.governance.mce_lifecycle import run_lifecycle_governance
-
-        return run_lifecycle_governance(slug=slug, bucket=bucket)
-    except Exception as exc:  # governance must never crash the pipeline (Art. XII)
-        logger.warning(
-            "lifecycle governance wiring failed (non-fatal) for %s: %s",
-            slug,
-            exc,
-            exc_info=True,
-        )
-        return {"error": str(exc)}
 
 
 def cmd_finalize(slug: str) -> dict[str, Any]:
@@ -10172,16 +10133,6 @@ def cmd_finalize(slug: str) -> dict[str, Any]:
     # ───────────────────────────────────────────────────────────────────────
     completion_marker = write_completion_marker(slug, bucket, state=sm.state)
     result["completion_marker"] = completion_marker
-
-    # ───────────────────────────────────────────────────────────────────────
-    # STORY 211.W4.1 / 211.W4.2 — MCE-driven lifecycle motor (PRE-teardown).
-    # The extraction signal is complete: docs are populated, logs written,
-    # completion marked. NOW the CSO governance state-machine advances itself —
-    # auto-promote L2-L4 → VALIDATED (L0/L1 stay pending sign-off), the gap-zero
-    # output gate, and the on-write stale cascade. Coupled here (PRE-teardown)
-    # per PLANO §A.2. NON-FATAL (Art. XII) — the helper never raises.
-    # ───────────────────────────────────────────────────────────────────────
-    result["lifecycle_governance"] = _run_lifecycle_governance_safe(slug, bucket)
 
     return result
 

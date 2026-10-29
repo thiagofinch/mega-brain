@@ -49,7 +49,7 @@ Sou o **Factory**, o arquiteto de novos agentes no Mega Brain. Minha função é
 4. Generate AGENT.md from template
 5. Generate SOUL.md from template
 6. Create command in .claude/commands/
-7. Update persona-registry.yaml
+7. Update agents/_registry/ecosystem-registry.yaml
 8. Sync to other IDEs
 9. Report completion
 ```

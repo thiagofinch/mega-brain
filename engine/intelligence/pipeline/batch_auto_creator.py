@@ -26,7 +26,6 @@ Usage::
 
 Version: 1.0.0
 Date: 2026-03-10
-Spec: docs/plans/epic1-phase1.4-batch-auto-creator-spec.md
 """
 
 from __future__ import annotations
@@ -1806,23 +1805,14 @@ def emit_advance_trigger(
 
 
 def trigger_cascading(md_path: Path) -> bool:
-    """Invoke ``post_batch_cascading.py`` on a newly created batch.
+    """Cascading hook for a newly created batch (no-op in the public release).
 
-    Returns True if cascading completed successfully, False otherwise.
+    The engine does not ship an in-process batch cascader; cascading runs later
+    in the pipeline (``mce.cascading`` via ``cmd_finalize``). Returns False so
+    callers record ``cascading_triggered=False``.
     """
-    try:
-        from engine.intelligence.pipeline.post_batch_cascading import (
-            process_batch_for_cascading,
-        )
-
-        process_batch_for_cascading(md_path)
-        return True
-    except ImportError:
-        logger.debug("post_batch_cascading not available; skipping cascading")
-        return False
-    except Exception as exc:
-        logger.warning("Cascading failed for %s: %s", md_path, exc)
-        return False
+    logger.debug("in-process batch cascading not available; skipping for %s", md_path)
+    return False
 
 
 def trigger_memory_enrichment(

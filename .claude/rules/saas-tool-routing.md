@@ -6,7 +6,7 @@ Applies PROACTIVELY whenever Claude needs to interact with any external SaaS too
 
 Este NAO e uma skill invocada manualmente. E comportamento base que Claude DEVE seguir automaticamente toda vez que uma tarefa envolve interacao com SaaS externo.
 
-**Regra fundamental:** Claude NUNCA tenta API externa antes de consultar o registry. A unica pausa aceitavel e para credenciais ausentes ou prerequisitos manuais.
+**Regra fundamental:** Claude NUNCA tenta API externa antes de classificar o SaaS (passo 2 do fluxo abaixo). A unica pausa aceitavel e para credenciais ausentes ou prerequisitos manuais.
 
 ## Fluxo de Decisao (NON-NEGOTIABLE)
 
@@ -14,7 +14,7 @@ Antes de interagir com QUALQUER SaaS externo:
 
 ```
 1. Identificar SaaS(es) necessario(s) para a tarefa
-2. Consultar workspace/domains/tech/saas-api-readiness.yaml
+2. Verificar o que o projeto declara (`.env`, `.mcp.json`, documentacao oficial da API)
 3. Classificar:
    ┌─────────────────────────────────────────────────────────────┐
    │ CONNECTED  → Usar API diretamente com auth_method documentado│
@@ -27,7 +27,7 @@ Antes de interagir com QUALQUER SaaS externo:
    │ NO_API     → Declarar acao manual ou Playwright              │
    └─────────────────────────────────────────────────────────────┘
 4. Executar tarefa completa autonomamente
-5. Atualizar last_verified ao final da operacao bem-sucedida
+5. Registrar a data da verificacao nas notas do projeto ao final da operacao bem-sucedida
 ```
 
 ## Comunicacao Estruturada
@@ -39,7 +39,7 @@ Antes de interagir com QUALQUER SaaS externo:
 | Credencial ausente | `Aguardando credencial {ENV_KEY}. Documentar em .env e re-tentar.` |
 | Prerequisito nao autorizado | `[{SaaS}] requer {prerequisite}. Status: {prerequisite_status}. Sugestao: {workaround}.` |
 | Conclusao | `[{SaaS}] {operacao} completa.` |
-| Governanca | `Encontrei {token/endpoint} novo. Posso registrar em saas-api-readiness.yaml.` |
+| Governanca | `Encontrei {token/endpoint} novo. Posso registrar nas notas do projeto.` |
 
 ## Exemplos
 
@@ -89,15 +89,12 @@ Acao:
 
 | Arquivo | Funcao | Quando consultar |
 |---------|--------|-----------------|
-| `workspace/domains/tech/saas-api-readiness.yaml` | Classificador primario (CONNECTED/AVAILABLE/NO_API) | PRIMEIRO — antes de qualquer acesso a SaaS |
-| `.claude/credentials-map.md` | Mapa de tokens + IDs fixos | Para resolver `env_key` e `base_url` |
-| `agents/_registry/capability-registry.yaml` | Service adapters internos do mega-brain | Para descobrir SE existe wrapper Python/JS |
-| `services/{tool}/` | Adapters concretos (e.g. google-meet/, fireflies_webhook/) | Antes de criar codigo novo |
+| `.claude/credentials-map.md` (local, opcional: nao vem na distribuicao) | Mapa de tokens + IDs fixos | Para resolver `env_key` e `base_url`, quando existir |
 
 ## Ciclo de Vida — SaaS Novo
 
 ```
-1. Pedido envolve SaaS nao listado em saas-api-readiness.yaml
+1. Pedido envolve SaaS ainda nao classificado nas notas do projeto
 2. Pesquisar:
    a. Tem documentacao API publica? → AVAILABLE ou CONNECTED
    b. Apenas dashboard? → NO_API
@@ -105,16 +102,16 @@ Acao:
    a. Existe ENV_KEY no .env? → tentar token
    b. Existe SA configurada? → tentar DWD
    c. Nenhum → AVAILABLE com prerequisite "configurar credencial"
-4. Registrar entry em saas-api-readiness.yaml com last_verified
-5. Atualizar credentials-map.md se token novo
+4. Registrar a classificacao e a data da verificacao nas notas do projeto
+5. Atualizar o credentials-map.md local (se existir) quando houver token novo
 ```
 
 ## Anti-Padroes (NUNCA fazer)
 
-1. Tentar API externa sem consultar saas-api-readiness.yaml primeiro
+1. Tentar API externa sem classificar o SaaS primeiro
 2. Recuperar empiricamente um endpoint que ja esta documentado
-3. Fazer 3+ tentativas com auth errado quando o registry tem o auth_method correto
-4. Marcar last_verified sem validar operacao real (false positive)
+3. Fazer 3+ tentativas com auth errado quando a documentacao do projeto tem o auth_method correto
+4. Marcar como verificado sem validar operacao real (false positive)
 5. Adicionar entry CONNECTED sem ter validado base_url + auth_method funcionais
 6. Ignorar prerequisite_status NOT_AUTHORIZED e tentar mesmo assim
 
@@ -126,4 +123,4 @@ Acao:
 
 ## Origem
 
-Regra de tool-routing focada exclusivamente em SaaS externos (capability-registry.yaml cobre rotas internas).
+Regra de tool-routing focada exclusivamente em SaaS externos.

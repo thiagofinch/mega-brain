@@ -10,7 +10,7 @@ adapters:
     status: "required"
     entrypoint:
       command: null
-      documentation: "docs/stories/epic-orquestrador-global/MASTER-PLAN-OG-RUNTIME-CLOSURE.md"
+      documentation: null
     input_schema: null
     output_schema: null
     capabilities:
@@ -64,7 +64,6 @@ adapters:
     status: "experimental"
     entrypoint:
       skill: ".agents/skills/swarm-execute/SKILL.md"
-      claude_projection: ".claude/skills/swarm-execute/SKILL.md"
       executor: "core/core/orchestration/parallel-executor.js"
     input_schema: null
     output_schema: null

@@ -5,7 +5,7 @@ Agent Namespace Sync — PostToolUse Hook v1.0
 Quando um agente namespaced é criado/editado em .claude/agents/ ({squad}--{agent}.md),
 sincroniza:
   1. agents/_registry/ecosystem-registry.yaml (adiciona/atualiza entry)
-  2. .claude/skills/SKILL-INDEX.json (rebuild via skill_indexer.py se existir)
+  2. indice de skills (rebuild via skill_indexer.py se existir; artefato gerado)
   3. squads/{squad}/config.yaml — flagueia se squad não tem o agente listado
 
 Hook Event: PostToolUse (Write|Edit em .claude/agents/)

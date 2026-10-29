@@ -63,28 +63,11 @@ def _resolve_default_bu() -> str:
     """Discover default BU from workspace config or filesystem fallback.
 
     Priority:
-    1. workspace/_system/config.yaml → first active business slug
-    2. Single directory under workspace/businesses/
-    3. Env override: MEGA_BRAIN_DEFAULT_BU
-    4. Hard fallback: 'default'
+    1. Single directory under workspace/businesses/
+    2. Env override: MEGA_BRAIN_DEFAULT_BU
+    3. Hard fallback: 'default'
     """
     import os
-    try:
-        config_path = _PROJECT_ROOT / "workspace" / "_system" / "config.yaml"
-        if config_path.exists():
-            import yaml  # type: ignore[import-untyped]
-
-            with config_path.open(encoding="utf-8") as fh:
-                cfg = yaml.safe_load(fh) or {}
-            businesses = cfg.get("businesses", [])
-            if isinstance(businesses, list):
-                for biz in businesses:
-                    if isinstance(biz, dict) and biz.get("status") == "active":
-                        slug = biz.get("slug", "")
-                        if slug:
-                            return slug
-    except Exception as exc:
-        logger.debug("orglive_sync: config.yaml read failed: %s", exc)
 
     # Filesystem fallback: single BU directory
     try:

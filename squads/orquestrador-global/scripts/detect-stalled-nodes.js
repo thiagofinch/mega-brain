@@ -4,7 +4,7 @@
  *
  * Story: OG runtime closure Item 4
  * Contracts:
- *   - squads/orquestrador-global/data/execution-registry.yaml
+ *   - registry de execucoes: passado como argumento (sem argumento = nada a detectar)
  *   - schemas/contracts/orchestration-replan-proposal.schema.json
  */
 'use strict';
@@ -12,33 +12,30 @@
 const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml');
-const Ajv2020 = require('ajv/dist/2020');
-const {
-  loadStructuredFile,
-  validateSchema: validateNodeStatusSchema,
-  validateSemantics: validateNodeStatusSemantics,
-} = require('./validate-node-status');
 
-let addFormats;
-try {
-  addFormats = require('ajv-formats');
-} catch {
-  addFormats = (ajv) => {
-    ajv.addFormat('date-time', {
-      type: 'string',
-      validate: (value) => !Number.isNaN(Date.parse(value)),
-    });
-  };
+// ajv e validate-node-status so sao carregados quando realmente necessarios,
+// para que a ausencia do registry (nao distribuido na release publica) degrade
+// com mensagem clara em vez de falhar no require.
+function loadAddFormats() {
+  try {
+    return require('ajv-formats');
+  } catch {
+    return (ajv) => {
+      ajv.addFormat('date-time', {
+        type: 'string',
+        validate: (value) => !Number.isNaN(Date.parse(value)),
+      });
+    };
+  }
 }
 
 const REPO_ROOT = path.resolve(__dirname, '../../..');
-const DEFAULT_REGISTRY = path.join(REPO_ROOT, 'squads/orquestrador-global/data/execution-registry.yaml');
 const DEFAULT_NODE_STATUS_SCHEMA = path.join(REPO_ROOT, 'schemas/contracts/orchestration-node-status.schema.json');
 const DEFAULT_REPLAN_SCHEMA = path.join(REPO_ROOT, 'schemas/contracts/orchestration-replan-proposal.schema.json');
 
 function parseArgs(argv) {
   const args = {
-    registry: DEFAULT_REGISTRY,
+    registry: null,
     nodeStatusSchema: DEFAULT_NODE_STATUS_SCHEMA,
     replanSchema: DEFAULT_REPLAN_SCHEMA,
     now: new Date().toISOString(),
@@ -68,6 +65,8 @@ function loadYaml(filePath) {
 }
 
 function validateProposalSchema(schemaPath, proposal) {
+  const Ajv2020 = require('ajv/dist/2020');
+  const addFormats = loadAddFormats();
   const schema = JSON.parse(fs.readFileSync(schemaPath, 'utf8'));
   const ajv = new Ajv2020({ allErrors: true, strict: false });
   addFormats(ajv);
@@ -105,6 +104,11 @@ function planNodeById(plan) {
 }
 
 function loadExecutionContext(execution, args) {
+  const {
+    loadStructuredFile,
+    validateSchema: validateNodeStatusSchema,
+    validateSemantics: validateNodeStatusSemantics,
+  } = require('./validate-node-status');
   const sidecarPath = path.resolve(REPO_ROOT, execution.node_status_path);
   const sidecar = loadStructuredFile(sidecarPath);
   const sidecarSchema = validateNodeStatusSchema(args.nodeStatusSchema, sidecar);
@@ -208,6 +212,26 @@ function buildProposal(stalled, args) {
 
 function main() {
   const args = parseArgs(process.argv);
+  if (!args.registry) {
+    // Nenhum registry de execucoes informado: sem execucoes registradas, nada a detectar.
+    console.log(JSON.stringify({
+      valid: true,
+      registry: null,
+      now: args.now,
+      registry_found: false,
+      note: 'nenhum registry de execucoes informado; nenhuma execucao para verificar.',
+      stalled_count: 0,
+      stalled_nodes: [],
+      proposal_path: null,
+      proposal_valid: true,
+      errors: [],
+    }, null, 2));
+    process.exit(args.expectStalled ? 1 : 0);
+  }
+  if (!fs.existsSync(args.registry)) {
+    console.error(`[detect-stalled-nodes] registry nao encontrado: ${path.relative(REPO_ROOT, args.registry)}`);
+    process.exit(2);
+  }
   const registry = loadYaml(args.registry);
   const detection = detectStalls(registry, args);
   let proposal = null;

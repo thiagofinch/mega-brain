@@ -13,7 +13,7 @@ Reuso (nada reinventado):
   - LLM:            engine.intelligence.pipeline.mce.llm_router.LLMRouter.run_prompt
   - Config/key:     engine.intelligence.pipeline.fireflies_config.load_config
   - Conteúdo:       _QUERY_FULL_TRANSCRIPT (summary.overview/keywords/action_items)
-  - Mutation:       updateMeetingTitle (provada em services/google-meet/fix-fireflies-titles.mjs)
+  - Mutation:       updateMeetingTitle
 
 Segurança (alinha .claude/rules/extraction-no-fallbacks.md):
   - Sem sinal de conteúdo => retorna None e NÃO renomeia (nunca inventa título).

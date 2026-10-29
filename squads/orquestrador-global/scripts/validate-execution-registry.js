@@ -30,13 +30,12 @@ try {
 }
 
 const REPO_ROOT = path.resolve(__dirname, '../../..');
-const DEFAULT_REGISTRY = path.join(REPO_ROOT, 'squads/orquestrador-global/data/execution-registry.yaml');
 const DEFAULT_SCHEMA = path.join(REPO_ROOT, 'schemas/contracts/orchestration-execution.schema.json');
 const DEFAULT_NODE_STATUS_SCHEMA = path.join(REPO_ROOT, 'schemas/contracts/orchestration-node-status.schema.json');
 
 function parseArgs(argv) {
   const args = {
-    registry: DEFAULT_REGISTRY,
+    registry: null,
     schema: DEFAULT_SCHEMA,
     nodeStatusSchema: DEFAULT_NODE_STATUS_SCHEMA,
   };
@@ -45,7 +44,6 @@ function parseArgs(argv) {
     const arg = argv[i];
     if (arg === '--schema') args.schema = path.resolve(argv[++i]);
     else if (arg === '--node-status-schema') args.nodeStatusSchema = path.resolve(argv[++i]);
-    else if (!args.registry) args.registry = path.resolve(arg);
     else args.registry = path.resolve(arg);
   }
 
@@ -181,6 +179,14 @@ function validateSemantics(registry, args) {
 
 function main() {
   const args = parseArgs(process.argv);
+  if (!args.registry) {
+    console.error('[validate-execution-registry] uso: validate-execution-registry.js <execution-registry.yaml> [--schema <arq>] [--node-status-schema <arq>]');
+    process.exit(2);
+  }
+  if (!fs.existsSync(args.registry)) {
+    console.error(`[validate-execution-registry] registry nao encontrado: ${path.relative(REPO_ROOT, args.registry)}`);
+    process.exit(2);
+  }
   const registry = loadRegistry(args.registry);
   const schemaResult = validateRegistrySchema(args.schema, registry);
   const semanticResult = validateSemantics(registry, args);

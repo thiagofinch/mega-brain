@@ -6,9 +6,9 @@ Architecture Decision
 ---------------------
 The MCE governance system has two complementary halves:
 
-- **Synapse** (``core/engine/rules/workflows/mce.yaml``) holds *declarative*
-  rules: gate definitions, veto conditions, severity levels, and transition
-  mappings.  It answers "what should be checked?"
+- **Declarative rules** (gate definitions, veto conditions, severity levels and
+  transition mappings; not shipped in the public release) answer
+  "what should be checked?"
 
 - **qa_gates** (this module) executes *imperative* checks: it reads actual
   artifact files on disk, validates their content against checkpoint criteria
@@ -151,7 +151,6 @@ def _resolve_insights_state(slug: str) -> Path:
 # ---------------------------------------------------------------------------
 
 _checkpoints_cache: dict[str, Any] | None = None
-_gates_cache: dict[str, Any] | None = None
 
 
 def _load_checkpoints() -> dict[str, Any]:
@@ -180,30 +179,6 @@ def _load_checkpoints() -> dict[str, Any]:
         _checkpoints_cache = {}
 
     return _checkpoints_cache
-
-
-def _load_gates() -> dict[str, Any]:
-    """Load ``mce.yaml`` quality gates once and cache them."""
-    global _gates_cache
-    if _gates_cache is not None:
-        return _gates_cache
-
-    from engine.paths import CORE
-
-    gates_path = CORE / "engine" / "rules" / "workflows" / "mce.yaml"
-    if not gates_path.exists():
-        logger.warning("mce.yaml not found at %s -- gate definitions unavailable", gates_path)
-        _gates_cache = {}
-        return _gates_cache
-
-    try:
-        with open(gates_path, encoding="utf-8") as fh:
-            _gates_cache = yaml.safe_load(fh) or {}
-    except Exception as exc:
-        logger.warning("Failed to parse mce.yaml: %s", exc)
-        _gates_cache = {}
-
-    return _gates_cache
 
 
 # ---------------------------------------------------------------------------

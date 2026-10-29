@@ -18,9 +18,16 @@ const _BOOT_TIME = process.hrtime.bigint();
  */
 
 const path = require('path');
-const { resolveHookRuntime, buildHookOutput, finalizeHookSession, detectActivationSkill, runActivationPipeline } = require(
-  path.join(__dirname, '..', '..', 'mega-brain-core', 'core', 'synapse', 'runtime', 'hook-runtime.js'),
-);
+
+let hookRuntime;
+try {
+  hookRuntime = require(path.join(__dirname, '..', '..', 'mega-brain-core', 'core', 'synapse', 'runtime', 'hook-runtime.js'));
+} catch {
+  // The SYNAPSE runtime (mega-brain-core/) is not part of this distribution:
+  // without it the hook is a silent no-op instead of a crash on every prompt.
+  process.exit(0);
+}
+const { resolveHookRuntime, buildHookOutput, finalizeHookSession, detectActivationSkill, runActivationPipeline } = hookRuntime;
 
 /** Safety timeout (ms) — defense-in-depth; Claude Code also manages hook timeout. */
 const HOOK_TIMEOUT_MS = 5000;

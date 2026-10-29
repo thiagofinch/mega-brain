@@ -270,7 +270,7 @@ artifact_contracts: []
 megabrain_extensions:
   artifact_contracts: []
   artifact_contracts_rationale: "Sem artifact contracts template-bound neste bloco; outputs transitórios são governados por workspace_integration."
-  executor_ref: squads/mega-brain/data/composition-rules.yaml
+  executor_ref: squads/orquestrador-global/data/composition-rules.yaml
 pack:
   name: orquestrador-global
   title: orquestrador-global
@@ -345,7 +345,6 @@ metrics:
 anti_pattern_policy:
   deviations_documented: true
   exception_handling: logged_and_reviewed
-  errata_path: docs/errata.md
 error_handling:
   default: graceful_fallback
   on_fail: escalate_to_human

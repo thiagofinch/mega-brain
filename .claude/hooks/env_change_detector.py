@@ -18,18 +18,19 @@ Flow:
         ADD     -> trigger gap check
         UPDATE  -> trigger gap check (credential rotation)
         DELETE  -> log INFO, remove from snapshot (AC11), no trigger
-  5. For each ADD/UPDATE: cross-reference 3 sources:
-        - services/INDEX.json (substring search for key name)
-        - agents/_registry/capability-registry.yaml (substring search)
+  5. For each ADD/UPDATE: cross-reference the registry that ships with this
+     repository:
         - agents/_registry/ecosystem-registry.yaml (substring search)
-     If ALL three mention the key -> already registered, skip.
+     (the services index and the capability registry are not part of the
+     public distribution and are not consulted.)
+     If it mentions the key -> already registered, skip.
      Else -> append entry to .data/env-change-pending-onboard.jsonl.
   6. Atomically update .data/env-snapshot.json.
 
 Queue entry schema (jsonl):
   {"timestamp": "ISO", "key_name": "NEW_API_KEY",
    "action": "ADD|UPDATE", "snapshot_hash": "sha256:...",
-   "gaps": ["services-index", "capability-registry", ...],
+   "gaps": ["ecosystem-registry"],
    "status": "pending-manual-trigger"}
 
 AC12 decision: queue-only v1. Subprocess invocation deferred (TIL-AUTOONBOARD-V2).
@@ -54,8 +55,6 @@ ENV_FILE = PROJECT_ROOT / ".env"
 SNAPSHOT_FILE = PROJECT_ROOT / ".data" / "env-snapshot.json"
 QUEUE_FILE = PROJECT_ROOT / ".data" / "env-change-pending-onboard.jsonl"
 
-SERVICES_INDEX = PROJECT_ROOT / "services" / "INDEX.json"
-CAPABILITY_REGISTRY = PROJECT_ROOT / "agents" / "_registry" / "capability-registry.yaml"
 ECOSYSTEM_REGISTRY = PROJECT_ROOT / "agents" / "_registry" / "ecosystem-registry.yaml"
 
 SNAPSHOT_SCHEMA_VERSION = "1.0"
@@ -157,8 +156,6 @@ def _cross_reference(key_name: str) -> list[str]:
     Empty list = key is fully registered (no gap)."""
     gaps: list[str] = []
     for slug, path in (
-        ("services-index", SERVICES_INDEX),
-        ("capability-registry", CAPABILITY_REGISTRY),
         ("ecosystem-registry", ECOSYSTEM_REGISTRY),
     ):
         try:

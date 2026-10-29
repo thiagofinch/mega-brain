@@ -6,18 +6,6 @@ description: "Contexto para o Maestro (orquestrador multi-squad)"
 sources:
   # Orchestration knowledge — selected sections
   - type: file
-    path: knowledge/TEAM-REGISTRY.md
-    priority: required
-
-  - type: file
-    path: knowledge/TEAM-PATTERNS.md
-    sections:
-      - "## Pipeline"
-      - "## Parallel Workers"
-      - "## Stage Gate"
-    priority: required
-
-  - type: file
     path: knowledge/MODEL-STRATEGY.md
     priority: required
 
