@@ -26,11 +26,23 @@ from fastapi.responses import FileResponse
 sys.path.insert(0, str(Path(__file__).parent))
 
 
-from anthropic import Anthropic
-from mega_brain_connector import MegaBrainConnector
-from orchestrator import JARVIS_SYSTEM_PROMPT
+try:
+    from anthropic import Anthropic
+except ImportError:  # dependencia opcional da voz (pip install anthropic)
+    Anthropic = None
+if __package__:  # importado como pacote (engine.jarvis.voice)
+    from .mega_brain_connector import MegaBrainConnector
+else:  # execucao como script (python server.py)
+    from mega_brain_connector import MegaBrainConnector
+if __package__:  # importado como pacote (engine.jarvis.voice)
+    from .orchestrator import JARVIS_SYSTEM_PROMPT
+else:  # execucao como script (python server.py)
+    from orchestrator import JARVIS_SYSTEM_PROMPT
 
-from config import Config
+if __package__:  # importado como pacote (engine.jarvis.voice)
+    from .config import Config
+else:  # execucao como script (python server.py)
+    from config import Config
 
 # ==============================
 # TTS ENGINE - Sesame CSM-1B (estado da arte em humanização)
@@ -50,7 +62,10 @@ def init_sesame():
     global sesame_handler
     if sesame_handler is None and USE_SESAME_TTS:
         try:
-            from tts_sesame import SesameTTSHandler
+            if __package__:  # importado como pacote (engine.jarvis.voice)
+                from .tts_sesame import SesameTTSHandler
+            else:  # execucao como script (python server.py)
+                from tts_sesame import SesameTTSHandler
 
             sesame_handler = SesameTTSHandler()
             print("[TTS] Sesame CSM-1B inicializado - Voz ultra-humanizada ativada")
@@ -72,10 +87,18 @@ connected_clients: list[WebSocket] = []
 conversation_history: list[dict] = []
 
 # Connector do Mega Brain
-mega_brain = MegaBrainConnector()
+# (criado no primeiro uso: importar o módulo não grava estado em disco)
+_mega_brain: MegaBrainConnector | None = None
+
+
+def get_mega_brain() -> MegaBrainConnector:
+    global _mega_brain
+    if _mega_brain is None:
+        _mega_brain = MegaBrainConnector()
+    return _mega_brain
 
 # Cliente Anthropic
-anthropic = Anthropic(api_key=Config.ANTHROPIC_API_KEY)
+anthropic = Anthropic(api_key=Config.ANTHROPIC_API_KEY) if Anthropic is not None else None
 
 
 # ==============================
@@ -288,9 +311,9 @@ async def execute_tool(tool_name: str, tool_input: dict[str, Any]) -> str:
         await broadcast_log("📊 Obtendo status do sistema...", "info")
 
         status = {
-            "mission": mega_brain.get_mission_summary(),
-            "agents": mega_brain.get_available_agents(),
-            "context": mega_brain.get_context_for_claude(),
+            "mission": get_mega_brain().get_mission_summary(),
+            "agents": get_mega_brain().get_available_agents(),
+            "context": get_mega_brain().get_context_for_claude(),
         }
         return json.dumps(status, indent=2, ensure_ascii=False)
 
@@ -313,7 +336,7 @@ async def execute_tool(tool_name: str, tool_input: dict[str, Any]) -> str:
 
         await broadcast_log(f"🤖 Consultando agente {agent}...", "info")
 
-        agent_context = mega_brain.get_agent_context(agent)
+        agent_context = get_mega_brain().get_agent_context(agent)
         if agent_context:
             return f"Contexto do {agent}:\n{agent_context[:2000]}"
         else:
@@ -334,7 +357,7 @@ async def process_message(user_message: str) -> str:
     conversation_history.append({"role": "user", "content": user_message})
 
     # Monta contexto do sistema
-    system_context = mega_brain.get_context_for_claude()
+    system_context = get_mega_brain().get_context_for_claude()
 
     system_prompt = f"""
 {JARVIS_SYSTEM_PROMPT}
@@ -469,7 +492,7 @@ async def api_status():
     return {
         "status": "online",
         "clients": len(connected_clients),
-        "mega_brain": mega_brain.get_mission_summary(),
+        "mega_brain": get_mega_brain().get_mission_summary(),
     }
 
 

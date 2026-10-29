@@ -30,7 +30,10 @@ except ImportError:
     websockets = None
     print("[WARN] websockets não instalado.")
 
-from config import Config
+if __package__:  # importado como pacote (engine.jarvis.voice)
+    from .config import Config
+else:  # execucao como script (python stt_handler.py)
+    from config import Config
 
 
 class STTHandler:

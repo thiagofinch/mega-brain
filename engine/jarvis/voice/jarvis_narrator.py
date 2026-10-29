@@ -25,11 +25,15 @@ from engine.config import get_config  # W1-001.1: centralised config
 
 # Configurações
 ELEVENLABS_API_KEY = get_config("ELEVENLABS_API_KEY")
-if not ELEVENLABS_API_KEY:
-    raise ValueError("ELEVENLABS_API_KEY not set in environment")
-ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
-if not ANTHROPIC_API_KEY:
-    raise ValueError("ANTHROPIC_API_KEY not set in environment")
+ANTHROPIC_API_KEY = get_config("ANTHROPIC_API_KEY")
+
+
+def require_api_keys() -> None:
+    """Falha com mensagem clara se faltar credencial (chamado ao usar, não ao importar)."""
+    if not ELEVENLABS_API_KEY:
+        raise ValueError("ELEVENLABS_API_KEY not set in environment")
+    if not ANTHROPIC_API_KEY:
+        raise ValueError("ANTHROPIC_API_KEY not set in environment")
 
 # Voz JARVIS clonada ([VOICE_ACTOR_NAME] - dublador oficial PT-BR)
 JARVIS_VOICE_ID = os.environ.get("ELEVENLABS_NARRATOR_VOICE_ID", "your-voice-id-here")
@@ -319,6 +323,8 @@ def main():
     )
 
     args = parser.parse_args()
+
+    require_api_keys()
 
     # Modo de verificação de quota
     if args.check_quota:

@@ -15,18 +15,36 @@ import os
 from datetime import datetime
 from pathlib import Path
 
-from config import Config
+if __package__:  # importado como pacote (engine.jarvis.voice)
+    from .config import Config
+else:  # execucao como script (python vapi_webhook_server.py)
+    from config import Config
 from flask import Flask, jsonify, request
-from flask_cors import CORS
+try:
+    from flask_cors import CORS
+except ImportError:  # dependencia opcional (pip install flask-cors)
+    CORS = None
 
 # Import do connector existente
-from mega_brain_connector import MegaBrainConnector
+if __package__:  # importado como pacote (engine.jarvis.voice)
+    from .mega_brain_connector import MegaBrainConnector
+else:  # execucao como script (python vapi_webhook_server.py)
+    from mega_brain_connector import MegaBrainConnector
 
 app = Flask(__name__)
-CORS(app)
+if CORS is not None:
+    CORS(app)
 
 # Inicializa connector
-connector = MegaBrainConnector()
+# (criado no primeiro uso: importar o módulo não grava estado em disco)
+_connector: MegaBrainConnector | None = None
+
+
+def get_connector() -> MegaBrainConnector:
+    global _connector
+    if _connector is None:
+        _connector = MegaBrainConnector()
+    return _connector
 
 # =================================
 # TOOLS DO MEGA BRAIN
@@ -35,7 +53,7 @@ connector = MegaBrainConnector()
 
 def tool_mission_status() -> dict:
     """Retorna status atual da missão."""
-    connector.reload_state()
+    get_connector().reload_state()
 
     # Lê o arquivo de progresso para dados mais atualizados
     mission_id = os.environ.get("MEGA_BRAIN_ACTIVE_MISSION", "MISSION-001")
@@ -43,8 +61,8 @@ def tool_mission_status() -> dict:
 
     try:
         # Dados do state
-        mission = connector.state.get("mission", {})
-        pipeline = connector.state.get("pipeline", {})
+        mission = get_connector().state.get("mission", {})
+        pipeline = get_connector().state.get("pipeline", {})
 
         # Dynamic data from state file
         return {
@@ -95,7 +113,7 @@ def tool_inbox_status() -> dict:
 
 def tool_agent_list() -> dict:
     """Lista agentes disponíveis."""
-    agents = connector.get_available_agents()
+    agents = get_connector().get_available_agents()
     return {
         "total": len(agents),
         "agentes": agents[:20],  # Limita para voz
@@ -105,7 +123,7 @@ def tool_agent_list() -> dict:
 
 def tool_system_summary() -> dict:
     """Resumo geral do sistema."""
-    context = connector.get_context_for_claude()
+    context = get_connector().get_context_for_claude()
 
     return {
         "sistema": "Mega Brain",
@@ -214,7 +232,7 @@ def vapi_webhook():
         elif message_type == "end-of-call-report":
             print("[VAPI] Call ended")
             # Registra no connector
-            connector.add_action("Voice call ended")
+            get_connector().add_action("Voice call ended")
             return jsonify({"status": "received"})
 
         # Fallback

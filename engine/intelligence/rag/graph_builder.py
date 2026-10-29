@@ -19,6 +19,8 @@ Versao: 2.1.0
 Data: 2026-03-28
 """
 
+import importlib
+import importlib.util
 import json
 import logging
 import os
@@ -28,10 +30,23 @@ from pathlib import Path
 
 import yaml
 
-try:  # sibling module — package import in all real usage; fallback for direct-script run
-    from . import derivational_edges as _derivational
-except ImportError:  # pragma: no cover - direct ``python graph_builder.py`` execution
-    import derivational_edges as _derivational  # type: ignore
+
+def _load_derivational():
+    """Load the optional sibling ``derivational_edges`` extension, or ``None`` if absent.
+
+    The module is opt-in (``MB_DERIVATIONAL_EDGES_ENABLED``, default OFF) and some
+    distributions omit it. Presence is probed with ``find_spec`` instead of catching
+    ``ImportError`` so a REAL failure inside an installed extension (e.g. one of its
+    own dependencies missing) still propagates instead of being masked as "absent".
+    """
+    # Package import in all real usage; bare name for direct ``python graph_builder.py``.
+    name = f"{__package__}.derivational_edges" if __package__ else "derivational_edges"
+    if importlib.util.find_spec(name) is None:
+        return None
+    return importlib.import_module(name)
+
+
+_derivational = _load_derivational()
 
 logger = logging.getLogger(__name__)
 
@@ -853,6 +868,13 @@ def build_graph(
     # STORY-213.W1.2 — derivational spine (default OFF; see ``derivational_edges_enabled``).
     # When OFF, EVERY line below behaves exactly as pre-W1.2 (byte-identical build).
     deriv_on = derivational_edges_enabled() if derivational is None else bool(derivational)
+    if deriv_on and _derivational is None:
+        raise RuntimeError(
+            "Derivational edges are enabled (MB_DERIVATIONAL_EDGES_ENABLED or "
+            "derivational=True) but the optional 'derivational_edges' module is not "
+            "installed in this distribution. Unset MB_DERIVATIONAL_EDGES_ENABLED "
+            "(or pass derivational=False) or install the derivational_edges extension."
+        )
     # {person: {atom_type: [(entity_id, provenance_set), ...]}} — populated only when ON,
     # so the derivation runs on real per-person provenance after the full DNA build.
     atoms_prov: dict[str, dict[str, list[tuple[str, set[str]]]]] = {}

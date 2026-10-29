@@ -18,7 +18,10 @@ from datetime import datetime
 from pathlib import Path
 from typing import Optional
 
-from config import Config
+if __package__:  # importado como pacote (engine.jarvis.voice)
+    from .config import Config
+else:  # execucao como script (python mega_brain_connector.py)
+    from config import Config
 
 
 class MegaBrainConnector:

@@ -17,20 +17,23 @@ import tempfile
 import wave
 
 import numpy as np
-import pyaudio
 import requests
-from anthropic import Anthropic
+
+try:
+    import pyaudio
+except ImportError:  # dependencia opcional (pip install pyaudio)
+    pyaudio = None
+try:
+    from anthropic import Anthropic
+except ImportError:  # dependencia opcional (pip install anthropic)
+    Anthropic = None
 
 from engine.config import get_config  # W1-001.1: centralised config
 
 # Configurações
 ANTHROPIC_API_KEY = get_config("ANTHROPIC_API_KEY")
-if not ANTHROPIC_API_KEY:
-    raise ValueError("ANTHROPIC_API_KEY not set in environment")
 DEEPGRAM_API_KEY = os.getenv("DEEPGRAM_API_KEY", "")
-ELEVENLABS_API_KEY = os.getenv("ELEVENLABS_API_KEY")
-if not ELEVENLABS_API_KEY:
-    raise ValueError("ELEVENLABS_API_KEY not set in environment")
+ELEVENLABS_API_KEY = get_config("ELEVENLABS_API_KEY")
 JARVIS_VOICE_ID = os.environ.get("ELEVENLABS_TERMINAL_VOICE_ID", "your-voice-id-here")
 
 # System prompt JARVIS
@@ -55,6 +58,13 @@ class JarvisTerminal:
     """Interface de voz JARVIS para terminal."""
 
     def __init__(self):
+        if pyaudio is None or Anthropic is None:
+            raise ImportError("pyaudio/anthropic não instalados. Execute: pip install pyaudio anthropic")
+        if not ANTHROPIC_API_KEY:
+            raise ValueError("ANTHROPIC_API_KEY not set in environment")
+        if not ELEVENLABS_API_KEY:
+            raise ValueError("ELEVENLABS_API_KEY not set in environment")
+
         # Audio config
         self.audio_format = pyaudio.paInt16
         self.channels = 1

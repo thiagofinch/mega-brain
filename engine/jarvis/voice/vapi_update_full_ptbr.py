@@ -22,16 +22,20 @@ from engine.config import get_config  # W1-001.1: centralised config
 #=================================
 
 VAPI_API_KEY = os.getenv("VAPI_API_KEY")
-if not VAPI_API_KEY:
-    raise ValueError("VAPI_API_KEY not set in environment")
 ASSISTANT_ID = os.getenv("VAPI_ASSISTANT_ID")
-if not ASSISTANT_ID:
-    raise ValueError("VAPI_ASSISTANT_ID not set in environment")
 
 # Voice ID v5 BR - Clone da dublagem brasileira ([VOICE_ACTOR_NAME])
 VOICE_ID_V5_BR = os.getenv("VAPI_VOICE_ID_V5_BR")
-if not VOICE_ID_V5_BR:
-    raise ValueError("VAPI_VOICE_ID_V5_BR not set in environment")
+
+
+def require_credentials(need_voice: bool = False) -> None:
+    """Falha com mensagem clara se faltar credencial (chamado ao usar, não ao importar)."""
+    if not VAPI_API_KEY:
+        raise ValueError("VAPI_API_KEY not set in environment")
+    if not ASSISTANT_ID:
+        raise ValueError("VAPI_ASSISTANT_ID not set in environment")
+    if need_voice and not VOICE_ID_V5_BR:
+        raise ValueError("VAPI_VOICE_ID_V5_BR not set in environment")
 
 #=================================
 # SYSTEM PROMPT - PORTUGUES BRASILEIRO NATIVO
@@ -146,7 +150,7 @@ TOOLS_CONFIG = [
         "type": "function",
         "function": {
             "name": "source_status",
-            "description": "Retorna o status de uma fonte especifica como Jeremy Haynes, Cole Gordon, Alex Hormozi. Use quando perguntarem sobre uma fonte."
+            "description": "Retorna o status de uma fonte especifica como Jeremy Haynes, Cole Gordon, Alex Hormozi. Use quando perguntarem sobre uma fonte.",
             "parameters": {
                 "type": "object",
                 "properties": {
@@ -293,6 +297,7 @@ FULL_PTBR_CONFIG = {
 
 def update_assistant_full():
     """Atualiza o assistente com todas as configuracoes PT-BR."""
+    require_credentials(need_voice=True)
 
     print("=" * 70)
     print("VAPI - ATUALIZACAO COMPLETA JARVIS BRASILEIRO")
@@ -349,6 +354,7 @@ def update_assistant_full():
 
 def set_server_url(ngrok_url: str):
     """Configura o serverUrl para webhooks."""
+    require_credentials()
 
     full_url = f"{ngrok_url}/vapi/webhook"
 
@@ -378,6 +384,7 @@ def set_server_url(ngrok_url: str):
 
 def verify_configuration():
     """Verifica a configuracao atual do assistente."""
+    require_credentials()
 
     print("\n[VERIFICANDO CONFIGURACAO ATUAL]")
 

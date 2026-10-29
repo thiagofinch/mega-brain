@@ -28,7 +28,7 @@ from typing import Any
 
 from engine.intelligence.pipeline.read_ai_config import ReadAIConfig, load_config
 from engine.intelligence.pipeline.read_ai_gardener import PessoalGardener
-from engine.intelligence.pipeline.read_ai_router import MeetingRouter
+from engine.intelligence.pipeline.meeting_router import MeetingRouter
 
 # ============================================================================
 # Constants
@@ -419,7 +419,12 @@ class ReadAIHarvester:
     def __init__(self, config: ReadAIConfig | None = None):
         self.config = config or load_config()
         self.client = ReadAIClient(self.config)
-        self.router = MeetingRouter(self.config)
+        self.router = MeetingRouter(
+            company_domains=self.config.company_domains,
+            company_keywords=self.config.company_keywords,
+            company_name=self.config.company_name,
+            log_dir=self.config.log_dir,
+        )
         self.gardener = PessoalGardener(self.config)
         self.state = _load_state(self.config.state_path)
         self._log_path = self.config.log_dir / "harvest.jsonl"
@@ -482,13 +487,19 @@ class ReadAIHarvester:
 
                 # Classify and route
                 router_data = self._extract_router_data(meeting)
-                decision = self.router.classify(router_data)
+                decision = self.router.classify_meeting(router_data)
 
                 # Generate tag
                 tag = self._next_tag()
 
                 # Move from staging to inbox
-                dest = self.router.move_file(staging_file, decision, tag)
+                dest = self.router.move_file(
+                staging_file,
+                decision,
+                tag,
+                self.config.empresa_dir,
+                self.config.pessoal_dir,
+            )
 
                 # Update state
                 self.state.processed_ids.append(mid)
@@ -739,13 +750,19 @@ class ReadAIHarvester:
 
             # 4. Classify
             router_data = self._extract_router_data(meeting)
-            decision = self.router.classify(router_data)
+            decision = self.router.classify_meeting(router_data)
 
             # 5. Tag (filesystem-aware)
             tag = self._next_tag_from_filesystem()
 
             # 6. Route to inbox
-            dest = self.router.move_file(staging_file, decision, tag)
+            dest = self.router.move_file(
+                staging_file,
+                decision,
+                tag,
+                self.config.empresa_dir,
+                self.config.pessoal_dir,
+            )
 
             # 7. Update state
             self.state.processed_ids.append(meeting_id)

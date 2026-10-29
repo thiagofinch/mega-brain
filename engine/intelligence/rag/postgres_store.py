@@ -53,7 +53,15 @@ import os
 import warnings
 from typing import Any
 
-from .dynamic_security import FILTERABLE_IDENTITY_COLUMNS
+try:
+    from .dynamic_security import FILTERABLE_IDENTITY_COLUMNS
+except ImportError:
+    # ``dynamic_security`` is not shipped in the public release. Fall back to the
+    # closed enum documented below (``visibility`` + ``client_id``, the real
+    # ``rag_chunks`` row-security columns). Same whitelist, so filters on these two
+    # columns keep restricting and no other key can reach SQL: it fails closed,
+    # never open.
+    FILTERABLE_IDENTITY_COLUMNS = frozenset({"visibility", "client_id"})
 from .vector_store import SearchResult, VectorStore
 
 # pgvector dimension of the LEGACY rag_chunks.embedding column (vector(1024)).

@@ -29,3 +29,5 @@ opentelemetry-sdk>=1.25
 # Optional — install only when running the LLM-as-judge auditor (AC7)
 # anthropic>=0.40.0
 # scikit-learn>=1.4.0  # required by detect_capability_drift.py for k-means clustering
+# Optional — live inbox observer (engine/intelligence/pipeline/inbox_watcher.py); `--once` works without it
+# watchdog>=3.0.0

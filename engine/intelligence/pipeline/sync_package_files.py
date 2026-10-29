@@ -22,8 +22,11 @@ from collections import defaultdict
 from datetime import UTC, datetime
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
-from audit_layers import L2_PATTERNS, L3_PATTERNS, NEVER_PATTERNS, scan_repository
+try:  # sibling package module — package import in all real usage; fallback for direct-script run
+    from engine.intelligence.validation.audit_layers import L2_PATTERNS, L3_PATTERNS, NEVER_PATTERNS, scan_repository
+except ImportError:  # pragma: no cover - direct ``python sync_package_files.py`` execution
+    sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
+    from engine.intelligence.validation.audit_layers import L2_PATTERNS, L3_PATTERNS, NEVER_PATTERNS, scan_repository
 
 # Files auto-included by npm (do NOT add to files array)
 NPM_AUTO_INCLUDED = {

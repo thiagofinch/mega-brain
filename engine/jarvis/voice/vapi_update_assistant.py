@@ -16,11 +16,15 @@ from engine.config import get_config  # W1-001.1: centralised config
 
 # Configuração
 VAPI_API_KEY = get_config("VAPI_API_KEY")
-if not VAPI_API_KEY:
-    raise ValueError("VAPI_API_KEY not set in environment")
 ASSISTANT_ID = get_config("VAPI_ASSISTANT_ID")
-if not ASSISTANT_ID:
-    raise ValueError("VAPI_ASSISTANT_ID not set in environment")
+
+
+def require_credentials() -> None:
+    """Falha com mensagem clara se faltar credencial (chamado ao usar, não ao importar)."""
+    if not VAPI_API_KEY:
+        raise ValueError("VAPI_API_KEY not set in environment")
+    if not ASSISTANT_ID:
+        raise ValueError("VAPI_ASSISTANT_ID not set in environment")
 
 # Tools do Mega Brain
 TOOLS_CONFIG = [
@@ -80,7 +84,7 @@ TOOLS_CONFIG = [
         "type": "function",
         "function": {
             "name": "source_status",
-            "description": "Retorna o status de uma fonte específica (Jeremy Haynes, Cole Gordon, Alex Hormozi). Use quando perguntarem sobre uma fonte específica."
+            "description": "Retorna o status de uma fonte específica (Jeremy Haynes, Cole Gordon, Alex Hormozi). Use quando perguntarem sobre uma fonte específica.",
             "parameters": {
                 "type": "object",
                 "properties": {
@@ -134,6 +138,7 @@ REGRAS ABSOLUTAS:
 
 def update_assistant():
     """Atualiza o assistente no Vapi."""
+    require_credentials()
 
     print("=" * 60)
     print("VAPI - ATUALIZANDO JARVIS COM TOOLS")
@@ -212,6 +217,7 @@ def set_server_url(ngrok_url: str):
     Args:
         ngrok_url: URL do ngrok (ex: https://abc123.ngrok.io)
     """
+    require_credentials()
     full_url = f"{ngrok_url}/vapi/webhook"
 
     print(f"\n📤 Configurando serverUrl: {full_url}")
