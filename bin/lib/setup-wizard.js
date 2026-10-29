@@ -107,11 +107,11 @@ async function checkPython() {
 
   if (versionOutput) {
     const version = parseVersion(versionOutput);
-    if (version && version.major >= 3 && version.minor >= 10) {
+    if (version && (version.major > 3 || (version.major === 3 && version.minor >= 11))) {
       spinner.succeed(chalk.green(`Python ${version.raw} detected (${pythonCmd})`));
       return { ok: true, version: version.raw, command: pythonCmd };
     } else if (version) {
-      spinner.warn(chalk.yellow(`Python ${version.raw} found - 3.10+ recommended`));
+      spinner.warn(chalk.yellow(`Python ${version.raw} found - 3.11+ required`));
       return { ok: true, version: version.raw, command: pythonCmd, warning: true };
     }
   }

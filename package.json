@@ -1,6 +1,6 @@
 {
   "name": "@thiagofinch/mega-brain",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "AI Knowledge Management System — ingira materiais de especialistas, extraia DNA cognitivo e delibere decisões com o Conclave",
   "type": "module",
   "bin": {
@@ -36,6 +36,8 @@
     "agents/system/conclave/",
     "bin/",
     "engine/__init__.py",
+    "engine/config.py",
+    "engine/paths.py",
     "engine/glossary/",
     "engine/intelligence/",
     "engine/jarvis/",
@@ -63,19 +65,13 @@
     "logs/.gitkeep",
     "logs/README.md",
     "requirements.txt",
-    "workspace/workspace.yaml",
-    "workspace/structure.yaml",
-    "workspace/relationships.yaml",
     "workspace/_templates/",
-    "workspace/config/",
-    "workspace/providers/",
     "system/02-JARVIS-SOUL.md",
     "system/03-JARVIS-DNA.yaml"
   ],
   "scripts": {
     "start": "node bin/mega-brain.js",
     "install-wizard": "node bin/mega-brain.js install",
-    "validate": "node bin/mega-brain.js validate",
     "validate:layers": "node bin/validate-package.js",
     "validate:json": "python3 engine/intelligence/validation/validate_json_integrity.py",
     "lint": "ruff check engine/ .claude/hooks/",
