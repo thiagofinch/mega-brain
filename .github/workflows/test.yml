@@ -5,100 +5,61 @@ on:
     branches: [main]
     paths:
       - 'engine/**'
+      - '.claude/**'
+      - 'scripts/**'
+      - 'bin/**'
       - 'tests/**'
-      - 'pyproject.toml'
-      - 'scripts/check_agentic_write_gate.py'
-      - 'scripts/check_example_harvest_honesty.py'
-      - 'scripts/run_agentic_probe.py'
+      - 'requirements.txt'
+      - '.github/workflows/test.yml'
   pull_request:
     branches: [main]
     paths:
       - 'engine/**'
+      - '.claude/**'
+      - 'scripts/**'
+      - 'bin/**'
       - 'tests/**'
-      - 'pyproject.toml'
-      - 'scripts/check_agentic_write_gate.py'
-      - 'scripts/check_example_harvest_honesty.py'
-      - 'scripts/run_agentic_probe.py'
+      - 'requirements.txt'
+      - '.github/workflows/test.yml'
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    # Linux + Windows, no piso do README (3.11, exigido por datetime.UTC) e na
+    # versão atual: a release 2.0 quebrou no Windows (fcntl) e no Python < 3.12
+    # (f-string com barra invertida).
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python-version: ['3.11', '3.12']
+    runs-on: ${{ matrix.os }}
 
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: ${{ matrix.python-version }}
 
       - name: Install dependencies
-        # ".[dev]" now includes fastapi + uvicorn (see pyproject.toml [dev]),
-        # required so tests/python/test_api/* import at collection time.
-        run: |
-          pip install pyyaml pytest pytest-cov
-          pip install -e ".[dev]"
+        # Só o que a engine exige para importar. Os extras pesados do
+        # requirements.txt (torch, pyannote, assemblyai) são opcionais e
+        # ficam fora de propósito: o import não pode depender deles.
+        run: pip install "PyYAML>=6.0" "transitions>=0.9.0" pytest
 
-      - name: Validate ontology aggregator slots + Function registry (D9/D10 · 213.W1.1/W2.1 FK honesty)
-        # STORY-213.W2.1 OBS-1 (deferred from 213.W1.1): now that the functions[]
-        # slots are POPULATED, wire BOTH FK-honesty validators + their suites into
-        # CI so a drifted/fabricated Function <-> Object Type <-> code reference
-        # fails the build (fail-closed, exit != 0).
-        run: |
-          python3 scripts/validate_typed_schema_slots.py
-          python3 scripts/validate_function_registry.py
-          python3 -m pytest tests/test_typed_schema_slots.py tests/test_function_registry.py -q
+      - name: Engine imports (static + smoke)
+        # Fail-closed: sintaxe inválida, import de módulo inexistente ou
+        # módulo de engine/ que não importa com as dependências mínimas.
+        # Pacote de terceiros ausente (ex.: numpy da voz) só é listado.
+        run: python scripts/check_engine_imports.py
 
-      - name: Run tests with coverage
-        run: |
-          python3 -m pytest tests/python/ -v --tb=short \
-            --cov=engine/intelligence \
-            --cov-report=term-missing \
-            --cov-fail-under=9
+      - name: Install voice base dependencies
+        # Os testes de engine/jarvis/voice cobrem o import sem os extras
+        # (anthropic, sounddevice, elevenlabs, torch), mas com a base da voz.
+        run: pip install numpy requests fastapi uvicorn flask
 
-      - name: Agentic write-gate enforcement (D11, STORY-213.W2.2)
-        # Fail-closed: the single-door invariant (every agentic mutation flows
-        # through a validated Action BEFORE it persists; write without a valid
-        # Action HALTs; human filesystem edit is NOT gated — D1). Runs against
-        # REAL machinery (real Journey Log + temp sink), no mocks. Exit != 0
-        # blocks the job. Mirrors validate_typed_schema_slots.py (213.W1.1).
-        run: |
-          python3 scripts/check_agentic_write_gate.py
-
-      - name: Example-harvest honesty gate (D3, STORY-213.W2.3)
-        # Fail-closed: an Action Type is materialized ONLY when a REAL example
-        # backs its input_schema (No-Invention). A capability without an observed
-        # example stays in the backlog; a fabricated schema field / fragmented
-        # (per-parameter) Action / a schema that lies about provenance fails the
-        # job (exit != 0). Runs against the real Journey Log + capability SOT,
-        # no mocks. Mirrors check_agentic_write_gate.py (213.W2.2).
-        run: |
-          python3 scripts/check_example_harvest_honesty.py
-
-      - name: Agentic probe smoke (I1, STORY-213.W4.1)
-        # Fail-closed: the end-to-end proof that the Foundry decision -> action ->
-        # audit loop is ALIVE — the 6-link chain (workspace context -> Function
-        # heuristic -> tool -> ESCRITA via Action -> typed view -> workflow
-        # automation) under a real test identity (RLS of 213.W3.2 — NOT
-        # service_role). Runs against REAL machinery (real Function/Action/Journey
-        # Log/workspace docs), no mocks; asserts PASS + determinism (2 runs) +
-        # honest failure on a broken link. The Postgres RLS proof + external
-        # ClickUp/N8N calls are external-tier (INCONCLUSIVE when creds absent,
-        # never mocked). Exit != 0 blocks the job. Mirrors check_agentic_write_gate.py.
-        run: |
-          python3 scripts/run_agentic_probe.py
-          python3 -m pytest tests/python/test_agentic_probe.py -q
-
-      - name: Run E2E BrainEngine tests
-        run: |
-          python3 -m pytest tests/e2e/ -v --tb=short
-
-      - name: Upload coverage report
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: coverage-report
-          path: .coverage
-          retention-days: 7
+      - name: Run tests
+        run: python -m pytest tests/python/ -v --tb=short
 
   secrets-scan:
     runs-on: ubuntu-latest

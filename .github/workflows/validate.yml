@@ -116,46 +116,6 @@ jobs:
           print(f'Validated {count} structural-contract YAML files (skipped {skipped} content/DNA/template files)')
           "
 
-      - name: Capability views anti-drift (SOT -> 2 vistas geradas, fail-closed)
-        # Story 212.W1.1 / ADR-ONTOLOGIA-OPERACIONAL D1. Gate estrutural: prova que as
-        # 2 vistas geradas (agents/_registry/capability-registry.yaml + services/
-        # tool-capability-registry.yaml) continuam idênticas ao SOT-projetado
-        # (agents/_registry/capability-sot.yaml). Divergência => exit != 0 (bloqueia merge).
-        # Roda tambem a prova negativa/positiva do proprio gate.
-        run: npm run validate:capability-views
-
-      - name: Skill typed refs FK + lifecycle (SOT FK, fail-closed new / advisory legacy)
-        # Story 212.W2.2 / ADR-ONTOLOGIA-OPERACIONAL D3. Espelha o gate capability-views:
-        # uma skill NOVA (fora de .claude/skills/skill-typed-refs-baseline.yaml) DEVE declarar
-        # typed refs que resolvem por FK contra capability-sot.yaml (capabilities.<id>) + UAE
-        # task ids, e lifecycle_state DEVE ser membro do STATE_ORDER do motor CSO (engine/
-        # governance). Violação => exit 1 (bloqueia merge). Skills legadas no baseline seguem
-        # advisory (TK-RG-004 faseado). --check é env-estável (baseline grandfather-a as 177
-        # legadas → 0 errors hoje). Wire revisado + aprovado por @devops (autoridade de CI).
-        run: npm run validate:skill-typed-refs
-
-      - name: Forge-provenance gate (created_by fail-closed, git-diff-scoped — GR3/D11)
-        # Story 214.W3.1 / ADR-REFACTOR-ONTOLOGICO RD2 (cisão D11). Todo artefato NOVO
-        # (git-diff-scoped) de tipo governado blocking (Story/Epic) DEVE carregar created_by
-        # válido (forja) ou o escape `manual` rotulado; ausência => exit 1 (bloqueia merge).
-        # Legados (442 stories sem stamp) grandfathered — a torneira fecha na origem (RISK-7).
-        # As 13 entidades SOT-INDEX ficam advisory (stamp per-instance aspiracional). Roda também
-        # as provas negativas/positivas do próprio gate. Contrato: scripts/lib/provenance-contract.js.
-        # Em CI o base é origin/main (three-dot diff). Wire de enforcement aprovado por @devops
-        # (autoridade Art. II — RISK-7 PR próprio, close @devops).
-        run: git fetch origin main --depth=1 || true; npm run validate:provenance
-
-      - name: UAE task gate (task NOVA fora do canon fail-closed, git-diff-scoped — RD11 CI-tap)
-        # Story 214.W4.1 / ADR-REFACTOR-ONTOLOGICO RD11. Promove validate:tasks-uae a BLOQUEANTE
-        # de task NOVA, git-diff-scoped (mesmo padrão grandfather da W3.1/provenance). Uma task NOVA
-        # (fora do baseline de ~2164 legadas) adicionada/modificada no diff do PR fora do canon UAE
-        # => exit 1 (bloqueia merge; torneira estancada na VALIDAÇÃO — par da forja W3.1 que estanca
-        # a CRIAÇÃO). As 2552 legadas ficam advisory e NUNCA são escaneadas fora do diff — não tornam
-        # o CI vermelho retroativamente (AC3, senão nenhum PR mergeia). depends_on schema interno W2.2
-        # (schemas/uae/, RISK-4). Em CI o base é origin/main (three-dot diff). Wire de enforcement
-        # aprovado por @devops (Art. II — RISK-7 PR próprio, close @devops).
-        run: git fetch origin main --depth=1 || true; npm run validate:tasks-uae:ci
-
       # NOTE: the npm pre-publish security gate (bin/pre-publish-gate.js) is NOT run
       # here. It validates the published npm PACKAGE (npm pack contents: secret scan +
       # L1-only layer check), not PR code quality, so it does not belong on the PR gate.

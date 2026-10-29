@@ -10,6 +10,11 @@ from pathlib import Path
 
 import pytest
 
+# Dependencias base da voz (engine/jarvis/voice/requirements.txt). Sem elas o
+# pacote de voz nao e utilizavel e estes testes nao se aplicam.
+for _base in ("numpy", "requests", "fastapi", "uvicorn", "flask"):
+    pytest.importorskip(_base)
+
 PKG = "engine.jarvis.voice"
 VOICE_DIR = Path(__file__).resolve().parents[2] / "engine" / "jarvis" / "voice"
 OPTIONAL = ("anthropic", "pyaudio", "sounddevice", "elevenlabs", "torch", "flask_cors")

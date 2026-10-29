@@ -65,11 +65,9 @@ jobs:
           print('[OK] /rag-search skill exists')
         shell: python3 {0}
 
-  # STORY-GBA-F0.1 — recall@K eval gate (CI-blocking anti-regression armor).
-  # Replays the frozen qrels gabarito through the gate logic and FAILS the build
-  # if recall@K / first_relevant_hit regress. Retrieval is stubbed in the
-  # characterization test (no index/DB needed in CI), so this gate is the
-  # deterministic proof that the gate BLOCKS on retrieval regressions.
+  # STORY-GBA-F0.1 — recall@K eval gate. The characterization test that replays
+  # the qrels through the gate is not part of this distribution, so CI only
+  # checks that the gate module loads and the frozen qrels baseline parses.
   eval-gate:
     runs-on: ubuntu-latest
     steps:
@@ -89,6 +87,3 @@ jobs:
           assert len(qf.queries) >= 30, f'baseline too small: {len(qf.queries)}'
           print(f'[OK] qrels baseline parses: {len(qf.queries)} queries')
           "
-      - name: Run recall@K eval gate (characterization — BLOCKING)
-        run: |
-          python3 -m pytest tests/rag/test_eval_gate.py -v --tb=short
