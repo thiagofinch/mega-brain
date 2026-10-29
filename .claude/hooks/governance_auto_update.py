@@ -4,8 +4,8 @@
 Detects when source code modules are modified and reports which
 governance documents need propagation updates.
 
-Strategy A: Static registry lookup (.claude/governance/cascade-registry.yaml)
-Strategy B: Dynamic grep fallback for modules not in registry
+Strategy: dynamic grep of the governance docs (CLAUDE.md files and
+.claude/rules/*.md) for keywords taken from the modified module's name.
 
 Output: JSON with governance propagation report visible in chat.
 Never blocks (exit 0 always — advisory only).
@@ -26,13 +26,11 @@ from pathlib import Path
 # ---------------------------------------------------------------------------
 
 _ROOT = Path(__file__).resolve().parent.parent.parent
-_REGISTRY_PATH = _ROOT / ".claude" / "governance" / "cascade-registry.yaml"
 
 # Governance doc locations to scan in fallback mode
 _GOV_SCAN_PATHS = [
     _ROOT / "CLAUDE.md",
     _ROOT / ".claude" / "CLAUDE.md",
-    _ROOT / "mega-brain-core" / "constitution.md",
 ]
 _GOV_SCAN_DIR = _ROOT / ".claude" / "rules"
 
@@ -45,7 +43,6 @@ _WATCHED = [
     ".claude/skills/*/SKILL.md",
     "squads/*/config.yaml",
     "services/**/*.js",
-    "mega-brain-core/constitution.md",
     "engine/paths.py",
 ]
 
@@ -78,43 +75,7 @@ def _is_watched(rel: str) -> bool:
 
 
 # ---------------------------------------------------------------------------
-# Strategy A: Registry lookup
-# ---------------------------------------------------------------------------
-
-
-def _load_registry() -> list[dict]:
-    if not _REGISTRY_PATH.exists():
-        return []
-    try:
-        import yaml
-
-        with open(_REGISTRY_PATH, encoding="utf-8") as f:
-            data = yaml.safe_load(f)
-        return data.get("mappings", []) if data else []
-    except Exception:
-        return []
-
-
-def _registry_lookup(rel: str) -> tuple[list[dict], list[str]]:
-    """Return (governance_docs, keywords) from registry for a file."""
-    docs = []
-    keywords = []
-    for mapping in _load_registry():
-        pattern = mapping.get("source_pattern", "")
-        if _match_glob(rel, pattern):
-            for doc in mapping.get("governance_docs", []):
-                docs.append(
-                    {
-                        "path": doc["path"],
-                        "section": doc.get("section", ""),
-                    }
-                )
-            keywords.extend(mapping.get("keywords", []))
-    return docs, keywords
-
-
-# ---------------------------------------------------------------------------
-# Strategy B: Dynamic grep fallback
+# Dynamic grep of governance docs
 # ---------------------------------------------------------------------------
 
 
@@ -167,16 +128,8 @@ def main() -> None:
         if not _is_watched(rel):
             sys.exit(0)
 
-        # Strategy A
-        docs, keywords = _registry_lookup(rel)
-
-        # Strategy B fallback
-        if not docs and keywords:
-            docs = _grep_for_keywords(keywords)
-        elif not docs:
-            stem_words = [w for w in Path(rel).stem.replace("_", " ").split() if len(w) > 3]
-            if stem_words:
-                docs = _grep_for_keywords(stem_words[:3])
+        stem_words = [w for w in Path(rel).stem.replace("_", " ").split() if len(w) > 3]
+        docs = _grep_for_keywords(stem_words[:3]) if stem_words else []
 
         if not docs:
             sys.exit(0)

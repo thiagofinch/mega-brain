@@ -302,7 +302,6 @@ function resolveAgentId(capabilityRef, selectedCapabilities) {
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Effort mapping: estimated_duration_minutes → 1-10 effort scale
-// (aligned with .claude/skills/swarm-execute/SKILL.md effort table)
 // ─────────────────────────────────────────────────────────────────────────────
 function durationToEffort(minutes) {
   if (typeof minutes !== 'number' || minutes <= 0) return 3; // default moderate

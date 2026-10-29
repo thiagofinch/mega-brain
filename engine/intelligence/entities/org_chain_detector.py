@@ -22,8 +22,11 @@ import re
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
-from entity_normalizer import load_registry, normalize_text, save_registry
+try:  # sibling package module — package import in all real usage; fallback for direct-script run
+    from engine.intelligence.entities.entity_normalizer import load_registry, normalize_text, save_registry
+except ImportError:  # pragma: no cover - direct ``python org_chain_detector.py`` execution
+    sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
+    from engine.intelligence.entities.entity_normalizer import load_registry, normalize_text, save_registry
 
 # ---------------------------------------------------------------------------
 # PATHS

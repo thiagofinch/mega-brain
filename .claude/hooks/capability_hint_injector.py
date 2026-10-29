@@ -32,7 +32,7 @@ Layered matching pipeline (TIL-12 + TIL-19):
 
 Telemetry (TIL-12 AC6):
     Each invocation appends a JSON line to .data/capability-hints-metrics.jsonl
-    using the schema documented at docs/architecture/capability-hints-metrics.schema.md.
+    (best-effort, fail-open; the record layout is defined by _append_metric callers below).
 
 Fail-open semantics: exit 0 silently on any error or no match. The injector
 MUST NEVER block a user prompt.
@@ -45,8 +45,8 @@ TIL-21 addition:
     engine.intelligence.metrics.otel_capability_tracer module. Spans land in
     `.data/otel/capability-traces-{date}.jsonl`. The tracer is fail-open: if
     `opentelemetry-sdk` is missing OR the file write fails, the hook continues
-    silently. AC1.1 latency cap: < 20ms p95 overhead — measured by
-    scripts/til-21/tests/test_drift_detection.py::test_latency_overhead.
+    silently. AC1.1 latency cap: < 20ms p95 overhead — measured in the
+    full installation (latency test not part of the public distribution).
 
 ADR: ADR-TIL-001 (hooks dir = Python only)
 """

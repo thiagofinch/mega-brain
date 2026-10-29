@@ -166,12 +166,6 @@ Skills follow [Semantic Versioning](https://semver.org/):
   workflows/            # RECOMMENDED -- machine-readable pipeline YAML
 ```
 
-## Registry Governance
-
-- All skills MUST be tracked in `squads/infra-ops-squad/data/service-catalog.yaml` (Tier 2+ required, Tier 1 recommended)
-- Skill file changes (`.claude/skills/*/SKILL.md`) are monitored by the registry governance check
-- Corresponding registry: `service-catalog.yaml`
-
 ---
 
 *Skill Standards v1.0 -- Mega Brain*

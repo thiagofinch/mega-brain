@@ -40,6 +40,5 @@ if [ "$FORCE" -eq 0 ] && [ -f "$DEBOUNCE_FILE" ]; then
   fi
 fi
 
-cd "$ROOT"
-python3 scripts/build-navigation-map.py --bucket all --dossier-type persons
-date +%s > "$DEBOUNCE_FILE"
+# O gerador do NAVIGATION-MAP nao faz parte desta distribuicao: nada a reconstruir.
+echo "[refresh-navigation-map] o gerador do NAVIGATION-MAP nao existe nesta distribuicao; nada a reconstruir."

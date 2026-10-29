@@ -97,7 +97,7 @@ def load_config() -> FirefliesConfig:
     Load FirefliesConfig from the canonical config module.
 
     Hierarchy is handled by ``get_config()``:
-    env system > .env file > config file > default.
+    env system > .env file > default (engine/config.py).
     """
     # Company domains: try COMPANY_DOMAINS, then READ_AI_COMPANY_DOMAINS
     raw_domains = get_config("COMPANY_DOMAINS") or get_config("READ_AI_COMPANY_DOMAINS", "")

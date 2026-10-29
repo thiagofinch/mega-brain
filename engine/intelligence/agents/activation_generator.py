@@ -13,7 +13,6 @@ Behavior:
        - .cursor/agents.yaml (append entry)
        - .windsurf/agents.yaml (append entry)
        - .gemini/agents/{slug}.md (if .gemini/ exists)
-    5. Updates agents/_master-registry.yaml with activation metadata.
 
 Constraints:
     - Python 3, stdlib + PyYAML only.
@@ -667,85 +666,6 @@ def _generate_gemini_command(
 # ---------------------------------------------------------------------------
 
 
-def _update_master_registry(
-    slug: str,
-    category: str,
-    nickname_data: dict[str, str],
-    agent_dir: Path,
-) -> bool:
-    """Add activation metadata to _master-registry.yaml.
-
-    Finds the entry for the slug and adds nickname/icon/archetype fields.
-    Returns True if file was updated.
-    """
-    registry_path = AGENTS / "_master-registry.yaml"
-    if not registry_path.exists():
-        logger.warning("Master registry not found at %s", registry_path)
-        return False
-
-    # Load, modify, save approach.
-    data = _read_yaml(registry_path)
-    if not data:
-        return False
-
-    name = nickname_data.get("name", slug)
-    icon = nickname_data.get("icon", "")
-    archetype = nickname_data.get("archetype", "")
-
-    updated = False
-
-    # Search across all top-level category lists
-    for section_key in ("external", "business", "personal"):
-        agents_list = data.get(section_key, [])
-        if not isinstance(agents_list, list):
-            continue
-        for entry in agents_list:
-            if isinstance(entry, dict) and entry.get("id") == slug:
-                entry["nickname"] = name
-                entry["icon"] = icon
-                entry["archetype"] = archetype
-                entry["activation"] = True
-                updated = True
-
-    # Cargo is nested: cargo.sales, cargo.marketing, cargo.c-level
-    cargo = data.get("cargo", {})
-    if isinstance(cargo, dict):
-        for _sub_key, agents_list in cargo.items():
-            if not isinstance(agents_list, list):
-                continue
-            for entry in agents_list:
-                if isinstance(entry, dict) and entry.get("id") == slug:
-                    entry["nickname"] = name
-                    entry["icon"] = icon
-                    entry["archetype"] = archetype
-                    entry["activation"] = True
-                    updated = True
-
-    # System is nested: system.conclave, system.boardroom
-    system = data.get("system", {})
-    if isinstance(system, dict):
-        for _sub_key, agents_list in system.items():
-            if not isinstance(agents_list, list):
-                continue
-            for entry in agents_list:
-                if isinstance(entry, dict) and entry.get("id") == slug:
-                    entry["nickname"] = name
-                    entry["icon"] = icon
-                    entry["archetype"] = archetype
-                    entry["activation"] = True
-                    updated = True
-
-    if updated:
-        header = (
-            "# _master-registry.yaml\n"
-            f"# Last updated: {datetime.now(UTC).strftime('%Y-%m-%dT%H:%M:%SZ')}\n"
-            "# Auto-updated by activation_generator.py\n\n"
-        )
-        _write_yaml(registry_path, data, header)
-
-    return updated
-
-
 # ---------------------------------------------------------------------------
 # LOGGING
 # ---------------------------------------------------------------------------
@@ -934,12 +854,6 @@ def generate_activation(
         rel_gemini = _relative_to_root(gemini_path)
         result["created"].append(rel_gemini)
         logger.info("[CREATED] %s", rel_gemini)
-
-    # 6. Update master registry
-    registry_updated = _update_master_registry(slug, category, nickname_data, agent_dir)
-    if registry_updated:
-        result["updated"].append("agents/_master-registry.yaml")
-        logger.info("[UPDATED] agents/_master-registry.yaml for '%s'", slug)
 
     _log_event(
         slug,

@@ -26,8 +26,10 @@ L1_PATTERNS = [
     # Core engine
     "bin/",
     "core/",
+    "engine/",  # 2.0 layout: core/ was renamed to engine/
     ".claude/",
     "agents/conclave/",
+    "agents/system/conclave/",  # 2.0 layout
     "agents/_templates/",
     "docs/",
     # Empty structures with .gitkeep
@@ -48,6 +50,7 @@ L1_PATTERNS = [
     ".env.example",
     ".gitleaks.toml",
     "README.md",
+    "LICENSE",
     "CONTRIBUTING.md",
     "QUICK-START.md",
     # GitHub integration (CI/CD, templates, assets)
@@ -71,6 +74,8 @@ L1_PATTERNS = [
     "artifacts/canonical/",
     "artifacts/narratives/",
     "artifacts/dna/",
+    # Workspace scaffold (templates only; business data lives in L2/L3)
+    "workspace/_templates/",
     # Knowledge scaffold
     "knowledge/README.md",
     "knowledge/NAVIGATION-MAP.json",
@@ -154,7 +159,7 @@ def classify_path(path: Path, repo_root: Path, is_file: bool) -> tuple[str, str]
     Returns: (layer, reason)
     Priority: DELETE > NEVER > L3 > L2 > L1 > REVIEW
     """
-    rel_path = str(path.relative_to(repo_root))
+    rel_path = path.relative_to(repo_root).as_posix()
     name = path.name
 
     # Check DELETE patterns
@@ -265,7 +270,7 @@ def scan_repository(repo_root: Path, verbose: bool = False) -> dict:
             try:
                 layer, reason = classify_path(dir_path, repo_root, is_file=False)
 
-                rel_path = str(dir_path.relative_to(repo_root))
+                rel_path = dir_path.relative_to(repo_root).as_posix()
                 classifications.append(
                     {
                         "path": rel_path + "/",
@@ -305,7 +310,7 @@ def scan_repository(repo_root: Path, verbose: bool = False) -> dict:
             try:
                 layer, reason = classify_path(file_path, repo_root, is_file=True)
 
-                rel_path = str(file_path.relative_to(repo_root))
+                rel_path = file_path.relative_to(repo_root).as_posix()
                 classifications.append(
                     {
                         "path": rel_path,

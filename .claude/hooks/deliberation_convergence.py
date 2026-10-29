@@ -120,7 +120,7 @@ def _compute_disagreement_rate(state: dict[str, Any]) -> float:
     """Compute disagreement_rate from tribunal_summary lexical signals.
 
     # Disagreement detection by lexical signals from tribunal-chief protocol.
-    # Source: squads/tribunal/agents/tribunal-chief.md — closing protocol writes
+    # Source: tribunal-chief closing protocol — writes
     # explicit corrobora/contradiz tokens in tribunal_summary. Hook reads contract.
     # Article IV: NOT invention — reading documented protocol output.
 

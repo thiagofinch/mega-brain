@@ -80,9 +80,15 @@ BAR_EMPTY = "\u2591"    # Block: light shade
 HEADER_BAR = "\u2580"   # Block: upper half
 BULLET = "\u25b8"       # Decorator: bullet
 
+# Box-drawing strokes used inside f-strings (a backslash inside an f-string
+# expression is a SyntaxError before Python 3.12).
+_BOX_DOUBLE_H = "\u2550"
+_BOX_LIGHT_H = "\u2500"
+_BOX_HEAVY_H = "\u2501"
+
 SOLID_LINE = SOLID * W
-DOUBLE_LINE = "\u2550" * W1
-SINGLE_LINE = "\u2500" * W2
+DOUBLE_LINE = _BOX_DOUBLE_H * W1
+SINGLE_LINE = _BOX_LIGHT_H * W2
 
 
 # =========================================================================
@@ -118,19 +124,19 @@ def _inner_box_line(content: str, inner_width: int = W2) -> str:
 def _nested_box(title: str, content_lines: list[str]) -> list[str]:
     """Chronicler nested box: double outer + single inner."""
     lines = [
-        f"\u2554{'\u2550' * W1}\u2557",
+        f"\u2554{_BOX_DOUBLE_H * W1}\u2557",
         _box_line(""),
         _box_line(f"{BULLET} {title}"),
         _box_line(""),
-        f"\u2551    \u250c{'\u2500' * W2}\u2510    \u2551",
+        f"\u2551    \u250c{_BOX_LIGHT_H * W2}\u2510    \u2551",
         _box_line(""),
     ]
     for cl in content_lines:
         lines.append(_inner_box_line(cl))
     lines.append(_box_line(""))
-    lines.append(f"\u2551    \u2514{'\u2500' * W2}\u2518    \u2551")
+    lines.append(f"\u2551    \u2514{_BOX_LIGHT_H * W2}\u2518    \u2551")
     lines.append(_box_line(""))
-    lines.append(f"\u255a{'\u2550' * W1}\u255d")
+    lines.append(f"\u255a{_BOX_DOUBLE_H * W1}\u255d")
     return lines
 
 
@@ -144,9 +150,9 @@ def _super_header(tag: str, person_name: str, status: str, now: str) -> list[str
         f"\u2588\u2588\u2588\u2588{_pad('', W - 8)}\u2588\u2588\u2588\u2588",
         f"\u2588\u2588\u2588\u2588     {_pad(title, W - 14)}\u2588\u2588\u2588\u2588",
         f"\u2588\u2588\u2588\u2588{_pad('', W - 8)}\u2588\u2588\u2588\u2588",
-        f"\u2588\u2588\u2588\u2588          \u2554{_pad('', 86, '\u2550')}\u2557          \u2588\u2588\u2588\u2588",
+        f"\u2588\u2588\u2588\u2588          \u2554{_pad('', 86, _BOX_DOUBLE_H)}\u2557          \u2588\u2588\u2588\u2588",
         f"\u2588\u2588\u2588\u2588          \u2551  {_pad(subtitle, 84)}\u2551          \u2588\u2588\u2588\u2588",
-        f"\u2588\u2588\u2588\u2588          \u255a{_pad('', 86, '\u2550')}\u255d          \u2588\u2588\u2588\u2588",
+        f"\u2588\u2588\u2588\u2588          \u255a{_pad('', 86, _BOX_DOUBLE_H)}\u255d          \u2588\u2588\u2588\u2588",
         f"\u2588\u2588\u2588\u2588{_pad('', W - 8)}\u2588\u2588\u2588\u2588",
         SOLID_LINE,
         SOLID_LINE,
@@ -169,7 +175,7 @@ def _section_header(num: int, emoji: str, title: str) -> list[str]:
 def _changes_box(changes: list[str]) -> list[str]:
     """Chronicler changes box (O QUE MUDOU)."""
     lines = [
-        f"\u250f{'\u2501' * (W - 2)}\u2513",
+        f"\u250f{_BOX_HEAVY_H * (W - 2)}\u2513",
         f"\u2503{_pad('', W - 2)}\u2503",
         f"\u2503{_pad('                    O QUE MUDOU NESTA EXECUCAO', W - 2)}\u2503",
         f"\u2503{_pad('', W - 2)}\u2503",
@@ -177,7 +183,7 @@ def _changes_box(changes: list[str]) -> list[str]:
     for change in changes:
         lines.append(f"\u2503   {BULLET} {_pad(change, W - 7)}\u2503")
     lines.append(f"\u2503{_pad('', W - 2)}\u2503")
-    lines.append(f"\u2517{'\u2501' * (W - 2)}\u251b")
+    lines.append(f"\u2517{_BOX_HEAVY_H * (W - 2)}\u251b")
     return lines
 
 
@@ -187,14 +193,14 @@ def _metric_grid(metrics: list[tuple[str, str, str]]) -> list[str]:
     card_w = 24
 
     lines = [
-        f"\u256d{'\u2500' * (W - 2)}\u256e",
+        f"\u256d{_BOX_LIGHT_H * (W - 2)}\u256e",
         f"\u2502{_pad('                                    PAINEL DE METRICAS', W - 2)}\u2502",
         f"\u2502{_pad('', W - 2)}\u2502",
     ]
 
     for row_start in range(0, len(metrics), 4):
         row = metrics[row_start:row_start + 4]
-        card_tops = "   ".join(f"\u250c{'\u2500' * card_w}\u2510" for _ in row)
+        card_tops = "   ".join(f"\u250c{_BOX_LIGHT_H * card_w}\u2510" for _ in row)
         lines.append(f"\u2502   {_pad(card_tops, W - 5)}\u2502")
         card_vals = "   ".join(f"\u2502{_pad(m[0], card_w, ' ').center(card_w)}\u2502" for m in row)
         lines.append(f"\u2502   {_pad(card_vals, W - 5)}\u2502")
@@ -202,18 +208,18 @@ def _metric_grid(metrics: list[tuple[str, str, str]]) -> list[str]:
         lines.append(f"\u2502   {_pad(card_lbls, W - 5)}\u2502")
         card_exps = "   ".join(f"\u2502{_pad('[' + m[2] + ']', card_w, ' ').center(card_w)}\u2502" for m in row)
         lines.append(f"\u2502   {_pad(card_exps, W - 5)}\u2502")
-        card_bots = "   ".join(f"\u2514{'\u2500' * card_w}\u2518" for _ in row)
+        card_bots = "   ".join(f"\u2514{_BOX_LIGHT_H * card_w}\u2518" for _ in row)
         lines.append(f"\u2502   {_pad(card_bots, W - 5)}\u2502")
 
     lines.append(f"\u2502{_pad('', W - 2)}\u2502")
-    lines.append(f"\u2570{'\u2500' * (W - 2)}\u256f")
+    lines.append(f"\u2570{_BOX_LIGHT_H * (W - 2)}\u256f")
     return lines
 
 
 def _chronicler_notes(observations: list[str]) -> list[str]:
     """Chronicler notes section."""
     lines = [
-        f"\u2554{'\u2550' * (W - 2)}\u2557",
+        f"\u2554{_BOX_DOUBLE_H * (W - 2)}\u2557",
         f"\u2551{_pad('', W - 2)}\u2551",
         f"\u2551{_pad('                         NOTAS DO CHRONICLER', W - 2)}\u2551",
         f"\u2551{_pad('', W - 2)}\u2551",
@@ -223,7 +229,7 @@ def _chronicler_notes(observations: list[str]) -> list[str]:
     lines.append(f"\u2551{_pad('', W - 2)}\u2551")
     lines.append(f"\u2551{_pad('                                                          -- Chronicler', W - 2)}\u2551")
     lines.append(f"\u2551{_pad('', W - 2)}\u2551")
-    lines.append(f"\u255a{'\u2550' * (W - 2)}\u255d")
+    lines.append(f"\u255a{_BOX_DOUBLE_H * (W - 2)}\u255d")
     return lines
 
 

@@ -3,7 +3,8 @@
 invalidate_capability_embeddings.py -- PostToolUse hook: mark embedding cache stale
 
 Trigger paths (any Write/Edit hitting one of these marks the cache stale):
-  - agents/_registry/capability-registry.yaml          (TIL-12 AC7)
+  - the capability registry under agents/_registry/    (TIL-12 AC7; optional, not
+    part of the public distribution)
   - .claude/skills/*/business-context.md               (TIL-12 @po condition #4 — L3 source)
 
 Side effect: `touch .data/capability-embeddings.stale` (zero-byte sentinel).
@@ -34,7 +35,7 @@ HOOK_TAG = "[invalidate_capability_embeddings]"
 STALE_SENTINEL = PROJECT_ROOT / ".data" / "capability-embeddings.stale"
 DEBOUNCE_SECONDS = 30
 
-REGISTRY_REL = "agents/_registry/capability-registry.yaml"
+REGISTRY_GLOB = "agents/_registry/*.yaml"
 SKILL_CTX_GLOB = ".claude/skills/*/business-context.md"
 
 
@@ -43,7 +44,7 @@ def _log(msg: str) -> None:
 
 
 def _matches_trigger(rel_path: str) -> bool:
-    if rel_path == REGISTRY_REL:
+    if fnmatch.fnmatch(rel_path, REGISTRY_GLOB):
         return True
     if fnmatch.fnmatch(rel_path, SKILL_CTX_GLOB):
         return True

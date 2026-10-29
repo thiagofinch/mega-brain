@@ -63,7 +63,7 @@ User: "publish page X online"
    *build + *validate-tokens + *a11y-audit + *contrast-check + *visual-regression
     │
     ▼
-4. @devops (mega-brain-core/development/agents/devops)
+4. @devops
    ├─ DNS read (Cloudflare API: list DNS + list Worker routes for zone)
    ├─ wrangler.toml build (project + route + compatibility_date)
    ├─ wrangler deploy (Pages or Workers)
@@ -106,13 +106,6 @@ If any gap: REPORT to user BEFORE generating page artifacts. Do not waste tokens
 - Cloudflare Workers: 100k requests/day free, 10ms CPU per request.
 - DNS records: 1000 per zone free.
 - For static reference pages: ALWAYS use Pages (free, simpler).
-
-## Service Layer Binding
-
-This rule extends:
-- `services/cloudflare/` (created on first deploy)
-- `mega-brain-core/development/agents/devops.md` (authority — extends `*push` to web deploys)
-- `agents/_registry/capability-registry.yaml` (entry: `cloudflare_dns_edit`, `cloudflare_workers_routes_read`)
 
 ## Trigger Keywords
 

@@ -7,7 +7,7 @@ Resolves pipeline settings through a strict precedence hierarchy:
     Level 1 (highest):  CLI arguments (passed at construction)
     Level 2:            Environment variables (MCE_* prefix)
     Level 3:            Per-slug config (.claude/mission-control/mce/{SLUG}/config.yaml)
-    Level 4:            Squad config (mega-brain/squads/mega-brain/config.yaml)
+    Level 4:            Squad config (optional, under MEGABRAIN_HUB_ROOT; not shipped)
     Level 5 (lowest):   Defaults (defaults.yaml shipped with the pipeline)
 
 First match wins. ``get(key)`` walks levels 1-5 and returns the first
@@ -423,11 +423,11 @@ class CascadeConfig:
     # -- squad config loading -----------------------------------------------
 
     def _load_squad_config(self) -> dict[str, Any]:
-        """Load squad-level config from mega-brain if available.
+        """Load an optional squad-level config if a hub root is configured.
 
-        Looks for ``squads/mega-brain/config.yaml`` under
-        ``self._megabrain_hub_root``.  Falls back to the ``MEGABRAIN_HUB_ROOT``
-        environment variable.  Returns empty dict if nothing is found.
+        Uses ``self._megabrain_hub_root`` or the ``MEGABRAIN_HUB_ROOT``
+        environment variable.  The public release ships no squad config, so
+        this returns an empty dict unless the hub root provides one.
         """
         hub_root = self._megabrain_hub_root
 

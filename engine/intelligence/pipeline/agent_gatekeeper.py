@@ -6,7 +6,7 @@ Before Phase 5 creates or updates an agent, this gate checks existence:
   - Agent EXISTS  -> L2 autonomous cascade update (no approval needed)
   - Agent ABSENT  -> L3 queue for human approval (appended to .data/l3-approval-queue.jsonl)
 
-Thread-safe: uses fcntl.flock for concurrent worker access to the queue file.
+Thread-safe: uses lock_file (flock/msvcrt) for concurrent worker access to the queue file.
 Deduplication: same slug is never queued twice (merges source_files instead).
 
 Story: PIP-007
@@ -16,12 +16,13 @@ Date: 2026-04-16
 
 from __future__ import annotations
 
-import fcntl
 import json
 import logging
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
+
+from engine.intelligence.pipeline._file_lock import lock_file, unlock_file
 
 from engine.intelligence.utils.agent_files import find_agent_file  # MCE-13.6
 from engine.paths import AGENTS_BUSINESS, AGENTS_EXTERNAL, ROOT
@@ -115,7 +116,7 @@ class AgentGatekeeper:
     ) -> None:
         """Append slug to L3 approval queue with deduplication.
 
-        Thread-safe via fcntl.flock. If slug already pending, merges
+        Thread-safe via lock_file (flock/msvcrt). If slug already pending, merges
         source_files into existing entry rather than creating duplicate.
         """
         self.queue_path.parent.mkdir(parents=True, exist_ok=True)
@@ -125,7 +126,7 @@ class AgentGatekeeper:
 
         # Open file for read+write (create if absent)
         with open(self.queue_path, "a+", encoding="utf-8") as fh:
-            fcntl.flock(fh, fcntl.LOCK_EX)
+            lock_file(fh)
             try:
                 # Read all existing entries
                 fh.seek(0)
@@ -178,7 +179,7 @@ class AgentGatekeeper:
 
                 logger.info("[L3] Agent queued for approval: %s", slug)
             finally:
-                fcntl.flock(fh, fcntl.LOCK_UN)
+                unlock_file(fh)
 
     # ── Gate Decision ────────────────────────────────────────────────────
 

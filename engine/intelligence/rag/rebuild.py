@@ -22,8 +22,27 @@ Date: 2026-03-16
 
 from __future__ import annotations
 
+import hashlib
 import time
+from pathlib import Path
 from typing import Any
+
+
+def _source_content_sha(source_file: str) -> str | None:
+    """SHA-256 do arquivo-fonte; ``None`` quando nao existe ou nao pode ser lido."""
+    if not source_file:
+        return None
+    try:
+        path = Path(source_file)
+        if not path.is_file():
+            return None
+        digest = hashlib.sha256()
+        with open(path, "rb") as fh:
+            for block in iter(lambda: fh.read(1 << 20), b""):
+                digest.update(block)
+        return digest.hexdigest()
+    except OSError:
+        return None
 
 
 def _dual_write_pgvector(
@@ -62,11 +81,10 @@ def _dual_write_pgvector(
     vocabulary) and a ``source_content_sha`` (SHA-256 of its source file, R3
     provenance), both landing in the JSONB ``metadata`` column (no DDL — the
     ``entity_type``/``graph_id`` promotion to first-class columns is F1-15's job).
-    DNA chunks get ``entity_type`` deterministically (zero LLM). Non-DNA chunks
-    get it via the 2-pass reflection ONLY when ``reflect_entity_type=True`` — the
-    default (``False``) keeps the standard rebuild deterministic / no-LLM, so this
-    change never fires a per-chunk LLM call in the automatic pipeline path (the
-    corpus-wide typed backfill is F1-15, not this function).
+    Nesta distribuicao a derivacao de tags (``source_type``/``quality_tier``/
+    ``entity_type``) nao e distribuida: esses campos so sao gravados quando o proprio
+    chunk ja os traz; caso contrario ficam ``None`` (lacuna honesta). Nenhuma chamada
+    LLM e feita por este rebuild.
     """
     vectors = getattr(idx.vector, "vectors", None) or []
     chunks = idx.chunks or []
@@ -82,7 +100,6 @@ def _dual_write_pgvector(
         )
 
     from .pgvector_store import PgVectorStore
-    from .tagging import derive_entity_type, derive_tags, source_content_sha
 
     chunk_ids: list[str] = []
     texts: list[str] = []
@@ -101,22 +118,21 @@ def _dual_write_pgvector(
         # extraction-gap (None, None) for 100% of rows. We spread into a NEW dict so
         # the original chunk is never mutated.
         chunk_with_bucket = {**chunk, "bucket": bucket}
-        source_type, quality_tier = derive_tags(chunk_with_bucket)
-        # entity_type (STORY-F1-1): DNA → deterministic (zero LLM); non-DNA →
-        # 2-pass reflection ONLY when reflect_entity_type is on (else honest None).
-        entity_type, et_telemetry = derive_entity_type(
-            chunk_with_bucket,
-            reflect=reflect_entity_type,
-            extractor=entity_type_extractor,
-        )
-        entity_llm_calls += et_telemetry.get("llm_calls", 0)
+        # A derivacao de source_type/quality_tier nao faz parte desta distribuicao:
+        # as tags so entram quando o proprio chunk ja as traz; senao ficam None
+        # (lacuna honesta, nunca um default inventado).
+        source_type = chunk_with_bucket.get("source_type")
+        quality_tier = chunk_with_bucket.get("quality_tier")
+        # entity_type: a derivacao (DNA deterministico / reflexao LLM) nao faz parte
+        # desta distribuicao; so e gravado quando o chunk ja o traz.
+        entity_type = chunk_with_bucket.get("entity_type")
         if entity_type is not None:
             entity_tagged += 1
         # source_content_sha (STORY-F1-1 / R3 provenance): hash the SOURCE file,
         # cached per source_file. Uses the chunk's real ``source_file`` path.
         sf = chunk.get("source_file", "") or ""
         if sf not in source_sha_cache:
-            source_sha_cache[sf] = source_content_sha(sf)
+            source_sha_cache[sf] = _source_content_sha(sf)
         meta = dict(chunk.get("metadata") or {})
         # Carry the fields the writer persists as first-class columns, sourced
         # from the chunk's real signals (No Invention — None where unprovable).
@@ -146,7 +162,7 @@ def _dual_write_pgvector(
         "entity_type_tagged": entity_tagged,
         "entity_type_gap": len(chunk_ids) - entity_tagged,
         "entity_type_llm_calls": entity_llm_calls,
-        "entity_type_reflect": reflect_entity_type,
+        "entity_type_reflect": False,  # a reflexao nao e distribuida (sempre no-op)
         "source_content_sha_present": provenance,
     }
 
@@ -177,15 +193,10 @@ def rebuild(
             its source_type/quality_tier tag right after ``idx.save()``. No-op on a
             BM25-only build (no vectors to mirror). Set ``False`` for a pure-BM25
             maintenance rebuild that must not touch pgvector.
-        reflect_entity_type: If ``True`` (STORY-F1-1), run the non-DNA 2-pass
-            reflection to populate ``entity_type`` for non-DNA chunks (≤1 LLM call
-            per non-DNA chunk). Default ``False`` keeps the rebuild deterministic /
-            zero-LLM — DNA chunks are ALWAYS typed deterministically regardless.
-            The corpus-wide typed backfill (turning this on for a full rebuild) is
-            F1-15's job, not the automatic pipeline path.
-        entity_type_extractor: Optional pass-1 extractor override (dependency
-            injection for the 2-pass reflection). ``None`` uses the default OpenAI
-            schema-guided extractor. Only consulted when ``reflect_entity_type``.
+        reflect_entity_type: Mantido por compatibilidade; sem efeito nesta
+            distribuicao (a reflexao de ``entity_type`` nao e distribuida).
+        entity_type_extractor: Mantido por compatibilidade; sem efeito nesta
+            distribuicao.
 
     Returns:
         Stats dict with per-bucket chunk counts, graph stats, and the S4 fan-out

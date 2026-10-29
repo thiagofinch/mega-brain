@@ -105,12 +105,11 @@ def _classify_cross_expert_intent(query: str) -> bool:
 
 
 def _load_cross_expert_config() -> dict:
-    """Load cross-expert configuration from YAML file.
+    """Load cross-expert configuration (built-in defaults, env override).
 
-    Falls back to sensible defaults if config file is absent or malformed.
-    Config file: engine/config/cross-expert-config.yaml
+    The similarity threshold can be overridden with ``MCE_CROSS_EXPERT_THRESHOLD``.
     """
-    # Read threshold from env first — allows runtime override without file edit
+    # Read threshold from env — allows runtime override without code edit
     env_threshold = os.environ.get("MCE_CROSS_EXPERT_THRESHOLD")
 
     defaults: dict = {
@@ -120,41 +119,7 @@ def _load_cross_expert_config() -> dict:
         "auto_inject_on_intent": True,
     }
 
-    try:
-        import pathlib
-
-        # Resolve config path relative to repo root (portable — no hardcoded user path)
-        repo_root = pathlib.Path(__file__).resolve().parent.parent.parent
-        config_path = repo_root / "engine" / "config" / "cross-expert-config.yaml"
-
-        if not config_path.exists():
-            return defaults
-
-        # PyYAML is stdlib-adjacent — already used by hooks
-        import yaml  # type: ignore[import]
-
-        with config_path.open("r", encoding="utf-8") as f:
-            data = yaml.safe_load(f) or {}
-
-        cfg = data.get("cross_expert", {})
-
-        # Env var overrides file threshold
-        threshold = (
-            float(env_threshold)
-            if env_threshold
-            else float(cfg.get("similarity_threshold", defaults["similarity_threshold"]))
-        )
-
-        return {
-            "similarity_threshold": threshold,
-            "max_chars": int(cfg.get("max_chars", defaults["max_chars"])),
-            "enabled_for": cfg.get("enabled_for", defaults["enabled_for"]),
-            "auto_inject_on_intent": bool(
-                cfg.get("auto_inject_on_intent", defaults["auto_inject_on_intent"])
-            ),
-        }
-    except Exception:
-        return defaults
+    return defaults
 
 
 # ---------------------------------------------------------------------------

@@ -1,13 +1,13 @@
 ---
-description: Cria novo agente seguindo padrão Mega Brain com layers e persona-registry
+description: Cria novo agente seguindo padrão Mega Brain com layers e ecosystem-registry
 argument-hint: [ID] --layer [L0|L1|L2|L3|L4|SUB] --name "..." --role "..." [--element Fire|Earth|Air|Water]
 ---
 
 # CREATE-AGENT - Agent Factory (Mega Brain Pattern)
 
 > **Versão:** 2.0.0
-> **Agent-Creator:** `core/jarvis/agent-creator/`
-> **Registry:** `agents/persona-registry.yaml`
+> **Agent-Creator:** `engine/jarvis/agent-creator/`
+> **Registry:** `agents/_registry/ecosystem-registry.yaml`
 
 ---
 
@@ -29,7 +29,7 @@ argument-hint: [ID] --layer [L0|L1|L2|L3|L4|SUB] --name "..." --role "..." [--el
 
 | Layer | Folder | Description | Trigger |
 |-------|--------|-------------|---------|
-| L0 | `core/jarvis/` | System agents | Manual |
+| L0 | `engine/jarvis/` | System agents | Manual |
 | L1 | `agents/conclave/` | Conclave (debate) | `/conclave` |
 | L2 | `agents/boardroom/` | C-Level executives | Threshold ≥10 |
 | L3 | `agents/external/` | Expert mind clones | Pipeline Phase 5.2 |

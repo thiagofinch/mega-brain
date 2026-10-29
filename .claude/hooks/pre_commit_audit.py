@@ -61,7 +61,6 @@ SECRET_PATTERNS = [
 TEMPLATE_REGISTRY = {
     ".env": ".env.example",
     ".mcp.json": ".mcp.example.json",
-    ".claude/settings.json": ".claude/settings.example.json",
 }
 
 # ── Binary extensions to skip during secret scanning ───────────────────────

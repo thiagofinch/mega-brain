@@ -19,8 +19,7 @@ These paths are not part of the product. They are local machine state.
 ### Inside the Repository
 
 Use repo-relative paths:
-- `squads/squad-creator/config.yaml`
-- `mega-brain-core/product/checklists/pre-push-checklist.md`
+- `squads/orquestrador-global/config.yaml`
 - `workspace/businesses/mega-brain/L2-tactical/...`
 - `outputs/traceability/...`
 

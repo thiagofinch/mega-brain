@@ -2,8 +2,8 @@
  * operator-bootstrap — resolve active operator via Phase 0.5 read-first OR cascade fallback.
  *
  * Canonical file: .mega-brain/active-operator.yaml (LOCAL, gitignored — bootstrapped per checkout).
- * Schema: .mega-brain/active-operator.example.yaml.
- * Setter: scripts/megabrain-operator.js (run via `npm run megabrain:operator -- set <slug>`).
+ * Schema minimo: operator.slug + operator.heuristic_namespace (pasta existente).
+ * Nao ha setter nem arquivo-modelo nesta distribuicao: o arquivo e criado manualmente.
  *
  * Implements KA_KE_152 (Runtime Ownership via Persistent State) + STORY-MIG-1.13.
  */
@@ -12,7 +12,6 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 const { readYamlOrNull } = require('./yaml-io');
 
 function findRepoRoot(startDir = process.cwd()) {
@@ -26,9 +25,8 @@ function findRepoRoot(startDir = process.cwd()) {
 
 const REPO_ROOT = findRepoRoot();
 const OPERATOR_FILE = path.join(REPO_ROOT, '.mega-brain', 'active-operator.yaml');
-const OPERATOR_EXAMPLE = path.join(REPO_ROOT, '.mega-brain', 'active-operator.example.yaml');
+const OPERATOR_HINT = 'Crie .mega-brain/active-operator.yaml com operator.slug e operator.heuristic_namespace (pasta existente com as heuristicas do operador).';
 const MINDS_ROOT = path.join(REPO_ROOT, 'squads', 'squad-creator-pro', 'minds');
-const MEGABRAIN_OPERATOR_SCRIPT = path.join(REPO_ROOT, 'scripts', 'megabrain-operator.js');
 
 /**
  * Phase 0.5 fast path — read .mega-brain/active-operator.yaml and validate.
@@ -80,28 +78,7 @@ function cascadeFallback() {
 }
 
 /**
- * Write-back via megabrain-operator setter. More robust than writing YAML manually
- * because the setter scans the filesystem and populates counts/next_id automatically.
- * Returns { success, stdout, stderr }.
- */
-function writeBackViaSetter(slug) {
-  try {
-    const stdout = execSync(`node "${MEGABRAIN_OPERATOR_SCRIPT}" set ${slug}`, {
-      cwd: REPO_ROOT,
-      encoding: 'utf-8',
-    });
-    return { success: true, stdout, stderr: '' };
-  } catch (err) {
-    return {
-      success: false,
-      stdout: err.stdout || '',
-      stderr: err.stderr || err.message,
-    };
-  }
-}
-
-/**
- * Full bootstrap flow — read first, cascade if missing, write-back on cascade success.
+ * Full bootstrap flow — read first, cascade if missing (sem write-back automatico).
  * Returns { operator, source, drift? }.
  * Throws if cascade fails and prompt is needed (caller must handle prompting).
  */
@@ -116,22 +93,11 @@ function resolveOperator({ allowPrompt = false } = {}) {
   const cascade = cascadeFallback();
 
   if (cascade.resolved) {
-    // Bootstrap write-back
-    const writeResult = writeBackViaSetter(cascade.resolved);
-    if (!writeResult.success) {
-      throw new Error(`Bootstrap write-back failed for ${cascade.resolved}: ${writeResult.stderr}`);
-    }
-    // Re-read after write-back
-    const refreshed = loadOperator();
-    if (!refreshed.ok) {
-      throw new Error(`Post-bootstrap load failed: ${refreshed.reason}`);
-    }
-    return {
-      operator: refreshed.operator,
-      metadata: refreshed.metadata,
-      source: `cascade_bootstrap:${cascade.source}`,
-      write_back: writeResult.stdout,
-    };
+    // Sem setter nesta distribuicao: o arquivo de estado precisa ser criado manualmente.
+    throw new Error(
+      `Operador inferido (${cascade.resolved}, via ${cascade.source}), mas ${OPERATOR_FILE} nao existe. ` +
+      `${OPERATOR_HINT} Use operator.slug = ${cascade.resolved}.`
+    );
   }
 
   // Ambiguous or no candidates — caller must prompt
@@ -139,7 +105,7 @@ function resolveOperator({ allowPrompt = false } = {}) {
     throw new Error(
       `Cascade cannot auto-resolve operator (reason: ${cascade.source}). ` +
       `Candidates: ${(cascade.candidates || []).join(', ') || '(none)'}. ` +
-      `Run: npm run megabrain:operator -- set <slug>`
+      OPERATOR_HINT
     );
   }
 
@@ -154,11 +120,9 @@ function resolveOperator({ allowPrompt = false } = {}) {
 module.exports = {
   REPO_ROOT,
   OPERATOR_FILE,
-  OPERATOR_EXAMPLE,
+  OPERATOR_HINT,
   MINDS_ROOT,
-  MEGABRAIN_OPERATOR_SCRIPT,
   loadOperator,
   cascadeFallback,
-  writeBackViaSetter,
   resolveOperator,
 };

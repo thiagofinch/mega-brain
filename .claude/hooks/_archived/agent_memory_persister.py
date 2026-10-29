@@ -1,5 +1,5 @@
 # ARCHIVED 2026-04-16 — W1-001.6
-# Logic consolidated into engine/memory_manager.py
+# Logic consolidated into engine/intelligence/memory_manager.py
 # Replacement stub in .claude/hooks/agent_memory_persister.py
 
 #!/usr/bin/env python3

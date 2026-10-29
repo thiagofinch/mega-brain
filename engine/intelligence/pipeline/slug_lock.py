@@ -6,7 +6,7 @@ Between slugs, full parallelism is allowed.
 
 Lock file location: .claude/mission-control/mce/{slug}/.lock
 
-Uses fcntl.flock (POSIX) for OS-level exclusive locking.
+Uses fcntl.flock (POSIX) / msvcrt.locking (Windows) for OS-level exclusive locking.
 Includes stale lock detection via PID check.
 
 Usage:
@@ -26,10 +26,38 @@ Usage:
         lock_mgr.release("alex-hormozi")
 """
 
-import fcntl
 import os
+import sys
 from contextlib import contextmanager
 from pathlib import Path
+
+from engine.intelligence.pipeline._file_lock import lock_file, unlock_file
+
+
+def _win_pid_alive(pid: int) -> bool:
+    """Windows PID check: there os.kill(pid, 0) sends CTRL_C_EVENT instead of probing."""
+    import ctypes
+    from ctypes import wintypes
+
+    process_query_limited_information = 0x1000
+    still_active = 259
+    error_access_denied = 5
+    kernel32 = ctypes.WinDLL("kernel32", use_last_error=True)
+    kernel32.OpenProcess.argtypes = (wintypes.DWORD, wintypes.BOOL, wintypes.DWORD)
+    kernel32.OpenProcess.restype = wintypes.HANDLE
+    kernel32.GetExitCodeProcess.argtypes = (wintypes.HANDLE, ctypes.POINTER(wintypes.DWORD))
+    kernel32.CloseHandle.argtypes = (wintypes.HANDLE,)
+    handle = kernel32.OpenProcess(process_query_limited_information, False, pid)
+    if not handle:
+        # Access denied means the process exists but belongs to another user
+        return ctypes.get_last_error() == error_access_denied
+    try:
+        code = wintypes.DWORD()
+        if not kernel32.GetExitCodeProcess(handle, ctypes.byref(code)):
+            return True
+        return code.value == still_active
+    finally:
+        kernel32.CloseHandle(handle)
 
 
 class SlugLockManager:
@@ -54,6 +82,8 @@ class SlugLockManager:
 
     def _is_pid_alive(self, pid: int) -> bool:
         """Check if a process with the given PID is still running."""
+        if sys.platform == "win32":
+            return _win_pid_alive(pid)
         try:
             os.kill(pid, 0)
             return True
@@ -104,7 +134,7 @@ class SlugLockManager:
         fd = os.open(str(lock_path), os.O_CREAT | os.O_RDWR)
 
         # Block until exclusive lock is acquired
-        fcntl.flock(fd, fcntl.LOCK_EX)
+        lock_file(fd)
 
         # Write our PID for stale detection
         os.ftruncate(fd, 0)
@@ -126,7 +156,7 @@ class SlugLockManager:
             return
 
         try:
-            fcntl.flock(fd, fcntl.LOCK_UN)
+            unlock_file(fd)
         except OSError:
             pass
 

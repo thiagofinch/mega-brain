@@ -4,22 +4,19 @@
  * Given validated heuristic files + decision cards, atomically:
  *   1. Verify all L3 files exist and passed compliance gate
  *   2. Append L2 cards to decision-cards.yaml
- *   3. Invoke `megabrain-operator refresh` to update active-operator.yaml counts
- *   4. Report summary
+ *   3. Report summary
  *
  * The actual L3 .md file writes happen BEFORE persist — the runner writes them
  * as part of the Phase 4 FORMALIZE stage. Persist just wires them up in the
- * decision-cards and refreshes operator state.
+ * decision-cards.
  */
 
 'use strict';
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 const { appendCardsToDecisionCards } = require('./yaml-io');
 const { validateBatch } = require('./compliance-gate');
-const { MEGABRAIN_OPERATOR_SCRIPT, REPO_ROOT } = require('./operator-bootstrap');
 
 /**
  * Persist a batch of validated heuristics.
@@ -28,7 +25,6 @@ const { MEGABRAIN_OPERATOR_SCRIPT, REPO_ROOT } = require('./operator-bootstrap')
  * @param {string} params.decisionCardsPath  Path to decision-cards.yaml
  * @param {string[]} params.heuristicFilePaths  Absolute paths to the L3 .md files already written
  * @param {Object[]} params.newCards  L2 card objects to append to decision-cards.yaml
- * @param {boolean} params.skipOperatorRefresh  If true, don't run megabrain-operator refresh
  *
  * @returns {Object}  { success, validation, appended, refreshed, errors }
  */
@@ -37,7 +33,6 @@ function persistBatch(params) {
     decisionCardsPath,
     heuristicFilePaths,
     newCards,
-    skipOperatorRefresh = false,
   } = params;
 
   const errors = [];
@@ -88,29 +83,12 @@ function persistBatch(params) {
     };
   }
 
-  // Step 4 — refresh active-operator.yaml via megabrain-operator
-  let refreshed = false;
-  let refreshOutput = '';
-  if (!skipOperatorRefresh) {
-    try {
-      refreshOutput = execSync(`node "${MEGABRAIN_OPERATOR_SCRIPT}" refresh`, {
-        cwd: REPO_ROOT,
-        encoding: 'utf-8',
-      });
-      refreshed = true;
-    } catch (err) {
-      errors.push(`operator refresh failed: ${err.stderr || err.message}`);
-      // Non-fatal — cards are persisted, operator file can be refreshed manually
-    }
-  }
-
   return {
     success: true,
     validation,
     appended: true,
     appended_count: newCards.length,
-    refreshed,
-    refresh_output: refreshOutput,
+    refreshed: false,
     errors,
   };
 }

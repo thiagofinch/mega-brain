@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# CONNECTED — W1-001.6: delegates to engine/memory_manager.py
+# CONNECTED — W1-001.6: delegates to engine/intelligence/memory_manager.py
 """
 memory_capture.py — PostToolUse hook (Agent tool)
 Captures when the Agent tool is used (subagent completions) and writes
@@ -27,7 +27,7 @@ if _project_root not in sys.path:
     sys.path.insert(0, _project_root)
 
 try:
-    from engine.memory_manager import write_memory as _mm_write
+    from engine.intelligence.memory_manager import memory_write as _mm_write
 
     _HAS_MEMORY_MANAGER = True
 except ImportError:
@@ -72,9 +72,14 @@ def detect_agent_from_tool(tool_input: dict) -> str:
 
 
 def write_memory_entry(agent_slug: str, entry: dict) -> None:
-    """Append via engine/memory_manager (canonical path)."""
+    """Append via engine/intelligence/memory_manager (canonical path)."""
     if _HAS_MEMORY_MANAGER:
-        _mm_write(agent_slug, entry)
+        _mm_write(
+            agent_slug,
+            entry.get("summary", ""),
+            source=entry.get("tool", "Agent"),
+            tags=["agent-tool"],
+        )
     else:
         mem_dir = os.path.join(_project_root, ".data", "agent_memory", agent_slug)
         os.makedirs(mem_dir, exist_ok=True)

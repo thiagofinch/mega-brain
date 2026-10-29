@@ -141,7 +141,6 @@ tokens:
   description: Execution mode (normal|shadow|dry-run|emergency). plan-architect supports --dry-run override.
   consumed_by:
     - agents/plan-architect.md
-    - .claude/skills/orquestrador-global/SKILL.md
 
 # =============================================================================
 # Token consumption coverage (W4-01 acceptance criterion)

@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 """
-Workspace Contract Guard — PreToolUse Hook (schema-aware)
-=========================================================
+Workspace Contract Guard — PreToolUse Hook
+==========================================
 Intercepts Write/Edit operations targeting ``workspace/`` paths and validates
 them against the CSO governance model.
 
 Hook Type: PreToolUse (Write|Edit)
-Story: 211.W3.1 (upgrade fail-open -> schema-aware fail-closed) — Wave 3 Enforcement ON
 Original: 2026-03-23 (fail-open legacy checks)
 
 ACTOR-CONSCIOUSNESS (why this hook is safe for the MCE pipeline)
@@ -24,20 +23,14 @@ CHECKS (in order)
 1. macOS duplicate filename (``* 2.*`` / `` <N>.``) -> block (all workspace layers).
 2. Legacy hygiene from workspace.yaml (forbidden_patterns, uppercase dirs,
    sacred boundaries) — preserved for backward compat.
-3. Schema-aware **registry-consult** (option (b), ratified default — the per-BU
-   ``document-registry.yaml`` is 100%/drift-0/deterministic since W1.1; we do NOT
-   require in-file ``_meta`` and do NOT mass-edit the 423 YAMLs):
-     - L0-identity / L1-strategy: **fail-CLOSED** — an unregistered doc, a doc
-       whose registry entry lacks ``state``/``owner``/``layer``, OR any internal
-       error (registry unavailable) -> **block**.
-     - L2/L3/L4: **advisory** (warn + allow) by default; flips to blocking under
-       the ``WORKSPACE_GUARD_L2L4_MODE=blocking`` kill-switch (TK-RG-004 pattern).
+
+Nota: a consulta ao registry por documento (``document-registry.yaml``) nao faz
+parte desta distribuicao; o guard aplica somente as checagens 1 e 2.
 
 ENV KILL-SWITCHES
 -----------------
 - ``WORKSPACE_GUARD_DISABLED=1``   -> full rollback: guard becomes advisory-only
-  everywhere (never blocks). PLANO §E.5 rollback flag.
-- ``WORKSPACE_GUARD_L2L4_MODE``    -> ``advisory`` (default) | ``blocking``.
+  everywhere (never blocks).
 
 EXIT CODES
 ----------
@@ -46,8 +39,7 @@ EXIT CODES
 
 ERROR HANDLING
 --------------
-- Non-workspace paths, L2-L4 (advisory): fail-OPEN (allow) on any error.
-- L0/L1 layered docs: fail-CLOSED (block) on any internal error (AC3).
+- Qualquer erro interno: fail-OPEN (allow).
 """
 
 import fnmatch
@@ -66,20 +58,12 @@ _DUPE_RE = re.compile(r" \d+\.[^/]+$")
 # Layer segment like "l0-identity" / "L0-identity" / "L1-strategy" -> canonical "L0".."L4".
 _LAYER_RE = re.compile(r"^[lL]([0-4])-")
 
-# Layers that are fail-closed (human sign-off required; guarded hard).
-_FAIL_CLOSED_LAYERS = {"L0", "L1"}
-
 _config_cache: "dict | None" = None
 
 
 def _guard_disabled() -> bool:
     """Full rollback flag — guard becomes advisory-only (never blocks)."""
     return os.environ.get("WORKSPACE_GUARD_DISABLED", "").strip() in ("1", "true", "yes", "on")
-
-
-def _l2l4_blocking() -> bool:
-    """Kill-switch: flip L2-L4 from advisory (default) to blocking."""
-    return os.environ.get("WORKSPACE_GUARD_L2L4_MODE", "advisory").strip().lower() == "blocking"
 
 
 def _load_config() -> "dict | None":
@@ -171,42 +155,6 @@ def _check_sacred_boundaries(relative_path: str, sacred_boundaries: list) -> "st
     return None
 
 
-def _schema_check(relative_path: str, bu_slug: str) -> "str | None":
-    """Registry-consult (option b): the target doc must be a registered document
-    whose registry entry carries the governance schema (``state``/``owner``/``layer``).
-
-    Returns a violation reason (str) when the doc is unregistered or its entry is
-    schema-incomplete, or None when it validates. Raises on internal errors — the
-    caller decides fail-closed (L0/L1) vs advisory (L2-L4).
-    """
-    # Import the CSO registry read-side (AC3: guard imports engine/governance/registry.py).
-    root_str = str(PROJECT_ROOT.resolve())
-    if root_str not in sys.path:
-        sys.path.insert(0, root_str)
-    from engine.governance.registry import load_registry  # may raise ImportError
-
-    registry = load_registry(PROJECT_ROOT, bu_slug)  # may raise FileNotFoundError
-    path_map = {
-        doc.get("path"): doc
-        for doc in registry.get("documents", [])
-        if isinstance(doc, dict) and doc.get("path")
-    }
-    entry = path_map.get(relative_path)
-    if entry is None:
-        return (
-            f"Document '{relative_path}' is not registered in the {bu_slug} "
-            "document-registry.yaml — governed docs must be registered "
-            "(written by the MCE pipeline / @jarvis-workspace, not ad-hoc)"
-        )
-    missing = [k for k in ("state", "owner", "layer") if entry.get(k) in (None, "")]
-    if missing:
-        return (
-            f"Registry entry for '{relative_path}' is schema-incomplete "
-            f"(missing/empty: {', '.join(missing)})"
-        )
-    return None
-
-
 def _block(reason: str) -> None:
     print(json.dumps({"decision": "block", "reason": f"[Workspace Contract Guard] {reason}"}))
     sys.exit(2)
@@ -243,7 +191,6 @@ def main() -> None:
 
         filename = Path(relative_path).name
         bu_slug, layer = _bu_and_layer(relative_path)
-        fail_closed = layer in _FAIL_CLOSED_LAYERS
         disabled = _guard_disabled()
 
         # --- Hard hygiene violations (dupe + legacy) — always block unless rollback ---
@@ -267,37 +214,16 @@ def main() -> None:
                 if chk:
                     hard.append(chk)
 
-        # --- Schema-aware registry-consult for L0-L4 layered docs (AC3) ---
-        schema_reason: "str | None" = None
-        schema_error = False
-        if bu_slug and layer:
-            try:
-                schema_reason = _schema_check(relative_path, bu_slug)
-            except Exception as exc:  # noqa: BLE001 — internal error handling is the point
-                schema_error = True
-                schema_reason = f"schema validation unavailable ({exc})"
-
         # --- Decision ---
         if disabled:
-            # PLANO §E.5 rollback: advisory-only everywhere (never blocks).
-            notes = hard + ([schema_reason] if schema_reason else [])
-            if notes:
-                _approve(note=f"[advisory][WORKSPACE_GUARD_DISABLED] {'; '.join(notes)}")
+            # Rollback: advisory-only everywhere (never blocks).
+            if hard:
+                _approve(note=f"[advisory][WORKSPACE_GUARD_DISABLED] {'; '.join(hard)}")
             _approve()
 
         # Hard hygiene blocks regardless of layer.
         if hard:
             _block("; ".join(hard))
-
-        # Schema: L0/L1 fail-closed (block); L2-L4 advisory unless kill-switch blocking.
-        if schema_reason:
-            if fail_closed:
-                if schema_error:
-                    _block(f"{schema_reason} for {layer} doc '{relative_path}' — fail-closed")
-                _block(schema_reason)
-            if _l2l4_blocking():
-                _block(schema_reason)
-            _approve(note=f"[advisory][{layer}] {schema_reason}")
 
         _approve()
 

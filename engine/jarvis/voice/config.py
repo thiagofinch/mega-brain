@@ -97,7 +97,7 @@ class Config:
     # Caminho base do projeto Mega Brain
     MEGA_BRAIN_PATH = get_config(
         "MEGA_BRAIN_PATH",
-        str(Path(__file__).parent.parent),  # Um nível acima de /system/jarvis-voice/
+        str(Path(__file__).resolve().parents[3]),  # raiz do repo (engine/jarvis/voice/ -> ../../..)
     )
 
     # Caminhos específicos do JARVIS

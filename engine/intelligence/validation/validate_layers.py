@@ -23,8 +23,11 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 # Import from sibling module in same directory
-sys.path.insert(0, str(Path(__file__).parent.parent))
-from audit_layers import classify_path
+try:  # sibling package module — package import in all real usage; fallback for direct-script run
+    from engine.intelligence.validation.audit_layers import classify_path
+except ImportError:  # pragma: no cover - direct ``python validate_layers.py`` execution
+    sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
+    from engine.intelligence.validation.audit_layers import classify_path
 
 
 def _unquote_git_path(line: str) -> str:

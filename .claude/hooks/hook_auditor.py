@@ -8,13 +8,13 @@ Checks performed:
   1. File existence for each hook referenced in settings.json
   2. AST parse validity for Python hooks
   3. Execute permission for shell hooks
-  4. Stale core/ path detection (delegates to scripts/validate_hook_imports.py logic)
+  4. Stale core/ path detection (regex STALE_CORE_PATTERN, defined below)
 
 Output: Compact health score printed to stdout on startup.
 
 Hook: SessionStart | Timeout: 10s
 Story: W4-001.5
-AC: hook_auditor.py exists, runs on SessionStart, reports score, uses validate_hook_imports
+AC: hook_auditor.py exists, runs on SessionStart, reports score
 
 EXIT CODES:
   0 -- ALLOW (always, never blocks session start)
@@ -31,7 +31,7 @@ from pathlib import Path
 
 PROJECT_ROOT = Path(os.environ.get("CLAUDE_PROJECT_DIR", ".")).resolve()
 SETTINGS_PATH = PROJECT_ROOT / ".claude" / "settings.json"
-STALE_CORE_PATTERN = re.compile(r"(?<!\.mega-brain-)(?<!\w)core/")
+STALE_CORE_PATTERN = re.compile(r"(?<!\.mega-brain-)(?<![\w-])core/")
 
 # The env var prefix to strip from hook command paths
 _ENV_PREFIX = "$CLAUDE_PROJECT_DIR/"

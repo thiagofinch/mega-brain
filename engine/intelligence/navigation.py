@@ -1,6 +1,6 @@
 """navigation.py — Reverse lookup helpers for NAVIGATION-MAP (Story MCE-3.6).
 
-Wraps `.data/navigation-map.json` (built by `scripts/build-navigation-map.py`)
+Wraps `.data/navigation-map.json` (gerado fora desta distribuicao)
 with three query helpers used by the rest of the engine.
 
 Resolution order for chunk lookups:

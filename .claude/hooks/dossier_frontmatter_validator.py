@@ -95,7 +95,7 @@ def main() -> None:
     if not content.startswith("---"):
         print(
             f"[dossier_frontmatter_validator] WARN: {abs_path.name} "
-            f"has no YAML frontmatter. Run: python3 scripts/migrate_dossier_frontmatter.py",
+            "has no YAML frontmatter (add a YAML block delimited by --- at the top).",
             file=sys.stderr,
         )
         sys.exit(0)

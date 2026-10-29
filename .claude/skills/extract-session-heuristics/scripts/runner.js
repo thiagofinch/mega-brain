@@ -29,7 +29,7 @@ const path = require('path');
 const {
   REPO_ROOT,
   OPERATOR_FILE,
-  MEGABRAIN_OPERATOR_SCRIPT,
+  OPERATOR_HINT,
   loadOperator,
   resolveOperator,
 } = require('./lib/operator-bootstrap');
@@ -67,7 +67,7 @@ function getDecisionCardsPath(operator) {
 // ================================================================
 // Subcommand: bootstrap
 // Ensures .mega-brain/active-operator.yaml exists and is valid.
-// If missing: runs cascade fallback + write-back via megabrain-operator setter.
+// If missing: tenta o cascade fallback e orienta a criar o arquivo manualmente.
 // ================================================================
 
 function cmdBootstrap() {
@@ -92,7 +92,7 @@ function cmdBootstrap() {
     printJson({
       ok: false,
       error: err.message,
-      hint: 'Run: npm run megabrain:operator -- list  (and then) -- set <slug>',
+      hint: OPERATOR_HINT,
     });
     return 1;
   }
@@ -133,7 +133,7 @@ function cmdScan() {
       has_drift: drift.hasDrift,
       deltas: drift.drift,
       hint: drift.hasDrift
-        ? 'Run: npm run megabrain:operator -- refresh'
+        ? 'Atualize os contadores em .mega-brain/active-operator.yaml manualmente'
         : 'operator state matches filesystem',
     },
   });
@@ -314,7 +314,7 @@ function cmdStatus() {
       operator_file: OPERATOR_FILE,
       hint: load.reason === 'file_missing'
         ? 'Run: node scripts/runner.js bootstrap'
-        : 'Run: npm run megabrain:operator -- set <slug>',
+        : OPERATOR_HINT,
     });
     return 1;
   }

@@ -17,8 +17,14 @@ import queue
 import threading
 from typing import Optional
 
-import sounddevice as sd
-from config import Config
+try:
+    import sounddevice as sd
+except ImportError:  # dependencia opcional de audio (create_tts_handler cai no modo simples)
+    sd = None
+if __package__:  # importado como pacote (engine.jarvis.voice)
+    from .config import Config
+else:  # execucao como script (python tts_handler.py)
+    from config import Config
 
 # Tenta importar elevenlabs - versões diferentes têm APIs diferentes
 try:
@@ -31,7 +37,8 @@ except ImportError:
 
         ELEVENLABS_V2 = False
     except ImportError:
-        raise ImportError("ElevenLabs não instalado. Execute: pip install elevenlabs")
+        # Opcional no import; TTSHandler/TTSHandlerSimple falham ao instanciar
+        ELEVENLABS_V2 = None
 
 
 class TTSHandler:
@@ -45,6 +52,9 @@ class TTSHandler:
         self._audio_queue = queue.Queue()
         self._is_speaking = False
         self._playback_thread: Optional[threading.Thread] = None
+
+        if ELEVENLABS_V2 is None:
+            raise ImportError("ElevenLabs não instalado. Execute: pip install elevenlabs")
 
         # Inicializa cliente baseado na versão do SDK
         if ELEVENLABS_V2:
@@ -282,6 +292,9 @@ class TTSHandlerSimple:
 
     def __init__(self):
         self.config = Config()
+
+        if ELEVENLABS_V2 is None:
+            raise ImportError("ElevenLabs não instalado. Execute: pip install elevenlabs")
 
         if not ELEVENLABS_V2:
             set_api_key(self.config.ELEVENLABS_API_KEY)

@@ -3,7 +3,8 @@
 check_capability_freshness.py — passive freshness lint for capability registry.
 
 Closes TIL-17 AC4 (technical validation freshness) + TIL-14 AC6 (business
-context freshness). Reads agents/_registry/capability-registry.yaml and emits
+context freshness). Reads the capability registry (optional, not part of the
+public distribution; without it the script only reports it and exits 0) and emits
 warnings to stderr when:
 
   - capability.last_validated is older than 180 days (technical staleness)

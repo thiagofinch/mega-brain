@@ -2,7 +2,8 @@
 """
 build_capability_keyword_index.py -- Build keyword index for intent detection
 
-Generates agents/_registry/capability-keyword-index.json with:
+Generates the capability keyword index (a generated JSON file kept next to the
+capability registry, not versioned) with:
 - entries: list of {keyword, capability_id, priority}
 - resolvedCapabilities: dict of pre-resolved capability results
 

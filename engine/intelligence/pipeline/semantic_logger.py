@@ -43,7 +43,6 @@ Usage:
 
 from __future__ import annotations
 
-import fcntl
 import json
 import os
 import time
@@ -51,6 +50,8 @@ from collections import defaultdict
 from contextlib import contextmanager
 from pathlib import Path
 from typing import Any
+
+from engine.intelligence.pipeline._file_lock import lock_file, unlock_file
 
 
 @contextmanager
@@ -63,11 +64,11 @@ def _exclusive_lock(file_obj):
 
     Reference: STORY-OS-001 AC2-AC4 + roundtable 2026-05-06 finding F2.
     """
-    fcntl.flock(file_obj.fileno(), fcntl.LOCK_EX)
+    lock_file(file_obj)
     try:
         yield
     finally:
-        fcntl.flock(file_obj.fileno(), fcntl.LOCK_UN)
+        unlock_file(file_obj)
 
 
 # ---------------------------------------------------------------------------

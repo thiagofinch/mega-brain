@@ -34,10 +34,10 @@ Constraints (Constitution Art. I + ADR-G5)::
 
 Thresholds (documented source inline per check)::
 - Sprint 0 (AD-8 PR-001/PR-002): chunk_count > 0, insights_count > 0.
-- Identity gate (squads/megabrain-pipeline-squad/config.yaml lines 386-394):
+- Identity gate:
   L6>=3 patterns, L7>=3 values, L8>=5 phrases, L9>=2 obsessions, L10>=1.
 - RAG gate: chunks_post > 0 AND chunks_post >= chunks_pre
-  (orchestrate.cmd_rag_index + config.yaml MCE-QG-RAG).
+  (orchestrate.cmd_rag_index).
 - Agent-gen: 15 agent files per Phase 5 template.
 
 CLI (manual testing, non-authoritative)::
@@ -93,14 +93,13 @@ _INSIGHTS_STATE_LEGACY: Path = _ARTIFACTS / "insights" / "INSIGHTS-STATE.json"
 # Thresholds (all configurable — hard-coded here only when no YAML source).
 # ---------------------------------------------------------------------------
 
-# Source: squads/megabrain-pipeline-squad/config.yaml MCE-QG-3 + PR-001.
+# Source: MCE-QG-3 + PR-001.
 _MIN_CHUNKS: int = 1
 
-# Source: squads/megabrain-pipeline-squad/config.yaml MCE-QG-5 + PR-002.
+# Source: MCE-QG-5 + PR-002.
 _MIN_INSIGHTS: int = 1
 
-# Source: squads/megabrain-pipeline-squad/config.yaml lines 386-394
-# (phase_d_profile.ATM-VALIDATE-IDENTITY-GATE.thresholds).
+# Source: phase_d_profile.ATM-VALIDATE-IDENTITY-GATE.thresholds.
 _IDENTITY_GATE_THRESHOLDS: dict[str, int] = {
     "L6_min_patterns": 3,  # behavioral patterns
     "L6_min_chunk_ids_per_pattern": 2,
@@ -886,7 +885,7 @@ def validate_voice(slug: str) -> dict[str, Any]:
     checks["behavioral_states"] = len(states)
     checks["voice_dimensions"] = dim_count
 
-    # Threshold source: squads/megabrain-pipeline-squad/config.yaml L8_min_phrases=5.
+    # Threshold source: L8_min_phrases=5.
     min_phrases = _IDENTITY_GATE_THRESHOLDS["L8_min_phrases"]
     if len(phrases) < min_phrases:
         return _build(
@@ -924,8 +923,7 @@ def validate_voice(slug: str) -> dict[str, Any]:
 def validate_identity_gate(slug: str) -> dict[str, Any]:
     """S10 — identity gate (pipeline-ops: guard, AD-7 auto-validator).
 
-    Aggregates thresholds across L6-L10 per squads/megabrain-pipeline-squad/
-    config.yaml lines 386-394. Replaces the old human approval step; this
+    Aggregates thresholds across L6-L10. Replaces the old human approval step; this
     function is the auto-quality-gate that AD-7 mandates.
     """
     step_id = "S10-checkpoint"

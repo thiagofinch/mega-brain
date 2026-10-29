@@ -45,7 +45,7 @@ responsible: "@agent-creator"
 ## Execution
 
 ### Phase 1: Read Source
-1. Read `agents/persona-registry.yaml` as source of truth
+1. Read `agents/_registry/ecosystem-registry.yaml` as source of truth
 2. Parse all agent entries
 
 ### Phase 2: Generate IDE Configs
@@ -68,7 +68,7 @@ responsible: "@agent-creator"
 ```yaml
 # .claude/agents.yaml (example)
 version: "1.0"
-synced_from: "agents/persona-registry.yaml"
+synced_from: "agents/_registry/ecosystem-registry.yaml"
 last_sync: "2026-02-27T10:00:00Z"
 
 agents:

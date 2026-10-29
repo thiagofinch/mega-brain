@@ -91,12 +91,14 @@ class PgVectorStore(VectorStore):
     # ------------------------------------------------------------------
 
     def _get_client(self):
-        """Lazy-initialise the legacy Supabase PostgREST client."""
-        if self._client is None:
-            from engine.providers import supabase_client
+        """Backend REST legado (Supabase PostgREST): nao distribuido na release publica.
 
-            self._client = supabase_client
-        return self._client
+        Levanta um erro acionavel em vez de um ModuleNotFoundError generico.
+        """
+        raise RuntimeError(
+            "Supabase REST backend is not available in this install. "
+            "Set DATABASE_URL to use the portable Postgres backend."
+        )
 
     def _get_sql_store(self) -> PostgresStore | None:
         """Return the portable :class:`PostgresStore` if a DSN is available.
@@ -140,7 +142,7 @@ class PgVectorStore(VectorStore):
 
         # Legacy Supabase PostgREST path. Etiquetagem (completude-total.S1):
         # source_type/quality_tier come from the caller's metadata dict (derived
-        # by engine/intelligence/rag/tagging.py). ``None`` → JSON null → SQL NULL
+        # by the caller's tagging step). ``None`` → JSON null → SQL NULL
         # (honest extraction_gap, never a fabricated default).
         client = self._get_client()
         record = {

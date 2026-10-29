@@ -162,8 +162,6 @@ class FirefliesDedup:
         "duplicates_skipped": N
       }
     }
-
-    Root cause documented in docs/adr/ADR-CALL-DEDUP-ROOT-CAUSE.md.
     """
 
     def __init__(self, state_path: Path) -> None:

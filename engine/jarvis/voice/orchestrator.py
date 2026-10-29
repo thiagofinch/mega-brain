@@ -19,12 +19,30 @@ import asyncio
 import time
 from datetime import datetime
 
-from anthropic import Anthropic
-from config import Config
-from mega_brain_connector import MegaBrainConnector
-from stt_handler import create_stt_handler
-from transition_phrases import TransitionPhrases
-from tts_handler import create_tts_handler
+try:
+    from anthropic import Anthropic
+except ImportError:  # dependencia opcional da voz (pip install anthropic)
+    Anthropic = None
+if __package__:  # importado como pacote (engine.jarvis.voice)
+    from .config import Config
+else:  # execucao como script (python orchestrator.py)
+    from config import Config
+if __package__:  # importado como pacote (engine.jarvis.voice)
+    from .mega_brain_connector import MegaBrainConnector
+else:  # execucao como script (python orchestrator.py)
+    from mega_brain_connector import MegaBrainConnector
+if __package__:  # importado como pacote (engine.jarvis.voice)
+    from .stt_handler import create_stt_handler
+else:  # execucao como script (python orchestrator.py)
+    from stt_handler import create_stt_handler
+if __package__:  # importado como pacote (engine.jarvis.voice)
+    from .transition_phrases import TransitionPhrases
+else:  # execucao como script (python orchestrator.py)
+    from transition_phrases import TransitionPhrases
+if __package__:  # importado como pacote (engine.jarvis.voice)
+    from .tts_handler import create_tts_handler
+else:  # execucao como script (python orchestrator.py)
+    from tts_handler import create_tts_handler
 
 # ==============================
 # JARVIS SYSTEM PROMPT - A personalidade COMPLETA do JARVIS
@@ -271,6 +289,8 @@ class JarvisOrchestrator:
             raise ValueError("Configurações inválidas")
 
         # Inicializa componentes
+        if Anthropic is None:
+            raise ImportError("anthropic nao instalado. Execute: pip install anthropic")
         self.anthropic = Anthropic(api_key=self.config.ANTHROPIC_API_KEY)
         self.tts = create_tts_handler()
         self.mega_brain = MegaBrainConnector()

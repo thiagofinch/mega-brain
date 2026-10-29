@@ -1,6 +1,8 @@
 """
 Constitution Gate — PreToolUse guard for constitution.md writes.
-Blocks direct writes to mega-brain-core/constitution.md without amendment process.
+Avisa sobre escritas diretas no constitution.md do mega-brain-core sem processo
+de emenda. A constituicao nao faz parte da distribuicao publica: enquanto o
+arquivo nao existir no projeto, o hook e um no-op silencioso.
 Exit codes: 0=allow, 1=warn, 2=block
 """
 
@@ -25,6 +27,11 @@ def main():
             sys.exit(0)
 
         rel_path = file_path.replace(project_root + "/", "") if project_root else file_path
+
+        if not project_root or not os.path.isfile(
+            os.path.join(project_root, "mega-brain-core", "constitution.md")
+        ):
+            sys.exit(0)  # constituicao nao distribuida: nada a proteger
 
         if "constitution.md" in rel_path.lower() and "mega-brain-core/" in rel_path:
             print(

@@ -33,9 +33,7 @@ Fail-open semantics (AC1):
   - If file write fails → silent skip
   - Hook latency overhead MUST stay < 20ms p95 (AC1.1) — measured via test 5
 
-Threshold-tuned constants live in `mega-brain-core/core-config.yaml`
-(`capability_drift.*`) and are loaded by drift detection scripts, not by
-this tracer.
+Threshold-tuned constants for drift detection are not loaded by this tracer.
 
 Reference: OTel GenAI semconv (2026-03) https://opentelemetry.io/docs/specs/semconv/gen-ai/
 """

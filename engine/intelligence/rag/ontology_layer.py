@@ -20,7 +20,10 @@ Data: 2026-03-01
 import os
 
 from .graph_builder import KnowledgeGraph, get_graph
-from .typed_schema import load_schema
+try:
+    from .typed_schema import load_schema
+except ImportError:  # typed_schema nao faz parte da release publica
+    load_schema = None  # type: ignore[assignment]
 
 # ---------------------------------------------------------------------------
 # ONTOLOGY CONFIG
@@ -68,6 +71,8 @@ def _build_layer_hierarchy(enabled: bool | None = None) -> list[str]:
     if enabled is None:
         enabled = ontology_hotpath_enabled()
     if not enabled:
+        return list(_LAYER_HIERARCHY_LEGACY)
+    if load_schema is None:  # fail-safe: sem typed_schema, mantem os 5 tipos legados
         return list(_LAYER_HIERARCHY_LEGACY)
     try:
         schema = load_schema()

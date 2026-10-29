@@ -8,22 +8,11 @@ Execute este script para testar se o microfone está funcionando.
 import time
 
 import numpy as np
-import sounddevice as sd
 
-print("""
-╔═══════════════════════════════════════════════════════════════════════╗
-║                    TESTE DE MICROFONE - JARVIS                        ║
-╚═══════════════════════════════════════════════════════════════════════╝
-""")
-
-# Mostra dispositivos
-print("📱 Dispositivos de áudio:")
-print(sd.query_devices())
-
-print("\n" + "=" * 60)
-print("🎤 Testando microfone por 5 segundos...")
-print("   Fale algo para ver os níveis de áudio")
-print("=" * 60 + "\n")
+try:
+    import sounddevice as sd
+except ImportError:  # dependencia opcional (pip install sounddevice)
+    sd = None
 
 SAMPLE_RATE = 48000
 DURATION = 5  # segundos
@@ -36,17 +25,40 @@ def audio_callback(indata, frames, time_info, status):
     print(f"\r🎤 Nível: {'█' * min(bars, 50):<50} {volume:.1f}", end="", flush=True)
 
 
-try:
-    with sd.InputStream(
-        samplerate=SAMPLE_RATE, channels=1, dtype=np.float32, callback=audio_callback
-    ):
-        time.sleep(DURATION)
+def main():
+    if sd is None:
+        raise SystemExit("sounddevice não instalado. Execute: pip install sounddevice")
 
-    print("\n\n✅ Microfone funcionando!")
-    print("\n👉 Agora execute: python3 main.py")
+    print("""
+╔═══════════════════════════════════════════════════════════════════════╗
+║                    TESTE DE MICROFONE - JARVIS                        ║
+╚═══════════════════════════════════════════════════════════════════════╝
+""")
 
-except Exception as e:
-    print(f"\n\n❌ Erro no microfone: {e}")
-    print("\n📝 Verifique:")
-    print("   1. System Settings > Privacy & Security > Microphone")
-    print("   2. Permita acesso ao Terminal")
+    # Mostra dispositivos
+    print("📱 Dispositivos de áudio:")
+    print(sd.query_devices())
+
+    print("\n" + "=" * 60)
+    print("🎤 Testando microfone por 5 segundos...")
+    print("   Fale algo para ver os níveis de áudio")
+    print("=" * 60 + "\n")
+
+    try:
+        with sd.InputStream(
+            samplerate=SAMPLE_RATE, channels=1, dtype=np.float32, callback=audio_callback
+        ):
+            time.sleep(DURATION)
+
+        print("\n\n✅ Microfone funcionando!")
+        print("\n👉 Agora execute: python3 main.py")
+
+    except Exception as e:
+        print(f"\n\n❌ Erro no microfone: {e}")
+        print("\n📝 Verifique:")
+        print("   1. System Settings > Privacy & Security > Microphone")
+        print("   2. Permita acesso ao Terminal")
+
+
+if __name__ == "__main__":
+    main()

@@ -4,13 +4,13 @@ theme_router.py -- Semantic theme dossier routing for MCE cascade
 Resolves an insight dict to the canonical dossier path for its theme.
 
 Resolution priority (Story MCE-11.5 AC2):
-    1. Exact slug match against theme-routing.yaml keys
+    1. Exact slug match against the configured theme routes (when a config is given)
     2. Alias match (case-insensitive)
     3. Match via ``category`` field of insight (normalised to kebab-case)
     4. Fallback: "general"
 
 Auto-discovery (AC3):
-    If no entry in theme-routing.yaml matches, ThemeRouter derives a
+    If no configured route matches (or no routing config is given), ThemeRouter derives a
     kebab-case slug from the insight's category/dna_layer value and
     returns a path under DOSSIERS_DIR.  If that path does not exist the
     caller is responsible for creating it (``ensure_dossier_exists``).
@@ -18,7 +18,7 @@ Auto-discovery (AC3):
 Constraints:
     - Python 3, stdlib + PyYAML only.
     - Thread-safe after construction (read-only after ``__init__``).
-    - theme-routing.yaml is loaded once per ThemeRouter instance.
+    - The optional routing config is loaded once per ThemeRouter instance.
 
 Version: 1.0.0
 Date: 2026-05-27
@@ -33,8 +33,8 @@ from typing import Any
 
 import yaml
 
-# Canonical config path relative to project root
-_DEFAULT_CONFIG = Path(__file__).parents[4] / "engine" / "config" / "theme-routing.yaml"
+# Project root (this file lives at engine/intelligence/pipeline/mce/).
+_PROJECT_ROOT = Path(__file__).parents[4]
 
 
 def _slugify(value: str) -> str:
@@ -57,8 +57,9 @@ class ThemeRouter:
     """Maps insight dicts to canonical dossier paths.
 
     Args:
-        config_path: Path to theme-routing.yaml.  Defaults to
-            ``engine/config/theme-routing.yaml`` relative to project root.
+        config_path: Optional YAML with a ``routes`` mapping.  The public
+            release ships no routing config, so by default only
+            auto-discovery (and the "general" fallback) is used.
         dossiers_dir: Base directory for dossier files.  Defaults to
             ``knowledge/external/dossiers/themes/`` relative to project root.
     """
@@ -68,14 +69,16 @@ class ThemeRouter:
         config_path: Path | None = None,
         dossiers_dir: Path | None = None,
     ) -> None:
-        self._config_path = config_path or _DEFAULT_CONFIG
-        project_root = self._config_path.parents[2]  # engine/ -> root
+        self._config_path = config_path
+        project_root = _PROJECT_ROOT
         self._dossiers_dir = dossiers_dir or (
             project_root / "knowledge" / "external" / "dossiers" / "themes"
         )
 
-        raw = yaml.safe_load(self._config_path.read_text(encoding="utf-8"))
-        routes: dict[str, dict] = (raw or {}).get("routes", {})
+        routes: dict[str, dict] = {}
+        if self._config_path is not None and self._config_path.exists():
+            raw = yaml.safe_load(self._config_path.read_text(encoding="utf-8"))
+            routes = (raw or {}).get("routes", {})
 
         # Build forward index: slug -> absolute Path
         self._slug_to_path: dict[str, Path] = {}
@@ -111,7 +114,7 @@ class ThemeRouter:
         Returns an absolute Path (may not exist yet for new dossiers).
         """
         # Strip surrounding brackets from tag so "[METODOLOGIA]" matches
-        # the alias "METODOLOGIA" already declared in theme-routing.yaml.
+        # an alias "METODOLOGIA" declared in the routing config.
         tag_raw = insight.get("tag") or ""
         tag_stripped = tag_raw.strip("[]") if tag_raw else ""
 
@@ -195,7 +198,7 @@ class ThemeRouter:
         """Derive a dossier path for an unknown theme.
 
         Does NOT create the file — caller must call ``ensure_dossier_exists``.
-        Does NOT modify theme-routing.yaml — that is a human operation.
+        Does NOT modify the routing config — that is a human operation.
         """
         slug = _slugify(raw)
         if not slug or slug == "general":

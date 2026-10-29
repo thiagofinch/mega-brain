@@ -415,13 +415,17 @@ def _route_dossier_compiler(file_path: str) -> bool:
             _log_event("dossier_compiler", file_path, "skip", f"decision={decision}")
             return True
 
-        # ADR-003 (Hybrid Pattern, 2026-05-10) — C-03 SWAP V1->V2 via adapter.
-        # V1.0 (engine.intelligence.dossier.dossier_compiler) is non-idempotent
-        # (append mode "a"). V2.0 (engine.intelligence.pipeline.dossier_compiler)
-        # implements structured field diff. Adapter preserves the caller signature
-        # while routing to V2.0. V1.0 module is preserved on disk as @deprecated
-        # rollback path (do not delete).
-        from engine.intelligence.dossier.dossier_compiler_adapter import compile_dossier
+        # O adapter para o compilador V2 nao faz parte desta distribuicao.
+        # Usa-se o compilador V1 (engine.intelligence.dossier.dossier_compiler),
+        # que mantem a assinatura (slug, category, bucket) deste chamador.
+        from engine.intelligence.dossier.dossier_compiler import _bucket_root, compile_dossier
+
+        # O V1 anexa uma secao incremental quando o dossie ja existe; um CREATE
+        # repetido duplicaria conteudo, entao a rota so cria.
+        dossier_path = _bucket_root(bucket) / "dossiers" / category / f"DOSSIER-{slug.upper()}.md"
+        if dossier_path.exists():
+            _log_event("dossier_compiler", file_path, "skip", f"exists={dossier_path.name}")
+            return True
 
         result_path = compile_dossier(
             slug=slug,

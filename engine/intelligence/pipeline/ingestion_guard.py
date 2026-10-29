@@ -268,9 +268,7 @@ def _hash_body(body: str) -> str:
 # (different Transcript ID, different MEET-id, a few different words) which
 # defeats tier-1 (exact identity) and tier-2 (exact body hash). This is a LOCAL
 # function — it deliberately does NOT touch hashing.py (the SOT of the EXACT
-# hash, tiers 1/2). The normalization + SimHash here are byte-compatible with
-# scripts/dedup_business_calls.py (Parte B hygiene), so the guard's near-dup
-# decision lands in the SAME fingerprint space the hygiene clustering uses.
+# hash, tiers 1/2).
 #
 # Pure stdlib (hashlib.md5 per shingle), 100% deterministic, zero network/API.
 
@@ -304,9 +302,7 @@ def _normalize_for_simhash(body: str) -> str:
     """Normalize a body for the near-dup fingerprint (deterministic).
 
     Drops metadata/separator lines, MEET-id tokens and dates/times; lowercases;
-    keeps only letters (incl. accented) + spaces; collapses whitespace. Mirrors
-    scripts/dedup_business_calls.py::normalize_body exactly so the guard and the
-    Parte B hygiene share the SAME fingerprint space.
+    keeps only letters (incl. accented) + spaces; collapses whitespace.
     """
     out_lines: list[str] = []
     for raw in body.splitlines():

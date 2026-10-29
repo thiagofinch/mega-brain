@@ -205,7 +205,6 @@ team_execution:
     format: markdown
   execution_logging:
     enabled: true
-    rule: .claude/rules/execution-logging.md
     output_dir: .data/executions
   defaults:
     max_agents: 5

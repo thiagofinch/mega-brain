@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "_description": "Retrieval benchmark gabarito (régua), regenerated 2026-06-27 from the live 34004-chunk index (.data/rag_index/chunks.json) by deterministic name-anchor join (tests/rag/regenerate_qrels.py). 13 reverse-joined from the original alex-hormozi gabarito + 30 forward-generated across 10 other persons (heuristicas/frameworks). Each relevant_chunk_id is a REAL live chunk_id whose `name` matches the query anchor; answer_text is that chunk's text. NO fabricated mappings; unresolved/ambiguous anchors DROPPED + logged (Art. IV + extraction-no-fallbacks). See docs/stories/epic-RETRIEVAL-BENCHMARK/STORY-RBM-QRELS-REBUILD.md.",
+  "_description": "Retrieval benchmark gabarito (régua), regenerated 2026-06-27 from the live 34004-chunk index (.data/rag_index/chunks.json) by deterministic name-anchor join. 13 reverse-joined from the original alex-hormozi gabarito + 30 forward-generated across 10 other persons (heuristicas/frameworks). Each relevant_chunk_id is a REAL live chunk_id whose `name` matches the query anchor; answer_text is that chunk's text. NO fabricated mappings; unresolved/ambiguous anchors DROPPED + logged (Art. IV + extraction-no-fallbacks).",
   "queries": [
     {
       "query_id": "q001",

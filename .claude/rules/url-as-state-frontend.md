@@ -10,8 +10,6 @@ paths:
 
 # URL as State (Frontend Navigation)
 
-> Stub for auto-load. Full content: `minds/knowledge_architect/heuristics/_archived/AN_KE_044-archived-v3.13.0-frontend-specific.md`
-
 ## Principle
 
 For frontend navigation state (filters, tabs, pagination, sort, search query) that **must survive refresh, share-link, or back/forward navigation** — store it in the URL (search params or path), NOT in component state.

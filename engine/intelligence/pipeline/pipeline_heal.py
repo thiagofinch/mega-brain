@@ -182,7 +182,9 @@ class PipelineHealDetector:
         report.checks.append(self._check_nav_map(source_id))
         report.checks.append(self._check_agent_memory(source_id, slug))
         report.checks.append(self._check_rag_index())
-        report.checks.append(self._check_file_registry(source_id))
+        registry_check = self._check_file_registry(source_id)
+        if registry_check is not None:
+            report.checks.append(registry_check)
         report.checks.append(self._check_session_state(source_id))
         report.checks.append(self._check_dna(source_id, slug))
         report.checks.append(self._check_soul(source_id, slug))
@@ -356,14 +358,14 @@ class PipelineHealDetector:
 
     def _check_nav_map(self, sid: str) -> CheckResult:
         """P6.6: Verify NAVIGATION-MAP.json is updated with this source."""
-        nav = self._load_json("knowledge/NAVIGATION-MAP.json")
+        nav = self._load_json("knowledge/external/NAVIGATION-MAP.json")
         if nav is None:
             return CheckResult(
                 "P6.6",
                 "Navigation Map",
                 False,
                 "NAVIGATION-MAP.json not found",
-                "Run python3 core/intelligence/nav_map_builder.py",
+                "Run python3 -m engine.intelligence.nav_map_builder",
             )
         text = json.dumps(nav)
         if sid in text:
@@ -388,7 +390,7 @@ class PipelineHealDetector:
             "Navigation Map",
             False,
             f"No {sid} entry in NAVIGATION-MAP.json",
-            "Run python3 core/intelligence/nav_map_builder.py",
+            "Run python3 -m engine.intelligence.nav_map_builder",
         )
 
     def _check_agent_memory(self, sid: str, slug: str) -> CheckResult:
@@ -463,8 +465,14 @@ class PipelineHealDetector:
             "Install RAG system first",
         )
 
-    def _check_file_registry(self, sid: str) -> CheckResult:
-        """P8.1.2: Verify file-registry.json has an entry for this source."""
+    def _check_file_registry(self, sid: str) -> CheckResult | None:
+        """P8.1.2: Verify file-registry.json has an entry for this source.
+
+        Returns None (check skipped) when no file registry exists: the registry
+        is an optional artifact that is not produced by the public release.
+        """
+        if not self.file_registry:
+            return None
         files = self.file_registry.get("files", {})
         name = self._source_name(sid)
         name_upper = name.upper()
@@ -476,7 +484,7 @@ class PipelineHealDetector:
             "File Registry",
             False,
             f"No entry for {sid}",
-            "Run python3 scripts/file_registry.py --scan",
+            "Register the source in system/REGISTRY/file-registry.json",
         )
 
     def _check_session_state(self, sid: str) -> CheckResult:

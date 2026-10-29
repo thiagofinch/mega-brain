@@ -18,12 +18,18 @@ from collections import deque
 from typing import Optional
 
 import numpy as np
-import torch
+
+try:
+    import torch
+except ImportError:  # dependencia opcional (pip install torch)
+    torch = None
 
 
 # Verificar qual GPU está disponível
 def get_device():
     """Detecta o melhor device disponível: CUDA > MPS > CPU"""
+    if torch is None:
+        return "cpu"
     if torch.cuda.is_available():
         return "cuda"
     elif torch.backends.mps.is_available():
@@ -49,6 +55,9 @@ class SesameTTSHandler:
         Args:
             speaker_id: ID do speaker (0 = voz padrão masculina)
         """
+        if torch is None:
+            raise ImportError("torch não instalado. Execute: pip install torch")
+
         self.speaker_id = speaker_id
         self.model = None
         self.processor = None
@@ -290,7 +299,10 @@ class HybridTTSHandler:
 
         # Fallback para ElevenLabs
         if self.elevenlabs_fallback is None:
-            from tts_handler import create_tts_handler
+            if __package__:  # importado como pacote (engine.jarvis.voice)
+                from .tts_handler import create_tts_handler
+            else:  # execucao como script (python tts_sesame.py)
+                from tts_handler import create_tts_handler
 
             self.elevenlabs_fallback = create_tts_handler()
 

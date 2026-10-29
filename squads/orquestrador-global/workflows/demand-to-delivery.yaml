@@ -38,7 +38,6 @@ trigger:
 prerequisites:
   - "At least 5 squads configured with config.yaml and agents"
   - "Execution logging directory exists (.data/executions/)"
-  - "Execution logging rule loaded (.claude/rules/execution-logging.md)"
 
 # =============================================================================
 # INPUT REQUIREMENTS

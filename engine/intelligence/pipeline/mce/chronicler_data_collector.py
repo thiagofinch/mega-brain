@@ -54,7 +54,7 @@ logger = logging.getLogger("mce.chronicler_data_collector")
 # Segments that should never be returned as a person slug.
 # SYNC: This constant is intentionally duplicated in .claude/hooks/mce_step_logger.py
 #        (_slug_from_path). Both implementations MUST use the same set. Changes here
-#        MUST be mirrored there (and vice-versa). Validated by test_slug_sync.py.
+#        MUST be mirrored there (and vice-versa).
 SKIP_SEGMENTS: frozenset[str] = frozenset(
     {
         "dna",
@@ -258,7 +258,6 @@ def resolve_slug_from_path(path: str) -> str:
     SYNC: This logic is intentionally duplicated (inline) in
           ``.claude/hooks/mce_step_logger.py`` ``_slug_from_path()``.
           Both implementations MUST produce identical results.
-          Validated by ``tests/python/test_pipeline/test_slug_sync.py``.
 
     Args:
         path: Absolute or relative file path from the pipeline.

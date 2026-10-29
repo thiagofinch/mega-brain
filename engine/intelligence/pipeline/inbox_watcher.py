@@ -23,7 +23,6 @@ Usage::
 
 Version: 1.0.0
 Date: 2026-03-10
-Spec: docs/plans/epic1-phase1.2-inbox-watcher-spec.md
 """
 
 from __future__ import annotations
@@ -40,8 +39,16 @@ import time
 from datetime import UTC, datetime
 from pathlib import Path
 
-from watchdog.events import FileCreatedEvent, FileSystemEventHandler
-from watchdog.observers import Observer
+try:
+    from watchdog.events import FileCreatedEvent, FileSystemEventHandler
+    from watchdog.observers import Observer
+except ImportError:
+    # ``watchdog`` is an optional dependency (not in requirements.txt). The module
+    # stays importable without it; only the live observer (``run_daemon`` without
+    # ``--once``) needs it and fails with an actionable message.
+    FileCreatedEvent = None  # type: ignore[assignment,misc]
+    FileSystemEventHandler = object  # type: ignore[assignment,misc]
+    Observer = None  # type: ignore[assignment,misc]
 
 from engine.paths import ROUTING
 
@@ -498,7 +505,7 @@ class InboxHandler(FileSystemEventHandler):
         self._pending: dict[str, threading.Timer] = {}
         self._lock = threading.Lock()
 
-    def on_created(self, event: FileCreatedEvent) -> None:  # type: ignore[override]
+    def on_created(self, event: "FileCreatedEvent") -> None:  # type: ignore[override]
         """Called when a file or directory is created."""
         if event.is_directory:
             return
@@ -602,6 +609,15 @@ def run_daemon(*, dry_run: bool = False, once: bool = False, verbose: bool = Fal
         return 0
 
     # Set up watchdog observer.
+    if Observer is None:
+        logger.error(
+            "The 'watchdog' package is required to watch the inbox continuously. "
+            "Install it with: pip install watchdog (or run with --once for a single sweep)"
+        )
+        state.status = "stopped"
+        state.write()
+        return 1
+
     handler = InboxHandler(state, dry_run=dry_run)
     observer = Observer()
 

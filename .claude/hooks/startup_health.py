@@ -24,7 +24,6 @@ CRITICAL_DIRS = [
     "agents",
     "knowledge/external",
     ".claude/hooks",
-    "docs/governance/rules",
     ".claude/skills",
 ]
 
@@ -35,13 +34,18 @@ CRITICAL_FILES = [
     ".claude/settings.json",
 ]
 
-# ROUTING keys to spot-check (sample — not all 131)
-ROUTING_SPOT_CHECKS = [
-    "logs",
-    "artifacts/audit",
-    ".data",
+# Spot-checks alinhados com engine.paths (fonte unica dos caminhos).
+# Diretorios de runtime (sob DATA = .data/, ex.: LOGS e ARTIFACTS) sao criados
+# sob demanda por quem escreve neles: so se verifica que engine.paths os
+# resolve dentro de DATA. Os demais exigem que o diretorio pai exista.
+PATHS_SPOT_CHECKS = [
+    "DATA",
+    "LOGS",
+    "ARTIFACTS",
+    "MISSION_CONTROL",
+]
+EXTRA_SPOT_CHECKS = [
     ".claude/sessions",
-    ".claude/mission-control",
 ]
 
 
@@ -59,11 +63,19 @@ def main():
 
         missing_routing = []
         try:
-            from engine.paths import ROUTING
+            import engine.paths as _paths
 
-            for key in ROUTING_SPOT_CHECKS:
-                path = _ROOT / key
-                if not path.parent.exists():
+            runtime_root = _paths.DATA
+            for name in PATHS_SPOT_CHECKS:
+                path = getattr(_paths, name, None)
+                if path is None:
+                    missing_routing.append(f"engine.paths.{name}")
+                elif path == runtime_root or runtime_root in path.parents:
+                    continue  # runtime: criado sob demanda
+                elif not path.parent.exists():
+                    missing_routing.append(str(path.relative_to(_ROOT)))
+            for key in EXTRA_SPOT_CHECKS:
+                if not (_ROOT / key).parent.exists():
                     missing_routing.append(key)
         except ImportError:
             missing_routing.append("engine.paths import failed")
@@ -122,7 +134,11 @@ def main():
             )
 
         total_checks = (
-            len(CRITICAL_DIRS) + len(CRITICAL_FILES) + len(ROUTING_SPOT_CHECKS) + len(rag_checks)
+            len(CRITICAL_DIRS)
+            + len(CRITICAL_FILES)
+            + len(PATHS_SPOT_CHECKS)
+            + len(EXTRA_SPOT_CHECKS)
+            + len(rag_checks)
         )
         total_issues = (
             len(missing_dirs)

@@ -73,7 +73,7 @@ frameworks:
     application: >
       Every execution creates a directory in .data/executions/
       with 00-master-plan.md, NN-squad-input.md, NN-squad-output.md, and
-      99-execution-summary.md. See .claude/rules/execution-logging.md.
+      99-execution-summary.md.
 
 process:
   steps:
@@ -124,7 +124,7 @@ quality_gates:
   - "Master plan contains all required sections per logging rule"
   - "Squad input document is self-contained (squad can work without asking)"
   - "Execution summary includes lessons learned section"
-  - "All files use the standard templates from execution-logging.md"
+  - "All files use the standard execution logging templates"
 squad: orquestrador-global
 task_id: basic-orchestration-setup
 version: "3.1.1"

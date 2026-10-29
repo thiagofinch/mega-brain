@@ -2,7 +2,6 @@
 paths:
   - "docs/qa/**"
   - ".coderabbit.yaml"
-  - "mega-brain-core/core-config.yaml"
 ---
 
 # CodeRabbit Integration
@@ -72,4 +71,4 @@ CodeRabbit reports saved to: `docs/qa/coderabbit-reports/`
 
 ## Configuration Reference
 
-Full config in `core-config.yaml` under `coderabbit_integration` section.
+Repository config lives in `.coderabbit.yaml`.

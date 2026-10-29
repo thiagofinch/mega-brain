@@ -3,7 +3,8 @@
 post_task_suggester.py — Post-Task Capability Suggester (TIL-13)
 
 Hook: Stop
-Default: OPT-IN OFF. Reads mega-brain-core/core-config.yaml `post_task_suggestions.enabled`.
+Default: OPT-IN OFF. The external core-config file is not part of the public
+distribution, so the hook stays disabled (silent no-op).
 When disabled, returns zero-cost no-op within first 5ms.
 
 PURPOSE
@@ -39,7 +40,6 @@ ADR: ADR-TIL-001 (hooks dir = Python only)
 @po BLOCKERS resolved (2026-05-12):
   1. Path = .claude/hooks/post_task_suggester.py (not scripts/tool-onboarder/)
   2. AUTHORITY_BLOCKLIST hardcoded (TODO TIL-23 — proper machine-readable registry)
-  3. core-config.yaml `post_task_suggestions` section added
 """
 
 from __future__ import annotations
@@ -58,7 +58,6 @@ from pathlib import Path
 # Paths and constants
 # ---------------------------------------------------------------------------
 PROJECT_ROOT = Path(os.environ.get("CLAUDE_PROJECT_DIR", ".")).resolve()
-CONFIG_PATH = PROJECT_ROOT / "mega-brain-core" / "core-config.yaml"
 INDEX_PATH = PROJECT_ROOT / "agents" / "_registry" / "capability-keyword-index.json"
 REGISTRY_PATH = PROJECT_ROOT / "agents" / "_registry" / "capability-registry.yaml"
 DATA_DIR = PROJECT_ROOT / ".data"
@@ -72,7 +71,7 @@ N_TURNS_DEDUP = 3
 MAX_SUGGESTIONS_PER_TURN = 1
 SEMANTIC_TOP_K = 5
 
-# AC4 — anti-noise defaults (overridable by core-config.yaml)
+# AC4 — anti-noise defaults
 DEFAULT_CONFIDENCE_THRESHOLD = 0.70
 DEFAULT_TRIVIAL_WORD_THRESHOLD = 50
 DEFAULT_MAX_PER_TURN = 1
@@ -140,29 +139,14 @@ def _get_active_agent_id() -> str:
 
 
 def _load_config() -> dict:
-    """Load post_task_suggestions section from core-config.yaml.
-
-    Returns defaults (enabled=False) if file missing, section absent, or YAML broken.
-    """
+    """Return the post_task_suggestions config (defaults only: enabled=False)."""
     defaults = {
         "enabled": False,
         "confidence_threshold": DEFAULT_CONFIDENCE_THRESHOLD,
         "max_per_turn": DEFAULT_MAX_PER_TURN,
         "trivial_word_threshold": DEFAULT_TRIVIAL_WORD_THRESHOLD,
     }
-    try:
-        import yaml  # PyYAML
-    except ImportError:
-        return defaults
-    try:
-        if not CONFIG_PATH.exists():
-            return defaults
-        data = yaml.safe_load(CONFIG_PATH.read_text(encoding="utf-8")) or {}
-        section = data.get("post_task_suggestions") or {}
-        defaults.update({k: v for k, v in section.items() if k in defaults})
-        return defaults
-    except Exception:
-        return defaults
+    return defaults
 
 
 # ---------------------------------------------------------------------------

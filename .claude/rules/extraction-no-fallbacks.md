@@ -8,7 +8,7 @@ paths:
 
 # Extraction Pipeline — NO FALLBACKS (NON-NEGOTIABLE)
 
-**Origin:** founder directive 2026-05-02. Promoted from "nada é FIXED" (handoff 2026-05-02-extract-canonical-design-md-handoff.md) → ABSOLUTE RULE.
+**Origin:** founder directive 2026-05-02. Promoted from "nada é FIXED" → ABSOLUTE RULE.
 
 ## Rule
 
@@ -64,6 +64,6 @@ Brand stress test post-removal-of-fallbacks SHOULD show coverage drop for brands
 
 ## Reference
 
-- Original directive: 2026-05-02 (handoff `docs/sessions/2026-05/2026-05-02-extract-canonical-design-md-handoff.md`)
+- Original directive: 2026-05-02
 - Reinforcement: 2026-05-02 lote 6 chat (user message: "na extracao nao devemos ter fallback ... nada de fallback na extracao pq se nao vai gerar falsos positivos ... fallback é hardcoded na aplicacao")
 - Anti-pattern example: `.tmp/repair-generated-design-bundles.cjs` — manually edits brand bundles with hardcoded headlines/leads/CTAs. NEVER reproduce this pattern in the extractor.

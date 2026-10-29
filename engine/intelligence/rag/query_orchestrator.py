@@ -23,7 +23,6 @@ Architecture (from RT-AUDIT-2026-04-06, Q6):
 
 Version: 1.0.0
 Date: 2026-04-09
-Ref: docs/architecture/roundtable-mega-brain-audit-decisions-2026-04-06.md (Q6)
 """
 
 from __future__ import annotations
@@ -392,16 +391,6 @@ def query_full(
                     latency_ms=latency_ms,
                     strategy="ontology_traversal",
                 )
-                try:
-                    from engine.intelligence.pipeline.consultation_logger import (
-                        log_query_response,
-                    )
-
-                    log_query_response(
-                        querying_agent="query_orchestrator", response=response
-                    )
-                except Exception:
-                    pass
                 return response
             # ontology path yielded nothing -> fall through to cross-expert/BM25.
 
@@ -416,16 +405,6 @@ def query_full(
                     latency_ms=latency_ms,
                     strategy="hybrid_graph",
                 )
-                try:
-                    from engine.intelligence.pipeline.consultation_logger import (
-                        log_query_response,
-                    )
-
-                    log_query_response(
-                        querying_agent="query_orchestrator", response=response
-                    )
-                except Exception:
-                    pass
                 return response
             # graph path yielded nothing -> fall through to BM25 path below.
 
@@ -474,14 +453,6 @@ def query_full(
         latency_ms=latency_ms,
         errors=errors,
     )
-
-    # Auto-log every query for observability (RT-AUDIT-2026-04-06, Action #13)
-    try:
-        from engine.intelligence.pipeline.consultation_logger import log_query_response
-
-        log_query_response(querying_agent="query_orchestrator", response=response)
-    except Exception:
-        pass  # Logging failure must never break search
 
     return response
 

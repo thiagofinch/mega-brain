@@ -17,8 +17,14 @@ import signal
 import sys
 from typing import Optional
 
-from config import Config
-from orchestrator import JarvisOrchestrator
+if __package__:  # importado como pacote (engine.jarvis.voice)
+    from .config import Config
+else:  # execucao como script (python main.py)
+    from config import Config
+if __package__:  # importado como pacote (engine.jarvis.voice)
+    from .orchestrator import JarvisOrchestrator
+else:  # execucao como script (python main.py)
+    from orchestrator import JarvisOrchestrator
 
 # ==============================
 # ASCII ART
@@ -167,7 +173,10 @@ class JarvisVoiceApp:
         print("2. TEXT-TO-SPEECH (ElevenLabs)")
         print("=" * 60)
         try:
-            from tts_handler import create_tts_handler
+            if __package__:  # importado como pacote (engine.jarvis.voice)
+                from .tts_handler import create_tts_handler
+            else:  # execucao como script (python main.py)
+                from tts_handler import create_tts_handler
 
             tts = create_tts_handler()
             print("   ✅ TTS Handler criado")
@@ -183,7 +192,10 @@ class JarvisVoiceApp:
         print("3. MEGA BRAIN CONNECTOR")
         print("=" * 60)
         try:
-            from mega_brain_connector import MegaBrainConnector
+            if __package__:  # importado como pacote (engine.jarvis.voice)
+                from .mega_brain_connector import MegaBrainConnector
+            else:  # execucao como script (python main.py)
+                from mega_brain_connector import MegaBrainConnector
 
             connector = MegaBrainConnector()
             print("   ✅ Connector criado")
@@ -226,7 +238,10 @@ class JarvisVoiceApp:
             async def dummy_callback(text):
                 pass
 
-            from stt_handler import create_stt_handler
+            if __package__:  # importado como pacote (engine.jarvis.voice)
+                from .stt_handler import create_stt_handler
+            else:  # execucao como script (python main.py)
+                from stt_handler import create_stt_handler
 
             stt = create_stt_handler(dummy_callback)
             print("   ✅ STT Handler criado")

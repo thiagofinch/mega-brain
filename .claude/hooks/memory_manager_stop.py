@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-# CONNECTED — W1-001.6: delegates to engine/memory_manager.py
+# CONNECTED — W1-001.6: delegates to engine/intelligence/memory_manager.py
 """
 memory_manager_stop.py — Stop hook
-Delegates cleanup to engine/memory_manager.cleanup_all() on session end.
+Poda a memoria de cada agente (MemoryStore.prune) ao fim da sessao.
 Fail-open: always exits 0.
 """
 
@@ -20,11 +20,32 @@ if _project_root not in sys.path:
     sys.path.insert(0, _project_root)
 
 try:
-    from engine.memory_manager import cleanup_all as _mm_cleanup_all
+    from engine.intelligence.memory_manager import MEMORY_DIR as _MM_DIR
+    from engine.intelligence.memory_manager import get_store as _mm_get_store
 
     _HAS_MEMORY_MANAGER = True
 except ImportError:
     _HAS_MEMORY_MANAGER = False
+
+
+def _mm_cleanup_all() -> list[dict]:
+    """Poda cada agente com memoria em .data/agent_memory/ e devolve as estatisticas."""
+    stats = []
+    if not _MM_DIR.is_dir():
+        return stats
+    for agent_dir in sorted(_MM_DIR.iterdir()):
+        if not agent_dir.is_dir() or not (agent_dir / "memories.jsonl").exists():
+            continue
+        result = _mm_get_store(agent_dir.name).prune()
+        stats.append(
+            {
+                "agent_id": agent_dir.name,
+                "before": result["before"],
+                "after": result["after"],
+                "removed": result["pruned"],
+            }
+        )
+    return stats
 
 
 def reset_state():

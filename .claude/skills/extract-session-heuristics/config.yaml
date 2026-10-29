@@ -47,21 +47,3 @@ owner_resolution:
       handle: "@process-validator"
       display_name: "Process Validator"
       default_extract_prefix: "PV_KE"
-
-artifact_contracts:
-  - artifact_id: "decision-cards"
-    template_path: "../../squads/squad-creator-pro/minds/{heuristic_owner_slug}/heuristics/decision-cards.yaml"
-    lifecycle_states: [draft, validated, approved]
-  - artifact_id: "heuristic-doc"
-    template_path: "../../squads/squad-creator-pro/templates/session-heuristic-tmpl.md"
-    lifecycle_states: [draft, validated]
-  - artifact_id: "scope-extraction-report"
-    template_path: "../../squads/squad-creator-pro/templates/scope-extraction-report-tmpl.md"
-    lifecycle_states: [draft, validated]
-
-references:
-  task: "squads/squad-creator-pro/tasks/an-extract-session-heuristics.md"
-  checklist: "squads/squad-creator-pro/checklists/session-heuristics-extraction.md"
-  template: "squads/squad-creator-pro/templates/session-heuristic-tmpl.md"
-  scope_report_template: "squads/squad-creator-pro/templates/scope-extraction-report-tmpl.md"
-  decision_cards: "squads/squad-creator-pro/minds/{heuristic_owner_slug}/heuristics/decision-cards.yaml"

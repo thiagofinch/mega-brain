@@ -15,6 +15,10 @@ depends_on: []
 
 Skill agnóstica de extração de conhecimento. Transforma qualquer fonte textual em entidades DS_KE estruturadas usando o pipeline híbrido (regex pre-filter + LLM curation) do `services/etl/`.
 
+> **Nesta distribuição:** o pipeline `services/etl/` (parsers, `finalize-etl.js`,
+> `build-kb-index.js`) não é distribuído. Sem ele, os passos que chamam esses
+> módulos não rodam.
+
 ## Activation
 
 ```

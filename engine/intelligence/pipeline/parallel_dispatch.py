@@ -29,6 +29,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
+from engine.intelligence.pipeline._file_lock import lock_file, unlock_file
 from engine.intelligence.pipeline.barrier import WorkerBarrier
 from engine.intelligence.pipeline.merge_phase import post_barrier_pipeline
 from engine.intelligence.pipeline.preflight import ManifestUpdater, PreFlightBootstrap
@@ -443,13 +444,11 @@ class SubagentBridge:
         self._update_manifest(file_path, status, error=error)
 
     def _update_manifest(self, file_path: str, status: str, error: str = "") -> None:
-        import fcntl
-
         key = f"{self.slug}/{_Path(file_path).name}"
         try:
             lock_path = self._manifest_path.with_suffix(".lock")
             with open(lock_path, "w") as lf:
-                fcntl.flock(lf.fileno(), fcntl.LOCK_EX)
+                lock_file(lf)
                 try:
                     manifest = {}
                     if self._manifest_path.exists():
@@ -459,7 +458,7 @@ class SubagentBridge:
                     with open(self._manifest_path, "w") as f:
                         _json.dump(manifest, f, indent=2)
                 finally:
-                    fcntl.flock(lf.fileno(), fcntl.LOCK_UN)
+                    unlock_file(lf)
         except Exception as exc:
             logger.warning("SubagentBridge[%s]: manifest update failed: %s", self.slug, exc)
 

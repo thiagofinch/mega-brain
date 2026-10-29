@@ -44,7 +44,7 @@ responsible: "@agent-creator"
 | agent_md | md | agents/{layer}/{id}/AGENT.md | Agent definition |
 | soul_md | md | agents/{layer}/{id}/SOUL.md | Personality |
 | command_md | md | .claude/commands/{id}.md | Activation command |
-| registry | yaml | agents/persona-registry.yaml | Registry entry |
+| registry | yaml | agents/_registry/ecosystem-registry.yaml | Registry entry |
 
 ---
 
@@ -55,12 +55,12 @@ responsible: "@agent-creator"
 
 1. Validate layer is valid (L0, L1, L2, L3, L4, SUB)
 2. Validate id is kebab-case and unique
-3. Check persona-registry.yaml for duplicates
+3. Check agents/_registry/ecosystem-registry.yaml for duplicates
 4. Determine target folder based on layer
 
 ```python
 LAYER_FOLDERS = {
-    "L0": "core/jarvis/",
+    "L0": "engine/jarvis/",
     "L1": "agents/conclave/",
     "L2": "agents/boardroom/",
     "L3": "agents/external/",
@@ -73,7 +73,7 @@ LAYER_FOLDERS = {
 **Quality Gate:** QG-103
 
 1. Load AGENT template from `agents/_templates/TEMPLATE-AGENT-V3.md`
-2. Load SOUL template from `core/templates/agents/SOUL-TEMPLATE.md`
+2. Load SOUL template from `engine/templates/agents/soul-template.md`
 3. Fill templates with provided data
 4. Generate greetings based on identity level
 
@@ -99,7 +99,7 @@ Responder como {name} com sua voz e perspectiva únicas.
 ### Phase 4: Update Registry
 **Quality Gate:** QG-104
 
-1. Read `agents/persona-registry.yaml`
+1. Read `agents/_registry/ecosystem-registry.yaml`
 2. Add entry to appropriate section
 3. Save updated registry
 
@@ -110,7 +110,7 @@ Responder como {name} com sua voz e perspectiva únicas.
 - [ ] AGENT.md exists at correct location
 - [ ] SOUL.md exists at correct location
 - [ ] Command file created
-- [ ] Entry added to persona-registry.yaml
+- [ ] Entry added to agents/_registry/ecosystem-registry.yaml
 - [ ] No duplicate IDs in registry
 
 ---
@@ -126,7 +126,7 @@ Responder como {name} com sua voz e perspectiva únicas.
 
 ## Protocol Reference
 
-See `core/jarvis/agent-creator/AGENT.md` for full context.
+See `engine/jarvis/agent-creator/AGENT.md` for full context.
 
 ---
 

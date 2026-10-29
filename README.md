@@ -44,7 +44,7 @@ com rigor.
 |-----------|--------|----------------|
 | [Claude Code](https://claude.ai/claude-code) | atual | Interface onde os comandos `/ingest`, `/conclave` etc. rodam |
 | [Node.js](https://nodejs.org) | 18 ou superior | CLI e ferramentas do sistema |
-| [Python](https://python.org) | 3.10 ou superior | Engine de processamento (pipeline MCE, RAG, transcricao) |
+| [Python](https://python.org) | 3.11 ou superior | Engine de processamento (pipeline MCE, RAG, transcricao) |
 | Git | atual | Clonar e atualizar o repositorio |
 
 Voce tambem vai precisar de pelo menos as **chaves de API obrigatorias** (ver
@@ -161,7 +161,7 @@ Cada bucket tem o seu indice RAG.
 ## Stack
 
 - **Node.js 18+** — CLI e tooling.
-- **Python 3.10+** — engine de processamento (pipeline, RAG, transcricao).
+- **Python 3.11+** — engine de processamento (pipeline, RAG, transcricao).
 - **Local-first** — o conhecimento vive no filesystem do projeto. Nenhum banco de
   dados externo e obrigatorio para usar o sistema.
 

@@ -7,7 +7,6 @@ Story: STORY-RAG-10 (S10) — Phase 2 Wave 6
 Date: 2026-04-12
 
 Model: TF-IDF (1-2gram, 5000 features) + LinearSVC — 93.1% accuracy
-Trained by: scripts/train_query_classifier.py
 Model path: .data/models/query_classifier/classifier.joblib
 
 TRANSCEND T5 preserved:

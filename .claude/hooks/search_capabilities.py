@@ -2,8 +2,9 @@
 """
 search_capabilities.py -- Natural-language capability discovery tool (TIL-19 AC2/4/5)
 
-A CLI / library entry point that returns the top-5 capabilities from
-agents/_registry/capability-registry.yaml that match a free-form query.
+A CLI / library entry point that returns the top-5 capabilities from the
+capability registry (optional, not part of the public distribution) that match
+a free-form query.
 
 Usage (CLI):
     python3 .claude/hooks/search_capabilities.py "I need to create a video"
@@ -25,7 +26,7 @@ Architecture:
   - Embedding contract is canonical (text-embedding-3-large, 1536d) per
     engine.intelligence.rag.embedding_config.
   - Fail-open semantics: if numpy/cache/API key are missing, falls back
-    to keyword search against agents/_registry/capability-keyword-index.json.
+    to keyword search against the optional keyword index under agents/_registry/.
 
 Budget (TIL-19 AC5):
   - Warm path (cache hit): < 200ms

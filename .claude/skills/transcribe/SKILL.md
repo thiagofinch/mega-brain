@@ -12,6 +12,9 @@ user-invocable: true
 Transcreve vídeos e áudios locais (Whisper.cpp) ou de URLs YouTube (ETL pipeline).
 Detecta automaticamente se o input é arquivo local ou link.
 
+> **Nesta distribuição:** o pipeline `infrastructure/services/etl/` não é distribuído,
+> então o caminho de URL do YouTube (ETL) não roda.
+
 ## Quick Start
 
 ```

@@ -201,9 +201,7 @@ def _openai_embed(
     SAME dim as the gateway. The explicit param still matters: it pins the dim
     to the config value so a future config change (or a partial provider default)
     can never silently land vectors in a different space than the pgvector schema
-    expects → cosine corruption. Ref:
-    docs/stories/epic-rag-integrity-recovery/DECISION-F1.md +
-    docs/stories/epic-rag-vector-migration/STORY-RAG-VM-M1-embedding-config-3072.md
+    expects → cosine corruption.
 
     Timeout fix (2026-06-01, liam-ottley ingest):
     Migrated from urllib.request.urlopen → requests.post with separate
@@ -1040,7 +1038,7 @@ class HybridIndex:
         # ── metadata.json live-count stamp (PART A / STORY-EXTERNAL-CONSOLIDATION) ──
         # Root cause of the phantom 395/4988/7826 chunk-count ambiguity: the rich
         # metadata.json (rebuilt_at, embedding_*, snapshot, ...) was ONLY written by
-        # scripts/rebuild_all_indexes.py. Every other save path — incremental,
+        # the full-rebuild path. Every other save path — incremental,
         # targeted re-index, BM25-only — funnels through THIS .save() and left
         # metadata.json untouched, so the sidecar "chunks" silently drifted from the
         # real chunks.json length. Stamping the live count here makes the sidecar

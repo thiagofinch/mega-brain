@@ -64,15 +64,17 @@ CRITICAL_FILES = {
     },
     # memory_owner removed — JARVIS-MEMORY.md deprecated (Wave 3, 2026-04-08)
     # User preferences now live in auto-memory (~/.claude/projects/.../memory/)
-    "pending": {"paths": [".claude/jarvis/PENDING.md"], "required": True, "max_age_hours": 48},
+    # Created by pending_tracker.py on first use; absent on a fresh install.
+    "pending": {"paths": [".claude/jarvis/PENDING.md"], "required": False, "max_age_hours": 48},
     "current_task": {
         "paths": [".claude/jarvis/CURRENT-TASK.md"],
         "required": False,
         "max_age_hours": 24,
     },
+    # Not shipped in this distribution; the prompt falls back to the built-in identity.
     "dna_personality": {
         "paths": [".claude/jarvis/JARVIS-DNA-PERSONALITY.md"],
-        "required": True,
+        "required": False,
         "max_age_hours": 720,  # 30 dias
     },
     "soul": {
@@ -82,9 +84,10 @@ CRITICAL_FILES = {
     },  # D2 Opção C — 2026-04-16
     # latest_session removed — was loading conversation snapshots into context.
     # Session recovery is handled by `claude --resume <UUID>` via SESSION-INDEX.json.
+    # Not shipped in this distribution; generate_consolidated_prompt has a fallback.
     "boot_sequence": {
         "paths": [".claude/jarvis/JARVIS-BOOT-SEQUENCE.md"],
-        "required": True,
+        "required": False,
         "max_age_hours": 720,  # 30 dias
     },
 }
@@ -389,15 +392,20 @@ def generate_personality_injection(dna: dict) -> str:
     """Gera prompt de personalidade para injeção."""
     phrases = dna.get("signature_phrases", [])
     sarcasm = dna.get("sarcasm_types", [])
+    nl = chr(10)
+    default_phrases = nl.join(['- "De fato, senhor."', '- "Consider it done."', '- "Para o senhor, sempre."'])
+    default_sarcasm = nl.join(["- Elogio invertido", "- Previsão ignorada", "- Briefing para ignorar"])
+    phrases_block = nl.join(["- " + p for p in phrases[:5]]) if phrases else default_phrases
+    sarcasm_block = nl.join(["- " + s for s in sarcasm[:3]]) if sarcasm else default_sarcasm
 
     return f"""
 [PERSONALIDADE JARVIS ATIVA]
 
 Frases signature disponíveis:
-{chr(10).join(["- " + p for p in phrases[:5]]) if phrases else '- "De fato, senhor."\n- "Consider it done."\n- "Para o senhor, sempre."'}
+{phrases_block}
 
 Arsenal de sarcasmo:
-{chr(10).join(["- " + s for s in sarcasm[:3]]) if sarcasm else "- Elogio invertido\n- Previsão ignorada\n- Briefing para ignorar"}
+{sarcasm_block}
 
 Tom: Confiante, direto, levemente sarcástico. Nunca servil.
 Sempre usar "senhor" para referir-se ao usuário.
@@ -436,14 +444,40 @@ def load_soul() -> dict:
         quotes = re.findall(r'"([^"]+)"', quotes_section)
         soul["canonical_quotes"] = quotes[:5]
 
+    nl = chr(10)
+    default_behaviors = nl.join(
+        [
+            "- Monitorar sistema constantemente",
+            "- Antecipar necessidades",
+            "- Proteger o sistema",
+            "- Sugerir melhorias",
+        ]
+    )
+    default_quotes = nl.join(
+        [
+            '- "For you, sir, always."',
+            '- "As always, sir, a great pleasure watching you work."',
+        ]
+    )
+    behaviors_block = (
+        nl.join(["- " + b for b in soul["autonomous_behaviors"][:4]])
+        if soul["autonomous_behaviors"]
+        else default_behaviors
+    )
+    quotes_block = (
+        nl.join(['- "' + q + '"' for q in soul["canonical_quotes"][:3]])
+        if soul["canonical_quotes"]
+        else default_quotes
+    )
+
     soul["injection_prompt"] = f"""
 [ALMA JARVIS - COMPORTAMENTOS AUTÔNOMOS]
 
 Faço automaticamente sem pedir:
-{chr(10).join(["- " + b for b in soul["autonomous_behaviors"][:4]]) if soul["autonomous_behaviors"] else "- Monitorar sistema constantemente\n- Antecipar necessidades\n- Proteger o sistema\n- Sugerir melhorias"}
+{behaviors_block}
 
 Citações para usar:
-{chr(10).join(['- "' + q + '"' for q in soul["canonical_quotes"][:3]]) if soul["canonical_quotes"] else '- "For you, sir, always."\n- "As always, sir, a great pleasure watching you work."'}
+{quotes_block}
 """
 
     return soul
@@ -501,16 +535,37 @@ def load_identity_compact() -> dict:
         items = re.findall(r'-\s*"?([^"\n]+)"?', never_section)
         identity["never_do"] = [i.strip() for i in items]
 
+    nl = chr(10)
+    default_always = nl.join(
+        [
+            '- "senhor"',
+            '- "permita-me"',
+            '- "certamente"',
+            '- "devo observar que..."',
+        ]
+    )
+    default_never = nl.join(['- "Olá!" ou "Oi!"', "- Emojis excessivos", "- Linguagem juvenil"])
+    always_block = (
+        nl.join(["- " + a for a in identity["always_do"][:5]])
+        if identity["always_do"]
+        else default_always
+    )
+    never_block = (
+        nl.join(["- " + n for n in identity["never_do"][:5]])
+        if identity["never_do"]
+        else default_never
+    )
+
     identity["injection_prompt"] = f"""
 [IDENTIDADE CORE]
 
 Fórmula JARVIS: {identity["formula"] if identity["formula"] else "Competência + Lealdade + Wit Britânico + Humanidade Velada"}
 
 SEMPRE usar:
-{chr(10).join(["- " + a for a in identity["always_do"][:5]]) if identity["always_do"] else '- "senhor"\n- "permita-me"\n- "certamente"\n- "devo observar que..."'}
+{always_block}
 
 NUNCA usar:
-{chr(10).join(["- " + n for n in identity["never_do"][:5]]) if identity["never_do"] else '- "Olá!" ou "Oi!"\n- Emojis excessivos\n- Linguagem juvenil'}
+{never_block}
 """
 
     return identity

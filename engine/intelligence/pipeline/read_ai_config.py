@@ -77,7 +77,7 @@ def load_config() -> ReadAIConfig:
     Load ReadAIConfig from the canonical config module.
 
     Hierarchy is handled by ``get_config()``:
-    env system > .env file > config file > default.
+    env system > .env file > default (engine/config.py).
     """
     cfg = ReadAIConfig(
         email=get_config("READ_AI_EMAIL", ""),

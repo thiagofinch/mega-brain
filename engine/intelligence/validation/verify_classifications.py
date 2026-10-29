@@ -4,8 +4,11 @@
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
-from audit_layers import classify_path
+try:  # sibling package module — package import in all real usage; fallback for direct-script run
+    from engine.intelligence.validation.audit_layers import classify_path
+except ImportError:  # pragma: no cover - direct ``python verify_classifications.py`` execution
+    sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
+    from engine.intelligence.validation.audit_layers import classify_path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 
@@ -15,7 +18,6 @@ SPOT_CHECKS = [
     ("core/tasks/HO-TP-001.md", "L1", "Core task file"),
     ("bin/cli.js", "L1", "CLI entry point"),
     (".claude/CLAUDE.md", "L1", "Claude integration"),
-    ("docs/audit/AUDIT-REPORT.md", "L1", "Documentation"),
     # L1 — Root project files
     ("package.json", "L1", "NPM package config"),
     ("package-lock.json", "L1", "NPM lockfile"),
@@ -29,7 +31,6 @@ SPOT_CHECKS = [
     (".gitattributes", "L1", "Git attributes"),
     (".gitleaks.toml", "L1", "Secret scanning config"),
     # L1 — GitHub
-    (".github/workflows/publish.yml", "L1", "CI publish workflow"),
     (".github/CODEOWNERS", "L1", "Code ownership"),
     (".github/ISSUE_TEMPLATE/bug.md", "L1", "Issue template"),
     # L1 — Planning

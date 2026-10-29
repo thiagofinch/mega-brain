@@ -1,8 +1,6 @@
 # Claude Code Agent Registry
-# Source: agents/persona-registry.yaml
 # Version: 1.0.0
 
-source: "agents/persona-registry.yaml"
 sync_targets:
   - ".cursor/agents.yaml"
   - ".windsurf/agents.yaml"

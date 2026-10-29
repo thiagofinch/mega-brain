@@ -139,7 +139,6 @@ schemas:
 references:
   - squads/orquestrador-global/knowledge/EXECUTION-ENGINES.md
   - squads/orquestrador-global/data/execution-engine-registry.yaml
-  - .claude/rules/on-demand/delegation-protocol.md
 squad: orquestrador-global
 task_id: dispatch-to-megabrain-example-squad
 version: "3.1.1"

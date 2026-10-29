@@ -148,5 +148,5 @@ Hook `.claude/hooks/epistemic_validator.py` (PostToolUse) analisa output de agen
 
 ## Reference
 
-- Story: `docs/stories/epic-mce-port-jarvis-v2.1/STORY-MCE-3.12-epistemic-format.md`
+- Story: MCE-3.12
 - Origem: portado de JARVIS v2.1 antigo (`04-SYSTEM/PROTOCOLS/AGENTS/EPISTEMIC-PROTOCOL.md`)
